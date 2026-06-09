@@ -20,8 +20,8 @@ export default function Hero({ count, issue }: { count: number; issue: string })
         <h1 className="hero-title">
           {site.heroTitleA}
           <br />
-          <span className="ht-indent">{site.heroTitleB}</span>
           <span className="dots">.</span>
+          {site.heroTitleB}
         </h1>
 
         <p className="hero-sub">{site.description}</p>

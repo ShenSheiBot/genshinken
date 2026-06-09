@@ -133,8 +133,7 @@ body {
   font-size: clamp(48px, 8.5vw, 124px); line-height: .94;
   letter-spacing: -.035em; text-wrap: balance;
 }
-.hero-title .dots { color: var(--accent); }
-.hero-title .ht-indent { padding-left: .5em; } /* 孰知其故 前空出约半个全角 */
+.hero-title .dots { color: var(--accent); margin-right: .2em; } /* 橙点置于孰知其故前，兼作半个全角缩进 */
 .hero-sub {
   position: relative; z-index: 3; margin: 30px 0 0 58px; max-width: 540px;
   font-family: var(--f-cjk-serif); font-size: 18px; line-height: 1.6; color: var(--ink-soft);
@@ -340,6 +339,8 @@ body {
    ============================================================ */
 .foot { border-top: 1px solid var(--hair-strong); margin-top: 80px; padding: 48px 0 56px; position: relative; overflow: hidden; }
 .foot-inner { max-width: var(--maxw); margin: 0 auto; padding: 0 40px; display: flex; justify-content: flex-end; align-items: flex-end; gap: 24px; flex-wrap: wrap; }
+.foot-sign { display: flex; align-items: center; gap: 20px; }
+.foot-logo { height: 46px; width: auto; display: block; flex: none; } /* 与署名两行等高，右缘贴页脚右边界 */
 .foot .big { font-family: var(--f-grotesk); font-weight: 700; font-size: clamp(38px, 6.5vw, 92px); line-height: .9; letter-spacing: -.035em; }
 .foot .big .dots { color: var(--accent); }
 .foot .meta { font-family: var(--f-mono); font-size: 11px; color: var(--ink-soft); line-height: 2; text-align: right; letter-spacing: .04em; text-transform: uppercase; }
