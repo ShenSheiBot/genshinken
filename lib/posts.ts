@@ -12,12 +12,20 @@ import { renderMarkdown } from "./markdown";
 
 const POSTS_DIR = path.join(process.cwd(), "source", "_posts");
 
+/** 一条署名：作者=实心方块「作」；译者「译」/编者「编」/校对「校」=空心方块 */
+export interface Credit {
+  mark: string;
+  name: string;
+  solid: boolean;
+}
+
 export interface PostSummary {
   slug: string;
   title: string;
   category: string;
   tags: string[];
   author: string;
+  credits: Credit[];
   dateDisplay: string; // "2026 · 05 · 12"
   dateISO: string; // "2026-05-12"
   timestamp: number; // 用于排序
@@ -68,6 +76,25 @@ function toList(v: unknown): string[] {
     .split(/[,，]/)
     .map((x) => x.trim())
     .filter(Boolean);
+}
+
+// 署名角色 → 方块标记。作者实心，其余空心。可在 front-matter 用任一 key 填写。
+const CREDIT_ROLES: { keys: string[]; mark: string; solid: boolean }[] = [
+  { keys: ["post_author", "author", "作者"], mark: "作", solid: true },
+  { keys: ["translator", "译者", "翻译"], mark: "译", solid: false },
+  { keys: ["editor", "编者", "编辑"], mark: "编", solid: false },
+  { keys: ["proofreader", "校对", "校对者", "校"], mark: "校", solid: false },
+];
+
+function buildCredits(data: Record<string, unknown>): Credit[] {
+  const out: Credit[] = [];
+  for (const role of CREDIT_ROLES) {
+    const key = role.keys.find((k) => data[k] != null && String(data[k]).trim() !== "");
+    if (!key) continue;
+    const name = toList(data[key]).join("、") || String(data[key]).trim();
+    if (name) out.push({ mark: role.mark, name, solid: role.solid });
+  }
+  return out;
 }
 
 function toDate(v: unknown): Date {
@@ -158,6 +185,7 @@ async function loadRaw(): Promise<Post[]> {
         category: categories[0] ?? tags[0] ?? "未分类",
         tags: Array.from(new Set([...facet, ...tags])),
         author: String(data.post_author ?? data.author ?? "").trim(),
+        credits: buildCredits(data),
         dateDisplay: fmtDisplay(date),
         dateISO: fmtISO(date),
         timestamp: +date,

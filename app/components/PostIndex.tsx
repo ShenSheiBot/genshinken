@@ -85,7 +85,16 @@ export default function PostIndex({
                 <div className="smain">
                   <div className="sen">{p.category}</div>
                   <h3>{p.title}</h3>
-                  {p.author && <div className="sauthor">{p.author}</div>}
+                  {p.credits.length > 0 && (
+                    <div className="sauthor">
+                      {p.credits.map((c, ci) => (
+                        <span key={ci} className="credit">
+                          <span className={"cmark " + (c.solid ? "solid" : "hollow")}>{c.mark}</span>
+                          {c.name}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                   <p className="sex">{p.excerpt}</p>
                 </div>
                 <div className="smeta">
