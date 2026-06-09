@@ -201,7 +201,7 @@ async function loadRaw(): Promise<Post[]> {
   // 时间倒序（最新在前），并编号 01..N
   posts.sort((a, b) => b.timestamp - a.timestamp || a.slug.localeCompare(b.slug));
   posts.forEach((p, i) => {
-    p.no = String(i + 1).padStart(2, "0");
+    p.no = String(i + 1);
   });
   return posts;
 }

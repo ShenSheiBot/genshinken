@@ -81,7 +81,6 @@ export default function PostIndex({
               >
                 <div className="sno">
                   <span className="big">{p.no}</span>
-                  <span className="of">/ {String(filtered.length).padStart(2, "0")}</span>
                   <span className="when">
                     <b>{p.dateISO.slice(0, 4)}</b>
                     <span>{p.dateISO.slice(5).replace("-", " · ")}</span>
