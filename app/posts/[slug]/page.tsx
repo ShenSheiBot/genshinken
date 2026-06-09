@@ -65,10 +65,17 @@ export default async function ArticlePage({
             <span>{post.dateDisplay}</span>
             <span className="d" />
             <span>{post.readMin} MIN READ</span>
-            {post.author && (
+            {post.credits.length > 0 && (
               <>
                 <span className="d" />
-                <span>{post.author}</span>
+                <span className="credits">
+                  {post.credits.map((c, i) => (
+                    <span key={i} className="credit">
+                      <span className={"cmark " + (c.solid ? "solid" : "hollow")}>{c.mark}</span>
+                      {c.name}
+                    </span>
+                  ))}
+                </span>
               </>
             )}
           </div>

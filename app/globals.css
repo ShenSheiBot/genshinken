@@ -231,10 +231,14 @@ body {
 .srow .smain h3 { font-family: var(--f-cjk-serif); font-weight: 900; font-size: clamp(30px, 4.4vw, 52px); line-height: 1.04; margin: 0 0 12px; letter-spacing: -.01em; }
 .srow .smain .sauthor { display: flex; flex-wrap: wrap; align-items: center; gap: 1em; font-family: var(--f-cjk-serif); font-weight: 500; font-size: 16px; color: var(--ink); margin: 0 0 10px; }
 .srow:hover .smain .sauthor { color: var(--solid-ink); }
-.sauthor .credit { display: inline-flex; align-items: center; gap: .5em; } /* 方块与名字间空半个全角；credit 间空一个全角(由 .sauthor gap) */
-.sauthor .cmark { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; font-family: var(--f-grotesk); font-weight: 700; font-size: 11px; line-height: 1; flex: none; }
-.sauthor .cmark.solid { background: var(--accent); color: var(--bg); }
-.sauthor .cmark.hollow { border: 1px solid var(--accent); color: var(--accent); background: transparent; }
+/* 署名方块（首页卡片 + 文章页元信息共用）：方块与名字间半个全角，署名之间一个全角 */
+.credit { display: inline-flex; align-items: center; gap: .5em; }
+.cmark { display: inline-flex; align-items: center; justify-content: center; font-family: var(--f-grotesk); font-weight: 700; line-height: 1; flex: none; }
+.cmark.solid { background: var(--accent); color: var(--bg); }
+.cmark.hollow { border: 1px solid var(--accent); color: var(--accent); background: transparent; }
+.sauthor .cmark { width: 18px; height: 18px; font-size: 11px; }
+.art-meta .credits { display: inline-flex; align-items: center; gap: 1em; }
+.art-meta .cmark { width: 16px; height: 16px; font-size: 10px; }
 .srow .smain .sex { margin: 0; max-width: 600px; font-family: var(--f-cjk-serif); font-size: 16px; line-height: 1.6; color: var(--ink-soft); }
 .srow:hover .smain .sex { color: var(--solid-ink); opacity: .82; }
 .srow .smeta { display: flex; flex-direction: column; align-items: flex-end; gap: 11px; text-align: right; font-family: var(--f-mono); font-size: 12px; color: var(--ink-faint); letter-spacing: .03em; padding-top: 6px; }
