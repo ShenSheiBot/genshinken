@@ -80,7 +80,12 @@ export default function PostIndex({
                 style={{ animationDelay: i * 0.04 + "s" }}
               >
                 <div className="sno">
-                  <span className="big">{p.no}</span> / {String(filtered.length).padStart(2, "0")}
+                  <span className="big">{p.no}</span>
+                  <span className="of">/ {String(filtered.length).padStart(2, "0")}</span>
+                  <span className="when">
+                    <b>{p.dateISO.slice(0, 4)}</b>
+                    <span>{p.dateISO.slice(5).replace("-", " · ")}</span>
+                  </span>
                 </div>
                 <div className="smain">
                   <div className="sen">{p.category}</div>
@@ -98,16 +103,15 @@ export default function PostIndex({
                   <p className="sex">{p.excerpt}</p>
                 </div>
                 <div className="smeta">
-                  <span className="sdate">{p.dateDisplay}</span>
-                  <span className="sread">
-                    {p.readMin} MIN READ
-                    <span className="arrow">↗</span>
-                  </span>
                   <div className="stags">
                     {p.tags.map((t) => (
                       <span key={t} className="stag">#{t}</span>
                     ))}
                   </div>
+                  <span className="sread">
+                    {p.readMin} MIN READ
+                    <span className="arrow">↗</span>
+                  </span>
                 </div>
               </Link>
             ))}
