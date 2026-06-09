@@ -20,4 +20,15 @@ export const site = {
   /** 水印字 */
   ghost: "un-canon",
   license: "CC0 1.0",
+  /** 浏览器标签页标题 */
+  tabTitle: "西方負典的博客",
+  /** 页脚「关注」链接（沿用 un-canon.com，博客把「博客」换成「主页」） */
+  social: [
+    { label: "主页", href: "https://un-canon.com/" },
+    { label: "哔哩哔哩", href: "https://space.bilibili.com/323302694" },
+    { label: "知乎", href: "https://www.zhihu.com/people/tHEREwILLbEbLOOD" },
+    { label: "YOUTUBE", href: "https://www.youtube.com/channel/UCF7IkcI5JK-mxFttzwh0qbQ" },
+    { label: "GITHUB", href: "https://github.com/un-canon" },
+  ],
+  email: "info@un-canon.com",
 } as const;

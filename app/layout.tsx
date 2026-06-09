@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: { default: site.title, template: `%s — ${site.brand}` },
+  title: { default: site.tabTitle, template: `%s · ${site.tabTitle}` },
   description: site.description,
   applicationName: site.brand,
   openGraph: {

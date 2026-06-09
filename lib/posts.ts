@@ -200,8 +200,9 @@ async function loadRaw(): Promise<Post[]> {
 
   // 时间倒序（最新在前），并编号 01..N
   posts.sort((a, b) => b.timestamp - a.timestamp || a.slug.localeCompare(b.slug));
+  // 编号按发表先后：最早的文章为 1，最新的为 N（列表仍按时间倒序展示）
   posts.forEach((p, i) => {
-    p.no = String(i + 1);
+    p.no = String(posts.length - i);
   });
   return posts;
 }

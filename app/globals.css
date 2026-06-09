@@ -358,7 +358,13 @@ body {
    页脚
    ============================================================ */
 .foot { border-top: 1px solid var(--hair-strong); margin-top: 80px; padding: 48px 0 56px; position: relative; overflow: hidden; }
-.foot-inner { max-width: var(--maxw); margin: 0 auto; padding: 0 40px; display: flex; justify-content: flex-end; align-items: flex-end; gap: 24px; flex-wrap: wrap; }
+.foot-inner { max-width: var(--maxw); margin: 0 auto; padding: 0 40px; display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; flex-wrap: wrap; }
+.foot-links { display: grid; grid-template-columns: max-content 1fr; gap: 12px 30px; align-items: baseline; font-family: var(--f-mono); font-size: 12px; letter-spacing: .04em; }
+.foot-links .k { color: var(--ink-faint); letter-spacing: .12em; white-space: nowrap; }
+.foot-links .v { color: var(--ink-soft); line-height: 1.7; }
+.foot-links .v a { color: var(--ink); transition: color .15s; }
+.foot-links .v a:hover { color: var(--accent); }
+.foot-links .v .dash { color: var(--ink-faint); margin: 0 11px; }
 .foot-sign { display: flex; align-items: center; gap: 20px; }
 .foot-logo { height: 46px; width: auto; display: block; flex: none; } /* 与署名两行等高，右缘贴页脚右边界 */
 .foot .big { font-family: var(--f-grotesk); font-weight: 700; font-size: clamp(38px, 6.5vw, 92px); line-height: .9; letter-spacing: -.035em; }

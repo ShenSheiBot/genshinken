@@ -9,6 +9,24 @@ export default function Footer() {
   return (
     <footer className="foot">
       <div className="foot-inner">
+        <div className="foot-links">
+          <span className="k">关注</span>
+          <span className="v">
+            {site.social.map((s, i) => (
+              <span key={s.href}>
+                {i > 0 && <span className="dash">—</span>}
+                <a href={s.href} target="_blank" rel="noopener noreferrer">
+                  {s.label}
+                </a>
+              </span>
+            ))}
+          </span>
+          <span className="k">联系</span>
+          <span className="v">
+            <a href={`mailto:${site.email}`}>{site.email.toUpperCase()}</a>
+          </span>
+        </div>
+
         <div className="foot-sign">
           <div className="meta">
             <b>{site.brand}</b>
