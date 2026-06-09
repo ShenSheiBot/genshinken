@@ -17,15 +17,10 @@ export default function Hero({ count, issue }: { count: number; issue: string })
         <div className="bp-wedge" />
         <div className="bp-wedge thin" />
 
-        <div className="bp-label">
-          <span className="ic" />
-          // <u>un-canon.blog</u>
-        </div>
-
         <h1 className="hero-title">
           {site.heroTitleA}
           <br />
-          {site.heroTitleB}
+          <span className="ht-indent">{site.heroTitleB}</span>
           <span className="dots">.</span>
         </h1>
 
