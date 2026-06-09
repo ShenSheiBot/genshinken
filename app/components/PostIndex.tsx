@@ -85,18 +85,20 @@ export default function PostIndex({
                 <div className="smain">
                   <div className="sen">{p.category}</div>
                   <h3>{p.title}</h3>
+                  {p.author && <div className="sauthor">{p.author}</div>}
                   <p className="sex">{p.excerpt}</p>
+                </div>
+                <div className="smeta">
+                  <span className="sdate">{p.dateDisplay}</span>
+                  <span className="sread">
+                    {p.readMin} MIN READ
+                    <span className="arrow">↗</span>
+                  </span>
                   <div className="stags">
                     {p.tags.map((t) => (
                       <span key={t} className="stag">#{t}</span>
                     ))}
                   </div>
-                </div>
-                <div className="smeta">
-                  {p.dateDisplay}
-                  <br />
-                  {p.readMin} MIN READ
-                  <span className="arrow">↗</span>
                 </div>
               </Link>
             ))}
