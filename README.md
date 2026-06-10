@@ -1,4 +1,4 @@
-# 西方負典 / UNCANON
+# 西方負典 / UN-CANON
 
 新粗野主义人文随笔站 —— 关注历史、产业与文化的中文博客。
 线上地址：<https://un-canon.blog>

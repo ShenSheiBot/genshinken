@@ -2,7 +2,7 @@
   "name": "un-canon-blog",
   "version": "1.0.0",
   "private": true,
-  "description": "西方負典 / UNCANON — 新粗野主义人文随笔站 (Next.js + Markdown)",
+  "description": "西方負典 / UN-CANON — 新粗野主义人文随笔站 (Next.js + Markdown)",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
