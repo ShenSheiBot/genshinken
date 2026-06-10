@@ -65,6 +65,60 @@ function rehypeRewrite() {
   };
 }
 
+/* ---------------- 弯引号规范化（构建期）----------------
+   正文里的 ASCII 直引号 " ' 统一改成方向性 Unicode 引号 “ ” ‘ ’，
+   由字体按中英文环境渲染为全角/半角。只处理文本节点，跳过 code/pre，
+   也不会碰到 Markdown 语法里的引号（如图片 title），因为那些不是文本节点。 */
+const OPEN_DQ = "“", CLOSE_DQ = "”", OPEN_SQ = "‘", CLOSE_SQ = "’";
+const Q_BLOCK = new Set([
+  "p", "li", "blockquote", "h1", "h2", "h3", "h4", "h5", "h6",
+  "td", "th", "figcaption", "dd", "dt", "summary",
+]);
+const Q_SKIP = new Set(["code", "pre", "kbd", "samp", "script", "style"]);
+const isWordChar = (ch: string) => /[A-Za-z0-9]/.test(ch);
+
+function smartenText(value: string, state: { dq: boolean; sq: boolean }): string {
+  let out = "";
+  for (let i = 0; i < value.length; i++) {
+    const ch = value[i];
+    if (ch === '"') {
+      out += state.dq ? CLOSE_DQ : OPEN_DQ;
+      state.dq = !state.dq;
+    } else if (ch === "'") {
+      const prev = i > 0 ? value[i - 1] : "";
+      const next = i + 1 < value.length ? value[i + 1] : "";
+      if (isWordChar(prev) && isWordChar(next)) {
+        out += CLOSE_SQ; // 词内撇号：it's / don't
+      } else {
+        out += state.sq ? CLOSE_SQ : OPEN_SQ;
+        state.sq = !state.sq;
+      }
+    } else {
+      out += ch;
+    }
+  }
+  return out;
+}
+
+function rehypeSmartQuotes() {
+  const walk = (node: { type?: string; tagName?: string; value?: string; children?: unknown[] }, state: { dq: boolean; sq: boolean }) => {
+    if (node.type === "element" && node.tagName && Q_SKIP.has(node.tagName)) return;
+    // 引号配对在每个块级元素内重置，跨行内元素（em/strong/a）仍连续
+    const st = node.type === "element" && node.tagName && Q_BLOCK.has(node.tagName)
+      ? { dq: false, sq: false }
+      : state;
+    for (const raw of node.children ?? []) {
+      const child = raw as { type?: string; value?: string; children?: unknown[] };
+      if (child.type === "text" && typeof child.value === "string") {
+        child.value = smartenText(child.value, st);
+      } else if (child.type === "element") {
+        walk(child, st);
+      }
+    }
+  };
+  return (tree: Root) => walk(tree as unknown as { children: unknown[] }, { dq: false, sq: false });
+}
+
 const processor = unified()
   .use(remarkParse)
   .use(remarkGfm)
@@ -72,6 +126,7 @@ const processor = unified()
   .use(remarkRehype, { allowDangerousHtml: true })
   .use(rehypeSlug)
   .use(rehypeRewrite)
+  .use(rehypeSmartQuotes)
   .use(rehypeStringify, { allowDangerousHtml: true });
 
 export async function renderMarkdown(md: string): Promise<string> {
