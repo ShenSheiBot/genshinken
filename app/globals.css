@@ -120,16 +120,6 @@ body {
   color: var(--ghost); letter-spacing: -.03em; white-space: nowrap; pointer-events: none; user-select: none;
 }
 
-.bp-label {
-  position: relative; z-index: 3;
-  display: inline-flex; align-items: center; gap: 9px;
-  font-family: var(--f-mono); font-size: 12px; letter-spacing: .04em;
-  color: var(--ink-soft); margin-left: 56px; margin-bottom: 30px;
-}
-.bp-label u { text-decoration: none; border-bottom: 1px solid var(--ink-soft); padding-bottom: 1px; }
-.bp-label .ic { width: 15px; height: 15px; border: 1.5px solid var(--ink-soft); position: relative; }
-.bp-label .ic::after { content: ""; position: absolute; inset: 3px; border: 1px solid var(--ink-soft); }
-
 .hero-title {
   position: relative; z-index: 3; margin: 0 0 0 56px;
   font-family: var(--f-grotesk); font-weight: 700;
@@ -382,7 +372,7 @@ body {
    ============================================================ */
 @media (max-width: 860px) {
   .bp-wedge, .bp-rot, .bp-leader, .bp-ghost { display: none; }
-  .hero-title, .hero-sub, .hero-meta, .bp-label { margin-left: 30px; }
+  .hero-title, .hero-sub, .hero-meta { margin-left: 30px; }
   .bp-ticks { display: none; }
   .hero-inner { min-height: auto; padding-bottom: 40px; }
 }
