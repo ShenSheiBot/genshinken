@@ -14,6 +14,9 @@
 2. 填写 front-matter（见下），写正文。
 3. 提交并推送到 `main` 分支 —— Vercel 会自动构建上线。
 
+> **发布前请逐项核对交付标准：[`docs/delivery-standards.md`](docs/delivery-standards.md)**
+> （slug 全 ASCII、front-matter 完整、弯引号、脚注 `[^n]` 可跳转、作者署名等）。
+
 ### Front-matter 字段
 
 ```markdown
@@ -26,7 +29,7 @@ post_author: 作者名       # 作者；首页卡片上以实心橙块「作」�
 translator: 译者名        # 可选；空心橙块「译」
 editor: 编者名            # 可选；空心橙块「编」
 proofreader: 校对名       # 可选；空心橙块「校」
-slug: my-custom-url      # 可选，自定义 URL；缺省时用文件名
+slug: my-custom-url      # 自定义 URL；必须为 ASCII（缺省取文件名，故中文文件名也要补此项）
 excerpt: 一句话摘要        # 可选，缺省时自动取正文首段
 ---
 
@@ -53,6 +56,10 @@ excerpt: 一句话摘要        # 可选，缺省时自动取正文首段
 正文引号统一使用**方向性弯引号** `“ ”`（双）/ `‘ ’`（单），由字体按中英文环境渲染为全角 / 半角；**不要用 ASCII 直引号** `"` `'`。
 
 构建管线会把正文文本中的直引号自动规范化为弯引号（区分开 / 闭，英文词内撇号如 `it's` 归一为 `’`），并跳过代码块与 Markdown 语法本身（如图片 `title`）。即便有此兜底，**写作时仍建议直接输入弯引号**，使 Outline / 任意 Markdown 预览里的源文也保持正确。
+
+### 脚注与链接
+
+脚注用 **GFM 语法** `[^n]`（正文角标）+ `[^n]: 定义`（文末定义），前端会渲染为可点角标、文末脚注区与返回箭头。Outline 的 Markdown 预览会弄乱 `[^n]`——**以博客前端为准**，落库到 `source/_posts/` 的 `.md` 必须用 GFM 脚注语法。外链自动新窗口打开；Outline 内部 `mention://` 链接会被降级为纯文本，发布前请替换为真实 URL。
 
 ---
 
