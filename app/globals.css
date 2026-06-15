@@ -326,6 +326,10 @@ body {
 .art-body th, .art-body td { border: 1px solid var(--hair-strong); padding: 10px 14px; text-align: left; }
 .art-body th { font-weight: 700; }
 
+/* 脚注/注释区：左对齐。引文夹带大量西文与档案编号，又因列表缩进列更窄，
+   两端对齐会把字距撑得过宽——参考文献按惯例齐左即可。 */
+.art-body .footnotes p, .art-body .footnotes li { text-align: left; }
+
 .art-after { max-width: var(--art-w); margin: 0 auto; padding: 0 40px; }
 .art-end { margin: 56px 0 0; display: flex; align-items: center; gap: 16px; }
 .art-end .sq { width: 13px; height: 13px; background: var(--accent); }
