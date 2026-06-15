@@ -250,7 +250,7 @@ body {
    ============================================================ */
 .article { position: relative; }
 .art-hero { position: relative; overflow: hidden; border-bottom: 1px solid var(--hair-strong); padding: 0 0 8px; }
-.art-hero-inner { position: relative; max-width: var(--art-w); margin: 0 auto; padding: 30px 40px 48px; }
+.art-hero-inner { position: relative; max-width: var(--maxw); margin: 0 auto; padding: 30px 40px 48px; }
 .backbtn {
   display: inline-flex; align-items: center; gap: 10px;
   font-family: var(--f-mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase;
@@ -279,7 +279,7 @@ body {
 /* ---- 正文（渲染后的 Markdown）---- */
 .art-body { max-width: var(--art-w); margin: 0 auto; padding: 56px 40px 0; position: relative; z-index: 2; }
 .art-body > :first-child { margin-top: 0; }
-.art-body p { font-family: var(--f-cjk-serif); font-size: 18px; line-height: 1.85; margin: 0 0 26px; text-wrap: pretty; }
+.art-body p { font-family: var(--f-cjk-serif); font-size: 18px; line-height: 1.85; margin: 0 0 26px; text-wrap: pretty; text-align: justify; }
 .art-body h1, .art-body h2, .art-body h3, .art-body h4 {
   font-family: var(--f-grotesk); font-weight: 700; line-height: 1.18;
   margin: 52px 0 22px; letter-spacing: -.02em; scroll-margin-top: 80px;
@@ -297,7 +297,7 @@ body {
 .art-body a[id^="_ftn"] { scroll-margin-top: 80px; }
 .art-body strong { font-weight: 700; color: var(--ink); }
 .art-body em { font-style: italic; }
-.art-body ul, .art-body ol { font-family: var(--f-cjk-serif); font-size: 17px; line-height: 1.85; margin: 0 0 26px; padding-left: 1.4em; }
+.art-body ul, .art-body ol { font-family: var(--f-cjk-serif); font-size: 17px; line-height: 1.85; margin: 0 0 26px; padding-left: 1.4em; text-align: justify; }
 .art-body li { margin: 0 0 10px; }
 .art-body li::marker { color: var(--accent); }
 .art-body blockquote {
@@ -305,7 +305,7 @@ body {
   border-left: 3px solid var(--accent);
   font-family: var(--f-quote); color: var(--ink-soft); font-style: normal;
 }
-.art-body blockquote p { font-size: 18px; line-height: 1.8; margin: 0 0 14px; }
+.art-body blockquote p { font-size: 18px; line-height: 1.8; margin: 0 0 14px; text-align: justify; }
 .art-body blockquote strong { font-weight: 600; }
 .art-body blockquote p:last-child { margin-bottom: 0; }
 .art-body img { display: block; max-width: 100%; height: auto; margin: 36px auto; border: 1px solid var(--hair-strong); }
