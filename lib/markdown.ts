@@ -123,7 +123,13 @@ const processor = unified()
   .use(remarkParse)
   .use(remarkGfm)
   .use(remarkCjkFriendly)
-  .use(remarkRehype, { allowDangerousHtml: true })
+  .use(remarkRehype, {
+    allowDangerousHtml: true,
+    // GFM 脚注区标签本地化为「注释」，并去掉默认的 sr-only 类（本站将其作为可见的文章要件标题，由 CSS 单独定样式）
+    footnoteLabel: "注释",
+    footnoteLabelTagName: "h2",
+    footnoteLabelProperties: {},
+  })
   .use(rehypeSlug)
   .use(rehypeRewrite)
   .use(rehypeSmartQuotes)

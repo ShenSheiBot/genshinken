@@ -326,9 +326,22 @@ body {
 .art-body th, .art-body td { border: 1px solid var(--hair-strong); padding: 10px 14px; text-align: left; }
 .art-body th { font-weight: 700; }
 
-/* 脚注/注释区：左对齐。引文夹带大量西文与档案编号，又因列表缩进列更窄，
-   两端对齐会把字距撑得过宽——参考文献按惯例齐左即可。 */
-.art-body .footnotes p, .art-body .footnotes li { text-align: left; }
+/* ---- 注释 / 脚注：文章要件，样式区别于正文内容标题 ----
+   不沿用正文 h2 的红方块大标题；改用细体 mono 标签 + 顶部分隔线。
+   引文夹带大量西文与档案编号、列表缩进使列更窄，故一律左对齐（参考文献惯例）。 */
+.art-body .footnotes { margin-top: 64px; padding-top: 30px; border-top: 1px solid var(--hair-strong); font-size: 14px; }
+.art-body .footnotes h2 {
+  display: block; margin: 0 0 22px;
+  font-family: var(--f-mono); font-size: 12px; font-weight: 700;
+  letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft);
+}
+.art-body .footnotes h2::before { content: none; }
+.art-body .footnotes ol { font-family: var(--f-cjk-serif); margin: 0; padding-left: 1.6em; }
+.art-body .footnotes li { margin: 0 0 12px; line-height: 1.75; color: var(--ink-soft); text-align: left; }
+.art-body .footnotes li::marker { color: var(--ink-faint); font-family: var(--f-mono); }
+.art-body .footnotes p { margin: 0; text-align: left; }
+.art-body .footnotes a[data-footnote-backref] { color: var(--accent); border: none; margin-left: 4px; }
+.art-body .footnotes a[data-footnote-backref]:hover { background: none; }
 
 .art-after { max-width: var(--art-w); margin: 0 auto; padding: 0 40px; }
 .art-end { margin: 56px 0 0; display: flex; align-items: center; gap: 16px; }
