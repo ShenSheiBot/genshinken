@@ -129,6 +129,8 @@ const processor = unified()
     footnoteLabel: "注释",
     footnoteLabelTagName: "h2",
     footnoteLabelProperties: {},
+    // 返回角标用 ↑(U+2191)，避免默认的 ↩(U+21A9) 在移动端被渲染成彩色 emoji，破坏美术资产一致性
+    footnoteBackContent: "↑",
   })
   .use(rehypeSlug)
   .use(rehypeRewrite)

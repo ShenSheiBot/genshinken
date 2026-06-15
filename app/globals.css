@@ -22,6 +22,7 @@
   --ink-faint: #9a978d;
   --hair: #c4c2bb;          /* 发丝构造线 */
   --hair-strong: #1a1916;   /* 强调线 */
+  --grid: rgba(26, 25, 22, 0.06);   /* 全幅竖向栅格线（比 --hair 更轻，避免压正文） */
   --ghost: rgba(26, 25, 22, 0.055); /* 巨型水印字 */
   --solid: #1a1916;         /* 实心黑块/斜楔 */
   --solid-ink: #e8e7e3;     /* 黑块上的文字 */
@@ -37,6 +38,7 @@ html[data-theme="dark"] {
   --ink-faint: #5b594f;
   --hair: #2c2b27;
   --hair-strong: #e8e7e3;
+  --grid: rgba(232, 231, 227, 0.05);
   --ghost: rgba(232, 231, 227, 0.045);
   --solid: #e8e7e3;
   --solid-ink: #131311;
@@ -58,10 +60,10 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   transition: background .3s ease, color .3s ease;
-  /* 全幅竖向发丝栅格 */
+  /* 全幅竖向栅格（更轻，避免压正文） */
   background-image: repeating-linear-gradient(90deg,
     transparent 0, transparent 159px,
-    var(--hair) 159px, var(--hair) 160px);
+    var(--grid) 159px, var(--grid) 160px);
   background-attachment: fixed;
 }
 .app { min-height: 100vh; position: relative; }
