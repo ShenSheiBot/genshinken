@@ -250,7 +250,7 @@ body {
    ============================================================ */
 .article { position: relative; }
 .art-hero { position: relative; overflow: hidden; border-bottom: 1px solid var(--hair-strong); padding: 0 0 8px; }
-.art-hero-inner { position: relative; max-width: var(--maxw); margin: 0 auto; padding: 30px 40px 48px; }
+.art-hero-inner { position: relative; max-width: var(--art-w); margin: 0 auto; padding: 30px 40px 48px; }
 .backbtn {
   display: inline-flex; align-items: center; gap: 10px;
   font-family: var(--f-mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase;
@@ -380,7 +380,7 @@ body {
   .wrap, .topbar, .hero-inner, .art-hero-inner, .foot-inner { padding-left: 20px; padding-right: 20px; }
   .srow { grid-template-columns: 56px 1fr; }
   .srow .smeta { grid-column: 1 / -1; text-align: left; align-items: flex-start; padding-top: 8px; }
-  .art-body, .art-after, .nextnav { padding-left: 22px; padding-right: 22px; }
+  .art-body, .art-after, .nextnav { padding-left: 20px; padding-right: 20px; }
   body { background-image: none; }
 }
 

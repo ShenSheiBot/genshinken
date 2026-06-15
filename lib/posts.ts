@@ -173,7 +173,6 @@ async function loadRaw(): Promise<Post[]> {
 
       const categories = toList(data.categories ?? data.category);
       const tags = toList(data.tags);
-      const facet = categories.length ? categories : tags;
 
       const date = toDate(data.date);
       const html = await renderMarkdown(content);
@@ -183,7 +182,7 @@ async function loadRaw(): Promise<Post[]> {
         slug,
         title,
         category: categories[0] ?? tags[0] ?? "未分类",
-        tags: Array.from(new Set([...facet, ...tags])),
+        tags: Array.from(new Set(tags)),
         author: String(data.post_author ?? data.author ?? "").trim(),
         credits: buildCredits(data),
         dateDisplay: fmtDisplay(date),
