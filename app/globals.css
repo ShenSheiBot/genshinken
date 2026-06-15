@@ -381,6 +381,9 @@ body {
   .srow { grid-template-columns: 56px 1fr; }
   .srow .smeta { grid-column: 1 / -1; text-align: left; align-items: flex-start; padding-top: 8px; }
   .art-body, .art-after, .nextnav { padding-left: 20px; padding-right: 20px; }
+  /* 移动端窄列：略缩字号 + 收紧字距，让每行多容纳字符，两端对齐时字间空隙更小 */
+  .art-body p, .art-body blockquote p { font-size: 16px; letter-spacing: -0.01em; }
+  .art-body ul, .art-body ol { font-size: 15px; letter-spacing: -0.01em; }
   body { background-image: none; }
 }
 
