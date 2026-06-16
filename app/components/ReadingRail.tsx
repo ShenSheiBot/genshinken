@@ -5,16 +5,19 @@ import { useEffect, useState } from "react";
 type Mark = { n: number; top: number };
 
 /**
- * 阅读里程碑：在正文右侧留白处，每十行（以正文基准行高为单位）标一个灰色小数字。
- * 纯装饰（aria-hidden），构建后由 JS 量算行高与正文高度定位，resize 时重算。
- * 窄屏（无右侧留白）由 CSS 隐去，详见 .read-rail 的媒体查询。
+ * 阅读里程碑：每十行（以正文基准行高为单位）一个灰色小数字，
+ * 贴在正文版心的左右两侧内边距沟槽里——桌面与移动端一致（不再依赖宽留白）。
+ * 纯装饰（aria-hidden），构建后量算行高/版心盒子定位，resize 时重算。
  */
 export default function ReadingRail() {
   const [marks, setMarks] = useState<Mark[]>([]);
+  const [leftPx, setLeftPx] = useState(2);
+  const [rightPx, setRightPx] = useState(2);
 
   useEffect(() => {
     const body = document.querySelector(".art-body") as HTMLElement | null;
-    if (!body) return;
+    const article = document.querySelector(".article") as HTMLElement | null;
+    if (!body || !article) return;
 
     const compute = () => {
       const lh = parseFloat(getComputedStyle(body).lineHeight);
@@ -27,6 +30,12 @@ export default function ReadingRail() {
       const count = Math.floor(body.offsetHeight / per);
       const out: Mark[] = [];
       for (let i = 1; i <= count; i++) out.push({ n: i * 10, top: Math.round(bodyTop + i * per) });
+
+      // 落在正文盒子左右内缘 +2px（即版心两侧的内边距沟槽，桌面 40px / 移动 20px）
+      const boxLeft = body.offsetLeft;
+      const boxRight = article.offsetWidth - (body.offsetLeft + body.offsetWidth);
+      setLeftPx(Math.max(2, boxLeft + 2));
+      setRightPx(Math.max(2, boxRight + 2));
       setMarks(out);
     };
 
@@ -40,7 +49,12 @@ export default function ReadingRail() {
   return (
     <div className="read-rail" aria-hidden="true">
       {marks.map((m) => (
-        <span key={m.n} className="rmark" style={{ top: m.top }}>
+        <span key={"l" + m.n} className="rmark" style={{ top: m.top, left: leftPx }}>
+          {m.n}
+        </span>
+      ))}
+      {marks.map((m) => (
+        <span key={"r" + m.n} className="rmark" style={{ top: m.top, right: rightPx }}>
           {m.n}
         </span>
       ))}

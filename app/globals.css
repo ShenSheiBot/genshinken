@@ -120,20 +120,13 @@ body {
 }
 .topbar .art-running .rc .cmark { width: 16px; height: 16px; font-size: 9px; }
 
-/* ---- 阅读里程碑：正文右侧留白处每十行一个灰色小数字 ---- */
+/* ---- 阅读里程碑：每十行一个灰色小数字，贴正文版心左右两侧（桌面 / 移动一致，位置由 JS 量算内联）---- */
 .read-rail { position: absolute; inset: 0; pointer-events: none; z-index: 1; }
 .read-rail .rmark {
   position: absolute; transform: translateY(-50%);
-  right: calc((100% - var(--art-w)) / 2 - 42px);
-  font-family: var(--f-mono); font-size: 11px; letter-spacing: .05em;
-  color: var(--ink-faint); opacity: .65; white-space: nowrap;
+  font-family: var(--f-mono); font-size: 10px; letter-spacing: .02em;
+  color: var(--ink-faint); opacity: .5; white-space: nowrap;
 }
-.read-rail .rmark::before {
-  content: ""; position: absolute; top: 50%; left: -15px;
-  width: 9px; height: 1px; background: var(--hair); transform: translateY(-50%);
-}
-/* 窄屏无右侧留白：隐去里程碑（移动端兼容）*/
-@media (max-width: 1200px) { .read-rail { display: none; } }
 
 /* ============================================================
    英雄区 / 技术海报 masthead
@@ -315,7 +308,12 @@ body {
 .art-tags .t { font-family: var(--f-mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); }
 
 /* ---- 正文（渲染后的 Markdown）---- */
-.art-body { max-width: var(--art-w); margin: 0 auto; padding: 56px 40px 0; position: relative; z-index: 2; }
+.art-body {
+  max-width: var(--art-w); margin: 0 auto; padding: 56px 40px 0; position: relative; z-index: 2;
+  /* 仿 xeCJK / ctex 排版：标点挤压（全角标点吸收两端对齐的余量，而非撑开汉字间距）+ 中西文自动间距 */
+  text-spacing-trim: normal;
+  text-autospace: normal;
+}
 .art-body > :first-child { margin-top: 0; }
 .art-body p { font-family: var(--f-cjk-serif); font-size: 18px; line-height: 1.85; margin: 0 0 26px; text-wrap: pretty; text-align: justify; }
 .art-body h1, .art-body h2, .art-body h3, .art-body h4 {
@@ -436,9 +434,9 @@ body {
   .srow { grid-template-columns: 56px 1fr; }
   .srow .smeta { grid-column: 1 / -1; text-align: left; align-items: flex-start; padding-top: 8px; }
   .art-body, .art-after, .nextnav { padding-left: 20px; padding-right: 20px; }
-  /* 移动端窄列：字号保持，仅收紧字距来压缩两端对齐的字间空隙 */
-  .art-body p, .art-body blockquote p { font-size: 16px; letter-spacing: -0.1em; }
-  .art-body ul, .art-body ol { font-size: 16px; letter-spacing: -0.1em; }
+  /* 移动端窄列：字号保持 16px，仅轻收字距作兜底（标点挤压由 text-spacing-trim 承担）*/
+  .art-body p, .art-body blockquote p { font-size: 16px; letter-spacing: -0.05em; }
+  .art-body ul, .art-body ol { font-size: 16px; letter-spacing: -0.05em; }
   /* 顶栏页眉信息在窄屏隐去署名，只留标题，避免拥挤 */
   .topbar .art-running .rc { display: none; }
   body { background-image: none; }
