@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllSlugs, getPostBySlug, getAdjacent } from "@/lib/posts";
 import { site } from "@/lib/site";
+import { RegisterArticleHeader } from "@/app/components/ArticleHeader";
 
 export const dynamicParams = false;
 
@@ -51,6 +52,7 @@ export default async function ArticlePage({
 
   return (
     <div className="article">
+      <RegisterArticleHeader title={post.title} credits={post.credits} />
       <section className="art-hero">
         <div className="art-hero-inner">
           <Link href="/" className="backbtn">

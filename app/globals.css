@@ -49,6 +49,8 @@ html[data-theme="dark"] {
 
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
+/* 始终为滚动条预留沟槽：筛选导致页面长度变化、滚动条出现/消失时，正文列宽不再抖动重排 */
+html { scrollbar-gutter: stable; }
 a { color: inherit; text-decoration: none; }
 button { font-family: inherit; cursor: pointer; background: none; border: none; padding: 0; }
 
@@ -87,17 +89,34 @@ body {
   font-size: 16px; letter-spacing: -.01em; white-space: nowrap;
 }
 .topbar .brand .blot { width: 13px; height: 13px; background: var(--accent); flex: none; }
-.topbar .status { flex: 1; }
+.topbar .status { flex: 1; min-width: 0; }
+/* 显示模式切换：单一图标按钮（无中英文字） */
 .topbar .toggle {
-  font-family: var(--f-mono); font-size: 11px; letter-spacing: .08em;
-  text-transform: uppercase; color: var(--ink);
-  display: flex; align-items: center; gap: 8px;
-  padding: 7px 13px; border: 1px solid var(--hair-strong);
+  flex: none; display: inline-flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; padding: 0; color: var(--ink);
+  border: 1px solid var(--hair-strong);
   transition: background .15s, color .15s;
 }
 .topbar .toggle:hover { background: var(--solid); color: var(--solid-ink); }
-.topbar .toggle .tk { width: 9px; height: 9px; border: 1px solid currentColor; }
-.topbar .toggle .tk.on { background: currentColor; }
+.topbar .toggle svg { display: block; }
+
+/* 滚动后顶栏显形的「页眉文章信息」：标题（可省略号）+ 署名 */
+.topbar .art-running {
+  display: flex; align-items: baseline; gap: 14px; min-width: 0;
+  opacity: 0; transform: translateY(5px);
+  transition: opacity .26s ease, transform .26s ease;
+  pointer-events: none;
+}
+.topbar[data-revealed="true"] .art-running { opacity: 1; transform: none; }
+.topbar .art-running .rt {
+  flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  font-family: var(--f-cjk-serif); font-weight: 700; font-size: 15px; color: var(--ink);
+}
+.topbar .art-running .rc {
+  flex: none; display: inline-flex; align-items: center; gap: .9em;
+  font-family: var(--f-mono); font-size: 11px; letter-spacing: .03em; color: var(--ink-soft);
+}
+.topbar .art-running .rc .cmark { width: 13px; height: 13px; font-size: 8px; }
 
 /* ============================================================
    英雄区 / 技术海报 masthead
@@ -401,8 +420,10 @@ body {
   .srow .smeta { grid-column: 1 / -1; text-align: left; align-items: flex-start; padding-top: 8px; }
   .art-body, .art-after, .nextnav { padding-left: 20px; padding-right: 20px; }
   /* 移动端窄列：略缩字号 + 收紧字距，让每行多容纳字符，两端对齐时字间空隙更小 */
-  .art-body p, .art-body blockquote p { font-size: 16px; letter-spacing: -0.01em; }
-  .art-body ul, .art-body ol { font-size: 15px; letter-spacing: -0.01em; }
+  .art-body p, .art-body blockquote p { font-size: 15px; letter-spacing: -0.02em; }
+  .art-body ul, .art-body ol { font-size: 14px; letter-spacing: -0.02em; }
+  /* 顶栏页眉信息在窄屏隐去署名，只留标题，避免拥挤 */
+  .topbar .art-running .rc { display: none; }
   body { background-image: none; }
 }
 

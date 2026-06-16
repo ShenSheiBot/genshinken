@@ -3,6 +3,7 @@ import "./globals.css";
 import { site } from "@/lib/site";
 import TopBar from "./components/TopBar";
 import Footer from "./components/Footer";
+import { ArticleHeaderProvider } from "./components/ArticleHeader";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -38,11 +39,13 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body>
-        <div className="app">
-          <TopBar />
-          {children}
-          <Footer />
-        </div>
+        <ArticleHeaderProvider>
+          <div className="app">
+            <TopBar />
+            {children}
+            <Footer />
+          </div>
+        </ArticleHeaderProvider>
       </body>
     </html>
   );
