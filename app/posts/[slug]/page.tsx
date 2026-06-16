@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { getAllSlugs, getPostBySlug, getAdjacent } from "@/lib/posts";
 import { site } from "@/lib/site";
 import { RegisterArticleHeader } from "@/app/components/ArticleHeader";
+import ReadingRail from "@/app/components/ReadingRail";
 
 export const dynamicParams = false;
 
@@ -97,6 +98,7 @@ export default async function ArticlePage({
         style={{ animationDelay: "0.06s" }}
         dangerouslySetInnerHTML={{ __html: post.html }}
       />
+      <ReadingRail />
 
       <div className="art-after">
         <div className="art-end">

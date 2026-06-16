@@ -100,9 +100,10 @@ body {
 .topbar .toggle:hover { background: var(--solid); color: var(--solid-ink); }
 .topbar .toggle svg { display: block; }
 
-/* 滚动后顶栏显形的「页眉文章信息」：标题（可省略号）+ 署名 */
+/* 滚动后顶栏显形的「页眉文章信息」：标题（可省略号）+ 署名。
+   字号与垂直对齐均与左侧品牌一致（16px、整体居中对齐）。 */
 .topbar .art-running {
-  display: flex; align-items: baseline; gap: 14px; min-width: 0;
+  display: flex; align-items: center; gap: 18px; min-width: 0;
   opacity: 0; transform: translateY(5px);
   transition: opacity .26s ease, transform .26s ease;
   pointer-events: none;
@@ -110,13 +111,29 @@ body {
 .topbar[data-revealed="true"] .art-running { opacity: 1; transform: none; }
 .topbar .art-running .rt {
   flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
-  font-family: var(--f-cjk-serif); font-weight: 700; font-size: 15px; color: var(--ink);
+  font-family: var(--f-cjk-serif); font-weight: 700; font-size: 16px; line-height: 1;
+  letter-spacing: -.01em; color: var(--ink);
 }
 .topbar .art-running .rc {
-  flex: none; display: inline-flex; align-items: center; gap: .9em;
-  font-family: var(--f-mono); font-size: 11px; letter-spacing: .03em; color: var(--ink-soft);
+  flex: none; display: inline-flex; align-items: center; gap: 1em;
+  font-family: var(--f-cjk-serif); font-size: 16px; line-height: 1; color: var(--ink);
 }
-.topbar .art-running .rc .cmark { width: 13px; height: 13px; font-size: 8px; }
+.topbar .art-running .rc .cmark { width: 16px; height: 16px; font-size: 9px; }
+
+/* ---- 阅读里程碑：正文右侧留白处每十行一个灰色小数字 ---- */
+.read-rail { position: absolute; inset: 0; pointer-events: none; z-index: 1; }
+.read-rail .rmark {
+  position: absolute; transform: translateY(-50%);
+  right: calc((100% - var(--art-w)) / 2 - 42px);
+  font-family: var(--f-mono); font-size: 11px; letter-spacing: .05em;
+  color: var(--ink-faint); opacity: .65; white-space: nowrap;
+}
+.read-rail .rmark::before {
+  content: ""; position: absolute; top: 50%; left: -15px;
+  width: 9px; height: 1px; background: var(--hair); transform: translateY(-50%);
+}
+/* 窄屏无右侧留白：隐去里程碑（移动端兼容）*/
+@media (max-width: 1200px) { .read-rail { display: none; } }
 
 /* ============================================================
    英雄区 / 技术海报 masthead
@@ -419,9 +436,9 @@ body {
   .srow { grid-template-columns: 56px 1fr; }
   .srow .smeta { grid-column: 1 / -1; text-align: left; align-items: flex-start; padding-top: 8px; }
   .art-body, .art-after, .nextnav { padding-left: 20px; padding-right: 20px; }
-  /* 移动端窄列：略缩字号 + 收紧字距，让每行多容纳字符，两端对齐时字间空隙更小 */
-  .art-body p, .art-body blockquote p { font-size: 15px; letter-spacing: -0.02em; }
-  .art-body ul, .art-body ol { font-size: 14px; letter-spacing: -0.02em; }
+  /* 移动端窄列：字号保持，仅收紧字距来压缩两端对齐的字间空隙 */
+  .art-body p, .art-body blockquote p { font-size: 16px; letter-spacing: -0.1em; }
+  .art-body ul, .art-body ol { font-size: 16px; letter-spacing: -0.1em; }
   /* 顶栏页眉信息在窄屏隐去署名，只留标题，避免拥挤 */
   .topbar .art-running .rc { display: none; }
   body { background-image: none; }
