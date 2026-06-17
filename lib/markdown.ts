@@ -22,7 +22,7 @@ const SIZE_TITLE = /^\s*=(\d+)x(\d+)\s*$/; // Typora/Hexo 图片尺寸标注
 /** 修正相对资源路径、外链行为、脚注锚点 */
 function rehypeRewrite() {
   return (tree: Root) => {
-    visit(tree, "element", (node: Element) => {
+    visit(tree, "element", (node: Element, index, parent) => {
       const props = node.properties ?? {};
 
       if (node.tagName === "img" && typeof props.src === "string") {
@@ -57,6 +57,22 @@ function rehypeRewrite() {
         } else if (/^#_ftn(\d+)$/.test(href)) {
           // 正文角标 —— 它自身是脚注定义回链的跳转目标
           props.id = "_ftnref" + href.match(/^#_ftn(\d+)$/)![1];
+        }
+      }
+
+      // 承接段标记：紧邻其上、独立成行的 <!--continue-->（译前处理注入）→ 抹掉标记并给本段加 .cont（首行不缩进）
+      if (node.tagName === "p" && parent && typeof index === "number") {
+        const sibs = (parent as { children: Array<{ type?: string; value?: string }> }).children;
+        let j = index - 1;
+        while (j >= 0) {
+          const sib = sibs[j];
+          if (sib && sib.type === "text" && /^\s*$/.test(sib.value ?? "")) { j--; continue; }
+          if (sib && sib.type === "raw" && /^<!--\s*continue\s*-->/.test(sib.value ?? "")) {
+            sib.value = ""; // 抹掉标记输出
+            const cn = props.className as unknown;
+            props.className = Array.isArray(cn) ? [...cn, "cont"] : cn ? [String(cn), "cont"] : ["cont"];
+          }
+          break;
         }
       }
 

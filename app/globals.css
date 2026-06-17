@@ -316,9 +316,9 @@ body {
 }
 .art-body > :first-child { margin-top: 0; }
 .art-body p { font-family: var(--f-cjk-serif); font-size: 18px; line-height: 1.85; margin: 0 0 26px; text-wrap: pretty; text-align: justify; text-indent: 2em; }
-/* 引文本身不首行缩进；引文之后承接上一自然段的段落亦不缩进（接续，非新段）*/
+/* 引文本身不首行缩进；承接段由译前处理打 <!--continue--> 标记（→ .cont）显式免缩进 */
 .art-body blockquote p,
-.art-body blockquote + p { text-indent: 0; }
+.art-body p.cont { text-indent: 0; }
 .art-body h1, .art-body h2, .art-body h3, .art-body h4 {
   font-family: var(--f-grotesk); font-weight: 700; line-height: 1.18;
   margin: 52px 0 22px; letter-spacing: -.02em; scroll-margin-top: 80px;
