@@ -22,18 +22,21 @@ export default function ReadingRail() {
 
     const compute = () => {
       const articleTop = article.getBoundingClientRect().top;
-      // 按阅读顺序收集每一实际文本行的中心 Y（相对 .article），排除注释区
+      // 逐块按「内容高度 ÷ 行高」数实际行数（每个行盒恰为一倍行高），定位每行中心 Y。
+      // 不用 getClientRects——它按内联盒（脚注上标 / 链接 / 强调）拆分，同一视觉行会被算成多段。
       const centers: number[] = [];
       const blocks = body.querySelectorAll("p, li, h1, h2, h3, h4, h5, h6, figcaption");
       blocks.forEach((el) => {
         if ((el as HTMLElement).closest(".footnotes")) return; // 注释部分不要里程碑
-        const range = document.createRange();
-        range.selectNodeContents(el);
-        const rects = range.getClientRects();
-        for (let i = 0; i < rects.length; i++) {
-          const r = rects[i];
-          if (r.height > 0 && r.width > 0) centers.push(r.top + r.height / 2 - articleTop);
-        }
+        const cs = getComputedStyle(el as HTMLElement);
+        let lh = parseFloat(cs.lineHeight);
+        if (!lh || Number.isNaN(lh)) lh = (parseFloat(cs.fontSize) || 16) * 1.85;
+        const rect = (el as HTMLElement).getBoundingClientRect();
+        const padTop = parseFloat(cs.paddingTop) || 0;
+        const padBottom = parseFloat(cs.paddingBottom) || 0;
+        const top0 = rect.top - articleTop + padTop; // 文本区顶（相对 .article）
+        const lines = Math.max(1, Math.round((rect.height - padTop - padBottom) / lh));
+        for (let k = 0; k < lines; k++) centers.push(top0 + (k + 0.5) * lh); // 第 k 行中心
       });
 
       const out: Mark[] = [];
