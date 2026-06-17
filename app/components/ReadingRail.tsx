@@ -22,8 +22,8 @@ export default function ReadingRail() {
 
     const compute = () => {
       const articleTop = article.getBoundingClientRect().top;
-      // 逐块按「内容高度 ÷ 行高」数实际行数（每个行盒恰为一倍行高），定位每行中心 Y。
-      // 不用 getClientRects——它按内联盒（脚注上标 / 链接 / 强调）拆分，同一视觉行会被算成多段。
+      // 直接量每行的渲染矩形取中心；按垂直位置分组，消除脚注上标/链接造成的「同一视觉行多个矩形」，
+      // 每行以最宽的矩形（正文主体）中心为准 → 里程碑精确对齐到该行的中心线。
       const centers: number[] = [];
       const blocks = body.querySelectorAll("p, li, h1, h2, h3, h4, h5, h6, figcaption");
       blocks.forEach((el) => {
@@ -31,12 +31,22 @@ export default function ReadingRail() {
         const cs = getComputedStyle(el as HTMLElement);
         let lh = parseFloat(cs.lineHeight);
         if (!lh || Number.isNaN(lh)) lh = (parseFloat(cs.fontSize) || 16) * 1.85;
-        const rect = (el as HTMLElement).getBoundingClientRect();
-        const padTop = parseFloat(cs.paddingTop) || 0;
-        const padBottom = parseFloat(cs.paddingBottom) || 0;
-        const top0 = rect.top - articleTop + padTop; // 文本区顶（相对 .article）
-        const lines = Math.max(1, Math.round((rect.height - padTop - padBottom) / lh));
-        for (let k = 0; k < lines; k++) centers.push(top0 + (k + 0.5) * lh); // 第 k 行中心
+        const range = document.createRange();
+        range.selectNodeContents(el);
+        const rects = Array.from(range.getClientRects())
+          .filter((r) => r.width > 1 && r.height > 1)
+          .sort((a, b) => a.top - b.top);
+        const lines: { center: number; width: number }[] = [];
+        for (const r of rects) {
+          const c = (r.top + r.bottom) / 2;
+          const last = lines[lines.length - 1];
+          if (last && Math.abs(c - last.center) < lh * 0.5) {
+            if (r.width > last.width) { last.center = c; last.width = r.width; } // 同行：取最宽矩形中心
+          } else {
+            lines.push({ center: c, width: r.width });
+          }
+        }
+        for (const l of lines) centers.push(l.center - articleTop);
       });
 
       const out: Mark[] = [];
