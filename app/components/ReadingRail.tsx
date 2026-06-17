@@ -20,10 +20,12 @@ export default function ReadingRail() {
     if (!body || !article) return;
 
     const compute = () => {
-      const lh = parseFloat(getComputedStyle(body).lineHeight);
+      // .art-body 本身 line-height 计算值是 "normal"，须从子段落量行高；再以字号×1.85 兜底
+      const probe = (body.querySelector("p") as HTMLElement | null) ?? body;
+      let lh = parseFloat(getComputedStyle(probe).lineHeight);
       if (!lh || Number.isNaN(lh)) {
-        setMarks([]);
-        return;
+        const fs = parseFloat(getComputedStyle(probe).fontSize) || 16;
+        lh = fs * 1.85;
       }
       const per = lh * 10; // 每十行的像素高度
       const bodyTop = body.offsetTop; // 相对 .article（定位祖先）

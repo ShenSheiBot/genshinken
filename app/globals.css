@@ -125,7 +125,7 @@ body {
 .read-rail .rmark {
   position: absolute; transform: translateY(-50%);
   font-family: var(--f-mono); font-size: 10px; letter-spacing: .02em;
-  color: var(--ink-faint); opacity: .5; white-space: nowrap;
+  color: var(--ink-faint); opacity: .75; white-space: nowrap;
 }
 
 /* ============================================================
@@ -435,8 +435,8 @@ body {
   .srow .smeta { grid-column: 1 / -1; text-align: left; align-items: flex-start; padding-top: 8px; }
   .art-body, .art-after, .nextnav { padding-left: 20px; padding-right: 20px; }
   /* 移动端窄列：字号保持 16px，仅轻收字距作兜底（标点挤压由 text-spacing-trim 承担）*/
-  .art-body p, .art-body blockquote p { font-size: 16px; letter-spacing: -0.05em; }
-  .art-body ul, .art-body ol { font-size: 16px; letter-spacing: -0.05em; }
+  .art-body p, .art-body blockquote p { font-size: 16px; letter-spacing: -0.075em; }
+  .art-body ul, .art-body ol { font-size: 16px; letter-spacing: -0.075em; }
   /* 顶栏页眉信息在窄屏隐去署名，只留标题，避免拥挤 */
   .topbar .art-running .rc { display: none; }
   body { background-image: none; }
