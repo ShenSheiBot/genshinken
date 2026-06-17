@@ -36,4 +36,6 @@ next-env.d.ts
 
 # local design reference (not part of the site)
 /_design_extract/
+/claude-design-package/
+/claude-design-package.zip
 /UN-CANON-BLOG.zip

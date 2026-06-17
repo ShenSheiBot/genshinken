@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 
 type Mark = { n: number; top: number };
 
+type Line = { center: number; width: number };
+
 /**
  * 阅读里程碑：每十行一个灰色小数字，贴正文版心左右两侧（桌面 / 移动一致）。
  * 用 Range.getClientRects 量算「实际渲染行」的中心 Y——里程碑对齐到对应行的中心线，
@@ -20,51 +22,96 @@ export default function ReadingRail() {
     const article = document.querySelector(".article") as HTMLElement | null;
     if (!body || !article) return;
 
-    const compute = () => {
-      const articleTop = article.getBoundingClientRect().top;
-      // 直接量每行的渲染矩形取中心；按垂直位置分组，消除脚注上标/链接造成的「同一视觉行多个矩形」，
-      // 每行以最宽的矩形（正文主体）中心为准 → 里程碑精确对齐到该行的中心线。
-      const centers: number[] = [];
-      const blocks = body.querySelectorAll("p, li, h1, h2, h3, h4, h5, h6, figcaption");
-      blocks.forEach((el) => {
-        if ((el as HTMLElement).closest(".footnotes")) return; // 注释部分不要里程碑
-        const cs = getComputedStyle(el as HTMLElement);
-        let lh = parseFloat(cs.lineHeight);
-        if (!lh || Number.isNaN(lh)) lh = (parseFloat(cs.fontSize) || 16) * 1.85;
-        const range = document.createRange();
-        range.selectNodeContents(el);
-        const rects = Array.from(range.getClientRects())
-          .filter((r) => r.width > 1 && r.height > 1)
-          .sort((a, b) => a.top - b.top);
-        const lines: { center: number; width: number }[] = [];
-        for (const r of rects) {
-          const c = (r.top + r.bottom) / 2;
-          const last = lines[lines.length - 1];
-          if (last && Math.abs(c - last.center) < lh * 0.5) {
-            if (r.width > last.width) { last.center = c; last.width = r.width; } // 同行：取最宽矩形中心
-          } else {
-            lines.push({ center: c, width: r.width });
+    let raf = 0;
+    let alive = true;
+
+    const readableBlocks = () =>
+      Array.from(body.querySelectorAll<HTMLElement>("p, li, h1, h2, h3, h4, h5, h6, figcaption"))
+        .filter((el) => {
+          if (el.closest(".footnotes")) return false;
+          // Markdown can emit <li><p>...</p></li>; count the paragraph lines, not the
+          // wrapping list item again.
+          if (el.tagName === "LI" && el.querySelector("p, ul, ol, blockquote")) return false;
+          return true;
+        });
+
+    const linesOf = (el: HTMLElement): Line[] => {
+      const cs = getComputedStyle(el);
+      let lh = parseFloat(cs.lineHeight);
+      if (!lh || Number.isNaN(lh)) lh = (parseFloat(cs.fontSize) || 16) * 1.5;
+      const tolerance = Math.max(3, Math.min(18, lh * 0.45));
+
+      const range = document.createRange();
+      range.selectNodeContents(el);
+      const rects = Array.from(range.getClientRects())
+        .filter((r) => r.width > 1 && r.height > 1)
+        .sort((a, b) => a.top - b.top);
+      range.detach();
+
+      const lines: Line[] = [];
+      for (const r of rects) {
+        const center = (r.top + r.bottom) / 2;
+        const last = lines[lines.length - 1];
+        if (last && Math.abs(center - last.center) <= tolerance) {
+          // Same visual line: inline links/superscripts may create extra rects.
+          // The widest rect is the body text run and gives the most stable center.
+          if (r.width > last.width) {
+            last.center = center;
+            last.width = r.width;
           }
+        } else {
+          lines.push({ center, width: r.width });
         }
-        for (const l of lines) centers.push(l.center - articleTop);
-      });
+      }
+      return lines;
+    };
+
+    const compute = () => {
+      if (!alive) return;
+      const articleRect = article.getBoundingClientRect();
+      const bodyRect = body.getBoundingClientRect();
+      const centers = readableBlocks()
+        .flatMap(linesOf)
+        .map((line) => line.center - articleRect.top)
+        .sort((a, b) => a - b);
 
       const out: Mark[] = [];
-      for (let i = 9; i < centers.length; i += 10) out.push({ n: i + 1, top: Math.round(centers[i]) });
+      for (let i = 9; i < centers.length; i += 10) {
+        out.push({ n: i + 1, top: Number(centers[i].toFixed(2)) });
+      }
 
-      const boxLeft = body.offsetLeft;
-      const boxRight = article.offsetWidth - (body.offsetLeft + body.offsetWidth);
-      setLeftPx(Math.max(2, boxLeft + 2));
-      setRightPx(Math.max(2, boxRight + 2));
+      setLeftPx(Math.max(2, Math.round(bodyRect.left - articleRect.left + 2)));
+      setRightPx(Math.max(2, Math.round(articleRect.right - bodyRect.right + 2)));
       setMarks(out);
     };
 
-    compute();
+    const schedule = () => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        raf = requestAnimationFrame(compute);
+      });
+    };
+
+    schedule();
     const ro = new ResizeObserver(compute);
     ro.observe(body);
+    ro.observe(article);
+    window.addEventListener("resize", schedule);
+    body.addEventListener("animationend", schedule);
+    body.addEventListener("animationcancel", schedule);
+    body.querySelectorAll("img").forEach((img) => {
+      if (!img.complete) img.addEventListener("load", schedule, { once: true });
+    });
     // 字体异步加载后行位置会变，加载完再算一次
-    if (document.fonts?.ready) document.fonts.ready.then(compute).catch(() => {});
-    return () => ro.disconnect();
+    if (document.fonts?.ready) document.fonts.ready.then(schedule).catch(() => {});
+    return () => {
+      alive = false;
+      cancelAnimationFrame(raf);
+      ro.disconnect();
+      window.removeEventListener("resize", schedule);
+      body.removeEventListener("animationend", schedule);
+      body.removeEventListener("animationcancel", schedule);
+    };
   }, []);
 
   if (marks.length === 0) return null;

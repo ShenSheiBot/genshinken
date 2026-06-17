@@ -124,7 +124,8 @@ body {
 .read-rail { position: absolute; inset: 0; pointer-events: none; z-index: 1; }
 .read-rail .rmark {
   position: absolute; transform: translateY(-50%);
-  font-family: var(--f-mono); font-size: 10px; letter-spacing: .02em;
+  font-family: var(--f-mono); font-size: 10px; line-height: 1; letter-spacing: .02em;
+  font-variant-numeric: tabular-nums;
   color: var(--ink-faint); opacity: .75; white-space: nowrap;
 }
 
