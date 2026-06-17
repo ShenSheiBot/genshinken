@@ -12,6 +12,7 @@
 - [ ] **分类不重复进标签**：`categories` 与 `tags` 不重叠（前端会分别渲染）
 - [ ] **引号全为方向性弯引号** `“ ” ‘ ’`，正文无 ASCII 直引号 `" '`
 - [ ] **脚注用 GFM `[^n]` 语法**，`npm run build` 后确认角标可跳转、底部有脚注区
+- [ ] **首行缩进交给前端**：勿手敲全角空格；承接段用 `<!--continue-->` 标记（见 §7）
 - [ ] **链接有效**：外链正常；无残留的 Outline `mention://` 内链
 - [ ] **提交作者 = `un-canon <un-canon@hotmail.com>`**
 - [ ] 本地 `npm run build` 通过，再推送
@@ -128,3 +129,22 @@ excerpt: 一句话摘要         # 可选，缺省取正文首段
   控制台手动 Promote 对应部署。
 - Vercel 项目 Framework Preset 应为 **Next.js**；仓库内 `vercel.json` 已声明 `"framework": "nextjs"`
   并固定 `buildCommand: next build`，构建以此为准。
+
+---
+
+## 7. 首行缩进与承接段
+
+- 正文自然段**首行缩进两格**——但**不要手敲全角空格**：缩进由前端 CSS（`.art-body p { text-indent: 2em }`）
+  自动完成，手敲会叠加成四格。
+- **承接段例外**：在自然段中插入引文（blockquote）后、继续该段的段落**不缩进**。在该段前**单独一行**写
+  哨兵记号 `<!--continue-->`（ASCII，必须独立成行，否则会被 CommonMark 当作 HTML 块吞掉整段）：
+
+  ```markdown
+  > ……引文最后一行。
+
+  <!--continue-->
+
+  在英国的清算联盟方案……（承接段，前端去标记并赋 .cont，不缩进首行）
+  ```
+
+  该标记应在**译前处理**阶段注入，原则见 `docs/pre-translation.md`。引文本身不缩进，无需标记。
