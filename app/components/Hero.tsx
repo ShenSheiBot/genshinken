@@ -30,8 +30,6 @@ export default function Hero({ count, issue }: { count: number; issue: string })
           <span>NO. {issue || "—"}</span>
           <span className="d" />
           <span>{count} ENTRIES</span>
-          <span className="d" />
-          <span>{site.license}</span>
         </div>
 
         <div className="bp-rot">unfinished</div>
