@@ -78,15 +78,15 @@ body {
 .topbar {
   position: sticky; top: 0; z-index: 60;
   display: flex; align-items: center; gap: 24px;
-  padding: 14px 40px;
+  min-height: 65px; padding: 14px 40px;
   background: var(--bg);
   border-bottom: 1px solid var(--hair-strong);
   transition: background .3s ease, color .3s ease, border-color .3s ease;
 }
 .topbar .brand {
-  display: flex; align-items: center; gap: 11px;
+  display: flex; align-items: center; gap: 11px; min-height: 36px;
   font-family: var(--f-grotesk); font-weight: 700;
-  font-size: 16px; letter-spacing: -.01em; white-space: nowrap;
+  font-size: 16px; line-height: 36px; letter-spacing: 0; white-space: nowrap;
 }
 .topbar .brand .blot { width: 13px; height: 13px; background: var(--accent); flex: none; }
 .topbar .status { flex: 1; min-width: 0; }
@@ -103,7 +103,7 @@ body {
 /* 滚动后顶栏显形的「页眉文章信息」：标题（可省略号）+ 署名。
    字号与垂直对齐均与左侧品牌一致（16px、整体居中对齐）。 */
 .topbar .art-running {
-  display: flex; align-items: center; gap: 18px; min-width: 0;
+  display: flex; align-items: center; gap: 18px; min-width: 0; min-height: 36px;
   opacity: 0; transform: translateY(5px);
   transition: opacity .26s ease, transform .26s ease;
   pointer-events: none;
@@ -111,12 +111,12 @@ body {
 .topbar[data-revealed="true"] .art-running { opacity: 1; transform: none; }
 .topbar .art-running .rt {
   flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
-  font-family: var(--f-cjk-serif); font-weight: 700; font-size: 16px; line-height: 1;
-  letter-spacing: -.01em; color: var(--ink);
+  font-family: var(--f-cjk-serif); font-weight: 700; font-size: 16px; line-height: 36px;
+  letter-spacing: 0; color: var(--ink);
 }
 .topbar .art-running .rc {
   flex: none; display: inline-flex; align-items: center; gap: 1em;
-  font-family: var(--f-cjk-serif); font-size: 16px; line-height: 1; color: var(--ink);
+  min-height: 36px; font-family: var(--f-cjk-serif); font-size: 16px; line-height: 36px; color: var(--ink);
 }
 .topbar .art-running .rc .cmark { width: 16px; height: 16px; font-size: 9px; }
 

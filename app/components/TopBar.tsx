@@ -54,7 +54,7 @@ export default function TopBar() {
     <header className="topbar" data-revealed={revealed ? "true" : "false"}>
       <Link href="/" className="brand">
         <span className="blot" />
-        {site.brand}
+        {site.brandCN}
       </Link>
 
       <div className="status">
