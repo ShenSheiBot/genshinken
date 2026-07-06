@@ -22,6 +22,8 @@ export interface Credit {
 export interface PostSummary {
   slug: string;
   title: string;
+  subtitle: string;
+  draft: boolean;
   category: string;
   tags: string[];
   author: string;
@@ -36,6 +38,7 @@ export interface PostSummary {
 
 export interface Post extends PostSummary {
   html: string;
+  sortOrder: number;
 }
 
 /* ---------------- front-matter 解析（双写法） ---------------- */
@@ -127,6 +130,21 @@ function plainText(html: string): string {
 
 const URL_RE = /https?:\/\/\S+/gi;
 
+function isDraft(v: unknown): boolean {
+  if (typeof v === "boolean") return v;
+  if (typeof v === "string") return /^(true|yes|1)$/i.test(v.trim());
+  return false;
+}
+
+function toSortOrder(v: unknown): number {
+  const n = typeof v === "number" ? v : typeof v === "string" ? Number(v.trim()) : 0;
+  return Number.isFinite(n) ? n : 0;
+}
+
+function comparePosts(a: Post, b: Post): number {
+  return b.timestamp - a.timestamp || b.sortOrder - a.sortOrder || a.slug.localeCompare(b.slug);
+}
+
 /** 去掉链接后剩余的实义文字长度（用于跳过「标签：链接」这类无信息段落） */
 function meaningfulLen(t: string): number {
   return t.replace(URL_RE, "").replace(/\s+/g, "").length;
@@ -177,10 +195,14 @@ async function loadRaw(): Promise<Post[]> {
       const date = toDate(data.date);
       const html = await renderMarkdown(content);
       const title = String(data.title ?? baseName).trim();
+      const subtitle = String(data.subtitle ?? "").trim();
+      const draft = isDraft(data.draft);
 
       const post: Post = {
         slug,
         title,
+        subtitle,
+        draft,
         category: categories[0] ?? tags[0] ?? "未分类",
         tags: Array.from(new Set(tags)),
         author: String(data.post_author ?? data.author ?? "").trim(),
@@ -188,6 +210,7 @@ async function loadRaw(): Promise<Post[]> {
         dateDisplay: fmtDisplay(date),
         dateISO: fmtISO(date),
         timestamp: +date,
+        sortOrder: toSortOrder(data.sort_order ?? data.sortOrder ?? data.order),
         excerpt: deriveExcerpt(html, data.excerpt, title),
         readMin: readMinutes(html),
         no: "00",
@@ -197,13 +220,16 @@ async function loadRaw(): Promise<Post[]> {
     })
   );
 
+  const visiblePosts = posts.filter((p) => !p.draft);
+
   // 时间倒序（最新在前），并编号 01..N
-  posts.sort((a, b) => b.timestamp - a.timestamp || a.slug.localeCompare(b.slug));
+  visiblePosts.sort(comparePosts);
   // 编号按发表先后：最早的文章为 1，最新的为 N（列表仍按时间倒序展示）
-  posts.forEach((p, i) => {
-    p.no = String(posts.length - i);
+  visiblePosts.forEach((p, i) => {
+    p.no = String(visiblePosts.length - i);
   });
-  return posts;
+
+  return posts.sort(comparePosts);
 }
 
 /* ---------------- 构建期缓存 ---------------- */
@@ -213,24 +239,28 @@ function all(): Promise<Post[]> {
   return cache;
 }
 
-const strip = ({ html, ...rest }: Post): PostSummary => rest;
+const strip = ({ html, sortOrder, ...rest }: Post): PostSummary => rest;
 
 export async function getAllPosts(): Promise<PostSummary[]> {
-  return (await all()).map(strip);
+  return (await all()).filter((p) => !p.draft).map(strip);
 }
 
 export async function getAllSlugs(): Promise<string[]> {
-  return (await all()).map((p) => p.slug);
+  return (await all())
+    .filter((p) => !p.draft)
+    .map((p) => p.slug);
 }
 
 export async function getPostBySlug(slug: string): Promise<Post | null> {
   const posts = await all();
-  return posts.find((p) => p.slug === slug) ?? null;
+  const post = posts.find((p) => p.slug === slug) ?? null;
+  if (!post || (!allowDraftPreview() && post.draft)) return null;
+  return post;
 }
 
 /** 下一篇（循环），用于文章页底部导航 */
 export async function getAdjacent(slug: string): Promise<PostSummary | null> {
-  const posts = await all();
+  const posts = (await all()).filter((p) => !p.draft);
   if (posts.length === 0) return null;
   const idx = posts.findIndex((p) => p.slug === slug);
   if (idx === -1) return null;
@@ -239,8 +269,12 @@ export async function getAdjacent(slug: string): Promise<PostSummary | null> {
 
 /** 站点期号，如 "2026 · 06"，取最新文章年月 */
 export async function getIssue(): Promise<string> {
-  const posts = await all();
+  const posts = (await all()).filter((p) => !p.draft);
   if (!posts.length) return "";
   const d = new Date(posts[0].timestamp);
   return `${d.getUTCFullYear()} · ${String(d.getUTCMonth() + 1).padStart(2, "0")}`;
+}
+
+function allowDraftPreview(): boolean {
+  return process.env.NODE_ENV !== "production";
 }

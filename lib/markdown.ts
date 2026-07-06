@@ -19,6 +19,99 @@ import type { Root, Element } from "hast";
 
 const SIZE_TITLE = /^\s*=(\d+)x(\d+)\s*$/; // Typora/Hexo 图片尺寸标注
 
+type SourceNote = {
+  key: string;
+  num: number;
+  label: string;
+  text: string;
+  refs: string[];
+};
+
+const SOURCE_NOTE_DEF = /^\[\^w(\d+)\]:[ \t]*(.*)$/gm;
+const SOURCE_NOTE_REF = /\[\^w(\d+)\]/g;
+
+function toRoman(n: number): string {
+  const pairs: [number, string][] = [
+    [1000, "m"],
+    [900, "cm"],
+    [500, "d"],
+    [400, "cd"],
+    [100, "c"],
+    [90, "xc"],
+    [50, "l"],
+    [40, "xl"],
+    [10, "x"],
+    [9, "ix"],
+    [5, "v"],
+    [4, "iv"],
+    [1, "i"],
+  ];
+  let out = "";
+  for (const [value, roman] of pairs) {
+    while (n >= value) {
+      out += roman;
+      n -= value;
+    }
+  }
+  return out;
+}
+
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+function extractSourceNotes(md: string): { markdown: string; sourceNotes: SourceNote[] } {
+  const defs = new Map<string, SourceNote>();
+
+  let markdown = md.replace(SOURCE_NOTE_DEF, (_match, rawNum: string, text: string) => {
+    const num = Number(rawNum);
+    const key = `w${rawNum}`;
+    defs.set(key, { key, num, label: toRoman(num), text, refs: [] });
+    return "";
+  });
+
+  const refCounts = new Map<string, number>();
+  markdown = markdown.replace(SOURCE_NOTE_REF, (match, rawNum: string) => {
+    const key = `w${rawNum}`;
+    const note = defs.get(key);
+    if (!note) return match;
+
+    const next = (refCounts.get(key) ?? 0) + 1;
+    refCounts.set(key, next);
+    const refId = `source-ref-${key}-${next}`;
+    note.refs.push(refId);
+
+    return `<sup class="source-ref" id="${refId}"><a href="#source-note-${key}" aria-label="文献 ${note.label}">${note.label}</a></sup>`;
+  });
+
+  return {
+    markdown,
+    sourceNotes: Array.from(defs.values()).sort((a, b) => a.num - b.num),
+  };
+}
+
+function renderSourceNotes(sourceNotes: SourceNote[]): string {
+  if (sourceNotes.length === 0) return "";
+
+  const items = sourceNotes
+    .map((note) => {
+      const backrefs = note.refs
+        .map(
+          (refId) =>
+            `<a href="#${refId}" class="source-backref" aria-label="返回文献 ${note.label}">↑</a>`
+        )
+        .join("");
+      return `<li id="source-note-${note.key}" value="${note.num}"><p>${escapeHtml(note.text)}${backrefs}</p></li>`;
+    })
+    .join("");
+
+  return `<section class="source-notes" data-source-notes><h2>文献</h2><ol>${items}</ol></section>`;
+}
+
 /** 修正相对资源路径、外链行为、脚注锚点 */
 function rehypeRewrite() {
   return (tree: Root) => {
@@ -154,6 +247,7 @@ const processor = unified()
   .use(rehypeStringify, { allowDangerousHtml: true });
 
 export async function renderMarkdown(md: string): Promise<string> {
-  const file = await processor.process(md);
-  return String(file);
+  const { markdown, sourceNotes } = extractSourceNotes(md);
+  const file = await processor.process(markdown);
+  return String(file) + renderSourceNotes(sourceNotes);
 }

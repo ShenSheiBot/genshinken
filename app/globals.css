@@ -304,6 +304,11 @@ body {
 }
 .art-meta .d { width: 4px; height: 4px; background: var(--accent); }
 .art-title { position: relative; z-index: 2; margin: 0; font-family: var(--f-cjk-serif); font-weight: 900; font-size: clamp(34px, 6vw, 82px); line-height: 1.0; letter-spacing: -.015em; text-wrap: balance; }
+.art-subtitle {
+  position: relative; z-index: 2; margin: 18px 0 0;
+  font-family: var(--f-cjk-serif); font-size: clamp(20px, 2.4vw, 30px); line-height: 1.35;
+  color: var(--ink-soft); text-wrap: balance;
+}
 .art-en { position: relative; z-index: 2; margin: 18px 0 0; font-family: var(--f-mono); font-size: clamp(13px, 1.8vw, 17px); letter-spacing: .16em; color: var(--accent); }
 .art-tags { position: relative; z-index: 2; display: flex; gap: 18px; flex-wrap: wrap; margin: 24px 0 0; }
 .art-tags .t { font-family: var(--f-mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); }
@@ -348,6 +353,20 @@ body {
 .art-body blockquote p { font-size: 18px; line-height: 1.8; margin: 0 0 14px; text-align: justify; }
 .art-body blockquote strong { font-weight: 600; }
 .art-body blockquote p:last-child { margin-bottom: 0; }
+.art-body .signature-block {
+  width: min(520px, 76%);
+  margin: 38px 0 44px auto;
+  text-align: right;
+}
+.art-body .signature-block p {
+  margin: 0 0 12px;
+  text-align: right;
+  text-indent: 0;
+  font-size: 22px;
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+.art-body .signature-block p:last-child { margin-bottom: 0; }
 .art-body img { display: block; max-width: 100%; height: auto; margin: 36px auto; border: 1px solid var(--hair-strong); }
 .art-body figure { margin: 36px 0; }
 .art-body figcaption { font-family: var(--f-mono); font-size: 12px; color: var(--ink-faint); text-align: center; margin-top: 10px; }
@@ -379,9 +398,27 @@ body {
 .art-body .footnotes ol { font-family: var(--f-cjk-serif); margin: 0; padding-left: 1.6em; }
 .art-body .footnotes li { margin: 0 0 12px; line-height: 1.75; color: var(--ink-soft); text-align: left; }
 .art-body .footnotes li::marker { color: var(--ink-faint); font-family: var(--f-mono); }
-.art-body .footnotes p { margin: 0; text-align: left; }
+.art-body .footnotes p { margin: 0; text-align: left; text-indent: 0; }
 .art-body .footnotes a[data-footnote-backref] { color: var(--accent); border: none; margin-left: 4px; }
 .art-body .footnotes a[data-footnote-backref]:hover { background: none; }
+
+.art-body .source-ref { font-family: var(--f-mono); font-size: .72em; line-height: 0; }
+.art-body .source-ref a { color: var(--accent); border: none; padding-bottom: 0; }
+.art-body .source-ref a:hover { background: none; color: var(--accent); }
+
+.art-body .source-notes { margin-top: 42px; padding-top: 30px; border-top: 1px solid var(--hair-strong); font-size: 14px; }
+.art-body .source-notes h2 {
+  display: block; margin: 0 0 22px;
+  font-family: var(--f-mono); font-size: 12px; font-weight: 700;
+  letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft);
+}
+.art-body .source-notes h2::before { content: none; }
+.art-body .source-notes ol { font-family: var(--f-cjk-serif); margin: 0; padding-left: 1.8em; list-style-type: lower-roman; }
+.art-body .source-notes li { margin: 0 0 12px; line-height: 1.75; color: var(--ink-soft); text-align: left; }
+.art-body .source-notes li::marker { color: var(--ink-faint); font-family: var(--f-mono); }
+.art-body .source-notes p { margin: 0; text-align: left; text-indent: 0; }
+.art-body .source-backref { color: var(--accent); border: none; margin-left: 4px; }
+.art-body .source-backref:hover { background: none; }
 
 .art-after { max-width: var(--art-w); margin: 0 auto; padding: 0 40px; }
 .art-end { margin: 56px 0 0; display: flex; align-items: center; gap: 16px; }

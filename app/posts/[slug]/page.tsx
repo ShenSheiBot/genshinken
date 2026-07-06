@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 import { RegisterArticleHeader } from "@/app/components/ArticleHeader";
 import ReadingRail from "@/app/components/ReadingRail";
 
-export const dynamicParams = false;
+export const dynamicParams = true;
 
 export async function generateStaticParams() {
   const slugs = await getAllSlugs();
@@ -63,7 +63,7 @@ export default async function ArticlePage({
           <div className="art-ghost enter">{post.category}</div>
 
           <div className="art-meta enter">
-            <span>NO. {post.no}</span>
+            <span>{post.draft ? "DRAFT" : `NO. ${post.no}`}</span>
             <span className="d" />
             <span>{post.dateDisplay}</span>
             <span className="d" />
@@ -84,6 +84,7 @@ export default async function ArticlePage({
           </div>
 
           <h1 className="art-title enter">{post.title}</h1>
+          {post.subtitle && <div className="art-subtitle enter">{post.subtitle}</div>}
           <div className="art-en enter">{post.category}</div>
           <div className="art-tags enter">
             {post.tags.map((t) => (
