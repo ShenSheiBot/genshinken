@@ -57,7 +57,7 @@ export default async function ArticlePage({
       <section className="art-hero">
         <div className="art-hero-inner">
           <Link href="/" className="backbtn">
-            ← 返回索引 / INDEX
+            ← 返回索引
           </Link>
 
           <div className="art-ghost enter">{post.category}</div>

@@ -6,7 +6,7 @@ export default function NotFound() {
       <div className="big">404 / ∅</div>
       页面不存在 —— This page does not exist.
       <div style={{ marginTop: 18 }}>
-        <Link href="/">← 返回索引 / INDEX</Link>
+        <Link href="/">← 返回索引</Link>
       </div>
     </div>
   );
