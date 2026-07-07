@@ -5,6 +5,7 @@ import { getAllSlugs, getPostBySlug, getAdjacent } from "@/lib/posts";
 import { site } from "@/lib/site";
 import { RegisterArticleHeader } from "@/app/components/ArticleHeader";
 import ReadingRail from "@/app/components/ReadingRail";
+import TocRail from "@/app/components/TocRail";
 
 export const dynamicParams = true;
 
@@ -100,6 +101,7 @@ export default async function ArticlePage({
         dangerouslySetInnerHTML={{ __html: post.html }}
       />
       <ReadingRail />
+      <TocRail />
 
       <div className="art-after">
         <div className="art-end">
