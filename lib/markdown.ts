@@ -167,6 +167,20 @@ function rehypeRewrite() {
           }
           break;
         }
+
+        const first = (node.children ?? []).find((child) => {
+          const item = child as { type?: string; value?: string };
+          return item.type !== "text" || /\S/.test(item.value ?? "");
+        }) as Element | undefined;
+        if (first?.type === "element" && first.tagName === "strong") {
+          const label = elementText(first);
+          if (/^(摘　要|关键词)：/.test(label)) {
+            const cn = props.className as unknown;
+            props.className = Array.isArray(cn)
+              ? [...cn, "article-summary-meta"]
+              : cn ? [String(cn), "article-summary-meta"] : ["article-summary-meta"];
+          }
+        }
       }
 
       node.properties = props;
