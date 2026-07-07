@@ -10,6 +10,7 @@
   --f-serif: "Newsreader", "Noto Serif SC", Georgia, serif;
   --f-mono: "Space Mono", "Noto Sans SC", monospace;
   --f-cjk-serif: "Noto Serif SC", serif;
+  --f-note: "Times New Roman", Times, "Noto Serif SC", serif;
   /* 引用：西文类 Garamond，CJK 类仿宋；逐字回退，缺字时落到已加载的 Noto Serif SC */
   --f-quote: "EB Garamond", Garamond, Georgia, "STFangsong", "FangSong", "FangSong_GB2312", "仿宋", "华文仿宋", "Noto Serif SC", serif;
   --maxw: 1280px;
@@ -77,22 +78,22 @@ body {
    ============================================================ */
 .topbar {
   position: sticky; top: 0; z-index: 60;
-  display: flex; align-items: center; gap: 24px;
+  display: grid; grid-template-columns: max-content minmax(0, 1fr) max-content; align-items: center; gap: 24px;
   min-height: 65px; padding: 14px 40px;
   background: var(--bg);
   border-bottom: 1px solid var(--hair-strong);
   transition: background .3s ease, color .3s ease, border-color .3s ease;
 }
 .topbar .brand {
-  display: flex; align-items: center; gap: 11px; min-height: 36px;
+  display: inline-flex; align-items: center; gap: 11px; height: 36px;
   font-family: var(--f-grotesk); font-weight: 700;
-  font-size: 16px; line-height: 36px; letter-spacing: 0; white-space: nowrap;
+  font-size: 16px; line-height: 1; letter-spacing: 0; white-space: nowrap;
 }
 .topbar .brand .blot { width: 13px; height: 13px; background: var(--accent); flex: none; }
-.topbar .status { flex: 1; min-width: 0; }
+.topbar .status { min-width: 0; height: 36px; display: flex; align-items: center; overflow: hidden; }
 /* 显示模式切换：单一图标按钮（无中英文字） */
 .topbar .toggle {
-  flex: none; display: inline-flex; align-items: center; justify-content: center;
+  justify-self: end; display: inline-flex; align-items: center; justify-content: center;
   width: 36px; height: 36px; padding: 0; color: var(--ink);
   border: 1px solid var(--hair-strong);
   transition: background .15s, color .15s;
@@ -103,7 +104,7 @@ body {
 /* 滚动后顶栏显形的「页眉文章信息」：标题（可省略号）+ 署名。
    字号与垂直对齐均与左侧品牌一致（16px、整体居中对齐）。 */
 .topbar .art-running {
-  display: flex; align-items: center; gap: 18px; min-width: 0; min-height: 36px;
+  display: flex; align-items: center; gap: 18px; width: 100%; min-width: 0; height: 36px;
   opacity: 0; transform: translateY(5px);
   transition: opacity .26s ease, transform .26s ease;
   pointer-events: none;
@@ -111,13 +112,14 @@ body {
 .topbar[data-revealed="true"] .art-running { opacity: 1; transform: none; }
 .topbar .art-running .rt {
   flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
-  font-family: var(--f-cjk-serif); font-weight: 700; font-size: 16px; line-height: 36px;
+  font-family: var(--f-cjk-serif); font-weight: 700; font-size: 16px; line-height: 1.2;
   letter-spacing: 0; color: var(--ink);
 }
 .topbar .art-running .rc {
   flex: none; display: inline-flex; align-items: center; gap: 1em;
-  min-height: 36px; font-family: var(--f-cjk-serif); font-size: 16px; line-height: 36px; color: var(--ink);
+  height: 36px; font-family: var(--f-cjk-serif); font-size: 16px; line-height: 1.2; color: var(--ink);
 }
+.topbar .art-running .credit { height: 36px; }
 .topbar .art-running .rc .cmark { width: 16px; height: 16px; font-size: 9px; }
 
 /* ---- 阅读里程碑：每十行一个灰色小数字，贴正文版心左右两侧（桌面 / 移动一致，位置由 JS 量算内联）---- */
@@ -395,14 +397,14 @@ body {
   letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft);
 }
 .art-body .footnotes h2::before { content: none; }
-.art-body .footnotes ol { font-family: var(--f-cjk-serif); margin: 0; padding-left: 1.6em; }
-.art-body .footnotes li { margin: 0 0 12px; line-height: 1.75; color: var(--ink-soft); text-align: left; }
-.art-body .footnotes li::marker { color: var(--ink-faint); font-family: var(--f-mono); }
-.art-body .footnotes p { margin: 0; text-align: left; text-indent: 0; }
+.art-body .footnotes ol { font-family: var(--f-note); margin: 0; padding-left: 1.6em; }
+.art-body .footnotes li { margin: 0 0 12px; font-family: var(--f-note); line-height: 1.75; color: var(--ink-soft); text-align: left; }
+.art-body .footnotes li::marker { color: var(--ink-faint); font-family: "Times New Roman", Times, serif; }
+.art-body .footnotes p { margin: 0; font-family: var(--f-note); text-align: left; text-indent: 0; }
 .art-body .footnotes a[data-footnote-backref] { color: var(--accent); border: none; margin-left: 4px; }
 .art-body .footnotes a[data-footnote-backref]:hover { background: none; }
 
-.art-body .source-ref { font-family: var(--f-mono); font-size: .72em; line-height: 0; }
+.art-body .source-ref { font-family: "Times New Roman", Times, serif; font-size: .72em; line-height: 0; }
 .art-body .source-ref a { color: var(--accent); border: none; padding-bottom: 0; }
 .art-body .source-ref a:hover { background: none; color: var(--accent); }
 
@@ -413,10 +415,10 @@ body {
   letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft);
 }
 .art-body .source-notes h2::before { content: none; }
-.art-body .source-notes ol { font-family: var(--f-cjk-serif); margin: 0; padding-left: 1.8em; list-style-type: lower-roman; }
-.art-body .source-notes li { margin: 0 0 12px; line-height: 1.75; color: var(--ink-soft); text-align: left; }
-.art-body .source-notes li::marker { color: var(--ink-faint); font-family: var(--f-mono); }
-.art-body .source-notes p { margin: 0; text-align: left; text-indent: 0; }
+.art-body .source-notes ol { font-family: var(--f-note); margin: 0; padding-left: 1.8em; list-style-type: lower-roman; }
+.art-body .source-notes li { margin: 0 0 12px; font-family: var(--f-note); line-height: 1.75; color: var(--ink-soft); text-align: left; }
+.art-body .source-notes li::marker { color: var(--ink-faint); font-family: "Times New Roman", Times, serif; }
+.art-body .source-notes p { margin: 0; font-family: var(--f-note); text-align: left; text-indent: 0; }
 .art-body .source-backref { color: var(--accent); border: none; margin-left: 4px; }
 .art-body .source-backref:hover { background: none; }
 

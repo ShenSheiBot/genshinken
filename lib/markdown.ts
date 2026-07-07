@@ -56,13 +56,7 @@ function toRoman(n: number): string {
   return out;
 }
 
-function escapeHtml(value: string): string {
-  return value
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
-}
+const CJK_TEXT = /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Hangul}]/u;
 
 function extractSourceNotes(md: string): { markdown: string; sourceNotes: SourceNote[] } {
   const defs = new Map<string, SourceNote>();
@@ -94,22 +88,28 @@ function extractSourceNotes(md: string): { markdown: string; sourceNotes: Source
   };
 }
 
-function renderSourceNotes(sourceNotes: SourceNote[]): string {
+function appendBackrefs(html: string, backrefs: string): string {
+  if (!backrefs) return html;
+  return /<\/p>\s*$/.test(html) ? html.replace(/<\/p>\s*$/, `${backrefs}</p>`) : html + backrefs;
+}
+
+async function renderSourceNotes(sourceNotes: SourceNote[]): Promise<string> {
   if (sourceNotes.length === 0) return "";
 
-  const items = sourceNotes
-    .map((note) => {
+  const items = await Promise.all(
+    sourceNotes.map(async (note) => {
       const backrefs = note.refs
         .map(
           (refId) =>
             `<a href="#${refId}" class="source-backref" aria-label="返回文献 ${note.label}">↑</a>`
         )
         .join("");
-      return `<li id="source-note-${note.key}" value="${note.num}"><p>${escapeHtml(note.text)}${backrefs}</p></li>`;
+      const html = String(await processor.process(note.text)).trim();
+      return `<li id="source-note-${note.key}" value="${note.num}">${appendBackrefs(html, backrefs)}</li>`;
     })
-    .join("");
+  );
 
-  return `<section class="source-notes" data-source-notes><h2>文献</h2><ol>${items}</ol></section>`;
+  return `<section class="source-notes" data-source-notes><h2>文献</h2><ol>${items.join("")}</ol></section>`;
 }
 
 /** 修正相对资源路径、外链行为、脚注锚点 */
@@ -170,6 +170,25 @@ function rehypeRewrite() {
       }
 
       node.properties = props;
+    });
+  };
+}
+
+function elementText(node: Element): string {
+  let out = "";
+  for (const child of node.children ?? []) {
+    if (child.type === "text") out += child.value;
+    if (child.type === "element") out += elementText(child);
+  }
+  return out;
+}
+
+function rehypeCjkEmphasis() {
+  return (tree: Root) => {
+    visit(tree, "element", (node: Element) => {
+      if (node.tagName === "em" && CJK_TEXT.test(elementText(node))) {
+        node.tagName = "strong";
+      }
     });
   };
 }
@@ -243,11 +262,12 @@ const processor = unified()
   })
   .use(rehypeSlug)
   .use(rehypeRewrite)
+  .use(rehypeCjkEmphasis)
   .use(rehypeSmartQuotes)
   .use(rehypeStringify, { allowDangerousHtml: true });
 
 export async function renderMarkdown(md: string): Promise<string> {
   const { markdown, sourceNotes } = extractSourceNotes(md);
   const file = await processor.process(markdown);
-  return String(file) + renderSourceNotes(sourceNotes);
+  return String(file) + await renderSourceNotes(sourceNotes);
 }
