@@ -323,7 +323,7 @@ body {
   text-autospace: normal;
 }
 .art-body > :first-child { margin-top: 0; }
-.art-body p { font-family: var(--f-cjk-serif); font-size: 18px; line-height: 1.85; margin: 0 0 26px; text-wrap: pretty; text-align: justify; text-indent: 2em; }
+.art-body p { font-family: var(--f-cjk-serif); font-size: 18px; line-height: 1.85; margin: 0 0 26px; text-wrap: pretty; text-align: left; text-indent: 2em; }
 /* 引文本身不首行缩进；承接段由译前处理打 <!--continue--> 标记（→ .cont）显式免缩进 */
 .art-body blockquote p,
 .art-body p.cont { text-indent: 0; }
@@ -344,15 +344,16 @@ body {
 .art-body a[id^="_ftn"] { scroll-margin-top: 80px; }
 .art-body strong { font-weight: 700; color: var(--ink); }
 .art-body em { font-style: italic; }
-.art-body ul, .art-body ol { font-family: var(--f-cjk-serif); font-size: 17px; line-height: 1.85; margin: 0 0 26px; padding-left: 1.4em; text-align: justify; }
+.art-body ul, .art-body ol { font-family: var(--f-cjk-serif); font-size: 17px; line-height: 1.85; margin: 0 0 26px; padding-left: 1.4em; text-align: left; }
 .art-body li { margin: 0 0 10px; }
+.art-body li p { text-indent: 0; }
 .art-body li::marker { color: var(--accent); }
 .art-body blockquote {
   margin: 36px 0; padding: 8px 0 8px 26px;
   border-left: 3px solid var(--accent);
   font-family: var(--f-quote); color: var(--ink-soft); font-style: normal;
 }
-.art-body blockquote p { font-size: 18px; line-height: 1.8; margin: 0 0 14px; text-align: justify; }
+.art-body blockquote p { font-size: 18px; line-height: 1.8; margin: 0 0 14px; text-align: left; }
 .art-body blockquote strong { font-weight: 600; }
 .art-body blockquote p:last-child { margin-bottom: 0; }
 .art-body .signature-block {
@@ -478,8 +479,8 @@ body {
   .srow .smeta { grid-column: 1 / -1; text-align: left; align-items: flex-start; padding-top: 8px; }
   .art-body, .art-after, .nextnav { padding-left: 20px; padding-right: 20px; }
   /* 移动端窄列：字号保持 16px，仅轻收字距作兜底（标点挤压由 text-spacing-trim 承担）*/
-  .art-body p, .art-body blockquote p { font-size: 16px; letter-spacing: -0.075em; }
-  .art-body ul, .art-body ol { font-size: 16px; letter-spacing: -0.075em; }
+  .art-body p, .art-body blockquote p { font-size: 16px; }
+  .art-body ul, .art-body ol { font-size: 16px; }
   /* 顶栏页眉信息在窄屏隐去署名，只留标题，避免拥挤 */
   .topbar .art-running .rc { display: none; }
   body { background-image: none; }
