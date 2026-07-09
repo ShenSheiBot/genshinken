@@ -31,6 +31,7 @@ export default function TocRail() {
   const scaleRef = useRef<HTMLDivElement | null>(null);
   const navRef = useRef<HTMLElement | null>(null);
   const anchorRef = useRef<HTMLElement | null>(null);
+  const endRef = useRef<HTMLElement | null>(null);
   const geom = useRef({ start: 0, span: 1 });
   const fracsRef = useRef<number[]>([]);
 
@@ -57,7 +58,10 @@ export default function TocRail() {
       if (!alive) return;
       // 停驻：栏顶跟随正文首行，最高停在顶栏下 90px
       if (navRef.current && anchorRef.current) {
-        const t = Math.max(90, anchorRef.current.getBoundingClientRect().top);
+        const railHeight = navRef.current.getBoundingClientRect().height;
+        const naturalTop = Math.max(90, anchorRef.current.getBoundingClientRect().top);
+        const endBottom = endRef.current?.getBoundingClientRect().bottom ?? Infinity;
+        const t = Math.min(naturalTop, endBottom - railHeight);
         navRef.current.style.top = t + "px";
       }
       const q = readFrac();
@@ -78,6 +82,7 @@ export default function TocRail() {
       const endEl =
         (document.querySelector(".art-after .art-end") as HTMLElement | null) ||
         body;
+      endRef.current = endEl;
       const end = endEl.getBoundingClientRect().bottom + sy;
       geom.current = { start: startY, span: Math.max(1, end - startY) };
 
