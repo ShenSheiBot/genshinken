@@ -43,6 +43,24 @@ export default function TocRail() {
     let scrollRaf = 0;
     let alive = true;
 
+    const syncPlacement = () => {
+      const bodyRect = body.getBoundingClientRect();
+      const bodyStyle = getComputedStyle(body);
+      const padLeft = parseFloat(bodyStyle.paddingLeft) || 0;
+      const contentLeft = bodyRect.left + padLeft;
+      const readMark = document.querySelector<HTMLElement>(".read-rail .rmark");
+      const markLeft = readMark?.getBoundingClientRect().left ?? bodyRect.left + 2;
+      const markGap = Math.max(1, contentLeft - markLeft);
+      const axis = contentLeft - markGap * 2;
+      const minAxis = Math.max(40, markGap);
+
+      document.documentElement.style.setProperty(
+        "--toc-rail-left",
+        Math.round(axis - 22) + "px"
+      );
+      document.documentElement.dataset.articleNav = axis >= minAxis ? "rail" : "compact";
+    };
+
     const frac = (y: number) =>
       Math.max(0, Math.min(1, (y - geom.current.start) / geom.current.span));
 
@@ -75,6 +93,7 @@ export default function TocRail() {
 
     const compute = () => {
       if (!alive) return;
+      syncPlacement();
       const sy = window.scrollY;
       // 量程：正文首行 → 完 / FIN 行
       anchorRef.current = (body.firstElementChild as HTMLElement | null) || body;
@@ -175,6 +194,8 @@ export default function TocRail() {
     if (document.fonts?.ready) document.fonts.ready.then(schedule).catch(() => {});
     return () => {
       alive = false;
+      delete document.documentElement.dataset.articleNav;
+      document.documentElement.style.removeProperty("--toc-rail-left");
       cancelAnimationFrame(raf);
       cancelAnimationFrame(scrollRaf);
       ro.disconnect();
