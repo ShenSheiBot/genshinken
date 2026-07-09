@@ -14,7 +14,8 @@
   /* 引用：西文类 Garamond，CJK 类仿宋；逐字回退，缺字时落到已加载的 Noto Serif SC */
   --f-quote: "EB Garamond", Garamond, Georgia, "STFangsong", "FangSong", "FangSong_GB2312", "仿宋", "华文仿宋", "Noto Serif SC", serif;
   --maxw: 1280px;
-  --art-w: 1000px; /* 正文阅读列宽（较初版 680 左右各加宽约一格栅格） */
+  --grid-step: 160px;
+  --art-w: 680px;
 
   /* —— 亮色（默认） —— */
   --bg: #e8e7e3;
@@ -65,8 +66,8 @@ body {
   transition: background .3s ease, color .3s ease;
   /* 全幅竖向栅格（更轻，避免压正文） */
   background-image: repeating-linear-gradient(90deg,
-    transparent 0, transparent 159px,
-    var(--grid) 159px, var(--grid) 160px);
+    transparent 0, transparent calc(var(--grid-step) - 1px),
+    var(--grid) calc(var(--grid-step) - 1px), var(--grid) var(--grid-step));
   background-attachment: fixed;
 }
 .app { min-height: 100vh; position: relative; }
@@ -492,6 +493,9 @@ body {
   .bp-ticks { display: none; }
   .hero-inner { min-height: auto; padding-bottom: 40px; }
 }
+@media (min-width: 861px) {
+  .art-hero-inner { padding-left: calc(40px + var(--grid-step)); }
+}
 @media (max-width: 680px) {
   .wrap, .topbar, .hero-inner, .art-hero-inner, .foot-inner { padding-left: 20px; padding-right: 20px; }
   .topbar { gap: 18px; }
@@ -577,7 +581,7 @@ body {
    栏为固定定位但顶端可变：页首与正文首行对齐，随下滑上移，
    至顶栏下 90px 停驻（top 由 JS 每帧设定，height 恒定）。
    ============================================================ */
-.toc-rail { position: fixed; left: 18px; top: 90px; height: calc(100vh - 120px); width: 44px; z-index: 40; }
+.toc-rail { position: fixed; left: calc(18px + var(--grid-step)); top: 90px; height: calc(100vh - 120px); width: 44px; z-index: 40; }
 .toc-pct {
   position: absolute; top: 0; left: 0; width: 100%; text-align: center;
   font-family: var(--f-mono); font-size: 10px; letter-spacing: .08em;
