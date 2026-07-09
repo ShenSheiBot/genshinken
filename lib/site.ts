@@ -8,7 +8,7 @@ export const site = {
   brandCN: "西方負典",
   brandEN: "UN-CANON",
   /** <title> 默认值 */
-  title: "西方負典 / UN-CANON — 新粗野主义人文随笔站",
+  title: "西方負典 / UN-CANON",
   /** 英雄区副标题 / meta description */
   description:
     "「西方負典」是一档关注历史、产业和文化的人文博客，希望为汉语读者提供基于观察视角的话题和内容。",
