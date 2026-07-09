@@ -634,8 +634,19 @@ body {
 }
 .toc-dot .g[data-glyph="solid"] { width: 7px; height: 7px; background: var(--ink-faint); }
 .toc-dot .g[data-glyph="ring"] { width: 7px; height: 7px; border: 1.5px solid currentColor; background: var(--bg); }
+.toc-dot .g[data-glyph="ring"]::after {
+  box-sizing: border-box; inset: 0; background: transparent; border: 1.5px solid var(--toc-lit);
+}
 .toc-dot .g[data-glyph="core"] { width: 7px; height: 7px; background: var(--bg); }
-.toc-dot .g[data-glyph="core"]::before { content: ""; width: 2.75px; height: 2.75px; border-radius: 50%; background: currentColor; }
+.toc-dot .g[data-glyph="core"]::before {
+  content: ""; width: 2.75px; height: 2.75px; border-radius: 50%; background: currentColor;
+  transform: scale(0); transition: transform .42s cubic-bezier(.2, .8, .2, 1);
+}
+.toc-dot .g[data-glyph="core"]::after { content: none; }
+.toc-dot[data-state="passed"] .g[data-glyph="core"]::before,
+.toc-dot[data-state="active"] .g[data-glyph="core"]::before {
+  transform: scale(1);
+}
 .toc-dot .g[data-glyph="sq"] { width: 6px; height: 6px; border-radius: 0; background: var(--ink-faint); }
 .toc-dot[data-state="active"] .g { transform: scale(1.3); }
 .toc-tip {
