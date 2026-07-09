@@ -218,6 +218,12 @@ const Q_BLOCK = new Set([
 ]);
 const Q_SKIP = new Set(["code", "pre", "kbd", "samp", "script", "style"]);
 const isWordChar = (ch: string) => /[A-Za-z0-9]/.test(ch);
+const LATIN_SKIP = new Set(["code", "pre", "kbd", "samp", "script", "style"]);
+const LATIN_RUN =
+  /[([{<"]?[\p{Script=Latin}\p{Script=Cyrillic}\p{Script=Greek}0-9][\p{Script=Latin}\p{Script=Cyrillic}\p{Script=Greek}0-9 \t\u00a0.,;:!?'\u2019"()[\]{}<>/\\&+%№§#@*=_~\-–—]*/gu;
+const LATIN_WORD_CHAR = /[\p{Script=Latin}\p{Script=Cyrillic}\p{Script=Greek}0-9]/u;
+const LATIN_SPACE = /[ \t\u00a0]/u;
+const LATIN_QUOTE_PUNCT = /[.,;:!?)]/u;
 
 function smartenText(value: string, state: { dq: boolean; sq: boolean }): string {
   let out = "";
@@ -261,6 +267,163 @@ function rehypeSmartQuotes() {
   return (tree: Root) => walk(tree as unknown as { children: unknown[] }, { dq: false, sq: false });
 }
 
+type TextNode = { type: "text"; value: string };
+type InlineRunNode = TextNode | Element;
+type LatinState = { sq: boolean };
+
+function pushText(out: InlineRunNode[], value: string) {
+  if (value) out.push({ type: "text", value });
+}
+
+function pushLatin(out: InlineRunNode[], value: string) {
+  if (!value) return;
+  const leading = value.match(/^[ \t\u00a0]+/u)?.[0] ?? "";
+  const trailing = value.match(/[ \t\u00a0]+$/u)?.[0] ?? "";
+  const core = value.slice(leading.length, value.length - trailing.length);
+  pushText(out, leading);
+  if (core) {
+    out.push({
+      type: "element",
+      tagName: "span",
+      properties: { className: ["latin-run"] },
+      children: [{ type: "text", value: core }],
+    });
+  }
+  pushText(out, trailing);
+}
+
+function isLatinWordChar(ch: string | undefined): boolean {
+  return Boolean(ch && LATIN_WORD_CHAR.test(ch));
+}
+
+function nextNonSpace(value: string, start: number): string | undefined {
+  for (let i = start; i < value.length; i++) {
+    if (!LATIN_SPACE.test(value[i])) return value[i];
+  }
+  return undefined;
+}
+
+function updateLatinQuoteState(value: string, state: LatinState) {
+  let open = state.sq;
+  for (let i = 0; i < value.length; i++) {
+    const ch = value[i];
+    if (ch === OPEN_SQ) {
+      open = true;
+      continue;
+    }
+    if (ch !== CLOSE_SQ) continue;
+
+    const prev = value[i - 1];
+    const directNext = value[i + 1];
+    const next = nextNonSpace(value, i + 1);
+    if (isLatinWordChar(prev) && isLatinWordChar(directNext)) continue;
+    if (open) {
+      open = false;
+    } else if (!isLatinWordChar(prev) && isLatinWordChar(next)) {
+      open = true;
+    }
+  }
+  state.sq = open;
+}
+
+function openSingleBefore(value: string, index: number, state: LatinState): boolean {
+  const inner = { sq: state.sq };
+  for (let i = 0; i < index; i++) {
+    const ch = value[i];
+    if (ch === OPEN_SQ) {
+      inner.sq = true;
+      continue;
+    }
+    if (ch !== CLOSE_SQ) continue;
+
+    const prev = value[i - 1];
+    const directNext = value[i + 1];
+    const next = nextNonSpace(value, i + 1);
+    if (isLatinWordChar(prev) && isLatinWordChar(directNext)) continue;
+    if (inner.sq) {
+      inner.sq = false;
+    } else if (!isLatinWordChar(prev) && isLatinWordChar(next)) {
+      inner.sq = true;
+    }
+  }
+  return inner.sq;
+}
+
+function isOuterLatinQuote(text: string, index: number, source: string, sourceIndex: number, state: LatinState): boolean {
+  const ch = text[index];
+  if (ch === CLOSE_DQ) return true;
+  if (ch !== CLOSE_SQ) return false;
+
+  const prev = text[index - 1];
+  const directNext = text[index + 1];
+  const next = nextNonSpace(text, index + 1);
+
+  if (isLatinWordChar(prev) && isLatinWordChar(directNext)) return false;
+  if (openSingleBefore(source, sourceIndex, state)) return true;
+  if (isLatinWordChar(prev) && isLatinWordChar(next)) return false;
+  if (isLatinWordChar(prev) && (next === "." || next === ",")) return false;
+  return true;
+}
+
+function pushLatinPieces(out: InlineRunNode[], text: string, source: string, matchIndex: number, state: LatinState) {
+  let start = 0;
+  for (let i = 0; i < text.length; i++) {
+    if (!isOuterLatinQuote(text, i, source, matchIndex + i, state)) continue;
+
+    pushLatin(out, text.slice(start, i));
+    let end = i + 1;
+    while (end < text.length && LATIN_QUOTE_PUNCT.test(text[end])) end++;
+    pushText(out, text.slice(i, end));
+    start = end;
+    i = end - 1;
+  }
+  pushLatin(out, text.slice(start));
+}
+
+function splitLatinRuns(value: string, state: LatinState): InlineRunNode[] {
+  const out: InlineRunNode[] = [];
+  let last = 0;
+  for (const match of value.matchAll(LATIN_RUN)) {
+    const index = match.index ?? 0;
+    const text = match[0];
+    if (index > last) {
+      const plain = value.slice(last, index);
+      out.push({ type: "text", value: plain });
+      updateLatinQuoteState(plain, state);
+    }
+    pushLatinPieces(out, text, value, index, state);
+    updateLatinQuoteState(text, state);
+    last = index + text.length;
+  }
+  if (last === 0) return [{ type: "text", value }];
+  if (last < value.length) {
+    const rest = value.slice(last);
+    out.push({ type: "text", value: rest });
+    updateLatinQuoteState(rest, state);
+  }
+  return out;
+}
+
+function rehypeLatinRuns() {
+  const walk = (node: { type?: string; tagName?: string; value?: string; children?: unknown[] }, state: LatinState) => {
+    if (node.type === "element" && node.tagName && LATIN_SKIP.has(node.tagName)) return;
+    if (!Array.isArray(node.children)) return;
+
+    const next: unknown[] = [];
+    for (const raw of node.children) {
+      const child = raw as { type?: string; tagName?: string; value?: string; children?: unknown[] };
+      if (child.type === "text" && typeof child.value === "string") {
+        next.push(...splitLatinRuns(child.value, state));
+      } else {
+        walk(child, state);
+        next.push(child);
+      }
+    }
+    node.children = next;
+  };
+  return (tree: Root) => walk(tree as unknown as { children: unknown[] }, { sq: false });
+}
+
 const processor = unified()
   .use(remarkParse)
   .use(remarkGfm)
@@ -278,6 +441,7 @@ const processor = unified()
   .use(rehypeRewrite)
   .use(rehypeCjkEmphasis)
   .use(rehypeSmartQuotes)
+  .use(rehypeLatinRuns)
   .use(rehypeStringify, { allowDangerousHtml: true });
 
 export async function renderMarkdown(md: string): Promise<string> {

@@ -329,7 +329,7 @@ body {
 }
 .art-body > :first-child { margin-top: 0; }
 .art-body p {
-  font-family: var(--f-note); font-size: 18px; line-height: 1.85;
+  font-family: var(--f-cjk-serif); font-size: 18px; line-height: 1.85;
   margin: 0 0 26px; text-wrap: pretty; text-align: justify;
   text-justify: inter-character; word-break: normal; overflow-wrap: normal;
   text-indent: 2em;
@@ -356,8 +356,15 @@ body {
 .art-body a[id^="_ftn"] { scroll-margin-top: 80px; }
 .art-body strong { font-weight: 700; color: var(--ink); }
 .art-body em { font-style: italic; }
+.art-body p .latin-run,
+.art-body li .latin-run,
+.art-body td .latin-run,
+.art-body th .latin-run,
+.art-body figcaption .latin-run {
+  font-family: var(--f-note);
+}
 .art-body ul, .art-body ol {
-  font-family: var(--f-note); font-size: 17px; line-height: 1.85;
+  font-family: var(--f-cjk-serif); font-size: 17px; line-height: 1.85;
   margin: 0 0 26px; padding-left: 1.4em; text-align: justify;
   text-justify: inter-character; word-break: normal; overflow-wrap: normal;
 }
@@ -370,10 +377,11 @@ body {
   font-family: var(--f-quote); color: var(--ink-soft); font-style: normal;
 }
 .art-body blockquote p {
-  font-family: var(--f-quote);
+  font-family: var(--f-cjk-serif);
   font-size: 18px; line-height: 1.8; margin: 0 0 14px;
   text-align: justify; text-justify: inter-character;
 }
+.art-body blockquote .latin-run { font-family: var(--f-quote); }
 .art-body blockquote strong { font-weight: 600; }
 .art-body blockquote p:last-child { margin-bottom: 0; }
 .art-body .signature-block {
@@ -418,10 +426,10 @@ body {
   letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft);
 }
 .art-body .footnotes h2::before { content: none; }
-.art-body .footnotes ol { font-family: var(--f-note); margin: 0; padding-left: 1.6em; }
-.art-body .footnotes li { margin: 0 0 12px; font-family: var(--f-note); line-height: 1.75; color: var(--ink-soft); text-align: left; }
+.art-body .footnotes ol { font-family: var(--f-cjk-serif); margin: 0; padding-left: 1.6em; }
+.art-body .footnotes li { margin: 0 0 12px; font-family: var(--f-cjk-serif); line-height: 1.75; color: var(--ink-soft); text-align: left; }
 .art-body .footnotes li::marker { color: var(--ink-faint); font-family: "Times New Roman", Times, serif; }
-.art-body .footnotes p { margin: 0; font-family: var(--f-note); text-align: left; text-indent: 0; }
+.art-body .footnotes p { margin: 0; font-family: var(--f-cjk-serif); text-align: left; text-indent: 0; }
 .art-body .footnotes a[data-footnote-backref] { color: var(--accent); border: none; margin-left: 4px; }
 .art-body .footnotes a[data-footnote-backref]:hover { background: none; }
 
@@ -436,10 +444,10 @@ body {
   letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft);
 }
 .art-body .source-notes h2::before { content: none; }
-.art-body .source-notes ol { font-family: var(--f-note); margin: 0; padding-left: 1.8em; list-style-type: lower-roman; }
-.art-body .source-notes li { margin: 0 0 12px; font-family: var(--f-note); line-height: 1.75; color: var(--ink-soft); text-align: left; }
+.art-body .source-notes ol { font-family: var(--f-cjk-serif); margin: 0; padding-left: 1.8em; list-style-type: lower-roman; }
+.art-body .source-notes li { margin: 0 0 12px; font-family: var(--f-cjk-serif); line-height: 1.75; color: var(--ink-soft); text-align: left; }
 .art-body .source-notes li::marker { color: var(--ink-faint); font-family: "Times New Roman", Times, serif; }
-.art-body .source-notes p { margin: 0; font-family: var(--f-note); text-align: left; text-indent: 0; }
+.art-body .source-notes p { margin: 0; font-family: var(--f-cjk-serif); text-align: left; text-indent: 0; }
 .art-body .source-backref { color: var(--accent); border: none; margin-left: 4px; }
 .art-body .source-backref:hover { background: none; }
 
