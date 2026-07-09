@@ -218,7 +218,20 @@ const Q_BLOCK = new Set([
 ]);
 const Q_SKIP = new Set(["code", "pre", "kbd", "samp", "script", "style"]);
 const isWordChar = (ch: string) => /[A-Za-z0-9]/.test(ch);
-const LATIN_SKIP = new Set(["code", "pre", "kbd", "samp", "script", "style"]);
+const LATIN_SKIP = new Set([
+  "code",
+  "pre",
+  "kbd",
+  "samp",
+  "script",
+  "style",
+  "h1",
+  "h2",
+  "h3",
+  "h4",
+  "h5",
+  "h6",
+]);
 const LATIN_RUN =
   /[([{<"]?[\p{Script=Latin}\p{Script=Cyrillic}\p{Script=Greek}0-9][\p{Script=Latin}\p{Script=Cyrillic}\p{Script=Greek}0-9 \t\u00a0.,;:!?'\u2019"()[\]{}<>/\\&+%№§#@*=_~\-–—]*/gu;
 const LATIN_WORD_CHAR = /[\p{Script=Latin}\p{Script=Cyrillic}\p{Script=Greek}0-9]/u;
