@@ -249,7 +249,7 @@ body {
    ============================================================ */
 .slab-list { border-top: 1px solid var(--hair-strong); }
 .srow {
-  display: grid; grid-template-columns: 96px 1fr 200px; gap: 28px; align-items: start;
+  display: grid; grid-template-columns: 96px minmax(0, 1fr) max-content; gap: 28px; align-items: start;
   padding: 38px 18px 34px; cursor: pointer; color: inherit;
   border-bottom: 1px solid var(--hair-strong);
   position: relative; transition: background .18s, color .18s, padding .18s;
@@ -283,7 +283,7 @@ body {
 .srow .smeta .sread { white-space: nowrap; }
 .srow .smeta .arrow { display: inline-block; margin-left: 8px; font-family: var(--f-grotesk); font-weight: 700; font-size: 22px; line-height: 1; color: var(--ink); vertical-align: -3px; transition: transform .18s; }
 .srow:hover .smeta .arrow { color: var(--solid-ink); transform: translate(4px, -4px); }
-.srow .smeta .stags { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px 14px; }
+.srow .smeta .stags { display: flex; flex-wrap: nowrap; justify-content: flex-end; gap: 14px; max-width: 100%; white-space: nowrap; }
 .srow .smeta .stag { font-family: var(--f-mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-faint); white-space: nowrap; }
 .srow:hover .smeta .stag { color: var(--solid-ink); opacity: .7; }
 
@@ -320,7 +320,7 @@ body {
   color: var(--ink-soft); text-wrap: balance;
 }
 .art-en { position: relative; z-index: 2; margin: 18px 0 0; font-family: var(--f-mono); font-size: clamp(13px, 1.8vw, 17px); letter-spacing: .16em; color: var(--accent); }
-.art-tags { position: relative; z-index: 2; display: flex; gap: 18px; flex-wrap: wrap; margin: 24px 0 0; }
+.art-tags { position: relative; z-index: 2; display: flex; flex-wrap: nowrap; gap: 18px; max-width: 100%; overflow-x: auto; white-space: nowrap; margin: 24px 0 0; }
 .art-tags .t { font-family: var(--f-mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); }
 
 /* ---- 正文（渲染后的 Markdown）---- */
@@ -570,7 +570,7 @@ html[data-article-nav="compact"] .topbar .mobile-section-item[data-active="true"
   .topbar { gap: 18px; }
   .srow { grid-template-columns: 56px 1fr; }
   .srow .smeta { grid-column: 1 / -1; text-align: left; align-items: flex-start; padding-top: 8px; }
-  .srow .smeta .stags { justify-content: flex-start; }
+  .srow .smeta .stags { justify-content: flex-start; width: 100%; overflow-x: auto; }
   .art-body, .art-after, .nextnav { padding-left: 20px; padding-right: 20px; }
   /* 移动端窄列：字号保持 16px，仅轻收字距作兜底（标点挤压由 text-spacing-trim 承担）*/
   .art-body p, .art-body blockquote p { font-size: 16px; }
