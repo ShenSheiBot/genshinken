@@ -3,7 +3,7 @@ title: 朦胧云遮阳，晴时已西山
 date: 2026-07-10
 slug: modern-japan-bourgeois-state
 categories: [历史]
-tags: [日本, 近代史, 政治]
+tags: [日本, 近代史, 政治, 随笔]
 post_author: Jack Cade
 excerpt: 从明治维新到战时法西斯体制，近代日本的资产阶级并非以革命夺权，而是在天皇制国家七十余年的阶级权力交易与均衡中，借绝对主义、政党政治与战时体制层层过渡，最终完成对国家政权的独占。
 ---
