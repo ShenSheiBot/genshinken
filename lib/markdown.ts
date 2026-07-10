@@ -237,6 +237,7 @@ const LATIN_RUN =
 const LATIN_WORD_CHAR = /[\p{Script=Latin}\p{Script=Cyrillic}\p{Script=Greek}0-9]/u;
 const LATIN_SPACE = /[ \t\u00a0]/u;
 const LATIN_QUOTE_PUNCT = /[.,;:!?)]/u;
+const CJK_INTERPUNCT = /[·・]/u;
 
 function smartenText(value: string, state: { dq: boolean; sq: boolean }): string {
   let out = "";
@@ -294,12 +295,17 @@ function pushLatin(out: InlineRunNode[], value: string) {
   const trailing = value.match(/[ \t\u00a0]+$/u)?.[0] ?? "";
   const core = value.slice(leading.length, value.length - trailing.length);
   pushText(out, leading);
-  if (core) {
+  for (const part of core.split(/([·・])/u)) {
+    if (!part) continue;
+    if (CJK_INTERPUNCT.test(part)) {
+      pushText(out, part);
+      continue;
+    }
     out.push({
       type: "element",
       tagName: "span",
       properties: { className: ["latin-run"] },
-      children: [{ type: "text", value: core }],
+      children: [{ type: "text", value: part }],
     });
   }
   pushText(out, trailing);

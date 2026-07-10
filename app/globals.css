@@ -9,10 +9,13 @@
   --f-grotesk: "Helvetica Neue", Helvetica, "PingFang SC", "Noto Sans SC", Arial, sans-serif;
   --f-serif: "Newsreader", "Noto Serif SC", Georgia, serif;
   --f-mono: "Space Mono", "Noto Sans SC", monospace;
-  --f-cjk-serif: "Noto Serif SC", serif;
-  --f-note: "Times New Roman", Times, "Noto Serif SC", serif;
-  /* 引用：西文类 Garamond，CJK 类仿宋；逐字回退，缺字时落到已加载的 Noto Serif SC */
-  --f-quote: "EB Garamond", Garamond, Georgia, "STFangsong", "FangSong", "FangSong_GB2312", "仿宋", "华文仿宋", "Noto Serif SC", serif;
+  --f-cjk-serif: "STSong", "华文宋体", "Songti SC", "SimSun", "Noto Serif SC", serif;
+  --f-cjk-fangsong: "STFangsong", "华文仿宋", "FangSong", "FangSong_GB2312", "Noto Serif SC", serif;
+  --f-cjk-kai: "STKaiti", "华文楷体", "KaiTi", "Kaiti SC", "Noto Serif SC", serif;
+  --f-note: "Times New Roman", Times, var(--f-cjk-serif);
+  --f-quote-latin: "EB Garamond", Garamond, Georgia, serif;
+  --f-quote-cjk: var(--f-cjk-fangsong);
+  --f-quote: var(--f-quote-latin), var(--f-quote-cjk);
   --maxw: 1280px;
   --grid-step: 160px;
   --art-w: 680px;
@@ -377,11 +380,14 @@ body {
   font-family: var(--f-quote); color: var(--ink-soft); font-style: normal;
 }
 .art-body blockquote p {
-  font-family: var(--f-cjk-serif);
+  font-family: var(--f-quote-cjk);
   font-size: 18px; line-height: 1.8; margin: 0 0 14px;
   text-align: justify; text-justify: inter-character;
 }
-.art-body blockquote .latin-run { font-family: var(--f-quote); }
+.art-body blockquote .latin-run,
+.art-body blockquote p .latin-run {
+  font-family: var(--f-quote-latin);
+}
 .art-body blockquote strong { font-weight: 600; }
 .art-body blockquote p:last-child { margin-bottom: 0; }
 .art-body .signature-block {
