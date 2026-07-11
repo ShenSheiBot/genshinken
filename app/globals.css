@@ -326,7 +326,6 @@ body {
 /* ---- 正文（渲染后的 Markdown）---- */
 .art-body {
   max-width: var(--art-w); margin: 0 auto; padding: 56px 40px 0; position: relative; z-index: 2;
-  --mobile-justify-max-gap: .30px;
   /* 仿 xeCJK / ctex 排版：标点挤压（全角标点吸收两端对齐的余量，而非撑开汉字间距）+ 中西文自动间距 */
   text-spacing-trim: normal;
   text-autospace: normal;
@@ -580,22 +579,6 @@ html[data-article-nav="compact"] .topbar .mobile-section-item[data-active="true"
   /* 移动端正文保持 18px；版心与桌面端一致采用两端对齐。 */
   .art-body p, .art-body blockquote p { font-size: 18px; }
   .art-body ul, .art-body ol { font-size: 18px; }
-  .art-body p.controlled-justify-measure {
-    text-align: left;
-    text-justify: auto;
-  }
-  .art-body p[data-controlled-justify="true"] { text-align: left; text-indent: 0; }
-  .art-body .controlled-justify-line {
-    display: block;
-    white-space: nowrap;
-    text-align: left;
-    text-indent: 0;
-  }
-  .art-body .controlled-justify-line[data-justify="true"] {
-    text-align: justify;
-    text-align-last: justify;
-    text-justify: inter-character;
-  }
   /* 顶栏页眉信息在窄屏隐去署名，只留标题，避免拥挤 */
   body { background-image: none; }
 }

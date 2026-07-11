@@ -4,7 +4,6 @@ import { notFound } from "next/navigation";
 import { getAllSlugs, getPostBySlug, getAdjacent } from "@/lib/posts";
 import { site } from "@/lib/site";
 import { RegisterArticleHeader } from "@/app/components/ArticleHeader";
-import MobileControlledJustify from "@/app/components/MobileControlledJustify";
 import ReadingRail from "@/app/components/ReadingRail";
 import TocRail from "@/app/components/TocRail";
 
@@ -101,7 +100,6 @@ export default async function ArticlePage({
         style={{ animationDelay: "0.06s" }}
         dangerouslySetInnerHTML={{ __html: post.html }}
       />
-      <MobileControlledJustify />
       <ReadingRail />
       <TocRail />
 
