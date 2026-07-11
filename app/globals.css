@@ -576,13 +576,9 @@ html[data-article-nav="compact"] .topbar .mobile-section-item[data-active="true"
     padding-right: 28px;
   }
   .art-after, .nextnav { padding-left: 20px; padding-right: 20px; }
-  /* 移动端保持自然字距；两端对齐在窄版心上会明显拉开汉字间距。 */
-  .art-body p, .art-body blockquote p,
-  .art-body ul, .art-body ol {
-    font-size: 18px;
-    text-align: left;
-    text-justify: auto;
-  }
+  /* 移动端正文保持 18px；版心与桌面端一致采用两端对齐。 */
+  .art-body p, .art-body blockquote p { font-size: 18px; }
+  .art-body ul, .art-body ol { font-size: 18px; }
   /* 顶栏页眉信息在窄屏隐去署名，只留标题，避免拥挤 */
   body { background-image: none; }
 }
