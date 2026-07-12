@@ -572,18 +572,16 @@ html[data-article-nav="compact"] .topbar .mobile-section-item[data-active="true"
   .srow .smeta { grid-column: 1 / -1; text-align: left; align-items: flex-start; padding-top: 8px; }
   .srow .smeta .stags { justify-content: flex-start; width: 100%; overflow-x: auto; }
   .art-body {
-    padding-left: 28px;
-    padding-right: 28px;
+    padding-left: 25px;
+    padding-right: 25px;
   }
   .art-after, .nextnav { padding-left: 20px; padding-right: 20px; }
-  /* 轻收字距以容纳一枚额外汉字，降低两端对齐对每个间隔的补偿量。 */
+  /* 393px 视口下容纳 19 个自然字宽，降低两端对齐的字间补偿。 */
   .art-body > p, .art-body > blockquote p {
     font-size: 18px;
-    letter-spacing: -.02em;
   }
   .art-body > ul, .art-body > ol {
     font-size: 18px;
-    letter-spacing: -.02em;
   }
   /* 顶栏页眉信息在窄屏隐去署名，只留标题，避免拥挤 */
   body { background-image: none; }
