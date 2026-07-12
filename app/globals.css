@@ -576,9 +576,15 @@ html[data-article-nav="compact"] .topbar .mobile-section-item[data-active="true"
     padding-right: 28px;
   }
   .art-after, .nextnav { padding-left: 20px; padding-right: 20px; }
-  /* 移动端正文保持 18px；版心与桌面端一致采用两端对齐。 */
-  .art-body p, .art-body blockquote p { font-size: 18px; }
-  .art-body ul, .art-body ol { font-size: 18px; }
+  /* 轻收字距以容纳一枚额外汉字，降低两端对齐对每个间隔的补偿量。 */
+  .art-body > p, .art-body > blockquote p {
+    font-size: 18px;
+    letter-spacing: -.02em;
+  }
+  .art-body > ul, .art-body > ol {
+    font-size: 18px;
+    letter-spacing: -.02em;
+  }
   /* 顶栏页眉信息在窄屏隐去署名，只留标题，避免拥挤 */
   body { background-image: none; }
 }
