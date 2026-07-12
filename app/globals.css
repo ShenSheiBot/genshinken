@@ -572,11 +572,12 @@ html[data-article-nav="compact"] .topbar .mobile-section-item[data-active="true"
   .srow .smeta { grid-column: 1 / -1; text-align: left; align-items: flex-start; padding-top: 8px; }
   .srow .smeta .stags { justify-content: flex-start; width: 100%; overflow-x: auto; }
   .art-body {
-    padding-left: 25px;
-    padding-right: 25px;
+    /* 正文内容区上限 328px；393px 视口下对应 32.5px 的左右留白。 */
+    padding-left: max(28px, calc((100% - 328px) / 2));
+    padding-right: max(28px, calc((100% - 328px) / 2));
   }
   .art-after, .nextnav { padding-left: 20px; padding-right: 20px; }
-  /* 393px 视口下容纳 19 个自然字宽，降低两端对齐的字间补偿。 */
+  /* 328px 行宽下按 18 个自然字宽落行，降低两端对齐的字间补偿。 */
   .art-body > p, .art-body > blockquote p {
     font-size: 18px;
   }
