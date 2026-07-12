@@ -92,4 +92,14 @@ public/               静态资源（attachments / img）
 Vercel 项目 `un-canon-blog` 的 Framework Preset 应为 **Next.js**
 （仓库内 `vercel.json` 已声明 `"framework": "nextjs"`）。推送 `main` 即自动部署。
 
+### 爬虫访问策略
+
+站点通过 `app/robots.ts` 允许搜索引擎和常见 LLM 爬虫访问，并以 `Crawl-delay: 10`
+请求合作爬虫保持低频访问。`public/llms.txt` 提供站点范围、文章索引和访问约定。
+
+注意：`robots.txt` 和 `Crawl-delay` 只能表达协议层面的访问意愿，不能强制不遵守协议的
+爬虫限速。当前域名的线上 `robots.txt` 还可能被 Cloudflare Managed Content 追加规则；
+如需真正允许 GPTBot、ClaudeBot 等，必须在 Cloudflare 的 AI Crawl Control / Managed
+Content 设置中关闭对应的禁止规则，并在 Cloudflare Rate Limiting 中配置实际限速。
+
 授权：CC0 1.0

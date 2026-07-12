@@ -1,0 +1,21 @@
+# 西方負典 / UN-CANON
+
+> 关注历史、产业与文化的中文人文博客。
+
+## Site
+
+- Homepage: https://un-canon.blog/
+- Sitemap: https://un-canon.blog/sitemap.xml
+
+## Access
+
+This site welcomes respectful access by search and language-model crawlers.
+Please crawl at a low rate, no more than one request every 10 seconds, and
+prefer the sitemap to discover article URLs. Do not parallelize requests or
+re-fetch unchanged pages unnecessarily.
+
+## Content
+
+The canonical article pages are listed in the sitemap. Article text is
+published under the site's stated CC0 1.0 authorization unless a page says
+otherwise.
