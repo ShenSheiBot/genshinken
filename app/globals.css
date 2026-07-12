@@ -2,7 +2,8 @@
    西方負典 / UN-CANON — 新粗野主义随笔站
    参考: 瑞士工程制图 / brutalist editorial
    暖浅灰 + 墨黑 + 极少量 crimson · 扁平发丝线 · 无硬阴影
-   主题令牌挂在 <html data-theme> 上以避免首屏闪烁
+   主题令牌挂在 <html data-theme> 上以避免首屏闪烁；同时声明原生双主题，
+   让浏览器与深色模式阅读器不要对页面进行额外反色
    ============================================================ */
 
 :root {
@@ -54,6 +55,9 @@ html[data-theme="dark"] {
 
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
+html { color-scheme: light dark; }
+html[data-theme="light"] { color-scheme: light; }
+html[data-theme="dark"] { color-scheme: dark; }
 /* 始终为滚动条预留沟槽：筛选导致页面长度变化、滚动条出现/消失时，正文列宽不再抖动重排 */
 html { scrollbar-gutter: stable; }
 a { color: inherit; text-decoration: none; }
