@@ -2,7 +2,7 @@
 title: 苏联计划经济的历史审视
 subtitle: 对苏联计划管理负责人的分析与访谈
 date: 2026-07-13
-draft: true
+draft: false
 slug: olsevich-gregory-soviet-planned-economy-retrospective
 categories: [历史]
 tags: [苏联, 计划经济, 访谈, 译介]
