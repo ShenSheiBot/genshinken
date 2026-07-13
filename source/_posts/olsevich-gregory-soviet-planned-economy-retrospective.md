@@ -31,7 +31,7 @@ excerpt: 莫斯科国立大学经济系学者对苏联计划经济1953至1990年
   <p>莫斯科国立大学经济系</p>
   <p>国民经济史与经济学说教研室主任</p>
   <p>经济学博士</p>
-  <p>阿·格·胡多科尔莫夫　教授</p>
+  <p>阿<span class="cjk-interpunct">·</span>格<span class="cjk-interpunct">·</span>胡多科尔莫夫　教授</p>
 </div>
 
 ## 第一部分　分析

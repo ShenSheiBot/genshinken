@@ -281,6 +281,39 @@ function rehypeSmartQuotes() {
   return (tree: Root) => walk(tree as unknown as { children: unknown[] }, { dq: false, sq: false });
 }
 
+function rehypeCjkInterpuncts() {
+  const walk = (node: { type?: string; tagName?: string; children?: unknown[] }) => {
+    if (node.type === "element" && node.tagName && Q_SKIP.has(node.tagName)) return;
+    if (!Array.isArray(node.children)) return;
+
+    const next: unknown[] = [];
+    for (const raw of node.children) {
+      const child = raw as { type?: string; value?: string; tagName?: string; children?: unknown[] };
+      if (child.type === "text" && typeof child.value === "string" && CJK_INTERPUNCT.test(child.value)) {
+        const parts = child.value.split(/([·・])/u);
+        for (const part of parts) {
+          if (!part) continue;
+          if (CJK_INTERPUNCT.test(part)) {
+            next.push({
+              type: "element",
+              tagName: "span",
+              properties: { className: ["cjk-interpunct"] },
+              children: [{ type: "text", value: part }],
+            });
+          } else {
+            next.push({ type: "text", value: part });
+          }
+        }
+      } else {
+        walk(child);
+        next.push(child);
+      }
+    }
+    node.children = next;
+  };
+  return (tree: Root) => walk(tree as unknown as { children: unknown[] });
+}
+
 type TextNode = { type: "text"; value: string };
 type InlineRunNode = TextNode | Element;
 type LatinState = { sq: boolean };
@@ -298,7 +331,12 @@ function pushLatin(out: InlineRunNode[], value: string) {
   for (const part of core.split(/([·・])/u)) {
     if (!part) continue;
     if (CJK_INTERPUNCT.test(part)) {
-      pushText(out, part);
+      out.push({
+        type: "element",
+        tagName: "span",
+        properties: { className: ["cjk-interpunct"] },
+        children: [{ type: "text", value: part }],
+      });
       continue;
     }
     out.push({
@@ -460,6 +498,7 @@ const processor = unified()
   .use(rehypeRewrite)
   .use(rehypeCjkEmphasis)
   .use(rehypeSmartQuotes)
+  .use(rehypeCjkInterpuncts)
   .use(rehypeLatinRuns)
   .use(rehypeStringify, { allowDangerousHtml: true });
 

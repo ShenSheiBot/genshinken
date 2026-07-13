@@ -370,6 +370,9 @@ body {
 .art-body figcaption .latin-run {
   font-family: var(--f-note);
 }
+.art-body .cjk-interpunct {
+  font-family: inherit;
+}
 .art-body ul, .art-body ol {
   font-family: var(--f-cjk-serif); font-size: 17px; line-height: 1.85;
   margin: 0 0 26px; padding-left: 1.4em; text-align: justify;
@@ -400,11 +403,12 @@ body {
   text-align: right;
 }
 .art-body .signature-block p {
+  font-family: var(--f-cjk-kai);
   margin: 0 0 12px;
   text-align: right;
   text-indent: 0;
-  font-size: 22px;
-  line-height: 1.75;
+  font-size: 18px;
+  line-height: 1.85;
   letter-spacing: 0;
 }
 .art-body .signature-block p:last-child { margin-bottom: 0; }
