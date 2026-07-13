@@ -26,7 +26,10 @@ export const metadata: Metadata = {
     locale: "zh_CN",
     type: "website",
   },
-  alternates: { canonical: "/" },
+  alternates: {
+    canonical: "/",
+    types: { "application/rss+xml": [{ url: "/rss.xml", title: site.brand }] },
+  },
 };
 
 // 首屏前同步设定 data-theme，避免暗色闪烁

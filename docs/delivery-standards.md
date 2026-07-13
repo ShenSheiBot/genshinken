@@ -9,6 +9,7 @@
 
 - [ ] **slug / 文件名全 ASCII**：短横线连字，无中文、空格、全角符号
 - [ ] **YAML front-matter 完整**：标题、日期、分类、标签、署名等全部写进头部，不散落正文
+- [ ] **修订旧文补 `updated` 字段**：实质性修订（改译文、补脚注）时在 front-matter 写 `updated: YYYY-MM-DD`——驱动 sitemap lastmod / RSS / 结构化数据，搜索引擎据此重抓
 - [ ] **分类不重复进标签**：`categories` 与 `tags` 不重叠（前端会分别渲染）
 - [ ] **引号全为方向性弯引号** `“ ” ‘ ’`，正文无 ASCII 直引号 `" '`
 - [ ] **脚注用 GFM `[^n]` 语法**，`npm run build` 后确认角标可跳转、底部有脚注区
@@ -46,6 +47,7 @@ front-matter，不要混在正文里。**
 ---
 title: 文章标题
 date: 2026-06-15          # 发布日期 YYYY-MM-DD
+updated: 2026-07-13       # 可选；实质性修订时更新，缺省回退到 date
 slug: ascii-url-slug      # 必填且必须 ASCII（见 §1）
 categories: [历史]         # 主分类；前端单独渲染为分类标记
 tags: [布雷顿森林, 冷战起源] # 标签；勿与 categories 重复

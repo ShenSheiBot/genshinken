@@ -1,0 +1,30 @@
+# 新文章 push 到 main 后，把变更文章的 URL 推送给 IndexNow（Bing 数小时内收录）。
+# Google 不参与 IndexNow，靠 sitemap lastmod 自然重抓。
+name: IndexNow
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "source/_posts/**"
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      # 等 Vercel 构建上线，避免搜索引擎抢先抓到 404
+      - name: 等待部署完成
+        run: sleep 150
+
+      - name: 收集本次变更的文章
+        run: |
+          git diff --name-only --diff-filter=AM HEAD^ HEAD -- 'source/_posts/*.md' > changed.txt
+          echo "变更清单："
+          cat changed.txt
+
+      - name: 提交到 IndexNow
+        run: node scripts/indexnow-submit.mjs --list changed.txt

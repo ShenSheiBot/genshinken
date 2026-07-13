@@ -34,9 +34,48 @@ export async function generateMetadata({
       url: canonical,
       type: "article",
       publishedTime: post.dateISO,
+      modifiedTime: post.updatedISO,
       authors: post.author ? [post.author] : undefined,
       tags: post.tags,
     },
+  };
+}
+
+/* ---------------- JSON-LD Article 结构化数据 ---------------- */
+
+/** 「甲、乙」或全角空格并列 → schema.org Person 列表 */
+function toPersons(name: string) {
+  return name
+    .split(/[、　]/)
+    .map((n) => n.trim())
+    .filter(Boolean)
+    .map((n) => ({ "@type": "Person", name: n }));
+}
+
+function buildJsonLd(post: NonNullable<Awaited<ReturnType<typeof getPostBySlug>>>) {
+  const url = `${site.url}/posts/${encodeURIComponent(post.slug)}`;
+  const roles: Record<string, string> = { 作: "author", 译: "translator", 编: "editor", 校: "contributor" };
+  const credits: Record<string, unknown> = {};
+  for (const c of post.credits) {
+    const key = roles[c.mark];
+    if (key) credits[key] = toPersons(c.name);
+  }
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    ...(post.subtitle ? { alternativeHeadline: post.subtitle } : {}),
+    description: post.excerpt || site.description,
+    url,
+    mainEntityOfPage: url,
+    inLanguage: "zh-Hans",
+    datePublished: post.dateISO,
+    dateModified: post.updatedISO,
+    ...credits,
+    ...(post.tags.length ? { keywords: post.tags.join(",") } : {}),
+    articleSection: post.category,
+    license: "https://creativecommons.org/publicdomain/zero/1.0/",
+    publisher: { "@type": "Organization", name: site.brand, url: site.url },
   };
 }
 
@@ -54,6 +93,11 @@ export default async function ArticlePage({
 
   return (
     <div className="article">
+      {/* JSON 里的 "<" 转义为 <，防止内容字符串提前闭合 script 标签 */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildJsonLd(post)).replace(/</g, "\\u003c") }}
+      />
       <RegisterArticleHeader title={post.title} credits={post.credits} />
       <section className="art-hero">
         <div className="art-hero-inner">

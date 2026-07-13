@@ -30,6 +30,7 @@ export interface PostSummary {
   credits: Credit[];
   dateDisplay: string; // "2026 · 05 · 12"
   dateISO: string; // "2026-05-12"
+  updatedISO: string; // 修订日期（front-matter `updated`），缺省回退到 dateISO
   timestamp: number; // 用于排序
   excerpt: string;
   readMin: number;
@@ -193,6 +194,7 @@ async function loadRaw(): Promise<Post[]> {
       const tags = toList(data.tags);
 
       const date = toDate(data.date);
+      const updated = toDate(data.updated);
       const html = await renderMarkdown(content);
       const title = String(data.title ?? baseName).trim();
       const subtitle = String(data.subtitle ?? "").trim();
@@ -209,6 +211,7 @@ async function loadRaw(): Promise<Post[]> {
         credits: buildCredits(data),
         dateDisplay: fmtDisplay(date),
         dateISO: fmtISO(date),
+        updatedISO: +updated > 0 ? fmtISO(updated) : fmtISO(date),
         timestamp: +date,
         sortOrder: toSortOrder(data.sort_order ?? data.sortOrder ?? data.order),
         excerpt: deriveExcerpt(html, data.excerpt, title),
@@ -243,6 +246,11 @@ const strip = ({ html, sortOrder, ...rest }: Post): PostSummary => rest;
 
 export async function getAllPosts(): Promise<PostSummary[]> {
   return (await all()).filter((p) => !p.draft).map(strip);
+}
+
+/** 含渲染后 HTML 的全量文章（仅正式发布），供 RSS feed 使用 */
+export async function getAllPostsFull(): Promise<Post[]> {
+  return (await all()).filter((p) => !p.draft);
 }
 
 export async function getAllSlugs(): Promise<string[]> {
