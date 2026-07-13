@@ -349,14 +349,16 @@ body {
 .art-body h1, .art-body h2, .art-body h3, .art-body h4 {
   font-family: var(--f-grotesk); font-weight: 700; line-height: 1.18;
   margin: 52px 0 22px; letter-spacing: -.02em; scroll-margin-top: 80px;
-  display: flex; align-items: baseline; gap: 14px;
+  position: relative;
 }
 .art-body h1 { font-size: 27px; }
 .art-body h2 { font-size: 24px; }
 .art-body h3 { font-size: 20px; }
 .art-body h4 { font-size: 18px; }
+.art-body h1, .art-body h2, .art-body h3 { padding-left: 23px; }
 .art-body h1::before, .art-body h2::before, .art-body h3::before {
-  content: ""; width: 9px; height: 9px; background: var(--accent); flex: none; transform: translateY(-2px);
+  content: ""; position: absolute; left: 0; top: calc(.59em - 4.5px);
+  width: 9px; height: 9px; background: var(--accent);
 }
 .art-body a { color: var(--accent); border-bottom: 1px solid currentColor; padding-bottom: 1px; word-break: break-word; }
 .art-body a:hover { background: var(--accent); color: var(--solid-ink, #fff); }
@@ -435,7 +437,7 @@ body {
    引文夹带大量西文与档案编号、列表缩进使列更窄，故一律左对齐（参考文献惯例）。 */
 .art-body .footnotes { margin-top: 64px; padding-top: 30px; border-top: 1px solid var(--hair-strong); font-size: 14px; }
 .art-body .footnotes h2 {
-  display: block; margin: 0 0 22px;
+  display: block; margin: 0 0 22px; padding-left: 0;
   font-family: var(--f-mono); font-size: 12px; font-weight: 700;
   letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft);
 }
@@ -453,7 +455,7 @@ body {
 
 .art-body .source-notes { margin-top: 42px; padding-top: 30px; border-top: 1px solid var(--hair-strong); font-size: 14px; }
 .art-body .source-notes h2 {
-  display: block; margin: 0 0 22px;
+  display: block; margin: 0 0 22px; padding-left: 0;
   font-family: var(--f-mono); font-size: 12px; font-weight: 700;
   letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft);
 }
