@@ -1,6 +1,10 @@
 import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
+import remarkGfm from "remark-gfm";
+import remarkParse from "remark-parse";
+import { unified } from "unified";
+import { visit } from "unist-util-visit";
 
 const postsDirectory = path.join(process.cwd(), "source", "_posts");
 const validSections = new Set(["essay", "review", "translation", "multimedia"]);
@@ -20,23 +24,85 @@ function parseFrontMatter(file, raw) {
   try {
     if (/^\s*---\r?\n/.test(source)) {
       const parsed = matter(source);
-      return { data: parsed.data, header: parsed.matter };
+      return { data: parsed.data, header: parsed.matter, content: parsed.content };
     }
 
     const lines = source.split(/\r?\n/);
     const closingDelimiter = lines.findIndex((line) => /^---\s*$/.test(line));
     if (closingDelimiter === -1) {
       report(errors, file, "缺少 front matter 结束分隔线 ---");
-      return { data: {}, header: "" };
+      return { data: {}, header: "", content: source };
     }
 
     const legacyHeader = lines.slice(0, closingDelimiter).join("\n");
     const parsed = matter(`---\n${legacyHeader}\n---\n`);
-    return { data: parsed.data, header: legacyHeader };
+    return {
+      data: parsed.data,
+      header: legacyHeader,
+      content: lines.slice(closingDelimiter + 1).join("\n"),
+    };
   } catch (error) {
     report(errors, file, `front matter 无法解析：${error.message}`);
-    return { data: {}, header: "" };
+    return { data: {}, header: "", content: source };
   }
+}
+
+function straightQuoteKinds(value) {
+  const kinds = [];
+  if (value.includes('"')) kinds.push("ASCII 双直引号");
+  if (value.includes("'")) kinds.push("ASCII 单直引号");
+  return kinds;
+}
+
+function validateTypography(file, content, data) {
+  const tree = unified().use(remarkParse).use(remarkGfm).parse(content);
+
+  visit(tree, (node) => {
+    if (node.type === "text") {
+      const kinds = straightQuoteKinds(node.value);
+      if (kinds.length > 0) {
+        const start = node.position?.start;
+        const location = start ? `第 ${start.line} 行第 ${start.column} 列` : "正文";
+        report(errors, file, `${location}含${kinds.join("和")}，请改用弯引号`);
+      }
+    }
+
+    if (node.type === "image" || node.type === "link") {
+      for (const [field, value] of [
+        ["替代文字", node.alt],
+        ["标题", node.title],
+      ]) {
+        if (typeof value !== "string") continue;
+        const kinds = straightQuoteKinds(value);
+        if (kinds.length > 0) {
+          const line = node.position?.start?.line;
+          const location = line ? `第 ${line} 行${field}` : field;
+          report(errors, file, `${location}含${kinds.join("和")}，请改用弯引号`);
+        }
+      }
+    }
+  });
+
+  function inspectMetadata(value, keyPath) {
+    if (typeof value === "string") {
+      const kinds = straightQuoteKinds(value);
+      if (kinds.length > 0) {
+        report(errors, file, `front matter 字段 ${keyPath} 含${kinds.join("和")}，请改用弯引号`);
+      }
+      return;
+    }
+    if (Array.isArray(value)) {
+      value.forEach((item, index) => inspectMetadata(item, `${keyPath}[${index}]`));
+      return;
+    }
+    if (value && typeof value === "object") {
+      for (const [key, item] of Object.entries(value)) {
+        inspectMetadata(item, keyPath ? `${keyPath}.${key}` : key);
+      }
+    }
+  }
+
+  inspectMetadata(data, "");
 }
 
 function toList(value) {
@@ -111,11 +177,13 @@ const files = fs
 
 const records = files.map((file) => {
   const raw = fs.readFileSync(path.join(postsDirectory, file), "utf8");
-  const { data, header } = parseFrontMatter(file, raw);
+  const { data, header, content } = parseFrontMatter(file, raw);
   const slug = typeof data.slug === "string" ? data.slug.trim() : "";
   const section = typeof data.section === "string" ? data.section.trim().toLowerCase() : "";
   const categories = toList(data.categories ?? data.category);
   const tags = toList(data.tags);
+
+  validateTypography(file, content, data);
 
   if (typeof data.title !== "string" || data.title.trim() === "") {
     report(errors, file, "必须填写非空 title");

@@ -527,39 +527,11 @@ body:has(main[data-archive-page="true"]) {
 .foot-links .v a:hover { color: var(--accent); }
 .foot-links .v .dash { color: var(--ink-faint); margin: 0 11px; }
 .foot-sign { display: flex; align-items: center; gap: 20px; }
-.foot-logo-lockup {
-  position: relative;
-  display: grid;
-  grid-template-columns: 40px 20px;
-  width: 60px;
-  height: 46px;
-  overflow: hidden;
-  flex: none;
-  background: #000;
-}
 .foot-logo {
-  width: 46px;
   height: 46px;
+  width: auto;
   display: block;
-  clip-path: inset(0 18% 0 0);
-  object-fit: cover;
-  object-position: left center;
-}
-.foot-logo-cn {
-  position: absolute;
-  inset: 0 0 0 auto;
-  display: grid;
-  width: 20px;
-  place-items: center;
-  padding: 3px 0;
-  color: #000;
-  background: #fff;
-  font-family: var(--f-cjk-serif);
-  font-size: 8px;
-  font-weight: 900;
-  line-height: 1;
-  letter-spacing: 0;
-  writing-mode: vertical-rl;
+  flex: none;
 }
 .foot .big { font-family: var(--f-grotesk); font-weight: 700; font-size: clamp(38px, 6.5vw, 92px); line-height: .9; letter-spacing: -.035em; }
 .foot .big .dots { color: var(--accent); }

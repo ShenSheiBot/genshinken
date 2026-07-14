@@ -23,7 +23,9 @@ export default function Footer() {
           </span>
           <span className="k">联系</span>
           <span className="v">
-            <a href={`mailto:${site.email}`}>{site.email.toUpperCase()}</a>
+            <a href={`mailto:${site.infoEmail}`}>{site.infoEmail.toUpperCase()}</a>
+            <br />
+            <a href={`mailto:${site.editorEmail}`}>{site.editorEmail}</a>
           </span>
         </div>
 
@@ -34,11 +36,8 @@ export default function Footer() {
             {site.license}
           </div>
           {hasLogo && (
-            <span className="foot-logo-lockup" aria-label={site.brandCN}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img className="foot-logo" src="/img/logo.png" alt="" />
-              <b className="foot-logo-cn" aria-hidden="true">西方負典</b>
-            </span>
+            // eslint-disable-next-line @next/next/no-img-element
+            <img className="foot-logo" src="/img/logo.png" alt="" />
           )}
         </div>
       </div>

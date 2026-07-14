@@ -24,5 +24,6 @@ export const site = {
     { label: "YouTube", href: "https://www.youtube.com/channel/UCF7IkcI5JK-mxFttzwh0qbQ" },
     { label: "GitHub", href: "https://github.com/un-canon" },
   ],
-  email: "info@un-canon.com",
+  infoEmail: "info@un-canon.com",
+  editorEmail: "editor@un-canon.com",
 } as const;

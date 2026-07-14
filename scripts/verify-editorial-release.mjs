@@ -24,6 +24,8 @@ for (const [label, result] of Object.entries({ home, article, media, search, mis
 
 assert.equal(home.response.status, 200, "homepage must return HTTP 200");
 assert.match(home.html, /欢迎来到象征界的大草原/);
+assert.match(home.html, /issueRail[^>]*><span>編輯部<\/span>/);
+assert.match(home.html, /mailto:info@un-canon\.com[\s\S]*mailto:editor@un-canon\.com/);
 assert.doesNotMatch(home.html, /東流不溢，孰知其故/);
 assert.doesNotMatch(home.html, /<i[^>]*>(?:论|评|译|媒)<\/i>/);
 assert.doesNotMatch(home.html, /历史唯物主义论纲/);
@@ -76,10 +78,16 @@ for (const value of [
 ]) {
   assert.ok(!article.html.includes(value), `article must not contain ${value}`);
 }
-assert.match(article.html, /foot-logo-cn[^>]*[^<]*>西方負典</);
+assert.match(article.html, /<img class="foot-logo" src="\/img\/logo\.png" alt=""\s*\/>/);
+assert.doesNotMatch(article.html, /foot-logo-(?:lockup|cn)/);
 
 assert.equal(media.response.status, 200, "media detail must return HTTP 200");
 assert.doesNotMatch(media.html, embeddedMediaTag, "media detail must not embed a media player");
+assert.match(
+  media.html,
+  /<img(?=[^>]*src="\/attachments\/7c05677d-fc8b-42f6-8164-8062c5935c59\.png")(?=[^>]*width="1535")(?=[^>]*height="1024")[^>]*>/,
+  "media image dimensions must survive the straight-quote cleanup"
+);
 for (const value of [
   "MULTIMEDIA / DETAIL",
   "EXTERNAL LINKS",

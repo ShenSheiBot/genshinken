@@ -29,6 +29,12 @@
     "unified": "^11.0.5",
     "unist-util-visit": "^5.0.0"
   },
+  "overrides": {
+    "gray-matter": {
+      "js-yaml": "3.15.0"
+    },
+    "postcss": "8.5.19"
+  },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.6",
     "@types/node": "^22.10.7",

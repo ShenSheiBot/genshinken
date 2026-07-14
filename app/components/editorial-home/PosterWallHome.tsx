@@ -179,7 +179,7 @@ export default function PosterWallHome({
     <main className={styles.root} aria-labelledby="poster-wall-heading">
       <header className={styles.masthead}>
         <div className={styles.issueRail}>
-          <span>西方負典编辑部</span>
+          <span>編輯部</span>
           <span className={styles.issueRule} aria-hidden="true" />
           <span>期号 {issue || "—"}</span>
         </div>
