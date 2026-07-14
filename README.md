@@ -23,7 +23,8 @@
 ---
 title: 文章标题
 categories: 历史          # 主分类（也用作首页/文章页的分类标签）
-tags: [历史, 产业]        # 标签（可多个；用于首页筛选）
+section: essay           # 编辑栏目：essay / review / translation / multimedia
+tags: [产业, 冷战史]      # 标签（可多个；勿与主分类重复；用于文章索引筛选）
 date: 2026-05-12         # 发布日期 YYYY-MM-DD
 post_author: 作者名       # 作者；首页卡片上以实心橙块「作」标记
 translator: 译者名        # 可选；空心橙块「译」
@@ -34,6 +35,7 @@ excerpt: 一句话摘要        # 可选，缺省时自动取正文首段
 ---
 
 > 署名顺序固定为 作者 → 译者 → 编者 → 校对；一个角色多人用逗号分隔。
+> `section` 与主题分类相互独立：例如一篇历史译文应写 `categories: 历史` 与 `section: translation`。
 
 正文从这里开始……
 ```
@@ -75,9 +77,11 @@ npm run build    # 生产构建（与 Vercel 一致）
 
 ```
 app/                  Next.js App Router（页面、布局、组件）
-  components/         TopBar / Hero / Footer / PostIndex
+  components/         TopBar / Footer / PosterWallHome / PostIndex
+  search/             文章索引与栏目、主题分类、标签筛选
+  media/[slug]/       多媒体条目详情页
   posts/[slug]/       文章详情页
-  page.tsx            首页（英雄区 + 索引列表 + 标签筛选）
+  page.tsx            首页（编辑海报墙 + 最新更新）
   globals.css         全站样式（新粗野主义设计 + Markdown 正文样式）
 lib/
   posts.ts            读取 / 解析文章

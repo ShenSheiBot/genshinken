@@ -4,6 +4,7 @@
    ============================================================ */
 import { getAllPostsFull } from "@/lib/posts";
 import { site } from "@/lib/site";
+import { postPath } from "@/lib/editorial";
 
 export const dynamic = "force-static";
 
@@ -34,7 +35,7 @@ export async function GET() {
 
   const items = posts
     .map((p) => {
-      const link = `${site.url}/posts/${encodeURIComponent(p.slug)}`;
+      const link = `${site.url}${postPath(p)}`;
       return [
         "<item>",
         `<title>${esc(p.title)}</title>`,

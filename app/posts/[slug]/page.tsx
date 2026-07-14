@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { getAllSlugs, getPostBySlug, getAdjacent } from "@/lib/posts";
 import { site } from "@/lib/site";
+import { postPath } from "@/lib/editorial";
 import { RegisterArticleHeader } from "@/app/components/ArticleHeader";
 import ReadingRail from "@/app/components/ReadingRail";
 import TocRail from "@/app/components/TocRail";
@@ -23,7 +24,7 @@ export async function generateMetadata({
   const post = await getPostBySlug(decodeURIComponent(slug));
   if (!post) return {};
   const description = post.excerpt || site.description;
-  const canonical = `/posts/${encodeURIComponent(post.slug)}`;
+  const canonical = postPath(post);
   return {
     title: post.title,
     description,
@@ -53,7 +54,7 @@ function toPersons(name: string) {
 }
 
 function buildJsonLd(post: NonNullable<Awaited<ReturnType<typeof getPostBySlug>>>) {
-  const url = `${site.url}/posts/${encodeURIComponent(post.slug)}`;
+  const url = `${site.url}${postPath(post)}`;
   const roles: Record<string, string> = { 作: "author", 译: "translator", 编: "editor", 校: "contributor" };
   const credits: Record<string, unknown> = {};
   for (const c of post.credits) {
@@ -88,6 +89,7 @@ export default async function ArticlePage({
   const decoded = decodeURIComponent(slug);
   const post = await getPostBySlug(decoded);
   if (!post) notFound();
+  if (post.section === "multimedia") permanentRedirect(postPath(post));
 
   const next = await getAdjacent(decoded);
 
@@ -157,7 +159,7 @@ export default async function ArticlePage({
 
       {next && next.slug !== post.slug && (
         <div className="nextnav">
-          <Link href={`/posts/${encodeURIComponent(next.slug)}`} className="nextrow">
+          <Link href={postPath(next)} className="nextrow">
             <div>
               <div className="nlabel">下一篇 / NEXT —— NO.{next.no}</div>
               <div className="ntitle">{next.title}</div>

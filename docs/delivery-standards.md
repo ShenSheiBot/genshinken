@@ -9,6 +9,7 @@
 
 - [ ] **slug / 文件名全 ASCII**：短横线连字，无中文、空格、全角符号
 - [ ] **YAML front-matter 完整**：标题、日期、分类、标签、署名等全部写进头部，不散落正文
+- [ ] **编辑栏目已填写**：`section` 只能是 `essay / review / translation / multimedia`
 - [ ] **修订旧文补 `updated` 字段**：实质性修订（改译文、补脚注）时在 front-matter 写 `updated: YYYY-MM-DD`——驱动 sitemap lastmod / RSS / 结构化数据，搜索引擎据此重抓
 - [ ] **分类不重复进标签**：`categories` 与 `tags` 不重叠（前端会分别渲染）
 - [ ] **引号全为方向性弯引号** `“ ” ‘ ’`，正文无 ASCII 直引号 `" '`
@@ -22,7 +23,8 @@
 
 ## 1. 文件与 URL：必须 ASCII
 
-`slug` 决定文章 URL：`/posts/<slug>`。**slug 必须是 ASCII**（小写字母、数字、短横线 `-`），
+`slug` 决定文章 URL：普通文章为 `/posts/<slug>`，`section: multimedia` 为 `/media/<slug>`。
+**slug 必须是 ASCII**（小写字母、数字、短横线 `-`），
 禁止中文、空格、全角标点——中文 URL 会被百分号编码成乱码，不利于分享与 SEO。
 
 ```yaml
@@ -50,6 +52,7 @@ date: 2026-06-15          # 发布日期 YYYY-MM-DD
 updated: 2026-07-13       # 可选；实质性修订时更新，缺省回退到 date
 slug: ascii-url-slug      # 必填且必须 ASCII（见 §1）
 categories: [历史]         # 主分类；前端单独渲染为分类标记
+section: translation      # 编辑栏目；驱动首页入口与文章索引筛选
 tags: [布雷顿森林, 冷战起源] # 标签；勿与 categories 重复
 post_author: 作者名         # 作者，实心方块「作」
 translator: 译者名          # 可选，空心「译」
@@ -61,6 +64,12 @@ excerpt: 一句话摘要         # 可选，缺省取正文首段
 
 - 署名顺序固定：作者 → 译者 → 编者 → 校对；一个角色多人用逗号分隔。
 - `categories` 只用于分类标记，**不会**再混进标签行（`lib/posts.ts` 已分离二者）。
+- `section` 是首页栏目，必须且只能取以下值之一：
+  - `essay`：论
+  - `review`：评
+  - `translation`：译介
+  - `multimedia`：多媒体
+- `section` 与 `categories` 相互独立；不要用“历史 / 哲学”等主题分类代替栏目，也不要只依赖译者署名推断译介。
 
 ---
 

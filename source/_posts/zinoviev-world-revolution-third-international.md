@@ -4,6 +4,7 @@ subtitle: 四小时演讲
 date: 2026-06-29
 slug: zinoviev-world-revolution-third-international
 categories: [历史]
+section: translation
 tags: [第三国际, 世界革命, 共产国际, 译介]
 post_author: 格里戈里·季诺维也夫
 translator: 王鱼

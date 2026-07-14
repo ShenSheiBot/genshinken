@@ -3,6 +3,7 @@ title: 苏联与布雷顿森林会议
 date: 2026-06-15
 slug: pechatnov-soviet-union-bretton-woods
 categories: [历史]
+section: translation
 tags: [布雷顿森林, 冷战起源, 苏联外交]
 post_author: 弗拉基米尔·奥·佩恰特诺夫
 translator: 追曲

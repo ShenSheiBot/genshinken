@@ -41,7 +41,9 @@ function postUrl(file) {
   if (/^draft:\s*(true|yes|1)\s*$/im.test(head)) return null;
   const m = head.match(/^slug:\s*(.+)$/m);
   const slug = (m ? m[1].trim().replace(/^["']|["']$/g, "") : path.basename(file, ".md")).trim();
-  return `${SITE}/posts/${encodeURIComponent(slug)}`;
+  const section = head.match(/^section:\s*(.+)$/m)?.[1].trim().replace(/^["']|["']$/g, "").toLowerCase();
+  const base = section === "multimedia" ? "media" : "posts";
+  return `${SITE}/${base}/${encodeURIComponent(slug)}`;
 }
 
 function collectFiles(args) {

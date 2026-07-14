@@ -9,6 +9,7 @@ import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
 import { renderMarkdown } from "./markdown";
+import { isEditorialSection, type EditorialSection } from "./editorial";
 
 const POSTS_DIR = path.join(process.cwd(), "source", "_posts");
 
@@ -25,6 +26,7 @@ export interface PostSummary {
   subtitle: string;
   draft: boolean;
   category: string;
+  section: EditorialSection;
   tags: string[];
   author: string;
   credits: Credit[];
@@ -99,6 +101,14 @@ function buildCredits(data: Record<string, unknown>): Credit[] {
     if (name) out.push({ mark: role.mark, name, solid: role.solid });
   }
   return out;
+}
+
+function resolveSection(data: Record<string, unknown>, file: string): EditorialSection {
+  const declared = typeof data.section === "string" ? data.section.trim().toLowerCase() : "";
+  if (isEditorialSection(declared)) return declared;
+  throw new Error(
+    `${file}: front-matter section 必须是 essay / review / translation / multimedia 之一`
+  );
 }
 
 function toDate(v: unknown): Date {
@@ -199,16 +209,20 @@ async function loadRaw(): Promise<Post[]> {
       const title = String(data.title ?? baseName).trim();
       const subtitle = String(data.subtitle ?? "").trim();
       const draft = isDraft(data.draft);
+      const category = categories[0] ?? tags[0] ?? "未分类";
+      const uniqueTags = Array.from(new Set(tags));
+      const credits = buildCredits(data);
 
       const post: Post = {
         slug,
         title,
         subtitle,
         draft,
-        category: categories[0] ?? tags[0] ?? "未分类",
-        tags: Array.from(new Set(tags)),
+        category,
+        section: resolveSection(data, file),
+        tags: uniqueTags,
         author: String(data.post_author ?? data.author ?? "").trim(),
-        credits: buildCredits(data),
+        credits,
         dateDisplay: fmtDisplay(date),
         dateISO: fmtISO(date),
         updatedISO: +updated > 0 ? fmtISO(updated) : fmtISO(date),

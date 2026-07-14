@@ -3,6 +3,7 @@ title: 列宁之争
 date: 2026-07-06
 slug: lih-lenin-disputed
 categories: [历史]
+section: translation
 tags: [爱尔福特主义, 《怎么办？》, 俄国社会民主工党, 译介]
 post_author: 拉斯·T·李赫
 translator: 王鱼

@@ -1,15 +1,7 @@
 import { getAllPosts, getIssue } from "@/lib/posts";
-import Hero from "./components/Hero";
-import PostIndex from "./components/PostIndex";
+import PosterWallHome from "./components/editorial-home/PosterWallHome";
 
 export default async function Home() {
-  const posts = await getAllPosts();
-  const issue = await getIssue();
-
-  return (
-    <>
-      <Hero count={posts.length} issue={issue} />
-      <PostIndex posts={posts} total={posts.length} />
-    </>
-  );
+  const [posts, issue] = await Promise.all([getAllPosts(), getIssue()]);
+  return <PosterWallHome posts={posts} issue={issue} />;
 }

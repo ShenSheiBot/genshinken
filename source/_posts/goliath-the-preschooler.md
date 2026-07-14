@@ -4,6 +4,7 @@ subtitle: 东西欧如何在冷战期间能源与金融合作中埋设全球市�
 date: 2026-06-23
 slug: goliath-the-preschooler
 categories: [历史]
+section: essay
 tags: [布雷顿森林, 世界市场, 冷战起源]
 post_author: 王揆
 excerpt: 苏联如何通过能源、信贷、管道和欧洲美元市场，主动参与并塑造冷战后期全球金融资本主义的形成。

@@ -5,6 +5,7 @@ date: 2026-07-13
 draft: false
 slug: olsevich-gregory-soviet-planned-economy-retrospective
 categories: [历史]
+section: translation
 tags: [苏联, 计划经济, 访谈, 译介]
 post_author: 尤利·奥尔塞维奇　保罗·格雷戈里
 translator: 王揆

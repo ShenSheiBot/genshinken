@@ -4,7 +4,9 @@ title: 历史转折中的联合工团②——布莱恩特区与移交温哥华
 
 categories: 历史
 
-tags: [历史]
+section: multimedia
+
+tags: [联合工团, 温哥华]
 
 date: 2026-05-12
 

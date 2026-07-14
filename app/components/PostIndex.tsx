@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import type { PostSummary } from "@/lib/posts";
+import { postPath } from "@/lib/editorial";
 
 export default function PostIndex({
   posts,
@@ -75,7 +76,7 @@ export default function PostIndex({
             {filtered.map((p, i) => (
               <Link
                 key={p.slug}
-                href={`/posts/${encodeURIComponent(p.slug)}`}
+                href={postPath(p)}
                 className="srow enter"
                 style={{ animationDelay: i * 0.04 + "s" }}
               >
