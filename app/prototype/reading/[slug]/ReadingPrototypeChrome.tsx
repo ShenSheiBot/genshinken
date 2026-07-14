@@ -30,7 +30,7 @@ type ReferenceLink = { anchor: HTMLAnchorElement; target: HTMLElement; kind: Ref
 type ReferenceSurface = "desk" | "sheet";
 type ReferenceVisit = { kind: ReferenceKind; id: string; label: string };
 type FragmentLine = { center: number; width: number };
-type DeskSlots = { left: HTMLElement; right: HTMLElement };
+type DeskSlots = { left: HTMLElement; right: HTMLElement | null };
 
 const variantMeta: Record<Variant, { short: string }> = {
   dossier: { short: "案卷" },
@@ -299,7 +299,7 @@ export default function ReadingPrototypeChrome({
   useEffect(() => {
     const left = document.getElementById("reading-left-rail");
     const right = document.getElementById("reading-right-rail");
-    setSlots(left && right ? { left, right } : null);
+    setSlots(left ? { left, right } : null);
   }, [variant]);
 
   useEffect(() => {
@@ -739,8 +739,19 @@ export default function ReadingPrototypeChrome({
   };
 
   const leftDesk = <div className={styles.leftDeskRail}>{compactCredits}{lineNavigator}{tocPanel}</div>;
-  const rightDesk = <div className={styles.referenceRail}>{referencePane("annotation")}{referencePane("source")}</div>;
-  const portalDesk = desktopDesk && slots ? <>{createPortal(leftDesk, slots.left)}{createPortal(rightDesk, slots.right)}</> : null;
+  const referencePaneCount = Number(annotations.length > 0) + Number(sources.length > 0);
+  const rightDesk = referencePaneCount > 0 ? (
+    <div className={styles.referenceRail} data-count={referencePaneCount}>
+      {annotations.length > 0 && referencePane("annotation")}
+      {sources.length > 0 && referencePane("source")}
+    </div>
+  ) : null;
+  const portalDesk = desktopDesk && slots ? (
+    <>
+      {createPortal(leftDesk, slots.left)}
+      {rightDesk && slots.right && createPortal(rightDesk, slots.right)}
+    </>
+  ) : null;
 
   const updateSize = (size: ReaderSize) => {
     setReaderSize(size);

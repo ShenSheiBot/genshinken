@@ -1,0 +1,173 @@
+:root {
+  --editorial-motion-fast: 160ms;
+  --editorial-motion-slow: 440ms;
+  --editorial-motion-ease: cubic-bezier(.2, .75, .3, 1);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  [data-reveal-zone="home"] [data-reveal-sequence="masthead"] > * {
+    animation: editorial-proof-set var(--editorial-motion-slow) var(--editorial-motion-ease) both;
+  }
+
+  [data-reveal-zone="home"] [data-reveal-sequence="masthead"] > :nth-child(1) { animation-delay: 40ms; }
+  [data-reveal-zone="home"] [data-reveal-sequence="masthead"] > :nth-child(2) { animation-delay: 110ms; }
+  [data-reveal-zone="home"] [data-reveal-sequence="masthead"] > :nth-child(3) { animation-delay: 185ms; }
+  [data-reveal-zone="home"] [data-reveal-sequence="masthead"] > :nth-child(4) { animation-delay: 260ms; }
+
+  [data-reveal-zone="home"] [data-reveal-sequence="masthead"] > :first-child > :nth-child(2) {
+    transform-origin: left;
+    animation: editorial-proof-rule 300ms var(--editorial-motion-ease) 40ms both;
+  }
+
+  [data-reveal-zone="home"] h1 > span {
+    display: block;
+    /* Release clip-path after the reveal: the compact CJK line box relies on
+       visible glyph overhang and would otherwise crop the title. */
+    animation: editorial-proof-title 520ms var(--editorial-motion-ease) 110ms backwards;
+  }
+
+  html[data-editorial-reveal-ready="true"] [data-reveal]:not([data-reveal-visible="true"]) {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  [data-reveal][data-reveal-visible="true"] {
+    opacity: 1;
+    transform: none;
+    transition:
+      opacity 340ms var(--editorial-motion-ease),
+      transform 340ms var(--editorial-motion-ease);
+  }
+
+  /* The wall substrate draws its one-pixel seams with --hair-strong. Keep the
+     tile shell opaque and animate only the card so refresh never exposes that
+     substrate as a large dark block. */
+  html[data-editorial-reveal-ready="true"] [data-reveal-zone="home"] article[data-reveal]:not([data-reveal-visible="true"]) {
+    opacity: 1;
+    transform: none;
+  }
+
+  html[data-editorial-reveal-ready="true"] [data-reveal-zone="home"] article[data-reveal]:not([data-reveal-visible="true"]) > a {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  [data-reveal-zone="home"] article[data-reveal][data-reveal-visible="true"] > a {
+    opacity: 1;
+    transform: none;
+    transition:
+      opacity 340ms var(--editorial-motion-ease),
+      transform 340ms var(--editorial-motion-ease),
+      color 180ms ease,
+      background 180ms ease,
+      box-shadow 180ms ease;
+  }
+
+  [data-reveal-zone="home"] [data-reveal-index="1"][data-reveal-visible="true"] > a { transition-delay: 36ms, 36ms, 0ms, 0ms, 0ms; }
+  [data-reveal-zone="home"] [data-reveal-index="2"][data-reveal-visible="true"] > a { transition-delay: 72ms, 72ms, 0ms, 0ms, 0ms; }
+  [data-reveal-zone="home"] [data-reveal-index="3"][data-reveal-visible="true"] > a { transition-delay: 108ms, 108ms, 0ms, 0ms, 0ms; }
+
+  html[data-editorial-reveal-ready="true"] [data-reveal-zone="reader"] #reading-cover:not([data-reveal-visible="true"]),
+  html[data-editorial-reveal-ready="true"] [data-reveal-zone="media"] > article > section:first-child:not([data-reveal-visible="true"]) {
+    clip-path: inset(0 0 9% 0);
+  }
+
+  [data-reveal-zone="reader"] #reading-cover[data-reveal-visible="true"],
+  [data-reveal-zone="media"] > article > section:first-child[data-reveal-visible="true"] {
+    clip-path: inset(0);
+    transition:
+      clip-path 520ms var(--editorial-motion-ease),
+      opacity 360ms ease,
+      transform 340ms var(--editorial-motion-ease);
+  }
+
+  [data-reveal-zone="home"] article > a:hover,
+  [data-reveal-zone="home"] article > a:focus-visible,
+  [data-reveal-zone="archive"] li > a:hover,
+  [data-reveal-zone="archive"] li > a:focus-visible {
+    box-shadow: inset 0 0 0 3px var(--accent);
+  }
+
+  .foot-links .v a {
+    position: relative;
+  }
+
+  .foot-links .v a::after {
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    left: 0;
+    height: 1px;
+    content: "";
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--editorial-motion-fast) ease;
+  }
+
+  .foot-links .v a:hover::after,
+  .foot-links .v a:focus-visible::after {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes editorial-proof-set {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes editorial-proof-rule {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@keyframes editorial-proof-title {
+  /* The title uses a deliberately tight .72 line box. Its CJK glyphs extend
+     about .16em beyond that box, so the reveal must sweep through the same
+     expanded bounds it will occupy after clip-path is released. */
+  from { opacity: 0; clip-path: inset(calc(100% + .16em) -.16em -.16em); transform: translateY(14px); }
+  to { opacity: 1; clip-path: inset(-.16em); transform: none; }
+}
+
+@media (max-width: 767px) and (prefers-reduced-motion: no-preference) {
+  html[data-editorial-reveal-ready="true"] [data-reveal]:not([data-reveal-visible="true"]),
+  html[data-editorial-reveal-ready="true"] [data-reveal-zone="home"] article[data-reveal]:not([data-reveal-visible="true"]) > a {
+    transform: translateY(6px);
+  }
+
+  html[data-editorial-reveal-ready="true"] [data-reveal-zone="home"] article[data-reveal]:not([data-reveal-visible="true"]) {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal],
+  [data-reveal] *,
+  [data-reveal]::before,
+  [data-reveal]::after,
+  [data-reveal-sequence] > *,
+  [data-reveal-sequence] > *::before,
+  [data-reveal-sequence] > *::after,
+  .foot-links .v a::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  [data-reveal],
+  [data-reveal] > a {
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+  }
+}
+
+@media print {
+  [data-reveal],
+  [data-reveal] > a {
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}

@@ -119,10 +119,10 @@ function SourceRecord({ post }: { post: Post }) {
 }
 
 function Appendices({ parts }: { parts: ArticleParts }) {
-  if (!parts.notes && !parts.sources) return null;
+  if (parts.noteCount === 0 && parts.sourceCount === 0) return null;
   return (
     <div className={`${styles.appendices} reading-prototype-appendix`}>
-      {parts.notes && (
+      {parts.noteCount > 0 && (
         <details open>
           <summary>
             <span>注释</span>
@@ -134,7 +134,7 @@ function Appendices({ parts }: { parts: ArticleParts }) {
           />
         </details>
       )}
-      {parts.sources && (
+      {parts.sourceCount > 0 && (
         <details>
           <summary>
             <span>文献</span>
@@ -171,7 +171,7 @@ function ArticleFlow({ parts }: { parts: ArticleParts }) {
 function MobileInformation({ post }: { post: Post }) {
   return (
     <details className={styles.mobileInformation}>
-      <summary>本文信息 <span>展开档案＋原文资料</span></summary>
+      <summary>本文信息 <span>展开署名与资料</span></summary>
       <div className={styles.mobileInformationGrid}>
         <MetaRows post={post} />
         <SourceRecord post={post} />
@@ -231,8 +231,12 @@ export function ReadingDossier({
   isPublicEdition?: boolean;
 }) {
   const section = sectionMeta[sectionFor(post)];
+  const hasReferences = parts.noteCount > 0 || parts.sourceCount > 0;
+  const referenceLabel = parts.noteCount > 0 && parts.sourceCount > 0
+    ? "注释与文献"
+    : parts.noteCount > 0 ? "注释" : "文献";
   return (
-    <main className={`${isPublicEdition ? "reading-edition-page" : "reading-prototype-page"} ${styles.root} ${styles.dossierRoot}`} data-reading-variant="dossier">
+    <main className={`${isPublicEdition ? "reading-edition-page" : "reading-prototype-page"} ${styles.root} ${styles.dossierRoot}`} data-reading-variant="dossier" data-reveal-zone="reader">
       <ReadingPrototypeChrome
         title={post.title}
         slug={post.slug}
@@ -242,12 +246,12 @@ export function ReadingDossier({
         mode={isPublicEdition ? "edition" : "preview"}
       />
 
-      <header className={styles.dossierCover} id="reading-cover">
+      <header className={styles.dossierCover} id="reading-cover" data-reveal>
         <aside className={styles.docket}>
           <span className={styles.docketNumber}>{section.number}</span>
           <div><b>{section.label}</b></div>
           <i />
-          <p>{site.brandCN}<br />文章档案<br />第 {post.no} 号</p>
+          <p>{site.brandCN}<br />文章<br />第 {post.no} 号</p>
         </aside>
 
         <div className={styles.coverStory}>
@@ -270,7 +274,9 @@ export function ReadingDossier({
       <section className={styles.dossierReading}>
         <aside id="reading-left-rail" className={styles.deskRailSlot} aria-label="署名、行数与文章目录" />
         <ArticleFlow parts={parts} />
-        <aside id="reading-right-rail" className={styles.deskRailSlot} aria-label="注释与文献" />
+        {hasReferences && (
+          <aside id="reading-right-rail" className={styles.deskRailSlot} aria-label={referenceLabel} />
+        )}
       </section>
       <ContinueReading current={post} posts={posts} variant="dossier" isPublicEdition={isPublicEdition} />
     </main>

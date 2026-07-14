@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./components/editorial-motion/EditorialMotion.css";
 import { site } from "@/lib/site";
 import TopBar from "./components/TopBar";
 import Footer from "./components/Footer";
 import { ArticleHeaderProvider } from "./components/ArticleHeader";
+import EditorialReveal from "./components/editorial-motion/EditorialReveal";
+import { editorialRevealBootstrap } from "./components/editorial-motion/editorial-reveal-bootstrap";
 
 export const viewport = {
   colorScheme: "light dark",
@@ -49,6 +52,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <script dangerouslySetInnerHTML={{ __html: editorialRevealBootstrap }} />
       </head>
       <body>
         <ArticleHeaderProvider>
@@ -57,6 +61,7 @@ export default function RootLayout({
             {children}
             <Footer />
           </div>
+          <EditorialReveal />
         </ArticleHeaderProvider>
       </body>
     </html>

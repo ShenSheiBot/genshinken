@@ -170,7 +170,7 @@ export default async function MediaDetailPage({
     "本条目通过站外链接发布；这里整理可核实的来源入口和编辑关联的站内文稿。";
 
   return (
-    <main className={styles.page}>
+    <main className={styles.page} data-reveal-zone="media">
       <div className={styles.contextBar}>
         <Link href="/" className={styles.backLink}>
           ← 返回首页
@@ -179,7 +179,7 @@ export default async function MediaDetailPage({
       </div>
 
       <article>
-        <section className={styles.hero} aria-labelledby="media-title">
+        <section className={styles.hero} aria-labelledby="media-title" data-reveal>
           <div className={styles.poster} role="img" aria-label={`${mediaPost.title}的多媒体档案封面`}>
             <div className={styles.posterRule} aria-hidden="true" />
             <div className={styles.posterHeader}>
@@ -268,7 +268,7 @@ export default async function MediaDetailPage({
           </div>
         </section>
 
-        <section className={styles.overview} aria-labelledby="overview-title">
+        <section className={styles.overview} aria-labelledby="overview-title" data-reveal>
           <div className={styles.sectionLabel}>
             <span>01</span>
             <p>条目说明</p>
@@ -290,7 +290,7 @@ export default async function MediaDetailPage({
           </div>
         </section>
 
-        <section className={styles.material} aria-labelledby="material-title">
+        <section className={styles.material} aria-labelledby="material-title" data-reveal>
           <header className={styles.materialHeading}>
             <div>
               <span>02</span>
@@ -305,7 +305,7 @@ export default async function MediaDetailPage({
         </section>
 
         {relatedPosts.length > 0 && (
-          <section className={styles.related} aria-labelledby="related-title">
+          <section className={styles.related} aria-labelledby="related-title" data-reveal>
             <div className={styles.relatedHeading}>
               <div>
                 <span>03</span>

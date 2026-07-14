@@ -1024,6 +1024,10 @@
   .deskRailSlot { display: none; }
 }
 
+.referenceRail[data-count="1"] {
+  grid-template-rows: minmax(0, 1fr);
+}
+
 @media (min-width: 768px) and (max-width: 1359px) {
   .runningTools .compactTocButton {
     display: inline-flex;

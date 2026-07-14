@@ -2,6 +2,7 @@ import Link from "next/link";
 import { EDITORIAL_SECTION_META, postPath } from "@/lib/editorial";
 import type { PostSummary } from "@/lib/posts";
 import styles from "./archive.module.css";
+import ResponsiveFacetDetails from "./ResponsiveFacetDetails";
 
 export type ArchiveFacetOption = {
   key: string;
@@ -68,7 +69,7 @@ function FacetGroup({
 }) {
   const activeCount = options.filter((option) => option.active && option.key !== "all").length;
   return (
-    <details className={styles.facetGroup} open data-facet-number={number}>
+    <ResponsiveFacetDetails className={styles.facetGroup} number={number}>
       <summary id={`archive-facet-${number}`}>
         <span className={styles.facetTitle}><i>{number}</i>{label}</span>
         <span className={styles.facetState}>
@@ -78,7 +79,7 @@ function FacetGroup({
       <div aria-labelledby={`archive-facet-${number}`}>
         {options.map((option) => <FacetOption key={option.key} option={option} />)}
       </div>
-    </details>
+    </ResponsiveFacetDetails>
   );
 }
 
@@ -110,15 +111,14 @@ export default function ArchiveIndex({
   ).length;
 
   return (
-    <main className={styles.page} data-archive-page="true">
-      <header className={styles.hero}>
+    <main className={styles.page} data-archive-page="true" data-reveal-zone="archive">
+      <header className={styles.hero} data-reveal>
         <div className={styles.kicker}>
           <b>02</b>
           <span>索引</span>
         </div>
         <div>
           <h1>文章索引</h1>
-          <p>按栏目、主题分类和标签浏览全部站内内容。</p>
         </div>
         <div className={styles.count} aria-label={`当前显示 ${posts.length} 篇，共 ${total} 篇`}>
           <strong>{String(posts.length).padStart(2, "0")}</strong>
@@ -155,7 +155,7 @@ export default function ArchiveIndex({
               {posts.map((post) => {
                 const section = EDITORIAL_SECTION_META[post.section];
                 return (
-                  <li key={post.slug}>
+                  <li key={post.slug} data-reveal>
                     <Link className={styles.row} href={postPath(post)}>
                       <div className={styles.recordId}>
                         <b>{post.no}</b>

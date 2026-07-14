@@ -36,6 +36,7 @@ assert.doesNotMatch(home.html, /東流不溢，孰知其故/);
 assert.doesNotMatch(home.html, /<i[^>]*>(?:论|评|译|媒)<\/i>/);
 assert.doesNotMatch(home.html, /历史唯物主义论纲/);
 assert.doesNotMatch(home.html, /站内不嵌入播放 · 站外内容由详情页跳转/);
+assert.doesNotMatch(home.html, /motion-prototype-switcher|ub_motion_prototype|LOCAL_MOTION_PROTOTYPE/);
 for (const value of ["论", "评", "译介", "多媒体"]) {
   assert.ok(home.html.includes(value), `homepage must contain ${value}`);
 }
@@ -66,6 +67,7 @@ assert.match(article.html, /application\/ld\+json/);
 assert.match(article.html, /dateModified/);
 assert.match(article.html, /正文完/);
 assert.match(article.html, /\/img\/logo\.png/);
+assert.doesNotMatch(article.html, />文章档案</);
 for (const value of [
   "待编辑部补录",
   "资料字段以编辑部档案为准",
@@ -129,6 +131,7 @@ for (const path of mediaPaths) {
 assert.equal(search.response.status, 200, "search must return HTTP 200");
 assert.match(search.html, /文章索引/);
 assert.equal((search.html.match(/<details[^>]+open/g) || []).length, 3, "archive filters must be collapsible");
+assert.doesNotMatch(search.html, /按栏目、主题分类和标签浏览全部站内内容/);
 assert.doesNotMatch(search.html, /索引 \/ INDEX|全部 \/ ALL|MIN READ/);
 assert.equal(missing.response.status, 404, "missing page must return HTTP 404");
 assert.match(missing.html, /页面不存在。/);

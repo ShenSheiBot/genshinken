@@ -7,7 +7,7 @@ const hasLogo = fs.existsSync(path.join(process.cwd(), "public", "img", "logo.pn
 
 export default function Footer() {
   return (
-    <footer className="foot">
+    <footer className="foot" data-reveal>
       <div className="foot-inner">
         <div className="foot-links">
           <span className="k">关注</span>

@@ -88,7 +88,6 @@ function tileStyle(index: number, total: number): TileStyle {
     "--wall-tablet-rows": tabletRows,
     "--wall-min-height": `${desktopRows * 48 + Math.max(0, desktopRows - 1)}px`,
     "--wall-tablet-min-height": `${tabletRows * 44 + Math.max(0, tabletRows - 1)}px`,
-    animationDelay: `${Math.min(index, 10) * 36}ms`,
   };
 }
 
@@ -176,8 +175,8 @@ export default function PosterWallHome({
     .slice(0, 6);
 
   return (
-    <main className={styles.root} aria-labelledby="poster-wall-heading">
-      <header className={styles.masthead}>
+    <main className={styles.root} aria-labelledby="poster-wall-heading" data-reveal-zone="home">
+      <header className={styles.masthead} data-reveal-sequence="masthead">
         <div className={styles.issueRail}>
           <span>編輯部</span>
           <span className={styles.issueRule} aria-hidden="true" />
@@ -204,7 +203,7 @@ export default function PosterWallHome({
         </div>
       </header>
 
-      <nav className={styles.sectionNav} aria-label="首页内容栏目">
+      <nav className={styles.sectionNav} aria-label="首页内容栏目" data-reveal>
         {POSTER_SECTION_PRIORITY.map((section, index) => {
           const meta = EDITORIAL_SECTION_META[section];
           const count = grouped[section].length;
@@ -248,6 +247,8 @@ export default function PosterWallHome({
                  className={`${styles.tile} ${treatment}`}
                  data-section={section}
                  data-featured={isFirstOfSection ? "true" : undefined}
+                 data-reveal
+                 data-reveal-index={index}
                  style={tileStyle(index, wallPosts.length)}
               >
                 <Link
@@ -297,7 +298,7 @@ export default function PosterWallHome({
         )}
       </div>
 
-      <section className={styles.latestUpdates} aria-labelledby="poster-latest-title">
+      <section className={styles.latestUpdates} aria-labelledby="poster-latest-title" data-reveal>
         <div className={styles.latestInner}>
           <header className={styles.latestHeading}>
             <div>
@@ -316,7 +317,7 @@ export default function PosterWallHome({
               const section = post.section;
               const meta = EDITORIAL_SECTION_META[section];
               return (
-                <li key={post.slug}>
+                <li key={post.slug} data-reveal>
                   <article>
                     <Link className={styles.latestCard} href={postPath(post)}>
                       <header>

@@ -383,6 +383,8 @@
   .filters > header { position: static; padding-right: 0; }
   .filters > header a { display: inline-flex; min-height: 44px; align-items: center; }
   .facetGroup { padding-right: 0; }
+  .facetGroup[data-responsive-pending="true"] > :not(summary) { display: none; }
+  .facetGroup[data-responsive-pending="true"] summary::after { content: "+"; }
   .facetGroup[open] > div { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 12px; }
   .facetGroup[data-facet-number="01"][open] > div { grid-template-columns: minmax(0, 1fr); }
   .option { min-height: 44px; }
