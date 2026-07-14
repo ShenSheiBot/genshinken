@@ -25,6 +25,7 @@ for (const [label, result] of Object.entries({ home, article, media, search, mis
 assert.equal(home.response.status, 200, "homepage must return HTTP 200");
 assert.match(home.html, /欢迎来到象征界的大草原/);
 assert.match(home.html, /issueRail[^>]*><span>編輯部<\/span>/);
+assert.doesNotMatch(home.html, /期号/);
 assert.match(home.html, /mailto:info@un-canon\.com[\s\S]*mailto:editor@un-canon\.com/);
 assert.doesNotMatch(home.html, /東流不溢，孰知其故/);
 assert.doesNotMatch(home.html, /<i[^>]*>(?:论|评|译|媒)<\/i>/);

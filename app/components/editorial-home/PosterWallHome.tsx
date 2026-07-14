@@ -181,7 +181,7 @@ export default function PosterWallHome({
         <div className={styles.issueRail}>
           <span>編輯部</span>
           <span className={styles.issueRule} aria-hidden="true" />
-          <span>期号 {issue || "—"}</span>
+          <span>{issue || "—"}</span>
         </div>
 
         <div className={styles.brandBlock}>
