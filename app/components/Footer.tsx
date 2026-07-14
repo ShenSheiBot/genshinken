@@ -23,8 +23,10 @@ export default function Footer() {
           </span>
           <span className="k">联系</span>
           <span className="v">
-            <a href={`mailto:${site.infoEmail}`}>{site.infoEmail.toUpperCase()}</a>
-            <br />
+            <a href={`mailto:${site.infoEmail}`}>{site.infoEmail}</a>
+          </span>
+          <span className="k">投稿</span>
+          <span className="v">
             <a href={`mailto:${site.editorEmail}`}>{site.editorEmail}</a>
           </span>
         </div>
