@@ -53,7 +53,7 @@ function destinationLabel(url: URL): string {
   }
   if (/(?:^|\.)pan\.quark\.cn$/i.test(host)) return "夸克网盘";
 
-  return host;
+  return "站外平台";
 }
 
 /**
@@ -122,7 +122,7 @@ function RelatedPostCard({
       {post.excerpt && <p>{post.excerpt}</p>}
       <div className={styles.cardMeta}>
         <span>{post.dateDisplay}</span>
-        <span>{post.readMin} MIN READ</span>
+        <span>预计阅读 {post.readMin} 分钟</span>
         <span className={styles.cardArrow} aria-hidden="true">
           →
         </span>
@@ -188,7 +188,7 @@ export default async function MediaDetailPage({
         <Link href="/" className={styles.backLink}>
           ← 返回首页
         </Link>
-        <span className={styles.contextNote}>MULTIMEDIA / DETAIL</span>
+        <span className={styles.contextNote}>多媒体详情</span>
       </div>
 
       <article>
@@ -200,7 +200,7 @@ export default async function MediaDetailPage({
               <span>多媒体</span>
             </div>
             <div className={styles.posterIndex} aria-hidden="true">
-              M
+              媒
             </div>
             <div className={styles.posterCross} aria-hidden="true">
               <i />
@@ -211,7 +211,7 @@ export default async function MediaDetailPage({
               <span>媒</span>
             </div>
             <div className={styles.posterFooter}>
-              <span>EXTERNAL LINKS</span>
+              <span>站外链接</span>
               <span>{mediaPost.dateDisplay}</span>
             </div>
           </div>
@@ -219,7 +219,7 @@ export default async function MediaDetailPage({
           <div className={styles.heroCopy}>
             <div className={styles.eyebrow}>
               <span className={styles.redSquare} aria-hidden="true" />
-              <span>多媒体 / MULTIMEDIA</span>
+              <span>多媒体</span>
               <span>档案</span>
             </div>
 
@@ -285,7 +285,6 @@ export default async function MediaDetailPage({
           <div className={styles.sectionLabel}>
             <span>01</span>
             <p>条目说明</p>
-            <small>ABOUT THIS ITEM</small>
           </div>
           <div className={styles.overviewBody}>
             <h2 id="overview-title">
@@ -307,7 +306,7 @@ export default async function MediaDetailPage({
         <section className={styles.material} aria-labelledby="material-title">
           <header className={styles.materialHeading}>
             <div>
-              <span>02 / ITEM MATERIAL</span>
+              <span>02</span>
               <h2 id="material-title">条目资料</h2>
             </div>
             <p>原始说明与附件</p>
@@ -322,7 +321,7 @@ export default async function MediaDetailPage({
           <section className={styles.related} aria-labelledby="related-title">
             <div className={styles.relatedHeading}>
               <div>
-                <span>03 / RELATED READING</span>
+                <span>03</span>
                 <h2 id="related-title">关联文稿</h2>
               </div>
               <p>{String(relatedPosts.length).padStart(2, "0")} 篇站内文章</p>

@@ -34,8 +34,11 @@ export default function Footer() {
             {site.license}
           </div>
           {hasLogo && (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img className="foot-logo" src="/img/logo.png" alt={site.brandEN} />
+            <span className="foot-logo-lockup" aria-label={site.brandCN}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img className="foot-logo" src="/img/logo.png" alt="" />
+              <b className="foot-logo-cn" aria-hidden="true">西方負典</b>
+            </span>
           )}
         </div>
       </div>

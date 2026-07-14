@@ -115,7 +115,7 @@ export default function TopBar() {
           if (level === 2) parentH2Key = el.id;
           return {
             key: el.id,
-            title: (el.textContent || "").trim() || "Section " + (i + 1),
+            title: (el.textContent || "").trim() || "章节 " + (i + 1),
             level,
             el,
             top: el.getBoundingClientRect().top + window.scrollY,

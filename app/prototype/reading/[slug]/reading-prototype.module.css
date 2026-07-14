@@ -839,8 +839,7 @@
   border-top: 1px solid var(--hair-strong);
 }
 
-.continue > header { display: flex; justify-content: space-between; align-items: baseline; }
-.continue > header span { font-family: var(--f-mono); font-size: 10px; letter-spacing: .13em; color: var(--ink-faint); }
+.continue > header { display: flex; justify-content: flex-end; align-items: baseline; }
 .continue h2 { margin: 0; font-family: var(--reader-interface-family); font-size: 25px; }
 .continueGrid { display: grid; grid-template-columns: 1fr 1fr; margin-top: 28px; border: 1px solid var(--hair-strong); }
 .continueGrid a { display: flex; flex-direction: column; min-height: 180px; padding: 25px 28px; transition: color .16s ease, background .16s ease; }
@@ -879,8 +878,7 @@
 .sheetHandle { display: none; }
 .sheetHeader { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 22px; padding-bottom: 18px; border-bottom: 1px solid var(--hair-strong); }
 .sheetHeading { display: flex; align-items: center; gap: 12px; min-width: 0; }
-.sheetHeader small { font-family: var(--reader-interface-family); font-size: 9px; font-weight: 600; letter-spacing: .12em; color: var(--accent); }
-.sheetHeader h2 { margin: 4px 0 0; font-family: var(--reader-interface-family); font-size: 25px; }
+.sheetHeader h2 { margin: 0; font-family: var(--reader-interface-family); font-size: 25px; }
 .sheetHeaderActions { display: flex; align-items: center; gap: 12px; }
 .sheetHeaderActions strong { font-family: var(--reader-interface-family); font-size: 10px; font-weight: 600; color: var(--accent); font-variant-numeric: tabular-nums; }
 .sheetHeaderActions > button { width: 36px; height: 36px; color: var(--ink); font-size: 25px; border: 1px solid var(--hair); }

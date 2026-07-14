@@ -36,7 +36,7 @@ export default function PostIndex({
       <div className="wrap">
         <div className="index-head">
           <div className="ih-k">
-            索引 / INDEX —— <b>{filtered.length}</b> / {total} 篇
+            索引 —— <b>{filtered.length}</b> / {total} 篇
           </div>
           <span className="dim">
             <span className="da l" />
@@ -49,7 +49,7 @@ export default function PostIndex({
 
         <div className="tagbar">
           <button className="fchip" data-on={activeTag === null} onClick={() => setActiveTag(null)}>
-            全部 / ALL<span className="ct">{total}</span>
+            全部<span className="ct">{total}</span>
           </button>
           {tags.map((t) => (
             <button
@@ -69,7 +69,7 @@ export default function PostIndex({
         {filtered.length === 0 ? (
           <div className="empty">
             <div className="big">∅ 空。</div>
-            没有标记「{activeTag}」的随笔 —— Nothing tagged here yet.
+            没有标记「{activeTag}」的随笔。
           </div>
         ) : (
           <div className="slab-list">
@@ -109,7 +109,7 @@ export default function PostIndex({
                     ))}
                   </div>
                   <span className="sread">
-                    {p.readMin} MIN READ
+                    预计阅读 {p.readMin} 分钟
                     <span className="arrow">↗</span>
                   </span>
                 </div>

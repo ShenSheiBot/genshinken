@@ -1,21 +1,17 @@
-# 西方負典 / UN-CANON
+# 西方負典
 
 > 关注历史、产业与文化的中文人文博客。
 
-## Site
+## 站点
 
-- Homepage: https://un-canon.blog/
-- Sitemap: https://un-canon.blog/sitemap.xml
+- 首页：https://un-canon.blog/
+- 站点地图：https://un-canon.blog/sitemap.xml
 
-## Access
+## 访问
 
-This site welcomes respectful access by search and language-model crawlers.
-Please crawl at a low rate, no more than one request every 10 seconds, and
-prefer the sitemap to discover article URLs. Do not parallelize requests or
-re-fetch unchanged pages unnecessarily.
+本站允许搜索引擎与语言模型爬虫进行适度访问。请保持较低抓取频率，每十秒不超过一次请求，
+并优先通过站点地图发现文章地址。请勿并行抓取，也不要无故重复抓取未发生变化的页面。
 
-## Content
+## 内容
 
-The canonical article pages are listed in the sitemap. Article text is
-published under the site's stated CC0 1.0 authorization unless a page says
-otherwise.
+文章的规范地址均列于站点地图。除非页面另有说明，文章正文依照本站所标示的 CC0 1.0 授权发布。

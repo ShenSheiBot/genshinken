@@ -731,7 +731,7 @@ export default function ReadingPrototypeChrome({
         <div className={styles.runningTitle}><b>{title}</b><span>{currentSection}</span></div>
         <button className={styles.mobileSectionButton} type="button" onClick={(event) => openSheet("toc", event.currentTarget)}><span>{currentSection}</span><b>⌄</b></button>
         <div className={styles.runningTools}>
-          <button type="button" onClick={(event) => openSheet("settings", event.currentTarget)} aria-label="阅读设置">Aa</button>
+          <button type="button" onClick={(event) => openSheet("settings", event.currentTarget)} aria-label="阅读设置">字</button>
           <button type="button" onClick={toggleTheme} aria-label="切换明暗主题">{dark ? "☾" : "☼"}</button>
         </div>
         <span className={styles.topProgress} style={{ width: `${pct}%` }} />
@@ -744,10 +744,7 @@ export default function ReadingPrototypeChrome({
             <header className={styles.sheetHeader}>
               <div className={styles.sheetHeading}>
                 {previousReference && (sheet === "annotation" || sheet === "source") && <button type="button" className={styles.referenceBack} onClick={returnToPreviousReference}>← 返回{previousReference.kind === "annotation" ? "注释" : "文献"} {previousReference.label}</button>}
-                <div>
-                  {sheet === "settings" && <small>READING</small>}
-                  <h2>{sheet === "toc" ? "文章目录" : sheet === "settings" ? "阅读设置" : sheet === "annotation" ? "注释" : "文献"}</h2>
-                </div>
+                <div><h2>{sheet === "toc" ? "文章目录" : sheet === "settings" ? "阅读设置" : sheet === "annotation" ? "注释" : "文献"}</h2></div>
               </div>
               <div className={styles.sheetHeaderActions}>
                 {(sheet === "annotation" || sheet === "source") && <strong>{(sheet === "annotation" ? annotations : sources).length.toLocaleString("zh-CN")}</strong>}
@@ -757,13 +754,13 @@ export default function ReadingPrototypeChrome({
             {sheet === "toc" ? <>{lineNavigator}{tocPanel}</> : sheet === "annotation" ? referencePane("annotation", true) : sheet === "source" ? referencePane("source", true) : (
               <>
                 <section className={styles.settingGroup}>
-                  <span>字族 / TYPEFACE</span>
+                  <span>字族</span>
                   <div className={styles.fontChooser}>
-                    <button type="button" data-active={readerFont === "serif"} onClick={() => updateFont("serif")}><b className={styles.serifSample}>字 Aa</b><span>衬线</span></button>
-                    <button type="button" data-active={readerFont === "sans"} onClick={() => updateFont("sans")}><b className={styles.sansSample}>字 Aa</b><span>无衬线</span></button>
+                    <button type="button" data-active={readerFont === "serif"} onClick={() => updateFont("serif")}><b className={styles.serifSample}>字</b><span>衬线</span></button>
+                    <button type="button" data-active={readerFont === "sans"} onClick={() => updateFont("sans")}><b className={styles.sansSample}>字</b><span>无衬线</span></button>
                   </div>
                 </section>
-                <section className={styles.settingGroup}><span>字号 / SIZE</span><div className={styles.sizeChooser}>{(["small", "medium", "large"] as const).map((size, index) => <button key={size} type="button" data-active={size === readerSize} onClick={() => updateSize(size)}><b style={{ fontSize: `${15 + index * 4}px` }}>字</b><span>{["小", "中", "大"][index]}</span></button>)}</div></section>
+                <section className={styles.settingGroup}><span>字号</span><div className={styles.sizeChooser}>{(["small", "medium", "large"] as const).map((size, index) => <button key={size} type="button" data-active={size === readerSize} onClick={() => updateSize(size)}><b style={{ fontSize: `${15 + index * 4}px` }}>字</b><span>{["小", "中", "大"][index]}</span></button>)}</div></section>
                 <button className={styles.themeChoice} type="button" onClick={toggleTheme}><span>{dark ? "☾" : "☼"}</span><b>{dark ? "切换到浅色" : "切换到深色"}</b><i>→</i></button>
               </>
             )}
@@ -771,7 +768,7 @@ export default function ReadingPrototypeChrome({
         </div>
       )}
 
-      {!isEdition && <aside className={styles.prototypeSwitcher} aria-label="正文原型切换器"><span>PROTOTYPE</span><Link href={`/posts/${encodeURIComponent(slug)}`}>现有正文</Link>{(Object.keys(variantMeta) as Variant[]).map((key, index) => <button key={key} type="button" data-active={key === variant} onClick={() => setVariant(key)}>{String(index + 1).padStart(2, "0")} {variantMeta[key].short}</button>)}</aside>}
+      {!isEdition && <aside className={styles.prototypeSwitcher} aria-label="正文原型切换器"><span>原型</span><Link href={`/posts/${encodeURIComponent(slug)}`}>现有正文</Link>{(Object.keys(variantMeta) as Variant[]).map((key, index) => <button key={key} type="button" data-active={key === variant} onClick={() => setVariant(key)}>{String(index + 1).padStart(2, "0")} {variantMeta[key].short}</button>)}</aside>}
     </>
   );
 }

@@ -140,6 +140,8 @@ export default function PosterWallHome({
   issue: string;
 }) {
   const { ordered, grouped } = orderAsWall(posts);
+  // 四个完整视觉带共容纳十张；限制墙体高度，避免尾项单独开启第五带。
+  const wallPosts = ordered.slice(0, 10);
   const firstSlug: Partial<Record<EditorialSection, string>> = {
     review: grouped.review[0]?.slug,
     essay: grouped.essay[0]?.slug,
@@ -149,15 +151,15 @@ export default function PosterWallHome({
   const featuredCount = Object.values(firstSlug).filter(Boolean).length;
   const latestArticles = posts
     .filter((post) => post.section !== "multimedia")
-    .slice(0, 3);
+    .slice(0, 6);
 
   return (
     <main className={styles.root} aria-labelledby="poster-wall-heading">
       <header className={styles.masthead}>
         <div className={styles.issueRail}>
-          <span>UN—CANON / EDITORIAL WALL</span>
+          <span>西方負典编辑部</span>
           <span className={styles.issueRule} aria-hidden="true" />
-          <span>ISSUE {issue || "—"}</span>
+          <span>期号 {issue || "—"}</span>
         </div>
 
         <div className={styles.brandBlock}>
@@ -194,7 +196,6 @@ export default function PosterWallHome({
             >
               <span className={styles.sectionNumber}>{String(index + 1).padStart(2, "0")}</span>
               <strong>{meta.label}</strong>
-              <small>{meta.english}</small>
               <b>{String(count).padStart(2, "0")}</b>
             </Link>
           );
@@ -202,13 +203,13 @@ export default function PosterWallHome({
       </nav>
 
       <div id="poster-wall" className={styles.wall}>
-        {ordered.length === 0 ? (
+        {wallPosts.length === 0 ? (
           <div className={styles.empty}>
             <span>∅</span>
             <p>内容正在编排中。</p>
           </div>
         ) : (
-          ordered.map((post, index) => {
+          wallPosts.map((post, index) => {
             const section = post.section;
             const meta = EDITORIAL_SECTION_META[section];
             const isFirstOfSection = post.slug === firstSlug[section];
@@ -225,7 +226,7 @@ export default function PosterWallHome({
                  className={`${styles.tile} ${treatment}`}
                  data-section={section}
                  data-featured={isFirstOfSection ? "true" : undefined}
-                 style={tileStyle(index, ordered.length)}
+                 style={tileStyle(index, wallPosts.length)}
               >
                 <Link
                   href={postPath(post)}
@@ -236,13 +237,10 @@ export default function PosterWallHome({
                     <span className={styles.posterNumber}>{String(index + 1).padStart(2, "0")}</span>
                     <span className={styles.posterGlyph}>{meta.glyph}</span>
                     <span className={styles.posterAxis} />
-                    <span className={styles.posterWord}>{meta.english}</span>
                   </div>
 
                   <div className={styles.cardHeader}>
-                    <span className={styles.kind}>
-                      {meta.label} / {meta.english}
-                    </span>
+                    <span className={styles.kind}>{meta.label}</span>
                     <time dateTime={post.dateISO}>{post.dateISO.replaceAll("-", ".")}</time>
                   </div>
 
@@ -266,7 +264,7 @@ export default function PosterWallHome({
                     <span>
                       {section === "multimedia"
                         ? "站内详情 · 简介 · 关联文稿"
-                        : `${post.readMin} MIN READ`}
+                        : `预计阅读 ${post.readMin} 分钟`}
                     </span>
                     <strong>{section === "multimedia" ? "查看详情" : "阅读全文"} ↗</strong>
                   </div>
@@ -277,16 +275,11 @@ export default function PosterWallHome({
         )}
       </div>
 
-      <div className={styles.wallCaption}>
-        <span>评 / 论 / 译介 / 多媒体</span>
-        <span>NO EMBEDS · EXTERNAL DESTINATIONS LIVE ON DETAIL PAGES</span>
-      </div>
-
       <section className={styles.latestUpdates} aria-labelledby="poster-latest-title">
         <div className={styles.latestInner}>
           <header className={styles.latestHeading}>
             <div>
-              <span>05 / LATEST UPDATES</span>
+              <span>05</span>
               <h2 id="poster-latest-title">最新更新</h2>
             </div>
             <p>
@@ -305,14 +298,14 @@ export default function PosterWallHome({
                   <article>
                     <Link className={styles.latestCard} href={postPath(post)}>
                       <header>
-                        <span>文稿 {String(index + 1).padStart(2, "0")}</span>
+                        <span>文稿 {post.no}</span>
                         <span>{meta.label}</span>
                       </header>
                       <h3>{post.title}</h3>
                       {(post.excerpt || post.subtitle) && <p>{post.excerpt || post.subtitle}</p>}
                       <footer>
                         <time dateTime={post.dateISO}>{post.dateDisplay}</time>
-                        <span>{post.readMin} MIN READ <b aria-hidden="true">→</b></span>
+                        <span>预计阅读 {post.readMin} 分钟 <b aria-hidden="true">→</b></span>
                       </footer>
                     </Link>
                   </article>

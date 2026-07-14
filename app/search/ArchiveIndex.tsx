@@ -66,14 +66,19 @@ function FacetGroup({
   label: string;
   options: ArchiveFacetOption[];
 }) {
+  const activeCount = options.filter((option) => option.active && option.key !== "all").length;
   return (
-    <section className={styles.facetGroup} aria-labelledby={`archive-facet-${number}`}>
-      <h2 id={`archive-facet-${number}`}>
-        <span>{number}</span>
-        {label}
-      </h2>
-      <div>{options.map((option) => <FacetOption key={option.key} option={option} />)}</div>
-    </section>
+    <details className={styles.facetGroup} open data-facet-number={number}>
+      <summary id={`archive-facet-${number}`}>
+        <span className={styles.facetTitle}><i>{number}</i>{label}</span>
+        <span className={styles.facetState}>
+          {activeCount > 0 ? `已选 ${activeCount}` : `共 ${options.length - 1} 项`}
+        </span>
+      </summary>
+      <div aria-labelledby={`archive-facet-${number}`}>
+        {options.map((option) => <FacetOption key={option.key} option={option} />)}
+      </div>
+    </details>
   );
 }
 

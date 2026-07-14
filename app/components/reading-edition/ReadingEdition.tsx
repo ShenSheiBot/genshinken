@@ -90,7 +90,7 @@ function MetaRows({ post }: { post: Post }) {
       ))}
       <div><dt>发布</dt><dd>{post.dateISO.replaceAll("-", ".")}</dd></div>
       <div><dt>篇幅</dt><dd>约 {post.readMin} 分钟</dd></div>
-      <div><dt>编号</dt><dd>NO. {post.no}</dd></div>
+      <div><dt>编号</dt><dd>第 {post.no} 号</dd></div>
     </dl>
   );
 }
@@ -101,9 +101,7 @@ function SourceRecord({ post }: { post: Post }) {
   const translator = post.credits.find((credit) => credit.mark === "译")?.name;
   return (
     <aside className={styles.sourceRecord} aria-label={translated ? "原文资料" : "文章提要"}>
-      <span className={styles.eyebrow}>
-        {translated ? "原文资料" : "EDITORIAL NOTE / 本文提要"}
-      </span>
+      <span className={styles.eyebrow}>{translated ? "原文资料" : "本文提要"}</span>
       {translated ? (
         <dl>
           {originalAuthor && <div><dt>原作者</dt><dd>{withCjkInterpuncts(originalAuthor)}</dd></div>}
@@ -162,7 +160,7 @@ function ArticleFlow({ parts }: { parts: ArticleParts }) {
       />
       <div className={styles.endMark} aria-label="正文完">
         <span />
-        <b>正文完 / FIN</b>
+        <b>正文完</b>
         <i />
       </div>
       <Appendices parts={parts} />
@@ -202,7 +200,6 @@ function ContinueReading({
   return (
     <section className={styles.continue} aria-labelledby="continue-heading">
       <header>
-        <span>CONTINUE READING</span>
         <h2 id="continue-heading">继续阅读</h2>
       </header>
       <div className={styles.continueGrid}>
@@ -249,12 +246,9 @@ export function ReadingDossier({
       <header className={styles.dossierCover} id="reading-cover">
         <aside className={styles.docket}>
           <span className={styles.docketNumber}>{section.number}</span>
-          <div>
-            <b>{section.label}</b>
-            {post.section !== "translation" && <small>{section.english}</small>}
-          </div>
+          <div><b>{section.label}</b></div>
           <i />
-          <p>{site.brandCN} / {site.brandEN}<br />文章档案 / DOSSIER<br />NO. {post.no}</p>
+          <p>{site.brandCN}<br />文章档案<br />第 {post.no} 号</p>
         </aside>
 
         <div className={styles.coverStory}>
@@ -300,7 +294,7 @@ export function ReadingFolio({ post, parts, posts }: { post: Post; parts: Articl
       <header className={styles.folioCover} id="reading-cover">
         <div className={styles.folioMast}>
           <Link href="/prototype/triptych">{site.brandCN}</Link>
-          <span>LONGFORM　{post.dateISO.replaceAll("-", ".")}</span>
+          <span>长文　{post.dateISO.replaceAll("-", ".")}</span>
         </div>
         <div className={styles.folioTitleBlock}>
           <span className={styles.folioIssue}>{section.number}</span>
