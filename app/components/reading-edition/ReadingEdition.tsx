@@ -236,7 +236,6 @@ export function ReadingDossier({
       <ReadingPrototypeChrome
         title={post.title}
         slug={post.slug}
-        readMin={post.readMin}
         variant="dossier"
         credits={post.credits}
         fallbackAuthor={post.author}
@@ -285,7 +284,6 @@ export function ReadingFolio({ post, parts, posts }: { post: Post; parts: Articl
       <ReadingPrototypeChrome
         title={post.title}
         slug={post.slug}
-        readMin={post.readMin}
         variant="folio"
         credits={post.credits}
         fallbackAuthor={post.author}

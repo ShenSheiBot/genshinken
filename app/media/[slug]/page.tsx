@@ -4,23 +4,10 @@ import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug, type Post, type PostSummary } from "@/lib/posts";
 import { site } from "@/lib/site";
 import { postPath } from "@/lib/editorial";
+import { sanitizeMediaMaterial } from "@/lib/media-material";
 import styles from "./media-detail.module.css";
 
 export const dynamicParams = true;
-
-/**
- * Editorially selected reading paths for the current media collection.
- * The relationship is deliberately explicit: a media item without a confirmed
- * association simply has no related-reading panel rather than receiving a
- * guessed list of articles.
- */
-const RELATED_POSTS: Record<string, readonly string[]> = {
-  csa: [
-    "olsevich-gregory-soviet-planned-economy-retrospective",
-    "lih-lenin-disputed",
-    "modern-japan-bourgeois-state",
-  ],
-};
 
 type Destination = {
   href: string;
@@ -61,9 +48,9 @@ function destinationLabel(url: URL): string {
  * Extract only absolute HTTP(S) anchors, deduplicate them, and never embed
  * the resulting destination in this site.
  */
-function destinationsFrom(post: Post): Destination[] {
+function destinationsFrom(html: string): Destination[] {
   const seen = new Set<string>();
-  const matches = post.html.matchAll(/<a\b[^>]*\bhref=(?:"([^"]*)"|'([^']*)')[^>]*>/gi);
+  const matches = html.matchAll(/<a\b[^>]*\bhref=(?:"([^"]*)"|'([^']*)')[^>]*>/gi);
   const destinations: Destination[] = [];
 
   for (const match of matches) {
@@ -91,9 +78,8 @@ function isPost(post: PostSummary | undefined): post is PostSummary {
 }
 
 function relatedPostsFor(mediaPost: Post, posts: PostSummary[]): PostSummary[] {
-  const relatedSlugs = RELATED_POSTS[mediaPost.slug] ?? [];
-  return relatedSlugs
-    .map((slug) => posts.find((post) => post.slug === slug))
+  return mediaPost.relatedPosts
+    .map((slug) => posts.find((post) => post.slug === slug && post.section !== "multimedia"))
     .filter(isPost);
 }
 
@@ -176,7 +162,8 @@ export default async function MediaDetailPage({
   if (!mediaPost || mediaPost.section !== "multimedia") notFound();
 
   const [posts] = await Promise.all([getAllPosts()]);
-  const destinations = destinationsFrom(mediaPost);
+  const materialHtml = sanitizeMediaMaterial(mediaPost.html);
+  const destinations = destinationsFrom(materialHtml);
   const relatedPosts = relatedPostsFor(mediaPost, posts);
   const summary =
     mediaPost.excerpt ||
@@ -313,7 +300,7 @@ export default async function MediaDetailPage({
           </header>
           <article
             className={styles.materialBody}
-            dangerouslySetInnerHTML={{ __html: mediaPost.html }}
+            dangerouslySetInnerHTML={{ __html: materialHtml }}
           />
         </section>
 

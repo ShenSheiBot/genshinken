@@ -110,7 +110,9 @@ function groupPostsBySection(posts: PostSummary[]): Record<EditorialSection, Pos
     multimedia: [],
   };
   posts.forEach((post) => grouped[post.section].push(post));
-  grouped.multimedia.sort((a, b) => Number(b.slug === "csa") - Number(a.slug === "csa"));
+  for (const section of POSTER_SECTION_PRIORITY) {
+    grouped[section].sort((a, b) => b.featuredOrder - a.featuredOrder);
+  }
   return grouped;
 }
 
@@ -125,9 +127,29 @@ function orderAsWall(posts: PostSummary[]): {
     (post): post is PostSummary => Boolean(post)
   );
   const leadSlugs = new Set(leads.map((post) => post.slug));
+  const tails: Record<EditorialSection, PostSummary[]> = {
+    essay: grouped.essay.filter((post) => !leadSlugs.has(post.slug)),
+    review: grouped.review.filter((post) => !leadSlugs.has(post.slug)),
+    translation: grouped.translation.filter((post) => !leadSlugs.has(post.slug)),
+    multimedia: grouped.multimedia.filter((post) => !leadSlugs.has(post.slug)),
+  };
+  const tailOffsets: Record<EditorialSection, number> = {
+    essay: 0,
+    review: 0,
+    translation: 0,
+    multimedia: 0,
+  };
+  // Preserve the existing cross-section rhythm while replacing each section's
+  // occupied slots with that section's explicit editorial order.
+  const orderedTail = posts
+    .filter((post) => !leadSlugs.has(post.slug))
+    .map((post) => {
+      const offset = tailOffsets[post.section]++;
+      return tails[post.section][offset] ?? post;
+    });
 
   return {
-    ordered: [...leads, ...posts.filter((post) => !leadSlugs.has(post.slug))],
+    ordered: [...leads, ...orderedTail],
     grouped,
   };
 }
@@ -290,7 +312,7 @@ export default function PosterWallHome({
           </header>
 
           <ol className={styles.latestGrid}>
-            {latestArticles.map((post, index) => {
+            {latestArticles.map((post) => {
               const section = post.section;
               const meta = EDITORIAL_SECTION_META[section];
               return (

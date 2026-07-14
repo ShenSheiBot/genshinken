@@ -207,7 +207,6 @@ function referenceItem(target: HTMLElement, kind: ReferenceKind, index: number, 
 export default function ReadingPrototypeChrome({
   title,
   slug,
-  readMin,
   variant,
   credits,
   fallbackAuthor,
@@ -215,7 +214,6 @@ export default function ReadingPrototypeChrome({
 }: {
   title: string;
   slug: string;
-  readMin: number;
   variant: Variant;
   credits: Credit[];
   fallbackAuthor: string;
@@ -261,7 +259,6 @@ export default function ReadingPrototypeChrome({
   );
   const progress = lineCount > 0 ? currentLine / lineCount : 0;
   const pct = Math.round(progress * 100);
-  const remaining = Math.max(0, Math.ceil(readMin * (1 - progress)));
   const sheetOpen = sheet !== null;
   const previousReference = referenceTrail.at(-1);
 
@@ -525,13 +522,16 @@ export default function ReadingPrototypeChrome({
   }, [referenceTrail, selectReference]);
 
   const closeSheet = useCallback(() => {
+    const hadSheet = sheet !== null;
     const wasReference = sheet === "annotation" || sheet === "source";
     setSheet(null);
     if (wasReference) {
       setReferenceTrail([]);
       history.replaceState(history.state, "", window.location.pathname + window.location.search);
     }
-    requestAnimationFrame(() => (lastNoteAnchor.current || lastSheetTrigger.current)?.focus());
+    if (hadSheet) {
+      requestAnimationFrame(() => (lastNoteAnchor.current || lastSheetTrigger.current)?.focus());
+    }
   }, [sheet]);
 
   useEffect(() => {
@@ -547,6 +547,29 @@ export default function ReadingPrototypeChrome({
       if (event.key === "Escape" && sheet) {
         event.preventDefault();
         closeSheet();
+        return;
+      }
+      if (event.key === "Tab" && sheet) {
+        const dialog = sheetRef.current;
+        if (!dialog) return;
+        const focusable = Array.from(dialog.querySelectorAll<HTMLElement>(
+          "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])"
+        )).filter((element) => element.getClientRects().length > 0 && element.getAttribute("aria-hidden") !== "true");
+        const first = focusable[0];
+        const last = focusable.at(-1);
+        if (!first || !last) {
+          event.preventDefault();
+          dialog.focus();
+          return;
+        }
+        const active = document.activeElement;
+        if (event.shiftKey && (active === first || !dialog.contains(active))) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && (active === last || !dialog.contains(active))) {
+          event.preventDefault();
+          first.focus();
+        }
         return;
       }
       if (isEdition || (event.key !== "ArrowLeft" && event.key !== "ArrowRight")) return;
@@ -567,9 +590,15 @@ export default function ReadingPrototypeChrome({
   };
 
   const jumpToHeading = (id: string) => {
-    setSheet(null);
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    closeSheet();
     requestAnimationFrame(() => requestAnimationFrame(() => {
-      document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+      const target = document.getElementById(id);
+      target?.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+      if (target) {
+        target.tabIndex = -1;
+        target.focus({ preventScroll: true });
+      }
     }));
   };
 
@@ -584,7 +613,7 @@ export default function ReadingPrototypeChrome({
     const bodyTop = body.getBoundingClientRect().top + window.scrollY;
     const target = bodyTop + centers[line - 1] - visualAnchor();
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    setSheet(null);
+    closeSheet();
     requestAnimationFrame(() => requestAnimationFrame(() => {
       window.scrollTo({ top: Math.max(0, target), behavior: reduce ? "auto" : "smooth" });
     }));
@@ -603,9 +632,16 @@ export default function ReadingPrototypeChrome({
     const id = kind === "annotation" ? activeAnnotationId : activeSourceId;
     const target = document.getElementById(id);
     const details = target?.closest("details");
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (details) details.open = true;
-    setSheet(null);
-    requestAnimationFrame(() => target?.scrollIntoView({ behavior: "smooth", block: "center" }));
+    closeSheet();
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      target?.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" });
+      if (target) {
+        target.tabIndex = -1;
+        target.focus({ preventScroll: true });
+      }
+    }));
   };
 
   const toggleToc = (id: string) => {
@@ -729,17 +765,18 @@ export default function ReadingPrototypeChrome({
       <header className={styles.runningHeader}>
         <Link href={isEdition ? "/" : "/prototype/poster"} className={styles.runningBrand} aria-label={`返回${site.brandCN}首页`}><i />{site.brandCN}</Link>
         <div className={styles.runningTitle}><b>{title}</b><span>{currentSection}</span></div>
-        <button className={styles.mobileSectionButton} type="button" onClick={(event) => openSheet("toc", event.currentTarget)}><span>{currentSection}</span><b>⌄</b></button>
+        <button className={styles.mobileSectionButton} type="button" onClick={(event) => openSheet("toc", event.currentTarget)} aria-label={`文章目录：${currentSection}`} aria-haspopup="dialog" aria-expanded={sheet === "toc"}><span>{currentSection}</span><b>⌄</b></button>
         <div className={styles.runningTools}>
+          <button className={styles.compactTocButton} type="button" onClick={(event) => openSheet("toc", event.currentTarget)} aria-haspopup="dialog" aria-expanded={sheet === "toc"}>目录</button>
           <button type="button" onClick={(event) => openSheet("settings", event.currentTarget)} aria-label="阅读设置">字</button>
-          <button type="button" onClick={toggleTheme} aria-label="切换明暗主题">{dark ? "☾" : "☼"}</button>
+          <button className={styles.themeButton} type="button" onClick={toggleTheme} aria-label="切换明暗主题">{dark ? "☾" : "☼"}</button>
         </div>
         <span className={styles.topProgress} style={{ width: `${pct}%` }} />
       </header>
 
       {sheet && (
         <div className={styles.sheetLayer} role="presentation" onMouseDown={(event) => { if (event.currentTarget === event.target) closeSheet(); }}>
-          <section ref={sheetRef} className={styles.sheet} role="dialog" aria-modal="true" aria-label={sheet === "toc" ? "文章目录" : sheet === "settings" ? "阅读设置" : sheet === "annotation" ? "文章注释" : "文章文献"}>
+          <section ref={sheetRef} className={styles.sheet} role="dialog" aria-modal="true" tabIndex={-1} aria-label={sheet === "toc" ? "文章目录" : sheet === "settings" ? "阅读设置" : sheet === "annotation" ? "文章注释" : "文章文献"}>
             <div className={styles.sheetHandle} />
             <header className={styles.sheetHeader}>
               <div className={styles.sheetHeading}>

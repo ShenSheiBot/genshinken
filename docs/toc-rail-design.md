@@ -1,7 +1,9 @@
-# 目录进度栏（TocRail）设计文档
+# 目录进度栏（TocRail）历史设计文档
+
+> **已废止，不是现行实现或验收标准。** 本文记录改版前的独立 `TocRail` 探索；生产文章页已经改用案卷阅读界面，不再由文章路由挂载 `TocRail` 或 `ReadingRail`。当前目录、视觉行、注释/文献、断点与移动排版要求以 [`frontend-product-spec.md`](frontend-product-spec.md) 第 4 节为准。以下内容仅供追溯设计背景，不应据此新增或验收功能。
 
 > 文章页左缘的目录 × 阅读进度部件。方案代号「标尺 / SCALE」。
-> 代码：`app/components/TocRail.tsx` + `app/globals.css` 末尾「目录进度栏」一节；由 `app/posts/[slug]/page.tsx` 挂载。
+> 历史代码位置：`app/components/TocRail.tsx` + `app/globals.css` 末尾「目录进度栏」一节；当前文章页不再挂载。
 
 ## 设计思路
 

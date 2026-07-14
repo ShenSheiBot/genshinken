@@ -17,7 +17,7 @@
 - [ ] **首行缩进交给前端**：勿手敲全角空格；承接段用 `<!--continue-->` 标记（见 §7）
 - [ ] **链接有效**：外链正常；无残留的 Outline `mention://` 内链
 - [ ] **提交作者 = `un-canon <un-canon@hotmail.com>`**
-- [ ] 本地 `npm run build` 通过，再推送
+- [ ] 本地 `npm run check` 与 `npm run build` 通过，再推送
 
 ---
 
@@ -32,8 +32,8 @@ slug: pechatnov-soviet-union-bretton-woods   # ✅
 slug: 苏联与布雷顿森林会议                      # ❌ 会变成 %E8%8B%8F... 乱码
 ```
 
-缺省时 `slug` 取文件名，**所以中文文件名同样会产出中文 URL**。要么给中文文件名补一个 ASCII `slug`，
-要么直接用 ASCII 文件名。
+运行时为兼容旧稿，缺省时仍会从文件名回退 `slug`；但发布门禁禁止依赖这一行为。每篇稿件都必须
+显式填写 ASCII `slug`，Markdown 文件名也必须是 ASCII，且建议与 slug 保持一致。
 
 > 命名约定：`<作者姓氏或主题>-<英文关键词>`，如 `pechatnov-soviet-union-bretton-woods`、
 > `historical-materialism-theses`。
@@ -59,6 +59,7 @@ translator: 译者名          # 可选，空心「译」
 editor: 编者名             # 可选，空心「编」
 proofreader: 校对名         # 可选，空心「校」
 excerpt: 一句话摘要         # 可选，缺省取正文首段
+featured_order: 0        # 可选；同栏目首页推荐优先级，数值越大越靠前
 ---
 ```
 
@@ -70,6 +71,10 @@ excerpt: 一句话摘要         # 可选，缺省取正文首段
   - `translation`：译介
   - `multimedia`：多媒体
 - `section` 与 `categories` 相互独立；不要用“历史 / 哲学”等主题分类代替栏目，也不要只依赖译者署名推断译介。
+- `featured_order` 可用于任一栏目，必须是有限数值；缺省为 `0`，数值越大则在同栏目首页越靠前。
+- `related_posts` 只允许多媒体条目使用，写作 slug 列表，例如
+  `related_posts: [lih-lenin-disputed, pechatnov-soviet-union-bretton-woods]`。目标必须是已发布的
+  非多媒体站内文稿，不得重复或指向条目自身。
 
 ---
 
@@ -132,8 +137,20 @@ excerpt: 一句话摘要         # 可选，缺省取正文首段
 
 ## 6. 提交与部署
 
-- **提交作者固定为 `un-canon <un-canon@hotmail.com>`**（本机 git config 是 bakasayaka，需显式
-  `--author` 覆盖）。
+- **Author 与 Committer 都固定为 `un-canon <un-canon@hotmail.com>`**。在本仓库执行一次：
+
+  ```bash
+  git config --local user.name un-canon
+  git config --local user.email un-canon@hotmail.com
+  ```
+
+  不要只用 `git commit --author=...`：它不会修改 Committer。提交后同时核对四个字段：
+
+  ```bash
+  git show -s --format='Author: %an <%ae>%nCommitter: %cn <%ce>' HEAD
+  ```
+
+  只有 Author 与 Committer 的姓名、邮箱都完全一致时才可推送。
 - 推送 `main` 即触发 Vercel 自动构建上线。
 - ⚠️ **部署去重**：若某 commit 已作为分支 preview 构建过，再把**同一 SHA**推到 `main` 时，Vercel 可能
   因 SHA 去重而**不重新生成生产部署**。确保进入生产的是一个新 commit（内容有实质变化），或在 Vercel
@@ -159,3 +176,17 @@ excerpt: 一句话摘要         # 可选，缺省取正文首段
   ```
 
   该标记应在**译前处理**阶段注入，原则见 `docs/pre-translation.md`。引文本身不缩进，无需标记。
+
+---
+
+## 8. 自动交付门禁
+
+- `npm run validate:content`：检查栏目、显式 ASCII slug、slug 唯一性、分类/标签和多媒体关联字段。
+- `npm run validate:media-html`：验证多媒体资料 HTML 的允许列表会剔除播放器、主动内容和危险属性。
+- `npm run typecheck`：执行严格 TypeScript 检查，不生成文件。
+- `npm run lint`：使用非交互 ESLint CLI；任何警告也视为失败。
+- `npm run check`：依次运行上述四项，适合作为提交前快速门禁。
+- `npm run build`：执行完整生产构建。首页、索引、案卷正文与多媒体的产品验收以
+  [`frontend-product-spec.md`](frontend-product-spec.md) 为准。
+- `npm run verify:editorial -- <base-url>`：对已经启动的本地站点或公开环境执行发布回归；例如
+  `npm run verify:editorial -- https://un-canon.blog`。

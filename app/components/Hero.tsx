@@ -37,7 +37,7 @@ export default function Hero({ count, issue }: { count: number; issue: string })
           <span className="arr">►</span>
         </div>
         <div className="bp-leader two">
-          <span className="lb">// 愿景</span>
+          <span className="lb">{"// 愿景"}</span>
           <span className="ln" />
           <span className="dot" />
         </div>

@@ -35,8 +35,10 @@ export interface PostSummary {
   updatedISO: string; // 修订日期（front-matter `updated`），缺省回退到 dateISO
   timestamp: number; // 用于排序
   excerpt: string;
+  relatedPosts: string[]; // 多媒体条目按编辑顺序声明的关联文章 slug
+  featuredOrder: number; // 同栏目首页推荐优先级；数值越大越靠前
   readMin: number;
-  no: string; // "01" — 按时间倒序编号，最新为 01
+  no: string; // 最早发布为 1，之后递增；最新文章为当前总数 N
 }
 
 export interface Post extends PostSummary {
@@ -182,9 +184,7 @@ function deriveExcerpt(html: string, fmExcerpt: unknown, title: string): string 
     return /https?:\/\//i.test(t) ? ml >= 40 : ml >= 8;
   });
   const source = pick ?? "";
-  if (!source) return "";
-  const limit = 92;
-  return source.length > limit ? source.slice(0, limit) + "…" : source;
+  return source;
 }
 
 function readMinutes(html: string): number {
@@ -238,6 +238,8 @@ async function loadRaw(): Promise<Post[]> {
         timestamp: +date,
         sortOrder: toSortOrder(data.sort_order ?? data.sortOrder ?? data.order),
         excerpt: deriveExcerpt(html, data.excerpt, title),
+        relatedPosts: Array.from(new Set(toList(data.related_posts))),
+        featuredOrder: toSortOrder(data.featured_order),
         readMin: readMinutes(html),
         no: "00",
         originalTitle: metadataText(data.original_title ?? data.originalTitle ?? data["原文题名"]),

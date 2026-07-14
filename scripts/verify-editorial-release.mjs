@@ -1,6 +1,8 @@
 import assert from "node:assert/strict";
 
 const base = (process.argv[2] || "http://localhost:3000").replace(/\/$/, "");
+const prohibitedBrand = "\u53cd\u6b63\u5178";
+const embeddedMediaTag = /<(?:iframe|video|audio|object|embed)\b/i;
 
 async function page(path) {
   const response = await fetch(`${base}${path}`, { redirect: "manual" });
@@ -15,6 +17,10 @@ const missing = await page("/does-not-exist");
 const mediaRedirect = await fetch(`${base}/posts/csa`, { redirect: "manual" });
 const rss = await fetch(`${base}/rss.xml`);
 const sitemap = await page("/sitemap.xml");
+
+for (const [label, result] of Object.entries({ home, article, media, search, missing })) {
+  assert.ok(!result.html.includes(prohibitedBrand), `${label} must not contain the prohibited brand`);
+}
 
 assert.equal(home.response.status, 200, "homepage must return HTTP 200");
 assert.match(home.html, /欢迎来到象征界的大草原/);
@@ -53,7 +59,6 @@ assert.match(article.html, /dateModified/);
 assert.match(article.html, /正文完/);
 assert.match(article.html, /\/img\/logo\.png/);
 for (const value of [
-  "反正典",
   "待编辑部补录",
   "资料字段以编辑部档案为准",
   "ORIGINAL RECORD",
@@ -74,6 +79,7 @@ for (const value of [
 assert.match(article.html, /foot-logo-cn[^>]*[^<]*>西方負典</);
 
 assert.equal(media.response.status, 200, "media detail must return HTTP 200");
+assert.doesNotMatch(media.html, embeddedMediaTag, "media detail must not embed a media player");
 for (const value of [
   "MULTIMEDIA / DETAIL",
   "EXTERNAL LINKS",
@@ -92,6 +98,20 @@ assert.match(rss.headers.get("content-type") || "", /application\/rss\+xml/);
 assert.match(sitemap.html, /\/search/);
 assert.match(sitemap.html, /\/media\//);
 assert.match(sitemap.html, /<lastmod>/);
+const mediaPaths = [
+  ...new Set(
+    [...sitemap.html.matchAll(/<loc>([^<]*\/media\/[^<]+)<\/loc>/g)].map(
+      ([, location]) => new URL(location).pathname
+    )
+  ),
+];
+assert.ok(mediaPaths.length > 0, "sitemap must contain at least one media detail page");
+for (const path of mediaPaths) {
+  const detail = await page(path);
+  assert.equal(detail.response.status, 200, `${path} must return HTTP 200`);
+  assert.doesNotMatch(detail.html, embeddedMediaTag, `${path} must not embed a media player`);
+  assert.ok(!detail.html.includes(prohibitedBrand), `${path} must not contain the prohibited brand`);
+}
 assert.equal(search.response.status, 200, "search must return HTTP 200");
 assert.match(search.html, /文章索引/);
 assert.equal((search.html.match(/<details[^>]+open/g) || []).length, 3, "archive filters must be collapsible");

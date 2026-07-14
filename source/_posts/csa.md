@@ -2,9 +2,18 @@
 
 title: 历史转折中的联合工团②——布莱恩特区与移交温哥华
 
+slug: csa
+
 categories: 历史
 
 section: multimedia
+
+featured_order: 1
+
+related_posts:
+  - olsevich-gregory-soviet-planned-economy-retrospective
+  - lih-lenin-disputed
+  - modern-japan-bourgeois-state
 
 tags: [联合工团, 温哥华]
 

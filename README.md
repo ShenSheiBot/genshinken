@@ -16,6 +16,9 @@
 
 > **发布前请逐项核对交付标准：[`docs/delivery-standards.md`](docs/delivery-standards.md)**
 > （slug 全 ASCII、front-matter 完整、弯引号、脚注 `[^n]` 可跳转、作者署名等）。
+>
+> **前端产品和验收标准：[`docs/frontend-product-spec.md`](docs/frontend-product-spec.md)**
+> （首页、文章索引、案卷正文、多媒体详情页及响应式交互的现行决定）。
 
 ### Front-matter 字段
 
@@ -30,12 +33,16 @@ post_author: 作者名       # 作者；首页卡片上以实心橙块「作」�
 translator: 译者名        # 可选；空心橙块「译」
 editor: 编者名            # 可选；空心橙块「编」
 proofreader: 校对名       # 可选；空心橙块「校」
-slug: my-custom-url      # 自定义 URL；必须为 ASCII（缺省取文件名，故中文文件名也要补此项）
+slug: my-custom-url      # 必填 URL；必须为小写 ASCII kebab-case
 excerpt: 一句话摘要        # 可选，缺省时自动取正文首段
+featured_order: 0       # 可选；同栏目首页推荐优先级，数值越大越靠前
 ---
 
 > 署名顺序固定为 作者 → 译者 → 编者 → 校对；一个角色多人用逗号分隔。
 > `section` 与主题分类相互独立：例如一篇历史译文应写 `categories: 历史` 与 `section: translation`。
+> 运行时仍兼容旧稿从文件名回退 slug，但发布门禁要求每篇稿件显式填写；不要依赖回退。
+> 多媒体条目可以另外填写 `related_posts: [article-slug, another-slug]`，关联零篇或多篇站内文稿；
+> 该字段只能用于 `section: multimedia`，目标必须是已经发布的非多媒体文章。
 
 正文从这里开始……
 ```
@@ -70,6 +77,7 @@ excerpt: 一句话摘要        # 可选，缺省时自动取正文首段
 ```bash
 npm install
 npm run dev      # http://localhost:3000
+npm run check    # 内容模型 + TypeScript + ESLint
 npm run build    # 生产构建（与 Vercel 一致）
 ```
 
@@ -81,7 +89,7 @@ app/                  Next.js App Router（页面、布局、组件）
   search/             文章索引与栏目、主题分类、标签筛选
   media/[slug]/       多媒体条目详情页
   posts/[slug]/       文章详情页
-  page.tsx            首页（编辑海报墙 + 最新更新）
+  page.tsx            首页（四栏目编辑展示 + 最新更新）
   globals.css         全站样式（新粗野主义设计 + Markdown 正文样式）
 lib/
   posts.ts            读取 / 解析文章

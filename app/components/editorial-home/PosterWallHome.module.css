@@ -1,4 +1,4 @@
-/* 首页编辑海报墙与最新更新。 */
+/* 首页编辑展示与最新更新。 */
 .root {
   width: 100%;
   color: var(--ink);
@@ -505,12 +505,6 @@
   -webkit-line-clamp: 2;
 }
 
-.tile[data-featured="true"] .excerpt {
-  display: block;
-  overflow: visible;
-  -webkit-line-clamp: unset;
-}
-
 .tile[data-featured="true"] .card {
   height: auto;
   min-height: inherit;
@@ -521,6 +515,13 @@
 .featureWide .excerpt,
 .thirdCompact .subtitle {
   display: none;
+}
+
+/* The four section leads always carry their complete editorial overview. */
+.tile[data-featured="true"] .excerpt {
+  display: block;
+  overflow: visible;
+  -webkit-line-clamp: unset;
 }
 
 .platformStrip {

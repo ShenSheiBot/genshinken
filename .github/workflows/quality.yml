@@ -1,0 +1,70 @@
+name: Quality
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: quality-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      NEXT_TELEMETRY_DISABLED: "1"
+
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+
+      - name: 配置 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: 安装锁定依赖
+        run: npm ci
+
+      - name: 校验内容模型
+        run: npm run validate:content
+
+      - name: 校验多媒体 HTML
+        run: npm run validate:media-html
+
+      - name: 检查 TypeScript
+        run: npm run typecheck
+
+      - name: 检查 ESLint
+        run: npm run lint
+
+      - name: 构建生产版本
+        run: npm run build
+
+      - name: 回归生产构建
+        shell: bash
+        run: |
+          npm run start -- --hostname 127.0.0.1 > /tmp/un-canon-next.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" 2>/dev/null || true' EXIT
+
+          ready=0
+          for attempt in {1..30}; do
+            if curl --fail --silent --show-error http://127.0.0.1:3000/ > /dev/null; then
+              ready=1
+              break
+            fi
+            sleep 1
+          done
+
+          if [ "$ready" -ne 1 ]; then
+            cat /tmp/un-canon-next.log
+            exit 1
+          fi
+
+          npm run verify:editorial -- http://127.0.0.1:3000
