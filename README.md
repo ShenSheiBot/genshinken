@@ -18,7 +18,7 @@
 > （slug 全 ASCII、front-matter 完整、弯引号、脚注 `[^n]` 可跳转、作者署名等）。
 >
 > **前端产品和验收标准：[`docs/frontend-product-spec.md`](docs/frontend-product-spec.md)**
-> （首页、文章索引、案卷正文、多媒体详情页及响应式交互的现行决定）。
+> （首页、内容索引、案卷正文、多媒体详情页及响应式交互的现行决定）。
 
 ### Front-matter 字段
 
@@ -27,7 +27,7 @@
 title: 文章标题
 categories: 历史          # 主分类（也用作首页/文章页的分类标签）
 section: essay           # 编辑栏目：essay / review / translation / multimedia
-tags: [产业, 冷战史]      # 标签（可多个；勿与主分类重复；用于文章索引筛选）
+tags: [产业, 冷战史]      # 标签（可多个；勿与主分类重复；用于内容索引筛选）
 date: 2026-05-12         # 发布日期 YYYY-MM-DD
 post_author: 作者名       # 作者；首页卡片上以实心橙块「作」标记
 translator: 译者名        # 可选；空心橙块「译」
@@ -86,7 +86,7 @@ npm run build    # 生产构建（与 Vercel 一致）
 ```
 app/                  Next.js App Router（页面、布局、组件）
   components/         TopBar / Footer / PosterWallHome / PostIndex
-  search/             文章索引与栏目、主题分类、标签筛选
+  search/             内容索引与栏目、主题分类、标签筛选
   media/[slug]/       多媒体条目详情页
   posts/[slug]/       文章详情页
   page.tsx            首页（四栏目编辑展示 + 最新更新）
@@ -107,7 +107,7 @@ Vercel 项目 `un-canon-blog` 的 Framework Preset 应为 **Next.js**
 ### 爬虫访问策略
 
 站点通过 `app/robots.ts` 允许搜索引擎和常见 LLM 爬虫访问，并以 `Crawl-delay: 10`
-请求合作爬虫保持低频访问。`public/llms.txt` 提供站点范围、文章索引和访问约定。
+请求合作爬虫保持低频访问。`public/llms.txt` 提供站点范围、内容索引和访问约定。
 
 注意：`robots.txt` 和 `Crawl-delay` 只能表达协议层面的访问意愿，不能强制不遵守协议的
 爬虫限速。当前域名的线上 `robots.txt` 还可能被 Cloudflare Managed Content 追加规则；

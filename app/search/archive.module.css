@@ -374,10 +374,28 @@
 }
 
 @media (max-width: 680px) {
-  .hero { display: block; min-height: 0; padding: 32px 20px 27px; }
-  .hero > div:nth-child(2) { margin-top: 34px; }
-  .hero h1 { font-size: clamp(52px, 16vw, 72px); }
-  .count { margin-top: 20px; }
+  .hero {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "kicker kicker"
+      "heading count";
+    min-height: 0;
+    column-gap: 12px;
+    row-gap: 0;
+    padding: 32px 20px 27px;
+  }
+  .kicker { grid-area: kicker; }
+  .heading { grid-area: heading; min-width: 0; margin-top: 34px; }
+  .hero h1 { font-size: clamp(52px, 16vw, 72px); white-space: nowrap; }
+  .count {
+    grid-area: count;
+    align-self: end;
+    gap: 6px;
+    margin-top: 34px;
+    white-space: nowrap;
+  }
+  .count strong { font-size: clamp(24px, 7.2vw, 30px); }
+  .count span { font-size: 9px; }
   .frame { display: block; padding: 0 20px; }
   .filters { position: static; max-height: none; overflow: visible; border-right: 0; }
   .filters > header { position: static; padding-right: 0; }

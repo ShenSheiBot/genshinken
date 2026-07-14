@@ -38,7 +38,7 @@ function FacetOption({ option }: { option: ArchiveFacetOption }) {
         disabled
         className={styles.option}
         data-disabled="true"
-        title="当前筛选条件下没有符合的文章"
+        title="当前筛选条件下没有符合的内容"
       >
         {content}
       </button>
@@ -117,17 +117,17 @@ export default function ArchiveIndex({
           <b>02</b>
           <span>索引</span>
         </div>
-        <div>
-          <h1>文章索引</h1>
+        <div className={styles.heading}>
+          <h1>内容索引</h1>
         </div>
-        <div className={styles.count} aria-label={`当前显示 ${posts.length} 篇，共 ${total} 篇`}>
+        <div className={styles.count} aria-label={`当前显示 ${posts.length} 项，共 ${total} 项`}>
           <strong>{String(posts.length).padStart(2, "0")}</strong>
           <span>/ {String(total).padStart(2, "0")}</span>
         </div>
       </header>
 
       <div className={styles.frame}>
-        <aside className={styles.filters} aria-label="文章筛选">
+        <aside className={styles.filters} aria-label="内容筛选">
           <header>
             <span>已选 {String(selectedCount).padStart(2, "0")} / 03</span>
             {hasFilters ? <Link href={resetHref}>清除全部</Link> : <span>全部内容</span>}
@@ -137,7 +137,7 @@ export default function ArchiveIndex({
           <FacetGroup number="03" label="标签" options={tagOptions} />
         </aside>
 
-        <section className={styles.results} aria-label="文稿索引">
+        <section className={styles.results} aria-label="内容索引">
           <div className={styles.columnHead} aria-hidden="true">
             <span>编号 / 日期</span>
             <span>分类 / 标题</span>

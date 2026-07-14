@@ -129,7 +129,8 @@ for (const path of mediaPaths) {
   assert.ok(!detail.html.includes(prohibitedBrand), `${path} must not contain the prohibited brand`);
 }
 assert.equal(search.response.status, 200, "search must return HTTP 200");
-assert.match(search.html, /文章索引/);
+assert.match(search.html, /内容索引/);
+assert.doesNotMatch(search.html, /文章索引/);
 assert.equal((search.html.match(/<details[^>]+open/g) || []).length, 3, "archive filters must be collapsible");
 assert.doesNotMatch(search.html, /按栏目、主题分类和标签浏览全部站内内容/);
 assert.doesNotMatch(search.html, /索引 \/ INDEX|全部 \/ ALL|MIN READ/);

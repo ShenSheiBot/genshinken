@@ -9,8 +9,8 @@ import { getAllPosts, type PostSummary } from "@/lib/posts";
 import ArchiveIndex, { type ArchiveFacetOption } from "./ArchiveIndex";
 
 export const metadata: Metadata = {
-  title: "文章索引",
-  description: "浏览西方負典的全部文章，并按栏目、主题分类与标签筛选。",
+  title: "内容索引",
+  description: "浏览西方負典的全部内容，并按栏目、主题分类与标签筛选。",
   alternates: { canonical: "/search" },
 };
 

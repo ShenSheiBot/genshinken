@@ -52,7 +52,7 @@ date: 2026-06-15          # 发布日期 YYYY-MM-DD
 updated: 2026-07-13       # 可选；实质性修订时更新，缺省回退到 date
 slug: ascii-url-slug      # 必填且必须 ASCII（见 §1）
 categories: [历史]         # 主分类；前端单独渲染为分类标记
-section: translation      # 编辑栏目；驱动首页入口与文章索引筛选
+section: translation      # 编辑栏目；驱动首页入口与内容索引筛选
 tags: [布雷顿森林, 冷战起源] # 标签；勿与 categories 重复
 post_author: 作者名         # 作者，实心方块「作」
 translator: 译者名          # 可选，空心「译」
