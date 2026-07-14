@@ -50,16 +50,41 @@
   background: var(--hair-strong);
 }
 
-.displayTitle {
+.brandBlock {
   z-index: 1;
   grid-column: 1 / 10;
   align-self: end;
+  min-width: 0;
+}
+
+.displayTitle {
   margin: 0;
   font-family: var(--f-grotesk);
   font-size: clamp(74px, 10.5vw, 150px);
   font-weight: 700;
   line-height: 0.72;
   letter-spacing: -0.075em;
+}
+
+.heroWelcome {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 28px 0 2px;
+  color: var(--ink-soft);
+  font-family: var(--f-cjk-serif);
+  font-size: clamp(14px, 1.15vw, 17px);
+  font-weight: 700;
+  line-height: 1.45;
+  letter-spacing: 0.11em;
+}
+
+.heroWelcome::before {
+  width: clamp(34px, 4vw, 52px);
+  height: 1px;
+  flex: none;
+  content: "";
+  background: var(--accent);
 }
 
 .displayTitle span,
@@ -99,21 +124,11 @@
 
 .manifesto p {
   max-width: 250px;
-  margin: 0 0 14px;
+  margin: 0;
   font-family: var(--f-cjk-serif);
   font-size: 16px;
   font-weight: 700;
   line-height: 1.55;
-}
-
-.manifesto small {
-  display: block;
-  max-width: 260px;
-  color: var(--ink-soft);
-  font-family: var(--f-mono);
-  font-size: 9px;
-  line-height: 1.6;
-  letter-spacing: 0.08em;
 }
 
 .registration {
@@ -443,42 +458,9 @@
   display: inline-flex;
   min-width: 0;
   align-items: center;
-  gap: 8px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-.kind i {
-  display: inline-grid;
-  width: 19px;
-  height: 19px;
-  flex: none;
-  place-items: center;
-  border: 1px solid currentColor;
-  color: var(--card-ink);
-  font-family: var(--f-cjk-serif);
-  font-size: 10px;
-  font-style: normal;
-  line-height: 1;
-}
-
-.tile[data-section="essay"] .kind i {
-  color: var(--solid-ink);
-  background: var(--solid);
-  border-color: var(--solid);
-}
-
-.tile[data-section="review"] .kind i {
-  color: var(--solid-ink);
-  background: var(--accent);
-  border-color: var(--accent);
-}
-
-.tile[data-section="multimedia"] .kind i {
-  color: var(--solid-ink);
-  background: var(--accent);
-  border-color: var(--accent);
 }
 
 .cardHeader time {
@@ -921,8 +903,11 @@
     padding-left: 28px;
   }
 
-  .displayTitle {
+  .brandBlock {
     grid-column: 1 / 9;
+  }
+
+  .displayTitle {
     font-size: clamp(68px, 12vw, 112px);
   }
 
@@ -1018,10 +1003,24 @@
     display: none;
   }
 
-  .displayTitle {
+  .brandBlock {
     margin-top: 62px;
+  }
+
+  .displayTitle {
     font-size: clamp(61px, 18vw, 96px);
     line-height: 0.76;
+  }
+
+  .heroWelcome {
+    gap: 11px;
+    margin-top: 20px;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+  }
+
+  .heroWelcome::before {
+    width: 28px;
   }
 
   .displayTitle em {

@@ -160,14 +160,16 @@ export default function PosterWallHome({
           <span>ISSUE {issue || "—"}</span>
         </div>
 
-        <h1 id="poster-wall-heading" className={styles.displayTitle}>
-          <span>{site.brandCN}</span>
-        </h1>
+        <div className={styles.brandBlock}>
+          <h1 id="poster-wall-heading" className={styles.displayTitle}>
+            <span>{site.brandCN}</span>
+          </h1>
+          <p className={styles.heroWelcome}>欢迎来到象征界的大草原</p>
+        </div>
 
         <div className={styles.manifesto}>
           <span className={styles.manifestoNumber}>{String(posts.length).padStart(2, "0")}</span>
           <p>「西方負典」是一档关注历史、产业和文化的人文博客，希望为汉语读者提供基于观察视角的话题和内容。</p>
-          <small>東流不溢，孰知其故</small>
         </div>
 
         <div className={styles.registration} aria-hidden="true">
@@ -239,7 +241,6 @@ export default function PosterWallHome({
 
                   <div className={styles.cardHeader}>
                     <span className={styles.kind}>
-                      <i>{meta.glyph}</i>
                       {meta.label} / {meta.english}
                     </span>
                     <time dateTime={post.dateISO}>{post.dateISO.replaceAll("-", ".")}</time>

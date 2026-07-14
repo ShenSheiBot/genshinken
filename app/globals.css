@@ -12,7 +12,6 @@
   --f-mono: "Space Mono", "Noto Sans SC", monospace;
   --f-cjk-serif: "STSong", "华文宋体", "Songti SC", "SimSun", "Noto Serif SC", serif;
   --f-cjk-fangsong: "STFangsong", "华文仿宋", "FangSong", "FangSong_GB2312", "Noto Serif SC", serif;
-  --f-cjk-kai: "STKaiti", "华文楷体", "KaiTi", "Kaiti SC", "Noto Serif SC", serif;
   --f-note: "Times New Roman", Times, var(--f-cjk-serif);
   --f-quote-latin: "EB Garamond", Garamond, Georgia, serif;
   --f-quote-cjk: var(--f-cjk-fangsong);
@@ -64,6 +63,9 @@ html {
   scrollbar-width: thin;
   scrollbar-color: var(--accent) transparent;
 }
+@media (max-width: 767px) {
+  html:has(.reading-edition-page) { scrollbar-gutter: auto; }
+}
 html::-webkit-scrollbar { width: 9px; height: 9px; }
 html::-webkit-scrollbar-track {
   background: linear-gradient(90deg,
@@ -96,6 +98,11 @@ body {
     var(--grid) calc(var(--grid-step) - 1px), var(--grid) var(--grid-step));
   background-attachment: fixed;
 }
+
+/* The dossier reading edition supplies its own running header and paper surface. */
+.app:has(.reading-edition-page) > .topbar { display: none; }
+.app:has(.reading-edition-page) > .foot { margin-top: 0; }
+body:has(.reading-edition-page) { background-image: none; }
 .app { min-height: 100vh; position: relative; }
 
 .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 40px; position: relative; }
@@ -429,12 +436,11 @@ body:has(main[data-archive-page="true"]) {
   text-align: right;
 }
 .art-body .signature-block p {
-  font-family: var(--f-cjk-kai);
   margin: 0 0 12px;
   text-align: right;
   text-indent: 0;
-  font-size: 18px;
-  line-height: 1.85;
+  font-size: 22px;
+  line-height: 1.75;
   letter-spacing: 0;
 }
 .art-body .signature-block p:last-child { margin-bottom: 0; }

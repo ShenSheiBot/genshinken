@@ -40,6 +40,9 @@ export interface PostSummary {
 }
 
 export interface Post extends PostSummary {
+  originalTitle: string;
+  originalPublication: string;
+  originalDate: string;
   html: string;
   sortOrder: number;
 }
@@ -152,6 +155,12 @@ function toSortOrder(v: unknown): number {
   return Number.isFinite(n) ? n : 0;
 }
 
+function metadataText(v: unknown): string {
+  if (v == null) return "";
+  if (v instanceof Date && !isNaN(+v)) return fmtISO(v);
+  return String(v).trim();
+}
+
 function comparePosts(a: Post, b: Post): number {
   return b.timestamp - a.timestamp || b.sortOrder - a.sortOrder || a.slug.localeCompare(b.slug);
 }
@@ -231,6 +240,14 @@ async function loadRaw(): Promise<Post[]> {
         excerpt: deriveExcerpt(html, data.excerpt, title),
         readMin: readMinutes(html),
         no: "00",
+        originalTitle: metadataText(data.original_title ?? data.originalTitle ?? data["原文题名"]),
+        originalPublication: metadataText(
+          data.original_publication ??
+            data.originalPublication ??
+            data.original_source ??
+            data["原刊"]
+        ),
+        originalDate: metadataText(data.original_date ?? data.originalDate ?? data["原文日期"]),
         html,
       };
       return post;
@@ -256,7 +273,14 @@ function all(): Promise<Post[]> {
   return cache;
 }
 
-const strip = ({ html, sortOrder, ...rest }: Post): PostSummary => rest;
+const strip = ({
+  html,
+  sortOrder,
+  originalTitle,
+  originalPublication,
+  originalDate,
+  ...rest
+}: Post): PostSummary => rest;
 
 export async function getAllPosts(): Promise<PostSummary[]> {
   return (await all()).filter((p) => !p.draft).map(strip);

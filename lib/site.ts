@@ -14,9 +14,6 @@ export const site = {
     "「西方負典」是一档关注历史、产业和文化的人文博客，希望为汉语读者提供基于观察视角的话题和内容。",
   /** 站点正式地址（用于 OpenGraph / sitemap） */
   url: "https://un-canon.blog",
-  /** 英雄区主标题（出自《庄子·齐物论》） */
-  heroTitleA: "東流不溢",
-  heroTitleB: "孰知其故",
   /** 水印字 */
   ghost: "un-canon",
   license: "CC0 1.0",

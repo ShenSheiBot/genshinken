@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound, permanentRedirect } from "next/navigation";
-import { getAllSlugs, getPostBySlug, getAdjacent } from "@/lib/posts";
+import { getAllPosts, getAllSlugs, getPostBySlug } from "@/lib/posts";
 import { site } from "@/lib/site";
 import { postPath } from "@/lib/editorial";
-import { RegisterArticleHeader } from "@/app/components/ArticleHeader";
-import ReadingRail from "@/app/components/ReadingRail";
-import TocRail from "@/app/components/TocRail";
+import {
+  ReadingDossier,
+  splitArticle,
+} from "@/app/components/reading-edition/ReadingEdition";
 
 export const dynamicParams = true;
 
@@ -42,24 +42,27 @@ export async function generateMetadata({
   };
 }
 
-/* ---------------- JSON-LD Article 结构化数据 ---------------- */
-
 /** 「甲、乙」或全角空格并列 → schema.org Person 列表 */
 function toPersons(name: string) {
   return name
     .split(/[、　]/)
-    .map((n) => n.trim())
+    .map((value) => value.trim())
     .filter(Boolean)
-    .map((n) => ({ "@type": "Person", name: n }));
+    .map((value) => ({ "@type": "Person", name: value }));
 }
 
 function buildJsonLd(post: NonNullable<Awaited<ReturnType<typeof getPostBySlug>>>) {
   const url = `${site.url}${postPath(post)}`;
-  const roles: Record<string, string> = { 作: "author", 译: "translator", 编: "editor", 校: "contributor" };
+  const roles: Record<string, string> = {
+    作: "author",
+    译: "translator",
+    编: "editor",
+    校: "contributor",
+  };
   const credits: Record<string, unknown> = {};
-  for (const c of post.credits) {
-    const key = roles[c.mark];
-    if (key) credits[key] = toPersons(c.name);
+  for (const credit of post.credits) {
+    const key = roles[credit.mark];
+    if (key) credits[key] = toPersons(credit.name);
   }
   return {
     "@context": "https://schema.org",
@@ -91,83 +94,22 @@ export default async function ArticlePage({
   if (!post) notFound();
   if (post.section === "multimedia") permanentRedirect(postPath(post));
 
-  const next = await getAdjacent(decoded);
+  const posts = await getAllPosts();
 
   return (
-    <div className="article">
-      {/* JSON 里的 "<" 转义为 <，防止内容字符串提前闭合 script 标签 */}
+    <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildJsonLd(post)).replace(/</g, "\\u003c") }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildJsonLd(post)).replace(/</g, "\\u003c"),
+        }}
       />
-      <RegisterArticleHeader title={post.title} credits={post.credits} />
-      <section className="art-hero">
-        <div className="art-hero-inner">
-          <Link href="/" className="backbtn">
-            ← 返回索引
-          </Link>
-
-          <div className="art-ghost enter">{post.category}</div>
-
-          <div className="art-meta enter">
-            <span>{post.draft ? "DRAFT" : `NO. ${post.no}`}</span>
-            <span className="d" />
-            <span>{post.dateDisplay}</span>
-            <span className="d" />
-            <span>{post.readMin} MIN READ</span>
-            {post.credits.length > 0 && (
-              <>
-                <span className="d" />
-                <span className="credits">
-                  {post.credits.map((c, i) => (
-                    <span key={i} className="credit">
-                      <span className={"cmark " + (c.solid ? "solid" : "hollow")}>{c.mark}</span>
-                      {c.name}
-                    </span>
-                  ))}
-                </span>
-              </>
-            )}
-          </div>
-
-          <h1 className="art-title enter">{post.title}</h1>
-          {post.subtitle && <div className="art-subtitle enter">{post.subtitle}</div>}
-          <div className="art-en enter">{post.category}</div>
-          <div className="art-tags enter">
-            {post.tags.map((t) => (
-              <span key={t} className="t">#{t}</span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <article
-        className="art-body enter"
-        style={{ animationDelay: "0.06s" }}
-        dangerouslySetInnerHTML={{ __html: post.html }}
+      <ReadingDossier
+        post={post}
+        parts={splitArticle(post.html)}
+        posts={posts}
+        isPublicEdition
       />
-      <ReadingRail />
-      <TocRail />
-
-      <div className="art-after">
-        <div className="art-end">
-          <span className="sq" />
-          <span className="t">完 / FIN</span>
-          <span className="l" />
-        </div>
-      </div>
-
-      {next && next.slug !== post.slug && (
-        <div className="nextnav">
-          <Link href={postPath(next)} className="nextrow">
-            <div>
-              <div className="nlabel">下一篇 / NEXT —— NO.{next.no}</div>
-              <div className="ntitle">{next.title}</div>
-            </div>
-            <span className="narrow">→</span>
-          </Link>
-        </div>
-      )}
-    </div>
+    </>
   );
 }

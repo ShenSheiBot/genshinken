@@ -18,10 +18,7 @@ export default function Hero({ count, issue }: { count: number; issue: string })
         <div className="bp-wedge thin" />
 
         <h1 className="hero-title">
-          {site.heroTitleA}
-          <br />
-          <span className="dots">.</span>
-          {site.heroTitleB}
+          {site.brandCN}
         </h1>
 
         <p className="hero-sub">{site.description}</p>
