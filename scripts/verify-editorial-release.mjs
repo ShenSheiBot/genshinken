@@ -26,8 +26,11 @@ assert.equal(home.response.status, 200, "homepage must return HTTP 200");
 assert.match(home.html, /欢迎来到象征界的大草原/);
 assert.match(home.html, /issueRail[^>]*><span>編輯部<\/span>/);
 assert.doesNotMatch(home.html, /期号/);
-assert.match(home.html, />联系<\/span><span class="v"><a href="mailto:info@un-canon\.com">info@un-canon\.com<\/a>/);
-assert.match(home.html, />投稿<\/span><span class="v"><a href="mailto:editor@un-canon\.com">editor@un-canon\.com<\/a>/);
+// Cloudflare 会在生产响应中改写可见邮箱链接；React 载荷仍保留原始顺序和值。
+assert.match(
+  home.html,
+  /联系[\s\S]*?mailto:info@un-canon\.com[\s\S]*?投稿[\s\S]*?mailto:editor@un-canon\.com/
+);
 assert.doesNotMatch(home.html, /INFO@UN-CANON\.COM/);
 assert.doesNotMatch(home.html, /東流不溢，孰知其故/);
 assert.doesNotMatch(home.html, /<i[^>]*>(?:论|评|译|媒)<\/i>/);
