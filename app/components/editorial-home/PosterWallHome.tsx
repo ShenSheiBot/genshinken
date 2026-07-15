@@ -36,12 +36,12 @@ type TileStyle = CSSProperties & {
 
 function desktopPlacement(index: number, total: number): [number, number] {
   if (total === 1) return [12, 10];
-  if (total === 2) return index === 0 ? [7, 10] : [5, 10];
+  if (total === 2) return index === 0 ? [7, 8] : [5, 8];
   if (total === 3) return index === 0 ? [12, 9] : [6, 8];
 
   const anchors: [number, number][] = [
-    [7, 10],
-    [5, 10],
+    [7, 8],
+    [5, 8],
     [7, 7],
     [5, 7],
   ];
@@ -99,6 +99,10 @@ function creditsFor(post: PostSummary): string {
       .join(" · ");
   }
   return post.author || "西方負典编辑部";
+}
+
+function overviewFor(post: PostSummary): string {
+  return post.excerpt || post.subtitle || `围绕${post.category || "本期主题"}展开的材料收录。`;
 }
 
 function groupPostsBySection(posts: PostSummary[]): Record<EditorialSection, PostSummary[]> {
@@ -264,6 +268,9 @@ export default function PosterWallHome({
 
                   <div className={styles.cardHeader}>
                     <span className={styles.kind}>{meta.label}</span>
+                    <span className={styles.cardFolio} aria-hidden="true">
+                      #{String(index + 1).padStart(2, "0")}
+                    </span>
                     <time dateTime={post.dateISO}>{post.dateISO.replaceAll("-", ".")}</time>
                   </div>
 
@@ -272,7 +279,7 @@ export default function PosterWallHome({
                     <h2 className={styles.postTitle}>{post.title}</h2>
                     {post.subtitle && <p className={styles.subtitle}>{post.subtitle}</p>}
                     <p className={styles.creditLine}>{creditsFor(post)}</p>
-                    {post.excerpt && <p className={styles.excerpt}>{post.excerpt}</p>}
+                    <p className={styles.excerpt}>{overviewFor(post)}</p>
                   </div>
 
                   {section === "multimedia" && (

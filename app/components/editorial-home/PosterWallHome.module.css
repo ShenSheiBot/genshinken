@@ -151,6 +151,73 @@
   background: var(--accent);
 }
 
+/* Bring the editorial masthead and opening recommendations into the first desktop viewport. */
+@media (min-width: 961px) {
+  .masthead {
+    gap: 28px 20px;
+    min-height: 312px;
+    padding: 28px 40px 30px;
+  }
+
+  .heroWelcome {
+    margin: 20px 0 2px;
+  }
+
+  .manifesto {
+    padding: 10px 0 3px 18px;
+  }
+
+  .manifestoNumber {
+    margin-bottom: 24px;
+  }
+
+  .registration {
+    top: 62px;
+  }
+
+  .wall {
+    margin-top: 16px;
+  }
+
+  .wall > .tile .posterNumber {
+    display: none;
+  }
+
+  .wall > .tile .posterGlyph {
+    top: 18px;
+    right: 18px;
+    left: auto;
+    color: color-mix(in srgb, var(--card-ink) 5%, transparent);
+    font-size: clamp(72px, 6vw, 96px);
+    line-height: 0.74;
+    pointer-events: none;
+  }
+
+  .wall > .leadWide .posterGlyph {
+    top: 18px;
+    right: 20px;
+    font-size: clamp(112px, 10vw, 164px);
+  }
+
+  .wall > .leadNarrow .posterGlyph {
+    top: 18px;
+    right: 18px;
+    font-size: clamp(86px, 8vw, 128px);
+  }
+
+  .wall > .featureWide .posterGlyph {
+    top: 18px;
+    right: 18px;
+    font-size: clamp(92px, 8vw, 132px);
+  }
+
+  .wall > .featureNarrow .posterGlyph {
+    top: 18px;
+    right: 18px;
+    font-size: clamp(76px, 6.5vw, 106px);
+  }
+}
+
 .sectionNav {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -422,6 +489,24 @@
   font-variant-numeric: tabular-nums;
 }
 
+.cardFolio {
+  display: none;
+}
+
+@media (min-width: 961px) {
+  .cardFolio {
+    display: block;
+    margin-left: auto;
+    color: var(--accent);
+    font-family: var(--f-mono);
+    font-size: 9px;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    white-space: nowrap;
+  }
+}
+
 .cardBody {
   position: relative;
   z-index: 1;
@@ -505,23 +590,50 @@
   -webkit-line-clamp: 2;
 }
 
-.tile[data-featured="true"] .card {
-  height: auto;
-  min-height: inherit;
-}
-
-.thirdCompact .excerpt,
-.thirdStandard .excerpt,
-.featureWide .excerpt,
 .thirdCompact .subtitle {
   display: none;
 }
 
-/* The four section leads always carry their complete editorial overview. */
-.tile[data-featured="true"] .excerpt {
-  display: block;
-  overflow: visible;
-  -webkit-line-clamp: unset;
+.featureNarrow .cardBody {
+  min-height: 0;
+  padding: 12px 0 7px;
+}
+
+.featureNarrow .category {
+  margin-bottom: 5px;
+}
+
+.featureNarrow .postTitle {
+  max-width: 11em;
+  font-size: clamp(30px, 2.6vw, 38px);
+  line-height: 1;
+}
+
+.featureNarrow .creditLine {
+  margin-top: 6px;
+}
+
+.featureNarrow .excerpt {
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.thirdCompact .cardBody,
+.thirdStandard .cardBody {
+  padding: 20px 0 13px;
+}
+
+.thirdCompact .creditLine,
+.thirdStandard .creditLine {
+  margin-top: 10px;
+}
+
+.thirdCompact .excerpt,
+.thirdStandard .excerpt {
+  margin-top: 10px;
+  font-size: 12px;
+  line-height: 1.45;
 }
 
 .platformStrip {
