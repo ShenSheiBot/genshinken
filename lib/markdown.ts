@@ -233,10 +233,8 @@ const LATIN_SKIP = new Set([
   "h6",
 ]);
 const LATIN_RUN =
-  /[([{<"]?[\p{Script=Latin}\p{Script=Cyrillic}\p{Script=Greek}0-9][\p{Script=Latin}\p{Script=Cyrillic}\p{Script=Greek}0-9 \t\u00a0.,;:!?'\u2019"()[\]{}<>/\\&+%№§#@*=_~\-–—]*/gu;
+  /[\p{Script=Latin}\p{Script=Cyrillic}\p{Script=Greek}0-9 \t\u00a0.,;:!?'\u2018\u2019\u201c\u201d"()[\]{}<>/\\&+%№§#@*=_~\-–—]*[\p{Script=Latin}\p{Script=Cyrillic}\p{Script=Greek}0-9][\p{Script=Latin}\p{Script=Cyrillic}\p{Script=Greek}0-9 \t\u00a0.,;:!?'\u2018\u2019\u201c\u201d"()[\]{}<>/\\&+%№§#@*=_~\-–—]*/gu;
 const LATIN_WORD_CHAR = /[\p{Script=Latin}\p{Script=Cyrillic}\p{Script=Greek}0-9]/u;
-const LATIN_SPACE = /[ \t\u00a0]/u;
-const LATIN_QUOTE_PUNCT = /[.,;:!?)]/u;
 const CJK_INTERPUNCT = /[·・…]/u;
 
 function smartenText(value: string, state: { dq: boolean; sq: boolean }): string {
@@ -316,7 +314,8 @@ function rehypeCjkInterpuncts() {
 
 type TextNode = { type: "text"; value: string };
 type InlineRunNode = TextNode | Element;
-type LatinState = { sq: boolean };
+type TextReference = { node: TextNode; start: number; end: number };
+type ScriptContext = "cjk" | "latin" | null;
 
 function pushText(out: InlineRunNode[], value: string) {
   if (value) out.push({ type: "text", value });
@@ -349,136 +348,174 @@ function pushLatin(out: InlineRunNode[], value: string) {
   pushText(out, trailing);
 }
 
-function isLatinWordChar(ch: string | undefined): boolean {
+function isLatinWordChar(ch: string | undefined) {
   return Boolean(ch && LATIN_WORD_CHAR.test(ch));
 }
 
-function nextNonSpace(value: string, start: number): string | undefined {
-  for (let i = start; i < value.length; i++) {
-    if (!LATIN_SPACE.test(value[i])) return value[i];
+function scriptBefore(value: string, start: number): ScriptContext {
+  for (let i = start - 1; i >= 0; i--) {
+    if (CJK_TEXT.test(value[i])) return "cjk";
+    if (isLatinWordChar(value[i])) return "latin";
   }
-  return undefined;
+  return null;
 }
 
-function updateLatinQuoteState(value: string, state: LatinState) {
-  let open = state.sq;
-  for (let i = 0; i < value.length; i++) {
-    const ch = value[i];
-    if (ch === OPEN_SQ) {
-      open = true;
+function scriptAfter(value: string, start: number): ScriptContext {
+  for (let i = start + 1; i < value.length; i++) {
+    if (CJK_TEXT.test(value[i])) return "cjk";
+    if (isLatinWordChar(value[i])) return "latin";
+  }
+  return null;
+}
+
+function isCjkQuotePair(before: ScriptContext, after: ScriptContext) {
+  return before === "cjk" || after === "cjk";
+}
+
+function cjkQuotePositions(value: string) {
+  // Quote glyphs inherit the script of the quoted span, including across em/strong/a nodes.
+  const positions = new Set<number>();
+  const opens: Array<{ glyph: typeof OPEN_SQ | typeof OPEN_DQ; index: number }> = [];
+
+  for (let index = 0; index < value.length; index++) {
+    const glyph = value[index];
+    if (glyph === OPEN_SQ || glyph === OPEN_DQ) {
+      opens.push({ glyph, index });
       continue;
     }
-    if (ch !== CLOSE_SQ) continue;
 
-    const prev = value[i - 1];
-    const directNext = value[i + 1];
-    const next = nextNonSpace(value, i + 1);
-    if (isLatinWordChar(prev) && isLatinWordChar(directNext)) continue;
-    if (open) {
-      open = false;
-    } else if (!isLatinWordChar(prev) && isLatinWordChar(next)) {
-      open = true;
-    }
-  }
-  state.sq = open;
-}
+    if (glyph !== CLOSE_SQ && glyph !== CLOSE_DQ) continue;
+    if (glyph === CLOSE_SQ && isLatinWordChar(value[index - 1]) && isLatinWordChar(value[index + 1])) continue;
 
-function openSingleBefore(value: string, index: number, state: LatinState): boolean {
-  const inner = { sq: state.sq };
-  for (let i = 0; i < index; i++) {
-    const ch = value[i];
-    if (ch === OPEN_SQ) {
-      inner.sq = true;
+    const openingGlyph = glyph === CLOSE_SQ ? OPEN_SQ : OPEN_DQ;
+    const openingIndex = opens.map((entry) => entry.glyph).lastIndexOf(openingGlyph);
+    if (openingIndex === -1) {
+      if (isCjkQuotePair(scriptBefore(value, index), scriptAfter(value, index))) positions.add(index);
       continue;
     }
-    if (ch !== CLOSE_SQ) continue;
 
-    const prev = value[i - 1];
-    const directNext = value[i + 1];
-    const next = nextNonSpace(value, i + 1);
-    if (isLatinWordChar(prev) && isLatinWordChar(directNext)) continue;
-    if (inner.sq) {
-      inner.sq = false;
-    } else if (!isLatinWordChar(prev) && isLatinWordChar(next)) {
-      inner.sq = true;
+    const [opening] = opens.splice(openingIndex, 1);
+    const containsCjk = CJK_TEXT.test(value.slice(opening.index + 1, index));
+    if (containsCjk || isCjkQuotePair(scriptBefore(value, opening.index), scriptAfter(value, index))) {
+      positions.add(opening.index);
+      positions.add(index);
     }
   }
-  return inner.sq;
+
+  opens.forEach((opening) => {
+    if (isCjkQuotePair(scriptBefore(value, opening.index), scriptAfter(value, opening.index))) {
+      positions.add(opening.index);
+    }
+  });
+
+  return positions;
 }
 
-function isOuterLatinQuote(text: string, index: number, source: string, sourceIndex: number, state: LatinState): boolean {
-  const ch = text[index];
-  if (ch === CLOSE_DQ) return true;
-  if (ch !== CLOSE_SQ) return false;
-
-  const prev = text[index - 1];
-  const directNext = text[index + 1];
-  const next = nextNonSpace(text, index + 1);
-
-  if (isLatinWordChar(prev) && isLatinWordChar(directNext)) return false;
-  if (openSingleBefore(source, sourceIndex, state)) return true;
-  if (isLatinWordChar(prev) && isLatinWordChar(next)) return false;
-  if (isLatinWordChar(prev) && (next === "." || next === ",")) return false;
-  return true;
+function hasClass(node: { properties?: { className?: unknown } }, className: string) {
+  const raw = node.properties?.className;
+  const classes = Array.isArray(raw) ? raw.map(String) : typeof raw === "string" ? raw.split(/\s+/) : [];
+  return classes.includes(className);
 }
 
-function pushLatinPieces(out: InlineRunNode[], text: string, source: string, matchIndex: number, state: LatinState) {
-  let start = 0;
-  for (let i = 0; i < text.length; i++) {
-    if (!isOuterLatinQuote(text, i, source, matchIndex + i, state)) continue;
-
-    pushLatin(out, text.slice(start, i));
-    let end = i + 1;
-    while (end < text.length && LATIN_QUOTE_PUNCT.test(text[end])) end++;
-    pushText(out, text.slice(i, end));
-    start = end;
-    i = end - 1;
+function collectInlineText(
+  node: { children?: unknown[] },
+  references: TextReference[]
+) {
+  for (const raw of node.children ?? []) {
+    const child = raw as { type?: string; tagName?: string; value?: string; children?: unknown[]; properties?: { className?: unknown } };
+    if (child.type === "text" && typeof child.value === "string") {
+      const start = references.length === 0 ? 0 : references[references.length - 1].end;
+      references.push({ node: child as TextNode, start, end: start + child.value.length });
+      continue;
+    }
+    if (child.type !== "element" || !child.tagName) continue;
+    if (LATIN_SKIP.has(child.tagName) || hasClass(child, "cjk-interpunct")) continue;
+    if (Q_BLOCK.has(child.tagName)) continue;
+    collectInlineText(child, references);
   }
-  pushLatin(out, text.slice(start));
 }
 
-function splitLatinRuns(value: string, state: LatinState): InlineRunNode[] {
+function latinMask(value: string) {
+  const mask = new Uint8Array(value.length);
+  const matcher = new RegExp(LATIN_RUN);
+  for (const match of value.matchAll(matcher)) {
+    const start = match.index ?? 0;
+    mask.fill(1, start, start + match[0].length);
+  }
+  cjkQuotePositions(value).forEach((index) => {
+    mask[index] = 0;
+  });
+  return mask;
+}
+
+function replaceTextWithRuns(reference: TextReference, mask: Uint8Array): InlineRunNode[] {
   const out: InlineRunNode[] = [];
-  let last = 0;
-  for (const match of value.matchAll(LATIN_RUN)) {
-    const index = match.index ?? 0;
-    const text = match[0];
-    if (index > last) {
-      const plain = value.slice(last, index);
-      out.push({ type: "text", value: plain });
-      updateLatinQuoteState(plain, state);
-    }
-    pushLatinPieces(out, text, value, index, state);
-    updateLatinQuoteState(text, state);
-    last = index + text.length;
+  const { value } = reference.node;
+  let start = 0;
+  let latin = mask[reference.start] === 1;
+
+  for (let index = 1; index < value.length; index++) {
+    const nextLatin = mask[reference.start + index] === 1;
+    if (nextLatin === latin) continue;
+    const part = value.slice(start, index);
+    if (latin) pushLatin(out, part);
+    else pushText(out, part);
+    start = index;
+    latin = nextLatin;
   }
-  if (last === 0) return [{ type: "text", value }];
-  if (last < value.length) {
-    const rest = value.slice(last);
-    out.push({ type: "text", value: rest });
-    updateLatinQuoteState(rest, state);
-  }
+
+  const part = value.slice(start);
+  if (latin) pushLatin(out, part);
+  else pushText(out, part);
   return out;
 }
 
-function rehypeLatinRuns() {
-  const walk = (node: { type?: string; tagName?: string; value?: string; children?: unknown[] }, state: LatinState) => {
-    if (node.type === "element" && node.tagName && LATIN_SKIP.has(node.tagName)) return;
-    if (!Array.isArray(node.children)) return;
-
-    const next: unknown[] = [];
-    for (const raw of node.children) {
-      const child = raw as { type?: string; tagName?: string; value?: string; children?: unknown[] };
-      if (child.type === "text" && typeof child.value === "string") {
-        next.push(...splitLatinRuns(child.value, state));
-      } else {
-        walk(child, state);
-        next.push(child);
-      }
+function replaceInlineText(
+  node: { children?: unknown[] },
+  replacements: Map<TextNode, InlineRunNode[]>
+) {
+  if (!Array.isArray(node.children)) return;
+  const next: unknown[] = [];
+  for (const raw of node.children) {
+    const child = raw as { type?: string; children?: unknown[] };
+    if (child.type === "text" && replacements.has(child as TextNode)) {
+      next.push(...replacements.get(child as TextNode)!);
+      continue;
     }
-    node.children = next;
+    replaceInlineText(child, replacements);
+    next.push(child);
+  }
+  node.children = next;
+}
+
+function latinizeBlock(node: { children?: unknown[] }) {
+  const references: TextReference[] = [];
+  collectInlineText(node, references);
+  if (references.length === 0) return;
+
+  const value = references.map((reference) => reference.node.value).join("");
+  const mask = latinMask(value);
+  const replacements = new Map<TextNode, InlineRunNode[]>();
+  references.forEach((reference) => {
+    if (mask.subarray(reference.start, reference.end).some(Boolean)) {
+      replacements.set(reference.node, replaceTextWithRuns(reference, mask));
+    }
+  });
+  if (replacements.size > 0) replaceInlineText(node, replacements);
+}
+
+function rehypeLatinRuns() {
+  const walk = (node: { type?: string; tagName?: string; children?: unknown[] }) => {
+    if (node.type === "element" && node.tagName && LATIN_SKIP.has(node.tagName)) return;
+    if (node.type === "element" && node.tagName && Q_BLOCK.has(node.tagName)) {
+      latinizeBlock(node);
+    }
+    for (const raw of node.children ?? []) {
+      const child = raw as { type?: string; tagName?: string; children?: unknown[] };
+      if (child.type === "element") walk(child);
+    }
   };
-  return (tree: Root) => walk(tree as unknown as { children: unknown[] }, { sq: false });
+  return (tree: Root) => walk(tree as unknown as { children: unknown[] });
 }
 
 const processor = unified()
