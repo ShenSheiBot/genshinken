@@ -24,7 +24,7 @@ type ReferenceItem = {
   kind: ReferenceKind;
   index: number;
   html: string;
-  preview: string;
+  previewHtml: string;
 };
 type ReferenceLink = { anchor: HTMLAnchorElement; target: HTMLElement; kind: ReferenceKind };
 type ReferenceSurface = "desk" | "sheet";
@@ -200,8 +200,12 @@ function referenceItem(target: HTMLElement, kind: ReferenceKind, index: number, 
   clone
     .querySelectorAll("a[data-footnote-backref], a.source-backref, a[href^='#user-content-fnref'], a[href^='#source-ref-']")
     .forEach((node) => node.remove());
-  const preview = (clone.textContent || "").replace(/↩/g, "").replace(/\s+/g, " ").trim();
-  return { id: target.id, label, kind, index, html: clone.innerHTML, preview };
+  const preview = clone.cloneNode(true) as HTMLElement;
+  preview.querySelectorAll("p").forEach((paragraph) => {
+    paragraph.replaceWith(...Array.from(paragraph.childNodes));
+  });
+  preview.normalize();
+  return { id: target.id, label, kind, index, html: clone.innerHTML, previewHtml: preview.innerHTML };
 }
 
 export default function ReadingPrototypeChrome({
@@ -727,7 +731,7 @@ export default function ReadingPrototypeChrome({
             const selected = item.id === active;
             return (
               <article id={`reading-reference-${kind}-${item.index}`} key={item.id} className={styles.referenceItem} data-reference-kind={kind} data-reference-id={item.id} data-active={selected ? "true" : "false"}>
-                <button type="button" className={styles.referenceSelect} aria-expanded={selected} aria-current={selected ? "true" : undefined} onClick={() => selectReference(kind, item.id, compact ? "sheet" : "desk")}><span>{item.label}</span>{!selected && <p>{item.preview}</p>}</button>
+                <button type="button" className={styles.referenceSelect} aria-expanded={selected} aria-current={selected ? "true" : undefined} onClick={() => selectReference(kind, item.id, compact ? "sheet" : "desk")}><span>{item.label}</span>{!selected && <p dangerouslySetInnerHTML={{ __html: item.previewHtml }} />}</button>
                 {selected && <div className={styles.referenceDetail} dangerouslySetInnerHTML={{ __html: item.html }} />}
               </article>
             );
