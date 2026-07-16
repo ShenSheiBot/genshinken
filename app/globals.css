@@ -7,6 +7,11 @@
    ============================================================ */
 
 :root {
+  --site-header-height: 65px;
+  --site-header-inline: 40px;
+  --site-brand-size: 20px;
+  --site-nav-size: 15px;
+  --f-brand: "FOT Matisse Pro EB", "STSong", "华文宋体", "Songti SC", "SimSun", serif;
   --f-grotesk: "Helvetica Neue", Helvetica, "PingFang SC", "Noto Sans SC", Arial, sans-serif;
   --f-serif: "Newsreader", "Noto Serif SC", Georgia, serif;
   --f-mono: "Space Mono", "Noto Sans SC", monospace;
@@ -34,6 +39,15 @@
   --accent: #b3271e;        /* crimson,极少量 */
   --panel: #e8e7e3;
   --code-bg: rgba(26, 25, 22, 0.05);
+}
+
+@font-face {
+  font-family: "FOT Matisse Pro EB";
+  src: url("/fonts/fot-matisse-pro-eb-brand.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  unicode-range: U+5178, U+65B9, U+897F, U+8CA0;
 }
 
 html[data-theme="dark"] {
@@ -113,18 +127,52 @@ body:has(.reading-edition-page) { background-image: none; }
 .topbar {
   position: sticky; top: 0; z-index: 60;
   display: grid; grid-template-columns: max-content minmax(0, 1fr) max-content; align-items: center; gap: 24px;
-  min-height: 65px; padding: 14px 40px;
+  min-height: var(--site-header-height); padding: 0 var(--site-header-inline);
   background: var(--bg);
   border-bottom: 1px solid var(--hair-strong);
   transition: background .3s ease, color .3s ease, border-color .3s ease;
 }
 .topbar .brand {
-  display: inline-flex; align-items: center; gap: 11px; height: 36px;
+  display: inline-flex; align-items: center; justify-self: start; gap: 11px; width: max-content; height: 36px;
   font-family: var(--f-grotesk); font-weight: 700;
-  font-size: 16px; line-height: 1; letter-spacing: 0; white-space: nowrap;
+  font-size: 17px; line-height: 1; letter-spacing: 0; white-space: nowrap;
 }
+.topbar .brandName { font-family: var(--f-brand); font-size: var(--site-brand-size); font-weight: 800; }
 .topbar .brand .blot { width: 13px; height: 13px; background: var(--accent); flex: none; }
-.topbar .status { min-width: 0; height: 36px; display: flex; align-items: center; overflow: hidden; }
+.topbar .status { min-width: 0; height: calc(var(--site-header-height) - 1px); display: flex; align-items: center; overflow: hidden; }
+.topbar .global-section-nav {
+  display: flex; align-items: stretch;
+  width: max-content; max-width: 100%; height: calc(var(--site-header-height) - 1px); min-width: 0; margin-inline: auto;
+  border-left: 1px solid var(--hair);
+}
+.topbar .global-section-link {
+  display: flex; flex: 0 0 auto; align-items: center; gap: 7px; min-width: 0;
+  padding: 0 clamp(13px, 1.15vw, 18px); color: var(--ink);
+  border-right: 1px solid var(--hair);
+  font-family: var(--f-grotesk); transition: color .15s ease, background .15s ease;
+}
+.topbar .global-section-link strong {
+  min-width: 0; font-size: var(--site-nav-size); font-weight: 600;
+  line-height: 1; white-space: nowrap;
+}
+.topbar .global-section-link span {
+  flex: none; color: var(--ink-soft); font-family: var(--f-mono);
+  font-size: 9px; font-variant-numeric: tabular-nums; letter-spacing: .06em;
+}
+.topbar .global-section-all span {
+  color: var(--accent); font-family: var(--f-grotesk); font-size: var(--site-nav-size); letter-spacing: 0;
+}
+.topbar .global-section-link:hover,
+.topbar .global-section-link:focus-visible { color: var(--solid-ink); background: var(--solid); outline: none; }
+.topbar .global-section-link:hover span,
+.topbar .global-section-link:focus-visible span { color: var(--accent); }
+@media (min-width: 961px) {
+  .topbar:has(.global-section-nav) {
+    grid-template-columns: minmax(220px, 1fr) max-content minmax(220px, 1fr);
+  }
+  .topbar:has(.global-section-nav) .status { justify-content: center; }
+  .topbar:has(.global-section-nav) .toggle { grid-column: 3; }
+}
 /* 显示模式切换：单一图标按钮（无中英文字） */
 .topbar .toggle {
   justify-self: end; display: inline-flex; align-items: center; justify-content: center;
@@ -631,6 +679,18 @@ html[data-article-nav="compact"] .topbar .mobile-section-item[data-active="true"
   }
   /* 顶栏页眉信息在窄屏隐去署名，只留标题，避免拥挤 */
   body { background-image: none; }
+}
+
+@media (min-width: 681px) and (max-width: 1023px) {
+  :root { --site-header-inline: 24px; }
+  .topbar { gap: 16px; }
+  .topbar .global-section-link { gap: 6px; padding-right: 10px; padding-left: 10px; }
+  .topbar .global-section-link strong { font-size: 15px; }
+  .topbar .global-section-link span { font-size: 9px; }
+}
+
+@media (max-width: 767px) {
+  .topbar .global-section-nav { display: none; }
 }
 
 /* 进入动画 */

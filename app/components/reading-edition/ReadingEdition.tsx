@@ -2,17 +2,28 @@ import Link from "next/link";
 import type { Credit, Post, PostSummary } from "@/lib/posts";
 import { site } from "@/lib/site";
 import {
+  EDITORIAL_SECTIONS,
   EDITORIAL_SECTION_META,
   postPath,
   type EditorialSection,
 } from "@/lib/editorial";
 import ReadingPrototypeChrome from "@/app/prototype/reading/[slug]/ReadingPrototypeChrome";
 import styles from "@/app/prototype/reading/[slug]/reading-prototype.module.css";
+import homeStyles from "@/app/components/editorial-home/PosterWallHome.module.css";
 
 type ReadingVariant = "dossier" | "folio";
 
 const sectionFor = (post: PostSummary): EditorialSection => post.section;
 const sectionMeta = EDITORIAL_SECTION_META;
+
+function countsBySection(posts: PostSummary[]): Record<EditorialSection, number> {
+  return Object.fromEntries(
+    EDITORIAL_SECTIONS.map((section) => [
+      section,
+      posts.filter((post) => sectionFor(post) === section).length,
+    ])
+  ) as Record<EditorialSection, number>;
+}
 
 export type ArticleParts = {
   main: string;
@@ -180,7 +191,28 @@ function MobileInformation({ post }: { post: Post }) {
   );
 }
 
-function ContinueReading({
+function relatedPostsFor(current: Post, posts: PostSummary[]): PostSummary[] {
+  const currentTags = new Set(current.tags.map((tag) => tag.normalize("NFKC").trim()));
+
+  return posts
+    .filter((post) => post.slug !== current.slug)
+    .map((post) => {
+      const sharedTags = post.tags.filter((tag) => currentTags.has(tag.normalize("NFKC").trim())).length;
+      const sameTheme = post.category === current.category;
+      const sameSection = sectionFor(post) === sectionFor(current);
+
+      // 标签最能表明材料的直接关联；主题分类与栏目补足没有共同标签的文章。
+      return {
+        post,
+        score: sharedTags * 100 + Number(sameTheme) * 20 + Number(sameSection) * 8,
+      };
+    })
+    .sort((a, b) => b.score - a.score || b.post.timestamp - a.post.timestamp || a.post.slug.localeCompare(b.post.slug))
+    .slice(0, 3)
+    .map(({ post }) => post);
+}
+
+function RelatedReading({
   current,
   posts,
   variant,
@@ -191,28 +223,49 @@ function ContinueReading({
   variant: ReadingVariant;
   isPublicEdition?: boolean;
 }) {
-  const currentSection = sectionFor(current);
-  const candidates = [
-    ...posts.filter((post) => post.slug !== current.slug && sectionFor(post) === currentSection),
-    ...posts.filter((post) => post.slug !== current.slug && sectionFor(post) !== currentSection),
-  ].filter((post, index, list) => list.findIndex((item) => item.slug === post.slug) === index).slice(0, 2);
+  const candidates = relatedPostsFor(current, posts);
 
   return (
-    <section className={styles.continue} aria-labelledby="continue-heading">
-      <header>
-        <h2 id="continue-heading">继续阅读</h2>
-      </header>
-      <div className={styles.continueGrid}>
-        {candidates.map((post, index) => (
-          <Link
-            key={post.slug}
-            href={isPublicEdition ? postPath(post) : `/prototype/reading/${encodeURIComponent(post.slug)}?variant=${variant}`}
-          >
-            <small>{String(index + 1).padStart(2, "0")} / {sectionMeta[sectionFor(post)].label}</small>
-            <strong>{post.title}</strong>
-            <span>{post.readMin} 分钟　→</span>
-          </Link>
-        ))}
+    <section className={homeStyles.latestUpdates} data-surface="paper" aria-labelledby="related-heading" data-reveal>
+      <div className={homeStyles.latestInner}>
+        <header className={homeStyles.latestHeading}>
+          <div>
+            <span>03</span>
+            <h2 id="related-heading">相关推荐</h2>
+          </div>
+          <p>
+            <Link href="/search" className={homeStyles.viewAll}>
+              查看全部内容 <b aria-hidden="true">→</b>
+            </Link>
+          </p>
+        </header>
+
+        <ol className={homeStyles.latestGrid}>
+          {candidates.map((post) => {
+            const section = sectionMeta[sectionFor(post)];
+            return (
+              <li key={post.slug}>
+                <article>
+                  <Link
+                    className={homeStyles.latestCard}
+                    href={isPublicEdition ? postPath(post) : `/prototype/reading/${encodeURIComponent(post.slug)}?variant=${variant}`}
+                  >
+                    <header>
+                      <span>文稿 {post.no}</span>
+                      <span>{section.label}</span>
+                    </header>
+                    <h3>{post.title}</h3>
+                    {(post.excerpt || post.subtitle) && <p>{post.excerpt || post.subtitle}</p>}
+                    <footer>
+                      <time dateTime={post.dateISO}>{post.dateDisplay}</time>
+                      <span>预计阅读 {post.readMin} 分钟 <b aria-hidden="true">→</b></span>
+                    </footer>
+                  </Link>
+                </article>
+              </li>
+            );
+          })}
+        </ol>
       </div>
     </section>
   );
@@ -231,6 +284,7 @@ export function ReadingDossier({
   isPublicEdition?: boolean;
 }) {
   const section = sectionMeta[sectionFor(post)];
+  const sectionCounts = countsBySection(posts);
   const hasReferences = parts.noteCount > 0 || parts.sourceCount > 0;
   const referenceLabel = parts.noteCount > 0 && parts.sourceCount > 0
     ? "注释与文献"
@@ -243,6 +297,8 @@ export function ReadingDossier({
         variant="dossier"
         credits={post.credits}
         fallbackAuthor={post.author}
+        currentPostSection={sectionFor(post)}
+        sectionCounts={sectionCounts}
         mode={isPublicEdition ? "edition" : "preview"}
       />
 
@@ -278,13 +334,14 @@ export function ReadingDossier({
           <aside id="reading-right-rail" className={styles.deskRailSlot} aria-label={referenceLabel} />
         )}
       </section>
-      <ContinueReading current={post} posts={posts} variant="dossier" isPublicEdition={isPublicEdition} />
+      <RelatedReading current={post} posts={posts} variant="dossier" isPublicEdition={isPublicEdition} />
     </main>
   );
 }
 
 export function ReadingFolio({ post, parts, posts }: { post: Post; parts: ArticleParts; posts: PostSummary[] }) {
   const section = sectionMeta[sectionFor(post)];
+  const sectionCounts = countsBySection(posts);
   return (
     <main className={`reading-prototype-page ${styles.root} ${styles.folioRoot}`} data-reading-variant="folio">
       <ReadingPrototypeChrome
@@ -293,6 +350,8 @@ export function ReadingFolio({ post, parts, posts }: { post: Post; parts: Articl
         variant="folio"
         credits={post.credits}
         fallbackAuthor={post.author}
+        currentPostSection={sectionFor(post)}
+        sectionCounts={sectionCounts}
       />
 
       <header className={styles.folioCover} id="reading-cover">
@@ -323,7 +382,7 @@ export function ReadingFolio({ post, parts, posts }: { post: Post; parts: Articl
         <ArticleFlow parts={parts} />
         <div className={styles.railPlaceholder} aria-hidden="true" />
       </section>
-      <ContinueReading current={post} posts={posts} variant="folio" />
+      <RelatedReading current={post} posts={posts} variant="folio" />
     </main>
   );
 }

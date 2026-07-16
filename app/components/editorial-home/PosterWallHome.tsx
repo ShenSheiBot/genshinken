@@ -181,29 +181,21 @@ export default function PosterWallHome({
   return (
     <main className={styles.root} aria-labelledby="poster-wall-heading" data-reveal-zone="home">
       <header className={styles.masthead} data-reveal-sequence="masthead">
-        <div className={styles.issueRail}>
-          <span>編輯部</span>
-          <span className={styles.issueRule} aria-hidden="true" />
-          <span>{issue || "—"}</span>
-        </div>
+        <h1 id="poster-wall-heading" className={styles.screenReaderTitle}>{site.brandCN}</h1>
 
-        <div className={styles.brandBlock}>
-          <h1 id="poster-wall-heading" className={styles.displayTitle}>
-            <span>{site.brandCN}</span>
-          </h1>
-          <p className={styles.heroWelcome}>欢迎来到象征界的大草原</p>
-        </div>
+        <blockquote className={styles.mastheadQuote}>
+          <span>東流不溢</span>
+          <span><b className={styles.quotePunctuation}>，</b>孰知其故</span>
+        </blockquote>
 
         <div className={styles.manifesto}>
-          <span className={styles.manifestoNumber}>{String(posts.length).padStart(2, "0")}</span>
+          <div className={styles.manifestoMeta}>
+            <span className={styles.manifestoNumber}>{String(posts.length).padStart(2, "0")}</span>
+            {issue && (
+              <span className={styles.manifestoMonth}>{issue.replace(/\s+/g, "")}</span>
+            )}
+          </div>
           <p>「西方負典」是一档关注历史、产业和文化的人文博客，希望为汉语读者提供基于观察视角的话题和内容。</p>
-        </div>
-
-        <div className={styles.registration} aria-hidden="true">
-          <span />
-          <span />
-          <span />
-          <span />
         </div>
       </header>
 

@@ -23,8 +23,11 @@ for (const [label, result] of Object.entries({ home, article, media, search, mis
 }
 
 assert.equal(home.response.status, 200, "homepage must return HTTP 200");
-assert.match(home.html, /欢迎来到象征界的大草原/);
-assert.match(home.html, /issueRail[^>]*><span>編輯部<\/span>/);
+assert.match(home.html, /東流不溢/);
+assert.match(home.html, /孰知其故/);
+assert.match(home.html, /2026·07/);
+assert.doesNotMatch(home.html, /issueRail/);
+assert.doesNotMatch(home.html, /欢迎来到象征界的大草原/);
 assert.doesNotMatch(home.html, /期号/);
 // Cloudflare 会在生产响应中改写可见邮箱链接；React 载荷仍保留原始顺序和值。
 assert.match(

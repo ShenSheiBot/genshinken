@@ -3,6 +3,11 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { site } from "@/lib/site";
+import {
+  EDITORIAL_SECTIONS,
+  EDITORIAL_SECTION_META,
+  type EditorialSection,
+} from "@/lib/editorial";
 import { useArticleHeader } from "./ArticleHeader";
 
 type Theme = "light" | "dark";
@@ -34,7 +39,11 @@ function ChevronIcon() {
   );
 }
 
-export default function TopBar() {
+export default function TopBar({
+  sectionCounts,
+}: {
+  sectionCounts: Record<EditorialSection, number>;
+}) {
   const [theme, setTheme] = useState<Theme>("light");
   const [mounted, setMounted] = useState(false);
   const [sections, setSections] = useState<MobileSection[]>([]);
@@ -199,11 +208,31 @@ export default function TopBar() {
     <header className="topbar" data-revealed={revealed ? "true" : "false"} ref={headerRef}>
       <Link href="/" className="brand">
         <span className="blot" />
-        {site.brandCN}
+        <span className="brandName">{site.brandCN}</span>
       </Link>
 
       <div className="status">
-        {meta && (
+        {!revealed ? (
+          <nav className="global-section-nav" aria-label="内容栏目">
+            {EDITORIAL_SECTIONS.map((section) => {
+              const meta = EDITORIAL_SECTION_META[section];
+              return (
+                <Link
+                  key={section}
+                  href={`/search?section=${section}`}
+                  className="global-section-link"
+                >
+                  <strong>{meta.label}</strong>
+                  <span>{String(sectionCounts[section]).padStart(2, "0")}</span>
+                </Link>
+              );
+            })}
+            <Link href="/search" className="global-section-link global-section-all">
+              <strong>全部内容</strong>
+              <span aria-hidden="true">→</span>
+            </Link>
+          </nav>
+        ) : meta ? (
           <div className="art-running">
             <span className="rt">{meta.title}</span>
             <div className="mobile-section-nav">
@@ -230,7 +259,7 @@ export default function TopBar() {
               </span>
             )}
           </div>
-        )}
+        ) : null}
       </div>
 
       <button className="toggle" onClick={toggle} aria-label="切换明暗主题" title="切换明暗主题">

@@ -9,12 +9,12 @@
   position: relative;
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
-  grid-template-rows: auto 1fr;
-  gap: 42px 20px;
+  grid-template-rows: minmax(0, 1fr);
+  gap: 20px;
   width: min(100%, var(--maxw));
-  min-height: 410px;
+  min-height: 270px;
   margin: 0 auto;
-  padding: 44px 40px 38px;
+  padding: 28px 40px 30px;
   overflow: hidden;
 }
 
@@ -32,94 +32,87 @@
   pointer-events: none;
 }
 
-.issueRail {
-  z-index: 1;
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: max-content minmax(40px, 1fr) max-content;
-  align-items: center;
-  gap: 18px;
-  font-family: var(--f-mono);
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  color: var(--ink-soft);
-}
-
-.issueRule {
+.screenReaderTitle {
+  position: absolute;
+  width: 1px;
   height: 1px;
-  background: var(--hair-strong);
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
 }
 
-.brandBlock {
+.mastheadQuote {
   z-index: 1;
-  grid-column: 1 / 10;
-  align-self: end;
+  grid-column: 1 / 9;
+  align-self: center;
+  width: max-content;
+  margin: 0;
+  padding-left: 0.42em;
   min-width: 0;
 }
 
-.displayTitle {
-  margin: 0;
-  font-family: var(--f-grotesk);
-  font-size: clamp(74px, 10.5vw, 150px);
-  font-weight: 700;
-  line-height: 0.72;
-  letter-spacing: -0.075em;
-}
-
-.heroWelcome {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin: 28px 0 2px;
-  color: var(--ink-soft);
-  font-family: var(--f-cjk-serif);
-  font-size: clamp(14px, 1.15vw, 17px);
-  font-weight: 700;
-  line-height: 1.45;
-  letter-spacing: 0.11em;
-}
-
-.heroWelcome::before {
-  width: clamp(34px, 4vw, 52px);
-  height: 1px;
-  flex: none;
-  content: "";
-  background: var(--accent);
-}
-
-.displayTitle span,
-.displayTitle em {
+.mastheadQuote span {
   display: block;
+  font-family: var(--f-grotesk);
+  font-size: clamp(58px, 5.5vw, 76px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.04;
+  letter-spacing: 0;
 }
 
-.displayTitle em {
-  margin-left: 0.72em;
+.mastheadQuote span + span {
+  position: relative;
+  margin-top: 5px;
+}
+
+.quotePunctuation {
+  position: absolute;
+  bottom: 0.02em;
+  left: -0.54em;
   color: var(--accent);
-  font-family: var(--f-cjk-serif);
-  font-size: 0.57em;
-  font-style: normal;
-  font-weight: 900;
-  line-height: 1.08;
-  letter-spacing: -0.04em;
+  font-size: 0.42em;
+  font-weight: 700;
+  line-height: 1;
 }
 
 .manifesto {
   z-index: 1;
   grid-column: 10 / -1;
-  align-self: end;
-  padding: 18px 0 3px 18px;
+  align-self: center;
+  padding: 2px 0 2px 18px;
   border-left: 1px solid var(--hair-strong);
 }
 
+.manifestoMeta {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 19px;
+  white-space: nowrap;
+}
+
 .manifestoNumber {
-  display: block;
-  margin-bottom: 36px;
   color: var(--accent);
   font-family: var(--f-grotesk);
-  font-size: 58px;
+  font-size: clamp(46px, 4.5vw, 58px);
   font-weight: 700;
   line-height: 0.7;
   letter-spacing: -0.06em;
+}
+
+.manifestoMonth {
+  display: block;
+  padding-left: 15px;
+  border-left: 1px solid var(--hair);
+  color: var(--ink-soft);
+  font-family: var(--f-mono);
+  font-size: 11px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  letter-spacing: 0.08em;
 }
 
 .manifesto p {
@@ -131,48 +124,19 @@
   line-height: 1.55;
 }
 
-.registration {
-  position: absolute;
-  top: 88px;
-  right: 40px;
-  display: grid;
-  grid-template-columns: repeat(2, 5px);
-  gap: 4px;
-}
-
-.registration span {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--ink-faint);
-}
-
-.registration span:first-child {
-  background: var(--accent);
-}
-
 /* Bring the editorial masthead and opening recommendations into the first desktop viewport. */
 @media (min-width: 961px) {
   .masthead {
-    gap: 28px 20px;
-    min-height: 312px;
-    padding: 28px 40px 30px;
-  }
-
-  .heroWelcome {
-    margin: 20px 0 2px;
+    min-height: 258px;
+    padding: 20px 40px 24px;
   }
 
   .manifesto {
-    padding: 10px 0 3px 18px;
+    padding-left: 18px;
   }
 
-  .manifestoNumber {
-    margin-bottom: 24px;
-  }
-
-  .registration {
-    top: 62px;
+  .manifestoMeta {
+    margin-bottom: 17px;
   }
 
   .wall {
@@ -226,6 +190,12 @@
   padding: 0 40px;
   border-top: 1px solid var(--hair-strong);
   border-bottom: 1px solid var(--hair-strong);
+}
+
+@media (min-width: 768px) {
+  .sectionNav {
+    display: none;
+  }
 }
 
 .sectionLink {
@@ -711,7 +681,11 @@
   --latest-ink: #e8e7e3;
   --latest-soft: #96938a;
   --latest-hair: #4a4944;
-  --accent: #ef5a4d;
+  --latest-card-rule: rgb(232 231 227 / 14%);
+  --latest-hover-bg: var(--latest-ink);
+  --latest-hover-ink: #11110f;
+  --latest-hover-soft: #5f5d56;
+  --latest-accent: #ef5a4d;
 
   margin-top: 76px;
   color: var(--latest-ink);
@@ -723,6 +697,22 @@
     rgb(232 231 227 / 7%) 159px,
     rgb(232 231 227 / 7%) 160px
   );
+}
+
+.latestUpdates[data-surface="paper"] {
+  --latest-bg: var(--bg);
+  --latest-ink: var(--ink);
+  --latest-soft: var(--ink-soft);
+  --latest-hair: var(--hair-strong);
+  --latest-card-rule: var(--hair);
+  --latest-hover-bg: var(--solid);
+  --latest-hover-ink: var(--solid-ink);
+  --latest-hover-soft: color-mix(in srgb, var(--solid-ink) 72%, transparent);
+  --latest-accent: var(--accent);
+
+  margin-top: 72px;
+  border-top: 1px solid var(--hair-strong);
+  background-image: none;
 }
 
 .latestInner {
@@ -741,7 +731,7 @@
 
 .latestHeading > div > span {
   display: block;
-  color: var(--accent);
+  color: var(--latest-accent);
   font-family: var(--f-mono);
   font-size: 10px;
   font-weight: 700;
@@ -784,7 +774,7 @@
 }
 
 .viewAll b {
-  color: var(--accent);
+  color: var(--latest-accent);
   font-family: var(--f-grotesk);
   font-size: 20px;
   line-height: 1;
@@ -793,7 +783,7 @@
 
 .viewAll:hover,
 .viewAll:focus-visible {
-  color: var(--accent);
+  color: var(--latest-accent);
   outline: none;
 }
 
@@ -803,7 +793,7 @@
 }
 
 .viewAll:focus-visible {
-  box-shadow: 0 2px 0 var(--accent);
+  box-shadow: 0 2px 0 var(--latest-accent);
 }
 
 .latestGrid {
@@ -858,7 +848,7 @@
 
 .latestCard > header {
   padding-bottom: 16px;
-  border-bottom: 1px solid rgb(232 231 227 / 14%);
+  border-bottom: 1px solid var(--latest-card-rule);
 }
 
 .latestCard > header span:last-child {
@@ -901,38 +891,40 @@
 
 .latestCard > footer b {
   margin-left: 12px;
-  color: var(--accent);
+  color: var(--latest-accent);
   font-family: var(--f-grotesk);
   font-size: 21px;
   line-height: 0;
 }
 
 .latestCard:focus-visible {
-  color: #11110f;
-  background: var(--latest-ink);
+  color: var(--latest-hover-ink);
+  background: var(--latest-hover-bg);
   outline: none;
 }
 
 .latestCard:focus-visible {
-  box-shadow: inset 0 0 0 4px var(--accent);
+  box-shadow: inset 0 0 0 4px var(--latest-accent);
 }
 
 .latestCard:focus-visible > header,
 .latestCard:focus-visible > footer,
-.latestCard:focus-visible > p {
-  color: #5f5d56;
+.latestCard:focus-visible > p,
+.latestCard:focus-visible > header span:last-child {
+  color: var(--latest-hover-soft);
 }
 
 @media (hover: hover) {
   .latestCard:hover {
-    color: #11110f;
-    background: var(--latest-ink);
+    color: var(--latest-hover-ink);
+    background: var(--latest-hover-bg);
   }
 
   .latestCard:hover > header,
   .latestCard:hover > footer,
-  .latestCard:hover > p {
-    color: #5f5d56;
+  .latestCard:hover > p,
+  .latestCard:hover > header span:last-child {
+    color: var(--latest-hover-soft);
   }
 
   .card:hover {
@@ -960,17 +952,13 @@
 
 @media (max-width: 960px) {
   .masthead {
-    min-height: 360px;
+    min-height: 244px;
     padding-right: 28px;
     padding-left: 28px;
   }
 
-  .brandBlock {
-    grid-column: 1 / 9;
-  }
-
-  .displayTitle {
-    font-size: clamp(68px, 12vw, 112px);
+  .mastheadQuote {
+    grid-column: 1 / 8;
   }
 
   .manifesto {
@@ -1041,7 +1029,7 @@
   .masthead {
     display: block;
     min-height: 0;
-    padding: 32px 20px 30px;
+    padding: 27px 20px 30px;
   }
 
   .masthead::before {
@@ -1050,62 +1038,44 @@
     font-size: 46vw;
   }
 
-  .issueRail {
-    display: flex;
-    justify-content: space-between;
-    gap: 12px;
+  .mastheadQuote {
+    width: max-content;
+    max-width: calc(100% - 0.42em);
   }
 
-  .issueRail span:first-child {
-    max-width: 52%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  .mastheadQuote span {
+    font-size: clamp(48px, 13vw, 64px);
   }
 
-  .issueRule {
-    display: none;
+  .mastheadQuote span + span {
+    margin-top: 4px;
   }
 
-  .brandBlock {
-    margin-top: 62px;
-  }
-
-  .displayTitle {
-    font-size: clamp(61px, 18vw, 96px);
-    line-height: 0.76;
-  }
-
-  .heroWelcome {
-    gap: 11px;
-    margin-top: 20px;
-    font-size: 14px;
-    letter-spacing: 0.08em;
-  }
-
-  .heroWelcome::before {
-    width: 28px;
-  }
-
-  .displayTitle em {
-    margin-left: 0.56em;
-    font-size: 0.6em;
+  .quotePunctuation {
+    left: -0.46em;
   }
 
   .manifesto {
-    width: min(78%, 310px);
-    margin: 45px 0 0 auto;
-    padding-top: 12px;
+    width: min(84%, 320px);
+    margin: 31px 0 0 auto;
+    padding: 13px 0 2px 14px;
+  }
+
+  .manifestoMeta {
+    gap: 11px;
+    margin-bottom: 17px;
+  }
+
+  .manifestoMonth {
+    padding-left: 11px;
   }
 
   .manifestoNumber {
-    margin-bottom: 20px;
     font-size: 42px;
   }
 
-  .registration {
-    top: 74px;
-    right: 20px;
+  .manifestoMonth {
+    font-size: 10px;
   }
 
   .sectionNav {

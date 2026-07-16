@@ -8,6 +8,11 @@ import { usePathname, useRouter } from "next/navigation";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { Credit } from "@/lib/posts";
 import { site } from "@/lib/site";
+import {
+  EDITORIAL_SECTIONS,
+  EDITORIAL_SECTION_META,
+  type EditorialSection,
+} from "@/lib/editorial";
 import styles from "./reading-prototype.module.css";
 
 type Variant = "dossier" | "folio";
@@ -214,6 +219,8 @@ export default function ReadingPrototypeChrome({
   variant,
   credits,
   fallbackAuthor,
+  currentPostSection,
+  sectionCounts,
   mode = "preview",
 }: {
   title: string;
@@ -221,6 +228,8 @@ export default function ReadingPrototypeChrome({
   variant: Variant;
   credits: Credit[];
   fallbackAuthor: string;
+  currentPostSection: EditorialSection;
+  sectionCounts: Record<EditorialSection, number>;
   /** The public edition keeps the reader chrome but removes preview controls. */
   mode?: ReaderMode;
 }) {
@@ -289,7 +298,7 @@ export default function ReadingPrototypeChrome({
   }, []);
 
   useEffect(() => {
-    const media = window.matchMedia("(min-width: 1360px)");
+    const media = window.matchMedia("(min-width: 1024px)");
     const sync = () => {
       const next = media.matches && variant === "dossier";
       setDesktopDesk(next);
@@ -742,7 +751,15 @@ export default function ReadingPrototypeChrome({
     );
   };
 
-  const leftDesk = <div className={styles.leftDeskRail}>{compactCredits}{lineNavigator}{tocPanel}</div>;
+  const articleIdentity = (
+    <section className={styles.articleIdentity} aria-live="polite">
+      <span className={styles.eyebrow}>当前阅读</span>
+      <b title={title}>{title}</b>
+      <span className={styles.currentSectionLabel}>当前章节</span>
+      <p>{currentSection}</p>
+    </section>
+  );
+  const leftDesk = <div className={styles.leftDeskRail}>{articleIdentity}{compactCredits}{lineNavigator}{tocPanel}</div>;
   const referencePaneCount = Number(annotations.length > 0) + Number(sources.length > 0);
   const rightDesk = referencePaneCount > 0 ? (
     <div className={styles.referenceRail} data-count={referencePaneCount}>
@@ -778,8 +795,26 @@ export default function ReadingPrototypeChrome({
     <>
       {portalDesk}
       <header className={styles.runningHeader}>
-        <Link href={isEdition ? "/" : "/prototype/poster"} className={styles.runningBrand} aria-label={`返回${site.brandCN}首页`}><i />{site.brandCN}</Link>
-        <div className={styles.runningTitle}><b>{title}</b><span>{currentSection}</span></div>
+        <Link href={isEdition ? "/" : "/prototype/poster"} className={styles.runningBrand} aria-label={`返回${site.brandCN}首页`}><i /><span className={styles.runningBrandName}>{site.brandCN}</span></Link>
+        <nav className={styles.runningSections} aria-label="内容栏目">
+          {EDITORIAL_SECTIONS.map((section) => {
+            const sectionMeta = EDITORIAL_SECTION_META[section];
+            return (
+              <Link
+                key={section}
+                href={`/search?section=${section}`}
+                className={styles.runningSectionLink}
+                data-active={section === currentPostSection ? "true" : undefined}
+              >
+                <b>{sectionMeta.label}</b>
+                <span>{String(sectionCounts[section]).padStart(2, "0")}</span>
+              </Link>
+            );
+          })}
+          <Link href="/search" className={`${styles.runningSectionLink} ${styles.runningSectionAll}`}>
+            <b>全部内容</b><span aria-hidden="true">→</span>
+          </Link>
+        </nav>
         <button className={styles.mobileSectionButton} type="button" onClick={(event) => openSheet("toc", event.currentTarget)} aria-label={`文章目录：${currentSection}`} aria-haspopup="dialog" aria-expanded={sheet === "toc"}><span>{currentSection}</span><b>⌄</b></button>
         <div className={styles.runningTools}>
           <button className={styles.compactTocButton} type="button" onClick={(event) => openSheet("toc", event.currentTarget)} aria-haspopup="dialog" aria-expanded={sheet === "toc"}>目录</button>
