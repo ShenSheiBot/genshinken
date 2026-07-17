@@ -174,6 +174,14 @@ export default function PosterWallHome({
     multimedia: grouped.multimedia[0]?.slug,
   };
   const featuredCount = Object.values(firstSlug).filter(Boolean).length;
+  // 海报编号 = 该文在本栏目内的发表序号（最早为 01）；posts 已按时间倒序。
+  const sectionOrdinals = new Map<string, string>();
+  for (const section of POSTER_SECTION_PRIORITY) {
+    const sectionPosts = posts.filter((post) => post.section === section);
+    sectionPosts.forEach((post, index) => {
+      sectionOrdinals.set(post.slug, String(sectionPosts.length - index).padStart(2, "0"));
+    });
+  }
   const latestArticles = posts
     .filter((post) => post.section !== "multimedia")
     .slice(0, 6);
@@ -253,7 +261,7 @@ export default function PosterWallHome({
                   aria-label={`${meta.label}：${post.title}`}
                 >
                   <div className={styles.generatedCover} aria-hidden="true">
-                    <span className={styles.posterNumber}>{String(index + 1).padStart(2, "0")}</span>
+                    <span className={styles.posterNumber}>{sectionOrdinals.get(post.slug) ?? "00"}</span>
                     <span className={styles.posterGlyph}>{meta.glyph}</span>
                     <span className={styles.posterAxis} />
                   </div>
@@ -261,7 +269,7 @@ export default function PosterWallHome({
                   <div className={styles.cardHeader}>
                     <span className={styles.kind}>{meta.label}</span>
                     <span className={styles.cardFolio} aria-hidden="true">
-                      #{String(index + 1).padStart(2, "0")}
+                      #{sectionOrdinals.get(post.slug) ?? "00"}
                     </span>
                     <time dateTime={post.dateISO}>{post.dateISO.replaceAll("-", ".")}</time>
                   </div>

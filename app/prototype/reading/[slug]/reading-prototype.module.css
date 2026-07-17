@@ -1150,6 +1150,8 @@
     padding: 0 16px;
   }
   .runningBrand { width: 28px; padding: 0; font-size: 0; }
+  /* font-size: 0 压不掉子元素的显式字号，会把品牌名挤成一列竖排——直接隐藏 */
+  .runningBrandName { display: none; }
   .runningBrand i { width: 12px; height: 12px; }
   .runningSections { display: none; }
   .mobileSectionButton {
