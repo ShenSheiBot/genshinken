@@ -43,10 +43,16 @@ assert.doesNotMatch(home.html, /motion-prototype-switcher|ub_motion_prototype|LO
 for (const value of ["论", "评", "译介", "多媒体"]) {
   assert.ok(home.html.includes(value), `homepage must contain ${value}`);
 }
-for (const number of ["11", "10", "9", "8", "7", "6"]) {
+// 文稿编号随内容增长后移，取页面上的最高编号向下核对最新六篇。
+const latestArticleNumbers = [...home.html.matchAll(/文稿(?:\s|<!--.*?-->)*(\d+)/g)].map(
+  ([, value]) => Number(value)
+);
+const highestArticleNumber = Math.max(...latestArticleNumbers, 0);
+assert.ok(highestArticleNumber >= 6, "latest updates must use article numbers");
+for (let offset = 0; offset < 6; offset++) {
   assert.match(
     home.html,
-    new RegExp(`文稿(?:\\s|<!--.*?-->)*${number}`),
+    new RegExp(`文稿(?:\\s|<!--.*?-->)*${highestArticleNumber - offset}(?!\\d)`),
     "latest updates must use article numbers"
   );
 }
