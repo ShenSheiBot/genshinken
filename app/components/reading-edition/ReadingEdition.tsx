@@ -16,6 +16,14 @@ type ReadingVariant = "dossier" | "folio";
 const sectionFor = (post: PostSummary): EditorialSection => post.section;
 const sectionMeta = EDITORIAL_SECTION_META;
 
+// 档案编号 = 该文在本栏目内的发表序号（最早为 01）；posts 按时间倒序传入。
+function sectionOrdinal(post: PostSummary, posts: PostSummary[]): string {
+  const sectionPosts = posts.filter((p) => sectionFor(p) === sectionFor(post));
+  const index = sectionPosts.findIndex((p) => p.slug === post.slug);
+  if (index === -1) return sectionMeta[sectionFor(post)].number;
+  return String(sectionPosts.length - index).padStart(2, "0");
+}
+
 function countsBySection(posts: PostSummary[]): Record<EditorialSection, number> {
   return Object.fromEntries(
     EDITORIAL_SECTIONS.map((section) => [
@@ -304,7 +312,7 @@ export function ReadingDossier({
 
       <header className={styles.dossierCover} id="reading-cover" data-reveal>
         <aside className={styles.docket}>
-          <span className={styles.docketNumber}>{section.number}</span>
+          <span className={styles.docketNumber}>{sectionOrdinal(post, posts)}</span>
           <div><b>{section.label}</b></div>
           <i />
           <p>{site.brandCN}<br />文章<br />第 {post.no} 号</p>

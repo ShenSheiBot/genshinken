@@ -246,6 +246,8 @@
 .body :global(h3::before) {
   content: counter(reading-section, decimal-leading-zero);
   position: absolute;
+  /* 全局 .art-body h*::before 的 left:0 会与 right:100% 过约束并胜出，必须显式重置 */
+  left: auto;
   right: 100%;
   top: 1.55rem;
   width: 42px;
