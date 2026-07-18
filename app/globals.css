@@ -133,8 +133,25 @@ body:has(.reading-edition-page) { background-image: none; }
     calc((100% - var(--maxw)) / 2 + var(--site-header-inline))
   );
   background: var(--bg);
-  border-bottom: 1px solid var(--hair-strong);
-  transition: background .3s ease, color .3s ease, border-color .3s ease;
+  border-bottom: 1px solid transparent;
+  transition: background .3s ease, color .3s ease;
+}
+.topbar::after {
+  position: absolute;
+  right: max(
+    var(--site-header-inline),
+    calc((100% - var(--maxw)) / 2 + var(--site-header-inline))
+  );
+  bottom: -1px;
+  left: max(
+    var(--site-header-inline),
+    calc((100% - var(--maxw)) / 2 + var(--site-header-inline))
+  );
+  height: 1px;
+  content: "";
+  pointer-events: none;
+  background: var(--hair-strong);
+  transition: background-color .3s ease;
 }
 .topbar .brand {
   display: inline-flex; align-items: center; justify-self: start; gap: 11px; width: max-content; height: 36px;
@@ -663,6 +680,7 @@ html[data-article-nav="compact"] .topbar .mobile-section-item[data-active="true"
 @media (max-width: 680px) {
   .wrap, .topbar, .hero-inner, .art-hero-inner, .foot-inner { padding-left: 20px; padding-right: 20px; }
   .topbar { gap: 18px; }
+  .topbar::after { right: 20px; left: 20px; }
   .srow { grid-template-columns: 56px 1fr; }
   .srow .smeta { grid-column: 1 / -1; text-align: left; align-items: flex-start; padding-top: 8px; }
   .srow .smeta .stags { justify-content: flex-start; width: 100%; overflow-x: auto; }

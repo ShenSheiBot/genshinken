@@ -470,7 +470,7 @@ assert.equal(aboutMains.length, 1, "about route must expose its dedicated contac
 const aboutMain = aboutMains[0];
 const aboutHeadings = elements(aboutMain.inner, "h1");
 assert.equal(aboutHeadings.length, 1, "about contact page must retain one main heading");
-assert.equal(visibleText(aboutHeadings[0].inner), "联系");
+assert.equal(visibleText(aboutHeadings[0].inner), "联系我们");
 assertEmailLink(aboutMain.inner, "editor@un-canon.com", "about contact page");
 assertEmailLink(aboutMain.inner, "info@un-canon.com", "about contact page");
 assert.doesNotMatch(aboutMain.inner, /我们做什么|编辑旨趣|团队|查看参与内容/);
