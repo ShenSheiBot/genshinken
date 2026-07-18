@@ -5,6 +5,8 @@
   background: var(--bg);
 }
 
+.catalogPage { border-bottom: 0; }
+
 .catalogHeader,
 .catalogue,
 .bookShell {
