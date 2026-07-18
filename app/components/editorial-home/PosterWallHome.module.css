@@ -285,10 +285,6 @@
   --card-bg: var(--panel);
 }
 
-.tile[data-section="review"] {
-  --card-bg: color-mix(in srgb, var(--bg) 94%, var(--accent));
-}
-
 .tile[data-section="multimedia"] {
   --accent: #ef5a4d;
   --card-bg: var(--solid);
