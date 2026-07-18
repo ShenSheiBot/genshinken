@@ -97,9 +97,7 @@ function overviewFor(post: PostSummary): string {
 }
 
 function CardCredits({ post }: { post: PostSummary }) {
-  const credits = post.section === "translation"
-    ? post.credits.filter((credit) => credit.role === "author")
-    : post.credits;
+  const credits = visibleHomeCredits(post);
 
   return (
     <CreditLinks
@@ -110,6 +108,13 @@ function CardCredits({ post }: { post: PostSummary }) {
       fallbackName={post.author || "西方負典编辑部"}
     />
   );
+}
+
+/** Keep translated recommendations focused on the original author everywhere on the home page. */
+function visibleHomeCredits(post: PostSummary) {
+  return post.section === "translation"
+    ? post.credits.filter((credit) => credit.role === "author")
+    : post.credits;
 }
 
 function groupPostsBySection(posts: PostSummary[]): Record<EditorialSection, PostSummary[]> {
@@ -290,7 +295,6 @@ export default function PosterWallHome({
         <div className={styles.latestInner}>
           <header className={styles.latestHeading}>
             <div>
-              <span>05</span>
               <h2 id="poster-latest-title">最新更新</h2>
             </div>
             <p>
@@ -304,21 +308,33 @@ export default function PosterWallHome({
             {latestArticles.map((post) => {
               const section = post.section;
               const meta = EDITORIAL_SECTION_META[section];
+              const credits = visibleHomeCredits(post);
               return (
                 <li key={post.slug} data-reveal>
-                  <article>
-                    <Link className={styles.latestCard} href={postPath(post)}>
+                  <article className={styles.latestArticle}>
+                    <Link
+                      className={styles.latestCardPrimaryLink}
+                      href={postPath(post)}
+                      aria-label={`阅读全文：${post.title}`}
+                    />
+                    <div className={styles.latestCard}>
                       <header>
                         <span>文稿 {post.no}</span>
                         <span>{meta.label}</span>
                       </header>
                       <h3>{post.title}</h3>
+                      <CreditLinks
+                        className={styles.latestCredits}
+                        credits={credits}
+                        separator="·"
+                        fallbackName={post.author || "未署名"}
+                      />
                       {(post.excerpt || post.subtitle) && <p>{post.excerpt || post.subtitle}</p>}
                       <footer>
                         <time dateTime={post.dateISO}>{post.dateDisplay}</time>
                         <span>预计阅读 {post.readMin} 分钟 <b aria-hidden="true">→</b></span>
                       </footer>
-                    </Link>
+                    </div>
                   </article>
                 </li>
               );

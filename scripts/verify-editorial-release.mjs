@@ -212,7 +212,48 @@ assert.ok(
   !home.html.includes('aria-label="首页内容栏目"'),
   "homepage must not retain the removed four-section navigation"
 );
-assert.ok(home.html.includes("href=\"/library\""), "latest updates must link to the library");
+const latestUpdates = elements(home.html, "section").find(
+  (section) => attribute(section.opening, "aria-labelledby") === "poster-latest-title"
+);
+assert.ok(latestUpdates, "homepage must render the latest-updates section");
+assert.ok(
+  visibleText(latestUpdates.outer).startsWith("最新更新"),
+  "latest-updates heading must not retain its removed decorative number"
+);
+assert.ok(
+  links(latestUpdates.outer).some((link) => link.href === "/library"),
+  "latest updates must link to the library"
+);
+const latestCards = elements(latestUpdates.inner, "article");
+assert.equal(latestCards.length, 6, "latest updates must render six article cards");
+for (const card of latestCards) {
+  assert.match(card.outer, /data-credit-role=["']author["']/,
+    "each latest-update card must render an inert author role mark");
+  const contributorLink = links(card.outer).find((link) =>
+    link.href.startsWith("/library?contributor=")
+  );
+  assert.ok(contributorLink, "each latest-update card must link its author name to the library");
+  assert.doesNotMatch(
+    contributorLink.inner,
+    /data-credit-role|aria-label=["'](?:作者|译者)["']|>\s*[作译]\s*</,
+    "latest-update role marks must remain outside contributor links"
+  );
+}
+const latestTranslation = latestCards.find((card) =>
+  card.outer.includes("苏联计划经济的历史审视")
+);
+assert.ok(latestTranslation, "the known translation must appear in latest updates");
+const latestTranslationCreditPaths = links(latestTranslation.outer).map((link) => link.href);
+for (const authorId of ["yuri-olsevich", "paul-gregory"]) {
+  assert.ok(
+    latestTranslationCreditPaths.includes(`/library?contributor=${authorId}`),
+    `translation latest-update card must link author ${authorId}`
+  );
+}
+assert.ok(
+  !latestTranslationCreditPaths.includes("/library?contributor=wang-kui"),
+  "translation latest-update cards must not show translator credits"
+);
 assert.doesNotMatch(home.html, /href=["']\/search(?:[?"'])/, "new navigation must not emit /search links");
 assert.doesNotMatch(home.html, /motion-prototype-switcher|ub_motion_prototype|LOCAL_MOTION_PROTOTYPE/);
 
