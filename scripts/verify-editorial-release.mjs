@@ -82,6 +82,24 @@ function links(html) {
   }));
 }
 
+function cloudflareProtectedEmails(html) {
+  return [...html.matchAll(/\bdata-cfemail=["']([\da-f]+)["']/gi)].flatMap(([, encoded]) => {
+    if (!/^(?:[\da-f]{2}){2,}$/i.test(encoded)) return [];
+    const key = Number.parseInt(encoded.slice(0, 2), 16);
+    const decoded = [];
+    for (let index = 2; index < encoded.length; index += 2) {
+      decoded.push(Number.parseInt(encoded.slice(index, index + 2), 16) ^ key);
+    }
+    return [String.fromCharCode(...decoded)];
+  });
+}
+
+function assertEmailLink(html, email, label) {
+  const literalLink = links(html).some((link) => link.href === `mailto:${email}`);
+  const protectedLink = cloudflareProtectedEmails(html).includes(email);
+  assert.ok(literalLink || protectedLink, `${label} must link to ${email}`);
+}
+
 function normalizedPath(value) {
   const url = new URL(value, base);
   return `${url.pathname}${url.search}${url.hash}`;
@@ -425,8 +443,8 @@ const aboutMain = aboutMains[0];
 const aboutHeadings = elements(aboutMain.inner, "h1");
 assert.equal(aboutHeadings.length, 1, "about contact page must retain one main heading");
 assert.equal(visibleText(aboutHeadings[0].inner), "联系");
-assert.match(aboutMain.inner, /mailto:editor@un-canon\.com/);
-assert.match(aboutMain.inner, /mailto:info@un-canon\.com/);
+assertEmailLink(aboutMain.inner, "editor@un-canon.com", "about contact page");
+assertEmailLink(aboutMain.inner, "info@un-canon.com", "about contact page");
 assert.doesNotMatch(aboutMain.inner, /我们做什么|编辑旨趣|团队|查看参与内容/);
 
 const topicsLd = assertMetadata("topics index", topics, "/topics", "CollectionPage");
