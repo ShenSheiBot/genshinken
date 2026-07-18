@@ -18,20 +18,6 @@
   overflow: hidden;
 }
 
-.masthead::before {
-  position: absolute;
-  right: -0.04em;
-  bottom: -0.3em;
-  content: "刊";
-  color: var(--ghost);
-  font-family: var(--f-grotesk);
-  font-size: clamp(120px, 21vw, 310px);
-  font-weight: 700;
-  line-height: 0.78;
-  letter-spacing: -0.08em;
-  pointer-events: none;
-}
-
 .screenReaderTitle {
   position: absolute;
   width: 1px;
