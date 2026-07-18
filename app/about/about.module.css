@@ -67,32 +67,8 @@
 .socials a:hover,
 .socials a:focus-visible { color: var(--accent); outline: none; text-decoration: underline; }
 
-/* The page body is the contact directory.  Its footer therefore keeps only
- * the site imprint, aligned with the contact cards rather than repeating all
- * of the same addresses and outbound links. */
-.page[data-about-page] ~ :global(.foot) {
-  margin-top: 0;
-  padding-top: 36px;
-}
-
-.page[data-about-page] ~ :global(.foot) :global(.foot-links) { display: none; }
-.page[data-about-page] ~ :global(.foot) :global(.foot-inner) { display: block; }
-.page[data-about-page] ~ :global(.foot) :global(.foot-sign) {
-  width: fit-content;
-  margin-left: 0;
-  justify-items: start;
-}
-.page[data-about-page] ~ :global(.foot) :global(.foot-sign-main) { gap: 18px; }
-.page[data-about-page] ~ :global(.foot) :global(.foot-logo) { order: -1; }
-.page[data-about-page] ~ :global(.foot) :global(.meta) { text-align: left; }
-.page[data-about-page] ~ :global(.foot) :global(.foot-build) {
-  width: auto;
-  justify-content: flex-start;
-}
-
 @media (max-width: 760px) {
   .page { padding: 46px 20px 0; }
   .contact { padding-bottom: 44px; }
   .contactGrid { grid-template-columns: 1fr; gap: 28px; }
-  .page[data-about-page] ~ :global(.foot) :global(.foot-inner) { padding-right: 20px; padding-left: 20px; }
 }

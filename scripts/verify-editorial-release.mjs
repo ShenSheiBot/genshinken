@@ -194,11 +194,39 @@ for (const [label, result] of Object.entries({
   missing,
 })) {
   assert.ok(!result.html.includes(prohibitedBrand), `${label} must not contain the prohibited brand`);
+  const footers = elements(result.html, "footer")
+    .filter((footer) => /\bclass=["'][^"']*\bfoot\b/i.test(footer.opening));
+  assert.equal(footers.length, 1, `${label} must expose exactly one global footer`);
+  const footer = footers[0];
+  assert.equal(
+    tags(footer.inner, "img").filter((image) => attribute(image, "src") === "/img/logo.png").length,
+    1,
+    `${label} footer must retain the site logo`
+  );
+  assert.match(footer.inner, /\bclass=["'][^"']*\bfoot-brand\b/i, `${label} footer must retain the FOT brand wordmark`);
+  if (label === "about") {
+    assert.match(
+      visibleText(footer.inner),
+      /^西方負典 最新修改 \d{4}\.\d{2}\.\d{2} UTC \d{2}:\d{2}:\d{2}$/,
+      "about footer must contain the centered brand lockup and build time"
+    );
+  } else {
+    assert.equal(
+      visibleText(footer.inner),
+      "西方負典",
+      `${label} footer must contain only the centered brand lockup`
+    );
+  }
 }
 
-const buildTimes = elements(home.html, "time")
+const buildTimes = elements(about.html, "time")
   .filter((item) => /\bdata-build-timestamp(?:\s|=|>)/i.test(item.opening));
-assert.equal(buildTimes.length, 1, "homepage must expose exactly one build timestamp in the footer");
+assert.equal(buildTimes.length, 1, "about page must expose exactly one build timestamp in the footer");
+assert.equal(
+  elements(home.html, "time").filter((item) => /\bdata-build-timestamp(?:\s|=|>)/i.test(item.opening)).length,
+  0,
+  "homepage must not expose the build timestamp"
+);
 const buildTime = buildTimes[0];
 const buildIso = attribute(buildTime.opening, "datetime");
 assert.ok(buildIso, "footer build timestamp must expose machine-readable datetime");
@@ -213,7 +241,7 @@ const buildTimePart = String(buildDate.getUTCHours()).padStart(2, "0") + ":" +
   String(buildDate.getUTCSeconds()).padStart(2, "0");
 assert.equal(
   visibleText(buildTime.inner),
-  `最新修改 ${buildDatePart} UCT ${buildTimePart}`,
+  `最新修改 ${buildDatePart} UTC ${buildTimePart}`,
   "footer build timestamp must use the requested compact display format"
 );
 

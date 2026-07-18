@@ -88,27 +88,6 @@
     box-shadow: inset 0 0 0 3px var(--accent);
   }
 
-  .foot-links .v a {
-    position: relative;
-  }
-
-  .foot-links .v a::after {
-    position: absolute;
-    right: 0;
-    bottom: -3px;
-    left: 0;
-    height: 1px;
-    content: "";
-    background: var(--accent);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform var(--editorial-motion-fast) ease;
-  }
-
-  .foot-links .v a:hover::after,
-  .foot-links .v a:focus-visible::after {
-    transform: scaleX(1);
-  }
 }
 
 @keyframes editorial-proof-set {
@@ -147,8 +126,7 @@
   [data-reveal]::after,
   [data-reveal-sequence] > *,
   [data-reveal-sequence] > *::before,
-  [data-reveal-sequence] > *::after,
-  .foot-links .v a::after {
+  [data-reveal-sequence] > *::after {
     animation: none !important;
     transition: none !important;
   }

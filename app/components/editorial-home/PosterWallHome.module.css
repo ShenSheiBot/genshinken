@@ -689,9 +689,9 @@
 .root:has(.latestUpdatesTransition) ~ :global(.foot)::before {
   position: absolute;
   z-index: 0;
-  inset: 0 0 auto;
+  inset: -2px 0 auto;
   width: 100%;
-  height: 56px;
+  height: 58px;
   content: "";
   pointer-events: none;
   background-color: var(--home-latest-transition-bg);
@@ -1168,7 +1168,7 @@
   }
 
   .root:has(.latestUpdatesTransition) ~ :global(.foot)::before {
-    height: 40px;
+    height: 42px;
     clip-path: polygon(0 0, 100% 0, 100% 42%, 50% 66%, 0 48%);
   }
 
