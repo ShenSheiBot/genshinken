@@ -39,6 +39,7 @@ export interface PostSummary {
   featuredOrder: number; // 同栏目首页推荐优先级；数值越大越靠前
   readMin: number;
   no: string; // 最早发布为 1，之后递增；最新文章为当前总数 N
+  sectionNo: string; // 栏目内发表序号，两位补零；同栏目最早为 01（首页海报 / 文章页档案 / 内容索引统一用此字段）
 }
 
 export interface Post extends PostSummary {
@@ -242,6 +243,7 @@ async function loadRaw(): Promise<Post[]> {
         featuredOrder: toSortOrder(data.featured_order),
         readMin: readMinutes(html),
         no: "00",
+        sectionNo: "00",
         originalTitle: metadataText(data.original_title ?? data.originalTitle ?? data["原文题名"]),
         originalPublication: metadataText(
           data.original_publication ??
@@ -264,6 +266,18 @@ async function loadRaw(): Promise<Post[]> {
   visiblePosts.forEach((p, i) => {
     p.no = String(visiblePosts.length - i);
   });
+  // 栏目内编号同理：同 section 内最早为 01。此处是唯一计算点，展示层一律读 sectionNo。
+  const sectionGroups = new Map<string, Post[]>();
+  for (const p of visiblePosts) {
+    const group = sectionGroups.get(p.section) ?? [];
+    group.push(p);
+    sectionGroups.set(p.section, group);
+  }
+  for (const group of sectionGroups.values()) {
+    group.forEach((p, i) => {
+      p.sectionNo = String(group.length - i).padStart(2, "0");
+    });
+  }
 
   return posts.sort(comparePosts);
 }

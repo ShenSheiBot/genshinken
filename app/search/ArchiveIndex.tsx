@@ -163,7 +163,7 @@ export default function ArchiveIndex({
                       </div>
                       <div className={styles.recordMain}>
                         <span className={styles.classification}>
-                          <i>{section.number}</i>
+                          <i>{post.sectionNo}</i>
                           <b>{section.label}</b>
                           <em>/ {post.category}</em>
                         </span>
