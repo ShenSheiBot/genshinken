@@ -5,13 +5,15 @@ import { site } from "@/lib/site";
 import CreditLinks from "@/app/components/CreditLinks";
 import styles from "./books.module.css";
 
+const description = `${site.brandCN}长篇译作与书籍目录。`;
+
 export const metadata: Metadata = {
-  title: "书籍与连载",
-  description: "按书籍组织的长篇翻译与连载，兼顾连续阅读、章节定位和本机阅读记录。",
+  title: "连载",
+  description,
   alternates: { canonical: "/books" },
   openGraph: {
-    title: "书籍与连载",
-    description: "按书籍组织的长篇翻译与连载，兼顾连续阅读、章节定位和本机阅读记录。",
+    title: "连载",
+    description,
     url: "/books",
     type: "website",
   },
@@ -24,7 +26,7 @@ export default function BooksPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: "书籍与连载",
+    name: "连载",
     description: metadata.description,
     url: canonical,
     inLanguage: "zh-Hans",
@@ -43,61 +45,54 @@ export default function BooksPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
       />
-      <header className={styles.indexHero}>
-        <div className={styles.indexHeroTitle}>
-          <p className={styles.eyebrow}>书籍 / 连续阅读</p>
+
+      <header className={styles.catalogHeader}>
+        <div>
           <h1>连载</h1>
         </div>
-        <div className={styles.indexHeroNote}>
-            <span>长篇／连续阅读</span>
-          <p>
-            长篇内容仍以整本连续正文呈现，同时提供稳定的章节入口。读者可以从头开始、前往最新更新，或自行选择本机保存的位置。
-          </p>
-          <small>
-            {String(books.length).padStart(2, "0")} 册收录 · {String(serializingCount).padStart(2, "0")} 册连载中
-          </small>
-        </div>
+        <dl className={styles.catalogStats}>
+          <div><dt>书目</dt><dd>{String(books.length).padStart(2, "0")}</dd></div>
+          <div><dt>连载中</dt><dd>{String(serializingCount).padStart(2, "0")}</dd></div>
+        </dl>
       </header>
 
       <section className={styles.catalogue} aria-labelledby="books-catalogue-heading">
-        <header className={styles.catalogueHeading}>
-          <h2 id="books-catalogue-heading">全部书目</h2>
-          <p>{String(books.length).padStart(2, "0")} 册</p>
-        </header>
-
+        <h2 className={styles.visuallyHidden} id="books-catalogue-heading">书目目录</h2>
         {books.length > 0 ? (
-          <ol className={styles.bookGrid}>
+          <ol className={styles.bookList}>
             {books.map((book, index) => {
               const credits = getBookCredits(book);
               const authors = credits.filter((credit) => credit.role === "author");
               const translators = credits.filter((credit) => credit.role === "translator");
               return (
                 <li key={book.id}>
-                  <article className={styles.bookCard}>
-                    <Link
-                      href={bookHref(book)}
-                      className={styles.bookCardLink}
-                      aria-label={`进入书籍：${book.title}`}
-                    />
-                    <header>
-                      <div>
-                        <span className={styles.bookIndex}>{String(index + 1).padStart(2, "0")}</span>
+                  <article className={styles.catalogBook}>
+                    <div className={styles.catalogCover} aria-hidden="true">
+                      <span>西方負典文库</span>
+                      <strong>{book.title}</strong>
+                      <small>{String(index + 1).padStart(2, "0")} / 书籍</small>
+                    </div>
+                    <div className={styles.catalogBody}>
+                      <div className={styles.catalogTopline}>
                         <span className={styles.status}>{bookStatusLabel(book.status)}</span>
+                        <span>书籍</span>
                       </div>
-                      <time dateTime={book.updatedAt}>{book.updatedAt.replaceAll("-", ".")}</time>
-                    </header>
-                    <h3>{book.title}</h3>
-                    <div className={styles.bookCardInfo}>
-                      <p>{book.subtitle}</p>
-                      <div className={styles.bookCardCredits}>
-                        <CreditLinks credits={authors} separator="·" />
-                        <CreditLinks credits={translators} separator="·" />
+                      <h3 className={styles.catalogTitle}>
+                        <Link href={bookHref(book)}>{book.title}</Link>
+                      </h3>
+                      <p className={styles.catalogSubtitle}>{book.subtitle}</p>
+                      <div className={styles.catalogCredits}>
+                        <div><span>作者</span><CreditLinks credits={authors} showMarks={false} separator="·" /></div>
+                        <div><span>译者</span><CreditLinks credits={translators} showMarks={false} separator="·" /></div>
                       </div>
                     </div>
-                    <footer>
-                      <span>{book.chapters.length} 个稳定章节入口</span>
-                      <b>进入书籍 ↗</b>
-                    </footer>
+                    <dl className={styles.catalogFacts}>
+                      <div><dt>章节</dt><dd>{book.chapters.length}</dd></div>
+                      <div><dt>更新</dt><dd><time dateTime={book.updatedAt}>{book.updatedAt.replaceAll("-", ".")}</time></dd></div>
+                    </dl>
+                    <Link className={styles.catalogOpen} href={bookHref(book)} aria-label={`进入书籍：${book.title}`}>
+                      <span>查看书籍</span><b aria-hidden="true">→</b>
+                    </Link>
                   </article>
                 </li>
               );

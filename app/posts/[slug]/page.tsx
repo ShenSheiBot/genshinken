@@ -3,8 +3,6 @@ import { notFound, permanentRedirect } from "next/navigation";
 import { getAllPosts, getAllSlugs, getPostBySlug, type CreditRole } from "@/lib/posts";
 import { site } from "@/lib/site";
 import { postPath } from "@/lib/editorial";
-import { getBookByDocumentSlug } from "@/lib/books";
-import { BookProgressTracker } from "@/app/books/BookLocalProgress";
 import {
   ReadingDossier,
   splitArticle,
@@ -94,7 +92,6 @@ export default async function ArticlePage({
   if (post.section === "multimedia") permanentRedirect(postPath(post));
 
   const posts = await getAllPosts();
-  const book = getBookByDocumentSlug(post.slug);
 
   return (
     <>
@@ -110,14 +107,6 @@ export default async function ArticlePage({
         posts={posts}
         isPublicEdition
       />
-      {book && (
-        <BookProgressTracker
-          bookId={book.id}
-          startChapterId={book.chapters[0].id}
-          startSectionId={book.startAnchor}
-          chapters={book.chapters.map(({ id, title, anchor }) => ({ id, title, anchor }))}
-        />
-      )}
     </>
   );
 }

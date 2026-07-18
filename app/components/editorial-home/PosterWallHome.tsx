@@ -291,7 +291,11 @@ export default function PosterWallHome({
         )}
       </div>
 
-      <section className={styles.latestUpdates} aria-labelledby="poster-latest-title" data-reveal>
+      <section
+        className={`${styles.latestUpdates} ${styles.latestUpdatesTransition}`}
+        aria-labelledby="poster-latest-title"
+        data-reveal
+      >
         <div className={styles.latestInner}>
           <header className={styles.latestHeading}>
             <div>

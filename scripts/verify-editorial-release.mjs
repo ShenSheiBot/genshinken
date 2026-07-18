@@ -178,6 +178,27 @@ for (const [label, result] of Object.entries({
   assert.ok(!result.html.includes(prohibitedBrand), `${label} must not contain the prohibited brand`);
 }
 
+const buildTimes = elements(home.html, "time")
+  .filter((item) => /\bdata-build-timestamp(?:\s|=|>)/i.test(item.opening));
+assert.equal(buildTimes.length, 1, "homepage must expose exactly one build timestamp in the footer");
+const buildTime = buildTimes[0];
+const buildIso = attribute(buildTime.opening, "datetime");
+assert.ok(buildIso, "footer build timestamp must expose machine-readable datetime");
+const buildDate = new Date(buildIso);
+assert.ok(!Number.isNaN(buildDate.valueOf()), "footer build timestamp must be a valid date");
+assert.equal(buildDate.toISOString(), buildIso, "footer build timestamp must be normalized UTC ISO");
+const buildDatePart = String(buildDate.getUTCFullYear()).padStart(4, "0") + "." +
+  String(buildDate.getUTCMonth() + 1).padStart(2, "0") + "." +
+  String(buildDate.getUTCDate()).padStart(2, "0");
+const buildTimePart = String(buildDate.getUTCHours()).padStart(2, "0") + ":" +
+  String(buildDate.getUTCMinutes()).padStart(2, "0") + ":" +
+  String(buildDate.getUTCSeconds()).padStart(2, "0");
+assert.equal(
+  visibleText(buildTime.inner),
+  `最新修改 ${buildDatePart} UCT ${buildTimePart}`,
+  "footer build timestamp must use the requested compact display format"
+);
+
 assertMetadata("homepage", home, "/");
 assert.match(home.html, /東流不溢/);
 assert.match(home.html, /孰知其故/);
@@ -397,10 +418,16 @@ assert.match(filteredLibrary.html, /苏联计划经济的历史审视/);
 assert.doesNotMatch(filteredLibrary.html, /学龄前的歌利亚/);
 
 assertMetadata("about", about, "/about");
-assert.match(about.html, /我们做什么/);
-assert.match(about.html, /编辑旨趣/);
-assert.match(about.html, /mailto:editor@un-canon\.com/);
-assert.match(about.html, /mailto:info@un-canon\.com/);
+const aboutMains = elements(about.html, "main")
+  .filter((main) => attribute(main.opening, "data-about-page") === "true");
+assert.equal(aboutMains.length, 1, "about route must expose its dedicated contact main landmark");
+const aboutMain = aboutMains[0];
+const aboutHeadings = elements(aboutMain.inner, "h1");
+assert.equal(aboutHeadings.length, 1, "about contact page must retain one main heading");
+assert.equal(visibleText(aboutHeadings[0].inner), "联系");
+assert.match(aboutMain.inner, /mailto:editor@un-canon\.com/);
+assert.match(aboutMain.inner, /mailto:info@un-canon\.com/);
+assert.doesNotMatch(aboutMain.inner, /我们做什么|编辑旨趣|团队|查看参与内容/);
 
 const topicsLd = assertMetadata("topics index", topics, "/topics", "CollectionPage");
 assert.ok(!topics.html.includes(incorrectSimplifiedBrand), "topics metadata must use 西方負典");
@@ -437,33 +464,23 @@ const bookLd = assertMetadata(
   "Book"
 );
 assert.match(book.html, /从头阅读/);
-assert.match(book.html, /阅读最新更新/);
-assert.match(book.html, /继续本机记录/);
+assert.match(book.html, /阅读最新章节/);
 assert.match(book.html, /\/library\?contributor=wang-kui/);
 const citationCards = elements(book.html, "article")
   .map((card) => ({ ...card, kind: attribute(card.opening, "data-citation") }))
   .filter((card) => card.kind);
 assert.deepEqual(
   citationCards.map((card) => card.kind),
-  ["original", "translation"],
-  "book page must keep independent original and translation citation slots"
+  ["translation"],
+  "book page must only show the BibTeX records actually provided"
 );
-for (const citation of citationCards) {
-  const copyButtons = elements(citation.outer, "button");
-  assert.ok(copyButtons.length <= 1, `${citation.kind} citation must have at most one copy button`);
-  if (copyButtons.length === 1) {
-    assert.equal(attribute(copyButtons[0].opening, "type"), "button");
-    assert.match(visibleText(copyButtons[0].outer), /复制.*BibTeX|已复制/);
-    assert.ok(attribute(copyButtons[0].opening, "aria-describedby"));
-    assert.match(citation.outer, /aria-live=["']polite["']/);
-  } else {
-    assert.match(citation.outer, /书目信息尚待核验/);
-  }
-}
-assert.ok(
-  elements(citationCards.find((card) => card.kind === "translation").outer, "button").length === 1,
-  "the published translation BibTeX must expose its copy button"
-);
+const translationCitation = citationCards.find((card) => card.kind === "translation");
+assert.ok(translationCitation, "the published translation BibTeX must have a compact citation row");
+const copyButtons = elements(translationCitation.outer, "button");
+assert.equal(copyButtons.length, 1, "the published translation BibTeX must expose one copy button");
+assert.equal(attribute(copyButtons[0].opening, "type"), "button");
+assert.match(visibleText(copyButtons[0].outer), /复制|已复制/);
+assert.match(copyButtons[0].opening, /aria-label=["'][^"']*BibTeX/);
 const fileLinks = links(book.html).filter((link) => /^(?:PDF|EPUB)/.test(link.text));
 assert.equal(new Set(fileLinks.map((link) => link.text.match(/^(PDF|EPUB)/)[1])).size, fileLinks.length);
 for (const fileLink of fileLinks) {

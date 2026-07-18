@@ -9,16 +9,12 @@ import {
   getAllBooks,
   getBookCredits,
   getBookBySlug,
-  getBookProgressSectionIds,
   getLatestBookChapter,
   getValidatedBookDocument,
 } from "@/lib/books";
 import { site } from "@/lib/site";
 import CreditLinks from "@/app/components/CreditLinks";
-import BookLocalProgress, {
-  BookBookmarkButton,
-  BookChapterLink,
-} from "../BookLocalProgress";
+import BookReadingActions from "../BookReadingActions";
 import BookResources from "../BookResources";
 import styles from "../books.module.css";
 
@@ -60,13 +56,10 @@ export default async function BookPage({
   if (!book) notFound();
 
   const document = await getValidatedBookDocument(book);
-  const firstChapter = book.chapters[0];
   const latestChapter = getLatestBookChapter(book);
   const credits = getBookCredits(book);
   const authors = credits.filter((credit) => credit.role === "author");
   const translators = credits.filter((credit) => credit.role === "translator");
-  const progressChapters = book.chapters.map(({ id, title, anchor }) => ({ id, title, anchor }));
-  const documentBaseHref = bookDocumentHref(book);
   const canonical = `${site.url}${bookHref(book)}`;
   const jsonLd = {
     "@context": "https://schema.org",
@@ -109,92 +102,74 @@ export default async function BookPage({
       />
       <div className={styles.bookShell}>
         <nav className={styles.breadcrumb} aria-label="面包屑">
-          <Link href="/books">书籍与连载</Link>
+          <Link href="/books">连载</Link>
           <span aria-hidden="true">/</span>
           <span aria-current="page">{book.title}</span>
         </nav>
 
-        <header className={styles.bookHeader}>
-          <div>
-            <p className={styles.eyebrow}>{bookStatusLabel(book.status)} / 书籍</p>
+        <header className={styles.publicationHeader}>
+          <div className={styles.bookCover} aria-hidden="true">
+            <span>西方負典文库</span>
+            <strong>{book.title}</strong>
+            <small>西方負典版</small>
+          </div>
+
+          <div className={styles.publicationIdentity}>
+            <p className={styles.sectionLabel}>{bookStatusLabel(book.status)} · 书籍</p>
             <h1>{book.title}</h1>
             <p className={styles.bookSubtitle}>{book.subtitle}</p>
+            <div className={styles.responsibility}>
+              <div><span>作者</span><CreditLinks credits={authors} showMarks={false} separator="·" /></div>
+              <div><span>译者</span><CreditLinks credits={translators} showMarks={false} separator="·" /></div>
+            </div>
             <p className={styles.bookDescription}>{book.description}</p>
           </div>
-          <dl className={styles.bookMeta}>
-            <div><dt>作者</dt><dd><CreditLinks credits={authors} showMarks={false} separator="·" /></dd></div>
-            <div><dt>译者</dt><dd><CreditLinks credits={translators} showMarks={false} separator="·" /></dd></div>
-            <div><dt>状态</dt><dd>{bookStatusLabel(book.status)}</dd></div>
-            <div><dt>章节</dt><dd>{book.chapters.length} 个入口</dd></div>
-            <div><dt>篇幅</dt><dd>约 {document.readMin} 分钟</dd></div>
-            <div><dt>更新</dt><dd><time dateTime={book.updatedAt}>{book.updatedAt}</time></dd></div>
-          </dl>
+
+          <aside className={styles.publicationRail} aria-label="阅读与书目信息">
+            <BookReadingActions
+              startHref={bookDocumentHref(book, book.startAnchor)}
+              latestHref={bookChapterHref(book, latestChapter)}
+              latestTitle={latestChapter.title}
+            />
+            <dl className={styles.publicationFacts}>
+              <div><dt>发布</dt><dd><time dateTime={book.publishedAt}>{book.publishedAt}</time></dd></div>
+              <div><dt>更新</dt><dd><time dateTime={book.updatedAt}>{book.updatedAt}</time></dd></div>
+              <div><dt>章节</dt><dd>{book.chapters.length}</dd></div>
+              <div><dt>全文</dt><dd>约 {document.readMin} 分钟</dd></div>
+            </dl>
+          </aside>
         </header>
 
-        <BookLocalProgress
-          bookId={book.id}
-          documentBaseHref={documentBaseHref}
-          start={{
-            chapterId: firstChapter.id,
-            sectionId: book.startAnchor,
-            href: bookDocumentHref(book, book.startAnchor),
-          }}
-          latest={{
-            chapterId: latestChapter.id,
-            sectionId: latestChapter.anchor,
-            href: bookChapterHref(book, latestChapter),
-            title: latestChapter.title,
-          }}
-          chapters={progressChapters}
-          validSectionIds={getBookProgressSectionIds(document)}
-        />
+        <div className={styles.publicationBody}>
+          <section className={styles.chapters} aria-labelledby="book-chapters-heading">
+            <header className={styles.sectionHeading}>
+              <h2 id="book-chapters-heading">目录</h2>
+              <p>{book.chapters.length} 章</p>
+            </header>
 
-        <BookResources
-          originalBibtex={book.originalBibtex}
-          translationBibtex={book.translationBibtex}
-          pdfUrl={book.pdfUrl}
-          epubUrl={book.epubUrl}
-        />
+            <ol className={styles.chapterList}>
+              {book.chapters.map((chapter) => (
+                <li key={chapter.id} data-latest={chapter.id === book.latestChapterId ? "true" : undefined}>
+                  <Link href={bookChapterHref(book, chapter)} className={styles.chapterLink}>
+                    <span>{chapter.number}</span>
+                    <div>
+                      <strong>{chapter.title}</strong>
+                      <time dateTime={chapter.publishedAt}>{chapter.publishedAt}</time>
+                    </div>
+                    <small>{chapter.id === book.latestChapterId ? "最新章节" : "阅读"} <b aria-hidden="true">→</b></small>
+                  </Link>
+                </li>
+              ))}
+            </ol>
+          </section>
 
-        <section className={styles.chapters} aria-labelledby="book-chapters-heading">
-          <header className={styles.chapterHeading}>
-            <div>
-              <span>目录</span>
-              <h2 id="book-chapters-heading">章节入口</h2>
-            </div>
-            <p>点击后仍在同一连续正文中阅读</p>
-          </header>
-
-          <ol className={styles.chapterList}>
-            {book.chapters.map((chapter) => (
-              <li key={chapter.id}>
-                <BookChapterLink
-                  bookId={book.id}
-                  chapterId={chapter.id}
-                  sectionId={chapter.anchor}
-                  href={bookChapterHref(book, chapter)}
-                  className={styles.chapterLink}
-                >
-                  <span>{chapter.number}</span>
-                  <strong>{chapter.title}</strong>
-                  <small>{chapter.id === book.latestChapterId ? "最新更新 ↗" : "打开章节 ↗"}</small>
-                </BookChapterLink>
-                <BookBookmarkButton
-                  bookId={book.id}
-                  chapterId={chapter.id}
-                  sectionId={chapter.anchor}
-                />
-              </li>
-            ))}
-          </ol>
-        </section>
-
-        <aside className={styles.continuityNote}>
-          <strong>连续阅读说明</strong>
-          <p>
-            章节入口只是这本书的稳定定位地址，不会把正文拆成互相隔离的文章。进入任一章节后，仍可向前或向后连续阅读整本文档，也可通过浏览器页面内查找检索全书。
-          </p>
-        </aside>
+          <BookResources
+            originalBibtex={book.originalBibtex}
+            translationBibtex={book.translationBibtex}
+            pdfUrl={book.pdfUrl}
+            epubUrl={book.epubUrl}
+          />
+        </div>
       </div>
     </main>
   );

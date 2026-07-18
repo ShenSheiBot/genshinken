@@ -1,169 +1,16 @@
 .page {
   width: min(100%, var(--maxw));
   margin: 0 auto;
-  padding: 72px 40px 96px;
+  padding: 72px 40px 0;
   color: var(--ink);
   background: var(--bg);
 }
 
-.hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(260px, .75fr);
-  gap: 56px;
-  align-items: end;
-  padding-bottom: 48px;
-  border-bottom: 1px solid var(--hair-strong);
-}
-
-.kicker,
-.sectionNumber {
-  color: var(--accent);
-  font-family: var(--f-mono);
-  font-size: 10px;
-  letter-spacing: .1em;
-}
-
-.hero h1 {
-  margin: 22px 0 0;
-  font-family: var(--f-cjk-serif);
-  font-size: clamp(58px, 9vw, 116px);
-  font-weight: 900;
-  line-height: .9;
-  letter-spacing: -.06em;
-}
-
-.intro {
-  margin: 0;
-  color: var(--ink-soft);
-  font-family: var(--f-cjk-serif);
-  font-size: clamp(18px, 2vw, 24px);
-  line-height: 1.65;
-}
-
-.sections {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  border-bottom: 1px solid var(--hair-strong);
-}
-
-.section {
-  min-width: 0;
-  padding: 44px 40px 52px 0;
-}
-
-.section:nth-child(even) {
-  padding-right: 0;
-  padding-left: 40px;
-  border-left: 1px solid var(--hair-strong);
-}
-
-.section h2 {
-  margin: 12px 0 20px;
-  font-family: var(--f-cjk-serif);
-  font-size: clamp(30px, 4vw, 48px);
-  line-height: 1.05;
-}
-
-.section p {
-  margin: 0;
-  color: var(--ink-soft);
-  font-family: var(--f-cjk-serif);
-  font-size: 16px;
-  line-height: 1.9;
-}
-
-.section p + p { margin-top: 14px; }
-
-.team {
-  padding: 52px 0;
-  border-bottom: 1px solid var(--hair-strong);
-}
-
-.sectionHeading {
-  display: grid;
-  grid-template-columns: 90px minmax(0, 1fr);
-  align-items: baseline;
-  gap: 20px;
-}
-
-.sectionHeading h2 {
-  margin: 0;
-  font-family: var(--f-cjk-serif);
-  font-size: clamp(34px, 5vw, 58px);
-  line-height: 1;
-}
-
-.teamList {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1px;
-  margin: 34px 0 0;
-  padding: 1px;
-  list-style: none;
-  background: var(--hair-strong);
-}
-
-.teamList li {
-  padding: 24px;
-  background: var(--bg);
-}
-
-.teamList strong {
-  display: block;
-  font-family: var(--f-cjk-serif);
-  font-size: 22px;
-}
-
-.teamList span,
-.teamList p {
-  color: var(--ink-soft);
-  font-family: var(--f-mono);
-  font-size: 10px;
-  line-height: 1.7;
-}
-
-.teamList p { font-family: var(--f-cjk-serif); font-size: 14px; }
-
-.teamEmpty {
-  max-width: 700px;
-  margin: 30px 0 0 110px;
-  padding: 22px 0 0;
-  border-top: 1px solid var(--hair);
-}
-
-.teamEmpty h3 {
-  margin: 0 0 12px;
-  font-family: var(--f-cjk-serif);
-  font-size: 23px;
-}
-
-.teamEmpty p {
-  margin: 0;
-  color: var(--ink-soft);
-  font-family: var(--f-cjk-serif);
-  font-size: 15px;
-  line-height: 1.8;
-}
-
-.teamEmpty a {
-  display: inline-block;
-  margin-top: 16px;
-  color: var(--accent);
-  font-family: var(--f-mono);
-  font-size: 10px;
-}
-
-.teamEmpty a:hover,
-.teamEmpty a:focus-visible { color: var(--ink); outline: none; text-decoration: underline; }
-
 .contact {
-  display: grid;
-  grid-template-columns: 90px minmax(0, 1fr);
-  gap: 20px;
-  padding-top: 52px;
+  padding-bottom: 56px;
 }
 
-.contactContent h2 {
+.contactContent h1 {
   margin: 0 0 28px;
   font-family: var(--f-cjk-serif);
   font-size: clamp(34px, 5vw, 58px);
@@ -173,16 +20,14 @@
 .contactGrid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
+  gap: 48px;
 }
 
 .contactCard {
   display: flex;
-  min-height: 132px;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 22px;
-  border: 1px solid var(--hair-strong);
+  gap: 26px;
+  padding: 0;
   color: var(--ink);
 }
 
@@ -202,9 +47,12 @@
 
 .contactCard:hover,
 .contactCard:focus-visible {
-  border-color: var(--accent);
+  color: var(--accent);
   outline: none;
 }
+
+.contactCard:hover strong,
+.contactCard:focus-visible strong { text-decoration: underline; }
 
 .socials {
   display: flex;
@@ -219,16 +67,32 @@
 .socials a:hover,
 .socials a:focus-visible { color: var(--accent); outline: none; text-decoration: underline; }
 
+/* The page body is the contact directory.  Its footer therefore keeps only
+ * the site imprint, aligned with the contact cards rather than repeating all
+ * of the same addresses and outbound links. */
+.page[data-about-page] ~ :global(.foot) {
+  margin-top: 0;
+  padding-top: 36px;
+}
+
+.page[data-about-page] ~ :global(.foot) :global(.foot-links) { display: none; }
+.page[data-about-page] ~ :global(.foot) :global(.foot-inner) { display: block; }
+.page[data-about-page] ~ :global(.foot) :global(.foot-sign) {
+  width: fit-content;
+  margin-left: 0;
+  justify-items: start;
+}
+.page[data-about-page] ~ :global(.foot) :global(.foot-sign-main) { gap: 18px; }
+.page[data-about-page] ~ :global(.foot) :global(.foot-logo) { order: -1; }
+.page[data-about-page] ~ :global(.foot) :global(.meta) { text-align: left; }
+.page[data-about-page] ~ :global(.foot) :global(.foot-build) {
+  width: auto;
+  justify-content: flex-start;
+}
+
 @media (max-width: 760px) {
-  .page { padding: 46px 20px 72px; }
-  .hero { grid-template-columns: 1fr; gap: 34px; }
-  .sections { display: block; }
-  .section,
-  .section:nth-child(even) { padding: 36px 0 40px; border-left: 0; }
-  .section + .section { border-top: 1px solid var(--hair); }
-  .sectionHeading,
-  .contact { grid-template-columns: 42px minmax(0, 1fr); gap: 12px; }
-  .teamList { grid-template-columns: 1fr; }
-  .teamEmpty { margin-left: 54px; }
-  .contactGrid { grid-template-columns: 1fr; }
+  .page { padding: 46px 20px 0; }
+  .contact { padding-bottom: 44px; }
+  .contactGrid { grid-template-columns: 1fr; gap: 28px; }
+  .page[data-about-page] ~ :global(.foot) :global(.foot-inner) { padding-right: 20px; padding-left: 20px; }
 }

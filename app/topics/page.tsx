@@ -4,7 +4,7 @@ import { site } from "@/lib/site";
 import { getAllTopics, type TopicStatus } from "@/lib/topics";
 import styles from "./topics.module.css";
 
-const description = `由${site.brandCN}编辑部人工编排的主题阅读路径。`;
+const description = `${site.brandCN}编辑部编排的专题目录。`;
 
 export const metadata: Metadata = {
   title: "专题",
@@ -49,44 +49,52 @@ export default async function TopicsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
       />
-      <header className={styles.indexHero}>
-        <div className={styles.eyebrow}>
-          <span>专题索引</span>
-          <span>{String(topics.length).padStart(2, "0")} 个专题</span>
-        </div>
-        <div className={styles.indexHeroCopy}>
+
+      <header className={styles.indexHeader}>
+        <div>
           <h1>专题</h1>
-          <p>由编辑部选择、分组并排序的阅读路径。专题会随新内容持续补充，而不会改变既有条目的地址。</p>
         </div>
+        <dl className={styles.indexStats}>
+          <div>
+            <dt>专题</dt>
+            <dd>{String(topics.length).padStart(2, "0")}</dd>
+          </div>
+        </dl>
       </header>
 
-      <section className={styles.topicIndex} aria-label="专题列表">
+      <section className={styles.topicIndex} aria-labelledby="topic-index-heading">
+        <h2 className={styles.visuallyHidden} id="topic-index-heading">专题目录</h2>
         {topics.length === 0 ? (
           <p className={styles.empty}>专题正在编排中。</p>
         ) : (
-          topics.map((topic, index) => (
-            <article className={styles.topicCard} key={topic.slug}>
-              <div className={styles.cardNumber}>{String(index + 1).padStart(2, "0")}</div>
-              <div className={styles.cardMain}>
-                <div className={styles.cardMeta}>
-                  <span>{STATUS_LABEL[topic.status]}</span>
-                  <time dateTime={topic.updated}>更新 {topic.updated}</time>
-                </div>
-                <h2>
-                  <Link href={`/topics/${encodeURIComponent(topic.slug)}`}>{topic.title}</Link>
-                </h2>
-                {topic.subtitle ? <p className={styles.subtitle}>{topic.subtitle}</p> : null}
-                <p className={styles.summary}>{topic.summary}</p>
-              </div>
-              <div className={styles.cardEnd}>
-                <span>{topic.groupCount} 组</span>
-                <span>{topic.itemCount} 项内容</span>
-                <Link href={`/topics/${encodeURIComponent(topic.slug)}`} aria-label={`进入专题：${topic.title}`}>
-                  进入专题 <span aria-hidden="true">→</span>
-                </Link>
-              </div>
-            </article>
-          ))
+          <ol className={styles.topicList}>
+            {topics.map((topic) => (
+              <li key={topic.slug}>
+                <article className={styles.topicRow}>
+                  <div className={styles.topicRowMeta}>
+                    <span className={styles.status}>{STATUS_LABEL[topic.status]}</span>
+                    <time dateTime={topic.updated}>{topic.updated.replaceAll("-", ".")}</time>
+                  </div>
+                  <div className={styles.topicRowMain}>
+                    <h3><Link href={`/topics/${encodeURIComponent(topic.slug)}`}>{topic.title}</Link></h3>
+                    {topic.subtitle ? <p className={styles.indexSubtitle}>{topic.subtitle}</p> : null}
+                    <p className={styles.indexSummary}>{topic.summary}</p>
+                  </div>
+                  <dl className={styles.topicRowFacts}>
+                    <div><dt>单元</dt><dd>{topic.groupCount}</dd></div>
+                    <div><dt>内容</dt><dd>{topic.itemCount}</dd></div>
+                  </dl>
+                  <Link
+                    className={styles.topicRowLink}
+                    href={`/topics/${encodeURIComponent(topic.slug)}`}
+                    aria-label={`进入专题：${topic.title}`}
+                  >
+                    <span>查看专题</span><b aria-hidden="true">→</b>
+                  </Link>
+                </article>
+              </li>
+            ))}
+          </ol>
         )}
       </section>
     </main>

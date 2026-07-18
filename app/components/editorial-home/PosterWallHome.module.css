@@ -644,6 +644,65 @@
   background-image: none;
 }
 
+/* The paper-to-night handoff uses a solid angled field, never a gradient. */
+.latestUpdatesTransition {
+  position: relative;
+  isolation: isolate;
+  margin-top: 164px;
+}
+
+.latestUpdatesTransition::before {
+  position: absolute;
+  z-index: 0;
+  top: -164px;
+  right: 0;
+  left: 0;
+  height: 164px;
+  content: "";
+  pointer-events: none;
+  background-color: var(--latest-bg);
+  clip-path: polygon(0 82%, 22% 73%, 45% 56%, 68% 34%, 84% 18%, 100% 6%, 100% 100%, 0 100%);
+}
+
+.latestUpdatesTransition .latestInner {
+  position: relative;
+  z-index: 1;
+}
+
+/* The lower handoff belongs to the footer instead of leaving an empty paper
+ * band inside the updates field.  The short dark flap keeps the transition
+ * structural, while the footer returns directly to the site's paper grid. */
+.root:has(.latestUpdatesTransition) {
+  border-bottom: 0;
+}
+
+.root:has(.latestUpdatesTransition) ~ :global(.foot) {
+  --home-latest-transition-bg: #11110f;
+
+  position: relative;
+  isolation: isolate;
+  margin-top: 0;
+  padding-top: 96px;
+  border-top: 0;
+}
+
+.root:has(.latestUpdatesTransition) ~ :global(.foot)::before {
+  position: absolute;
+  z-index: 0;
+  inset: 0 0 auto;
+  width: 100%;
+  height: 56px;
+  content: "";
+  pointer-events: none;
+  background-color: var(--home-latest-transition-bg);
+  clip-path: polygon(0 0, 100% 0, 100% 24%, 68% 58%, 34% 76%, 0 48%);
+}
+
+.root:has(.latestUpdatesTransition) ~ :global(.foot) :global(.foot-inner) {
+  position: relative;
+  z-index: 1;
+}
+
 .latestInner {
   width: min(100%, var(--maxw));
   margin: 0 auto;
@@ -1093,6 +1152,24 @@
   .latestUpdates {
     margin-top: 54px;
     background-size: 120px 100%;
+  }
+
+  .latestUpdatesTransition {
+    margin-top: 98px;
+  }
+
+  .latestUpdatesTransition::before {
+    top: -98px;
+    height: 98px;
+  }
+
+  .root:has(.latestUpdatesTransition) ~ :global(.foot) {
+    padding-top: 68px;
+  }
+
+  .root:has(.latestUpdatesTransition) ~ :global(.foot)::before {
+    height: 40px;
+    clip-path: polygon(0 0, 100% 0, 100% 42%, 50% 66%, 0 48%);
   }
 
   .latestInner {

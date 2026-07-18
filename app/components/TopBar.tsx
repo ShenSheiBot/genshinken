@@ -207,9 +207,8 @@ export default function TopBar() {
       <div className="status">
         {!revealed ? (
           <nav className="global-section-nav" aria-label="全站导航">
-            {GLOBAL_NAV_ITEMS.map((item, index) => (
+            {GLOBAL_NAV_ITEMS.map((item) => (
               <Link key={item.href} href={item.href} className="global-section-link">
-                <span aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
                 <strong>{item.label}</strong>
               </Link>
             ))}

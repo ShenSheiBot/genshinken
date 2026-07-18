@@ -236,10 +236,6 @@ export function getBookBySlug(slug: string): Book | null {
   return getAllBooks().find((book) => book.slug === slug) ?? null;
 }
 
-export function getBookByDocumentSlug(documentSlug: string): Book | null {
-  return getAllBooks().find((book) => book.documentSlug === documentSlug) ?? null;
-}
-
 export function getBookCredits(book: Pick<Book, "slug" | "authors" | "translators">): Credit[] {
   const rows: Array<{ role: CreditRole; names: string[] }> = [
     { role: "author", names: book.authors },
@@ -291,13 +287,6 @@ export function bookDocumentHref(
 
 function renderedIds(html: string): Set<string> {
   return new Set([...html.matchAll(/\sid="([^"]+)"/g)].map((match) => match[1]));
-}
-
-export function getBookProgressSectionIds(document: Pick<Post, "html">): string[] {
-  return [
-    "reading-cover",
-    ...[...document.html.matchAll(/<h[23]\b[^>]*\sid="([^"]+)"/g)].map((match) => match[1]),
-  ];
 }
 
 /** Fail the build when a manifest points at a missing document or heading anchor. */

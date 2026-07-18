@@ -52,11 +52,7 @@ export async function generateMetadata({
 }
 
 function itemMeta(item: ResolvedTopicItem): string {
-  return [
-    item.category,
-    item.dateISO,
-    item.readMin ? `预计阅读 ${item.readMin} 分钟` : "",
-  ]
+  return [item.category, item.dateISO, item.readMin ? `${item.readMin} 分钟` : ""]
     .filter(Boolean)
     .join(" · ");
 }
@@ -83,11 +79,11 @@ export default async function TopicPage({
     inLanguage: "zh-Hans",
     publisher: { "@type": "Organization", name: site.brand, url: site.url },
     hasPart: orderedItems.map((item, index) => ({
-        "@type": item.type === "book" ? "Book" : item.type === "media" ? "MediaObject" : "Article",
-        name: item.title,
-        url: `${site.url}${item.href}`,
-        position: index + 1,
-      })),
+      "@type": item.type === "book" ? "Book" : item.type === "media" ? "MediaObject" : "Article",
+      name: item.title,
+      url: `${site.url}${item.href}`,
+      position: index + 1,
+    })),
   };
 
   return (
@@ -103,88 +99,57 @@ export default async function TopicPage({
         <span aria-current="page">{topic.title}</span>
       </nav>
 
-      <header className={styles.topicHero}>
-        <div className={styles.topicFacts}>
-          <span className={styles.status}>{STATUS_LABEL[topic.status]}</span>
-          <dl>
-            <div>
-              <dt>发布</dt>
-              <dd><time dateTime={topic.published}>{topic.published}</time></dd>
-            </div>
-            <div>
-              <dt>更新</dt>
-              <dd><time dateTime={topic.updated}>{topic.updated}</time></dd>
-            </div>
-            <div>
-              <dt>编排</dt>
-              <dd>{topic.groupCount} 组 / {topic.itemCount} 项</dd>
-            </div>
-            {topic.curators.length ? (
-              <div>
-                <dt>策展</dt>
-                <dd>{topic.curators.join("、")}</dd>
-              </div>
-            ) : null}
-          </dl>
-        </div>
-        <div className={styles.topicHeading}>
-          <p className={styles.eyebrow}>人工策展 / 专题</p>
+      <header className={styles.topicHeader}>
+        <div className={styles.topicIdentity}>
+          <p className={styles.topicEyebrow}>专题 · {STATUS_LABEL[topic.status]}</p>
           <h1>{topic.title}</h1>
           {topic.subtitle ? <p className={styles.topicSubtitle}>{topic.subtitle}</p> : null}
           <p className={styles.topicSummary}>{topic.summary}</p>
         </div>
+        <dl className={styles.topicFacts}>
+          <div><dt>发布</dt><dd><time dateTime={topic.published}>{topic.published}</time></dd></div>
+          <div><dt>更新</dt><dd><time dateTime={topic.updated}>{topic.updated}</time></dd></div>
+          <div><dt>编排</dt><dd>{topic.groupCount} 单元 · {topic.itemCount} 项</dd></div>
+          {topic.curators.length ? <div><dt>策展</dt><dd>{topic.curators.join("、")}</dd></div> : null}
+        </dl>
       </header>
 
       <section className={styles.introduction} aria-labelledby="topic-introduction">
-        <h2 id="topic-introduction">专题导语</h2>
+        <h2 id="topic-introduction">导语</h2>
         <div dangerouslySetInnerHTML={{ __html: topic.introductionHtml }} />
-      </section>
-
-      <section className={styles.startHere} aria-labelledby="start-here-title">
-        <div className={styles.startLabel}>
-          <span>01</span>
-          <h2 id="start-here-title">从这里开始</h2>
-        </div>
-        <div className={styles.startCopy}>
-          <p className={styles.itemType}>{TYPE_LABEL[topic.startHere.type]}</p>
-          <h3>{topic.startHere.title}</h3>
-          {topic.startHere.subtitle ? <p className={styles.itemSubtitle}>{topic.startHere.subtitle}</p> : null}
-          <p>{topic.startHere.editorialNote || topic.startHere.summary}</p>
-          <span className={styles.itemMetadata}>{itemMeta(topic.startHere)}</span>
-        </div>
-        <Link className={styles.startLink} href={topic.startHere.href}>
-          开始阅读 <span aria-hidden="true">↗</span>
-        </Link>
       </section>
 
       <section className={styles.groups} aria-label="专题内容">
         {topic.groups.map((group, groupIndex) => (
           <section className={styles.group} id={group.id} key={group.id}>
             <header className={styles.groupHeader}>
-              <span>{String(groupIndex + 1).padStart(2, "0")}</span>
-              <div>
-                <h2>{group.title}</h2>
-                {group.summary ? <p>{group.summary}</p> : null}
-              </div>
+              <p className={styles.groupLabel}>专题单元 {String(groupIndex + 1).padStart(2, "0")}</p>
+              <h2>{group.title}</h2>
+              {group.summary ? <p>{group.summary}</p> : null}
             </header>
             <ol className={styles.itemList}>
-              {group.items.map((item, itemIndex) => (
-                <li className={styles.item} key={`${item.type}:${item.ref}`}>
-                  <div className={styles.itemOrder}>{String(itemIndex + 1).padStart(2, "0")}</div>
-                  <div className={styles.itemBody}>
-                    <div className={styles.itemTopline}>
-                      <span>{TYPE_LABEL[item.type]}</span>
-                      <span>{itemMeta(item)}</span>
+              {group.items.map((item, itemIndex) => {
+                const isStart = groupIndex === 0 && itemIndex === 0;
+                return (
+                  <li className={styles.item} data-start={isStart ? "true" : undefined} key={`${item.type}:${item.ref}`}>
+                    <div className={styles.itemOrder}>{String(itemIndex + 1).padStart(2, "0")}</div>
+                    <div className={styles.itemBody}>
+                      <div className={styles.itemTopline}>
+                        <div>
+                          {isStart ? <span className={styles.startBadge}>从这里开始</span> : null}
+                          <span className={styles.itemType}>{TYPE_LABEL[item.type]}</span>
+                        </div>
+                        <span>{itemMeta(item)}</span>
+                      </div>
+                      <h3 className={styles.itemTitle}>
+                        <Link href={item.href}>{item.title}<span aria-hidden="true">↗</span></Link>
+                      </h3>
+                      {item.subtitle ? <p className={styles.itemSubtitle}>{item.subtitle}</p> : null}
+                      <p className={styles.editorialNote}>{item.editorialNote || item.summary}</p>
                     </div>
-                    <h3><Link href={item.href}>{item.title}</Link></h3>
-                    {item.subtitle ? <p className={styles.itemSubtitle}>{item.subtitle}</p> : null}
-                    <p className={styles.editorialNote}>{item.editorialNote || item.summary}</p>
-                  </div>
-                  <Link className={styles.itemLink} href={item.href} aria-label={`阅读：${item.title}`}>
-                    阅读 <span aria-hidden="true">↗</span>
-                  </Link>
-                </li>
-              ))}
+                  </li>
+                );
+              })}
             </ol>
           </section>
         ))}

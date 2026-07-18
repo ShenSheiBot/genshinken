@@ -38,8 +38,8 @@ async function writeClipboard(text: string): Promise<void> {
 
 function feedbackLabel(status: CopyStatus): string {
   if (status === "copying") return "正在复制…";
-  if (status === "copied") return "已复制到剪贴板";
-  return "复制失败，请重试";
+  if (status === "copied") return "已复制";
+  return "复制失败，请重试。";
 }
 
 function isExternalUrl(href: string): boolean {
@@ -74,20 +74,12 @@ export default function BookResources({
     resetTimer.current = window.setTimeout(() => setCopyState(null), 3200);
   };
 
-  const citations = [
-    {
-      kind: "original" as const,
-      label: "原书 BibTeX",
-      detail: "原文版本",
-      bibtex: originalBibtex,
-    },
-    {
-      kind: "translation" as const,
-      label: "译本 BibTeX",
-      detail: "本站中文译本",
-      bibtex: translationBibtex,
-    },
-  ];
+  const citations: Array<{ kind: CitationKind; label: string; bibtex: string }> = [];
+  if (originalBibtex) citations.push({ kind: "original", label: "原书 BibTeX", bibtex: originalBibtex });
+  if (translationBibtex) {
+    citations.push({ kind: "translation", label: "译本 BibTeX", bibtex: translationBibtex });
+  }
+
   const files = [
     { format: "PDF", href: pdfUrl },
     { format: "EPUB", href: epubUrl },
@@ -96,60 +88,45 @@ export default function BookResources({
   return (
     <section className={styles.resources} aria-labelledby="book-resources-heading">
       <header className={styles.resourceHeading}>
-        <div>
-          <span>引用与下载</span>
-          <h2 id="book-resources-heading">书目资料</h2>
-        </div>
-        <p>只显示编辑部已经核验并实际提供的记录与文件。</p>
+        <h2 id="book-resources-heading">引用与文件</h2>
       </header>
 
-      <div className={styles.citationGrid}>
-        {citations.map(({ kind, label, detail, bibtex }, index) => {
-          const activeStatus = copyState?.kind === kind ? copyState.status : null;
-          const feedbackId = `book-resource-feedback-${kind}`;
-          return (
-            <article className={styles.citationCard} key={kind} data-citation={kind}>
-              <header>
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                <div>
+      {citations.length > 0 && (
+        <div className={styles.citationGrid}>
+          {citations.map(({ kind, label, bibtex }) => {
+            const activeStatus = copyState?.kind === kind ? copyState.status : null;
+            return (
+              <article className={styles.citationCard} key={kind} data-citation={kind}>
+                <header>
+                  <span>{kind === "original" ? "原书" : "译本"}</span>
                   <h3>{label}</h3>
-                  <p>{detail}</p>
-                </div>
-              </header>
+                </header>
 
-              {bibtex ? (
                 <div className={styles.copyAction}>
                   <button
                     type="button"
                     onClick={() => copyBibtex(kind, bibtex)}
-                    aria-describedby={feedbackId}
+                    aria-label={`复制${label}`}
                     disabled={activeStatus === "copying"}
                   >
                     <span>BIB</span>
-                    {activeStatus === "copied" ? "已复制 ✓" : "复制 BibTeX"}
+                    {activeStatus === "copied" ? "已复制 ✓" : "复制"}
                   </button>
-                  <span
-                    id={feedbackId}
-                    className={styles.copyFeedback}
-                    aria-live="polite"
-                  >
-                    {activeStatus ? feedbackLabel(activeStatus) : "复制完整书目记录"}
-                  </span>
+                  {activeStatus && (
+                    <span className={styles.copyFeedback} role="status" aria-live="polite" aria-atomic="true">
+                      {feedbackLabel(activeStatus)}
+                    </span>
+                  )}
                 </div>
-              ) : (
-                <p className={styles.resourceUnavailable}>书目信息尚待核验。</p>
-              )}
-            </article>
-          );
-        })}
-      </div>
+              </article>
+            );
+          })}
+        </div>
+      )}
 
       {files.length > 0 && (
         <div className={styles.fileShelf}>
-          <div>
-            <span>文件</span>
-            <p>可下载版本</p>
-          </div>
+          <span>文件</span>
           <div className={styles.fileActions}>
             {files.map(({ format, href }) => {
               const external = isExternalUrl(href);
@@ -163,7 +140,7 @@ export default function BookResources({
                   aria-label={`下载 ${format} 文件`}
                 >
                   <span>{format}</span>
-                  下载 ↘
+                  下载 →
                 </a>
               );
             })}

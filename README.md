@@ -96,9 +96,9 @@ npm run build    # 生产构建（与 Vercel 一致）
 app/                  Next.js App Router（页面、布局、组件）
   components/         TopBar / Footer / PosterWallHome / PostIndex
   library/            文库与栏目、主题分类、标签、贡献者、署名位置筛选
-  books/              书籍、连载、章节入口与本机阅读记录
+  books/              书籍、连载与章节入口
   topics/             人工策展专题索引与详情
-  about/              工作、旨趣、团队边界与联系方式
+  about/              联系方式与站外入口
   search/             旧 `/search` 的兼容重定向
   media/[slug]/       多媒体条目详情页
   posts/[slug]/       文章详情页
