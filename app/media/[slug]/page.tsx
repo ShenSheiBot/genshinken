@@ -1,10 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getAllPosts, getPostBySlug, type Post, type PostSummary } from "@/lib/posts";
+import {
+  getAllPosts,
+  getPostBySlug,
+  type CreditRole,
+  type Post,
+  type PostSummary,
+} from "@/lib/posts";
 import { site } from "@/lib/site";
 import { postPath } from "@/lib/editorial";
 import { sanitizeMediaMaterial } from "@/lib/media-material";
+import CreditLinks from "@/app/components/CreditLinks";
 import styles from "./media-detail.module.css";
 
 export const dynamicParams = true;
@@ -83,14 +90,6 @@ function relatedPostsFor(mediaPost: Post, posts: PostSummary[]): PostSummary[] {
     .filter(isPost);
 }
 
-function creditLine(post: Post): string {
-  if (post.credits.length > 0) {
-    return post.credits.map((credit) => `${credit.mark} ${credit.name}`).join(" · ");
-  }
-
-  return post.author || "未署名";
-}
-
 function RelatedPostCard({
   post,
   index,
@@ -115,6 +114,44 @@ function RelatedPostCard({
       </div>
     </Link>
   );
+}
+
+function buildJsonLd(post: Post, destinations: Destination[]) {
+  const canonical = `${site.url}${postPath(post)}`;
+  const roleProperties: Record<CreditRole, "author" | "translator"> = {
+    author: "author",
+    translator: "translator",
+  };
+  const people: Partial<Record<"author" | "translator", Array<Record<string, string>>>> = {};
+
+  for (const credit of post.credits) {
+    const property = roleProperties[credit.role];
+    const records = people[property] ?? [];
+    records.push({
+      "@type": "Person",
+      name: credit.name,
+      url: `${site.url}/library?contributor=${encodeURIComponent(credit.contributorId)}`,
+    });
+    people[property] = records;
+  }
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    name: post.title,
+    description: post.excerpt || site.description,
+    url: canonical,
+    mainEntityOfPage: canonical,
+    inLanguage: "zh-Hans",
+    datePublished: post.dateISO,
+    dateModified: post.updatedISO,
+    ...people,
+    ...(post.tags.length ? { keywords: post.tags.join(",") } : {}),
+    genre: post.category,
+    ...(destinations.length ? { sameAs: destinations.map((destination) => destination.href) } : {}),
+    license: "https://creativecommons.org/publicdomain/zero/1.0/",
+    publisher: { "@type": "Organization", name: site.brand, url: site.url },
+  };
 }
 
 export async function generateStaticParams() {
@@ -145,7 +182,10 @@ export async function generateMetadata({
       url: canonical,
       type: "article",
       publishedTime: post.dateISO,
-      authors: post.author ? [post.author] : undefined,
+      modifiedTime: post.updatedISO,
+      authors: post.credits
+        .filter((credit) => credit.role === "author")
+        .map((credit) => credit.name),
       tags: post.tags,
     },
   };
@@ -170,7 +210,14 @@ export default async function MediaDetailPage({
     "本条目通过站外链接发布；这里整理可核实的来源入口和编辑关联的站内文稿。";
 
   return (
-    <main className={styles.page} data-reveal-zone="media">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildJsonLd(mediaPost, destinations)).replace(/</g, "\\u003c"),
+        }}
+      />
+      <main className={styles.page} data-reveal-zone="media">
       <div className={styles.contextBar}>
         <Link href="/" className={styles.backLink}>
           ← 返回首页
@@ -226,7 +273,7 @@ export default async function MediaDetailPage({
               </div>
               <div>
                 <dt>署名</dt>
-                <dd>{creditLine(mediaPost)}</dd>
+                <dd><CreditLinks credits={mediaPost.credits} fallbackName={mediaPost.author || "未署名"} /></dd>
               </div>
               <div>
                 <dt>标签</dt>
@@ -321,6 +368,7 @@ export default async function MediaDetailPage({
           </section>
         )}
       </article>
-    </main>
+      </main>
+    </>
   );
 }

@@ -9,10 +9,11 @@
     "start": "next start",
     "lint": "eslint . --max-warnings=0",
     "typecheck": "tsc --noEmit --incremental false",
-    "validate:content": "node scripts/validate-content.mjs",
+    "validate:content": "node --experimental-strip-types --no-warnings scripts/validate-content.mjs",
     "validate:media-html": "node --experimental-strip-types --no-warnings scripts/verify-media-sanitizer.mjs",
     "verify:typography": "node --experimental-strip-types --no-warnings scripts/verify-markdown-typography.mjs",
     "verify:editorial": "node scripts/verify-editorial-release.mjs",
+    "verify:release": "node scripts/verify-editorial-release.mjs",
     "check": "npm run validate:content && npm run validate:media-html && npm run verify:typography && npm run typecheck && npm run lint"
   },
   "dependencies": {

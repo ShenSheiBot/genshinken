@@ -7,8 +7,9 @@ import {
   useState,
   type ReactNode,
 } from "react";
+import type { Credit } from "@/lib/posts";
 
-export type RunningCredit = { mark: string; name: string; solid: boolean };
+export type RunningCredit = Credit;
 type Meta = { title: string; credits: RunningCredit[] } | null;
 
 type Ctx = {
@@ -49,7 +50,7 @@ export function RegisterArticleHeader({
   const ctx = useArticleHeader();
   const setMeta = ctx?.setMeta;
   const setRevealed = ctx?.setRevealed;
-  const creditsKey = credits.map((c) => c.mark + c.name).join("|");
+  const creditsKey = credits.map((c) => `${c.role}:${c.contributorId}`).join("|");
 
   useEffect(() => {
     if (!setMeta || !setRevealed) return;

@@ -63,7 +63,8 @@ const MEDIA_MATERIAL_TAGS = [
  * Keep a conservative article allowlist and discard active content, event handlers,
  * unsafe URL schemes and every playback/embed element before injecting the HTML.
  */
-export function sanitizeMediaMaterial(html: string): string {
+/** Sanitize markdown-derived HTML before it crosses a dangerouslySetInnerHTML boundary. */
+export function sanitizePublicContentHtml(html: string): string {
   return sanitizeHtml(html, {
     allowedTags: MEDIA_MATERIAL_TAGS,
     allowedAttributes: {
@@ -82,5 +83,20 @@ export function sanitizeMediaMaterial(html: string): string {
     disallowedTagsMode: "discard",
     enforceHtmlBoundary: true,
     nonTextTags: ["script", "style", "textarea", "option", "iframe", "video", "audio", "object"],
+    transformTags: {
+      a: (tagName, attributes) => {
+        if (attributes.target !== "_blank") return { tagName, attribs: attributes };
+        const rel = new Set((attributes.rel || "").split(/\s+/).filter(Boolean));
+        rel.add("noopener");
+        rel.add("noreferrer");
+        return {
+          tagName,
+          attribs: { ...attributes, rel: [...rel].join(" ") },
+        };
+      },
+    },
   });
 }
+
+/** Media records and topic introductions share the same public-content boundary. */
+export const sanitizeMediaMaterial = sanitizePublicContentHtml;

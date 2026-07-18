@@ -1,4 +1,4 @@
-# 新文章 push 到 main 后，把变更文章的 URL 推送给 IndexNow（Bing 数小时内收录）。
+# 公开内容 push 到 main 后，把文章、书籍或专题 URL 推送给 IndexNow（Bing 数小时内收录）。
 # Google 不参与 IndexNow，靠 sitemap lastmod 自然重抓。
 name: IndexNow
 
@@ -7,6 +7,8 @@ on:
     branches: [main]
     paths:
       - "source/_posts/**"
+      - "source/_books/**"
+      - "source/_topics/**"
 
 jobs:
   submit:
@@ -20,9 +22,12 @@ jobs:
       - name: 等待部署完成
         run: sleep 150
 
-      - name: 收集本次变更的文章
+      - name: 收集本次变更的公开内容
         run: |
-          git diff --name-only --diff-filter=AM HEAD^ HEAD -- 'source/_posts/*.md' > changed.txt
+          git diff --name-only --diff-filter=AM HEAD^ HEAD -- \
+            'source/_posts/*.md' \
+            'source/_books/*.json' \
+            'source/_topics/*.md' > changed.txt
           echo "变更清单："
           cat changed.txt
 

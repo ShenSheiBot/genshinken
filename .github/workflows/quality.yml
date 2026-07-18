@@ -37,6 +37,9 @@ jobs:
       - name: 校验多媒体 HTML
         run: npm run validate:media-html
 
+      - name: 校验 Markdown 排版
+        run: npm run verify:typography
+
       - name: 检查 TypeScript
         run: npm run typecheck
 
@@ -67,4 +70,4 @@ jobs:
             exit 1
           fi
 
-          npm run verify:editorial -- http://127.0.0.1:3000
+          npm run verify:release -- http://127.0.0.1:3000

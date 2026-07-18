@@ -3,12 +3,9 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { site } from "@/lib/site";
-import {
-  EDITORIAL_SECTIONS,
-  EDITORIAL_SECTION_META,
-  type EditorialSection,
-} from "@/lib/editorial";
+import { GLOBAL_NAV_ITEMS } from "@/lib/navigation";
 import { useArticleHeader } from "./ArticleHeader";
+import CreditLinks from "./CreditLinks";
 
 type Theme = "light" | "dark";
 type MobileSection = { key: string; title: string; level: number };
@@ -39,11 +36,7 @@ function ChevronIcon() {
   );
 }
 
-export default function TopBar({
-  sectionCounts,
-}: {
-  sectionCounts: Record<EditorialSection, number>;
-}) {
+export default function TopBar() {
   const [theme, setTheme] = useState<Theme>("light");
   const [mounted, setMounted] = useState(false);
   const [sections, setSections] = useState<MobileSection[]>([]);
@@ -213,24 +206,13 @@ export default function TopBar({
 
       <div className="status">
         {!revealed ? (
-          <nav className="global-section-nav" aria-label="内容栏目">
-            {EDITORIAL_SECTIONS.map((section) => {
-              const meta = EDITORIAL_SECTION_META[section];
-              return (
-                <Link
-                  key={section}
-                  href={`/search?section=${section}`}
-                  className="global-section-link"
-                >
-                  <strong>{meta.label}</strong>
-                  <span>{String(sectionCounts[section]).padStart(2, "0")}</span>
-                </Link>
-              );
-            })}
-            <Link href="/search" className="global-section-link global-section-all">
-              <strong>全部内容</strong>
-              <span aria-hidden="true">→</span>
-            </Link>
+          <nav className="global-section-nav" aria-label="全站导航">
+            {GLOBAL_NAV_ITEMS.map((item, index) => (
+              <Link key={item.href} href={item.href} className="global-section-link">
+                <span aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+                <strong>{item.label}</strong>
+              </Link>
+            ))}
           </nav>
         ) : meta ? (
           <div className="art-running">
@@ -249,14 +231,7 @@ export default function TopBar({
               </button>
             </div>
             {meta.credits.length > 0 && (
-              <span className="rc">
-                {meta.credits.map((c, i) => (
-                  <span key={i} className="credit">
-                    <span className={"cmark " + (c.solid ? "solid" : "hollow")}>{c.mark}</span>
-                    {c.name}
-                  </span>
-                ))}
-              </span>
+              <CreditLinks className="rc" credits={meta.credits} />
             )}
           </div>
         ) : null}

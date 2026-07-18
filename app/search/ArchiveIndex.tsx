@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { EDITORIAL_SECTION_META, postPath } from "@/lib/editorial";
 import type { PostSummary } from "@/lib/posts";
+import CreditLinks from "@/app/components/CreditLinks";
 import styles from "./archive.module.css";
 import ResponsiveFacetDetails from "./ResponsiveFacetDetails";
 
@@ -21,6 +22,8 @@ type ArchiveIndexProps = {
   sectionOptions: ArchiveFacetOption[];
   categoryOptions: ArchiveFacetOption[];
   tagOptions: ArchiveFacetOption[];
+  contributorOptions: ArchiveFacetOption[];
+  roleOptions: ArchiveFacetOption[];
 };
 
 function FacetOption({ option }: { option: ArchiveFacetOption }) {
@@ -83,13 +86,6 @@ function FacetGroup({
   );
 }
 
-function creditsFor(post: PostSummary): string {
-  if (post.credits.length > 0) {
-    return post.credits.slice(0, 2).map((credit) => `${credit.mark} ${credit.name}`).join(" · ");
-  }
-  return post.author || "未署名";
-}
-
 function tagsFor(post: PostSummary): string {
   if (post.tags.length === 0) return "无标签";
   const visible = post.tags.slice(0, 2).map((tag) => `#${tag}`).join("　");
@@ -105,8 +101,16 @@ export default function ArchiveIndex({
   sectionOptions,
   categoryOptions,
   tagOptions,
+  contributorOptions,
+  roleOptions,
 }: ArchiveIndexProps) {
-  const selectedCount = [sectionOptions, categoryOptions, tagOptions].filter(
+  const selectedCount = [
+    sectionOptions,
+    categoryOptions,
+    tagOptions,
+    contributorOptions,
+    roleOptions,
+  ].filter(
     (options) => options.some((option) => option.active && option.key !== "all")
   ).length;
 
@@ -115,10 +119,10 @@ export default function ArchiveIndex({
       <header className={styles.hero} data-reveal>
         <div className={styles.kicker}>
           <b>02</b>
-          <span>索引</span>
+          <span>文库</span>
         </div>
         <div className={styles.heading}>
-          <h1>内容索引</h1>
+          <h1>文库</h1>
         </div>
         <div className={styles.count} aria-label={`当前显示 ${posts.length} 项，共 ${total} 项`}>
           <strong>{String(posts.length).padStart(2, "0")}</strong>
@@ -129,12 +133,14 @@ export default function ArchiveIndex({
       <div className={styles.frame}>
         <aside className={styles.filters} aria-label="内容筛选">
           <header>
-            <span>已选 {String(selectedCount).padStart(2, "0")} / 03</span>
+            <span>已选 {String(selectedCount).padStart(2, "0")} / 05</span>
             {hasFilters ? <Link href={resetHref}>清除全部</Link> : <span>全部内容</span>}
           </header>
           <FacetGroup number="01" label="栏目" options={sectionOptions} />
           <FacetGroup number="02" label="主题分类" options={categoryOptions} />
           <FacetGroup number="03" label="标签" options={tagOptions} />
+          <FacetGroup number="04" label="贡献者" options={contributorOptions} />
+          <FacetGroup number="05" label="署名位置" options={roleOptions} />
         </aside>
 
         <section className={styles.results} aria-label="内容索引">
@@ -155,8 +161,12 @@ export default function ArchiveIndex({
               {posts.map((post) => {
                 const section = EDITORIAL_SECTION_META[post.section];
                 return (
-                  <li key={post.slug} data-reveal>
-                    <Link className={styles.row} href={postPath(post)}>
+                  <li key={post.slug} className={styles.row} data-reveal>
+                    <Link
+                      className={styles.rowLink}
+                      href={postPath(post)}
+                      aria-label={`${section.label}：${post.title}`}
+                    />
                       <div className={styles.recordId}>
                         <b>{post.no}</b>
                         <time dateTime={post.dateISO}>{post.dateISO.replaceAll("-", ".")}</time>
@@ -170,11 +180,14 @@ export default function ArchiveIndex({
                         <h3>{post.title}</h3>
                       </div>
                       <div className={styles.recordMeta}>
-                        <span className={styles.credit}>{creditsFor(post)}</span>
+                        <CreditLinks
+                          className={styles.credit}
+                          credits={post.credits}
+                          fallbackName={post.author || "未署名"}
+                        />
                         <span className={styles.tags}>{tagsFor(post)}</span>
                         <small>{post.section === "multimedia" ? "详情" : `${post.readMin} 分钟阅读`}</small>
                       </div>
-                    </Link>
                   </li>
                 );
               })}

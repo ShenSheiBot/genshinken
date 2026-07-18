@@ -2,12 +2,12 @@ import Link from "next/link";
 import type { Credit, Post, PostSummary } from "@/lib/posts";
 import { site } from "@/lib/site";
 import {
-  EDITORIAL_SECTIONS,
   EDITORIAL_SECTION_META,
   postPath,
   type EditorialSection,
 } from "@/lib/editorial";
 import ReadingPrototypeChrome from "@/app/prototype/reading/[slug]/ReadingPrototypeChrome";
+import CreditLinks from "@/app/components/CreditLinks";
 import styles from "@/app/prototype/reading/[slug]/reading-prototype.module.css";
 import homeStyles from "@/app/components/editorial-home/PosterWallHome.module.css";
 
@@ -15,15 +15,6 @@ type ReadingVariant = "dossier" | "folio";
 
 const sectionFor = (post: PostSummary): EditorialSection => post.section;
 const sectionMeta = EDITORIAL_SECTION_META;
-
-function countsBySection(posts: PostSummary[]): Record<EditorialSection, number> {
-  return Object.fromEntries(
-    EDITORIAL_SECTIONS.map((section) => [
-      section,
-      posts.filter((post) => sectionFor(post) === section).length,
-    ])
-  ) as Record<EditorialSection, number>;
-}
 
 export type ArticleParts = {
   main: string;
@@ -56,31 +47,19 @@ export function splitArticle(html: string): ArticleParts {
 }
 
 function displayCredits(post: Post): Credit[] {
-  if (post.credits.length > 0) return post.credits;
-  return [{ mark: "作", name: post.author || `${site.brandCN}编辑部`, solid: true }];
-}
-
-function withCjkInterpuncts(value: string) {
-  return value.split(/([·・])/u).map((part, index) => (
-    part === "·" || part === "・"
-      ? <span className="cjk-interpunct" key={`${part}-${index}`}>{part}</span>
-      : part
-  ));
+  return post.credits;
 }
 
 /** Keep the editorial role marks visible in every reading-cover direction. */
 function CreditLine({ credits }: { credits: Credit[] }) {
   return (
-    <span className={styles.creditLine}>
-      {credits.map((credit, index) => (
-        <span className={styles.credit} key={`${credit.mark}-${credit.name}-${index}`}>
-          <span className={styles.creditMark} data-solid={credit.solid ? "true" : "false"}>
-            {credit.mark}
-          </span>
-          <span>{withCjkInterpuncts(credit.name)}</span>
-        </span>
-      ))}
-    </span>
+    <CreditLinks
+      className={styles.creditLine}
+      credits={credits}
+      itemClassName={styles.credit}
+      markClassName={styles.creditMark}
+      fallbackName={`${site.brandCN}编辑部`}
+    />
   );
 }
 
@@ -92,11 +71,16 @@ function MetaRows({ post }: { post: Post }) {
         <div key={`${credit.mark}-${credit.name}-${index}`}>
           <dt>
             <span className={styles.metaCreditLabel}>
-              <span className={styles.creditMark} data-solid={credit.solid ? "true" : "false"}>{credit.mark}</span>
-              {credit.mark === "作" ? "作者" : credit.mark === "译" ? "译者" : credit.mark === "编" ? "编辑" : "校对"}
+              <span
+                className={styles.creditMark}
+                data-solid={credit.solid ? "true" : "false"}
+                aria-label={credit.role === "author" ? "作者" : "译者"}
+              >
+                {credit.mark}
+              </span>
             </span>
           </dt>
-          <dd>{withCjkInterpuncts(credit.name)}</dd>
+          <dd><CreditLinks credits={[credit]} showMarks={false} /></dd>
         </div>
       ))}
       <div><dt>发布</dt><dd>{post.dateISO.replaceAll("-", ".")}</dd></div>
@@ -108,15 +92,29 @@ function MetaRows({ post }: { post: Post }) {
 
 function SourceRecord({ post }: { post: Post }) {
   const translated = sectionFor(post) === "translation";
-  const originalAuthor = post.author || post.credits.find((credit) => credit.mark === "作")?.name;
-  const translator = post.credits.find((credit) => credit.mark === "译")?.name;
+  const originalAuthors = post.credits.filter((credit) => credit.role === "author");
+  const translators = post.credits.filter((credit) => credit.role === "translator");
   return (
     <aside className={styles.sourceRecord} aria-label={translated ? "原文资料" : "文章提要"}>
       <span className={styles.eyebrow}>{translated ? "原文资料" : "本文提要"}</span>
       {translated ? (
         <dl>
-          {originalAuthor && <div><dt>原作者</dt><dd>{withCjkInterpuncts(originalAuthor)}</dd></div>}
-          {translator && <div><dt>译者</dt><dd>{withCjkInterpuncts(translator)}</dd></div>}
+          {(originalAuthors.length > 0 || post.author) && (
+            <div>
+              <dt>
+                <span className={styles.creditMark} data-solid="true" aria-label="作者">作</span>
+              </dt>
+              <dd><CreditLinks credits={originalAuthors} showMarks={false} fallbackName={post.author} /></dd>
+            </div>
+          )}
+          {translators.length > 0 && (
+            <div>
+              <dt>
+                <span className={styles.creditMark} data-solid="false" aria-label="译者">译</span>
+              </dt>
+              <dd><CreditLinks credits={translators} showMarks={false} /></dd>
+            </div>
+          )}
           {post.originalTitle && <div><dt>原文题名</dt><dd>{post.originalTitle}</dd></div>}
           {(post.originalPublication || post.originalDate) && (
             <div><dt>原刊 / 日期</dt><dd>{[post.originalPublication, post.originalDate].filter(Boolean).join(" / ")}</dd></div>
@@ -234,7 +232,7 @@ function RelatedReading({
             <h2 id="related-heading">相关推荐</h2>
           </div>
           <p>
-            <Link href="/search" className={homeStyles.viewAll}>
+            <Link href="/library" className={homeStyles.viewAll}>
               查看全部内容 <b aria-hidden="true">→</b>
             </Link>
           </p>
@@ -284,7 +282,6 @@ export function ReadingDossier({
   isPublicEdition?: boolean;
 }) {
   const section = sectionMeta[sectionFor(post)];
-  const sectionCounts = countsBySection(posts);
   const hasReferences = parts.noteCount > 0 || parts.sourceCount > 0;
   const referenceLabel = parts.noteCount > 0 && parts.sourceCount > 0
     ? "注释与文献"
@@ -297,8 +294,6 @@ export function ReadingDossier({
         variant="dossier"
         credits={post.credits}
         fallbackAuthor={post.author}
-        currentPostSection={sectionFor(post)}
-        sectionCounts={sectionCounts}
         mode={isPublicEdition ? "edition" : "preview"}
       />
 
@@ -341,7 +336,6 @@ export function ReadingDossier({
 
 export function ReadingFolio({ post, parts, posts }: { post: Post; parts: ArticleParts; posts: PostSummary[] }) {
   const section = sectionMeta[sectionFor(post)];
-  const sectionCounts = countsBySection(posts);
   return (
     <main className={`reading-prototype-page ${styles.root} ${styles.folioRoot}`} data-reading-variant="folio">
       <ReadingPrototypeChrome
@@ -350,8 +344,6 @@ export function ReadingFolio({ post, parts, posts }: { post: Post; parts: Articl
         variant="folio"
         credits={post.credits}
         fallbackAuthor={post.author}
-        currentPostSection={sectionFor(post)}
-        sectionCounts={sectionCounts}
       />
 
       <header className={styles.folioCover} id="reading-cover">

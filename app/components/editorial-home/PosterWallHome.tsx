@@ -7,6 +7,7 @@ import {
   postPath,
   type EditorialSection,
 } from "@/lib/editorial";
+import CreditLinks from "@/app/components/CreditLinks";
 import styles from "./PosterWallHome.module.css";
 
 const POSTER_SECTION_PRIORITY: EditorialSection[] = [
@@ -91,18 +92,24 @@ function tileStyle(index: number, total: number): TileStyle {
   };
 }
 
-function creditsFor(post: PostSummary): string {
-  if (post.credits.length > 0) {
-    return post.credits
-      .slice(0, 2)
-      .map((credit) => `${credit.mark} ${credit.name}`)
-      .join(" · ");
-  }
-  return post.author || "西方負典编辑部";
-}
-
 function overviewFor(post: PostSummary): string {
   return post.excerpt || post.subtitle || `围绕${post.category || "本期主题"}展开的材料收录。`;
+}
+
+function CardCredits({ post }: { post: PostSummary }) {
+  const credits = post.section === "translation"
+    ? post.credits.filter((credit) => credit.role === "author")
+    : post.credits;
+
+  return (
+    <CreditLinks
+      className={styles.creditLine}
+      credits={credits}
+      limit={post.section === "translation" ? undefined : 2}
+      separator="·"
+      fallbackName={post.author || "西方負典编辑部"}
+    />
+  );
 }
 
 function groupPostsBySection(posts: PostSummary[]): Record<EditorialSection, PostSummary[]> {
@@ -199,26 +206,6 @@ export default function PosterWallHome({
         </div>
       </header>
 
-      <nav className={styles.sectionNav} aria-label="首页内容栏目" data-reveal>
-        {POSTER_SECTION_PRIORITY.map((section, index) => {
-          const meta = EDITORIAL_SECTION_META[section];
-          const count = grouped[section].length;
-          return (
-            <Link
-              key={section}
-              href={`/search?section=${section}`}
-              className={styles.sectionLink}
-              data-section={section}
-              aria-label={`查看${meta.label}栏目，共 ${count} 篇`}
-            >
-              <span className={styles.sectionNumber}>{String(index + 1).padStart(2, "0")}</span>
-              <strong>{meta.label}</strong>
-              <b>{String(count).padStart(2, "0")}</b>
-            </Link>
-          );
-        })}
-      </nav>
-
       <div id="poster-wall" className={styles.wall}>
         {wallPosts.length === 0 ? (
           <div className={styles.empty}>
@@ -239,6 +226,7 @@ export default function PosterWallHome({
             return (
               <article
                 key={post.slug}
+                suppressHydrationWarning
                 id={isFirstOfSection ? `poster-${section}` : undefined}
                  className={`${styles.tile} ${treatment}`}
                  data-section={section}
@@ -247,11 +235,12 @@ export default function PosterWallHome({
                  data-reveal-index={index}
                  style={tileStyle(index, wallPosts.length)}
               >
-                <Link
-                  href={postPath(post)}
-                  className={styles.card}
-                  aria-label={`${meta.label}：${post.title}`}
-                >
+                <div className={styles.card} data-card-surface>
+                  <Link
+                    href={postPath(post)}
+                    className={styles.cardPrimaryLink}
+                    aria-label={`${meta.label}：${post.title}`}
+                  />
                   <div className={styles.generatedCover} aria-hidden="true">
                     <span className={styles.posterNumber}>{post.sectionNo}</span>
                     <span className={styles.posterGlyph}>{meta.glyph}</span>
@@ -259,18 +248,18 @@ export default function PosterWallHome({
                   </div>
 
                   <div className={styles.cardHeader}>
-                    <span className={styles.kind}>{meta.label}</span>
-                    <span className={styles.cardFolio} aria-hidden="true">
-                      #{post.sectionNo}
+                    <span className={styles.kind}>
+                      <b>{meta.label}</b>
+                      <span aria-hidden="true">·</span>
+                      <span>{post.category || "未分类"}</span>
                     </span>
                     <time dateTime={post.dateISO}>{post.dateISO.replaceAll("-", ".")}</time>
                   </div>
 
                   <div className={styles.cardBody}>
-                    <span className={styles.category}>{post.category || "未分类"}</span>
                     <h2 className={styles.postTitle}>{post.title}</h2>
                     {post.subtitle && <p className={styles.subtitle}>{post.subtitle}</p>}
-                    <p className={styles.creditLine}>{creditsFor(post)}</p>
+                    <CardCredits post={post} />
                     <p className={styles.excerpt}>{overviewFor(post)}</p>
                   </div>
 
@@ -290,7 +279,7 @@ export default function PosterWallHome({
                     </span>
                     <strong>{section === "multimedia" ? "查看详情" : "阅读全文"} ↗</strong>
                   </div>
-                </Link>
+                </div>
               </article>
             );
           })
@@ -305,7 +294,7 @@ export default function PosterWallHome({
               <h2 id="poster-latest-title">最新更新</h2>
             </div>
             <p>
-              <Link href="/search" className={styles.viewAll}>
+              <Link href="/library" className={styles.viewAll}>
                 查看全部文章 <b aria-hidden="true">→</b>
               </Link>
             </p>

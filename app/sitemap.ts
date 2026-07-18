@@ -1,21 +1,44 @@
 import type { MetadataRoute } from "next";
+import { bookHref, getAllBooks } from "@/lib/books";
 import { getAllPosts } from "@/lib/posts";
 import { site } from "@/lib/site";
 import { postPath } from "@/lib/editorial";
+import { getAllTopics } from "@/lib/topics";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const posts = await getAllPosts();
+  const [posts, topics] = await Promise.all([getAllPosts(), getAllTopics()]);
+  const books = getAllBooks();
   const postEntries: MetadataRoute.Sitemap = posts.map((p) => ({
     url: `${site.url}${postPath(p)}`,
     lastModified: p.updatedISO,
   }));
+  const bookEntries: MetadataRoute.Sitemap = books.map((book) => ({
+    url: `${site.url}${bookHref(book)}`,
+    lastModified: book.updatedAt,
+  }));
+  const topicEntries: MetadataRoute.Sitemap = topics.map((topic) => ({
+    url: `${site.url}/topics/${encodeURIComponent(topic.slug)}`,
+    lastModified: topic.updated,
+  }));
 
-  // 首页 lastmod 取全站最近一次内容变动（发布或修订），而非构建日期
-  const latest = posts.reduce((m, p) => (p.updatedISO > m ? p.updatedISO : m), "");
+  // 聚合页 lastmod 取其真实数据源最近一次变动，不使用构建日期。
+  const latestPost = posts.reduce((latest, post) =>
+    post.updatedISO > latest ? post.updatedISO : latest, "");
+  const latestBook = books.reduce((latest, book) =>
+    book.updatedAt > latest ? book.updatedAt : latest, "");
+  const latestTopic = topics.reduce((latest, topic) =>
+    topic.updated > latest ? topic.updated : latest, "");
+  const latestSite = [latestPost, latestBook, latestTopic].reduce((latest, value) =>
+    value > latest ? value : latest, "");
 
   return [
-    { url: site.url, lastModified: latest || undefined },
-    { url: `${site.url}/search`, lastModified: latest || undefined },
+    { url: site.url, lastModified: latestSite || undefined },
+    { url: `${site.url}/topics`, lastModified: latestTopic || undefined },
+    { url: `${site.url}/library`, lastModified: latestPost || undefined },
+    { url: `${site.url}/books`, lastModified: latestBook || undefined },
+    { url: `${site.url}/about` },
+    ...topicEntries,
+    ...bookEntries,
     ...postEntries,
   ];
 }

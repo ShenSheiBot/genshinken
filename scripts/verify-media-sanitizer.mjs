@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { sanitizeMediaMaterial } from "../lib/media-material.ts";
+import { sanitizeMediaMaterial, sanitizePublicContentHtml } from "../lib/media-material.ts";
 
 const malicious = `
   <p class="keep" data-state="safe" aria-label="正文" onclick="alert(1)" style="color:red">
@@ -26,5 +26,20 @@ assert.doesNotMatch(clean, /document\.body|display:\s*none/i);
 assert.match(clean, /<p class="keep" data-state="safe" aria-label="正文">/);
 assert.match(clean, /<img src="\/attachments\/cover\.png" alt="封面" \/>/);
 assert.match(clean, /<a href="https:\/\/example\.com\/watch" target="_blank" rel="noopener noreferrer">安全站外链接<\/a>/);
+
+const blankTarget = sanitizePublicContentHtml(
+  '<a href="https://example.com/read" target="_blank">新窗口链接</a>'
+);
+assert.match(
+  blankTarget,
+  /<a href="https:\/\/example\.com\/read" target="_blank" rel="noopener noreferrer">新窗口链接<\/a>/
+);
+
+const topicClean = sanitizePublicContentHtml(
+  '<p>专题导语</p><script>globalThis.topicXss = 1</script><a href="javascript:alert(1)">危险链接</a>'
+);
+assert.doesNotMatch(topicClean, /<(?:script|style|iframe|video|audio|object|embed)\b/i);
+assert.doesNotMatch(topicClean, /javascript:|topicXss/i);
+assert.match(topicClean, /<p>专题导语<\/p>/);
 
 console.log("media material sanitizer verification passed");

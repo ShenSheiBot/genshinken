@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { notFound, permanentRedirect } from "next/navigation";
-import { getAllPosts, getAllSlugs, getPostBySlug } from "@/lib/posts";
+import { getAllPosts, getAllSlugs, getPostBySlug, type CreditRole } from "@/lib/posts";
 import { site } from "@/lib/site";
 import { postPath } from "@/lib/editorial";
+import { getBookByDocumentSlug } from "@/lib/books";
+import { BookProgressTracker } from "@/app/books/BookLocalProgress";
 import {
   ReadingDossier,
   splitArticle,
@@ -36,33 +38,30 @@ export async function generateMetadata({
       type: "article",
       publishedTime: post.dateISO,
       modifiedTime: post.updatedISO,
-      authors: post.author ? [post.author] : undefined,
+      authors: post.credits
+        .filter((credit) => credit.role === "author")
+        .map((credit) => credit.name),
       tags: post.tags,
     },
   };
 }
 
-/** 「甲、乙」或全角空格并列 → schema.org Person 列表 */
-function toPersons(name: string) {
-  return name
-    .split(/[、　]/)
-    .map((value) => value.trim())
-    .filter(Boolean)
-    .map((value) => ({ "@type": "Person", name: value }));
-}
-
 function buildJsonLd(post: NonNullable<Awaited<ReturnType<typeof getPostBySlug>>>) {
   const url = `${site.url}${postPath(post)}`;
-  const roles: Record<string, string> = {
-    作: "author",
-    译: "translator",
-    编: "editor",
-    校: "contributor",
+  const roles: Record<CreditRole, string> = {
+    author: "author",
+    translator: "translator",
   };
-  const credits: Record<string, unknown> = {};
+  const credits: Record<string, Array<Record<string, string>>> = {};
   for (const credit of post.credits) {
-    const key = roles[credit.mark];
-    if (key) credits[key] = toPersons(credit.name);
+    const key = roles[credit.role];
+    const people = credits[key] ?? [];
+    people.push({
+      "@type": "Person",
+      name: credit.name,
+      url: `${site.url}/library?contributor=${encodeURIComponent(credit.contributorId)}`,
+    });
+    credits[key] = people;
   }
   return {
     "@context": "https://schema.org",
@@ -95,6 +94,7 @@ export default async function ArticlePage({
   if (post.section === "multimedia") permanentRedirect(postPath(post));
 
   const posts = await getAllPosts();
+  const book = getBookByDocumentSlug(post.slug);
 
   return (
     <>
@@ -110,6 +110,14 @@ export default async function ArticlePage({
         posts={posts}
         isPublicEdition
       />
+      {book && (
+        <BookProgressTracker
+          bookId={book.id}
+          startChapterId={book.chapters[0].id}
+          startSectionId={book.startAnchor}
+          chapters={book.chapters.map(({ id, title, anchor }) => ({ id, title, anchor }))}
+        />
+      )}
     </>
   );
 }

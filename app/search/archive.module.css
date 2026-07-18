@@ -249,6 +249,7 @@
 .list { margin: 0; padding: 0; list-style: none; }
 
 .row {
+  position: relative;
   display: grid;
   grid-template-columns: 84px minmax(0, 1fr) 190px;
   gap: 0;
@@ -258,14 +259,20 @@
   transition: color 160ms ease, background 160ms ease, box-shadow 160ms ease;
 }
 
+.rowLink {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+}
+
 .row:hover,
-.row:focus-visible {
+.row:focus-within {
   color: var(--solid-ink);
   background: var(--solid);
   outline: none;
 }
 
-.row:focus-visible { position: relative; z-index: 1; box-shadow: inset 0 0 0 2px var(--accent); }
+.rowLink:focus-visible { outline: none; box-shadow: inset 0 0 0 2px var(--accent); }
 
 .recordId {
   display: flex;
@@ -318,24 +325,33 @@
 .credit,
 .tags,
 .recordMeta small { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.credit { color: var(--ink); font-family: var(--f-cjk-serif); font-size: 11px; }
+.credit {
+  position: relative;
+  z-index: 2;
+  color: var(--ink);
+  font-family: var(--f-cjk-serif);
+  font-size: 11px;
+  overflow: visible;
+  text-overflow: clip;
+  white-space: normal;
+}
 .tags,
 .recordMeta small { color: var(--ink-soft); font-family: var(--f-mono); font-size: 8px; line-height: 1.45; }
 .recordMeta small { margin-top: auto; color: var(--accent); letter-spacing: .06em; }
 
 .row:hover .recordId time,
-.row:focus-visible .recordId time,
+.row:focus-within .recordId time,
 .row:hover .classification,
-.row:focus-visible .classification,
+.row:focus-within .classification,
 .row:hover .credit,
-.row:focus-visible .credit,
+.row:focus-within .credit,
 .row:hover .tags,
-.row:focus-visible .tags { color: inherit; opacity: .68; }
+.row:focus-within .tags { color: inherit; opacity: .68; }
 
 .row:hover .recordMain,
-.row:focus-visible .recordMain,
+.row:focus-within .recordMain,
 .row:hover .recordMeta,
-.row:focus-visible .recordMeta { border-color: color-mix(in srgb, var(--solid-ink) 28%, transparent); }
+.row:focus-within .recordMeta { border-color: color-mix(in srgb, var(--solid-ink) 28%, transparent); }
 
 .empty { display: grid; min-height: 360px; place-content: center; text-align: center; border-bottom: 1px solid var(--hair-strong); }
 .empty strong { color: var(--accent); font-family: var(--f-grotesk); font-size: 64px; }

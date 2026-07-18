@@ -31,14 +31,13 @@ tags: [产业, 冷战史]      # 标签（可多个；勿与主分类重复；�
 date: 2026-05-12         # 发布日期 YYYY-MM-DD
 post_author: 作者名       # 作者；首页卡片上以实心橙块「作」标记
 translator: 译者名        # 可选；空心橙块「译」
-editor: 编者名            # 可选；空心橙块「编」
-proofreader: 校对名       # 可选；空心橙块「校」
 slug: my-custom-url      # 必填 URL；必须为小写 ASCII kebab-case
 excerpt: 一句话摘要        # 可选，缺省时自动取正文首段
 featured_order: 0       # 可选；同栏目首页推荐优先级，数值越大越靠前
 ---
 
-> 署名顺序固定为 作者 → 译者 → 编者 → 校对；一个角色多人用逗号分隔。
+> 署名角色只有作者与译者，顺序固定为 作者 → 译者；一个角色多人用逗号分隔。
+> 前端的「作／译」角色方块只是文本，只有姓名链接到 `/library?contributor=<id>`；首页译介推荐只显示作者。
 > `section` 与主题分类相互独立：例如一篇历史译文应写 `categories: 历史` 与 `section: translation`。
 > 运行时仍兼容旧稿从文件名回退 slug，但发布门禁要求每篇稿件显式填写；不要依赖回退。
 > 多媒体条目可以另外填写 `related_posts: [article-slug, another-slug]`，关联零篇或多篇站内文稿；
@@ -59,6 +58,16 @@ featured_order: 0       # 可选；同栏目首页推荐优先级，数值越大
 ```
 
 构建时会自动改写为 `/attachments/your-image.png`。
+
+### 书籍、连载与专题
+
+一级导航依次为「专题」「连载」「文库」「关于」，分别进入 `/topics`、`/books`、`/library`、`/about`。
+文库只负责文章与多媒体的栏目、分类、标签、贡献者和署名位置筛选；书籍清单与连续阅读统一由 `/books` 承担。
+
+书籍清单位于 `source/_books/*.json`。除章节和连续正文定位字段外，可按实际资料提供
+`originalBibtex`、`translationBibtex`、`pdfUrl`、`epubUrl`：原书与译本 BibTeX 各自复制；PDF／EPUB
+下载入口只在对应 URL 存在时出现。不得为补齐界面而虚构书目信息或空文件地址。专题位于
+`source/_topics/*.md`，按分组与条目数组的人工顺序公开，不从标签自动生成。
 
 ### 标点与引号（写作规范）
 
@@ -86,7 +95,11 @@ npm run build    # 生产构建（与 Vercel 一致）
 ```
 app/                  Next.js App Router（页面、布局、组件）
   components/         TopBar / Footer / PosterWallHome / PostIndex
-  search/             内容索引与栏目、主题分类、标签筛选
+  library/            文库与栏目、主题分类、标签、贡献者、署名位置筛选
+  books/              书籍、连载、章节入口与本机阅读记录
+  topics/             人工策展专题索引与详情
+  about/              工作、旨趣、团队边界与联系方式
+  search/             旧 `/search` 的兼容重定向
   media/[slug]/       多媒体条目详情页
   posts/[slug]/       文章详情页
   page.tsx            首页（四栏目编辑展示 + 最新更新）
@@ -96,6 +109,8 @@ lib/
   markdown.ts         Markdown → HTML 渲染管线
   site.ts             站点常量（品牌、简介等）
 source/_posts/        文章内容（Markdown）
+source/_books/        书籍与章节清单（JSON）
+source/_topics/       人工策展专题（Markdown）
 public/               静态资源（attachments / img）
 ```
 

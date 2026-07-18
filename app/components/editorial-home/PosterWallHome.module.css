@@ -2,6 +2,7 @@
 .root {
   width: 100%;
   color: var(--ink);
+  background: var(--bg);
   border-bottom: 1px solid var(--hair-strong);
 }
 
@@ -166,74 +167,7 @@
     right: 18px;
     font-size: clamp(76px, 6.5vw, 106px);
   }
-}
 
-.sectionNav {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  width: min(100%, var(--maxw));
-  margin: 0 auto;
-  padding: 0 40px;
-  border-top: 1px solid var(--hair-strong);
-  border-bottom: 1px solid var(--hair-strong);
-}
-
-@media (min-width: 768px) {
-  .sectionNav {
-    display: none;
-  }
-}
-
-.sectionLink {
-  position: relative;
-  display: grid;
-  grid-template-columns: 28px minmax(0, 1fr) max-content;
-  grid-template-rows: auto;
-  gap: 2px 9px;
-  min-width: 0;
-  padding: 17px 15px;
-  overflow: hidden;
-  transition: color 160ms ease, background 160ms ease;
-}
-
-.sectionLink + .sectionLink {
-  border-left: 1px solid var(--hair-strong);
-}
-
-.sectionLink:hover,
-.sectionLink:focus-visible {
-  color: var(--solid-ink);
-  background: var(--solid);
-  outline: none;
-}
-
-.sectionLink:focus-visible {
-  box-shadow: inset 0 0 0 3px var(--accent);
-}
-
-.sectionNumber {
-  align-self: center;
-  color: var(--accent);
-  font-family: var(--f-mono);
-  font-size: 11px;
-}
-
-.sectionLink strong {
-  z-index: 1;
-  min-width: 0;
-  font-family: var(--f-cjk-serif);
-  font-size: 20px;
-  line-height: 1.1;
-}
-
-.sectionLink b {
-  z-index: 1;
-  grid-column: 3;
-  align-self: center;
-  font-family: var(--f-grotesk);
-  font-size: 27px;
-  line-height: 1;
-  letter-spacing: -0.06em;
 }
 
 .wall {
@@ -298,10 +232,15 @@
   transition: color 180ms ease, background 180ms ease, box-shadow 180ms ease;
 }
 
-.card:focus-visible {
-  z-index: 3;
+.cardPrimaryLink {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+}
+
+.cardPrimaryLink:focus-visible {
   outline: none;
-  box-shadow: inset 0 0 0 5px var(--accent);
+  box-shadow: inset 0 0 0 3px var(--accent);
 }
 
 .generatedCover {
@@ -318,6 +257,12 @@
   content: "";
 }
 
+/*
+ * The selected P3 treatment deliberately gives every editorial card the same
+ * restrained poster field: a light rule grid, one oblique axis and a circular
+ * construction.  Typography stays above it, while multimedia adds its own
+ * inverse-colour poster system below.
+ */
 .generatedCover::before {
   inset: 0;
   opacity: 0.7;
@@ -335,6 +280,10 @@
   border-radius: 50%;
 }
 
+/*
+ * 论：一组正交的论证轴和短标。图形只占右侧编辑栏，正文不跨入。
+ * 不使用贯穿全卡的网格，保留构成主义的方向感而不制造阅读噪音。
+ */
 .tile[data-section="translation"] .generatedCover::before {
   inset: 14px;
   border: 3px double color-mix(in srgb, var(--card-ink) 24%, transparent);
@@ -351,23 +300,33 @@
   transform: rotate(45deg);
 }
 
+/* 多媒体恢复原海报的同心圆、红色轴线和折线标记。 */
 .tile[data-section="multimedia"] .generatedCover::before {
+  display: block;
   inset: 0;
   opacity: 0.52;
   background:
-    repeating-radial-gradient(circle at 70% 40%, transparent 0 15px, var(--card-hair) 15px 16px, transparent 16px 31px),
-    linear-gradient(90deg, transparent 0 38%, var(--accent) 38% 39%, transparent 39% 100%);
+    repeating-radial-gradient(
+      circle at 70% 40%,
+      transparent 0 15px,
+      var(--card-hair) 15px 16px,
+      transparent 16px 31px
+    ),
+    linear-gradient(
+      90deg,
+      transparent 0 38%,
+      var(--accent) 38% 39%,
+      transparent 39% 100%
+    );
 }
 
 .tile[data-section="multimedia"] .generatedCover::after {
+  display: block;
   top: 23%;
   right: 12%;
-  bottom: auto;
   width: 28%;
-  border: 0;
   border-top: 9px solid var(--accent);
   border-bottom: 2px solid var(--card-ink);
-  border-radius: 0;
   transform: skewY(-13deg);
 }
 
@@ -431,9 +390,28 @@
   display: inline-flex;
   min-width: 0;
   align-items: center;
+  gap: 0.65em;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.kind b {
+  flex: none;
+  color: var(--card-ink);
+  font-size: 10px;
+}
+
+.kind > span:first-of-type {
+  flex: none;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.kind > span:last-child {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .cardHeader time {
@@ -441,42 +419,13 @@
   font-variant-numeric: tabular-nums;
 }
 
-.cardFolio {
-  display: none;
-}
-
-@media (min-width: 961px) {
-  .cardFolio {
-    display: block;
-    margin-left: auto;
-    color: var(--accent);
-    font-family: var(--f-mono);
-    font-size: 9px;
-    font-variant-numeric: tabular-nums;
-    letter-spacing: 0.08em;
-    line-height: 1;
-    white-space: nowrap;
-  }
-}
-
 .cardBody {
   position: relative;
-  z-index: 1;
+  z-index: 3;
   align-self: end;
   min-width: 0;
   padding: 26px 0 17px;
-}
-
-.category {
-  display: inline-block;
-  margin-bottom: 11px;
-  padding: 4px 7px 3px;
-  border: 1px solid currentColor;
-  color: var(--card-soft);
-  font-family: var(--f-mono);
-  font-size: 9px;
-  line-height: 1;
-  letter-spacing: 0.1em;
+  pointer-events: none;
 }
 
 .postTitle {
@@ -521,12 +470,15 @@
 }
 
 .creditLine {
+  position: relative;
+  z-index: 3;
   margin: 13px 0 0;
   color: var(--card-soft);
   font-family: var(--f-mono);
   font-size: 9px;
   line-height: 1.5;
   letter-spacing: 0.05em;
+  pointer-events: none;
 }
 
 .excerpt {
@@ -542,6 +494,12 @@
   -webkit-line-clamp: 2;
 }
 
+/* The lead review has room for its full synopsis; do not turn it into an ellipsis. */
+.leadNarrow .excerpt {
+  display: block;
+  overflow: visible;
+}
+
 .thirdCompact .subtitle {
   display: none;
 }
@@ -549,10 +507,6 @@
 .featureNarrow .cardBody {
   min-height: 0;
   padding: 12px 0 7px;
-}
-
-.featureNarrow .category {
-  margin-bottom: 5px;
 }
 
 .featureNarrow .postTitle {
@@ -672,13 +626,6 @@
   margin-top: 76px;
   color: var(--latest-ink);
   background-color: var(--latest-bg);
-  background-image: repeating-linear-gradient(
-    90deg,
-    transparent 0,
-    transparent 159px,
-    rgb(232 231 227 / 7%) 159px,
-    rgb(232 231 227 / 7%) 160px
-  );
 }
 
 .latestUpdates[data-surface="paper"] {
@@ -783,7 +730,6 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
   margin: 0;
   padding: 0;
-  border: 1px solid var(--latest-ink);
   list-style: none;
 }
 
@@ -911,10 +857,14 @@
 
   .card:hover {
     z-index: 2;
-    box-shadow: inset 0 0 0 5px var(--accent);
+    box-shadow: inset 0 0 0 3px var(--accent);
   }
 
   .card:hover .generatedCover {
+    transform: none;
+  }
+
+  .tile[data-section="multimedia"] .card:hover .generatedCover {
     transform: scale(1.025);
   }
 
@@ -928,6 +878,10 @@
   }
 
   .generatedCover {
+    transition: none;
+  }
+
+  .tile[data-section="multimedia"] .generatedCover {
     transition: transform 260ms cubic-bezier(0.2, 0.75, 0.3, 1);
   }
 }
@@ -947,25 +901,10 @@
     grid-column: 9 / -1;
   }
 
-  .sectionNav,
   .wall,
   .latestInner {
     padding-right: 28px;
     padding-left: 28px;
-  }
-
-  .sectionLink {
-    grid-template-columns: 20px minmax(0, 1fr) max-content;
-    gap: 2px 8px;
-    padding: 15px 10px;
-  }
-
-  .sectionLink strong {
-    font-size: 17px;
-  }
-
-  .sectionLink b {
-    font-size: 22px;
   }
 
   .wall {
@@ -1058,43 +997,6 @@
 
   .manifestoMonth {
     font-size: 10px;
-  }
-
-  .sectionNav {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    padding: 0 20px;
-  }
-
-  .sectionLink:nth-child(3) {
-    border-left: 0;
-  }
-
-  .sectionLink:nth-child(n + 3) {
-    border-top: 1px solid var(--hair-strong);
-  }
-
-  .sectionLink {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
-    min-height: 76px;
-    padding: 13px 12px 12px;
-  }
-
-  .sectionNumber {
-    margin-bottom: 7px;
-  }
-
-  .sectionLink strong {
-    font-size: 19px;
-  }
-
-  .sectionLink b {
-    position: absolute;
-    top: 12px;
-    right: 9px;
-    font-size: 21px;
   }
 
   .wall {

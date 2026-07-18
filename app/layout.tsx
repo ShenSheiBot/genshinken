@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import "./components/editorial-motion/EditorialMotion.css";
 import { site } from "@/lib/site";
-import { EDITORIAL_SECTIONS, type EditorialSection } from "@/lib/editorial";
-import { getAllPosts } from "@/lib/posts";
 import TopBar from "./components/TopBar";
 import Footer from "./components/Footer";
 import { ArticleHeaderProvider } from "./components/ArticleHeader";
@@ -43,14 +41,6 @@ const themeScript = `(function(){try{var t=localStorage.getItem('ub_theme');if(t
 export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  const posts = await getAllPosts();
-  const sectionCounts = Object.fromEntries(
-    EDITORIAL_SECTIONS.map((section) => [
-      section,
-      posts.filter((post) => post.section === section).length,
-    ])
-  ) as Record<EditorialSection, number>;
-
   return (
     <html lang="zh" data-theme="light" suppressHydrationWarning>
       <head>
@@ -67,7 +57,7 @@ export default async function RootLayout({
       <body>
         <ArticleHeaderProvider>
           <div className="app">
-            <TopBar sectionCounts={sectionCounts} />
+            <TopBar />
             {children}
             <Footer />
           </div>

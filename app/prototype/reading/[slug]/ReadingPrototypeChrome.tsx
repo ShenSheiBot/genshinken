@@ -8,11 +8,8 @@ import { usePathname, useRouter } from "next/navigation";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { Credit } from "@/lib/posts";
 import { site } from "@/lib/site";
-import {
-  EDITORIAL_SECTIONS,
-  EDITORIAL_SECTION_META,
-  type EditorialSection,
-} from "@/lib/editorial";
+import { GLOBAL_NAV_ITEMS } from "@/lib/navigation";
+import CreditLinks from "@/app/components/CreditLinks";
 import styles from "./reading-prototype.module.css";
 
 type Variant = "dossier" | "folio";
@@ -97,17 +94,7 @@ function ancestorIds(nodes: TocNode[], target: string, trail: string[] = []): st
 function roleLabel(mark: string): string {
   if (mark === "作") return "作者";
   if (mark === "译") return "译者";
-  if (mark === "编") return "编辑";
-  if (mark === "校") return "校对";
   return mark;
-}
-
-function withCjkInterpuncts(value: string) {
-  return value.split(/([·・])/u).map((part, index) => (
-    part === "·" || part === "・"
-      ? <span className="cjk-interpunct" key={`${part}-${index}`}>{part}</span>
-      : part
-  ));
 }
 
 function lineOwners(body: HTMLElement): Array<[HTMLElement, Text[]]> {
@@ -219,8 +206,6 @@ export default function ReadingPrototypeChrome({
   variant,
   credits,
   fallbackAuthor,
-  currentPostSection,
-  sectionCounts,
   mode = "preview",
 }: {
   title: string;
@@ -228,8 +213,6 @@ export default function ReadingPrototypeChrome({
   variant: Variant;
   credits: Credit[];
   fallbackAuthor: string;
-  currentPostSection: EditorialSection;
-  sectionCounts: Record<EditorialSection, number>;
   /** The public edition keeps the reader chrome but removes preview controls. */
   mode?: ReaderMode;
 }) {
@@ -721,9 +704,14 @@ export default function ReadingPrototypeChrome({
     <section className={styles.compactCredits}>
       <span className={styles.eyebrow}>署名</span>
       <dl>
-        {(credits.length > 0 ? credits : [{ mark: "作", name: fallbackAuthor || `${site.brandCN}编辑部`, solid: true }]).map((credit, index) => (
-          <div key={`${credit.mark}-${credit.name}-${index}`}><dt>{roleLabel(credit.mark)}</dt><dd>{withCjkInterpuncts(credit.name)}</dd></div>
-        ))}
+        {credits.length > 0 ? credits.map((credit) => (
+          <div key={`${credit.role}-${credit.contributorId}`}>
+            <dt>{roleLabel(credit.mark)}</dt>
+            <dd><CreditLinks credits={[credit]} showMarks={false} /></dd>
+          </div>
+        )) : (
+          <div><dt>作者</dt><dd>{fallbackAuthor || `${site.brandCN}编辑部`}</dd></div>
+        )}
       </dl>
     </section>
   );
@@ -796,24 +784,13 @@ export default function ReadingPrototypeChrome({
       {portalDesk}
       <header className={styles.runningHeader}>
         <Link href={isEdition ? "/" : "/prototype/poster"} className={styles.runningBrand} aria-label={`返回${site.brandCN}首页`}><i /><span className={styles.runningBrandName}>{site.brandCN}</span></Link>
-        <nav className={styles.runningSections} aria-label="内容栏目">
-          {EDITORIAL_SECTIONS.map((section) => {
-            const sectionMeta = EDITORIAL_SECTION_META[section];
-            return (
-              <Link
-                key={section}
-                href={`/search?section=${section}`}
-                className={styles.runningSectionLink}
-                data-active={section === currentPostSection ? "true" : undefined}
-              >
-                <b>{sectionMeta.label}</b>
-                <span>{String(sectionCounts[section]).padStart(2, "0")}</span>
-              </Link>
-            );
-          })}
-          <Link href="/search" className={`${styles.runningSectionLink} ${styles.runningSectionAll}`}>
-            <b>全部内容</b><span aria-hidden="true">→</span>
-          </Link>
+        <nav className={styles.runningSections} aria-label="全站导航">
+          {GLOBAL_NAV_ITEMS.map((item, index) => (
+            <Link key={item.href} href={item.href} className={styles.runningSectionLink}>
+              <span aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+              <b>{item.label}</b>
+            </Link>
+          ))}
         </nav>
         <button className={styles.mobileSectionButton} type="button" onClick={(event) => openSheet("toc", event.currentTarget)} aria-label={`文章目录：${currentSection}`} aria-haspopup="dialog" aria-expanded={sheet === "toc"}><span>{currentSection}</span><b>⌄</b></button>
         <div className={styles.runningTools}>
@@ -838,7 +815,13 @@ export default function ReadingPrototypeChrome({
                 <button ref={sheetCloseRef} type="button" onClick={closeSheet} aria-label="关闭">×</button>
               </div>
             </header>
-            {sheet === "toc" ? <>{lineNavigator}{tocPanel}</> : sheet === "annotation" ? referencePane("annotation", true) : sheet === "source" ? referencePane("source", true) : (
+            {sheet === "toc" ? <>
+              <nav className={styles.sheetSiteNav} aria-label="全站导航">
+                {GLOBAL_NAV_ITEMS.map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}
+              </nav>
+              {lineNavigator}
+              {tocPanel}
+            </> : sheet === "annotation" ? referencePane("annotation", true) : sheet === "source" ? referencePane("source", true) : (
               <>
                 <section className={styles.settingGroup}>
                   <span>字族</span>

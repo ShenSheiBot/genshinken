@@ -5,9 +5,16 @@ import remarkGfm from "remark-gfm";
 import remarkParse from "remark-parse";
 import { unified } from "unified";
 import { visit } from "unist-util-visit";
+import { CONTRIBUTORS } from "../lib/contributors.ts";
 
 const postsDirectory = path.join(process.cwd(), "source", "_posts");
+const booksDirectory = path.join(process.cwd(), "source", "_books");
+const topicsDirectory = path.join(process.cwd(), "source", "_topics");
+const publicDirectory = path.join(process.cwd(), "public");
 const validSections = new Set(["essay", "review", "translation", "multimedia"]);
+const validBookStatuses = new Set(["serializing", "complete", "paused"]);
+const validTopicStatuses = new Set(["ongoing", "complete", "archived"]);
+const validTopicItemTypes = new Set(["post", "book", "media"]);
 const slugPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const prohibitedMediaElement = /<\s*\/?\s*(?:iframe|video|audio|object|embed|script|style)\b/i;
 const inlineEventHandler = /\son[a-z][\w:-]*\s*=/i;
@@ -15,8 +22,26 @@ const dangerousHtmlUrl = /\s(?:href|src)\s*=\s*["']?\s*(?:javascript|vbscript):/
 const errors = [];
 const warnings = [];
 
+const creditFields = [
+  { role: "作者", keys: ["post_author", "author", "作者"], required: true },
+  { role: "译者", keys: ["translator", "译者", "翻译"], required: false },
+];
+const unsupportedCreditFields = ["editor", "编者", "编辑", "proofreader", "校对", "校对者", "校"];
+
 function report(collection, file, message) {
   collection.push(`${file}: ${message}`);
+}
+
+function validateUntrustedHtml(file, value, label) {
+  if (prohibitedMediaElement.test(value)) {
+    report(errors, file, `${label} 不得包含播放器、嵌入、script 或 style 原生标签`);
+  }
+  if (inlineEventHandler.test(value)) {
+    report(errors, file, `${label} 不得包含 onload/onerror 等内联事件属性`);
+  }
+  if (dangerousHtmlUrl.test(value)) {
+    report(errors, file, `${label} 不得包含 javascript:/vbscript: URL`);
+  }
 }
 
 function parseFrontMatter(file, raw) {
@@ -165,15 +190,189 @@ function hasOwn(data, key) {
   return Object.prototype.hasOwnProperty.call(data, key);
 }
 
+function isRecord(value) {
+  return Boolean(value) && typeof value === "object" && !Array.isArray(value);
+}
+
+function nonEmptyString(value) {
+  return typeof value === "string" && value.trim() !== "";
+}
+
+function stringArray(value, file, field, { required = false } = {}) {
+  if (!Array.isArray(value)) {
+    report(errors, file, `${field} 必须是字符串数组`);
+    return [];
+  }
+  const strings = [];
+  value.forEach((item, index) => {
+    if (!nonEmptyString(item)) {
+      report(errors, file, `${field}[${index}] 必须是非空字符串`);
+    } else {
+      strings.push(item.trim());
+    }
+  });
+  if (required && strings.length === 0) report(errors, file, `${field} 至少需要一项`);
+  return strings;
+}
+
+function validateBookDownloadUrl(file, field, value) {
+  if (value == null) return;
+  if (!nonEmptyString(value)) {
+    report(errors, file, `${field} 如填写必须是非空 URL`);
+    return;
+  }
+
+  const href = value.trim();
+  if (href.startsWith("/")) {
+    const base = new URL("https://un-canon.invalid");
+    let resolved;
+    try {
+      resolved = new URL(href, base);
+    } catch {
+      report(errors, file, `${field} 必须是站内根相对路径或 HTTP(S) URL`);
+      return;
+    }
+    if (resolved.origin !== base.origin) {
+      report(errors, file, `${field} 不能使用 protocol-relative 或反斜杠伪装的外站 URL`);
+      return;
+    }
+
+    const pathname = href.split(/[?#]/, 1)[0];
+    const root = path.resolve(publicDirectory);
+    const asset = path.resolve(publicDirectory, `.${pathname}`);
+    if (!asset.startsWith(`${root}${path.sep}`) || !fs.existsSync(asset) || !fs.statSync(asset).isFile()) {
+      report(errors, file, `${field} 指向的 public 文件不存在：${href}`);
+    }
+    return;
+  }
+
+  try {
+    const parsed = new URL(href);
+    if (parsed.protocol === "http:" || parsed.protocol === "https:") return;
+  } catch {
+    // Report the field-specific error below.
+  }
+  report(errors, file, `${field} 必须是站内根相对路径或 HTTP(S) URL`);
+}
+
+function markdownFiles(directory) {
+  if (!fs.existsSync(directory)) return [];
+  return fs
+    .readdirSync(directory)
+    .filter((file) => file.endsWith(".md") && !file.startsWith("_") && !file.startsWith("."))
+    .sort((a, b) => a.localeCompare(b, "zh-CN"));
+}
+
+function jsonFiles(directory) {
+  if (!fs.existsSync(directory)) return [];
+  return fs
+    .readdirSync(directory)
+    .filter((file) => file.endsWith(".json") && !file.startsWith("_") && !file.startsWith("."))
+    .sort((a, b) => a.localeCompare(b, "en"));
+}
+
+function splitCreditNames(value) {
+  const values = Array.isArray(value) ? value : [value];
+  return values.flatMap((item) =>
+    String(item)
+      .split(/[,，、;；\n]+|\u3000+/u)
+      .map((name) => name.trim())
+      .filter(Boolean)
+  );
+}
+
+const contributorIds = new Set();
+const contributorNames = new Map();
+const teamOrders = new Set();
+for (const contributor of CONTRIBUTORS) {
+  const file = "lib/contributors.ts";
+  if (!slugPattern.test(contributor.id)) {
+    report(errors, file, `贡献者 id 必须是小写 ASCII kebab-case：${contributor.id}`);
+  }
+  if (contributorIds.has(contributor.id)) {
+    report(errors, file, `贡献者 id 重复：${contributor.id}`);
+  }
+  contributorIds.add(contributor.id);
+
+  for (const name of [contributor.displayName, ...contributor.aliases]) {
+    if (!nonEmptyString(name)) {
+      report(errors, file, `贡献者 ${contributor.id} 含空白姓名或别名`);
+      continue;
+    }
+    const key = normalized(name.trim().replace(/\s+/gu, " "));
+    const owner = contributorNames.get(key);
+    if (owner && owner !== contributor.id) {
+      report(errors, file, `姓名或别名“${name}”同时属于 ${owner} 与 ${contributor.id}`);
+    } else {
+      contributorNames.set(key, contributor.id);
+    }
+  }
+
+  if (contributor.teamOrder != null) {
+    if (!Number.isInteger(contributor.teamOrder) || contributor.teamOrder < 0) {
+      report(errors, file, `${contributor.id} 的 teamOrder 必须是非负整数`);
+    } else if (teamOrders.has(contributor.teamOrder)) {
+      report(errors, file, `teamOrder 重复：${contributor.teamOrder}`);
+    }
+    teamOrders.add(contributor.teamOrder);
+  }
+  if (!contributor.teamMember && (contributor.teamTitle || contributor.bio || contributor.teamOrder != null)) {
+    report(warnings, file, `${contributor.id} 不是团队成员，但填写了团队展示字段`);
+  }
+}
+
+function contributorIdFor(value) {
+  const trimmed = String(value).trim();
+  if (contributorIds.has(trimmed)) return trimmed;
+  return contributorNames.get(normalized(trimmed.replace(/\s+/gu, " "))) ?? null;
+}
+
+function validateContributorNames(file, field, names, { required = false } = {}) {
+  if (required && names.length === 0) report(errors, file, `${field} 至少需要一位贡献者`);
+  const ids = [];
+  for (const name of names) {
+    const id = contributorIdFor(name);
+    if (!id) {
+      report(errors, file, `${field} 署名“${name}”尚未登记到 lib/contributors.ts`);
+    } else {
+      ids.push(id);
+    }
+  }
+  const repeated = duplicates(ids);
+  if (repeated.length > 0) report(errors, file, `${field} 含重复贡献者：${repeated.join("、")}`);
+}
+
+function requiredRecordString(record, field, file) {
+  const value = record[field];
+  if (!nonEmptyString(value)) {
+    report(errors, file, `${field} 必须是非空字符串`);
+    return "";
+  }
+  return value.trim();
+}
+
+function stableRecordId(record, field, file) {
+  const value = requiredRecordString(record, field, file);
+  if (value && !slugPattern.test(value)) {
+    report(errors, file, `${field} 必须是小写 ASCII kebab-case：${value}`);
+  }
+  return value;
+}
+
+function recordDate(record, field, file) {
+  const value = requiredRecordString(record, field, file);
+  if (value && !isValidPublicationDate(value)) {
+    report(errors, file, `${field} 必须是有效的 YYYY-MM-DD`);
+  }
+  return value;
+}
+
 if (!fs.existsSync(postsDirectory)) {
   console.error(`内容目录不存在：${postsDirectory}`);
   process.exit(1);
 }
 
-const files = fs
-  .readdirSync(postsDirectory)
-  .filter((file) => file.endsWith(".md") && !file.startsWith("_") && !file.startsWith("."))
-  .sort((a, b) => a.localeCompare(b, "zh-CN"));
+const files = markdownFiles(postsDirectory);
 
 const records = files.map((file) => {
   const raw = fs.readFileSync(path.join(postsDirectory, file), "utf8");
@@ -182,11 +381,27 @@ const records = files.map((file) => {
   const section = typeof data.section === "string" ? data.section.trim().toLowerCase() : "";
   const categories = toList(data.categories ?? data.category);
   const tags = toList(data.tags);
+  const dateISO = rawScalar(header, "date") ?? "";
+  const updatedISO = rawScalar(header, "updated") ?? dateISO;
 
   validateTypography(file, content, data);
 
   if (typeof data.title !== "string" || data.title.trim() === "") {
     report(errors, file, "必须填写非空 title");
+  }
+
+  for (const field of creditFields) {
+    const key = field.keys.find((candidate) => {
+      const value = data[candidate];
+      return value != null && (Array.isArray(value) ? value.length > 0 : String(value).trim() !== "");
+    });
+    const names = key ? splitCreditNames(data[key]) : [];
+    validateContributorNames(file, field.role, names, { required: field.required });
+  }
+  for (const field of unsupportedCreditFields) {
+    if (hasOwn(data, field)) {
+      report(errors, file, `${field} 不是受支持的署名字段；只允许作者与译者`);
+    }
   }
 
   if (!isValidPublicationDate(rawScalar(header, "date"))) {
@@ -221,15 +436,7 @@ const records = files.map((file) => {
   }
 
   if (section === "multimedia") {
-    if (prohibitedMediaElement.test(raw)) {
-      report(errors, file, "多媒体条目不得包含播放器、嵌入、script 或 style 原生标签");
-    }
-    if (inlineEventHandler.test(raw)) {
-      report(errors, file, "多媒体条目不得包含 onload/onerror 等内联事件属性");
-    }
-    if (dangerousHtmlUrl.test(raw)) {
-      report(errors, file, "多媒体条目不得包含 javascript:/vbscript: URL");
-    }
+    validateUntrustedHtml(file, raw, "多媒体条目");
   }
 
   const repeatedCategories = duplicates(categories);
@@ -277,6 +484,8 @@ const records = files.map((file) => {
     section,
     draft: isDraft(data.draft),
     relatedPosts,
+    dateISO,
+    updatedISO,
   };
 });
 
@@ -315,6 +524,235 @@ for (const record of records) {
   }
 }
 
+const bookRecords = jsonFiles(booksDirectory)
+  .map((fileName) => {
+    const file = path.join("source", "_books", fileName).replaceAll("\\", "/");
+    let data;
+    try {
+      data = JSON.parse(fs.readFileSync(path.join(booksDirectory, fileName), "utf8"));
+    } catch (error) {
+      report(errors, file, `JSON 无法解析：${error.message}`);
+      return null;
+    }
+    if (!isRecord(data)) {
+      report(errors, file, "清单顶层必须是对象");
+      return null;
+    }
+
+    validateTypography(file, "", data);
+    const id = stableRecordId(data, "id", file);
+    const slug = stableRecordId(data, "slug", file);
+    const documentSlug = stableRecordId(data, "documentSlug", file);
+    const title = requiredRecordString(data, "title", file);
+    requiredRecordString(data, "subtitle", file);
+    requiredRecordString(data, "description", file);
+    const status = requiredRecordString(data, "status", file);
+    if (status && !validBookStatuses.has(status)) {
+      report(errors, file, "status 必须是 serializing / complete / paused 之一");
+    }
+    const publishedAt = recordDate(data, "publishedAt", file);
+    const updatedAt = recordDate(data, "updatedAt", file);
+    if (publishedAt && updatedAt && updatedAt < publishedAt) {
+      report(errors, file, "updatedAt 不能早于 publishedAt");
+    }
+    const startAnchor = requiredRecordString(data, "startAnchor", file);
+    const latestChapterId = stableRecordId(data, "latestChapterId", file);
+    const authors = stringArray(data.authors, file, "authors", { required: true });
+    const translators = stringArray(data.translators, file, "translators");
+    validateContributorNames(file, "authors", authors, { required: true });
+    validateContributorNames(file, "translators", translators);
+    validateBookDownloadUrl(file, "pdfUrl", data.pdfUrl);
+    validateBookDownloadUrl(file, "epubUrl", data.epubUrl);
+
+    const fileStem = fileName.slice(0, -5);
+    if (slug && fileStem !== slug) {
+      report(errors, file, `文件名必须与 slug 一致：${slug}.json`);
+    }
+    if (!title) report(errors, file, "书名不能为空");
+
+    const chapterIds = new Set();
+    const chapterNumbers = new Set();
+    const chapterAnchors = new Set();
+    if (!Array.isArray(data.chapters) || data.chapters.length === 0) {
+      report(errors, file, "chapters 至少需要一个章节");
+    } else {
+      data.chapters.forEach((value, index) => {
+        const label = `${file}#chapters[${index}]`;
+        if (!isRecord(value)) {
+          report(errors, label, "章节必须是对象");
+          return;
+        }
+        const chapterId = stableRecordId(value, "id", label);
+        const number = requiredRecordString(value, "number", label);
+        requiredRecordString(value, "title", label);
+        const anchor = requiredRecordString(value, "anchor", label);
+        const chapterDate = recordDate(value, "publishedAt", label);
+        if (chapterDate && updatedAt && chapterDate > updatedAt) {
+          report(errors, label, "publishedAt 不能晚于书籍 updatedAt");
+        }
+        for (const [set, candidate, field] of [
+          [chapterIds, chapterId, "id"],
+          [chapterNumbers, number, "number"],
+          [chapterAnchors, anchor, "anchor"],
+        ]) {
+          if (!candidate) continue;
+          if (set.has(candidate)) report(errors, label, `${field} 重复：${candidate}`);
+          set.add(candidate);
+        }
+      });
+    }
+    if (latestChapterId && !chapterIds.has(latestChapterId)) {
+      report(errors, file, `latestChapterId 未指向已声明章节：${latestChapterId}`);
+    }
+
+    return {
+      file,
+      id,
+      slug,
+      documentSlug,
+      publishedAt,
+      updatedAt,
+      startAnchor,
+    };
+  })
+  .filter(Boolean);
+
+const booksBySlug = new Map();
+const bookIds = new Map();
+const bookDocuments = new Map();
+for (const book of bookRecords) {
+  for (const [map, value, field] of [
+    [bookIds, book.id, "id"],
+    [booksBySlug, book.slug, "slug"],
+    [bookDocuments, book.documentSlug, "documentSlug"],
+  ]) {
+    if (!value) continue;
+    const previous = map.get(value);
+    if (previous) report(errors, book.file, `${field} 与 ${previous.file} 重复：${value}`);
+    else map.set(value, book);
+  }
+
+  const document = recordsBySlug.get(book.documentSlug);
+  if (!document) {
+    report(errors, book.file, `documentSlug 指向不存在的文稿：${book.documentSlug}`);
+  } else {
+    if (document.draft) report(errors, book.file, `documentSlug 不得指向草稿：${book.documentSlug}`);
+    if (document.section === "multimedia") {
+      report(errors, book.file, `documentSlug 必须指向非多媒体文稿：${book.documentSlug}`);
+    }
+    if (book.updatedAt && document.updatedISO && book.updatedAt !== document.updatedISO) {
+      report(
+        errors,
+        book.file,
+        `updatedAt (${book.updatedAt}) 必须与正文 updated/date (${document.updatedISO}) 一致`
+      );
+    }
+  }
+}
+
+const topicRecords = markdownFiles(topicsDirectory).map((fileName) => {
+  const file = path.join("source", "_topics", fileName).replaceAll("\\", "/");
+  const raw = fs.readFileSync(path.join(topicsDirectory, fileName), "utf8");
+  const { data, header, content } = parseFrontMatter(file, raw);
+  validateTypography(file, content, data);
+
+  const fileStem = fileName.slice(0, -3);
+  const slug = nonEmptyString(data.slug) ? data.slug.trim() : fileStem;
+  if (!slugPattern.test(fileStem)) report(errors, file, "文件名必须是小写 ASCII kebab-case");
+  if (!slugPattern.test(slug)) report(errors, file, `slug 必须是小写 ASCII kebab-case：${slug}`);
+  if (slug !== fileStem) report(errors, file, `slug 必须与文件名一致：${fileStem}`);
+  if (!nonEmptyString(data.title)) report(errors, file, "必须填写非空 title");
+  if (!nonEmptyString(data.summary)) report(errors, file, "必须填写非空 summary");
+  if (!nonEmptyString(content) && !nonEmptyString(data.introduction)) {
+    report(errors, file, "必须在正文或 introduction 字段填写专题导语");
+  }
+  validateUntrustedHtml(
+    file,
+    nonEmptyString(data.introduction) ? data.introduction : content,
+    "专题导语"
+  );
+
+  const status = nonEmptyString(data.status) ? data.status.trim() : "";
+  if (!validTopicStatuses.has(status)) {
+    report(errors, file, "status 必须是 ongoing / complete / archived 之一");
+  }
+  const published = rawScalar(header, "published") ?? "";
+  const updated = rawScalar(header, "updated") ?? published;
+  if (!isValidPublicationDate(published)) report(errors, file, "published 必须是有效的 YYYY-MM-DD");
+  if (!isValidPublicationDate(updated)) report(errors, file, "updated 必须是有效的 YYYY-MM-DD");
+  if (published && updated && updated < published) report(errors, file, "updated 不能早于 published");
+
+  const groupIds = new Set();
+  const itemRefs = new Set();
+  if (!Array.isArray(data.groups) || data.groups.length === 0) {
+    report(errors, file, "groups 至少需要一个分组");
+  } else {
+    data.groups.forEach((value, groupIndex) => {
+      const groupFile = `${file}#groups[${groupIndex}]`;
+      if (!isRecord(value)) {
+        report(errors, groupFile, "分组必须是对象");
+        return;
+      }
+      const groupId = nonEmptyString(value.id) ? value.id.trim() : "";
+      if (!slugPattern.test(groupId)) report(errors, groupFile, "id 必须是小写 ASCII kebab-case");
+      if (groupIds.has(groupId)) report(errors, groupFile, `id 重复：${groupId}`);
+      if (groupId) groupIds.add(groupId);
+      if (!nonEmptyString(value.title)) report(errors, groupFile, "title 不能为空");
+      if (!Array.isArray(value.items) || value.items.length === 0) {
+        report(errors, groupFile, "items 至少需要一个条目");
+        return;
+      }
+
+      value.items.forEach((item, itemIndex) => {
+        const itemFile = `${groupFile}.items[${itemIndex}]`;
+        if (!isRecord(item)) {
+          report(errors, itemFile, "条目必须是对象");
+          return;
+        }
+        const type = nonEmptyString(item.type) ? item.type.trim() : "";
+        const ref = nonEmptyString(item.ref) ? item.ref.trim() : "";
+        if (!validTopicItemTypes.has(type)) {
+          report(errors, itemFile, "type 必须是 post / book / media 之一");
+        }
+        if (!slugPattern.test(ref)) report(errors, itemFile, `ref 必须是小写 ASCII kebab-case：${ref}`);
+        if (hasOwn(item, "editorialNote") && !nonEmptyString(item.editorialNote)) {
+          report(errors, itemFile, "editorialNote 如填写则必须是非空字符串");
+        }
+        const itemKey = `${type}:${ref}`;
+        if (itemRefs.has(itemKey)) report(errors, itemFile, `条目引用重复：${itemKey}`);
+        if (type && ref) itemRefs.add(itemKey);
+
+        if (type === "book") {
+          if (!booksBySlug.has(ref)) report(errors, itemFile, `找不到书籍：${ref}`);
+          return;
+        }
+        const post = recordsBySlug.get(ref);
+        if (!post) {
+          report(errors, itemFile, `找不到文稿：${ref}`);
+          return;
+        }
+        if (post.draft) report(errors, itemFile, `不得引用草稿：${ref}`);
+        if (type === "media" && post.section !== "multimedia") {
+          report(errors, itemFile, `media 必须引用 multimedia 文稿：${ref}`);
+        }
+        if (type === "post" && post.section === "multimedia") {
+          report(errors, itemFile, `multimedia 文稿必须使用 media 类型：${ref}`);
+        }
+      });
+    });
+  }
+
+  return { file, slug };
+});
+
+const topicsBySlug = new Map();
+for (const topic of topicRecords) {
+  if (!topic.slug) continue;
+  const previous = topicsBySlug.get(topic.slug);
+  if (previous) report(errors, topic.file, `slug 与 ${previous.file} 重复：${topic.slug}`);
+  else topicsBySlug.set(topic.slug, topic);
+}
+
 for (const warning of warnings) console.warn(`警告：${warning}`);
 
 if (errors.length > 0) {
@@ -323,4 +761,7 @@ if (errors.length > 0) {
   process.exit(1);
 }
 
-console.log(`内容校验通过：${records.length} 篇文稿，${warnings.length} 项非阻塞警告。`);
+console.log(
+  `内容校验通过：${records.length} 篇文稿，${CONTRIBUTORS.length} 位贡献者，` +
+  `${bookRecords.length} 本书，${topicRecords.length} 个专题，${warnings.length} 项非阻塞警告。`
+);

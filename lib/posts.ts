@@ -10,11 +10,20 @@ import path from "node:path";
 import matter from "gray-matter";
 import { renderMarkdown } from "./markdown";
 import { isEditorialSection, type EditorialSection } from "./editorial";
+import {
+  findContributor,
+  findContributorByName,
+  type ContributorId,
+} from "./contributors";
 
 const POSTS_DIR = path.join(process.cwd(), "source", "_posts");
 
-/** 一条署名：作者=实心方块「作」；译者「译」/编者「编」/校对「校」=空心方块 */
+export type CreditRole = "author" | "translator";
+
+/** 一条署名对应一个贡献者；多人署名会展开为多条记录。 */
 export interface Credit {
+  role: CreditRole;
+  contributorId: ContributorId;
   mark: string;
   name: string;
   solid: boolean;
@@ -90,21 +99,62 @@ function toList(v: unknown): string[] {
     .filter(Boolean);
 }
 
-// 署名角色 → 方块标记。作者实心，其余空心。可在 front-matter 用任一 key 填写。
-const CREDIT_ROLES: { keys: string[]; mark: string; solid: boolean }[] = [
-  { keys: ["post_author", "author", "作者"], mark: "作", solid: true },
-  { keys: ["translator", "译者", "翻译"], mark: "译", solid: false },
-  { keys: ["editor", "编者", "编辑"], mark: "编", solid: false },
-  { keys: ["proofreader", "校对", "校对者", "校"], mark: "校", solid: false },
+// 署名角色 → 方块标记。作者实心，其余空心。可在 front-matter 用任一历史 key 填写。
+export const CREDIT_ROLE_META: Record<
+  CreditRole,
+  { label: string; mark: string; solid: boolean }
+> = {
+  author: { label: "作者", mark: "作", solid: true },
+  translator: { label: "译者", mark: "译", solid: false },
+};
+
+export const CREDIT_ROLES = Object.keys(CREDIT_ROLE_META) as CreditRole[];
+
+const CREDIT_FIELDS: { role: CreditRole; keys: string[] }[] = [
+  { role: "author", keys: ["post_author", "author", "作者"] },
+  { role: "translator", keys: ["translator", "译者", "翻译"] },
 ];
 
-function buildCredits(data: Record<string, unknown>): Credit[] {
+/**
+ * Old posts use display names rather than ids. Commas, Chinese enumeration
+ * commas, line breaks and full-width spaces separate people; ordinary spaces
+ * remain valid inside Latin names.
+ */
+function creditNames(value: unknown): string[] {
+  const values = Array.isArray(value) ? value : [value];
+  return values.flatMap((item) =>
+    String(item)
+      .split(/[,，、;；\n]+|\u3000+/u)
+      .map((name) => name.trim())
+      .filter(Boolean)
+  );
+}
+
+function buildCredits(data: Record<string, unknown>, file: string): Credit[] {
   const out: Credit[] = [];
-  for (const role of CREDIT_ROLES) {
-    const key = role.keys.find((k) => data[k] != null && String(data[k]).trim() !== "");
+  for (const field of CREDIT_FIELDS) {
+    const key = field.keys.find((candidate) => {
+      const value = data[candidate];
+      return value != null && (Array.isArray(value) ? value.length > 0 : String(value).trim() !== "");
+    });
     if (!key) continue;
-    const name = toList(data[key]).join("、") || String(data[key]).trim();
-    if (name) out.push({ mark: role.mark, name, solid: role.solid });
+
+    for (const rawName of creditNames(data[key])) {
+      const contributor = findContributor(rawName) ?? findContributorByName(rawName);
+      if (!contributor) {
+        throw new Error(
+          `${file}: 署名“${rawName}”尚未登记。请先在 lib/contributors.ts 添加稳定贡献者 id。`
+        );
+      }
+      const meta = CREDIT_ROLE_META[field.role];
+      out.push({
+        role: field.role,
+        contributorId: contributor.id,
+        mark: meta.mark,
+        name: contributor.displayName,
+        solid: meta.solid,
+      });
+    }
   }
   return out;
 }
@@ -221,7 +271,10 @@ async function loadRaw(): Promise<Post[]> {
       const draft = isDraft(data.draft);
       const category = categories[0] ?? tags[0] ?? "未分类";
       const uniqueTags = Array.from(new Set(tags));
-      const credits = buildCredits(data);
+      const credits = buildCredits(data, file);
+      const authors = credits
+        .filter((credit) => credit.role === "author")
+        .map((credit) => credit.name);
 
       const post: Post = {
         slug,
@@ -231,7 +284,7 @@ async function loadRaw(): Promise<Post[]> {
         category,
         section: resolveSection(data, file),
         tags: uniqueTags,
-        author: String(data.post_author ?? data.author ?? "").trim(),
+        author: authors.join("　") || String(data.post_author ?? data.author ?? "").trim(),
         credits,
         dateDisplay: fmtDisplay(date),
         dateISO: fmtISO(date),
