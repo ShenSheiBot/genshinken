@@ -313,6 +313,18 @@ async function loadRaw(): Promise<Post[]> {
 
   const visiblePosts = posts.filter((p) => !p.draft);
 
+  // 重复 slug 守卫（与 books.ts / topics.ts 一致）：两篇可见文稿撞 slug 时，
+  // getPostBySlug 会静默取首个并遮蔽另一篇，而编号仍把两篇都计入 N —— 直接抛错。
+  // 构建期 validate-content 已拦截；此处为运行期纵深防御，避免门禁被绕过时静默出重复 URL。
+  const slugOwner = new Map<string, string>();
+  for (const p of visiblePosts) {
+    const prev = slugOwner.get(p.slug);
+    if (prev) {
+      throw new Error(`重复 slug「${p.slug}」：《${prev}》与《${p.title}》撞车，slug 必须唯一`);
+    }
+    slugOwner.set(p.slug, p.title);
+  }
+
   // 时间倒序（最新在前），并编号 01..N
   visiblePosts.sort(comparePosts);
   // 编号按发表先后：最早的文章为 1，最新的为 N（列表仍按时间倒序展示）

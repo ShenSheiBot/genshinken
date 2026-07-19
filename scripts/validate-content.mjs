@@ -44,6 +44,20 @@ function validateUntrustedHtml(file, value, label) {
   }
 }
 
+// 正文本地图片存在性校验：src 映射到 public/ 下（渲染管线把 attachments/x 与 /x
+// 都改写为 /attachments/... 或 /x）；写错图名会静默上线 404 破图，这里在构建期拦下。
+function checkLocalAsset(file, rawSrc, line) {
+  const src = String(rawSrc ?? "").trim();
+  if (!src || /^(https?:|data:|mailto:|tel:|#)/i.test(src) || src.startsWith("//")) return;
+  const pathname = src.replace(/^\.?\//, "").split(/[?#]/, 1)[0];
+  if (!pathname) return;
+  const root = path.resolve(publicDirectory);
+  const asset = path.resolve(publicDirectory, pathname);
+  if (!asset.startsWith(`${root}${path.sep}`) || !fs.existsSync(asset) || !fs.statSync(asset).isFile()) {
+    report(errors, file, `${line ? `第 ${line} 行` : "正文"}图片指向的 public 文件不存在：${src}`);
+  }
+}
+
 function parseFrontMatter(file, raw) {
   const source = raw.replace(/^\uFEFF/, "");
   try {
@@ -105,6 +119,16 @@ function validateTypography(file, content, data) {
           report(errors, file, `${location}含${kinds.join("和")}，请改用弯引号`);
         }
       }
+    }
+
+    if (node.type === "image" && typeof node.url === "string") {
+      checkLocalAsset(file, node.url, node.position?.start?.line);
+    }
+
+    // 残留的 Outline mention:// 内链在公网无意义，渲染期会被静默降级为死链纯文本；构建期拦下。
+    if (node.type === "link" && typeof node.url === "string" && /^\s*mention:/i.test(node.url)) {
+      const line = node.position?.start?.line;
+      report(errors, file, `${line ? `第 ${line} 行` : "正文"}残留 Outline mention:// 内链，请替换为真实 URL 或纯文本`);
     }
   });
 
@@ -410,6 +434,12 @@ const records = files.map((file) => {
 
   if (hasOwn(data, "updated") && !isValidPublicationDate(rawScalar(header, "updated"))) {
     report(errors, file, "updated 必须是有效的 YYYY-MM-DD");
+  }
+
+  // 与书籍(updatedAt>=publishedAt)、专题(updated>=published)对称：修订日不得早于发布日，
+  // 否则会生成早于发布的 sitemap lastmod 与 JSON-LD dateModified。
+  if (updatedISO && dateISO && updatedISO < dateISO) {
+    report(errors, file, `updated (${updatedISO}) 不能早于 date (${dateISO})`);
   }
 
   if (categories.length === 0) {
