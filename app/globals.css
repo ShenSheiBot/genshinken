@@ -29,7 +29,7 @@
   --bg: #e8e7e3;
   --ink: #1a1916;
   --ink-soft: #6b685f;
-  --ink-faint: #9a978d;
+  --ink-faint: #66635a;    /* WCAG AA 4.85:1 on --bg（原 #9a978d 仅 2.36:1，承载栏目/发布/编号等小字元信息） */
   --hair: #c4c2bb;          /* 发丝构造线 */
   --hair-strong: #1a1916;   /* 强调线 */
   --grid: rgba(26, 25, 22, 0.06);   /* 全幅竖向栅格线（比 --hair 更轻，避免压正文） */
@@ -54,7 +54,7 @@ html[data-theme="dark"] {
   --bg: #131311;
   --ink: #e8e7e3;
   --ink-soft: #908d84;
-  --ink-faint: #5b594f;
+  --ink-faint: #8f8c82;    /* WCAG AA 5.53:1 on --bg（原 #5b594f 仅 2.65:1） */
   --hair: #2c2b27;
   --hair-strong: #e8e7e3;
   --grid: rgba(232, 231, 227, 0.05);
@@ -68,6 +68,15 @@ html[data-theme="dark"] {
 
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
+
+/* 跳至正文：键盘用户可越过全站导航直达 <main id="main">，聚焦时才显形。 */
+.skip-link {
+  position: absolute; left: -9999px; top: 0; z-index: 200;
+  padding: 10px 16px; background: var(--solid); color: var(--solid-ink);
+  font-family: var(--f-grotesk); font-size: 14px; text-decoration: none;
+}
+.skip-link:focus { left: 8px; top: 8px; }
+main:focus { outline: none; }
 html { color-scheme: light dark; }
 html[data-theme="light"] { color-scheme: light; }
 html[data-theme="dark"] { color-scheme: dark; }

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <main className={styles.page} data-about-page="true">
+    <main id="main" tabIndex={-1} className={styles.page} data-about-page="true">
       <section className={styles.contact} aria-labelledby="about-contact">
         <div className={styles.contactContent}>
           <h1 id="about-contact">联系我们</h1>

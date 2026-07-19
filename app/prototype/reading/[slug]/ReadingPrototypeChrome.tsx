@@ -728,7 +728,7 @@ export default function ReadingPrototypeChrome({
             const selected = item.id === active;
             return (
               <article id={`reading-reference-${kind}-${item.index}`} key={item.id} className={styles.referenceItem} data-reference-kind={kind} data-reference-id={item.id} data-active={selected ? "true" : "false"}>
-                <button type="button" className={styles.referenceSelect} aria-expanded={selected} aria-current={selected ? "true" : undefined} onClick={() => selectReference(kind, item.id, compact ? "sheet" : "desk")}><span>{item.label}</span>{!selected && <p dangerouslySetInnerHTML={{ __html: item.previewHtml }} />}</button>
+                <button type="button" className={styles.referenceSelect} aria-expanded={selected} aria-current={selected ? "true" : undefined} onClick={() => selectReference(kind, item.id, compact ? "sheet" : "desk")}><span>{item.label}</span>{!selected && <span className={styles.referencePreview} dangerouslySetInnerHTML={{ __html: item.previewHtml }} />}</button>
                 {selected && <div className={styles.referenceDetail} dangerouslySetInnerHTML={{ __html: item.html }} />}
               </article>
             );
@@ -774,7 +774,14 @@ export default function ReadingPrototypeChrome({
   };
   const toggleTheme = () => {
     const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
-    document.documentElement.dataset.theme = next;
+    const root = document.documentElement;
+    root.dataset.theme = next;
+    // 与 TopBar 权威切换 / 首屏 bootstrap 保持一致：同步原生 color-scheme 与 theme-color，
+    // 否则阅读页（生产主模板）切深色后滚动条/表单控件仍按 light 渲染、移动端地址栏色不变。
+    root.style.colorScheme = next;
+    document.querySelectorAll('meta[name="theme-color"]').forEach((meta) =>
+      meta.setAttribute("content", next === "dark" ? "#131311" : "#e8e7e3")
+    );
     localStorage.setItem("ub_theme", next);
     setDark(next === "dark");
   };

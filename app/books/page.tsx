@@ -40,7 +40,7 @@ export default function BooksPage() {
   };
 
   return (
-    <main className={`${styles.page} ${styles.catalogPage}`}>
+    <main id="main" tabIndex={-1} className={`${styles.page} ${styles.catalogPage}`}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}

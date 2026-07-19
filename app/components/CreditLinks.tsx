@@ -65,6 +65,7 @@ export default function CreditLinks({
                   styles.mark,
                   markClassName
                 )}
+                role="img"
                 aria-label={credit.role === "author" ? "作者" : "译者"}
               >
                 {credit.mark}

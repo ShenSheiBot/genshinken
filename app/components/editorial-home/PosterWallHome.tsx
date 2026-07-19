@@ -191,7 +191,7 @@ export default function PosterWallHome({
     .slice(0, 6);
 
   return (
-    <main className={styles.root} aria-labelledby="poster-wall-heading" data-reveal-zone="home">
+    <main id="main" tabIndex={-1} className={styles.root} aria-labelledby="poster-wall-heading" data-reveal-zone="home">
       <header className={styles.masthead} data-reveal-sequence="masthead">
         <h1 id="poster-wall-heading" className={styles.screenReaderTitle}>{site.brandCN}</h1>
 

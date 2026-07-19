@@ -756,9 +756,10 @@
 .referenceItem { border-bottom: 1px solid var(--hair); }
 .referenceSelect { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 7px; width: 100%; padding: 8px 2px; color: var(--ink-soft); text-align: left; }
 .referenceSelect > span { font-family: var(--reader-note-family); font-size: 10px; color: var(--accent); font-variant-numeric: lining-nums tabular-nums; }
-.referenceSelect > p { display: -webkit-box; margin: 0; overflow: hidden; font-family: var(--reader-body-family); font-size: 11px; line-height: 1.5; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
-.referenceSelect > p :global(.latin-run) { font-family: var(--reader-body-latin-family); }
-.referenceItem[data-active="true"] .referenceSelect > p { color: var(--ink); font-weight: 700; }
+/* 预览用 span（不是 p）：button 的内容模型是 phrasing，button>p 是非法嵌套。 */
+.referenceSelect > .referencePreview { display: -webkit-box; margin: 0; overflow: hidden; font-family: var(--reader-body-family); font-size: 11px; line-height: 1.5; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+.referenceSelect > .referencePreview :global(.latin-run) { font-family: var(--reader-body-latin-family); }
+.referenceItem[data-active="true"] .referenceSelect > .referencePreview { color: var(--ink); font-weight: 700; }
 .referenceDetail { padding: 0 4px 12px 35px; font-family: var(--reader-body-family); font-size: 12px; line-height: 1.65; color: var(--ink-soft); }
 .referenceItem[data-active="true"] .referenceDetail { color: var(--ink); }
 .referenceDetail p { margin: 0 0 .65em; }
@@ -1135,7 +1136,7 @@
   .tocJump b { font-size: 10px; }
   .referencePane > header b { font-size: 13px; }
   .referenceSelect { grid-template-columns: 22px minmax(0, 1fr); gap: 5px; }
-  .referenceSelect > p { font-size: 10px; }
+  .referenceSelect > .referencePreview { font-size: 10px; }
   .referenceDetail { padding-left: 27px; font-size: 11px; }
 }
 

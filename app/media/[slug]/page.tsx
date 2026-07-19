@@ -217,7 +217,7 @@ export default async function MediaDetailPage({
           __html: JSON.stringify(buildJsonLd(mediaPost, destinations)).replace(/</g, "\\u003c"),
         }}
       />
-      <main className={styles.page} data-reveal-zone="media">
+      <main id="main" tabIndex={-1} className={styles.page} data-reveal-zone="media">
       <div className={styles.contextBar}>
         <Link href="/" className={styles.backLink}>
           ← 返回首页

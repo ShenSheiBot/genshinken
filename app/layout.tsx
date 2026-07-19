@@ -28,11 +28,45 @@ export const metadata: Metadata = {
     siteName: site.brand,
     locale: "zh_CN",
     type: "website",
+    images: [{ url: "/icon.png", width: 512, height: 512, alt: site.brand }],
+  },
+  twitter: {
+    card: "summary",
+    title: site.title,
+    description: site.description,
+    images: ["/icon.png"],
   },
   alternates: {
     canonical: "/",
     types: { "application/rss+xml": [{ url: "/rss.xml", title: site.brand }] },
   },
+};
+
+// 站点级结构化数据：Organization + WebSite（各页的 Article/CollectionPage/Book 等
+// 通过 publisher @id 引用本 Organization）。补齐 logo / sameAs，恢复 Organization
+// 富结果与知识图谱关联资格。
+const siteJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${site.url}/#organization`,
+      name: site.brand,
+      url: site.url,
+      logo: `${site.url}/icon.png`,
+      description: site.description,
+      sameAs: site.social.map((entry) => entry.href),
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${site.url}/#website`,
+      name: site.brand,
+      url: site.url,
+      inLanguage: "zh-Hans",
+      description: site.description,
+      publisher: { "@id": `${site.url}/#organization` },
+    },
+  ],
 };
 
 // 首屏前同步设定 data-theme，避免暗色闪烁
@@ -53,10 +87,15 @@ export default async function RootLayout({
         />
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <script dangerouslySetInnerHTML={{ __html: editorialRevealBootstrap }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd).replace(/</g, "\\u003c") }}
+        />
       </head>
       <body>
         <ArticleHeaderProvider>
           <div className="app">
+            <a href="#main" className="skip-link">跳至正文</a>
             <TopBar />
             {children}
             <Footer />

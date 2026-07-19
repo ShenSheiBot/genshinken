@@ -74,6 +74,7 @@ function MetaRows({ post }: { post: Post }) {
               <span
                 className={styles.creditMark}
                 data-solid={credit.solid ? "true" : "false"}
+                role="img"
                 aria-label={credit.role === "author" ? "作者" : "译者"}
               >
                 {credit.mark}
@@ -102,7 +103,7 @@ function SourceRecord({ post }: { post: Post }) {
           {(originalAuthors.length > 0 || post.author) && (
             <div>
               <dt>
-                <span className={styles.creditMark} data-solid="true" aria-label="作者">作</span>
+                <span className={styles.creditMark} data-solid="true" role="img" aria-label="作者">作</span>
               </dt>
               <dd><CreditLinks credits={originalAuthors} showMarks={false} fallbackName={post.author} /></dd>
             </div>
@@ -110,7 +111,7 @@ function SourceRecord({ post }: { post: Post }) {
           {translators.length > 0 && (
             <div>
               <dt>
-                <span className={styles.creditMark} data-solid="false" aria-label="译者">译</span>
+                <span className={styles.creditMark} data-solid="false" role="img" aria-label="译者">译</span>
               </dt>
               <dd><CreditLinks credits={translators} showMarks={false} /></dd>
             </div>
@@ -287,7 +288,7 @@ export function ReadingDossier({
     ? "注释与文献"
     : parts.noteCount > 0 ? "注释" : "文献";
   return (
-    <main className={`${isPublicEdition ? "reading-edition-page" : "reading-prototype-page"} ${styles.root} ${styles.dossierRoot}`} data-reading-variant="dossier" data-reveal-zone="reader">
+    <main id="main" tabIndex={-1} className={`${isPublicEdition ? "reading-edition-page" : "reading-prototype-page"} ${styles.root} ${styles.dossierRoot}`} data-reading-variant="dossier" data-reveal-zone="reader">
       <ReadingPrototypeChrome
         title={post.title}
         slug={post.slug}
@@ -337,7 +338,7 @@ export function ReadingDossier({
 export function ReadingFolio({ post, parts, posts }: { post: Post; parts: ArticleParts; posts: PostSummary[] }) {
   const section = sectionMeta[sectionFor(post)];
   return (
-    <main className={`reading-prototype-page ${styles.root} ${styles.folioRoot}`} data-reading-variant="folio">
+    <main id="main" tabIndex={-1} className={`reading-prototype-page ${styles.root} ${styles.folioRoot}`} data-reading-variant="folio">
       <ReadingPrototypeChrome
         title={post.title}
         slug={post.slug}
