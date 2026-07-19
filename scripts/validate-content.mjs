@@ -435,9 +435,9 @@ const records = files.map((file) => {
     );
   }
 
-  if (section === "multimedia") {
-    validateUntrustedHtml(file, raw, "多媒体条目");
-  }
+  // 正文 HTML 消毒门禁：所有栏目都扫描（此前仅 multimedia），堵住 essay/review/translation
+  // 正文经 lib/markdown.ts allowDangerousHtml 原样透传 + dangerouslySetInnerHTML 注入的存储型 XSS 面。
+  validateUntrustedHtml(file, raw, section === "multimedia" ? "多媒体条目" : "正文");
 
   const repeatedCategories = duplicates(categories);
   if (repeatedCategories.length > 0) {

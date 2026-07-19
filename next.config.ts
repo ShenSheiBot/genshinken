@@ -6,6 +6,37 @@ function buildTimestamp(value = process.env.UN_CANON_BUILD_TIMESTAMP): string {
   return new Date().toISOString();
 }
 
+// Content Security Policy. Script/style keep 'unsafe-inline' because the site
+// ships two inline bootstrap scripts (theme, reveal) plus Next's framework
+// inline runtime, and SSG pages cannot carry per-request nonces. The value is
+// in constraining object/base/frame/default and pairing with the header set
+// below; the real XSS injection path is closed at the content gate (see
+// scripts/validate-content.mjs).
+const contentSecurityPolicy = [
+  "default-src 'self'",
+  "script-src 'self' 'unsafe-inline'",
+  "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+  "font-src 'self' https://fonts.gstatic.com",
+  "img-src 'self' data: https:",
+  "connect-src 'self'",
+  "object-src 'none'",
+  "base-uri 'self'",
+  "frame-ancestors 'none'",
+  "form-action 'self'",
+  "upgrade-insecure-requests",
+].join("; ");
+
+const securityHeaders = [
+  { key: "Content-Security-Policy", value: contentSecurityPolicy },
+  { key: "X-Content-Type-Options", value: "nosniff" },
+  { key: "X-Frame-Options", value: "DENY" },
+  { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+  {
+    key: "Permissions-Policy",
+    value: "camera=(), microphone=(), geolocation=(), browsing-topics=()",
+  },
+];
+
 const nextConfig: NextConfig = {
   // Markdown lives in source/_posts and is read at build time (SSG).
   // Posts reference images under /attachments — served statically from public/.
@@ -15,6 +46,9 @@ const nextConfig: NextConfig = {
   // baked into the generated pages, rather than being the visitor's clock.
   env: {
     NEXT_PUBLIC_BUILD_TIMESTAMP: buildTimestamp(),
+  },
+  async headers() {
+    return [{ source: "/:path*", headers: securityHeaders }];
   },
 };
 
