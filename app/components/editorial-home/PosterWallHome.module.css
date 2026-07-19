@@ -648,7 +648,6 @@ html[data-theme="dark"] .latestUpdates:not([data-surface="paper"]) {
   --latest-accent: var(--accent);
 
   margin-top: 72px;
-  border-top: 1px solid var(--hair-strong);
   background-image: none;
 }
 
