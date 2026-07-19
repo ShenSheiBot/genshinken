@@ -228,7 +228,7 @@ for (const [label, result] of Object.entries({
   assert.equal(footers.length, 1, `${label} must expose exactly one global footer`);
   const footer = footers[0];
   assert.equal(
-    tags(footer.inner, "img").filter((image) => attribute(image, "src") === "/img/logo.png").length,
+    tags(footer.inner, "img").filter((image) => /^\/img\/logo\.(png|webp|avif)$/.test(attribute(image, "src") || "")).length,
     1,
     `${label} footer must retain the site logo`
   );
