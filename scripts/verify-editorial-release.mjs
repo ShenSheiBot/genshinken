@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
@@ -121,6 +122,49 @@ function cloudflareProtectedEmails(html) {
     }
     return [String.fromCharCode(...decoded)];
   });
+}
+
+async function verifyHostedCjkFonts(html) {
+  const stylesheetUrls = tags(html, "link")
+    .filter((tag) => (attribute(tag, "rel") || "").split(/\s+/).includes("stylesheet"))
+    .map((tag) => new URL(decodeHtml(attribute(tag, "href") || ""), base));
+  assert.ok(stylesheetUrls.length > 0, "article must expose its compiled stylesheets");
+
+  const stylesheetResponses = await Promise.all(stylesheetUrls.map((url) => fetch(url)));
+  for (const [index, response] of stylesheetResponses.entries()) {
+    assert.equal(response.status, 200, `stylesheet must be reachable: ${stylesheetUrls[index]}`);
+  }
+  const compiledCss = (await Promise.all(stylesheetResponses.map((response) => response.text()))).join("\n");
+  const faceBlocks = [...compiledCss.matchAll(/@font-face\s*{[\s\S]*?}/g)].map((match) => match[0]);
+  const expectedFamilies = ["UN Canon STSong", "UN Canon STFangsong", "UN Canon STKaiti"];
+  const fontUrls = [];
+
+  for (const family of expectedFamilies) {
+    const face = faceBlocks.find((block) =>
+      new RegExp(`font-family\\s*:\\s*["']?${family}["']?\\s*;`).test(block)
+    );
+    assert.ok(face, `compiled CSS must retain the self-hosted ${family} face`);
+    assert.match(face, /font-display\s*:\s*swap(?:\s*;|\s*})/, `${family} must remain non-blocking`);
+    const source = /src\s*:\s*url\(([^)]+)\)\s*format\(["']?woff2["']?\)/.exec(face)?.[1]
+      .trim()
+      .replace(/^['"]|['"]$/g, "");
+    assert.ok(source, `${family} must expose a WOFF2 source URL`);
+    const url = new URL(source, base);
+    assert.equal(url.origin, new URL(base).origin, `${family} must remain same-origin`);
+    fontUrls.push({ family, url });
+  }
+
+  const fontResponses = await Promise.all(fontUrls.map(({ url }) => fetch(url)));
+  const hashes = new Set();
+  for (const [index, response] of fontResponses.entries()) {
+    const { family, url } = fontUrls[index];
+    assert.equal(response.status, 200, `${family} must be published at ${url}`);
+    const bytes = Buffer.from(await response.arrayBuffer());
+    assert.equal(bytes.subarray(0, 4).toString("ascii"), "wOF2", `${family} must publish valid WOFF2 bytes`);
+    const digest = crypto.createHash("sha256").update(bytes).digest("hex");
+    assert.ok(!hashes.has(digest), `${family} must not duplicate another hosted CJK font`);
+    hashes.add(digest);
+  }
 }
 
 function assertEmailLink(html, email, label) {
@@ -424,6 +468,7 @@ for (const section of ["review", "translation"]) {
 }
 
 const articleLd = assertMetadata("article", article, "/posts/lih-lenin-disputed", "Article");
+await verifyHostedCjkFonts(article.html);
 assert.match(article.html, /reading-edition-page/);
 assert.match(article.html, /dateModified/);
 assert.match(article.html, /正文完/);

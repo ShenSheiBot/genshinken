@@ -5,10 +5,10 @@
   --reading-right: 270px;
   --reading-gap: 36px;
   --reader-font: 19px;
-  --reader-body-family: "STSong", "华文宋体", "Songti SC", "SimSun", "Noto Serif SC", serif;
+  --reader-body-family: var(--f-cjk-serif);
   --reader-body-latin-family: "Times New Roman", Times, serif;
-  --reader-title-family: "STZhongsong", "华文中宋", "Songti SC", "STSong", "华文宋体", "Noto Serif SC", serif;
-  --reader-quote-family: "STFangsong", "华文仿宋", "FangSong", "FangSong_GB2312", "Noto Serif SC", serif;
+  --reader-title-family: "STZhongsong", "华文中宋", var(--f-cjk-serif);
+  --reader-quote-family: var(--f-cjk-fangsong);
   --reader-quote-latin-family: var(--font-eb-garamond), Garamond, "Times New Roman", Times, serif;
   --reader-interface-family: "DengXian", "等线", "PingFang SC", "Microsoft YaHei", "Noto Sans SC", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   --reader-note-family: var(--reader-body-latin-family);
@@ -999,7 +999,7 @@
 .fontChooser b { font-size: 22px; font-weight: 500; }
 .fontChooser span { margin-top: 10px; font-family: var(--reader-interface-family); font-size: 12px; font-weight: 700; }
 .fontChooser small { margin-top: 4px; font-family: var(--reader-interface-family); font-size: 7px; color: var(--ink-faint); }
-.serifSample { font-family: "Times New Roman", Times, "STSong", "华文宋体", serif; }
+.serifSample { font-family: var(--f-cjk-serif); }
 .sansSample { font-family: "Helvetica Neue", Helvetica, Arial, "DengXian", "等线", sans-serif; }
 
 .prototypeSwitcher {
@@ -1316,9 +1316,9 @@
 :global(html[data-reader-size="large"]) .body { --reader-font: 21px; }
 
 :global(html[data-reader-font="serif"]) .root {
-  --reader-body-family: "STSong", "华文宋体", "Songti SC", "SimSun", "Noto Serif SC", serif;
+  --reader-body-family: var(--f-cjk-serif);
   --reader-body-latin-family: "Times New Roman", Times, serif;
-  --reader-quote-family: "STFangsong", "华文仿宋", "FangSong", "FangSong_GB2312", "Noto Serif SC", serif;
+  --reader-quote-family: var(--f-cjk-fangsong);
   --reader-quote-latin-family: var(--font-eb-garamond), Garamond, "Times New Roman", Times, serif;
   --reader-interface-family: "DengXian", "等线", "PingFang SC", "Microsoft YaHei", "Noto Sans SC", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   --reader-note-family: var(--reader-body-latin-family);

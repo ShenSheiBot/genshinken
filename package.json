@@ -15,9 +15,10 @@
     "validate:content": "node --experimental-strip-types --no-warnings scripts/validate-content.mjs",
     "validate:media-html": "node --experimental-strip-types --no-warnings scripts/verify-media-sanitizer.mjs",
     "verify:typography": "node --experimental-strip-types --no-warnings scripts/verify-markdown-typography.mjs",
+    "verify:fonts": "node scripts/verify-font-contract.mjs",
     "verify:editorial": "node scripts/verify-editorial-release.mjs",
     "verify:release": "node scripts/verify-editorial-release.mjs",
-    "check": "npm run validate:content && npm run validate:media-html && npm run verify:typography && npm run typecheck && npm run lint"
+    "check": "npm run validate:content && npm run validate:media-html && npm run verify:typography && npm run verify:fonts && npm run typecheck && npm run lint"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

@@ -6,8 +6,9 @@ import { site } from "@/lib/site";
 
 // Latin / Cyrillic / Greek 字体自托管（next/font：同源、自动预载、内联字体 CSS），
 // 取代此前渲染阻塞的第三方 Google Fonts <link>。含 cyrillic/greek 子集，保住
-// 俄语/希腊语引文在衬线与 Garamond 栈里的呈现。CJK 交给系统字体（见 globals.css
-// 字体栈），不再加载 Noto Serif/Sans SC 巨型网络字体——这是移动端 18s 卡顿的根因。
+// 俄语/希腊语引文在衬线与 Garamond 栈里的呈现。CJK 使用 globals.css 中按需加载的
+// 站内华文宋体／仿宋／楷体语料子集；不再加载 Noto Serif/Sans SC 多字重巨型网络字体，
+// 避免重新引入此前移动端约 18 秒的阻塞。
 const newsreader = Newsreader({
   subsets: ["latin", "latin-ext"],
   style: ["normal", "italic"],

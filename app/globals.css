@@ -11,12 +11,13 @@
   --site-header-inline: 40px;
   --site-brand-size: 20px;
   --site-nav-size: 15px;
-  --f-brand: "FOT Matisse Pro EB", "STSong", "华文宋体", "Songti SC", "SimSun", serif;
+  --f-brand: "FOT Matisse Pro EB", "UN Canon STSong", "STSong", "华文宋体", "Songti SC", "SimSun", serif;
   --f-grotesk: "Helvetica Neue", Helvetica, "PingFang SC", "Microsoft YaHei", "微软雅黑", "Noto Sans SC", Arial, sans-serif;
-  --f-serif: var(--font-newsreader), "Songti SC", "STSong", "SimSun", "Noto Serif SC", Georgia, serif;
+  --f-serif: var(--font-newsreader), "UN Canon STSong", "STSong", "华文宋体", "Songti SC", "SimSun", "Noto Serif SC", Georgia, serif;
   --f-mono: var(--font-space-mono), "PingFang SC", "Noto Sans SC", monospace;
-  --f-cjk-serif: "STSong", "华文宋体", "Songti SC", "SimSun", "Noto Serif SC", serif;
-  --f-cjk-fangsong: "STFangsong", "华文仿宋", "FangSong", "FangSong_GB2312", "Noto Serif SC", serif;
+  --f-cjk-serif: "UN Canon STSong", "STSong", "华文宋体", "Songti SC", "SimSun", "Noto Serif SC", serif;
+  --f-cjk-fangsong: "UN Canon STFangsong", "STFangsong", "华文仿宋", "FangSong", "FangSong_GB2312", "Noto Serif SC", serif;
+  --f-cjk-kaiti: "UN Canon STKaiti", "STKaiti", "华文楷体", "KaiTi", "楷体", serif;
   --f-note: "Times New Roman", Times, var(--f-cjk-serif);
   --f-quote-latin: var(--font-eb-garamond), Garamond, Georgia, serif;
   --f-quote-cjk: var(--f-cjk-fangsong);
@@ -48,6 +49,30 @@
   font-weight: 800;
   font-display: swap;
   unicode-range: U+5178, U+65B9, U+897F, U+8CA0;
+}
+
+@font-face {
+  font-family: "UN Canon STSong";
+  src: url("/fonts/un-canon-st-song.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "UN Canon STFangsong";
+  src: url("/fonts/un-canon-st-fangsong.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "UN Canon STKaiti";
+  src: url("/fonts/un-canon-st-kaiti.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
 }
 
 html[data-theme="dark"] {
