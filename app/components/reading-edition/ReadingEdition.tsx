@@ -15,6 +15,9 @@ type ReadingVariant = "dossier" | "folio";
 
 const sectionFor = (post: PostSummary): EditorialSection => post.section;
 const sectionMeta = EDITORIAL_SECTION_META;
+const sectionLibraryHref = (section: EditorialSection) =>
+  `/library?section=${encodeURIComponent(section)}`;
+const tagLibraryHref = (tag: string) => `/library?tag=${encodeURIComponent(tag)}`;
 
 export type ArticleParts = {
   main: string;
@@ -64,9 +67,21 @@ function CreditLine({ credits }: { credits: Credit[] }) {
 }
 
 function MetaRows({ post }: { post: Post }) {
+  const section = sectionMeta[sectionFor(post)];
   return (
     <dl className={styles.metaRows}>
-      <div><dt>栏目</dt><dd>{sectionMeta[sectionFor(post)].label}</dd></div>
+      <div>
+        <dt>栏目</dt>
+        <dd>
+          <Link
+            className={styles.libraryFilterLink}
+            href={sectionLibraryHref(sectionFor(post))}
+            aria-label={`在文库中筛选栏目：${section.label}`}
+          >
+            {section.label}
+          </Link>
+        </dd>
+      </div>
       {displayCredits(post).map((credit, index) => (
         <div key={`${credit.mark}-${credit.name}-${index}`}>
           <dt>
@@ -289,7 +304,15 @@ export function ReadingDossier({
       <header className={styles.dossierCover} id="reading-cover" data-reveal>
         <aside className={styles.docket}>
           <span className={styles.docketNumber}>{post.sectionNo}</span>
-          <div><b>{section.label}</b></div>
+          <div>
+            <Link
+              className={styles.libraryFilterLink}
+              href={sectionLibraryHref(sectionFor(post))}
+              aria-label={`在文库中筛选栏目：${section.label}`}
+            >
+              <b>{section.label}</b>
+            </Link>
+          </div>
           <i />
           <p>{site.brandCN}<br />文章<br />第 {post.no} 号</p>
         </aside>
@@ -304,7 +327,20 @@ export function ReadingDossier({
           {post.subtitle && <p className={styles.subtitle}>{post.subtitle}</p>}
           <p className={styles.dek}>{post.excerpt}</p>
           <p className={styles.byline}><CreditLine credits={displayCredits(post)} /></p>
-          <div className={styles.tagLine}>{post.tags.map((tag) => <span key={tag}>#{tag}</span>)}</div>
+          {post.tags.length > 0 && (
+            <nav className={styles.tagLine} aria-label="按标签筛选文库">
+              {post.tags.map((tag) => (
+                <Link
+                  className={styles.libraryFilterLink}
+                  href={tagLibraryHref(tag)}
+                  aria-label={`在文库中筛选标签：${tag}`}
+                  key={tag}
+                >
+                  #{tag}
+                </Link>
+              ))}
+            </nav>
+          )}
         </div>
 
         <SourceRecord post={post} />
@@ -341,7 +377,15 @@ export function ReadingFolio({ post, parts, posts }: { post: Post; parts: Articl
         </div>
         <div className={styles.folioTitleBlock}>
           <span className={styles.folioIssue}>{post.sectionNo}</span>
-          <p className={styles.folioSection}>{section.label}</p>
+          <p className={styles.folioSection}>
+            <Link
+              className={styles.libraryFilterLink}
+              href={sectionLibraryHref(sectionFor(post))}
+              aria-label={`在文库中筛选栏目：${section.label}`}
+            >
+              {section.label}
+            </Link>
+          </p>
           <h1 className="art-title">{post.title}</h1>
           {post.subtitle && <p className={styles.subtitle}>{post.subtitle}</p>}
         </div>

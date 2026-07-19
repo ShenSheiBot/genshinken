@@ -567,8 +567,38 @@
   background: var(--accent);
 }
 
+.libraryFilterLink {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  color: inherit;
+  transition: color .15s ease;
+}
+
+.docket .libraryFilterLink {
+  justify-content: center;
+  min-width: 24px;
+}
+
+.libraryFilterLink:hover { color: var(--accent); }
+.libraryFilterLink:focus-visible {
+  color: var(--accent);
+  outline: 1px solid currentColor;
+  outline-offset: 3px;
+}
+
 .tagLine { display: flex; flex-wrap: wrap; gap: 10px 18px; margin-top: 22px; }
-.tagLine span { font-family: var(--f-mono); font-size: 10px; letter-spacing: .05em; color: var(--ink-faint); }
+.tagLine a {
+  flex: 0 0 auto;
+  justify-content: center;
+  min-width: 24px;
+  color: var(--ink-faint);
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: .05em;
+  white-space: nowrap;
+}
+.tagLine .libraryFilterLink:focus-visible { outline-offset: -1px; }
 
 .sourceRecord {
   align-self: center;

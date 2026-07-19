@@ -31,6 +31,31 @@ function bookCitationKinds(slug) {
   if (typeof data.translationBibtex === "string" && data.translationBibtex.trim()) kinds.push("translation");
   return kinds;
 }
+function postLibraryFacets(slug) {
+  const { data } = matter(
+    fs.readFileSync(path.join(process.cwd(), "source", "_posts", `${slug}.md`), "utf8")
+  );
+  return {
+    section: String(data.section || ""),
+    tags: Array.isArray(data.tags) ? data.tags.map(String) : [],
+  };
+}
+function sourceLibraryRecords() {
+  const directory = path.join(process.cwd(), "source", "_posts");
+  return fs.readdirSync(directory)
+    .filter((file) => file.endsWith(".md"))
+    .flatMap((file) => {
+      const { data } = matter(fs.readFileSync(path.join(directory, file), "utf8"));
+      if (data.draft === true) return [];
+      const slug = String(data.slug || path.basename(file, ".md"));
+      const section = String(data.section || "");
+      return [{
+        href: section === "multimedia" ? `/media/${slug}` : `/posts/${slug}`,
+        section,
+        tags: Array.isArray(data.tags) ? data.tags.map(String) : [],
+      }];
+    });
+}
 const productionOrigin = "https://un-canon.blog";
 const prohibitedBrand = "\u53cd\u6b63\u5178";
 const incorrectSimplifiedBrand = "西方负典";
@@ -480,6 +505,68 @@ assert.ok(coverKicker, "article cover must expose its compact return/date/durati
 assert.ok(links(coverKicker).some((link) => link.href === "/"), "article cover must link back home");
 assert.equal(tags(coverKicker, "time").length, 1, "article cover must expose one publication time");
 assert.match(visibleText(coverKicker), /返回首页.*分钟/, "article cover must keep return, date, and duration together");
+const articleFacets = postLibraryFacets("lih-lenin-disputed");
+const articleDocket = elements(article.html, "aside").find((aside) =>
+  /\bclass=["'][^"']*docket/.test(aside.opening)
+);
+assert.ok(articleDocket, "article cover must expose its section docket");
+const articleSectionLink = links(articleDocket.inner).find(
+  (link) => link.href === `/library?section=${encodeURIComponent(articleFacets.section)}`
+);
+assert.ok(articleSectionLink, "article section label must link to its library section filter");
+assert.equal(
+  articleSectionLink.text,
+  sectionLabels[articleFacets.section],
+  "article section link must contain only the section label, not its folio number"
+);
+const articleTagLine = elements(article.html, "nav").find((element) =>
+  /\bclass=["'][^"']*tagLine/.test(element.opening)
+);
+assert.ok(articleTagLine, "article cover must expose its tag list");
+const expectedArticleTagLinks = articleFacets.tags.map((tag) => ({
+  href: `/library?tag=${encodeURIComponent(tag)}`,
+  text: `#${tag}`,
+}));
+assert.deepEqual(
+  links(articleTagLine.inner).map(({ href, text }) => ({ href, text })),
+  expectedArticleTagLinks,
+  "article tags must map one-to-one to their library tag filters"
+);
+const articleFacetTargets = [
+  { label: "section", href: articleSectionLink.href },
+  ...expectedArticleTagLinks.map(({ href, text }) => ({ label: text, href })),
+];
+const libraryRecords = sourceLibraryRecords();
+const articleFacetLandings = await Promise.all(
+  articleFacetTargets.map(({ href }) => page(href))
+);
+for (const [index, landing] of articleFacetLandings.entries()) {
+  const target = articleFacetTargets[index];
+  assert.equal(landing.response.status, 200, `${target.label} library filter must resolve`);
+  assert.equal(normalizedPath(canonical(landing.html) || ""), "/library");
+  const activeFacet = links(landing.html).find((link) => link.href === target.href);
+  assert.ok(activeFacet, `${target.label} library filter must remain addressable`);
+  assert.equal(attribute(activeFacet.opening, "data-active"), "true");
+  assert.equal(attribute(activeFacet.opening, "aria-current"), "true");
+  const params = new URL(target.href, productionOrigin).searchParams;
+  const expectedResults = libraryRecords
+    .filter((record) =>
+      (!params.get("section") || record.section === params.get("section"))
+      && (!params.get("tag") || record.tags.includes(params.get("tag")))
+    )
+    .map((record) => record.href)
+    .sort();
+  const actualResults = [...new Set(
+    links(landing.html)
+      .map((link) => link.href)
+      .filter((href) => /^\/(?:posts|media)\//.test(href))
+  )].sort();
+  assert.deepEqual(
+    actualResults,
+    expectedResults,
+    `${target.label} library filter must return exactly its matching records`
+  );
+}
 const readingHeader = elements(article.html, "header").find((header) =>
   /aria-label=["']返回西方負典首页["']/.test(header.inner)
   && /<nav\b[^>]*aria-label=["']全站导航["']/.test(header.inner)
