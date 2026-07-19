@@ -22,7 +22,7 @@ export default function Footer() {
         <div className="foot-sign">
           <div className="foot-lockup">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img className="foot-logo" src="/img/logo.png" alt="" />
+            <img className="foot-logo" src="/img/logo.png" alt="" width={144} height={144} loading="lazy" decoding="async" />
             <b className="foot-brand">{site.brand}</b>
           </div>
           {buildTimestamp && <FooterBuildTimestamp {...buildTimestamp} />}
