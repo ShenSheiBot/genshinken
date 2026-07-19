@@ -1,7 +1,10 @@
 name: Quality
 
 on:
+  # Gate main directly and every PR; feature-branch pushes are covered by their PR,
+  # so this avoids the double run (push + pull_request) on same-repo branches.
   push:
+    branches: [main]
   pull_request:
 
 permissions:

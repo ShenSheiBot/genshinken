@@ -10,26 +10,35 @@ on:
       - "source/_books/**"
       - "source/_topics/**"
 
+# Least-privilege: this job only reads the repository to diff changed content.
+permissions:
+  contents: read
+
 jobs:
   submit:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 2
-
-      # 等 Vercel 构建上线，避免搜索引擎抢先抓到 404
-      - name: 等待部署完成
-        run: sleep 150
+          # Full history so a multi-commit push can diff github.event.before..sha.
+          fetch-depth: 0
 
       - name: 收集本次变更的公开内容
         run: |
-          git diff --name-only --diff-filter=AM HEAD^ HEAD -- \
+          BEFORE='${{ github.event.before }}'
+          # First push to the branch (before = all-zero) or missing base: fall back to HEAD^.
+          if ! git rev-parse --quiet --verify "$BEFORE^{commit}" >/dev/null 2>&1; then
+            BEFORE=$(git rev-parse --quiet --verify HEAD^ 2>/dev/null || git rev-parse HEAD)
+          fi
+          # A = added, M = modified, R = renamed (new path). Renamed-away / deleted
+          # URLs 404 naturally and get de-indexed; submitting them needs the old blob
+          # (the submitter reads files that must still exist), out of scope here.
+          git diff --name-only --diff-filter=AMR "$BEFORE" '${{ github.sha }}' -- \
             'source/_posts/*.md' \
             'source/_books/*.json' \
             'source/_topics/*.md' > changed.txt
           echo "变更清单："
           cat changed.txt
 
-      - name: 提交到 IndexNow
-        run: node scripts/indexnow-submit.mjs --list changed.txt
+      - name: 提交到 IndexNow（先轮询部署就绪，替代盲等 sleep）
+        run: node scripts/indexnow-submit.mjs --list changed.txt --verify

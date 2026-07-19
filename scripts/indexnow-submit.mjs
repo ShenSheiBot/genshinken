@@ -121,13 +121,51 @@ function collectFiles(args) {
     .filter((entry) => /\.(?:md|json)$/i.test(entry) && fs.existsSync(entry));
 }
 
-const files = collectFiles(process.argv.slice(2));
-const urls = new Set([`${SITE}/`]);
+const args = process.argv.slice(2);
+const verifyLive = args.includes("--verify");
+const files = collectFiles(args);
+
+// 首页与栏目索引恒存在，直接提交；文章/书籍/专题详情页则在 --verify 下先轮询
+// 部署就绪（HTTP 2xx/3xx）再提交，替代此前工作流里固定 sleep 的盲等，避免抢在
+// Vercel 部署完成前把尚未上线的 URL 交给搜索引擎（会抓到 404）。
+const alwaysUrls = new Set([`${SITE}/`]);
+const detailUrls = new Set();
 for (const file of files) {
   const target = publicUrl(file);
-  if (target?.url) urls.add(target.url);
-  if (target?.index) urls.add(target.index);
+  if (target?.url) detailUrls.add(target.url);
+  if (target?.index) alwaysUrls.add(target.index);
 }
+
+async function isLive(url) {
+  try {
+    const res = await fetch(url, { method: "GET", redirect: "manual" });
+    return res.status >= 200 && res.status < 400;
+  } catch {
+    return false;
+  }
+}
+
+async function waitLive(url, deadline) {
+  for (;;) {
+    if (await isLive(url)) return true;
+    if (Date.now() >= deadline) return false;
+    await new Promise((resolve) => setTimeout(resolve, 5000));
+  }
+}
+
+let liveDetailUrls = [...detailUrls];
+if (verifyLive && detailUrls.size > 0) {
+  const deadline = Date.now() + 300_000; // 最长等 5 分钟部署上线
+  const checked = await Promise.all(
+    [...detailUrls].map(async (url) => ({ url, ok: await waitLive(url, deadline) }))
+  );
+  liveDetailUrls = checked.filter((c) => c.ok).map((c) => c.url);
+  for (const c of checked) {
+    if (!c.ok) console.warn(`跳过：部署未就绪，暂不提交 ${c.url}`);
+  }
+}
+
+const urls = new Set([...alwaysUrls, ...liveDetailUrls]);
 
 if (urls.size <= 1 && files.length === 0) {
   console.log("变更清单为空，仅提交首页。");
