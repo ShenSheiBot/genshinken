@@ -984,25 +984,6 @@
 .sheetHeaderActions { display: flex; align-items: center; gap: 12px; }
 .sheetHeaderActions strong { font-family: var(--reader-interface-family); font-size: 10px; font-weight: 600; color: var(--accent); font-variant-numeric: tabular-nums; }
 .sheetHeaderActions > button { width: 36px; height: 36px; color: var(--ink); font-size: 25px; border: 1px solid var(--hair); }
-.sheetSiteNav {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  margin-bottom: 4px;
-  border: 1px solid var(--hair-strong);
-}
-.sheetSiteNav a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 42px;
-  color: var(--ink);
-  font-family: var(--reader-interface-family);
-  font-size: 13px;
-  font-weight: 700;
-}
-.sheetSiteNav a + a { border-left: 1px solid var(--hair-strong); }
-.sheetSiteNav a:hover,
-.sheetSiteNav a:focus-visible { color: var(--solid-ink); background: var(--solid); outline: none; }
 .referenceBack { min-height: 32px; padding: 0 10px; color: var(--ink); border: 1px solid var(--hair); font-family: var(--reader-interface-family); font-size: 9px; font-weight: 600; white-space: nowrap; }
 .referenceBack:hover,
 .referenceBack:focus-visible { color: var(--solid-ink); background: var(--solid); outline: none; }

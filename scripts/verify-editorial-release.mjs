@@ -60,6 +60,15 @@ const productionOrigin = "https://un-canon.blog";
 const prohibitedBrand = "\u53cd\u6b63\u5178";
 const incorrectSimplifiedBrand = "西方负典";
 const embeddedMediaTag = /<(?:iframe|video|audio|object|embed)\b/i;
+const readingChromeSource = fs.readFileSync(
+  path.join(process.cwd(), "app", "prototype", "reading", "[slug]", "ReadingPrototypeChrome.tsx"),
+  "utf8"
+);
+assert.equal(
+  (readingChromeSource.match(/GLOBAL_NAV_ITEMS\.map\s*\(/g) ?? []).length,
+  1,
+  "reader global navigation must render exactly once, in the reading header"
+);
 
 async function page(path) {
   const response = await fetch(`${base}${path}`, { redirect: "manual" });

@@ -824,9 +824,6 @@ export default function ReadingPrototypeChrome({
               </div>
             </header>
             {sheet === "toc" ? <>
-              <nav className={styles.sheetSiteNav} aria-label="全站导航">
-                {GLOBAL_NAV_ITEMS.map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}
-              </nav>
               {lineNavigator}
               {tocPanel}
             </> : sheet === "annotation" ? referencePane("annotation", true) : sheet === "source" ? referencePane("source", true) : (
