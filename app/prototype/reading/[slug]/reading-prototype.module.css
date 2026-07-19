@@ -9,7 +9,7 @@
   --reader-body-latin-family: "Times New Roman", Times, serif;
   --reader-title-family: "STZhongsong", "华文中宋", "Songti SC", "STSong", "华文宋体", "Noto Serif SC", serif;
   --reader-quote-family: "STFangsong", "华文仿宋", "FangSong", "FangSong_GB2312", "Noto Serif SC", serif;
-  --reader-quote-latin-family: "EB Garamond", Garamond, "Times New Roman", Times, serif;
+  --reader-quote-latin-family: var(--font-eb-garamond), Garamond, "Times New Roman", Times, serif;
   --reader-interface-family: "DengXian", "等线", "PingFang SC", "Microsoft YaHei", "Noto Sans SC", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   --reader-note-family: var(--reader-body-latin-family);
   min-height: 100vh;
@@ -1324,7 +1324,7 @@
   --reader-body-family: "STSong", "华文宋体", "Songti SC", "SimSun", "Noto Serif SC", serif;
   --reader-body-latin-family: "Times New Roman", Times, serif;
   --reader-quote-family: "STFangsong", "华文仿宋", "FangSong", "FangSong_GB2312", "Noto Serif SC", serif;
-  --reader-quote-latin-family: "EB Garamond", Garamond, "Times New Roman", Times, serif;
+  --reader-quote-latin-family: var(--font-eb-garamond), Garamond, "Times New Roman", Times, serif;
   --reader-interface-family: "DengXian", "等线", "PingFang SC", "Microsoft YaHei", "Noto Sans SC", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   --reader-note-family: var(--reader-body-latin-family);
 }

@@ -12,13 +12,13 @@
   --site-brand-size: 20px;
   --site-nav-size: 15px;
   --f-brand: "FOT Matisse Pro EB", "STSong", "华文宋体", "Songti SC", "SimSun", serif;
-  --f-grotesk: "Helvetica Neue", Helvetica, "PingFang SC", "Noto Sans SC", Arial, sans-serif;
-  --f-serif: "Newsreader", "Noto Serif SC", Georgia, serif;
-  --f-mono: "Space Mono", "Noto Sans SC", monospace;
+  --f-grotesk: "Helvetica Neue", Helvetica, "PingFang SC", "Microsoft YaHei", "微软雅黑", "Noto Sans SC", Arial, sans-serif;
+  --f-serif: var(--font-newsreader), "Songti SC", "STSong", "SimSun", "Noto Serif SC", Georgia, serif;
+  --f-mono: var(--font-space-mono), "PingFang SC", "Noto Sans SC", monospace;
   --f-cjk-serif: "STSong", "华文宋体", "Songti SC", "SimSun", "Noto Serif SC", serif;
   --f-cjk-fangsong: "STFangsong", "华文仿宋", "FangSong", "FangSong_GB2312", "Noto Serif SC", serif;
   --f-note: "Times New Roman", Times, var(--f-cjk-serif);
-  --f-quote-latin: "EB Garamond", Garamond, Georgia, serif;
+  --f-quote-latin: var(--font-eb-garamond), Garamond, Georgia, serif;
   --f-quote-cjk: var(--f-cjk-fangsong);
   --f-quote: var(--f-quote-latin), var(--f-quote-cjk);
   --maxw: 1280px;

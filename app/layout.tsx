@@ -1,7 +1,33 @@
 import type { Metadata } from "next";
+import { Newsreader, EB_Garamond, Space_Mono } from "next/font/google";
 import "./globals.css";
 import "./components/editorial-motion/EditorialMotion.css";
 import { site } from "@/lib/site";
+
+// Latin / Cyrillic / Greek 字体自托管（next/font：同源、自动预载、内联字体 CSS），
+// 取代此前渲染阻塞的第三方 Google Fonts <link>。含 cyrillic/greek 子集，保住
+// 俄语/希腊语引文在衬线与 Garamond 栈里的呈现。CJK 交给系统字体（见 globals.css
+// 字体栈），不再加载 Noto Serif/Sans SC 巨型网络字体——这是移动端 18s 卡顿的根因。
+const newsreader = Newsreader({
+  subsets: ["latin", "latin-ext"],
+  style: ["normal", "italic"],
+  display: "swap",
+  variable: "--font-newsreader",
+});
+const ebGaramond = EB_Garamond({
+  subsets: ["latin", "latin-ext", "cyrillic", "greek"],
+  style: ["normal", "italic"],
+  display: "swap",
+  variable: "--font-eb-garamond",
+});
+const spaceMono = Space_Mono({
+  subsets: ["latin", "latin-ext"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+  display: "swap",
+  variable: "--font-space-mono",
+});
+const fontVariables = `${newsreader.variable} ${ebGaramond.variable} ${spaceMono.variable}`;
 import TopBar from "./components/TopBar";
 import Footer from "./components/Footer";
 import { ArticleHeaderProvider } from "./components/ArticleHeader";
@@ -76,15 +102,9 @@ export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="zh" data-theme="light" suppressHydrationWarning>
+    <html lang="zh" data-theme="light" className={fontVariables} suppressHydrationWarning>
       <head>
         <meta name="darkreader-lock" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Noto+Serif+SC:wght@400;500;700;900&family=Noto+Sans+SC:wght@400;500;700;900&display=swap"
-          rel="stylesheet"
-        />
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <script dangerouslySetInnerHTML={{ __html: editorialRevealBootstrap }} />
         <script
