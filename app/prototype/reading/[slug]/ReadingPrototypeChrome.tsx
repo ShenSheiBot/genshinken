@@ -792,9 +792,8 @@ export default function ReadingPrototypeChrome({
       <header className={styles.runningHeader}>
         <Link href={isEdition ? "/" : "/prototype/poster"} className={styles.runningBrand} aria-label={`返回${site.brandCN}首页`}><i /><span className={styles.runningBrandName}>{site.brandCN}</span></Link>
         <nav className={styles.runningSections} aria-label="全站导航">
-          {GLOBAL_NAV_ITEMS.map((item, index) => (
+          {GLOBAL_NAV_ITEMS.map((item) => (
             <Link key={item.href} href={item.href} className={styles.runningSectionLink}>
-              <span aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
               <b>{item.label}</b>
             </Link>
           ))}

@@ -13,10 +13,9 @@ export const site = {
     "「西方負典」是一档关注历史、产业和文化的人文博客，希望为汉语读者提供基于观察视角的话题和内容。",
   /** 站点正式地址（用于 OpenGraph / sitemap） */
   url: "https://un-canon.blog",
-  license: "CC0 1.0",
   /** 浏览器标签页标题 */
   tabTitle: "西方負典的博客",
-  /** 页脚「关注」链接（沿用 un-canon.com，博客把「博客」换成「主页」） */
+  /** 「关注 / 联系」链接：About 页与站点级 JSON-LD 的 sameAs 使用（沿用 un-canon.com，博客把「博客」换成「主页」） */
   social: [
     { label: "主页", href: "https://un-canon.com/" },
     { label: "哔哩哔哩", href: "https://space.bilibili.com/323302694" },

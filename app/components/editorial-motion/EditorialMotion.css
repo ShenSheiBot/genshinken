@@ -1,5 +1,4 @@
 :root {
-  --editorial-motion-fast: 160ms;
   --editorial-motion-slow: 440ms;
   --editorial-motion-ease: cubic-bezier(.2, .75, .3, 1);
 }

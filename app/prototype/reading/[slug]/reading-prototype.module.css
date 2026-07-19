@@ -103,21 +103,10 @@
   white-space: nowrap;
 }
 
-.runningSectionLink span {
-  flex: none;
-  color: var(--ink-faint);
-  font-family: var(--f-mono);
-  font-size: 9px;
-  font-variant-numeric: tabular-nums;
-  letter-spacing: .06em;
-}
-
 .runningSectionLink[data-active="true"] {
   color: var(--accent);
   background: color-mix(in srgb, var(--accent) 7%, transparent);
 }
-
-.runningSectionLink[data-active="true"] span { color: currentColor; }
 
 .runningSectionLink:hover,
 .runningSectionLink:focus-visible {
@@ -125,9 +114,6 @@
   background: var(--solid);
   outline: none;
 }
-
-.runningSectionLink:hover span,
-.runningSectionLink:focus-visible span { color: var(--accent); }
 
 .runningSectionAll span {
   width: 15px;
@@ -1120,7 +1106,6 @@
 
   .runningHeader { grid-template-columns: minmax(220px, 1fr) max-content minmax(220px, 1fr); }
   .runningSectionLink b { font-size: var(--site-nav-size); }
-  .runningSectionLink span { font-size: 9px; }
 
   .articleIdentity b { font-size: 16px; }
   .articleIdentity p { font-size: 11px; }
@@ -1151,7 +1136,6 @@
     padding-inline: 24px;
   }
   .runningSectionLink { padding-inline: 10px; }
-  .runningSectionLink span { display: none; }
   .runningTools .compactTocButton {
     display: inline-flex;
     width: auto;

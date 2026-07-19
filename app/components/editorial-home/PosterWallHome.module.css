@@ -628,6 +628,14 @@
   background-color: var(--latest-bg);
 }
 
+/* 深色主题下：页面本身近黑（--bg #131311），默认「最新更新」暗带 #11110f 与之
+   几乎无差，暗带及其斜切过渡（.latestUpdatesTransition::before 用 --latest-bg）隐形。
+   加深暗带并补顶部发丝线，恢复暗带与接缝在深色下的可见性。 */
+html[data-theme="dark"] .latestUpdates:not([data-surface="paper"]) {
+  --latest-bg: #060605;
+  border-top: 1px solid var(--latest-hair);
+}
+
 .latestUpdates[data-surface="paper"] {
   --latest-bg: var(--bg);
   --latest-ink: var(--ink);

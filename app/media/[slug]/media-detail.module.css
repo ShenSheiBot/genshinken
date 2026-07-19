@@ -344,7 +344,8 @@
   font-size: 16px;
 }
 
-.noPlayerNote {
+.noPlayerNote,
+.noDestination {
   margin: 12px 0 0;
   font-family: var(--f-mono);
   font-size: 9px;
