@@ -12,9 +12,17 @@ function buildTimestamp(value = process.env.UN_CANON_BUILD_TIMESTAMP): string {
 // in constraining object/base/frame/default and pairing with the header set
 // below; the real XSS injection path is closed at the content gate (see
 // scripts/validate-content.mjs).
+const scriptSources = [
+  "'self'",
+  "'unsafe-inline'",
+  // Next's development runtime uses eval for React Refresh. Keep the
+  // exception out of production while allowing the local preview to hydrate.
+  ...(process.env.NODE_ENV === "development" ? ["'unsafe-eval'"] : []),
+].join(" ");
+
 const contentSecurityPolicy = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline'",
+  `script-src ${scriptSources}`,
   "style-src 'self' 'unsafe-inline'",
   "font-src 'self'",
   "img-src 'self' data: https:",
