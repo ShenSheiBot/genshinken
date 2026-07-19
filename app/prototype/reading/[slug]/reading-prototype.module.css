@@ -672,7 +672,18 @@
 
 .articleIdentity {
   min-width: 0;
-  padding: 0 0 8px;
+  padding: 5px 0 8px;
+}
+
+.dossierReading:has(.body > :global(h1:first-child)) .articleIdentity,
+.dossierReading:has(.body > :global(h2:first-child)) .articleIdentity,
+.dossierReading:has(.body > :global(h3:first-child)) .articleIdentity,
+.dossierReading:has(.body > :global(h4:first-child)) .articleIdentity {
+  padding-top: 20px;
+}
+
+.dossierReading:has(.body > :global(blockquote:first-child)) .articleIdentity {
+  padding-top: 11px;
 }
 
 .articleIdentity b {
