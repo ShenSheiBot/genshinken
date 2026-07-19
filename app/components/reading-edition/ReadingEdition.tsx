@@ -178,18 +178,6 @@ function ArticleFlow({ parts }: { parts: ArticleParts }) {
   );
 }
 
-function MobileInformation({ post }: { post: Post }) {
-  return (
-    <details className={styles.mobileInformation}>
-      <summary>本文信息 <span>展开署名与资料</span></summary>
-      <div className={styles.mobileInformationGrid}>
-        <MetaRows post={post} />
-        <SourceRecord post={post} />
-      </div>
-    </details>
-  );
-}
-
 function relatedPostsFor(current: Post, posts: PostSummary[]): PostSummary[] {
   const currentTags = new Set(current.tags.map((tag) => tag.normalize("NFKC").trim()));
 
@@ -309,7 +297,7 @@ export function ReadingDossier({
         <div className={styles.coverStory}>
           <div className={styles.coverKicker}>
             <Link href={isPublicEdition ? "/" : "/prototype/poster"}>← 返回首页</Link>
-            <span>{post.dateISO.replaceAll("-", ".")}</span>
+            <time dateTime={post.dateISO}>{post.dateISO.replaceAll("-", ".")}</time>
             <span>{post.readMin} 分钟</span>
           </div>
           <h1 className="art-title">{post.title}</h1>
@@ -320,7 +308,6 @@ export function ReadingDossier({
         </div>
 
         <SourceRecord post={post} />
-        <MobileInformation post={post} />
       </header>
 
       <section className={styles.dossierReading}>
@@ -362,7 +349,6 @@ export function ReadingFolio({ post, parts, posts }: { post: Post; parts: Articl
           <p>{post.excerpt}</p>
           <div><strong><CreditLine credits={displayCredits(post)} /></strong><span>约 {post.readMin} 分钟</span></div>
         </div>
-        <MobileInformation post={post} />
       </header>
 
       <section className={styles.folioReading}>

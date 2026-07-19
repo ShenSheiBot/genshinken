@@ -741,11 +741,14 @@
 .referenceScroller { min-height: 0; overflow-y: auto; overscroll-behavior: contain; scrollbar-gutter: stable; padding-right: 8px; }
 .referenceItem { border-bottom: 1px solid var(--hair); }
 .referenceSelect { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 7px; width: 100%; padding: 8px 2px; color: var(--ink-soft); text-align: left; }
-.referenceSelect > span { font-family: var(--reader-note-family); font-size: 10px; color: var(--accent); font-variant-numeric: lining-nums tabular-nums; }
+.referenceSelect > span { font-family: var(--reader-note-family); font-size: 10px; color: inherit; font-variant-numeric: lining-nums tabular-nums; }
+.referenceItem[data-active="true"] .referenceSelect,
+.referenceSelect:hover,
+.referenceSelect:focus-visible { color: var(--accent); }
+.referenceSelect:focus-visible { outline: 1px solid var(--accent); outline-offset: -1px; }
 /* 预览用 span（不是 p）：button 的内容模型是 phrasing，button>p 是非法嵌套。 */
 .referenceSelect > .referencePreview { display: -webkit-box; margin: 0; overflow: hidden; font-family: var(--reader-body-family); font-size: 11px; line-height: 1.5; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
 .referenceSelect > .referencePreview :global(.latin-run) { font-family: var(--reader-body-latin-family); }
-.referenceItem[data-active="true"] .referenceSelect > .referencePreview { color: var(--ink); font-weight: 700; }
 .referenceDetail { padding: 0 4px 12px 35px; font-family: var(--reader-body-family); font-size: 12px; line-height: 1.65; color: var(--ink-soft); }
 .referenceItem[data-active="true"] .referenceDetail { color: var(--ink); }
 .referenceDetail p { margin: 0 0 .65em; }
@@ -906,12 +909,6 @@
 .sheetProgress > span b { display: block; height: 100%; background: var(--accent); }
 
 /* -------------------------------------------------------------------------- */
-/* Mobile information                                                         */
-/* -------------------------------------------------------------------------- */
-
-.mobileInformation { display: none; }
-
-/* -------------------------------------------------------------------------- */
 /* Sheets and prototype switcher                                               */
 /* -------------------------------------------------------------------------- */
 
@@ -1067,15 +1064,6 @@
   .coverStory h1 { font-size: clamp(45px, 7vw, 62px); }
   .dossierCover > .sourceRecord { display: none; }
 
-  .mobileInformation { display: block; margin-top: 42px; border-top: 1px solid var(--hair-strong); border-bottom: 1px solid var(--hair-strong); }
-  .mobileInformation summary { display: flex; justify-content: space-between; align-items: center; min-height: 55px; cursor: pointer; list-style: none; font-family: var(--reader-interface-family); font-size: 14px; font-weight: 700; }
-  .mobileInformation summary::-webkit-details-marker { display: none; }
-  .mobileInformation summary::after { content: "+"; margin-left: 12px; font-family: var(--f-grotesk); font-size: 20px; font-weight: 400; }
-  .mobileInformation[open] summary::after { content: "−"; }
-  .mobileInformation summary span { margin-left: auto; font-family: var(--f-mono); font-size: 8px; font-weight: 400; letter-spacing: .05em; color: var(--ink-faint); }
-  .mobileInformationGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 38px; padding: 8px 0 28px; }
-  .mobileInformationGrid .sourceRecord { align-self: start; }
-
   .dossierReading,
   .folioReading { display: block; max-width: var(--reading-text); padding: 62px 0 0; }
   .articleFile,
@@ -1087,8 +1075,6 @@
   .folioTitleBlock { margin-top: 60px; }
   .folioIssue { left: -10px; }
   .folioLead { max-width: 720px; }
-  .folioCover .mobileInformation { max-width: 720px; margin-right: auto; margin-left: auto; }
-
   .sheet { width: min(430px, 88vw); }
   .sheet .tocPanel { max-height: calc(100dvh - 285px); }
   .sheet .tocViewport { max-height: none; }
@@ -1182,6 +1168,7 @@
   .dossierCover {
     max-width: none;
     padding: 34px 20px 38px;
+    border-bottom: 0;
   }
   .docket { grid-template-columns: max-content max-content 1fr; gap: 12px; padding-bottom: 16px; }
   .docketNumber { font-size: 32px; }
@@ -1191,18 +1178,15 @@
   .docket i { display: block; }
   .docket p { display: none; }
   .coverStory { padding-top: 34px; }
-  .coverKicker { gap: 10px 16px; margin-bottom: 23px; }
-  .coverKicker a { width: 100%; margin-bottom: 4px; border: 0; }
+  .coverKicker { flex-wrap: nowrap; gap: 10px 12px; margin-bottom: 23px; }
+  .coverKicker a { flex: none; width: auto; margin: 0 auto 0 0; border: 0; }
+  .coverKicker > time,
+  .coverKicker > span { flex: none; white-space: nowrap; }
   .coverStory h1 { font-size: clamp(35px, 10.7vw, 44px); line-height: 1.14; letter-spacing: -.025em; }
   .subtitle { margin-top: 16px; font-size: 20px; line-height: 1.48; }
   .dek { margin-top: 26px; font-size: 16px; line-height: 1.75; }
   .byline { margin-top: 24px; font-size: 15px; }
   .tagLine { flex-wrap: nowrap; margin-right: -20px; padding-right: 20px; overflow-x: auto; }
-
-  .mobileInformation { margin-top: 30px; }
-  .mobileInformationGrid { display: block; padding-bottom: 23px; }
-  .mobileInformationGrid .sourceRecord { margin-top: 22px; }
-  .mobileInformation summary span { display: none; }
 
   .dossierReading,
   .folioReading {
@@ -1272,8 +1256,6 @@
   .folioLead { display: block; margin-top: 36px; padding-top: 20px; }
   .folioLead > p { font-size: 16px; line-height: 1.74; }
   .folioLead > div { margin-top: 21px; padding: 17px 0 0; border-top: 1px solid var(--hair); border-left: 0; }
-  .folioCover .mobileInformation { margin-top: 28px; }
-
   .sheetLayer { align-items: flex-end; justify-content: stretch; }
   .sheet {
     width: 100%;
@@ -1359,8 +1341,7 @@
 @media print {
   .runningHeader,
   .deskRailSlot,
-  .prototypeSwitcher,
-  .mobileInformation { display: none !important; }
+  .prototypeSwitcher { display: none !important; }
   .root :global(.latestUpdates) { display: none !important; }
   .root { padding: 0; background: #fff; color: #000; }
   .dossierCover,

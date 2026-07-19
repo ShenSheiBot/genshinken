@@ -417,6 +417,14 @@ const articleLd = assertMetadata("article", article, "/posts/lih-lenin-disputed"
 assert.match(article.html, /reading-edition-page/);
 assert.match(article.html, /dateModified/);
 assert.match(article.html, /正文完/);
+assert.doesNotMatch(article.html, /本文信息|展开署名与资料/);
+const coverKicker = article.html.match(
+  /<div\b(?=[^>]*\bclass=["'][^"']*coverKicker)[^>]*>[\s\S]*?<\/div>/i
+)?.[0];
+assert.ok(coverKicker, "article cover must expose its compact return/date/duration row");
+assert.ok(links(coverKicker).some((link) => link.href === "/"), "article cover must link back home");
+assert.equal(tags(coverKicker, "time").length, 1, "article cover must expose one publication time");
+assert.match(visibleText(coverKicker), /返回首页.*分钟/, "article cover must keep return, date, and duration together");
 assert.match(article.html, /\/library\?contributor=wang-yu/);
 assert.doesNotMatch(article.html, /\/library\?contributor=wang-yu(?:&amp;|&)role=translator/);
 assert.doesNotMatch(article.html, /data-credit-role=["'](?:editor|proofreader)["']/);
