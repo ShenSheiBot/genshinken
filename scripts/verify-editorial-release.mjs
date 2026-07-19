@@ -1,6 +1,35 @@
 import assert from "node:assert/strict";
+import fs from "node:fs";
+import path from "node:path";
+import matter from "gray-matter";
 
 const base = (process.argv[2] || "http://localhost:3000").replace(/\/$/, "");
+
+// C3: 关键期望值从内容源（source/_topics、source/_books）派生，而非写死当前内容快照，
+// 使新增文章、调整策展顺序、增补 BibTeX 时，正确实现不再被误判为回归失败。
+const TOPIC_ITEM_PREFIX = { post: "/posts/", book: "/books/", media: "/media/" };
+function curatedTopicPaths(slug) {
+  const { data } = matter(
+    fs.readFileSync(path.join(process.cwd(), "source", "_topics", `${slug}.md`), "utf8")
+  );
+  const paths = [];
+  for (const group of data.groups ?? []) {
+    for (const item of group.items ?? []) {
+      const prefix = TOPIC_ITEM_PREFIX[item.type];
+      if (prefix && item.ref) paths.push(`${prefix}${item.ref}`);
+    }
+  }
+  return paths;
+}
+function bookCitationKinds(slug) {
+  const data = JSON.parse(
+    fs.readFileSync(path.join(process.cwd(), "source", "_books", `${slug}.json`), "utf8")
+  );
+  const kinds = [];
+  if (typeof data.originalBibtex === "string" && data.originalBibtex.trim()) kinds.push("original");
+  if (typeof data.translationBibtex === "string" && data.translationBibtex.trim()) kinds.push("translation");
+  return kinds;
+}
 const productionOrigin = "https://un-canon.blog";
 const prohibitedBrand = "\u53cd\u6b63\u5178";
 const incorrectSimplifiedBrand = "西方负典";
@@ -306,21 +335,8 @@ for (const card of latestCards) {
     "latest-update role marks must remain outside contributor links"
   );
 }
-const latestTranslation = latestCards.find((card) =>
-  card.outer.includes("苏联计划经济的历史审视")
-);
-assert.ok(latestTranslation, "the known translation must appear in latest updates");
-const latestTranslationCreditPaths = links(latestTranslation.outer).map((link) => link.href);
-for (const authorId of ["yuri-olsevich", "paul-gregory"]) {
-  assert.ok(
-    latestTranslationCreditPaths.includes(`/library?contributor=${authorId}`),
-    `translation latest-update card must link author ${authorId}`
-  );
-}
-assert.ok(
-  !latestTranslationCreditPaths.includes("/library?contributor=wang-kui"),
-  "translation latest-update cards must not show translator credits"
-);
+// 不再钉住某一具体译文标题（会随更新老化出最新六篇而误红）；每张最新更新卡片的
+// 署名链接结构由上面的通用循环（296-308）覆盖，此处不再做基于具体内容的断言。
 assert.doesNotMatch(home.html, /href=["']\/search(?:[?"'])/, "new navigation must not emit /search links");
 assert.doesNotMatch(home.html, /motion-prototype-switcher|ub_motion_prototype|LOCAL_MOTION_PROTOTYPE/);
 
@@ -366,20 +382,14 @@ for (const card of editorialCards) {
   );
 }
 
-const featuredTranslation = editorialCards.find((card) =>
-  card.section === "translation" && card.outer.includes("苏联计划经济的历史审视")
-);
-assert.ok(featuredTranslation, "the known translation recommendation must appear in the editorial wall");
-const translationCreditPaths = links(featuredTranslation.outer).map((link) => link.href);
-for (const authorId of ["yuri-olsevich", "paul-gregory"]) {
-  assert.ok(
-    translationCreditPaths.includes(`/library?contributor=${authorId}`),
-    `translation recommendation must link author ${authorId}`
-  );
-}
+// 泛化：不钉具体译文标题/作者 id（会随最新译介变化而误红）；只验证译介推荐卡的
+// 渲染规则——至少链接一位贡献者、且不显示「原作者/译者」标签字段。作者/译者角色
+// 区分的强校验放在按 slug 稳定寻址的书籍页与文章页，不受首页 recency 排序影响。
+const featuredTranslation = editorialCards.find((card) => card.section === "translation");
+assert.ok(featuredTranslation, "the editorial wall must include a translation recommendation");
 assert.ok(
-  !translationCreditPaths.includes("/library?contributor=wang-kui"),
-  "translation recommendations must not show translator credits"
+  links(featuredTranslation.outer).some((link) => link.href.startsWith("/library?contributor=")),
+  "translation recommendation must link at least one contributor"
 );
 assert.doesNotMatch(
   visibleText(featuredTranslation.outer),
@@ -487,18 +497,15 @@ const topicLd = assertMetadata(
 assert.match(topic.html, /从这里开始/);
 assert.match(topic.html, /会议与制度边界/);
 assert.match(topic.html, /世界市场与计划实践/);
-assert.equal(topicLd.hasPart?.length, 3, "topic JSON-LD must preserve its three curated items");
+const curatedTopicItems = curatedTopicPaths("soviet-union-and-bretton-woods");
+assert.ok(curatedTopicItems.length > 0, "curated topic source must declare at least one item");
 for (const item of topicLd.hasPart ?? []) {
   assert.match(item.url, /^https:\/\//, "topic item JSON-LD URLs must be absolute");
 }
 assert.deepEqual(
-  topicLd.hasPart.map((item) => normalizedPath(item.url)),
-  [
-    "/posts/pechatnov-soviet-union-bretton-woods",
-    "/posts/goliath-the-preschooler",
-    "/posts/olsevich-gregory-soviet-planned-economy-retrospective",
-  ],
-  "topic JSON-LD must preserve the hand-curated reading order"
+  (topicLd.hasPart ?? []).map((item) => normalizedPath(item.url)),
+  curatedTopicItems,
+  "topic JSON-LD must render the source-curated items in their authored order"
 );
 
 const booksLd = assertMetadata("books index", books, "/books", "CollectionPage");
@@ -516,9 +523,9 @@ const citationCards = elements(book.html, "article")
   .map((card) => ({ ...card, kind: attribute(card.opening, "data-citation") }))
   .filter((card) => card.kind);
 assert.deepEqual(
-  citationCards.map((card) => card.kind),
-  ["translation"],
-  "book page must only show the BibTeX records actually provided"
+  citationCards.map((card) => card.kind).sort(),
+  bookCitationKinds("soviet-planned-economy-retrospective").sort(),
+  "book page must render exactly the BibTeX kinds declared in the source manifest"
 );
 const translationCitation = citationCards.find((card) => card.kind === "translation");
 assert.ok(translationCitation, "the published translation BibTeX must have a compact citation row");
