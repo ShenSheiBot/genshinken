@@ -69,6 +69,16 @@ assert.equal(
   1,
   "reader global navigation must render exactly once, in the reading header"
 );
+assert.doesNotMatch(
+  readingChromeSource,
+  /<span className=\{styles\.eyebrow\}>\u7f72\u540d<\/span>/,
+  "reader desktop credits must omit the redundant visible attribution heading"
+);
+assert.match(
+  readingChromeSource,
+  /\{articleIdentity\}\{compactCredits\}\{currentChapter\}\{lineNavigator\}\{tocPanel\}/,
+  "reader desktop rail must place credits before the current chapter"
+);
 
 async function page(path) {
   const response = await fetch(`${base}${path}`, { redirect: "manual" });

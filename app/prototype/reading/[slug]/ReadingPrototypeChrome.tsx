@@ -1,7 +1,7 @@
 "use client";
 
 // THROWAWAY READING PROTOTYPE — dossier desk, visual-line navigation and compact reading drawers.
-import type { FormEvent, MouseEvent as ReactMouseEvent } from "react";
+import type { FormEvent, MouseEvent as ReactMouseEvent, PointerEvent as ReactPointerEvent } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
@@ -89,12 +89,6 @@ function ancestorIds(nodes: TocNode[], target: string, trail: string[] = []): st
     if (found.length > 0) return found;
   }
   return [];
-}
-
-function roleLabel(mark: string): string {
-  if (mark === "作") return "作者";
-  if (mark === "译") return "译者";
-  return mark;
 }
 
 function lineOwners(body: HTMLElement): Array<[HTMLElement, Text[]]> {
@@ -247,6 +241,12 @@ export default function ReadingPrototypeChrome({
   const lastSheetTrigger = useRef<HTMLElement | null>(null);
   const sheetCloseRef = useRef<HTMLButtonElement | null>(null);
   const sheetRef = useRef<HTMLElement | null>(null);
+  const directReferencePositionRef = useRef<{
+    button: HTMLButtonElement;
+    scrollTop: number;
+    pageX: number;
+    pageY: number;
+  } | null>(null);
 
   const tocTree = useMemo(() => buildTocTree(toc), [toc]);
   const currentSection = useMemo(
@@ -438,14 +438,15 @@ export default function ReadingPrototypeChrome({
       const node = scope?.querySelector<HTMLElement>(`[data-reference-kind="${kind}"][data-reference-id="${CSS.escape(id)}"]`);
       const scroller = node?.parentElement;
       if (!node || !scroller) return;
-      const itemRect = node.getBoundingClientRect();
+      const disclosure = node.querySelector<HTMLElement>(":scope > button") ?? node;
+      const itemRect = disclosure.getBoundingClientRect();
       const scrollerRect = scroller.getBoundingClientRect();
       if (itemRect.top < scrollerRect.top) scroller.scrollTop += itemRect.top - scrollerRect.top;
       else if (itemRect.bottom > scrollerRect.bottom) scroller.scrollTop += itemRect.bottom - scrollerRect.bottom;
     }));
   }, []);
 
-  const selectReference = useCallback((kind: ReferenceKind, id: string, surface: ReferenceSurface = "desk") => {
+  const selectReference = useCallback((kind: ReferenceKind, id: string, surface: ReferenceSurface = "desk", ensureVisible = true) => {
     if (kind === "annotation") setActiveAnnotationId(id);
     else setActiveSourceId(id);
     history.replaceState(
@@ -453,8 +454,45 @@ export default function ReadingPrototypeChrome({
       "",
       `${window.location.pathname}${window.location.search}#${encodeURIComponent(id)}`
     );
-    scrollReferenceIntoView(surface, kind, id);
+    if (ensureVisible) scrollReferenceIntoView(surface, kind, id);
   }, [scrollReferenceIntoView]);
+
+  const rememberDirectReferencePosition = useCallback((event: ReactPointerEvent<HTMLButtonElement>) => {
+    const scroller = event.currentTarget.parentElement?.parentElement;
+    if (!scroller) return;
+    directReferencePositionRef.current = {
+      button: event.currentTarget,
+      scrollTop: scroller.scrollTop,
+      pageX: window.scrollX,
+      pageY: window.scrollY,
+    };
+  }, []);
+
+  const selectDirectReference = useCallback((
+    event: ReactMouseEvent<HTMLButtonElement>,
+    kind: ReferenceKind,
+    id: string,
+    surface: ReferenceSurface
+  ) => {
+    const scroller = event.currentTarget.parentElement?.parentElement;
+    const remembered = directReferencePositionRef.current;
+    const position = scroller && remembered?.button === event.currentTarget
+      ? remembered
+      : scroller
+        ? { button: event.currentTarget, scrollTop: scroller.scrollTop, pageX: window.scrollX, pageY: window.scrollY }
+        : null;
+    directReferencePositionRef.current = null;
+
+    selectReference(kind, id, surface, false);
+    if (!position) return;
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      const scope = surface === "sheet" ? sheetRef.current : document.getElementById("reading-right-rail");
+      const currentItem = scope?.querySelector<HTMLElement>(`[data-reference-kind="${kind}"][data-reference-id="${CSS.escape(id)}"]`);
+      const currentScroller = currentItem?.parentElement;
+      if (currentScroller) currentScroller.scrollTop = position.scrollTop;
+      window.scrollTo(position.pageX, position.pageY);
+    }));
+  }, [selectReference]);
 
   useEffect(() => {
     const hash = decodeURIComponent(window.location.hash.slice(1));
@@ -701,16 +739,27 @@ export default function ReadingPrototypeChrome({
   );
 
   const compactCredits = (
-    <section className={styles.compactCredits}>
-      <span className={styles.eyebrow}>署名</span>
+    <section className={styles.compactCredits} aria-label="署名">
       <dl>
         {credits.length > 0 ? credits.map((credit) => (
           <div key={`${credit.role}-${credit.contributorId}`}>
-            <dt>{roleLabel(credit.mark)}</dt>
+            <dt>
+              <span
+                className={styles.creditMark}
+                data-solid={credit.solid ? "true" : "false"}
+                role="img"
+                aria-label={credit.role === "author" ? "作者" : "译者"}
+              >
+                {credit.mark}
+              </span>
+            </dt>
             <dd><CreditLinks credits={[credit]} showMarks={false} /></dd>
           </div>
         )) : (
-          <div><dt>作者</dt><dd>{fallbackAuthor || `${site.brandCN}编辑部`}</dd></div>
+          <div>
+            <dt><span className={styles.creditMark} data-solid="true" role="img" aria-label="作者">作</span></dt>
+            <dd>{fallbackAuthor || `${site.brandCN}编辑部`}</dd>
+          </div>
         )}
       </dl>
     </section>
@@ -728,7 +777,7 @@ export default function ReadingPrototypeChrome({
             const selected = item.id === active;
             return (
               <article id={`reading-reference-${kind}-${item.index}`} key={item.id} className={styles.referenceItem} data-reference-kind={kind} data-reference-id={item.id} data-active={selected ? "true" : "false"}>
-                <button type="button" className={styles.referenceSelect} aria-expanded={selected} aria-current={selected ? "true" : undefined} onClick={() => selectReference(kind, item.id, compact ? "sheet" : "desk")}><span>{item.label}</span>{!selected && <span className={styles.referencePreview} dangerouslySetInnerHTML={{ __html: item.previewHtml }} />}</button>
+                <button type="button" className={styles.referenceSelect} aria-expanded={selected} aria-current={selected ? "true" : undefined} onPointerDown={rememberDirectReferencePosition} onPointerCancel={() => { directReferencePositionRef.current = null; }} onClick={(event) => selectDirectReference(event, kind, item.id, compact ? "sheet" : "desk")}><span>{item.label}</span>{!selected && <span className={styles.referencePreview} dangerouslySetInnerHTML={{ __html: item.previewHtml }} />}</button>
                 {selected && <div className={styles.referenceDetail} dangerouslySetInnerHTML={{ __html: item.html }} />}
               </article>
             );
@@ -740,14 +789,18 @@ export default function ReadingPrototypeChrome({
   };
 
   const articleIdentity = (
-    <section className={styles.articleIdentity} aria-live="polite">
+    <section className={styles.articleIdentity}>
       <span className={styles.eyebrow}>当前阅读</span>
       <b title={title}>{title}</b>
+    </section>
+  );
+  const currentChapter = (
+    <section className={styles.currentChapter} aria-live="polite" aria-atomic="true">
       <span className={styles.currentSectionLabel}>当前章节</span>
       <p>{currentSection}</p>
     </section>
   );
-  const leftDesk = <div className={styles.leftDeskRail}>{articleIdentity}{compactCredits}{lineNavigator}{tocPanel}</div>;
+  const leftDesk = <div className={styles.leftDeskRail}>{articleIdentity}{compactCredits}{currentChapter}{lineNavigator}{tocPanel}</div>;
   const referencePaneCount = Number(annotations.length > 0) + Number(sources.length > 0);
   const rightDesk = referencePaneCount > 0 ? (
     <div className={styles.referenceRail} data-count={referencePaneCount}>
