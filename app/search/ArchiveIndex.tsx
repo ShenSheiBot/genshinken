@@ -117,10 +117,6 @@ export default function ArchiveIndex({
   return (
     <main id="main" tabIndex={-1} className={styles.page} data-archive-page="true" data-reveal-zone="archive">
       <header className={styles.hero} data-reveal>
-        <div className={styles.kicker}>
-          <b>02</b>
-          <span>文库</span>
-        </div>
         <div className={styles.heading}>
           <h1>文库</h1>
         </div>

@@ -16,26 +16,7 @@
   border-bottom: 1px solid var(--hair-strong);
 }
 
-.kicker {
-  align-self: start;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: var(--ink-soft);
-  font-family: var(--f-mono);
-  font-size: 9px;
-  letter-spacing: .1em;
-}
-
-.kicker b {
-  display: grid;
-  width: 25px;
-  height: 25px;
-  place-items: center;
-  color: var(--solid-ink);
-  background: var(--accent);
-  font-size: 9px;
-}
+.heading { grid-column: 2; }
 
 .hero h1 {
   margin: 0;
@@ -55,6 +36,7 @@
 }
 
 .count {
+  grid-column: 3;
   display: flex;
   align-items: baseline;
   gap: 9px;
@@ -392,22 +374,18 @@
 @media (max-width: 680px) {
   .hero {
     grid-template-columns: minmax(0, 1fr) auto;
-    grid-template-areas:
-      "kicker kicker"
-      "heading count";
+    grid-template-areas: "heading count";
     min-height: 0;
     column-gap: 12px;
     row-gap: 0;
     padding: 32px 20px 27px;
   }
-  .kicker { grid-area: kicker; }
-  .heading { grid-area: heading; min-width: 0; margin-top: 34px; }
+  .heading { grid-area: heading; min-width: 0; }
   .hero h1 { font-size: clamp(52px, 16vw, 72px); white-space: nowrap; }
   .count {
     grid-area: count;
     align-self: end;
     gap: 6px;
-    margin-top: 34px;
     white-space: nowrap;
   }
   .count strong { font-size: clamp(24px, 7.2vw, 30px); }
