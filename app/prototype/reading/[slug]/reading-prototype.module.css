@@ -35,18 +35,23 @@
 /* -------------------------------------------------------------------------- */
 
 .runningHeader {
+  --running-header-inline: max(
+    var(--site-header-inline),
+    calc((100% - var(--maxw)) / 2 + var(--site-header-inline))
+  );
+
   position: fixed;
   inset: 0 0 auto;
   z-index: 90;
   display: grid;
-  grid-template-columns: minmax(220px, 1fr) max-content minmax(220px, 1fr);
+  grid-template-columns: max-content minmax(0, 1fr) max-content;
   align-items: center;
   gap: 24px;
   min-height: var(--site-header-height);
-  padding: 0 var(--site-header-inline);
+  padding: 0 var(--running-header-inline);
   color: var(--ink);
   background: var(--bg);
-  border-bottom: 1px solid var(--hair-strong);
+  border-bottom: 1px solid transparent;
 }
 
 .runningBrand {
@@ -76,6 +81,7 @@
 
 .runningSections {
   display: flex;
+  justify-self: start;
   align-items: stretch;
   height: calc(var(--site-header-height) - 1px);
   width: max-content;
@@ -147,10 +153,20 @@
   outline: none;
 }
 
+.topRule {
+  position: absolute;
+  right: var(--running-header-inline);
+  bottom: -1px;
+  left: var(--running-header-inline);
+  height: 1px;
+  pointer-events: none;
+  background: var(--hair-strong);
+}
+
 .topProgress {
   position: absolute;
+  bottom: 0;
   left: 0;
-  bottom: -1px;
   height: 2px;
   max-width: 100%;
   background: var(--accent);
@@ -1043,8 +1059,6 @@
   .root { --reading-text: min(680px, calc(100vw - 64px)); }
 
   .runningHeader { grid-template-columns: max-content minmax(0, 1fr) max-content; }
-  .runningBrand { padding-right: 22px; }
-  .runningSections { width: 100%; }
 
   .dossierRoot { background-image: none; }
   .dossierCover {
@@ -1089,7 +1103,6 @@
     --reading-text: calc(var(--reading-wide) - var(--reading-left) - var(--reading-right) - var(--reading-gap) * 2);
   }
 
-  .runningHeader { grid-template-columns: minmax(220px, 1fr) max-content minmax(220px, 1fr); }
   .runningSectionLink b { font-size: var(--site-nav-size); }
 
   .articleIdentity b { font-size: 16px; }
@@ -1118,7 +1131,6 @@
   .runningHeader {
     grid-template-columns: max-content minmax(0, 1fr) max-content;
     gap: 16px;
-    padding-inline: 24px;
   }
   .runningSectionLink { padding-inline: 10px; }
   .runningTools .compactTocButton {
@@ -1141,6 +1153,8 @@
   }
 
   .runningHeader {
+    --running-header-inline: 16px;
+
     grid-template-columns: max-content minmax(0, 1fr) max-content;
     min-height: 52px;
     padding: 0 16px;

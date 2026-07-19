@@ -425,6 +425,27 @@ assert.ok(coverKicker, "article cover must expose its compact return/date/durati
 assert.ok(links(coverKicker).some((link) => link.href === "/"), "article cover must link back home");
 assert.equal(tags(coverKicker, "time").length, 1, "article cover must expose one publication time");
 assert.match(visibleText(coverKicker), /返回首页.*分钟/, "article cover must keep return, date, and duration together");
+const readingHeader = elements(article.html, "header").find((header) =>
+  /aria-label=["']返回西方負典首页["']/.test(header.inner)
+  && /<nav\b[^>]*aria-label=["']全站导航["']/.test(header.inner)
+);
+assert.ok(readingHeader, "article must expose its reading header with a home link and global navigation");
+const readingNavigation = elements(readingHeader.inner, "nav").find(
+  (nav) => attribute(nav.opening, "aria-label") === "全站导航"
+);
+assert.ok(readingNavigation, "article reading header must expose the global navigation");
+const readingNavigationLinks = links(readingNavigation.inner);
+assert.deepEqual(
+  readingNavigationLinks.map((link) => link.href),
+  expectedNavigation.map(([path]) => path),
+  "article navigation order must be 专题, 连载, 文库, 关于"
+);
+expectedNavigation.forEach(([, label], index) => {
+  assert.ok(
+    readingNavigationLinks[index].text.endsWith(label),
+    `article navigation item ${index + 1} must be labelled ${label}`
+  );
+});
 assert.match(article.html, /\/library\?contributor=wang-yu/);
 assert.doesNotMatch(article.html, /\/library\?contributor=wang-yu(?:&amp;|&)role=translator/);
 assert.doesNotMatch(article.html, /data-credit-role=["'](?:editor|proofreader)["']/);

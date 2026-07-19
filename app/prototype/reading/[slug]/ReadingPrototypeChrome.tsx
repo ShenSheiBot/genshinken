@@ -804,7 +804,9 @@ export default function ReadingPrototypeChrome({
           <button type="button" onClick={(event) => openSheet("settings", event.currentTarget)} aria-label="阅读设置">字</button>
           <button className={styles.themeButton} type="button" onClick={toggleTheme} aria-label="切换明暗主题">{dark ? "☾" : "☼"}</button>
         </div>
-        <span className={styles.topProgress} style={{ width: `${pct}%` }} />
+        <span className={styles.topRule} aria-hidden="true">
+          <span className={styles.topProgress} style={{ width: `${pct}%` }} />
+        </span>
       </header>
 
       {sheet && (
