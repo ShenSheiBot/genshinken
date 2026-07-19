@@ -455,15 +455,15 @@
   grid-template-columns: var(--reading-left) var(--reading-text) var(--reading-right);
   gap: var(--reading-gap);
   max-width: var(--reading-wide);
-  min-height: min(620px, calc(100vh - 58px));
+  min-height: 0;
   margin: 0 auto;
-  padding: 48px 0 40px;
+  padding: 48px 0 0;
 }
 
 .docket {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
+  min-height: 0;
   padding: 6px 28px 0 0;
   border-right: 1px solid var(--hair-strong);
 }
@@ -483,7 +483,7 @@
 .docket i { width: 100%; height: 1px; margin: 24px 0; background: var(--hair); }
 .docket p { margin: auto 0 0; font-family: var(--f-mono); font-size: 10px; line-height: 1.75; letter-spacing: .1em; color: var(--ink-faint); }
 
-.coverStory { align-self: center; min-width: 0; padding: 10px 0; }
+.coverStory { align-self: end; min-width: 0; padding: 50px 0 0; }
 
 .coverKicker {
   display: flex;
@@ -1096,7 +1096,7 @@
     display: block;
     max-width: 760px;
     min-height: 0;
-    padding: 66px 40px 52px;
+    padding: 66px 40px 20px;
   }
   .docket { display: grid; grid-template-columns: max-content max-content 1fr max-content; align-items: center; gap: 18px; min-height: 0; padding: 0 0 22px; border-right: 0; border-bottom: 1px solid var(--hair-strong); }
   .docketNumber { font-size: 44px; }
@@ -1108,7 +1108,7 @@
   .coverStory h1 { font-size: clamp(45px, 7vw, 62px); }
   .dossierCover > .sourceRecord { display: none; }
 
-  .dossierReading,
+  .dossierReading { display: block; max-width: var(--reading-text); padding: 34px 0 0; }
   .folioReading { display: block; max-width: var(--reading-text); padding: 62px 0 0; }
   .articleFile,
   .folioMargin,
@@ -1211,7 +1211,7 @@
 
   .dossierCover {
     max-width: none;
-    padding: 24px 20px 32px;
+    padding: 24px 20px 6px;
     border-bottom: 0;
   }
   .docket { grid-template-columns: max-content max-content 1fr; gap: 12px; padding-bottom: 0; border-bottom: 0; }
@@ -1232,11 +1232,11 @@
   .byline { margin-top: 24px; font-size: 15px; }
   .tagLine { flex-wrap: nowrap; margin-right: -20px; padding-right: 20px; overflow-x: auto; }
 
-  .dossierReading,
-  .folioReading {
+  .dossierReading {
     width: var(--reading-text);
-    padding-top: 44px;
+    padding-top: 10px;
   }
+  .folioReading { width: var(--reading-text); padding-top: 44px; }
   .dossierReading {
     position: relative;
     inset-inline-start: 4px;
@@ -1392,6 +1392,7 @@
   .folioCover { display: block; min-height: 0; padding: 0 0 30px; }
   .docket,
   .dossierCover > .sourceRecord { display: none; }
+  .coverStory { padding: 0; }
   .dossierReading,
   .folioReading { display: block; max-width: 680px; padding: 30px 0 0; }
   .appendices details { break-inside: auto; }

@@ -1063,37 +1063,66 @@ html[data-theme="dark"] .latestUpdates:not([data-surface="paper"]) {
   }
 
   .tile {
-    min-height: 340px;
+    --mobile-art-height: 340px;
+
+    min-height: 0;
   }
 
   .leadWide {
-    min-height: 430px;
+    --mobile-art-height: 430px;
   }
 
   .leadNarrow {
-    min-height: 390px;
+    --mobile-art-height: 390px;
   }
 
   .featureWide {
-    min-height: 370px;
+    --mobile-art-height: 370px;
   }
 
   .featureNarrow {
-    min-height: 350px;
+    --mobile-art-height: 350px;
   }
 
   .thirdStandard {
-    min-height: 360px;
+    --mobile-art-height: 360px;
   }
 
   .thirdCompact {
-    min-height: 310px;
+    --mobile-art-height: 310px;
   }
 
   .card {
+    grid-template-rows: auto auto auto auto;
     height: auto;
-    min-height: inherit;
+    min-height: 0;
     padding: 16px 18px;
+  }
+
+  .tile .generatedCover {
+    inset: 0 0 auto;
+    height: var(--mobile-art-height);
+  }
+
+  .tile .cardBody {
+    align-self: start;
+    padding: 18px 0 12px;
+  }
+
+  .tile .creditLine,
+  .tile .excerpt {
+    margin-top: 10px;
+  }
+
+  .tile .excerpt {
+    display: block;
+    overflow: visible;
+    line-height: 1.5;
+    -webkit-line-clamp: unset;
+  }
+
+  .tile .cardFooter {
+    padding-top: 10px;
   }
 
   .postTitle,
