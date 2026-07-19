@@ -1095,6 +1095,41 @@
     margin-inline-start: var(--reading-canvas-start);
     margin-inline-end: 0;
   }
+
+  .docket {
+    display: grid;
+    grid-template-columns: max-content max-content minmax(0, 1fr);
+    grid-template-rows: max-content minmax(0, 1fr) max-content;
+    align-items: end;
+    column-gap: 4px;
+    padding: 6px 0 0;
+  }
+  .docketNumber {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: end;
+    justify-self: start;
+    font-size: 82px;
+  }
+  .docket > div {
+    grid-column: 1;
+    grid-row: 1;
+    display: block;
+    align-self: end;
+    margin: 0;
+  }
+  .docket > div b {
+    display: block;
+    font-size: 30px;
+    line-height: 1;
+  }
+  .docket i { display: none; }
+  .docket p {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    align-self: end;
+    margin: 0;
+  }
 }
 
 @media (max-width: 1023px) {
@@ -1109,11 +1144,11 @@
     min-height: 0;
     padding: 66px 40px 20px;
   }
-  .docket { display: grid; grid-template-columns: max-content max-content 1fr max-content; align-items: center; gap: 18px; min-height: 0; padding: 0 0 22px; border-right: 0; border-bottom: 1px solid var(--hair-strong); }
+  .docket { display: grid; grid-template-columns: max-content max-content 1fr; align-items: center; gap: 18px; min-height: 0; padding: 0 0 22px; border-right: 0; border-bottom: 1px solid var(--hair-strong); }
   .docketNumber { font-size: 44px; }
   .docket > div { margin: 0; }
   .docket > div b { font-size: 22px; }
-  .docket i { width: auto; margin: 0; }
+  .docket i { display: none; }
   .docket p { margin: 0; text-align: right; }
   .coverStory { padding: 48px 0 0; }
   .coverStory h1 { font-size: clamp(45px, 7vw, 62px); }
@@ -1146,6 +1181,9 @@
   }
 
   .runningSectionLink b { font-size: var(--site-nav-size); }
+
+  .docketNumber { font-size: clamp(56px, 5.5vw, 82px); }
+  .docket > div b { font-size: clamp(22px, 2.2vw, 30px); }
 
   .articleIdentity b { font-size: 16px; }
   .currentChapter p { font-size: 11px; }
@@ -1230,7 +1268,6 @@
   .docket > div { gap: 7px; }
   .docket > div b { font-size: 19px; }
   .docket > div small { font-size: 8px; }
-  .docket i { display: block; }
   .docket p { display: none; }
   .coverStory { padding-top: 24px; }
   .coverKicker { flex-wrap: nowrap; gap: 8px 12px; margin-bottom: 18px; }

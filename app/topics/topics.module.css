@@ -1,4 +1,5 @@
 .page {
+  --topic-main-width: min(calc(100% - 80px), calc(var(--maxw) - 80px));
   width: 100%;
   color: var(--ink);
   background: var(--bg);
@@ -10,7 +11,7 @@
 .topicHeader,
 .introduction,
 .groups {
-  width: min(100%, var(--maxw));
+  width: var(--topic-main-width);
   margin-inline: auto;
 }
 
@@ -45,7 +46,7 @@
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: end;
   gap: 40px;
-  padding: 48px 40px 32px;
+  padding: 48px 0 32px;
   border-bottom: 2px solid var(--hair-strong);
 }
 
@@ -92,9 +93,7 @@
   letter-spacing: -.06em;
 }
 
-.topicIndex {
-  padding: 0 40px 72px;
-}
+.topicIndex { padding: 0 0 72px; }
 
 .topicList {
   margin: 0;
@@ -225,7 +224,7 @@
   min-height: 42px;
   align-items: center;
   gap: 9px;
-  padding: 0 40px;
+  padding: 0;
   border-bottom: 1px solid var(--hair);
   color: var(--ink-soft);
   font-size: 9px;
@@ -248,7 +247,7 @@
   display: grid;
   grid-template-columns: minmax(0, 1fr) 260px;
   gap: clamp(44px, 7vw, 88px);
-  padding: 38px 40px 42px;
+  padding: 38px 0 42px;
   border-bottom: 2px solid var(--hair-strong);
 }
 
@@ -307,7 +306,7 @@
   grid-template-columns: 132px minmax(0, 760px);
   justify-content: center;
   gap: 48px;
-  padding: 34px 40px 38px;
+  padding: 34px 0 38px;
   border-bottom: 1px solid var(--hair);
 }
 
@@ -329,9 +328,7 @@
 .introduction > div p { margin: 0 0 .85em; }
 .introduction > div p:last-child { margin-bottom: 0; }
 
-.groups {
-  padding: 8px 40px 76px;
-}
+.groups { padding: 8px 0 76px; }
 
 .group { padding-top: 34px; }
 .group + .group { margin-top: 16px; }
@@ -463,14 +460,15 @@
 }
 
 @media (max-width: 680px) {
+  .page { --topic-main-width: min(calc(100% - 40px), calc(var(--maxw) - 40px)); }
   .indexHeader {
-    padding: 36px 20px 26px;
+    padding: 36px 0 26px;
   }
 
   .indexHeader h1 { font-size: clamp(54px, 18vw, 70px); }
   .indexStats dd { font-size: 32px; }
 
-  .topicIndex { padding: 0 20px 54px; }
+  .topicIndex { padding: 0 0 54px; }
   .topicRow { display: block; padding: 24px 0 26px; }
   .topicRowMeta { display: flex; justify-content: space-between; margin-bottom: 18px; }
   .topicRowMain h3 { font-size: 32px; }
@@ -479,8 +477,8 @@
   .topicRowFacts > div { min-width: 52px; }
   .topicRowLink { justify-content: flex-start; margin-top: 18px; }
 
-  .breadcrumb { padding: 0 20px; }
-  .topicHeader { display: block; padding: 30px 20px 32px; }
+  .breadcrumb { padding: 0; }
+  .topicHeader { display: block; padding: 30px 0 32px; }
   .topicIdentity h1 { font-size: clamp(40px, 12vw, 50px); }
   .topicSubtitle { font-size: 16px; }
   .topicSummary { margin-top: 18px; font-size: 14px; }
@@ -495,11 +493,11 @@
   }
   .topicFacts > div { grid-template-columns: 46px minmax(0, 1fr); }
 
-  .introduction { display: block; padding: 28px 20px 32px; }
+  .introduction { display: block; padding: 28px 0 32px; }
   .introduction > h2 { margin-bottom: 16px; }
   .introduction > div { font-size: 15px; }
 
-  .groups { padding: 0 20px 58px; }
+  .groups { padding: 0 0 58px; }
   .group { padding-top: 30px; }
   .group + .group { margin-top: 10px; }
   .groupHeader { display: block; padding-bottom: 16px; }

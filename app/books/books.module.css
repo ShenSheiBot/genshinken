@@ -1,16 +1,14 @@
 .page {
+  --book-main-width: min(calc(100% - 80px), calc(var(--maxw) - 80px));
   width: 100%;
   color: var(--ink);
-  border-bottom: 1px solid var(--hair-strong);
   background: var(--bg);
 }
-
-.catalogPage { border-bottom: 0; }
 
 .catalogHeader,
 .catalogue,
 .bookShell {
-  width: min(100%, var(--maxw));
+  width: var(--book-main-width);
   margin-inline: auto;
 }
 
@@ -48,7 +46,7 @@
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: end;
   gap: 48px;
-  padding: 48px 40px 32px;
+  padding: 48px 0 32px;
   border-bottom: 2px solid var(--hair-strong);
 }
 
@@ -99,9 +97,7 @@
   letter-spacing: -.06em;
 }
 
-.catalogue {
-  padding: 0 40px 68px;
-}
+.catalogue { padding: 0 0 68px; }
 
 .bookList {
   margin: 0;
@@ -257,7 +253,8 @@
 }
 
 .bookShell {
-  padding: 0 40px 72px;
+  padding: 0 0 72px;
+  border-bottom: 1px solid var(--hair-strong);
 }
 
 .breadcrumb {
@@ -686,11 +683,12 @@
 }
 
 @media (max-width: 760px) {
-  .catalogHeader { padding: 36px 20px 26px; }
+  .page { --book-main-width: min(calc(100% - 40px), calc(var(--maxw) - 40px)); }
+  .catalogHeader { padding: 36px 0 26px; }
   .catalogHeader h1 { font-size: clamp(54px, 18vw, 70px); }
   .catalogStats { gap: 18px; }
   .catalogStats dd { font-size: 30px; }
-  .catalogue { padding: 0 20px 54px; }
+  .catalogue { padding: 0 0 54px; }
   .catalogBook {
     grid-template-columns: 82px minmax(0, 1fr);
     gap: 18px;
@@ -707,7 +705,6 @@
   }
   .catalogOpen { grid-column: 2; justify-content: flex-start; }
 
-  .bookShell { padding-right: 20px; padding-left: 20px; }
   .publicationHeader {
     grid-template-columns: 136px minmax(0, 1fr);
     gap: 24px;
