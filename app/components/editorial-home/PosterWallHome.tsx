@@ -246,9 +246,8 @@ export default function PosterWallHome({
                     className={styles.cardPrimaryLink}
                     aria-label={`${meta.label}：${post.title}`}
                   />
-                  <div className={styles.generatedCover} aria-hidden="true">
+                  <div className={styles.generatedCover} aria-hidden="true" data-card-background="true">
                     <span className={styles.posterNumber}>{post.sectionNo}</span>
-                    <span className={styles.posterGlyph}>{meta.glyph}</span>
                     <span className={styles.posterAxis} />
                   </div>
 

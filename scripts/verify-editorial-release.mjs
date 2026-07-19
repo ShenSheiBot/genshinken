@@ -368,6 +368,20 @@ for (const section of Object.keys(sectionLabels)) {
   );
 }
 for (const card of editorialCards) {
+  const background = card.outer.match(
+    /<div\b(?=[^>]*\bdata-card-background=["']true["'])(?=[^>]*\baria-hidden=["']true["'])[^>]*>([\s\S]*?)<\/div>/i
+  );
+  assert.ok(background, `${card.section} card must expose its inert background layer`);
+  assert.match(
+    visibleText(background[1]),
+    /^\d{2}$/,
+    `${card.section} card background must contain only its two-digit folio`
+  );
+  assert.doesNotMatch(
+    visibleText(background[1]),
+    /\p{Script=Han}/u,
+    `${card.section} card background must not contain decorative Han glyphs`
+  );
   assert.match(
     card.outer,
     new RegExp(
@@ -403,10 +417,6 @@ assert.match(multimediaCard.outer, /aria-label=["']发布平台与站内资料["
 for (const label of ["发布入口", "站外来源", "站内资料"]) {
   assert.ok(visibleText(multimediaCard.outer).includes(label), `multimedia card must retain ${label}`);
 }
-const multimediaCover = multimediaCard.outer.match(
-  /<div\b(?=[^>]*\baria-hidden=["']true["'])[^>]*>([\s\S]*?)<\/div>/i
-);
-assert.ok(multimediaCover && /\d{2}\s*媒/.test(visibleText(multimediaCover[1])), "multimedia card must retain its folio and glyph");
 for (const section of ["review", "translation"]) {
   for (const card of editorialCards.filter((candidate) => candidate.section === section)) {
     assert.doesNotMatch(card.outer, /<hr\b/i, `${section} cards must not render an authored divider`);

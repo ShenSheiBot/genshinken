@@ -9,18 +9,16 @@ export type EditorialSection = (typeof EDITORIAL_SECTIONS)[number];
 
 export const EDITORIAL_SECTION_META: Record<
   EditorialSection,
-  { label: string; glyph: string; number: string }
+  { label: string; number: string }
 > = {
-  essay: { label: "论", glyph: "论", number: "01" },
-  review: { label: "评", glyph: "评", number: "02" },
+  essay: { label: "论", number: "01" },
+  review: { label: "评", number: "02" },
   translation: {
     label: "译介",
-    glyph: "译",
     number: "03",
   },
   multimedia: {
     label: "多媒体",
-    glyph: "媒",
     number: "04",
   },
 };
