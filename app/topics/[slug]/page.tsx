@@ -46,6 +46,7 @@ export async function generateMetadata({
       title: topic.title,
       description: topic.summary,
       url: canonical,
+      siteName: site.tabTitle,
       type: "website",
     },
   };

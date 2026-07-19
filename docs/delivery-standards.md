@@ -128,7 +128,7 @@ featured_order: 0        # 可选；同栏目首页推荐优先级，数值越�
   （如 `〔1〕`），但**落库到 `source/_posts/` 的 `.md` 必须改回 GFM `[^n]` 语法**。
 - 也兼容 Word/Outline 导出的 `_ftn/_ftnref` 锚点（`lib/markdown.ts` 会互锚）。
 - **交付前必须 `npm run build`**，确认生成的 HTML 含 `data-footnotes` 区与 `#user-content-fn-*`
-  跳转锚点。
+  跳转锚点；脚注回引的可见符号为 `↑`，无障碍名称使用中文，不保留英文 `Back to reference`。
 
 ### 链接
 
@@ -169,7 +169,7 @@ featured_order: 0        # 可选；同栏目首页推荐优先级，数值越�
   因 SHA 去重而**不重新生成生产部署**。确保进入生产的是一个新 commit（内容有实质变化），或在 Vercel
   控制台手动 Promote 对应部署。
 - Vercel 项目 Framework Preset 应为 **Next.js**；仓库内 `vercel.json` 已声明 `"framework": "nextjs"`
-  并固定 `buildCommand: next build`，构建以此为准。
+  并固定 `buildCommand: npm run check && next build`，构建以此为准。
 
 ---
 
@@ -273,7 +273,7 @@ groups:
 
 - `/library` 是内容筛选唯一 canonical；旧 `/search` 仅作 `308` 兼容跳转并保留查询参数。不要在新内容或界面中创建新的 `/search` 链接。
 - sitemap 收录首页、`/topics`、`/library`、`/books`、`/about`、专题详情、书籍详情及文章／多媒体 canonical。它不收录旧 `/search`、带查询参数的筛选页或只负责跳转的章节入口。
-- 文章、多媒体、书籍和专题详情必须同时提供自洽的 canonical、OpenGraph 与实体 JSON-LD；结构化数据内的 URL 使用 `https://un-canon.blog/...` 绝对地址。
+- 文章、多媒体、书籍和专题详情必须同时提供自洽的 canonical、OpenGraph 与实体 JSON-LD；`og:site_name` 统一为「西方負典的博客」，暂不输出 `og:image` 与 `og:locale`。平台兼容分享标签不单独维护内容，必须共享同页 OpenGraph 的标题与摘要且不带图片。结构化数据内的 URL 使用 `https://un-canon.blog/...` 绝对地址。
 - RSS 只发布文章和多媒体正文。书籍的连续正文已经通过 `documentSlug` 对应文章进入 RSS；书籍落地页、章节跳转和专题策展页不重复生成 feed 项。
 - 推送文章、书籍或专题源文件到 `main` 后，IndexNow 工作流会提交实体 URL 及相应聚合页。Google 依靠 sitemap `lastmod` 重抓。
 
@@ -288,3 +288,4 @@ groups:
   [`frontend-product-spec.md`](frontend-product-spec.md) 为准。
 - `npm run verify:release -- <base-url>`：对已经启动的本地生产构建或公开环境执行完整发布回归；覆盖导航、五组文库筛选、贡献者姓名、About、专题、书籍、重定向、canonical、OpenGraph、JSON-LD、sitemap 和 RSS。例如 `npm run verify:release -- https://un-canon.blog`。
 - `npm run verify:editorial -- <base-url>` 暂作为同一脚本的兼容别名保留。
+- GitHub Actions 的质量门禁只在 `main` 分支 push 和所有 pull request 上运行；功能分支 push 由其 pull request 覆盖，避免重复执行。

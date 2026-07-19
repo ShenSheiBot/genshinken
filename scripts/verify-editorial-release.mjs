@@ -105,6 +105,11 @@ function openGraph(html, property) {
   return tag ? attribute(tag, "content") : null;
 }
 
+function namedMeta(html, name) {
+  const tag = tags(html, "meta").find((candidate) => attribute(candidate, "name") === name);
+  return tag ? attribute(tag, "content") : null;
+}
+
 function structuredData(html) {
   return [...html.matchAll(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)]
     .map(([, json]) => {
@@ -243,9 +248,22 @@ function assertMetadata(label, result, expectedPath, jsonLdType = null) {
   );
 
   const ogTitle = openGraph(result.html, "og:title");
+  const ogDescription = openGraph(result.html, "og:description");
   const ogUrl = openGraph(result.html, "og:url");
+  const ogSiteName = openGraph(result.html, "og:site_name");
   assert.ok(ogTitle, `${label} must declare og:title`);
+  assert.ok(ogDescription, `${label} must declare og:description`);
   assert.ok(ogUrl, `${label} must declare og:url`);
+  assert.equal(ogSiteName, "西方負典的博客", `${label} must use the shared OpenGraph site name`);
+  assert.equal(openGraph(result.html, "og:image"), null, `${label} must not declare og:image`);
+  assert.equal(openGraph(result.html, "og:locale"), null, `${label} must not declare og:locale`);
+  assert.equal(namedMeta(result.html, "twitter:title"), ogTitle, `${label} Twitter title must share og:title`);
+  assert.equal(
+    namedMeta(result.html, "twitter:description"),
+    ogDescription,
+    `${label} Twitter description must share og:description`
+  );
+  assert.equal(namedMeta(result.html, "twitter:image"), null, `${label} must not declare twitter:image`);
   assert.equal(
     productionPath(ogUrl, label, "og:url"),
     expectedPath,

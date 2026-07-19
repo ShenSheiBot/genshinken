@@ -28,11 +28,11 @@ excerpt: 莫斯科国立大学经济系学者对苏联计划经济1953至1990年
 
 尤·奥尔塞维奇和保罗·格雷戈里两位教授这部书，是作为教学用书出的，首先面向学生。但它的内容，凡研究经济和历史的人都会感兴趣。两位作者再一次证明：教材也能写得引人入胜、读来轻快，同时不失深刻的见解与理论的概括。
 
-<div class=“signature-block”>
+<div class="signature-block">
   <p>莫斯科国立大学经济系</p>
   <p>国民经济史与经济学说教研室主任</p>
   <p>经济学博士</p>
-  <p>阿<span class=“cjk-interpunct”>·</span>格<span class=“cjk-interpunct”>·</span>胡多科尔莫夫　教授</p>
+  <p>阿<span class="cjk-interpunct">·</span>格<span class="cjk-interpunct">·</span>胡多科尔莫夫　教授</p>
 </div>
 
 ## 第一部分　分析

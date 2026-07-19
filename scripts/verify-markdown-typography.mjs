@@ -35,4 +35,16 @@ assert.match(
   "quotes enclosing CJK text must remain in the CJK run"
 );
 
+const footnoteHtml = await renderMarkdown("正文引用[^1]。\n\n[^1]: 注释正文。");
+assert.match(
+  footnoteHtml,
+  /aria-label="返回正文引用 1"/,
+  "GFM footnote backreferences must expose a Chinese accessible name"
+);
+assert.doesNotMatch(
+  footnoteHtml,
+  /aria-label="Back to reference/,
+  "GFM footnote backreferences must not retain the default English accessible name"
+);
+
 console.log("markdown typography verification passed");

@@ -249,7 +249,7 @@ function RelatedReading({
               <li key={post.slug}>
                 <article>
                   <Link
-                    className={homeStyles.latestCard}
+                    className={`${homeStyles.latestCard} ${homeStyles.latestCardInteractive}`}
                     href={isPublicEdition ? postPath(post) : `/prototype/reading/${encodeURIComponent(post.slug)}?variant=${variant}`}
                   >
                     <header>

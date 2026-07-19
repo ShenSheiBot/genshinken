@@ -785,6 +785,10 @@ html[data-theme="dark"] .latestUpdates:not([data-surface="paper"]) {
   transition: color 170ms ease, background 170ms ease, box-shadow 170ms ease;
 }
 
+.latestCardInteractive {
+  pointer-events: auto;
+}
+
 .latestCard > header,
 .latestCard > footer {
   display: flex;

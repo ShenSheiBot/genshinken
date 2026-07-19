@@ -52,16 +52,8 @@ export const metadata: Metadata = {
     title: site.title,
     description: site.description,
     url: site.url,
-    siteName: site.brand,
-    locale: "zh_CN",
+    siteName: site.tabTitle,
     type: "website",
-    images: [{ url: "/icon.png", width: 512, height: 512, alt: site.brand }],
-  },
-  twitter: {
-    card: "summary",
-    title: site.title,
-    description: site.description,
-    images: ["/icon.png"],
   },
   alternates: {
     canonical: "/",

@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     title: "联系我们",
     description: pageDescription,
     url: `${site.url}/about`,
+    siteName: site.tabTitle,
     type: "website",
   },
 };

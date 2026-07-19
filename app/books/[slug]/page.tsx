@@ -41,6 +41,7 @@ export async function generateMetadata({
       title: book.title,
       description: book.description,
       url: canonical,
+      siteName: site.tabTitle,
       type: "book",
     },
   };

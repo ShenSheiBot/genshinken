@@ -708,9 +708,9 @@ html[data-article-nav="compact"] .topbar .mobile-section-item .title {
 }
 html[data-article-nav="compact"] .topbar .mobile-section-item[data-level="3"] .title { font-size: 14px; font-weight: 500; }
 html[data-article-nav="compact"] .topbar .mobile-section-item[data-level="4"] .title { font-size: 13px; font-weight: 500; color: var(--ink-soft); }
-html[data-article-nav="compact"] .topbar .mobile-section-item[data-current-h2="true"] .title { color: var(--accent); }
-html[data-article-nav="compact"] .topbar .mobile-section-item[data-active="true"] .mark { background: var(--accent); }
-html[data-article-nav="compact"] .topbar .mobile-section-item[data-active="true"] .title { color: var(--accent); font-weight: 700; }
+html[data-article-nav="compact"] .topbar .mobile-section-item[data-current-h2="true"] .title { color: var(--ink); }
+html[data-article-nav="compact"] .topbar .mobile-section-item[data-active="true"] .mark { background: var(--ink); }
+html[data-article-nav="compact"] .topbar .mobile-section-item[data-active="true"] .title { color: var(--ink); font-weight: 700; }
 @media (max-width: 680px) {
   .wrap, .topbar, .hero-inner, .art-hero-inner, .foot-inner { padding-left: 20px; padding-right: 20px; }
   .topbar { gap: 18px; }
@@ -814,9 +814,9 @@ html[data-article-nav="rail"] .toc-rail { display: block; }
   color: var(--ink-faint); --toc-lit: var(--ink-faint); transition: color .18s;
 }
 .toc-dot[data-state="passed"] { color: var(--ink); --toc-lit: var(--ink); }
-.toc-dot[data-state="active"] { color: var(--accent); --toc-lit: var(--accent); }
+.toc-dot[data-state="active"] { color: var(--ink); --toc-lit: var(--ink); }
 .toc-dot:hover { color: var(--ink); --toc-lit: var(--ink); }
-.toc-dot[data-state="active"]:hover { color: var(--accent); --toc-lit: var(--accent); }
+.toc-dot[data-state="active"]:hover { color: var(--ink); --toc-lit: var(--ink); }
 .toc-dot:focus-visible { outline: 1px solid var(--accent); outline-offset: 2px; }
 .toc-dot .g {
   position: relative; box-sizing: border-box; display: flex; align-items: center; justify-content: center;
@@ -855,7 +855,7 @@ html[data-article-nav="rail"] .toc-rail { display: block; }
   padding: 5px 10px; background: var(--bg); border: 1px solid var(--hair-strong); z-index: 5;
 }
 .toc-dot:hover .toc-tip, .toc-dot:focus-visible .toc-tip { display: flex; }
-.toc-tip .k { font-family: var(--f-mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); flex: none; }
+.toc-tip .k { font-family: var(--f-mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink); flex: none; }
 .toc-tip .t {
   font-family: var(--f-cjk-serif); font-weight: 600; font-size: 13px; color: var(--ink);
   max-width: 340px; overflow: hidden; text-overflow: ellipsis;

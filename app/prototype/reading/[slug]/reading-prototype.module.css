@@ -777,13 +777,13 @@
 .tocDisclosurePlaceholder { width: 18px; height: 31px; }
 .tocDisclosure { color: var(--ink-faint); font-family: var(--f-mono); font-size: 11px; }
 .tocDisclosure:hover,
-.tocDisclosure:focus-visible { color: var(--accent); outline: none; }
+.tocDisclosure:focus-visible { color: var(--ink); outline: none; }
 .tocJump { display: grid; grid-template-columns: 25px minmax(0, 1fr); gap: 4px; width: 100%; min-width: 0; padding: 7px 0; color: var(--ink-soft); text-align: left; }
 .tocJump span { padding-top: 2px; font-family: var(--f-mono); font-size: 7px; color: var(--ink-faint); }
 .tocJump b { overflow: hidden; font-family: var(--reader-interface-family); font-size: 11px; font-weight: 400; line-height: 1.45; text-overflow: ellipsis; white-space: nowrap; }
 .tocRow[data-active="true"] .tocJump b,
 .tocJump:hover b,
-.tocJump:focus-visible b { color: var(--accent); }
+.tocJump:focus-visible b { color: var(--ink); }
 .tocJump:focus-visible { outline: 1px solid var(--accent); outline-offset: -1px; }
 .tocChildren[hidden] { display: none; }
 .tocPanel .toTop { margin: 10px 0 0; padding-top: 10px; border-top: 1px solid var(--hair); }

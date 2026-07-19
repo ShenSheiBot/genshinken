@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     title: "文库",
     description: pageDescription,
     url: `${site.url}/library`,
+    siteName: site.tabTitle,
     type: "website",
   },
 };
@@ -166,7 +167,7 @@ export default async function LibraryPage({
         count,
         active: filters.section === section,
         disabled: count === 0 && filters.section !== section,
-        href: filterHref(filters, { section }),
+        href: filterHref(filters, { section: filters.section === section ? null : section }),
       };
     }),
   ];
@@ -187,7 +188,9 @@ export default async function LibraryPage({
         count,
         active: filters.category === category.value,
         disabled: count === 0 && filters.category !== category.value,
-        href: filterHref(filters, { category: category.value }),
+        href: filterHref(filters, {
+          category: filters.category === category.value ? null : category.value,
+        }),
       };
     }),
   ];
@@ -208,7 +211,7 @@ export default async function LibraryPage({
         count,
         active: filters.tag === tag.value,
         disabled: count === 0 && filters.tag !== tag.value,
-        href: filterHref(filters, { tag: tag.value }),
+        href: filterHref(filters, { tag: filters.tag === tag.value ? null : tag.value }),
       };
     }),
   ];
@@ -229,7 +232,9 @@ export default async function LibraryPage({
         count,
         active: filters.contributor === contributor.id,
         disabled: count === 0 && filters.contributor !== contributor.id,
-        href: filterHref(filters, { contributor: contributor.id }),
+        href: filterHref(filters, {
+          contributor: filters.contributor === contributor.id ? null : contributor.id,
+        }),
       };
     }),
   ];
@@ -250,7 +255,7 @@ export default async function LibraryPage({
         count,
         active: filters.role === role,
         disabled: count === 0 && filters.role !== role,
-        href: filterHref(filters, { role }),
+        href: filterHref(filters, { role: filters.role === role ? null : role }),
       };
     }),
   ];

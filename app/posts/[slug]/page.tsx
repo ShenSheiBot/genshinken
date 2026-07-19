@@ -33,6 +33,7 @@ export async function generateMetadata({
       title: post.title,
       description,
       url: canonical,
+      siteName: site.tabTitle,
       type: "article",
       publishedTime: post.dateISO,
       modifiedTime: post.updatedISO,

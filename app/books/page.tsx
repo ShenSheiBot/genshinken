@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     title: "连载",
     description,
     url: "/books",
+    siteName: site.tabTitle,
     type: "website",
   },
 };

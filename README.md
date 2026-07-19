@@ -87,7 +87,7 @@ featured_order: 0       # 可选；同栏目首页推荐优先级，数值越大
 npm install
 npm run dev      # http://localhost:3000
 npm run check    # 内容模型 + TypeScript + ESLint
-npm run build    # 生产构建（与 Vercel 一致）
+npm run build    # Next.js 生产构建；Vercel 会先执行 npm run check
 ```
 
 ## 目录结构

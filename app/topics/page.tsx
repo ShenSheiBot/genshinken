@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     title: "专题",
     description,
     url: "/topics",
+    siteName: site.tabTitle,
     type: "website",
   },
 };
