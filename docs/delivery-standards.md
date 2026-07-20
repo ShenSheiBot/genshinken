@@ -53,6 +53,7 @@ front-matter，不要混在正文里。**
 ```yaml
 ---
 title: 文章标题
+title_breaks: ["优先断行前半", "优先断行后半"] # 必填；各段拼接后必须等于 title
 date: 2026-06-15          # 发布日期 YYYY-MM-DD
 updated: 2026-07-13       # 可选；实质性修订时更新，缺省回退到 date
 slug: ascii-url-slug      # 必填且必须 ASCII（见 §1）
@@ -67,16 +68,17 @@ featured_order: 0        # 可选；同栏目首页推荐优先级，数值越�
 ```
 
 - 署名角色只有作者与译者，顺序固定为 作者 → 译者；一个角色多人优先写 YAML 数组，也兼容逗号、顿号、分号、换行或全角空格分隔。不要新增 `editor / proofreader` 等前端未定义字段。
+- `title_breaks` 明确标题在空间不足时的优先断点。标题能在一行显示时不会强制换行；确实需要换行时，编辑应避免第二行以「的／之／与」等非实词开头，避免切进实词内部，并使相邻两行长度不过度悬殊。短标题仍填写单项数组，例如 `title_breaks: ["列宁之争"]`。字段缺失时内容校验给出建议和非阻塞警告；拼接后不等于 `title`、类型错误或空数组会阻止构建。
 - 每个署名必须能按显示名、稳定 id 或登记别名解析到 `lib/contributors.ts` 的唯一记录；未登记署名会阻止校验和构建。
 - `categories` 只用于分类标记，**不会**再混进标签行（`lib/posts.ts` 已分离二者）。
 - `section` 是文章的编辑栏目，必须且只能取以下值之一：
   - `essay`：论
   - `review`：评
-  - `translation`：译介
+  - `translation`：译
   - `multimedia`：多媒体
-- `section` 与 `categories` 相互独立；不要用“历史 / 哲学”等主题分类代替栏目，也不要只依赖译者署名推断译介。
+- `section` 与 `categories` 相互独立；不要用“历史 / 哲学”等主题分类代替栏目，也不要只依赖译者署名推断「译」栏目。
 - `featured_order` 可用于任一栏目，必须是有限数值；缺省为 `0`，数值越大则在同栏目首页越靠前。
-- 首页推荐卡页眉由 `section` 与 `categories` 组合为「栏目 · 主题分类」，不得手写 `#03` 一类类别编号。译介推荐只展示 `post_author`，完整译者署名留在正文和文库。
+- 首页推荐卡页眉由 `section` 与 `categories` 组合为「栏目 · 主题分类」，不得手写 `#03` 一类类别编号。「译」栏目推荐只展示 `post_author`，完整译者署名留在正文和文库。
 - `related_posts` 只允许多媒体条目使用，写作 slug 列表，例如
   `related_posts: [lih-lenin-disputed, pechatnov-soviet-union-bretton-woods]`。目标必须是已发布的
   非多媒体站内文稿，不得重复或指向条目自身。

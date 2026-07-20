@@ -14,7 +14,7 @@ export const EDITORIAL_SECTION_META: Record<
   essay: { label: "论", number: "01" },
   review: { label: "评", number: "02" },
   translation: {
-    label: "译介",
+    label: "译",
     number: "03",
   },
   multimedia: {
@@ -30,6 +30,8 @@ const SECTION_ALIASES: Record<string, EditorialSection> = {
   评: "review",
   translation: "translation",
   interpretation: "translation",
+  译: "translation",
+  // 兼容已经发布的旧 front matter；面向读者的栏目名称统一显示为“译”。
   译介: "translation",
   multimedia: "multimedia",
   media: "multimedia",

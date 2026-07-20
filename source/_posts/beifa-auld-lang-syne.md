@@ -1,6 +1,7 @@
 # 其他
 
 title: 友谊地久天长【北伐金曲】
+title_breaks: ["友谊地久天长", "【北伐金曲】"]
 
 categories: 音乐
 

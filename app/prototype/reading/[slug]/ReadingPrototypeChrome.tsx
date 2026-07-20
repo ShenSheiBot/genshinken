@@ -32,6 +32,7 @@ type ReferenceLink = { anchor: HTMLAnchorElement; target: HTMLElement; kind: Ref
 type ReferenceSurface = "desk" | "sheet";
 type ReferenceVisit = { kind: ReferenceKind; id: string; label: string };
 type FragmentLine = { center: number; width: number };
+type LineMarker = { line: number; top: number };
 type DeskSlots = { left: HTMLElement; right: HTMLElement | null };
 
 const variantMeta: Record<Variant, { short: string }> = {
@@ -82,10 +83,10 @@ function buildTocTree(items: TocItem[]): TocNode[] {
   return roots;
 }
 
-function ancestorIds(nodes: TocNode[], target: string, trail: string[] = []): string[] {
+function activeBranchIds(nodes: TocNode[], target: string, trail: string[] = []): string[] {
   for (const node of nodes) {
-    if (node.id === target) return trail;
-    const found = ancestorIds(node.children, target, [...trail, node.id]);
+    if (node.id === target) return node.children.length > 0 ? [...trail, node.id] : trail;
+    const found = activeBranchIds(node.children, target, [...trail, node.id]);
     if (found.length > 0) return found;
   }
   return [];
@@ -162,6 +163,39 @@ function sortLineCenters(values: number[]): number[] {
   return values.sort((a, b) => a - b);
 }
 
+function snapReferenceScrollerLine(scroller: HTMLElement): void {
+  if (scroller.scrollTop <= 1 || scroller.scrollHeight - scroller.clientHeight - scroller.scrollTop <= 1) return;
+  const scrollerRect = scroller.getBoundingClientRect();
+  const visibleItems = Array.from(scroller.children).filter((child): child is HTMLElement => {
+    if (!(child instanceof HTMLElement)) return false;
+    const rect = child.getBoundingClientRect();
+    return rect.bottom > scrollerRect.top - 36 && rect.top < scrollerRect.top + 72;
+  });
+  const lineRects: DOMRect[] = [];
+  visibleItems.forEach((item) => {
+    const walker = document.createTreeWalker(item, NodeFilter.SHOW_TEXT);
+    for (let raw = walker.nextNode(); raw; raw = walker.nextNode()) {
+      const text = raw as Text;
+      if (!text.data.trim() || text.parentElement?.closest("[hidden], [aria-hidden='true']")) continue;
+      const range = document.createRange();
+      range.selectNodeContents(text);
+      Array.from(range.getClientRects()).forEach((rect) => {
+        if (rect.width > 0.5 && rect.height > 0.5 && rect.bottom > scrollerRect.top - 2 && rect.top < scrollerRect.top + 72) {
+          lineRects.push(rect);
+        }
+      });
+      range.detach();
+    }
+  });
+  lineRects.sort((a, b) => a.top - b.top);
+  const firstWholeLine = lineRects.find((rect) => rect.top >= scrollerRect.top - 0.5);
+  if (!firstWholeLine) return;
+  const delta = firstWholeLine.top - scrollerRect.top;
+  if (Math.abs(delta) < 0.75 || delta > Math.max(30, firstWholeLine.height * 1.55)) return;
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  scroller.scrollTo({ top: scroller.scrollTop + delta, behavior: reduce ? "auto" : "smooth" });
+}
+
 function toRoman(value: number): string {
   const pairs: Array<[number, string]> = [
     [1000, "m"], [900, "cm"], [500, "d"], [400, "cd"],
@@ -230,10 +264,18 @@ export default function ReadingPrototypeChrome({
   const [lineCount, setLineCount] = useState(0);
   const [currentLine, setCurrentLine] = useState(0);
   const [lineDraft, setLineDraft] = useState("");
+  const [editingLine, setEditingLine] = useState(false);
+  const [editingReference, setEditingReference] = useState<ReferenceKind | null>(null);
+  const [referenceDraft, setReferenceDraft] = useState("");
+  const [lineMarkers, setLineMarkers] = useState<LineMarker[]>([]);
+  const [lineMarkerHost, setLineMarkerHost] = useState<HTMLElement | null>(null);
 
   const tocRef = useRef<TocItem[]>([]);
   const bodyRef = useRef<HTMLElement | null>(null);
   const lineCentersRef = useRef<number[]>([]);
+  const referenceSnapSuppressedUntilRef = useRef(new WeakMap<HTMLElement, number>());
+  const lineInputRef = useRef<HTMLInputElement | null>(null);
+  const referenceInputRef = useRef<HTMLInputElement | null>(null);
   const referenceLinksRef = useRef<ReferenceLink[]>([]);
   const annotationRef = useRef<ReferenceItem[]>([]);
   const sourceRef = useRef<ReferenceItem[]>([]);
@@ -302,6 +344,7 @@ export default function ReadingPrototypeChrome({
     const body = document.querySelector<HTMLElement>(".reading-prototype-body");
     if (!body) return;
     bodyRef.current = body;
+    setLineMarkerHost(body.parentElement);
 
     const headings = Array.from(body.querySelectorAll<HTMLElement>("h1, h2, h3, h4")).map((heading, index) => {
       if (!heading.id) heading.id = `reading-section-${index + 1}`;
@@ -336,7 +379,10 @@ export default function ReadingPrototypeChrome({
     setActiveAnnotationId((current) => current || annotationItems[0]?.id || "");
     setActiveSourceId((current) => current || sourceItems[0]?.id || "");
 
-    return () => { bodyRef.current = null; };
+    return () => {
+      bodyRef.current = null;
+      setLineMarkerHost(null);
+    };
   }, [variant]);
 
   const syncReadingPosition = useCallback(() => {
@@ -375,6 +421,26 @@ export default function ReadingPrototypeChrome({
   }, [syncReadingPosition]);
 
   useEffect(() => {
+    const timers = new Map<HTMLElement, number>();
+    const scheduleReferenceSnap = (event: Event) => {
+      const scroller = event.target;
+      if (!(scroller instanceof HTMLElement) || !scroller.matches("[data-reference-scroller]")) return;
+      const current = timers.get(scroller);
+      if (current) window.clearTimeout(current);
+      timers.set(scroller, window.setTimeout(() => {
+        timers.delete(scroller);
+        if (performance.now() < (referenceSnapSuppressedUntilRef.current.get(scroller) ?? 0)) return;
+        snapReferenceScrollerLine(scroller);
+      }, 130));
+    };
+    document.addEventListener("scroll", scheduleReferenceSnap, true);
+    return () => {
+      document.removeEventListener("scroll", scheduleReferenceSnap, true);
+      timers.forEach((timer) => window.clearTimeout(timer));
+    };
+  }, []);
+
+  useEffect(() => {
     const body = bodyRef.current;
     if (!body) return;
     let generation = 0;
@@ -396,6 +462,7 @@ export default function ReadingPrototypeChrome({
         else {
           const centers = sortLineCenters(values);
           lineCentersRef.current = centers;
+          setLineMarkers(centers.flatMap((top, index) => (index + 1) % 10 === 0 ? [{ line: index + 1, top }] : []));
           setLineCount(centers.length);
           syncReadingPosition();
         }
@@ -423,14 +490,40 @@ export default function ReadingPrototypeChrome({
   }, [readerFont, readerSize, syncReadingPosition, variant]);
 
   useEffect(() => {
-    const ancestors = ancestorIds(tocTree, activeId);
-    if (ancestors.length === 0) return;
-    setExpandedToc((current) => {
-      const next = new Set(current);
-      ancestors.forEach((id) => next.add(id));
-      return next;
-    });
+    setExpandedToc(new Set(activeBranchIds(tocTree, activeId)));
   }, [activeId, tocTree]);
+
+  useEffect(() => {
+    if (!editingLine) return;
+    const frame = requestAnimationFrame(() => {
+      lineInputRef.current?.focus();
+      lineInputRef.current?.select();
+    });
+    const finishEditingOutside = (event: PointerEvent) => {
+      if (event.target !== lineInputRef.current) setEditingLine(false);
+    };
+    document.addEventListener("pointerdown", finishEditingOutside, true);
+    return () => {
+      cancelAnimationFrame(frame);
+      document.removeEventListener("pointerdown", finishEditingOutside, true);
+    };
+  }, [editingLine]);
+
+  useEffect(() => {
+    if (!editingReference) return;
+    const frame = requestAnimationFrame(() => {
+      referenceInputRef.current?.focus();
+      referenceInputRef.current?.select();
+    });
+    const finishEditingOutside = (event: PointerEvent) => {
+      if (event.target !== referenceInputRef.current) setEditingReference(null);
+    };
+    document.addEventListener("pointerdown", finishEditingOutside, true);
+    return () => {
+      cancelAnimationFrame(frame);
+      document.removeEventListener("pointerdown", finishEditingOutside, true);
+    };
+  }, [editingReference]);
 
   const scrollReferenceIntoView = useCallback((surface: ReferenceSurface, kind: ReferenceKind, id: string) => {
     requestAnimationFrame(() => requestAnimationFrame(() => {
@@ -441,12 +534,17 @@ export default function ReadingPrototypeChrome({
       const disclosure = node.querySelector<HTMLElement>(":scope > button") ?? node;
       const itemRect = disclosure.getBoundingClientRect();
       const scrollerRect = scroller.getBoundingClientRect();
-      if (itemRect.top < scrollerRect.top) scroller.scrollTop += itemRect.top - scrollerRect.top;
-      else if (itemRect.bottom > scrollerRect.bottom) scroller.scrollTop += itemRect.bottom - scrollerRect.bottom;
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (itemRect.top < scrollerRect.top) {
+        scroller.scrollTo({ top: scroller.scrollTop + itemRect.top - scrollerRect.top, behavior: reduce ? "auto" : "smooth" });
+      } else if (itemRect.bottom > scrollerRect.bottom) {
+        scroller.scrollTo({ top: scroller.scrollTop + itemRect.bottom - scrollerRect.bottom, behavior: reduce ? "auto" : "smooth" });
+      }
     }));
   }, []);
 
   const selectReference = useCallback((kind: ReferenceKind, id: string, surface: ReferenceSurface = "desk", ensureVisible = true) => {
+    setEditingReference(null);
     if (kind === "annotation") setActiveAnnotationId(id);
     else setActiveSourceId(id);
     history.replaceState(
@@ -483,14 +581,25 @@ export default function ReadingPrototypeChrome({
         : null;
     directReferencePositionRef.current = null;
 
+    if (scroller) referenceSnapSuppressedUntilRef.current.set(scroller, performance.now() + 1000);
     selectReference(kind, id, surface, false);
     if (!position) return;
     requestAnimationFrame(() => requestAnimationFrame(() => {
       const scope = surface === "sheet" ? sheetRef.current : document.getElementById("reading-right-rail");
       const currentItem = scope?.querySelector<HTMLElement>(`[data-reference-kind="${kind}"][data-reference-id="${CSS.escape(id)}"]`);
       const currentScroller = currentItem?.parentElement;
-      if (currentScroller) currentScroller.scrollTop = position.scrollTop;
-      window.scrollTo(position.pageX, position.pageY);
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const started = performance.now();
+      const restorePosition = () => {
+        if (currentScroller) currentScroller.scrollTop = position.scrollTop;
+        window.scrollTo(position.pageX, position.pageY);
+      };
+      const restoreDuringTransition = () => {
+        restorePosition();
+        if (!reduce && performance.now() - started < 320) requestAnimationFrame(restoreDuringTransition);
+      };
+      restoreDuringTransition();
+      if (!reduce) window.setTimeout(restorePosition, 520);
     }));
   }, [selectReference]);
 
@@ -644,8 +753,12 @@ export default function ReadingPrototypeChrome({
     if (!body || centers.length === 0 || !Number.isFinite(requested)) return;
     const line = Math.max(1, Math.min(centers.length, requested));
     setLineDraft(String(line));
+    setCurrentLine(line);
+    setEditingLine(false);
     const bodyTop = body.getBoundingClientRect().top + window.scrollY;
-    const target = bodyTop + centers[line - 1] - visualAnchor();
+    // Scroll positions are quantized to device pixels; a one-pixel bias keeps
+    // the requested center on the inclusive side of upperBound after landing.
+    const target = bodyTop + centers[line - 1] - visualAnchor() + 1;
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     closeSheet();
     requestAnimationFrame(() => requestAnimationFrame(() => {
@@ -653,28 +766,61 @@ export default function ReadingPrototypeChrome({
     }));
   };
 
-  const stepReference = (kind: ReferenceKind, delta: number, surface: ReferenceSurface = "desk") => {
-    const items = kind === "annotation" ? annotationRef.current : sourceRef.current;
-    const active = kind === "annotation" ? activeAnnotationId : activeSourceId;
-    if (items.length === 0) return;
-    const index = Math.max(0, items.findIndex((item) => item.id === active));
-    const next = items[(index + delta + items.length) % items.length];
-    selectReference(kind, next.id, surface);
+  const beginLineEdit = () => {
+    if (lineCount === 0) return;
+    setLineDraft(String(currentLine || 1));
+    setEditingLine(true);
   };
 
-  const viewReferenceAtEnd = (kind: ReferenceKind) => {
-    const id = kind === "annotation" ? activeAnnotationId : activeSourceId;
-    const target = document.getElementById(id);
-    const details = target?.closest("details");
+  const beginReferenceEdit = (kind: ReferenceKind, current: number) => {
+    setReferenceDraft(String(current));
+    setEditingReference(kind);
+  };
+
+  const jumpToReferenceNumber = (event: FormEvent<HTMLFormElement>, kind: ReferenceKind, surface: ReferenceSurface) => {
+    event.preventDefault();
+    const items = kind === "annotation" ? annotationRef.current : sourceRef.current;
+    const requested = Number.parseInt(referenceDraft, 10);
+    if (items.length === 0 || !Number.isFinite(requested)) return;
+    const index = Math.max(1, Math.min(items.length, requested));
+    setReferenceDraft(String(index));
+    setEditingReference(null);
+    selectReference(kind, items[index - 1].id, surface);
+  };
+
+  const scrollReferenceEdge = (kind: ReferenceKind, edge: "start" | "end", surface: ReferenceSurface = "desk") => {
+    const scope = surface === "sheet" ? sheetRef.current : document.getElementById("reading-right-rail");
+    const scroller = scope?.querySelector<HTMLElement>(`[data-reference-scroller="${kind}"]`);
+    if (!scroller) return;
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (details) details.open = true;
+    scroller.scrollTo({
+      top: edge === "start" ? 0 : scroller.scrollHeight,
+      behavior: reduce ? "auto" : "smooth",
+    });
+  };
+
+  const returnToPageStart = () => {
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    closeSheet();
+    history.replaceState(history.state, "", `${window.location.pathname}${window.location.search}`);
+    requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" }));
+  };
+
+  const viewReferenceOrigin = (kind: ReferenceKind) => {
+    const id = kind === "annotation" ? activeAnnotationId : activeSourceId;
+    const remembered = lastNoteAnchor.current;
+    const rememberedTarget = remembered ? safeTarget(remembered.getAttribute("href") || "") : null;
+    const anchor = rememberedTarget?.id === id
+      ? remembered
+      : referenceLinksRef.current.find((link) => link.target.id === id)?.anchor;
+    if (!anchor) return;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     closeSheet();
     requestAnimationFrame(() => requestAnimationFrame(() => {
-      target?.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" });
-      if (target) {
-        target.tabIndex = -1;
-        target.focus({ preventScroll: true });
-      }
+      const top = anchor.getBoundingClientRect().top + window.scrollY - visualAnchor() + 1;
+      window.scrollTo({ top: Math.max(0, top), behavior: reduce ? "auto" : "smooth" });
+      if (anchor.id) history.replaceState(history.state, "", `${window.location.pathname}${window.location.search}#${encodeURIComponent(anchor.id)}`);
+      anchor.focus({ preventScroll: true });
     }));
   };
 
@@ -705,8 +851,16 @@ export default function ReadingPrototypeChrome({
           </button>
         </div>
         {hasChildren && (
-          <div id={childrenId} className={styles.tocChildren} hidden={!expanded}>
-            {node.children.map((child, index) => renderTocNode(child, `${path}-${index}`, depth + 1, rootIndex))}
+          <div
+            id={childrenId}
+            className={styles.tocChildren}
+            data-expanded={expanded ? "true" : "false"}
+            aria-hidden={!expanded}
+            inert={!expanded}
+          >
+            <div className={styles.tocChildrenInner}>
+              {node.children.map((child, index) => renderTocNode(child, `${path}-${index}`, depth + 1, rootIndex))}
+            </div>
           </div>
         )}
       </div>
@@ -716,15 +870,41 @@ export default function ReadingPrototypeChrome({
   const lineNavigator = (
     <form className={styles.lineNavigator} onSubmit={jumpToLine} aria-label="按正文视觉行跳转">
       <div className={styles.lineNumbers}>
-        <span>本版阅读进度</span>
-        <strong>{currentLine.toLocaleString("zh-CN")}<small> / {lineCount.toLocaleString("zh-CN")} 行</small></strong>
+        <span>阅读进度</span>
+        <strong>
+          {editingLine ? (
+            <input
+              ref={lineInputRef}
+              className={styles.lineCurrent}
+              type="text"
+              inputMode="numeric"
+              pattern="[0-9]*"
+              enterKeyHint="go"
+              autoComplete="off"
+              value={lineDraft}
+              aria-label={`输入正文行数，共 ${lineCount} 行`}
+              onChange={(event) => setLineDraft(event.target.value.replace(/\D/g, ""))}
+              onKeyDown={(event) => {
+                if (event.key !== "Enter") return;
+                event.preventDefault();
+                event.currentTarget.form?.requestSubmit();
+              }}
+            />
+          ) : (
+            <button
+              className={styles.lineCurrent}
+              type="button"
+              disabled={lineCount === 0}
+              aria-label={lineCount === 0 ? "正文行数正在计算" : `当前第 ${currentLine} 行，点击输入行数跳转`}
+              onClick={beginLineEdit}
+            >
+              {String(currentLine)}
+            </button>
+          )}
+          <small> / {String(lineCount)} 行</small>
+        </strong>
       </div>
       <span className={styles.lineTrack} aria-hidden="true"><i style={{ width: `${pct}%` }} /></span>
-      <div className={styles.lineJump}>
-        <label><span>跳至</span><input type="text" inputMode="numeric" pattern="[0-9]*" value={lineDraft} placeholder={currentLine ? String(currentLine) : "行数"} aria-label={`跳转到正文行，共 ${lineCount} 行`} onChange={(event) => setLineDraft(event.target.value.replace(/\D/g, ""))} disabled={lineCount === 0} /><span>行</span></label>
-        <button type="submit" disabled={lineCount === 0 || lineDraft.length === 0} aria-label="跳转到输入行">→</button>
-      </div>
-      <small>当前字号、字族与视口下的视觉行</small>
     </form>
   );
 
@@ -734,7 +914,7 @@ export default function ReadingPrototypeChrome({
       <div className={`${styles.tocViewport} ${styles.styledScroller}`}>
         {tocTree.length === 0 ? <p className={styles.emptyRail}>本文没有分节标题，可按视觉行定位。</p> : tocTree.map((node, index) => renderTocNode(node, String(index), 0, index))}
       </div>
-      <a className={styles.toTop} href="#reading-cover">↑ 返回篇首</a>
+      <button className={styles.toTop} type="button" onClick={returnToPageStart}>返回篇首</button>
     </nav>
   );
 
@@ -765,42 +945,75 @@ export default function ReadingPrototypeChrome({
     </section>
   );
 
+  const referenceCounter = (kind: ReferenceKind, surface: ReferenceSurface) => {
+    const items = kind === "annotation" ? annotations : sources;
+    const active = kind === "annotation" ? activeAnnotationId : activeSourceId;
+    const current = Math.max(1, items.findIndex((item) => item.id === active) + 1);
+    const heading = kind === "annotation" ? "注释" : "文献";
+    return (
+      <form className={styles.referenceCounter} onSubmit={(event) => jumpToReferenceNumber(event, kind, surface)} aria-label={`按序号跳转${heading}`}>
+        {editingReference === kind ? (
+          <input
+            ref={referenceInputRef}
+            className={styles.referenceCurrent}
+            type="text"
+            inputMode="numeric"
+            pattern="[0-9]*"
+            enterKeyHint="go"
+            autoComplete="off"
+            value={referenceDraft}
+            aria-label={`输入${heading}序号，共 ${items.length} 条`}
+            onChange={(event) => setReferenceDraft(event.target.value.replace(/\D/g, ""))}
+            onKeyDown={(event) => {
+              if (event.key !== "Enter") return;
+              event.preventDefault();
+              event.currentTarget.form?.requestSubmit();
+            }}
+          />
+        ) : (
+          <button className={styles.referenceCurrent} type="button" aria-label={`当前第 ${current} 条${heading}，点击输入序号跳转`} onClick={() => beginReferenceEdit(kind, current)}>
+            {String(current)}
+          </button>
+        )}
+        <small><span>/</span>{String(items.length)}</small>
+      </form>
+    );
+  };
+
   const referencePane = (kind: ReferenceKind, compact = false) => {
     const items = kind === "annotation" ? annotations : sources;
     const active = kind === "annotation" ? activeAnnotationId : activeSourceId;
     const heading = kind === "annotation" ? "注释" : "文献";
     return (
       <section className={styles.referencePane} data-kind={kind} data-compact={compact ? "true" : "false"}>
-        {!compact && <header><b>{heading}</b><strong>{items.length.toLocaleString("zh-CN")}</strong></header>}
-        <div className={`${styles.referenceScroller} ${styles.styledScroller}`} onClick={compact ? followSheetReference : undefined}>
+        {!compact && <header><b>{heading}</b>{referenceCounter(kind, "desk")}</header>}
+        <div className={styles.referenceScroller} data-reference-scroller={kind} onClick={compact ? followSheetReference : undefined}>
           {items.length === 0 ? <p className={styles.emptyRail}>本文没有{heading}。</p> : items.map((item) => {
             const selected = item.id === active;
             return (
               <article id={`reading-reference-${kind}-${item.index}`} key={item.id} className={styles.referenceItem} data-reference-kind={kind} data-reference-id={item.id} data-active={selected ? "true" : "false"}>
                 <button type="button" className={styles.referenceSelect} aria-expanded={selected} aria-current={selected ? "true" : undefined} onPointerDown={rememberDirectReferencePosition} onPointerCancel={() => { directReferencePositionRef.current = null; }} onClick={(event) => selectDirectReference(event, kind, item.id, compact ? "sheet" : "desk")}><span>{item.label}</span>{!selected && <span className={styles.referencePreview} dangerouslySetInnerHTML={{ __html: item.previewHtml }} />}</button>
-                {selected && <div className={styles.referenceDetail} dangerouslySetInnerHTML={{ __html: item.html }} />}
+                <div className={styles.referenceDetailShell} data-expanded={selected ? "true" : "false"} aria-hidden={!selected} inert={!selected}>
+                  <div className={styles.referenceDetail}>
+                    <div className={styles.referenceDetailContent} dangerouslySetInnerHTML={{ __html: item.html }} />
+                  </div>
+                </div>
               </article>
             );
           })}
         </div>
-        {items.length > 0 && <footer><button type="button" onClick={() => stepReference(kind, -1, compact ? "sheet" : "desk")}>← 上一条</button><button type="button" onClick={() => viewReferenceAtEnd(kind)}>查看文末</button><button type="button" onClick={() => stepReference(kind, 1, compact ? "sheet" : "desk")}>下一条 →</button></footer>}
+        {items.length > 0 && <footer><button type="button" onClick={() => scrollReferenceEdge(kind, "start", compact ? "sheet" : "desk")}>首条{heading}</button><button type="button" onClick={() => scrollReferenceEdge(kind, "end", compact ? "sheet" : "desk")}>末条{heading}</button><button type="button" onClick={() => viewReferenceOrigin(kind)}>原文位置</button></footer>}
       </section>
     );
   };
 
   const articleIdentity = (
     <section className={styles.articleIdentity}>
-      <span className={styles.eyebrow}>当前阅读</span>
+      <span className={styles.eyebrow}>您正在读</span>
       <b title={title}>{title}</b>
     </section>
   );
-  const currentChapter = (
-    <section className={styles.currentChapter} aria-live="polite" aria-atomic="true">
-      <span className={styles.currentSectionLabel}>当前章节</span>
-      <p>{currentSection}</p>
-    </section>
-  );
-  const leftDesk = <div className={styles.leftDeskRail}>{articleIdentity}{compactCredits}{currentChapter}{lineNavigator}{tocPanel}</div>;
+  const leftDesk = <div className={styles.leftDeskRail}>{articleIdentity}{compactCredits}{lineNavigator}{tocPanel}</div>;
   const referencePaneCount = Number(annotations.length > 0) + Number(sources.length > 0);
   const rightDesk = referencePaneCount > 0 ? (
     <div className={styles.referenceRail} data-count={referencePaneCount}>
@@ -814,6 +1027,21 @@ export default function ReadingPrototypeChrome({
       {rightDesk && slots.right && createPortal(rightDesk, slots.right)}
     </>
   ) : null;
+  const lineMarkerPortal = lineMarkerHost && lineMarkers.length > 0
+    ? createPortal(
+      <div className={styles.visualLineMarkers} aria-hidden="true">
+        {lineMarkers.map((marker) => (
+          <span
+            className={styles.visualLineMarker}
+            data-line={String(marker.line)}
+            key={marker.line}
+            style={{ top: `${marker.top}px` }}
+          />
+        ))}
+      </div>,
+      lineMarkerHost
+    )
+    : null;
 
   const updateSize = (size: ReaderSize) => {
     setReaderSize(size);
@@ -842,6 +1070,7 @@ export default function ReadingPrototypeChrome({
   return (
     <>
       {portalDesk}
+      {lineMarkerPortal}
       <header className={styles.runningHeader}>
         <Link href={isEdition ? "/" : "/prototype/poster"} className={styles.runningBrand} aria-label={`返回${site.brandCN}首页`}><i /><span className={styles.runningBrandName}>{site.brandCN}</span></Link>
         <nav className={styles.runningSections} aria-label="全站导航">
@@ -857,14 +1086,14 @@ export default function ReadingPrototypeChrome({
           <button type="button" onClick={(event) => openSheet("settings", event.currentTarget)} aria-label="阅读设置">字</button>
           <button className={styles.themeButton} type="button" onClick={toggleTheme} aria-label="切换明暗主题">{dark ? "☾" : "☼"}</button>
         </div>
-        <span className={styles.topRule} aria-hidden="true">
+        <span className={styles.topRule} data-rail-progress={desktopDesk ? "true" : "false"} aria-hidden="true">
           <span className={styles.topProgress} style={{ width: `${pct}%` }} />
         </span>
       </header>
 
       {sheet && (
         <div className={styles.sheetLayer} role="presentation" onMouseDown={(event) => { if (event.currentTarget === event.target) closeSheet(); }}>
-          <section ref={sheetRef} className={styles.sheet} role="dialog" aria-modal="true" tabIndex={-1} aria-label={sheet === "toc" ? "文章目录" : sheet === "settings" ? "阅读设置" : sheet === "annotation" ? "文章注释" : "文章文献"}>
+          <section ref={sheetRef} className={styles.sheet} data-sheet={sheet} role="dialog" aria-modal="true" tabIndex={-1} aria-label={sheet === "toc" ? "文章目录" : sheet === "settings" ? "阅读设置" : sheet === "annotation" ? "文章注释" : "文章文献"}>
             <div className={styles.sheetHandle} />
             <header className={styles.sheetHeader}>
               <div className={styles.sheetHeading}>
@@ -872,7 +1101,7 @@ export default function ReadingPrototypeChrome({
                 <div><h2>{sheet === "toc" ? "文章目录" : sheet === "settings" ? "阅读设置" : sheet === "annotation" ? "注释" : "文献"}</h2></div>
               </div>
               <div className={styles.sheetHeaderActions}>
-                {(sheet === "annotation" || sheet === "source") && <strong>{(sheet === "annotation" ? annotations : sources).length.toLocaleString("zh-CN")}</strong>}
+                {(sheet === "annotation" || sheet === "source") && referenceCounter(sheet, "sheet")}
                 <button ref={sheetCloseRef} type="button" onClick={closeSheet} aria-label="关闭">×</button>
               </div>
             </header>

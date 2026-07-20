@@ -64,6 +64,16 @@ const readingChromeSource = fs.readFileSync(
   path.join(process.cwd(), "app", "prototype", "reading", "[slug]", "ReadingPrototypeChrome.tsx"),
   "utf8"
 );
+const readingStylesSource = fs.readFileSync(
+  path.join(process.cwd(), "app", "prototype", "reading", "[slug]", "reading-prototype.module.css"),
+  "utf8"
+);
+const readingEditionSource = fs.readFileSync(
+  path.join(process.cwd(), "app", "components", "reading-edition", "ReadingEdition.tsx"),
+  "utf8"
+);
+const postsSource = fs.readFileSync(path.join(process.cwd(), "lib", "posts.ts"), "utf8");
+const globalStylesSource = fs.readFileSync(path.join(process.cwd(), "app", "globals.css"), "utf8");
 assert.equal(
   (readingChromeSource.match(/GLOBAL_NAV_ITEMS\.map\s*\(/g) ?? []).length,
   1,
@@ -76,8 +86,137 @@ assert.doesNotMatch(
 );
 assert.match(
   readingChromeSource,
-  /\{articleIdentity\}\{compactCredits\}\{currentChapter\}\{lineNavigator\}\{tocPanel\}/,
-  "reader desktop rail must place credits before the current chapter"
+  /\{articleIdentity\}\{compactCredits\}\{lineNavigator\}\{tocPanel\}/,
+  "reader desktop rail must place credits directly before reading progress and the table of contents"
+);
+assert.doesNotMatch(
+  readingChromeSource,
+  /currentChapter|当前章节/,
+  "reader desktop rail must not duplicate the active table-of-contents entry as a current chapter block"
+);
+assert.doesNotMatch(
+  readingChromeSource,
+  /本版阅读进度|当前字号、字族与视口下的视觉行|className=\{styles\.lineJump\}/,
+  "reader progress must use the compact click-to-edit control"
+);
+assert.match(
+  readingChromeSource,
+  /<span>阅读进度<\/span>[\s\S]*?editingLine[\s\S]*?String\(currentLine\)[\s\S]*?String\(lineCount\)/,
+  "reader progress must expose ungrouped current and total line counts"
+);
+assert.match(readingChromeSource, />您正在读<\//, "reader identity label must use the confirmed wording");
+assert.doesNotMatch(readingChromeSource, />当前阅读<\//, "reader identity label must not retain the old wording");
+assert.match(
+  readingChromeSource,
+  /referenceCounter[\s\S]*?当前第 \$\{current\} 条\$\{heading\}[\s\S]*?<small><span>\/<\/span>\{String\(items\.length\)\}<\/small>/,
+  "reference panes must expose an editable current/total counter"
+);
+assert.match(
+  readingChromeSource,
+  /data-rail-progress=\{desktopDesk \? "true" : "false"\}/,
+  "reader header progress must defer to the visible desktop rail"
+);
+assert.doesNotMatch(
+  readingChromeSource,
+  /上一条|查看文末|下一条/,
+  "reference panes must not retain the superseded previous/end/next actions"
+);
+assert.match(
+  readingChromeSource,
+  /首条\{heading\}[\s\S]*?末条\{heading\}[\s\S]*?原文位置/,
+  "reference panes must expose edge and source-position actions"
+);
+assert.match(
+  readingChromeSource,
+  /returnToPageStart[\s\S]*?window\.scrollTo\(\{ top: 0,[\s\S]*?<button className=\{styles\.toTop\}[^>]*>返回篇首<\/button>/,
+  "return-to-start must use an arrowless control that scrolls to the true page top"
+);
+assert.match(
+  readingStylesSource,
+  /\.body\s+:global\(\.signature-block p\)[\s\S]*?font-family:\s*var\(--f-cjk-kaiti\);[\s\S]*?font-size:\s*var\(--reader-font\);/,
+  "in-text signature blocks must follow the reader size in hosted STKaiti"
+);
+assert.match(
+  readingStylesSource,
+  /\.referenceScroller\s*\{[\s\S]*?scrollbar-width:\s*none;/,
+  "reference panes must keep scrolling while hiding their visible scrollbars"
+);
+assert.match(
+  readingStylesSource,
+  /\.lineNumbers > span\s*\{[^}]*font-size:\s*15px;[^}]*\}[\s\S]*?\.lineNumbers strong\s*\{[^}]*font-size:\s*15px;/,
+  "reader progress label and current value must share the same size"
+);
+assert.match(
+  readingStylesSource,
+  /\.appendixContent :global\(\.footnotes li\)[\s\S]*?font-size:\s*calc\(var\(--reader-font\) - 1px\);[\s\S]*?\.appendixContent :global\(\.footnotes p\)[\s\S]*?font-size:\s*calc\(var\(--reader-font\) - 1px\);/,
+  "endnotes and sources must remain exactly one size below the reader body"
+);
+assert.match(
+  readingStylesSource,
+  /input\.lineCurrent::selection\s*\{[^}]*color:\s*var\(--solid-ink\);[^}]*background:\s*var\(--solid\);/,
+  "line input selection must use the active theme contrast tokens"
+);
+assert.match(
+  readingStylesSource,
+  /\.referenceItem\[data-active="true"\] \.referenceSelect[\s\S]*?grid-column:\s*1;[\s\S]*?\.referenceItem\[data-active="true"\] \.referenceDetailShell\s*\{\s*grid-row:\s*1;/,
+  "selected reference labels and their first detail line must share a row"
+);
+assert.match(readingEditionSource, /\.slice\(0, 3\)/, "article related reading must select three cards");
+assert.doesNotMatch(readingEditionSource, /<span>03<\/span>/, "article related reading must omit its decorative number");
+assert.match(
+  postsSource,
+  /titleBreaks:\s*string\[\][\s\S]*?title_breaks[\s\S]*?segments\.join\(""\) !== title/,
+  "article metadata must load title_breaks and require an exact title reconstruction"
+);
+assert.match(
+  readingEditionSource,
+  /function PreferredTitle[\s\S]*?post\.titleBreaks\.map[\s\S]*?<wbr \/>/,
+  "article titles must render editorially preferred break opportunities"
+);
+assert.match(
+  readingStylesSource,
+  /\.dossierCover\s*\{[^}]*grid-template-rows:\s*max-content;[^}]*align-items:\s*stretch;[^}]*min-height:\s*0;[^}]*\}[\s\S]*?\.coverStory\s*\{[^}]*grid-column:\s*2 \/ -1;[^}]*align-self:\s*start;[^}]*\}[\s\S]*?\.coverStory h1\s*\{[^}]*max-width:\s*none;/,
+  "desktop article titles must use the full rightward width while the cover height follows actual content"
+);
+assert.match(
+  readingStylesSource,
+  /\.docket\s*\{[^}]*border-right:\s*1px solid var\(--hair-strong\);[^}]*\}[\s\S]*?\.docket > div b\s*\{[^}]*font-family:\s*"Microsoft YaHei",\s*"微软雅黑",\s*"Noto Sans CJK SC"[^}]*font-weight:\s*900;/,
+  "article docket must keep a full-height separator and a heavy Microsoft YaHei/Noto Sans CJK section mark"
+);
+assert.doesNotMatch(
+  readingStylesSource,
+  /\.coverStory h1\s*\{[^}]*(?:max-width:\s*740px|text-wrap:\s*balance)/,
+  "desktop article titles must not retain the old width cap or automatic balancing"
+);
+assert.match(
+  readingStylesSource,
+  /\.creditMark\s*\{[^}]*border:\s*1px solid var\(--accent\);[^}]*font-family:\s*"Microsoft YaHei",\s*"微软雅黑"[^}]*font-weight:\s*700;[\s\S]*?\.compactCredits \.creditMark\s*\{\s*width:\s*16px;\s*height:\s*16px;\s*font-size:\s*9px;\s*\}/,
+  "desktop rail credit roles must retain boxed cmarks and share the bold Microsoft YaHei glyph style"
+);
+assert.match(
+  globalStylesSource,
+  /\.cmark\s*\{[^}]*font-family:\s*"Microsoft YaHei",\s*"微软雅黑"[^}]*font-weight:\s*700;/,
+  "boxed cmarks must share a bold Microsoft YaHei glyph style"
+);
+assert.match(
+  readingChromeSource,
+  /setLineMarkers\([\s\S]*?\(index \+ 1\) % 10 === 0[\s\S]*?className=\{styles\.visualLineMarker\}[\s\S]*?data-line=\{String\(marker\.line\)\}/,
+  "the reading chrome must regenerate a marker for every tenth measured visual line"
+);
+assert.match(
+  readingStylesSource,
+  /\.visualLineMarkers\s*\{[^}]*display:\s*none;[\s\S]*?\.visualLineMarker::before,[\s\S]*?\.visualLineMarker::after[\s\S]*?@media \(min-width:\s*1360px\)\s*\{\s*\.visualLineMarkers\s*\{\s*display:\s*block;/,
+  "visual line markers must appear on both sides only at the wide-desktop breakpoint"
+);
+assert.doesNotMatch(
+  readingChromeSource,
+  /snapVisibleBodyLine|scheduleBodySnap|bodySnapTimer/,
+  "the main article scroll must not perform a second post-scroll line snap"
+);
+assert.match(
+  readingStylesSource,
+  /--reading-bottom-safe:\s*22px;[\s\S]*?height:\s*calc\(100dvh - var\(--reading-rail-top\) - var\(--reading-bottom-safe\)\);/,
+  "both desktop rails must share a modest bottom safe area"
 );
 
 async function page(path) {
@@ -288,6 +427,7 @@ function assertMetadata(label, result, expectedPath, jsonLdType = null) {
 const [
   home,
   article,
+  preferredBreakArticle,
   media,
   library,
   filteredLibrary,
@@ -302,6 +442,7 @@ const [
 ] = await Promise.all([
   page("/"),
   page("/posts/lih-lenin-disputed"),
+  page("/posts/olsevich-gregory-soviet-planned-economy-retrospective"),
   page("/media/csa"),
   page("/library"),
   page("/library?contributor=wang-kui&role=translator"),
@@ -318,6 +459,7 @@ const [
 for (const [label, result] of Object.entries({
   home,
   article,
+  preferredBreakArticle,
   media,
   library,
   filteredLibrary,
@@ -460,7 +602,7 @@ assert.equal(
 const sectionLabels = {
   essay: "论",
   review: "评",
-  translation: "译介",
+  translation: "译",
   multimedia: "多媒体",
 };
 const editorialCards = elements(home.html, "article")
@@ -502,7 +644,7 @@ for (const card of editorialCards) {
   );
 }
 
-// 泛化：不钉具体译文标题/作者 id（会随最新译介变化而误红）；只验证译介推荐卡的
+// 泛化：不钉具体译文标题/作者 id（会随最新“译”栏目变化而误红）；只验证“译”栏目推荐卡的
 // 渲染规则——至少链接一位贡献者、且不显示「原作者/译者」标签字段。作者/译者角色
 // 区分的强校验放在按 slug 稳定寻址的书籍页与文章页，不受首页 recency 排序影响。
 const featuredTranslation = editorialCards.find((card) => card.section === "translation");
@@ -541,12 +683,22 @@ const coverKicker = article.html.match(
 assert.ok(coverKicker, "article cover must expose its compact return/date/duration row");
 assert.ok(links(coverKicker).some((link) => link.href === "/"), "article cover must link back home");
 assert.equal(tags(coverKicker, "time").length, 1, "article cover must expose one publication time");
-assert.match(visibleText(coverKicker), /返回首页.*分钟/, "article cover must keep return, date, and duration together");
+assert.match(
+  visibleText(coverKicker),
+  /返回首页.*第\s*\d+\s*号.*\d{4}\.\d{2}\.\d{2}.*\d+\s*分钟/,
+  "article cover must keep return, issue number, date, and duration together in that order"
+);
+assert.match(preferredBreakArticle.html, /<wbr\s*\/?\s*>/i, "segmented article titles must expose preferred break opportunities");
 const articleFacets = postLibraryFacets("lih-lenin-disputed");
 const articleDocket = elements(article.html, "aside").find((aside) =>
   /\bclass=["'][^"']*docket/.test(aside.opening)
 );
 assert.ok(articleDocket, "article cover must expose its section docket");
+assert.doesNotMatch(
+  articleDocket.inner,
+  /<p\b[^>]*>[\s\S]*?西方負典[\s\S]*?文章[\s\S]*?第\s*\d+\s*号[\s\S]*?<\/p>/i,
+  "article docket must not duplicate the brand, document type, and issue number"
+);
 const articleSectionLink = links(articleDocket.inner).find(
   (link) => link.href === `/library?section=${encodeURIComponent(articleFacets.section)}`
 );

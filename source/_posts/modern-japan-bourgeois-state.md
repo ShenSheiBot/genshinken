@@ -1,5 +1,6 @@
 ---
 title: 朦胧云遮阳，晴时已西山
+title_breaks: ["朦胧云遮阳，", "晴时已西山"]
 date: 2026-07-10
 slug: modern-japan-bourgeois-state
 categories: [历史]

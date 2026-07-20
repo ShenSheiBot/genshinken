@@ -32,6 +32,7 @@ export interface Credit {
 export interface PostSummary {
   slug: string;
   title: string;
+  titleBreaks: string[];
   subtitle: string;
   draft: boolean;
   category: string;
@@ -214,6 +215,18 @@ function metadataText(v: unknown): string {
   return String(v).trim();
 }
 
+function titleBreaks(value: unknown, title: string, file: string): string[] {
+  if (value == null) return [title];
+  if (!Array.isArray(value)) {
+    throw new Error(`${file}: title_breaks 必须是按显示顺序填写的字符串数组`);
+  }
+  const segments = value.map((segment) => String(segment).trim()).filter(Boolean);
+  if (segments.length === 0 || segments.join("") !== title) {
+    throw new Error(`${file}: title_breaks 拼接后必须与 title 完全一致`);
+  }
+  return segments;
+}
+
 function comparePosts(a: Post, b: Post): number {
   return b.timestamp - a.timestamp || b.sortOrder - a.sortOrder || a.slug.localeCompare(b.slug);
 }
@@ -267,6 +280,7 @@ async function loadRaw(): Promise<Post[]> {
       const updated = toDate(data.updated);
       const html = await renderMarkdown(content);
       const title = String(data.title ?? baseName).trim();
+      const preferredTitleBreaks = titleBreaks(data.title_breaks ?? data.titleBreaks, title, file);
       const subtitle = String(data.subtitle ?? "").trim();
       const draft = isDraft(data.draft);
       const category = categories[0] ?? tags[0] ?? "未分类";
@@ -279,6 +293,7 @@ async function loadRaw(): Promise<Post[]> {
       const post: Post = {
         slug,
         title,
+        titleBreaks: preferredTitleBreaks,
         subtitle,
         draft,
         category,

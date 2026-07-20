@@ -1,5 +1,6 @@
 ---
 title: 苏联计划经济的历史审视
+title_breaks: ["苏联计划经济的", "历史审视"]
 subtitle: 对苏联计划管理负责人的分析与访谈
 date: 2026-07-13
 draft: false

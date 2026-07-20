@@ -11,23 +11,6 @@ type Theme = "light" | "dark";
 type MobileSection = { key: string; title: string; level: number };
 type SectionRef = MobileSection & { el: HTMLElement; top: number; parentH2Key: string };
 
-function SunIcon() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-      <circle cx="12" cy="12" r="4.1" />
-      <path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.2 5.2l1.8 1.8M17 17l1.8 1.8M18.8 5.2L17 7M7 17l-1.8 1.8" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-function MoonIcon() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M20.2 14.8A8.2 8.2 0 1 1 9.2 3.8a6.4 6.4 0 0 0 11 11z" />
-    </svg>
-  );
-}
-
 function ChevronIcon() {
   return (
     <svg className="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
@@ -237,7 +220,7 @@ export default function TopBar() {
       </div>
 
       <button className="toggle" onClick={toggle} aria-label="切换明暗主题" title="切换明暗主题">
-        {mounted && theme === "dark" ? <MoonIcon /> : <SunIcon />}
+        {mounted && theme === "dark" ? "☾" : "☼"}
       </button>
 
       {meta && sections.length > 0 && (

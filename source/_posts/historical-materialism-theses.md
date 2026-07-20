@@ -1,5 +1,6 @@
 ﻿---
 title: 历史唯物主义论纲
+title_breaks: ["历史唯物主义论纲"]
 categories: 哲学
 section: essay
 tags: [历史唯物主义, 拉康]

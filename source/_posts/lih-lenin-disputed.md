@@ -1,5 +1,6 @@
 ---
 title: 列宁之争
+title_breaks: ["列宁之争"]
 date: 2026-07-06
 slug: lih-lenin-disputed
 categories: [历史]

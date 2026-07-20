@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Fragment } from "react";
 import type { Credit, Post, PostSummary } from "@/lib/posts";
 import { site } from "@/lib/site";
 import {
@@ -66,6 +67,15 @@ function CreditLine({ credits }: { credits: Credit[] }) {
   );
 }
 
+function PreferredTitle({ post }: { post: PostSummary }) {
+  return post.titleBreaks.map((segment, index) => (
+    <Fragment key={`${segment}-${index}`}>
+      <span className={styles.titleSegment}>{segment}</span>
+      {index < post.titleBreaks.length - 1 && <wbr />}
+    </Fragment>
+  ));
+}
+
 function MetaRows({ post }: { post: Post }) {
   const section = sectionMeta[sectionFor(post)];
   return (
@@ -103,43 +113,6 @@ function MetaRows({ post }: { post: Post }) {
       <div><dt>篇幅</dt><dd>约 {post.readMin} 分钟</dd></div>
       <div><dt>编号</dt><dd>第 {post.no} 号</dd></div>
     </dl>
-  );
-}
-
-function SourceRecord({ post }: { post: Post }) {
-  const translated = sectionFor(post) === "translation";
-  const originalAuthors = post.credits.filter((credit) => credit.role === "author");
-  const translators = post.credits.filter((credit) => credit.role === "translator");
-  return (
-    <aside className={styles.sourceRecord} aria-label={translated ? "原文资料" : "文章提要"}>
-      <span className={styles.eyebrow}>{translated ? "原文资料" : "本文提要"}</span>
-      {translated ? (
-        <dl>
-          {(originalAuthors.length > 0 || post.author) && (
-            <div>
-              <dt>
-                <span className={styles.creditMark} data-solid="true" role="img" aria-label="作者">作</span>
-              </dt>
-              <dd><CreditLinks credits={originalAuthors} showMarks={false} fallbackName={post.author} /></dd>
-            </div>
-          )}
-          {translators.length > 0 && (
-            <div>
-              <dt>
-                <span className={styles.creditMark} data-solid="false" role="img" aria-label="译者">译</span>
-              </dt>
-              <dd><CreditLinks credits={translators} showMarks={false} /></dd>
-            </div>
-          )}
-          {post.originalTitle && <div><dt>原文题名</dt><dd>{post.originalTitle}</dd></div>}
-          {(post.originalPublication || post.originalDate) && (
-            <div><dt>原刊 / 日期</dt><dd>{[post.originalPublication, post.originalDate].filter(Boolean).join(" / ")}</dd></div>
-          )}
-        </dl>
-      ) : (
-        <p>{post.excerpt || "文章资料正在整理。"}</p>
-      )}
-    </aside>
   );
 }
 
@@ -228,11 +201,10 @@ function RelatedReading({
   const candidates = relatedPostsFor(current, posts);
 
   return (
-    <section className={homeStyles.latestUpdates} data-surface="paper" aria-labelledby="related-heading" data-reveal>
+    <section className={`${homeStyles.latestUpdates} ${styles.relatedReading}`} data-surface="paper" aria-labelledby="related-heading" data-reveal>
       <div className={homeStyles.latestInner}>
         <header className={homeStyles.latestHeading}>
           <div>
-            <span>03</span>
             <h2 id="related-heading">相关推荐</h2>
           </div>
           <p>
@@ -242,7 +214,7 @@ function RelatedReading({
           </p>
         </header>
 
-        <ol className={homeStyles.latestGrid}>
+        <ol className={`${homeStyles.latestGrid} ${styles.relatedGrid}`}>
           {candidates.map((post) => {
             const section = sectionMeta[sectionFor(post)];
             return (
@@ -314,16 +286,16 @@ export function ReadingDossier({
             </Link>
           </div>
           <i />
-          <p>{site.brandCN}<br />文章<br />第 {post.no} 号</p>
         </aside>
 
         <div className={styles.coverStory}>
           <div className={styles.coverKicker}>
             <Link href={isPublicEdition ? "/" : "/prototype/poster"}>← 返回首页</Link>
+            <span>第 {post.no} 号</span>
             <time dateTime={post.dateISO}>{post.dateISO.replaceAll("-", ".")}</time>
             <span>{post.readMin} 分钟</span>
           </div>
-          <h1 className="art-title">{post.title}</h1>
+          <h1 className="art-title"><PreferredTitle post={post} /></h1>
           {post.subtitle && <p className={styles.subtitle}>{post.subtitle}</p>}
           <p className={styles.dek}>{post.excerpt}</p>
           <p className={styles.byline}><CreditLine credits={displayCredits(post)} /></p>
@@ -342,8 +314,6 @@ export function ReadingDossier({
             </nav>
           )}
         </div>
-
-        <SourceRecord post={post} />
       </header>
 
       <section className={styles.dossierReading}>
@@ -386,7 +356,7 @@ export function ReadingFolio({ post, parts, posts }: { post: Post; parts: Articl
               {section.label}
             </Link>
           </p>
-          <h1 className="art-title">{post.title}</h1>
+          <h1 className="art-title"><PreferredTitle post={post} /></h1>
           {post.subtitle && <p className={styles.subtitle}>{post.subtitle}</p>}
         </div>
         <div className={styles.folioLead}>

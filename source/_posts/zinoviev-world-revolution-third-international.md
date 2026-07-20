@@ -1,5 +1,6 @@
 ---
 title: 世界革命与第三国际
+title_breaks: ["世界革命与", "第三国际"]
 subtitle: 四小时演讲
 date: 2026-06-29
 slug: zinoviev-world-revolution-third-international

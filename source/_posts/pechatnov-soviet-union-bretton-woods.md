@@ -1,5 +1,6 @@
 ---
 title: 苏联与布雷顿森林会议
+title_breaks: ["苏联与布雷顿森林会议"]
 date: 2026-06-15
 slug: pechatnov-soviet-union-bretton-woods
 categories: [历史]

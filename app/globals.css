@@ -220,12 +220,12 @@ body:has(.reading-edition-page) { background-image: none; }
 /* 显示模式切换：单一图标按钮（无中英文字） */
 .topbar .toggle {
   justify-self: end; display: inline-flex; align-items: center; justify-content: center;
-  width: 36px; height: 36px; padding: 0; color: var(--ink);
-  border: 1px solid var(--hair-strong);
+  width: 40px; height: 34px; padding: 0; color: var(--ink);
+  border: 0; border-left: 1px solid var(--hair);
+  font-family: var(--f-grotesk); font-size: 15px;
   transition: background .15s, color .15s;
 }
 .topbar .toggle:hover { background: var(--solid); color: var(--solid-ink); }
-.topbar .toggle svg { display: block; }
 
 /* 滚动后顶栏显形的「页眉文章信息」：标题（可省略号）+ 署名。
    字号与垂直对齐均与左侧品牌一致（16px、整体居中对齐）。 */
@@ -392,7 +392,7 @@ body:has(.reading-edition-page) { background-image: none; }
 .srow:hover .smain .sauthor { color: var(--solid-ink); }
 /* 署名方块（首页卡片 + 文章页元信息共用）：方块与名字间半个全角，署名之间一个全角 */
 .credit { display: inline-flex; align-items: center; gap: .5em; }
-.cmark { display: inline-flex; align-items: center; justify-content: center; font-family: var(--f-grotesk); font-weight: 700; line-height: 1; flex: none; }
+.cmark { display: inline-flex; align-items: center; justify-content: center; font-family: "Microsoft YaHei", "微软雅黑", "PingFang SC", sans-serif; font-weight: 700; line-height: 1; flex: none; }
 .cmark.solid { background: var(--accent); color: var(--bg); }
 .cmark.hollow { border: 1px solid var(--accent); color: var(--accent); background: transparent; }
 .sauthor .cmark { width: 18px; height: 18px; font-size: 11px; }
@@ -550,9 +550,31 @@ body:has(main[data-archive-page="true"]) {
   padding: 20px 22px; overflow-x: auto; margin: 32px 0;
 }
 .art-body pre code { background: none; border: none; padding: 0; font-size: inherit; }
-.art-body table { width: 100%; border-collapse: collapse; margin: 32px 0; font-family: var(--f-mono); font-size: 14px; }
-.art-body th, .art-body td { border: 1px solid var(--hair-strong); padding: 10px 14px; text-align: left; }
-.art-body th { font-weight: 700; }
+.art-body table {
+  width: 100%;
+  margin: 34px 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-top: 1px solid var(--hair);
+  border-bottom: 1px solid var(--hair);
+  font-family: var(--reader-body-family, var(--f-cjk-serif));
+  font-size: 15px;
+  line-height: 1.55;
+}
+.art-body th,
+.art-body td {
+  padding: 12px 14px;
+  border: 0;
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+.art-body th {
+  border-bottom: 1px solid var(--hair);
+  font-family: var(--reader-interface-family, var(--f-grotesk));
+  font-weight: 700;
+}
+.art-body tbody tr + tr td { border-top: 1px solid var(--hair); }
 
 /* ---- 注释 / 脚注：文章要件，样式区别于正文内容标题 ----
    不沿用正文 h2 的红方块大标题；改用细体 mono 标签 + 顶部分隔线。
@@ -574,6 +596,8 @@ body:has(main[data-archive-page="true"]) {
 .art-body .source-ref { font-family: "Times New Roman", Times, serif; font-size: .72em; line-height: 0; }
 .art-body .source-ref a { color: var(--accent); border: none; padding-bottom: 0; }
 .art-body .source-ref a:hover { background: none; color: var(--accent); }
+.art-body sup.source-ref + sup:not(.source-ref),
+.art-body sup:not(.source-ref) + sup.source-ref { margin-left: .3em; }
 
 .art-body .source-notes { margin-top: 42px; padding-top: 30px; border-top: 1px solid var(--hair-strong); font-size: 14px; }
 .art-body .source-notes h2 {

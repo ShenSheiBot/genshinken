@@ -239,6 +239,90 @@ function stringArray(value, file, field, { required = false } = {}) {
   return strings;
 }
 
+const titleFunctionWordStart = /^[的之与及而或于在把被从向为以]/u;
+
+function badTitleStart(value) {
+  return titleFunctionWordStart.test(value) && !/^(为何|为了|为着)/u.test(value);
+}
+
+function titleLength(value) {
+  return Array.from(String(value).replace(/\s+/gu, "")).length;
+}
+
+function titleWordBoundaries(title) {
+  const boundaries = new Set();
+  if (typeof Intl.Segmenter === "function") {
+    const segmenter = new Intl.Segmenter("zh-CN", { granularity: "word" });
+    for (const segment of segmenter.segment(title)) {
+      boundaries.add(segment.index + segment.segment.length);
+    }
+  }
+  for (let index = 1; index < title.length; index += 1) {
+    if (/[，。！？；：、—）】》]/u.test(title[index - 1])) boundaries.add(index);
+  }
+  boundaries.delete(0);
+  boundaries.delete(title.length);
+  return boundaries;
+}
+
+function suggestTitleBreaks(title) {
+  if (titleLength(title) <= 8) return [title];
+  const boundaries = [...titleWordBoundaries(title)];
+  const candidates = boundaries.length > 0
+    ? boundaries
+    : Array.from({ length: Math.max(0, title.length - 1) }, (_, index) => index + 1);
+  const best = candidates
+    .map((index) => {
+      const first = title.slice(0, index);
+      const second = title.slice(index);
+      const firstLength = titleLength(first);
+      const secondLength = titleLength(second);
+      const badStart = badTitleStart(second) ? 100 : 0;
+      const punctuationBonus = /[，。！？；：、—]$/u.test(first) ? -4 : 0;
+      return { first, second, score: Math.abs(firstLength - secondLength) + badStart + punctuationBonus };
+    })
+    .sort((a, b) => a.score - b.score)[0];
+  return best ? [best.first, best.second] : [title];
+}
+
+function validateTitleBreaks(file, data) {
+  const title = nonEmptyString(data.title) ? data.title.trim() : "";
+  if (!title) return;
+  if (!hasOwn(data, "title_breaks")) {
+    report(
+      warnings,
+      file,
+      `未填写 title_breaks；建议：title_breaks: ${JSON.stringify(suggestTitleBreaks(title))}`
+    );
+    return;
+  }
+  const segments = stringArray(data.title_breaks, file, "title_breaks", { required: true });
+  if (segments.length === 0 || segments.join("") !== title) {
+    report(errors, file, "title_breaks 按顺序拼接后必须与 title 完全一致");
+    return;
+  }
+  const wordBoundaries = titleWordBoundaries(title);
+  let offset = 0;
+  segments.slice(0, -1).forEach((segment, index) => {
+    offset += segment.length;
+    const next = segments[index + 1];
+    if (badTitleStart(next)) {
+      report(warnings, file, `title_breaks[${index + 1}] 以非实词“${next[0]}”开头，建议前移断点`);
+    }
+    if (wordBoundaries.size > 0 && !wordBoundaries.has(offset)) {
+      report(warnings, file, `title_breaks 在“${segment.slice(-3)}｜${next.slice(0, 3)}”之间可能切入实词`);
+    }
+  });
+  if (segments.length === 2) {
+    const lengths = segments.map(titleLength);
+    const shorter = Math.min(...lengths);
+    const longer = Math.max(...lengths);
+    if (shorter / longer < 0.5) {
+      report(warnings, file, `title_breaks 两行长度差距过大（${lengths.join(" / ")}），请重新平衡`);
+    }
+  }
+}
+
 function validateBookDownloadUrl(file, field, value) {
   if (value == null) return;
   if (!nonEmptyString(value)) {
@@ -413,6 +497,7 @@ const records = files.map((file) => {
   if (typeof data.title !== "string" || data.title.trim() === "") {
     report(errors, file, "必须填写非空 title");
   }
+  validateTitleBreaks(file, data);
 
   for (const field of creditFields) {
     const key = field.keys.find((candidate) => {

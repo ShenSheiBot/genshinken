@@ -870,7 +870,8 @@ html[data-theme="dark"] .latestUpdates:not([data-surface="paper"]) {
 }
 
 .latestCardPrimaryLink:focus-visible + .latestCard,
-.latestArticle:focus-within .latestCard {
+.latestArticle:focus-within .latestCard,
+.latestCardInteractive:focus-visible {
   color: var(--latest-hover-ink);
   background: var(--latest-hover-bg);
   outline: none;
@@ -886,12 +887,18 @@ html[data-theme="dark"] .latestUpdates:not([data-surface="paper"]) {
 .latestArticle:focus-within .latestCard > footer,
 .latestArticle:focus-within .latestCard > p,
 .latestArticle:focus-within .latestCard > .latestCredits,
-.latestArticle:focus-within .latestCard > header span:last-child {
+.latestArticle:focus-within .latestCard > header span:last-child,
+.latestCardInteractive:focus-visible > header,
+.latestCardInteractive:focus-visible > footer,
+.latestCardInteractive:focus-visible > p,
+.latestCardInteractive:focus-visible > .latestCredits,
+.latestCardInteractive:focus-visible > header span:last-child {
   color: var(--latest-hover-soft);
 }
 
 @media (hover: hover) {
-  .latestArticle:hover .latestCard {
+  .latestArticle:hover .latestCard,
+  .latestCardInteractive:hover {
     color: var(--latest-hover-ink);
     background: var(--latest-hover-bg);
   }
@@ -900,7 +907,12 @@ html[data-theme="dark"] .latestUpdates:not([data-surface="paper"]) {
   .latestArticle:hover .latestCard > footer,
   .latestArticle:hover .latestCard > p,
   .latestArticle:hover .latestCard > .latestCredits,
-  .latestArticle:hover .latestCard > header span:last-child {
+  .latestArticle:hover .latestCard > header span:last-child,
+  .latestCardInteractive:hover > header,
+  .latestCardInteractive:hover > footer,
+  .latestCardInteractive:hover > p,
+  .latestCardInteractive:hover > .latestCredits,
+  .latestCardInteractive:hover > header span:last-child {
     color: var(--latest-hover-soft);
   }
 
