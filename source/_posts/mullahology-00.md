@@ -1,6 +1,6 @@
 ---
-title: 导言：一份关于克苏鲁的调查报告
-title_breaks: ["导言：一份关于", "克苏鲁的调查报告"]
+title: 一份关于克苏鲁的调查报告
+title_breaks: ["一份关于克苏鲁的", "调查报告"]
 date: 2026-07-20
 slug: mullahology-00
 categories: [历史]
