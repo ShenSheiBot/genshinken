@@ -6,11 +6,16 @@ import {
   bookDocumentHref,
   bookHref,
   bookStatusLabel,
+  getAllBookChapters,
   getAllBooks,
   getBookCredits,
   getBookBySlug,
   getLatestBookChapter,
+  getPublishedBookChapters,
   getValidatedBookDocument,
+  isPublishedBookChapter,
+  type Book,
+  type BookChapter,
 } from "@/lib/books";
 import { site } from "@/lib/site";
 import CreditLinks from "@/app/components/CreditLinks";
@@ -19,6 +24,55 @@ import BookResources from "../BookResources";
 import styles from "../books.module.css";
 
 export const dynamicParams = true;
+
+function ChapterCatalogue({
+  book,
+  chapters,
+  depth = 0,
+}: {
+  book: Book;
+  chapters: BookChapter[];
+  depth?: number;
+}) {
+  return (
+    <ol className={depth === 0 ? styles.chapterList : styles.chapterChildren}>
+      {chapters.map((chapter) => {
+        const published = isPublishedBookChapter(chapter);
+        const latest = published && chapter.id === book.latestChapterId;
+        return (
+          <li
+            key={chapter.id}
+            data-chapter-status={chapter.status}
+            data-latest={latest ? "true" : undefined}
+          >
+            {published ? (
+              <Link
+                href={bookChapterHref(book, chapter)}
+                className={`${styles.chapterRow} ${styles.chapterLink}`}
+              >
+                <span>{chapter.number}</span>
+                <div>
+                  <strong>{chapter.title}</strong>
+                  <time dateTime={chapter.publishedAt}>{chapter.publishedAt}</time>
+                </div>
+                <small>{latest ? "最新章节" : "阅读"} <b aria-hidden="true">→</b></small>
+              </Link>
+            ) : (
+              <div className={`${styles.chapterRow} ${styles.chapterForthcoming}`}>
+                <span>{chapter.number}</span>
+                <div><strong>{chapter.title}</strong></div>
+                <small>待更新</small>
+              </div>
+            )}
+            {chapter.children.length > 0 && (
+              <ChapterCatalogue book={book} chapters={chapter.children} depth={depth + 1} />
+            )}
+          </li>
+        );
+      })}
+    </ol>
+  );
+}
 
 export function generateStaticParams() {
   return getAllBooks().map((book) => ({ slug: book.slug }));
@@ -58,6 +112,8 @@ export default async function BookPage({
 
   const document = await getValidatedBookDocument(book);
   const latestChapter = getLatestBookChapter(book);
+  const allChapters = getAllBookChapters(book);
+  const publishedChapters = getPublishedBookChapters(book);
   const credits = getBookCredits(book);
   const authors = credits.filter((credit) => credit.role === "author");
   const translators = credits.filter((credit) => credit.role === "translator");
@@ -85,7 +141,7 @@ export default async function BookPage({
       url: `${site.url}/library?contributor=${encodeURIComponent(credit.contributorId)}`,
     })),
     publisher: { "@type": "Organization", name: site.brand, url: site.url },
-    hasPart: book.chapters.map((chapter, index) => ({
+    hasPart: publishedChapters.map((chapter, index) => ({
       "@type": "Chapter",
       name: chapter.title,
       position: index + 1,
@@ -135,7 +191,7 @@ export default async function BookPage({
             <dl className={styles.publicationFacts}>
               <div><dt>发布</dt><dd><time dateTime={book.publishedAt}>{book.publishedAt}</time></dd></div>
               <div><dt>更新</dt><dd><time dateTime={book.updatedAt}>{book.updatedAt}</time></dd></div>
-              <div><dt>章节</dt><dd>{book.chapters.length}</dd></div>
+              <div><dt>章节</dt><dd>{publishedChapters.length} / {allChapters.length}</dd></div>
               <div><dt>全文</dt><dd>约 {document.readMin} 分钟</dd></div>
             </dl>
           </aside>
@@ -145,23 +201,10 @@ export default async function BookPage({
           <section className={styles.chapters} aria-labelledby="book-chapters-heading">
             <header className={styles.sectionHeading}>
               <h2 id="book-chapters-heading">目录</h2>
-              <p>{book.chapters.length} 章</p>
+              <p>已发布 {publishedChapters.length} / 全部 {allChapters.length}</p>
             </header>
 
-            <ol className={styles.chapterList}>
-              {book.chapters.map((chapter) => (
-                <li key={chapter.id} data-latest={chapter.id === book.latestChapterId ? "true" : undefined}>
-                  <Link href={bookChapterHref(book, chapter)} className={styles.chapterLink}>
-                    <span>{chapter.number}</span>
-                    <div>
-                      <strong>{chapter.title}</strong>
-                      <time dateTime={chapter.publishedAt}>{chapter.publishedAt}</time>
-                    </div>
-                    <small>{chapter.id === book.latestChapterId ? "最新章节" : "阅读"} <b aria-hidden="true">→</b></small>
-                  </Link>
-                </li>
-              ))}
-            </ol>
+            <ChapterCatalogue book={book} chapters={book.chapters} />
           </section>
 
           <BookResources

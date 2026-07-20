@@ -187,11 +187,13 @@
 
 ## 6. 书籍与连载
 
-- `/books` 是书目索引；`/books/<slug>` 是一本书的状态、说明、章节入口和阅读选择页。书籍清单位于 `source/_books/*.json`，与承载连续正文的 `documentSlug` 分离。
-- 正文仍是一份可连续滚动、全文查找的文章，不按章节拆成互相隔离的内容页。`/books/<slug>/chapters/<chapter-id>` 是稳定入口，并以 `308` 跳到连续正文中的稳定标题锚点；这些跳转入口不作为 sitemap canonical 项。
-- 书籍页始终提供「从头阅读」「阅读最新章节」两个明确入口。读者每次进入自行选择起点；不自动恢复、不使用弹窗，也不记录本地阅读位置。
-- `latestChapterId` 必须指向现有章节；章节 id、number 与 anchor 在书内唯一。书籍 `updatedAt` 与承载正文的 `updated/date` 同步更新。
-- 书籍页作者／译者姓名使用贡献者稳定 id 链接文库。Book JSON-LD 及 Chapter URL 必须为绝对 URL，章节 `position` 从 1 开始，包含 publisher、发布日期和修订日期。
+- `/books` 是书目索引；`/books/<slug>` 是一本书的状态、说明、递归目录、章节入口和阅读选择页。书籍清单位于 `source/_books/*.json`，与承载连续正文的 `documentSlug` 分离。目录节点可以通过 `children` 继续嵌套，公开顺序严格遵循父子数组的书写顺序。
+- 每个新目录节点显式使用 `status: published / forthcoming`；旧平铺清单缺省状态仅作为兼容路径按 `published` 读取。两种状态都在书籍详情目录中可见；`published` 显示真实阅读入口，`forthcoming` 明确显示待更新状态且不可点击。聚合页和详情页的章节统计均按递归目录显示已发布数量／全部数量。
+- 正文仍是一份可连续滚动、全文查找的文章，不按章节拆成互相隔离的内容页。只有 `published` 节点生成 `/books/<slug>/chapters/<chapter-id>` 稳定入口，并以 `308` 跳到连续正文中的稳定标题锚点；`forthcoming` 不生成章节路由。这些跳转入口均不作为 sitemap canonical 项。
+- 书籍页始终提供「从头阅读」「阅读最新章节」两个明确入口。读者每次进入自行选择起点；不自动恢复、不使用弹窗，也不记录本地阅读位置。「阅读最新章节」只指向 `latestChapterId` 对应的已发布节点。
+- `latestChapterId` 必须指向递归目录中现有且状态为 `published` 的节点；节点 id、number 以及已发布节点的 anchor 在整棵目录树内唯一。`forthcoming` 节点必须省略 `anchor / publishedAt`，且不得包含状态为 `published` 的后代；待更新节点不参与锚点存在性校验。书籍 `updatedAt` 与承载正文的 `updated/date` 同步更新。
+- Book JSON-LD 的 `hasPart` 只列出递归目录中的 `published` 节点，并保持公开目录顺序；待更新节点不进入结构化数据。Chapter URL 必须为绝对 URL，章节 `position` 在已发布节点序列中从 1 开始；Book 同时包含 publisher、发布日期和修订日期。书籍页作者／译者姓名使用贡献者稳定 id 链接文库。
+- 后续更新继续向同一个 `documentSlug` 对应的连续正文追加内容，再把既有待更新节点切换为 `published` 并补齐 `anchor / publishedAt`；不得为同一本书的后续章节创建互相隔离的新正文。
 - 书籍清单可分别提供 `originalBibtex / translationBibtex / pdfUrl / epubUrl`。原书与译本书目信息是两个独立复制位：有对应 BibTeX 才显示紧凑的复制控件，并提供成功／失败反馈；缺失资料不得用另一版本或虚构记录代替。
 - PDF 与 EPUB 下载彼此可选，只在对应 URL 实际存在时显示真实下载链接；不得渲染禁用按钮、空链接或占位地址。站内文件使用根相对 URL，站外文件只接受 HTTP(S)。
 - `/books` 与 `/books/<slug>` 应以清楚而紧凑的书目层级、连载状态和阅读路径为主；聚合页首屏应尽快露出首条书目，详情首屏应尽快进入两个阅读入口，不用超大留白或装饰遮挡书名、署名、章节与资源操作。聚合页主体与页脚之间不得使用横贯视口的分隔线，书目内部的版心分隔线保留。连载聚合页、书籍详情及页尾交界的内容与横线均与页眉同宽，不得跨出版心。

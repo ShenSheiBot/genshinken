@@ -4,14 +4,16 @@ import {
   getAllBooks,
   getBookBySlug,
   getBookChapter,
+  getPublishedBookChapters,
   getValidatedBookDocument,
+  isPublishedBookChapter,
 } from "@/lib/books";
 
 export const dynamicParams = true;
 
 export function generateStaticParams() {
   return getAllBooks().flatMap((book) =>
-    book.chapters.map((chapter) => ({ slug: book.slug, chapter: chapter.id }))
+    getPublishedBookChapters(book).map((chapter) => ({ slug: book.slug, chapter: chapter.id }))
   );
 }
 
@@ -24,7 +26,7 @@ export default async function StableBookChapterPage({
   const book = getBookBySlug(decodeURIComponent(slug));
   if (!book) notFound();
   const chapter = getBookChapter(book, decodeURIComponent(chapterParam));
-  if (!chapter) notFound();
+  if (!chapter || !isPublishedBookChapter(chapter)) notFound();
 
   await getValidatedBookDocument(book);
   permanentRedirect(bookDocumentHref(book, chapter.anchor));

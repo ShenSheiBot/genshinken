@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { bookHref, bookStatusLabel, getAllBooks, getBookCredits } from "@/lib/books";
+import {
+  bookHref,
+  bookStatusLabel,
+  getAllBookChapters,
+  getAllBooks,
+  getBookCredits,
+  getPublishedBookChapters,
+} from "@/lib/books";
 import { site } from "@/lib/site";
 import CreditLinks from "@/app/components/CreditLinks";
 import styles from "./books.module.css";
@@ -65,6 +72,8 @@ export default function BooksPage() {
               const credits = getBookCredits(book);
               const authors = credits.filter((credit) => credit.role === "author");
               const translators = credits.filter((credit) => credit.role === "translator");
+              const allChapters = getAllBookChapters(book);
+              const publishedChapters = getPublishedBookChapters(book);
               return (
                 <li key={book.id}>
                   <article className={styles.catalogBook}>
@@ -88,7 +97,7 @@ export default function BooksPage() {
                       </div>
                     </div>
                     <dl className={styles.catalogFacts}>
-                      <div><dt>章节</dt><dd>{book.chapters.length}</dd></div>
+                      <div><dt>章节</dt><dd>{publishedChapters.length} / {allChapters.length}</dd></div>
                       <div><dt>更新</dt><dd><time dateTime={book.updatedAt}>{book.updatedAt.replaceAll("-", ".")}</time></dd></div>
                     </dl>
                     <Link className={styles.catalogOpen} href={bookHref(book)} aria-label={`进入书籍：${book.title}`}>

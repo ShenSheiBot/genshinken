@@ -13,6 +13,7 @@ const topicsDirectory = path.join(process.cwd(), "source", "_topics");
 const publicDirectory = path.join(process.cwd(), "public");
 const validSections = new Set(["essay", "review", "translation", "multimedia"]);
 const validBookStatuses = new Set(["serializing", "complete", "paused"]);
+const validBookChapterStatuses = new Set(["published", "forthcoming"]);
 const validTopicStatuses = new Set(["ongoing", "complete", "archived"]);
 const validTopicItemTypes = new Set(["post", "book", "media"]);
 const slugPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
@@ -686,13 +687,13 @@ const bookRecords = jsonFiles(booksDirectory)
     if (!title) report(errors, file, "书名不能为空");
 
     const chapterIds = new Set();
+    const publishedChapterIds = new Set();
     const chapterNumbers = new Set();
     const chapterAnchors = new Set();
     if (!Array.isArray(data.chapters) || data.chapters.length === 0) {
       report(errors, file, "chapters 至少需要一个章节");
     } else {
-      data.chapters.forEach((value, index) => {
-        const label = `${file}#chapters[${index}]`;
+      const validateChapter = (value, label, ancestorForthcoming = false) => {
         if (!isRecord(value)) {
           report(errors, label, "章节必须是对象");
           return;
@@ -700,24 +701,65 @@ const bookRecords = jsonFiles(booksDirectory)
         const chapterId = stableRecordId(value, "id", label);
         const number = requiredRecordString(value, "number", label);
         requiredRecordString(value, "title", label);
-        const anchor = requiredRecordString(value, "anchor", label);
-        const chapterDate = recordDate(value, "publishedAt", label);
+        const status = hasOwn(value, "status")
+          ? requiredRecordString(value, "status", label)
+          : "published";
+        if (status && !validBookChapterStatuses.has(status)) {
+          report(errors, label, "status 必须是 published / forthcoming 之一");
+        }
+
+        const published = status === "published";
+        if (published && ancestorForthcoming) {
+          report(errors, label, "published 节点不得位于 forthcoming 祖先节点之下");
+        }
+        let anchor = "";
+        let chapterDate = "";
+        if (published) {
+          anchor = requiredRecordString(value, "anchor", label);
+          chapterDate = recordDate(value, "publishedAt", label);
+        } else if (status === "forthcoming") {
+          if (hasOwn(value, "anchor")) report(errors, label, "forthcoming 节点不得填写 anchor");
+          if (hasOwn(value, "publishedAt")) {
+            report(errors, label, "forthcoming 节点不得填写 publishedAt");
+          }
+        }
         if (chapterDate && updatedAt && chapterDate > updatedAt) {
           report(errors, label, "publishedAt 不能晚于书籍 updatedAt");
         }
+        if (chapterId && published) publishedChapterIds.add(chapterId);
         for (const [set, candidate, field] of [
           [chapterIds, chapterId, "id"],
           [chapterNumbers, number, "number"],
-          [chapterAnchors, anchor, "anchor"],
+          [chapterAnchors, published ? anchor : "", "anchor"],
         ]) {
           if (!candidate) continue;
           if (set.has(candidate)) report(errors, label, `${field} 重复：${candidate}`);
           set.add(candidate);
         }
+
+        if (hasOwn(value, "children")) {
+          if (!Array.isArray(value.children)) {
+            report(errors, label, "children 如填写必须是章节数组");
+          } else {
+            value.children.forEach((child, childIndex) => {
+              validateChapter(
+                child,
+                `${label}.children[${childIndex}]`,
+                ancestorForthcoming || status === "forthcoming"
+              );
+            });
+          }
+        }
+      };
+
+      data.chapters.forEach((value, index) => {
+        validateChapter(value, `${file}#chapters[${index}]`);
       });
     }
     if (latestChapterId && !chapterIds.has(latestChapterId)) {
       report(errors, file, `latestChapterId 未指向已声明章节：${latestChapterId}`);
+    } else if (latestChapterId && !publishedChapterIds.has(latestChapterId)) {
+      report(errors, file, `latestChapterId 必须指向 published 章节：${latestChapterId}`);
     }
 
     return {

@@ -92,6 +92,18 @@ export const CONTRIBUTORS = [
     aliases: ["Lars T. Lih", "Lars Lih"],
     teamMember: false,
   },
+  {
+    id: "vasily-shulgin",
+    displayName: "瓦西里·维塔利耶维奇·舒尔金",
+    aliases: ["Василий Витальевич Шульгин", "В. В. Шульгин", "Vasily Vitalyevich Shulgin", "Vasily Shulgin"],
+    teamMember: false,
+  },
+  {
+    id: "yu-shulue",
+    displayName: "俞叔略",
+    aliases: [],
+    teamMember: false,
+  },
 ] as const satisfies readonly Contributor[];
 
 export type ContributorId = (typeof CONTRIBUTORS)[number]["id"];

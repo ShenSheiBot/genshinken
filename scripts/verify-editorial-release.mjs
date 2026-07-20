@@ -22,14 +22,28 @@ function curatedTopicPaths(slug) {
   }
   return paths;
 }
-function bookCitationKinds(slug) {
-  const data = JSON.parse(
+function readBookManifest(slug) {
+  return JSON.parse(
     fs.readFileSync(path.join(process.cwd(), "source", "_books", `${slug}.json`), "utf8")
   );
+}
+function bookCitationKinds(slug) {
+  const data = readBookManifest(slug);
   const kinds = [];
   if (typeof data.originalBibtex === "string" && data.originalBibtex.trim()) kinds.push("original");
   if (typeof data.translationBibtex === "string" && data.translationBibtex.trim()) kinds.push("translation");
   return kinds;
+}
+function flattenBookChapters(chapters, depth = 0) {
+  return (chapters ?? []).flatMap((chapter) => [
+    {
+      ...chapter,
+      status: chapter.status ?? "published",
+      statusExplicit: Object.hasOwn(chapter, "status"),
+      depth,
+    },
+    ...flattenBookChapters(chapter.children, depth + 1),
+  ]);
 }
 function postLibraryFacets(slug) {
   const { data } = matter(
@@ -424,6 +438,66 @@ function assertMetadata(label, result, expectedPath, jsonLdType = null) {
   return null;
 }
 
+const shulginManifest = readBookManifest("shulgin-dni");
+const shulginChapters = flattenBookChapters(shulginManifest.chapters);
+const shulginPublishedChapters = shulginChapters.filter((chapter) => chapter.status === "published");
+const shulginForthcomingChapters = shulginChapters.filter((chapter) => chapter.status === "forthcoming");
+const shulginSourceMarkdown = fs.readFileSync(
+  path.join(process.cwd(), "source", "_posts", "shulgin-dni.md"),
+  "utf8"
+);
+const shulginOriginalNoteIds = [...shulginSourceMarkdown.matchAll(/^\[\^(\d+)\]:/gm)]
+  .map((match) => Number(match[1]));
+assert.equal(shulginChapters.length, 16, "shulgin-dni initial catalogue must contain 16 nodes");
+assert.equal(shulginPublishedChapters.length, 3, "shulgin-dni initial release must publish 3 nodes");
+assert.equal(shulginForthcomingChapters.length, 13, "shulgin-dni initial release must retain 13 forthcoming nodes");
+assert.deepEqual(
+  shulginPublishedChapters.map((chapter) => chapter.id),
+  ["shulgin-notes", "epigraph-and-preface", "constitutional-day-one"],
+  "shulgin-dni initial release must contain only Proof.00 and Proof.01 catalogue entries"
+);
+assert.deepEqual(
+  shulginOriginalNoteIds,
+  [1, 2, 3, 4, 5],
+  "shulgin-dni initial release must not include the unpublished full tail-note unit"
+);
+assert.ok(
+  shulginChapters.every((chapter) => chapter.status === "published" || chapter.status === "forthcoming"),
+  "shulgin-dni catalogue entries must explicitly declare published/forthcoming status"
+);
+assert.ok(
+  shulginChapters.every((chapter) => chapter.statusExplicit),
+  "shulgin-dni must not rely on the legacy implicit-published compatibility path"
+);
+assert.equal(
+  shulginChapters.find((chapter) => chapter.number === "00")?.status,
+  "published",
+  "shulgin-dni initial 00 material must be published"
+);
+assert.equal(
+  shulginChapters.find((chapter) => chapter.number === "01")?.status,
+  "published",
+  "shulgin-dni initial 01 material must be published"
+);
+assert.ok(
+  shulginForthcomingChapters.length > 0,
+  "shulgin-dni must retain its forthcoming catalogue plan"
+);
+assert.ok(
+  shulginForthcomingChapters.every(
+    (chapter) => !Object.hasOwn(chapter, "anchor") && !Object.hasOwn(chapter, "publishedAt")
+  ),
+  "shulgin-dni forthcoming entries must omit anchor and publishedAt"
+);
+assert.ok(
+  shulginChapters.some((chapter) => chapter.depth > 0),
+  "shulgin-dni must exercise recursive catalogue children"
+);
+assert.ok(
+  shulginPublishedChapters.some((chapter) => chapter.id === shulginManifest.latestChapterId),
+  "shulgin-dni latestChapterId must identify a published catalogue entry"
+);
+
 const [
   home,
   article,
@@ -437,6 +511,8 @@ const [
   topic,
   books,
   book,
+  shulginBook,
+  shulginDocument,
   missing,
   sitemap,
 ] = await Promise.all([
@@ -452,6 +528,8 @@ const [
   page("/topics/soviet-union-and-bretton-woods"),
   page("/books"),
   page("/books/soviet-planned-economy-retrospective"),
+  page("/books/shulgin-dni"),
+  page(`/posts/${encodeURIComponent(shulginManifest.documentSlug)}`),
   page("/does-not-exist"),
   page("/sitemap.xml"),
 ]);
@@ -468,6 +546,8 @@ for (const [label, result] of Object.entries({
   topic,
   books,
   book,
+  shulginBook,
+  shulginDocument,
   missing,
 })) {
   assert.ok(!result.html.includes(prohibitedBrand), `${label} must not contain the prohibited brand`);
@@ -908,6 +988,145 @@ bookLd.hasPart.forEach((chapter, index) => {
   assert.match(chapter.url, /^https:\/\//, "Chapter JSON-LD URL must be absolute");
 });
 
+const shulginLd = assertMetadata(
+  "shulgin-dni book detail",
+  shulginBook,
+  "/books/shulgin-dni",
+  "Book"
+);
+const shulginDocumentPath = `/posts/${encodeURIComponent(shulginManifest.documentSlug)}`;
+assertMetadata("shulgin-dni continuous document", shulginDocument, shulginDocumentPath, "Article");
+const shulginMain = elements(shulginBook.html, "main")[0];
+assert.ok(shulginMain, "shulgin-dni detail must expose its main landmark");
+const shulginText = visibleText(shulginMain.inner);
+for (const chapter of shulginChapters) {
+  assert.ok(
+    shulginText.includes(chapter.title),
+    `shulgin-dni catalogue must expose ${chapter.number} ${chapter.title}`
+  );
+}
+assert.ok(
+  shulginText.includes(`已发布 ${shulginPublishedChapters.length} / 全部 ${shulginChapters.length}`),
+  "shulgin-dni detail must report recursively published/all catalogue counts"
+);
+assert.equal(
+  (shulginText.match(/待更新/g) ?? []).length,
+  shulginForthcomingChapters.length,
+  "every shulgin-dni forthcoming entry must expose a visible pending state"
+);
+const shulginStatusRows = tags(shulginBook.html, "li")
+  .map((tag) => attribute(tag, "data-chapter-status"))
+  .filter(Boolean);
+assert.equal(
+  shulginStatusRows.length,
+  shulginChapters.length,
+  "shulgin-dni must render every recursive catalogue entry exactly once"
+);
+assert.equal(
+  shulginStatusRows.filter((status) => status === "published").length,
+  shulginPublishedChapters.length,
+  "shulgin-dni rendered published count must match its source manifest"
+);
+assert.equal(
+  shulginStatusRows.filter((status) => status === "forthcoming").length,
+  shulginForthcomingChapters.length,
+  "shulgin-dni rendered forthcoming count must match its source manifest"
+);
+
+const expectedShulginChapterPaths = shulginPublishedChapters
+  .map((chapter) => `/books/shulgin-dni/chapters/${encodeURIComponent(chapter.id)}`)
+  .sort();
+const linkedShulginChapterPaths = [...new Set(
+  links(shulginBook.html)
+    .map((link) => link.href)
+    .filter((href) => href.startsWith("/books/shulgin-dni/chapters/"))
+)].sort();
+assert.deepEqual(
+  linkedShulginChapterPaths,
+  expectedShulginChapterPaths,
+  "shulgin-dni must link published entries and keep forthcoming entries inert"
+);
+const latestShulginPath = `/books/shulgin-dni/chapters/${encodeURIComponent(shulginManifest.latestChapterId)}`;
+assert.ok(
+  links(shulginBook.html).some((link) =>
+    link.href === latestShulginPath && link.text.includes("阅读最新章节")
+  ),
+  "shulgin-dni latest-reading action must target its published latestChapterId"
+);
+
+const shulginParts = shulginLd.hasPart ?? [];
+assert.deepEqual(
+  shulginParts.map((chapter) => chapter.name),
+  shulginPublishedChapters.map((chapter) => chapter.title),
+  "shulgin-dni JSON-LD must contain only published entries in recursive catalogue order"
+);
+assert.deepEqual(
+  shulginParts.map((chapter) => normalizedPath(chapter.url)),
+  shulginPublishedChapters.map(
+    (chapter) => `/books/shulgin-dni/chapters/${encodeURIComponent(chapter.id)}`
+  ),
+  "shulgin-dni JSON-LD chapter URLs must match the published entry routes"
+);
+shulginParts.forEach((chapter, index) => {
+  assert.equal(chapter.position, index + 1, "shulgin-dni published positions must be one-based");
+  assert.match(chapter.url, /^https:\/\//, "shulgin-dni Chapter URLs must be absolute");
+});
+assert.ok(
+  shulginForthcomingChapters.every((chapter) =>
+    !shulginParts.some((part) => normalizedPath(part.url).endsWith(`/chapters/${encodeURIComponent(chapter.id)}`))
+  ),
+  "shulgin-dni forthcoming entries must be absent from Book JSON-LD"
+);
+
+const shulginCatalogCard = elements(books.html, "article")
+  .find((card) => visibleText(card.outer).includes(shulginManifest.title));
+assert.ok(shulginCatalogCard, "books index must expose the shulgin-dni record");
+assert.ok(
+  visibleText(shulginCatalogCard.outer)
+    .includes(`章节 ${shulginPublishedChapters.length} / ${shulginChapters.length}`),
+  "books index must report shulgin-dni published/all counts"
+);
+
+const shulginHeadingIds = new Set(
+  ["h1", "h2", "h3", "h4", "h5", "h6"]
+    .flatMap((tagName) => tags(shulginDocument.html, tagName))
+    .map((tag) => decodeHtml(attribute(tag, "id") || ""))
+    .filter(Boolean)
+);
+for (const chapter of shulginPublishedChapters) {
+  assert.ok(
+    shulginHeadingIds.has(chapter.anchor),
+    `shulgin-dni published anchor #${chapter.anchor} must exist in the continuous document`
+  );
+}
+
+const shulginPublishedResponses = await Promise.all(
+  shulginPublishedChapters.map((chapter) =>
+    fetch(`${base}/books/shulgin-dni/chapters/${encodeURIComponent(chapter.id)}`, { redirect: "manual" })
+  )
+);
+for (const [index, response] of shulginPublishedResponses.entries()) {
+  const chapter = shulginPublishedChapters[index];
+  assert.equal(response.status, 308, `published shulgin-dni chapter ${chapter.id} must redirect permanently`);
+  assert.equal(
+    decodeURIComponent(normalizedPath(response.headers.get("location") || "")),
+    `/posts/${shulginManifest.documentSlug}#${chapter.anchor}`,
+    `published shulgin-dni chapter ${chapter.id} must target its continuous-document anchor`
+  );
+}
+const shulginForthcomingResponses = await Promise.all(
+  shulginForthcomingChapters.map((chapter) =>
+    fetch(`${base}/books/shulgin-dni/chapters/${encodeURIComponent(chapter.id)}`, { redirect: "manual" })
+  )
+);
+for (const [index, response] of shulginForthcomingResponses.entries()) {
+  assert.equal(
+    response.status,
+    404,
+    `forthcoming shulgin-dni chapter ${shulginForthcomingChapters[index].id} must not expose a route`
+  );
+}
+
 const [legacySearch, legacyFilteredSearch, mediaRedirect, chapterRedirect] = await Promise.all([
   fetch(`${base}/search`, { redirect: "manual" }),
   fetch(`${base}/search?section=essay&tag=%E5%8E%86%E5%8F%B2`, { redirect: "manual" }),
@@ -945,6 +1164,8 @@ for (const requiredPath of [
   "/topics/soviet-union-and-bretton-woods",
   "/books",
   "/books/soviet-planned-economy-retrospective",
+  "/books/shulgin-dni",
+  shulginDocumentPath,
   "/posts/lih-lenin-disputed",
   "/media/csa",
 ]) {

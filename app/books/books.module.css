@@ -482,32 +482,45 @@
   font-size: 8px;
 }
 
-.chapterList {
+.chapterList,
+.chapterChildren {
   margin: 0;
   padding: 0;
-  border-top: 2px solid var(--hair-strong);
   list-style: none;
 }
 
-.chapterList > li {
+.chapterList { border-top: 2px solid var(--hair-strong); }
+
+.chapterChildren {
+  margin-left: 48px;
+  border-top: 1px solid var(--hair);
+}
+
+.chapterList > li,
+.chapterChildren > li {
   border-bottom: 1px solid var(--hair-strong);
 }
 
-.chapterList > li[data-latest="true"] {
+.chapterChildren > li:last-child { border-bottom: 0; }
+
+.chapterList li[data-latest="true"] > .chapterRow {
   box-shadow: inset 4px 0 var(--accent);
   background: color-mix(in srgb, var(--accent) 5%, var(--bg));
 }
 
-.chapterLink {
+.chapterRow {
   display: grid;
   grid-template-columns: 48px minmax(0, 1fr) auto;
   gap: 18px;
   align-items: center;
   padding: 16px 12px 16px 8px;
+}
+
+.chapterLink {
   transition: color 150ms ease, background 150ms ease;
 }
 
-.chapterLink > span {
+.chapterRow > span {
   color: var(--accent);
   font-family: var(--f-grotesk);
   font-size: 18px;
@@ -515,26 +528,34 @@
   text-align: center;
 }
 
-.chapterLink > div {
+.chapterRow > div {
   display: grid;
   gap: 6px;
   min-width: 0;
 }
 
-.chapterLink strong {
+.chapterRow strong {
   font-family: var(--f-cjk-serif);
   font-size: clamp(20px, 2.1vw, 27px);
   line-height: 1.18;
 }
 
-.chapterLink time,
-.chapterLink small {
+.chapterRow time,
+.chapterRow small {
   color: var(--ink-soft);
   font-size: 8px;
 }
 
-.chapterLink small { white-space: nowrap; }
-.chapterLink small b { margin-left: 7px; color: var(--accent); font-size: 15px; }
+.chapterRow small { white-space: nowrap; }
+.chapterRow small b { margin-left: 7px; color: var(--accent); font-size: 15px; }
+
+.chapterForthcoming {
+  color: var(--ink-faint);
+  background: color-mix(in srgb, var(--hair) 22%, transparent);
+}
+
+.chapterForthcoming > span,
+.chapterForthcoming small { color: var(--ink-faint); }
 
 .chapterLink:hover,
 .chapterLink:focus-visible {
@@ -743,8 +764,9 @@
   .publicationRail { grid-column: auto; }
   .readingActions { grid-template-columns: minmax(0, 1fr); }
   .publicationFacts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .chapterLink { grid-template-columns: 38px minmax(0, 1fr); gap: 12px; padding-right: 0; }
-  .chapterLink > small { grid-column: 2; }
+  .chapterRow { grid-template-columns: 38px minmax(0, 1fr); gap: 12px; padding-right: 0; }
+  .chapterRow > small { grid-column: 2; }
+  .chapterChildren { margin-left: 24px; }
   .citationCard { grid-template-columns: minmax(0, 1fr); }
   .copyAction { align-items: flex-start; }
 }

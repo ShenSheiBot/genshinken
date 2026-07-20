@@ -17,7 +17,7 @@
 - [ ] **引号全为方向性弯引号** `“ ” ‘ ’`，正文无 ASCII 直引号 `" '`
 - [ ] **脚注用 GFM `[^n]` 语法**，`npm run build` 后确认角标可跳转、底部有脚注区
 - [ ] **首行缩进交给前端**：勿手敲全角空格；承接段用 `<!--continue-->` 标记（见 §8）
-- [ ] **书籍清单同步**：章节 id／anchor 稳定，`latestChapterId` 有效，`updatedAt` 与连续正文一致
+- [ ] **书籍清单同步**：递归目录 id／number 稳定，已发布节点的 anchor 有效，`latestChapterId` 只指向已发布节点，`updatedAt` 与连续正文一致
 - [ ] **专题引用有效**：分组顺序正确，`post / media / book` 类型与目标一致，导语和编者按已复核
 - [ ] **链接有效**：外链正常；无残留的 Outline `mention://` 内链
 - [ ] **提交作者 = `un-canon <un-canon@hotmail.com>`**
@@ -196,7 +196,7 @@ featured_order: 0        # 可选；同栏目首页推荐优先级，数值越�
 
 ## 9. 书籍与章节清单
 
-每本书使用 `source/_books/<slug>.json`，书籍元数据与承载全文的 Markdown 分离。全文仍是一篇连续正文；章节清单只提供稳定定位、连载状态和更新时间。
+每本书使用 `source/_books/<slug>.json`，书籍元数据与承载全文的 Markdown 分离。全文仍是一篇连续正文；章节清单是可递归的编辑目录，只提供稳定定位、逐项发布状态和更新时间，不把目录节点拆成独立正文。
 
 ```json
 {
@@ -212,28 +212,47 @@ featured_order: 0        # 可选；同栏目首页推荐优先级，数值越�
   "publishedAt": "2026-07-18",
   "updatedAt": "2026-07-18",
   "startAnchor": "reading-cover",
-  "latestChapterId": "chapter-two",
+  "latestChapterId": "chapter-one",
   "originalBibtex": "@book{original_edition, ...}",
   "translationBibtex": "@misc{un_canon_translation, ...}",
   "pdfUrl": "/attachments/example-book.pdf",
   "epubUrl": "https://example.org/example-book.epub",
   "chapters": [
     {
+      "id": "preface",
+      "number": "00",
+      "title": "序言",
+      "status": "published",
+      "anchor": "序言",
+      "publishedAt": "2026-07-01"
+    },
+    {
       "id": "chapter-one",
       "number": "01",
       "title": "第一章",
+      "status": "published",
       "anchor": "第一章",
-      "publishedAt": "2026-07-01"
+      "publishedAt": "2026-07-18",
+      "children": [
+        {
+          "id": "chapter-two",
+          "number": "02",
+          "title": "第二章",
+          "status": "forthcoming"
+        }
+      ]
     }
   ]
 }
 ```
 
-- `id / slug / documentSlug / chapter.id / latestChapterId` 均使用稳定 ASCII kebab-case；文件名与书籍 slug 一致。
-- `status` 只能是 `serializing / complete / paused`。章节 `id / number / anchor` 在书内不得重复。
-- `documentSlug` 必须指向已发布的非多媒体文稿；构建会进一步确认每个 anchor 在渲染后的连续正文中存在。
-- 新增章节时同时更新 `latestChapterId`、书籍 `updatedAt` 与正文 `updated`；两处日期不一致会阻止发布。
-- 章节入口 `/books/<slug>/chapters/<chapter-id>` 是永久稳定跳转，不是独立正文。不得改变既有章节 id 来“整理”名称；需要改标题时只改 `title`。
+- `id / slug / documentSlug / chapter.id / latestChapterId` 均使用稳定 ASCII kebab-case；文件名与书籍 slug 一致。`children` 可以在任意目录节点下继续嵌套；父子数组的书写顺序共同构成公开目录顺序。
+- 书籍 `status` 只能是 `serializing / complete / paused`。每个新增或修改的目录节点必须显式填写 `status: published / forthcoming`；旧清单中缺省 `status` 的平铺节点仅为兼容既有内容而按 `published` 读取，不得在新书中继续省略。节点 `id / number` 在整棵目录树内不得重复，不能只在同一层检查唯一性。
+- `published` 节点必须填写非空 `anchor` 与有效 `publishedAt`，anchor 在整棵目录树内唯一。`forthcoming` 节点必须省略 `anchor / publishedAt`；它只展示待更新目录，不参与锚点存在性校验，也不得包含状态为 `published` 的后代。
+- `documentSlug` 必须指向已发布的非多媒体文稿。只有 `published` 节点生成 `/books/<slug>/chapters/<chapter-id>` 路由、Book JSON-LD `hasPart` 和可点击目录入口；`forthcoming` 节点不得生成上述三类公开入口。
+- `latestChapterId` 必须指向递归目录中已经 `published` 的节点，不能指向待更新节点。书籍页和目录统计分别显示“已发布节点数 / 全部节点数”，两个数字都按整棵目录树递归计算。
+- 后续连载继续追加到同一个 `documentSlug` 对应的连续正文：先把新标题和正文写入该 Markdown，再将既有目录节点从 `forthcoming` 切换为 `published`，补齐 `anchor / publishedAt`，并按需更新 `latestChapterId`。同时更新书籍 `updatedAt` 与正文 `updated`；两处日期不一致会阻止发布。不得为同一本书的后续章节另建互相隔离的正文文稿。
+- 已发布章节入口 `/books/<slug>/chapters/<chapter-id>` 是永久稳定跳转，不是独立正文。不得改变既有章节 id 来“整理”名称；需要改标题时只改 `title`。
 - 连载书籍不保存本地阅读位置；入口仅提供「从头阅读」与「阅读最新章节」，由读者每次自行选择。
 - `originalBibtex` 与 `translationBibtex` 都是可选的非空字符串，分别驱动原书和译本的独立复制按钮。只录入已经核验的版本；缺失时保留待补状态，不得拿另一版本冒充。
 - `pdfUrl` 与 `epubUrl` 都是可选字段，只接受根相对、HTTP 或 HTTPS URL。前端只在字段存在时显示对应下载链接；没有文件时不要填写空字符串、`#` 或占位地址。

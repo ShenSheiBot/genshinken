@@ -1,0 +1,125 @@
+{
+  "id": "shulgin-dni",
+  "slug": "shulgin-dni",
+  "title": "往日",
+  "subtitle": "忆一九〇五年立宪与一九一七年二月革命",
+  "description": "瓦西里·舒尔金对1905年十月宣言与1917年二月革命的回忆。本连载据1925年列宁格勒工人出版社“浪潮”版翻译，并收入谢尔盖·皮翁特科夫斯基的导读序与168条尾注。",
+  "documentSlug": "shulgin-dni",
+  "status": "serializing",
+  "authors": ["vasily-shulgin"],
+  "translators": ["yu-shulue"],
+  "publishedAt": "2026-07-20",
+  "updatedAt": "2026-07-20",
+  "startAnchor": "reading-cover",
+  "latestChapterId": "constitutional-day-one",
+  "originalBibtex": "@book{shulgin1925dni,\n  author = {Шульгин, Василий Витальевич},\n  title = {Дни: [записки]},\n  address = {Ленинград},\n  publisher = {Рабочее издательство «Прибой»},\n  year = {1925},\n  note = {Со вступительной статьей и пояснительными примечаниями С. А. Пионтковского},\n  language = {Russian}\n}",
+  "translationBibtex": "@misc{shulgin2026dniZH,\n  author = {瓦西里·维塔利耶维奇·舒尔金},\n  translator = {俞叔略},\n  title = {往日：忆一九〇五年立宪与一九一七年二月革命},\n  year = {2026},\n  url = {https://un-canon.blog/posts/shulgin-dni},\n  urldate = {2026-07-20},\n  language = {zh-Hans},\n  note = {连载中；CC0 1.0 Universal}\n}",
+  "chapters": [
+    {
+      "id": "shulgin-notes",
+      "number": "00",
+      "title": "舒尔金札记",
+      "status": "published",
+      "anchor": "舒尔金札记",
+      "publishedAt": "2026-07-20"
+    },
+    {
+      "id": "epigraph-and-preface",
+      "number": "01",
+      "title": "题辞与代序",
+      "status": "published",
+      "anchor": "题辞与代序",
+      "publishedAt": "2026-07-20"
+    },
+    {
+      "id": "constitutional-day-one",
+      "number": "02",
+      "title": "“立宪”首日",
+      "status": "published",
+      "anchor": "立宪首日",
+      "publishedAt": "2026-07-20"
+    },
+    {
+      "id": "constitutional-day-two",
+      "number": "03",
+      "title": "“立宪”次日",
+      "status": "forthcoming"
+    },
+    {
+      "id": "constitutional-day-three",
+      "number": "04",
+      "title": "“立宪”后日",
+      "status": "forthcoming"
+    },
+    {
+      "id": "penultimate-days",
+      "number": "05",
+      "title": "“立宪”的倒数第二天",
+      "status": "forthcoming",
+      "children": [
+        {
+          "id": "penultimate-1916-11-03",
+          "number": "05.1",
+          "title": "1916年11月3日",
+          "status": "forthcoming"
+        },
+        {
+          "id": "penultimate-1916-11-12",
+          "number": "05.2",
+          "title": "1916年11月至12月",
+          "status": "forthcoming"
+        },
+        {
+          "id": "penultimate-1917-02-26",
+          "number": "05.3",
+          "title": "1917年2月26日",
+          "status": "forthcoming"
+        }
+      ]
+    },
+    {
+      "id": "last-days",
+      "number": "06",
+      "title": "“立宪”的最后几天",
+      "status": "forthcoming",
+      "children": [
+        {
+          "id": "last-1917-02-27",
+          "number": "06.1",
+          "title": "1917年2月27日",
+          "status": "forthcoming"
+        },
+        {
+          "id": "last-1917-02-28",
+          "number": "06.2",
+          "title": "1917年2月28日",
+          "status": "forthcoming"
+        },
+        {
+          "id": "last-1917-03-01",
+          "number": "06.3",
+          "title": "1917年3月1日",
+          "status": "forthcoming"
+        },
+        {
+          "id": "last-1917-03-02",
+          "number": "06.4",
+          "title": "1917年3月2日",
+          "status": "forthcoming"
+        },
+        {
+          "id": "last-1917-03-03",
+          "number": "06.5",
+          "title": "1917年3月3日",
+          "status": "forthcoming"
+        }
+      ]
+    },
+    {
+      "id": "notes",
+      "number": "07",
+      "title": "尾注（168条）",
+      "status": "forthcoming"
+    }
+  ]
+}

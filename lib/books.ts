@@ -14,16 +14,30 @@ const STABLE_ID = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
 
 export const BOOK_STATUSES = ["serializing", "complete", "paused"] as const;
+export const BOOK_CHAPTER_STATUSES = ["published", "forthcoming"] as const;
 
 export type BookStatus = (typeof BOOK_STATUSES)[number];
+export type BookChapterStatus = (typeof BOOK_CHAPTER_STATUSES)[number];
 
-export interface BookChapter {
+interface BookChapterBase {
   id: string;
   number: string;
   title: string;
+  status: BookChapterStatus;
+  children: BookChapter[];
+}
+
+export interface PublishedBookChapter extends BookChapterBase {
+  status: "published";
   anchor: string;
   publishedAt: string;
 }
+
+export interface ForthcomingBookChapter extends BookChapterBase {
+  status: "forthcoming";
+}
+
+export type BookChapter = PublishedBookChapter | ForthcomingBookChapter;
 
 export interface Book {
   id: string;
@@ -127,17 +141,68 @@ function validateContributorNames(names: string[], field: string, source: string
   });
 }
 
-function parseChapter(value: unknown, index: number, source: string): BookChapter {
+function parseChapter(
+  value: unknown,
+  index: number,
+  source: string,
+  ancestorForthcoming = false
+): BookChapter {
   const chapterSource = `${source} chapter ${index + 1}`;
   if (!isRecord(value)) fail(chapterSource, "entry", "must be an object");
 
-  return {
+  const declaredStatus = value.status === undefined
+    ? "published"
+    : requiredString(value, "status", chapterSource);
+  if (!BOOK_CHAPTER_STATUSES.includes(declaredStatus as BookChapterStatus)) {
+    fail(chapterSource, "status", `must be one of ${BOOK_CHAPTER_STATUSES.join(", ")}`);
+  }
+  const status = declaredStatus as BookChapterStatus;
+  if (ancestorForthcoming && status === "published") {
+    fail(chapterSource, "status", "cannot be published beneath a forthcoming ancestor");
+  }
+
+  let children: BookChapter[] = [];
+  if (value.children !== undefined) {
+    if (!Array.isArray(value.children)) fail(chapterSource, "children", "must be an array when provided");
+    children = value.children.map((child, childIndex) =>
+      parseChapter(child, childIndex, chapterSource, ancestorForthcoming || status === "forthcoming")
+    );
+  }
+
+  const base = {
     id: stableId(value, "id", chapterSource),
     number: requiredString(value, "number", chapterSource),
     title: requiredString(value, "title", chapterSource),
-    anchor: requiredString(value, "anchor", chapterSource),
-    publishedAt: dateString(value, "publishedAt", chapterSource),
+    children,
   };
+
+  if (status === "published") {
+    return {
+      ...base,
+      status,
+      anchor: requiredString(value, "anchor", chapterSource),
+      publishedAt: dateString(value, "publishedAt", chapterSource),
+    };
+  }
+
+  for (const field of ["anchor", "publishedAt"]) {
+    if (Object.prototype.hasOwnProperty.call(value, field)) {
+      fail(chapterSource, field, "must be omitted for a forthcoming chapter");
+    }
+  }
+
+  return {
+    ...base,
+    status,
+  };
+}
+
+function flattenChapters(chapters: readonly BookChapter[]): BookChapter[] {
+  return chapters.flatMap((chapter) => [chapter, ...flattenChapters(chapter.children)]);
+}
+
+export function isPublishedBookChapter(chapter: BookChapter): chapter is PublishedBookChapter {
+  return chapter.status === "published";
 }
 
 function parseManifest(value: unknown, source: string): Book {
@@ -152,18 +217,25 @@ function parseManifest(value: unknown, source: string): Book {
     fail(source, "chapters", "must contain at least one chapter");
   }
   const chapters = value.chapters.map((chapter, index) => parseChapter(chapter, index, source));
+  const allChapters = flattenChapters(chapters);
   const chapterIds = new Set<string>();
   const chapterAnchors = new Set<string>();
-  chapters.forEach((chapter) => {
+  allChapters.forEach((chapter) => {
     if (chapterIds.has(chapter.id)) fail(source, "chapters", `contains duplicate id ${chapter.id}`);
-    if (chapterAnchors.has(chapter.anchor)) fail(source, "chapters", `contains duplicate anchor ${chapter.anchor}`);
+    if (isPublishedBookChapter(chapter) && chapterAnchors.has(chapter.anchor)) {
+      fail(source, "chapters", `contains duplicate anchor ${chapter.anchor}`);
+    }
     chapterIds.add(chapter.id);
-    chapterAnchors.add(chapter.anchor);
+    if (isPublishedBookChapter(chapter)) chapterAnchors.add(chapter.anchor);
   });
 
   const latestChapterId = stableId(value, "latestChapterId", source);
-  if (!chapterIds.has(latestChapterId)) {
+  const latestChapter = allChapters.find((chapter) => chapter.id === latestChapterId);
+  if (!latestChapter) {
     fail(source, "latestChapterId", `does not match a declared chapter (${latestChapterId})`);
+  }
+  if (!isPublishedBookChapter(latestChapter)) {
+    fail(source, "latestChapterId", `must point to a published chapter (${latestChapterId})`);
   }
 
   const authors = stringList(value, "authors", source);
@@ -256,13 +328,23 @@ export function getBookCredits(book: Pick<Book, "slug" | "authors" | "translator
   }));
 }
 
-export function getBookChapter(book: Book, chapterId: string): BookChapter | null {
-  return book.chapters.find((chapter) => chapter.id === chapterId) ?? null;
+export function getAllBookChapters(book: Pick<Book, "chapters">): BookChapter[] {
+  return flattenChapters(book.chapters);
 }
 
-export function getLatestBookChapter(book: Book): BookChapter {
+export function getPublishedBookChapters(book: Pick<Book, "chapters">): PublishedBookChapter[] {
+  return getAllBookChapters(book).filter(isPublishedBookChapter);
+}
+
+export function getBookChapter(book: Book, chapterId: string): BookChapter | null {
+  return getAllBookChapters(book).find((chapter) => chapter.id === chapterId) ?? null;
+}
+
+export function getLatestBookChapter(book: Book): PublishedBookChapter {
   const chapter = getBookChapter(book, book.latestChapterId);
-  if (!chapter) throw new Error(`[books] ${book.slug}: latest chapter is missing`);
+  if (!chapter || !isPublishedBookChapter(chapter)) {
+    throw new Error(`[books] ${book.slug}: latest published chapter is missing`);
+  }
   return chapter;
 }
 
@@ -297,7 +379,7 @@ export async function getValidatedBookDocument(book: Book): Promise<Post> {
   }
 
   const ids = renderedIds(post.html);
-  for (const chapter of book.chapters) {
+  for (const chapter of getPublishedBookChapters(book)) {
     if (!ids.has(chapter.anchor)) {
       throw new Error(
         `[books] ${book.slug}: chapter ${chapter.id} points to missing rendered id #${chapter.anchor}`

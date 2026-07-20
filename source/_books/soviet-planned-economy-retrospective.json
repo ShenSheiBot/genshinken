@@ -18,6 +18,7 @@
       "id": "preface",
       "number": "00",
       "title": "前言",
+      "status": "published",
       "anchor": "前言",
       "publishedAt": "2026-07-13"
     },
@@ -25,6 +26,7 @@
       "id": "analysis",
       "number": "01",
       "title": "第一部分　分析",
+      "status": "published",
       "anchor": "第一部分分析",
       "publishedAt": "2026-07-13"
     },
@@ -32,6 +34,7 @@
       "id": "interviews",
       "number": "02",
       "title": "第二部分　访谈",
+      "status": "published",
       "anchor": "第二部分访谈",
       "publishedAt": "2026-07-13"
     },
@@ -39,6 +42,7 @@
       "id": "appendix",
       "number": "03",
       "title": "附录",
+      "status": "published",
       "anchor": "附录",
       "publishedAt": "2026-07-13"
     }
