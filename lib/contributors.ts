@@ -92,6 +92,12 @@ export const CONTRIBUTORS = [
     aliases: ["Lars T. Lih", "Lars Lih"],
     teamMember: false,
   },
+  {
+    id: "fang-cao",
+    displayName: "芳草",
+    aliases: [],
+    teamMember: false,
+  },
 ] as const satisfies readonly Contributor[];
 
 export type ContributorId = (typeof CONTRIBUTORS)[number]["id"];
