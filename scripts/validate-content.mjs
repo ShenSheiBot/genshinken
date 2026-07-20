@@ -840,6 +840,7 @@ const topicRecords = markdownFiles(topicsDirectory).map((fileName) => {
   if (published && updated && updated < published) report(errors, file, "updated 不能早于 published");
 
   const groupIds = new Set();
+  const groupNumbers = new Set();
   const itemRefs = new Set();
   if (!Array.isArray(data.groups) || data.groups.length === 0) {
     report(errors, file, "groups 至少需要一个分组");
@@ -854,6 +855,18 @@ const topicRecords = markdownFiles(topicsDirectory).map((fileName) => {
       if (!slugPattern.test(groupId)) report(errors, groupFile, "id 必须是小写 ASCII kebab-case");
       if (groupIds.has(groupId)) report(errors, groupFile, `id 重复：${groupId}`);
       if (groupId) groupIds.add(groupId);
+      const rawGroupNumber = value.number == null || value.number === ""
+        ? String(groupIndex + 1)
+        : typeof value.number === "number" ? String(value.number) : String(value.number).trim();
+      if (!/^\d{1,2}$/.test(rawGroupNumber)) {
+        report(errors, groupFile, "number 只能是一到两位数字，如 00");
+      } else {
+        const normalizedGroupNumber = rawGroupNumber.padStart(2, "0");
+        if (groupNumbers.has(normalizedGroupNumber)) {
+          report(errors, groupFile, `number 重复：${normalizedGroupNumber}`);
+        }
+        groupNumbers.add(normalizedGroupNumber);
+      }
       if (!nonEmptyString(value.title)) report(errors, groupFile, "title 不能为空");
       if (!Array.isArray(value.items) || value.items.length === 0) {
         report(errors, groupFile, "items 至少需要一个条目");

@@ -203,7 +203,7 @@
 - 专题聚合页与专题详情的内容、面包屑和分隔线均与页眉同宽；不得以外层内边距之外的宽度绘制横线。
 
 - `/topics` 展示编辑部人工策展的主题集合；`/topics/<slug>` 展示导语、「从这里开始」和有序内容分组。专题不是标签搜索结果，也不由算法自动生成。
-- 专题源位于 `source/_topics/*.md`。它包含 `title / subtitle / summary / status / published / updated`、可选 `curators`、正文导语和 `groups`；数组顺序就是公开编排顺序。
+- 专题源位于 `source/_topics/*.md`。它包含 `title / subtitle / summary / status / published / updated`、可选 `curators`、正文导语和 `groups`；数组顺序就是公开编排顺序。分组可显式填写专题内唯一的两位 `number`，序言单元允许使用 `00`；未填写时按数组顺序生成 `01 / 02 / …`。
 - 条目引用类型只能是 `post / media / book`，以稳定 slug 指向已发布实体，并可附 `editorialNote`。首组首项是「从这里开始」入口；重复、缺失、草稿或类型错配引用必须阻止发布。
 - 专题详情使用 CollectionPage JSON-LD，并按编辑顺序输出绝对的 `hasPart` URL。专题索引与详情均进入 sitemap；专题不作为 RSS 内容条目重复发布。
 - 专题索引与详情的视觉层级必须紧凑地区分专题状态／摘要、导语、分组和条目；索引首屏应露出首条专题记录，详情从浅色标题区直接进入导语。首组首项以内联「从这里开始」标识呈现，不得在页面中重复渲染同一条目。装饰不得穿过标题或编者按，也不得削弱人工阅读顺序。

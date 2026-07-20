@@ -23,6 +23,8 @@ export interface TopicGroupSource {
   id: string;
   title: string;
   summary: string;
+  /** 单元编号；缺省时按分组顺序从 01 递增。序言一类的前置单元可显式写 "00"。 */
+  number: string;
   items: TopicItemReference[];
 }
 
@@ -120,12 +122,22 @@ function itemType(value: unknown, label: string): TopicItemType {
   throw new Error(`${label} 必须是 post / book / media 之一。`);
 }
 
+function groupNumber(value: unknown, index: number, label: string): string {
+  if (value == null || value === "") return String(index + 1).padStart(2, "0");
+  const declared = typeof value === "number" ? String(value) : String(value).trim();
+  if (!/^\d{1,2}$/.test(declared)) {
+    throw new Error(`${label}.number 只能是一到两位数字，如 "00"。`);
+  }
+  return declared.padStart(2, "0");
+}
+
 function parseGroups(value: unknown, file: string): TopicGroupSource[] {
   if (!Array.isArray(value) || value.length === 0) {
     throw new Error(`${file}: groups 至少需要一个分组。`);
   }
 
   const groupIds = new Set<string>();
+  const groupNumbers = new Set<string>();
   const itemRefs = new Set<string>();
   return value.map((rawGroup, groupIndex) => {
     const label = `${file}: groups[${groupIndex}]`;
@@ -136,6 +148,9 @@ function parseGroups(value: unknown, file: string): TopicGroupSource[] {
     }
     if (groupIds.has(id)) throw new Error(`${file}: 分组 id “${id}” 重复。`);
     groupIds.add(id);
+    const number = groupNumber(group.number, groupIndex, label);
+    if (groupNumbers.has(number)) throw new Error(`${file}: 专题单元编号 “${number}” 重复。`);
+    groupNumbers.add(number);
 
     if (!Array.isArray(group.items) || group.items.length === 0) {
       throw new Error(`${label}.items 至少需要一个条目。`);
@@ -161,6 +176,7 @@ function parseGroups(value: unknown, file: string): TopicGroupSource[] {
       id,
       title: requiredText(group.title, `${label}.title`),
       summary: optionalText(group.summary),
+      number,
       items,
     };
   });

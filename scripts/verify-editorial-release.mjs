@@ -498,6 +498,23 @@ assert.ok(
   "shulgin-dni latestChapterId must identify a published catalogue entry"
 );
 
+const { data: mullahologyTopicData } = matter(
+  fs.readFileSync(path.join(process.cwd(), "source", "_topics", "mullahology.md"), "utf8")
+);
+const mullahologyGroups = mullahologyTopicData.groups ?? [];
+const mullahologyTopicItems = curatedTopicPaths("mullahology");
+assert.equal(mullahologyTopicData.title, "毛拉学", "mullahology topic title must remain stable");
+assert.deepEqual(
+  mullahologyGroups.map((group) => String(group.number).padStart(2, "0")),
+  ["00", "01"],
+  "mullahology must retain its explicit preface and chapter unit numbers"
+);
+assert.deepEqual(
+  mullahologyTopicItems,
+  ["/posts/mullahology-00", "/posts/mullahology-01"],
+  "mullahology must retain its two published source units in authored order"
+);
+
 const [
   home,
   article,
@@ -509,10 +526,16 @@ const [
   about,
   topics,
   topic,
+  mullahologyTopic,
+  mullahologyPreface,
+  mullahologyChapter,
   books,
   book,
   shulginBook,
   shulginDocument,
+  fangLibrary,
+  shulginLibrary,
+  yuLibrary,
   missing,
   sitemap,
 ] = await Promise.all([
@@ -526,10 +549,16 @@ const [
   page("/about"),
   page("/topics"),
   page("/topics/soviet-union-and-bretton-woods"),
+  page("/topics/mullahology"),
+  page("/posts/mullahology-00"),
+  page("/posts/mullahology-01"),
   page("/books"),
   page("/books/soviet-planned-economy-retrospective"),
   page("/books/shulgin-dni"),
   page(`/posts/${encodeURIComponent(shulginManifest.documentSlug)}`),
+  page("/library?contributor=fang-cao"),
+  page("/library?contributor=vasily-shulgin"),
+  page("/library?contributor=yu-shulue"),
   page("/does-not-exist"),
   page("/sitemap.xml"),
 ]);
@@ -544,10 +573,16 @@ for (const [label, result] of Object.entries({
   about,
   topics,
   topic,
+  mullahologyTopic,
+  mullahologyPreface,
+  mullahologyChapter,
   books,
   book,
   shulginBook,
   shulginDocument,
+  fangLibrary,
+  shulginLibrary,
+  yuLibrary,
   missing,
 })) {
   assert.ok(!result.html.includes(prohibitedBrand), `${label} must not contain the prohibited brand`);
@@ -661,6 +696,12 @@ for (const card of latestCards) {
     contributorLink.inner,
     /data-credit-role|aria-label=["'](?:作者|译者)["']|>\s*[作译]\s*</,
     "latest-update role marks must remain outside contributor links"
+  );
+}
+for (const pathName of ["/posts/mullahology-00", "/posts/mullahology-01", "/posts/shulgin-dni"]) {
+  assert.ok(
+    links(home.html).some((link) => link.href === pathName),
+    `combined public preview homepage must retain ${pathName}`
   );
 }
 // 不再钉住某一具体译文标题（会随更新老化出最新六篇而误红）；每张最新更新卡片的
@@ -894,6 +935,9 @@ assert.ok(Array.isArray(mediaLd.sameAs) && mediaLd.sameAs.length > 0, "media JSO
 
 assertMetadata("library", library, "/library");
 assertMetadata("filtered library", filteredLibrary, "/library");
+assertMetadata("fang-cao library", fangLibrary, "/library");
+assertMetadata("vasily-shulgin library", shulginLibrary, "/library");
+assertMetadata("yu-shulue library", yuLibrary, "/library");
 assert.match(library.html, /内容索引/);
 const libraryPanels = elements(library.html, "details");
 assert.equal(libraryPanels.length, 5, "library must render five collapsible filter panels");
@@ -912,6 +956,10 @@ assert.match(visibleText(rolePanel.outer), /译者/);
 assert.doesNotMatch(visibleText(rolePanel.outer), /编辑|校对/);
 assert.match(filteredLibrary.html, /苏联计划经济的历史审视/);
 assert.doesNotMatch(filteredLibrary.html, /学龄前的歌利亚/);
+assert.match(fangLibrary.html, /一份关于克苏鲁的调查报告/);
+assert.match(fangLibrary.html, /斩断伊斯兰这片绿色的叶子/);
+assert.match(shulginLibrary.html, /往日/);
+assert.match(yuLibrary.html, /往日/);
 
 assertMetadata("about", about, "/about");
 const aboutMains = elements(about.html, "main")
@@ -947,6 +995,24 @@ assert.deepEqual(
   curatedTopicItems,
   "topic JSON-LD must render the source-curated items in their authored order"
 );
+const mullahologyLd = assertMetadata(
+  "mullahology topic detail",
+  mullahologyTopic,
+  "/topics/mullahology",
+  "CollectionPage"
+);
+const mullahologyText = visibleText(mullahologyTopic.html);
+assert.match(mullahologyText, /专题单元 00/);
+assert.match(mullahologyText, /专题单元 01/);
+assert.match(mullahologyText, /一份关于克苏鲁的调查报告/);
+assert.match(mullahologyText, /斩断伊斯兰这片绿色的叶子/);
+assert.deepEqual(
+  (mullahologyLd.hasPart ?? []).map((item) => normalizedPath(item.url)),
+  mullahologyTopicItems,
+  "mullahology JSON-LD must retain both source units in authored order"
+);
+assertMetadata("mullahology preface", mullahologyPreface, "/posts/mullahology-00", "Article");
+assertMetadata("mullahology chapter one", mullahologyChapter, "/posts/mullahology-01", "Article");
 
 const booksLd = assertMetadata("books index", books, "/books", "CollectionPage");
 assert.ok(booksLd.hasPart?.length > 0, "books index JSON-LD must list published books");
@@ -1162,10 +1228,13 @@ for (const requiredPath of [
   "/about",
   "/topics",
   "/topics/soviet-union-and-bretton-woods",
+  "/topics/mullahology",
   "/books",
   "/books/soviet-planned-economy-retrospective",
   "/books/shulgin-dni",
   shulginDocumentPath,
+  "/posts/mullahology-00",
+  "/posts/mullahology-01",
   "/posts/lih-lenin-disputed",
   "/media/csa",
 ]) {
