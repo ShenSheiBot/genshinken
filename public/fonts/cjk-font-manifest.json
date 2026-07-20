@@ -26,8 +26,8 @@
       "sourceSha256": "c5cc2ed5e2c0e6385013fe82d950eee6960d805bd602b86c53ff454783f382c4"
     }
   },
-  "siteCodePointCount": 3066,
-  "siteCodePointSha256": "c52a7119b07de74cd6b67fb46be799796924d8e89f38f9c712c0f9453b9059cb",
+  "siteCodePointCount": 3069,
+  "siteCodePointSha256": "4a5a8718b80828115b56ce62dcba79f9d11cf3b4038361911c83d532cfd27797",
   "strategy": "gb2312-plus-site-corpus",
   "subsetCodePointCount": 7148,
   "unsupportedSiteCodePointRanges": [
