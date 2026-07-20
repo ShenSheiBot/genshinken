@@ -124,7 +124,7 @@ export default async function TopicPage({
         {topic.groups.map((group, groupIndex) => (
           <section className={styles.group} id={group.id} key={group.id}>
             <header className={styles.groupHeader}>
-              <p className={styles.groupLabel}>专题单元 {String(groupIndex + 1).padStart(2, "0")}</p>
+              <p className={styles.groupLabel}>专题单元 {group.number}</p>
               <h2>{group.title}</h2>
               {group.summary ? <p>{group.summary}</p> : null}
             </header>
