@@ -1,5 +1,5 @@
 {
-  "corpusFileCount": 68,
+  "corpusFileCount": 70,
   "fonts": {
     "UN Canon STFangsong": {
       "bytes": 1719256,
@@ -26,8 +26,8 @@
       "sourceSha256": "c5cc2ed5e2c0e6385013fe82d950eee6960d805bd602b86c53ff454783f382c4"
     }
   },
-  "siteCodePointCount": 3038,
-  "siteCodePointSha256": "dfb2f9c0212d6062a61f30f599de46dbf077b51f450a6bef46ecba2e8ccc1201",
+  "siteCodePointCount": 3066,
+  "siteCodePointSha256": "c52a7119b07de74cd6b67fb46be799796924d8e89f38f9c712c0f9453b9059cb",
   "strategy": "gb2312-plus-site-corpus",
   "subsetCodePointCount": 7148,
   "unsupportedSiteCodePointRanges": [
