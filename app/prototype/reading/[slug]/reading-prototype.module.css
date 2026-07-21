@@ -30,7 +30,7 @@
 .eyebrow {
   display: block;
   font-family: var(--reader-interface-family);
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
   line-height: 1.4;
   letter-spacing: .13em;
@@ -220,7 +220,7 @@
   height: 0;
   color: var(--ink-faint);
   font-family: var(--f-mono);
-  font-size: 7px;
+  font-size: 8px;
   font-variant-numeric: tabular-nums;
   line-height: 1;
 }
@@ -229,13 +229,13 @@
 .visualLineMarker::after {
   position: absolute;
   top: 0;
-  width: 24px;
+  width: 20px;
   content: attr(data-line);
   transform: translateY(-50%);
 }
 
-.visualLineMarker::before { right: calc(100% + 7px); text-align: right; }
-.visualLineMarker::after { left: calc(100% + 7px); text-align: left; }
+.visualLineMarker::before { right: calc(100% + 3px); text-align: right; }
+.visualLineMarker::after { left: calc(100% + 3px); text-align: left; }
 
 .body {
   z-index: auto;
@@ -753,7 +753,7 @@
 .compactCredits dl > div { display: grid; grid-template-columns: 20px minmax(0, 1fr); align-items: center; gap: 6px; padding: 3px 0; }
 .compactCredits dt { display: flex; align-items: center; font-family: var(--reader-interface-family); font-size: 8px; font-weight: 600; letter-spacing: .06em; color: var(--ink-faint); }
 .compactCredits .creditMark { width: 16px; height: 16px; font-size: 9px; }
-.compactCredits dd { margin: 0; overflow: hidden; font-family: var(--reader-body-family); font-size: 13px; line-height: 1.45; text-overflow: ellipsis; white-space: nowrap; }
+.compactCredits dd { margin: 0; overflow: hidden; font-family: var(--reader-body-family); font-size: 14px; line-height: 1.45; text-overflow: ellipsis; white-space: nowrap; }
 
 .leftDeskRail > .lineNavigator {
   padding: 8px 0;
@@ -808,13 +808,13 @@ input.lineCurrent::selection { color: var(--solid-ink); background: var(--solid)
 .tocRow { position: relative; display: block; min-width: 0; }
 .tocDisclosure,
 .tocDisclosurePlaceholder { position: absolute; width: 0; height: 0; }
-.tocDisclosure { position: absolute; z-index: 1; top: 7px; right: 0; width: 18px; height: 24px; color: var(--ink-faint); font-family: var(--f-mono); font-size: 11px; }
+.tocDisclosure { position: absolute; z-index: 1; top: 7px; right: 0; width: 18px; height: 24px; color: var(--ink-faint); font-family: var(--f-mono); font-size: 12px; }
 .tocRow:has(.tocDisclosure) .tocJump { padding-right: 22px; }
 .tocDisclosure:hover,
 .tocDisclosure:focus-visible { color: var(--ink); outline: none; }
 .tocJump { display: grid; grid-template-columns: 16px minmax(0, 1fr); gap: 3px; width: 100%; min-width: 0; padding: 7px 0; color: var(--ink-soft); text-align: left; }
-.tocJump span { padding-top: 2px; font-family: var(--f-mono); font-size: 7px; color: var(--ink-faint); }
-.tocJump b { min-width: 0; overflow: visible; font-family: var(--reader-interface-family); font-size: 11px; font-weight: 400; line-height: 1.45; text-indent: 0; text-overflow: clip; text-wrap: wrap; white-space: normal; overflow-wrap: anywhere; }
+.tocJump span { padding-top: 2px; font-family: var(--f-mono); font-size: 8px; color: var(--ink-faint); }
+.tocJump b { min-width: 0; overflow: visible; font-family: var(--reader-interface-family); font-size: 12px; font-weight: 400; line-height: 1.45; text-indent: 0; text-overflow: clip; text-wrap: wrap; white-space: normal; overflow-wrap: anywhere; }
 .tocRow[data-active="true"] .tocJump b,
 .tocJump:hover b,
 .tocJump:focus-visible b { color: var(--ink); }
@@ -837,7 +837,7 @@ input.lineCurrent::selection { color: var(--solid-ink); background: var(--solid)
   background: color-mix(in srgb, var(--ink) 8%, transparent);
   border: 0;
   font-family: var(--reader-interface-family);
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 600;
   text-align: center;
   transition: color .15s ease, background .15s ease;
@@ -859,7 +859,7 @@ input.lineCurrent::selection { color: var(--solid-ink); background: var(--solid)
 .referencePane > header { --reference-counter-size: 15px; display: flex; justify-content: space-between; align-items: baseline; min-height: 45px; padding: 0 2px; border-bottom: 0; }
 .referencePane > header b { font-family: var(--reader-interface-family); font-size: var(--reference-counter-size); }
 .referenceCounter { display: inline-flex; align-items: baseline; justify-content: flex-end; min-width: 0; color: var(--ink); font-family: var(--reader-interface-family); font-variant-numeric: tabular-nums; }
-.referenceCounter small { color: var(--ink-soft); font-size: 9px; font-weight: 400; }
+.referenceCounter small { color: var(--ink-soft); font-size: 10px; font-weight: 400; }
 .referenceCounter small span { padding: 0 2px; }
 .referenceCurrent { width: auto; min-width: 1ch; max-width: 4ch; padding: 0; color: var(--ink); background: transparent; border: 0; border-radius: 0; outline: 0; font: inherit; font-size: var(--reference-counter-size); font-weight: 700; line-height: 1; text-align: right; }
 button.referenceCurrent { cursor: text; }
@@ -870,7 +870,7 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
 .referenceScroller::-webkit-scrollbar { display: none; width: 0; height: 0; }
 .referenceItem { display: grid; grid-template-columns: max-content minmax(0, 1fr); column-gap: 8px; border-bottom: 0; }
 .referenceSelect { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 8px; width: 100%; min-width: 0; padding: 5px 2px; color: var(--ink-soft); text-align: left; }
-.referenceSelect > span { font-family: var(--reader-note-family); font-size: 10px; color: inherit; font-variant-numeric: lining-nums tabular-nums; }
+.referenceSelect > span { font-family: var(--reader-note-family); font-size: 11px; color: inherit; font-variant-numeric: lining-nums tabular-nums; }
 .referenceItem[data-active="true"] .referenceSelect,
 .referenceSelect:hover,
 .referenceSelect:focus-visible { color: var(--accent); }
@@ -879,7 +879,7 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
 .referenceItem[data-active="true"] .referenceSelect { grid-column: 1; grid-row: 1; align-self: start; display: block; width: auto; padding: 5px 0; }
 .referenceItem[data-active="true"] .referenceSelect > span { display: block; line-height: 1.65; }
 /* 预览用 span（不是 p）：button 的内容模型是 phrasing，button>p 是非法嵌套。 */
-.referenceSelect > .referencePreview { display: -webkit-box; margin: 0; overflow: hidden; font-family: var(--reader-body-family); font-size: 11px; line-height: 1.5; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+.referenceSelect > .referencePreview { display: -webkit-box; margin: 0; overflow: hidden; font-family: var(--reader-body-family); font-size: 12px; line-height: 1.5; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
 .referenceSelect > .referencePreview :global(.latin-run) { font-family: var(--reader-body-latin-family); }
 .referenceDetailShell {
   grid-column: 2;
@@ -891,18 +891,18 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
 }
 .referenceItem[data-active="true"] .referenceDetailShell { grid-row: 1; }
 .referenceDetailShell[data-expanded="true"] { grid-template-rows: 1fr; opacity: 1; }
-.referenceDetail { min-width: 0; min-height: 0; overflow: hidden; overflow-wrap: anywhere; font-family: var(--reader-body-family); font-size: 12px; line-height: 1.65; color: var(--ink-soft); }
+.referenceDetail { min-width: 0; min-height: 0; overflow: hidden; overflow-wrap: anywhere; font-family: var(--reader-body-family); font-size: 13px; line-height: 1.65; color: var(--ink-soft); }
 .referenceDetailContent { padding: 5px 4px 7px 0; }
 .referenceItem[data-active="true"] .referenceDetail { color: var(--ink); }
 .referenceDetail p { margin: 0 0 .42em; }
 .referenceDetail a { color: var(--accent); border-bottom: 1px solid currentColor; word-break: break-word; }
 .referencePane > footer { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4px; padding: 5px 0 1px; border-top: 0; }
-.referencePane > footer button { min-height: 30px; color: var(--ink); background: color-mix(in srgb, var(--ink) 8%, transparent); border: 0; font-family: var(--reader-interface-family); font-size: 9px; font-weight: 600; transition: color .15s ease, background .15s ease; }
+.referencePane > footer button { min-height: 30px; color: var(--ink); background: color-mix(in srgb, var(--ink) 8%, transparent); border: 0; font-family: var(--reader-interface-family); font-size: 10px; font-weight: 600; transition: color .15s ease, background .15s ease; }
 .tocPanel .toTop:hover,
 .tocPanel .toTop:focus-visible,
 .referencePane > footer button:hover,
 .referencePane > footer button:focus-visible { color: var(--solid-ink); background: var(--solid); outline: none; }
-.emptyRail { margin: 14px 0; font-family: var(--reader-body-family); font-size: 11px; line-height: 1.6; color: var(--ink-faint); }
+.emptyRail { margin: 14px 0; font-family: var(--reader-body-family); font-size: 12px; line-height: 1.6; color: var(--ink-faint); }
 
 /* Unified editorial scrollbars for TOC and both reference panes. */
 .styledScroller { scrollbar-width: thin; scrollbar-color: var(--accent) color-mix(in srgb, var(--ink) 8%, transparent); }
@@ -1241,12 +1241,21 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
 
 @media (min-width: 1024px) and (max-width: 1359px) {
   .root {
-    --reading-wide: min(1099px, calc(100vw - var(--reading-canvas-start) - 16px));
-    --reading-left: clamp(164px, 17vw, 210px);
-    --reading-right: var(--reading-left);
+    --reading-wide: min(1200px, calc(100% - var(--reading-canvas-start) - var(--reading-canvas-start)));
+    --reading-left: 164px;
+    --reading-right: 164px;
     --reading-gap: clamp(16px, 2vw, 26px);
-    --reading-text: calc(var(--reading-wide) - var(--reading-left) - var(--reading-right) - var(--reading-gap) * 2);
+    --reading-text: 628px;
   }
+
+  .dossierCover,
+  .dossierReading,
+  .folioReading {
+    grid-template-columns: minmax(var(--reading-left), 1fr) minmax(0, var(--reading-text)) minmax(var(--reading-right), 1fr);
+  }
+
+  .dossierReading .articleFlow,
+  .folioReading .articleFlow { width: 100%; }
 
   .runningSectionLink b { font-size: var(--site-nav-size); }
 
@@ -1255,18 +1264,18 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
 
   .articleIdentity b { font-size: 16px; }
   .compactCredits dl > div { grid-template-columns: 24px minmax(0, 1fr); gap: 7px; }
-  .compactCredits dd { font-size: 11px; }
+  .compactCredits dd { font-size: 12px; }
   .lineNavigator { padding-top: 14px; padding-bottom: 14px; }
   .lineNumbers strong { font-size: 15px; }
   .tocPanel { padding-top: 14px; }
   .tocJump { grid-template-columns: 15px minmax(0, 1fr); gap: 3px; }
-  .tocJump b { font-size: 10px; }
+  .tocJump b { font-size: 11px; }
   .referenceSelect { gap: 7px; }
-  .referenceSelect > .referencePreview { font-size: 10px; }
-  .referenceDetail { font-size: 11px; }
+  .referenceSelect > .referencePreview { font-size: 11px; }
+  .referenceDetail { font-size: 12px; }
 }
 
-@media (min-width: 1360px) {
+@media (min-width: 1200px) {
   .visualLineMarkers { display: block; }
 }
 

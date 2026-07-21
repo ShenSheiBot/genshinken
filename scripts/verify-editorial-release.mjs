@@ -219,8 +219,8 @@ assert.match(
 );
 assert.match(
   readingStylesSource,
-  /\.visualLineMarkers\s*\{[^}]*display:\s*none;[\s\S]*?\.visualLineMarker::before,[\s\S]*?\.visualLineMarker::after[\s\S]*?@media \(min-width:\s*1360px\)\s*\{\s*\.visualLineMarkers\s*\{\s*display:\s*block;/,
-  "visual line markers must appear on both sides only at the wide-desktop breakpoint"
+  /\.visualLineMarkers\s*\{[^}]*display:\s*none;[\s\S]*?\.visualLineMarker::before,[\s\S]*?\.visualLineMarker::after[\s\S]*?@media \(min-width:\s*1200px\)\s*\{\s*\.visualLineMarkers\s*\{\s*display:\s*block;/,
+  "visual line markers must appear on both sides when the desktop reading grid has enough room"
 );
 assert.doesNotMatch(
   readingChromeSource,
