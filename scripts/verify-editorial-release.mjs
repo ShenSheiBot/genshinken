@@ -1165,6 +1165,17 @@ for (const chapter of shulginPublishedChapters) {
     `shulgin-dni published anchor #${chapter.anchor} must exist in the continuous document`
   );
 }
+const shulginConstitutionalDayHeading = elements(shulginDocument.html, "h2")
+  .find((heading) => decodeHtml(attribute(heading.opening, "id") || "") === "立宪首日");
+assert.ok(
+  shulginConstitutionalDayHeading,
+  "shulgin-dni constitutional-day heading must preserve its stable anchor"
+);
+assert.equal(
+  visibleText(shulginConstitutionalDayHeading.outer),
+  "“立宪”首日，1905年10月18日",
+  "shulgin-dni constitutional-day heading must combine the title and date"
+);
 
 const shulginPublishedResponses = await Promise.all(
   shulginPublishedChapters.map((chapter) =>
