@@ -10,8 +10,10 @@
 import { unified } from "unified";
 import remarkParse from "remark-parse";
 import remarkGfm from "remark-gfm";
+import remarkMath from "remark-math";
 import remarkCjkFriendly from "remark-cjk-friendly";
 import remarkRehype from "remark-rehype";
+import rehypeKatex from "rehype-katex";
 import rehypeSlug from "rehype-slug";
 import rehypeStringify from "rehype-stringify";
 import { visit } from "unist-util-visit";
@@ -521,6 +523,7 @@ function rehypeLatinRuns() {
 const processor = unified()
   .use(remarkParse)
   .use(remarkGfm)
+  .use(remarkMath)
   .use(remarkCjkFriendly)
   .use(remarkRehype, {
     allowDangerousHtml: true,
@@ -540,6 +543,7 @@ const processor = unified()
   .use(rehypeSmartQuotes)
   .use(rehypeCjkInterpuncts)
   .use(rehypeLatinRuns)
+  .use(rehypeKatex)
   .use(rehypeStringify, { allowDangerousHtml: true });
 
 export async function renderMarkdown(md: string): Promise<string> {

@@ -237,12 +237,14 @@ export default function PosterWallHome({
                  data-section={section}
                  data-featured={isFirstOfSection ? "true" : undefined}
                  data-reveal
+                 data-reveal-priority={index < 4 ? "true" : undefined}
                  data-reveal-index={index}
                  style={tileStyle(index, wallPosts.length)}
               >
                 <div className={styles.card} data-card-surface>
                   <Link
                     href={postPath(post)}
+                    prefetch={false}
                     className={styles.cardPrimaryLink}
                     aria-label={`${meta.label}：${post.title}`}
                   />
@@ -318,6 +320,7 @@ export default function PosterWallHome({
                     <Link
                       className={styles.latestCardPrimaryLink}
                       href={postPath(post)}
+                      prefetch={false}
                       aria-label={`阅读全文：${post.title}`}
                     />
                     <div className={styles.latestCard}>

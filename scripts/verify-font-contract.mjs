@@ -84,9 +84,9 @@ const globalsCss = readUtf8(globalsPath);
 const readerCss = readUtf8(readerPath);
 assert.ok(fs.existsSync(manifestPath), "missing generated CJK font manifest; run scripts/build-cjk-font-subsets.py");
 const manifest = JSON.parse(readUtf8(manifestPath));
-assert.equal(manifest.version, 1, "unsupported CJK font manifest version");
-assert.equal(manifest.strategy, "gb2312-plus-site-corpus", "CJK font subset strategy changed unexpectedly");
-assert.ok(manifest.subsetCodePointCount >= 6_500, "hosted CJK subsets are unexpectedly small");
+assert.equal(manifest.version, 2, "unsupported CJK font manifest version");
+assert.equal(manifest.strategy, "site-corpus", "CJK font subset strategy changed unexpectedly");
+assert.ok(manifest.subsetCodePointCount >= 2_500, "hosted CJK subsets are unexpectedly small");
 
 const faceBlocks = [...globalsCss.matchAll(/@font-face\s*{[\s\S]*?}/g)].map((match) => match[0]);
 const hashes = new Set();

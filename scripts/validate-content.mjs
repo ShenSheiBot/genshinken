@@ -23,6 +23,21 @@ const dangerousHtmlUrl = /\s(?:href|src)\s*=\s*["']?\s*(?:javascript|vbscript):/
 const errors = [];
 const warnings = [];
 
+function berlinDateISO(value = process.env.UN_CANON_BUILD_TIMESTAMP) {
+  const date = value ? new Date(value) : new Date();
+  const safeDate = Number.isNaN(date.valueOf()) ? new Date() : date;
+  const parts = new Intl.DateTimeFormat("en-GB", {
+    timeZone: "Europe/Berlin",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).formatToParts(safeDate);
+  const byType = Object.fromEntries(parts.map((part) => [part.type, part.value]));
+  return `${byType.year}-${byType.month}-${byType.day}`;
+}
+
+const publicationCutoffISO = berlinDateISO();
+
 const creditFields = [
   { role: "作者", keys: ["post_author", "author", "作者"], required: true },
   { role: "译者", keys: ["translator", "译者", "翻译"], required: false },
@@ -492,6 +507,7 @@ const records = files.map((file) => {
   const tags = toList(data.tags);
   const dateISO = rawScalar(header, "date") ?? "";
   const updatedISO = rawScalar(header, "updated") ?? dateISO;
+  const draft = isDraft(data.draft);
 
   validateTypography(file, content, data);
 
@@ -526,6 +542,12 @@ const records = files.map((file) => {
   // 否则会生成早于发布的 sitemap lastmod 与 JSON-LD dateModified。
   if (updatedISO && dateISO && updatedISO < dateISO) {
     report(errors, file, `updated (${updatedISO}) 不能早于 date (${dateISO})`);
+  }
+  if (!draft && dateISO > publicationCutoffISO) {
+    report(errors, file, `date (${dateISO}) 晚于公开构建日期 (${publicationCutoffISO})；请设为草稿或延后部署`);
+  }
+  if (!draft && updatedISO > publicationCutoffISO) {
+    report(errors, file, `updated (${updatedISO}) 晚于公开构建日期 (${publicationCutoffISO})`);
   }
 
   if (categories.length === 0) {
@@ -598,7 +620,7 @@ const records = files.map((file) => {
     file,
     slug,
     section,
-    draft: isDraft(data.draft),
+    draft,
     relatedPosts,
     dateISO,
     updatedISO,
@@ -671,6 +693,12 @@ const bookRecords = jsonFiles(booksDirectory)
     if (publishedAt && updatedAt && updatedAt < publishedAt) {
       report(errors, file, "updatedAt 不能早于 publishedAt");
     }
+    if (publishedAt > publicationCutoffISO) {
+      report(errors, file, `publishedAt (${publishedAt}) 晚于公开构建日期 (${publicationCutoffISO})`);
+    }
+    if (updatedAt > publicationCutoffISO) {
+      report(errors, file, `updatedAt (${updatedAt}) 晚于公开构建日期 (${publicationCutoffISO})`);
+    }
     const startAnchor = requiredRecordString(data, "startAnchor", file);
     const latestChapterId = stableRecordId(data, "latestChapterId", file);
     const authors = stringArray(data.authors, file, "authors", { required: true });
@@ -725,6 +753,9 @@ const bookRecords = jsonFiles(booksDirectory)
         }
         if (chapterDate && updatedAt && chapterDate > updatedAt) {
           report(errors, label, "publishedAt 不能晚于书籍 updatedAt");
+        }
+        if (chapterDate > publicationCutoffISO) {
+          report(errors, label, `publishedAt (${chapterDate}) 晚于公开构建日期 (${publicationCutoffISO})`);
         }
         if (chapterId && published) publishedChapterIds.add(chapterId);
         for (const [set, candidate, field] of [
@@ -838,6 +869,12 @@ const topicRecords = markdownFiles(topicsDirectory).map((fileName) => {
   if (!isValidPublicationDate(published)) report(errors, file, "published 必须是有效的 YYYY-MM-DD");
   if (!isValidPublicationDate(updated)) report(errors, file, "updated 必须是有效的 YYYY-MM-DD");
   if (published && updated && updated < published) report(errors, file, "updated 不能早于 published");
+  if (published > publicationCutoffISO) {
+    report(errors, file, `published (${published}) 晚于公开构建日期 (${publicationCutoffISO})`);
+  }
+  if (updated > publicationCutoffISO) {
+    report(errors, file, `updated (${updated}) 晚于公开构建日期 (${publicationCutoffISO})`);
+  }
 
   const groupIds = new Set();
   const groupNumbers = new Set();

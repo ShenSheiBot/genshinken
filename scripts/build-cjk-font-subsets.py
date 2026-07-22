@@ -5,9 +5,10 @@ Usage:
     python scripts/build-cjk-font-subsets.py --source-dir C:/path/to/ttfs
 
 The source directory must contain STSong.ttf, STFangsong.ttf, and STKaiti.ttf.
-Generated WOFF2 files cover GB2312 plus every supported CJK/punctuation code point
-currently present in the rendered site corpus. The committed manifest lets CI fail
-when new site text needs the subsets to be regenerated.
+Generated WOFF2 files cover every supported CJK/punctuation code point currently
+present in the rendered site corpus. The committed manifest lets CI fail when new
+site text needs the subsets to be regenerated, avoiding a permanent GB2312 payload
+on pages that use only a fraction of it.
 """
 
 from __future__ import annotations
@@ -71,20 +72,6 @@ def site_code_points(files: Iterable[Path]) -> set[int]:
             for character in path.read_text(encoding="utf-8")
             if is_cjk_text_code_point(ord(character))
         )
-    return code_points
-
-
-def gb2312_code_points() -> set[int]:
-    code_points: set[int] = set()
-    for lead in range(0xA1, 0xF8):
-        for trail in range(0xA1, 0xFF):
-            try:
-                character = bytes((lead, trail)).decode("gb2312")
-            except UnicodeDecodeError:
-                continue
-            code_point = ord(character)
-            if is_cjk_text_code_point(code_point):
-                code_points.add(code_point)
     return code_points
 
 
@@ -182,10 +169,9 @@ def main() -> None:
         common_supported = supported if common_supported is None else common_supported & supported
     assert common_supported is not None
 
-    requested = gb2312_code_points() | site_points
-    subset_points = requested & common_supported
+    subset_points = site_points & common_supported
     unsupported_site_points = site_points - common_supported
-    if len(subset_points) < 6_500:
+    if len(subset_points) < 2_500:
         raise SystemExit(f"refusing to build unexpectedly small CJK subsets ({len(subset_points)} code points)")
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -208,10 +194,10 @@ def main() -> None:
         "fonts": manifest_fonts,
         "siteCodePointCount": len(site_points),
         "siteCodePointSha256": code_point_digest(site_points),
-        "strategy": "gb2312-plus-site-corpus",
+        "strategy": "site-corpus",
         "subsetCodePointCount": len(subset_points),
         "unsupportedSiteCodePointRanges": compact_ranges(unsupported_site_points),
-        "version": 1,
+        "version": 2,
     }
     MANIFEST_PATH.write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
@@ -219,8 +205,8 @@ def main() -> None:
         newline="\n",
     )
     print(
-        f"covered {len(subset_points):,} code points from GB2312 plus "
-        f"{len(corpus_files)} site files; {len(unsupported_site_points)} site code points remain on fallback"
+        f"covered {len(subset_points):,} code points from {len(corpus_files)} site files; "
+        f"{len(unsupported_site_points)} site code points remain on fallback"
     )
 
 

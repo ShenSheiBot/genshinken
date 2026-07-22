@@ -1229,6 +1229,17 @@ assert.equal(
   "/posts/olsevich-gregory-soviet-planned-economy-retrospective#附录"
 );
 
+const retiredHexoResponses = await Promise.all([
+  "/2026/05/12/csa",
+  "/2026/05/08/%E5%8E%86%E5%8F%B2%E5%94%AF%E7%89%A9%E4%B8%BB%E4%B9%89%E8%AE%BA%E7%BA%B2",
+  "/archives",
+  "/categories/%E5%8E%86%E5%8F%B2",
+  "/tags/%E5%8E%86%E5%8F%B2",
+].map((path) => fetch(`${base}${path}`, { redirect: "manual" })));
+for (const response of retiredHexoResponses) {
+  assert.equal(response.status, 410, "retired Hexo URLs must return HTTP 410 Gone");
+}
+
 assert.equal(sitemap.response.status, 200, "sitemap must return HTTP 200");
 const sitemapLocations = [...sitemap.html.matchAll(/<loc>([^<]+)<\/loc>/g)].map(([, value]) => value);
 const sitemapPaths = sitemapLocations.map((value) => new URL(value).pathname);

@@ -47,4 +47,8 @@ assert.doesNotMatch(
   "GFM footnote backreferences must not retain the default English accessible name"
 );
 
+const mathHtml = await renderMarkdown("Inline $E=mc^2$\n\n$$\n\\int_0^1 x^2\\,dx\n$$");
+assert.match(mathHtml, /class="katex"/, "inline math must render with KaTeX");
+assert.match(mathHtml, /class="katex-display"/, "display math must render with KaTeX");
+
 console.log("markdown typography verification passed");

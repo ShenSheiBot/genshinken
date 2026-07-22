@@ -13,12 +13,14 @@ const newsreader = Newsreader({
   subsets: ["latin", "latin-ext"],
   style: ["normal", "italic"],
   display: "swap",
+  preload: false,
   variable: "--font-newsreader",
 });
 const ebGaramond = EB_Garamond({
   subsets: ["latin", "latin-ext", "cyrillic", "greek"],
   style: ["normal", "italic"],
   display: "swap",
+  preload: false,
   variable: "--font-eb-garamond",
 });
 const spaceMono = Space_Mono({
@@ -26,6 +28,7 @@ const spaceMono = Space_Mono({
   weight: ["400", "700"],
   style: ["normal", "italic"],
   display: "swap",
+  preload: false,
   variable: "--font-space-mono",
 });
 const fontVariables = `${newsreader.variable} ${ebGaramond.variable} ${spaceMono.variable}`;

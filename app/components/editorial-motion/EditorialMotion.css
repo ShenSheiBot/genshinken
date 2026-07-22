@@ -25,7 +25,7 @@
     animation: editorial-proof-title 520ms var(--editorial-motion-ease) 110ms backwards;
   }
 
-  html[data-editorial-reveal-ready="true"] [data-reveal]:not([data-reveal-visible="true"]) {
+  html[data-editorial-reveal-ready="true"] [data-reveal]:not([data-reveal-priority="true"]):not([data-reveal-visible="true"]) {
     opacity: 0;
     transform: translateY(10px);
   }
@@ -41,12 +41,12 @@
   /* The wall substrate draws its one-pixel seams with --hair-strong. Keep the
      tile shell opaque and animate only the card so refresh never exposes that
      substrate as a large dark block. */
-  html[data-editorial-reveal-ready="true"] [data-reveal-zone="home"] article[data-reveal]:not([data-reveal-visible="true"]) {
+  html[data-editorial-reveal-ready="true"] [data-reveal-zone="home"] article[data-reveal]:not([data-reveal-priority="true"]):not([data-reveal-visible="true"]) {
     opacity: 1;
     transform: none;
   }
 
-  html[data-editorial-reveal-ready="true"] [data-reveal-zone="home"] article[data-reveal]:not([data-reveal-visible="true"]) > [data-card-surface] {
+  html[data-editorial-reveal-ready="true"] [data-reveal-zone="home"] article[data-reveal]:not([data-reveal-priority="true"]):not([data-reveal-visible="true"]) > [data-card-surface] {
     opacity: 0;
     transform: translateY(10px);
   }
@@ -60,6 +60,13 @@
       color 180ms ease,
       background 180ms ease,
       box-shadow 180ms ease;
+  }
+
+  /* Above-the-fold cards remain paintable before React hydrates, so their
+     titles can become LCP immediately. Preserve the proofing motion with a
+     transform-only entrance that never hides text from the paint pipeline. */
+  [data-reveal-zone="home"] article[data-reveal-priority="true"] > [data-card-surface] {
+    animation: editorial-priority-card 340ms var(--editorial-motion-ease) both;
   }
 
   [data-reveal-zone="home"] [data-reveal-index="1"][data-reveal-visible="true"] > [data-card-surface] { transition-delay: 36ms, 36ms, 0ms, 0ms, 0ms; }
@@ -107,13 +114,18 @@
   to { opacity: 1; clip-path: inset(-.16em); transform: none; }
 }
 
+@keyframes editorial-priority-card {
+  from { transform: translateY(10px); }
+  to { transform: none; }
+}
+
 @media (max-width: 767px) and (prefers-reduced-motion: no-preference) {
-  html[data-editorial-reveal-ready="true"] [data-reveal]:not([data-reveal-visible="true"]),
-  html[data-editorial-reveal-ready="true"] [data-reveal-zone="home"] article[data-reveal]:not([data-reveal-visible="true"]) > [data-card-surface] {
+  html[data-editorial-reveal-ready="true"] [data-reveal]:not([data-reveal-priority="true"]):not([data-reveal-visible="true"]),
+  html[data-editorial-reveal-ready="true"] [data-reveal-zone="home"] article[data-reveal]:not([data-reveal-priority="true"]):not([data-reveal-visible="true"]) > [data-card-surface] {
     transform: translateY(6px);
   }
 
-  html[data-editorial-reveal-ready="true"] [data-reveal-zone="home"] article[data-reveal]:not([data-reveal-visible="true"]) {
+  html[data-editorial-reveal-ready="true"] [data-reveal-zone="home"] article[data-reveal]:not([data-reveal-priority="true"]):not([data-reveal-visible="true"]) {
     transform: none;
   }
 }
