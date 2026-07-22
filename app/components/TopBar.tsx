@@ -44,7 +44,7 @@ export default function TopBar() {
       document.documentElement.setAttribute("data-theme", next);
       document.documentElement.style.colorScheme = next;
       document.querySelectorAll('meta[name="theme-color"]').forEach((meta) => {
-        meta.setAttribute("content", next === "dark" ? "#131311" : "#e8e7e3");
+        meta.setAttribute("content", next === "dark" ? "#060605" : "#e8e7e3");
       });
       try {
         localStorage.setItem("ub_theme", next);

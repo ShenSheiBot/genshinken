@@ -1061,7 +1061,7 @@ export default function ReadingPrototypeChrome({
     // 否则阅读页（生产主模板）切深色后滚动条/表单控件仍按 light 渲染、移动端地址栏色不变。
     root.style.colorScheme = next;
     document.querySelectorAll('meta[name="theme-color"]').forEach((meta) =>
-      meta.setAttribute("content", next === "dark" ? "#131311" : "#e8e7e3")
+      meta.setAttribute("content", next === "dark" ? "#060605" : "#e8e7e3")
     );
     localStorage.setItem("ub_theme", next);
     setDark(next === "dark");

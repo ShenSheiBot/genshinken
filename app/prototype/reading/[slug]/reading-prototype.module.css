@@ -406,7 +406,13 @@
   border: 0;
 }
 
-.body :global(hr) { margin: 3.5rem 0; border-color: var(--hair); }
+.body :global(hr) {
+  width: 33.333%;
+  height: .5px;
+  margin: 3.5rem auto;
+  border: 0;
+  background: var(--ink);
+}
 
 .endMark {
   display: flex;

@@ -76,7 +76,7 @@
 }
 
 html[data-theme="dark"] {
-  --bg: #131311;
+  --bg: #060605;
   --ink: #e8e7e3;
   --ink-soft: #908d84;
   --ink-faint: #8f8c82;    /* WCAG AA 5.53:1 on --bg（原 #5b594f 仅 2.65:1） */
@@ -85,7 +85,7 @@ html[data-theme="dark"] {
   --grid: rgba(232, 231, 227, 0.05);
   --ghost: rgba(232, 231, 227, 0.045);
   --solid: #e8e7e3;
-  --solid-ink: #131311;
+  --solid-ink: #060605;
   --accent: #e0473a;
   --panel: #1b1b18;
   --code-bg: rgba(232, 231, 227, 0.06);
