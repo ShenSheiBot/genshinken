@@ -736,6 +736,17 @@ for (const section of Object.keys(sectionLabels)) {
     `homepage must include at least one ${section} card`
   );
 }
+const nonFeaturedEditorialCards = editorialCards.filter(
+  (card) => attribute(card.opening, "data-featured") !== "true"
+);
+assert.ok(nonFeaturedEditorialCards.length > 0, "homepage must include non-featured editorial cards");
+for (const card of nonFeaturedEditorialCards) {
+  assert.equal(
+    attribute(card.opening, "data-treatment"),
+    "third-compact",
+    "every non-featured editorial card must use the compact title treatment"
+  );
+}
 for (const card of editorialCards) {
   const background = card.outer.match(
     /<div\b(?=[^>]*\bdata-card-background=["']true["'])(?=[^>]*\baria-hidden=["']true["'])[^>]*>([\s\S]*?)<\/div>/i

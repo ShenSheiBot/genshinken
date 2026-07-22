@@ -24,8 +24,6 @@ const FEATURED_TREATMENT: Record<EditorialSection, string> = {
   multimedia: styles.featureNarrow,
 };
 
-const TAIL_TREATMENTS = [styles.thirdCompact, styles.thirdCompact, styles.thirdCompact];
-
 type TileStyle = CSSProperties & {
   "--wall-cols": number;
   "--wall-rows": number;
@@ -185,7 +183,6 @@ export default function PosterWallHome({
     translation: grouped.translation[0]?.slug,
     multimedia: grouped.multimedia[0]?.slug,
   };
-  const featuredCount = Object.values(firstSlug).filter(Boolean).length;
   const latestArticles = posts
     .filter((post) => post.section !== "multimedia")
     .slice(0, 6);
@@ -222,11 +219,14 @@ export default function PosterWallHome({
             const section = post.section;
             const meta = EDITORIAL_SECTION_META[section];
             const isFirstOfSection = post.slug === firstSlug[section];
-            const tailIndex = Math.max(0, index - featuredCount);
             const treatment = isFirstOfSection
               ? FEATURED_TREATMENT[section]
-              : TAIL_TREATMENTS[tailIndex] ??
-                (tailIndex % 2 === 0 ? styles.thirdStandard : styles.thirdCompact);
+              : styles.thirdCompact;
+            const treatmentName = isFirstOfSection
+              ? `featured-${section}`
+              : treatment === styles.thirdCompact
+                ? "third-compact"
+                : "third-standard";
 
             return (
               <article
@@ -236,6 +236,7 @@ export default function PosterWallHome({
                  className={`${styles.tile} ${treatment}`}
                  data-section={section}
                  data-featured={isFirstOfSection ? "true" : undefined}
+                 data-treatment={treatmentName}
                  data-reveal
                  data-reveal-priority={index < 4 ? "true" : undefined}
                  data-reveal-index={index}
