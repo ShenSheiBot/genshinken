@@ -83,8 +83,8 @@ export default function PostIndex({
                 <div className="sno">
                   <span className="big">{p.no}</span>
                   <span className="when">
-                    <b>{p.dateISO.slice(0, 4)}</b>
-                    <span>{p.dateISO.slice(5).replace("-", " · ")}</span>
+                    <b>{p.displayDateISO.slice(0, 4)}</b>
+                    <span>{p.displayDateISO.slice(5).replace("-", " · ")}</span>
                   </span>
                 </div>
                 <div className="smain">

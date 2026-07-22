@@ -10,14 +10,17 @@ import {
 import CreditLinks from "@/app/components/CreditLinks";
 import styles from "./PosterWallHome.module.css";
 
-const POSTER_SECTION_PRIORITY: EditorialSection[] = [
+type PosterSection = Exclude<EditorialSection, "negative">;
+type PosterPost = PostSummary & { section: PosterSection };
+
+const POSTER_SECTION_PRIORITY: PosterSection[] = [
   "essay",
   "review",
   "translation",
   "multimedia",
 ];
 
-const FEATURED_TREATMENT: Record<EditorialSection, string> = {
+const FEATURED_TREATMENT: Record<PosterSection, string> = {
   essay: styles.leadWide,
   review: styles.leadNarrow,
   translation: styles.featureWide,
@@ -115,8 +118,12 @@ function visibleHomeCredits(post: PostSummary) {
     : post.credits;
 }
 
-function groupPostsBySection(posts: PostSummary[]): Record<EditorialSection, PostSummary[]> {
-  const grouped: Record<EditorialSection, PostSummary[]> = {
+function isPosterPost(post: PostSummary): post is PosterPost {
+  return post.section !== "negative";
+}
+
+function groupPostsBySection(posts: PosterPost[]): Record<PosterSection, PosterPost[]> {
+  const grouped: Record<PosterSection, PosterPost[]> = {
     essay: [],
     review: [],
     translation: [],
@@ -130,23 +137,24 @@ function groupPostsBySection(posts: PostSummary[]): Record<EditorialSection, Pos
 }
 
 function orderAsWall(posts: PostSummary[]): {
-  ordered: PostSummary[];
-  grouped: Record<EditorialSection, PostSummary[]>;
+  ordered: PosterPost[];
+  grouped: Record<PosterSection, PosterPost[]>;
 } {
-  const grouped = groupPostsBySection(posts);
+  const posterPosts = posts.filter(isPosterPost);
+  const grouped = groupPostsBySection(posterPosts);
 
   // 先让四个栏目各占一个视觉锚点，再恢复真实时间顺序。
   const leads = POSTER_SECTION_PRIORITY.map((section) => grouped[section][0]).filter(
-    (post): post is PostSummary => Boolean(post)
+    (post): post is PosterPost => Boolean(post)
   );
   const leadSlugs = new Set(leads.map((post) => post.slug));
-  const tails: Record<EditorialSection, PostSummary[]> = {
+  const tails: Record<PosterSection, PosterPost[]> = {
     essay: grouped.essay.filter((post) => !leadSlugs.has(post.slug)),
     review: grouped.review.filter((post) => !leadSlugs.has(post.slug)),
     translation: grouped.translation.filter((post) => !leadSlugs.has(post.slug)),
     multimedia: grouped.multimedia.filter((post) => !leadSlugs.has(post.slug)),
   };
-  const tailOffsets: Record<EditorialSection, number> = {
+  const tailOffsets: Record<PosterSection, number> = {
     essay: 0,
     review: 0,
     translation: 0,
@@ -154,7 +162,7 @@ function orderAsWall(posts: PostSummary[]): {
   };
   // Preserve the existing cross-section rhythm while replacing each section's
   // occupied slots with that section's explicit editorial order.
-  const orderedTail = posts
+  const orderedTail = posterPosts
     .filter((post) => !leadSlugs.has(post.slug))
     .map((post) => {
       const offset = tailOffsets[post.section]++;
@@ -177,7 +185,7 @@ export default function PosterWallHome({
   const { ordered, grouped } = orderAsWall(posts);
   // 四个完整视觉带共容纳十张；限制墙体高度，避免尾项单独开启第五带。
   const wallPosts = ordered.slice(0, 10);
-  const firstSlug: Partial<Record<EditorialSection, string>> = {
+  const firstSlug: Partial<Record<PosterSection, string>> = {
     review: grouped.review[0]?.slug,
     essay: grouped.essay[0]?.slug,
     translation: grouped.translation[0]?.slug,

@@ -3,6 +3,7 @@ export const EDITORIAL_SECTIONS = [
   "review",
   "translation",
   "multimedia",
+  "negative",
 ] as const;
 
 export type EditorialSection = (typeof EDITORIAL_SECTIONS)[number];
@@ -21,6 +22,10 @@ export const EDITORIAL_SECTION_META: Record<
     label: "多媒体",
     number: "04",
   },
+  negative: {
+    label: "负",
+    number: "05",
+  },
 };
 
 const SECTION_ALIASES: Record<string, EditorialSection> = {
@@ -36,6 +41,8 @@ const SECTION_ALIASES: Record<string, EditorialSection> = {
   multimedia: "multimedia",
   media: "multimedia",
   多媒体: "multimedia",
+  negative: "negative",
+  负: "negative",
 };
 
 export function editorialSectionFrom(value: unknown): EditorialSection | null {

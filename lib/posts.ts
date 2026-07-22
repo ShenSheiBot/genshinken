@@ -10,6 +10,7 @@ import path from "node:path";
 import matter from "gray-matter";
 import { renderMarkdown } from "./markdown";
 import { isEditorialSection, type EditorialSection } from "./editorial";
+import { assignSectionNumbers } from "./post-numbering";
 import {
   findContributor,
   findContributorByName,
@@ -42,6 +43,8 @@ export interface PostSummary {
   credits: Credit[];
   dateDisplay: string; // "2026 · 05 · 12"
   dateISO: string; // "2026-05-12"
+  displayDateDisplay: string; // 负栏目显示原文写作日期；其他栏目显示博客发布日期
+  displayDateISO: string;
   updatedISO: string; // 修订日期（front-matter `updated`），缺省回退到 dateISO
   timestamp: number; // 用于排序
   excerpt: string;
@@ -49,7 +52,7 @@ export interface PostSummary {
   featuredOrder: number; // 同栏目首页推荐优先级；数值越大越靠前
   readMin: number;
   no: string; // 最早发布为 1，之后递增；最新文章为当前总数 N
-  sectionNo: string; // 栏目内发表序号，两位补零；同栏目最早为 01（首页海报 / 文章页档案 / 内容索引统一用此字段）
+  sectionNo: string; // 常规栏目按发表日期编号；负栏目按原文写作日期编号
 }
 
 export interface Post extends PostSummary {
@@ -164,7 +167,7 @@ function resolveSection(data: Record<string, unknown>, file: string): EditorialS
   const declared = typeof data.section === "string" ? data.section.trim().toLowerCase() : "";
   if (isEditorialSection(declared)) return declared;
   throw new Error(
-    `${file}: front-matter section 必须是 essay / review / translation / multimedia 之一`
+    `${file}: front-matter section 必须是 essay / review / translation / multimedia / negative 之一`
   );
 }
 
@@ -186,6 +189,12 @@ function fmtDisplay(d: Date): string {
 
 function fmtISO(d: Date): string {
   return d.toISOString().slice(0, 10);
+}
+
+function isISODate(value: string): boolean {
+  if (!/^\d{4}-\d{2}-\d{2}$/u.test(value)) return false;
+  const date = toDate(value);
+  return +date > 0 && fmtISO(date) === value;
 }
 
 function plainText(html: string): string {
@@ -286,6 +295,12 @@ async function loadRaw(): Promise<Post[]> {
       const category = categories[0] ?? tags[0] ?? "未分类";
       const uniqueTags = Array.from(new Set(tags));
       const credits = buildCredits(data, file);
+      const section = resolveSection(data, file);
+      const originalDate = metadataText(data.original_date ?? data.originalDate ?? data["原文日期"]);
+      if (section === "negative" && !isISODate(originalDate)) {
+        throw new Error(`${file}: section: negative 必须填写有效的 original_date（YYYY-MM-DD）`);
+      }
+      const displayDate = section === "negative" ? toDate(originalDate) : date;
       const authors = credits
         .filter((credit) => credit.role === "author")
         .map((credit) => credit.name);
@@ -297,12 +312,14 @@ async function loadRaw(): Promise<Post[]> {
         subtitle,
         draft,
         category,
-        section: resolveSection(data, file),
+        section,
         tags: uniqueTags,
         author: authors.join("　") || String(data.post_author ?? data.author ?? "").trim(),
         credits,
         dateDisplay: fmtDisplay(date),
         dateISO: fmtISO(date),
+        displayDateDisplay: fmtDisplay(displayDate),
+        displayDateISO: fmtISO(displayDate),
         updatedISO: +updated > 0 ? fmtISO(updated) : fmtISO(date),
         timestamp: +date,
         sortOrder: toSortOrder(data.sort_order ?? data.sortOrder ?? data.order),
@@ -319,7 +336,7 @@ async function loadRaw(): Promise<Post[]> {
             data.original_source ??
             data["原刊"]
         ),
-        originalDate: metadataText(data.original_date ?? data.originalDate ?? data["原文日期"]),
+        originalDate,
         html,
       };
       return post;
@@ -346,18 +363,7 @@ async function loadRaw(): Promise<Post[]> {
   visiblePosts.forEach((p, i) => {
     p.no = String(visiblePosts.length - i);
   });
-  // 栏目内编号同理：同 section 内最早为 01。此处是唯一计算点，展示层一律读 sectionNo。
-  const sectionGroups = new Map<string, Post[]>();
-  for (const p of visiblePosts) {
-    const group = sectionGroups.get(p.section) ?? [];
-    group.push(p);
-    sectionGroups.set(p.section, group);
-  }
-  for (const group of sectionGroups.values()) {
-    group.forEach((p, i) => {
-      p.sectionNo = String(group.length - i).padStart(2, "0");
-    });
-  }
+  assignSectionNumbers(visiblePosts);
 
   return posts.sort(comparePosts);
 }

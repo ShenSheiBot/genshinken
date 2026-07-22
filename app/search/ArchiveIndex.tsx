@@ -165,7 +165,12 @@ export default function ArchiveIndex({
                     />
                       <div className={styles.recordId}>
                         <b>{post.no}</b>
-                        <time dateTime={post.dateISO}>{post.dateISO.replaceAll("-", ".")}</time>
+                        <time
+                          dateTime={post.displayDateISO}
+                          title={post.section === "negative" ? "原文写作日期" : "博客发布日期"}
+                        >
+                          {post.displayDateISO.replaceAll("-", ".")}
+                        </time>
                       </div>
                       <div className={styles.recordMain}>
                         <span className={styles.classification}>

@@ -11,7 +11,7 @@ const postsDirectory = path.join(process.cwd(), "source", "_posts");
 const booksDirectory = path.join(process.cwd(), "source", "_books");
 const topicsDirectory = path.join(process.cwd(), "source", "_topics");
 const publicDirectory = path.join(process.cwd(), "public");
-const validSections = new Set(["essay", "review", "translation", "multimedia"]);
+const validSections = new Set(["essay", "review", "translation", "multimedia", "negative"]);
 const validBookStatuses = new Set(["serializing", "complete", "paused"]);
 const validBookChapterStatuses = new Set(["published", "forthcoming"]);
 const validTopicStatuses = new Set(["ongoing", "complete", "archived"]);
@@ -538,6 +538,14 @@ const records = files.map((file) => {
     report(errors, file, "updated 必须是有效的 YYYY-MM-DD");
   }
 
+  const originalDateISO = rawScalar(header, "original_date") ?? "";
+  if (hasOwn(data, "original_date") && !isValidPublicationDate(originalDateISO)) {
+    report(errors, file, "original_date 必须是有效的 YYYY-MM-DD");
+  }
+  if (section === "negative" && !isValidPublicationDate(originalDateISO)) {
+    report(errors, file, "section: negative 必须填写 original_date，作为原文写作日期");
+  }
+
   // 与书籍(updatedAt>=publishedAt)、专题(updated>=published)对称：修订日不得早于发布日，
   // 否则会生成早于发布的 sitemap lastmod 与 JSON-LD dateModified。
   if (updatedISO && dateISO && updatedISO < dateISO) {
@@ -569,7 +577,7 @@ const records = files.map((file) => {
     report(
       errors,
       file,
-      "section 必须是 essay / review / translation / multimedia 之一"
+      "section 必须是 essay / review / translation / multimedia / negative 之一"
     );
   }
 

@@ -147,6 +147,13 @@ export default async function LibraryPage({
   if (hasInvalidFilter) redirect(filterHref(filters));
 
   const filtered = posts.filter((post) => postMatches(post, filters));
+  if (filters.section === "negative") {
+    filtered.sort(
+      (a, b) =>
+        a.displayDateISO.localeCompare(b.displayDateISO) ||
+        a.slug.localeCompare(b.slug)
+    );
+  }
   const countWith = (update: Partial<ActiveFilters>) =>
     posts.filter((post) => postMatches(post, { ...filters, ...update })).length;
 

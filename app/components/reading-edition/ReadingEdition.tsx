@@ -109,7 +109,10 @@ function MetaRows({ post }: { post: Post }) {
           <dd><CreditLinks credits={[credit]} showMarks={false} /></dd>
         </div>
       ))}
-      <div><dt>发布</dt><dd>{post.dateISO.replaceAll("-", ".")}</dd></div>
+      <div>
+        <dt>{post.section === "negative" ? "成文" : "发布"}</dt>
+        <dd>{post.displayDateISO.replaceAll("-", ".")}</dd>
+      </div>
       <div><dt>篇幅</dt><dd>约 {post.readMin} 分钟</dd></div>
       <div><dt>编号</dt><dd>第 {post.no} 号</dd></div>
     </dl>
@@ -231,7 +234,7 @@ function RelatedReading({
                     <h3>{post.title}</h3>
                     {(post.excerpt || post.subtitle) && <p>{post.excerpt || post.subtitle}</p>}
                     <footer>
-                      <time dateTime={post.dateISO}>{post.dateDisplay}</time>
+                      <time dateTime={post.displayDateISO}>{post.displayDateDisplay}</time>
                       <span>预计阅读 {post.readMin} 分钟 <b aria-hidden="true">→</b></span>
                     </footer>
                   </Link>
@@ -292,7 +295,12 @@ export function ReadingDossier({
           <div className={styles.coverKicker}>
             <Link href={isPublicEdition ? "/" : "/prototype/poster"}>← 返回首页</Link>
             <span>第 {post.no} 号</span>
-            <time dateTime={post.dateISO}>{post.dateISO.replaceAll("-", ".")}</time>
+            <time
+              dateTime={post.displayDateISO}
+              title={post.section === "negative" ? "原文写作日期" : "博客发布日期"}
+            >
+              {post.displayDateISO.replaceAll("-", ".")}
+            </time>
             <span>{post.readMin} 分钟</span>
           </div>
           <h1 className="art-title"><PreferredTitle post={post} /></h1>
@@ -343,7 +351,7 @@ export function ReadingFolio({ post, parts, posts }: { post: Post; parts: Articl
       <header className={styles.folioCover} id="reading-cover">
         <div className={styles.folioMast}>
           <Link href="/prototype/triptych">{site.brandCN}</Link>
-          <span>长文　{post.dateISO.replaceAll("-", ".")}</span>
+          <span>长文　{post.displayDateISO.replaceAll("-", ".")}</span>
         </div>
         <div className={styles.folioTitleBlock}>
           <span className={styles.folioIssue}>{post.sectionNo}</span>
