@@ -672,6 +672,20 @@
 .coverLeadMeta { margin-bottom: 34px; }
 .coverLeadMetaWithTopics { margin-bottom: 34px; }
 
+@media (min-width: 1024px) and (max-width: 1359px) {
+  .coverLeadMetaWithTopics {
+    position: relative;
+    top: calc(4.51vw - 44px);
+  }
+}
+
+@media (min-width: 1360px) {
+  .coverLeadMetaWithTopics {
+    position: relative;
+    top: 23.24px;
+  }
+}
+
 .coverKicker {
   display: flex;
   flex-wrap: wrap;
