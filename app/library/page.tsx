@@ -20,6 +20,7 @@ import {
 } from "@/lib/contributors";
 import ArchiveIndex, { type ArchiveFacetOption } from "@/app/search/ArchiveIndex";
 import { site } from "@/lib/site";
+import { comparePostNumbersDescending } from "@/lib/post-numbering";
 
 const pageDescription = "浏览西方負典的文章和多媒体，并按栏目、主题、标签、贡献者与署名位置筛选。";
 export const metadata: Metadata = {
@@ -146,14 +147,9 @@ export default async function LibraryPage({
   );
   if (hasInvalidFilter) redirect(filterHref(filters));
 
-  const filtered = posts.filter((post) => postMatches(post, filters));
-  if (filters.section === "negative") {
-    filtered.sort(
-      (a, b) =>
-        a.displayDateISO.localeCompare(b.displayDateISO) ||
-        a.slug.localeCompare(b.slug)
-    );
-  }
+  const filtered = posts
+    .filter((post) => postMatches(post, filters))
+    .sort(comparePostNumbersDescending);
   const countWith = (update: Partial<ActiveFilters>) =>
     posts.filter((post) => postMatches(post, { ...filters, ...update })).length;
 

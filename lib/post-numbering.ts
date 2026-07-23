@@ -10,6 +10,20 @@ export interface PostNumberRecord extends SectionNumberRecord {
   no: string;
 }
 
+/** Keep archive indexes in their visible, site-wide identifier order. */
+export function comparePostNumbersDescending<
+  T extends Pick<PostNumberRecord, "no" | "slug">,
+>(a: T, b: T): number {
+  const aNumber = Number(a.no);
+  const bNumber = Number(b.no);
+
+  if (Number.isFinite(aNumber) && Number.isFinite(bNumber) && aNumber !== bNumber) {
+    return bNumber - aNumber;
+  }
+
+  return a.slug.localeCompare(b.slug);
+}
+
 /**
  * Regular sections follow blog publication order. The archival `negative`
  * section instead follows the manuscripts' original writing dates.

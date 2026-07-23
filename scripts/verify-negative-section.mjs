@@ -2,10 +2,14 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
-import { assignPostNumbers } from "../lib/post-numbering.ts";
+import {
+  assignPostNumbers,
+  comparePostNumbersDescending,
+} from "../lib/post-numbering.ts";
 import { renderMarkdown } from "../lib/markdown.ts";
 
 const postsDirectory = path.join(process.cwd(), "source", "_posts");
+const archiveIndexPath = path.join(process.cwd(), "app", "search", "ArchiveIndex.tsx");
 const upperSlug = "deleuze-difference-repetition-review-1";
 const lowerSlug = "deleuze-difference-repetition-review-2";
 
@@ -40,6 +44,16 @@ const posts = fs.readdirSync(postsDirectory)
   );
 
 assignPostNumbers(posts);
+
+const libraryPosts = [...posts].sort(comparePostNumbersDescending);
+const librarySlugs = libraryPosts.map((post) => post.slug);
+const numberOneIndex = libraryPosts.findIndex((post) => post.no === "1");
+const upperLibraryIndex = librarySlugs.indexOf(upperSlug);
+const lowerLibraryIndex = librarySlugs.indexOf(lowerSlug);
+assert.ok(
+  numberOneIndex < upperLibraryIndex && upperLibraryIndex < lowerLibraryIndex,
+  "the library must keep descending numeric order: 1, -01, -02"
+);
 
 const upper = posts.find((post) => post.slug === upperSlug);
 const lower = posts.find((post) => post.slug === lowerSlug);
@@ -79,6 +93,13 @@ const latestArticleSlugs = posts
 assert.ok(
   latestArticleSlugs.includes(upperSlug) && latestArticleSlugs.includes(lowerSlug),
   "both reviews must remain on the actual-publication latest timeline"
+);
+
+const archiveIndexSource = fs.readFileSync(archiveIndexPath, "utf8");
+assert.match(
+  archiveIndexSource,
+  /className=\{styles\.classification\}>\s*<b>\{section\.label\}<\/b>\s*<i>\{post\.sectionNo\}<\/i>/u,
+  "library classifications must display the section label before its section number"
 );
 
 console.log("negative editorial section verification passed");
