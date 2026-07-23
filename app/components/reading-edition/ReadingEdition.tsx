@@ -279,7 +279,7 @@ export function ReadingDossier({
         mode={isPublicEdition ? "edition" : "preview"}
       />
 
-      <header className={styles.dossierCover} id="reading-cover" data-reveal>
+      <header className={styles.dossierCover} id="reading-cover">
         <aside className={styles.docket}>
           <Link
             className={`${styles.libraryFilterLink} ${styles.docketSectionLink}`}
@@ -287,7 +287,18 @@ export function ReadingDossier({
             aria-label={`在文库中筛选栏目：${section.label} ${post.sectionNo}`}
           >
             <b>{section.label}</b>
-            <span className={styles.docketNumber}>{post.sectionNo}</span>
+            <span className={styles.docketNumber} aria-label={post.sectionNo}>
+              {Array.from(post.sectionNo).map((digit, index) => (
+                <span
+                  className={styles.docketDigit}
+                  data-roll={index % 2 === 0 ? "up" : "down"}
+                  aria-hidden="true"
+                  key={`${digit}-${index}`}
+                >
+                  <span>{digit}</span>
+                </span>
+              ))}
+            </span>
           </Link>
           {topicMemberships.length > 0 && (
             <nav className={styles.docketTopics} aria-label="所属专题">

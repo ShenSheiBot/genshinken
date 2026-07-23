@@ -73,12 +73,12 @@
   [data-reveal-zone="home"] [data-reveal-index="2"][data-reveal-visible="true"] > [data-card-surface] { transition-delay: 72ms, 72ms, 0ms, 0ms, 0ms; }
   [data-reveal-zone="home"] [data-reveal-index="3"][data-reveal-visible="true"] > [data-card-surface] { transition-delay: 108ms, 108ms, 0ms, 0ms, 0ms; }
 
-  html[data-editorial-reveal-ready="true"] [data-reveal-zone="reader"] #reading-cover:not([data-reveal-visible="true"]),
+  html[data-editorial-reveal-ready="true"] [data-reveal-zone="reader"] #reading-cover[data-reveal]:not([data-reveal-visible="true"]),
   html[data-editorial-reveal-ready="true"] [data-reveal-zone="media"] > article > section:first-child:not([data-reveal-visible="true"]) {
     clip-path: inset(0 0 9% 0);
   }
 
-  [data-reveal-zone="reader"] #reading-cover[data-reveal-visible="true"],
+  [data-reveal-zone="reader"] #reading-cover[data-reveal][data-reveal-visible="true"],
   [data-reveal-zone="media"] > article > section:first-child[data-reveal-visible="true"] {
     clip-path: inset(0);
     transition:

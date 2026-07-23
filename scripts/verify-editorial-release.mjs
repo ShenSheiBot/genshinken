@@ -198,14 +198,44 @@ assert.match(
   "article titles must render editorially preferred break opportunities"
 );
 assert.match(
+  readingEditionSource,
+  /className=\{styles\.docketNumber\}\s+aria-label=\{post\.sectionNo\}[\s\S]*?Array\.from\(post\.sectionNo\)\.map[\s\S]*?data-roll=\{index % 2 === 0 \? "up" : "down"\}/,
+  "article docket numbers must expose two independently rolling digit slots"
+);
+assert.doesNotMatch(
+  readingEditionSource,
+  /className=\{styles\.dossierCover\}\s+id="reading-cover"\s+data-reveal/,
+  "the custom reader entrance must not be hidden by the generic cover reveal"
+);
+assert.match(
+  readingStylesSource,
+  /@media \(prefers-reduced-motion: no-preference\)[\s\S]*?\.docketDigit\[data-roll="up"\][^}]*animation:\s*docket-digit-up[\s\S]*?\.docketDigit\[data-roll="down"\][^}]*animation:\s*docket-digit-down/,
+  "article docket digits must roll upward and downward only when motion is allowed"
+);
+assert.match(
+  readingStylesSource,
+  /\.docket::after\s*\{[^}]*animation:\s*reader-rule-rise\s+520ms[^}]*80ms[^}]*\}[\s\S]*?\.docketSectionLink > b\s*\{[^}]*reader-cover-left[^}]*600ms[\s\S]*?\.coverStory > \*\s*\{[^}]*reader-cover-right[\s\S]*?\.dossierReading \.articleFlow\s*\{[^}]*reader-body-enter[\s\S]*?\.leftDeskRail\s*\{[^}]*reader-rail-left[\s\S]*?\.referenceRail\s*\{[^}]*reader-rail-right/,
+  "reader entrance must sequence the rule, opposing cover fields, body, and outward rails"
+);
+assert.match(
+  readingStylesSource,
+  /\.docketDigit\[data-roll="up"\] > span\s*\{[^}]*docket-digit-up\s+820ms[^}]*980ms[^}]*\}[\s\S]*?\.docketDigit\[data-roll="down"\] > span\s*\{[^}]*docket-digit-down\s+760ms[^}]*1040ms/,
+  "staggered docket digits must finish together at 1800ms"
+);
+assert.match(
+  readingStylesSource,
+  /@keyframes docket-digit-up\s*\{[^}]*translateY\(115%\)[\s\S]*?@keyframes docket-digit-down\s*\{[^}]*translateY\(-115%\)/,
+  "article docket digit keyframes must enter from opposite vertical directions"
+);
+assert.match(
   readingStylesSource,
   /\.dossierCover\s*\{[^}]*grid-template-rows:\s*max-content;[^}]*align-items:\s*stretch;[^}]*min-height:\s*0;[^}]*\}[\s\S]*?\.coverStory\s*\{[^}]*grid-column:\s*2 \/ -1;[^}]*align-self:\s*start;[^}]*\}[\s\S]*?\.coverStory h1\s*\{[^}]*max-width:\s*none;/,
   "desktop article titles must use the full rightward width while the cover height follows actual content"
 );
 assert.match(
   readingStylesSource,
-  /\.docket\s*\{[^}]*border-right:\s*1px solid var\(--hair-strong\);[^}]*\}[\s\S]*?\.docketSectionLink b\s*\{[^}]*font-family:\s*"Microsoft YaHei",\s*"微软雅黑",\s*"Noto Sans CJK SC"[^}]*font-weight:\s*900;/,
-  "article docket must keep a full-height separator and a heavy Microsoft YaHei/Noto Sans CJK section mark"
+  /\.docket\s*\{[^}]*position:\s*relative;[^}]*\}[\s\S]*?\.docket::after\s*\{[^}]*top:\s*0;[^}]*bottom:\s*0;[^}]*background:\s*var\(--hair-strong\);[^}]*\}[\s\S]*?\.docketSectionLink b\s*\{[^}]*font-family:\s*"Microsoft YaHei",\s*"微软雅黑",\s*"Noto Sans CJK SC"[^}]*font-weight:\s*900;/,
+  "article docket must animate a full-height separator and retain its heavy section mark"
 );
 assert.doesNotMatch(
   readingStylesSource,
@@ -878,7 +908,7 @@ const articleSectionLink = links(articleDocket.inner).find(
 assert.ok(articleSectionLink, "article section label must link to its library section filter");
 assert.match(
   articleSectionLink.text,
-  new RegExp(`^${sectionLabels[articleFacets.section]}\\s*\\d{2}$`),
+  new RegExp(`^${sectionLabels[articleFacets.section]}\\s*\\d\\s*\\d$`),
   "article section link must combine its section label and folio number"
 );
 const articleTagLine = elements(article.html, "nav").find((element) =>
@@ -1083,7 +1113,7 @@ const mullahologyDocketLinks = links(mullahologyChapterDocket.inner);
 assert.deepEqual(
   mullahologyDocketLinks.map(({ href, text }) => ({ href, text })),
   [
-    { href: "/library?section=essay", text: "论 04" },
+    { href: "/library?section=essay", text: "论 0 4" },
     { href: "/topics/mullahology", text: "毛拉学 01" },
   ],
   "mullahology chapter docket must link its section and topic unit in reading order"
