@@ -306,6 +306,12 @@
 .body :global(h3) { margin-top: 2.3rem; font-size: 21px; }
 .body :global(h4) { margin-top: 2.1rem; font-size: 18px; border-top: 0; padding-top: 0; }
 
+.body :global(.chapter-anchor-alias) {
+  display: block;
+  height: 0;
+  scroll-margin-top: calc(var(--reading-rail-top) + 12px);
+}
+
 .body :global(h1::before),
 .body :global(h2::before),
 .body :global(h3::before) {

@@ -1325,6 +1325,16 @@ assert.match(
   /<span\b[^>]*id=["']1916年11月3日["'][^>]*><\/span>/,
   "shulgin-dni penultimate-day heading must retain the 05.1 stable anchor without a second heading"
 );
+assert.match(
+  shulginPenultimateHeading.outer,
+  /<span\b(?=[^>]*id=["']1916年11月3日["'])(?=[^>]*class=["'][^"']*chapter-anchor-alias[^"']*["'])[^>]*>/,
+  "shulgin-dni 05.1 stable anchor must opt into the reader header offset"
+);
+assert.match(
+  readingStylesSource,
+  /\.body\s+:global\(\.chapter-anchor-alias\)\s*\{[\s\S]*?scroll-margin-top:\s*calc\(var\(--reading-rail-top\) \+ 12px\);/,
+  "reader alias anchors must clear the fixed reader header"
+);
 assert.equal(
   elements(shulginDocument.html, "h3")
     .filter((heading) => visibleText(heading.outer) === "1916年11月3日")
