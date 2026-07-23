@@ -52,7 +52,7 @@ const upperLibraryIndex = librarySlugs.indexOf(upperSlug);
 const lowerLibraryIndex = librarySlugs.indexOf(lowerSlug);
 assert.ok(
   numberOneIndex < upperLibraryIndex && upperLibraryIndex < lowerLibraryIndex,
-  "the library must keep descending numeric order: 1, -01, -02"
+  "the library must keep descending numeric order: 1, -1, -2"
 );
 
 const upper = posts.find((post) => post.slug === upperSlug);
@@ -60,11 +60,11 @@ const lower = posts.find((post) => post.slug === lowerSlug);
 assert.ok(upper && lower, "the two legacy Difference and Repetition reviews must exist");
 assert.deepEqual(
   [upper.section, upper.no, upper.sectionNo, upper.originalDate, upper.dateISO],
-  ["negative", "-01", "01", "2025-03-08", "2026-07-22"]
+  ["negative", "-1", "01", "2025-03-08", "2026-07-22"]
 );
 assert.deepEqual(
   [lower.section, lower.no, lower.sectionNo, lower.originalDate, lower.dateISO],
-  ["negative", "-02", "02", "2025-03-29", "2026-07-22"]
+  ["negative", "-2", "02", "2025-03-29", "2026-07-22"]
 );
 
 const upperDocument = matter(

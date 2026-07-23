@@ -59,7 +59,7 @@ export function assignSectionNumbers<T extends SectionNumberRecord>(posts: T[]):
 
 /**
  * Assign the stable site-wide sequence, then give archival `negative` posts
- * their own visibly distinct negative identifiers (`-01`, `-02`, ...).
+ * their own visibly distinct negative identifiers (`-1`, `-2`, ...).
  * Regular posts retain the existing global sequence so published identifiers
  * do not shift when archival manuscripts are added.
  */
@@ -71,6 +71,6 @@ export function assignPostNumbers<T extends PostNumberRecord>(posts: T[]): void 
   assignSectionNumbers(posts);
 
   for (const post of posts) {
-    if (post.section === "negative") post.no = `-${post.sectionNo}`;
+    if (post.section === "negative") post.no = `-${Number(post.sectionNo)}`;
   }
 }

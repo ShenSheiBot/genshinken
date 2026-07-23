@@ -52,7 +52,7 @@ export interface PostSummary {
   relatedPosts: string[]; // 多媒体条目按编辑顺序声明的关联文章 slug
   featuredOrder: number; // 同栏目首页推荐优先级；数值越大越靠前
   readMin: number;
-  no: string; // 常规文章保留全站流水号；负栏目使用独立的 -01、-02… 编号
+  no: string; // 常规文章保留全站流水号；负栏目使用独立的 -1、-2… 编号
   sectionNo: string; // 常规栏目按发表日期编号；负栏目按原文写作日期编号
 }
 
