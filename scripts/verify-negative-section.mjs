@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
-import { assignSectionNumbers } from "../lib/post-numbering.ts";
+import { assignPostNumbers } from "../lib/post-numbering.ts";
 import { renderMarkdown } from "../lib/markdown.ts";
 
 const postsDirectory = path.join(process.cwd(), "source", "_posts");
@@ -24,6 +24,7 @@ const posts = fs.readdirSync(postsDirectory)
     return [{
       slug: String(data.slug ?? path.basename(file, ".md")),
       section: String(data.section ?? ""),
+      no: "00",
       sectionNo: "00",
       timestamp: +new Date(`${dateISO}T00:00:00Z`),
       sortOrder: Number(data.sort_order ?? data.sortOrder ?? data.order ?? 0),
@@ -38,18 +39,18 @@ const posts = fs.readdirSync(postsDirectory)
       a.slug.localeCompare(b.slug)
   );
 
-assignSectionNumbers(posts);
+assignPostNumbers(posts);
 
 const upper = posts.find((post) => post.slug === upperSlug);
 const lower = posts.find((post) => post.slug === lowerSlug);
 assert.ok(upper && lower, "the two legacy Difference and Repetition reviews must exist");
 assert.deepEqual(
-  [upper.section, upper.sectionNo, upper.originalDate, upper.dateISO],
-  ["negative", "01", "2025-03-08", "2026-07-22"]
+  [upper.section, upper.no, upper.sectionNo, upper.originalDate, upper.dateISO],
+  ["negative", "-01", "01", "2025-03-08", "2026-07-22"]
 );
 assert.deepEqual(
-  [lower.section, lower.sectionNo, lower.originalDate, lower.dateISO],
-  ["negative", "02", "2025-03-29", "2026-07-22"]
+  [lower.section, lower.no, lower.sectionNo, lower.originalDate, lower.dateISO],
+  ["negative", "-02", "02", "2025-03-29", "2026-07-22"]
 );
 
 const upperDocument = matter(

@@ -95,7 +95,7 @@
   border-left: 1px solid var(--hair);
   color: var(--ink-soft);
   font-family: var(--f-mono);
-  font-size: 11px;
+  font-size: var(--text-meta);
   font-weight: 700;
   font-variant-numeric: tabular-nums;
   line-height: 1;
@@ -337,7 +337,7 @@
   padding-bottom: 12px;
   border-bottom: 1px solid var(--card-hair);
   color: var(--card-soft);
-  font-size: 9px;
+  font-size: var(--text-sm);
   letter-spacing: 0.07em;
 }
 
@@ -354,7 +354,7 @@
 .kind b {
   flex: none;
   color: var(--card-ink);
-  font-size: 10px;
+  font-size: var(--text-caption);
 }
 
 .kind > span:first-of-type {
@@ -430,7 +430,7 @@
   margin: 13px 0 0;
   color: var(--card-soft);
   font-family: var(--f-mono);
-  font-size: 9px;
+  font-size: var(--text-sm);
   line-height: 1.5;
   letter-spacing: 0.05em;
   pointer-events: none;
@@ -505,7 +505,7 @@
   padding: 10px 0;
   border-top: 1px solid var(--card-hair);
   color: var(--card-soft);
-  font-size: 8px;
+  font-size: var(--text-xs);
   line-height: 1;
   letter-spacing: 0.06em;
 }
@@ -528,7 +528,7 @@
   padding-top: 12px;
   border-top: 1px solid var(--card-hair);
   color: var(--card-soft);
-  font-size: 8px;
+  font-size: var(--text-xs);
   line-height: 1.25;
   letter-spacing: 0.06em;
 }
@@ -543,7 +543,7 @@
 .cardFooter strong {
   flex: none;
   color: var(--card-ink);
-  font-size: 9px;
+  font-size: var(--text-sm);
   transition: color 160ms ease, transform 160ms ease;
 }
 
@@ -692,7 +692,7 @@ html[data-theme="dark"] .latestUpdates:not([data-surface="paper"]) {
   margin: 0 0 3px;
   color: var(--latest-soft);
   font-family: var(--f-mono);
-  font-size: 9px;
+  font-size: var(--text-sm);
   letter-spacing: 0.08em;
 }
 
@@ -708,7 +708,7 @@ html[data-theme="dark"] .latestUpdates:not([data-surface="paper"]) {
   align-items: center;
   gap: 4px;
   color: var(--latest-ink);
-  font-size: 10px;
+  font-size: var(--text-caption);
   font-weight: 700;
   letter-spacing: 0.08em;
   transition: color 160ms ease;
@@ -797,7 +797,7 @@ html[data-theme="dark"] .latestUpdates:not([data-surface="paper"]) {
   gap: 18px;
   color: var(--latest-soft);
   font-family: var(--f-mono);
-  font-size: 9px;
+  font-size: var(--text-sm);
   letter-spacing: 0.07em;
 }
 
@@ -825,7 +825,7 @@ html[data-theme="dark"] .latestUpdates:not([data-surface="paper"]) {
   margin-top: 14px;
   color: var(--latest-soft);
   font-family: var(--f-mono);
-  font-size: 9px;
+  font-size: var(--text-sm);
   line-height: 1.5;
   letter-spacing: .05em;
   pointer-events: none;
@@ -1057,7 +1057,7 @@ html[data-theme="dark"] .latestUpdates:not([data-surface="paper"]) {
   }
 
   .manifestoMonth {
-    font-size: 10px;
+    font-size: var(--text-caption);
   }
 
   .wall {
@@ -1254,7 +1254,7 @@ html[data-theme="dark"] .latestUpdates:not([data-surface="paper"]) {
 
   .latestCard > footer {
     gap: 8px;
-    font-size: 8px;
+    font-size: var(--text-xs);
   }
 
   .latestCard > footer span {

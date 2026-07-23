@@ -60,7 +60,7 @@
   gap: 12px 22px;
   margin-top: 26px;
   font-family: var(--f-mono);
-  font-size: 10px;
+  font-size: var(--text-caption);
 }
 
 .socials a { color: var(--ink-soft); }

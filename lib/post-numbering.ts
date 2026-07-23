@@ -6,6 +6,10 @@ export interface SectionNumberRecord {
   originalDate: string;
 }
 
+export interface PostNumberRecord extends SectionNumberRecord {
+  no: string;
+}
+
 /**
  * Regular sections follow blog publication order. The archival `negative`
  * section instead follows the manuscripts' original writing dates.
@@ -36,5 +40,23 @@ export function assignSectionNumbers<T extends SectionNumberRecord>(posts: T[]):
     group.forEach((post, index) => {
       post.sectionNo = String(group.length - index).padStart(2, "0");
     });
+  }
+}
+
+/**
+ * Assign the stable site-wide sequence, then give archival `negative` posts
+ * their own visibly distinct negative identifiers (`-01`, `-02`, ...).
+ * Regular posts retain the existing global sequence so published identifiers
+ * do not shift when archival manuscripts are added.
+ */
+export function assignPostNumbers<T extends PostNumberRecord>(posts: T[]): void {
+  posts.forEach((post, index) => {
+    post.no = String(posts.length - index);
+  });
+
+  assignSectionNumbers(posts);
+
+  for (const post of posts) {
+    if (post.section === "negative") post.no = `-${post.sectionNo}`;
   }
 }

@@ -11,6 +11,12 @@
   --site-header-inline: 40px;
   --site-brand-size: 20px;
   --site-nav-size: 15px;
+  /* 全站辅助小字统一放大一级；组件按语义层级复用这些令牌。 */
+  --text-2xs: 8px;
+  --text-xs: 9px;
+  --text-sm: 10px;
+  --text-caption: 11px;
+  --text-meta: 12px;
   --f-brand: "FOT Matisse Pro EB", "UN Canon STSong", "STSong", "华文宋体", "Songti SC", "SimSun", serif;
   --f-grotesk: "Helvetica Neue", Helvetica, "PingFang SC", "Microsoft YaHei", "微软雅黑", "Noto Sans SC", Arial, sans-serif;
   --f-serif: var(--font-newsreader), "UN Canon STSong", "STSong", "华文宋体", "Songti SC", "SimSun", "Noto Serif SC", Georgia, serif;
@@ -246,7 +252,7 @@ body:has(.reading-edition-page) { background-image: none; }
   height: 36px; font-family: var(--f-cjk-serif); font-size: 16px; line-height: 1.2; color: var(--ink);
 }
 .topbar .art-running .credit { height: 36px; }
-.topbar .art-running .rc .cmark { width: 16px; height: 16px; font-size: 9px; }
+.topbar .art-running .rc .cmark { width: 16px; height: 16px; font-size: var(--text-sm); }
 .topbar .mobile-section-nav,
 .topbar .mobile-section-menu {
   display: none;
@@ -256,7 +262,7 @@ body:has(.reading-edition-page) { background-image: none; }
 .read-rail { position: absolute; inset: 0; pointer-events: none; z-index: 1; }
 .read-rail .rmark {
   position: absolute; transform: translateY(-50%);
-  font-family: var(--f-mono); font-size: 10px; line-height: 1; letter-spacing: .02em;
+  font-family: var(--f-mono); font-size: var(--text-caption); line-height: 1; letter-spacing: .02em;
   font-variant-numeric: tabular-nums;
   color: var(--ink-faint); opacity: .75; white-space: nowrap;
 }
@@ -270,7 +276,7 @@ body:has(.reading-edition-page) { background-image: none; }
 .bp-ticks {
   position: absolute; left: 40px; top: 70px; bottom: 40px;
   display: flex; flex-direction: column; justify-content: space-between;
-  font-family: var(--f-mono); font-size: 11px; color: var(--ink-faint);
+  font-family: var(--f-mono); font-size: var(--text-meta); color: var(--ink-faint);
   letter-spacing: .03em; z-index: 2;
 }
 .bp-ticks::before { content: ""; position: absolute; left: -14px; top: 0; bottom: 0; width: 1px; background: var(--hair-strong); }
@@ -346,7 +352,7 @@ body:has(.reading-edition-page) { background-image: none; }
   text-transform: uppercase; color: var(--ink-soft);
 }
 .index-head .ih-k b { color: var(--ink); font-weight: 700; }
-.dim { display: inline-flex; align-items: center; gap: 0; font-family: var(--f-mono); font-size: 11px; color: var(--ink-faint); }
+.dim { display: inline-flex; align-items: center; gap: 0; font-family: var(--f-mono); font-size: var(--text-meta); color: var(--ink-faint); }
 .dim .da { width: 0; height: 0; border-top: 4px solid transparent; border-bottom: 4px solid transparent; }
 .dim .da.l { border-right: 7px solid var(--ink-faint); }
 .dim .da.r { border-left: 7px solid var(--ink-faint); }
@@ -362,7 +368,7 @@ body:has(.reading-edition-page) { background-image: none; }
   color: var(--ink-soft); padding: 4px 0 5px; position: relative; transition: color .15s;
 }
 .fchip:hover { color: var(--ink); }
-.fchip .ct { font-size: 10px; color: var(--ink-faint); margin-left: 5px; vertical-align: super; }
+.fchip .ct { font-size: var(--text-caption); color: var(--ink-faint); margin-left: 5px; vertical-align: super; }
 .fchip[data-on="true"] { color: var(--ink); }
 .fchip[data-on="true"]::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--accent); }
 
@@ -395,9 +401,9 @@ body:has(.reading-edition-page) { background-image: none; }
 .cmark { display: inline-flex; align-items: center; justify-content: center; font-family: "Microsoft YaHei", "微软雅黑", "PingFang SC", sans-serif; font-weight: 700; line-height: 1; flex: none; }
 .cmark.solid { background: var(--accent); color: var(--bg); }
 .cmark.hollow { border: 1px solid var(--accent); color: var(--accent); background: transparent; }
-.sauthor .cmark { width: 18px; height: 18px; font-size: 11px; }
+.sauthor .cmark { width: 18px; height: 18px; font-size: var(--text-meta); }
 .art-meta .credits { display: inline-flex; align-items: center; gap: 1em; }
-.art-meta .cmark { width: 16px; height: 16px; font-size: 10px; }
+.art-meta .cmark { width: 16px; height: 16px; font-size: var(--text-caption); }
 .srow .smain .sex { margin: 0; max-width: 600px; font-family: var(--f-cjk-serif); font-size: 16px; line-height: 1.6; color: var(--ink-soft); }
 .srow:hover .smain .sex { color: var(--solid-ink); opacity: .82; }
 .srow .smeta { display: flex; flex-direction: column; align-items: flex-end; gap: 11px; text-align: right; font-family: var(--f-mono); font-size: 12px; color: var(--ink-faint); letter-spacing: .03em; padding-top: 6px; }
@@ -406,7 +412,7 @@ body:has(.reading-edition-page) { background-image: none; }
 .srow .smeta .arrow { display: inline-block; margin-left: 8px; font-family: var(--f-grotesk); font-weight: 700; font-size: 22px; line-height: 1; color: var(--ink); vertical-align: -3px; transition: transform .18s; }
 .srow:hover .smeta .arrow { color: var(--solid-ink); transform: translate(4px, -4px); }
 .srow .smeta .stags { display: flex; flex-wrap: nowrap; justify-content: flex-end; gap: 14px; max-width: 100%; white-space: nowrap; }
-.srow .smeta .stag { font-family: var(--f-mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-faint); white-space: nowrap; }
+.srow .smeta .stag { font-family: var(--f-mono); font-size: var(--text-meta); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-faint); white-space: nowrap; }
 .srow:hover .smeta .stag { color: var(--solid-ink); opacity: .7; }
 
 /* ============================================================
@@ -626,7 +632,7 @@ body:has(main[data-archive-page="true"]) {
   transition: background .15s, color .15s;
 }
 .nextrow:hover { background: var(--solid); color: var(--solid-ink); }
-.nextrow .nlabel { font-family: var(--f-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft); }
+.nextrow .nlabel { font-family: var(--f-mono); font-size: var(--text-meta); letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft); }
 .nextrow:hover .nlabel { color: var(--solid-ink); opacity: .7; }
 .nextrow .ntitle { font-family: var(--f-cjk-serif); font-weight: 900; font-size: 28px; margin-top: 8px; letter-spacing: -.01em; }
 .nextrow .narrow { font-family: var(--f-grotesk); font-weight: 700; font-size: 30px; flex: none; }
@@ -655,7 +661,7 @@ body:has(main[data-archive-page="true"]) {
   margin: 0;
   color: var(--ink-faint);
   font-family: var(--f-mono);
-  font-size: 10px;
+  font-size: var(--text-caption);
   font-variant-numeric: tabular-nums;
   line-height: 1.35;
   letter-spacing: .04em;
@@ -763,7 +769,7 @@ html[data-article-nav="compact"] .topbar .mobile-section-item[data-active="true"
   .topbar { gap: 16px; }
   .topbar .global-section-link { gap: 6px; padding-right: 10px; padding-left: 10px; }
   .topbar .global-section-link strong { font-size: 15px; }
-  .topbar .global-section-link span { font-size: 9px; }
+  .topbar .global-section-link span { font-size: var(--text-sm); }
 }
 
 /* Keep the running header on the same left line as the home-page canvas. */
@@ -820,7 +826,7 @@ html[data-article-nav="compact"] .topbar .mobile-section-item[data-active="true"
 html[data-article-nav="rail"] .toc-rail { display: block; }
 .toc-pct {
   position: absolute; top: 0; left: 0; width: 100%; text-align: center;
-  font-family: var(--f-mono); font-size: 10px; letter-spacing: .08em;
+  font-family: var(--f-mono); font-size: var(--text-caption); letter-spacing: .08em;
   font-variant-numeric: tabular-nums; color: var(--ink-faint); white-space: nowrap;
 }
 .toc-scale { position: absolute; left: 0; right: 0; top: 26px; bottom: 0; }
@@ -879,7 +885,7 @@ html[data-article-nav="rail"] .toc-rail { display: block; }
   padding: 5px 10px; background: var(--bg); border: 1px solid var(--hair-strong); z-index: 5;
 }
 .toc-dot:hover .toc-tip, .toc-dot:focus-visible .toc-tip { display: flex; }
-.toc-tip .k { font-family: var(--f-mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink); flex: none; }
+.toc-tip .k { font-family: var(--f-mono); font-size: var(--text-caption); letter-spacing: .08em; text-transform: uppercase; color: var(--ink); flex: none; }
 .toc-tip .t {
   font-family: var(--f-cjk-serif); font-weight: 600; font-size: 13px; color: var(--ink);
   max-width: 340px; overflow: hidden; text-overflow: ellipsis;

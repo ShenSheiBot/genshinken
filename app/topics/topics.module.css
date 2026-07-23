@@ -55,7 +55,7 @@
 .groupLabel {
   margin: 0 0 12px;
   color: var(--accent);
-  font-size: 9px;
+  font-size: var(--text-sm);
   font-weight: 700;
 }
 
@@ -80,7 +80,7 @@
 
 .indexStats dt {
   color: var(--ink-soft);
-  font-size: 9px;
+  font-size: var(--text-sm);
 }
 
 .indexStats dd {
@@ -114,7 +114,7 @@
   display: grid;
   gap: 8px;
   color: var(--ink-soft);
-  font-size: 9px;
+  font-size: var(--text-sm);
   line-height: 1.5;
 }
 
@@ -178,7 +178,7 @@
 .topicRowFacts dt {
   margin-bottom: 5px;
   color: var(--ink-soft);
-  font-size: 8px;
+  font-size: var(--text-xs);
 }
 
 .topicRowFacts dd {
@@ -195,7 +195,7 @@
   gap: 10px;
   padding-top: 2px;
   color: var(--ink-soft);
-  font-size: 9px;
+  font-size: var(--text-sm);
   font-weight: 700;
 }
 
@@ -227,7 +227,7 @@
   padding: 0;
   border-bottom: 1px solid var(--hair);
   color: var(--ink-soft);
-  font-size: 9px;
+  font-size: var(--text-sm);
 }
 
 .breadcrumb span:last-child {
@@ -293,7 +293,7 @@
   gap: 12px;
   padding: 8px 0;
   border-bottom: 1px solid var(--hair);
-  font-size: 9px;
+  font-size: var(--text-sm);
   line-height: 1.55;
 }
 
@@ -314,7 +314,7 @@
   margin: 3px 0 0;
   color: var(--accent);
   font-family: var(--f-mono);
-  font-size: 9px;
+  font-size: var(--text-sm);
   font-weight: 700;
   letter-spacing: .09em;
 }
@@ -384,7 +384,7 @@
 .itemOrder {
   padding: 22px 10px 20px 0;
   color: var(--ink-faint);
-  font-size: 9px;
+  font-size: var(--text-sm);
   text-align: right;
 }
 
@@ -399,7 +399,7 @@
   justify-content: space-between;
   gap: 20px;
   color: var(--ink-soft);
-  font-size: 8px;
+  font-size: var(--text-xs);
   line-height: 1.5;
 }
 

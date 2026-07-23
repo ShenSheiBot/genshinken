@@ -204,7 +204,7 @@ assert.doesNotMatch(
 );
 assert.match(
   readingStylesSource,
-  /\.creditMark\s*\{[^}]*border:\s*1px solid var\(--accent\);[^}]*font-family:\s*"Microsoft YaHei",\s*"微软雅黑"[^}]*font-weight:\s*700;[\s\S]*?\.compactCredits \.creditMark\s*\{\s*width:\s*16px;\s*height:\s*16px;\s*font-size:\s*9px;\s*\}/,
+  /\.creditMark\s*\{[^}]*border:\s*1px solid var\(--accent\);[^}]*font-family:\s*"Microsoft YaHei",\s*"微软雅黑"[^}]*font-weight:\s*700;[\s\S]*?\.compactCredits \.creditMark\s*\{\s*width:\s*16px;\s*height:\s*16px;\s*font-size:\s*var\(--text-sm\);\s*\}/,
   "desktop rail credit roles must retain boxed cmarks and share the bold Microsoft YaHei glyph style"
 );
 assert.match(

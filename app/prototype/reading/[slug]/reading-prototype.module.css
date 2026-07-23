@@ -30,7 +30,7 @@
 .eyebrow {
   display: block;
   font-family: var(--reader-interface-family);
-  font-size: 11px;
+  font-size: var(--text-meta);
   font-weight: 700;
   line-height: 1.4;
   letter-spacing: .13em;
@@ -220,7 +220,7 @@
   height: 0;
   color: var(--ink-faint);
   font-family: var(--f-mono);
-  font-size: 8px;
+  font-size: var(--text-xs);
   font-variant-numeric: tabular-nums;
   line-height: 1;
 }
@@ -317,7 +317,7 @@
   background: none;
   transform: none;
   font-family: var(--f-mono);
-  font-size: 10px;
+  font-size: var(--text-caption);
   font-weight: 700;
   line-height: 1;
   letter-spacing: .06em;
@@ -429,7 +429,7 @@
 
 .endMark b {
   font-family: var(--f-mono);
-  font-size: 10px;
+  font-size: var(--text-caption);
   letter-spacing: .13em;
   color: var(--ink-soft);
 }
@@ -549,7 +549,7 @@
   font-size: 30px;
   font-weight: 900;
 }
-.docket > div small { font-family: var(--f-mono); font-size: 9px; letter-spacing: .12em; color: var(--ink-soft); }
+.docket > div small { font-family: var(--f-mono); font-size: var(--text-sm); letter-spacing: .12em; color: var(--ink-soft); }
 .docket i { width: 100%; height: 1px; margin: 24px 0; background: var(--hair); }
 
 .coverStory { grid-column: 2 / -1; align-self: start; min-width: 0; padding: 50px 0 0; }
@@ -561,7 +561,7 @@
   gap: 16px 24px;
   margin-bottom: 34px;
   font-family: var(--f-mono);
-  font-size: 10px;
+  font-size: var(--text-caption);
   letter-spacing: .07em;
   color: var(--ink-soft);
 }
@@ -633,7 +633,7 @@
   border: 1px solid var(--accent);
   color: var(--accent);
   font-family: "Microsoft YaHei", "微软雅黑", var(--reader-interface-family);
-  font-size: 11px;
+  font-size: var(--text-meta);
   font-weight: 700;
   line-height: 1;
 }
@@ -670,7 +670,7 @@
   min-width: 24px;
   color: var(--ink-faint);
   font-family: var(--f-mono);
-  font-size: 10px;
+  font-size: var(--text-caption);
   letter-spacing: .05em;
   white-space: nowrap;
 }
@@ -702,13 +702,13 @@
 
 .metaRows { margin: 22px 0 0; }
 .metaRows > div { display: grid; grid-template-columns: 48px 1fr; gap: 10px; padding: 10px 0; border-top: 1px solid var(--hair); }
-.metaRows dt { font-family: var(--f-mono); font-size: 9px; letter-spacing: .06em; color: var(--ink-faint); }
+.metaRows dt { font-family: var(--f-mono); font-size: var(--text-sm); letter-spacing: .06em; color: var(--ink-faint); }
 .metaCreditLabel { display: inline-flex; align-items: center; gap: 5px; }
-.metaCreditLabel .creditMark { width: 14px; height: 14px; font-size: 8px; }
+.metaCreditLabel .creditMark { width: 14px; height: 14px; font-size: var(--text-xs); }
 .metaRows dd { margin: 0; font-family: var(--reader-body-family); font-size: 13px; line-height: 1.45; }
 .fileRule { height: 3px; margin: 26px 0; background: var(--accent); }
 .articleFile > p { margin: 0; font-family: var(--reader-body-family); font-size: 13px; line-height: 1.72; color: var(--ink-soft); }
-.articleFile > a { display: inline-block; margin-top: 24px; font-family: var(--f-mono); font-size: 9px; letter-spacing: .06em; border-bottom: 1px solid var(--hair-strong); }
+.articleFile > a { display: inline-block; margin-top: 24px; font-family: var(--f-mono); font-size: var(--text-sm); letter-spacing: .06em; border-bottom: 1px solid var(--hair-strong); }
 .railPlaceholder { width: var(--reading-right); }
 
 /* Dossier research desk: both rails live inside the article grid, so the
@@ -757,8 +757,8 @@
 
 .compactCredits dl { margin: 0; }
 .compactCredits dl > div { display: grid; grid-template-columns: 20px minmax(0, 1fr); align-items: center; gap: 6px; padding: 3px 0; }
-.compactCredits dt { display: flex; align-items: center; font-family: var(--reader-interface-family); font-size: 8px; font-weight: 600; letter-spacing: .06em; color: var(--ink-faint); }
-.compactCredits .creditMark { width: 16px; height: 16px; font-size: 9px; }
+.compactCredits dt { display: flex; align-items: center; font-family: var(--reader-interface-family); font-size: var(--text-xs); font-weight: 600; letter-spacing: .06em; color: var(--ink-faint); }
+.compactCredits .creditMark { width: 16px; height: 16px; font-size: var(--text-sm); }
 .compactCredits dd { margin: 0; overflow: hidden; font-family: var(--reader-body-family); font-size: 14px; line-height: 1.45; text-overflow: ellipsis; white-space: nowrap; }
 
 .leftDeskRail > .lineNavigator {
@@ -776,7 +776,7 @@
 .lineNumbers { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
 .lineNumbers > span { font-family: var(--reader-interface-family); font-size: 15px; font-weight: 700; letter-spacing: 0; color: var(--ink); }
 .lineNumbers strong { display: inline-flex; align-items: baseline; justify-content: flex-end; min-width: 0; font-family: var(--f-grotesk); font-size: 15px; line-height: 1; letter-spacing: -.02em; }
-.lineNumbers strong small { font-family: var(--f-mono); font-size: 10px; font-weight: 400; letter-spacing: 0; color: var(--ink-soft); }
+.lineNumbers strong small { font-family: var(--f-mono); font-size: var(--text-caption); font-weight: 400; letter-spacing: 0; color: var(--ink-soft); }
 .lineCurrent {
   min-width: 0;
   padding: 0;
@@ -819,7 +819,7 @@ input.lineCurrent::selection { color: var(--solid-ink); background: var(--solid)
 .tocDisclosure:hover,
 .tocDisclosure:focus-visible { color: var(--ink); outline: none; }
 .tocJump { display: grid; grid-template-columns: 16px minmax(0, 1fr); gap: 3px; width: 100%; min-width: 0; padding: 7px 0; color: var(--ink-soft); text-align: left; }
-.tocJump span { padding-top: 2px; font-family: var(--f-mono); font-size: 8px; color: var(--ink-faint); }
+.tocJump span { padding-top: 2px; font-family: var(--f-mono); font-size: var(--text-xs); color: var(--ink-faint); }
 .tocJump b { min-width: 0; overflow: visible; font-family: var(--reader-interface-family); font-size: 12px; font-weight: 400; line-height: 1.45; text-indent: 0; text-overflow: clip; text-wrap: wrap; white-space: normal; overflow-wrap: anywhere; }
 .tocRow[data-active="true"] .tocJump b,
 .tocJump:hover b,
@@ -843,7 +843,7 @@ input.lineCurrent::selection { color: var(--solid-ink); background: var(--solid)
   background: color-mix(in srgb, var(--ink) 8%, transparent);
   border: 0;
   font-family: var(--reader-interface-family);
-  font-size: 10px;
+  font-size: var(--text-caption);
   font-weight: 600;
   text-align: center;
   transition: color .15s ease, background .15s ease;
@@ -865,7 +865,7 @@ input.lineCurrent::selection { color: var(--solid-ink); background: var(--solid)
 .referencePane > header { --reference-counter-size: 15px; display: flex; justify-content: space-between; align-items: baseline; min-height: 45px; padding: 0 2px; border-bottom: 0; }
 .referencePane > header b { font-family: var(--reader-interface-family); font-size: var(--reference-counter-size); }
 .referenceCounter { display: inline-flex; align-items: baseline; justify-content: flex-end; min-width: 0; color: var(--ink); font-family: var(--reader-interface-family); font-variant-numeric: tabular-nums; }
-.referenceCounter small { color: var(--ink-soft); font-size: 10px; font-weight: 400; }
+.referenceCounter small { color: var(--ink-soft); font-size: var(--text-caption); font-weight: 400; }
 .referenceCounter small span { padding: 0 2px; }
 .referenceCurrent { width: auto; min-width: 1ch; max-width: 4ch; padding: 0; color: var(--ink); background: transparent; border: 0; border-radius: 0; outline: 0; font: inherit; font-size: var(--reference-counter-size); font-weight: 700; line-height: 1; text-align: right; }
 button.referenceCurrent { cursor: text; }
@@ -876,7 +876,7 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
 .referenceScroller::-webkit-scrollbar { display: none; width: 0; height: 0; }
 .referenceItem { display: grid; grid-template-columns: max-content minmax(0, 1fr); column-gap: 8px; border-bottom: 0; }
 .referenceSelect { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 8px; width: 100%; min-width: 0; padding: 5px 2px; color: var(--ink-soft); text-align: left; }
-.referenceSelect > span { font-family: var(--reader-note-family); font-size: 11px; color: inherit; font-variant-numeric: lining-nums tabular-nums; }
+.referenceSelect > span { font-family: var(--reader-note-family); font-size: var(--text-meta); color: inherit; font-variant-numeric: lining-nums tabular-nums; }
 .referenceItem[data-active="true"] .referenceSelect,
 .referenceSelect:hover,
 .referenceSelect:focus-visible { color: var(--accent); }
@@ -903,7 +903,7 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
 .referenceDetail p { margin: 0 0 .42em; }
 .referenceDetail a { color: var(--accent); border-bottom: 1px solid currentColor; word-break: break-word; }
 .referencePane > footer { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4px; padding: 5px 0 1px; border-top: 0; }
-.referencePane > footer button { min-height: 30px; color: var(--ink); background: color-mix(in srgb, var(--ink) 8%, transparent); border: 0; font-family: var(--reader-interface-family); font-size: 10px; font-weight: 600; transition: color .15s ease, background .15s ease; }
+.referencePane > footer button { min-height: 30px; color: var(--ink); background: color-mix(in srgb, var(--ink) 8%, transparent); border: 0; font-family: var(--reader-interface-family); font-size: var(--text-caption); font-weight: 600; transition: color .15s ease, background .15s ease; }
 .tocPanel .toTop:hover,
 .tocPanel .toTop:focus-visible,
 .referencePane > footer button:hover,
@@ -940,7 +940,7 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
   padding: 0 0 14px;
   border-bottom: 3px double var(--hair-strong);
   font-family: var(--f-mono);
-  font-size: 10px;
+  font-size: var(--text-caption);
   letter-spacing: .09em;
 }
 
@@ -965,7 +965,7 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
 .folioSection {
   margin: 0 0 24px;
   font-family: var(--f-mono);
-  font-size: 10px;
+  font-size: var(--text-caption);
   font-weight: 700;
   letter-spacing: .16em;
   color: var(--accent);
@@ -1004,8 +1004,8 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
 .folioLead > div { display: flex; flex-direction: column; gap: 12px; padding-left: 22px; border-left: 1px solid var(--hair); }
 .folioLead strong { font-family: var(--reader-body-family); font-size: 14px; line-height: 1.6; }
 .folioLead .creditLine { gap: 7px 14px; }
-.folioLead .creditMark { width: 16px; height: 16px; font-size: 10px; }
-.folioLead span { font-family: var(--f-mono); font-size: 9px; letter-spacing: .08em; color: var(--ink-faint); }
+.folioLead .creditMark { width: 16px; height: 16px; font-size: var(--text-caption); }
+.folioLead span { font-family: var(--f-mono); font-size: var(--text-sm); letter-spacing: .08em; color: var(--ink-faint); }
 
 .folioReading { border-top: 1px solid var(--hair-strong); }
 
@@ -1092,12 +1092,12 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
 .sheetHeader h2 { margin: 0; font-family: var(--reader-interface-family); font-size: 25px; }
 .sheetHeaderActions { display: flex; align-items: center; gap: 12px; }
 .sheetHeaderActions > button { width: 36px; height: 36px; color: var(--ink); font-size: 25px; border: 1px solid var(--hair); }
-.referenceBack { min-height: 32px; padding: 0 10px; color: var(--ink); border: 1px solid var(--hair); font-family: var(--reader-interface-family); font-size: 9px; font-weight: 600; white-space: nowrap; }
+.referenceBack { min-height: 32px; padding: 0 10px; color: var(--ink); border: 1px solid var(--hair); font-family: var(--reader-interface-family); font-size: var(--text-sm); font-weight: 600; white-space: nowrap; }
 .referenceBack:hover,
 .referenceBack:focus-visible { color: var(--solid-ink); background: var(--solid); outline: none; }
 .sheet .referencePane[data-compact="true"] { grid-template-rows: minmax(0, 1fr) auto; }
 .sheetProgress { margin-bottom: 22px; }
-.sheetProgress p { margin: 9px 0 0; font-family: var(--f-mono); font-size: 9px; color: var(--ink-faint); }
+.sheetProgress p { margin: 9px 0 0; font-family: var(--f-mono); font-size: var(--text-sm); color: var(--ink-faint); }
 .sheet .tocJump { padding-top: 10px; padding-bottom: 10px; }
 .sheet .tocJump b { font-size: 14px; white-space: normal; }
 
@@ -1105,19 +1105,19 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
 .sizeChooser button { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100px; gap: 9px; color: var(--ink); border: 1px solid var(--hair); }
 .sizeChooser button[data-active="true"] { border-color: var(--accent); box-shadow: inset 0 -3px var(--accent); }
 .sizeChooser b { font-family: var(--reader-interface-family); }
-.sizeChooser span { font-family: var(--reader-interface-family); font-size: 9px; color: var(--ink-faint); }
+.sizeChooser span { font-family: var(--reader-interface-family); font-size: var(--text-sm); color: var(--ink-faint); }
 .themeChoice { display: grid; grid-template-columns: 36px 1fr max-content; align-items: center; gap: 12px; width: 100%; min-height: 58px; margin-top: 16px; padding: 0 14px; color: var(--ink); border: 1px solid var(--hair); text-align: left; }
 .themeChoice span { font-size: 20px; }
 .themeChoice b { font-family: var(--reader-interface-family); font-size: 14px; }
 .themeChoice i { font-style: normal; }
 .settingGroup + .settingGroup { margin-top: 24px; }
-.settingGroup > span { display: block; margin-bottom: 9px; font-family: var(--reader-interface-family); font-size: 8px; font-weight: 600; letter-spacing: .1em; color: var(--ink-faint); }
+.settingGroup > span { display: block; margin-bottom: 9px; font-family: var(--reader-interface-family); font-size: var(--text-xs); font-weight: 600; letter-spacing: .1em; color: var(--ink-faint); }
 .fontChooser { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .fontChooser button { display: grid; grid-template-rows: auto auto auto; justify-items: start; min-height: 112px; padding: 16px; color: var(--ink); border: 1px solid var(--hair); text-align: left; }
 .fontChooser button[data-active="true"] { border-color: var(--accent); box-shadow: inset 0 -3px var(--accent); }
 .fontChooser b { font-size: 22px; font-weight: 500; }
 .fontChooser span { margin-top: 10px; font-family: var(--reader-interface-family); font-size: 12px; font-weight: 700; }
-.fontChooser small { margin-top: 4px; font-family: var(--reader-interface-family); font-size: 7px; color: var(--ink-faint); }
+.fontChooser small { margin-top: 4px; font-family: var(--reader-interface-family); font-size: var(--text-2xs); color: var(--ink-faint); }
 .serifSample { font-family: var(--f-cjk-serif); }
 .sansSample { font-family: "Helvetica Neue", Helvetica, Arial, "DengXian", "等线", sans-serif; }
 
@@ -1136,7 +1136,7 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
   box-shadow: 0 9px 30px rgb(0 0 0 / 24%);
   transform: translateX(-50%);
   font-family: var(--f-mono);
-  font-size: 9px;
+  font-size: var(--text-sm);
   letter-spacing: .05em;
   white-space: nowrap;
 }
@@ -1275,9 +1275,9 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
   .lineNumbers strong { font-size: 15px; }
   .tocPanel { padding-top: 14px; }
   .tocJump { grid-template-columns: 15px minmax(0, 1fr); gap: 3px; }
-  .tocJump b { font-size: 11px; }
+  .tocJump b { font-size: var(--text-meta); }
   .referenceSelect { gap: 7px; }
-  .referenceSelect > .referencePreview { font-size: 11px; }
+  .referenceSelect > .referencePreview { font-size: var(--text-meta); }
   .referenceDetail { font-size: 12px; }
 }
 
@@ -1347,7 +1347,7 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
   .docketNumber { font-size: 32px; }
   .docket > div { gap: 7px; }
   .docket > div b { font-size: 19px; }
-  .docket > div small { font-size: 8px; }
+  .docket > div small { font-size: var(--text-xs); }
   .coverStory { padding-top: 24px; }
   .coverKicker { flex-wrap: nowrap; gap: 8px 12px; margin-bottom: 18px; }
   .coverKicker a { flex: none; width: auto; margin: 0 auto 0 0; border: 0; }
@@ -1398,7 +1398,7 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
     width: auto;
     margin: 0 0 9px;
     font-family: var(--f-mono);
-    font-size: 9px;
+    font-size: var(--text-sm);
     font-style: normal;
     text-align: left;
   }
@@ -1417,7 +1417,7 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
   .appendixContent :global(.source-notes p) { font-size: calc(var(--reader-font) - 1px); line-height: 1.72; }
 
   .folioCover { max-width: none; padding: 25px 20px 42px; }
-  .folioMast { font-size: 8px; }
+  .folioMast { font-size: var(--text-xs); }
   .folioMast span { text-align: right; }
   .folioTitleBlock { margin-top: 48px; text-align: left; }
   .folioIssue { left: auto; right: 0; top: -38px; font-size: 88px; }
@@ -1444,7 +1444,7 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
   .sheetHeader h2 { font-size: 22px; }
   .sheetHeader { --reference-counter-size: 22px; }
   .sheetHeaderActions { gap: 8px; }
-  .referenceBack { min-height: 30px; padding: 0 8px; font-size: 8px; }
+  .referenceBack { min-height: 30px; padding: 0 8px; font-size: var(--text-xs); }
   .sheet .tocJump { padding-top: 8px; padding-bottom: 8px; }
   .sheet .tocJump b { font-size: 13px; }
   .sheet .tocPanel { max-height: none; }

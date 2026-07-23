@@ -10,7 +10,7 @@ import path from "node:path";
 import matter from "gray-matter";
 import { renderMarkdown } from "./markdown";
 import { isEditorialSection, type EditorialSection } from "./editorial";
-import { assignSectionNumbers } from "./post-numbering";
+import { assignPostNumbers } from "./post-numbering";
 import {
   findContributor,
   findContributorByName,
@@ -51,7 +51,7 @@ export interface PostSummary {
   relatedPosts: string[]; // 多媒体条目按编辑顺序声明的关联文章 slug
   featuredOrder: number; // 同栏目首页推荐优先级；数值越大越靠前
   readMin: number;
-  no: string; // 最早发布为 1，之后递增；最新文章为当前总数 N
+  no: string; // 常规文章保留全站流水号；负栏目使用独立的 -01、-02… 编号
   sectionNo: string; // 常规栏目按发表日期编号；负栏目按原文写作日期编号
 }
 
@@ -357,13 +357,9 @@ async function loadRaw(): Promise<Post[]> {
     slugOwner.set(p.slug, p.title);
   }
 
-  // 时间倒序（最新在前），并编号 01..N
+  // 时间倒序（最新在前）；常规文章保留全站流水号，负栏目使用独立的负号编号。
   visiblePosts.sort(comparePosts);
-  // 编号按发表先后：最早的文章为 1，最新的为 N（列表仍按时间倒序展示）
-  visiblePosts.forEach((p, i) => {
-    p.no = String(visiblePosts.length - i);
-  });
-  assignSectionNumbers(visiblePosts);
+  assignPostNumbers(visiblePosts);
 
   return posts.sort(comparePosts);
 }
