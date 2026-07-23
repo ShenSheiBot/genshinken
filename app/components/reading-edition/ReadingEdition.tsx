@@ -300,34 +300,41 @@ export function ReadingDossier({
               ))}
             </span>
           </Link>
-          {topicMemberships.length > 0 && (
-            <nav className={styles.docketTopics} aria-label="所属专题">
-              {topicMemberships.map((membership) => (
-                <Link
-                  className={`${styles.libraryFilterLink} ${styles.docketTopicLink}`}
-                  href={membership.href}
-                  key={`${membership.href}:${membership.groupNumber}`}
-                >
-                  <b>{membership.title}</b>
-                  <span>{membership.groupNumber}</span>
-                </Link>
-              ))}
-            </nav>
-          )}
           <i />
         </aside>
 
         <div className={styles.coverStory}>
-          <div className={styles.coverKicker}>
-            <Link href={isPublicEdition ? "/" : "/prototype/poster"}>← 返回首页</Link>
-            <span>第 {post.no} 号</span>
-            <time
-              dateTime={post.displayDateISO}
-              title={post.section === "negative" ? "原文写作日期" : "博客发布日期"}
-            >
-              {post.displayDateISO.replaceAll("-", ".")}
-            </time>
-            <span>{post.readMin} 分钟</span>
+          <div
+            className={`${styles.coverLeadMeta} ${
+              topicMemberships.length > 0 ? styles.coverLeadMetaWithTopics : ""
+            }`}
+          >
+            <div className={styles.coverKicker}>
+              <Link href={isPublicEdition ? "/" : "/prototype/poster"}>← 返回首页</Link>
+              <span>第 {post.no} 号</span>
+              <time
+                dateTime={post.displayDateISO}
+                title={post.section === "negative" ? "原文写作日期" : "博客发布日期"}
+              >
+                {post.displayDateISO.replaceAll("-", ".")}
+              </time>
+              <span>{post.readMin} 分钟</span>
+            </div>
+            {topicMemberships.length > 0 && (
+              <nav className={styles.coverTopics} aria-label="所属专题">
+                <span className={styles.coverTopicEyebrow}>专题</span>
+                {topicMemberships.map((membership) => (
+                  <Link
+                    className={`${styles.libraryFilterLink} ${styles.coverTopicLink}`}
+                    href={membership.href}
+                    key={`${membership.href}:${membership.groupNumber}`}
+                  >
+                    <b>{membership.title}</b>
+                    <span>{membership.groupNumber}</span>
+                  </Link>
+                ))}
+              </nav>
+            )}
           </div>
           <h1 className="art-title"><PreferredTitle post={post} /></h1>
           {post.subtitle && <p className={styles.subtitle}>{post.subtitle}</p>}
