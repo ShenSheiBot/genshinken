@@ -563,8 +563,8 @@ body:has(main[data-archive-page="true"]) {
   margin: 34px 0;
   border-collapse: separate;
   border-spacing: 0;
-  border-top: 1px solid var(--hair);
-  border-bottom: 1px solid var(--hair);
+  border-top: 0;
+  border-bottom: 0;
   font-family: var(--reader-body-family, var(--f-cjk-serif));
   font-size: 15px;
   line-height: 1.55;

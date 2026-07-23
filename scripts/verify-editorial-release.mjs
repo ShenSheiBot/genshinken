@@ -253,6 +253,11 @@ assert.match(
   "boxed cmarks must share a bold Microsoft YaHei glyph style"
 );
 assert.match(
+  globalStylesSource,
+  /\.art-body table\s*\{[^}]*border-top:\s*0;[^}]*border-bottom:\s*0;[^}]*\}[\s\S]*?\.art-body th\s*\{[^}]*border-bottom:\s*1px solid var\(--hair\);[\s\S]*?\.art-body tbody tr \+ tr td\s*\{\s*border-top:\s*1px solid var\(--hair\);\s*\}/,
+  "article tables must remain open at the outer edges while retaining internal row rules"
+);
+assert.match(
   readingChromeSource,
   /setLineMarkers\([\s\S]*?\(index \+ 1\) % 10 === 0[\s\S]*?className=\{styles\.visualLineMarker\}[\s\S]*?data-line=\{String\(marker\.line\)\}/,
   "the reading chrome must regenerate a marker for every tenth measured visual line"
