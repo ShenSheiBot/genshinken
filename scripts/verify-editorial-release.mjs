@@ -486,6 +486,18 @@ const shulginSourceMarkdown = fs.readFileSync(
   path.join(process.cwd(), "source", "_posts", "shulgin-dni.md"),
   "utf8"
 );
+const shulginInlinePageBreaks = [
+  "006", "007", "017", "018", "019", "023", "028", "029", "031",
+  "032", "048", "049", "051", "053", "055", "056", "058",
+  "059", "060", "062", "063", "065", "066",
+];
+for (const pageNumber of shulginInlinePageBreaks) {
+  assert.doesNotMatch(
+    shulginSourceMarkdown,
+    new RegExp(`(?:^|\\n)\\s*<!-- p\\.${pageNumber} -->\\s*(?:\\n|$)`),
+    `shulgin-dni p.${pageNumber} marker must remain inline instead of splitting a continued paragraph`
+  );
+}
 const shulginOriginalNoteIds = [...shulginSourceMarkdown.matchAll(/^\[\^(\d+)\]:/gm)]
   .map((match) => Number(match[1]));
 const historicalMaterialismSource = fs.readFileSync(
@@ -1197,6 +1209,21 @@ const shulginLd = assertMetadata(
 );
 const shulginDocumentPath = `/posts/${encodeURIComponent(shulginManifest.documentSlug)}`;
 assertMetadata("shulgin-dni continuous document", shulginDocument, shulginDocumentPath, "Article");
+const shulginRenderedParagraphs = elements(shulginDocument.html, "p");
+for (const pageNumber of shulginInlinePageBreaks) {
+  assert.ok(
+    shulginRenderedParagraphs.some((paragraph) =>
+      paragraph.inner.includes(`<!-- p.${pageNumber} -->`)
+    ),
+    `shulgin-dni p.${pageNumber} marker must render inside its continued paragraph`
+  );
+}
+assert.ok(
+  shulginRenderedParagraphs.some((paragraph) =>
+    /这双眼睛\s*变得惊人/.test(visibleText(paragraph.inner))
+  ),
+  "shulgin-dni p.056 must keep the continued sentence inside one rendered paragraph"
+);
 const shulginMain = elements(shulginBook.html, "main")[0];
 assert.ok(shulginMain, "shulgin-dni detail must expose its main landmark");
 const shulginText = visibleText(shulginMain.inner);
