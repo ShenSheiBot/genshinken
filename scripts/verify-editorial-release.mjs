@@ -448,18 +448,33 @@ const shulginSourceMarkdown = fs.readFileSync(
 );
 const shulginOriginalNoteIds = [...shulginSourceMarkdown.matchAll(/^\[\^(\d+)\]:/gm)]
   .map((match) => Number(match[1]));
-assert.equal(shulginChapters.length, 16, "shulgin-dni initial catalogue must contain 16 nodes");
-assert.equal(shulginPublishedChapters.length, 3, "shulgin-dni initial release must publish 3 nodes");
-assert.equal(shulginForthcomingChapters.length, 13, "shulgin-dni initial release must retain 13 forthcoming nodes");
+const historicalMaterialismSource = fs.readFileSync(
+  path.join(process.cwd(), "source", "_posts", "historical-materialism-theses.md"),
+  "utf8"
+);
+assert.doesNotMatch(
+  historicalMaterialismSource.trimEnd(),
+  /(?:^|\n)(?:---|\*\*\*)$/,
+  "historical-materialism-theses must not end with a redundant thematic break"
+);
+assert.equal(shulginChapters.length, 16, "shulgin-dni catalogue must contain 16 nodes");
+assert.equal(shulginPublishedChapters.length, 5, "shulgin-dni current release must publish 5 nodes");
+assert.equal(shulginForthcomingChapters.length, 11, "shulgin-dni current release must retain 11 forthcoming nodes");
 assert.deepEqual(
   shulginPublishedChapters.map((chapter) => chapter.id),
-  ["shulgin-notes", "epigraph-and-preface", "constitutional-day-one"],
-  "shulgin-dni initial release must contain only Proof.00 and Proof.01 catalogue entries"
+  [
+    "shulgin-notes",
+    "epigraph-and-preface",
+    "constitutional-day-one",
+    "constitutional-day-two",
+    "constitutional-day-three",
+  ],
+  "shulgin-dni current release must contain Proof.00 through Proof.03 catalogue entries"
 );
 assert.deepEqual(
   shulginOriginalNoteIds,
-  [1, 2, 3, 4, 5],
-  "shulgin-dni initial release must not include the unpublished full tail-note unit"
+  [1, 2, 3, 4, 5, 6, 7],
+  "shulgin-dni current release must include only original notes referenced by published units"
 );
 assert.ok(
   shulginChapters.every((chapter) => chapter.status === "published" || chapter.status === "forthcoming"),
@@ -472,12 +487,12 @@ assert.ok(
 assert.equal(
   shulginChapters.find((chapter) => chapter.number === "00")?.status,
   "published",
-  "shulgin-dni initial 00 material must be published"
+  "shulgin-dni 00 material must be published"
 );
 assert.equal(
   shulginChapters.find((chapter) => chapter.number === "01")?.status,
   "published",
-  "shulgin-dni initial 01 material must be published"
+  "shulgin-dni 01 material must be published"
 );
 assert.ok(
   shulginForthcomingChapters.length > 0,
@@ -738,6 +753,22 @@ for (const section of Object.keys(sectionLabels)) {
 }
 const nonFeaturedEditorialCards = editorialCards.filter(
   (card) => attribute(card.opening, "data-featured") !== "true"
+);
+const mullahologyPrefaceCard = editorialCards.find((card) =>
+  links(card.outer).some((link) => link.href === "/posts/mullahology-00")
+);
+assert.ok(mullahologyPrefaceCard, "homepage must expose the Mullahology preface recommendation");
+const mullahologyPrefaceTitle = elements(mullahologyPrefaceCard.outer, "h2")[0];
+assert.ok(mullahologyPrefaceTitle, "Mullahology preface recommendation must expose its title");
+assert.deepEqual(
+  elements(mullahologyPrefaceTitle.inner, "span").map((line) => visibleText(line.inner)),
+  ["一份关于克苏鲁的", "调查报告"],
+  "Mullahology preface homepage title must preserve its two editorial lines"
+);
+assert.ok(
+  visibleText(mullahologyPrefaceCard.outer)
+    .includes("如果自由主义的真理是纳粹主义，那么新自由主义的真理是什么？"),
+  "Mullahology preface recommendation must expose the revised overview"
 );
 assert.ok(nonFeaturedEditorialCards.length > 0, "homepage must include non-featured editorial cards");
 for (const card of nonFeaturedEditorialCards) {

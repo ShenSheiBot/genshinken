@@ -34,6 +34,7 @@ export interface PostSummary {
   slug: string;
   title: string;
   titleBreaks: string[];
+  homeTitleBreaks: string[];
   subtitle: string;
   draft: boolean;
   category: string;
@@ -224,14 +225,19 @@ function metadataText(v: unknown): string {
   return String(v).trim();
 }
 
-function titleBreaks(value: unknown, title: string, file: string): string[] {
+function titleBreaks(
+  value: unknown,
+  title: string,
+  file: string,
+  field = "title_breaks"
+): string[] {
   if (value == null) return [title];
   if (!Array.isArray(value)) {
-    throw new Error(`${file}: title_breaks 必须是按显示顺序填写的字符串数组`);
+    throw new Error(`${file}: ${field} 必须是按显示顺序填写的字符串数组`);
   }
   const segments = value.map((segment) => String(segment).trim()).filter(Boolean);
   if (segments.length === 0 || segments.join("") !== title) {
-    throw new Error(`${file}: title_breaks 拼接后必须与 title 完全一致`);
+    throw new Error(`${file}: ${field} 拼接后必须与 title 完全一致`);
   }
   return segments;
 }
@@ -290,6 +296,10 @@ async function loadRaw(): Promise<Post[]> {
       const html = await renderMarkdown(content);
       const title = String(data.title ?? baseName).trim();
       const preferredTitleBreaks = titleBreaks(data.title_breaks ?? data.titleBreaks, title, file);
+      const homeTitleBreaksValue = data.home_title_breaks ?? data.homeTitleBreaks;
+      const preferredHomeTitleBreaks = homeTitleBreaksValue == null
+        ? []
+        : titleBreaks(homeTitleBreaksValue, title, file, "home_title_breaks");
       const subtitle = String(data.subtitle ?? "").trim();
       const draft = isDraft(data.draft);
       const category = categories[0] ?? tags[0] ?? "未分类";
@@ -309,6 +319,7 @@ async function loadRaw(): Promise<Post[]> {
         slug,
         title,
         titleBreaks: preferredTitleBreaks,
+        homeTitleBreaks: preferredHomeTitleBreaks,
         subtitle,
         draft,
         category,

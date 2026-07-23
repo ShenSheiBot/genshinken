@@ -9,9 +9,9 @@
   "authors": ["vasily-shulgin"],
   "translators": ["yu-shulue"],
   "publishedAt": "2026-07-20",
-  "updatedAt": "2026-07-21",
+  "updatedAt": "2026-07-22",
   "startAnchor": "reading-cover",
-  "latestChapterId": "constitutional-day-one",
+  "latestChapterId": "constitutional-day-three",
   "originalBibtex": "@book{shulgin1925dni,\n  author = {Шульгин, Василий Витальевич},\n  title = {Дни: [записки]},\n  address = {Ленинград},\n  publisher = {Рабочее издательство «Прибой»},\n  year = {1925},\n  note = {Со вступительной статьей и пояснительными примечаниями С. А. Пионтковского},\n  language = {Russian}\n}",
   "translationBibtex": "@misc{shulgin2026dniZH,\n  author = {瓦西里·维塔利耶维奇·舒尔金},\n  translator = {俞叔略},\n  title = {往日：忆一九〇五年立宪与一九一七年二月革命},\n  year = {2026},\n  url = {https://un-canon.blog/posts/shulgin-dni},\n  urldate = {2026-07-20},\n  language = {zh-Hans},\n  note = {连载中；CC0 1.0 Universal}\n}",
   "chapters": [
@@ -43,13 +43,17 @@
       "id": "constitutional-day-two",
       "number": "03",
       "title": "“立宪”次日",
-      "status": "forthcoming"
+      "status": "published",
+      "anchor": "立宪次日",
+      "publishedAt": "2026-07-22"
     },
     {
       "id": "constitutional-day-three",
       "number": "04",
       "title": "“立宪”后日",
-      "status": "forthcoming"
+      "status": "published",
+      "anchor": "立宪后日",
+      "publishedAt": "2026-07-22"
     },
     {
       "id": "penultimate-days",
@@ -118,7 +122,7 @@
     {
       "id": "notes",
       "number": "07",
-      "title": "尾注（168条）",
+      "title": "尾注",
       "status": "forthcoming"
     }
   ]

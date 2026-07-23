@@ -97,6 +97,13 @@ function overviewFor(post: PostSummary): string {
   return post.excerpt || post.subtitle || `围绕${post.category || "本期主题"}展开的材料收录。`;
 }
 
+function HomeTitle({ post }: { post: PostSummary }) {
+  if (post.homeTitleBreaks.length === 0) return post.title;
+  return post.homeTitleBreaks.map((segment, index) => (
+    <span className={styles.titleLine} key={`${segment}-${index}`}>{segment}</span>
+  ));
+}
+
 function CardCredits({ post }: { post: PostSummary }) {
   const credits = visibleHomeCredits(post);
 
@@ -272,7 +279,7 @@ export default function PosterWallHome({
                   </div>
 
                   <div className={styles.cardBody}>
-                    <h2 className={styles.postTitle}>{post.title}</h2>
+                    <h2 className={styles.postTitle}><HomeTitle post={post} /></h2>
                     {post.subtitle && <p className={styles.subtitle}>{post.subtitle}</p>}
                     <CardCredits post={post} />
                     <p className={styles.excerpt}>{overviewFor(post)}</p>

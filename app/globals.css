@@ -59,7 +59,7 @@
 
 @font-face {
   font-family: "UN Canon STSong";
-  src: url("/fonts/un-canon-st-song.woff2") format("woff2");
+  src: url("/fonts/un-canon-st-song.woff2?v=83199bc7c3db") format("woff2");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -67,7 +67,7 @@
 
 @font-face {
   font-family: "UN Canon STFangsong";
-  src: url("/fonts/un-canon-st-fangsong.woff2") format("woff2");
+  src: url("/fonts/un-canon-st-fangsong.woff2?v=43278a1427ce") format("woff2");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -75,7 +75,7 @@
 
 @font-face {
   font-family: "UN Canon STKaiti";
-  src: url("/fonts/un-canon-st-kaiti.woff2") format("woff2");
+  src: url("/fonts/un-canon-st-kaiti.woff2?v=0e613c7d0035") format("woff2");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -469,6 +469,8 @@ body:has(.reading-edition-page) { background-image: none; }
 .art-body blockquote p,
 .art-body p.cont { text-indent: 0; }
 .art-body p.article-summary-meta { text-indent: 0; }
+.art-body p.epigraph-text,
+.art-body p.epigraph-attribution { font-family: var(--f-cjk-kaiti); }
 .art-body p.article-summary-meta strong { font-family: var(--f-grotesk); font-weight: 700; color: var(--ink); }
 .art-body h1, .art-body h2, .art-body h3, .art-body h4 {
   font-family: var(--f-grotesk); font-weight: 700; line-height: 1.18;

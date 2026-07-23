@@ -304,6 +304,17 @@ function suggestTitleBreaks(title) {
 function validateTitleBreaks(file, data) {
   const title = nonEmptyString(data.title) ? data.title.trim() : "";
   if (!title) return;
+  if (hasOwn(data, "home_title_breaks")) {
+    const homeSegments = stringArray(
+      data.home_title_breaks,
+      file,
+      "home_title_breaks",
+      { required: true }
+    );
+    if (homeSegments.length === 0 || homeSegments.join("") !== title) {
+      report(errors, file, "home_title_breaks 按顺序拼接后必须与 title 完全一致");
+    }
+  }
   if (!hasOwn(data, "title_breaks")) {
     report(
       warnings,

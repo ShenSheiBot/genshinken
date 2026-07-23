@@ -96,7 +96,11 @@ for (const expected of expectedFonts) {
     new RegExp(`font-family\\s*:\\s*["']${escapeRegExp(expected.family)}["']\\s*;`).test(block)
   );
   assert.ok(face, `missing self-hosted @font-face for ${expected.family}`);
-  assert.match(face, new RegExp(`url\\(["']?/fonts/${escapeRegExp(expected.file)}["']?\\)`));
+  assert.match(
+    face,
+    new RegExp(`url\\(["']?/fonts/${escapeRegExp(expected.file)}\\?v=[0-9a-f]{12}["']?\\)`),
+    `${expected.file} must use a content-derived cache key`
+  );
   assert.match(face, /format\(["']woff2["']\)/);
   assert.match(face, /font-style\s*:\s*normal\s*;/);
   assert.match(face, /font-weight\s*:\s*400\s*;/);
@@ -122,6 +126,13 @@ for (const expected of expectedFonts) {
   assert.equal(record.bytes, bytes.length);
   assert.equal(record.codePointCount, manifest.subsetCodePointCount);
   assert.equal(record.sha256, digest);
+  assert.match(
+    face,
+    new RegExp(
+      `url\\(["']?/fonts/${escapeRegExp(expected.file)}\\?v=${digest.slice(0, 12)}["']?\\)`
+    ),
+    `${expected.file} cache key must match its current SHA-256 digest`
+  );
 }
 
 const serifRule = /:global\(html\[data-reader-font="serif"\]\) \.root\s*{([\s\S]*?)}/.exec(readerCss)?.[1];

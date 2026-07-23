@@ -265,6 +265,11 @@
   font-size: var(--reader-font);
 }
 
+.body :global(p.epigraph-text),
+.body :global(p.epigraph-attribution) {
+  font-family: var(--f-cjk-kaiti);
+}
+
 .body > :global(p:first-child),
 .body :global(h1 + p),
 .body :global(h2 + p),
@@ -288,7 +293,7 @@
   font-weight: 800;
   line-height: 1.34;
   letter-spacing: -.025em;
-  scroll-margin-top: 82px;
+  scroll-margin-top: calc(var(--reading-rail-top) + 12px);
   border-top: 0;
 }
 
@@ -483,7 +488,7 @@
 
 .appendixContent :global(.footnotes li),
 .appendixContent :global(.source-notes li) {
-  scroll-margin-top: 82px;
+  scroll-margin-top: calc(var(--reading-rail-top) + 12px);
   margin-bottom: .85rem;
   font-size: calc(var(--reader-font) - 1px);
   line-height: 1.78;

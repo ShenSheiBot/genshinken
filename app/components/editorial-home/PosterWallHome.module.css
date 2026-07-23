@@ -252,7 +252,7 @@
  */
 .tile[data-section="translation"] .generatedCover::before {
   inset: 14px;
-  border: 3px double color-mix(in srgb, var(--card-ink) 24%, transparent);
+  border: 0;
   background:
     linear-gradient(90deg, transparent 49.8%, color-mix(in srgb, var(--card-ink) 16%, transparent) 49.8% 50.2%, transparent 50.2%),
     repeating-linear-gradient(90deg, transparent 0 44px, color-mix(in srgb, var(--card-ink) 6%, transparent) 44px 45px);
@@ -393,6 +393,10 @@
   line-height: 1.06;
   letter-spacing: -0.035em;
   text-wrap: balance;
+}
+
+.titleLine {
+  display: block;
 }
 
 .leadWide .postTitle {
@@ -646,6 +650,10 @@ html[data-theme="dark"] .latestUpdates:not([data-surface="paper"]) {
   margin-top: 0;
   padding-top: 96px;
   border-top: 0;
+}
+
+html[data-theme="dark"] .root:has(.latestUpdatesTransition) ~ :global(.foot) {
+  --home-latest-transition-bg: #060605;
 }
 
 .root:has(.latestUpdatesTransition) ~ :global(.foot)::before {
