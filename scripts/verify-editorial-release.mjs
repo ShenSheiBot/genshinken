@@ -1023,6 +1023,16 @@ assert.deepEqual(
   "mullahology JSON-LD must retain both source units in authored order"
 );
 assertMetadata("mullahology preface", mullahologyPreface, "/posts/mullahology-00", "Article");
+assert.match(
+  mullahologyPreface.html,
+  /data-footnotes|class="footnotes"/,
+  "mullahology preface must render its restored annotation section"
+);
+assert.match(
+  visibleText(mullahologyPreface.html),
+  /福柯的中世纪帝国是代表一种时间的最后终止/,
+  "mullahology preface must retain the restored annotation text"
+);
 assertMetadata("mullahology chapter one", mullahologyChapter, "/posts/mullahology-01", "Article");
 
 const booksLd = assertMetadata("books index", books, "/books", "CollectionPage");
