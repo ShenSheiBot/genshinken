@@ -498,8 +498,8 @@ assert.doesNotMatch(
   "historical-materialism-theses must not end with a redundant thematic break"
 );
 assert.equal(shulginChapters.length, 16, "shulgin-dni catalogue must contain 16 nodes");
-assert.equal(shulginPublishedChapters.length, 5, "shulgin-dni current release must publish 5 nodes");
-assert.equal(shulginForthcomingChapters.length, 11, "shulgin-dni current release must retain 11 forthcoming nodes");
+assert.equal(shulginPublishedChapters.length, 7, "shulgin-dni current release must publish 7 nodes");
+assert.equal(shulginForthcomingChapters.length, 9, "shulgin-dni current release must retain 9 forthcoming nodes");
 assert.deepEqual(
   shulginPublishedChapters.map((chapter) => chapter.id),
   [
@@ -508,12 +508,20 @@ assert.deepEqual(
     "constitutional-day-one",
     "constitutional-day-two",
     "constitutional-day-three",
+    "penultimate-days",
+    "penultimate-1916-11-03",
   ],
-  "shulgin-dni current release must contain Proof.00 through Proof.03 catalogue entries"
+  "shulgin-dni current release must contain Proof.00 through Proof.04 catalogue entries"
 );
 assert.deepEqual(
   shulginOriginalNoteIds,
-  [1, 2, 3, 4, 5, 6, 7],
+  [
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
+    15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28,
+    31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44,
+    45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58,
+    59, 60, 61, 62, 63,
+  ],
   "shulgin-dni current release must include only original notes referenced by published units"
 );
 assert.ok(
