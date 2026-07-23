@@ -30,6 +30,7 @@ export const metadata: Metadata = {
 export default function BooksPage() {
   const books = getAllBooks();
   const serializingCount = books.filter((book) => book.status === "serializing").length;
+  const completeCount = books.filter((book) => book.status === "complete").length;
   const canonical = `${site.url}/books`;
   const jsonLd = {
     "@context": "https://schema.org",
@@ -59,8 +60,8 @@ export default function BooksPage() {
           <h1>连载</h1>
         </div>
         <dl className={styles.catalogStats}>
-          <div><dt>书目</dt><dd>{String(books.length).padStart(2, "0")}</dd></div>
           <div><dt>连载中</dt><dd>{String(serializingCount).padStart(2, "0")}</dd></div>
+          <div><dt>已完结</dt><dd>{String(completeCount).padStart(2, "0")}</dd></div>
         </dl>
       </header>
 

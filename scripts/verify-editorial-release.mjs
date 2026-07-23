@@ -27,6 +27,16 @@ function readBookManifest(slug) {
     fs.readFileSync(path.join(process.cwd(), "source", "_books", `${slug}.json`), "utf8")
   );
 }
+function sourceBookStatusCounts() {
+  const directory = path.join(process.cwd(), "source", "_books");
+  return fs.readdirSync(directory)
+    .filter((file) => file.endsWith(".json"))
+    .map((file) => JSON.parse(fs.readFileSync(path.join(directory, file), "utf8")))
+    .reduce((counts, book) => {
+      counts[book.status] = (counts[book.status] ?? 0) + 1;
+      return counts;
+    }, {});
+}
 function bookCitationKinds(slug) {
   const data = readBookManifest(slug);
   const kinds = [];
@@ -1068,6 +1078,22 @@ assertMetadata("mullahology chapter one", mullahologyChapter, "/posts/mullaholog
 
 const booksLd = assertMetadata("books index", books, "/books", "CollectionPage");
 assert.ok(booksLd.hasPart?.length > 0, "books index JSON-LD must list published books");
+const booksMain = elements(books.html, "main")[0];
+const booksCatalogHeader = elements(booksMain.inner, "header")[0];
+const booksCatalogStats = elements(booksCatalogHeader.inner, "dl")[0];
+assert.ok(booksCatalogStats, "books index must render its catalogue status counts");
+const bookStatusCounts = sourceBookStatusCounts();
+assert.deepEqual(
+  elements(booksCatalogStats.inner, "dt").map((term) => visibleText(term.inner)),
+  ["连载中", "已完结"],
+  "books index status counts must be ordered as serializing then complete"
+);
+assert.deepEqual(
+  elements(booksCatalogStats.inner, "dd").map((value) => visibleText(value.inner)),
+  [bookStatusCounts.serializing ?? 0, bookStatusCounts.complete ?? 0]
+    .map((count) => String(count).padStart(2, "0")),
+  "books index status counts must match the source manifests"
+);
 const bookLd = assertMetadata(
   "book detail",
   book,
