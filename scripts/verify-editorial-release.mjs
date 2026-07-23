@@ -1112,11 +1112,17 @@ assert.ok(mullahologyChapterDocket, "mullahology chapter must expose its linked 
 const mullahologyDocketLinks = links(mullahologyChapterDocket.inner);
 assert.deepEqual(
   mullahologyDocketLinks.map(({ href, text }) => ({ href, text })),
-  [
-    { href: "/library?section=essay", text: "论 0 4" },
-    { href: "/topics/mullahology", text: "毛拉学 01" },
-  ],
-  "mullahology chapter docket must link its section and topic unit in reading order"
+  [{ href: "/library?section=essay", text: "论 0 4" }],
+  "mullahology chapter docket must link its section without duplicating the topic unit"
+);
+const mullahologyChapterTopics = elements(mullahologyChapter.html, "nav").find((nav) =>
+  attribute(nav.opening, "aria-label") === "所属专题"
+);
+assert.ok(mullahologyChapterTopics, "mullahology chapter must expose its topic unit beside the article lead");
+assert.deepEqual(
+  links(mullahologyChapterTopics.inner).map(({ href, text }) => ({ href, text })),
+  [{ href: "/topics/mullahology", text: "毛拉学 01" }],
+  "mullahology chapter lead must link its topic unit"
 );
 
 const booksLd = assertMetadata("books index", books, "/books", "CollectionPage");
