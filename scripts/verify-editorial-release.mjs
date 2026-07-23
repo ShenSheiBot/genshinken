@@ -1288,15 +1288,13 @@ assert.ok(
   "books index must report shulgin-dni published/all counts"
 );
 
-const shulginHeadingIds = new Set(
-  ["h1", "h2", "h3", "h4", "h5", "h6"]
-    .flatMap((tagName) => tags(shulginDocument.html, tagName))
-    .map((tag) => decodeHtml(attribute(tag, "id") || ""))
-    .filter(Boolean)
+const shulginDocumentIds = new Set(
+  [...shulginDocument.html.matchAll(/<[a-z][^>]*\bid=["']([^"']+)["'][^>]*>/gi)]
+    .map(([, id]) => decodeHtml(id))
 );
 for (const chapter of shulginPublishedChapters) {
   assert.ok(
-    shulginHeadingIds.has(chapter.anchor),
+    shulginDocumentIds.has(chapter.anchor),
     `shulgin-dni published anchor #${chapter.anchor} must exist in the continuous document`
   );
 }
@@ -1310,6 +1308,29 @@ assert.equal(
   visibleText(shulginConstitutionalDayHeading.outer),
   "“立宪”首日，1905年10月18日",
   "shulgin-dni constitutional-day heading must combine the title and date"
+);
+const shulginPenultimateHeading = elements(shulginDocument.html, "h2")
+  .find((heading) => decodeHtml(attribute(heading.opening, "id") || "") === "立宪的倒数第二日");
+assert.ok(
+  shulginPenultimateHeading,
+  "shulgin-dni penultimate-day heading must preserve its stable anchor"
+);
+assert.equal(
+  visibleText(shulginPenultimateHeading.outer),
+  "“立宪”的倒数第二日，1916年11月3日",
+  "shulgin-dni penultimate-day heading must keep the source title and date on one heading"
+);
+assert.match(
+  shulginPenultimateHeading.outer,
+  /<span\b[^>]*id=["']1916年11月3日["'][^>]*><\/span>/,
+  "shulgin-dni penultimate-day heading must retain the 05.1 stable anchor without a second heading"
+);
+assert.equal(
+  elements(shulginDocument.html, "h3")
+    .filter((heading) => visibleText(heading.outer) === "1916年11月3日")
+    .length,
+  0,
+  "shulgin-dni penultimate-day date must not be split into a second heading"
 );
 
 const shulginPublishedResponses = await Promise.all(
