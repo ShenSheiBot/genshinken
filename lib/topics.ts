@@ -56,6 +56,12 @@ export interface TopicSummary {
   itemCount: number;
 }
 
+export interface TopicMembership {
+  href: string;
+  title: string;
+  groupNumber: string;
+}
+
 export interface Topic extends TopicSummary {
   introductionHtml: string;
   groups: TopicGroup[];
@@ -353,4 +359,18 @@ export async function getAllTopicSlugs(): Promise<string[]> {
 
 export async function getTopicBySlug(slug: string): Promise<Topic | null> {
   return (await allTopics()).find((topic) => topic.slug === slug) ?? null;
+}
+
+export async function getTopicMembershipsForPost(slug: string): Promise<TopicMembership[]> {
+  return (await allTopics()).flatMap((topic) =>
+    topic.groups.flatMap((group) =>
+      group.items.some((item) => item.type === "post" && item.ref === slug)
+        ? [{
+            href: `/topics/${encodeURIComponent(topic.slug)}`,
+            title: topic.title,
+            groupNumber: group.number,
+          }]
+        : []
+    )
+  );
 }

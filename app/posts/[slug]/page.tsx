@@ -3,6 +3,7 @@ import { notFound, permanentRedirect } from "next/navigation";
 import { getAllPosts, getAllSlugs, getPostBySlug, type CreditRole } from "@/lib/posts";
 import { site } from "@/lib/site";
 import { postPath } from "@/lib/editorial";
+import { getTopicMembershipsForPost } from "@/lib/topics";
 import {
   ReadingDossier,
   splitArticle,
@@ -92,7 +93,10 @@ export default async function ArticlePage({
   if (!post) notFound();
   if (post.section === "multimedia") permanentRedirect(postPath(post));
 
-  const posts = await getAllPosts();
+  const [posts, topicMemberships] = await Promise.all([
+    getAllPosts(),
+    getTopicMembershipsForPost(post.slug),
+  ]);
 
   return (
     <>
@@ -106,6 +110,7 @@ export default async function ArticlePage({
         post={post}
         parts={splitArticle(post.html)}
         posts={posts}
+        topicMemberships={topicMemberships}
         isPublicEdition
       />
     </>

@@ -204,7 +204,7 @@ assert.match(
 );
 assert.match(
   readingStylesSource,
-  /\.docket\s*\{[^}]*border-right:\s*1px solid var\(--hair-strong\);[^}]*\}[\s\S]*?\.docket > div b\s*\{[^}]*font-family:\s*"Microsoft YaHei",\s*"微软雅黑",\s*"Noto Sans CJK SC"[^}]*font-weight:\s*900;/,
+  /\.docket\s*\{[^}]*border-right:\s*1px solid var\(--hair-strong\);[^}]*\}[\s\S]*?\.docketSectionLink b\s*\{[^}]*font-family:\s*"Microsoft YaHei",\s*"微软雅黑",\s*"Noto Sans CJK SC"[^}]*font-weight:\s*900;/,
   "article docket must keep a full-height separator and a heavy Microsoft YaHei/Noto Sans CJK section mark"
 );
 assert.doesNotMatch(
@@ -876,10 +876,10 @@ const articleSectionLink = links(articleDocket.inner).find(
   (link) => link.href === `/library?section=${encodeURIComponent(articleFacets.section)}`
 );
 assert.ok(articleSectionLink, "article section label must link to its library section filter");
-assert.equal(
+assert.match(
   articleSectionLink.text,
-  sectionLabels[articleFacets.section],
-  "article section link must contain only the section label, not its folio number"
+  new RegExp(`^${sectionLabels[articleFacets.section]}\\s*\\d{2}$`),
+  "article section link must combine its section label and folio number"
 );
 const articleTagLine = elements(article.html, "nav").find((element) =>
   /\bclass=["'][^"']*tagLine/.test(element.opening)
@@ -1075,6 +1075,19 @@ assert.match(
   "mullahology preface must retain the restored annotation text"
 );
 assertMetadata("mullahology chapter one", mullahologyChapter, "/posts/mullahology-01", "Article");
+const mullahologyChapterDocket = elements(mullahologyChapter.html, "aside").find((aside) =>
+  /\bclass=["'][^"']*docket/.test(aside.opening)
+);
+assert.ok(mullahologyChapterDocket, "mullahology chapter must expose its linked docket");
+const mullahologyDocketLinks = links(mullahologyChapterDocket.inner);
+assert.deepEqual(
+  mullahologyDocketLinks.map(({ href, text }) => ({ href, text })),
+  [
+    { href: "/library?section=essay", text: "论 04" },
+    { href: "/topics/mullahology", text: "毛拉学 01" },
+  ],
+  "mullahology chapter docket must link its section and topic unit in reading order"
+);
 
 const booksLd = assertMetadata("books index", books, "/books", "CollectionPage");
 assert.ok(booksLd.hasPart?.length > 0, "books index JSON-LD must list published books");

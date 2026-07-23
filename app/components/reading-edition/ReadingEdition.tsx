@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Fragment } from "react";
 import type { Credit, Post, PostSummary } from "@/lib/posts";
+import type { TopicMembership } from "@/lib/topics";
 import { site } from "@/lib/site";
 import {
   EDITORIAL_SECTION_META,
@@ -252,11 +253,13 @@ export function ReadingDossier({
   post,
   parts,
   posts,
+  topicMemberships = [],
   isPublicEdition = false,
 }: {
   post: Post;
   parts: ArticleParts;
   posts: PostSummary[];
+  topicMemberships?: TopicMembership[];
   /** Render this selected dossier direction at the public /posts URL. */
   isPublicEdition?: boolean;
 }) {
@@ -278,16 +281,28 @@ export function ReadingDossier({
 
       <header className={styles.dossierCover} id="reading-cover" data-reveal>
         <aside className={styles.docket}>
-          <span className={styles.docketNumber}>{post.sectionNo}</span>
-          <div>
-            <Link
-              className={styles.libraryFilterLink}
-              href={sectionLibraryHref(sectionFor(post))}
-              aria-label={`在文库中筛选栏目：${section.label}`}
-            >
-              <b>{section.label}</b>
-            </Link>
-          </div>
+          <Link
+            className={`${styles.libraryFilterLink} ${styles.docketSectionLink}`}
+            href={sectionLibraryHref(sectionFor(post))}
+            aria-label={`在文库中筛选栏目：${section.label} ${post.sectionNo}`}
+          >
+            <b>{section.label}</b>
+            <span className={styles.docketNumber}>{post.sectionNo}</span>
+          </Link>
+          {topicMemberships.length > 0 && (
+            <nav className={styles.docketTopics} aria-label="所属专题">
+              {topicMemberships.map((membership) => (
+                <Link
+                  className={`${styles.libraryFilterLink} ${styles.docketTopicLink}`}
+                  href={membership.href}
+                  key={`${membership.href}:${membership.groupNumber}`}
+                >
+                  <b>{membership.title}</b>
+                  <span>{membership.groupNumber}</span>
+                </Link>
+              ))}
+            </nav>
+          )}
           <i />
         </aside>
 
