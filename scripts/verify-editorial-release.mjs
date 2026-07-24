@@ -329,6 +329,10 @@ function structuredData(html) {
     });
 }
 
+function structuredDataEntities(html) {
+  return structuredData(html).flatMap((value) => value?.["@graph"] ?? [value]);
+}
+
 function elements(html, name) {
   return [...html.matchAll(new RegExp(`<${name}\\b([^>]*)>([\\s\\S]*?)<\\/${name}>`, "gi"))]
     .map(([outer, attributes, inner]) => ({
@@ -491,6 +495,30 @@ function assertMetadata(label, result, expectedPath, jsonLdType = null) {
     return record;
   }
   return null;
+}
+
+function assertBlogPostingMetadata(label, result, expectedPath) {
+  const record = assertMetadata(label, result, expectedPath, "BlogPosting");
+  assert.equal(openGraph(result.html, "og:type"), "article", `${label} must retain og:type=article`);
+  assert.equal(
+    namedMeta(result.html, "prism.genre"),
+    "blogentry",
+    `${label} must advertise PRISM blogentry metadata for Zotero`
+  );
+  assert.equal(record.isPartOf?.["@type"], "Blog", `${label} must belong to a schema.org Blog`);
+  assert.equal(
+    record.isPartOf?.["@id"],
+    `${productionOrigin}/#blog`,
+    `${label} must reference the shared Blog entity`
+  );
+  assert.equal(record.isPartOf?.name, "西方負典的博客", `${label} must expose the blog title`);
+  assert.equal(record.isPartOf?.url, productionOrigin, `${label} must expose the production blog URL`);
+
+  const blog = structuredDataEntities(result.html).find((value) => value?.["@type"] === "Blog");
+  assert.ok(blog, `${label} must include the shared Blog JSON-LD entity`);
+  assert.equal(blog["@id"], `${productionOrigin}/#blog`, `${label} Blog entity must use the stable @id`);
+  assert.equal(blog.name, "西方負典的博客", `${label} Blog entity must use the shared title`);
+  return record;
 }
 
 const shulginManifest = readBookManifest("shulgin-dni");
@@ -917,7 +945,7 @@ for (const section of ["review", "translation"]) {
   }
 }
 
-const articleLd = assertMetadata("article", article, "/posts/lih-lenin-disputed", "Article");
+const articleLd = assertBlogPostingMetadata("article", article, "/posts/lih-lenin-disputed");
 await verifyHostedCjkFonts(article.html);
 assert.match(article.html, /reading-edition-page/);
 assert.match(article.html, /dateModified/);
@@ -1137,7 +1165,7 @@ assert.deepEqual(
   mullahologyTopicItems,
   "mullahology JSON-LD must retain all source units in authored order"
 );
-assertMetadata("mullahology preface", mullahologyPreface, "/posts/mullahology-00", "Article");
+assertBlogPostingMetadata("mullahology preface", mullahologyPreface, "/posts/mullahology-00");
 assert.match(
   mullahologyPreface.html,
   /data-footnotes|class="footnotes"/,
@@ -1148,7 +1176,7 @@ assert.match(
   /福柯的中世纪帝国是代表一种时间的最后终止/,
   "mullahology preface must retain the restored annotation text"
 );
-assertMetadata("mullahology chapter one", mullahologyChapter, "/posts/mullahology-01", "Article");
+assertBlogPostingMetadata("mullahology chapter one", mullahologyChapter, "/posts/mullahology-01");
 const mullahologyChapterDocket = elements(mullahologyChapter.html, "aside").find((aside) =>
   /\bclass=["'][^"']*docket/.test(aside.opening)
 );
@@ -1168,7 +1196,7 @@ assert.deepEqual(
   [{ href: "/topics/mullahology", text: "毛拉学 01" }],
   "mullahology chapter lead must link its topic unit"
 );
-assertMetadata("mullahology chapter two", mullahologyChapterTwo, "/posts/mullahology-02", "Article");
+assertBlogPostingMetadata("mullahology chapter two", mullahologyChapterTwo, "/posts/mullahology-02");
 const mullahologyChapterTwoTopics = elements(mullahologyChapterTwo.html, "nav").find((nav) =>
   attribute(nav.opening, "aria-label") === "所属专题"
 );
@@ -1245,7 +1273,7 @@ const shulginLd = assertMetadata(
   "Book"
 );
 const shulginDocumentPath = `/posts/${encodeURIComponent(shulginManifest.documentSlug)}`;
-assertMetadata("shulgin-dni continuous document", shulginDocument, shulginDocumentPath, "Article");
+assertBlogPostingMetadata("shulgin-dni continuous document", shulginDocument, shulginDocumentPath);
 const shulginRenderedParagraphs = elements(shulginDocument.html, "p");
 for (const pageNumber of shulginInlinePageBreaks) {
   assert.ok(

@@ -30,6 +30,9 @@ export async function generateMetadata({
     title: post.title,
     description,
     alternates: { canonical },
+    other: {
+      "prism.genre": "blogentry",
+    },
     openGraph: {
       title: post.title,
       description,
@@ -65,7 +68,7 @@ function buildJsonLd(post: NonNullable<Awaited<ReturnType<typeof getPostBySlug>>
   }
   return {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     headline: post.title,
     ...(post.subtitle ? { alternativeHeadline: post.subtitle } : {}),
     description: post.excerpt || site.description,
@@ -74,6 +77,12 @@ function buildJsonLd(post: NonNullable<Awaited<ReturnType<typeof getPostBySlug>>
     inLanguage: "zh-Hans",
     datePublished: post.dateISO,
     dateModified: post.updatedISO,
+    isPartOf: {
+      "@type": "Blog",
+      "@id": `${site.url}/#blog`,
+      name: site.tabTitle,
+      url: site.url,
+    },
     ...credits,
     ...(post.tags.length ? { keywords: post.tags.join(",") } : {}),
     articleSection: post.category,

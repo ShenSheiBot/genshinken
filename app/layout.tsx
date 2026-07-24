@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   },
 };
 
-// 站点级结构化数据：Organization + WebSite（各页的 Article/CollectionPage/Book 等
+// 站点级结构化数据：Organization + WebSite + Blog（各页的 BlogPosting/CollectionPage/Book 等
 // 通过 publisher @id 引用本 Organization）。补齐 logo / sameAs，恢复 Organization
 // 富结果与知识图谱关联资格。
 const siteJsonLd = {
@@ -83,6 +83,15 @@ const siteJsonLd = {
       "@type": "WebSite",
       "@id": `${site.url}/#website`,
       name: site.brand,
+      url: site.url,
+      inLanguage: "zh-Hans",
+      description: site.description,
+      publisher: { "@id": `${site.url}/#organization` },
+    },
+    {
+      "@type": "Blog",
+      "@id": `${site.url}/#blog`,
+      name: site.tabTitle,
       url: site.url,
       inLanguage: "zh-Hans",
       description: site.description,
