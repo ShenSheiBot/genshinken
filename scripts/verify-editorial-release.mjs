@@ -259,6 +259,16 @@ assert.match(
 );
 assert.match(
   readingChromeSource,
+  /function tableColumnCount[\s\S]*?cell\.colSpan[\s\S]*?columnCount >= 3[\s\S]*?data-reference-table-link[\s\S]*?查看文后表格/,
+  "reference panes must replace tables with three or more columns by an endnote table link"
+);
+assert.match(
+  readingStylesSource,
+  /\[data-reference-columns="2"\][\s\S]*?(?:th|td):last-child[\s\S]*?white-space:\s*nowrap;/,
+  "two-column reference tables must reserve an unbroken final column"
+);
+assert.match(
+  readingChromeSource,
   /setLineMarkers\([\s\S]*?\(index \+ 1\) % 10 === 0[\s\S]*?className=\{styles\.visualLineMarker\}[\s\S]*?data-line=\{String\(marker\.line\)\}/,
   "the reading chrome must regenerate a marker for every tenth measured visual line"
 );

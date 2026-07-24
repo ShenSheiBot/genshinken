@@ -213,14 +213,51 @@ function toRoman(value: number): string {
   return output;
 }
 
+function tableColumnCount(table: HTMLTableElement): number {
+  return Array.from(table.rows).reduce((maximum, row) => {
+    const columns = Array.from(row.cells).reduce((total, cell) => total + Math.max(1, cell.colSpan), 0);
+    return Math.max(maximum, columns);
+  }, 0);
+}
+
 function referenceItem(target: HTMLElement, kind: ReferenceKind, index: number, label: string): ReferenceItem {
+  const sourceTables = Array.from(target.querySelectorAll<HTMLTableElement>("table"));
+  sourceTables.forEach((table, tableIndex) => {
+    const columnCount = tableColumnCount(table);
+    table.dataset.referenceColumns = String(columnCount);
+    if (columnCount >= 3) {
+      if (!table.id) table.id = `${target.id}-table-${tableIndex + 1}`;
+      table.tabIndex = -1;
+    }
+  });
+
   const clone = target.cloneNode(true) as HTMLElement;
   clone.removeAttribute("id");
   clone.querySelectorAll<HTMLElement>("[id]").forEach((node) => node.removeAttribute("id"));
   clone
     .querySelectorAll("a[data-footnote-backref], a.source-backref, a[href^='#user-content-fnref'], a[href^='#source-ref-']")
     .forEach((node) => node.remove());
+
+  Array.from(clone.querySelectorAll<HTMLTableElement>("table")).forEach((table, tableIndex) => {
+    const columnCount = tableColumnCount(table);
+    table.dataset.referenceColumns = String(columnCount);
+    if (columnCount < 3) return;
+    const sourceTable = sourceTables[tableIndex];
+    if (!sourceTable?.id) return;
+    const link = document.createElement("a");
+    link.href = `#${sourceTable.id}`;
+    link.setAttribute("data-reference-table-link", "true");
+    link.textContent = "查看文后表格";
+    table.replaceWith(link);
+  });
+
   const preview = clone.cloneNode(true) as HTMLElement;
+  preview.querySelectorAll<HTMLAnchorElement>('a[data-reference-table-link="true"]').forEach((link) => {
+    const marker = document.createElement("span");
+    marker.className = "reference-table-link-preview";
+    marker.textContent = link.textContent;
+    link.replaceWith(marker);
+  });
   preview.querySelectorAll("p").forEach((paragraph) => {
     paragraph.replaceWith(...Array.from(paragraph.childNodes));
   });
@@ -623,6 +660,28 @@ export default function ReadingPrototypeChrome({
     if (!desktopDesk) setSheet(kind);
   }, [desktopDesk, selectReference]);
 
+  const followReferenceTable = useCallback((event: ReactMouseEvent<HTMLElement>): boolean => {
+    const anchor = (event.target as HTMLElement | null)?.closest<HTMLAnchorElement>('a[data-reference-table-link="true"]');
+    if (!anchor || !event.currentTarget.contains(anchor)) return false;
+    const target = safeTarget(anchor.getAttribute("href") || "");
+    if (!(target instanceof HTMLTableElement)) return false;
+
+    event.preventDefault();
+    event.stopPropagation();
+    const details = target.closest("details");
+    if (details) details.open = true;
+    setSheet(null);
+    setReferenceTrail([]);
+    const hash = anchor.getAttribute("href") || "";
+    history.replaceState(history.state, "", window.location.pathname + window.location.search + hash);
+    requestAnimationFrame(() => {
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      target.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+      target.focus({ preventScroll: true });
+    });
+    return true;
+  }, []);
+
   useEffect(() => {
     const flow = document.querySelector<HTMLElement>(".reading-prototype-flow");
     if (!flow) return;
@@ -987,7 +1046,13 @@ export default function ReadingPrototypeChrome({
     return (
       <section className={styles.referencePane} data-kind={kind} data-compact={compact ? "true" : "false"}>
         {!compact && <header><b>{heading}</b>{referenceCounter(kind, "desk")}</header>}
-        <div className={styles.referenceScroller} data-reference-scroller={kind} onClick={compact ? followSheetReference : undefined}>
+        <div
+          className={styles.referenceScroller}
+          data-reference-scroller={kind}
+          onClick={(event) => {
+            if (!followReferenceTable(event) && compact) followSheetReference(event);
+          }}
+        >
           {items.length === 0 ? <p className={styles.emptyRail}>本文没有{heading}。</p> : items.map((item) => {
             const selected = item.id === active;
             return (

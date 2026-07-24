@@ -501,6 +501,10 @@
   font-family: var(--reader-body-family);
 }
 
+.appendixContent :global(table[id]) {
+  scroll-margin-top: calc(var(--reading-rail-top) + 12px);
+}
+
 .appendixContent :global(.footnotes p),
 .appendixContent :global(.source-notes p) {
   font-size: calc(var(--reader-font) - 1px);
@@ -1064,6 +1068,27 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
 /* 预览用 span（不是 p）：button 的内容模型是 phrasing，button>p 是非法嵌套。 */
 .referenceSelect > .referencePreview { display: -webkit-box; margin: 0; overflow: hidden; font-family: var(--reader-body-family); font-size: 12px; line-height: 1.5; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
 .referenceSelect > .referencePreview :global(.latin-run) { font-family: var(--reader-body-latin-family); }
+.referencePreview :global(table[data-reference-columns="2"]),
+.referenceDetail :global(table[data-reference-columns="2"]) { width: 100%; table-layout: auto; }
+.referencePreview :global(table[data-reference-columns="2"] th:last-child),
+.referencePreview :global(table[data-reference-columns="2"] td:last-child),
+.referenceDetail :global(table[data-reference-columns="2"] th:last-child),
+.referenceDetail :global(table[data-reference-columns="2"] td:last-child) {
+  width: 1%;
+  white-space: nowrap;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+.referenceDetail :global(a[data-reference-table-link="true"]) {
+  display: inline-block;
+  margin: .25em 0 .65em;
+  font-family: var(--reader-interface-family);
+  font-weight: 600;
+}
+.referencePreview :global(.reference-table-link-preview) {
+  font-family: var(--reader-interface-family);
+  font-weight: 600;
+}
 .referenceDetailShell {
   grid-column: 2;
   display: grid;
