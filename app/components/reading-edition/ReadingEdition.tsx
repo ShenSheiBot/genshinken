@@ -273,6 +273,7 @@ export function ReadingDossier({
       <ReadingPrototypeChrome
         title={post.title}
         slug={post.slug}
+        contentRevision={post.contentRevision}
         variant="dossier"
         credits={post.credits}
         fallbackAuthor={post.author}
@@ -376,6 +377,7 @@ export function ReadingFolio({ post, parts, posts }: { post: Post; parts: Articl
       <ReadingPrototypeChrome
         title={post.title}
         slug={post.slug}
+        contentRevision={post.contentRevision}
         variant="folio"
         credits={post.credits}
         fallbackAuthor={post.author}

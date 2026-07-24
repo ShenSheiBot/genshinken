@@ -1,35 +1,35 @@
 {
-  "corpusFileCount": 81,
+  "corpusFileCount": 84,
   "fonts": {
     "UN Canon STFangsong": {
-      "bytes": 784780,
-      "codePointCount": 3383,
+      "bytes": 786700,
+      "codePointCount": 3390,
       "file": "un-canon-st-fangsong.woff2",
-      "sha256": "f317088eac05864f374f59a8c645653f3ab06e2d4398b5ce703e251a68d80a3d",
+      "sha256": "5d023b89cde81cef06ad21dfe9f110bebec48ff266fe23c065ff8bbca2f3c30f",
       "source": "STFangsong.ttf",
       "sourceSha256": "e6326459e8e60e436c7d60e34d273bda3ba4eea2d2a5b309ff8f1b73200f2e38"
     },
     "UN Canon STKaiti": {
-      "bytes": 968148,
-      "codePointCount": 3383,
+      "bytes": 970296,
+      "codePointCount": 3390,
       "file": "un-canon-st-kaiti.woff2",
-      "sha256": "c91b8344116aa374aad365b0ad19cc1afa89647ad38efb0a0b5f24c53ff42aaa",
+      "sha256": "9f1c681266999f3935bc975a9279ecb01ea474449c2b334ff469be0d59ff33b0",
       "source": "STKaiti.ttf",
       "sourceSha256": "a29c99c161fc43ce6aba2d7c152065359c2cb3019be4ae6248171178cb7d04d5"
     },
     "UN Canon STSong": {
-      "bytes": 770228,
-      "codePointCount": 3383,
+      "bytes": 772252,
+      "codePointCount": 3390,
       "file": "un-canon-st-song.woff2",
-      "sha256": "a69dfaeb804b14b3ef4d6e946f84bd3e95fef045ec7b7ee133741a1b1323a20d",
+      "sha256": "2368f030dbe3d6dede41cbf3340abcbebdc720c77ab11dff0536cb2271fb9183",
       "source": "STSong.ttf",
       "sourceSha256": "c5cc2ed5e2c0e6385013fe82d950eee6960d805bd602b86c53ff454783f382c4"
     }
   },
-  "siteCodePointCount": 3389,
-  "siteCodePointSha256": "e581ce6ebf8c6c3ce4e41df5f40ccce1ee017ba4342c410ca51c7bba694e96da",
+  "siteCodePointCount": 3396,
+  "siteCodePointSha256": "79a44ac17748df5b5548ea55bdb9f9086476e8d366a1a0e06a89f6224c012fb1",
   "strategy": "site-corpus",
-  "subsetCodePointCount": 3383,
+  "subsetCodePointCount": 3390,
   "unsupportedSiteCodePointRanges": [
     "U+30FB",
     "U+3400",

@@ -7,6 +7,7 @@ import {
   comparePostNumbersDescending,
 } from "../lib/post-numbering.ts";
 import { renderMarkdown } from "../lib/markdown.ts";
+import { topicMembershipNumber } from "../lib/topic-numbering.ts";
 
 const postsDirectory = path.join(process.cwd(), "source", "_posts");
 const archiveIndexPath = path.join(process.cwd(), "app", "search", "ArchiveIndex.tsx");
@@ -18,11 +19,19 @@ function isoDate(value) {
   return String(value ?? "").trim();
 }
 
+function frontMatterData(source) {
+  if (/^\s*---\r?\n/u.test(source)) return matter(source).data;
+  const lines = source.split(/\r?\n/u);
+  const closingDelimiter = lines.findIndex((line) => /^---\s*$/u.test(line));
+  assert.ok(closingDelimiter >= 0, "legacy post frontmatter must have a closing delimiter");
+  return matter(`---\n${lines.slice(0, closingDelimiter).join("\n")}\n---\n`).data;
+}
+
 const posts = fs.readdirSync(postsDirectory)
   .filter((file) => file.endsWith(".md"))
   .flatMap((file) => {
     const source = fs.readFileSync(path.join(postsDirectory, file), "utf8");
-    const data = matter(source).data;
+    const data = frontMatterData(source);
     if (data.draft === true) return [];
     const dateISO = isoDate(data.date);
     return [{
@@ -44,6 +53,22 @@ const posts = fs.readdirSync(postsDirectory)
   );
 
 assignPostNumbers(posts);
+
+const regularPosts = posts.filter((post) => post.section !== "negative");
+assert.deepEqual(
+  regularPosts.map((post) => Number(post.no)),
+  Array.from({ length: regularPosts.length }, (_, index) => regularPosts.length - index),
+  "regular posts must follow publication order in a contiguous site-wide sequence that excludes archival negative posts"
+);
+assert.deepEqual(
+  [
+    topicMembershipNumber("00", 0),
+    topicMembershipNumber("01", 0),
+    topicMembershipNumber("01", 1),
+  ],
+  ["00", "01", "02"],
+  "topic cover markers must retain preface 00 and then follow item order within the main group"
+);
 
 const libraryPosts = [...posts].sort(comparePostNumbersDescending);
 const librarySlugs = libraryPosts.map((post) => post.slug);

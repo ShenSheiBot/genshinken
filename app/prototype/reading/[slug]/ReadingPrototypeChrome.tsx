@@ -10,6 +10,15 @@ import type { Credit } from "@/lib/posts";
 import { site } from "@/lib/site";
 import { GLOBAL_NAV_ITEMS } from "@/lib/navigation";
 import CreditLinks from "@/app/components/CreditLinks";
+import {
+  fingerprintReadingNodes,
+  fingerprintReadingText,
+} from "@/app/components/reading-edition/reading-progress";
+import {
+  useReadingProgress,
+  type ReadingBlockMeasurement,
+  type ReadingMeasurement,
+} from "@/app/components/reading-edition/useReadingProgress";
 import styles from "./reading-prototype.module.css";
 
 type Variant = "dossier" | "folio";
@@ -44,6 +53,24 @@ const variantMeta: Record<Variant, { short: string }> = {
 
 const LINE_OWNER = "p,h1,h2,h3,h4,h5,h6,li,blockquote,pre,figcaption,td,th,dt,dd";
 const LINE_SKIP = "script,style,noscript,template,svg,[hidden],[aria-hidden='true'],.footnotes,.source-notes";
+const READING_MEDIA_OWNER = "img,video,audio,iframe,canvas,hr";
+const READING_MEDIA_SIGNATURE = `${READING_MEDIA_OWNER},source`;
+
+function readLocalSetting(key: string): string | null {
+  try {
+    return window.localStorage.getItem(key);
+  } catch {
+    return null;
+  }
+}
+
+function writeLocalSetting(key: string, value: string): void {
+  try {
+    window.localStorage.setItem(key, value);
+  } catch {
+    // Reader preferences are optional; restricted storage must not break prose.
+  }
+}
 
 function safeTarget(href: string): HTMLElement | null {
   if (!href.startsWith("#") || href.length < 2) return null;
@@ -114,7 +141,41 @@ function lineOwners(body: HTMLElement): Array<[HTMLElement, Text[]]> {
     if (list) list.push(text);
     else grouped.set(owner, [text]);
   }
-  return Array.from(grouped.entries());
+  body.querySelectorAll<HTMLElement>(READING_MEDIA_OWNER).forEach((media) => {
+    if (media.closest(LINE_SKIP)) return;
+    const owner = media.closest<HTMLElement>(LINE_OWNER) ?? media;
+    if (body.contains(owner) && !grouped.has(owner)) grouped.set(owner, []);
+  });
+  return Array.from(grouped.entries()).sort(([left], [right]) => {
+    if (left === right) return 0;
+    const position = left.compareDocumentPosition(right);
+    if (position & Node.DOCUMENT_POSITION_FOLLOWING) return -1;
+    if (position & Node.DOCUMENT_POSITION_PRECEDING) return 1;
+    return 0;
+  });
+}
+
+function fingerprintReadingBlock(owner: HTMLElement, nodes: Text[]): string {
+  const media = [
+    ...(owner.matches(READING_MEDIA_SIGNATURE) ? [owner] : []),
+    ...Array.from(owner.querySelectorAll<HTMLElement>(READING_MEDIA_SIGNATURE)),
+  ];
+  if (media.length === 0) return fingerprintReadingNodes(nodes, owner.tagName);
+  const signature = media.map((item) => [
+    item.tagName.toLowerCase(),
+    item.getAttribute("src") ?? "",
+    item.getAttribute("data-src") ?? "",
+    item.getAttribute("srcset") ?? "",
+    item.getAttribute("data-srcset") ?? "",
+    item.getAttribute("poster") ?? "",
+    item.getAttribute("alt") ?? "",
+    item.getAttribute("title") ?? "",
+    item.getAttribute("aria-label") ?? "",
+  ].join(":"));
+  return fingerprintReadingText(
+    `${fingerprintReadingNodes(nodes, owner.tagName)}:${signature.join("|")}`,
+    owner.tagName
+  );
 }
 
 function linesForOwner(owner: HTMLElement, nodes: Text[], body: HTMLElement): number[] {
@@ -163,7 +224,11 @@ function linesForOwner(owner: HTMLElement, nodes: Text[], body: HTMLElement): nu
       }
     } else lines.push(fragment);
   });
-  return lines.map((line) => line.center);
+  if (lines.length > 0) return lines.map((line) => line.center);
+  if (!owner.matches(READING_MEDIA_OWNER) && !owner.querySelector(READING_MEDIA_OWNER)) return [];
+  if (style.display === "none" || style.visibility === "hidden") return [];
+  const rect = owner.getBoundingClientRect();
+  return [rect.top + rect.height / 2 - bodyViewportTop];
 }
 
 function sortLineCenters(values: number[]): number[] {
@@ -276,6 +341,7 @@ function referenceItem(target: HTMLElement, kind: ReferenceKind, index: number, 
 export default function ReadingPrototypeChrome({
   title,
   slug,
+  contentRevision,
   variant,
   credits,
   fallbackAuthor,
@@ -283,6 +349,7 @@ export default function ReadingPrototypeChrome({
 }: {
   title: string;
   slug: string;
+  contentRevision: string;
   variant: Variant;
   credits: Credit[];
   fallbackAuthor: string;
@@ -317,6 +384,7 @@ export default function ReadingPrototypeChrome({
   const [referenceDraft, setReferenceDraft] = useState("");
   const [lineMarkers, setLineMarkers] = useState<LineMarker[]>([]);
   const [lineMarkerHost, setLineMarkerHost] = useState<HTMLElement | null>(null);
+  const [readingMeasurement, setReadingMeasurement] = useState<ReadingMeasurement | null>(null);
 
   const tocRef = useRef<TocItem[]>([]);
   const figureItemsRef = useRef<FigureIndexItem[]>([]);
@@ -358,6 +426,22 @@ export default function ReadingPrototypeChrome({
   const sheetOpen = sheet !== null;
   const previousReference = referenceTrail.at(-1);
   const showFigureIndex = isEdition && desktopDesk && figureItems.length > 0;
+  const {
+    trackingEnabled: readingProgressEnabled,
+    hasCurrentRecord,
+    statusMessage: readingProgressStatus,
+    boundaryHost: readingUpdateBoundaryHost,
+    observePosition,
+    setTrackingEnabled: setReadingProgressEnabled,
+    clearCurrent: clearCurrentReadingProgress,
+    clearAll: clearAllReadingProgress,
+  } = useReadingProgress({
+    active: isEdition,
+    slug,
+    revision: contentRevision,
+    measurement: readingMeasurement,
+    viewportAnchor: visualAnchor,
+  });
 
   const setVariant = useCallback((next: Variant) => {
     const params = new URLSearchParams(window.location.search);
@@ -366,9 +450,9 @@ export default function ReadingPrototypeChrome({
   }, [pathname, router]);
 
   useEffect(() => {
-    const savedSize = localStorage.getItem("ub_reader_size");
+    const savedSize = readLocalSetting("ub_reader_size");
     const size: ReaderSize = savedSize === "small" || savedSize === "large" ? savedSize : "medium";
-    const savedFont = localStorage.getItem("ub_reader_font");
+    const savedFont = readLocalSetting("ub_reader_font");
     const font: ReaderFont = savedFont === "sans" ? "sans" : "serif";
     setReaderSize(size);
     setReaderFont(font);
@@ -402,6 +486,7 @@ export default function ReadingPrototypeChrome({
   useEffect(() => {
     const body = document.querySelector<HTMLElement>(".reading-prototype-body");
     if (!body) return;
+    setReadingMeasurement(null);
     bodyRef.current = body;
     setLineMarkerHost(body.parentElement);
 
@@ -453,7 +538,7 @@ export default function ReadingPrototypeChrome({
       figureElementsRef.current.clear();
       setLineMarkerHost(null);
     };
-  }, [variant]);
+  }, [contentRevision, slug, variant]);
 
   const syncReadingPosition = useCallback(() => {
     const body = bodyRef.current;
@@ -463,6 +548,7 @@ export default function ReadingPrototypeChrome({
     const centers = lineCentersRef.current;
     const line = centers.length ? Math.min(centers.length, upperBound(centers, cursor - bodyTop)) : 0;
     setCurrentLine((current) => current === line ? current : line);
+    observePosition(line);
 
     let headingId = "";
     for (const item of tocRef.current) {
@@ -491,7 +577,7 @@ export default function ReadingPrototypeChrome({
       }
       setActiveFigureId((current) => current === figureId ? current : figureId);
     }
-  }, [showFigureIndex]);
+  }, [observePosition, showFigureIndex]);
 
   useEffect(() => {
     let frame = 0;
@@ -512,6 +598,12 @@ export default function ReadingPrototypeChrome({
       window.visualViewport?.removeEventListener("scroll", schedule);
     };
   }, [syncReadingPosition]);
+
+  useEffect(() => {
+    if (!readingMeasurement) return;
+    const frame = requestAnimationFrame(syncReadingPosition);
+    return () => cancelAnimationFrame(frame);
+  }, [readingMeasurement, syncReadingPosition]);
 
   useEffect(() => {
     const timers = new Map<HTMLElement, number>();
@@ -542,19 +634,41 @@ export default function ReadingPrototypeChrome({
     const measure = () => {
       const token = ++generation;
       const owners = lineOwners(body);
-      const values: number[] = [];
+      let headingId: string | null = null;
+      const blocks: ReadingBlockMeasurement[] = owners.map(([owner, nodes]) => {
+        if (/^H[1-6]$/.test(owner.tagName) && owner.id) headingId = owner.id;
+        return {
+          element: owner,
+          fingerprint: fingerprintReadingBlock(owner, nodes),
+          headingId,
+          centers: [],
+        };
+      });
       let index = 0;
       const pump = () => {
         if (token !== generation) return;
         const deadline = performance.now() + 8;
         do {
-          const owner = owners[index++];
-          if (owner) values.push(...linesForOwner(owner[0], owner[1], body));
+          const ownerIndex = index++;
+          const owner = owners[ownerIndex];
+          if (owner) blocks[ownerIndex].centers = linesForOwner(owner[0], owner[1], body);
         } while (index < owners.length && performance.now() < deadline);
         if (index < owners.length) frame = requestAnimationFrame(pump);
         else {
-          const centers = sortLineCenters(values);
+          const measuredBlocks = blocks.filter((block) => block.centers.length > 0);
+          const measuredLines = measuredBlocks.flatMap((block, blockIndex) =>
+            block.centers.map((center, lineIndex) => ({ center, blockIndex, lineIndex }))
+          ).sort((a, b) => a.center - b.center);
+          const centers = sortLineCenters(measuredLines.map((line) => line.center));
           lineCentersRef.current = centers;
+          setReadingMeasurement({
+            resource: slug,
+            revision: contentRevision,
+            body,
+            blocks: measuredBlocks,
+            lineCenters: centers,
+            lines: measuredLines.map(({ blockIndex, lineIndex }) => ({ blockIndex, lineIndex })),
+          });
           setLineMarkers(centers.flatMap((top, index) => (index + 1) % 10 === 0 ? [{ line: index + 1, top }] : []));
           setLineCount(centers.length);
           syncReadingPosition();
@@ -580,7 +694,7 @@ export default function ReadingPrototypeChrome({
       images.forEach((image) => image.removeEventListener("load", schedule));
       document.fonts?.removeEventListener("loadingdone", schedule);
     };
-  }, [readerFont, readerSize, syncReadingPosition, variant]);
+  }, [contentRevision, readerFont, readerSize, slug, syncReadingPosition, variant]);
 
   useEffect(() => {
     setExpandedToc(new Set(activeBranchIds(tocTree, activeId)));
@@ -1296,16 +1410,25 @@ export default function ReadingPrototypeChrome({
       lineMarkerHost
     )
     : null;
+  const readingUpdateBoundaryPortal = isEdition && readingUpdateBoundaryHost
+    ? createPortal(
+      <div className={styles.readingUpdateBoundary} role="note" aria-label="文章更新边界">
+        <span>上次读完至此</span>
+        <b>以下为更新内容</b>
+      </div>,
+      readingUpdateBoundaryHost
+    )
+    : null;
 
   const updateSize = (size: ReaderSize) => {
     setReaderSize(size);
     document.documentElement.dataset.readerSize = size;
-    localStorage.setItem("ub_reader_size", size);
+    writeLocalSetting("ub_reader_size", size);
   };
   const updateFont = (font: ReaderFont) => {
     setReaderFont(font);
     document.documentElement.dataset.readerFont = font;
-    localStorage.setItem("ub_reader_font", font);
+    writeLocalSetting("ub_reader_font", font);
   };
   const toggleTheme = () => {
     const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
@@ -1317,7 +1440,7 @@ export default function ReadingPrototypeChrome({
     document.querySelectorAll('meta[name="theme-color"]').forEach((meta) =>
       meta.setAttribute("content", next === "dark" ? "#060605" : "#e8e7e3")
     );
-    localStorage.setItem("ub_theme", next);
+    writeLocalSetting("ub_theme", next);
     setDark(next === "dark");
   };
 
@@ -1325,6 +1448,12 @@ export default function ReadingPrototypeChrome({
     <>
       {portalDesk}
       {lineMarkerPortal}
+      {readingUpdateBoundaryPortal}
+      {isEdition && readingProgressStatus && (
+        <p className={styles.readingResumeStatus} role="status" aria-live="polite">
+          {readingProgressStatus}
+        </p>
+      )}
       <header className={styles.runningHeader}>
         <Link href={isEdition ? "/" : "/prototype/poster"} className={styles.runningBrand} aria-label={`返回${site.brandCN}首页`}><i /><span className={styles.runningBrandName}>{site.brandCN}</span></Link>
         <nav className={styles.runningSections} aria-label="全站导航">
@@ -1373,6 +1502,38 @@ export default function ReadingPrototypeChrome({
                 </section>
                 <section className={styles.settingGroup}><span>字号</span><div className={styles.sizeChooser}>{(["small", "medium", "large"] as const).map((size, index) => <button key={size} type="button" data-active={size === readerSize} onClick={() => updateSize(size)}><b style={{ fontSize: `${15 + index * 4}px` }}>字</b><span>{["小", "中", "大"][index]}</span></button>)}</div></section>
                 <button className={styles.themeChoice} type="button" onClick={toggleTheme}><span>{dark ? "☾" : "☼"}</span><b>{dark ? "切换到浅色" : "切换到深色"}</b><i>→</i></button>
+                {isEdition && (
+                  <section className={styles.settingGroup}>
+                    <span>阅读记录</span>
+                    <div className={styles.readingProgressSetting}>
+                      <div>
+                        <b>保存本机阅读记录</b>
+                        <small>默认开启；记录仅保存在当前浏览器，不会上传或跨设备同步。</small>
+                      </div>
+                      <button
+                        className={styles.readingProgressSwitch}
+                        type="button"
+                        role="switch"
+                        aria-checked={readingProgressEnabled}
+                        aria-label="保存本机阅读记录"
+                        onClick={() => setReadingProgressEnabled(!readingProgressEnabled)}
+                      >
+                        <span aria-hidden="true" />
+                      </button>
+                    </div>
+                    <div className={styles.readingProgressActions}>
+                      <button type="button" disabled={!hasCurrentRecord} onClick={clearCurrentReadingProgress}>清除本文记录</button>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          if (window.confirm("确定清除当前浏览器中的全部阅读记录吗？")) clearAllReadingProgress();
+                        }}
+                      >
+                        清除全部记录
+                      </button>
+                    </div>
+                  </section>
+                )}
               </>
             )}
           </section>

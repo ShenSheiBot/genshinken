@@ -7,6 +7,7 @@
    ============================================================ */
 import fs from "node:fs";
 import path from "node:path";
+import { createHash } from "node:crypto";
 import matter from "gray-matter";
 import { renderMarkdown } from "./markdown";
 import { isEditorialSection, type EditorialSection } from "./editorial";
@@ -47,6 +48,7 @@ export interface PostSummary {
   displayDateDisplay: string; // 负栏目显示原文写作日期；其他栏目显示博客发布日期
   displayDateISO: string;
   updatedISO: string; // 修订日期（front-matter `updated`），缺省回退到 dateISO
+  contentRevision: string; // 渲染后正文 HTML 的 SHA-256 短哈希
   timestamp: number; // 用于排序
   excerpt: string;
   relatedPosts: string[]; // 多媒体条目按编辑顺序声明的关联文章 slug
@@ -273,6 +275,10 @@ function readMinutes(html: string): number {
   return Math.max(1, Math.round((cjk + latin) / 400));
 }
 
+function hashRenderedContent(html: string): string {
+  return createHash("sha256").update(html).digest("hex").slice(0, 16);
+}
+
 /* ---------------- 读取并解析 ---------------- */
 async function loadRaw(): Promise<Post[]> {
   if (!fs.existsSync(POSTS_DIR)) return [];
@@ -332,6 +338,7 @@ async function loadRaw(): Promise<Post[]> {
         displayDateDisplay: fmtDisplay(displayDate),
         displayDateISO: fmtISO(displayDate),
         updatedISO: +updated > 0 ? fmtISO(updated) : fmtISO(date),
+        contentRevision: hashRenderedContent(html),
         timestamp: +date,
         sortOrder: toSortOrder(data.sort_order ?? data.sortOrder ?? data.order),
         excerpt: deriveExcerpt(html, data.excerpt, title),

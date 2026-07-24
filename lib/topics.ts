@@ -6,6 +6,7 @@ import { postPath, type EditorialSection } from "./editorial";
 import { renderMarkdown } from "./markdown";
 import { sanitizePublicContentHtml } from "./media-material";
 import { getAllPosts, type PostSummary } from "./posts";
+import { topicMembershipNumber } from "./topic-numbering";
 
 const TOPICS_DIR = path.join(process.cwd(), "source", "_topics");
 
@@ -363,14 +364,15 @@ export async function getTopicBySlug(slug: string): Promise<Topic | null> {
 
 export async function getTopicMembershipsForPost(slug: string): Promise<TopicMembership[]> {
   return (await allTopics()).flatMap((topic) =>
-    topic.groups.flatMap((group) =>
-      group.items.some((item) => item.type === "post" && item.ref === slug)
+    topic.groups.flatMap((group) => {
+      const itemIndex = group.items.findIndex((item) => item.type === "post" && item.ref === slug);
+      return itemIndex >= 0
         ? [{
             href: `/topics/${encodeURIComponent(topic.slug)}`,
             title: topic.title,
-            groupNumber: group.number,
+            groupNumber: topicMembershipNumber(group.number, itemIndex),
           }]
-        : []
-    )
+        : [];
+    })
   );
 }

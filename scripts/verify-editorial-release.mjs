@@ -601,8 +601,8 @@ assert.deepEqual(
 );
 assert.deepEqual(
   mullahologyTopicItems,
-  ["/posts/mullahology-00", "/posts/mullahology-01"],
-  "mullahology must retain its two published source units in authored order"
+  ["/posts/mullahology-00", "/posts/mullahology-01", "/posts/mullahology-02"],
+  "mullahology must retain its three published source units in authored order"
 );
 
 const [
@@ -619,6 +619,7 @@ const [
   mullahologyTopic,
   mullahologyPreface,
   mullahologyChapter,
+  mullahologyChapterTwo,
   books,
   book,
   shulginBook,
@@ -642,6 +643,7 @@ const [
   page("/topics/mullahology"),
   page("/posts/mullahology-00"),
   page("/posts/mullahology-01"),
+  page("/posts/mullahology-02"),
   page("/books"),
   page("/books/soviet-planned-economy-retrospective"),
   page("/books/shulgin-dni"),
@@ -666,6 +668,7 @@ for (const [label, result] of Object.entries({
   mullahologyTopic,
   mullahologyPreface,
   mullahologyChapter,
+  mullahologyChapterTwo,
   books,
   book,
   shulginBook,
@@ -788,7 +791,12 @@ for (const card of latestCards) {
     "latest-update role marks must remain outside contributor links"
   );
 }
-for (const pathName of ["/posts/mullahology-00", "/posts/mullahology-01", "/posts/shulgin-dni"]) {
+for (const pathName of [
+  "/posts/mullahology-00",
+  "/posts/mullahology-01",
+  "/posts/mullahology-02",
+  "/posts/shulgin-dni",
+]) {
   assert.ok(
     links(home.html).some((link) => link.href === pathName),
     `combined public preview homepage must retain ${pathName}`
@@ -1123,10 +1131,11 @@ assert.match(mullahologyText, /专题单元 00/);
 assert.match(mullahologyText, /专题单元 01/);
 assert.match(mullahologyText, /一份关于克苏鲁的调查报告/);
 assert.match(mullahologyText, /斩断伊斯兰这片绿色的叶子/);
+assert.match(mullahologyText, /叶公好龙/);
 assert.deepEqual(
   (mullahologyLd.hasPart ?? []).map((item) => normalizedPath(item.url)),
   mullahologyTopicItems,
-  "mullahology JSON-LD must retain both source units in authored order"
+  "mullahology JSON-LD must retain all source units in authored order"
 );
 assertMetadata("mullahology preface", mullahologyPreface, "/posts/mullahology-00", "Article");
 assert.match(
@@ -1158,6 +1167,19 @@ assert.deepEqual(
   links(mullahologyChapterTopics.inner).map(({ href, text }) => ({ href, text })),
   [{ href: "/topics/mullahology", text: "毛拉学 01" }],
   "mullahology chapter lead must link its topic unit"
+);
+assertMetadata("mullahology chapter two", mullahologyChapterTwo, "/posts/mullahology-02", "Article");
+const mullahologyChapterTwoTopics = elements(mullahologyChapterTwo.html, "nav").find((nav) =>
+  attribute(nav.opening, "aria-label") === "所属专题"
+);
+assert.ok(
+  mullahologyChapterTwoTopics,
+  "mullahology chapter two must expose its topic unit beside the article lead"
+);
+assert.deepEqual(
+  links(mullahologyChapterTwoTopics.inner).map(({ href, text }) => ({ href, text })),
+  [{ href: "/topics/mullahology", text: "毛拉学 02" }],
+  "mullahology chapter two lead must link its topic unit"
 );
 
 const booksLd = assertMetadata("books index", books, "/books", "CollectionPage");
@@ -1465,6 +1487,7 @@ for (const requiredPath of [
   shulginDocumentPath,
   "/posts/mullahology-00",
   "/posts/mullahology-01",
+  "/posts/mullahology-02",
   "/posts/lih-lenin-disputed",
   "/media/csa",
 ]) {

@@ -64,8 +64,9 @@ export function assignSectionNumbers<T extends SectionNumberRecord>(posts: T[]):
  * do not shift when archival manuscripts are added.
  */
 export function assignPostNumbers<T extends PostNumberRecord>(posts: T[]): void {
-  posts.forEach((post, index) => {
-    post.no = String(posts.length - index);
+  const regularPosts = posts.filter((post) => post.section !== "negative");
+  regularPosts.forEach((post, index) => {
+    post.no = String(regularPosts.length - index);
   });
 
   assignSectionNumbers(posts);
