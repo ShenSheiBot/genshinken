@@ -18,8 +18,10 @@ type ReaderSize = "small" | "medium" | "large";
 type ReaderFont = "serif" | "sans";
 type ReferenceKind = "annotation" | "source";
 type Sheet = "toc" | "settings" | ReferenceKind | null;
+type FigureIndexMode = "toc" | "figures";
 type TocItem = { id: string; title: string; level: number };
 type TocNode = TocItem & { children: TocNode[] };
+type FigureIndexItem = { id: string; index: number; caption: string };
 type ReferenceItem = {
   id: string;
   label: string;
@@ -66,6 +68,12 @@ function upperBound(values: number[], target: number): number {
 function visualAnchor(): number {
   const viewport = window.visualViewport;
   return (viewport?.offsetTop ?? 0) + (viewport?.height ?? window.innerHeight) * 0.36;
+}
+
+function readingRailTop(): number {
+  const raw = getComputedStyle(document.documentElement).getPropertyValue("--reading-rail-top");
+  const parsed = Number.parseFloat(raw);
+  return Number.isFinite(parsed) ? parsed : 96;
 }
 
 function buildTocTree(items: TocItem[]): TocNode[] {
@@ -287,6 +295,9 @@ export default function ReadingPrototypeChrome({
   const [toc, setToc] = useState<TocItem[]>([]);
   const [activeId, setActiveId] = useState("");
   const [expandedToc, setExpandedToc] = useState<Set<string>>(() => new Set());
+  const [figureItems, setFigureItems] = useState<FigureIndexItem[]>([]);
+  const [activeFigureId, setActiveFigureId] = useState("");
+  const [figureIndexMode, setFigureIndexMode] = useState<FigureIndexMode>("toc");
   const [sheet, setSheet] = useState<Sheet>(null);
   const [readerSize, setReaderSize] = useState<ReaderSize>("medium");
   const [readerFont, setReaderFont] = useState<ReaderFont>("serif");
@@ -308,6 +319,10 @@ export default function ReadingPrototypeChrome({
   const [lineMarkerHost, setLineMarkerHost] = useState<HTMLElement | null>(null);
 
   const tocRef = useRef<TocItem[]>([]);
+  const figureItemsRef = useRef<FigureIndexItem[]>([]);
+  const figureElementsRef = useRef<Map<string, HTMLImageElement>>(new Map());
+  const figureScrollRequestRef = useRef(0);
+  const figureScrollCleanupRef = useRef<(() => void) | null>(null);
   const bodyRef = useRef<HTMLElement | null>(null);
   const lineCentersRef = useRef<number[]>([]);
   const referenceSnapSuppressedUntilRef = useRef(new WeakMap<HTMLElement, number>());
@@ -327,6 +342,12 @@ export default function ReadingPrototypeChrome({
     pageY: number;
   } | null>(null);
 
+  useEffect(() => () => {
+    figureScrollRequestRef.current += 1;
+    figureScrollCleanupRef.current?.();
+    figureScrollCleanupRef.current = null;
+  }, []);
+
   const tocTree = useMemo(() => buildTocTree(toc), [toc]);
   const currentSection = useMemo(
     () => toc.find((item) => item.id === activeId)?.title || "导读",
@@ -336,6 +357,7 @@ export default function ReadingPrototypeChrome({
   const pct = Math.round(progress * 100);
   const sheetOpen = sheet !== null;
   const previousReference = referenceTrail.at(-1);
+  const showFigureIndex = isEdition && desktopDesk && figureItems.length > 0;
 
   const setVariant = useCallback((next: Variant) => {
     const params = new URLSearchParams(window.location.search);
@@ -390,6 +412,15 @@ export default function ReadingPrototypeChrome({
     tocRef.current = headings;
     setToc(headings);
 
+    const figures = Array.from(body.querySelectorAll<HTMLImageElement>("img")).map((image, index) => {
+      if (!image.id) image.id = `reading-figure-${index + 1}`;
+      const caption = image.closest("figure")?.querySelector("figcaption")?.textContent?.trim() ?? "";
+      return { id: image.id, index: index + 1, caption };
+    });
+    figureItemsRef.current = figures;
+    figureElementsRef.current = new Map(figures.map((item) => [item.id, document.getElementById(item.id) as HTMLImageElement]));
+    setFigureItems(figures);
+
     const links: ReferenceLink[] = [];
     const labels = new Map<string, string>();
     body.querySelectorAll<HTMLAnchorElement>('a[href^="#"]').forEach((anchor) => {
@@ -418,6 +449,8 @@ export default function ReadingPrototypeChrome({
 
     return () => {
       bodyRef.current = null;
+      figureItemsRef.current = [];
+      figureElementsRef.current.clear();
       setLineMarkerHost(null);
     };
   }, [variant]);
@@ -437,7 +470,28 @@ export default function ReadingPrototypeChrome({
       if (element && element.getBoundingClientRect().top <= visualAnchor()) headingId = item.id;
     }
     setActiveId((current) => current === headingId ? current : headingId);
-  }, []);
+
+    if (showFigureIndex) {
+      const frameTop = readingRailTop();
+      const frameBottom = window.visualViewport?.height ?? window.innerHeight;
+      let figureId = "";
+      let bestScore = Number.NEGATIVE_INFINITY;
+      for (const item of figureItemsRef.current) {
+        const image = figureElementsRef.current.get(item.id);
+        if (!image) continue;
+        const rect = image.getBoundingClientRect();
+        const overlap = Math.max(0, Math.min(rect.bottom, frameBottom) - Math.max(rect.top, frameTop));
+        if (overlap <= 0) continue;
+        const visibleRatio = overlap / Math.max(1, Math.min(rect.height, frameBottom - frameTop));
+        const score = visibleRatio * 1000 - Math.abs(rect.top - frameTop);
+        if (score > bestScore) {
+          bestScore = score;
+          figureId = item.id;
+        }
+      }
+      setActiveFigureId((current) => current === figureId ? current : figureId);
+    }
+  }, [showFigureIndex]);
 
   useEffect(() => {
     let frame = 0;
@@ -448,12 +502,14 @@ export default function ReadingPrototypeChrome({
     window.addEventListener("scroll", schedule, { passive: true });
     window.addEventListener("resize", schedule);
     window.visualViewport?.addEventListener("resize", schedule);
+    window.visualViewport?.addEventListener("scroll", schedule);
     schedule();
     return () => {
       cancelAnimationFrame(frame);
       window.removeEventListener("scroll", schedule);
       window.removeEventListener("resize", schedule);
       window.visualViewport?.removeEventListener("resize", schedule);
+      window.visualViewport?.removeEventListener("scroll", schedule);
     };
   }, [syncReadingPosition]);
 
@@ -804,6 +860,84 @@ export default function ReadingPrototypeChrome({
     }));
   };
 
+  const jumpToFigure = async (id: string) => {
+    const requestId = ++figureScrollRequestRef.current;
+    figureScrollCleanupRef.current?.();
+    figureScrollCleanupRef.current = null;
+    const image = figureElementsRef.current.get(id);
+    if (!image) return;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    setFigureIndexMode("figures");
+    const targetIndex = figureItemsRef.current.findIndex((item) => item.id === id);
+    const alignmentImages = figureItemsRef.current
+      .slice(0, targetIndex < 0 ? undefined : targetIndex + 1)
+      .map((item) => figureElementsRef.current.get(item.id))
+      .filter((item): item is HTMLImageElement => Boolean(item));
+    alignmentImages.forEach((item) => { item.loading = "eager"; });
+    await Promise.all(alignmentImages.map(async (item) => {
+      try {
+        await item.decode();
+      } catch {
+        // A failed decode should not make the index unusable; the browser can
+        // still expose a stable box for the fallback/partially loaded image.
+      }
+    }));
+    if (requestId !== figureScrollRequestRef.current) return;
+    const imageScrollTop = () => {
+      const top = image.getBoundingClientRect().top + window.scrollY - readingRailTop();
+      const scrollHeight = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight);
+      const viewportHeight = window.visualViewport?.height ?? window.innerHeight;
+      return Math.min(Math.max(0, top), Math.max(0, scrollHeight - viewportHeight));
+    };
+    const alignImage = (behavior: ScrollBehavior) => {
+      window.scrollTo({ top: imageScrollTop(), behavior });
+    };
+
+    let frame = requestAnimationFrame(() => {
+      frame = requestAnimationFrame(() => {
+        if (requestId !== figureScrollRequestRef.current) return;
+        image.tabIndex = -1;
+        image.focus({ preventScroll: true });
+        history.replaceState(history.state, "", `${window.location.pathname}${window.location.search}#${encodeURIComponent(id)}`);
+        const targetTop = imageScrollTop();
+        if (reduce || Math.abs(window.scrollY - targetTop) <= 0.5) {
+          alignImage("auto");
+          figureScrollCleanupRef.current = null;
+          return;
+        }
+
+        let idleFrame = 0;
+        let lastScrollY = window.scrollY;
+        let finished = false;
+        const onScrollEnd = () => finish();
+        const cleanup = () => {
+          cancelAnimationFrame(frame);
+          window.removeEventListener("scrollend", onScrollEnd);
+          if (figureScrollCleanupRef.current === cleanup) figureScrollCleanupRef.current = null;
+        };
+        const finish = () => {
+          if (finished || requestId !== figureScrollRequestRef.current) return;
+          finished = true;
+          cleanup();
+          alignImage("auto");
+        };
+        const watchForIdle = () => {
+          const currentScrollY = window.scrollY;
+          idleFrame = Math.abs(currentScrollY - lastScrollY) <= 0.5 ? idleFrame + 1 : 0;
+          lastScrollY = currentScrollY;
+          if (idleFrame >= 6) finish();
+          else frame = requestAnimationFrame(watchForIdle);
+        };
+
+        figureScrollCleanupRef.current = cleanup;
+        if ("onscrollend" in window) window.addEventListener("scrollend", onScrollEnd, { once: true });
+        else frame = requestAnimationFrame(watchForIdle);
+        alignImage("smooth");
+      });
+    });
+    figureScrollCleanupRef.current = () => cancelAnimationFrame(frame);
+  };
+
   const jumpToLine = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const body = bodyRef.current;
@@ -967,12 +1101,67 @@ export default function ReadingPrototypeChrome({
     </form>
   );
 
-  const tocPanel = (
+  const tocContents = tocTree.length === 0
+    ? <p className={styles.emptyRail}>本文没有分节标题，可按视觉行定位。</p>
+    : tocTree.map((node, index) => renderTocNode(node, String(index), 0, index));
+
+  const tocPanel = showFigureIndex ? (
+    <nav
+      className={`${styles.tocPanel} ${styles.figureIndex}`}
+      data-figure-index-mode={figureIndexMode}
+      aria-label={figureIndexMode === "toc" ? "文章目录" : "文章图录"}
+    >
+      <header className={styles.figureIndexTabs} role="tablist" aria-label="目录与图录切换">
+        <span className={styles.figureIndexThumb} aria-hidden="true" />
+        <b className={styles.figureIndexTabLabel} data-slot="toc" data-selected={figureIndexMode === "toc" ? "true" : "false"} aria-hidden="true">目录</b>
+        <b className={styles.figureIndexTabLabel} data-slot="figures" data-selected={figureIndexMode === "figures" ? "true" : "false"} aria-hidden="true">图录</b>
+        <button data-slot="toc" type="button" role="tab" aria-label="目录" aria-selected={figureIndexMode === "toc"} aria-controls="reading-index-toc" onClick={() => setFigureIndexMode("toc")} />
+        <button data-slot="figures" type="button" role="tab" aria-label="图录" aria-selected={figureIndexMode === "figures"} aria-controls="reading-index-figures" onClick={() => setFigureIndexMode("figures")} />
+      </header>
+      <div className={styles.figureIndexViewport}>
+        <div className={styles.figureIndexPanels} data-mode={figureIndexMode}>
+          <div
+            id="reading-index-toc"
+            className={`${styles.tocViewport} ${styles.styledScroller} ${styles.figureIndexPanel}`}
+            role="tabpanel"
+            aria-hidden={figureIndexMode !== "toc"}
+            inert={figureIndexMode !== "toc"}
+          >
+            {tocContents}
+          </div>
+          <div
+            id="reading-index-figures"
+            className={`${styles.figureIndexList} ${styles.styledScroller} ${styles.figureIndexPanel}`}
+            role="tabpanel"
+            aria-hidden={figureIndexMode !== "figures"}
+            inert={figureIndexMode !== "figures"}
+          >
+            {figureItems.map((item) => {
+              const active = item.id === activeFigureId;
+              return (
+                <button
+                  type="button"
+                  className={styles.figureIndexJump}
+                  data-active={active ? "true" : "false"}
+                  aria-current={active ? "location" : undefined}
+                  aria-expanded={active && item.caption.length > 0}
+                  onClick={() => jumpToFigure(item.id)}
+                  key={item.id}
+                >
+                  <span>图{item.index}</span>
+                  {item.caption && <b>{item.caption}</b>}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+      <button className={styles.toTop} type="button" onClick={returnToPageStart}>返回篇首</button>
+    </nav>
+  ) : (
     <nav className={styles.tocPanel} aria-label="文章目录">
       <header><b>目录</b></header>
-      <div className={`${styles.tocViewport} ${styles.styledScroller}`}>
-        {tocTree.length === 0 ? <p className={styles.emptyRail}>本文没有分节标题，可按视觉行定位。</p> : tocTree.map((node, index) => renderTocNode(node, String(index), 0, index))}
-      </div>
+      <div className={`${styles.tocViewport} ${styles.styledScroller}`}>{tocContents}</div>
       <button className={styles.toTop} type="button" onClick={returnToPageStart}>返回篇首</button>
     </nav>
   );
