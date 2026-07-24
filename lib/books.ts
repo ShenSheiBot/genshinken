@@ -8,6 +8,13 @@ import {
   type Post,
 } from "./posts";
 import { findContributor, findContributorByName } from "./contributors";
+import {
+  bookCitationDefaults,
+  mergeCitation,
+  parseCitationInput,
+  type CitationCreator,
+  type CitationRecord,
+} from "./citations";
 
 const BOOKS_DIR = path.join(process.cwd(), "source", "_books");
 const STABLE_ID = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
@@ -54,8 +61,8 @@ export interface Book {
   startAnchor: string;
   latestChapterId: string;
   chapters: BookChapter[];
-  originalBibtex?: string;
-  translationBibtex?: string;
+  originalCitation?: CitationRecord;
+  translationCitation: CitationRecord;
   pdfUrl?: string;
   epubUrl?: string;
 }
@@ -242,24 +249,75 @@ function parseManifest(value: unknown, source: string): Book {
   const translators = stringList(value, "translators", source);
   validateContributorNames(authors, "authors", source);
   validateContributorNames(translators, "translators", source);
+  const slug = stableId(value, "slug", source);
+  const title = requiredString(value, "title", source);
+  const subtitle = requiredString(value, "subtitle", source);
+  const description = requiredString(value, "description", source);
+  const publishedAt = dateString(value, "publishedAt", source);
+  const citationCreators: CitationCreator[] = [
+    ...authors.map((name): CitationCreator => ({
+      creatorType: "author",
+      name: resolveContributor(name)?.displayName ?? name,
+    })),
+    ...translators.map((name): CitationCreator => ({
+      creatorType: "translator",
+      name: resolveContributor(name)?.displayName ?? name,
+    })),
+  ];
+  if (!isRecord(value.citations)) fail(source, "citations", "must be an object");
+  const translationInput = parseCitationInput(
+    value.citations.translation,
+    `${source}: citations.translation`
+  );
+  if (translationInput.itemType !== "book") {
+    fail(source, "citations.translation.itemType", "must be book");
+  }
+  const translationCitation = mergeCitation(
+    bookCitationDefaults({
+      slug,
+      title,
+      subtitle,
+      creators: citationCreators,
+      date: publishedAt,
+      abstractNote: description,
+    }),
+    translationInput,
+    `${source}: citations.translation`
+  );
+
+  let originalCitation: CitationRecord | undefined;
+  if (value.citations.original != null) {
+    const input = parseCitationInput(value.citations.original, `${source}: citations.original`);
+    if (input.itemType !== "book") fail(source, "citations.original.itemType", "must be book");
+    originalCitation = mergeCitation(
+      {
+        itemType: "book",
+        citationKey: input.citationKey ?? "",
+        title: input.title ?? "",
+        creators: input.creators ?? [],
+      },
+      input,
+      `${source}: citations.original`
+    );
+  }
 
   return {
     id: stableId(value, "id", source),
-    slug: stableId(value, "slug", source),
-    title: requiredString(value, "title", source),
-    subtitle: requiredString(value, "subtitle", source),
-    description: requiredString(value, "description", source),
+    slug,
+    title,
+    subtitle,
+    description,
     documentSlug: stableId(value, "documentSlug", source),
     status: status as BookStatus,
     authors,
     translators,
-    publishedAt: dateString(value, "publishedAt", source),
+    publishedAt,
     updatedAt: dateString(value, "updatedAt", source),
     startAnchor: requiredString(value, "startAnchor", source),
     latestChapterId,
     chapters,
-    originalBibtex: optionalString(value, "originalBibtex", source),
-    translationBibtex: optionalString(value, "translationBibtex", source),
+    originalCitation,
+    translationCitation,
     pdfUrl: optionalFileUrl(value, "pdfUrl", source),
     epubUrl: optionalFileUrl(value, "epubUrl", source),
   };
@@ -306,6 +364,10 @@ export function getAllBooks(): Book[] {
 
 export function getBookBySlug(slug: string): Book | null {
   return getAllBooks().find((book) => book.slug === slug) ?? null;
+}
+
+export function getBookByDocumentSlug(documentSlug: string): Book | null {
+  return getAllBooks().find((book) => book.documentSlug === documentSlug) ?? null;
 }
 
 export function getBookCredits(book: Pick<Book, "slug" | "authors" | "translators">): Credit[] {

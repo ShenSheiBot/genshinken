@@ -17,6 +17,13 @@ import {
   findContributorByName,
   type ContributorId,
 } from "./contributors";
+import {
+  mergeCitation,
+  pageCitationDefaults,
+  parseCitationInput,
+  type CitationCreator,
+  type CitationRecord,
+} from "./citations";
 
 const POSTS_DIR = path.join(process.cwd(), "source", "_posts");
 
@@ -56,6 +63,7 @@ export interface PostSummary {
   readMin: number;
   no: string; // 常规文章保留全站流水号；负栏目使用独立的 -1、-2… 编号
   sectionNo: string; // 常规栏目按发表日期编号；负栏目按原文写作日期编号
+  citation: CitationRecord;
 }
 
 export interface Post extends PostSummary {
@@ -320,6 +328,29 @@ async function loadRaw(): Promise<Post[]> {
       const authors = credits
         .filter((credit) => credit.role === "author")
         .map((credit) => credit.name);
+      const citationCreators: CitationCreator[] = credits.map((credit) => ({
+        creatorType: credit.role,
+        name: credit.name,
+      }));
+      const citationInput = data.citation == null
+        ? undefined
+        : parseCitationInput(data.citation, `${file}: citation`);
+      if (citationInput && !citationInput.itemType) {
+        throw new Error(`${file}: citation.itemType 必须显式填写 Zotero item type`);
+      }
+      const citation = mergeCitation(
+        pageCitationDefaults({
+          slug,
+          title,
+          subtitle,
+          creators: citationCreators,
+          date: fmtISO(date),
+          abstractNote: deriveExcerpt(html, data.excerpt, title),
+          rights: metadataText(data.license),
+        }),
+        citationInput,
+        `${file}: citation`
+      );
 
       const post: Post = {
         slug,
@@ -347,6 +378,7 @@ async function loadRaw(): Promise<Post[]> {
         readMin: readMinutes(html),
         no: "00",
         sectionNo: "00",
+        citation,
         originalTitle: metadataText(data.original_title ?? data.originalTitle ?? data["原文题名"]),
         originalPublication: metadataText(
           data.original_publication ??

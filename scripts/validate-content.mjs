@@ -6,6 +6,12 @@ import remarkParse from "remark-parse";
 import { unified } from "unified";
 import { visit } from "unist-util-visit";
 import { CONTRIBUTORS } from "../lib/contributors.ts";
+import {
+  bookCitationDefaults,
+  mergeCitation,
+  pageCitationDefaults,
+  parseCitationInput,
+} from "../lib/citations.ts";
 
 const postsDirectory = path.join(process.cwd(), "source", "_posts");
 const booksDirectory = path.join(process.cwd(), "source", "_books");
@@ -535,6 +541,42 @@ const records = files.map((file) => {
     const names = key ? splitCreditNames(data[key]) : [];
     validateContributorNames(file, field.role, names, { required: field.required });
   }
+
+  let citationKey = "";
+  try {
+    const citationInput = data.citation == null
+      ? undefined
+      : parseCitationInput(data.citation, `${file}: citation`);
+    if (citationInput && !citationInput.itemType) {
+      report(errors, file, "citation.itemType 必须显式填写 Zotero item type");
+    }
+    const creators = creditFields.flatMap((field) => {
+      const key = field.keys.find((candidate) => {
+        const value = data[candidate];
+        return value != null && (Array.isArray(value) ? value.length > 0 : String(value).trim() !== "");
+      });
+      if (!key) return [];
+      const creatorType = field.role === "译者" ? "translator" : "author";
+      return splitCreditNames(data[key]).map((name) => ({ creatorType, name }));
+    });
+    const citation = mergeCitation(
+      pageCitationDefaults({
+        slug,
+        title: nonEmptyString(data.title) ? data.title.trim() : file.slice(0, -3),
+        subtitle: nonEmptyString(data.subtitle) ? data.subtitle.trim() : undefined,
+        creators,
+        date: dateISO,
+        abstractNote: nonEmptyString(data.excerpt) ? data.excerpt.trim() : undefined,
+        rights: nonEmptyString(data.license) ? data.license.trim() : undefined,
+      }),
+      citationInput,
+      `${file}: citation`
+    );
+    citationKey = citation.citationKey;
+  } catch (error) {
+    report(errors, file, error instanceof Error ? error.message : String(error));
+  }
+
   for (const field of unsupportedCreditFields) {
     if (hasOwn(data, field)) {
       report(errors, file, `${field} 不是受支持的署名字段；只允许作者与译者`);
@@ -643,6 +685,7 @@ const records = files.map((file) => {
     relatedPosts,
     dateISO,
     updatedISO,
+    citationKey,
   };
 });
 
@@ -726,6 +769,64 @@ const bookRecords = jsonFiles(booksDirectory)
     validateContributorNames(file, "translators", translators);
     validateBookDownloadUrl(file, "pdfUrl", data.pdfUrl);
     validateBookDownloadUrl(file, "epubUrl", data.epubUrl);
+    if (hasOwn(data, "originalBibtex") || hasOwn(data, "translationBibtex")) {
+      report(errors, file, "请把原始 BibTeX 字符串迁移到 Zotero 结构化 citations 对象");
+    }
+
+    const citationKeys = [];
+    try {
+      if (!isRecord(data.citations)) throw new Error(`${file}: citations 必须是对象`);
+      const translationInput = parseCitationInput(
+        data.citations.translation,
+        `${file}: citations.translation`
+      );
+      if (translationInput.itemType !== "book") {
+        throw new Error(`${file}: citations.translation.itemType 必须是 book`);
+      }
+      const creatorName = (name) => {
+        const id = contributorIdFor(name);
+        return CONTRIBUTORS.find((contributor) => contributor.id === id)?.displayName ?? name;
+      };
+      const translation = mergeCitation(
+        bookCitationDefaults({
+          slug,
+          title,
+          subtitle: nonEmptyString(data.subtitle) ? data.subtitle.trim() : undefined,
+          creators: [
+            ...authors.map((name) => ({ creatorType: "author", name: creatorName(name) })),
+            ...translators.map((name) => ({ creatorType: "translator", name: creatorName(name) })),
+          ],
+          date: publishedAt,
+          abstractNote: nonEmptyString(data.description) ? data.description.trim() : undefined,
+        }),
+        translationInput,
+        `${file}: citations.translation`
+      );
+      citationKeys.push(translation.citationKey);
+
+      if (data.citations.original != null) {
+        const originalInput = parseCitationInput(
+          data.citations.original,
+          `${file}: citations.original`
+        );
+        if (originalInput.itemType !== "book") {
+          throw new Error(`${file}: citations.original.itemType 必须是 book`);
+        }
+        const original = mergeCitation(
+          {
+            itemType: "book",
+            citationKey: originalInput.citationKey ?? "",
+            title: originalInput.title ?? "",
+            creators: originalInput.creators ?? [],
+          },
+          originalInput,
+          `${file}: citations.original`
+        );
+        citationKeys.push(original.citationKey);
+      }
+    } catch (error) {
+      report(errors, file, error instanceof Error ? error.message : String(error));
+    }
 
     const fileStem = fileName.slice(0, -5);
     if (slug && fileStem !== slug) {
@@ -820,6 +921,7 @@ const bookRecords = jsonFiles(booksDirectory)
       publishedAt,
       updatedAt,
       startAnchor,
+      citationKeys,
     };
   })
   .filter(Boolean);
@@ -853,6 +955,22 @@ for (const book of bookRecords) {
         book.file,
         `updatedAt (${book.updatedAt}) 必须与正文 updated/date (${document.updatedISO}) 一致`
       );
+    }
+  }
+}
+
+const citationKeyOwners = new Map();
+for (const record of records) {
+  if (!record.citationKey) continue;
+  citationKeyOwners.set(record.citationKey, record.file);
+}
+for (const book of bookRecords) {
+  for (const citationKey of book.citationKeys) {
+    const previous = citationKeyOwners.get(citationKey);
+    if (previous) {
+      report(errors, book.file, `citationKey 与 ${previous} 重复：${citationKey}`);
+    } else {
+      citationKeyOwners.set(citationKey, book.file);
     }
   }
 }

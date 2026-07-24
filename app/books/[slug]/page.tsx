@@ -18,6 +18,11 @@ import {
   type BookChapter,
 } from "@/lib/books";
 import { site } from "@/lib/site";
+import {
+  citationToBibtex,
+  citationToJsonLd,
+  citationToMetadata,
+} from "@/lib/citations";
 import CreditLinks from "@/app/components/CreditLinks";
 import BookReadingActions from "../BookReadingActions";
 import BookResources from "../BookResources";
@@ -90,7 +95,11 @@ export async function generateMetadata({
   return {
     title: book.title,
     description: book.description,
-    alternates: { canonical },
+    alternates: {
+      canonical,
+      types: { "application/x-bibtex": `${canonical}/cite.bib` },
+    },
+    other: citationToMetadata(book.translationCitation),
     openGraph: {
       title: book.title,
       description: book.description,
@@ -119,16 +128,10 @@ export default async function BookPage({
   const translators = credits.filter((credit) => credit.role === "translator");
   const canonical = `${site.url}${bookHref(book)}`;
   const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Book",
+    ...citationToJsonLd(book.translationCitation),
     "@id": `${canonical}#book`,
-    name: book.title,
     ...(book.subtitle ? { alternativeHeadline: book.subtitle } : {}),
     description: book.description,
-    url: canonical,
-    mainEntityOfPage: canonical,
-    inLanguage: "zh-Hans",
-    datePublished: book.publishedAt,
     dateModified: book.updatedAt,
     author: authors.map((credit) => ({
       "@type": "Person",
@@ -208,8 +211,10 @@ export default async function BookPage({
           </section>
 
           <BookResources
-            originalBibtex={book.originalBibtex}
-            translationBibtex={book.translationBibtex}
+            originalBibtex={book.originalCitation
+              ? citationToBibtex(book.originalCitation)
+              : undefined}
+            translationBibtex={citationToBibtex(book.translationCitation)}
             pdfUrl={book.pdfUrl}
             epubUrl={book.epubUrl}
           />

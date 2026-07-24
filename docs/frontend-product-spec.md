@@ -203,7 +203,8 @@
 - `latestChapterId` 必须指向递归目录中现有且状态为 `published` 的节点；节点 id、number 以及已发布节点的 anchor 在整棵目录树内唯一。`forthcoming` 节点必须省略 `anchor / publishedAt`，且不得包含状态为 `published` 的后代；待更新节点不参与锚点存在性校验。书籍 `updatedAt` 与承载正文的 `updated/date` 同步更新。
 - Book JSON-LD 的 `hasPart` 只列出递归目录中的 `published` 节点，并保持公开目录顺序；待更新节点不进入结构化数据。Chapter URL 必须为绝对 URL，章节 `position` 在已发布节点序列中从 1 开始；Book 同时包含 publisher、发布日期和修订日期。书籍页作者／译者姓名使用贡献者稳定 id 链接文库。
 - 后续更新继续向同一个 `documentSlug` 对应的连续正文追加内容，再把既有待更新节点切换为 `published` 并补齐 `anchor / publishedAt`；不得为同一本书的后续章节创建互相隔离的新正文。
-- 书籍清单可分别提供 `originalBibtex / translationBibtex / pdfUrl / epubUrl`。原书与译本书目信息是两个独立复制位：有对应 BibTeX 才显示紧凑的复制控件，并提供成功／失败反馈；缺失资料不得用另一版本或虚构记录代替。
+- 书籍清单使用 Zotero 结构化 `citations.original / citations.translation`，构建期生成 BibTeX。原书与译本是两个独立复制位：有对应记录才显示紧凑的复制控件，并提供成功／失败反馈；缺失资料不得用另一版本或虚构记录代替。译本必须作为 `book`，引用 URL 固定为 `/books/<slug>`。
+- 每个公开正文页均提供本页 BibTeX 一键复制和 `.bib` 下载；Zotero Embedded Metadata 同时暴露精确 `itemType`。普通正文缺省为 `blogPost`，已核验的译载资料可使用 `bookSection / journalArticle / preprint / thesis / interview`。
 - PDF 与 EPUB 下载彼此可选，只在对应 URL 实际存在时显示真实下载链接；不得渲染禁用按钮、空链接或占位地址。站内文件使用根相对 URL，站外文件只接受 HTTP(S)。
 - `/books` 与 `/books/<slug>` 应以清楚而紧凑的书目层级、连载状态和阅读路径为主；聚合页首屏应尽快露出首条书目，详情首屏应尽快进入两个阅读入口，不用超大留白或装饰遮挡书名、署名、章节与资源操作。聚合页主体与页脚之间不得使用横贯视口的分隔线，书目内部的版心分隔线保留。连载聚合页、书籍详情及页尾交界的内容与横线均与页眉同宽，不得跨出版心。
 

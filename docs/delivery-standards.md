@@ -219,8 +219,26 @@ featured_order: 0        # 可选；同栏目首页推荐优先级，数值越�
   "updatedAt": "2026-07-18",
   "startAnchor": "reading-cover",
   "latestChapterId": "chapter-one",
-  "originalBibtex": "@book{original_edition, ...}",
-  "translationBibtex": "@misc{un_canon_translation, ...}",
+  "citations": {
+    "original": {
+      "itemType": "book",
+      "citationKey": "original_edition",
+      "title": "Original title",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Given",
+          "lastName": "Family"
+        }
+      ],
+      "date": "1925"
+    },
+    "translation": {
+      "itemType": "book",
+      "citationKey": "un_canon_translation",
+      "rights": "CC0 1.0 Universal"
+    }
+  },
   "pdfUrl": "/attachments/example-book.pdf",
   "epubUrl": "https://example.org/example-book.epub",
   "chapters": [
@@ -262,7 +280,9 @@ featured_order: 0        # 可选；同栏目首页推荐优先级，数值越�
 - 普通文章与连载连续正文都默认保存完全本地的阅读位置。记录只属于当前浏览器配置文件和本站域名，不上传服务器、不使用 Cookie，也不跨浏览器或设备共享；阅读设置必须允许关闭保存、清除本文记录和清除全部阅读记录，关闭时不得清除或改变主题、字族与字号设置。
 - 直接进入不带 hash 的正文 URL 时自动恢复到上次语义位置，不提供「继续阅读」入口或恢复弹窗。书籍页仍只提供「从头阅读」与「阅读最新章节」：前者的 `#reading-cover` 和后者的章节 hash 都优先于本地记录；浏览器前进后退、刷新与 BFCache 等原生滚动恢复同样优先，客户端不得二次跳转。
 - 连载更新必须保留稳定标题锚点；构建产物同时以渲染后正文 HTML 的 SHA-256 短哈希标识内容版本。已读完的正文追加内容后仍恢复旧版本的原完成位置，不自动进入新增内容，由读者自行向后阅读；原块被改动或删除时按相邻语义块、章节和全文比例依次降级，不依赖旧的绝对滚动坐标。
-- `originalBibtex` 与 `translationBibtex` 都是可选的非空字符串，分别驱动原书和译本的独立复制按钮。只录入已经核验的版本；缺失时保留待补状态，不得拿另一版本冒充。
+- `citations` 直接使用 Zotero item JSON 字段名。`translation` 必填，且 `itemType` 必须是 `book`；未覆写的译本题名、作者／译者、日期、出版社和摘要从书籍清单派生，URL 永远是 `https://un-canon.blog/books/<slug>`。`original` 可选，只有原版资料已经核验时才填写；两者分别生成独立的 BibTeX 复制位，不得拿另一版本冒充。
+- 文章页缺省为 Zotero `blogPost`。只有已核验来源类别时才在 Markdown front matter 添加 `citation` 覆写为 `bookSection / journalArticle / preprint / thesis / interview`；字段必须采用 Zotero 名称，例如 `bookTitle / publicationTitle / repository / thesisType / university / interviewMedium / creators`。构建门禁会拒绝未知字段和缺少类型必需字段的记录。
+- 经典 BibTeX 没有 Zotero `blogPost / preprint / interview` 的一一对应 entry type；本站遵循 Zotero 自带 BibTeX translator，以 `@misc` 输出这三类，并在页面嵌入 `z:itemType` 保存精确 Zotero 类型。不得虚构 `@preprint`、`@interview` 等非标准 entry type。
 - `pdfUrl` 与 `epubUrl` 都是可选字段，只接受根相对、HTTP 或 HTTPS URL。前端只在字段存在时显示对应下载链接；没有文件时不要填写空字符串、`#` 或占位地址。
 - 一级导航中的「连载」直接进入 `/books`；文库不再放置书籍入口。发布书籍时应从该入口验收索引、详情、两个阅读入口、章节和资源操作。
 

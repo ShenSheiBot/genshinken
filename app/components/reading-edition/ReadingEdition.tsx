@@ -254,12 +254,16 @@ export function ReadingDossier({
   parts,
   posts,
   topicMemberships = [],
+  citationBibtex,
+  citationHref,
   isPublicEdition = false,
 }: {
   post: Post;
   parts: ArticleParts;
   posts: PostSummary[];
   topicMemberships?: TopicMembership[];
+  citationBibtex?: string;
+  citationHref?: string;
   /** Render this selected dossier direction at the public /posts URL. */
   isPublicEdition?: boolean;
 }) {
@@ -277,6 +281,8 @@ export function ReadingDossier({
         variant="dossier"
         credits={post.credits}
         fallbackAuthor={post.author}
+        citationBibtex={citationBibtex}
+        citationHref={citationHref}
         mode={isPublicEdition ? "edition" : "preview"}
       />
 

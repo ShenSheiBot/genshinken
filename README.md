@@ -46,6 +46,25 @@ featured_order: 0       # 可选；同栏目首页推荐优先级，数值越大
 正文从这里开始……
 ```
 
+正文页默认按 Zotero `blogPost` 发布并生成可复制 BibTeX。译载论文、预印本、学位论文或访谈应在
+front matter 增加 `citation`，字段名直接采用 Zotero item JSON，而不是另建站内字段：
+
+```yaml
+citation:
+  itemType: journalArticle
+  citationKey: author2024articleZH
+  publicationTitle: Journal Name
+  volume: "12"
+  issue: "3"
+  pages: 10-24
+  DOI: 10.0000/example
+```
+
+支持的 `itemType` 为 `blogPost / book / bookSection / journalArticle / preprint / thesis / interview`。其中
+`bookSection` 必须填写 `bookTitle`，`journalArticle` 必须填写 `publicationTitle`，`preprint` 必须填写 `repository`，
+`thesis` 必须填写 `thesisType / university`，`interview` 必须用 Zotero `creators`
+显式标明至少一位 `interviewee`，并填写 `interviewMedium`。没有核验过的来源字段应留空，不能猜填。
+
 > 兼容历史写法：也可以用「`# 标题`(会被当作 YAML 注释) + 散列键 + 单独一行 `---`」的旧式头部，
 > 解析结果与标准 front-matter 一致。新文章建议直接用上面的标准写法。
 
@@ -64,8 +83,9 @@ featured_order: 0       # 可选；同栏目首页推荐优先级，数值越大
 一级导航依次为「专题」「连载」「文库」「关于」，分别进入 `/topics`、`/books`、`/library`、`/about`。
 文库只负责文章与多媒体的栏目、分类、标签、贡献者和署名位置筛选；书籍清单与连续阅读统一由 `/books` 承担。
 
-书籍清单位于 `source/_books/*.json`。除章节和连续正文定位字段外，可按实际资料提供
-`originalBibtex`、`translationBibtex`、`pdfUrl`、`epubUrl`：原书与译本 BibTeX 各自复制；PDF／EPUB
+书籍清单位于 `source/_books/*.json`。`citations.translation` 是必填的 Zotero 结构化书目，
+`citations.original` 只在原版资料已经核验时填写；构建期统一生成两个复制位的 BibTeX。译本固定为
+Zotero `book` / BibTeX `@book`，引用 URL 固定指向 `/books/<slug>`。`pdfUrl`、`epubUrl`
 下载入口只在对应 URL 存在时出现。不得为补齐界面而虚构书目信息或空文件地址。专题位于
 `source/_topics/*.md`，按分组与条目数组的人工顺序公开，不从标签自动生成。
 

@@ -12,7 +12,12 @@
   "updatedAt": "2026-07-13",
   "startAnchor": "reading-cover",
   "latestChapterId": "appendix",
-  "translationBibtex": "@misc{olsevich_gregory_2026_zh,\n  author = {尤利·奥尔塞维奇 and 保罗·格雷戈里},\n  translator = {王揆},\n  title = {苏联计划经济的历史审视：对苏联计划管理负责人的分析与访谈},\n  year = {2026},\n  url = {https://un-canon.blog/posts/olsevich-gregory-soviet-planned-economy-retrospective},\n  language = {zh-Hans}\n}",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "olsevich_gregory_2026_zh"
+    }
+  },
   "chapters": [
     {
       "id": "preface",

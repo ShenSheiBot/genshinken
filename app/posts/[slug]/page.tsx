@@ -4,6 +4,13 @@ import { getAllPosts, getAllSlugs, getPostBySlug, type CreditRole } from "@/lib/
 import { site } from "@/lib/site";
 import { postPath } from "@/lib/editorial";
 import { getTopicMembershipsForPost } from "@/lib/topics";
+import { bookHref, getBookByDocumentSlug } from "@/lib/books";
+import {
+  citationToBibtex,
+  citationToJsonLd,
+  citationToMetadata,
+  type CitationRecord,
+} from "@/lib/citations";
 import {
   ReadingDossier,
   splitArticle,
@@ -24,33 +31,44 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = await getPostBySlug(decodeURIComponent(slug));
   if (!post) return {};
+  const book = getBookByDocumentSlug(post.slug);
+  const citation = book?.translationCitation ?? post.citation;
   const description = post.excerpt || site.description;
   const canonical = postPath(post);
+  const citationPath = book ? bookHref(book) : canonical;
+  const openGraphBase = {
+    title: post.title,
+    description,
+    url: canonical,
+    siteName: site.tabTitle,
+  };
   return {
     title: post.title,
     description,
-    alternates: { canonical },
-    other: {
-      "rdf:type": "http://schema.org/BlogPosting",
+    alternates: {
+      canonical,
+      types: { "application/x-bibtex": `${citationPath}/cite.bib` },
     },
-    openGraph: {
-      title: post.title,
-      description,
-      url: canonical,
-      siteName: site.tabTitle,
-      type: "article",
-      publishedTime: post.dateISO,
-      modifiedTime: post.updatedISO,
-      authors: post.credits
-        .filter((credit) => credit.role === "author")
-        .map((credit) => credit.name),
-      tags: post.tags,
-    },
+    other: citationToMetadata(citation),
+    openGraph: citation.itemType === "book"
+      ? { ...openGraphBase, type: "book" }
+      : {
+          ...openGraphBase,
+          type: "article",
+          publishedTime: post.dateISO,
+          modifiedTime: post.updatedISO,
+          authors: post.credits
+            .filter((credit) => credit.role === "author")
+            .map((credit) => credit.name),
+          tags: post.tags,
+        },
   };
 }
 
-function buildJsonLd(post: NonNullable<Awaited<ReturnType<typeof getPostBySlug>>>) {
-  const url = `${site.url}${postPath(post)}`;
+function buildJsonLd(
+  post: NonNullable<Awaited<ReturnType<typeof getPostBySlug>>>,
+  citation: CitationRecord
+) {
   const roles: Record<CreditRole, string> = {
     author: "author",
     translator: "translator",
@@ -67,22 +85,20 @@ function buildJsonLd(post: NonNullable<Awaited<ReturnType<typeof getPostBySlug>>
     credits[key] = people;
   }
   return {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    headline: post.title,
+    ...citationToJsonLd(citation),
     ...(post.subtitle ? { alternativeHeadline: post.subtitle } : {}),
     description: post.excerpt || site.description,
-    url,
-    mainEntityOfPage: url,
-    inLanguage: "zh-Hans",
-    datePublished: post.dateISO,
     dateModified: post.updatedISO,
-    isPartOf: {
-      "@type": "Blog",
-      "@id": `${site.url}/#blog`,
-      name: site.tabTitle,
-      url: site.url,
-    },
+    ...(citation.itemType === "blogPost"
+      ? {
+          isPartOf: {
+            "@type": "Blog",
+            "@id": `${site.url}/#blog`,
+            name: site.tabTitle,
+            url: site.url,
+          },
+        }
+      : {}),
     ...credits,
     ...(post.tags.length ? { keywords: post.tags.join(",") } : {}),
     articleSection: post.category,
@@ -101,6 +117,8 @@ export default async function ArticlePage({
   const post = await getPostBySlug(decoded);
   if (!post) notFound();
   if (post.section === "multimedia") permanentRedirect(postPath(post));
+  const book = getBookByDocumentSlug(post.slug);
+  const citation = book?.translationCitation ?? post.citation;
 
   const [posts, topicMemberships] = await Promise.all([
     getAllPosts(),
@@ -112,7 +130,7 @@ export default async function ArticlePage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(buildJsonLd(post)).replace(/</g, "\\u003c"),
+          __html: JSON.stringify(buildJsonLd(post, citation)).replace(/</g, "\\u003c"),
         }}
       />
       <ReadingDossier
@@ -120,6 +138,8 @@ export default async function ArticlePage({
         parts={splitArticle(post.html)}
         posts={posts}
         topicMemberships={topicMemberships}
+        citationBibtex={citationToBibtex(citation)}
+        citationHref={`${book ? bookHref(book) : postPath(post)}/cite.bib`}
         isPublicEdition
       />
     </>

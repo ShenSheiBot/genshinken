@@ -12,8 +12,31 @@
   "updatedAt": "2026-07-23",
   "startAnchor": "reading-cover",
   "latestChapterId": "penultimate-1916-11-03",
-  "originalBibtex": "@book{shulgin1925dni,\n  author = {Шульгин, Василий Витальевич},\n  title = {Дни: [записки]},\n  address = {Ленинград},\n  publisher = {Рабочее издательство «Прибой»},\n  year = {1925},\n  note = {Со вступительной статьей и пояснительными примечаниями С. А. Пионтковского},\n  language = {Russian}\n}",
-  "translationBibtex": "@misc{shulgin2026dniZH,\n  author = {瓦西里·维塔利耶维奇·舒尔金},\n  translator = {俞叔略},\n  title = {往日：忆一九〇五年立宪与一九一七年二月革命},\n  year = {2026},\n  url = {https://un-canon.blog/posts/shulgin-dni},\n  urldate = {2026-07-20},\n  language = {zh-Hans},\n  note = {连载中；CC0 1.0 Universal}\n}",
+  "citations": {
+    "original": {
+      "itemType": "book",
+      "citationKey": "shulgin1925dni",
+      "title": "Дни: [записки]",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Василий Витальевич",
+          "lastName": "Шульгин"
+        }
+      ],
+      "place": "Ленинград",
+      "publisher": "Рабочее издательство «Прибой»",
+      "date": "1925",
+      "language": "ru",
+      "extra": "Со вступительной статьей и пояснительными примечаниями С. А. Пионтковского"
+    },
+    "translation": {
+      "itemType": "book",
+      "citationKey": "shulgin2026dniZH",
+      "rights": "CC0 1.0 Universal",
+      "extra": "Status: serializing"
+    }
+  },
   "chapters": [
     {
       "id": "shulgin-notes",

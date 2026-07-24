@@ -40,8 +40,8 @@ function sourceBookStatusCounts() {
 function bookCitationKinds(slug) {
   const data = readBookManifest(slug);
   const kinds = [];
-  if (typeof data.originalBibtex === "string" && data.originalBibtex.trim()) kinds.push("original");
-  if (typeof data.translationBibtex === "string" && data.translationBibtex.trim()) kinds.push("translation");
+  if (data.citations?.original) kinds.push("original");
+  if (data.citations?.translation) kinds.push("translation");
   return kinds;
 }
 function flattenBookChapters(chapters, depth = 0) {
@@ -112,6 +112,41 @@ assert.match(
   readingChromeSource,
   /\{articleIdentity\}\{compactCredits\}\{lineNavigator\}\{tocPanel\}/,
   "reader desktop rail must place credits directly before reading progress and the table of contents"
+);
+assert.doesNotMatch(
+  readingEditionSource,
+  /citationLine|citationCoverActions|CitationCopyButton|引用\s*·/,
+  "article cover must not retain citation labels or controls"
+);
+assert.match(
+  readingEditionSource,
+  /citationBibtex=\{citationBibtex\}[\s\S]*?citationHref=\{citationHref\}/,
+  "article citations must be delegated to the reading chrome"
+);
+assert.match(
+  readingChromeSource,
+  /const tocActions[\s\S]*?CitationCopyButton[\s\S]*?下载[\s\S]*?className=\{styles\.toTop\}[^>]*>返回篇首<\/button>/,
+  "copy, download, and return-to-start must share the table-of-contents action row"
+);
+assert.match(
+  readingStylesSource,
+  /\.tocActions\s*\{[^}]*grid-template-columns:\s*repeat\(3,\s*minmax\(0,\s*1fr\)\);/,
+  "the three table-of-contents actions must use equal-width columns"
+);
+assert.match(
+  readingChromeSource,
+  /themeButton[\s\S]*?settingsButton[\s\S]*?settingsGlyph[\s\S]*?<i \/><i \/><i \/>/,
+  "theme and three-line reading-habits controls must use the confirmed order"
+);
+assert.doesNotMatch(
+  readingChromeSource,
+  /阅读设置/,
+  "the reader must use the confirmed 阅读习惯 label"
+);
+assert.match(
+  readingStylesSource,
+  /reading-sheet-slide-in[\s\S]*?reading-sheet-slide-out[\s\S]*?reading-sheet-dim-in[\s\S]*?reading-sheet-dim-out/,
+  "reading habits must animate the drawer and page dimming in both directions"
 );
 assert.doesNotMatch(
   readingChromeSource,
@@ -504,6 +539,11 @@ function assertBlogPostingMetadata(label, result, expectedPath) {
     namedMeta(result.html, "rdf:type"),
     "http://schema.org/BlogPosting",
     `${label} must advertise an explicit BlogPosting RDF type for Zotero`
+  );
+  assert.equal(
+    namedMeta(result.html, "z:itemType"),
+    "blogPost",
+    `${label} must advertise Zotero itemType=blogPost`
   );
   assert.equal(record.isPartOf?.["@type"], "Blog", `${label} must belong to a schema.org Blog`);
   assert.equal(
@@ -945,7 +985,16 @@ for (const section of ["review", "translation"]) {
   }
 }
 
-const articleLd = assertBlogPostingMetadata("article", article, "/posts/lih-lenin-disputed");
+const articleLd = assertMetadata(
+  "article",
+  article,
+  "/posts/lih-lenin-disputed",
+  "ScholarlyArticle"
+);
+assert.equal(openGraph(article.html, "og:type"), "article");
+assert.equal(namedMeta(article.html, "z:itemType"), "journalArticle");
+assert.equal(namedMeta(article.html, "rdf:type"), "http://schema.org/ScholarlyArticle");
+assert.equal(namedMeta(article.html, "citation_journal_title"), "Historical Materialism");
 await verifyHostedCjkFonts(article.html);
 assert.match(article.html, /reading-edition-page/);
 assert.match(article.html, /dateModified/);
@@ -1234,6 +1283,12 @@ const bookLd = assertMetadata(
   "/books/soviet-planned-economy-retrospective",
   "Book"
 );
+assert.equal(namedMeta(book.html, "z:itemType"), "book", "book detail must expose Zotero itemType=book");
+assert.equal(
+  namedMeta(book.html, "citation_public_url"),
+  `${productionOrigin}/books/soviet-planned-economy-retrospective`,
+  "book BibTeX and embedded metadata must cite the /books/ URL"
+);
 assert.match(book.html, /从头阅读/);
 assert.match(book.html, /阅读最新章节/);
 assert.match(book.html, /\/library\?contributor=wang-kui/);
@@ -1273,7 +1328,25 @@ const shulginLd = assertMetadata(
   "Book"
 );
 const shulginDocumentPath = `/posts/${encodeURIComponent(shulginManifest.documentSlug)}`;
-assertBlogPostingMetadata("shulgin-dni continuous document", shulginDocument, shulginDocumentPath);
+assertMetadata("shulgin-dni continuous document", shulginDocument, shulginDocumentPath);
+const shulginDocumentLd = structuredData(shulginDocument.html)
+  .find((value) => value?.["@type"] === "Book");
+assert.ok(shulginDocumentLd, "shulgin-dni continuous document must retain Book JSON-LD");
+assert.equal(
+  normalizedPath(shulginDocumentLd.url),
+  "/books/shulgin-dni",
+  "shulgin-dni continuous document citation must point to its /books/ record"
+);
+assert.equal(
+  namedMeta(shulginDocument.html, "z:itemType"),
+  "book",
+  "shulgin-dni continuous document must expose Zotero itemType=book"
+);
+assert.equal(
+  namedMeta(shulginDocument.html, "citation_public_url"),
+  `${productionOrigin}/books/shulgin-dni`,
+  "shulgin-dni embedded citation URL must point to /books/"
+);
 const shulginRenderedParagraphs = elements(shulginDocument.html, "p");
 for (const pageNumber of shulginInlinePageBreaks) {
   assert.ok(

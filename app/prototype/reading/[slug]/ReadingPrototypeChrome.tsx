@@ -10,6 +10,7 @@ import type { Credit } from "@/lib/posts";
 import { site } from "@/lib/site";
 import { GLOBAL_NAV_ITEMS } from "@/lib/navigation";
 import CreditLinks from "@/app/components/CreditLinks";
+import CitationCopyButton from "@/app/components/CitationCopyButton";
 import {
   fingerprintReadingNodes,
   fingerprintReadingText,
@@ -345,6 +346,8 @@ export default function ReadingPrototypeChrome({
   variant,
   credits,
   fallbackAuthor,
+  citationBibtex,
+  citationHref,
   mode = "preview",
 }: {
   title: string;
@@ -353,6 +356,8 @@ export default function ReadingPrototypeChrome({
   variant: Variant;
   credits: Credit[];
   fallbackAuthor: string;
+  citationBibtex?: string;
+  citationHref?: string;
   /** The public edition keeps the reader chrome but removes preview controls. */
   mode?: ReaderMode;
 }) {
@@ -366,6 +371,7 @@ export default function ReadingPrototypeChrome({
   const [activeFigureId, setActiveFigureId] = useState("");
   const [figureIndexMode, setFigureIndexMode] = useState<FigureIndexMode>("toc");
   const [sheet, setSheet] = useState<Sheet>(null);
+  const [sheetClosing, setSheetClosing] = useState(false);
   const [readerSize, setReaderSize] = useState<ReaderSize>("medium");
   const [readerFont, setReaderFont] = useState<ReaderFont>("serif");
   const [dark, setDark] = useState(false);
@@ -401,8 +407,8 @@ export default function ReadingPrototypeChrome({
   const sourceRef = useRef<ReferenceItem[]>([]);
   const lastNoteAnchor = useRef<HTMLAnchorElement | null>(null);
   const lastSheetTrigger = useRef<HTMLElement | null>(null);
-  const sheetCloseRef = useRef<HTMLButtonElement | null>(null);
   const sheetRef = useRef<HTMLElement | null>(null);
+  const sheetCloseTimerRef = useRef<number | null>(null);
   const directReferencePositionRef = useRef<{
     button: HTMLButtonElement;
     scrollTop: number;
@@ -414,6 +420,7 @@ export default function ReadingPrototypeChrome({
     figureScrollRequestRef.current += 1;
     figureScrollCleanupRef.current?.();
     figureScrollCleanupRef.current = null;
+    if (sheetCloseTimerRef.current != null) window.clearTimeout(sheetCloseTimerRef.current);
   }, []);
 
   const tocTree = useMemo(() => buildTocTree(toc), [toc]);
@@ -894,23 +901,34 @@ export default function ReadingPrototypeChrome({
   }, [referenceTrail, selectReference]);
 
   const closeSheet = useCallback(() => {
-    const hadSheet = sheet !== null;
+    if (sheet === null || sheetClosing) return;
+    const hadSheet = true;
     const wasReference = sheet === "annotation" || sheet === "source";
-    setSheet(null);
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (sheetRef.current?.contains(document.activeElement)) {
+      (document.activeElement as HTMLElement | null)?.blur();
+    }
+    setSheetClosing(true);
     if (wasReference) {
       setReferenceTrail([]);
       history.replaceState(history.state, "", window.location.pathname + window.location.search);
     }
-    if (hadSheet) {
-      requestAnimationFrame(() => (lastNoteAnchor.current || lastSheetTrigger.current)?.focus());
-    }
-  }, [sheet]);
+    if (sheetCloseTimerRef.current != null) window.clearTimeout(sheetCloseTimerRef.current);
+    sheetCloseTimerRef.current = window.setTimeout(() => {
+      sheetCloseTimerRef.current = null;
+      setSheet(null);
+      setSheetClosing(false);
+      if (hadSheet) {
+        requestAnimationFrame(() => (lastNoteAnchor.current || lastSheetTrigger.current)?.focus());
+      }
+    }, reduce ? 0 : 260);
+  }, [sheet, sheetClosing]);
 
   useEffect(() => {
     if (!sheetOpen) return;
     const previous = document.body.style.overflow;
     document.body.style.overflow = "hidden";
-    requestAnimationFrame(() => sheetCloseRef.current?.focus());
+    requestAnimationFrame(() => sheetRef.current?.focus());
     return () => { document.body.style.overflow = previous; };
   }, [sheetOpen]);
 
@@ -955,6 +973,11 @@ export default function ReadingPrototypeChrome({
   }, [closeSheet, isEdition, setVariant, sheet, variant]);
 
   const openSheet = (next: Exclude<Sheet, null>, trigger?: HTMLElement) => {
+    if (sheetCloseTimerRef.current != null) {
+      window.clearTimeout(sheetCloseTimerRef.current);
+      sheetCloseTimerRef.current = null;
+    }
+    setSheetClosing(false);
     if (trigger) lastSheetTrigger.current = trigger;
     if (next !== "annotation" && next !== "source") lastNoteAnchor.current = null;
     setReferenceTrail([]);
@@ -1219,6 +1242,30 @@ export default function ReadingPrototypeChrome({
     ? <p className={styles.emptyRail}>本文没有分节标题，可按视觉行定位。</p>
     : tocTree.map((node, index) => renderTocNode(node, String(index), 0, index));
 
+  const hasCitationActions = Boolean(citationBibtex && citationHref);
+  const tocActions = (
+    <footer
+      className={styles.tocActions}
+      data-citation={hasCitationActions ? "true" : "false"}
+      aria-label="文章操作"
+    >
+      {citationBibtex && citationHref && (
+        <>
+          <CitationCopyButton
+            bibtex={citationBibtex}
+            className={styles.citationRailCopy}
+            label="复制"
+          />
+          <a href={citationHref} download={`${slug}.bib`} aria-label="下载本页 BibTeX 引用">
+            <span>BIB</span>
+            下载
+          </a>
+        </>
+      )}
+      <button className={styles.toTop} type="button" onClick={returnToPageStart}>返回篇首</button>
+    </footer>
+  );
+
   const tocPanel = showFigureIndex ? (
     <nav
       className={`${styles.tocPanel} ${styles.figureIndex}`}
@@ -1270,13 +1317,13 @@ export default function ReadingPrototypeChrome({
           </div>
         </div>
       </div>
-      <button className={styles.toTop} type="button" onClick={returnToPageStart}>返回篇首</button>
+      {tocActions}
     </nav>
   ) : (
     <nav className={styles.tocPanel} aria-label="文章目录">
       <header><b>目录</b></header>
       <div className={`${styles.tocViewport} ${styles.styledScroller}`}>{tocContents}</div>
-      <button className={styles.toTop} type="button" onClick={returnToPageStart}>返回篇首</button>
+      {tocActions}
     </nav>
   );
 
@@ -1466,8 +1513,10 @@ export default function ReadingPrototypeChrome({
         <button className={styles.mobileSectionButton} type="button" onClick={(event) => openSheet("toc", event.currentTarget)} aria-label={`文章目录：${currentSection}`} aria-haspopup="dialog" aria-expanded={sheet === "toc"}><span>{currentSection}</span><b>⌄</b></button>
         <div className={styles.runningTools}>
           <button className={styles.compactTocButton} type="button" onClick={(event) => openSheet("toc", event.currentTarget)} aria-haspopup="dialog" aria-expanded={sheet === "toc"}>目录</button>
-          <button type="button" onClick={(event) => openSheet("settings", event.currentTarget)} aria-label="阅读设置">字</button>
           <button className={styles.themeButton} type="button" onClick={toggleTheme} aria-label="切换明暗主题">{dark ? "☾" : "☼"}</button>
+          <button className={styles.settingsButton} type="button" onClick={(event) => openSheet("settings", event.currentTarget)} aria-label="阅读习惯" aria-haspopup="dialog" aria-expanded={sheet === "settings"}>
+            <span className={styles.settingsGlyph} aria-hidden="true"><i /><i /><i /></span>
+          </button>
         </div>
         <span className={styles.topRule} data-rail-progress={desktopDesk ? "true" : "false"} aria-hidden="true">
           <span className={styles.topProgress} style={{ width: `${pct}%` }} />
@@ -1475,17 +1524,17 @@ export default function ReadingPrototypeChrome({
       </header>
 
       {sheet && (
-        <div className={styles.sheetLayer} role="presentation" onMouseDown={(event) => { if (event.currentTarget === event.target) closeSheet(); }}>
-          <section ref={sheetRef} className={styles.sheet} data-sheet={sheet} role="dialog" aria-modal="true" tabIndex={-1} aria-label={sheet === "toc" ? "文章目录" : sheet === "settings" ? "阅读设置" : sheet === "annotation" ? "文章注释" : "文章文献"}>
+        <div className={styles.sheetLayer} data-sheet={sheet} data-closing={sheetClosing ? "true" : "false"} role="presentation" onMouseDown={(event) => { if (event.currentTarget === event.target) closeSheet(); }}>
+          <section ref={sheetRef} className={styles.sheet} data-sheet={sheet} role="dialog" aria-modal="true" aria-hidden={sheetClosing || undefined} inert={sheetClosing} tabIndex={-1} aria-label={sheet === "toc" ? "文章目录" : sheet === "settings" ? "阅读习惯" : sheet === "annotation" ? "文章注释" : "文章文献"}>
             <div className={styles.sheetHandle} />
             <header className={styles.sheetHeader}>
               <div className={styles.sheetHeading}>
                 {previousReference && (sheet === "annotation" || sheet === "source") && <button type="button" className={styles.referenceBack} onClick={returnToPreviousReference}>← 返回{previousReference.kind === "annotation" ? "注释" : "文献"} {previousReference.label}</button>}
-                <div><h2>{sheet === "toc" ? "文章目录" : sheet === "settings" ? "阅读设置" : sheet === "annotation" ? "注释" : "文献"}</h2></div>
+                <div><h2>{sheet === "toc" ? "文章目录" : sheet === "settings" ? "阅读习惯" : sheet === "annotation" ? "注释" : "文献"}</h2></div>
               </div>
               <div className={styles.sheetHeaderActions}>
                 {(sheet === "annotation" || sheet === "source") && referenceCounter(sheet, "sheet")}
-                <button ref={sheetCloseRef} type="button" onClick={closeSheet} aria-label="关闭">×</button>
+                <button type="button" onClick={closeSheet} aria-label="关闭">×</button>
               </div>
             </header>
             {sheet === "toc" ? <>
@@ -1503,7 +1552,7 @@ export default function ReadingPrototypeChrome({
                 <section className={styles.settingGroup}><span>字号</span><div className={styles.sizeChooser}>{(["small", "medium", "large"] as const).map((size, index) => <button key={size} type="button" data-active={size === readerSize} onClick={() => updateSize(size)}><b style={{ fontSize: `${15 + index * 4}px` }}>字</b><span>{["小", "中", "大"][index]}</span></button>)}</div></section>
                 <button className={styles.themeChoice} type="button" onClick={toggleTheme}><span>{dark ? "☾" : "☼"}</span><b>{dark ? "切换到浅色" : "切换到深色"}</b><i>→</i></button>
                 {isEdition && (
-                  <section className={styles.settingGroup}>
+                  <section className={`${styles.settingGroup} ${styles.readingProgressGroup}`}>
                     <span>阅读记录</span>
                     <div className={styles.readingProgressSetting}>
                       <div>
