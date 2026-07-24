@@ -31,7 +31,7 @@ export async function generateMetadata({
     description,
     alternates: { canonical },
     other: {
-      "prism.genre": "blogentry",
+      "rdf:type": "http://schema.org/BlogPosting",
     },
     openGraph: {
       title: post.title,

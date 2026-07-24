@@ -501,9 +501,9 @@ function assertBlogPostingMetadata(label, result, expectedPath) {
   const record = assertMetadata(label, result, expectedPath, "BlogPosting");
   assert.equal(openGraph(result.html, "og:type"), "article", `${label} must retain og:type=article`);
   assert.equal(
-    namedMeta(result.html, "prism.genre"),
-    "blogentry",
-    `${label} must advertise PRISM blogentry metadata for Zotero`
+    namedMeta(result.html, "rdf:type"),
+    "http://schema.org/BlogPosting",
+    `${label} must advertise an explicit BlogPosting RDF type for Zotero`
   );
   assert.equal(record.isPartOf?.["@type"], "Blog", `${label} must belong to a schema.org Blog`);
   assert.equal(
