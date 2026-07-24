@@ -314,6 +314,38 @@ function rehypeCjkInterpuncts() {
   return (tree: Root) => walk(tree as unknown as { children: unknown[] });
 }
 
+function rehypeRareHanGlyphs() {
+  const walk = (node: { type?: string; tagName?: string; children?: unknown[] }) => {
+    if (node.type === "element" && node.tagName && Q_SKIP.has(node.tagName)) return;
+    if (!Array.isArray(node.children)) return;
+
+    const next: unknown[] = [];
+    for (const raw of node.children) {
+      const child = raw as { type?: string; value?: string; tagName?: string; children?: unknown[] };
+      if (child.type === "text" && typeof child.value === "string" && child.value.includes("\u4337")) {
+        for (const part of child.value.split(/(\u4337)/u)) {
+          if (!part) continue;
+          next.push(
+            part === "\u4337"
+              ? {
+                  type: "element",
+                  tagName: "span",
+                  properties: { className: ["rare-han"] },
+                  children: [{ type: "text", value: part }],
+                }
+              : { type: "text", value: part }
+          );
+        }
+      } else {
+        walk(child);
+        next.push(child);
+      }
+    }
+    node.children = next;
+  };
+  return (tree: Root) => walk(tree as unknown as { children: unknown[] });
+}
+
 type TextNode = { type: "text"; value: string };
 type InlineRunNode = TextNode | Element;
 type TextReference = { node: TextNode; start: number; end: number };
@@ -542,6 +574,7 @@ const processor = unified()
   .use(rehypeCjkEmphasis)
   .use(rehypeSmartQuotes)
   .use(rehypeCjkInterpuncts)
+  .use(rehypeRareHanGlyphs)
   .use(rehypeLatinRuns)
   .use(rehypeKatex)
   .use(rehypeStringify, { allowDangerousHtml: true });

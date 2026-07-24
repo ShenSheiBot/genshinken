@@ -81,6 +81,27 @@
   font-display: swap;
 }
 
+/* U+4337 is absent from the three ST source fonts. These one-glyph Noto
+   subsets prevent platform-dependent glyph and baseline fallback without
+   shipping another full CJK font. */
+@font-face {
+  font-family: "UN Canon Rare Han Serif";
+  src: url("/fonts/un-canon-rare-han-serif.woff2?v=fcbebb5254a4") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  unicode-range: U+4337;
+}
+
+@font-face {
+  font-family: "UN Canon Rare Han Sans";
+  src: url("/fonts/un-canon-rare-han-sans.woff2?v=bf88159b46a8") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  unicode-range: U+4337;
+}
+
 html[data-theme="dark"] {
   --bg: #060605;
   --ink: #e8e7e3;

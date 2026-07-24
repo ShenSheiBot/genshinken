@@ -372,6 +372,12 @@
    role: body, quote, display or interface. Each role follows reader theme. */
 .root :global(.cjk-interpunct) { font-family: inherit; }
 
+.root :global(.rare-han) {
+  font-family: "UN Canon Rare Han Serif";
+  font-style: inherit;
+  font-weight: inherit;
+}
+
 .root .body :global(.latin-run),
 .root .appendixContent :global(.latin-run),
 .root .referenceDetail :global(.latin-run) {
@@ -2061,6 +2067,10 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
   --reader-quote-latin-family: Optima, "Segoe UI", "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --reader-interface-family: "DengXian", "等线", "PingFang SC", "Microsoft YaHei", "Noto Sans SC", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   --reader-note-family: var(--reader-body-latin-family);
+}
+
+:global(html[data-reader-font="sans"]) .root :global(.rare-han) {
+  font-family: "UN Canon Rare Han Sans";
 }
 
 :global(html[data-reader-font="sans"]) .body :global(blockquote),

@@ -37,6 +37,19 @@ const expectedFonts = [
   },
 ];
 
+const rareHanFonts = [
+  {
+    family: "UN Canon Rare Han Serif",
+    file: "un-canon-rare-han-serif.woff2",
+    sha256: "fcbebb5254a4a8ae5edde4d1b7e548c1fb859e1843d00d4f3161b509153925ac",
+  },
+  {
+    family: "UN Canon Rare Han Sans",
+    file: "un-canon-rare-han-sans.woff2",
+    sha256: "bf88159b46a80c7d19c95d8d8f6c434518c9363fbd20a37db3acd9a0cb045bf3",
+  },
+];
+
 const textExtensions = new Set([".css", ".json", ".md", ".mjs", ".ts", ".tsx", ".txt"]);
 const corpusRoots = ["app", "lib", "source"];
 const alwaysInclude = "西方負典华文宋体仿宋楷体衬线无衬线，。；：？！“”‘’（）《》〈〉【】——……·";
@@ -135,6 +148,41 @@ for (const expected of expectedFonts) {
   );
 }
 
+assert.ok(
+  manifest.unsupportedSiteCodePointRanges.includes("U+4337"),
+  "the ST manifest must continue to declare U+4337 unsupported"
+);
+
+for (const expected of rareHanFonts) {
+  const face = faceBlocks.find((block) =>
+    new RegExp(`font-family\\s*:\\s*["']${escapeRegExp(expected.family)}["']\\s*;`).test(block)
+  );
+  assert.ok(face, `missing rare Han @font-face for ${expected.family}`);
+  assert.match(
+    face,
+    new RegExp(
+      `url\\(["']?/fonts/${escapeRegExp(expected.file)}\\?v=${expected.sha256.slice(0, 12)}["']?\\)`
+    ),
+    `${expected.file} must use its content-derived cache key`
+  );
+  assert.match(face, /format\(["']woff2["']\)/);
+  assert.match(face, /font-style\s*:\s*normal\s*;/);
+  assert.match(face, /font-weight\s*:\s*400\s*;/);
+  assert.match(face, /font-display\s*:\s*swap\s*;/);
+  assert.match(face, /unicode-range\s*:\s*U\+4337\s*;/i);
+
+  const assetPath = path.join(root, "public", "fonts", expected.file);
+  assert.ok(fs.existsSync(assetPath), `missing ${expected.file}`);
+  const bytes = fs.readFileSync(assetPath);
+  assert.equal(bytes.subarray(0, 4).toString("ascii"), "wOF2", `${expected.file} is not WOFF2`);
+  assert.ok(bytes.length >= 500, `${expected.file} is implausibly small`);
+  assert.ok(bytes.length <= 5_000, `${expected.file} exceeds the single-glyph budget`);
+  const digest = crypto.createHash("sha256").update(bytes).digest("hex");
+  assert.equal(digest, expected.sha256, `${expected.file} digest changed`);
+  assert.ok(!hashes.has(digest), `${expected.file} duplicates another hosted font`);
+  hashes.add(digest);
+}
+
 const serifRule = /:global\(html\[data-reader-font="serif"\]\) \.root\s*{([\s\S]*?)}/.exec(readerCss)?.[1];
 const sansRule = /:global\(html\[data-reader-font="sans"\]\) \.root\s*{([\s\S]*?)}/.exec(readerCss)?.[1];
 assert.ok(serifRule, "missing serif reader rule");
@@ -145,6 +193,14 @@ assert.notEqual(propertyValue(serifRule, "--reader-body-family"), propertyValue(
 assert.doesNotMatch(sansRule, /UN Canon ST(?:Song|Fangsong|Kaiti)/);
 assert.match(readerCss, /\.body :global\(p\)\s*{[\s\S]*?font-family\s*:\s*var\(--reader-body-family\)\s*;/);
 assert.match(readerCss, /\.serifSample\s*{\s*font-family\s*:\s*var\(--f-cjk-serif\)\s*;/);
+assert.match(
+  readerCss,
+  /\.root :global\(\.rare-han\)\s*{[\s\S]*?font-family\s*:\s*["']UN Canon Rare Han Serif["']\s*;/
+);
+assert.match(
+  readerCss,
+  /html\[data-reader-font="sans"\][\s\S]*?\.rare-han[\s\S]*?font-family\s*:\s*["']UN Canon Rare Han Sans["']\s*;/
+);
 
 const corpusFiles = corpusRoots.flatMap((directory) => walkTextFiles(path.join(root, directory)));
 const publicText = path.join(root, "public", "llms.txt");
@@ -165,5 +221,5 @@ assert.equal(manifest.siteCodePointCount, siteCodePoints.size, "hosted CJK subse
 assert.equal(manifest.siteCodePointSha256, siteCodePointDigest, "hosted CJK subsets are stale; regenerate them");
 
 console.log(
-  `hosted CJK font contract passed (${manifest.subsetCodePointCount} code points across ${expectedFonts.length} WOFF2 files)`
+  `hosted CJK font contract passed (${manifest.subsetCodePointCount} corpus code points plus ${rareHanFonts.length} rare Han fallbacks)`
 );

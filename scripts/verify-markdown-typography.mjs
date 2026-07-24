@@ -51,4 +51,10 @@ const mathHtml = await renderMarkdown("Inline $E=mc^2$\n\n$$\n\\int_0^1 x^2\\,dx
 assert.match(mathHtml, /class="katex"/, "inline math must render with KaTeX");
 assert.match(mathHtml, /class="katex-display"/, "display math must render with KaTeX");
 
+const rareHanHtml = await renderMarkdown(`小\u4337应使用稳定的单字字体回退。`);
+assert.ok(
+  rareHanHtml.includes(`<span class="rare-han">\u4337</span>`),
+  "U+4337 must be wrapped for the cross-platform rare Han fallback"
+);
+
 console.log("markdown typography verification passed");
