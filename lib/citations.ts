@@ -1,4 +1,5 @@
 const SITE_ORIGIN = "https://un-canon.blog";
+const SITE_PUBLISHER = "西方負典編譯組";
 
 export const ZOTERO_ITEM_TYPES = [
   "blogPost",
@@ -233,6 +234,9 @@ export function mergeCitation(
     delete citation.blogTitle;
     delete citation.websiteType;
   }
+  if (citation.url?.startsWith(`${SITE_ORIGIN}/`)) {
+    citation.publisher = SITE_PUBLISHER;
+  }
   if (!citation.citationKey || !CITATION_KEY.test(citation.citationKey)) {
     fail(`${source}.citationKey`, "缺失或格式无效");
   }
@@ -291,6 +295,7 @@ export function pageCitationDefaults(input: {
     language: "zh-Hans",
     ...(input.abstractNote ? { abstractNote: input.abstractNote } : {}),
     ...(input.rights ? { rights: input.rights } : {}),
+    publisher: SITE_PUBLISHER,
     blogTitle: "西方負典的博客",
     websiteType: "博客",
   };
@@ -313,8 +318,7 @@ export function bookCitationDefaults(input: {
     url: `${SITE_ORIGIN}/books/${encodeURIComponent(input.slug)}`,
     language: "zh-Hans",
     ...(input.abstractNote ? { abstractNote: input.abstractNote } : {}),
-    publisher: "西方負典",
-    series: "西方負典文库",
+    publisher: SITE_PUBLISHER,
   };
 }
 
@@ -439,7 +443,7 @@ export function citationToBibtex(citation: CitationRecord): string {
   } else if (citation.itemType === "interview") {
     add("type", citation.interviewMedium);
   } else if (citation.itemType === "blogPost") {
-    add("type", citation.websiteType || "Blog post");
+    add("type", "blogpost");
   }
 
   add("isbn", citation.ISBN);
@@ -449,7 +453,6 @@ export function citationToBibtex(citation: CitationRecord): string {
   add("urldate", citation.accessDate, true);
   add("abstract", citation.abstractNote);
   add("language", citation.language);
-  add("copyright", citation.rights);
   add("note", citation.extra);
 
   const body = fields

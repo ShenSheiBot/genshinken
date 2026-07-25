@@ -59,7 +59,7 @@
 
 @font-face {
   font-family: "UN Canon STSong";
-  src: url("/fonts/un-canon-st-song.woff2?v=2368f030dbe3") format("woff2");
+  src: url("/fonts/un-canon-st-song.woff2?v=b521240cac6c") format("woff2");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -67,7 +67,7 @@
 
 @font-face {
   font-family: "UN Canon STFangsong";
-  src: url("/fonts/un-canon-st-fangsong.woff2?v=5d023b89cde8") format("woff2");
+  src: url("/fonts/un-canon-st-fangsong.woff2?v=0933c69e66b5") format("woff2");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -75,7 +75,7 @@
 
 @font-face {
   font-family: "UN Canon STKaiti";
-  src: url("/fonts/un-canon-st-kaiti.woff2?v=9f1c68126699") format("woff2");
+  src: url("/fonts/un-canon-st-kaiti.woff2?v=43612526032f") format("woff2");
   font-style: normal;
   font-weight: 400;
   font-display: swap;

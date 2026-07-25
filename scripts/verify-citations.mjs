@@ -18,6 +18,7 @@ const base = {
   date: "2026-07-24",
   url: "https://un-canon.blog/posts/notes",
   language: "en",
+  rights: "CC0 1.0 Universal",
 };
 
 const cases = [
@@ -98,7 +99,13 @@ for (const { citation, entry, zoteroType } of cases) {
   assert.match(bibtex, /title = \{Notes \\& Methods\}/);
   assert.match(bibtex, /year = \{2026\}/);
   assert.match(bibtex, /month = \{jul\}/);
+  assert.match(bibtex, /publisher = \{西方負典編譯組\}/);
+  assert.doesNotMatch(bibtex, /copyright\s*=/);
 }
+
+const blogBibtex = citationToBibtex(mergeCitation(cases[0].citation, undefined, "fixture:blogPost"));
+assert.match(blogBibtex, /type = \{blogpost\}/);
+assert.doesNotMatch(blogBibtex, /type = \{(?:博客|Blog post)\}/);
 
 const bookSectionBibtex = citationToBibtex(cases[2].citation);
 assert.match(bookSectionBibtex, /booktitle = \{Collected Metadata Studies\}/);
@@ -156,6 +163,10 @@ for (const book of bookManifests) {
   const bibtex = citationToBibtex(translationCitation);
   assert.ok(bibtex.startsWith("@book{"), `${book.slug} translation must export as @book`);
   assert.match(bibtex, new RegExp(`url = \\{https://un-canon\\.blog/books/${book.slug}\\}`));
+  assert.match(bibtex, /publisher = \{西方負典編譯組\}/);
+  assert.doesNotMatch(bibtex, /series = \{西方負典文库\}/);
+  assert.doesNotMatch(bibtex, /copyright\s*=/);
+  assert.doesNotMatch(bibtex, /note = \{Status: serializing\}/);
 }
 
 console.log(`引用校验通过：${cases.length} 种 Zotero 类型，${bookManifests.length} 本连载。`);
