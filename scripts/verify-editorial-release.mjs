@@ -2,15 +2,34 @@ import assert from "node:assert/strict";
 import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
-import matter from "gray-matter";
+import {
+  parseLegacyYamlFrontMatter,
+  parseYamlFrontMatter,
+} from "../lib/safe-front-matter.mjs";
 
 const base = (process.argv[2] || "http://localhost:3000").replace(/\/$/, "");
 
 // C3: 关键期望值从内容源（source/_topics、source/_books）派生，而非写死当前内容快照，
 // 使新增文章、调整策展顺序、增补 BibTeX 时，正确实现不再被误判为回归失败。
 const TOPIC_ITEM_PREFIX = { post: "/posts/", book: "/books/", media: "/media/" };
+function parsePostFrontMatter(source) {
+  const normalized = String(source).replace(/^\uFEFF/u, "");
+  if (/^---[^\r\n]*\r?(?:\n|$)/u.test(normalized)) {
+    return parseYamlFrontMatter(normalized);
+  }
+  const lines = normalized.split(/\r?\n/u);
+  const closingDelimiter = lines.findIndex((line) => /^---\s*$/u.test(line));
+  if (closingDelimiter < 0) {
+    return parseYamlFrontMatter(normalized, { required: false });
+  }
+  return parseLegacyYamlFrontMatter(
+    lines.slice(0, closingDelimiter).join("\n"),
+    lines.slice(closingDelimiter + 1).join("\n")
+  );
+}
+
 function curatedTopicPaths(slug) {
-  const { data } = matter(
+  const { data } = parseYamlFrontMatter(
     fs.readFileSync(path.join(process.cwd(), "source", "_topics", `${slug}.md`), "utf8")
   );
   const paths = [];
@@ -56,7 +75,7 @@ function flattenBookChapters(chapters, depth = 0) {
   ]);
 }
 function postLibraryFacets(slug) {
-  const { data } = matter(
+  const { data } = parsePostFrontMatter(
     fs.readFileSync(path.join(process.cwd(), "source", "_posts", `${slug}.md`), "utf8")
   );
   return {
@@ -69,7 +88,9 @@ function sourceLibraryRecords() {
   return fs.readdirSync(directory)
     .filter((file) => file.endsWith(".md"))
     .flatMap((file) => {
-      const { data } = matter(fs.readFileSync(path.join(directory, file), "utf8"));
+      const { data } = parsePostFrontMatter(
+        fs.readFileSync(path.join(directory, file), "utf8")
+      );
       if (data.draft === true) return [];
       const slug = String(data.slug || path.basename(file, ".md"));
       const section = String(data.section || "");
@@ -681,7 +702,7 @@ assert.ok(
   "shulgin-dni latestChapterId must identify a published catalogue entry"
 );
 
-const { data: mullahologyTopicData } = matter(
+const { data: mullahologyTopicData } = parseYamlFrontMatter(
   fs.readFileSync(path.join(process.cwd(), "source", "_topics", "mullahology.md"), "utf8")
 );
 const mullahologyGroups = mullahologyTopicData.groups ?? [];

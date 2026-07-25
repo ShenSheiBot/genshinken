@@ -7,8 +7,8 @@ import { site } from "@/lib/site";
 import { GLOBAL_NAV_ITEMS } from "@/lib/navigation";
 import { useArticleHeader } from "./ArticleHeader";
 import CreditLinks from "./CreditLinks";
+import { toggleTheme, useTheme } from "./useTheme";
 
-type Theme = "light" | "dark";
 type MobileSection = { key: string; title: string; level: number };
 type SectionRef = MobileSection & { el: HTMLElement; top: number; parentH2Key: string };
 
@@ -22,8 +22,7 @@ function ChevronIcon() {
 
 export default function TopBar() {
   const pathname = usePathname();
-  const [theme, setTheme] = useState<Theme>("light");
-  const [mounted, setMounted] = useState(false);
+  const theme = useTheme();
   const [sections, setSections] = useState<MobileSection[]>([]);
   const [activeHeadingKey, setActiveHeadingKey] = useState("");
   const [activeH2Key, setActiveH2Key] = useState("");
@@ -34,12 +33,6 @@ export default function TopBar() {
   const ah = useArticleHeader();
   const meta = ah?.meta ?? null;
   const revealed = !!(meta && ah?.revealed);
-
-  useEffect(() => {
-    const current = (document.documentElement.getAttribute("data-theme") as Theme) || "light";
-    setTheme(current);
-    setMounted(true);
-  }, []);
 
   useLayoutEffect(() => {
     const root = document.documentElement;
@@ -59,23 +52,6 @@ export default function TopBar() {
       delete root.dataset.readingChromeEntry;
     };
   }, [pathname]);
-
-  const toggle = () => {
-    setTheme((prev) => {
-      const next: Theme = prev === "light" ? "dark" : "light";
-      document.documentElement.setAttribute("data-theme", next);
-      document.documentElement.style.colorScheme = next;
-      document.querySelectorAll('meta[name="theme-color"]').forEach((meta) => {
-        meta.setAttribute("content", next === "dark" ? "#060605" : "#e8e7e3");
-      });
-      try {
-        localStorage.setItem("ub_theme", next);
-      } catch {
-        /* ignore */
-      }
-      return next;
-    });
-  };
 
   useEffect(() => {
     if (!meta) {
@@ -241,8 +217,8 @@ export default function TopBar() {
         ) : null}
       </div>
 
-      <button className="toggle" onClick={toggle} aria-label="切换明暗主题" title="切换明暗主题">
-        {mounted && theme === "dark" ? "☾" : "☼"}
+      <button className="toggle" onClick={toggleTheme} aria-label="切换明暗主题" title="切换明暗主题">
+        {theme === "dark" ? "☾" : "☼"}
       </button>
 
       {meta && sections.length > 0 && (

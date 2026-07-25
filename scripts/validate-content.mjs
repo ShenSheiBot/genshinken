@@ -1,11 +1,15 @@
+import assert from "node:assert/strict";
 import fs from "node:fs";
 import path from "node:path";
-import matter from "gray-matter";
 import remarkGfm from "remark-gfm";
 import remarkParse from "remark-parse";
 import { unified } from "unified";
 import { visit } from "unist-util-visit";
 import { CONTRIBUTORS } from "../lib/contributors.ts";
+import {
+  parseLegacyYamlFrontMatter,
+  parseYamlFrontMatter,
+} from "../lib/safe-front-matter.mjs";
 import {
   bookCitationDefaults,
   mergeCitation,
@@ -27,6 +31,18 @@ const slugPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const prohibitedMediaElement = /<\s*\/?\s*(?:iframe|video|audio|object|embed|script|style)\b/i;
 const inlineEventHandler = /\son[a-z][\w:-]*\s*=/i;
 const dangerousHtmlUrl = /\s(?:href|src)\s*=\s*["']?\s*(?:javascript|vbscript):/i;
+const protocolLessAngleLink = /<www\.[^<>\s]+>/iu;
+
+assert.match(
+  "<www.example.org/path>",
+  protocolLessAngleLink,
+  "the content gate must reject protocol-less angle-bracket links"
+);
+assert.doesNotMatch(
+  "<https://www.example.org/path>",
+  protocolLessAngleLink,
+  "valid HTTP(S) autolinks must remain accepted"
+);
 const errors = [];
 const warnings = [];
 
@@ -65,6 +81,9 @@ function validateUntrustedHtml(file, value, label) {
   if (dangerousHtmlUrl.test(value)) {
     report(errors, file, `${label} 不得包含 javascript:/vbscript: URL`);
   }
+  if (protocolLessAngleLink.test(value)) {
+    report(errors, file, `${label} 的尖括号链接必须包含 http:// 或 https:// 协议`);
+  }
 }
 
 // 正文本地图片存在性校验：src 映射到 public/ 下（渲染管线把 attachments/x 与 /x
@@ -84,8 +103,8 @@ function checkLocalAsset(file, rawSrc, line) {
 function parseFrontMatter(file, raw) {
   const source = raw.replace(/^\uFEFF/, "");
   try {
-    if (/^\s*---\r?\n/.test(source)) {
-      const parsed = matter(source);
+    if (/^---[^\r\n]*\r?(?:\n|$)/.test(source)) {
+      const parsed = parseYamlFrontMatter(source);
       return { data: parsed.data, header: parsed.matter, content: parsed.content };
     }
 
@@ -97,7 +116,7 @@ function parseFrontMatter(file, raw) {
     }
 
     const legacyHeader = lines.slice(0, closingDelimiter).join("\n");
-    const parsed = matter(`---\n${legacyHeader}\n---\n`);
+    const parsed = parseLegacyYamlFrontMatter(legacyHeader);
     return {
       data: parsed.data,
       header: legacyHeader,
@@ -564,6 +583,8 @@ const records = files.map((file) => {
     const citation = mergeCitation(
       pageCitationDefaults({
         slug,
+        section,
+        script,
         title: nonEmptyString(data.title) ? data.title.trim() : file.slice(0, -3),
         subtitle: nonEmptyString(data.subtitle) ? data.subtitle.trim() : undefined,
         creators,
@@ -686,6 +707,7 @@ const records = files.map((file) => {
   return {
     file,
     slug,
+    script,
     section,
     draft,
     relatedPosts,
@@ -749,6 +771,10 @@ const bookRecords = jsonFiles(booksDirectory)
     const id = stableRecordId(data, "id", file);
     const slug = stableRecordId(data, "slug", file);
     const documentSlug = stableRecordId(data, "documentSlug", file);
+    const script = requiredRecordString(data, "script", file);
+    if (script && !validHanScripts.has(script)) {
+      report(errors, file, "script 必须显式填写 hans 或 hant");
+    }
     const title = requiredRecordString(data, "title", file);
     requiredRecordString(data, "subtitle", file);
     requiredRecordString(data, "description", file);
@@ -796,6 +822,7 @@ const bookRecords = jsonFiles(booksDirectory)
       const translation = mergeCitation(
         bookCitationDefaults({
           slug,
+          script,
           title,
           subtitle: nonEmptyString(data.subtitle) ? data.subtitle.trim() : undefined,
           creators: [
@@ -924,6 +951,7 @@ const bookRecords = jsonFiles(booksDirectory)
       id,
       slug,
       documentSlug,
+      script,
       publishedAt,
       updatedAt,
       startAnchor,
@@ -954,6 +982,13 @@ for (const book of bookRecords) {
     if (document.draft) report(errors, book.file, `documentSlug 不得指向草稿：${book.documentSlug}`);
     if (document.section === "multimedia") {
       report(errors, book.file, `documentSlug 必须指向非多媒体文稿：${book.documentSlug}`);
+    }
+    if (book.script && document.script && book.script !== document.script) {
+      report(
+        errors,
+        book.file,
+        `script (${book.script}) 必须与正文 script (${document.script}) 一致`
+      );
     }
     if (book.updatedAt && document.updatedISO && book.updatedAt !== document.updatedISO) {
       report(

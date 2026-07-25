@@ -15,6 +15,7 @@ import {
   type CitationCreator,
   type CitationRecord,
 } from "./citations";
+import { isHanScript, type HanScript } from "./han-script";
 
 const BOOKS_DIR = path.join(process.cwd(), "source", "_books");
 const STABLE_ID = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
@@ -53,6 +54,7 @@ export interface Book {
   subtitle: string;
   description: string;
   documentSlug: string;
+  script: HanScript;
   status: BookStatus;
   authors: string[];
   translators: string[];
@@ -253,6 +255,11 @@ function parseManifest(value: unknown, source: string): Book {
   const title = requiredString(value, "title", source);
   const subtitle = requiredString(value, "subtitle", source);
   const description = requiredString(value, "description", source);
+  const rawScript = requiredString(value, "script", source);
+  if (!isHanScript(rawScript)) {
+    fail(source, "script", "must be hans or hant");
+  }
+  const script = rawScript;
   const publishedAt = dateString(value, "publishedAt", source);
   const citationCreators: CitationCreator[] = [
     ...authors.map((name): CitationCreator => ({
@@ -275,6 +282,7 @@ function parseManifest(value: unknown, source: string): Book {
   const translationCitation = mergeCitation(
     bookCitationDefaults({
       slug,
+      script,
       title,
       subtitle,
       creators: citationCreators,
@@ -308,6 +316,7 @@ function parseManifest(value: unknown, source: string): Book {
     subtitle,
     description,
     documentSlug: stableId(value, "documentSlug", source),
+    script,
     status: status as BookStatus,
     authors,
     translators,

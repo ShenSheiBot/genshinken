@@ -267,6 +267,66 @@
   grid-column: 1 / -1;
 }
 
+.citationActions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 14px;
+  font-family: var(--f-mono);
+  font-size: var(--text-sm);
+}
+
+.citationCopy {
+  display: grid;
+  min-width: 0;
+}
+
+.citationActions button,
+.citationActions > a {
+  display: inline-flex;
+  min-width: 0;
+  min-height: 38px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 12px;
+  border: 1px solid var(--hair-strong);
+  color: var(--ink-soft);
+  background: transparent;
+  font: inherit;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: color 160ms ease, border-color 160ms ease;
+}
+
+.citationActions button:hover,
+.citationActions > a:hover {
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+.citationActions button:focus-visible,
+.citationActions > a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.citationActions button > span,
+.citationActions > a > span {
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.citationCopy > span[role="status"] {
+  color: var(--accent);
+  font-size: var(--text-2xs);
+}
+
+.citationCopy > span[role="status"]:empty {
+  display: none;
+}
+
 .destinations {
   margin-top: auto;
   padding-top: 42px;

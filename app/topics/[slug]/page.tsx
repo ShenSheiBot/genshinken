@@ -11,7 +11,7 @@ import {
 } from "@/lib/topics";
 import styles from "../topics.module.css";
 
-export const dynamicParams = true;
+export const dynamicParams = false;
 
 const STATUS_LABEL: Record<TopicStatus, string> = {
   ongoing: "持续更新",

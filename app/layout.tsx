@@ -106,13 +106,13 @@ const siteJsonLd = {
 
 // 首屏前同步设定 data-theme，避免暗色闪烁
 const themeScript = `(function(){try{var t=localStorage.getItem('ub_theme');if(t!=='dark'&&t!=='light'){t='light';}var d=document.documentElement;d.setAttribute('data-theme',t);d.style.colorScheme=t;document.querySelectorAll('meta[name="theme-color"]').forEach(function(m){m.setAttribute('content',t==='dark'?'#060605':'#e8e7e3');});}catch(e){document.documentElement.setAttribute('data-theme','light');document.documentElement.style.colorScheme='light';}})();`;
-const hanScriptBootstrap = `(function(){var f='${DEFAULT_HAN_SCRIPT}',k='${HAN_SCRIPT_STORAGE_KEY}',s=f;try{var v=localStorage.getItem(k);if(v==='hans'||v==='hant'){s=v;}else{var a=(navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'']);for(var i=0;i<a.length;i++){var p=String(a[i]).toLowerCase().split('-');if(p[0]!=='zh')continue;if(p.indexOf('hant')>-1){s='hant';break;}if(p.indexOf('hans')>-1){s='hans';break;}var r=p.find(function(x,j){return j>0&&(/^[a-z]{2}$/.test(x)||/^\\d{3}$/.test(x));});if(r==='tw'||r==='hk'||r==='mo'){s='hant';break;}if(r==='cn'||r==='sg'){s='hans';break;}}}}catch(e){}document.documentElement.setAttribute('data-chinese-script',s);})();`;
+const hanScriptBootstrap = `(function(){var f='${DEFAULT_HAN_SCRIPT}',k='${HAN_SCRIPT_STORAGE_KEY}',s=f;try{var v=localStorage.getItem(k);if(v==='hans'||v==='hant'){s=v;}else{var a=(navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'']);for(var i=0;i<a.length;i++){var p=String(a[i]).toLowerCase().split('-');if(p[0]!=='zh')continue;if(p.indexOf('hant')>-1){s='hant';break;}if(p.indexOf('hans')>-1){s='hans';break;}var r=p.find(function(x,j){return j>0&&(/^[a-z]{2}$/.test(x)||/^\\d{3}$/.test(x));});if(r==='tw'||r==='hk'||r==='mo'){s='hant';break;}if(r==='cn'||r==='sg'){s='hans';break;}}}}catch(e){}document.documentElement.setAttribute('data-chinese-script-requested',s);})();`;
 
 export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="zh" data-theme="light" data-chinese-script={DEFAULT_HAN_SCRIPT} className={fontVariables} suppressHydrationWarning>
+    <html lang="zh" data-theme="light" data-chinese-script={DEFAULT_HAN_SCRIPT} data-chinese-script-requested={DEFAULT_HAN_SCRIPT} className={fontVariables} suppressHydrationWarning>
       <head>
         <meta name="darkreader-lock" />
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />

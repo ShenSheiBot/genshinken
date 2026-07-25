@@ -1,3 +1,6 @@
+import type { EditorialSection } from "./editorial";
+import type { HanScript } from "./han-script";
+
 const SITE_ORIGIN = "https://un-canon.blog";
 const SITE_PUBLISHER = "西方負典編譯組";
 
@@ -86,6 +89,16 @@ export interface CitationRecord {
 export type CitationInput = Partial<CitationRecord>;
 export type CitationMetadata = Record<string, string | string[]>;
 
+const NATIVE_CREATOR_TYPES: Record<ZoteroItemType, readonly ZoteroCreatorType[]> = {
+  blogPost: ["author", "translator"],
+  book: ["author", "editor", "translator"],
+  bookSection: ["author", "editor", "translator"],
+  journalArticle: ["author", "editor", "translator"],
+  preprint: ["author", "editor", "translator"],
+  thesis: ["author"],
+  interview: ["interviewee", "interviewer", "translator"],
+};
+
 const STRING_FIELDS = [
   "citationKey",
   "title",
@@ -124,6 +137,63 @@ const STRING_FIELDS = [
   "blogTitle",
   "websiteType",
 ] as const satisfies readonly (keyof CitationRecord)[];
+
+type CitationStringField = (typeof STRING_FIELDS)[number];
+
+/**
+ * Zotero Web API v3 fields supported by this site's deliberately small
+ * CitationRecord subset. Keep this fail-closed: a field accepted for the
+ * wrong item type would otherwise appear valid while an exporter drops it.
+ */
+const ZOTERO_STRING_FIELDS_BY_ITEM_TYPE = {
+  blogPost: [
+    "citationKey", "title", "abstractNote", "blogTitle", "websiteType",
+    "date", "DOI", "url", "accessDate", "ISSN", "shortTitle", "language",
+    "rights", "extra",
+  ],
+  book: [
+    "citationKey", "title", "abstractNote", "series", "seriesNumber",
+    "volume", "edition", "date", "publisher", "place", "numPages", "ISBN",
+    "DOI", "url", "accessDate", "ISSN", "archive", "archiveLocation",
+    "shortTitle", "language", "rights", "extra",
+  ],
+  bookSection: [
+    "citationKey", "title", "abstractNote", "bookTitle", "series",
+    "seriesNumber", "volume", "edition", "date", "publisher", "place",
+    "pages", "ISBN", "DOI", "url", "accessDate", "ISSN", "archive",
+    "archiveLocation", "shortTitle", "language", "rights", "extra",
+  ],
+  journalArticle: [
+    "citationKey", "title", "abstractNote", "publicationTitle", "publisher",
+    "place", "date", "volume", "issue", "pages", "series", "seriesTitle",
+    "journalAbbreviation", "DOI", "url", "accessDate", "ISSN", "archive",
+    "archiveLocation", "shortTitle", "language", "rights", "extra",
+  ],
+  preprint: [
+    "citationKey", "title", "abstractNote", "genre", "repository",
+    "archiveID", "place", "date", "series", "seriesNumber", "DOI", "url",
+    "accessDate", "archive", "archiveLocation", "shortTitle", "language",
+    "rights", "extra",
+  ],
+  thesis: [
+    "citationKey", "title", "abstractNote", "thesisType", "university",
+    "place", "date", "series", "seriesNumber", "numPages", "DOI", "ISBN",
+    "url", "accessDate", "ISSN", "archive", "archiveLocation", "shortTitle",
+    "language", "rights", "extra",
+  ],
+  interview: [
+    "citationKey", "title", "abstractNote", "interviewMedium", "date",
+    "publisher", "place", "DOI", "url", "accessDate", "archive",
+    "archiveLocation", "shortTitle", "language", "rights", "extra",
+  ],
+} as const satisfies Record<ZoteroItemType, readonly CitationStringField[]>;
+
+const ZOTERO_PUBLISHER_ITEM_TYPES = new Set<ZoteroItemType>([
+  "book",
+  "bookSection",
+  "journalArticle",
+  "interview",
+]);
 
 const ALLOWED_FIELDS = new Set<string>(["itemType", "creators", ...STRING_FIELDS]);
 const CITATION_KEY = /^[^\s,{}]+$/u;
@@ -234,7 +304,10 @@ export function mergeCitation(
     delete citation.blogTitle;
     delete citation.websiteType;
   }
-  if (citation.url?.startsWith(`${SITE_ORIGIN}/`)) {
+  if (
+    citation.url?.startsWith(`${SITE_ORIGIN}/`)
+    && ZOTERO_PUBLISHER_ITEM_TYPES.has(citation.itemType)
+  ) {
     citation.publisher = SITE_PUBLISHER;
   }
   if (!citation.citationKey || !CITATION_KEY.test(citation.citationKey)) {
@@ -246,6 +319,25 @@ export function mergeCitation(
 }
 
 export function validateCitationSemantics(citation: CitationRecord, source: string): void {
+  const allowedFields = new Set<CitationStringField>(
+    ZOTERO_STRING_FIELDS_BY_ITEM_TYPE[citation.itemType]
+  );
+  for (const field of STRING_FIELDS) {
+    if (citation[field] !== undefined && !allowedFields.has(field)) {
+      fail(source, `${citation.itemType} 不支持 Zotero 字段：${field}`);
+    }
+  }
+  for (const creator of citation.creators) {
+    const native = NATIVE_CREATOR_TYPES[citation.itemType].includes(creator.creatorType);
+    const supportedFallback =
+      citation.itemType === "thesis" && creator.creatorType === "translator";
+    if (!native && !supportedFallback) {
+      fail(
+        source,
+        `${citation.itemType} 不支持 creatorType: ${creator.creatorType}`
+      );
+    }
+  }
   if (citation.itemType === "journalArticle" && !citation.publicationTitle) {
     fail(source, "journalArticle 必须填写 publicationTitle");
   }
@@ -276,8 +368,14 @@ export function fullCitationTitle(title: string, subtitle?: string): string {
   return subtitle?.trim() ? `${title}：${subtitle.trim()}` : title;
 }
 
+function citationLanguage(script: HanScript): "zh-Hans" | "zh-Hant" {
+  return script === "hant" ? "zh-Hant" : "zh-Hans";
+}
+
 export function pageCitationDefaults(input: {
   slug: string;
+  section: EditorialSection;
+  script: HanScript;
   title: string;
   subtitle?: string;
   creators: CitationCreator[];
@@ -291,11 +389,10 @@ export function pageCitationDefaults(input: {
     title: fullCitationTitle(input.title, input.subtitle),
     creators: input.creators,
     date: input.date,
-    url: `${SITE_ORIGIN}/posts/${encodeURIComponent(input.slug)}`,
-    language: "zh-Hans",
+    url: `${SITE_ORIGIN}/${input.section === "multimedia" ? "media" : "posts"}/${encodeURIComponent(input.slug)}`,
+    language: citationLanguage(input.script),
     ...(input.abstractNote ? { abstractNote: input.abstractNote } : {}),
     ...(input.rights ? { rights: input.rights } : {}),
-    publisher: SITE_PUBLISHER,
     blogTitle: "西方負典的博客",
     websiteType: "博客",
   };
@@ -303,6 +400,7 @@ export function pageCitationDefaults(input: {
 
 export function bookCitationDefaults(input: {
   slug: string;
+  script?: HanScript;
   title: string;
   subtitle?: string;
   creators: CitationCreator[];
@@ -316,7 +414,7 @@ export function bookCitationDefaults(input: {
     creators: input.creators,
     date: input.date,
     url: `${SITE_ORIGIN}/books/${encodeURIComponent(input.slug)}`,
-    language: "zh-Hans",
+    language: citationLanguage(input.script ?? "hans"),
     ...(input.abstractNote ? { abstractNote: input.abstractNote } : {}),
     publisher: SITE_PUBLISHER,
   };
@@ -325,6 +423,11 @@ export function bookCitationDefaults(input: {
 function creatorName(creator: CitationCreator): string {
   if (typeof creator.name === "string") return creator.name;
   return [creator.firstName, creator.lastName].filter(Boolean).join(" ");
+}
+
+function creatorExtraName(creator: CitationCreator): string {
+  if (typeof creator.name === "string") return creator.name;
+  return [creator.lastName, creator.firstName].filter(Boolean).join(" || ");
 }
 
 function bibtexEscape(value: string): string {
@@ -413,13 +516,13 @@ export function citationToBibtex(citation: CitationRecord): string {
     add("year", citation.date);
   }
 
+  add("series", citation.series);
   if (citation.itemType === "journalArticle") {
     add("journal", citation.publicationTitle);
     add("volume", citation.volume);
     add("number", citation.issue);
     add("pages", citation.pages?.replace(/[-\u2012-\u2015\u2053]+/gu, "--"));
   } else {
-    add("series", citation.series);
     add("number", citation.seriesNumber);
   }
   if (citation.itemType === "bookSection") {
@@ -427,8 +530,14 @@ export function citationToBibtex(citation: CitationRecord): string {
     add("pages", citation.pages?.replace(/[-\u2012-\u2015\u2053]+/gu, "--"));
   }
 
+  if (citation.itemType === "book" || citation.itemType === "bookSection") {
+    add("volume", citation.volume);
+  }
   add("edition", citation.edition);
-  add("publisher", citation.publisher);
+  add(
+    "publisher",
+    citation.url?.startsWith(`${SITE_ORIGIN}/`) ? SITE_PUBLISHER : citation.publisher
+  );
   add("address", citation.place);
   if (citation.itemType === "thesis") add("school", citation.university);
 
@@ -514,7 +623,6 @@ export function citationToMetadata(citation: CitationRecord): CitationMetadata {
   addMetadata(metadata, "z:seriesNumber", citation.seriesNumber);
   addMetadata(metadata, "z:edition", citation.edition);
   addMetadata(metadata, "z:numPages", citation.numPages);
-  addMetadata(metadata, "z:extra", citation.extra);
   addMetadata(metadata, "z:archive", citation.archive);
   addMetadata(metadata, "z:archiveLocation", citation.archiveLocation);
 
@@ -524,13 +632,41 @@ export function citationToMetadata(citation: CitationRecord): CitationMetadata {
   const translators = citation.creators
     .filter((creator) => creator.creatorType === "translator")
     .map(creatorName);
+  const nativeTranslators =
+    citation.itemType === "thesis" ? [] : translators;
   const editors = citation.creators
     .filter((creator) => creator.creatorType === "editor")
     .map(creatorName);
-  addMetadata(metadata, "citation_author", authors);
-  addMetadata(metadata, "citation_editor", editors);
-  addMetadata(metadata, "z:translators", translators);
-  addMetadata(metadata, "z:editors", editors);
+  const extraCreatorLines =
+    citation.itemType === "thesis"
+      ? citation.creators
+          .filter((creator) => creator.creatorType === "translator")
+          .map((creator) => `Translator: ${creatorExtraName(creator)}`)
+      : [];
+  addMetadata(
+    metadata,
+    "z:extra",
+    [...extraCreatorLines, citation.extra].filter(Boolean).join("\n")
+  );
+  const requiresRdfCreators =
+    nativeTranslators.length > 0
+    || citation.creators.some(
+      (creator) =>
+        creator.creatorType === "interviewee"
+        || creator.creatorType === "interviewer"
+    );
+  if (requiresRdfCreators) {
+    // Embedded Metadata imports all creator roles below through Zotero's RDF
+    // translator. Do not mix them with Highwire citation_author/editor tags:
+    // addHighwireMetadata() replaces all RDF creators as soon as either
+    // Highwire creator list is present, dropping unmatched translators.
+    addMetadata(metadata, "dc:creator", authors);
+    addMetadata(metadata, "z:translators", nativeTranslators);
+    addMetadata(metadata, "so:editor", editors);
+  } else {
+    addMetadata(metadata, "citation_author", authors);
+    addMetadata(metadata, "citation_editor", editors);
+  }
 
   if (citation.itemType === "journalArticle") {
     addMetadata(metadata, "citation_journal_title", citation.publicationTitle);

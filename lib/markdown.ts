@@ -18,6 +18,7 @@ import rehypeSlug from "rehype-slug";
 import rehypeStringify from "rehype-stringify";
 import { visit } from "unist-util-visit";
 import type { Root, Element } from "hast";
+import { sanitizePublicContentHtml } from "./media-material-runtime.mjs";
 
 const SIZE_TITLE = /^\s*=(\d+)x(\d+)\s*$/; // Typora/Hexo 图片尺寸标注
 
@@ -582,5 +583,5 @@ const processor = unified()
 export async function renderMarkdown(md: string): Promise<string> {
   const { markdown, sourceNotes } = extractSourceNotes(md);
   const file = await processor.process(markdown);
-  return String(file) + await renderSourceNotes(sourceNotes);
+  return sanitizePublicContentHtml(String(file) + await renderSourceNotes(sourceNotes));
 }

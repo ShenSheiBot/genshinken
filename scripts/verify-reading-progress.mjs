@@ -1,4 +1,6 @@
 import assert from "node:assert/strict";
+import fs from "node:fs";
+import path from "node:path";
 import {
   READING_PROGRESS_ENABLED_KEY,
   fingerprintReadingText,
@@ -6,6 +8,7 @@ import {
   readReadingProgress,
   readReadingProgressEnabled,
   readingProgressKey,
+  remoteReadingProgressSupersedesPending,
   removeAllReadingProgress,
   removeReadingProgress,
   writeReadingProgress,
@@ -91,6 +94,32 @@ assert.equal(writeReadingProgressEnabled(true), true);
 assert.equal(readReadingProgressEnabled(), true);
 
 const validRecord = recordFor(slug);
+assert.equal(
+  remoteReadingProgressSupersedesPending(
+    recordFor(slug, { savedAt: validRecord.savedAt + 1 }),
+    validRecord
+  ),
+  true,
+  "a newer remote record must supersede a pending local write"
+);
+assert.equal(
+  remoteReadingProgressSupersedesPending(validRecord, validRecord),
+  true,
+  "an equal remote timestamp must deterministically supersede a pending local write"
+);
+assert.equal(
+  remoteReadingProgressSupersedesPending(
+    recordFor(slug, { savedAt: validRecord.savedAt - 1 }),
+    validRecord
+  ),
+  false,
+  "an older remote record must not discard a newer pending local write"
+);
+assert.equal(
+  remoteReadingProgressSupersedesPending(validRecord, null),
+  true,
+  "a remote record must be accepted when no local write is pending"
+);
 assert.equal(writeReadingProgress(slug, validRecord), true);
 assert.deepEqual(readReadingProgress(slug), validRecord);
 assert.equal(readingProgressKey(slug), "ub_reading:v1:post:serial%2Fchapter-one");
@@ -129,6 +158,42 @@ assert.equal(writeReadingProgress(slug, validRecord), false);
 assert.equal(writeReadingProgressEnabled(false), false);
 assert.equal(removeReadingProgress(slug), false);
 assert.equal(removeAllReadingProgress(), null);
+
+const hookSource = fs.readFileSync(
+  path.join(
+    process.cwd(),
+    "app",
+    "components",
+    "reading-edition",
+    "useReadingProgress.ts"
+  ),
+  "utf8"
+);
+assert.match(
+  hookSource,
+  /if \(!enabled\) \{[\s\S]*?clearSaveTimer\(\);[\s\S]*?latestRecordRef\.current = null;[\s\S]*?userInteractedRef\.current = false;/u,
+  "cross-tab disable must discard pending writes and their interaction state"
+);
+assert.match(
+  hookSource,
+  /else if \(event\.key === readingProgressKey\(slug\)\)[\s\S]*?if \(!record\) \{[\s\S]*?clearSaveTimer\(\);[\s\S]*?latestRecordRef\.current = null;[\s\S]*?clearBoundary\(\);/u,
+  "cross-tab record removal must not be resurrected by a pending local save"
+);
+assert.match(
+  hookSource,
+  /else if \(remoteReadingProgressSupersedesPending\(record, latestRecordRef\.current\)\) \{[\s\S]*?clearSaveTimer\(\);[\s\S]*?latestRecordRef\.current = null;[\s\S]*?userInteractedRef\.current = false;/u,
+  "a non-empty cross-tab update must cancel an older pending local save"
+);
+assert.match(
+  hookSource,
+  /if \(persisted && remoteReadingProgressSupersedesPending\(persisted, record\)\)/u,
+  "flush must use the same newer-or-equal arbitration as the storage event"
+);
+assert.match(
+  hookSource,
+  /Math\.max\(Date\.now\(\), \(previousRecord\?\.savedAt \?\? 0\) \+ 1\)/u,
+  "same-tab records must receive monotonically increasing timestamps"
+);
 
 delete globalThis.window;
 console.log("reading progress verification passed");

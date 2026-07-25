@@ -41,4 +41,33 @@ const missingScript = fs.readdirSync(postsDirectory)
   });
 assert.deepEqual(missingScript, [], "every post must declare its source writing system");
 
-console.log("繁简偏好、OpenCC 通用转换与文章源文字系统校验通过。");
+const readerChromeSource = fs.readFileSync(
+  path.join(process.cwd(), "app", "prototype", "reading", "[slug]", "ReadingPrototypeChrome.tsx"),
+  "utf8"
+);
+for (const attribute of ["alt", "title", "aria-label"]) {
+  assert.match(
+    readerChromeSource,
+    new RegExp(`hanSourceAttribute\\(item, "${attribute}"\\)`),
+    `reading media fingerprints must use the immutable ${attribute} source`
+  );
+}
+
+const sourceMedia = ["img", "/figure.png", "", "", "", "", "配图", "后台说明", "打开配图"];
+const convertedMedia = sourceMedia.map((value) => s2t(value));
+assert.notDeepEqual(
+  convertedMedia,
+  sourceMedia,
+  "the regression fixture must contain attributes changed by Han conversion"
+);
+const mediaFingerprintInput = (rendered) => [
+  ...rendered.slice(0, 6),
+  ...sourceMedia.slice(6),
+].join(":");
+assert.equal(
+  mediaFingerprintInput(sourceMedia),
+  mediaFingerprintInput(convertedMedia),
+  "media fingerprint input must remain stable before and after Han conversion"
+);
+
+console.log("繁简偏好、OpenCC 转换方向、文章源文字系统与媒体指纹契约验证通过。");

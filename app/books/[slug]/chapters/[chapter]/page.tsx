@@ -9,7 +9,7 @@ import {
   isPublishedBookChapter,
 } from "@/lib/books";
 
-export const dynamicParams = true;
+export const dynamicParams = false;
 
 export function generateStaticParams() {
   return getAllBooks().flatMap((book) =>

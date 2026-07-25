@@ -8,8 +8,11 @@
 import fs from "node:fs";
 import path from "node:path";
 import { createHash } from "node:crypto";
-import matter from "gray-matter";
 import { renderMarkdown } from "./markdown";
+import {
+  parseLegacyYamlFrontMatter,
+  parseYamlFrontMatter,
+} from "./safe-front-matter.mjs";
 import { isEditorialSection, type EditorialSection } from "./editorial";
 import { assignPostNumbers } from "./post-numbering";
 import {
@@ -80,8 +83,8 @@ export interface Post extends PostSummary {
 function parseFrontMatter(raw: string): { data: Record<string, unknown>; content: string } {
   const stripped = raw.replace(/^﻿/, "");
   // 标准写法：以 --- 开头
-  if (/^\s*---\r?\n/.test(stripped)) {
-    const parsed = matter(stripped);
+  if (/^---[^\r\n]*\r?(?:\n|$)/.test(stripped)) {
+    const parsed = parseYamlFrontMatter(stripped);
     return { data: parsed.data as Record<string, unknown>, content: parsed.content };
   }
   // 无前缀写法：找到第一行单独的 ---
@@ -93,7 +96,7 @@ function parseFrontMatter(raw: string): { data: Record<string, unknown>; content
   const head = lines.slice(0, idx).join("\n");
   const body = lines.slice(idx + 1).join("\n");
   try {
-    const parsed = matter(`---\n${head}\n---\n${body}`);
+    const parsed = parseLegacyYamlFrontMatter(head, body);
     return { data: parsed.data as Record<string, unknown>, content: parsed.content };
   } catch {
     // YAML 解析失败时退回到逐行 key: value
@@ -350,6 +353,8 @@ async function loadRaw(): Promise<Post[]> {
       const citation = mergeCitation(
         pageCitationDefaults({
           slug,
+          section,
+          script,
           title,
           subtitle,
           creators: citationCreators,
@@ -452,6 +457,23 @@ export async function getAllPostsFull(): Promise<Post[]> {
 export async function getAllSlugs(): Promise<string[]> {
   return (await all())
     .filter((p) => !p.draft)
+    .map((p) => p.slug);
+}
+
+/**
+ * Parameters accepted by dynamic post/media routes. Production builds expose
+ * only published records; `next dev` also enumerates drafts so the existing
+ * local preview workflow keeps working with `dynamicParams = false`.
+ */
+export async function getPreviewablePosts(): Promise<PostSummary[]> {
+  return (await all())
+    .filter((p) => allowDraftPreview() || !p.draft)
+    .map(strip);
+}
+
+export async function getPreviewableSlugs(): Promise<string[]> {
+  return (await all())
+    .filter((p) => allowDraftPreview() || !p.draft)
     .map((p) => p.slug);
 }
 

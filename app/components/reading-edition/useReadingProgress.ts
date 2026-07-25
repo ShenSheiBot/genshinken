@@ -7,6 +7,7 @@ import {
   readReadingProgress,
   readReadingProgressEnabled,
   readingProgressKey,
+  remoteReadingProgressSupersedesPending,
   removeAllReadingProgress,
   removeReadingProgress,
   writeReadingProgress,
@@ -344,6 +345,14 @@ export function useReadingProgress({
     clearSaveTimer();
     const record = latestRecordRef.current;
     if (!active || !trackingEnabledRef.current || !writeReadyRef.current || !userInteractedRef.current || !record) return;
+    const persisted = readReadingProgress(slug);
+    if (persisted && remoteReadingProgressSupersedesPending(persisted, record)) {
+      latestRecordRef.current = null;
+      recordRef.current = persisted;
+      userInteractedRef.current = false;
+      setHasCurrentRecord(true);
+      return;
+    }
     if (writeReadingProgress(slug, record)) {
       recordRef.current = record;
       setHasCurrentRecord(true);
@@ -445,11 +454,32 @@ export function useReadingProgress({
       if (event.key === READING_PROGRESS_ENABLED_KEY) {
         const enabled = event.newValue !== "false";
         trackingEnabledRef.current = enabled;
+        writeReadyRef.current = enabled && restorePhaseRef.current === "done";
         setTrackingEnabledState(enabled);
-        if (!enabled) restoredReadingRef.current = null;
+        if (!enabled) {
+          clearSaveTimer();
+          latestRecordRef.current = null;
+          restoredReadingRef.current = null;
+          userInteractedRef.current = false;
+        } else {
+          userInteractedRef.current = false;
+        }
       } else if (event.key === readingProgressKey(slug)) {
         const record = readReadingProgress(slug);
-        recordRef.current = record;
+        if (!record) {
+          recordRef.current = null;
+          clearSaveTimer();
+          latestRecordRef.current = null;
+          restoredReadingRef.current = null;
+          userInteractedRef.current = false;
+          clearBoundary();
+        } else if (remoteReadingProgressSupersedesPending(record, latestRecordRef.current)) {
+          clearSaveTimer();
+          recordRef.current = record;
+          latestRecordRef.current = null;
+          restoredReadingRef.current = null;
+          userInteractedRef.current = false;
+        }
         setHasCurrentRecord(record !== null);
       }
     };
@@ -475,7 +505,7 @@ export function useReadingProgress({
       document.removeEventListener("visibilitychange", onVisibilityChange);
       flush();
     };
-  }, [active, flush, slug]);
+  }, [active, clearBoundary, clearSaveTimer, flush, slug]);
 
   useEffect(() => {
     if (!active || !preferenceReady || !measurement || measurement.resource !== slug || measurement.revision !== revision || restorePhaseRef.current !== "pending") return;
@@ -563,7 +593,7 @@ export function useReadingProgress({
     const previousRecord = latestRecordRef.current ?? recordRef.current;
     const sameRevisionCompleted = previousRecord?.revision === revision && previousRecord.status === "completed";
     const completed = crossedEnd || sameRevisionCompleted;
-    const now = Date.now();
+    const now = Math.max(Date.now(), (previousRecord?.savedAt ?? 0) + 1);
     const sameRevision = previousRecord?.revision === revision;
     const lastBlock = currentMeasurement.blocks.at(-1);
 

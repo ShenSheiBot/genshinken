@@ -5,7 +5,7 @@ import type { FormEvent, MouseEvent as ReactMouseEvent, PointerEvent as ReactPoi
 import { createPortal } from "react-dom";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import type { Credit } from "@/lib/posts";
 import type { HanScript } from "@/lib/han-script";
 import { site } from "@/lib/site";
@@ -23,8 +23,10 @@ import {
 } from "@/app/components/reading-edition/useReadingProgress";
 import {
   hanSourceText,
+  hanSourceAttribute,
   useHanScriptConversion,
 } from "@/app/components/useHanScriptConversion";
+import { toggleTheme, useTheme } from "@/app/components/useTheme";
 import styles from "./reading-prototype.module.css";
 
 type Variant = "dossier" | "folio";
@@ -176,9 +178,9 @@ function fingerprintReadingBlock(owner: HTMLElement, nodes: Text[]): string {
     item.getAttribute("srcset") ?? "",
     item.getAttribute("data-srcset") ?? "",
     item.getAttribute("poster") ?? "",
-    item.getAttribute("alt") ?? "",
-    item.getAttribute("title") ?? "",
-    item.getAttribute("aria-label") ?? "",
+    hanSourceAttribute(item, "alt") ?? "",
+    hanSourceAttribute(item, "title") ?? "",
+    hanSourceAttribute(item, "aria-label") ?? "",
   ].join(":"));
   return fingerprintReadingText(
     `${fingerprintReadingNodes(nodes, owner.tagName, hanSourceText)}:${signature.join("|")}`,
@@ -381,9 +383,11 @@ export default function ReadingPrototypeChrome({
   const [figureIndexMode, setFigureIndexMode] = useState<FigureIndexMode>("toc");
   const [sheet, setSheet] = useState<Sheet>(null);
   const [sheetClosing, setSheetClosing] = useState(false);
+  const [settingsCloseLeft, setSettingsCloseLeft] = useState<number | null>(null);
   const [readerSize, setReaderSize] = useState<ReaderSize>("medium");
   const [readerFont, setReaderFont] = useState<ReaderFont>("serif");
-  const [dark, setDark] = useState(false);
+  const theme = useTheme();
+  const dark = theme === "dark";
   const [desktopDesk, setDesktopDesk] = useState(false);
   const [slots, setSlots] = useState<DeskSlots | null>(null);
   const [annotations, setAnnotations] = useState<ReferenceItem[]>([]);
@@ -403,6 +407,7 @@ export default function ReadingPrototypeChrome({
   const {
     script: hanScript,
     busy: hanScriptBusy,
+    statusMessage: hanScriptStatus,
     conversionRevision,
     toggleScript: toggleHanScript,
   } = useHanScriptConversion({ sourceScript, contentRevision });
@@ -423,8 +428,11 @@ export default function ReadingPrototypeChrome({
   const lastNoteAnchor = useRef<HTMLAnchorElement | null>(null);
   const lastSheetTrigger = useRef<HTMLElement | null>(null);
   const sheetRef = useRef<HTMLElement | null>(null);
+  const settingsButtonRef = useRef<HTMLButtonElement | null>(null);
   const sheetCloseTimerRef = useRef<number | null>(null);
   const exitNavigationTimerRef = useRef<number | null>(null);
+  const referenceScrollCleanupRef = useRef<(() => void) | null>(null);
+  const directReferenceScrollCleanupRef = useRef<(() => void) | null>(null);
   const exitingReadingRef = useRef(false);
   const directReferencePositionRef = useRef<{
     button: HTMLButtonElement;
@@ -437,6 +445,10 @@ export default function ReadingPrototypeChrome({
     figureScrollRequestRef.current += 1;
     figureScrollCleanupRef.current?.();
     figureScrollCleanupRef.current = null;
+    referenceScrollCleanupRef.current?.();
+    referenceScrollCleanupRef.current = null;
+    directReferenceScrollCleanupRef.current?.();
+    directReferenceScrollCleanupRef.current = null;
     if (sheetCloseTimerRef.current != null) window.clearTimeout(sheetCloseTimerRef.current);
     if (exitNavigationTimerRef.current != null) window.clearTimeout(exitNavigationTimerRef.current);
     delete document.documentElement.dataset.readingChromeExit;
@@ -527,6 +539,7 @@ export default function ReadingPrototypeChrome({
     measurement: readingMeasurement,
     viewportAnchor: visualAnchor,
   });
+  const readerStatus = hanScriptStatus || (isEdition ? readingProgressStatus : "");
 
   const setVariant = useCallback((next: Variant) => {
     const params = new URLSearchParams(window.location.search);
@@ -543,7 +556,6 @@ export default function ReadingPrototypeChrome({
     setReaderFont(font);
     document.documentElement.dataset.readerSize = size;
     document.documentElement.dataset.readerFont = font;
-    setDark(document.documentElement.dataset.theme === "dark");
     return () => {
       delete document.documentElement.dataset.readerSize;
       delete document.documentElement.dataset.readerFont;
@@ -826,7 +838,18 @@ export default function ReadingPrototypeChrome({
   }, [editingReference]);
 
   const scrollReferenceIntoView = useCallback((surface: ReferenceSurface, kind: ReferenceKind, id: string) => {
-    requestAnimationFrame(() => requestAnimationFrame(() => {
+    referenceScrollCleanupRef.current?.();
+    let firstFrame = 0;
+    let secondFrame = 0;
+    const cleanup = () => {
+      cancelAnimationFrame(firstFrame);
+      cancelAnimationFrame(secondFrame);
+      if (referenceScrollCleanupRef.current === cleanup) referenceScrollCleanupRef.current = null;
+    };
+    referenceScrollCleanupRef.current = cleanup;
+    firstFrame = requestAnimationFrame(() => {
+      secondFrame = requestAnimationFrame(() => {
+        cleanup();
       const scope = surface === "sheet" ? sheetRef.current : document.getElementById("reading-right-rail");
       const node = scope?.querySelector<HTMLElement>(`[data-reference-kind="${kind}"][data-reference-id="${CSS.escape(id)}"]`);
       const scroller = node?.parentElement;
@@ -840,7 +863,8 @@ export default function ReadingPrototypeChrome({
       } else if (itemRect.bottom > scrollerRect.bottom) {
         scroller.scrollTo({ top: scroller.scrollTop + itemRect.bottom - scrollerRect.bottom, behavior: reduce ? "auto" : "smooth" });
       }
-    }));
+      });
+    });
   }, []);
 
   const selectReference = useCallback((kind: ReferenceKind, id: string, surface: ReferenceSurface = "desk", ensureVisible = true) => {
@@ -884,23 +908,53 @@ export default function ReadingPrototypeChrome({
     if (scroller) referenceSnapSuppressedUntilRef.current.set(scroller, performance.now() + 1000);
     selectReference(kind, id, surface, false);
     if (!position) return;
-    requestAnimationFrame(() => requestAnimationFrame(() => {
-      const scope = surface === "sheet" ? sheetRef.current : document.getElementById("reading-right-rail");
-      const currentItem = scope?.querySelector<HTMLElement>(`[data-reference-kind="${kind}"][data-reference-id="${CSS.escape(id)}"]`);
-      const currentScroller = currentItem?.parentElement;
-      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      const started = performance.now();
-      const restorePosition = () => {
-        if (currentScroller) currentScroller.scrollTop = position.scrollTop;
-        window.scrollTo(position.pageX, position.pageY);
-      };
-      const restoreDuringTransition = () => {
-        restorePosition();
-        if (!reduce && performance.now() - started < 320) requestAnimationFrame(restoreDuringTransition);
-      };
-      restoreDuringTransition();
-      if (!reduce) window.setTimeout(restorePosition, 520);
-    }));
+    directReferenceScrollCleanupRef.current?.();
+    let firstFrame = 0;
+    let secondFrame = 0;
+    let transitionFrame = 0;
+    let finalTimer: number | null = null;
+    let cancelled = false;
+    const cleanup = () => {
+      cancelled = true;
+      cancelAnimationFrame(firstFrame);
+      cancelAnimationFrame(secondFrame);
+      cancelAnimationFrame(transitionFrame);
+      if (finalTimer !== null) window.clearTimeout(finalTimer);
+      if (directReferenceScrollCleanupRef.current === cleanup) {
+        directReferenceScrollCleanupRef.current = null;
+      }
+    };
+    directReferenceScrollCleanupRef.current = cleanup;
+    firstFrame = requestAnimationFrame(() => {
+      secondFrame = requestAnimationFrame(() => {
+        if (cancelled) return;
+        const scope = surface === "sheet" ? sheetRef.current : document.getElementById("reading-right-rail");
+        const currentItem = scope?.querySelector<HTMLElement>(`[data-reference-kind="${kind}"][data-reference-id="${CSS.escape(id)}"]`);
+        const currentScroller = currentItem?.parentElement;
+        const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        const started = performance.now();
+        const restorePosition = () => {
+          if (cancelled) return;
+          if (currentScroller) currentScroller.scrollTop = position.scrollTop;
+          window.scrollTo(position.pageX, position.pageY);
+        };
+        const restoreDuringTransition = () => {
+          if (cancelled) return;
+          restorePosition();
+          if (!reduce && performance.now() - started < 320) {
+            transitionFrame = requestAnimationFrame(restoreDuringTransition);
+          }
+        };
+        restoreDuringTransition();
+        if (reduce) cleanup();
+        else {
+          finalTimer = window.setTimeout(() => {
+            restorePosition();
+            cleanup();
+          }, 520);
+        }
+      });
+    });
   }, [selectReference]);
 
   useEffect(() => {
@@ -1018,6 +1072,29 @@ export default function ReadingPrototypeChrome({
     return () => { document.body.style.overflow = previous; };
   }, [sheetOpen]);
 
+  useLayoutEffect(() => {
+    if (sheet !== "settings" || sheetClosing) return;
+    const syncSettingsClose = () => {
+      const button = settingsButtonRef.current;
+      const panel = sheetRef.current;
+      if (button && panel) {
+        // The sheet's slide transform makes fixed descendants use the sheet
+        // itself as their containing block. Convert the trigger's viewport
+        // coordinate into that stable, untransformed local coordinate.
+        setSettingsCloseLeft(
+          button.getBoundingClientRect().left - panel.offsetLeft
+        );
+      }
+    };
+    syncSettingsClose();
+    window.addEventListener("resize", syncSettingsClose);
+    window.visualViewport?.addEventListener("resize", syncSettingsClose);
+    return () => {
+      window.removeEventListener("resize", syncSettingsClose);
+      window.visualViewport?.removeEventListener("resize", syncSettingsClose);
+    };
+  }, [sheet, sheetClosing]);
+
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
       if (event.key === "Escape" && sheet) {
@@ -1064,6 +1141,9 @@ export default function ReadingPrototypeChrome({
       sheetCloseTimerRef.current = null;
     }
     setSheetClosing(false);
+    if (next === "settings" && trigger) {
+      setSettingsCloseLeft(null);
+    }
     if (trigger) lastSheetTrigger.current = trigger;
     if (next !== "annotation" && next !== "source") lastNoteAnchor.current = null;
     setReferenceTrail([]);
@@ -1563,28 +1643,14 @@ export default function ReadingPrototypeChrome({
     document.documentElement.dataset.readerFont = font;
     writeLocalSetting("ub_reader_font", font);
   };
-  const toggleTheme = () => {
-    const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
-    const root = document.documentElement;
-    root.dataset.theme = next;
-    // 与 TopBar 权威切换 / 首屏 bootstrap 保持一致：同步原生 color-scheme 与 theme-color，
-    // 否则阅读页（生产主模板）切深色后滚动条/表单控件仍按 light 渲染、移动端地址栏色不变。
-    root.style.colorScheme = next;
-    document.querySelectorAll('meta[name="theme-color"]').forEach((meta) =>
-      meta.setAttribute("content", next === "dark" ? "#060605" : "#e8e7e3")
-    );
-    writeLocalSetting("ub_theme", next);
-    setDark(next === "dark");
-  };
-
   return (
     <>
       {portalDesk}
       {lineMarkerPortal}
       {readingUpdateBoundaryPortal}
-      {isEdition && readingProgressStatus && (
-        <p className={styles.readingResumeStatus} role="status" aria-live="polite">
-          {readingProgressStatus}
+      {readerStatus && (
+        <p id="reader-status" className={styles.readingResumeStatus} role="status" aria-live="polite">
+          {readerStatus}
         </p>
       )}
       <header className={styles.runningHeader}>
@@ -1607,6 +1673,7 @@ export default function ReadingPrototypeChrome({
             disabled={hanScriptBusy}
             aria-busy={hanScriptBusy || undefined}
             aria-pressed={hanScript === "hant"}
+            aria-describedby={hanScriptStatus ? "reader-status" : undefined}
             aria-label={hanScript === "hant" ? "切換為簡體中文" : "切换为繁体中文"}
             title={hanScript === "hant" ? "切換為簡體中文" : "切换为繁体中文"}
           >
@@ -1615,7 +1682,7 @@ export default function ReadingPrototypeChrome({
               <span className={styles.hanSimplified}>简</span>
             </span>
           </button>
-          <button className={styles.settingsButton} type="button" onClick={(event) => openSheet("settings", event.currentTarget)} aria-label="阅读习惯" aria-haspopup="dialog" aria-expanded={sheet === "settings"}>
+          <button ref={settingsButtonRef} className={styles.settingsButton} type="button" onClick={(event) => openSheet("settings", event.currentTarget)} aria-label="阅读习惯" aria-haspopup="dialog" aria-expanded={sheet === "settings"}>
             <span className={styles.settingsGlyph} aria-hidden="true"><i /><i /><i /></span>
           </button>
         </div>
@@ -1633,7 +1700,12 @@ export default function ReadingPrototypeChrome({
                 {previousReference && (sheet === "annotation" || sheet === "source") && <button type="button" className={styles.referenceBack} onClick={returnToPreviousReference}>← 返回{previousReference.kind === "annotation" ? "注释" : "文献"} {previousReference.label}</button>}
                 <div><h2>{sheet === "toc" ? "文章目录" : sheet === "settings" ? "阅读习惯" : sheet === "annotation" ? "注释" : "文献"}</h2></div>
               </div>
-              <div className={styles.sheetHeaderActions}>
+              <div
+                className={styles.sheetHeaderActions}
+                style={sheet === "settings" && settingsCloseLeft !== null
+                  ? { left: `${settingsCloseLeft}px`, right: "auto" }
+                  : undefined}
+              >
                 {(sheet === "annotation" || sheet === "source") && referenceCounter(sheet, "sheet")}
                 <button type="button" onClick={closeSheet} aria-label="关闭">×</button>
               </div>

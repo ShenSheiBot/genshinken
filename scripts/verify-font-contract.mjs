@@ -3,6 +3,9 @@ import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { ConverterBuilder } from "opencc-js/core";
+import * as cn2t from "opencc-js/preset/cn2t";
+import * as t2cn from "opencc-js/preset/t2cn";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const globalsPath = path.join(root, "app", "globals.css");
@@ -97,8 +100,13 @@ const globalsCss = readUtf8(globalsPath);
 const readerCss = readUtf8(readerPath);
 assert.ok(fs.existsSync(manifestPath), "missing generated CJK font manifest; run scripts/build-cjk-font-subsets.py");
 const manifest = JSON.parse(readUtf8(manifestPath));
-assert.equal(manifest.version, 2, "unsupported CJK font manifest version");
-assert.equal(manifest.strategy, "site-corpus", "CJK font subset strategy changed unexpectedly");
+assert.equal(manifest.version, 3, "unsupported CJK font manifest version");
+assert.equal(
+  manifest.strategy,
+  "site-corpus-opencc-closure",
+  "CJK font subsets must cover the rendered corpus and its OpenCC conversion closure"
+);
+assert.equal(manifest.conversion, "opencc-js:cn2t+t2cn");
 assert.ok(manifest.subsetCodePointCount >= 2_500, "hosted CJK subsets are unexpectedly small");
 
 const faceBlocks = [...globalsCss.matchAll(/@font-face\s*{[\s\S]*?}/g)].map((match) => match[0]);
@@ -205,13 +213,46 @@ assert.match(
 const corpusFiles = corpusRoots.flatMap((directory) => walkTextFiles(path.join(root, directory)));
 const publicText = path.join(root, "public", "llms.txt");
 if (fs.existsSync(publicText)) corpusFiles.push(publicText);
-const siteCodePoints = new Set([...alwaysInclude].map((character) => character.codePointAt(0)));
-for (const file of corpusFiles) {
-  for (const character of readUtf8(file)) {
-    const codePoint = character.codePointAt(0);
-    if (isCjkTextCodePoint(codePoint)) siteCodePoints.add(codePoint);
-  }
+assert.equal(
+  manifest.corpusFileCount,
+  corpusFiles.length,
+  "the CJK corpus file inventory is stale; regenerate the subsets"
+);
+const sourceText = [alwaysInclude, ...corpusFiles.map(readUtf8)].join("\n");
+const sourceCodePoints = new Set();
+for (const character of sourceText) {
+  const codePoint = character.codePointAt(0);
+  if (isCjkTextCodePoint(codePoint)) sourceCodePoints.add(codePoint);
 }
+const simplifiedToTraditional = ConverterBuilder(cn2t)({ from: "cn", to: "t" });
+const traditionalToSimplified = ConverterBuilder(t2cn)({ from: "t", to: "cn" });
+const convertedText =
+  simplifiedToTraditional(sourceText) + "\n" + traditionalToSimplified(sourceText);
+const siteCodePoints = new Set(sourceCodePoints);
+for (const character of convertedText) {
+  const codePoint = character.codePointAt(0);
+  if (isCjkTextCodePoint(codePoint)) siteCodePoints.add(codePoint);
+}
+const codePointDigest = (codePoints) =>
+  crypto
+    .createHash("sha256")
+    .update(
+      [...codePoints]
+        .sort((left, right) => left - right)
+        .map((codePoint) => codePoint.toString(16).toUpperCase())
+        .join(",")
+    )
+    .digest("hex");
+assert.equal(
+  manifest.sourceCodePointCount,
+  sourceCodePoints.size,
+  "the source corpus fingerprint is stale"
+);
+assert.equal(
+  manifest.sourceCodePointSha256,
+  codePointDigest(sourceCodePoints),
+  "the source corpus fingerprint is stale"
+);
 const siteCodePointPayload = [...siteCodePoints]
   .sort((left, right) => left - right)
   .map((codePoint) => codePoint.toString(16).toUpperCase())
@@ -219,7 +260,17 @@ const siteCodePointPayload = [...siteCodePoints]
 const siteCodePointDigest = crypto.createHash("sha256").update(siteCodePointPayload).digest("hex");
 assert.equal(manifest.siteCodePointCount, siteCodePoints.size, "hosted CJK subsets are stale; regenerate them");
 assert.equal(manifest.siteCodePointSha256, siteCodePointDigest, "hosted CJK subsets are stale; regenerate them");
+assert.ok(
+  siteCodePoints.size > sourceCodePoints.size,
+  "OpenCC closure must contribute code points beyond the raw corpus"
+);
+for (const character of "軟頭髮後臺幹頁網絡閱讀記錄開啓專題連") {
+  assert.ok(
+    siteCodePoints.has(character.codePointAt(0)),
+    `OpenCC conversion output ${character} must be included in the font corpus`
+  );
+}
 
 console.log(
-  `hosted CJK font contract passed (${manifest.subsetCodePointCount} corpus code points plus ${rareHanFonts.length} rare Han fallbacks)`
+  `hosted CJK font contract passed (${manifest.subsetCodePointCount} OpenCC-closed corpus code points plus ${rareHanFonts.length} rare Han fallbacks)`
 );

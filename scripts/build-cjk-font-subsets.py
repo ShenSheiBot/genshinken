@@ -17,6 +17,7 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
+import subprocess
 from typing import Iterable
 
 from fontTools.subset import Options, Subsetter
@@ -26,6 +27,7 @@ from fontTools.ttLib import TTFont
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DIR = ROOT / "public" / "fonts"
 MANIFEST_PATH = OUTPUT_DIR / "cjk-font-manifest.json"
+CONVERTER_PATH = ROOT / "scripts" / "convert-cjk-font-corpus.mjs"
 TEXT_EXTENSIONS = {".css", ".json", ".md", ".mjs", ".ts", ".tsx", ".txt"}
 CORPUS_ROOTS = (ROOT / "app", ROOT / "lib", ROOT / "source")
 ALWAYS_INCLUDE = "西方負典华文宋体仿宋楷体衬线无衬线，。；：？！“”‘’（）《》〈〉【】——……·"
@@ -64,15 +66,43 @@ def text_files() -> list[Path]:
     return sorted(files)
 
 
-def site_code_points(files: Iterable[Path]) -> set[int]:
-    code_points = {ord(character) for character in ALWAYS_INCLUDE}
+def corpus_text(files: Iterable[Path]) -> str:
+    parts = [ALWAYS_INCLUDE]
     for path in files:
-        code_points.update(
-            ord(character)
-            for character in path.read_text(encoding="utf-8")
-            if is_cjk_text_code_point(ord(character))
+        parts.append(path.read_text(encoding="utf-8"))
+    return "\n".join(parts)
+
+
+def text_code_points(text: str) -> set[int]:
+    return {
+        ord(character)
+        for character in text
+        if is_cjk_text_code_point(ord(character))
+    }
+
+
+def opencc_converted_text(text: str) -> str:
+    completed = subprocess.run(
+        ["node", str(CONVERTER_PATH)],
+        input=text,
+        capture_output=True,
+        check=False,
+        encoding="utf-8",
+    )
+    if completed.returncode != 0:
+        raise SystemExit(
+            "OpenCC corpus conversion failed:\n"
+            + (completed.stderr.strip() or f"node exited with {completed.returncode}")
         )
-    return code_points
+    return completed.stdout
+
+
+def site_code_points(files: Iterable[Path]) -> tuple[set[int], set[int]]:
+    source_text = corpus_text(files)
+    source_points = text_code_points(source_text)
+    converted_points = text_code_points(opencc_converted_text(source_text))
+    code_points = source_points | converted_points
+    return source_points, code_points
 
 
 def sha256(path: Path) -> str:
@@ -162,7 +192,7 @@ def main() -> None:
         raise SystemExit(f"missing source fonts: {', '.join(str(path) for path in missing)}")
 
     corpus_files = text_files()
-    site_points = site_code_points(corpus_files)
+    source_points, site_points = site_code_points(corpus_files)
     common_supported: set[int] | None = None
     for _, source, _ in sources:
         supported = font_code_points(source)
@@ -191,13 +221,16 @@ def main() -> None:
 
     manifest = {
         "corpusFileCount": len(corpus_files),
+        "conversion": "opencc-js:cn2t+t2cn",
         "fonts": manifest_fonts,
+        "sourceCodePointCount": len(source_points),
+        "sourceCodePointSha256": code_point_digest(source_points),
         "siteCodePointCount": len(site_points),
         "siteCodePointSha256": code_point_digest(site_points),
-        "strategy": "site-corpus",
+        "strategy": "site-corpus-opencc-closure",
         "subsetCodePointCount": len(subset_points),
         "unsupportedSiteCodePointRanges": compact_ranges(unsupported_site_points),
-        "version": 2,
+        "version": 3,
     }
     MANIFEST_PATH.write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2, sort_keys=True) + "\n",

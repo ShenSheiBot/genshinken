@@ -28,7 +28,7 @@ import BookReadingActions from "../BookReadingActions";
 import BookResources from "../BookResources";
 import styles from "../books.module.css";
 
-export const dynamicParams = true;
+export const dynamicParams = false;
 
 function ChapterCatalogue({
   book,

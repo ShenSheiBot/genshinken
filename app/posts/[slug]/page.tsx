@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound, permanentRedirect } from "next/navigation";
-import { getAllPosts, getAllSlugs, getPostBySlug, type CreditRole } from "@/lib/posts";
+import { getAllPosts, getPostBySlug, getPreviewableSlugs, type CreditRole } from "@/lib/posts";
 import { site } from "@/lib/site";
 import { postPath } from "@/lib/editorial";
 import { getTopicMembershipsForPost } from "@/lib/topics";
@@ -16,10 +16,10 @@ import {
   splitArticle,
 } from "@/app/components/reading-edition/ReadingEdition";
 
-export const dynamicParams = true;
+export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  const slugs = await getAllSlugs();
+  const slugs = await getPreviewableSlugs();
   return slugs.map((slug) => ({ slug }));
 }
 

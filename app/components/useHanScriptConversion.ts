@@ -55,21 +55,33 @@ function localePreset(module: {
 
 async function loadConverter(source: HanScript): Promise<ConverterFunction> {
   if (source === "hans") {
-    hansToHant ??= Promise.all([
-      import("opencc-js/core"),
-      import("opencc-js/preset/cn2t"),
-    ]).then(([core, preset]) =>
-      core.ConverterBuilder(localePreset(preset))({ from: "cn", to: "t" })
-    );
+    if (!hansToHant) {
+      const loading = Promise.all([
+        import("opencc-js/core"),
+        import("opencc-js/preset/cn2t"),
+      ]).then(([core, preset]) =>
+        core.ConverterBuilder(localePreset(preset))({ from: "cn", to: "t" })
+      );
+      hansToHant = loading;
+      void loading.catch(() => {
+        if (hansToHant === loading) hansToHant = null;
+      });
+    }
     return hansToHant;
   }
 
-  hantToHans ??= Promise.all([
-    import("opencc-js/core"),
-    import("opencc-js/preset/t2cn"),
-  ]).then(([core, preset]) =>
-    core.ConverterBuilder(localePreset(preset))({ from: "t", to: "cn" })
-  );
+  if (!hantToHans) {
+    const loading = Promise.all([
+      import("opencc-js/core"),
+      import("opencc-js/preset/t2cn"),
+    ]).then(([core, preset]) =>
+      core.ConverterBuilder(localePreset(preset))({ from: "t", to: "cn" })
+    );
+    hantToHans = loading;
+    void loading.catch(() => {
+      if (hantToHans === loading) hantToHans = null;
+    });
+  }
   return hantToHans;
 }
 
@@ -191,6 +203,15 @@ export function hanSourceText(node: Text): string {
   return trackedText.get(node)?.source ?? node.data;
 }
 
+/** Media fingerprints use immutable source attributes rather than converted UI text. */
+export function hanSourceAttribute(
+  element: Element,
+  attribute: AttributeName
+): string | null {
+  return trackedAttributes.get(element)?.get(attribute)?.source
+    ?? element.getAttribute(attribute);
+}
+
 export function useHanScriptConversion({
   sourceScript,
   contentRevision,
@@ -199,32 +220,46 @@ export function useHanScriptConversion({
   contentRevision: string;
 }) {
   const [script, setScript] = useState<HanScript>(sourceScript);
+  const [requestedScript, setRequestedScript] = useState<HanScript>(sourceScript);
   const [busy, setBusy] = useState(false);
+  const [statusMessage, setStatusMessage] = useState("");
   const [conversionRevision, setConversionRevision] = useState(0);
   const mounted = useRef(false);
+  const pendingPersistScript = useRef<HanScript | null>(null);
+  const preserveFailureStatus = useRef(false);
 
   useEffect(() => {
     mounted.current = true;
-    const declared = document.documentElement.dataset.chineseScript;
+    const declared = document.documentElement.dataset.chineseScriptRequested;
     const initial = isHanScript(declared)
       ? declared
       : preferredHanScript(readSavedScript(), navigatorLanguages());
-    document.documentElement.dataset.chineseScript = initial;
-    setScript(initial);
+    document.documentElement.dataset.chineseScript = sourceScript;
+    document.documentElement.dataset.chineseScriptRequested = initial;
+    setScript(sourceScript);
+    setRequestedScript(initial);
+    setStatusMessage("");
+    preserveFailureStatus.current = false;
 
     const syncStorage = (event: StorageEvent) => {
       if (event.key !== HAN_SCRIPT_STORAGE_KEY) return;
       const next = isHanScript(event.newValue)
         ? event.newValue
         : browserHanScript(navigatorLanguages());
-      document.documentElement.dataset.chineseScript = next;
-      setScript(next);
+      pendingPersistScript.current = null;
+      preserveFailureStatus.current = false;
+      setStatusMessage("");
+      document.documentElement.dataset.chineseScriptRequested = next;
+      setRequestedScript(next);
     };
     const syncBrowser = () => {
       if (isHanScript(readSavedScript())) return;
       const next = browserHanScript(navigatorLanguages());
-      document.documentElement.dataset.chineseScript = next;
-      setScript(next);
+      pendingPersistScript.current = null;
+      preserveFailureStatus.current = false;
+      setStatusMessage("");
+      document.documentElement.dataset.chineseScriptRequested = next;
+      setRequestedScript(next);
     };
 
     window.addEventListener("storage", syncStorage);
@@ -236,7 +271,7 @@ export function useHanScriptConversion({
       document.documentElement.lang = "zh";
       delete document.documentElement.dataset.chineseConverting;
     };
-  }, []);
+  }, [sourceScript]);
 
   useEffect(() => {
     const root = document.querySelector<HTMLElement>(CONVERSION_ROOT);
@@ -244,23 +279,27 @@ export function useHanScriptConversion({
 
     let cancelled = false;
     let observer: MutationObserver | null = null;
+    const keepFailureStatus = preserveFailureStatus.current
+      && requestedScript === sourceScript;
+    preserveFailureStatus.current = false;
     document.documentElement.dataset.chineseConverting = "true";
     setBusy(true);
 
     void (async () => {
-      const converter = script === sourceScript
+      const converter = requestedScript === sourceScript
         ? null
         : await loadConverter(sourceScript);
       if (cancelled) return;
 
       renderSubtree(root, root, converter);
-      const languageTag = hanScriptLanguageTag(script);
+      const languageTag = hanScriptLanguageTag(requestedScript);
       root.lang = languageTag;
       root.querySelectorAll<HTMLElement>(CONVERSION_LANG_TARGET).forEach((element) => {
         element.lang = languageTag;
       });
       document.documentElement.lang = languageTag;
-      document.documentElement.dataset.chineseScript = script;
+      document.documentElement.dataset.chineseScript = requestedScript;
+      document.documentElement.dataset.chineseScriptRequested = requestedScript;
 
       observer = new MutationObserver((records) => {
         records.forEach((record) => {
@@ -288,24 +327,54 @@ export function useHanScriptConversion({
 
       delete document.documentElement.dataset.chineseConverting;
       if (mounted.current) {
+        if (pendingPersistScript.current === requestedScript) {
+          writeSavedScript(requestedScript);
+          pendingPersistScript.current = null;
+        }
+        setScript(requestedScript);
+        if (!keepFailureStatus) setStatusMessage("");
         setBusy(false);
         setConversionRevision((revision) => revision + 1);
       }
     })().catch(() => {
+      if (cancelled) return;
+      renderSubtree(root, root, null);
+      const sourceLanguageTag = hanScriptLanguageTag(sourceScript);
+      root.lang = sourceLanguageTag;
+      root.querySelectorAll<HTMLElement>(CONVERSION_LANG_TARGET).forEach((element) => {
+        element.lang = sourceLanguageTag;
+      });
+      document.documentElement.lang = sourceLanguageTag;
+      document.documentElement.dataset.chineseScript = sourceScript;
+      document.documentElement.dataset.chineseScriptRequested = sourceScript;
       delete document.documentElement.dataset.chineseConverting;
-      if (mounted.current) setBusy(false);
+      pendingPersistScript.current = null;
+      preserveFailureStatus.current = true;
+      if (mounted.current) {
+        setScript(sourceScript);
+        setRequestedScript(sourceScript);
+        setStatusMessage(
+          sourceScript === "hans"
+            ? "繁体转换未能完成，已保留简体原文；可以重试。"
+            : "简体转换未能完成，已保留繁体原文；可以重试。"
+        );
+        setBusy(false);
+        setConversionRevision((revision) => revision + 1);
+      }
     });
 
     return () => {
       cancelled = true;
       observer?.disconnect();
     };
-  }, [contentRevision, script, sourceScript]);
+  }, [contentRevision, requestedScript, sourceScript]);
 
   const selectScript = useCallback((next: HanScript) => {
-    writeSavedScript(next);
-    document.documentElement.dataset.chineseScript = next;
-    setScript(next);
+    pendingPersistScript.current = next;
+    preserveFailureStatus.current = false;
+    setStatusMessage("");
+    document.documentElement.dataset.chineseScriptRequested = next;
+    setRequestedScript(next);
   }, []);
 
   const toggleScript = useCallback(() => {
@@ -315,6 +384,7 @@ export function useHanScriptConversion({
   return {
     script,
     busy,
+    statusMessage,
     conversionRevision,
     selectScript,
     toggleScript,

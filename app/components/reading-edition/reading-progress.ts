@@ -78,6 +78,13 @@ export function nativeScrollRestorationHasPriority(type: string | undefined): bo
   return type === "back_forward" || type === "reload";
 }
 
+export function remoteReadingProgressSupersedesPending(
+  remote: ReadingProgressRecord,
+  pending: ReadingProgressRecord | null
+): boolean {
+  return pending === null || remote.savedAt >= pending.savedAt;
+}
+
 export function readReadingProgress(slug: string): ReadingProgressRecord | null {
   try {
     const raw = window.localStorage.getItem(readingProgressKey(slug));

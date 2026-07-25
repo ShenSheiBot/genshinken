@@ -1,7 +1,7 @@
 import { getAllBooks, getBookBySlug } from "@/lib/books";
 import { citationToBibtex } from "@/lib/citations";
 
-export const dynamicParams = true;
+export const dynamicParams = false;
 
 export function generateStaticParams() {
   return getAllBooks().map((book) => ({ slug: book.slug }));

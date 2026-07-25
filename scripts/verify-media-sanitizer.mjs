@@ -42,4 +42,13 @@ assert.doesNotMatch(topicClean, /<(?:script|style|iframe|video|audio|object|embe
 assert.doesNotMatch(topicClean, /javascript:|topicXss/i);
 assert.match(topicClean, /<p>专题导语<\/p>/);
 
+const pageCommentClean = sanitizePublicContentHtml(
+  "<p>前文<!-- p.006 -->后文<!-- arbitrary comment --></p>"
+);
+assert.equal(
+  pageCommentClean,
+  "<p>前文<!-- p.006 -->后文</p>",
+  "numeric source-page comments must survive in place while arbitrary comments are removed"
+);
+
 console.log("media material sanitizer verification passed");

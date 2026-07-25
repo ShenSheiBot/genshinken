@@ -6,6 +6,7 @@ import {
   citationToBibtex,
   citationToMetadata,
   mergeCitation,
+  pageCitationDefaults,
   parseCitationInput,
 } from "../lib/citations.ts";
 
@@ -28,7 +29,7 @@ const cases = [
     zoteroType: "blogPost",
   },
   {
-    citation: { ...base, itemType: "book", ISBN: "978-1-4028-9462-6" },
+    citation: { ...base, itemType: "book", volume: "2", ISBN: "978-1-4028-9462-6" },
     entry: "@book{",
     zoteroType: "book",
   },
@@ -47,6 +48,7 @@ const cases = [
       ...base,
       itemType: "journalArticle",
       publicationTitle: "Journal of Exact Metadata",
+      series: "Methods Series",
       volume: "12",
       issue: "3",
       pages: "10-19",
@@ -107,12 +109,140 @@ const blogBibtex = citationToBibtex(mergeCitation(cases[0].citation, undefined, 
 assert.match(blogBibtex, /type = \{blogpost\}/);
 assert.doesNotMatch(blogBibtex, /type = \{(?:博客|Blog post)\}/);
 
+const translatedCitation = {
+  ...base,
+  itemType: "journalArticle",
+  publicationTitle: "Journal of Exact Metadata",
+  creators: [
+    author,
+    { creatorType: "editor", name: "Margaret Hamilton" },
+    { creatorType: "translator", name: "Grace Hopper" },
+  ],
+};
+const translatedMetadata = citationToMetadata(translatedCitation);
+assert.deepEqual(
+  translatedMetadata["dc:creator"],
+  ["Ada Lovelace"],
+  "translated items must carry authors through RDF creator metadata"
+);
+assert.deepEqual(
+  translatedMetadata["z:translators"],
+  ["Grace Hopper"],
+  "translated items must carry translators through RDF creator metadata"
+);
+assert.deepEqual(
+  translatedMetadata["so:editor"],
+  ["Margaret Hamilton"],
+  "translated items must carry editors through Zotero's supported RDF editor predicate"
+);
+assert.ok(
+  !Object.hasOwn(translatedMetadata, "citation_author")
+    && !Object.hasOwn(translatedMetadata, "citation_editor"),
+  "translated items must not mix Highwire creators with RDF creators because Zotero replaces the latter"
+);
+assert.match(
+  citationToBibtex(translatedCitation),
+  /translator = \{\{Grace Hopper\}\}/,
+  "the Zotero metadata fix must not remove translators from BibTeX"
+);
+assert.deepEqual(
+  citationToMetadata(base).citation_author,
+  ["Ada Lovelace"],
+  "author-only items may retain broadly compatible Highwire creator metadata"
+);
+
+const translatedThesis = mergeCitation(
+  {
+    ...cases[5].citation,
+    creators: [
+      author,
+      { creatorType: "translator", firstName: "Grace", lastName: "Hopper" },
+    ],
+    extra: "Translation published: 2026-07-25",
+  },
+  undefined,
+  "fixture:translated-thesis"
+);
+const translatedThesisMetadata = citationToMetadata(translatedThesis);
+assert.deepEqual(
+  translatedThesisMetadata.citation_author,
+  ["Ada Lovelace"],
+  "thesis authors must remain native Zotero creators"
+);
+assert.ok(
+  !Object.hasOwn(translatedThesisMetadata, "z:translators"),
+  "thesis metadata must not claim Zotero supports a native translator creator"
+);
+assert.equal(
+  translatedThesisMetadata["z:extra"],
+  "Translator: Hopper || Grace\nTranslation published: 2026-07-25",
+  "thesis translators must survive through Zotero's CSL creator syntax in Extra"
+);
+assert.match(
+  citationToBibtex(translatedThesis),
+  /translator = \{Hopper, Grace\}/,
+  "the Zotero fallback must not remove the direct BibTeX translator field"
+);
+assert.throws(
+  () =>
+    mergeCitation(
+      {
+        ...base,
+        creators: [{ creatorType: "interviewee", name: "不兼容角色" }],
+      },
+      undefined,
+      "fixture:invalid-blog-creator"
+    ),
+  /blogPost 不支持 creatorType: interviewee/,
+  "invalid Zotero creator roles must fail the content gate instead of being dropped"
+);
+
+const hantMediaCitation = pageCitationDefaults({
+  slug: "media-fixture",
+  section: "multimedia",
+  script: "hant",
+  title: "媒體測試",
+  creators: [{ creatorType: "author", name: "測試作者" }],
+  date: "2026-07-25",
+});
+assert.equal(hantMediaCitation.url, "https://un-canon.blog/media/media-fixture");
+assert.equal(hantMediaCitation.language, "zh-Hant");
+assert.equal(citationToMetadata(hantMediaCitation).citation_language, "zh-Hant");
+
+const hansPostCitation = pageCitationDefaults({
+  slug: "post-fixture",
+  section: "essay",
+  script: "hans",
+  title: "文章测试",
+  creators: [{ creatorType: "author", name: "测试作者" }],
+  date: "2026-07-25",
+});
+assert.equal(hansPostCitation.url, "https://un-canon.blog/posts/post-fixture");
+assert.equal(hansPostCitation.language, "zh-Hans");
+assert.equal(
+  bookCitationDefaults({
+    slug: "book-fixture",
+    script: "hant",
+    title: "書籍測試",
+    creators: [{ creatorType: "author", name: "測試作者" }],
+    date: "2026-07-25",
+  }).language,
+  "zh-Hant",
+  "book citation defaults must accept a future script field while remaining Hans by default"
+);
+
 const bookSectionBibtex = citationToBibtex(cases[2].citation);
 assert.match(bookSectionBibtex, /booktitle = \{Collected Metadata Studies\}/);
 assert.match(bookSectionBibtex, /pages = \{25--40\}/);
+assert.match(
+  citationToBibtex(cases[1].citation),
+  /volume = \{2\}/,
+  "book volume must not be accepted and then dropped by the BibTeX serializer"
+);
 
 const journalBibtex = citationToBibtex(cases[3].citation);
 assert.match(journalBibtex, /journal = \{Journal of Exact Metadata\}/);
+assert.match(journalBibtex, /series = \{Methods Series\}/);
 assert.match(journalBibtex, /pages = \{10--19\}/);
 assert.equal(
   citationToMetadata(cases[3].citation).citation_journal_title,
@@ -131,6 +261,30 @@ assert.throws(
   () => parseCitationInput({ itemType: "book", madeUpField: "no" }, "fixture"),
   /不受支持的 Zotero 字段/
 );
+for (const [itemType, field, value] of [
+  ["blogPost", "university", "Example University"],
+  ["preprint", "pages", "1-10"],
+  ["thesis", "volume", "4"],
+]) {
+  assert.throws(
+    () =>
+      mergeCitation(
+        {
+          ...base,
+          itemType,
+          ...(itemType === "preprint" ? { repository: "arXiv" } : {}),
+          ...(itemType === "thesis"
+            ? { thesisType: "PhD thesis", university: "Example University" }
+            : {}),
+          [field]: value,
+        },
+        undefined,
+        `fixture:invalid-${itemType}-${field}`
+      ),
+    new RegExp(`${itemType} 不支持 Zotero 字段：${field}`),
+    `${itemType}.${field} must fail instead of being silently dropped`
+  );
+}
 
 const bookManifests = fs.readdirSync(path.join(process.cwd(), "source", "_books"))
   .filter((file) => file.endsWith(".json"))
@@ -142,6 +296,7 @@ for (const book of bookManifests) {
   const translationCitation = mergeCitation(
     bookCitationDefaults({
       slug: book.slug,
+      script: book.script,
       title: book.title,
       subtitle: book.subtitle,
       creators: [
@@ -156,6 +311,11 @@ for (const book of bookManifests) {
   );
   assert.equal(translationCitation.itemType, "book");
   assert.equal(
+    translationCitation.language,
+    book.script === "hant" ? "zh-Hant" : "zh-Hans",
+    `${book.slug} translation language must follow its manifest script`
+  );
+  assert.equal(
     translationCitation.url,
     `https://un-canon.blog/books/${book.slug}`,
     `${book.slug} must cite its /books/ URL`
@@ -168,5 +328,44 @@ for (const book of bookManifests) {
   assert.doesNotMatch(bibtex, /copyright\s*=/);
   assert.doesNotMatch(bibtex, /note = \{Status: serializing\}/);
 }
+
+const mediaRoute = path.join(
+  process.cwd(),
+  "app",
+  "media",
+  "[slug]",
+  "cite.bib",
+  "route.ts"
+);
+const legacyPostRoute = path.join(
+  process.cwd(),
+  "app",
+  "posts",
+  "[slug]",
+  "cite.bib",
+  "route.ts"
+);
+const mediaPage = path.join(process.cwd(), "app", "media", "[slug]", "page.tsx");
+assert.ok(fs.existsSync(mediaRoute), "canonical /media/[slug]/cite.bib route must exist");
+assert.match(
+  fs.readFileSync(mediaRoute, "utf8"),
+  /post\.section !== "multimedia"[\s\S]*citationToBibtex\(post\.citation\)/,
+  "the media BibTeX route must reject non-media records and export the canonical citation"
+);
+assert.match(
+  fs.readFileSync(legacyPostRoute, "utf8"),
+  /post\.section === "multimedia"[\s\S]*status: 308[\s\S]*Location: `\$\{postPath\(post\)\}\/cite\.bib`/,
+  "legacy /posts/<media>/cite.bib requests must permanently redirect to /media/"
+);
+const mediaPageSource = fs.readFileSync(mediaPage, "utf8");
+assert.match(mediaPageSource, /citationToMetadata\(post\.citation\)/);
+assert.match(
+  mediaPageSource,
+  /types:\s*\{\s*"application\/x-bibtex": `\$\{canonical\}\/cite\.bib`\s*\}/
+);
+assert.match(
+  mediaPageSource,
+  /<CitationCopyButton[\s\S]*download=\{`\$\{mediaPost\.slug\}\.bib`\}/
+);
 
 console.log(`引用校验通过：${cases.length} 种 Zotero 类型，${bookManifests.length} 本连载。`);

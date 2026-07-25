@@ -1,12 +1,12 @@
 import fs from "node:fs";
 import path from "node:path";
-import matter from "gray-matter";
 import { bookHref, getAllBooks, type Book } from "./books";
 import { postPath, type EditorialSection } from "./editorial";
 import { renderMarkdown } from "./markdown";
 import { sanitizePublicContentHtml } from "./media-material";
 import { getAllPosts, type PostSummary } from "./posts";
 import { topicMembershipNumber } from "./topic-numbering";
+import { parseYamlFrontMatter } from "./safe-front-matter.mjs";
 
 const TOPICS_DIR = path.join(process.cwd(), "source", "_topics");
 
@@ -191,7 +191,7 @@ function parseGroups(value: unknown, file: string): TopicGroupSource[] {
 
 function parseTopicFile(file: string): TopicSource {
   const fullPath = path.join(TOPICS_DIR, file);
-  const parsed = matter(fs.readFileSync(fullPath, "utf8"));
+  const parsed = parseYamlFrontMatter(fs.readFileSync(fullPath, "utf8"));
   const data = parsed.data as Record<string, unknown>;
   const fallbackSlug = file.replace(/\.md$/, "");
   const slug = optionalText(data.slug) || fallbackSlug;

@@ -1,12 +1,15 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import path from "node:path";
-import matter from "gray-matter";
 import {
   assignPostNumbers,
   comparePostNumbersDescending,
 } from "../lib/post-numbering.ts";
 import { renderMarkdown } from "../lib/markdown.ts";
+import {
+  parseLegacyYamlFrontMatter,
+  parseYamlFrontMatter,
+} from "../lib/safe-front-matter.mjs";
 import { topicMembershipNumber } from "../lib/topic-numbering.ts";
 
 const postsDirectory = path.join(process.cwd(), "source", "_posts");
@@ -20,12 +23,32 @@ function isoDate(value) {
 }
 
 function frontMatterData(source) {
-  if (/^\s*---\r?\n/u.test(source)) return matter(source).data;
+  if (/^---[^\r\n]*\r?(?:\n|$)/u.test(source)) return parseYamlFrontMatter(source).data;
   const lines = source.split(/\r?\n/u);
   const closingDelimiter = lines.findIndex((line) => /^---\s*$/u.test(line));
   assert.ok(closingDelimiter >= 0, "legacy post frontmatter must have a closing delimiter");
-  return matter(`---\n${lines.slice(0, closingDelimiter).join("\n")}\n---\n`).data;
+  return parseLegacyYamlFrontMatter(lines.slice(0, closingDelimiter).join("\n")).data;
 }
+
+delete globalThis.__UN_CANON_FRONT_MATTER_EXECUTED__;
+assert.throws(
+  () =>
+    parseYamlFrontMatter(
+      "---js\nglobalThis.__UN_CANON_FRONT_MATTER_EXECUTED__ = true; ({ title: 'unsafe' })\n---\nbody"
+    ),
+  /exact YAML delimiter/u,
+  "typed JavaScript front matter must be rejected before parser selection"
+);
+assert.equal(
+  globalThis.__UN_CANON_FRONT_MATTER_EXECUTED__,
+  undefined,
+  "rejected JavaScript front matter must never execute"
+);
+assert.deepEqual(
+  parseYamlFrontMatter("---\ntitle: safe\n---\nbody").data,
+  { title: "safe" },
+  "standard YAML front matter must retain its existing semantics"
+);
 
 const posts = fs.readdirSync(postsDirectory)
   .filter((file) => file.endsWith(".md"))
@@ -92,10 +115,10 @@ assert.deepEqual(
   ["negative", "-2", "02", "2025-03-29", "2026-07-22"]
 );
 
-const upperDocument = matter(
+const upperDocument = parseYamlFrontMatter(
   fs.readFileSync(path.join(postsDirectory, `${upperSlug}.md`), "utf8")
 );
-const lowerDocument = matter(
+const lowerDocument = parseYamlFrontMatter(
   fs.readFileSync(path.join(postsDirectory, `${lowerSlug}.md`), "utf8")
 );
 assert.deepEqual(

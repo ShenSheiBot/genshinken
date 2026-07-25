@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
   getAllPosts,
+  getPreviewablePosts,
   getPostBySlug,
   type CreditRole,
   type Post,
@@ -11,10 +12,13 @@ import {
 import { site } from "@/lib/site";
 import { postPath } from "@/lib/editorial";
 import { sanitizeMediaMaterial } from "@/lib/media-material";
+import { citationToBibtex, citationToMetadata } from "@/lib/citations";
+import { hanScriptLanguageTag } from "@/lib/han-script";
+import CitationCopyButton from "@/app/components/CitationCopyButton";
 import CreditLinks from "@/app/components/CreditLinks";
 import styles from "./media-detail.module.css";
 
-export const dynamicParams = true;
+export const dynamicParams = false;
 
 type Destination = {
   href: string;
@@ -142,7 +146,7 @@ function buildJsonLd(post: Post, destinations: Destination[]) {
     description: post.excerpt || site.description,
     url: canonical,
     mainEntityOfPage: canonical,
-    inLanguage: "zh-Hans",
+    inLanguage: hanScriptLanguageTag(post.script),
     datePublished: post.dateISO,
     dateModified: post.updatedISO,
     ...people,
@@ -155,7 +159,7 @@ function buildJsonLd(post: Post, destinations: Destination[]) {
 }
 
 export async function generateStaticParams() {
-  const posts = await getAllPosts();
+  const posts = await getPreviewablePosts();
   return posts
     .filter((post) => post.section === "multimedia")
     .map((post) => ({ slug: post.slug }));
@@ -175,7 +179,11 @@ export async function generateMetadata({
   return {
     title: post.title,
     description: post.excerpt || site.description,
-    alternates: { canonical },
+    alternates: {
+      canonical,
+      types: { "application/x-bibtex": `${canonical}/cite.bib` },
+    },
+    other: citationToMetadata(post.citation),
     openGraph: {
       title: post.title,
       description: post.excerpt || site.description,
@@ -206,6 +214,8 @@ export default async function MediaDetailPage({
   const materialHtml = sanitizeMediaMaterial(mediaPost.html);
   const destinations = destinationsFrom(materialHtml);
   const relatedPosts = relatedPostsFor(mediaPost, posts);
+  const citationBibtex = citationToBibtex(mediaPost.citation);
+  const citationHref = `${postPath(mediaPost)}/cite.bib`;
   const summary =
     mediaPost.excerpt ||
     "本条目通过站外链接发布；这里整理可核实的来源入口和编辑关联的站内文稿。";
@@ -281,6 +291,22 @@ export default async function MediaDetailPage({
                 <dd>{mediaPost.tags.length > 0 ? mediaPost.tags.join(" · ") : "未标注"}</dd>
               </div>
             </dl>
+
+            <div className={styles.citationActions} aria-label="BibTeX 引用">
+              <CitationCopyButton
+                bibtex={citationBibtex}
+                className={styles.citationCopy}
+                label="复制"
+              />
+              <a
+                href={citationHref}
+                download={`${mediaPost.slug}.bib`}
+                aria-label="下载本页 BibTeX 引用"
+              >
+                <span>BIB</span>
+                下载
+              </a>
+            </div>
 
             <div className={styles.destinations}>
               <div className={styles.destinationHeading}>
