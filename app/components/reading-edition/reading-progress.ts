@@ -167,10 +167,14 @@ export function fingerprintReadingText(text: string, tagName: string): string {
  * Generate a stable, synchronous fingerprint for a semantic reading block.
  * The normalized source text is never persisted; only this 64-bit digest is.
  */
-export function fingerprintReadingNodes(nodes: Text[], tagName: string): string {
+export function fingerprintReadingNodes(
+  nodes: Text[],
+  tagName: string,
+  readText: (node: Text) => string = (node) => node.data
+): string {
   const text = nodes
     .filter((node) => !node.parentElement?.closest(FINGERPRINT_SKIP))
-    .map((node) => node.data)
+    .map(readText)
     .join(" ");
   return fingerprintReadingText(text, tagName);
 }

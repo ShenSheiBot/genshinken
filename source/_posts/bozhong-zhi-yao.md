@@ -3,6 +3,7 @@ title: 《播种之谣》——在无父的时代重构时代传承的想象力
 title_breaks: ["《播种之谣》——在", "无父的时代重构", "时代传承的想象力"]
 date: 2026-07-24
 slug: bozhong-zhi-yao
+script: hans
 categories: [游戏评论]
 section: review
 tags: [视觉小说, 播种之谣, 代际传承]

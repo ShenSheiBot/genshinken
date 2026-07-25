@@ -24,6 +24,7 @@ import {
   type CitationCreator,
   type CitationRecord,
 } from "./citations";
+import { isHanScript, type HanScript } from "./han-script";
 
 const POSTS_DIR = path.join(process.cwd(), "source", "_posts");
 
@@ -40,6 +41,7 @@ export interface Credit {
 
 export interface PostSummary {
   slug: string;
+  script: HanScript;
   title: string;
   titleBreaks: string[];
   homeTitleBreaks: string[];
@@ -182,6 +184,12 @@ function resolveSection(data: Record<string, unknown>, file: string): EditorialS
   );
 }
 
+function resolveHanScript(data: Record<string, unknown>, file: string): HanScript {
+  const declared = typeof data.script === "string" ? data.script.trim().toLowerCase() : "";
+  if (isHanScript(declared)) return declared;
+  throw new Error(`${file}: front-matter script 必须是 hans 或 hant`);
+}
+
 function toDate(v: unknown): Date {
   if (v instanceof Date && !isNaN(+v)) return v;
   if (typeof v === "string") {
@@ -320,6 +328,7 @@ async function loadRaw(): Promise<Post[]> {
       const uniqueTags = Array.from(new Set(tags));
       const credits = buildCredits(data, file);
       const section = resolveSection(data, file);
+      const script = resolveHanScript(data, file);
       const originalDate = metadataText(data.original_date ?? data.originalDate ?? data["原文日期"]);
       if (section === "negative" && !isISODate(originalDate)) {
         throw new Error(`${file}: section: negative 必须填写有效的 original_date（YYYY-MM-DD）`);
@@ -354,6 +363,7 @@ async function loadRaw(): Promise<Post[]> {
 
       const post: Post = {
         slug,
+        script,
         title,
         titleBreaks: preferredTitleBreaks,
         homeTitleBreaks: preferredHomeTitleBreaks,

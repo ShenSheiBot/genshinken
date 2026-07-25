@@ -5,6 +5,7 @@ home_title_breaks: ["一份关于克苏鲁的", "调查报告"]
 date: 2026-07-20
 updated: 2026-07-23
 slug: mullahology-00
+script: hans
 categories: [历史]
 section: essay
 tags: [伊朗, 新自由主义, 治理术]

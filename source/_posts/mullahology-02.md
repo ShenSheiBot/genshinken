@@ -3,6 +3,7 @@ title: 叶公好龙
 title_breaks: ["叶公好龙"]
 date: 2026-07-24
 slug: mullahology-02
+script: hans
 categories: [历史]
 section: essay
 tags: [伊朗, 伊斯兰革命, 霍梅尼]

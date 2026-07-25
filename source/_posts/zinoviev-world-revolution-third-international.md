@@ -4,6 +4,7 @@ title_breaks: ["世界革命与", "第三国际"]
 subtitle: 四小时演讲
 date: 2026-06-29
 slug: zinoviev-world-revolution-third-international
+script: hans
 categories: [历史]
 section: translation
 tags: [第三国际, 世界革命, 共产国际, 译介]

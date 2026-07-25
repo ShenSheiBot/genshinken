@@ -18,15 +18,17 @@
     "verify:negative": "node --experimental-strip-types --no-warnings scripts/verify-negative-section.mjs",
     "verify:fonts": "node scripts/verify-font-contract.mjs",
     "verify:reading-progress": "node --experimental-strip-types --no-warnings scripts/verify-reading-progress.mjs",
+    "verify:han-script": "node --experimental-strip-types --no-warnings scripts/verify-han-script.mjs",
     "verify:citations": "node --experimental-strip-types --no-warnings scripts/verify-citations.mjs",
     "verify:editorial": "node scripts/verify-editorial-release.mjs",
     "verify:release": "node scripts/verify-editorial-release.mjs",
-    "check": "npm run validate:content && npm run validate:media-html && npm run verify:typography && npm run verify:negative && npm run verify:fonts && npm run verify:reading-progress && npm run verify:citations && npm run typecheck && npm run lint"
+    "check": "npm run validate:content && npm run validate:media-html && npm run verify:typography && npm run verify:negative && npm run verify:fonts && npm run verify:reading-progress && npm run verify:han-script && npm run verify:citations && npm run typecheck && npm run lint"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
     "katex": "^0.18.1",
     "next": "^15.1.6",
+    "opencc-js": "^1.4.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "rehype-katex": "^7.0.1",

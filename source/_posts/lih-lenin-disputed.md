@@ -3,6 +3,7 @@ title: 列宁之争
 title_breaks: ["列宁之争"]
 date: 2026-07-06
 slug: lih-lenin-disputed
+script: hans
 categories: [历史]
 section: translation
 tags: [爱尔福特主义, 《怎么办？》, 俄国社会民主工党, 译介]

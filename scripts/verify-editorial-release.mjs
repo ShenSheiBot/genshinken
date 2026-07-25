@@ -138,6 +138,31 @@ assert.match(
   /themeButton[\s\S]*?settingsButton[\s\S]*?settingsGlyph[\s\S]*?<i \/><i \/><i \/>/,
   "theme and three-line reading-habits controls must use the confirmed order"
 );
+assert.match(
+  readingChromeSource,
+  /themeButton[\s\S]*?hanScriptButton[\s\S]*?settingsButton/,
+  "theme, Han-script, and reading-habits controls must use the confirmed order"
+);
+assert.match(
+  readingStylesSource,
+  /data-reading-chrome-entry="route"[\s\S]*?themeButton[\s\S]*?reading-theme-shift-left[\s\S]*?hanScriptButton[\s\S]*?settingsButton[\s\S]*?reading-tool-enter/,
+  "route entry must shift theme left while revealing Han-script and reading-habits controls together"
+);
+assert.match(
+  readingChromeSource,
+  /readingChromeExit[\s\S]*?destination\.pathname\.startsWith\("\/posts\/"\)[\s\S]*?readingChromeExit = "route"[\s\S]*?router\.push\(href\)/,
+  "reader links to non-post routes must wait for the reverse chrome transition"
+);
+assert.match(
+  readingStylesSource,
+  /data-reading-chrome-exit="route"[\s\S]*?themeButton[\s\S]*?reading-theme-shift-right[\s\S]*?hanScriptButton[\s\S]*?settingsButton[\s\S]*?reading-tool-exit/,
+  "route exit must shift theme right while hiding Han-script and reading-habits controls together"
+);
+assert.match(
+  readingChromeSource,
+  /hanTraditional[^]*?>繁<[\s\S]*?hanSimplified[^]*?>简</,
+  "the Han-script switch must expose the overlapping 繁/简 glyph"
+);
 assert.doesNotMatch(
   readingChromeSource,
   /阅读设置/,

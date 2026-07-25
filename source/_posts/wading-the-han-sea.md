@@ -14,6 +14,7 @@ date: 2026-05-15
 post_author: Jack Cade
 
 slug: wading-the-han-sea
+script: hans
 
 excerpt: 亲与爱与漢地血肉。
 

@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { site } from "@/lib/site";
 import { GLOBAL_NAV_ITEMS } from "@/lib/navigation";
 import { useArticleHeader } from "./ArticleHeader";
@@ -20,6 +21,7 @@ function ChevronIcon() {
 }
 
 export default function TopBar() {
+  const pathname = usePathname();
   const [theme, setTheme] = useState<Theme>("light");
   const [mounted, setMounted] = useState(false);
   const [sections, setSections] = useState<MobileSection[]>([]);
@@ -28,6 +30,7 @@ export default function TopBar() {
   const [sectionMenuOpen, setSectionMenuOpen] = useState(false);
   const headerRef = useRef<HTMLElement | null>(null);
   const sectionRefs = useRef<SectionRef[]>([]);
+  const previousPathnameRef = useRef<string | null>(null);
   const ah = useArticleHeader();
   const meta = ah?.meta ?? null;
   const revealed = !!(meta && ah?.revealed);
@@ -37,6 +40,25 @@ export default function TopBar() {
     setTheme(current);
     setMounted(true);
   }, []);
+
+  useLayoutEffect(() => {
+    const root = document.documentElement;
+    const previousPathname = previousPathnameRef.current;
+
+    delete root.dataset.readingChromeEntry;
+    if (
+      previousPathname !== null
+      && !previousPathname.startsWith("/posts/")
+      && pathname.startsWith("/posts/")
+    ) {
+      root.dataset.readingChromeEntry = "route";
+    }
+    previousPathnameRef.current = pathname;
+
+    return () => {
+      delete root.dataset.readingChromeEntry;
+    };
+  }, [pathname]);
 
   const toggle = () => {
     setTheme((prev) => {

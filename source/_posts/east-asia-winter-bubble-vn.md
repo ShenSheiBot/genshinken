@@ -16,6 +16,7 @@ date: 2026-05-20
 post_author: Ho Jyuwai
 
 slug: east-asia-winter-bubble-vn
+script: hans
 
 excerpt: 以《泡沫冬景》为线索，讨论东亚作为他者、抵抗与共同经验的问题，以及中国视觉小说如何承载这种历史感。
 

@@ -86,6 +86,7 @@ function buildJsonLd(
   }
   return {
     ...citationToJsonLd(citation),
+    inLanguage: post.script === "hant" ? "zh-Hant" : "zh-Hans",
     ...(post.subtitle ? { alternativeHeadline: post.subtitle } : {}),
     description: post.excerpt || site.description,
     dateModified: post.updatedISO,

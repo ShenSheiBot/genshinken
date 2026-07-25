@@ -4,6 +4,7 @@ title: 历史转折中的联合工团②——布莱恩特区与移交温哥华
 title_breaks: ["历史转折中的", "联合工团②——", "布莱恩特区与移交温哥华"]
 
 slug: csa
+script: hans
 
 categories: 历史
 

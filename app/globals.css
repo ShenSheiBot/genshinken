@@ -59,7 +59,7 @@
 
 @font-face {
   font-family: "UN Canon STSong";
-  src: url("/fonts/un-canon-st-song.woff2?v=b521240cac6c") format("woff2");
+  src: url("/fonts/un-canon-st-song.woff2?v=ef7b0cf4a9f0") format("woff2");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -67,7 +67,7 @@
 
 @font-face {
   font-family: "UN Canon STFangsong";
-  src: url("/fonts/un-canon-st-fangsong.woff2?v=0933c69e66b5") format("woff2");
+  src: url("/fonts/un-canon-st-fangsong.woff2?v=a9fbf59c9d38") format("woff2");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -75,7 +75,7 @@
 
 @font-face {
   font-family: "UN Canon STKaiti";
-  src: url("/fonts/un-canon-st-kaiti.woff2?v=43612526032f") format("woff2");
+  src: url("/fonts/un-canon-st-kaiti.woff2?v=0bbd98c3f117") format("woff2");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -248,7 +248,7 @@ body:has(.reading-edition-page) { background-image: none; }
 .topbar .toggle {
   justify-self: end; display: inline-flex; align-items: center; justify-content: center;
   width: 40px; height: 34px; padding: 0; color: var(--ink);
-  border: 0; border-left: 1px solid var(--hair);
+  border: 0;
   font-family: var(--f-grotesk); font-size: 15px;
   transition: background .15s, color .15s;
 }

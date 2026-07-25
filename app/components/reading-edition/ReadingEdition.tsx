@@ -12,6 +12,7 @@ import ReadingPrototypeChrome from "@/app/prototype/reading/[slug]/ReadingProtot
 import CreditLinks from "@/app/components/CreditLinks";
 import styles from "@/app/prototype/reading/[slug]/reading-prototype.module.css";
 import homeStyles from "@/app/components/editorial-home/PosterWallHome.module.css";
+import { hanScriptLanguageTag, type HanScript } from "@/lib/han-script";
 
 type ReadingVariant = "dossier" | "folio";
 
@@ -152,12 +153,13 @@ function Appendices({ parts }: { parts: ArticleParts }) {
   );
 }
 
-function ArticleFlow({ parts }: { parts: ArticleParts }) {
+function ArticleFlow({ parts, sourceScript }: { parts: ArticleParts; sourceScript: HanScript }) {
   return (
     <div className={`${styles.articleFlow} reading-prototype-flow`}>
       <article
         className={`art-body ${styles.body} reading-prototype-body`}
-        lang="zh-Hans"
+        lang={hanScriptLanguageTag(sourceScript)}
+        data-han-convert-lang
         dangerouslySetInnerHTML={{ __html: parts.main }}
       />
       <div className={styles.endMark} aria-label="正文完">
@@ -273,11 +275,21 @@ export function ReadingDossier({
     ? "注释与文献"
     : parts.noteCount > 0 ? "注释" : "文献";
   return (
-    <main id="main" tabIndex={-1} className={`${isPublicEdition ? "reading-edition-page" : "reading-prototype-page"} ${styles.root} ${styles.dossierRoot}`} data-reading-variant="dossier" data-reveal-zone="reader">
+    <main
+      id="main"
+      tabIndex={-1}
+      className={`${isPublicEdition ? "reading-edition-page" : "reading-prototype-page"} ${styles.root} ${styles.dossierRoot}`}
+      data-reading-variant="dossier"
+      data-reveal-zone="reader"
+      data-han-convert-root="post"
+      data-han-source-script={post.script}
+      lang={hanScriptLanguageTag(post.script)}
+    >
       <ReadingPrototypeChrome
         title={post.title}
         slug={post.slug}
         contentRevision={post.contentRevision}
+        sourceScript={post.script}
         variant="dossier"
         credits={post.credits}
         fallbackAuthor={post.author}
@@ -366,7 +378,7 @@ export function ReadingDossier({
 
       <section className={styles.dossierReading}>
         <aside id="reading-left-rail" className={styles.deskRailSlot} aria-label="署名、行数与文章目录" />
-        <ArticleFlow parts={parts} />
+        <ArticleFlow parts={parts} sourceScript={post.script} />
         {hasReferences && (
           <aside id="reading-right-rail" className={styles.deskRailSlot} aria-label={referenceLabel} />
         )}
@@ -379,11 +391,20 @@ export function ReadingDossier({
 export function ReadingFolio({ post, parts, posts }: { post: Post; parts: ArticleParts; posts: PostSummary[] }) {
   const section = sectionMeta[sectionFor(post)];
   return (
-    <main id="main" tabIndex={-1} className={`reading-prototype-page ${styles.root} ${styles.folioRoot}`} data-reading-variant="folio">
+    <main
+      id="main"
+      tabIndex={-1}
+      className={`reading-prototype-page ${styles.root} ${styles.folioRoot}`}
+      data-reading-variant="folio"
+      data-han-convert-root="post"
+      data-han-source-script={post.script}
+      lang={hanScriptLanguageTag(post.script)}
+    >
       <ReadingPrototypeChrome
         title={post.title}
         slug={post.slug}
         contentRevision={post.contentRevision}
+        sourceScript={post.script}
         variant="folio"
         credits={post.credits}
         fallbackAuthor={post.author}
@@ -421,7 +442,7 @@ export function ReadingFolio({ post, parts, posts }: { post: Post; parts: Articl
           <MetaRows post={post} />
           <div className={styles.folioOrnament}>※</div>
         </aside>
-        <ArticleFlow parts={parts} />
+        <ArticleFlow parts={parts} sourceScript={post.script} />
         <div className={styles.railPlaceholder} aria-hidden="true" />
       </section>
       <RelatedReading current={post} posts={posts} variant="folio" />

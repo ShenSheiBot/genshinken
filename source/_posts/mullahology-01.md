@@ -3,6 +3,7 @@ title: 斩断伊斯兰这片绿色的叶子
 title_breaks: ["斩断伊斯兰", "这片绿色的叶子"]
 date: 2026-07-20
 slug: mullahology-01
+script: hans
 categories: [历史]
 section: essay
 tags: [伊朗, 伊斯兰革命, 霍梅尼]

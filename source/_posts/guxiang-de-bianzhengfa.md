@@ -3,6 +3,7 @@ title: 故乡的辩证法
 title_breaks: ["故乡的", "辩证法"]
 date: 2026-07-17
 slug: guxiang-de-bianzhengfa
+script: hans
 categories: [游戏评论]
 section: review
 tags: [视觉小说, 故乡, 城乡关系]

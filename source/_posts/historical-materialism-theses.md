@@ -7,6 +7,7 @@ tags: [历史唯物主义, 拉康]
 date: 2026-05-08
 post_author: Jack Cade
 slug: historical-materialism-theses
+script: hans
 excerpt: 从拉康的实在界、语言裂隙和死亡驱力出发，重申历史唯物主义如何理解行动、主体与意识形态。
 ---
 

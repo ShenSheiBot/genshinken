@@ -6,6 +6,7 @@ date: 2026-07-20
 updated: 2026-07-23
 draft: false
 slug: shulgin-dni
+script: hans
 categories: [历史]
 section: translation
 tags: [俄国, 1905革命, 二月革命, 回忆录, 译介]

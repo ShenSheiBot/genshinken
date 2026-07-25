@@ -4,6 +4,7 @@ title_breaks: ["德勒兹的斯大林主义"]
 date: 2026-07-22
 original_date: 2025-03-29
 slug: deleuze-difference-repetition-review-2
+script: hans
 categories: [哲学]
 section: negative
 tags: [德勒兹, 斯大林主义, 拉康]

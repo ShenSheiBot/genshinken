@@ -18,6 +18,7 @@ const booksDirectory = path.join(process.cwd(), "source", "_books");
 const topicsDirectory = path.join(process.cwd(), "source", "_topics");
 const publicDirectory = path.join(process.cwd(), "public");
 const validSections = new Set(["essay", "review", "translation", "multimedia", "negative"]);
+const validHanScripts = new Set(["hans", "hant"]);
 const validBookStatuses = new Set(["serializing", "complete", "paused"]);
 const validBookChapterStatuses = new Set(["published", "forthcoming"]);
 const validTopicStatuses = new Set(["ongoing", "complete", "archived"]);
@@ -520,6 +521,7 @@ const records = files.map((file) => {
   const { data, header, content } = parseFrontMatter(file, raw);
   const slug = typeof data.slug === "string" ? data.slug.trim() : "";
   const section = typeof data.section === "string" ? data.section.trim().toLowerCase() : "";
+  const script = typeof data.script === "string" ? data.script.trim().toLowerCase() : "";
   const categories = toList(data.categories ?? data.category);
   const tags = toList(data.tags);
   const dateISO = rawScalar(header, "date") ?? "";
@@ -632,6 +634,10 @@ const records = files.map((file) => {
       file,
       "section 必须是 essay / review / translation / multimedia / negative 之一"
     );
+  }
+
+  if (!validHanScripts.has(script)) {
+    report(errors, file, "script 必须显式填写 hans 或 hant");
   }
 
   // 正文 HTML 消毒门禁：所有栏目都扫描（此前仅 multimedia），堵住 essay/review/translation

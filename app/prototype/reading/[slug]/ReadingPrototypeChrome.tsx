@@ -7,6 +7,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { Credit } from "@/lib/posts";
+import type { HanScript } from "@/lib/han-script";
 import { site } from "@/lib/site";
 import { GLOBAL_NAV_ITEMS } from "@/lib/navigation";
 import CreditLinks from "@/app/components/CreditLinks";
@@ -20,6 +21,10 @@ import {
   type ReadingBlockMeasurement,
   type ReadingMeasurement,
 } from "@/app/components/reading-edition/useReadingProgress";
+import {
+  hanSourceText,
+  useHanScriptConversion,
+} from "@/app/components/useHanScriptConversion";
 import styles from "./reading-prototype.module.css";
 
 type Variant = "dossier" | "folio";
@@ -161,7 +166,9 @@ function fingerprintReadingBlock(owner: HTMLElement, nodes: Text[]): string {
     ...(owner.matches(READING_MEDIA_SIGNATURE) ? [owner] : []),
     ...Array.from(owner.querySelectorAll<HTMLElement>(READING_MEDIA_SIGNATURE)),
   ];
-  if (media.length === 0) return fingerprintReadingNodes(nodes, owner.tagName);
+  if (media.length === 0) {
+    return fingerprintReadingNodes(nodes, owner.tagName, hanSourceText);
+  }
   const signature = media.map((item) => [
     item.tagName.toLowerCase(),
     item.getAttribute("src") ?? "",
@@ -174,7 +181,7 @@ function fingerprintReadingBlock(owner: HTMLElement, nodes: Text[]): string {
     item.getAttribute("aria-label") ?? "",
   ].join(":"));
   return fingerprintReadingText(
-    `${fingerprintReadingNodes(nodes, owner.tagName)}:${signature.join("|")}`,
+    `${fingerprintReadingNodes(nodes, owner.tagName, hanSourceText)}:${signature.join("|")}`,
     owner.tagName
   );
 }
@@ -343,6 +350,7 @@ export default function ReadingPrototypeChrome({
   title,
   slug,
   contentRevision,
+  sourceScript,
   variant,
   credits,
   fallbackAuthor,
@@ -353,6 +361,7 @@ export default function ReadingPrototypeChrome({
   title: string;
   slug: string;
   contentRevision: string;
+  sourceScript: HanScript;
   variant: Variant;
   credits: Credit[];
   fallbackAuthor: string;
@@ -391,6 +400,12 @@ export default function ReadingPrototypeChrome({
   const [lineMarkers, setLineMarkers] = useState<LineMarker[]>([]);
   const [lineMarkerHost, setLineMarkerHost] = useState<HTMLElement | null>(null);
   const [readingMeasurement, setReadingMeasurement] = useState<ReadingMeasurement | null>(null);
+  const {
+    script: hanScript,
+    busy: hanScriptBusy,
+    conversionRevision,
+    toggleScript: toggleHanScript,
+  } = useHanScriptConversion({ sourceScript, contentRevision });
 
   const tocRef = useRef<TocItem[]>([]);
   const figureItemsRef = useRef<FigureIndexItem[]>([]);
@@ -409,6 +424,8 @@ export default function ReadingPrototypeChrome({
   const lastSheetTrigger = useRef<HTMLElement | null>(null);
   const sheetRef = useRef<HTMLElement | null>(null);
   const sheetCloseTimerRef = useRef<number | null>(null);
+  const exitNavigationTimerRef = useRef<number | null>(null);
+  const exitingReadingRef = useRef(false);
   const directReferencePositionRef = useRef<{
     button: HTMLButtonElement;
     scrollTop: number;
@@ -421,7 +438,68 @@ export default function ReadingPrototypeChrome({
     figureScrollCleanupRef.current?.();
     figureScrollCleanupRef.current = null;
     if (sheetCloseTimerRef.current != null) window.clearTimeout(sheetCloseTimerRef.current);
+    if (exitNavigationTimerRef.current != null) window.clearTimeout(exitNavigationTimerRef.current);
+    delete document.documentElement.dataset.readingChromeExit;
   }, []);
+
+  useEffect(() => {
+    if (!isEdition) return;
+
+    const onReadingLinkClick = (event: MouseEvent) => {
+      if (
+        event.defaultPrevented
+        || event.button !== 0
+        || event.metaKey
+        || event.ctrlKey
+        || event.shiftKey
+        || event.altKey
+      ) return;
+
+      const target = event.target instanceof Element ? event.target : null;
+      const anchor = target?.closest<HTMLAnchorElement>("a[href]");
+      const readingRoot = document.querySelector(".reading-edition-page");
+      if (
+        !anchor
+        || !readingRoot?.contains(anchor)
+        || anchor.hasAttribute("download")
+        || (anchor.target && anchor.target !== "_self")
+      ) return;
+
+      const rawHref = anchor.getAttribute("href");
+      if (!rawHref || rawHref.startsWith("#")) return;
+
+      const destination = new URL(anchor.href, window.location.href);
+      if (
+        destination.origin !== window.location.origin
+        || destination.pathname.startsWith("/posts/")
+      ) return;
+
+      event.preventDefault();
+      event.stopPropagation();
+      if (exitingReadingRef.current) return;
+      exitingReadingRef.current = true;
+
+      const href = `${destination.pathname}${destination.search}${destination.hash}`;
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reduceMotion) {
+        router.push(href);
+        return;
+      }
+
+      const root = document.documentElement;
+      delete root.dataset.readingChromeEntry;
+      root.dataset.readingChromeExit = "route";
+      exitNavigationTimerRef.current = window.setTimeout(() => {
+        exitNavigationTimerRef.current = null;
+        router.push(href);
+      }, 420);
+    };
+
+    document.addEventListener("click", onReadingLinkClick, true);
+    return () => {
+      document.removeEventListener("click", onReadingLinkClick, true);
+    };
+  }, [isEdition, router]);
 
   const tocTree = useMemo(() => buildTocTree(toc), [toc]);
   const currentSection = useMemo(
@@ -545,7 +623,7 @@ export default function ReadingPrototypeChrome({
       figureElementsRef.current.clear();
       setLineMarkerHost(null);
     };
-  }, [contentRevision, slug, variant]);
+  }, [contentRevision, conversionRevision, slug, variant]);
 
   const syncReadingPosition = useCallback(() => {
     const body = bodyRef.current;
@@ -701,7 +779,15 @@ export default function ReadingPrototypeChrome({
       images.forEach((image) => image.removeEventListener("load", schedule));
       document.fonts?.removeEventListener("loadingdone", schedule);
     };
-  }, [contentRevision, readerFont, readerSize, slug, syncReadingPosition, variant]);
+  }, [
+    contentRevision,
+    conversionRevision,
+    readerFont,
+    readerSize,
+    slug,
+    syncReadingPosition,
+    variant,
+  ]);
 
   useEffect(() => {
     setExpandedToc(new Set(activeBranchIds(tocTree, activeId)));
@@ -1502,7 +1588,7 @@ export default function ReadingPrototypeChrome({
         </p>
       )}
       <header className={styles.runningHeader}>
-        <Link href={isEdition ? "/" : "/prototype/poster"} className={styles.runningBrand} aria-label={`返回${site.brandCN}首页`}><i /><span className={styles.runningBrandName}>{site.brandCN}</span></Link>
+        <Link href={isEdition ? "/" : "/prototype/poster"} className={`${styles.runningBrand} ignore-opencc`} aria-label={`返回${site.brandCN}首页`}><i /><span className={styles.runningBrandName}>{site.brandCN}</span></Link>
         <nav className={styles.runningSections} aria-label="全站导航">
           {GLOBAL_NAV_ITEMS.map((item) => (
             <Link key={item.href} href={item.href} className={styles.runningSectionLink}>
@@ -1514,6 +1600,21 @@ export default function ReadingPrototypeChrome({
         <div className={styles.runningTools}>
           <button className={styles.compactTocButton} type="button" onClick={(event) => openSheet("toc", event.currentTarget)} aria-haspopup="dialog" aria-expanded={sheet === "toc"}>目录</button>
           <button className={styles.themeButton} type="button" onClick={toggleTheme} aria-label="切换明暗主题">{dark ? "☾" : "☼"}</button>
+          <button
+            className={`${styles.hanScriptButton} ignore-opencc`}
+            type="button"
+            onClick={toggleHanScript}
+            disabled={hanScriptBusy}
+            aria-busy={hanScriptBusy || undefined}
+            aria-pressed={hanScript === "hant"}
+            aria-label={hanScript === "hant" ? "切換為簡體中文" : "切换为繁体中文"}
+            title={hanScript === "hant" ? "切換為簡體中文" : "切换为繁体中文"}
+          >
+            <span className={styles.hanScriptGlyph} aria-hidden="true">
+              <span className={styles.hanTraditional}>繁</span>
+              <span className={styles.hanSimplified}>简</span>
+            </span>
+          </button>
           <button className={styles.settingsButton} type="button" onClick={(event) => openSheet("settings", event.currentTarget)} aria-label="阅读习惯" aria-haspopup="dialog" aria-expanded={sheet === "settings"}>
             <span className={styles.settingsGlyph} aria-hidden="true"><i /><i /><i /></span>
           </button>

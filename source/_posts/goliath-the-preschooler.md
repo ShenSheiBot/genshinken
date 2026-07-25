@@ -4,6 +4,7 @@ title_breaks: ["学龄前的", "歌利亚"]
 subtitle: 东西欧如何在冷战期间能源与金融合作中埋设全球市场的管道
 date: 2026-06-23
 slug: goliath-the-preschooler
+script: hans
 categories: [历史]
 section: essay
 tags: [布雷顿森林, 世界市场, 冷战起源]

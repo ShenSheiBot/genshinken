@@ -4,6 +4,7 @@ title_breaks: ["解码学"]
 date: 2026-07-22
 original_date: 2025-03-08
 slug: deleuze-difference-repetition-review-1
+script: hans
 categories: [哲学]
 section: negative
 tags: [德勒兹, 差异与重复, 精神分析]

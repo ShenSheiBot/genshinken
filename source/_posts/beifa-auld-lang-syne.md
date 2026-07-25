@@ -14,6 +14,7 @@ date: 2026-05-12
 post_author: Hatsushimo
 
 slug: beifa-auld-lang-syne
+script: hans
 
 
 ---
