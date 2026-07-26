@@ -89,7 +89,7 @@ Next.js App Router 从 `app/` 生成：
 | 确定性静态与逻辑 | `npm run check` | 内容、净化、排版、字体、阅读记录、繁简、引用、依赖、静态路由、TypeScript、ESLint。 | React hydration、真实浏览器交互和视觉终态。 |
 | 生产构建 | `npm run build` | Next.js 编译、SSG、路由和资源可生成。 | 部署环境和客户端体验。 |
 | SSR／HTTP 发布回归 | `npm run verify:release -- <base-url>` | 导航、筛选、HTML、metadata、canonical、重定向、JSON-LD、sitemap、RSS 和字体资源。 | 客户端 JS、焦点、localStorage、WebKit、动效和真实行盒。 |
-| 浏览器体验 | 当前为针对性检查，后续由博客 Playwright specs 与 Codex charter 承担 | 真实 hydration、交互、浏览器差异和体验判断。 | 尚未接入前不能作为自动必需检查。 |
+| 浏览器交互 | 博客自有 Playwright specs；状态与矩阵见 [`testing.md`](../testing.md) | 本地生产构建的真实 hydration、localStorage、焦点、剪贴板反馈和引擎差异。 | `implemented` 不表示最近一次远端结果；也不证明 Vercel 部署、真实设备、完整视觉或辅助技术体验。 |
 
 `verify:editorial` 是历史兼容别名；新文档和新流程统一使用 `verify:release`。
 
@@ -133,9 +133,9 @@ PowerShell 使用 `$env:UN_CANON_BUILD_TIMESTAMP='...'` 后再运行构建。固
 4. 启动本地生产服务
 5. `npm run verify:release`
 
-`vercel.json` 同样强制 `npm ci` 和 `npm run check && next build`。GitHub Quality 与 IndexNow runner 固定为 `ubuntu-24.04` 和 Node `22.20.0`，官方 Actions 固定到已核验的完整提交 SHA。`.github/workflows/browser-smoke.yml` 在 pull request 和 `main` push 上调用公开的 `UCCTB/web-test-platform` reusable workflow，并固定其完整提交 SHA；Playwright `1.62.0` 与 Chromium 项目由博客自己的 lockfile 和配置持有。
+`vercel.json` 同样强制 `npm ci` 和 `npm run check && next build`。GitHub Quality 与 IndexNow runner 固定为 `ubuntu-24.04` 和 Node `22.20.0`，官方 Actions 固定到已核验的完整提交 SHA。`.github/workflows/browser-smoke.yml` 调用公开的 `UCCTB/web-test-platform` reusable workflow，并固定其完整提交 SHA；workflow 不声明或继承调用方配置的 repository／organization secrets，GitHub 自动提供的 caller `GITHUB_TOKEN` 只授予 `contents: read`，artifact 属于博客 caller run。Playwright 版本、项目矩阵、产品断言和测试素材由博客自己的 lockfile、配置与 specs 持有，完整权责和 SHA 更新流程见 [`testing.md`](../testing.md)。
 
-Vercel 构建成功只说明部署候选通过静态门禁。运行时基线还必须记录生产提交 SHA、构建时间、Vercel Deployment ID、不可变 deployment URL，并在部署 `READY` 后对正式域名执行 `verify:release` 和代表性浏览器冒烟。
+Vercel 构建成功只说明部署候选通过静态门禁。运行时基线还必须记录生产提交 SHA、构建时间、Vercel Deployment ID、不可变 deployment URL，并在部署 `READY` 后分别对不可变 URL 与正式域名执行 `verify:release`，同时核验该提交的 caller browser run 与 artifact。当前没有对这两个部署 URL 执行 Playwright；不得把本地 browser suite 写成部署后浏览器冒烟。
 
 ## 9. 发布发现
 
@@ -155,4 +155,4 @@ IndexNow 是发现流程，不是质量门禁；它看见 2xx／3xx 不代表页
 4. 回滚后重新执行正式域名 `verify:release` 和受影响浏览器场景。
 5. sitemap、RSS 或 IndexNow 错误应修正其源码生成器，不能手工维护根目录副本掩盖问题。
 
-当前已有针对本地生产构建的 Desktop Chromium Reader smoke，并由调用方 Actions run 保存 Playwright HTML artifact。它不是部署后 production smoke，也没有跨仓库状态回写；正式域名自动回归、mobile／WebKit 与更完整的交互证据仍属于后续测试平台切片。
+仓库当前状态为 `implemented` 的浏览器资产包括 Desktop Chromium Reader smoke、移动 Chromium／WebKit、跨标签页、dialog 焦点和 BibTeX 剪贴板 specs；其精确覆盖与 `planned / manual / not-covered` 边界见 [`testing.md`](../testing.md)。资产存在不表示任一分支最近一次执行成功。Reusable workflow 产生的报告与失败 trace／截图保留在博客 caller artifact，不向 UCCTB 回写；正式域名自动浏览器回归仍为 `not-covered`。

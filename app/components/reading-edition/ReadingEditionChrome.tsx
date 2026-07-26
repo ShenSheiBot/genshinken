@@ -941,6 +941,7 @@ export default function ReadingEditionChrome({
     if (!link) return;
     selectReference(link.kind, hash, desktopDesk ? "desk" : "sheet");
     if (!desktopDesk) {
+      lastNoteAnchor.current = link.anchor;
       setReferenceTrail([]);
       setSheet(link.kind);
     }
@@ -1084,7 +1085,10 @@ export default function ReadingEditionChrome({
         if (!dialog) return;
         const focusable = Array.from(dialog.querySelectorAll<HTMLElement>(
           "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])"
-        )).filter((element) => element.getClientRects().length > 0 && element.getAttribute("aria-hidden") !== "true");
+        )).filter((element) => (
+          element.getClientRects().length > 0
+          && !element.closest("[inert], [aria-hidden='true']")
+        ));
         const first = focusable[0];
         const last = focusable.at(-1);
         if (!first || !last) {
@@ -1093,7 +1097,10 @@ export default function ReadingEditionChrome({
           return;
         }
         const active = document.activeElement;
-        if (event.shiftKey && (active === first || !dialog.contains(active))) {
+        if (active === dialog) {
+          event.preventDefault();
+          (event.shiftKey ? last : first).focus();
+        } else if (event.shiftKey && (active === first || !dialog.contains(active))) {
           event.preventDefault();
           last.focus();
         } else if (!event.shiftKey && (active === last || !dialog.contains(active))) {

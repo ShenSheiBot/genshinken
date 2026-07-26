@@ -62,7 +62,11 @@ export default function CitationCopyButton({
         {status === "copied" ? "已复制 ✓" : status === "copying" ? "复制中…" : label}
       </button>
       <span role="status" aria-live="polite" aria-atomic="true">
-        {status === "failed" ? "复制失败，请重试" : ""}
+        {status === "copied"
+          ? "BibTeX 已复制到剪贴板"
+          : status === "failed"
+            ? "复制失败，请重试"
+            : ""}
       </span>
     </span>
   );
