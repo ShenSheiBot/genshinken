@@ -51,6 +51,12 @@ export const CONTRIBUTORS = [
     teamMember: false,
   },
   {
+    id: "danshui",
+    displayName: "淡水",
+    aliases: ["danshui"],
+    teamMember: false,
+  },
+  {
     id: "grigory-zinoviev",
     displayName: "格里戈里·季诺维也夫",
     aliases: ["Grigory Zinoviev", "Grigori Zinoviev"],

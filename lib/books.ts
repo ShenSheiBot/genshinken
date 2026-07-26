@@ -58,6 +58,7 @@ export interface Book {
   status: BookStatus;
   authors: string[];
   translators: string[];
+  proofreaders: string[];
   publishedAt: string;
   updatedAt: string;
   startAnchor: string;
@@ -105,6 +106,10 @@ function stringList(record: JsonRecord, field: string, source: string): string[]
     fail(source, field, "must be an array of non-empty strings");
   }
   return value.map((item) => (item as string).trim());
+}
+
+function optionalStringList(record: JsonRecord, field: string, source: string): string[] {
+  return record[field] == null ? [] : stringList(record, field, source);
 }
 
 function optionalString(record: JsonRecord, field: string, source: string): string | undefined {
@@ -249,8 +254,10 @@ function parseManifest(value: unknown, source: string): Book {
 
   const authors = stringList(value, "authors", source);
   const translators = stringList(value, "translators", source);
+  const proofreaders = optionalStringList(value, "proofreaders", source);
   validateContributorNames(authors, "authors", source);
   validateContributorNames(translators, "translators", source);
+  validateContributorNames(proofreaders, "proofreaders", source);
   const slug = stableId(value, "slug", source);
   const title = requiredString(value, "title", source);
   const subtitle = requiredString(value, "subtitle", source);
@@ -320,6 +327,7 @@ function parseManifest(value: unknown, source: string): Book {
     status: status as BookStatus,
     authors,
     translators,
+    proofreaders,
     publishedAt,
     updatedAt: dateString(value, "updatedAt", source),
     startAnchor: requiredString(value, "startAnchor", source),
@@ -379,10 +387,13 @@ export function getBookByDocumentSlug(documentSlug: string): Book | null {
   return getAllBooks().find((book) => book.documentSlug === documentSlug) ?? null;
 }
 
-export function getBookCredits(book: Pick<Book, "slug" | "authors" | "translators">): Credit[] {
+export function getBookCredits(
+  book: Pick<Book, "slug" | "authors" | "translators" | "proofreaders">
+): Credit[] {
   const rows: Array<{ role: CreditRole; names: string[] }> = [
     { role: "author", names: book.authors },
     { role: "translator", names: book.translators },
+    { role: "proofreader", names: book.proofreaders },
   ];
 
   return rows.flatMap(({ role, names }) => names.map((name) => {

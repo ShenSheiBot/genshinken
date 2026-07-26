@@ -42,13 +42,14 @@ tags: [产业, 冷战史]      # 标签（可多个；勿与主分类重复；�
 date: 2026-05-12         # 发布日期 YYYY-MM-DD
 post_author: 作者名       # 作者；首页卡片上以实心橙块「作」标记
 translator: 译者名        # 可选；空心橙块「译」
+proofreader: 校对者名     # 可选；空心橙块「校」
 slug: my-custom-url      # 必填 URL；必须为小写 ASCII kebab-case
 excerpt: 一句话摘要        # 可选，缺省时自动取正文首段
 featured_order: 0       # 可选；同栏目首页推荐优先级，数值越大越靠前
 ---
 
-> 署名角色只有作者与译者，顺序固定为 作者 → 译者；一个角色多人用逗号分隔。
-> 前端的「作／译」角色方块只是文本，只有姓名链接到 `/library?contributor=<id>`；首页译介推荐只显示作者。
+> 署名角色为作者、译者与校对，顺序固定为 作者 → 译者 → 校对；一个角色多人用逗号分隔。
+> 前端的「作／译／校」角色方块只是文本，只有姓名链接到 `/library?contributor=<id>`；首页译介推荐只显示作者。
 > `section` 与主题分类相互独立：例如一篇历史译文应写 `categories: 历史` 与 `section: translation`。
 > 运行时仍兼容旧稿从文件名回退 slug，但发布门禁要求每篇稿件显式填写；不要依赖回退。
 > 多媒体条目可以另外填写 `related_posts: [article-slug, another-slug]`，关联零篇或多篇站内文稿；

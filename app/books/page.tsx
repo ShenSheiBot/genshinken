@@ -73,6 +73,7 @@ export default function BooksPage() {
               const credits = getBookCredits(book);
               const authors = credits.filter((credit) => credit.role === "author");
               const translators = credits.filter((credit) => credit.role === "translator");
+              const proofreaders = credits.filter((credit) => credit.role === "proofreader");
               const allChapters = getAllBookChapters(book);
               const publishedChapters = getPublishedBookChapters(book);
               return (
@@ -95,6 +96,9 @@ export default function BooksPage() {
                       <div className={styles.catalogCredits}>
                         <div><span>作者</span><CreditLinks credits={authors} showMarks={false} separator="·" /></div>
                         <div><span>译者</span><CreditLinks credits={translators} showMarks={false} separator="·" /></div>
+                        {proofreaders.length > 0 && (
+                          <div><span>校对</span><CreditLinks credits={proofreaders} showMarks={false} separator="·" /></div>
+                        )}
                       </div>
                     </div>
                     <dl className={styles.catalogFacts}>

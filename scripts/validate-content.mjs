@@ -64,8 +64,9 @@ const publicationCutoffISO = berlinDateISO();
 const creditFields = [
   { role: "作者", keys: ["post_author", "author", "作者"], required: true },
   { role: "译者", keys: ["translator", "译者", "翻译"], required: false },
+  { role: "校对", keys: ["proofreader", "校对", "校对者", "校"], required: false },
 ];
-const unsupportedCreditFields = ["editor", "编者", "编辑", "proofreader", "校对", "校对者", "校"];
+const unsupportedCreditFields = ["editor", "编者", "编辑"];
 
 function report(collection, file, message) {
   collection.push(`${file}: ${message}`);
@@ -572,6 +573,7 @@ const records = files.map((file) => {
       report(errors, file, "citation.itemType 必须显式填写 Zotero item type");
     }
     const creators = creditFields.flatMap((field) => {
+      if (field.role === "校对") return [];
       const key = field.keys.find((candidate) => {
         const value = data[candidate];
         return value != null && (Array.isArray(value) ? value.length > 0 : String(value).trim() !== "");
@@ -602,7 +604,7 @@ const records = files.map((file) => {
 
   for (const field of unsupportedCreditFields) {
     if (hasOwn(data, field)) {
-      report(errors, file, `${field} 不是受支持的署名字段；只允许作者与译者`);
+      report(errors, file, `${field} 不是受支持的署名字段；只允许作者、译者与校对`);
     }
   }
 
@@ -797,8 +799,12 @@ const bookRecords = jsonFiles(booksDirectory)
     const latestChapterId = stableRecordId(data, "latestChapterId", file);
     const authors = stringArray(data.authors, file, "authors", { required: true });
     const translators = stringArray(data.translators, file, "translators");
+    const proofreaders = data.proofreaders == null
+      ? []
+      : stringArray(data.proofreaders, file, "proofreaders");
     validateContributorNames(file, "authors", authors, { required: true });
     validateContributorNames(file, "translators", translators);
+    validateContributorNames(file, "proofreaders", proofreaders);
     validateBookDownloadUrl(file, "pdfUrl", data.pdfUrl);
     validateBookDownloadUrl(file, "epubUrl", data.epubUrl);
     if (hasOwn(data, "originalBibtex") || hasOwn(data, "translationBibtex")) {

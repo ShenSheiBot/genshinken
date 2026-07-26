@@ -1482,7 +1482,11 @@ export default function ReadingEditionChrome({
                 className={styles.creditMark}
                 data-solid={credit.solid ? "true" : "false"}
                 role="img"
-                aria-label={credit.role === "author" ? "作者" : "译者"}
+                aria-label={
+                  credit.role === "author"
+                    ? "作者"
+                    : credit.role === "translator" ? "译者" : "校对"
+                }
               >
                 {credit.mark}
               </span>

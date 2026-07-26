@@ -1201,7 +1201,8 @@ const rolePanel = libraryPanels.find((panel) => visibleText(panel.outer).include
 assert.ok(rolePanel, "library must render the credit-role panel");
 assert.match(visibleText(rolePanel.outer), /作者/);
 assert.match(visibleText(rolePanel.outer), /译者/);
-assert.doesNotMatch(visibleText(rolePanel.outer), /编辑|校对/);
+assert.match(visibleText(rolePanel.outer), /校对/);
+assert.doesNotMatch(visibleText(rolePanel.outer), /编辑/);
 assert.match(filteredLibrary.html, /苏联计划经济的历史审视/);
 assert.doesNotMatch(filteredLibrary.html, /学龄前的歌利亚/);
 assert.match(fangLibrary.html, /一份关于克苏鲁的调查报告/);

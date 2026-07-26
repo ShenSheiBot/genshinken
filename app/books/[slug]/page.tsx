@@ -126,6 +126,7 @@ export default async function BookPage({
   const credits = getBookCredits(book);
   const authors = credits.filter((credit) => credit.role === "author");
   const translators = credits.filter((credit) => credit.role === "translator");
+  const proofreaders = credits.filter((credit) => credit.role === "proofreader");
   const canonical = `${site.url}${bookHref(book)}`;
   const jsonLd = {
     ...citationToJsonLd(book.translationCitation),
@@ -142,6 +143,12 @@ export default async function BookPage({
       "@type": "Person",
       name: credit.name,
       url: `${site.url}/library?contributor=${encodeURIComponent(credit.contributorId)}`,
+    })),
+    contributor: proofreaders.map((credit) => ({
+      "@type": "Person",
+      name: credit.name,
+      url: `${site.url}/library?contributor=${encodeURIComponent(credit.contributorId)}`,
+      roleName: "校对",
     })),
     publisher: { "@type": "Organization", name: site.brand, url: site.url },
     hasPart: publishedChapters.map((chapter, index) => ({
@@ -181,6 +188,9 @@ export default async function BookPage({
             <div className={styles.responsibility}>
               <div><span>作者</span><CreditLinks credits={authors} showMarks={false} separator="·" /></div>
               <div><span>译者</span><CreditLinks credits={translators} showMarks={false} separator="·" /></div>
+              {proofreaders.length > 0 && (
+                <div><span>校对</span><CreditLinks credits={proofreaders} showMarks={false} separator="·" /></div>
+              )}
             </div>
             <p className={styles.bookDescription}>{book.description}</p>
           </div>

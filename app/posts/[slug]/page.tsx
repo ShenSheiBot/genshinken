@@ -69,9 +69,10 @@ function buildJsonLd(
   post: NonNullable<Awaited<ReturnType<typeof getPostBySlug>>>,
   citation: CitationRecord
 ) {
-  const roles: Record<CreditRole, string> = {
+  const roles: Record<CreditRole, "author" | "translator" | "contributor"> = {
     author: "author",
     translator: "translator",
+    proofreader: "contributor",
   };
   const credits: Record<string, Array<Record<string, string>>> = {};
   for (const credit of post.credits) {

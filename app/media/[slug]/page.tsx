@@ -122,11 +122,14 @@ function RelatedPostCard({
 
 function buildJsonLd(post: Post, destinations: Destination[]) {
   const canonical = `${site.url}${postPath(post)}`;
-  const roleProperties: Record<CreditRole, "author" | "translator"> = {
+  const roleProperties: Record<CreditRole, "author" | "translator" | "contributor"> = {
     author: "author",
     translator: "translator",
+    proofreader: "contributor",
   };
-  const people: Partial<Record<"author" | "translator", Array<Record<string, string>>>> = {};
+  const people: Partial<
+    Record<"author" | "translator" | "contributor", Array<Record<string, string>>>
+  > = {};
 
   for (const credit of post.credits) {
     const property = roleProperties[credit.role];
