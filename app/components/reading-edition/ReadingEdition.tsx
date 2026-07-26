@@ -8,9 +8,9 @@ import {
   postPath,
   type EditorialSection,
 } from "@/lib/editorial";
-import ReadingPrototypeChrome from "@/app/prototype/reading/[slug]/ReadingPrototypeChrome";
+import ReadingEditionChrome from "@/app/components/reading-edition/ReadingEditionChrome";
 import CreditLinks from "@/app/components/CreditLinks";
-import styles from "@/app/prototype/reading/[slug]/reading-prototype.module.css";
+import styles from "@/app/components/reading-edition/reading-edition.module.css";
 import homeStyles from "@/app/components/editorial-home/PosterWallHome.module.css";
 import { hanScriptLanguageTag, type HanScript } from "@/lib/han-script";
 
@@ -285,7 +285,7 @@ export function ReadingDossier({
       data-han-source-script={post.script}
       lang={hanScriptLanguageTag(post.script)}
     >
-      <ReadingPrototypeChrome
+      <ReadingEditionChrome
         title={post.title}
         slug={post.slug}
         contentRevision={post.contentRevision}
@@ -400,7 +400,7 @@ export function ReadingFolio({ post, parts, posts }: { post: Post; parts: Articl
       data-han-source-script={post.script}
       lang={hanScriptLanguageTag(post.script)}
     >
-      <ReadingPrototypeChrome
+      <ReadingEditionChrome
         title={post.title}
         slug={post.slug}
         contentRevision={post.contentRevision}

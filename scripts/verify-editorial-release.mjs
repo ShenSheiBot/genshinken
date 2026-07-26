@@ -106,11 +106,11 @@ const prohibitedBrand = "\u53cd\u6b63\u5178";
 const incorrectSimplifiedBrand = "西方负典";
 const embeddedMediaTag = /<(?:iframe|video|audio|object|embed)\b/i;
 const readingChromeSource = fs.readFileSync(
-  path.join(process.cwd(), "app", "prototype", "reading", "[slug]", "ReadingPrototypeChrome.tsx"),
+  path.join(process.cwd(), "app", "components", "reading-edition", "ReadingEditionChrome.tsx"),
   "utf8"
 );
 const readingStylesSource = fs.readFileSync(
-  path.join(process.cwd(), "app", "prototype", "reading", "[slug]", "reading-prototype.module.css"),
+  path.join(process.cwd(), "app", "components", "reading-edition", "reading-edition.module.css"),
   "utf8"
 );
 const readingEditionSource = fs.readFileSync(

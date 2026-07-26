@@ -42,7 +42,7 @@ const missingScript = fs.readdirSync(postsDirectory)
 assert.deepEqual(missingScript, [], "every post must declare its source writing system");
 
 const readerChromeSource = fs.readFileSync(
-  path.join(process.cwd(), "app", "prototype", "reading", "[slug]", "ReadingPrototypeChrome.tsx"),
+  path.join(process.cwd(), "app", "components", "reading-edition", "ReadingEditionChrome.tsx"),
   "utf8"
 );
 for (const attribute of ["alt", "title", "aria-label"]) {

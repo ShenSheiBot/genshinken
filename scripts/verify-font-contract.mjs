@@ -12,10 +12,9 @@ const globalsPath = path.join(root, "app", "globals.css");
 const readerPath = path.join(
   root,
   "app",
-  "prototype",
-  "reading",
-  "[slug]",
-  "reading-prototype.module.css"
+  "components",
+  "reading-edition",
+  "reading-edition.module.css"
 );
 const manifestPath = path.join(root, "public", "fonts", "cjk-font-manifest.json");
 

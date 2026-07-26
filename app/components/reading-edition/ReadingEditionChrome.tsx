@@ -1,6 +1,6 @@
 "use client";
 
-// THROWAWAY READING PROTOTYPE — dossier desk, visual-line navigation and compact reading drawers.
+// Production reading chrome — dossier desk, visual-line navigation and compact reading drawers.
 import type { FormEvent, MouseEvent as ReactMouseEvent, PointerEvent as ReactPointerEvent } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
@@ -27,7 +27,7 @@ import {
   useHanScriptConversion,
 } from "@/app/components/useHanScriptConversion";
 import { toggleTheme, useTheme } from "@/app/components/useTheme";
-import styles from "./reading-prototype.module.css";
+import styles from "./reading-edition.module.css";
 
 type Variant = "dossier" | "folio";
 type ReaderMode = "preview" | "edition";
@@ -348,7 +348,7 @@ function referenceItem(target: HTMLElement, kind: ReferenceKind, index: number, 
   return { id: target.id, label, kind, index, html: clone.innerHTML, previewHtml: preview.innerHTML };
 }
 
-export default function ReadingPrototypeChrome({
+export default function ReadingEditionChrome({
   title,
   slug,
   contentRevision,
