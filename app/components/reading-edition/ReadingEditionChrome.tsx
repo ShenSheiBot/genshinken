@@ -4,7 +4,7 @@
 import type { FormEvent, MouseEvent as ReactMouseEvent, PointerEvent as ReactPointerEvent } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import type { Credit } from "@/lib/posts";
 import type { HanScript } from "@/lib/han-script";
@@ -29,8 +29,6 @@ import {
 import { toggleTheme, useTheme } from "@/app/components/useTheme";
 import styles from "./reading-edition.module.css";
 
-type Variant = "dossier" | "folio";
-type ReaderMode = "preview" | "edition";
 type ReaderSize = "small" | "medium" | "large";
 type ReaderFont = "serif" | "sans";
 type ReferenceKind = "annotation" | "source";
@@ -53,11 +51,6 @@ type ReferenceVisit = { kind: ReferenceKind; id: string; label: string };
 type FragmentLine = { center: number; width: number };
 type LineMarker = { line: number; top: number };
 type DeskSlots = { left: HTMLElement; right: HTMLElement | null };
-
-const variantMeta: Record<Variant, { short: string }> = {
-  dossier: { short: "案卷" },
-  folio: { short: "长卷" },
-};
 
 const LINE_OWNER = "p,h1,h2,h3,h4,h5,h6,li,blockquote,pre,figcaption,td,th,dt,dd";
 const LINE_SKIP = "script,style,noscript,template,svg,[hidden],[aria-hidden='true'],.footnotes,.source-notes";
@@ -353,28 +346,21 @@ export default function ReadingEditionChrome({
   slug,
   contentRevision,
   sourceScript,
-  variant,
   credits,
   fallbackAuthor,
   citationBibtex,
   citationHref,
-  mode = "preview",
 }: {
   title: string;
   slug: string;
   contentRevision: string;
   sourceScript: HanScript;
-  variant: Variant;
   credits: Credit[];
   fallbackAuthor: string;
   citationBibtex?: string;
   citationHref?: string;
-  /** The public edition keeps the reader chrome but removes preview controls. */
-  mode?: ReaderMode;
 }) {
-  const isEdition = mode === "edition";
   const router = useRouter();
-  const pathname = usePathname();
   const [toc, setToc] = useState<TocItem[]>([]);
   const [activeId, setActiveId] = useState("");
   const [expandedToc, setExpandedToc] = useState<Set<string>>(() => new Set());
@@ -455,8 +441,6 @@ export default function ReadingEditionChrome({
   }, []);
 
   useEffect(() => {
-    if (!isEdition) return;
-
     const onReadingLinkClick = (event: MouseEvent) => {
       if (
         event.defaultPrevented
@@ -511,7 +495,7 @@ export default function ReadingEditionChrome({
     return () => {
       document.removeEventListener("click", onReadingLinkClick, true);
     };
-  }, [isEdition, router]);
+  }, [router]);
 
   const tocTree = useMemo(() => buildTocTree(toc), [toc]);
   const currentSection = useMemo(
@@ -522,7 +506,7 @@ export default function ReadingEditionChrome({
   const pct = Math.round(progress * 100);
   const sheetOpen = sheet !== null;
   const previousReference = referenceTrail.at(-1);
-  const showFigureIndex = isEdition && desktopDesk && figureItems.length > 0;
+  const showFigureIndex = desktopDesk && figureItems.length > 0;
   const {
     trackingEnabled: readingProgressEnabled,
     hasCurrentRecord,
@@ -533,19 +517,13 @@ export default function ReadingEditionChrome({
     clearCurrent: clearCurrentReadingProgress,
     clearAll: clearAllReadingProgress,
   } = useReadingProgress({
-    active: isEdition,
+    active: true,
     slug,
     revision: contentRevision,
     measurement: readingMeasurement,
     viewportAnchor: visualAnchor,
   });
-  const readerStatus = hanScriptStatus || (isEdition ? readingProgressStatus : "");
-
-  const setVariant = useCallback((next: Variant) => {
-    const params = new URLSearchParams(window.location.search);
-    params.set("variant", next);
-    router.replace(`${pathname}?${params.toString()}`, { scroll: false });
-  }, [pathname, router]);
+  const readerStatus = hanScriptStatus || readingProgressStatus;
 
   useEffect(() => {
     const savedSize = readLocalSetting("ub_reader_size");
@@ -565,23 +543,23 @@ export default function ReadingEditionChrome({
   useEffect(() => {
     const media = window.matchMedia("(min-width: 1024px)");
     const sync = () => {
-      const next = media.matches && variant === "dossier";
+      const next = media.matches;
       setDesktopDesk(next);
       if (next) setSheet(null);
     };
     sync();
     media.addEventListener("change", sync);
     return () => media.removeEventListener("change", sync);
-  }, [variant]);
+  }, []);
 
   useEffect(() => {
     const left = document.getElementById("reading-left-rail");
     const right = document.getElementById("reading-right-rail");
     setSlots(left ? { left, right } : null);
-  }, [variant]);
+  }, []);
 
   useEffect(() => {
-    const body = document.querySelector<HTMLElement>(".reading-prototype-body");
+    const body = document.querySelector<HTMLElement>(".reading-edition-body");
     if (!body) return;
     setReadingMeasurement(null);
     bodyRef.current = body;
@@ -614,11 +592,11 @@ export default function ReadingEditionChrome({
     });
     referenceLinksRef.current = links;
 
-    const annotationItems = Array.from(document.querySelectorAll<HTMLElement>(".reading-prototype-appendix .footnotes li")).map((target, index) => {
+    const annotationItems = Array.from(document.querySelectorAll<HTMLElement>(".reading-edition-appendix .footnotes li")).map((target, index) => {
       if (!target.id) target.id = `reading-annotation-${index + 1}`;
       return referenceItem(target, "annotation", index, labels.get(target.id) || String(index + 1));
     });
-    const sourceItems = Array.from(document.querySelectorAll<HTMLElement>(".reading-prototype-appendix .source-notes li")).map((target, index) => {
+    const sourceItems = Array.from(document.querySelectorAll<HTMLElement>(".reading-edition-appendix .source-notes li")).map((target, index) => {
       if (!target.id) target.id = `reading-source-${index + 1}`;
       return referenceItem(target, "source", index, labels.get(target.id) || toRoman(index + 1));
     });
@@ -635,7 +613,7 @@ export default function ReadingEditionChrome({
       figureElementsRef.current.clear();
       setLineMarkerHost(null);
     };
-  }, [contentRevision, conversionRevision, slug, variant]);
+  }, [contentRevision, conversionRevision, slug]);
 
   const syncReadingPosition = useCallback(() => {
     const body = bodyRef.current;
@@ -798,7 +776,6 @@ export default function ReadingEditionChrome({
     readerSize,
     slug,
     syncReadingPosition,
-    variant,
   ]);
 
   useEffect(() => {
@@ -1000,7 +977,7 @@ export default function ReadingEditionChrome({
   }, []);
 
   useEffect(() => {
-    const flow = document.querySelector<HTMLElement>(".reading-prototype-flow");
+    const flow = document.querySelector<HTMLElement>(".reading-edition-flow");
     if (!flow) return;
     const onClick = (event: MouseEvent) => {
       const anchor = (event.target as HTMLElement | null)?.closest<HTMLAnchorElement>('a[href^="#"]');
@@ -1125,15 +1102,10 @@ export default function ReadingEditionChrome({
         }
         return;
       }
-      if (isEdition || (event.key !== "ArrowLeft" && event.key !== "ArrowRight")) return;
-      const target = event.target as HTMLElement | null;
-      if (target?.closest("input, textarea, select, a, button, summary, [contenteditable='true']")) return;
-      event.preventDefault();
-      setVariant(variant === "dossier" ? "folio" : "dossier");
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [closeSheet, isEdition, setVariant, sheet, variant]);
+  }, [closeSheet, sheet]);
 
   const openSheet = (next: Exclude<Sheet, null>, trigger?: HTMLElement) => {
     if (sheetCloseTimerRef.current != null) {
@@ -1623,7 +1595,7 @@ export default function ReadingEditionChrome({
       lineMarkerHost
     )
     : null;
-  const readingUpdateBoundaryPortal = isEdition && readingUpdateBoundaryHost
+  const readingUpdateBoundaryPortal = readingUpdateBoundaryHost
     ? createPortal(
       <div className={styles.readingUpdateBoundary} role="note" aria-label="文章更新边界">
         <span>上次读完至此</span>
@@ -1654,7 +1626,7 @@ export default function ReadingEditionChrome({
         </p>
       )}
       <header className={styles.runningHeader}>
-        <Link href={isEdition ? "/" : "/prototype/poster"} className={`${styles.runningBrand} ignore-opencc`} aria-label={`返回${site.brandCN}首页`}><i /><span className={styles.runningBrandName}>{site.brandCN}</span></Link>
+        <Link href="/" className={`${styles.runningBrand} ignore-opencc`} aria-label={`返回${site.brandCN}首页`}><i /><span className={styles.runningBrandName}>{site.brandCN}</span></Link>
         <nav className={styles.runningSections} aria-label="全站导航">
           {GLOBAL_NAV_ITEMS.map((item) => (
             <Link key={item.href} href={item.href} className={styles.runningSectionLink}>
@@ -1724,45 +1696,41 @@ export default function ReadingEditionChrome({
                 </section>
                 <section className={styles.settingGroup}><span>字号</span><div className={styles.sizeChooser}>{(["small", "medium", "large"] as const).map((size, index) => <button key={size} type="button" data-active={size === readerSize} onClick={() => updateSize(size)}><b style={{ fontSize: `${15 + index * 4}px` }}>字</b><span>{["小", "中", "大"][index]}</span></button>)}</div></section>
                 <button className={styles.themeChoice} type="button" onClick={toggleTheme}><span>{dark ? "☾" : "☼"}</span><b>{dark ? "切换到浅色" : "切换到深色"}</b><i>→</i></button>
-                {isEdition && (
-                  <section className={`${styles.settingGroup} ${styles.readingProgressGroup}`}>
-                    <span>阅读记录</span>
-                    <div className={styles.readingProgressSetting}>
-                      <div>
-                        <b>保存本机阅读记录</b>
-                        <small>默认开启；记录仅保存在当前浏览器，不会上传或跨设备同步。</small>
-                      </div>
-                      <button
-                        className={styles.readingProgressSwitch}
-                        type="button"
-                        role="switch"
-                        aria-checked={readingProgressEnabled}
-                        aria-label="保存本机阅读记录"
-                        onClick={() => setReadingProgressEnabled(!readingProgressEnabled)}
-                      >
-                        <span aria-hidden="true" />
-                      </button>
+                <section className={`${styles.settingGroup} ${styles.readingProgressGroup}`}>
+                  <span>阅读记录</span>
+                  <div className={styles.readingProgressSetting}>
+                    <div>
+                      <b>保存本机阅读记录</b>
+                      <small>默认开启；记录仅保存在当前浏览器，不会上传或跨设备同步。</small>
                     </div>
-                    <div className={styles.readingProgressActions}>
-                      <button type="button" disabled={!hasCurrentRecord} onClick={clearCurrentReadingProgress}>清除本文记录</button>
-                      <button
-                        type="button"
-                        onClick={() => {
-                          if (window.confirm("确定清除当前浏览器中的全部阅读记录吗？")) clearAllReadingProgress();
-                        }}
-                      >
-                        清除全部记录
-                      </button>
-                    </div>
-                  </section>
-                )}
+                    <button
+                      className={styles.readingProgressSwitch}
+                      type="button"
+                      role="switch"
+                      aria-checked={readingProgressEnabled}
+                      aria-label="保存本机阅读记录"
+                      onClick={() => setReadingProgressEnabled(!readingProgressEnabled)}
+                    >
+                      <span aria-hidden="true" />
+                    </button>
+                  </div>
+                  <div className={styles.readingProgressActions}>
+                    <button type="button" disabled={!hasCurrentRecord} onClick={clearCurrentReadingProgress}>清除本文记录</button>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        if (window.confirm("确定清除当前浏览器中的全部阅读记录吗？")) clearAllReadingProgress();
+                      }}
+                    >
+                      清除全部记录
+                    </button>
+                  </div>
+                </section>
               </>
             )}
           </section>
         </div>
       )}
-
-      {!isEdition && <aside className={styles.prototypeSwitcher} aria-label="正文原型切换器"><span>原型</span><Link href={`/posts/${encodeURIComponent(slug)}`}>现有正文</Link>{(Object.keys(variantMeta) as Variant[]).map((key, index) => <button key={key} type="button" data-active={key === variant} onClick={() => setVariant(key)}>{String(index + 1).padStart(2, "0")} {variantMeta[key].short}</button>)}</aside>}
     </>
   );
 }

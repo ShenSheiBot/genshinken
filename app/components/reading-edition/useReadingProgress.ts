@@ -211,7 +211,7 @@ function resolveRestore(
 
   if (record.status === "completed" && endFingerprintIndex === lastBlockIndex) {
     const endMark = measurement.body
-      .closest<HTMLElement>(".reading-prototype-flow")
+      .closest<HTMLElement>(".reading-edition-flow")
       ?.querySelector<HTMLElement>('[aria-label="正文完"]');
     if (endMark) {
       return {
@@ -587,7 +587,7 @@ export function useReadingProgress({
       ? 0
       : (sectionLinesBefore + location.lineIndex) / (sectionLineCount - 1);
     const endMark = currentMeasurement.body
-      .closest<HTMLElement>(".reading-prototype-flow")
+      .closest<HTMLElement>(".reading-edition-flow")
       ?.querySelector<HTMLElement>('[aria-label="正文完"]');
     const crossedEnd = !!endMark && endMark.getBoundingClientRect().top <= viewportAnchor();
     const previousRecord = latestRecordRef.current ?? recordRef.current;

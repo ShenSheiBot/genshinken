@@ -39,7 +39,7 @@
 }
 
 /* -------------------------------------------------------------------------- */
-/* Prototype-local running header                                              */
+/* Production reading header                                                   */
 /* -------------------------------------------------------------------------- */
 
 .runningHeader {
@@ -136,16 +136,6 @@
   color: var(--solid-ink);
   background: var(--solid);
   outline: none;
-}
-
-.runningSectionAll span {
-  width: 15px;
-  color: var(--accent);
-  font-family: var(--f-grotesk);
-  font-size: var(--site-nav-size);
-  font-weight: 600;
-  letter-spacing: 0;
-  text-align: center;
 }
 
 .runningTools { justify-self: end; display: flex; align-items: center; }
@@ -655,15 +645,6 @@
 /* -------------------------------------------------------------------------- */
 
 .dossierRoot {
-  background-image:
-    linear-gradient(90deg, transparent calc(50% - .5px), var(--grid) 50%, transparent calc(50% + .5px));
-  background-size: 160px 100%;
-}
-
-/* The public reading edition uses a quiet paper field. Keep the grid only in
-   the prototype direction so changing the reader typeface cannot reveal a
-   blurred vertical pattern behind the text. */
-:global(.reading-edition-page).dossierRoot {
   background-image: none;
 }
 
@@ -995,8 +976,7 @@
 }
 .tagLine .libraryFilterLink:focus-visible { outline-offset: -1px; }
 
-.dossierReading,
-.folioReading {
+.dossierReading {
   display: grid;
   grid-template-columns: var(--reading-left) var(--reading-text) var(--reading-right);
   gap: var(--reading-gap);
@@ -1009,26 +989,6 @@
   min-width: 0;
   min-height: 0;
 }
-
-.articleFile {
-  position: sticky;
-  top: 84px;
-  align-self: start;
-  max-height: calc(100vh - 110px);
-  padding-right: 28px;
-  overflow-y: auto;
-}
-
-.metaRows { margin: 22px 0 0; }
-.metaRows > div { display: grid; grid-template-columns: 48px 1fr; gap: 10px; padding: 10px 0; border-top: 1px solid var(--hair); }
-.metaRows dt { font-family: var(--f-mono); font-size: var(--text-sm); letter-spacing: .06em; color: var(--ink-faint); }
-.metaCreditLabel { display: inline-flex; align-items: center; gap: 5px; }
-.metaCreditLabel .creditMark { width: 14px; height: 14px; font-size: var(--text-xs); }
-.metaRows dd { margin: 0; font-family: var(--reader-body-family); font-size: 13px; line-height: 1.45; }
-.fileRule { height: 3px; margin: 26px 0; background: var(--accent); }
-.articleFile > p { margin: 0; font-family: var(--reader-body-family); font-size: 13px; line-height: 1.72; color: var(--ink-soft); }
-.articleFile > a { display: inline-block; margin-top: 24px; font-family: var(--f-mono); font-size: var(--text-sm); letter-spacing: .06em; border-bottom: 1px solid var(--hair-strong); }
-.railPlaceholder { width: var(--reading-right); }
 
 /* Dossier research desk: both rails live inside the article grid, so the
    sticky boxes are bounded by the reading section and cannot cover related content. */
@@ -1253,7 +1213,6 @@ input.lineCurrent::selection { color: var(--solid-ink); background: var(--solid)
   .figureIndexJump > b { transition: none; }
 }
 
-.tocList { min-height: 0; }
 .tocBranch[data-depth="1"] { padding-left: 6px; }
 .tocBranch[data-depth="2"] { padding-left: 6px; }
 .tocRow { position: relative; display: block; min-width: 0; }
@@ -1412,150 +1371,7 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
 .styledScroller::-webkit-scrollbar-thumb:hover { background: var(--ink-soft); }
 
 /* -------------------------------------------------------------------------- */
-/* Folio direction                                                            */
-/* -------------------------------------------------------------------------- */
-
-.folioRoot {
-  --reading-text: 680px;
-  background: var(--bg);
-}
-
-.folioCover {
-  max-width: 1060px;
-  min-height: min(720px, calc(100vh - 58px));
-  margin: 0 auto;
-  padding: 42px 0 70px;
-}
-
-.folioMast {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 0 14px;
-  border-bottom: 3px double var(--hair-strong);
-  font-family: var(--f-mono);
-  font-size: var(--text-caption);
-  letter-spacing: .09em;
-}
-
-.folioTitleBlock {
-  position: relative;
-  max-width: 880px;
-  margin: 78px auto 0;
-  text-align: center;
-}
-
-.folioIssue {
-  position: absolute;
-  left: -70px;
-  top: -18px;
-  font-family: var(--f-serif);
-  font-size: 116px;
-  font-style: italic;
-  line-height: 1;
-  color: var(--ghost);
-}
-
-.folioSection {
-  margin: 0 0 24px;
-  font-family: var(--f-mono);
-  font-size: var(--text-caption);
-  font-weight: 700;
-  letter-spacing: .16em;
-  color: var(--accent);
-}
-
-.folioTitleBlock h1 {
-  margin: 0;
-  font-family: var(--reader-title-family);
-  font-size: clamp(50px, 5.5vw, 76px);
-  font-weight: 700;
-  line-height: 1.13;
-  letter-spacing: -.035em;
-  text-wrap: balance;
-}
-
-.folioTitleBlock .subtitle { max-width: 720px; margin: 26px auto 0; }
-
-.folioLead {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 210px;
-  gap: 56px;
-  max-width: 780px;
-  margin: 62px auto 0;
-  padding-top: 25px;
-  border-top: 1px solid var(--hair-strong);
-}
-
-.folioLead > p {
-  margin: 0;
-  font-family: var(--reader-body-family);
-  font-size: 18px;
-  line-height: 1.72;
-  color: var(--ink-soft);
-}
-
-.folioLead > div { display: flex; flex-direction: column; gap: 12px; padding-left: 22px; border-left: 1px solid var(--hair); }
-.folioLead strong { font-family: var(--reader-body-family); font-size: 14px; line-height: 1.6; }
-.folioLead .creditLine { gap: 7px 14px; }
-.folioLead .creditMark { width: 16px; height: 16px; font-size: var(--text-caption); }
-.folioLead span { font-family: var(--f-mono); font-size: var(--text-sm); letter-spacing: .08em; color: var(--ink-faint); }
-
-.folioReading { border-top: 1px solid var(--hair-strong); }
-
-.folioMargin {
-  position: sticky;
-  top: 84px;
-  align-self: start;
-  padding: 0 26px 28px 0;
-}
-
-.folioMargin > p {
-  margin: 26px 0 0;
-  font-family: var(--reader-body-family);
-  font-size: 13px;
-  font-style: italic;
-  line-height: 1.75;
-  color: var(--ink-soft);
-}
-
-.folioOrnament {
-  margin-top: 42px;
-  padding-top: 25px;
-  border-top: 1px solid var(--hair);
-  color: var(--accent);
-  font-family: var(--f-serif);
-  font-size: 30px;
-  text-align: center;
-}
-
-.folioRoot .body :global(h1),
-.folioRoot .body :global(h2) {
-  padding-top: 1.4rem;
-  font-family: var(--reader-title-family);
-  font-size: 29px;
-  font-weight: 700;
-  text-align: center;
-}
-
-.folioRoot .body :global(h1::before),
-.folioRoot .body :global(h2::before) {
-  position: static;
-  display: block;
-  width: auto;
-  margin: 0 0 10px;
-  color: var(--accent);
-  font-family: var(--f-serif);
-  font-size: 14px;
-  font-style: italic;
-  text-align: center;
-}
-
-.sheetProgress > span { display: block; height: 2px; margin-top: 14px; background: var(--hair); }
-.sheetProgress > span b { display: block; height: 100%; background: var(--accent); }
-
-/* -------------------------------------------------------------------------- */
-/* Sheets and prototype switcher                                               */
+/* Sheets                                                                      */
 /* -------------------------------------------------------------------------- */
 
 .sheetLayer {
@@ -1676,8 +1492,6 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
 .referenceBack:hover,
 .referenceBack:focus-visible { color: var(--solid-ink); background: var(--solid); outline: none; }
 .sheet .referencePane[data-compact="true"] { grid-template-rows: minmax(0, 1fr) auto; }
-.sheetProgress { margin-bottom: 22px; }
-.sheetProgress p { margin: 9px 0 0; font-family: var(--f-mono); font-size: var(--text-sm); color: var(--ink-faint); }
 .sheet .tocJump { padding-top: 10px; padding-bottom: 10px; }
 .sheet .tocJump b { font-size: 14px; white-space: normal; }
 
@@ -1788,55 +1602,6 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
 .readingUpdateBoundary span { grid-column: 1; grid-row: 1; }
 .readingUpdateBoundary b { grid-column: 3; grid-row: 1; color: var(--accent); font-weight: 700; }
 
-.prototypeSwitcher {
-  position: fixed;
-  left: 50%;
-  bottom: max(16px, env(safe-area-inset-bottom));
-  z-index: 110;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  padding: 5px;
-  color: #f4f1e9;
-  background: #171714;
-  border: 1px solid #f4f1e9;
-  box-shadow: 0 9px 30px rgb(0 0 0 / 24%);
-  transform: translateX(-50%);
-  font-family: var(--f-mono);
-  font-size: var(--text-sm);
-  letter-spacing: .05em;
-  white-space: nowrap;
-}
-
-.prototypeSwitcher > span {
-  align-self: stretch;
-  display: inline-flex;
-  align-items: center;
-  padding: 0 10px;
-  color: #fff;
-  background: #b3271e;
-  font-weight: 700;
-  letter-spacing: .12em;
-}
-
-.prototypeSwitcher a,
-.prototypeSwitcher button {
-  min-height: 34px;
-  padding: 0 12px;
-  color: inherit;
-  border: 1px solid rgb(244 241 233 / 26%);
-}
-
-.prototypeSwitcher button[data-active="true"],
-.prototypeSwitcher a:hover,
-.prototypeSwitcher button:hover,
-.prototypeSwitcher a:focus-visible,
-.prototypeSwitcher button:focus-visible {
-  color: #171714;
-  background: #f4f1e9;
-  outline: none;
-}
-
 /* -------------------------------------------------------------------------- */
 /* Tablet / wide single column                                                */
 /* -------------------------------------------------------------------------- */
@@ -1873,7 +1638,6 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
 
   .runningHeader { grid-template-columns: max-content minmax(0, 1fr) max-content; }
 
-  .dossierRoot { background-image: none; }
   .dossierCover {
     display: block;
     max-width: 760px;
@@ -1891,17 +1655,9 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
   .titleSegment { white-space: normal; }
 
   .dossierReading { display: block; max-width: var(--reading-text); padding: 34px 0 0; }
-  .folioReading { display: block; max-width: var(--reading-text); padding: 62px 0 0; }
-  .articleFile,
-  .folioMargin,
-  .railPlaceholder,
   .deskRailSlot { display: none; }
   .visualLineMarkers { display: none; }
 
-  .folioCover { max-width: 920px; min-height: 0; padding: 42px 40px 66px; }
-  .folioTitleBlock { margin-top: 60px; }
-  .folioIssue { left: -10px; }
-  .folioLead { max-width: 720px; }
   .sheet { width: min(430px, 88vw); }
   .sheet .tocPanel { max-height: calc(100dvh - 285px); }
   .sheet .tocViewport { max-height: none; }
@@ -1931,13 +1687,11 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
   }
 
   .dossierCover,
-  .dossierReading,
-  .folioReading {
+  .dossierReading {
     grid-template-columns: minmax(var(--reading-left), 1fr) minmax(0, var(--reading-text)) minmax(var(--reading-right), 1fr);
   }
 
-  .dossierReading .articleFlow,
-  .folioReading .articleFlow { width: 100%; }
+  .dossierReading .articleFlow { width: 100%; }
 
   .runningSectionLink b { font-size: var(--site-nav-size); }
 
@@ -2040,7 +1794,6 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
     width: var(--reading-text);
     padding-top: 10px;
   }
-  .folioReading { width: var(--reading-text); padding-top: 44px; }
   .dossierReading {
     position: relative;
     inset-inline-start: 4px;
@@ -2056,9 +1809,7 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
     overflow-wrap: normal;
   }
   .body :global(h1),
-  .body :global(h2),
-  .folioRoot .body :global(h1),
-  .folioRoot .body :global(h2) {
+  .body :global(h2) {
     margin-top: 3.55rem;
     padding-top: 1rem;
     font-size: 25px;
@@ -2067,9 +1818,7 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
   }
   .body :global(h3) { margin-top: 2.9rem; font-size: 20px; line-height: 1.45; }
   .body :global(h1::before),
-  .body :global(h2::before),
-  .folioRoot .body :global(h1::before),
-  .folioRoot .body :global(h2::before) {
+  .body :global(h2::before) {
     position: static;
     display: block;
     width: auto;
@@ -2093,17 +1842,6 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
   .appendixContent :global(.footnotes p),
   .appendixContent :global(.source-notes p) { font-size: calc(var(--reader-font) - 1px); line-height: 1.72; }
 
-  .folioCover { max-width: none; padding: 25px 20px 42px; }
-  .folioMast { font-size: var(--text-xs); }
-  .folioMast span { text-align: right; }
-  .folioTitleBlock { margin-top: 48px; text-align: left; }
-  .folioIssue { left: auto; right: 0; top: -38px; font-size: 88px; }
-  .folioSection { margin-bottom: 18px; }
-  .folioTitleBlock h1 { font-size: clamp(36px, 10.8vw, 44px); line-height: 1.18; }
-  .folioTitleBlock .subtitle { margin-top: 18px; }
-  .folioLead { display: block; margin-top: 36px; padding-top: 20px; }
-  .folioLead > p { font-size: 16px; line-height: 1.74; }
-  .folioLead > div { margin-top: 21px; padding: 17px 0 0; border-top: 1px solid var(--hair); border-left: 0; }
   .sheetLayer { align-items: flex-end; justify-content: stretch; }
   .sheetLayer[data-sheet="settings"] { align-items: stretch; justify-content: flex-end; }
   .sheet {
@@ -2146,23 +1884,11 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
   .sheet .tocViewport { max-height: 38vh; }
   .sheet .referencePane { height: 57vh; }
   .sheet .lineNavigator { margin-bottom: 12px; }
-
-  .prototypeSwitcher {
-    left: 10px;
-    right: 10px;
-    bottom: max(9px, env(safe-area-inset-bottom));
-    justify-content: center;
-    transform: none;
-  }
-  .prototypeSwitcher > span { display: none; }
-  .prototypeSwitcher a,
-  .prototypeSwitcher button { flex: 1; padding: 0 8px; }
 }
 
 @media (max-width: 349px) {
   .root { --reading-text: calc(100vw - 32px); --reader-font: 17px; }
-  .dossierCover,
-  .folioCover { padding-right: 16px; padding-left: 16px; }
+  .dossierCover { padding-right: 16px; padding-left: 16px; }
 }
 
 :global(html[data-reader-size="small"]) .body { --reader-font: 17px; }
@@ -2213,16 +1939,13 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
 
 @media print {
   .runningHeader,
-  .deskRailSlot,
-  .prototypeSwitcher { display: none !important; }
+  .deskRailSlot { display: none !important; }
   .root :global(.latestUpdates) { display: none !important; }
   .root { padding: 0; background: #fff; color: #000; }
-  .dossierCover,
-  .folioCover { display: block; min-height: 0; padding: 0 0 30px; }
+  .dossierCover { display: block; min-height: 0; padding: 0 0 30px; }
   .docket,
   .coverStory { padding: 0; }
-  .dossierReading,
-  .folioReading { display: block; max-width: 680px; padding: 30px 0 0; }
+  .dossierReading { display: block; max-width: 680px; padding: 30px 0 0; }
   .appendices details { break-inside: auto; }
   .appendices details:not([open]) > :not(summary) { display: block; }
   .body :global(p) { font-size: 11pt; color: #000; }

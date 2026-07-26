@@ -141,7 +141,6 @@ export default async function ArticlePage({
         topicMemberships={topicMemberships}
         citationBibtex={citationToBibtex(citation)}
         citationHref={`${book ? bookHref(book) : postPath(post)}/cite.bib`}
-        isPublicEdition
       />
     </>
   );
