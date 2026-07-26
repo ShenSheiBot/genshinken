@@ -1,4 +1,4 @@
-name: Browser smoke
+name: Browser suite
 
 on:
   # Gate main directly and every PR; feature-branch pushes are covered by their PR.
@@ -10,15 +10,15 @@ permissions:
   contents: read
 
 concurrency:
-  group: browser-smoke-${{ github.workflow }}-${{ github.ref }}
+  group: browser-suite-${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  reader-smoke:
-    name: Chromium reader smoke
+  reader-browser-suite:
+    name: Chromium and WebKit reader suite
     permissions:
       contents: read
-    uses: UCCTB/web-test-platform/.github/workflows/playwright.yml@3f92503e82b508dfe655968347c35e43e3d14f39
+    uses: UCCTB/web-test-platform/.github/workflows/playwright.yml@fd4527bfed95e44d5ae48ad4707295d199cd5418
     with:
       node-version: "22.20.0"
       working-directory: "."

@@ -22,6 +22,17 @@ export default defineConfig({
       name: "chromium",
       use: { ...devices["Desktop Chrome"] },
     },
+    {
+      name: "mobile-chromium",
+      use: {
+        ...devices["Pixel 7"],
+        viewport: { width: 375, height: 812 },
+      },
+    },
+    {
+      name: "mobile-webkit",
+      use: { ...devices["iPhone 15"] },
+    },
   ],
   webServer: {
     command: "npm run start -- --hostname 127.0.0.1 --port 3100",
