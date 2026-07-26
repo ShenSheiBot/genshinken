@@ -1,6 +1,6 @@
 # 博客浏览器套件基线归档 · 2026-07-26
 
-状态：**`gated`；最终 `baseline-verified` 以注释标签确认的主分支与生产证据为准**
+状态：**`gated`（`pull_request` 与 `main` push）；最终 `baseline-verified` 以注释标签确认的主分支与生产证据为准**
 
 生产地址：<https://un-canon.blog>
 
@@ -20,12 +20,12 @@
 
 ## 冻结范围
 
-- Desktop Chromium Reader smoke：公开正文加载、阅读进度、主题与阅读设置等基础路径。
-- mobile Chromium：窄视口 Reader 布局、设置 sheet、visual viewport 与关键交互。
-- mobile WebKit：iPhone 设备描述符下的窄视口布局、hydration 与 Reader 交互。
-- Desktop Chromium 跨标签页状态：主题与阅读进度同步、恢复、hash 导航，以及远端退出记录后来源页不再回写。
+- Desktop Chromium Reader smoke：正式 Reader 根契约、正文完成标记、原型残留、文档级水平溢出、阅读习惯入口和浏览器错误。
+- mobile Chromium：窄视口 Reader 布局、文章目录 sheet、背景滚动锁定、visual viewport 与关键操作可达性。
+- mobile WebKit：iPhone 设备描述符下的窄视口布局、hydration 与已实现的 Reader 交互。
+- Desktop Chromium 跨标签页状态：阅读记录保存与恢复、显式 hash 优先，以及远端关闭记录后来源页不再回写待写记录。
 - 键盘与焦点：通过键盘入口打开设置 dialog、初始焦点、焦点循环与关闭后焦点恢复。
-- BibTeX 剪贴板反馈：成功、拒绝与不可用路径的可访问状态反馈；系统剪贴板调用以测试替身观察。
+- BibTeX 剪贴板反馈：注入 `writeText` spy 后的成功写入、拒绝反馈与重试能力；不证明 API 缺失 fallback 或原生系统剪贴板。
 - 测试治理：`docs/testing.md`、四份测试 charter、artifact 命名与保留、retry／flake 审查和冻结规则。
 
 对应的权威测试资产为 `playwright.config.ts`、`tests/e2e/`、`.github/workflows/browser-smoke.yml`、[`docs/testing.md`](../testing.md) 与 [`docs/testing/charters/`](../testing/charters/)。后续修改这些资产或平台调用 SHA 时，必须建立新的证据链；不得移动或重打本基线标签。
@@ -73,6 +73,10 @@ artifact 过期后，标签中的摘要只能证明当时完成过核验，不�
 - 完整 WCAG 审计、屏幕阅读器和其他真实辅助技术组合。
 - 对 Vercel 不可变 URL 或正式域名直接执行 Playwright；现有 Playwright 配置仍启动本地 `next start`。
 - WebKit 对原生系统剪贴板的真实写入；现有自动化只验证调用与页面反馈。
+- `navigator.clipboard` 缺失时的 fallback，以及 Chromium 原生 clipboard permission 与写入／读回。
+- 主题与繁简偏好的真实跨标签页传播，以及 WebKit／mobile 跨标签页竞态。
+- 成功态完整视觉构图、字体观感、真实行盒和全部动效终态。
+- 跨设备、跨浏览器 profile、隐私窗口或服务器端阅读记录同步。
 - TLS 握手、证书链、HSTS、边缘传输、混合内容及生产 CSP header 的全面安全验证；`verify:release` 不覆盖这些项目。
 
 ## 回滚
