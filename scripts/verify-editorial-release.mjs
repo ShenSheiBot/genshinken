@@ -1312,6 +1312,24 @@ const booksMain = elements(books.html, "main")[0];
 const booksCatalogHeader = elements(booksMain.inner, "header")[0];
 const booksCatalogStats = elements(booksCatalogHeader.inner, "dl")[0];
 assert.ok(booksCatalogStats, "books index must render its catalogue status counts");
+const booksCatalogue = elements(booksMain.inner, "section").find(
+  (section) => attribute(section.opening, "aria-labelledby") === "books-catalogue-heading"
+);
+assert.ok(booksCatalogue, "books index must render its catalogue");
+const bookStatusOrder = { serializing: 0, paused: 1, complete: 2 };
+const catalogueBookStatuses = elements(booksCatalogue.inner, "article").map((article) =>
+  attribute(article.opening, "data-book-status")
+);
+assert.ok(catalogueBookStatuses.length > 0, "books index must render its book cards");
+assert.ok(
+  catalogueBookStatuses.every((status) => Object.hasOwn(bookStatusOrder, status)),
+  "books index book cards must expose a valid status"
+);
+assert.deepEqual(
+  catalogueBookStatuses,
+  [...catalogueBookStatuses].sort((a, b) => bookStatusOrder[a] - bookStatusOrder[b]),
+  "books index must order serializing books before paused and complete books"
+);
 const bookStatusCounts = sourceBookStatusCounts();
 assert.deepEqual(
   elements(booksCatalogStats.inner, "dt").map((term) => visibleText(term.inner)),

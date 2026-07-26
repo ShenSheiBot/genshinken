@@ -274,6 +274,7 @@ featured_order: 0        # 可选；同栏目首页推荐优先级，数值越�
 
 - `id / slug / documentSlug / chapter.id / latestChapterId` 均使用稳定 ASCII kebab-case；文件名与书籍 slug 一致。`children` 可以在任意目录节点下继续嵌套；父子数组的书写顺序共同构成公开目录顺序。
 - 书籍 `status` 只能是 `serializing / complete / paused`。每个新增或修改的目录节点必须显式填写 `status: published / forthcoming`；旧清单中缺省 `status` 的平铺节点仅为兼容既有内容而按 `published` 读取，不得在新书中继续省略。节点 `id / number` 在整棵目录树内不得重复，不能只在同一层检查唯一性。
+- `/books` 书目必须按 `serializing → paused → complete` 排列，同一状态内再按 `updatedAt` 降序和书名稳定排序。连载中书籍永远排在已完结书目之前；发布或更新完结书不得改变这一优先级。
 - `published` 节点必须填写非空 `anchor` 与有效 `publishedAt`，anchor 在整棵目录树内唯一。`forthcoming` 节点必须省略 `anchor / publishedAt`；它只展示待更新目录，不参与锚点存在性校验，也不得包含状态为 `published` 的后代。
 - `documentSlug` 必须指向已发布的非多媒体文稿。只有 `published` 节点生成 `/books/<slug>/chapters/<chapter-id>` 路由、Book JSON-LD `hasPart` 和可点击目录入口；`forthcoming` 节点不得生成上述三类公开入口。
 - `latestChapterId` 必须指向递归目录中已经 `published` 的节点，不能指向待更新节点。书籍页和目录统计分别显示“已发布节点数 / 全部节点数”，两个数字都按整棵目录树递归计算。

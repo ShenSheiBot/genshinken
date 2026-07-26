@@ -78,7 +78,7 @@ export default function BooksPage() {
               const publishedChapters = getPublishedBookChapters(book);
               return (
                 <li key={book.id}>
-                  <article className={styles.catalogBook}>
+                  <article className={styles.catalogBook} data-book-status={book.status}>
                     <div className={styles.catalogCover} aria-hidden="true">
                       <span>西方負典文库</span>
                       <strong>{book.title}</strong>

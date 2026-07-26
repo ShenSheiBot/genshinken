@@ -197,6 +197,7 @@
 ## 6. 书籍与连载
 
 - `/books` 是书目索引；`/books/<slug>` 是一本书的状态、说明、递归目录、章节入口和阅读选择页。书籍清单位于 `source/_books/*.json`，与承载连续正文的 `documentSlug` 分离。目录节点可以通过 `children` 继续嵌套，公开顺序严格遵循父子数组的书写顺序。
+- `/books` 的书目顺序固定为「连载中（`serializing`）→ 暂停更新（`paused`）→ 已完结（`complete`）」；同一状态内按 `updatedAt` 从新到旧排列，再以书名稳定排序。任何连载中书籍都必须排在所有已完结书目之前，不能由较新的完结日期覆盖这一优先级。
 - 每个新目录节点显式使用 `status: published / forthcoming`；旧平铺清单缺省状态仅作为兼容路径按 `published` 读取。两种状态都在书籍详情目录中可见；`published` 显示真实阅读入口，`forthcoming` 明确显示待更新状态且不可点击。聚合页和详情页的章节统计均按递归目录显示已发布数量／全部数量。
 - 正文仍是一份可连续滚动、全文查找的文章，不按章节拆成互相隔离的内容页。只有 `published` 节点生成 `/books/<slug>/chapters/<chapter-id>` 稳定入口，并以 `308` 跳到连续正文中的稳定标题锚点；`forthcoming` 不生成章节路由。这些跳转入口均不作为 sitemap canonical 项。
 - 书籍页始终提供「从头阅读」「阅读最新章节」两个明确入口；前者使用 `#reading-cover`，后者只指向 `latestChapterId` 对应的已发布章节 hash，两者都按显式 hash 定位并优先于本地记录。读者直接进入不带 hash 的连续正文 URL 时自动恢复本机阅读位置，不另设「继续阅读」入口或恢复弹窗。

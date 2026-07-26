@@ -27,6 +27,12 @@ export const BOOK_CHAPTER_STATUSES = ["published", "forthcoming"] as const;
 export type BookStatus = (typeof BOOK_STATUSES)[number];
 export type BookChapterStatus = (typeof BOOK_CHAPTER_STATUSES)[number];
 
+const BOOK_STATUS_ORDER: Record<BookStatus, number> = {
+  serializing: 0,
+  paused: 1,
+  complete: 2,
+};
+
 interface BookChapterBase {
   id: string;
   number: string;
@@ -375,7 +381,10 @@ export function getAllBooks(): Book[] {
   });
 
   return books.sort(
-    (a, b) => b.updatedAt.localeCompare(a.updatedAt) || a.title.localeCompare(b.title, "zh-CN")
+    (a, b) =>
+      BOOK_STATUS_ORDER[a.status] - BOOK_STATUS_ORDER[b.status] ||
+      b.updatedAt.localeCompare(a.updatedAt) ||
+      a.title.localeCompare(b.title, "zh-CN")
   );
 }
 
