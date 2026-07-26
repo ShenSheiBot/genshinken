@@ -329,13 +329,39 @@ groups:
 
 ## 12. 自动交付门禁
 
-- `npm run validate:content`：检查贡献者登记和署名、文章字段、书籍／章节 JSON、专题分组、跨实体引用、日期同步和唯一性。
-- `npm run validate:media-html`：验证多媒体资料 HTML 的允许列表会剔除播放器、主动内容和危险属性。
-- `npm run typecheck`：执行严格 TypeScript 检查，不生成文件。
-- `npm run lint`：使用非交互 ESLint CLI；任何警告也视为失败。
-- `npm run check`：依次运行内容、多媒体、排版、类型和 ESLint 门禁，适合作为提交前快速检查。
-- `npm run build`：执行完整生产构建。首页、索引、案卷正文与多媒体的产品验收以
-  [`frontend-product-spec.md`](frontend-product-spec.md) 为准。
-- `npm run verify:release -- <base-url>`：对已经启动的本地生产构建或公开环境执行完整发布回归；覆盖导航、五组文库筛选、贡献者姓名、About、专题、书籍、重定向、canonical、OpenGraph、JSON-LD、sitemap 和 RSS。例如 `npm run verify:release -- https://un-canon.blog`。
-- `npm run verify:editorial -- <base-url>` 暂作为同一脚本的兼容别名保留。
-- GitHub Actions 的质量门禁只在 `main` 分支 push 和所有 pull request 上运行；功能分支 push 由其 pull request 覆盖，避免重复执行。
+`package.json` 是命令和执行顺序的唯一真源；本文只解释门禁层级，新增或删除脚本时必须在同一变更中更新相关说明。
+
+### 12.1 确定性静态与逻辑门禁
+
+- `npm run validate:content`：贡献者登记和署名、文章字段、书籍／章节 JSON、专题分组、跨实体引用、日期同步和唯一性。
+- `npm run validate:media-html`：多媒体资料 HTML 允许列表、主动内容和危险属性。
+- `npm run verify:typography`：Markdown 排版、标题、表格、脚注、媒体和危险协议契约。
+- `npm run verify:negative`：负栏目及其既有内容回归。
+- `npm run verify:fonts`：CJK 语料、OpenCC 闭包、字体文件、大小、哈希与 CSS 缓存键。
+- `npm run verify:reading-progress`：阅读记录数据、恢复优先级、跨版本和跨标签页纯逻辑契约。
+- `npm run verify:han-script`：繁简偏好、转换方向、文章源文字系统和媒体指纹。
+- `npm run verify:citations`：Zotero／BibTeX 类型、字段和引用路由。
+- `npm run verify:dependencies`：当前依赖组合的兼容边界。
+- `npm run verify:routing`：静态动态路由、`generateStaticParams` 与未知实体行为。
+- `npm run typecheck`：严格 TypeScript 检查，不生成文件。
+- `npm run lint`：非交互 ESLint；任何警告也视为失败。
+- `npm run check`：按 `package.json` 串行执行以上全部门禁，适合作为提交前确定性检查。
+
+`npm run check` 不启动真实浏览器，不执行 React hydration，也不验证焦点、真实字体行盒、WebKit、localStorage 或动画终态。
+
+### 12.2 构建与发布回归
+
+- `npm run build`：执行完整生产构建并生成 SSG、路由和静态资源。首页、索引、案卷正文与多媒体的产品验收以 [`frontend-product-spec.md`](frontend-product-spec.md) 为准。
+- `npm run verify:release -- <base-url>`：对已经启动的生产构建或公开环境执行 SSR／HTTP 发布回归；覆盖导航、文库筛选、贡献者、About、专题、书籍、正文、多媒体、重定向、canonical、OpenGraph、JSON-LD、sitemap、RSS 和字体资源。例如 `npm run verify:release -- https://un-canon.blog`。
+- `npm run verify:editorial -- <base-url>` 仅作为历史兼容别名保留；新流程统一使用 `verify:release`。
+
+`verify:release` 使用 Node `fetch` 和生成 HTML 断言，不是浏览器 E2E。当前尚未仓库化 Playwright；代表页面的客户端交互和体验检查在测试平台接入前必须作为单独的浏览器证据记录，不能由 HTTP 成功替代。
+
+### 12.3 CI 与部署
+
+- GitHub Actions 在 `main` push 和所有 pull request 上执行 `npm ci → check → build → start → verify:release`；功能分支 push 由 pull request 覆盖，避免重复运行。
+- Vercel 使用 `npm ci`，并在 `next build` 前执行 `npm run check`。
+- IndexNow 只负责内容发现，不是发布质量门禁。
+- 正式冻结还需要精确提交、Deployment ID、不可变部署 URL、构建时间、生产域名回归、代表性浏览器证据和已知未覆盖范围。
+
+完整的所有权、字体重建、可重复构建、发布与回滚流程见 [`architecture/content-pipeline.md`](architecture/content-pipeline.md)；正文状态与恢复契约见 [`architecture/reader-runtime.md`](architecture/reader-runtime.md)。
