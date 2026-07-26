@@ -355,7 +355,7 @@ groups:
 - `npm run verify:release -- <base-url>`：对已经启动的生产构建或公开环境执行 SSR／HTTP 发布回归；覆盖导航、文库筛选、贡献者、About、专题、书籍、正文、多媒体、重定向、canonical、OpenGraph、JSON-LD、sitemap、RSS 和字体资源。例如 `npm run verify:release -- https://un-canon.blog`。
 - `npm run verify:editorial -- <base-url>` 仅作为历史兼容别名保留；新流程统一使用 `verify:release`。
 
-`verify:release` 使用 Node `fetch` 和生成 HTML 断言，不是浏览器 E2E。当前尚未仓库化 Playwright；代表页面的客户端交互和体验检查在测试平台接入前必须作为单独的浏览器证据记录，不能由 HTTP 成功替代。
+`verify:release` 使用 Node `fetch` 和生成 HTML 断言，不是浏览器 E2E。仓库现有的首个 Playwright slice 在 pull request 和 `main` push 上运行 Desktop Chromium Reader smoke，并保存 HTML artifact；它覆盖正式 Reader 协议、基本交互、原型残留、水平溢出和浏览器错误，但不能替代 mobile／WebKit、完整无障碍交互或部署后正式域名证据。
 
 ### 12.3 CI 与部署
 

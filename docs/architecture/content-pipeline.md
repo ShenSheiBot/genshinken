@@ -133,7 +133,7 @@ PowerShell 使用 `$env:UN_CANON_BUILD_TIMESTAMP='...'` 后再运行构建。固
 4. 启动本地生产服务
 5. `npm run verify:release`
 
-`vercel.json` 同样强制 `npm ci` 和 `npm run check && next build`。当前 GitHub runner 使用 `ubuntu-latest`、Node 22 大版本和 `actions/*@v4`；它们不是完全不可漂移的环境。建立测试平台时应另行固定 Ubuntu、Node/npm、Playwright、浏览器和平台 workflow 的完整提交 SHA。
+`vercel.json` 同样强制 `npm ci` 和 `npm run check && next build`。GitHub Quality 与 IndexNow runner 固定为 `ubuntu-24.04` 和 Node `22.20.0`，官方 Actions 固定到已核验的完整提交 SHA。`.github/workflows/browser-smoke.yml` 在 pull request 和 `main` push 上调用公开的 `UCCTB/web-test-platform` reusable workflow，并固定其完整提交 SHA；Playwright `1.62.0` 与 Chromium 项目由博客自己的 lockfile 和配置持有。
 
 Vercel 构建成功只说明部署候选通过静态门禁。运行时基线还必须记录生产提交 SHA、构建时间、Vercel Deployment ID、不可变 deployment URL，并在部署 `READY` 后对正式域名执行 `verify:release` 和代表性浏览器冒烟。
 
@@ -155,4 +155,4 @@ IndexNow 是发现流程，不是质量门禁；它看见 2xx／3xx 不代表页
 4. 回滚后重新执行正式域名 `verify:release` 和受影响浏览器场景。
 5. sitemap、RSS 或 IndexNow 错误应修正其源码生成器，不能手工维护根目录副本掩盖问题。
 
-当前没有自动的部署后 production smoke、Playwright artifact 或跨仓库状态回写。这些是测试平台纵向切片的输入，不应在文档中写成已经具备的能力。
+当前已有针对本地生产构建的 Desktop Chromium Reader smoke，并由调用方 Actions run 保存 Playwright HTML artifact。它不是部署后 production smoke，也没有跨仓库状态回写；正式域名自动回归、mobile／WebKit 与更完整的交互证据仍属于后续测试平台切片。

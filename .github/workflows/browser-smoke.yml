@@ -1,0 +1,26 @@
+name: Browser smoke
+
+on:
+  # Gate main directly and every PR; feature-branch pushes are covered by their PR.
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: browser-smoke-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  reader-smoke:
+    name: Chromium reader smoke
+    permissions:
+      contents: read
+    uses: UCCTB/web-test-platform/.github/workflows/playwright.yml@3f92503e82b508dfe655968347c35e43e3d14f39
+    with:
+      node-version: "22.20.0"
+      working-directory: "."
+      playwright-config: "playwright.config.ts"
+      artifact-retention-days: 14
