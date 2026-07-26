@@ -26,6 +26,7 @@
 - [`docs/frontend-product-spec.md`](docs/frontend-product-spec.md)：公开页面、响应式行为和产品验收标准。
 - [`docs/architecture/reader-runtime.md`](docs/architecture/reader-runtime.md)：正式正文组件、状态边界、位置恢复与回滚。
 - [`docs/architecture/content-pipeline.md`](docs/architecture/content-pipeline.md)：内容解析、字体闭包、构建、CI、部署与发布回归。
+- [`docs/testing.md`](docs/testing.md)：测试层级、Playwright 矩阵、UCCTB 平台边界、证据政策与 test charters。
 - [`docs/releases/`](docs/releases/)：已经发布并具备版本锚点的历史记录。
 
 仓库文档是本地构建、测试和发布操作的权威来源；Outline ADR 记录决策背景和取舍，不复制运行手册。
@@ -132,7 +133,7 @@ npm run start -- --hostname 127.0.0.1 --port 3100
 npm run verify:release -- http://127.0.0.1:3100
 ```
 
-`npm run check`、`npm run build` 和 `verify:release` 分别验证不同层级，不能互相替代。当前自动门禁尚不执行 Playwright；真实浏览器交互与视觉终态的覆盖边界见 [`docs/architecture/content-pipeline.md`](docs/architecture/content-pipeline.md)。
+`npm run check`、`npm run build`、`verify:release` 和 Playwright 分别验证不同层级，不能互相替代。仓库浏览器资产的状态、执行命令、UCCTB reusable workflow、artifact 与体验式检查边界统一见 [`docs/testing.md`](docs/testing.md)；`implemented` 只表示已有可执行资产，不表示某个分支或生产环境最近一次结果。
 
 ## 目录结构
 
@@ -158,6 +159,9 @@ source/_books/        书籍与章节清单（JSON）
 source/_topics/       人工策展专题（Markdown）
 public/               静态资源（attachments / img）
 scripts/              内容、字体、路由、引用与发布验证
+tests/e2e/            博客自有 Playwright specs 与本地 WebKit 测试 fixture
+docs/testing.md       测试策略、执行、平台权责与证据边界
+docs/testing/         可重复执行的 test charters
 docs/architecture/    运行时和内容管线维护说明
 docs/releases/        已发布版本锚点
 ```

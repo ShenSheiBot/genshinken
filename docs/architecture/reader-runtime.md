@@ -111,7 +111,7 @@ npm run lint
 
 完整门禁使用 `npm run check`，生产 HTML 和路由使用构建后的 `npm run verify:release -- <base-url>`。后者是 SSR／HTTP 回归，不执行客户端 JavaScript。
 
-当前已仓库化第一层 Playwright Reader smoke：博客持有 `playwright.config.ts` 和 `tests/e2e/reader-smoke.spec.ts`，测试平台在 Desktop Chromium 上验证正式 Reader 协议、正文完成标记、阅读习惯 dialog、原型残留、水平溢出和浏览器错误。跨标签页竞态、真实字体行盒、WebKit mobile、焦点循环、剪贴板反馈和动效终态仍需后续针对性浏览器检查，并继续保留体验式审查。
+仓库当前状态为 `implemented` 的 Playwright 资产包括 Desktop Chromium Reader smoke、移动 Chromium／WebKit、跨标签页、dialog 焦点与 BibTeX 剪贴板 specs。各 spec 只承担已写入的具体断言；`implemented` 不表示任一分支最近一次执行成功，也不能替代真实字体行盒、动效终态、实体 Safari 或辅助技术体验。精确矩阵、CSP bridge、证据政策以及 `planned / manual / not-covered` 范围统一见 [`testing.md`](../testing.md)。
 
 ## 9. 原型清理与回滚
 
