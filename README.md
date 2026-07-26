@@ -20,13 +20,23 @@
 > **前端产品和验收标准：[`docs/frontend-product-spec.md`](docs/frontend-product-spec.md)**
 > （首页、内容索引、案卷正文、多媒体详情页及响应式交互的现行决定）。
 
+## 文档索引
+
+- [`docs/delivery-standards.md`](docs/delivery-standards.md)：内容字段、编辑规范与发布要求。
+- [`docs/frontend-product-spec.md`](docs/frontend-product-spec.md)：公开页面、响应式行为和产品验收标准。
+- [`docs/architecture/reader-runtime.md`](docs/architecture/reader-runtime.md)：正式正文组件、状态边界、位置恢复与回滚。
+- [`docs/architecture/content-pipeline.md`](docs/architecture/content-pipeline.md)：内容解析、字体闭包、构建、CI、部署与发布回归。
+- [`docs/releases/`](docs/releases/)：已经发布并具备版本锚点的历史记录。
+
+仓库文档是本地构建、测试和发布操作的权威来源；Outline ADR 记录决策背景和取舍，不复制运行手册。
+
 ### Front-matter 字段
 
 ```markdown
 ---
 title: 文章标题
 categories: 历史          # 主分类（也用作首页/文章页的分类标签）
-section: essay           # 编辑栏目：essay / review / translation / multimedia
+section: essay           # 编辑栏目：essay / review / translation / multimedia / negative
 tags: [产业, 冷战史]      # 标签（可多个；勿与主分类重复；用于内容索引筛选）
 date: 2026-05-12         # 发布日期 YYYY-MM-DD
 post_author: 作者名       # 作者；首页卡片上以实心橙块「作」标记
@@ -104,17 +114,32 @@ Zotero `book` / BibTeX `@book`，引用 URL 固定指向 `/books/<slug>`。`pdfU
 ## 本地开发
 
 ```bash
-npm install
+npm ci
 npm run dev      # http://localhost:3000
-npm run check    # 内容模型 + TypeScript + ESLint
+npm run check    # 全部静态、内容与纯逻辑门禁；不启动真实浏览器
 npm run build    # Next.js 生产构建；Vercel 会先执行 npm run check
 ```
+
+验证构建结果时，在终端 A 启动并保持服务运行：
+
+```bash
+npm run start -- --hostname 127.0.0.1 --port 3100
+```
+
+再在终端 B 执行 SSR／HTTP 发布回归：
+
+```bash
+npm run verify:release -- http://127.0.0.1:3100
+```
+
+`npm run check`、`npm run build` 和 `verify:release` 分别验证不同层级，不能互相替代。当前自动门禁尚不执行 Playwright；真实浏览器交互与视觉终态的覆盖边界见 [`docs/architecture/content-pipeline.md`](docs/architecture/content-pipeline.md)。
 
 ## 目录结构
 
 ```
 app/                  Next.js App Router（页面、布局、组件）
   components/         TopBar / Footer / PosterWallHome / PostIndex
+    reading-edition/  正式正文布局、客户端 Chrome 与阅读记录
   library/            文库与栏目、主题分类、标签、贡献者、署名位置筛选
   books/              书籍、连载与章节入口
   topics/             人工策展专题索引与详情
@@ -132,6 +157,9 @@ source/_posts/        文章内容（Markdown）
 source/_books/        书籍与章节清单（JSON）
 source/_topics/       人工策展专题（Markdown）
 public/               静态资源（attachments / img）
+scripts/              内容、字体、路由、引用与发布验证
+docs/architecture/    运行时和内容管线维护说明
+docs/releases/        已发布版本锚点
 ```
 
 ## 部署说明

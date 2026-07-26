@@ -8,13 +8,11 @@ import {
   postPath,
   type EditorialSection,
 } from "@/lib/editorial";
-import ReadingPrototypeChrome from "@/app/prototype/reading/[slug]/ReadingPrototypeChrome";
+import ReadingEditionChrome from "@/app/components/reading-edition/ReadingEditionChrome";
 import CreditLinks from "@/app/components/CreditLinks";
-import styles from "@/app/prototype/reading/[slug]/reading-prototype.module.css";
+import styles from "@/app/components/reading-edition/reading-edition.module.css";
 import homeStyles from "@/app/components/editorial-home/PosterWallHome.module.css";
 import { hanScriptLanguageTag, type HanScript } from "@/lib/han-script";
-
-type ReadingVariant = "dossier" | "folio";
 
 const sectionFor = (post: PostSummary): EditorialSection => post.section;
 const sectionMeta = EDITORIAL_SECTION_META;
@@ -78,53 +76,10 @@ function PreferredTitle({ post }: { post: PostSummary }) {
   ));
 }
 
-function MetaRows({ post }: { post: Post }) {
-  const section = sectionMeta[sectionFor(post)];
-  return (
-    <dl className={styles.metaRows}>
-      <div>
-        <dt>栏目</dt>
-        <dd>
-          <Link
-            className={styles.libraryFilterLink}
-            href={sectionLibraryHref(sectionFor(post))}
-            aria-label={`在文库中筛选栏目：${section.label}`}
-          >
-            {section.label}
-          </Link>
-        </dd>
-      </div>
-      {displayCredits(post).map((credit, index) => (
-        <div key={`${credit.mark}-${credit.name}-${index}`}>
-          <dt>
-            <span className={styles.metaCreditLabel}>
-              <span
-                className={styles.creditMark}
-                data-solid={credit.solid ? "true" : "false"}
-                role="img"
-                aria-label={credit.role === "author" ? "作者" : "译者"}
-              >
-                {credit.mark}
-              </span>
-            </span>
-          </dt>
-          <dd><CreditLinks credits={[credit]} showMarks={false} /></dd>
-        </div>
-      ))}
-      <div>
-        <dt>{post.section === "negative" ? "成文" : "发布"}</dt>
-        <dd>{post.displayDateISO.replaceAll("-", ".")}</dd>
-      </div>
-      <div><dt>篇幅</dt><dd>约 {post.readMin} 分钟</dd></div>
-      <div><dt>编号</dt><dd>第 {post.no} 号</dd></div>
-    </dl>
-  );
-}
-
 function Appendices({ parts }: { parts: ArticleParts }) {
   if (parts.noteCount === 0 && parts.sourceCount === 0) return null;
   return (
-    <div className={`${styles.appendices} reading-prototype-appendix`}>
+    <div className={`${styles.appendices} reading-edition-appendix`}>
       {parts.noteCount > 0 && (
         <details open>
           <summary>
@@ -155,9 +110,9 @@ function Appendices({ parts }: { parts: ArticleParts }) {
 
 function ArticleFlow({ parts, sourceScript }: { parts: ArticleParts; sourceScript: HanScript }) {
   return (
-    <div className={`${styles.articleFlow} reading-prototype-flow`}>
+    <div className={`${styles.articleFlow} reading-edition-flow`}>
       <article
-        className={`art-body ${styles.body} reading-prototype-body`}
+        className={`art-body ${styles.body} reading-edition-body`}
         lang={hanScriptLanguageTag(sourceScript)}
         data-han-convert-lang
         dangerouslySetInnerHTML={{ __html: parts.main }}
@@ -193,16 +148,9 @@ function relatedPostsFor(current: Post, posts: PostSummary[]): PostSummary[] {
     .map(({ post }) => post);
 }
 
-function RelatedReading({
-  current,
-  posts,
-  variant,
-  isPublicEdition = false,
-}: {
+function RelatedReading({ current, posts }: {
   current: Post;
   posts: PostSummary[];
-  variant: ReadingVariant;
-  isPublicEdition?: boolean;
 }) {
   const candidates = relatedPostsFor(current, posts);
 
@@ -228,7 +176,7 @@ function RelatedReading({
                 <article>
                   <Link
                     className={`${homeStyles.latestCard} ${homeStyles.latestCardInteractive}`}
-                    href={isPublicEdition ? postPath(post) : `/prototype/reading/${encodeURIComponent(post.slug)}?variant=${variant}`}
+                    href={postPath(post)}
                   >
                     <header>
                       <span>文稿 {post.no}</span>
@@ -258,7 +206,6 @@ export function ReadingDossier({
   topicMemberships = [],
   citationBibtex,
   citationHref,
-  isPublicEdition = false,
 }: {
   post: Post;
   parts: ArticleParts;
@@ -266,8 +213,6 @@ export function ReadingDossier({
   topicMemberships?: TopicMembership[];
   citationBibtex?: string;
   citationHref?: string;
-  /** Render this selected dossier direction at the public /posts URL. */
-  isPublicEdition?: boolean;
 }) {
   const section = sectionMeta[sectionFor(post)];
   const hasReferences = parts.noteCount > 0 || parts.sourceCount > 0;
@@ -278,24 +223,21 @@ export function ReadingDossier({
     <main
       id="main"
       tabIndex={-1}
-      className={`${isPublicEdition ? "reading-edition-page" : "reading-prototype-page"} ${styles.root} ${styles.dossierRoot}`}
-      data-reading-variant="dossier"
+      className={`reading-edition-page ${styles.root} ${styles.dossierRoot}`}
       data-reveal-zone="reader"
       data-han-convert-root="post"
       data-han-source-script={post.script}
       lang={hanScriptLanguageTag(post.script)}
     >
-      <ReadingPrototypeChrome
+      <ReadingEditionChrome
         title={post.title}
         slug={post.slug}
         contentRevision={post.contentRevision}
         sourceScript={post.script}
-        variant="dossier"
         credits={post.credits}
         fallbackAuthor={post.author}
         citationBibtex={citationBibtex}
         citationHref={citationHref}
-        mode={isPublicEdition ? "edition" : "preview"}
       />
 
       <header className={styles.dossierCover} id="reading-cover">
@@ -329,7 +271,7 @@ export function ReadingDossier({
             }`}
           >
             <div className={styles.coverKicker}>
-              <Link href={isPublicEdition ? "/" : "/prototype/poster"}>← 返回首页</Link>
+              <Link href="/">← 返回首页</Link>
               <span>第 {post.no} 号</span>
               <time
                 dateTime={post.displayDateISO}
@@ -383,69 +325,7 @@ export function ReadingDossier({
           <aside id="reading-right-rail" className={styles.deskRailSlot} aria-label={referenceLabel} />
         )}
       </section>
-      <RelatedReading current={post} posts={posts} variant="dossier" isPublicEdition={isPublicEdition} />
-    </main>
-  );
-}
-
-export function ReadingFolio({ post, parts, posts }: { post: Post; parts: ArticleParts; posts: PostSummary[] }) {
-  const section = sectionMeta[sectionFor(post)];
-  return (
-    <main
-      id="main"
-      tabIndex={-1}
-      className={`reading-prototype-page ${styles.root} ${styles.folioRoot}`}
-      data-reading-variant="folio"
-      data-han-convert-root="post"
-      data-han-source-script={post.script}
-      lang={hanScriptLanguageTag(post.script)}
-    >
-      <ReadingPrototypeChrome
-        title={post.title}
-        slug={post.slug}
-        contentRevision={post.contentRevision}
-        sourceScript={post.script}
-        variant="folio"
-        credits={post.credits}
-        fallbackAuthor={post.author}
-      />
-
-      <header className={styles.folioCover} id="reading-cover">
-        <div className={styles.folioMast}>
-          <Link href="/prototype/triptych">{site.brandCN}</Link>
-          <span>长文　{post.displayDateISO.replaceAll("-", ".")}</span>
-        </div>
-        <div className={styles.folioTitleBlock}>
-          <span className={styles.folioIssue}>{post.sectionNo}</span>
-          <p className={styles.folioSection}>
-            <Link
-              className={styles.libraryFilterLink}
-              href={sectionLibraryHref(sectionFor(post))}
-              aria-label={`在文库中筛选栏目：${section.label}`}
-            >
-              {section.label}
-            </Link>
-          </p>
-          <h1 className="art-title"><PreferredTitle post={post} /></h1>
-          {post.subtitle && <p className={styles.subtitle}>{post.subtitle}</p>}
-        </div>
-        <div className={styles.folioLead}>
-          <p>{post.excerpt}</p>
-          <div><strong><CreditLine credits={displayCredits(post)} /></strong><span>约 {post.readMin} 分钟</span></div>
-        </div>
-      </header>
-
-      <section className={styles.folioReading}>
-        <aside className={styles.folioMargin}>
-          <span className={styles.eyebrow}>阅读版</span>
-          <p>{post.excerpt}</p>
-          <MetaRows post={post} />
-          <div className={styles.folioOrnament}>※</div>
-        </aside>
-        <ArticleFlow parts={parts} sourceScript={post.script} />
-        <div className={styles.railPlaceholder} aria-hidden="true" />
-      </section>
-      <RelatedReading current={post} posts={posts} variant="folio" />
+      <RelatedReading current={post} posts={posts} />
     </main>
   );
 }

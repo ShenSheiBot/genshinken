@@ -237,6 +237,6 @@
 - `npm run validate:content` 校验贡献者登记与署名、文章 front matter、书籍／章节清单、专题编排、跨实体引用、日期一致性和唯一性。
 - `npm run validate:media-html` 以恶意样本校验多媒体 HTML 允许列表、主动内容和危险属性过滤。
 - `npm run typecheck`、`npm run lint`、`npm run build` 必须非交互执行并以非零状态阻止合并。
-- `npm run verify:release -- <base-url>` 对已经启动或线上站点执行导航、文库筛选、贡献者链接、正文、多媒体、书籍、专题、About、重定向、canonical、OpenGraph、JSON-LD、sitemap 和 RSS 回归。`verify:editorial` 保留为兼容别名。
-- `npm run check` 是本地静态交付门禁；GitHub Actions 按现行去重策略在 `main` 分支 push 和所有 pull request 上运行依赖安装、内容校验、TypeScript、ESLint 和生产构建，不为功能分支 push 重复执行同一套门禁。
+- `npm run verify:release -- <base-url>` 对已经启动或线上站点执行导航、文库筛选、贡献者链接、正文、多媒体、书籍、专题、About、重定向、canonical、OpenGraph、JSON-LD、sitemap 和 RSS 的 SSR／HTTP 回归；它不执行客户端 JavaScript 或真实浏览器交互。`verify:editorial` 保留为兼容别名。
+- `npm run check` 是本地确定性静态与纯逻辑门禁；GitHub Actions 按现行去重策略在 `main` 分支 push 和所有 pull request 上运行锁定依赖安装、完整 `check`、生产构建和本地 `verify:release`，不为功能分支 push 重复执行同一套门禁。真实浏览器层在接入前不得被描述为已有自动覆盖。
 - 任何改变本文规范的产品决策，应在同一变更中更新本文、相关交付文档和对应自动断言。
