@@ -10,6 +10,7 @@ const staticDynamicRoutes = [
   "app/topics/[slug]/page.tsx",
   "app/books/[slug]/page.tsx",
   "app/books/[slug]/chapters/[chapter]/page.tsx",
+  "app/books/[slug]/chapters/[chapter]/cite.bib/route.ts",
   "app/books/[slug]/cite.bib/route.ts",
 ];
 

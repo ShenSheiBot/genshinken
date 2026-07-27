@@ -1,17 +1,16 @@
 import Link from "next/link";
 import type { CSSProperties } from "react";
-import type { PostSummary } from "@/lib/posts";
+import type { PublicContentEntry } from "@/lib/public-content";
 import { site } from "@/lib/site";
 import {
   EDITORIAL_SECTION_META,
-  postPath,
   type EditorialSection,
 } from "@/lib/editorial";
 import CreditLinks from "@/app/components/CreditLinks";
 import styles from "./PosterWallHome.module.css";
 
 type PosterSection = Exclude<EditorialSection, "negative">;
-type PosterPost = PostSummary & { section: PosterSection };
+type PosterPost = PublicContentEntry & { section: PosterSection };
 
 const POSTER_SECTION_PRIORITY: PosterSection[] = [
   "essay",
@@ -93,18 +92,18 @@ function tileStyle(index: number, total: number): TileStyle {
   };
 }
 
-function overviewFor(post: PostSummary): string {
+function overviewFor(post: PublicContentEntry): string {
   return post.excerpt || post.subtitle || `围绕${post.category || "本期主题"}展开的材料收录。`;
 }
 
-function HomeTitle({ post }: { post: PostSummary }) {
+function HomeTitle({ post }: { post: PublicContentEntry }) {
   if (post.homeTitleBreaks.length === 0) return post.title;
   return post.homeTitleBreaks.map((segment, index) => (
     <span className={styles.titleLine} key={`${segment}-${index}`}>{segment}</span>
   ));
 }
 
-function CardCredits({ post }: { post: PostSummary }) {
+function CardCredits({ post }: { post: PublicContentEntry }) {
   const credits = visibleHomeCredits(post);
 
   return (
@@ -119,13 +118,13 @@ function CardCredits({ post }: { post: PostSummary }) {
 }
 
 /** Keep translated recommendations focused on the original author everywhere on the home page. */
-function visibleHomeCredits(post: PostSummary) {
+function visibleHomeCredits(post: PublicContentEntry) {
   return post.section === "translation"
     ? post.credits.filter((credit) => credit.role === "author")
     : post.credits;
 }
 
-function isPosterPost(post: PostSummary): post is PosterPost {
+function isPosterPost(post: PublicContentEntry): post is PosterPost {
   return post.section !== "negative";
 }
 
@@ -143,7 +142,7 @@ function groupPostsBySection(posts: PosterPost[]): Record<PosterSection, PosterP
   return grouped;
 }
 
-function orderAsWall(posts: PostSummary[]): {
+function orderAsWall(posts: PublicContentEntry[]): {
   ordered: PosterPost[];
   grouped: Record<PosterSection, PosterPost[]>;
 } {
@@ -186,7 +185,7 @@ export default function PosterWallHome({
   posts,
   issue,
 }: {
-  posts: PostSummary[];
+  posts: PublicContentEntry[];
   issue: string;
 }) {
   const { ordered, grouped } = orderAsWall(posts);
@@ -259,7 +258,7 @@ export default function PosterWallHome({
               >
                 <div className={styles.card} data-card-surface>
                   <Link
-                    href={postPath(post)}
+                    href={post.href}
                     prefetch={false}
                     className={styles.cardPrimaryLink}
                     aria-label={`${meta.label}：${post.title}`}
@@ -335,7 +334,7 @@ export default function PosterWallHome({
                   <article className={styles.latestArticle}>
                     <Link
                       className={styles.latestCardPrimaryLink}
-                      href={postPath(post)}
+                      href={post.href}
                       prefetch={false}
                       aria-label={`阅读全文：${post.title}`}
                     />

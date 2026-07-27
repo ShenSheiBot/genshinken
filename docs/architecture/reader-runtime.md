@@ -15,15 +15,15 @@ app/posts/[slug]/page.tsx
   → useReadingProgress / useHanScriptConversion / useTheme
 ```
 
-- `/posts/<slug>` 是文章与书籍连续正文的 canonical 页面。
-- `/books/<slug>/chapters/<chapter>` 是稳定章节入口，重定向到连续正文中的显式标题 hash。
+- `/posts/<slug>` 只承载普通文章 canonical；`book_document: true` 的书籍 Markdown 仅在构建期读取，不生成公开文章页。
+- `/books/<slug>/chapters/<chapter>` 是书籍章节的独立 canonical 页面，只输出本章正文及本章实际引用的注释／文献。
 - `app/prototype/` 不属于生产运行时，也不应重新成为正文实现或路由入口。
 
 | 文件 | 职责 |
 | --- | --- |
 | `app/posts/[slug]/page.tsx` | 读取文章、专题归属和引用数据，输出 JSON-LD，并装配正式正文。 |
 | `app/components/reading-edition/ReadingEdition.tsx` | 拆分正文、注释和文献；渲染封面、正文网格、附录和相关推荐。 |
-| `app/components/reading-edition/ReadingEditionChrome.tsx` | 客户端页眉、目录／图录、视觉行、注释／文献面板、阅读设置和离场动效。 |
+| `app/components/reading-edition/ReadingEditionChrome.tsx` | 客户端页眉、目录／图录／全书目录、视觉行、注释／文献面板、阅读设置和离场动效。 |
 | `app/components/reading-edition/reading-edition.module.css` | 正式正文在桌面、平板、移动端和打印环境中的版式。 |
 | `app/components/reading-edition/reading-progress.ts` | 阅读记录的数据结构、存储键、校验和纯函数。 |
 | `app/components/reading-edition/useReadingProgress.ts` | 保存、恢复、跨标签页同步和文章更新边界。 |
@@ -38,17 +38,19 @@ app/posts/[slug]/page.tsx
 - `.reading-edition-body`：Markdown 正文和视觉行测量根节点。
 - `.reading-edition-flow`：正文、结束标记和附录的共同容器；阅读完成状态依赖它定位“正文完”。
 - `.reading-edition-appendix`：原始注释／文献 DOM；客户端从这里生成桌面侧栏和移动弹层。
-- `#reading-left-rail`：桌面署名、行数、目录和图录的 portal 宿主。
+- `#reading-left-rail`：桌面署名、行数、目录、图录和书籍章节索引的 portal 宿主。
 - `#reading-right-rail`：桌面注释／文献的 portal 宿主；无引用的文章不渲染它。
 
 这些选择器不是供内容作者使用的公开 API。自动化测试应优先使用标题、角色、ARIA 名称、稳定 URL 和内容计数；只有确实需要验证组件协作时才直接依赖内部类名。
 
 ## 3. 响应式职责
 
-- 桌面宽度（`min-width: 1024px`）使用正文中轴和受正文区边界约束的左右黏性栏。有图片时，左栏目录可切换为图录。
+- 桌面宽度（`min-width: 1024px`）使用正文中轴和受正文区边界约束的左右黏性栏。有图片时，普通文章左栏目录可切换为图录；书籍章节始终提供「目录／全书目录」，仅当本章实际含图片时才插入「图录」模式。
 - 平板与窄桌面隐藏 portal 栏，目录、设置和引用改用抽屉／面板。
-- 移动端页眉保留首页品牌图标、文章目录、繁简与阅读习惯入口；注释和文献共用一个焦点受控的底部 dialog。
+- 移动端页眉保留首页品牌图标、文章目录、繁简与阅读习惯入口；注释和文献共用一个焦点受控的底部 dialog。阅读习惯面板打开时，原页眉入口保持原坐标并作为同一按钮关闭面板，面板标题与它处于同一行，不另渲染 `×` 关闭按钮。
 - 原始文末注释／文献继续留在 HTML 中，保证无脚本、打印、链接目标和发布回归仍有完整内容。
+
+书籍章节的全书目录沿用 manifest 的递归顺序，不在面板顶部重复书籍首页。每个含正文标题的章节以独立 `＋/−` 控件展开次级标题：已发布的其他章节使用独立章节 URL 与标题 hash 跨页跳转，当前章节执行章内跳转，待更新章节保持不可点击。章节号、章名与次级标题沿用普通目录的紧凑网格：编号列最小 `16px`、只在「前 1／附 1」等复合编号需要时按内容扩展，列间距保持 `3px`，复合编号不得拆行，灰色 `↳` 与章节号左缘对齐。可用索引模式在桌面侧栏与窄屏目录面板中共用同一份数据和交互。
 
 桌面侧栏和移动弹层只是同一份引用数据的两个表面，不得分别维护第二套内容或编号。
 

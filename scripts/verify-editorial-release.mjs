@@ -85,13 +85,13 @@ function postLibraryFacets(slug) {
 }
 function sourceLibraryRecords() {
   const directory = path.join(process.cwd(), "source", "_posts");
-  return fs.readdirSync(directory)
+  const posts = fs.readdirSync(directory)
     .filter((file) => file.endsWith(".md"))
     .flatMap((file) => {
       const { data } = parsePostFrontMatter(
         fs.readFileSync(path.join(directory, file), "utf8")
       );
-      if (data.draft === true) return [];
+      if (data.draft === true || data.book_document === true) return [];
       const slug = String(data.slug || path.basename(file, ".md"));
       const section = String(data.section || "");
       return [{
@@ -99,6 +99,59 @@ function sourceLibraryRecords() {
         section,
         tags: Array.isArray(data.tags) ? data.tags.map(String) : [],
       }];
+    });
+
+  const bookDirectory = path.join(process.cwd(), "source", "_books");
+  const books = fs.readdirSync(bookDirectory)
+    .filter((file) => file.endsWith(".json"))
+    .map((file) => {
+      const book = JSON.parse(fs.readFileSync(path.join(bookDirectory, file), "utf8"));
+      const inherited = postLibraryFacets(book.documentSlug);
+      const tags = flattenBookChapters(book.chapters)
+        .filter((chapter) => chapter.status === "published")
+        .flatMap((chapter) =>
+          Array.isArray(chapter.tags) && chapter.tags.length > 0
+            ? chapter.tags.map(String)
+            : inherited.tags
+        );
+      return {
+        href: `/books/${book.slug}`,
+        section: inherited.section,
+        tags: [...new Set(tags)],
+      };
+    });
+
+  return [...posts, ...books];
+}
+function sourceHomeRecords() {
+  const directory = path.join(process.cwd(), "source", "_posts");
+  const posts = fs.readdirSync(directory)
+    .filter((file) => file.endsWith(".md"))
+    .flatMap((file) => {
+      const { data } = parsePostFrontMatter(fs.readFileSync(path.join(directory, file), "utf8"));
+      if (data.draft === true || data.book_document === true) return [];
+      const slug = String(data.slug || path.basename(file, ".md"));
+      const section = String(data.section || "");
+      return [{
+        href: section === "multimedia" ? `/media/${slug}` : `/posts/${slug}`,
+        section,
+      }];
+    });
+  const books = fs.readdirSync(path.join(process.cwd(), "source", "_books"))
+    .filter((file) => file.endsWith(".json"))
+    .map((file) => JSON.parse(fs.readFileSync(path.join(process.cwd(), "source", "_books", file), "utf8")))
+    .map((book) => ({ href: `/books/${book.slug}`, section: "translation" }));
+  return [...posts, ...books];
+}
+function sourcePublishedChapterPaths() {
+  const directory = path.join(process.cwd(), "source", "_books");
+  return fs.readdirSync(directory)
+    .filter((file) => file.endsWith(".json"))
+    .flatMap((file) => {
+      const book = JSON.parse(fs.readFileSync(path.join(directory, file), "utf8"));
+      return flattenBookChapters(book.chapters)
+        .filter((chapter) => chapter.status === "published")
+        .map((chapter) => `/books/${book.slug}/chapters/${encodeURIComponent(chapter.id)}`);
     });
 }
 const productionOrigin = "https://un-canon.blog";
@@ -119,6 +172,14 @@ const readingEditionSource = fs.readFileSync(
 );
 const postsSource = fs.readFileSync(path.join(process.cwd(), "lib", "posts.ts"), "utf8");
 const globalStylesSource = fs.readFileSync(path.join(process.cwd(), "app", "globals.css"), "utf8");
+const bookStylesSource = fs.readFileSync(
+  path.join(process.cwd(), "app", "books", "books.module.css"),
+  "utf8"
+);
+const bookChapterPageSource = fs.readFileSync(
+  path.join(process.cwd(), "app", "books", "[slug]", "chapters", "[chapter]", "page.tsx"),
+  "utf8"
+);
 assert.equal(
   (readingChromeSource.match(/GLOBAL_NAV_ITEMS\.map\s*\(/g) ?? []).length,
   1,
@@ -163,6 +224,41 @@ assert.match(
   readingChromeSource,
   /themeButton[\s\S]*?hanScriptButton[\s\S]*?settingsButton/,
   "theme, Han-script, and reading-habits controls must use the confirmed order"
+);
+assert.equal(
+  readingChromeSource.match(/className=\{styles\.settingsButton\}/g)?.length,
+  1,
+  "the fixed reading-habits control must remain the only settings button"
+);
+assert.match(
+  readingChromeSource,
+  /className=\{styles\.settingsButton\}[\s\S]*?if \(sheet === "settings"\) closeSheet\(\);[\s\S]*?else openSheet\("settings", event\.currentTarget\);/,
+  "the fixed reading-habits control must toggle its own panel"
+);
+assert.match(
+  readingChromeSource,
+  /const settingsTrigger = sheet === "settings"[\s\S]*?\[settingsTrigger, \.\.\.dialogFocusable\]/,
+  "the external reading-habits control must participate in the settings focus loop"
+);
+assert.match(
+  readingChromeSource,
+  /\{sheet !== "settings" && \([\s\S]*?className=\{styles\.sheetHeaderActions\}[\s\S]*?aria-label="关闭"/,
+  "only non-settings sheets may render an independent close button"
+);
+assert.doesNotMatch(
+  readingChromeSource,
+  /settingsCloseLeft/,
+  "the reading-habits control must not be replaced by a dynamically positioned close button"
+);
+assert.match(
+  readingStylesSource,
+  /\.runningHeader\[data-settings-open="true"\][\s\S]*?z-index:\s*130;[\s\S]*?\.settingsButton\s*\{\s*pointer-events:\s*auto;/,
+  "the fixed reading-habits control must stay above the open settings panel"
+);
+assert.doesNotMatch(
+  globalStylesSource,
+  /reading-edition-page[^}]*scrollbar-gutter:\s*auto/,
+  "reading pages must preserve the scrollbar gutter while a panel locks page scrolling"
 );
 assert.match(
   readingStylesSource,
@@ -280,8 +376,8 @@ assert.match(
 );
 assert.match(
   readingEditionSource,
-  /className=\{styles\.docketNumber\}\s+aria-label=\{post\.sectionNo\}[\s\S]*?Array\.from\(post\.sectionNo\)\.map[\s\S]*?data-roll=\{index % 2 === 0 \? "up" : "down"\}/,
-  "article docket numbers must expose two independently rolling digit slots"
+  /export function DocketNumber[\s\S]*?className=\{styles\.docketNumber\}[\s\S]*?Array\.from\(value\)\.map[\s\S]*?data-roll=\{index % 2 === 0 \? "up" : "down"\}[\s\S]*?<DossierCover[\s\S]*?sectionNumber=\{post\.sectionNo\}/,
+  "articles must use the shared independently rolling dossier number"
 );
 assert.doesNotMatch(
   readingEditionSource,
@@ -611,6 +707,7 @@ const shulginManifest = readBookManifest("shulgin-dni");
 const shulginChapters = flattenBookChapters(shulginManifest.chapters);
 const shulginPublishedChapters = shulginChapters.filter((chapter) => chapter.status === "published");
 const shulginForthcomingChapters = shulginChapters.filter((chapter) => chapter.status === "forthcoming");
+const shulginDocumentFacets = postLibraryFacets(shulginManifest.documentSlug);
 const shulginSourceMarkdown = fs.readFileSync(
   path.join(process.cwd(), "source", "_posts", "shulgin-dni.md"),
   "utf8"
@@ -707,6 +804,12 @@ const { data: mullahologyTopicData } = parseYamlFrontMatter(
 );
 const mullahologyGroups = mullahologyTopicData.groups ?? [];
 const mullahologyTopicItems = curatedTopicPaths("mullahology");
+const publicLibraryRecords = sourceLibraryRecords();
+const publicHomeRecords = sourceHomeRecords();
+const publicChapterPaths = sourcePublishedChapterPaths();
+const publicBookPaths = publicHomeRecords
+  .map((record) => record.href)
+  .filter((href) => /^\/books\/[^/]+$/u.test(href));
 assert.equal(mullahologyTopicData.title, "毛拉学", "mullahology topic title must remain stable");
 assert.deepEqual(
   mullahologyGroups.map((group) => String(group.number).padStart(2, "0")),
@@ -737,19 +840,17 @@ const [
   books,
   book,
   shulginBook,
-  shulginDocument,
+  shulginChapter,
   fangLibrary,
-  shulginLibrary,
-  yuLibrary,
   missing,
   sitemap,
 ] = await Promise.all([
   page("/"),
   page("/posts/lih-lenin-disputed"),
-  page("/posts/olsevich-gregory-soviet-planned-economy-retrospective"),
+  page("/posts/bozhong-zhi-yao"),
   page("/media/csa"),
   page("/library"),
-  page("/library?contributor=wang-kui&role=translator"),
+  page("/library?contributor=wang-yu&role=translator"),
   page("/library?contributor=not-a-contributor&role=translator"),
   page("/about"),
   page("/topics"),
@@ -761,10 +862,8 @@ const [
   page("/books"),
   page("/books/soviet-planned-economy-retrospective"),
   page("/books/shulgin-dni"),
-  page(`/posts/${encodeURIComponent(shulginManifest.documentSlug)}`),
+  page("/books/shulgin-dni/chapters/constitutional-day-one"),
   page("/library?contributor=fang-cao"),
-  page("/library?contributor=vasily-shulgin"),
-  page("/library?contributor=yu-shulue"),
   page("/does-not-exist"),
   page("/sitemap.xml"),
 ]);
@@ -784,13 +883,11 @@ for (const [label, result] of Object.entries({
   mullahologyChapter,
   mullahologyChapterTwo,
   books,
-  book,
-  shulginBook,
-  shulginDocument,
-  fangLibrary,
-  shulginLibrary,
-  yuLibrary,
-  missing,
+    book,
+    shulginBook,
+    shulginChapter,
+    fangLibrary,
+    missing,
 })) {
   assert.ok(!result.html.includes(prohibitedBrand), `${label} must not contain the prohibited brand`);
   const footers = elements(result.html, "footer")
@@ -905,17 +1002,28 @@ for (const card of latestCards) {
     "latest-update role marks must remain outside contributor links"
   );
 }
-for (const pathName of [
-  "/posts/mullahology-00",
-  "/posts/mullahology-01",
-  "/posts/mullahology-02",
-  "/posts/shulgin-dni",
-]) {
-  assert.ok(
-    links(home.html).some((link) => link.href === pathName),
-    `combined public preview homepage must retain ${pathName}`
-  );
-}
+const homepageCount = elements(home.html, "span").find((span) =>
+  (attribute(span.opening, "class") ?? "").includes("manifestoNumber")
+);
+assert.ok(homepageCount, "homepage must expose its public-content count");
+assert.equal(
+  visibleText(homepageCount.inner),
+  String(publicHomeRecords.length).padStart(2, "0"),
+  "homepage count must collapse each serial into one book recommendation"
+);
+assert.ok(
+  publicBookPaths.some((pathName) => links(home.html).some((link) => link.href === pathName)),
+  "homepage recommendations must link serialized books to their catalogue pages"
+);
+assert.ok(
+  publicBookPaths.some((pathName) => links(latestUpdates.inner).some((link) => link.href === pathName)),
+  "latest updates must collapse a serialized book into one catalogue link"
+);
+assert.ok(
+  publicChapterPaths.every((pathName) => !links(home.html).some((link) => link.href === pathName)),
+  "homepage recommendation surfaces must not expose individual chapter cards"
+);
+assert.doesNotMatch(home.html, /href=["']\/posts\/(?:shulgin-dni|lih-bread-and-authority-in-russia|olsevich-gregory-soviet-planned-economy-retrospective)["']/);
 // 不再钉住某一具体译文标题（会随更新老化出最新六篇而误红）；每张最新更新卡片的
 // 署名链接结构由上面的通用循环（296-308）覆盖，此处不再做基于具体内容的断言。
 assert.doesNotMatch(home.html, /href=["']\/search(?:[?"'])/, "new navigation must not emit /search links");
@@ -951,21 +1059,13 @@ for (const section of Object.keys(sectionLabels)) {
 const nonFeaturedEditorialCards = editorialCards.filter(
   (card) => attribute(card.opening, "data-featured") !== "true"
 );
-const mullahologyPrefaceCard = editorialCards.find((card) =>
-  links(card.outer).some((link) => link.href === "/posts/mullahology-00")
+const bookRecommendation = editorialCards.find((card) =>
+  links(card.outer).some((link) => publicBookPaths.includes(link.href))
 );
-assert.ok(mullahologyPrefaceCard, "homepage must expose the Mullahology preface recommendation");
-const mullahologyPrefaceTitle = elements(mullahologyPrefaceCard.outer, "h2")[0];
-assert.ok(mullahologyPrefaceTitle, "Mullahology preface recommendation must expose its title");
-assert.deepEqual(
-  elements(mullahologyPrefaceTitle.inner, "span").map((line) => visibleText(line.inner)),
-  ["一份关于克苏鲁的", "调查报告"],
-  "Mullahology preface homepage title must preserve its two editorial lines"
-);
+assert.ok(bookRecommendation, "homepage wall must expose a serialized-book recommendation");
 assert.ok(
-  visibleText(mullahologyPrefaceCard.outer)
-    .includes("如果自由主义的真理是纳粹主义，那么新自由主义的真理是什么？"),
-  "Mullahology preface recommendation must expose the revised overview"
+  elements(bookRecommendation.outer, "h2").some((heading) => visibleText(heading.inner).length > 0),
+  "serialized-book recommendations must retain their book title"
 );
 assert.ok(nonFeaturedEditorialCards.length > 0, "homepage must include non-featured editorial cards");
 for (const card of nonFeaturedEditorialCards) {
@@ -1015,7 +1115,7 @@ assert.ok(
 );
 assert.doesNotMatch(
   visibleText(featuredTranslation.outer),
-  /原作者|译者/,
+  /(?:^|[\s·：:])(?:原作者|译者)(?=$|[\s·：:])/,
   "translation recommendations must not invent original-author/translator display fields"
 );
 
@@ -1094,7 +1194,7 @@ const articleFacetTargets = [
   { label: "section", href: articleSectionLink.href },
   ...expectedArticleTagLinks.map(({ href, text }) => ({ label: text, href })),
 ];
-const libraryRecords = sourceLibraryRecords();
+const libraryRecords = publicLibraryRecords;
 const articleFacetLandings = await Promise.all(
   articleFacetTargets.map(({ href }) => page(href))
 );
@@ -1117,7 +1217,7 @@ for (const [index, landing] of articleFacetLandings.entries()) {
   const actualResults = [...new Set(
     links(landing.html)
       .map((link) => link.href)
-      .filter((href) => /^\/(?:posts|media)\//.test(href))
+      .filter((href) => /^\/(?:posts|media)\/|^\/books\/[^/]+$/.test(href))
   )].sort();
   assert.deepEqual(
     actualResults,
@@ -1184,9 +1284,11 @@ assert.ok(Array.isArray(mediaLd.sameAs) && mediaLd.sameAs.length > 0, "media JSO
 assertMetadata("library", library, "/library");
 assertMetadata("filtered library", filteredLibrary, "/library");
 assertMetadata("fang-cao library", fangLibrary, "/library");
-assertMetadata("vasily-shulgin library", shulginLibrary, "/library");
-assertMetadata("yu-shulue library", yuLibrary, "/library");
 assert.match(library.html, /内容索引/);
+assert.ok(
+  publicChapterPaths.every((pathName) => !links(library.html).some((link) => link.href === pathName)),
+  "library must collapse all chapter presentations into one serialized-book entry"
+);
 const libraryPanels = elements(library.html, "details");
 assert.equal(libraryPanels.length, 5, "library must render five collapsible filter panels");
 assert.ok(
@@ -1203,12 +1305,10 @@ assert.match(visibleText(rolePanel.outer), /作者/);
 assert.match(visibleText(rolePanel.outer), /译者/);
 assert.match(visibleText(rolePanel.outer), /校对/);
 assert.doesNotMatch(visibleText(rolePanel.outer), /编辑/);
-assert.match(filteredLibrary.html, /苏联计划经济的历史审视/);
+assert.match(filteredLibrary.html, /列宁之争/);
 assert.doesNotMatch(filteredLibrary.html, /学龄前的歌利亚/);
 assert.match(fangLibrary.html, /一份关于克苏鲁的调查报告/);
 assert.match(fangLibrary.html, /斩断伊斯兰这片绿色的叶子/);
-assert.match(shulginLibrary.html, /往日/);
-assert.match(yuLibrary.html, /往日/);
 
 assertMetadata("about", about, "/about");
 const aboutMains = elements(about.html, "main")
@@ -1354,7 +1454,7 @@ assert.equal(
   `${productionOrigin}/books/soviet-planned-economy-retrospective`,
   "book BibTeX and embedded metadata must cite the /books/ URL"
 );
-assert.match(book.html, /从头阅读/);
+assert.match(book.html, /从第一章阅读/);
 assert.match(book.html, /阅读最新章节/);
 assert.match(book.html, /\/library\?contributor=wang-kui/);
 const citationCards = elements(book.html, "article")
@@ -1392,27 +1492,215 @@ const shulginLd = assertMetadata(
   "/books/shulgin-dni",
   "Book"
 );
-const shulginDocumentPath = `/posts/${encodeURIComponent(shulginManifest.documentSlug)}`;
-assertMetadata("shulgin-dni continuous document", shulginDocument, shulginDocumentPath);
-const shulginDocumentLd = structuredData(shulginDocument.html)
-  .find((value) => value?.["@type"] === "Book");
-assert.ok(shulginDocumentLd, "shulgin-dni continuous document must retain Book JSON-LD");
+const shulginChapterPath = "/books/shulgin-dni/chapters/constitutional-day-one";
+const shulginChapterLd = assertMetadata(
+  "shulgin-dni chapter",
+  shulginChapter,
+  shulginChapterPath,
+  "Chapter"
+);
 assert.equal(
-  normalizedPath(shulginDocumentLd.url),
+  namedMeta(shulginChapter.html, "z:itemType"),
+  "bookSection",
+  "shulgin-dni chapter must expose Zotero itemType=bookSection"
+);
+assert.equal(
+  namedMeta(shulginChapter.html, "citation_public_url"),
+  `${productionOrigin}${shulginChapterPath}`,
+  "shulgin-dni chapter citation URL must point to its canonical page"
+);
+assert.equal(
+  normalizedPath(shulginChapterLd.isPartOf?.url ?? ""),
   "/books/shulgin-dni",
-  "shulgin-dni continuous document citation must point to its /books/ record"
+  "shulgin-dni chapter JSON-LD must belong to its book record"
 );
+assert.match(shulginChapter.html, /本章完/);
+assert.match(
+  shulginChapter.html,
+  /aria-label=["']本章完["']/,
+  "book chapter end markers must expose the same visible and accessible label"
+);
+assert.match(shulginChapter.html, /aria-label=["']章节导航["']/);
+const shulginChapterCover = elements(shulginChapter.html, "header")
+  .find((element) => attribute(element.opening, "id") === "reading-cover");
+assert.ok(shulginChapterCover, "book chapters must expose a reading cover");
+const shulginChapterCoverText = visibleText(shulginChapterCover.outer);
+const shulginTranslationDigits = /译\s*(\d)\s*(\d)/u.exec(shulginChapterCoverText);
+const shulginTranslationNumber = shulginTranslationDigits
+  ? `${shulginTranslationDigits[1]}${shulginTranslationDigits[2]}`
+  : undefined;
+const shulginDocketNumber = /第\s*(\d{2})\s*号/u.exec(shulginChapterCoverText)?.[1];
+assert.ok(shulginTranslationNumber, "book chapters must receive their own translation-section number");
+const shulginLibraryRow = elements(library.html, "li").find((row) =>
+  links(row.outer).some((link) => link.href === "/books/shulgin-dni")
+);
+assert.ok(shulginLibraryRow, "a serialized book must appear once in the library sequence");
+const shulginLibraryNumber = elements(shulginLibraryRow.inner, "b")
+  .map((element) => visibleText(element.inner))
+  .find((value) => /^\d+$/u.test(value));
 assert.equal(
-  namedMeta(shulginDocument.html, "z:itemType"),
-  "book",
-  "shulgin-dni continuous document must expose Zotero itemType=book"
+  shulginDocketNumber,
+  shulginLibraryNumber,
+  "every chapter must inherit the aggregated book issue shown in the library"
 );
+assert.ok(
+  shulginLibraryRow && new RegExp(`译\\s*${shulginTranslationNumber}`, "u")
+    .test(visibleText(shulginLibraryRow.outer)),
+  "every chapter must inherit the aggregated book translation-section number"
+);
+assert.doesNotMatch(
+  shulginChapterCoverText,
+  /译\s*\d\s*\d\s*\./u,
+  "book chapter identifiers must not append the manifest chapter number"
+);
+assert.match(
+  readingEditionSource,
+  /export function DocketNumber[\s\S]*?Array\.from\(value\)\.map[\s\S]*?className=\{styles\.docketDigit\}[\s\S]*?data-roll=\{index % 2 === 0 \? "up" : "down"\}/,
+  "the shared dossier docket must retain the two-slot rolling digit animation"
+);
+assert.match(
+  bookChapterPageSource,
+  /<ReadingDossierRoot[\s\S]*?<DossierCover[\s\S]*?sectionNumber=\{chapterCode\}[\s\S]*?<DossierReading/,
+  "book chapters must compose the shared dossier root, cover, and reading grid"
+);
+assert.doesNotMatch(
+  bookStylesSource,
+  /chapterDocketNumber/,
+  "book chapters must not override the shared dossier number artwork"
+);
+assert.match(
+  shulginChapterCoverText,
+  /连载\s*往日\s*·\s*忆一九〇五年立宪与一九一七年二月革命\s*第二章/u,
+  "book chapter covers must place the serial title and Chinese chapter unit above the article title"
+);
+assert.match(
+  bookChapterPageSource,
+  /coverLeadMetaWithTopics[\s\S]*?chapterCoverKicker[\s\S]*?chapterSeriesLine[\s\S]*?<\/div>\s*<h1/,
+  "book chapter metadata and serial eyebrow must share the standard lead-meta spacing group"
+);
+const shulginCatalogueReturn = links(shulginChapterCover.inner)
+  .find((link) => link.href === "/books/shulgin-dni");
+assert.ok(shulginCatalogueReturn, "book chapter covers must link back to their catalogue");
 assert.equal(
-  namedMeta(shulginDocument.html, "citation_public_url"),
-  `${productionOrigin}/books/shulgin-dni`,
-  "shulgin-dni embedded citation URL must point to /books/"
+  shulginCatalogueReturn.text,
+  "← 返回目录",
+  "the chapter-cover catalogue action must not repeat the book title"
 );
-const shulginRenderedParagraphs = elements(shulginDocument.html, "p");
+const currentShulginChapter = shulginPublishedChapters
+  .find((chapter) => chapter.id === "constitutional-day-one");
+const expectedShulginChapterTags = Array.isArray(currentShulginChapter?.tags)
+  && currentShulginChapter.tags.length > 0
+  ? currentShulginChapter.tags.map(String)
+  : shulginDocumentFacets.tags;
+const shulginChapterTagLine = elements(shulginChapter.html, "nav").find((element) =>
+  /\bclass=["'][^"']*tagLine/.test(element.opening)
+);
+assert.ok(shulginChapterTagLine, "book chapter covers must expose their tag list");
+assert.deepEqual(
+  links(shulginChapterTagLine.inner).map(({ href, text }) => ({ href, text })),
+  expectedShulginChapterTags.map((tag) => ({
+    href: `/library?tag=${encodeURIComponent(tag)}`,
+    text: `#${tag}`,
+  })),
+  "chapter tags must use a chapter override when present and otherwise inherit the book document tags"
+);
+assert.match(
+  bookChapterPageSource,
+  /bookToc=\{readingBookToc\(book, documents, chapter\.id\)\}/,
+  "book chapter pages must pass the recursive full-book catalogue to the reader"
+);
+assert.match(
+  readingChromeSource,
+  /"目录与全书目录切换"[\s\S]*?hasFigureIndex\s*&&[\s\S]*?aria-label="图录"[\s\S]*?aria-label="全书目录"/,
+  "book chapters must expose the full-book table-of-contents tab"
+);
+assert.match(
+  readingChromeSource,
+  /item\.current\s*\?[\s\S]*?aria-current="page"[\s\S]*?:\s*item\.href\s*\?[\s\S]*?<Link[\s\S]*?:[\s\S]*?aria-disabled="true"/,
+  "the full-book catalogue must distinguish current, published, and forthcoming chapters"
+);
+const shulginChapterNavigation = elements(shulginChapter.html, "nav")
+  .find((element) => attribute(element.opening, "aria-label") === "章节导航");
+assert.ok(shulginChapterNavigation, "book chapters must expose bottom chapter navigation");
+const shulginChapterNavigationLinks = links(shulginChapterNavigation.inner);
+assert.equal(
+  shulginChapterNavigationLinks.length,
+  3,
+  "a middle chapter must expose previous, catalogue, and next actions"
+);
+assert.ok(
+  shulginChapterNavigationLinks.every((link) =>
+    /<span\b[^>]*>[\s\S]*?<\/span>[\s\S]*?<strong\b[^>]*>[\s\S]*?<\/strong>/i.test(link.inner)
+  ),
+  "all three bottom chapter actions must share the same two-line structure"
+);
+const chapterReaderCoverRule = bookStylesSource.match(/\.chapterReaderCover\s*\{([^}]*)\}/)?.[1] ?? "";
+const chapterReaderNavRule = bookStylesSource.match(/\.chapterReaderNav\s*\{([^}]*)\}/)?.[1] ?? "";
+assert.ok(chapterReaderCoverRule, "book chapter cover styles must exist");
+assert.ok(chapterReaderNavRule, "book chapter navigation styles must exist");
+assert.doesNotMatch(
+  chapterReaderCoverRule,
+  /border-bottom\s*:/,
+  "book chapter covers must not draw a rule between the cover and body"
+);
+assert.doesNotMatch(
+  chapterReaderNavRule,
+  /border-top\s*:/,
+  "book chapter navigation must not draw a rule above the three actions"
+);
+assert.match(
+  readingChromeSource,
+  /className=\{styles\.bookTocDisclosure\}[\s\S]*?toggleBookChapter\(item\.id\)[\s\S]*?item\.sections\.map[\s\S]*?section\.href/,
+  "every full-book chapter with headings must expose a disclosure and cross-page section links"
+);
+assert.doesNotMatch(
+  readingChromeSource,
+  /bookTocHome/,
+  "the full-book catalogue must not repeat the removed book-home row"
+);
+const bookTocSectionsRule = readingStylesSource.match(/\.bookTocSections\s*\{([^}]*)\}/)?.[1] ?? "";
+assert.ok(bookTocSectionsRule, "full-book section styles must exist");
+assert.doesNotMatch(
+  bookTocSectionsRule,
+  /border-left\s*:/,
+  "expanded full-book sections must not draw the removed red vertical rule"
+);
+const bookTocRowRule = readingStylesSource.match(/\.bookTocRow\s*\{([^}]*)\}/)?.[1] ?? "";
+const bookTocNumberRule = readingStylesSource.match(/\.bookTocRow span,\s*\.bookTocRow small\s*\{([^}]*)\}/)?.[1] ?? "";
+const bookTocSectionLinkRule = readingStylesSource.match(/\.bookTocSectionLink\s*\{([^}]*)\}/)?.[1] ?? "";
+const bookTocSectionMarkerRule = readingStylesSource.match(/\.bookTocSectionLink span\s*\{([^}]*)\}/)?.[1] ?? "";
+assert.match(
+  bookTocRowRule,
+  /grid-template-columns:\s*minmax\(16px,\s*max-content\) minmax\(0,\s*1fr\) auto;[\s\S]*?gap:\s*3px;/,
+  "full-book chapter rows must keep a compact number grid that expands only for compound labels"
+);
+assert.match(
+  bookTocNumberRule,
+  /white-space:\s*nowrap;/,
+  "full-book compound chapter labels must stay on one line"
+);
+assert.match(
+  bookTocSectionLinkRule,
+  /grid-template-columns:\s*16px minmax\(0,\s*1fr\);[\s\S]*?gap:\s*3px;/,
+  "full-book section rows must align with the chapter number grid"
+);
+assert.match(
+  bookTocSectionMarkerRule,
+  /text-align:\s*left;/,
+  "full-book section markers must align to the number-column start"
+);
+assert.match(
+  readingStylesSource,
+  /\.bookTocSectionLink\[data-level="3"\] b\s*\{[^}]*padding-left:\s*6px;[^}]*\}[\s\S]*?\.bookTocSectionLink\[data-level="4"\] b\s*\{[^}]*padding-left:\s*12px;/,
+  "full-book section titles must preserve deeper heading hierarchy without moving their markers"
+);
+
+const shulginChapterPages = await Promise.all(
+  shulginPublishedChapters.map((chapter) =>
+    page(`/books/shulgin-dni/chapters/${encodeURIComponent(chapter.id)}`)
+  )
+);
+const shulginRenderedParagraphs = shulginChapterPages.flatMap((result) => elements(result.html, "p"));
 for (const pageNumber of shulginInlinePageBreaks) {
   assert.ok(
     shulginRenderedParagraphs.some((paragraph) =>
@@ -1518,75 +1806,42 @@ assert.ok(
   "books index must report shulgin-dni published/all counts"
 );
 
-const shulginDocumentIds = new Set(
-  [...shulginDocument.html.matchAll(/<[a-z][^>]*\bid=["']([^"']+)["'][^>]*>/gi)]
-    .map(([, id]) => decodeHtml(id))
-);
-for (const chapter of shulginPublishedChapters) {
+for (const [index, result] of shulginChapterPages.entries()) {
+  const chapter = shulginPublishedChapters[index];
+  const expectedPath = `/books/shulgin-dni/chapters/${encodeURIComponent(chapter.id)}`;
+  assert.equal(result.response.status, 200, `published shulgin-dni chapter ${chapter.id} must render`);
+  assert.equal(
+    normalizedPath(canonical(result.html)),
+    expectedPath,
+    `published shulgin-dni chapter ${chapter.id} must be canonical to itself`
+  );
+  assert.match(result.html, /reading-edition-page/);
   assert.ok(
-    shulginDocumentIds.has(chapter.anchor),
-    `shulgin-dni published anchor #${chapter.anchor} must exist in the continuous document`
+    visibleText(result.html).includes(chapter.title),
+    `published shulgin-dni chapter ${chapter.id} must expose its title`
   );
 }
-const shulginConstitutionalDayHeading = elements(shulginDocument.html, "h2")
-  .find((heading) => decodeHtml(attribute(heading.opening, "id") || "") === "立宪首日");
+
+const shulginSectionLanding = shulginChapterPages[
+  shulginPublishedChapters.findIndex((chapter) => chapter.id === "penultimate-days")
+];
+assert.match(shulginSectionLanding.html, /本节目录/);
 assert.ok(
-  shulginConstitutionalDayHeading,
-  "shulgin-dni constitutional-day heading must preserve its stable anchor"
+  links(shulginSectionLanding.html).some((link) =>
+    link.href === "/books/shulgin-dni/chapters/penultimate-1916-11-03"
+  ),
+  "a published parent node sharing a source heading must become a section landing"
 );
-assert.equal(
-  visibleText(shulginConstitutionalDayHeading.outer),
-  "“立宪”首日，1905年10月18日",
-  "shulgin-dni constitutional-day heading must combine the title and date"
-);
-const shulginPenultimateHeading = elements(shulginDocument.html, "h2")
-  .find((heading) => decodeHtml(attribute(heading.opening, "id") || "") === "立宪的倒数第二日");
-assert.ok(
-  shulginPenultimateHeading,
-  "shulgin-dni penultimate-day heading must preserve its stable anchor"
-);
-assert.equal(
-  visibleText(shulginPenultimateHeading.outer),
-  "“立宪”的倒数第二日，1916年11月3日",
-  "shulgin-dni penultimate-day heading must keep the source title and date on one heading"
-);
-assert.match(
-  shulginPenultimateHeading.outer,
-  /<span\b[^>]*id=["']1916年11月3日["'][^>]*><\/span>/,
-  "shulgin-dni penultimate-day heading must retain the 05.1 stable anchor without a second heading"
-);
-assert.match(
-  shulginPenultimateHeading.outer,
-  /<span\b(?=[^>]*id=["']1916年11月3日["'])(?=[^>]*class=["'][^"']*chapter-anchor-alias[^"']*["'])[^>]*>/,
-  "shulgin-dni 05.1 stable anchor must opt into the reader header offset"
-);
-assert.match(
-  readingStylesSource,
-  /\.body\s+:global\(\.chapter-anchor-alias\)\s*\{[\s\S]*?scroll-margin-top:\s*calc\(var\(--reading-rail-top\) \+ 12px\);/,
-  "reader alias anchors must clear the fixed reader header"
-);
-assert.equal(
-  elements(shulginDocument.html, "h3")
-    .filter((heading) => visibleText(heading.outer) === "1916年11月3日")
-    .length,
-  0,
-  "shulgin-dni penultimate-day date must not be split into a second heading"
+const shulginPenultimateChapter = shulginChapterPages[
+  shulginPublishedChapters.findIndex((chapter) => chapter.id === "penultimate-1916-11-03")
+];
+assert.match(shulginPenultimateChapter.html, /四下里静极了/);
+assert.doesNotMatch(
+  shulginPenultimateChapter.html,
+  /href=["']#1916年11月3日["']/,
+  "independent chapter pages must not depend on the removed continuous-document alias"
 );
 
-const shulginPublishedResponses = await Promise.all(
-  shulginPublishedChapters.map((chapter) =>
-    fetch(`${base}/books/shulgin-dni/chapters/${encodeURIComponent(chapter.id)}`, { redirect: "manual" })
-  )
-);
-for (const [index, response] of shulginPublishedResponses.entries()) {
-  const chapter = shulginPublishedChapters[index];
-  assert.equal(response.status, 308, `published shulgin-dni chapter ${chapter.id} must redirect permanently`);
-  assert.equal(
-    decodeURIComponent(normalizedPath(response.headers.get("location") || "")),
-    `/posts/${shulginManifest.documentSlug}#${chapter.anchor}`,
-    `published shulgin-dni chapter ${chapter.id} must target its continuous-document anchor`
-  );
-}
 const shulginForthcomingResponses = await Promise.all(
   shulginForthcomingChapters.map((chapter) =>
     fetch(`${base}/books/shulgin-dni/chapters/${encodeURIComponent(chapter.id)}`, { redirect: "manual" })
@@ -1600,7 +1855,7 @@ for (const [index, response] of shulginForthcomingResponses.entries()) {
   );
 }
 
-const [legacySearch, legacyFilteredSearch, mediaRedirect, chapterRedirect] = await Promise.all([
+const [legacySearch, legacyFilteredSearch, mediaRedirect, chapterPage] = await Promise.all([
   fetch(`${base}/search`, { redirect: "manual" }),
   fetch(`${base}/search?section=essay&tag=%E5%8E%86%E5%8F%B2`, { redirect: "manual" }),
   fetch(`${base}/posts/csa`, { redirect: "manual" }),
@@ -1619,11 +1874,16 @@ assert.equal(
 );
 assert.equal(mediaRedirect.status, 308, "legacy multimedia post URL must redirect permanently");
 assert.equal(normalizedPath(mediaRedirect.headers.get("location")), "/media/csa");
-assert.equal(chapterRedirect.status, 308, "stable chapter entry must redirect permanently");
-assert.equal(
-  decodeURIComponent(normalizedPath(chapterRedirect.headers.get("location"))),
-  "/posts/olsevich-gregory-soviet-planned-economy-retrospective#附录"
-);
+assert.equal(chapterPage.status, 200, "published chapter routes must render independent pages");
+
+const retiredBookDocuments = await Promise.all([
+  "/posts/shulgin-dni",
+  "/posts/lih-bread-and-authority-in-russia",
+  "/posts/olsevich-gregory-soviet-planned-economy-retrospective",
+].map((path) => fetch(`${base}${path}`, { redirect: "manual" })));
+for (const response of retiredBookDocuments) {
+  assert.equal(response.status, 404, "book Markdown sources must not expose legacy /posts/ pages");
+}
 
 const retiredHexoResponses = await Promise.all([
   "/2026/05/12/csa",
@@ -1650,7 +1910,6 @@ for (const requiredPath of [
   "/books",
   "/books/soviet-planned-economy-retrospective",
   "/books/shulgin-dni",
-  shulginDocumentPath,
   "/posts/mullahology-00",
   "/posts/mullahology-01",
   "/posts/mullahology-02",
@@ -1660,10 +1919,16 @@ for (const requiredPath of [
   assert.ok(sitemapPaths.includes(requiredPath), `sitemap must contain ${requiredPath}`);
 }
 assert.ok(!sitemapPaths.includes("/search"), "sitemap must not contain the legacy redirect route");
-assert.ok(
-  sitemapPaths.every((path) => !path.includes("/chapters/")),
-  "sitemap must not contain redirect-only chapter entry routes"
-);
+for (const chapterPath of expectedShulginChapterPaths) {
+  assert.ok(sitemapPaths.includes(chapterPath), `sitemap must contain chapter canonical ${chapterPath}`);
+}
+for (const retiredPath of [
+  "/posts/shulgin-dni",
+  "/posts/lih-bread-and-authority-in-russia",
+  "/posts/olsevich-gregory-soviet-planned-economy-retrospective",
+]) {
+  assert.ok(!sitemapPaths.includes(retiredPath), `sitemap must omit book Markdown source ${retiredPath}`);
+}
 assert.match(sitemap.html, /<lastmod>/);
 
 const sitemapPages = await Promise.all(sitemapPaths.map((path) => page(path)));

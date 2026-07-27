@@ -30,6 +30,9 @@ import {
 import { isHanScript, type HanScript } from "./han-script";
 
 const POSTS_DIR = path.join(process.cwd(), "source", "_posts");
+const BOOKS_DIR = path.join(process.cwd(), "source", "_books");
+
+const bookChapterSectionNumbers = new Map<string, string>();
 
 export type CreditRole = "author" | "translator" | "proofreader";
 
@@ -50,6 +53,7 @@ export interface PostSummary {
   homeTitleBreaks: string[];
   subtitle: string;
   draft: boolean;
+  bookDocument: boolean; // 仅作为书籍章节的构建源，不生成公开文章页面
   category: string;
   section: EditorialSection;
   tags: string[];
@@ -76,6 +80,7 @@ export interface Post extends PostSummary {
   originalPublication: string;
   originalDate: string;
   html: string;
+  markdown: string;
   sortOrder: number;
 }
 
@@ -269,6 +274,119 @@ function comparePosts(a: Post, b: Post): number {
   return b.timestamp - a.timestamp || b.sortOrder - a.sortOrder || a.slug.localeCompare(b.slug);
 }
 
+type PublicSectionPage = {
+  section: string;
+  sectionNo: string;
+  no: string;
+  timestamp: number;
+  slug: string;
+  originalDate: string;
+  sortOrder: number;
+  sourceSlug: string;
+  post?: Post;
+  chapterKeys?: string[];
+};
+
+type BookChapterNumberInput = {
+  id?: unknown;
+  status?: unknown;
+  presentation?: unknown;
+  publishedAt?: unknown;
+  children?: unknown;
+};
+
+function chapterNumberKey(documentSlug: string, chapterId: string): string {
+  return `${documentSlug}:${chapterId}`;
+}
+
+function flattenChapterNumberInputs(value: unknown): BookChapterNumberInput[] {
+  if (!Array.isArray(value)) return [];
+  return value.flatMap((chapter) => {
+    if (!chapter || typeof chapter !== "object" || Array.isArray(chapter)) return [];
+    const input = chapter as BookChapterNumberInput;
+    return [input, ...flattenChapterNumberInputs(input.children)];
+  });
+}
+
+function publicSectionPages(posts: Post[], visiblePosts: Post[]): PublicSectionPage[] {
+  const pages: PublicSectionPage[] = visiblePosts.map((post) => ({
+    section: post.section,
+    sectionNo: "00",
+    no: "00",
+    timestamp: post.timestamp,
+    slug: post.slug,
+    originalDate: post.originalDate,
+    sortOrder: post.sortOrder,
+    sourceSlug: post.slug,
+    post,
+  }));
+
+  if (!fs.existsSync(BOOKS_DIR)) return pages;
+
+  const bookDocuments = new Map(
+    posts
+      .filter((post) => !post.draft && post.bookDocument)
+      .map((post) => [post.slug, post] as const)
+  );
+
+  for (const file of fs.readdirSync(BOOKS_DIR).filter((name) => name.endsWith(".json"))) {
+    const manifest = JSON.parse(fs.readFileSync(path.join(BOOKS_DIR, file), "utf8")) as Record<string, unknown>;
+    const documentSlug = typeof manifest.documentSlug === "string" ? manifest.documentSlug.trim() : "";
+    const post = bookDocuments.get(documentSlug);
+    if (!post) continue;
+
+    const chapters = flattenChapterNumberInputs(manifest.chapters);
+    const published = chapters.filter((chapter) => (chapter.status ?? "published") === "published");
+    const readingDates = published
+      .filter((chapter) => (chapter.presentation ?? "reading") === "reading")
+      .map((chapter) => typeof chapter.publishedAt === "string" ? chapter.publishedAt.trim() : "")
+      .filter((date) => Number.isFinite(Date.parse(date)))
+      .sort((a, b) => b.localeCompare(a));
+    const publishedAt = readingDates[0]
+      ?? (typeof manifest.publishedAt === "string" ? manifest.publishedAt.trim() : "");
+    const timestamp = Date.parse(publishedAt);
+    const chapterKeys = published.flatMap((chapter) => {
+      const chapterId = typeof chapter.id === "string" ? chapter.id.trim() : "";
+      return chapterId ? [chapterNumberKey(documentSlug, chapterId)] : [];
+    });
+    if (!Number.isFinite(timestamp) || chapterKeys.length === 0) continue;
+
+    pages.push({
+      section: post.section,
+      sectionNo: "00",
+      no: "00",
+      timestamp,
+      slug: documentSlug,
+      originalDate: publishedAt,
+      sortOrder: post.sortOrder,
+      sourceSlug: documentSlug,
+      chapterKeys,
+    });
+  }
+
+  return pages;
+}
+
+function assignPublicNumbers(posts: Post[], visiblePosts: Post[]): void {
+  const pages = publicSectionPages(posts, visiblePosts).sort(
+    (a, b) =>
+      b.timestamp - a.timestamp ||
+      b.sortOrder - a.sortOrder ||
+      a.sourceSlug.localeCompare(b.sourceSlug) ||
+      a.slug.localeCompare(b.slug)
+  );
+
+  assignPostNumbers(pages);
+  bookChapterSectionNumbers.clear();
+  pages.forEach((page) => {
+    if (page.post) {
+      page.post.no = page.no;
+      page.post.sectionNo = page.sectionNo;
+    }
+    page.chapterKeys?.forEach((key) => bookChapterSectionNumbers.set(key, page.sectionNo));
+  });
+}
+
 /** 去掉链接后剩余的实义文字长度（用于跳过「标签：链接」这类无信息段落） */
 function meaningfulLen(t: string): number {
   return t.replace(URL_RE, "").replace(/\s+/g, "").length;
@@ -289,14 +407,14 @@ function deriveExcerpt(html: string, fmExcerpt: unknown, title: string): string 
   return source;
 }
 
-function readMinutes(html: string): number {
+export function readMinutes(html: string): number {
   const text = plainText(html);
   const cjk = (text.match(/[㐀-鿿豈-﫿]/g) || []).length;
   const latin = (text.match(/[A-Za-z0-9]+/g) || []).length;
   return Math.max(1, Math.round((cjk + latin) / 400));
 }
 
-function hashRenderedContent(html: string): string {
+export function hashRenderedContent(html: string): string {
   return createHash("sha256").update(html).digest("hex").slice(0, 16);
 }
 
@@ -329,6 +447,7 @@ async function loadRaw(): Promise<Post[]> {
         : titleBreaks(homeTitleBreaksValue, title, file, "home_title_breaks");
       const subtitle = String(data.subtitle ?? "").trim();
       const draft = isDraft(data.draft);
+      const bookDocument = isDraft(data.book_document);
       const category = categories[0] ?? tags[0] ?? "未分类";
       const uniqueTags = Array.from(new Set(tags));
       const credits = buildCredits(data, file);
@@ -377,6 +496,7 @@ async function loadRaw(): Promise<Post[]> {
         homeTitleBreaks: preferredHomeTitleBreaks,
         subtitle,
         draft,
+        bookDocument,
         category,
         section,
         tags: uniqueTags,
@@ -406,12 +526,13 @@ async function loadRaw(): Promise<Post[]> {
         ),
         originalDate,
         html,
+        markdown: content,
       };
       return post;
     })
   );
 
-  const visiblePosts = posts.filter((p) => !p.draft);
+  const visiblePosts = posts.filter((p) => !p.draft && !p.bookDocument);
 
   // 重复 slug 守卫（与 books.ts / topics.ts 一致）：两篇可见文稿撞 slug 时，
   // getPostBySlug 会静默取首个并遮蔽另一篇，而编号仍把两篇都计入 N —— 直接抛错。
@@ -425,9 +546,10 @@ async function loadRaw(): Promise<Post[]> {
     slugOwner.set(p.slug, p.title);
   }
 
-  // 时间倒序（最新在前）；常规文章保留全站流水号，负栏目使用独立的负号编号。
+  // 时间倒序（最新在前）；普通内容与每本书共同占一个公开条目。
   visiblePosts.sort(comparePosts);
-  assignPostNumbers(visiblePosts);
+  // 同一本书的所有章节映射到书籍条目的同一个栏目号。
+  assignPublicNumbers(posts, visiblePosts);
 
   return posts.sort(comparePosts);
 }
@@ -441,6 +563,7 @@ function all(): Promise<Post[]> {
 
 const strip = ({
   html,
+  markdown,
   sortOrder,
   originalTitle,
   originalPublication,
@@ -449,17 +572,17 @@ const strip = ({
 }: Post): PostSummary => rest;
 
 export async function getAllPosts(): Promise<PostSummary[]> {
-  return (await all()).filter((p) => !p.draft).map(strip);
+  return (await all()).filter((p) => !p.draft && !p.bookDocument).map(strip);
 }
 
 /** 含渲染后 HTML 的全量文章（仅正式发布），供 RSS feed 使用 */
 export async function getAllPostsFull(): Promise<Post[]> {
-  return (await all()).filter((p) => !p.draft);
+  return (await all()).filter((p) => !p.draft && !p.bookDocument);
 }
 
 export async function getAllSlugs(): Promise<string[]> {
   return (await all())
-    .filter((p) => !p.draft)
+    .filter((p) => !p.draft && !p.bookDocument)
     .map((p) => p.slug);
 }
 
@@ -470,13 +593,13 @@ export async function getAllSlugs(): Promise<string[]> {
  */
 export async function getPreviewablePosts(): Promise<PostSummary[]> {
   return (await all())
-    .filter((p) => allowDraftPreview() || !p.draft)
+    .filter((p) => (allowDraftPreview() || !p.draft) && !p.bookDocument)
     .map(strip);
 }
 
 export async function getPreviewableSlugs(): Promise<string[]> {
   return (await all())
-    .filter((p) => allowDraftPreview() || !p.draft)
+    .filter((p) => (allowDraftPreview() || !p.draft) && !p.bookDocument)
     .map((p) => p.slug);
 }
 
@@ -487,9 +610,17 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
   return post;
 }
 
+export async function getBookChapterSectionNumber(
+  documentSlug: string,
+  chapterId: string
+): Promise<string | null> {
+  await all();
+  return bookChapterSectionNumbers.get(chapterNumberKey(documentSlug, chapterId)) ?? null;
+}
+
 /** 下一篇（循环），用于文章页底部导航 */
 export async function getAdjacent(slug: string): Promise<PostSummary | null> {
-  const posts = (await all()).filter((p) => !p.draft);
+  const posts = (await all()).filter((p) => !p.draft && !p.bookDocument);
   if (posts.length === 0) return null;
   const idx = posts.findIndex((p) => p.slug === slug);
   if (idx === -1) return null;
@@ -498,7 +629,7 @@ export async function getAdjacent(slug: string): Promise<PostSummary | null> {
 
 /** 站点期号，如 "2026 · 06"，取最新文章年月 */
 export async function getIssue(): Promise<string> {
-  const posts = (await all()).filter((p) => !p.draft);
+  const posts = (await all()).filter((p) => !p.draft && !p.bookDocument);
   if (!posts.length) return "";
   const d = new Date(posts[0].timestamp);
   return `${d.getUTCFullYear()} · ${String(d.getUTCMonth() + 1).padStart(2, "0")}`;

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound, permanentRedirect } from "next/navigation";
-import { getAllPosts, getPostBySlug, getPreviewableSlugs, type CreditRole } from "@/lib/posts";
+import { getPostBySlug, getPreviewableSlugs, type CreditRole } from "@/lib/posts";
+import { getAllPublicContent } from "@/lib/public-content";
 import { site } from "@/lib/site";
 import { postPath } from "@/lib/editorial";
 import { getTopicMembershipsForPost } from "@/lib/topics";
@@ -30,7 +31,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const post = await getPostBySlug(decodeURIComponent(slug));
-  if (!post) return {};
+  if (!post || post.bookDocument) return {};
   const book = getBookByDocumentSlug(post.slug);
   const citation = book?.translationCitation ?? post.citation;
   const description = post.excerpt || site.description;
@@ -117,13 +118,13 @@ export default async function ArticlePage({
   const { slug } = await params;
   const decoded = decodeURIComponent(slug);
   const post = await getPostBySlug(decoded);
-  if (!post) notFound();
+  if (!post || post.bookDocument) notFound();
   if (post.section === "multimedia") permanentRedirect(postPath(post));
   const book = getBookByDocumentSlug(post.slug);
   const citation = book?.translationCitation ?? post.citation;
 
   const [posts, topicMemberships] = await Promise.all([
-    getAllPosts(),
+    getAllPublicContent(),
     getTopicMembershipsForPost(post.slug),
   ]);
 

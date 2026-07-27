@@ -23,15 +23,17 @@ flowchart LR
 
 | 来源 | 解析所有者 | 公开结果 |
 | --- | --- | --- |
-| `source/_posts/*.md` | `lib/posts.ts`、`lib/markdown.ts` | 文章或多媒体详情、引用文件、RSS 项。 |
-| `source/_books/*.json` | `lib/books.ts` | 书籍索引、详情、章节跳转和书籍引用文件。 |
+| `source/_posts/*.md` | `lib/posts.ts`、`lib/markdown.ts` | 普通文章或多媒体详情、引用文件、RSS 项；`book_document: true` 时仅作为书籍章节构建源。 |
+| `source/_books/*.json` | `lib/books.ts` | 书籍索引、详情、独立章节页面和书籍／章节引用文件。 |
 | `source/_topics/*.md` | `lib/topics.ts` | 人工策展专题索引与详情。 |
 | `lib/contributors.ts` | 内容校验与署名组件 | 贡献者稳定身份和文库筛选。 |
 | `public/attachments/`、`public/img/` | Next.js 静态资源 | 正文图片与公开静态材料。 |
 
 - 文章和书籍使用显式 ASCII slug；专题以稳定 ASCII slug 为身份，省略 front matter `slug` 时由 ASCII 文件名提供默认值。
 - `section`、分类、标签、贡献者和专题是不同维度，不能互相推导替代。
-- 书籍章节入口可以重定向到连续正文 hash，但章节路径本身不进入 sitemap。
+- 已发布书籍章节生成独立 canonical 和 sitemap 项；构建期按 manifest anchor 切分 Markdown，并只附带本章引用的注释。书籍构建源不生成 `/posts/` 页面。
+- 书籍 manifest 的每个章节节点可以声明独立 `tags` 字符串数组；未声明或为空时继承对应 `book_document` Markdown 的 front matter 标签。章节标签必须非空且去重。
+- 章节 `presentation` 区分正文、附属材料与纯导航节点，但首页和文库都把同一本书折叠为一个 `/books/<slug>` 连载条目。独立章节 URL 继承书籍条目的全站号与栏目号，不再各自占号。
 - 内容日期驱动 metadata、sitemap `lastmod` 和 RSS；IndexNow 由公开内容源文件的路径变更触发。构建时间不能伪装为内容更新时间。
 
 ## 3. 解析、安全与渲染
@@ -73,7 +75,7 @@ Next.js App Router 从 `app/` 生成：
 
 - 首页、About、文库、书籍和专题聚合页；
 - 文章、多媒体、书籍和专题详情；
-- 章节重定向与 BibTeX route handler；
+- 独立书籍章节与文章／书籍／章节 BibTeX route handler；
 - `/robots.txt`、`/sitemap.xml` 和 `/rss.xml`。
 
 动态公开实体使用 `generateStaticParams` 与 `dynamicParams = false` 固定发布集合。旧 `/search` 保留为 `/library` 的兼容重定向；未知实体不能在运行时悄悄变成动态页面。

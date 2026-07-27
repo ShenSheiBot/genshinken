@@ -16,7 +16,7 @@ export async function GET(
   const { slug } = await params;
   const decoded = decodeURIComponent(slug);
   const post = await getPostBySlug(decoded);
-  if (!post) return new Response("Not found", { status: 404 });
+  if (!post || post.bookDocument) return new Response("Not found", { status: 404 });
   if (post.section === "multimedia") {
     return new Response("Permanent Redirect\n", {
       status: 308,

@@ -680,6 +680,122 @@
   gap: 7px;
 }
 
+.chapterReaderCover {
+  padding-bottom: 34px;
+}
+
+.chapterCoverKicker { margin-bottom: 0; }
+
+.chapterSeriesLine {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 8px;
+  min-height: 18px;
+  margin: 8px 0 0;
+  color: var(--ink-soft);
+  font-family: var(--f-mono);
+  font-size: var(--text-sm);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.45;
+  letter-spacing: .06em;
+}
+
+.chapterSeriesLine b { color: var(--accent); }
+.chapterSeriesLine a { color: var(--ink); }
+.chapterSeriesLine strong { color: var(--ink-soft); font-weight: 700; }
+.chapterSeriesLine a:hover,
+.chapterSeriesLine a:focus-visible { color: var(--accent); outline: none; }
+
+.chapterSectionLanding {
+  margin-top: 2.5rem;
+  border-top: 2px solid var(--hair-strong);
+}
+
+.chapterSectionLanding h2 {
+  margin: 0;
+  padding: 18px 0 14px;
+  font-family: var(--reader-title-family);
+  font-size: 24px;
+}
+
+.chapterSectionLanding ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chapterSectionLanding li {
+  border-top: 1px solid var(--hair);
+}
+
+.chapterSectionLanding li > a,
+.chapterSectionLanding li > div {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr) auto;
+  gap: 14px;
+  align-items: center;
+  min-height: 58px;
+  padding: 10px 4px;
+}
+
+.chapterSectionLanding li > a:hover,
+.chapterSectionLanding li > a:focus-visible {
+  color: var(--accent);
+}
+
+.chapterSectionLanding li span,
+.chapterSectionLanding li small {
+  color: var(--ink-soft);
+  font-family: var(--reader-interface-family);
+  font-size: 12px;
+}
+
+.chapterReaderNav {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  align-items: stretch;
+  margin-top: 3.5rem;
+  padding: 18px 0 36px;
+  font-family: var(--reader-interface-family);
+}
+
+.chapterReaderNav > a {
+  display: grid;
+  gap: 7px;
+  align-content: start;
+  min-width: 0;
+  padding: 14px 12px;
+  background: color-mix(in srgb, var(--hair) 34%, transparent);
+  transition: color 150ms ease, background 150ms ease;
+}
+
+.chapterReaderNav > a:last-child {
+  text-align: right;
+}
+
+.chapterReaderNav span {
+  color: var(--ink-soft);
+  font-size: 12px;
+}
+
+.chapterReaderNav strong {
+  font-family: var(--reader-title-family);
+  font-size: 17px;
+  line-height: 1.35;
+}
+
+.chapterReaderNav > a:hover,
+.chapterReaderNav > a:focus-visible {
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 8%, var(--bg));
+}
+
+.chapterReaderCatalogue {
+  text-align: center;
+}
+
 @media (max-width: 980px) {
   .catalogBook { grid-template-columns: 104px minmax(0, 1fr) 124px; gap: 24px; }
   .catalogCover { width: 100px; }
@@ -748,6 +864,13 @@
   .publicationBody { grid-template-columns: minmax(0, 1fr); gap: 34px; padding-top: 32px; }
   .resources { position: static; }
   .sectionHeading h2 { font-size: 29px; }
+  .chapterReaderCover { padding-bottom: 26px; }
+  .chapterReaderCover .chapterCoverKicker { flex-wrap: wrap; }
+  .chapterReaderCover .chapterCoverKicker > a {
+    flex: 0 0 100%;
+    margin: 0;
+  }
+  .chapterReaderNav { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
 @media (max-width: 520px) {
@@ -769,6 +892,10 @@
   .chapterChildren { margin-left: 24px; }
   .citationCard { grid-template-columns: minmax(0, 1fr); }
   .copyAction { align-items: flex-start; }
+  .chapterReaderNav { gap: 14px; }
+  .chapterReaderNav strong { font-size: 15px; }
+  .chapterSectionLanding li > a,
+  .chapterSectionLanding li > div { grid-template-columns: 52px minmax(0, 1fr) auto; }
 }
 
 .page a:focus-visible,

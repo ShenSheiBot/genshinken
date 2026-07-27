@@ -25,6 +25,7 @@ const validSections = new Set(["essay", "review", "translation", "multimedia", "
 const validHanScripts = new Set(["hans", "hant"]);
 const validBookStatuses = new Set(["serializing", "complete", "paused"]);
 const validBookChapterStatuses = new Set(["published", "forthcoming"]);
+const validBookChapterPresentations = new Set(["reading", "reference", "navigation"]);
 const validTopicStatuses = new Set(["ongoing", "complete", "archived"]);
 const validTopicItemTypes = new Set(["post", "book", "media"]);
 const slugPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
@@ -547,6 +548,11 @@ const records = files.map((file) => {
   const dateISO = rawScalar(header, "date") ?? "";
   const updatedISO = rawScalar(header, "updated") ?? dateISO;
   const draft = isDraft(data.draft);
+  const bookDocument = isDraft(data.book_document);
+
+  if (hasOwn(data, "book_document") && typeof data.book_document !== "boolean") {
+    report(errors, file, "book_document 必须是布尔值 true / false");
+  }
 
   validateTypography(file, content, data);
 
@@ -712,6 +718,7 @@ const records = files.map((file) => {
     script,
     section,
     draft,
+    bookDocument,
     relatedPosts,
     dateISO,
     updatedISO,
@@ -750,6 +757,9 @@ for (const record of records) {
     }
     if (target.section === "multimedia") {
       report(errors, record.file, `related_posts 必须指向非多媒体文稿：${relatedSlug}`);
+    }
+    if (target.bookDocument) {
+      report(errors, record.file, `related_posts 不得指向书籍构建源：${relatedSlug}`);
     }
   }
 }
@@ -795,7 +805,6 @@ const bookRecords = jsonFiles(booksDirectory)
     if (updatedAt > publicationCutoffISO) {
       report(errors, file, `updatedAt (${updatedAt}) 晚于公开构建日期 (${publicationCutoffISO})`);
     }
-    const startAnchor = requiredRecordString(data, "startAnchor", file);
     const latestChapterId = stableRecordId(data, "latestChapterId", file);
     const authors = stringArray(data.authors, file, "authors", { required: true });
     const translators = stringArray(data.translators, file, "translators");
@@ -894,6 +903,20 @@ const bookRecords = jsonFiles(booksDirectory)
         if (status && !validBookChapterStatuses.has(status)) {
           report(errors, label, "status 必须是 published / forthcoming 之一");
         }
+        const presentation = hasOwn(value, "presentation")
+          ? requiredRecordString(value, "presentation", label)
+          : "reading";
+        if (presentation && !validBookChapterPresentations.has(presentation)) {
+          report(errors, label, "presentation 必须是 reading / reference / navigation 之一");
+        }
+
+        if (hasOwn(value, "tags")) {
+          const chapterTags = stringArray(value.tags, label, "tags");
+          const repeatedChapterTags = duplicates(chapterTags);
+          if (repeatedChapterTags.length > 0) {
+            report(errors, label, `tags 存在重复项：${repeatedChapterTags.join("、")}`);
+          }
+        }
 
         const published = status === "published";
         if (published && ancestorForthcoming) {
@@ -960,7 +983,6 @@ const bookRecords = jsonFiles(booksDirectory)
       script,
       publishedAt,
       updatedAt,
-      startAnchor,
       citationKeys,
     };
   })
@@ -989,6 +1011,9 @@ for (const book of bookRecords) {
     if (document.section === "multimedia") {
       report(errors, book.file, `documentSlug 必须指向非多媒体文稿：${book.documentSlug}`);
     }
+    if (!document.bookDocument) {
+      report(errors, book.file, `documentSlug 指向的文稿必须填写 book_document: true：${book.documentSlug}`);
+    }
     if (book.script && document.script && book.script !== document.script) {
       report(
         errors,
@@ -1003,6 +1028,12 @@ for (const book of bookRecords) {
         `updatedAt (${book.updatedAt}) 必须与正文 updated/date (${document.updatedISO}) 一致`
       );
     }
+  }
+}
+
+for (const document of records.filter((record) => record.bookDocument)) {
+  if (!bookDocuments.has(document.slug)) {
+    report(errors, document.file, "book_document: true 的文稿必须由一本书的 documentSlug 引用");
   }
 }
 

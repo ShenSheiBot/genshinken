@@ -3,7 +3,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
   bookChapterHref,
-  bookDocumentHref,
   bookHref,
   bookStatusLabel,
   getAllBookChapters,
@@ -123,6 +122,7 @@ export default async function BookPage({
   const latestChapter = getLatestBookChapter(book);
   const allChapters = getAllBookChapters(book);
   const publishedChapters = getPublishedBookChapters(book);
+  const firstChapter = publishedChapters[0];
   const credits = getBookCredits(book);
   const authors = credits.filter((credit) => credit.role === "author");
   const translators = credits.filter((credit) => credit.role === "translator");
@@ -197,7 +197,7 @@ export default async function BookPage({
 
           <aside className={styles.publicationRail} aria-label="阅读与书目信息">
             <BookReadingActions
-              startHref={bookDocumentHref(book, book.startAnchor)}
+              startHref={bookChapterHref(book, firstChapter)}
               latestHref={bookChapterHref(book, latestChapter)}
               latestTitle={latestChapter.title}
             />
@@ -205,7 +205,7 @@ export default async function BookPage({
               <div><dt>发布</dt><dd><time dateTime={book.publishedAt}>{book.publishedAt}</time></dd></div>
               <div><dt>更新</dt><dd><time dateTime={book.updatedAt}>{book.updatedAt}</time></dd></div>
               <div><dt>章节</dt><dd>{publishedChapters.length} / {allChapters.length}</dd></div>
-              <div><dt>全文</dt><dd>约 {document.readMin} 分钟</dd></div>
+              <div><dt>全书</dt><dd>约 {document.readMin} 分钟</dd></div>
             </dl>
           </aside>
         </header>

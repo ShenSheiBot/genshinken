@@ -51,7 +51,7 @@ test("reader exposes the production reading contract", async ({ page }) => {
     settings.getByRole("switch", { name: "保存本机阅读记录" })
   ).toHaveAttribute("aria-checked", /^(true|false)$/);
 
-  await settings.getByRole("button", { name: "关闭" }).click();
+  await page.getByRole("button", { name: "阅读习惯" }).click();
   await expect(settings).toBeHidden();
 
   expect(consoleErrors, "browser console errors").toEqual([]);

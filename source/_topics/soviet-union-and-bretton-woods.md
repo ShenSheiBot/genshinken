@@ -20,8 +20,8 @@ groups:
       - type: post
         ref: goliath-the-preschooler
         editorialNote: 通过能源、信贷、管道和欧洲美元市场，观察苏联如何参与冷战后期全球市场的形成。
-      - type: post
-        ref: olsevich-gregory-soviet-planned-economy-retrospective
+      - type: book
+        ref: soviet-planned-economy-retrospective
         editorialNote: 由计划经济的历史分析和计划主管访谈，补充专题的制度内部视角。
 ---
 

@@ -56,6 +56,7 @@ Quality 与 Browser workflow 都会独立安装、检查和构建调用方代码
 | `tests/e2e/reader-mobile.spec.ts` | `implemented` | 移动工具、目录 sheet、visual viewport 与正文水平溢出。 |
 | `tests/e2e/reader-cross-tab.spec.ts` | `implemented` | Desktop Chromium 中的保存位置恢复、显式 hash 优先和远端关闭记录后的待写取消。 |
 | `tests/e2e/reader-dialog-focus.spec.ts` | `implemented` | 设置与移动注释 dialog 的焦点循环、关闭和触发点恢复。 |
+| `tests/e2e/reader-book-chapter.spec.ts` | `implemented` | 章节案卷编号与普通正文一致、数字动画、本章结束语义及全书目录复合编号的真实行盒。 |
 | `tests/e2e/reader-clipboard.spec.ts` | `implemented` | BibTeX 写入数据、成功 live status、拒绝反馈和重试能力。 |
 
 测试优先使用角色、中文可访问名称、稳定 URL 与内容语义。只有验证 Reader 内部组件协作时才使用 `reading-edition-*` 等内部协议；更名时生产者、使用者、验证脚本和本文映射必须原子更新。

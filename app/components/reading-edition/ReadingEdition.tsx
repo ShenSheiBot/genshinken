@@ -1,11 +1,11 @@
 import Link from "next/link";
-import { Fragment } from "react";
+import { Fragment, type ReactNode } from "react";
 import type { Credit, Post, PostSummary } from "@/lib/posts";
+import type { PublicContentEntry } from "@/lib/public-content";
 import type { TopicMembership } from "@/lib/topics";
 import { site } from "@/lib/site";
 import {
   EDITORIAL_SECTION_META,
-  postPath,
   type EditorialSection,
 } from "@/lib/editorial";
 import ReadingEditionChrome from "@/app/components/reading-edition/ReadingEditionChrome";
@@ -108,7 +108,17 @@ function Appendices({ parts }: { parts: ArticleParts }) {
   );
 }
 
-function ArticleFlow({ parts, sourceScript }: { parts: ArticleParts; sourceScript: HanScript }) {
+export function ArticleFlow({
+  parts,
+  sourceScript,
+  endLabel = "正文完",
+  children,
+}: {
+  parts: ArticleParts;
+  sourceScript: HanScript;
+  endLabel?: string;
+  children?: ReactNode;
+}) {
   return (
     <div className={`${styles.articleFlow} reading-edition-flow`}>
       <article
@@ -117,17 +127,120 @@ function ArticleFlow({ parts, sourceScript }: { parts: ArticleParts; sourceScrip
         data-han-convert-lang
         dangerouslySetInnerHTML={{ __html: parts.main }}
       />
-      <div className={styles.endMark} aria-label="正文完">
+      <div className={styles.endMark} aria-label={endLabel}>
         <span />
-        <b>正文完</b>
+        <b>{endLabel}</b>
         <i />
       </div>
       <Appendices parts={parts} />
+      {children}
     </div>
   );
 }
 
-function relatedPostsFor(current: Post, posts: PostSummary[]): PostSummary[] {
+export function ReadingDossierRoot({
+  sourceScript,
+  children,
+}: {
+  sourceScript: HanScript;
+  children: ReactNode;
+}) {
+  return (
+    <main
+      id="main"
+      tabIndex={-1}
+      className={`reading-edition-page ${styles.root} ${styles.dossierRoot}`}
+      data-reveal-zone="reader"
+      data-han-convert-root="post"
+      data-han-source-script={sourceScript}
+      lang={hanScriptLanguageTag(sourceScript)}
+    >
+      {children}
+    </main>
+  );
+}
+
+export function DocketNumber({ value }: { value: string }) {
+  return (
+    <span className={styles.docketNumber} aria-label={value} data-reader-docket-number>
+      {Array.from(value).map((digit, index) => (
+        <span
+          className={styles.docketDigit}
+          data-roll={index % 2 === 0 ? "up" : "down"}
+          aria-hidden="true"
+          key={`${digit}-${index}`}
+        >
+          <span>{digit}</span>
+        </span>
+      ))}
+    </span>
+  );
+}
+
+export function DossierCover({
+  sectionHref,
+  sectionLabel,
+  sectionNumber,
+  className,
+  children,
+}: {
+  sectionHref: string;
+  sectionLabel: string;
+  sectionNumber: string;
+  className?: string;
+  children: ReactNode;
+}) {
+  return (
+    <header className={`${styles.dossierCover}${className ? ` ${className}` : ""}`} id="reading-cover">
+      <aside className={styles.docket}>
+        <Link
+          className={`${styles.libraryFilterLink} ${styles.docketSectionLink}`}
+          href={sectionHref}
+          aria-label={`在文库中筛选栏目：${sectionLabel} ${sectionNumber}`}
+        >
+          <b>{sectionLabel}</b>
+          <DocketNumber value={sectionNumber} />
+        </Link>
+        <i />
+      </aside>
+
+      <div className={styles.coverStory}>{children}</div>
+    </header>
+  );
+}
+
+export function DossierReading({
+  parts,
+  sourceScript,
+  endLabel,
+  leftRailLabel = "署名、行数与文章目录",
+  children,
+}: {
+  parts: ArticleParts;
+  sourceScript: HanScript;
+  endLabel?: string;
+  leftRailLabel?: string;
+  children?: ReactNode;
+}) {
+  const hasReferences = parts.noteCount > 0 || parts.sourceCount > 0;
+  const referenceLabel = parts.noteCount > 0 && parts.sourceCount > 0
+    ? "注释与文献"
+    : parts.noteCount > 0 ? "注释" : "文献";
+
+  return (
+    <section className={styles.dossierReading}>
+      <aside id="reading-left-rail" className={styles.deskRailSlot} aria-label={leftRailLabel} />
+      <ArticleFlow parts={parts} sourceScript={sourceScript} endLabel={endLabel}>
+        {children}
+      </ArticleFlow>
+      {hasReferences && (
+        <aside id="reading-right-rail" className={styles.deskRailSlot} aria-label={referenceLabel} />
+      )}
+    </section>
+  );
+}
+
+function relatedPostsFor(current: Post, posts: PublicContentEntry[]): PublicContentEntry[] {
   const currentTags = new Set(current.tags.map((tag) => tag.normalize("NFKC").trim()));
 
   return posts
@@ -150,7 +263,7 @@ function relatedPostsFor(current: Post, posts: PostSummary[]): PostSummary[] {
 
 function RelatedReading({ current, posts }: {
   current: Post;
-  posts: PostSummary[];
+  posts: PublicContentEntry[];
 }) {
   const candidates = relatedPostsFor(current, posts);
 
@@ -176,7 +289,7 @@ function RelatedReading({ current, posts }: {
                 <article>
                   <Link
                     className={`${homeStyles.latestCard} ${homeStyles.latestCardInteractive}`}
-                    href={postPath(post)}
+                    href={post.href}
                   >
                     <header>
                       <span>文稿 {post.no}</span>
@@ -209,26 +322,14 @@ export function ReadingDossier({
 }: {
   post: Post;
   parts: ArticleParts;
-  posts: PostSummary[];
+  posts: PublicContentEntry[];
   topicMemberships?: TopicMembership[];
   citationBibtex?: string;
   citationHref?: string;
 }) {
   const section = sectionMeta[sectionFor(post)];
-  const hasReferences = parts.noteCount > 0 || parts.sourceCount > 0;
-  const referenceLabel = parts.noteCount > 0 && parts.sourceCount > 0
-    ? "注释与文献"
-    : parts.noteCount > 0 ? "注释" : "文献";
   return (
-    <main
-      id="main"
-      tabIndex={-1}
-      className={`reading-edition-page ${styles.root} ${styles.dossierRoot}`}
-      data-reveal-zone="reader"
-      data-han-convert-root="post"
-      data-han-source-script={post.script}
-      lang={hanScriptLanguageTag(post.script)}
-    >
+    <ReadingDossierRoot sourceScript={post.script}>
       <ReadingEditionChrome
         title={post.title}
         slug={post.slug}
@@ -240,31 +341,11 @@ export function ReadingDossier({
         citationHref={citationHref}
       />
 
-      <header className={styles.dossierCover} id="reading-cover">
-        <aside className={styles.docket}>
-          <Link
-            className={`${styles.libraryFilterLink} ${styles.docketSectionLink}`}
-            href={sectionLibraryHref(sectionFor(post))}
-            aria-label={`在文库中筛选栏目：${section.label} ${post.sectionNo}`}
-          >
-            <b>{section.label}</b>
-            <span className={styles.docketNumber} aria-label={post.sectionNo}>
-              {Array.from(post.sectionNo).map((digit, index) => (
-                <span
-                  className={styles.docketDigit}
-                  data-roll={index % 2 === 0 ? "up" : "down"}
-                  aria-hidden="true"
-                  key={`${digit}-${index}`}
-                >
-                  <span>{digit}</span>
-                </span>
-              ))}
-            </span>
-          </Link>
-          <i />
-        </aside>
-
-        <div className={styles.coverStory}>
+      <DossierCover
+        sectionHref={sectionLibraryHref(sectionFor(post))}
+        sectionLabel={section.label}
+        sectionNumber={post.sectionNo}
+      >
           <div
             className={`${styles.coverLeadMeta} ${
               topicMemberships.length > 0 ? styles.coverLeadMetaWithTopics : ""
@@ -315,17 +396,10 @@ export function ReadingDossier({
               ))}
             </nav>
           )}
-        </div>
-      </header>
+      </DossierCover>
 
-      <section className={styles.dossierReading}>
-        <aside id="reading-left-rail" className={styles.deskRailSlot} aria-label="署名、行数与文章目录" />
-        <ArticleFlow parts={parts} sourceScript={post.script} />
-        {hasReferences && (
-          <aside id="reading-right-rail" className={styles.deskRailSlot} aria-label={referenceLabel} />
-        )}
-      </section>
+      <DossierReading parts={parts} sourceScript={post.script} />
       <RelatedReading current={post} posts={posts} />
-    </main>
+    </ReadingDossierRoot>
   );
 }

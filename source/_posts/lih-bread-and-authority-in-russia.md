@@ -5,6 +5,7 @@ subtitle: 俄国 1914–1921
 date: 2026-07-26
 updated: 2026-07-26
 draft: false
+book_document: true
 slug: lih-bread-and-authority-in-russia
 script: hans
 categories: [历史]

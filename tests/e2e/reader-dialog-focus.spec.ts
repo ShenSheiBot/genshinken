@@ -8,16 +8,20 @@ test("reading settings traps focus and restores its trigger", async ({ page }) =
   await expect(trigger).toBeFocused();
   await page.keyboard.press("Enter");
   const dialog = page.getByRole("dialog", { name: "阅读习惯" });
-  const close = dialog.getByRole("button", { name: "关闭" });
+  const first = dialog.getByRole("button", { name: "字 衬线" });
   const last = dialog.getByRole("button", { name: "清除全部记录" });
 
   await expect(dialog).toBeFocused();
   await page.keyboard.press("Shift+Tab");
   await expect(last).toBeFocused();
   await page.keyboard.press("Tab");
-  await expect(close).toBeFocused();
+  await expect(trigger).toBeFocused();
+  await page.keyboard.press("Tab");
+  await expect(first).toBeFocused();
+  await page.keyboard.press("Shift+Tab");
+  await expect(trigger).toBeFocused();
 
-  await close.click();
+  await page.keyboard.press("Enter");
   await expect(dialog).toBeHidden();
   await expect(trigger).toBeFocused();
 });

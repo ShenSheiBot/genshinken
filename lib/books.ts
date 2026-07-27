@@ -2,11 +2,15 @@ import fs from "node:fs";
 import path from "node:path";
 import {
   CREDIT_ROLE_META,
+  getBookChapterSectionNumber,
   getPostBySlug,
+  hashRenderedContent,
+  readMinutes,
   type Credit,
   type CreditRole,
   type Post,
 } from "./posts";
+import { renderMarkdown } from "./markdown";
 import { findContributor, findContributorByName } from "./contributors";
 import {
   bookCitationDefaults,
@@ -23,9 +27,11 @@ const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
 
 export const BOOK_STATUSES = ["serializing", "complete", "paused"] as const;
 export const BOOK_CHAPTER_STATUSES = ["published", "forthcoming"] as const;
+export const BOOK_CHAPTER_PRESENTATIONS = ["reading", "reference", "navigation"] as const;
 
 export type BookStatus = (typeof BOOK_STATUSES)[number];
 export type BookChapterStatus = (typeof BOOK_CHAPTER_STATUSES)[number];
+export type BookChapterPresentation = (typeof BOOK_CHAPTER_PRESENTATIONS)[number];
 
 const BOOK_STATUS_ORDER: Record<BookStatus, number> = {
   serializing: 0,
@@ -37,7 +43,9 @@ interface BookChapterBase {
   id: string;
   number: string;
   title: string;
+  tags: string[];
   status: BookChapterStatus;
+  presentation: BookChapterPresentation;
   children: BookChapter[];
 }
 
@@ -53,6 +61,24 @@ export interface ForthcomingBookChapter extends BookChapterBase {
 
 export type BookChapter = PublishedBookChapter | ForthcomingBookChapter;
 
+export interface BookChapterDocument {
+  chapter: PublishedBookChapter;
+  html: string;
+  headings: BookChapterHeading[];
+  contentRevision: string;
+  readMin: number;
+  isSectionLanding: boolean;
+  section: Post["section"];
+  sectionNo: string;
+  tags: string[];
+}
+
+export interface BookChapterHeading {
+  id: string;
+  title: string;
+  level: number;
+}
+
 export interface Book {
   id: string;
   slug: string;
@@ -67,7 +93,6 @@ export interface Book {
   proofreaders: string[];
   publishedAt: string;
   updatedAt: string;
-  startAnchor: string;
   latestChapterId: string;
   chapters: BookChapter[];
   originalCitation?: CitationRecord;
@@ -180,6 +205,16 @@ function parseChapter(
   if (ancestorForthcoming && status === "published") {
     fail(chapterSource, "status", "cannot be published beneath a forthcoming ancestor");
   }
+  const declaredPresentation = value.presentation === undefined
+    ? "reading"
+    : requiredString(value, "presentation", chapterSource);
+  if (!BOOK_CHAPTER_PRESENTATIONS.includes(declaredPresentation as BookChapterPresentation)) {
+    fail(
+      chapterSource,
+      "presentation",
+      `must be one of ${BOOK_CHAPTER_PRESENTATIONS.join(", ")}`
+    );
+  }
 
   let children: BookChapter[] = [];
   if (value.children !== undefined) {
@@ -193,6 +228,8 @@ function parseChapter(
     id: stableId(value, "id", chapterSource),
     number: requiredString(value, "number", chapterSource),
     title: requiredString(value, "title", chapterSource),
+    tags: Array.from(new Set(optionalStringList(value, "tags", chapterSource))),
+    presentation: declaredPresentation as BookChapterPresentation,
     children,
   };
 
@@ -336,7 +373,6 @@ function parseManifest(value: unknown, source: string): Book {
     proofreaders,
     publishedAt,
     updatedAt: dateString(value, "updatedAt", source),
-    startAnchor: requiredString(value, "startAnchor", source),
     latestChapterId,
     chapters,
     originalCitation,
@@ -450,14 +486,6 @@ export function bookChapterHref(
   return `${bookHref(book)}/chapters/${encodeURIComponent(chapter.id)}`;
 }
 
-export function bookDocumentHref(
-  book: Pick<Book, "documentSlug">,
-  sectionId?: string
-): string {
-  const pathName = `/posts/${encodeURIComponent(book.documentSlug)}`;
-  return sectionId ? `${pathName}#${encodeURIComponent(sectionId)}` : pathName;
-}
-
 function renderedIds(html: string): Set<string> {
   return new Set([...html.matchAll(/\sid="([^"]+)"/g)].map((match) => match[1]));
 }
@@ -468,6 +496,9 @@ export async function getValidatedBookDocument(book: Book): Promise<Post> {
   if (!post) {
     throw new Error(`[books] ${book.slug}: document ${book.documentSlug} does not exist`);
   }
+  if (!post.bookDocument) {
+    throw new Error(`[books] ${book.slug}: document ${book.documentSlug} must declare book_document: true`);
+  }
 
   const ids = renderedIds(post.html);
   for (const chapter of getPublishedBookChapters(book)) {
@@ -477,10 +508,260 @@ export async function getValidatedBookDocument(book: Book): Promise<Post> {
       );
     }
   }
-  if (book.startAnchor !== "reading-cover" && !ids.has(book.startAnchor)) {
-    throw new Error(`[books] ${book.slug}: startAnchor points to missing rendered id #${book.startAnchor}`);
-  }
   return post;
+}
+
+type FootnoteDefinition = { id: string; markdown: string };
+
+function extractFootnoteDefinitions(markdown: string): {
+  lines: string[];
+  definitions: Map<string, FootnoteDefinition>;
+} {
+  const lines = markdown.split(/\r?\n/u);
+  const definitions = new Map<string, FootnoteDefinition>();
+
+  for (let index = 0; index < lines.length; index += 1) {
+    const match = /^\[\^([^\]]+)\]:[ \t]*(.*)$/u.exec(lines[index]);
+    if (!match) continue;
+
+    const definitionLines = [lines[index]];
+    let cursor = index + 1;
+    while (cursor < lines.length) {
+      if (/^(?: {2,}|\t)\S/u.test(lines[cursor])) {
+        definitionLines.push(lines[cursor]);
+        cursor += 1;
+        continue;
+      }
+      if (
+        lines[cursor].trim() === "" &&
+        cursor + 1 < lines.length &&
+        /^(?: {2,}|\t)\S/u.test(lines[cursor + 1])
+      ) {
+        definitionLines.push(lines[cursor]);
+        cursor += 1;
+        continue;
+      }
+      break;
+    }
+
+    definitions.set(match[1], { id: match[1], markdown: definitionLines.join("\n") });
+    for (let lineIndex = index; lineIndex < cursor; lineIndex += 1) lines[lineIndex] = "";
+    index = cursor - 1;
+  }
+
+  return { lines, definitions };
+}
+
+function footnoteReferences(markdown: string): string[] {
+  const references: string[] = [];
+  const seen = new Set<string>();
+  for (const match of markdown.matchAll(/\[\^([^\]]+)\]/gu)) {
+    if (!seen.has(match[1])) {
+      seen.add(match[1]);
+      references.push(match[1]);
+    }
+  }
+  return references;
+}
+
+function appendReferencedFootnotes(
+  markdown: string,
+  definitions: ReadonlyMap<string, FootnoteDefinition>,
+  source: string
+): string {
+  const references = footnoteReferences(markdown);
+  const seen = new Set(references);
+
+  for (let index = 0; index < references.length; index += 1) {
+    const id = references[index];
+    const definition = definitions.get(id);
+    if (!definition) throw new Error(`[books] ${source}: missing footnote definition [^${id}]`);
+    for (const nested of footnoteReferences(definition.markdown)) {
+      if (!seen.has(nested)) {
+        seen.add(nested);
+        references.push(nested);
+      }
+    }
+  }
+
+  const appendix = references.map((id) => definitions.get(id)?.markdown).filter(Boolean).join("\n\n");
+  return [markdown.trim(), appendix].filter(Boolean).join("\n\n");
+}
+
+function markdownHeadingLines(lines: readonly string[]): Array<{ line: number; markdown: string }> {
+  const headings: Array<{ line: number; markdown: string }> = [];
+  let fence: "`" | "~" | null = null;
+
+  lines.forEach((line, index) => {
+    const fenceMatch = /^[ \t]{0,3}(`{3,}|~{3,})/u.exec(line);
+    if (fenceMatch) {
+      const marker = fenceMatch[1][0] as "`" | "~";
+      if (!fence) fence = marker;
+      else if (fence === marker) fence = null;
+      return;
+    }
+    if (!fence && /^#{1,6}[ \t]+\S/u.test(line)) headings.push({ line: index, markdown: line });
+  });
+
+  return headings;
+}
+
+async function chapterHeadingLines(markdownLines: readonly string[]): Promise<Map<string, number>> {
+  const result = new Map<string, number>();
+  const markdownHeadings = markdownHeadingLines(markdownLines);
+
+  if (markdownHeadings.length > 0) {
+    const rendered = await renderMarkdown(markdownHeadings.map((heading) => heading.markdown).join("\n\n"));
+    const ids = [...rendered.matchAll(/<h[1-6]\b[^>]*\bid="([^"]+)"[^>]*>/gu)]
+      .map((match) => match[1]);
+    if (ids.length !== markdownHeadings.length) {
+      throw new Error("[books] could not map Markdown headings to rendered chapter anchors");
+    }
+    ids.forEach((id, index) => result.set(id, markdownHeadings[index].line));
+  }
+
+  markdownLines.forEach((line, index) => {
+    if (!/<h[1-6]\b/iu.test(line)) return;
+    for (const match of line.matchAll(/\bid=["']([^"']+)["']/giu)) result.set(match[1], index);
+  });
+
+  return result;
+}
+
+const HEADING_ENTITY_TEXT: Record<string, string> = {
+  amp: "&",
+  apos: "'",
+  gt: ">",
+  hellip: "…",
+  laquo: "«",
+  ldquo: "“",
+  lsquo: "‘",
+  lt: "<",
+  mdash: "—",
+  nbsp: " ",
+  ndash: "–",
+  quot: '"',
+  raquo: "»",
+  rdquo: "”",
+  rsquo: "’",
+};
+
+function renderedHeadingText(html: string): string {
+  return html
+    .replace(/<[^>]+>/gu, " ")
+    .replace(/&#(?:x([\da-f]+)|(\d+));/giu, (_entity, hexadecimal: string, decimal: string) => {
+      const codePoint = Number.parseInt(hexadecimal ?? decimal, hexadecimal ? 16 : 10);
+      return Number.isFinite(codePoint) && codePoint <= 0x10ffff ? String.fromCodePoint(codePoint) : " ";
+    })
+    .replace(/&([a-z]+);/giu, (entity, name: string) => HEADING_ENTITY_TEXT[name.toLowerCase()] ?? entity)
+    .replace(/\s+/gu, " ")
+    .trim();
+}
+
+function withoutRenderedSection(html: string, className: string): string {
+  return html.replace(
+    new RegExp(`<section\\b[^>]*class="[^"]*\\b${className}\\b[^"]*"[^>]*>[\\s\\S]*?<\\/section>`, "giu"),
+    ""
+  );
+}
+
+function renderedChapterHeadings(html: string): BookChapterHeading[] {
+  const main = withoutRenderedSection(withoutRenderedSection(html, "footnotes"), "source-notes");
+  return [...main.matchAll(/<h([1-6])\b([^>]*)>([\s\S]*?)<\/h\1>/giu)].flatMap((match) => {
+    const idMatch = /\bid=["']([^"']+)["']/iu.exec(match[2]);
+    const title = renderedHeadingText(match[3]);
+    if (!idMatch || !title) return [];
+    return [{ id: idMatch[1], title, level: Number(match[1]) }];
+  });
+}
+
+const chapterDocumentCache = new Map<string, Promise<BookChapterDocument[]>>();
+
+export function getBookChapterCitation(
+  book: Book,
+  chapter: PublishedBookChapter
+): CitationRecord {
+  const parent = book.translationCitation;
+  return {
+    itemType: "bookSection",
+    citationKey: `${parent.citationKey}_${chapter.id.replaceAll("-", "_")}`,
+    title: chapter.title,
+    creators: parent.creators,
+    abstractNote: `${book.title}（${book.subtitle}）${chapter.number}：${chapter.title}`,
+    date: chapter.publishedAt,
+    url: `https://un-canon.blog${bookChapterHref(book, chapter)}`,
+    language: parent.language,
+    rights: parent.rights,
+    extra: parent.extra,
+    publisher: parent.publisher,
+    place: parent.place,
+    series: parent.series,
+    seriesNumber: parent.seriesNumber,
+    volume: parent.volume,
+    edition: parent.edition,
+    ISBN: parent.ISBN,
+    bookTitle: parent.title,
+  };
+}
+
+export async function getBookChapterDocuments(book: Book): Promise<BookChapterDocument[]> {
+  const cached = chapterDocumentCache.get(book.slug);
+  if (cached) return cached;
+
+  const promise = (async () => {
+    const post = await getValidatedBookDocument(book);
+    const published = getPublishedBookChapters(book);
+    const { lines, definitions } = extractFootnoteDefinitions(post.markdown);
+    const headingLines = await chapterHeadingLines(lines);
+    const starts = published.map((chapter) => {
+      const line = headingLines.get(chapter.anchor);
+      if (line == null) {
+        throw new Error(`[books] ${book.slug}: cannot locate Markdown boundary for #${chapter.anchor}`);
+      }
+      return line;
+    });
+
+    starts.forEach((start, index) => {
+      if (index > 0 && start < starts[index - 1]) {
+        throw new Error(`[books] ${book.slug}: chapter manifest order differs from the source document`);
+      }
+    });
+
+    return Promise.all(published.map(async (chapter, index): Promise<BookChapterDocument> => {
+      const start = starts[index];
+      const end = starts[index + 1] ?? lines.length;
+      const body = lines.slice(start + 1, end).join("\n").trim();
+      const isSectionLanding = start === end || !body;
+      const markdown = appendReferencedFootnotes(
+        body,
+        definitions,
+        `${book.slug}/${chapter.id}`
+      );
+      const html = markdown ? await renderMarkdown(markdown) : "";
+      const sectionNo = await getBookChapterSectionNumber(book.documentSlug, chapter.id);
+      return {
+        chapter,
+        html,
+        headings: renderedChapterHeadings(html),
+        contentRevision: hashRenderedContent(html),
+        readMin: html ? readMinutes(html) : 0,
+        isSectionLanding,
+        section: post.section,
+        sectionNo: sectionNo ?? post.sectionNo,
+        tags: chapter.tags.length > 0 ? chapter.tags : post.tags,
+      };
+    }));
+  })();
+
+  chapterDocumentCache.set(book.slug, promise);
+  return promise;
+}
+
+export async function getBookChapterDocument(
+  book: Book,
+  chapterId: string
+): Promise<BookChapterDocument | null> {
+  return (await getBookChapterDocuments(book)).find((document) => document.chapter.id === chapterId) ?? null;
 }
 
 export function bookStatusLabel(status: BookStatus): string {

@@ -1,5 +1,10 @@
 import type { MetadataRoute } from "next";
-import { bookHref, getAllBooks } from "@/lib/books";
+import {
+  bookChapterHref,
+  bookHref,
+  getAllBooks,
+  getPublishedBookChapters,
+} from "@/lib/books";
 import { getAllPosts } from "@/lib/posts";
 import { site } from "@/lib/site";
 import { postPath } from "@/lib/editorial";
@@ -16,6 +21,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     url: `${site.url}${bookHref(book)}`,
     lastModified: book.updatedAt,
   }));
+  const chapterEntries: MetadataRoute.Sitemap = books.flatMap((book) =>
+    getPublishedBookChapters(book).map((chapter) => ({
+      url: `${site.url}${bookChapterHref(book, chapter)}`,
+      lastModified: book.updatedAt,
+    }))
+  );
   const topicEntries: MetadataRoute.Sitemap = topics.map((topic) => ({
     url: `${site.url}/topics/${encodeURIComponent(topic.slug)}`,
     lastModified: topic.updated,
@@ -39,6 +50,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${site.url}/about` },
     ...topicEntries,
     ...bookEntries,
+    ...chapterEntries,
     ...postEntries,
   ];
 }

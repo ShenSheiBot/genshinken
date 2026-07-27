@@ -11,7 +11,6 @@
   "translators": ["yu-shulue"],
   "publishedAt": "2026-07-20",
   "updatedAt": "2026-07-23",
-  "startAnchor": "reading-cover",
   "latestChapterId": "penultimate-1916-11-03",
   "citations": {
     "original": {
@@ -82,6 +81,7 @@
       "number": "05",
       "title": "“立宪”的倒数第二日",
       "status": "published",
+      "presentation": "navigation",
       "anchor": "立宪的倒数第二日",
       "publishedAt": "2026-07-23",
       "children": [
@@ -149,7 +149,8 @@
       "id": "notes",
       "number": "07",
       "title": "尾注",
-      "status": "forthcoming"
+      "status": "forthcoming",
+      "presentation": "reference"
     }
   ]
 }

@@ -13,7 +13,6 @@ section: multimedia
 featured_order: 1
 
 related_posts:
-  - olsevich-gregory-soviet-planned-economy-retrospective
   - lih-lenin-disputed
   - modern-japan-bourgeois-state
 

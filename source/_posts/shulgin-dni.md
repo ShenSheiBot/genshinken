@@ -5,6 +5,7 @@ subtitle: 忆一九〇五年立宪与一九一七年二月革命
 date: 2026-07-20
 updated: 2026-07-23
 draft: false
+book_document: true
 slug: shulgin-dni
 script: hans
 categories: [历史]

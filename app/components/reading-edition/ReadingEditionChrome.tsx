@@ -5,7 +5,7 @@ import type { FormEvent, MouseEvent as ReactMouseEvent, PointerEvent as ReactPoi
 import { createPortal } from "react-dom";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { Credit } from "@/lib/posts";
 import type { HanScript } from "@/lib/han-script";
 import { site } from "@/lib/site";
@@ -33,10 +33,29 @@ type ReaderSize = "small" | "medium" | "large";
 type ReaderFont = "serif" | "sans";
 type ReferenceKind = "annotation" | "source";
 type Sheet = "toc" | "settings" | ReferenceKind | null;
-type FigureIndexMode = "toc" | "figures";
+type FigureIndexMode = "toc" | "figures" | "book";
 type TocItem = { id: string; title: string; level: number };
 type TocNode = TocItem & { children: TocNode[] };
 type FigureIndexItem = { id: string; index: number; caption: string };
+export type ReadingBookTocSection = {
+  id: string;
+  title: string;
+  level: number;
+  href: string;
+};
+export type ReadingBookTocItem = {
+  id: string;
+  number: string;
+  title: string;
+  status: "published" | "forthcoming";
+  href: string | null;
+  current: boolean;
+  sections: ReadingBookTocSection[];
+  children: ReadingBookTocItem[];
+};
+export type ReadingBookToc = {
+  chapters: ReadingBookTocItem[];
+};
 type ReferenceItem = {
   id: string;
   label: string;
@@ -350,6 +369,7 @@ export default function ReadingEditionChrome({
   fallbackAuthor,
   citationBibtex,
   citationHref,
+  bookToc,
 }: {
   title: string;
   slug: string;
@@ -359,17 +379,18 @@ export default function ReadingEditionChrome({
   fallbackAuthor: string;
   citationBibtex?: string;
   citationHref?: string;
+  bookToc?: ReadingBookToc;
 }) {
   const router = useRouter();
   const [toc, setToc] = useState<TocItem[]>([]);
   const [activeId, setActiveId] = useState("");
   const [expandedToc, setExpandedToc] = useState<Set<string>>(() => new Set());
+  const [expandedBookChapters, setExpandedBookChapters] = useState<Set<string>>(() => new Set());
   const [figureItems, setFigureItems] = useState<FigureIndexItem[]>([]);
   const [activeFigureId, setActiveFigureId] = useState("");
   const [figureIndexMode, setFigureIndexMode] = useState<FigureIndexMode>("toc");
   const [sheet, setSheet] = useState<Sheet>(null);
   const [sheetClosing, setSheetClosing] = useState(false);
-  const [settingsCloseLeft, setSettingsCloseLeft] = useState<number | null>(null);
   const [readerSize, setReaderSize] = useState<ReaderSize>("medium");
   const [readerFont, setReaderFont] = useState<ReaderFont>("serif");
   const theme = useTheme();
@@ -414,7 +435,6 @@ export default function ReadingEditionChrome({
   const lastNoteAnchor = useRef<HTMLAnchorElement | null>(null);
   const lastSheetTrigger = useRef<HTMLElement | null>(null);
   const sheetRef = useRef<HTMLElement | null>(null);
-  const settingsButtonRef = useRef<HTMLButtonElement | null>(null);
   const sheetCloseTimerRef = useRef<number | null>(null);
   const exitNavigationTimerRef = useRef<number | null>(null);
   const referenceScrollCleanupRef = useRef<(() => void) | null>(null);
@@ -506,7 +526,12 @@ export default function ReadingEditionChrome({
   const pct = Math.round(progress * 100);
   const sheetOpen = sheet !== null;
   const previousReference = referenceTrail.at(-1);
-  const showFigureIndex = desktopDesk && figureItems.length > 0;
+  const hasFigureIndex = figureItems.length > 0;
+  const showFigureIndex = desktopDesk && hasFigureIndex;
+  const showReadingIndexTabs = hasFigureIndex || Boolean(bookToc);
+  const readingIndexTabsLabel = hasFigureIndex
+    ? bookToc ? "目录、图录与全书目录切换" : "目录与图录切换"
+    : "目录与全书目录切换";
   const {
     trackingEnabled: readingProgressEnabled,
     hasCurrentRecord,
@@ -783,6 +808,26 @@ export default function ReadingEditionChrome({
   }, [activeId, tocTree]);
 
   useEffect(() => {
+    const pending = [...(bookToc?.chapters ?? [])];
+    let activeBookItemId = "";
+    while (pending.length > 0) {
+      const item = pending.shift();
+      if (!item) continue;
+      if (item.current) {
+        activeBookItemId = item.id;
+        break;
+      }
+      pending.unshift(...item.children);
+    }
+    setExpandedBookChapters(activeBookItemId ? new Set([activeBookItemId]) : new Set());
+  }, [bookToc, slug]);
+
+  useEffect(() => {
+    if (figureIndexMode === "figures" && !hasFigureIndex) setFigureIndexMode("toc");
+    if (figureIndexMode === "book" && !bookToc) setFigureIndexMode("toc");
+  }, [bookToc, figureIndexMode, hasFigureIndex]);
+
+  useEffect(() => {
     if (!editingLine) return;
     const frame = requestAnimationFrame(() => {
       lineInputRef.current?.focus();
@@ -1050,29 +1095,6 @@ export default function ReadingEditionChrome({
     return () => { document.body.style.overflow = previous; };
   }, [sheetOpen]);
 
-  useLayoutEffect(() => {
-    if (sheet !== "settings" || sheetClosing) return;
-    const syncSettingsClose = () => {
-      const button = settingsButtonRef.current;
-      const panel = sheetRef.current;
-      if (button && panel) {
-        // The sheet's slide transform makes fixed descendants use the sheet
-        // itself as their containing block. Convert the trigger's viewport
-        // coordinate into that stable, untransformed local coordinate.
-        setSettingsCloseLeft(
-          button.getBoundingClientRect().left - panel.offsetLeft
-        );
-      }
-    };
-    syncSettingsClose();
-    window.addEventListener("resize", syncSettingsClose);
-    window.visualViewport?.addEventListener("resize", syncSettingsClose);
-    return () => {
-      window.removeEventListener("resize", syncSettingsClose);
-      window.visualViewport?.removeEventListener("resize", syncSettingsClose);
-    };
-  }, [sheet, sheetClosing]);
-
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
       if (event.key === "Escape" && sheet) {
@@ -1083,12 +1105,20 @@ export default function ReadingEditionChrome({
       if (event.key === "Tab" && sheet) {
         const dialog = sheetRef.current;
         if (!dialog) return;
-        const focusable = Array.from(dialog.querySelectorAll<HTMLElement>(
+        const dialogFocusable = Array.from(dialog.querySelectorAll<HTMLElement>(
           "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])"
         )).filter((element) => (
           element.getClientRects().length > 0
           && !element.closest("[inert], [aria-hidden='true']")
         ));
+        const settingsTrigger = sheet === "settings"
+          && lastSheetTrigger.current
+          && lastSheetTrigger.current.getClientRects().length > 0
+          ? lastSheetTrigger.current
+          : null;
+        const focusable = settingsTrigger
+          ? [settingsTrigger, ...dialogFocusable]
+          : dialogFocusable;
         const first = focusable[0];
         const last = focusable.at(-1);
         if (!first || !last) {
@@ -1099,13 +1129,16 @@ export default function ReadingEditionChrome({
         const active = document.activeElement;
         if (active === dialog) {
           event.preventDefault();
-          (event.shiftKey ? last : first).focus();
-        } else if (event.shiftKey && (active === first || !dialog.contains(active))) {
+          (event.shiftKey ? last : dialogFocusable[0] ?? first).focus();
+        } else if (event.shiftKey && active === first) {
           event.preventDefault();
           last.focus();
-        } else if (!event.shiftKey && (active === last || !dialog.contains(active))) {
+        } else if (!event.shiftKey && active === last) {
           event.preventDefault();
           first.focus();
+        } else if (!dialog.contains(active) && active !== settingsTrigger) {
+          event.preventDefault();
+          (event.shiftKey ? last : dialogFocusable[0] ?? first).focus();
         }
         return;
       }
@@ -1120,22 +1153,26 @@ export default function ReadingEditionChrome({
       sheetCloseTimerRef.current = null;
     }
     setSheetClosing(false);
-    if (next === "settings" && trigger) {
-      setSettingsCloseLeft(null);
-    }
     if (trigger) lastSheetTrigger.current = trigger;
     if (next !== "annotation" && next !== "source") lastNoteAnchor.current = null;
     setReferenceTrail([]);
     setSheet(next);
   };
 
-  const jumpToHeading = (id: string) => {
+  const jumpToHeading = (id: string, retainHash = false) => {
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     closeSheet();
     requestAnimationFrame(() => requestAnimationFrame(() => {
       const target = document.getElementById(id);
       target?.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
       if (target) {
+        if (retainHash) {
+          history.replaceState(
+            history.state,
+            "",
+            `${window.location.pathname}${window.location.search}#${encodeURIComponent(id)}`
+          );
+        }
         target.tabIndex = -1;
         target.focus({ preventScroll: true });
       }
@@ -1308,6 +1345,15 @@ export default function ReadingEditionChrome({
     });
   };
 
+  const toggleBookChapter = (id: string) => {
+    setExpandedBookChapters((current) => {
+      const next = new Set(current);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  };
+
   const renderTocNode = (node: TocNode, path: string, depth: number, rootIndex: number) => {
     const hasChildren = node.children.length > 0;
     const expanded = expandedToc.has(node.id);
@@ -1387,6 +1433,91 @@ export default function ReadingEditionChrome({
     ? <p className={styles.emptyRail}>本文没有分节标题，可按视觉行定位。</p>
     : tocTree.map((node, index) => renderTocNode(node, String(index), 0, index));
 
+  const renderBookTocItem = (item: ReadingBookTocItem, depth: number) => {
+    const hasSections = item.sections.length > 0;
+    const expanded = hasSections && expandedBookChapters.has(item.id);
+    const sectionsId = `book-toc-sections-${item.id}`;
+    const rowContents = (
+      <>
+        <span>{item.number}</span>
+        <b>{item.title}</b>
+        {item.status === "forthcoming" && <small>待更新</small>}
+      </>
+    );
+    return (
+      <li className={styles.bookTocItem} data-current={item.current ? "true" : "false"} data-depth={depth} key={item.id}>
+        <div className={styles.bookTocRowGroup} data-has-sections={hasSections ? "true" : "false"}>
+          {item.current ? (
+            <button type="button" className={styles.bookTocRow} aria-current="page" onClick={returnToPageStart}>
+              {rowContents}
+            </button>
+          ) : item.href ? (
+            <Link className={styles.bookTocRow} href={item.href}>{rowContents}</Link>
+          ) : (
+            <div className={styles.bookTocRow} aria-disabled="true">{rowContents}</div>
+          )}
+          {hasSections && (
+            <button
+              type="button"
+              className={styles.bookTocDisclosure}
+              aria-label={`${expanded ? "折叠" : "展开"}${item.title}的次级标题`}
+              aria-expanded={expanded}
+              aria-controls={sectionsId}
+              onClick={() => toggleBookChapter(item.id)}
+            >
+              {expanded ? "−" : "+"}
+            </button>
+          )}
+        </div>
+        {hasSections && (
+          <div
+            id={sectionsId}
+            className={styles.bookTocSections}
+            data-expanded={expanded ? "true" : "false"}
+            aria-label={`${item.title}的次级标题`}
+            aria-hidden={!expanded}
+            inert={!expanded}
+          >
+            <div className={styles.bookTocSectionsInner}>
+              {item.sections.map((section) => item.current ? (
+                <button
+                  type="button"
+                  className={styles.bookTocSectionLink}
+                  data-level={section.level}
+                  aria-current={section.id === activeId ? "location" : undefined}
+                  onClick={() => jumpToHeading(section.id, true)}
+                  key={section.id}
+                >
+                  <span aria-hidden="true">↳</span><b>{section.title}</b>
+                </button>
+              ) : (
+                <Link
+                  className={styles.bookTocSectionLink}
+                  data-level={section.level}
+                  href={section.href}
+                  key={section.id}
+                >
+                  <span aria-hidden="true">↳</span><b>{section.title}</b>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+        {item.children.length > 0 && (
+          <ol className={styles.bookTocChildren}>
+            {item.children.map((child) => renderBookTocItem(child, depth + 1))}
+          </ol>
+        )}
+      </li>
+    );
+  };
+
+  const bookTocContents = bookToc ? (
+    <ol className={styles.bookTocList}>
+      {bookToc.chapters.map((item) => renderBookTocItem(item, 0))}
+    </ol>
+  ) : null;
+
   const hasCitationActions = Boolean(citationBibtex && citationHref);
   const tocActions = (
     <footer
@@ -1411,21 +1542,25 @@ export default function ReadingEditionChrome({
     </footer>
   );
 
-  const tocPanel = showFigureIndex ? (
+  const tocPanel = showReadingIndexTabs ? (
     <nav
       className={`${styles.tocPanel} ${styles.figureIndex}`}
       data-figure-index-mode={figureIndexMode}
-      aria-label={figureIndexMode === "toc" ? "文章目录" : "文章图录"}
+      data-has-figures={hasFigureIndex ? "true" : "false"}
+      data-has-book={bookToc ? "true" : "false"}
+      aria-label={figureIndexMode === "toc" ? "文章目录" : figureIndexMode === "figures" ? "文章图录" : "全书目录"}
     >
-      <header className={styles.figureIndexTabs} role="tablist" aria-label="目录与图录切换">
+      <header className={styles.figureIndexTabs} data-has-figures={hasFigureIndex ? "true" : "false"} data-has-book={bookToc ? "true" : "false"} role="tablist" aria-label={readingIndexTabsLabel}>
         <span className={styles.figureIndexThumb} aria-hidden="true" />
         <b className={styles.figureIndexTabLabel} data-slot="toc" data-selected={figureIndexMode === "toc" ? "true" : "false"} aria-hidden="true">目录</b>
-        <b className={styles.figureIndexTabLabel} data-slot="figures" data-selected={figureIndexMode === "figures" ? "true" : "false"} aria-hidden="true">图录</b>
+        {hasFigureIndex && <b className={styles.figureIndexTabLabel} data-slot="figures" data-selected={figureIndexMode === "figures" ? "true" : "false"} aria-hidden="true">图录</b>}
+        {bookToc && <b className={styles.figureIndexTabLabel} data-slot="book" data-selected={figureIndexMode === "book" ? "true" : "false"} aria-hidden="true">全书目录</b>}
         <button data-slot="toc" type="button" role="tab" aria-label="目录" aria-selected={figureIndexMode === "toc"} aria-controls="reading-index-toc" onClick={() => setFigureIndexMode("toc")} />
-        <button data-slot="figures" type="button" role="tab" aria-label="图录" aria-selected={figureIndexMode === "figures"} aria-controls="reading-index-figures" onClick={() => setFigureIndexMode("figures")} />
+        {hasFigureIndex && <button data-slot="figures" type="button" role="tab" aria-label="图录" aria-selected={figureIndexMode === "figures"} aria-controls="reading-index-figures" onClick={() => setFigureIndexMode("figures")} />}
+        {bookToc && <button data-slot="book" type="button" role="tab" aria-label="全书目录" aria-selected={figureIndexMode === "book"} aria-controls="reading-index-book" onClick={() => setFigureIndexMode("book")} />}
       </header>
       <div className={styles.figureIndexViewport}>
-        <div className={styles.figureIndexPanels} data-mode={figureIndexMode}>
+        <div className={styles.figureIndexPanels} data-mode={figureIndexMode} data-has-figures={hasFigureIndex ? "true" : "false"} data-has-book={bookToc ? "true" : "false"}>
           <div
             id="reading-index-toc"
             className={`${styles.tocViewport} ${styles.styledScroller} ${styles.figureIndexPanel}`}
@@ -1435,14 +1570,15 @@ export default function ReadingEditionChrome({
           >
             {tocContents}
           </div>
-          <div
-            id="reading-index-figures"
-            className={`${styles.figureIndexList} ${styles.styledScroller} ${styles.figureIndexPanel}`}
-            role="tabpanel"
-            aria-hidden={figureIndexMode !== "figures"}
-            inert={figureIndexMode !== "figures"}
-          >
-            {figureItems.map((item) => {
+          {hasFigureIndex && (
+            <div
+              id="reading-index-figures"
+              className={`${styles.figureIndexList} ${styles.styledScroller} ${styles.figureIndexPanel}`}
+              role="tabpanel"
+              aria-hidden={figureIndexMode !== "figures"}
+              inert={figureIndexMode !== "figures"}
+            >
+              {figureItems.map((item) => {
               const active = item.id === activeFigureId;
               return (
                 <button
@@ -1458,8 +1594,20 @@ export default function ReadingEditionChrome({
                   {item.caption && <b>{item.caption}</b>}
                 </button>
               );
-            })}
-          </div>
+              })}
+            </div>
+          )}
+          {bookToc && (
+            <div
+              id="reading-index-book"
+              className={`${styles.bookTocViewport} ${styles.styledScroller} ${styles.figureIndexPanel}`}
+              role="tabpanel"
+              aria-hidden={figureIndexMode !== "book"}
+              inert={figureIndexMode !== "book"}
+            >
+              {bookTocContents}
+            </div>
+          )}
         </div>
       </div>
       {tocActions}
@@ -1636,7 +1784,7 @@ export default function ReadingEditionChrome({
           {readerStatus}
         </p>
       )}
-      <header className={styles.runningHeader}>
+      <header className={styles.runningHeader} data-settings-open={sheet === "settings" ? "true" : "false"}>
         <Link href="/" className={`${styles.runningBrand} ignore-opencc`} aria-label={`返回${site.brandCN}首页`}><i /><span className={styles.runningBrandName}>{site.brandCN}</span></Link>
         <nav className={styles.runningSections} aria-label="全站导航">
           {GLOBAL_NAV_ITEMS.map((item) => (
@@ -1665,7 +1813,17 @@ export default function ReadingEditionChrome({
               <span className={styles.hanSimplified}>简</span>
             </span>
           </button>
-          <button ref={settingsButtonRef} className={styles.settingsButton} type="button" onClick={(event) => openSheet("settings", event.currentTarget)} aria-label="阅读习惯" aria-haspopup="dialog" aria-expanded={sheet === "settings"}>
+          <button
+            className={styles.settingsButton}
+            type="button"
+            onClick={(event) => {
+              if (sheet === "settings") closeSheet();
+              else openSheet("settings", event.currentTarget);
+            }}
+            aria-label="阅读习惯"
+            aria-haspopup="dialog"
+            aria-expanded={sheet === "settings"}
+          >
             <span className={styles.settingsGlyph} aria-hidden="true"><i /><i /><i /></span>
           </button>
         </div>
@@ -1683,15 +1841,12 @@ export default function ReadingEditionChrome({
                 {previousReference && (sheet === "annotation" || sheet === "source") && <button type="button" className={styles.referenceBack} onClick={returnToPreviousReference}>← 返回{previousReference.kind === "annotation" ? "注释" : "文献"} {previousReference.label}</button>}
                 <div><h2>{sheet === "toc" ? "文章目录" : sheet === "settings" ? "阅读习惯" : sheet === "annotation" ? "注释" : "文献"}</h2></div>
               </div>
-              <div
-                className={styles.sheetHeaderActions}
-                style={sheet === "settings" && settingsCloseLeft !== null
-                  ? { left: `${settingsCloseLeft}px`, right: "auto" }
-                  : undefined}
-              >
-                {(sheet === "annotation" || sheet === "source") && referenceCounter(sheet, "sheet")}
-                <button type="button" onClick={closeSheet} aria-label="关闭">×</button>
-              </div>
+              {sheet !== "settings" && (
+                <div className={styles.sheetHeaderActions}>
+                  {(sheet === "annotation" || sheet === "source") && referenceCounter(sheet, "sheet")}
+                  <button type="button" onClick={closeSheet} aria-label="关闭">×</button>
+                </div>
+              )}
             </header>
             {sheet === "toc" ? <>
               {lineNavigator}

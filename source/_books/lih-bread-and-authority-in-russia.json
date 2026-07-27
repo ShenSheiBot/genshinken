@@ -12,7 +12,6 @@
   "proofreaders": ["wang-kui"],
   "publishedAt": "2026-07-26",
   "updatedAt": "2026-07-26",
-  "startAnchor": "reading-cover",
   "latestChapterId": "chapter-9",
   "citations": {
     "original": {
@@ -45,6 +44,7 @@
       "number": "前 1",
       "title": "鸣谢",
       "status": "published",
+      "presentation": "reference",
       "anchor": "鸣谢",
       "publishedAt": "2026-07-26"
     },
@@ -53,6 +53,7 @@
       "number": "前 2",
       "title": "关键俄语专名翻译的说明",
       "status": "published",
+      "presentation": "reference",
       "anchor": "关键俄语专名翻译的说明",
       "publishedAt": "2026-07-26"
     },
@@ -141,6 +142,7 @@
       "number": "附 1",
       "title": "文献",
       "status": "published",
+      "presentation": "reference",
       "anchor": "文献",
       "publishedAt": "2026-07-26"
     },
@@ -149,6 +151,7 @@
       "number": "附 2",
       "title": "索引",
       "status": "published",
+      "presentation": "reference",
       "anchor": "索引",
       "publishedAt": "2026-07-26"
     }

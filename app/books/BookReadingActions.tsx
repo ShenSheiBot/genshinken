@@ -15,8 +15,8 @@ export default function BookReadingActions({
   return (
     <nav className={styles.readingActions} aria-label="阅读入口">
       <Link href={startHref} className={styles.readingAction}>
-        <span>全文</span>
-        <strong>从头阅读</strong>
+        <span>首章</span>
+        <strong>从第一章阅读</strong>
         <b aria-hidden="true">→</b>
       </Link>
       <Link href={latestHref} className={styles.readingAction}>

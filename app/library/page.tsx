@@ -9,10 +9,9 @@ import {
 import {
   CREDIT_ROLES,
   CREDIT_ROLE_META,
-  getAllPosts,
   type CreditRole,
-  type PostSummary,
 } from "@/lib/posts";
+import { getAllPublicContent, type PublicContentEntry } from "@/lib/public-content";
 import {
   findContributor,
   isContributorId,
@@ -94,7 +93,7 @@ function filterHref(filters: ActiveFilters, update: Partial<ActiveFilters> = {})
   return query ? `/library?${query}` : "/library";
 }
 
-function postMatches(post: PostSummary, filters: ActiveFilters): boolean {
+function postMatches(post: PublicContentEntry, filters: ActiveFilters): boolean {
   if (filters.section && post.section !== filters.section) return false;
   if (filters.category && post.category !== filters.category) return false;
   if (filters.tag && !post.tags.includes(filters.tag)) return false;
@@ -113,7 +112,7 @@ export default async function LibraryPage({
 }: {
   searchParams: Promise<SearchParams>;
 }) {
-  const [posts, rawParams] = await Promise.all([getAllPosts(), searchParams]);
+  const [posts, rawParams] = await Promise.all([getAllPublicContent(), searchParams]);
   const categories = facetsFor(posts.map((post) => post.category));
   const tags = facetsFor(posts.flatMap((post) => post.tags), true);
   const availableContributors = new Set(posts.flatMap((post) =>

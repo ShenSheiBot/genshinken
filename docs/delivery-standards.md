@@ -17,7 +17,7 @@
 - [ ] **引号全为方向性弯引号** `“ ” ‘ ’`，正文无 ASCII 直引号 `" '`
 - [ ] **脚注用 GFM `[^n]` 语法**，`npm run build` 后确认角标可跳转、底部有脚注区
 - [ ] **首行缩进交给前端**：勿手敲全角空格；承接段用 `<!--continue-->` 标记（见 §8）
-- [ ] **书籍清单同步**：递归目录 id／number 稳定，已发布节点的 anchor 有效，`latestChapterId` 只指向已发布节点，`updatedAt` 与连续正文一致
+- [ ] **书籍清单同步**：递归目录 id／number 稳定，已发布节点的 anchor 有效，`latestChapterId` 只指向已发布节点，`updatedAt` 与 `book_document` 构建源一致
 - [ ] **专题引用有效**：分组顺序正确，`post / media / book` 类型与目标一致，导语和编者按已复核
 - [ ] **链接有效**：外链正常；无残留的 Outline `mention://` 内链
 - [ ] **提交作者 = `un-canon <un-canon@hotmail.com>`**
@@ -203,7 +203,7 @@ featured_order: 0        # 可选；同栏目首页推荐优先级，数值越�
 
 ## 9. 书籍与章节清单
 
-每本书使用 `source/_books/<slug>.json`，书籍元数据与承载全文的 Markdown 分离。全文仍是一篇连续正文；章节清单是可递归的编辑目录，只提供稳定定位、逐项发布状态和更新时间，不把目录节点拆成独立正文。
+每本书使用 `source/_books/<slug>.json`，书籍元数据与标记为 `book_document: true` 的 Markdown 构建源分离。编辑源可以保持一份连续文本，但公开构建必须按递归目录切成独立章节页；每页只含本章正文和本章引用的注释／文献。
 
 ```json
 {
@@ -219,7 +219,6 @@ featured_order: 0        # 可选；同栏目首页推荐优先级，数值越�
   "proofreaders": ["校对者显示名"],
   "publishedAt": "2026-07-18",
   "updatedAt": "2026-07-18",
-  "startAnchor": "reading-cover",
   "latestChapterId": "chapter-one",
   "citations": {
     "original": {
@@ -259,6 +258,7 @@ featured_order: 0        # 可选；同栏目首页推荐优先级，数值越�
       "status": "published",
       "anchor": "第一章",
       "publishedAt": "2026-07-18",
+      "tags": ["专题标签", "章节标签"],
       "children": [
         {
           "id": "chapter-two",
@@ -276,12 +276,15 @@ featured_order: 0        # 可选；同栏目首页推荐优先级，数值越�
 - 书籍 `status` 只能是 `serializing / complete / paused`。每个新增或修改的目录节点必须显式填写 `status: published / forthcoming`；旧清单中缺省 `status` 的平铺节点仅为兼容既有内容而按 `published` 读取，不得在新书中继续省略。节点 `id / number` 在整棵目录树内不得重复，不能只在同一层检查唯一性。
 - `/books` 书目必须按 `serializing → paused → complete` 排列，同一状态内再按 `updatedAt` 降序和书名稳定排序。连载中书籍永远排在已完结书目之前；发布或更新完结书不得改变这一优先级。
 - `published` 节点必须填写非空 `anchor` 与有效 `publishedAt`，anchor 在整棵目录树内唯一。`forthcoming` 节点必须省略 `anchor / publishedAt`；它只展示待更新目录，不参与锚点存在性校验，也不得包含状态为 `published` 的后代。
-- `documentSlug` 必须指向已发布的非多媒体文稿。只有 `published` 节点生成 `/books/<slug>/chapters/<chapter-id>` 路由、Book JSON-LD `hasPart` 和可点击目录入口；`forthcoming` 节点不得生成上述三类公开入口。
+- 章节节点可选填 `tags` 字符串数组以覆盖本章标签；每项必须是非空字符串且不得重复。省略或使用空数组时继承 `book_document` Markdown 的 front matter 标签，确保每个章节页都有自己的最终标签集合。
+- 章节节点可选填 `presentation: reading / reference / navigation`，缺省为 `reading`。序、前言与正文使用 `reading`；致谢、术语说明、索引、文献等附属材料使用 `reference`；只承载子目录跳转而没有正文的父节点使用 `navigation`。表现类型用于计算整本书的最新正文日期、阅读时长等聚合字段；首页和文库始终只为整本书生成一个条目。
+- `documentSlug` 必须指向已发布、非多媒体且显式填写 `book_document: true` 的 Markdown 构建源。该源不得生成 `/posts/<documentSlug>` 页面，不进入首页、文库、RSS 或 sitemap。只有 `published` 节点生成 `/books/<slug>/chapters/<chapter-id>` 独立正文、Book JSON-LD `hasPart` 和可点击目录入口；`forthcoming` 节点不得生成上述三类公开入口。
 - `latestChapterId` 必须指向递归目录中已经 `published` 的节点，不能指向待更新节点。书籍页和目录统计分别显示“已发布节点数 / 全部节点数”，两个数字都按整棵目录树递归计算。
-- 后续连载继续追加到同一个 `documentSlug` 对应的连续正文：先把新标题和正文写入该 Markdown，再将既有目录节点从 `forthcoming` 切换为 `published`，补齐 `anchor / publishedAt`，并按需更新 `latestChapterId`。同时更新书籍 `updatedAt` 与正文 `updated`；两处日期不一致会阻止发布。不得为同一本书的后续章节另建互相隔离的正文文稿。
-- 已发布章节入口 `/books/<slug>/chapters/<chapter-id>` 是永久稳定跳转，不是独立正文。不得改变既有章节 id 来“整理”名称；需要改标题时只改 `title`。
-- 普通文章与连载连续正文都默认保存完全本地的阅读位置。记录只属于当前浏览器配置文件和本站域名，不上传服务器、不使用 Cookie，也不跨浏览器或设备共享；阅读设置必须允许关闭保存、清除本文记录和清除全部阅读记录，关闭时不得清除或改变主题、字族与字号设置。
-- 直接进入不带 hash 的正文 URL 时自动恢复到上次语义位置，不提供「继续阅读」入口或恢复弹窗。书籍页仍只提供「从头阅读」与「阅读最新章节」：前者的 `#reading-cover` 和后者的章节 hash 都优先于本地记录；浏览器前进后退、刷新与 BFCache 等原生滚动恢复同样优先，客户端不得二次跳转。
+- 后续连载继续追加到同一个 `documentSlug` 对应的构建源：先写入新标题和正文，再将既有目录节点从 `forthcoming` 切换为 `published`，补齐 `anchor / publishedAt`，并按需更新 `latestChapterId`。同时更新书籍 `updatedAt` 与正文 `updated`；两处日期不一致会阻止发布。
+- 已发布章节路径 `/books/<slug>/chapters/<chapter-id>` 是独立正文与自身 canonical。不得改变既有章节 id 来“整理”名称；需要改标题时只改 `title`。普通文章与每本书共同进入公开页面顺序；首页和文库都只显示一张链接 `/books/<slug>` 的连载卡，同一本书的所有章节页继承书籍条目的 `no / sectionNo`，因此共享同一个全站号和“译号”。
+- 章节页面必须提供「目录／全书目录」索引；只有本章正文实际含图片时才在二者之间显示「图录」，不得渲染空图录标签或面板。全书目录不重复书籍首页入口；每个含正文标题的章节在右侧提供 `＋/−` 展开按钮，展开后对其他已发布章节执行带 hash 的跨页跳转、对当前章节执行章内跳转，并保留待更新节点的不可点击状态。章节行复用普通目录最小 `16px` 的自适应编号列与 `3px` 列间距，「前 1／附 1」等复合编号保持单行；次级标题只使用与编号列左缘对齐的灰色层级标记，不绘制强调色竖线。页尾上一章／返回目录／下一章使用相同的两层按钮结构与表面样式，不在封面和正文之间或页尾导航上方绘制分隔线。
+- 普通文章与书籍章节页都默认保存完全本地的阅读位置。记录只属于当前浏览器配置文件和本站域名，不上传服务器、不使用 Cookie，也不跨浏览器或设备共享；阅读设置必须允许关闭保存、清除本文记录和清除全部阅读记录，关闭时不得清除或改变主题、字族与字号设置。阅读习惯面板打开时沿用页眉中位置不变的阅读习惯按钮作为关闭入口，按钮与面板标题同处一行，面板内部不得另设 `×` 关闭按钮。
+- 直接进入不带 hash 的正文 URL 时自动恢复到上次语义位置，不提供「继续阅读」入口或恢复弹窗。书籍页仍只提供「从第一章阅读」与「阅读最新章节」：二者都进入相应的独立章节页；章节页的本地阅读记录只在本章 URL 内恢复。浏览器前进后退、刷新与 BFCache 等原生滚动恢复同样优先，客户端不得二次跳转。
 - 连载更新必须保留稳定标题锚点；构建产物同时以渲染后正文 HTML 的 SHA-256 短哈希标识内容版本。已读完的正文追加内容后仍恢复旧版本的原完成位置，不自动进入新增内容，由读者自行向后阅读；原块被改动或删除时按相邻语义块、章节和全文比例依次降级，不依赖旧的绝对滚动坐标。
 - `citations` 直接使用 Zotero item JSON 字段名。`translation` 必填，且 `itemType` 必须是 `book`；未覆写的译本题名、作者／译者、日期、出版社和摘要从书籍清单派生，URL 永远是 `https://un-canon.blog/books/<slug>`。`original` 可选，只有原版资料已经核验时才填写；两者分别生成独立的 BibTeX 复制位，不得拿另一版本冒充。
 - 文章页缺省为 Zotero `blogPost`。只有已核验来源类别时才在 Markdown front matter 添加 `citation` 覆写为 `bookSection / journalArticle / preprint / thesis / interview`；字段必须采用 Zotero 名称，例如 `bookTitle / publicationTitle / repository / thesisType / university / interviewMedium / creators`。构建门禁会拒绝未知字段和缺少类型必需字段的记录。
@@ -325,9 +328,9 @@ groups:
 ## 11. Canonical、sitemap、RSS 与发布发现
 
 - `/library` 是内容筛选唯一 canonical；旧 `/search` 仅作 `308` 兼容跳转并保留查询参数。不要在新内容或界面中创建新的 `/search` 链接。
-- sitemap 收录首页、`/topics`、`/library`、`/books`、`/about`、专题详情、书籍详情及文章／多媒体 canonical。它不收录旧 `/search`、带查询参数的筛选页或只负责跳转的章节入口。
+- sitemap 收录首页、`/topics`、`/library`、`/books`、`/about`、专题详情、书籍详情、已发布章节及文章／多媒体 canonical。它不收录旧 `/search`、带查询参数的筛选页或书籍 Markdown 构建源。
 - 文章、多媒体、书籍和专题详情必须同时提供自洽的 canonical、OpenGraph 与实体 JSON-LD；`og:site_name` 统一为「西方負典的博客」，暂不输出 `og:image` 与 `og:locale`。平台兼容分享标签不单独维护内容，必须共享同页 OpenGraph 的标题与摘要且不带图片。结构化数据内的 URL 使用 `https://un-canon.blog/...` 绝对地址。
-- RSS 只发布文章和多媒体正文。书籍的连续正文已经通过 `documentSlug` 对应文章进入 RSS；书籍落地页、章节跳转和专题策展页不重复生成 feed 项。
+- RSS 只发布文章和多媒体正文。书籍构建源、书籍落地页、章节正文和专题策展页不生成 feed 项。
 - 推送文章、书籍或专题源文件到 `main` 后，IndexNow 工作流会提交实体 URL 及相应聚合页。Google 依靠 sitemap `lastmod` 重抓。
 
 ## 12. 自动交付门禁

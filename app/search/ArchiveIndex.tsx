@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { EDITORIAL_SECTION_META, postPath } from "@/lib/editorial";
-import type { PostSummary } from "@/lib/posts";
+import { EDITORIAL_SECTION_META } from "@/lib/editorial";
+import type { PublicContentEntry } from "@/lib/public-content";
 import CreditLinks from "@/app/components/CreditLinks";
 import styles from "./archive.module.css";
 import ResponsiveFacetDetails from "./ResponsiveFacetDetails";
@@ -15,7 +15,7 @@ export type ArchiveFacetOption = {
 };
 
 type ArchiveIndexProps = {
-  posts: PostSummary[];
+  posts: PublicContentEntry[];
   total: number;
   resetHref: string;
   hasFilters: boolean;
@@ -86,7 +86,7 @@ function FacetGroup({
   );
 }
 
-function tagsFor(post: PostSummary): string {
+function tagsFor(post: PublicContentEntry): string {
   if (post.tags.length === 0) return "无标签";
   const visible = post.tags.slice(0, 2).map((tag) => `#${tag}`).join("　");
   const remaining = post.tags.length - 2;
@@ -160,7 +160,7 @@ export default function ArchiveIndex({
                   <li key={post.slug} className={styles.row} data-reveal>
                     <Link
                       className={styles.rowLink}
-                      href={postPath(post)}
+                      href={post.href}
                       aria-label={`${section.label}：${post.title}`}
                     />
                       <div className={styles.recordId}>
