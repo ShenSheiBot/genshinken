@@ -4,7 +4,10 @@ const BOOK_PATH = "/books/lih-bread-and-authority-in-russia";
 const CHAPTER_PATH = `${BOOK_PATH}/chapters/chapter-3`;
 const NEXT_CHAPTER_PATH = `${BOOK_PATH}/chapters/chapter-4`;
 
-test("book chapter routes preserve the reader chrome entry and exit motion contract", async ({ page }) => {
+test("book chapter routes preserve the reader chrome entry and exit motion contract", async ({
+  isMobile,
+  page,
+}) => {
   await page.emulateMedia({ reducedMotion: "no-preference" });
   await page.goto(BOOK_PATH);
   const chapterLink = page.locator(`a[href="${CHAPTER_PATH}"]`);
@@ -13,14 +16,22 @@ test("book chapter routes preserve the reader chrome entry and exit motion contr
   await expect(page).toHaveURL(CHAPTER_PATH);
 
   const settingsButton = page.getByRole("button", { name: "阅读习惯", exact: true });
+  const hanButton = page.getByRole("button", { name: /切换为(?:简体|繁体)中文/ });
   const themeButton = page.getByRole("button", { name: "切换明暗主题", exact: true });
   await expect(settingsButton).toBeVisible();
+  await expect(hanButton).toBeVisible();
   await expect.poll(() => settingsButton.evaluate((button) =>
     getComputedStyle(button).animationName
   )).toContain("reading-tool-enter");
-  await expect.poll(() => themeButton.evaluate((button) =>
+  await expect.poll(() => hanButton.evaluate((button) =>
     getComputedStyle(button).animationName
-  )).toContain("reading-theme-shift-left");
+  )).toContain("reading-tool-enter");
+  if (!isMobile) {
+    await expect(themeButton).toBeVisible();
+    await expect.poll(() => themeButton.evaluate((button) =>
+      getComputedStyle(button).animationName
+    )).toContain("reading-theme-shift-left");
+  }
 
   await settingsButton.click();
   const settingsDialog = page.getByRole("dialog", { name: "阅读习惯", exact: true });

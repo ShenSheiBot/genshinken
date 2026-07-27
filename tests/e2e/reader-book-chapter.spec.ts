@@ -39,9 +39,15 @@ test("book chapters reuse the article docket and expose the chapter end label", 
   await expect(endMark).toHaveText("本章完");
 });
 
-test("full-book compound numbers remain on one rendered line", async ({ page }) => {
+test("full-book compound numbers remain on one rendered line", async ({ isMobile, page }) => {
   await page.goto(CHAPTER_PATH);
-  const fullBookTab = page.getByRole("tab", { name: "全书目录" });
+  let fullBookTab = page.getByRole("tab", { name: "全书目录" });
+  if (isMobile) {
+    await page.getByRole("button", { name: /^文章目录：/ }).click();
+    const catalogue = page.getByRole("dialog", { name: "文章目录" });
+    await expect(catalogue).toBeVisible();
+    fullBookTab = catalogue.getByRole("tab", { name: "全书目录" });
+  }
   await fullBookTab.click();
 
   const fullBookPanel = page.locator("#reading-index-book");
