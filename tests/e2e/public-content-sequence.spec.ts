@@ -4,11 +4,19 @@ const CHAPTER_PATH = "/books/lih-bread-and-authority-in-russia/chapters/chapter-
 const BOOK_PATH = "/books/lih-bread-and-authority-in-russia";
 const REFERENCE_PATH = `${BOOK_PATH}/chapters/bibliography`;
 
-test("home and library collapse each serial into one shared publication number", async ({ page }) => {
+test("home and library collapse each serial into one shared publication number", async ({
+  isMobile,
+  page,
+}) => {
   await page.goto("/library");
 
-  await expect(page.getByLabel("当前显示 20 项，共 20 项")).toBeVisible();
-  await expect(page.getByRole("link", { name: /^译\s*06$/u })).toBeVisible();
+  await expect(page.getByLabel("当前显示 21 项，共 21 项")).toBeVisible();
+  const sectionFacet = page.locator('[data-facet-number="01"]');
+  if (isMobile) {
+    await expect(sectionFacet).not.toHaveAttribute("open", "");
+    await sectionFacet.locator("summary").click();
+  }
+  await expect(sectionFacet.getByRole("link", { name: /^译\s*06$/u })).toBeVisible();
 
   const bookRow = page.locator(`li:has(a[href="${BOOK_PATH}"])`);
   await expect(bookRow).toBeVisible();
@@ -26,7 +34,7 @@ test("home and library collapse each serial into one shared publication number",
   );
 
   await page.goto("/");
-  await expect(page.locator("main > header").getByText("20", { exact: true })).toBeVisible();
+  await expect(page.locator("main > header").getByText("21", { exact: true })).toBeVisible();
   await expect(page.locator(`main article a[href="${BOOK_PATH}"]`).first()).toBeAttached();
   await expect(page.locator('main a[href^="/books/"][href*="/chapters/"]')).toHaveCount(0);
 
