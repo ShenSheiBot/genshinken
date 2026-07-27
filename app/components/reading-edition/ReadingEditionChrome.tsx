@@ -9,7 +9,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { Credit } from "@/lib/posts";
 import type { HanScript } from "@/lib/han-script";
 import { site } from "@/lib/site";
-import { GLOBAL_NAV_ITEMS } from "@/lib/navigation";
+import { GLOBAL_NAV_ITEMS, isReadingRoute } from "@/lib/navigation";
 import CreditLinks from "@/app/components/CreditLinks";
 import CitationCopyButton from "@/app/components/CitationCopyButton";
 import {
@@ -435,6 +435,8 @@ export default function ReadingEditionChrome({
   const lastNoteAnchor = useRef<HTMLAnchorElement | null>(null);
   const lastSheetTrigger = useRef<HTMLElement | null>(null);
   const sheetRef = useRef<HTMLElement | null>(null);
+  const settingsButtonRef = useRef<HTMLButtonElement | null>(null);
+  const pendingFocusRestoreRef = useRef<HTMLElement | "settings" | null>(null);
   const sheetCloseTimerRef = useRef<number | null>(null);
   const exitNavigationTimerRef = useRef<number | null>(null);
   const referenceScrollCleanupRef = useRef<(() => void) | null>(null);
@@ -487,7 +489,7 @@ export default function ReadingEditionChrome({
       const destination = new URL(anchor.href, window.location.href);
       if (
         destination.origin !== window.location.origin
-        || destination.pathname.startsWith("/posts/")
+        || isReadingRoute(destination.pathname)
       ) return;
 
       event.preventDefault();
@@ -1065,7 +1067,7 @@ export default function ReadingEditionChrome({
 
   const closeSheet = useCallback(() => {
     if (sheet === null || sheetClosing) return;
-    const hadSheet = true;
+    const wasSettings = sheet === "settings";
     const wasReference = sheet === "annotation" || sheet === "source";
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (sheetRef.current?.contains(document.activeElement)) {
@@ -1077,14 +1079,25 @@ export default function ReadingEditionChrome({
       history.replaceState(history.state, "", window.location.pathname + window.location.search);
     }
     if (sheetCloseTimerRef.current != null) window.clearTimeout(sheetCloseTimerRef.current);
+    pendingFocusRestoreRef.current = wasSettings
+      ? "settings"
+      : lastNoteAnchor.current || lastSheetTrigger.current;
     sheetCloseTimerRef.current = window.setTimeout(() => {
       sheetCloseTimerRef.current = null;
       setSheet(null);
       setSheetClosing(false);
-      if (hadSheet) {
-        requestAnimationFrame(() => (lastNoteAnchor.current || lastSheetTrigger.current)?.focus());
-      }
     }, reduce ? 0 : 260);
+  }, [sheet, sheetClosing]);
+
+  useEffect(() => {
+    if (sheet !== null || sheetClosing || pendingFocusRestoreRef.current === null) return;
+    const frame = requestAnimationFrame(() => {
+      const pending = pendingFocusRestoreRef.current;
+      const target = pending === "settings" ? settingsButtonRef.current : pending;
+      target?.focus();
+      pendingFocusRestoreRef.current = null;
+    });
+    return () => cancelAnimationFrame(frame);
   }, [sheet, sheetClosing]);
 
   useEffect(() => {
@@ -1105,20 +1118,12 @@ export default function ReadingEditionChrome({
       if (event.key === "Tab" && sheet) {
         const dialog = sheetRef.current;
         if (!dialog) return;
-        const dialogFocusable = Array.from(dialog.querySelectorAll<HTMLElement>(
+        const focusable = Array.from(dialog.querySelectorAll<HTMLElement>(
           "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])"
         )).filter((element) => (
           element.getClientRects().length > 0
           && !element.closest("[inert], [aria-hidden='true']")
         ));
-        const settingsTrigger = sheet === "settings"
-          && lastSheetTrigger.current
-          && lastSheetTrigger.current.getClientRects().length > 0
-          ? lastSheetTrigger.current
-          : null;
-        const focusable = settingsTrigger
-          ? [settingsTrigger, ...dialogFocusable]
-          : dialogFocusable;
         const first = focusable[0];
         const last = focusable.at(-1);
         if (!first || !last) {
@@ -1129,16 +1134,13 @@ export default function ReadingEditionChrome({
         const active = document.activeElement;
         if (active === dialog) {
           event.preventDefault();
-          (event.shiftKey ? last : dialogFocusable[0] ?? first).focus();
-        } else if (event.shiftKey && active === first) {
+          (event.shiftKey ? last : first).focus();
+        } else if (event.shiftKey && (active === first || !dialog.contains(active))) {
           event.preventDefault();
           last.focus();
-        } else if (!event.shiftKey && active === last) {
+        } else if (!event.shiftKey && (active === last || !dialog.contains(active))) {
           event.preventDefault();
           first.focus();
-        } else if (!dialog.contains(active) && active !== settingsTrigger) {
-          event.preventDefault();
-          (event.shiftKey ? last : dialogFocusable[0] ?? first).focus();
         }
         return;
       }
@@ -1153,6 +1155,7 @@ export default function ReadingEditionChrome({
       sheetCloseTimerRef.current = null;
     }
     setSheetClosing(false);
+    if (next === "settings") delete document.documentElement.dataset.readingChromeEntry;
     if (trigger) lastSheetTrigger.current = trigger;
     if (next !== "annotation" && next !== "source") lastNoteAnchor.current = null;
     setReferenceTrail([]);
@@ -1774,6 +1777,22 @@ export default function ReadingEditionChrome({
     document.documentElement.dataset.readerFont = font;
     writeLocalSetting("ub_reader_font", font);
   };
+  const settingsControl = (location: "header" | "sheet") => (
+    <button
+      ref={settingsButtonRef}
+      className={styles.settingsButton}
+      type="button"
+      onClick={(event) => {
+        if (location === "sheet") closeSheet();
+        else openSheet("settings", event.currentTarget);
+      }}
+      aria-label="阅读习惯"
+      aria-haspopup="dialog"
+      aria-expanded={location === "sheet"}
+    >
+      <span className={styles.settingsGlyph} aria-hidden="true"><i /><i /><i /></span>
+    </button>
+  );
   return (
     <>
       {portalDesk}
@@ -1784,7 +1803,7 @@ export default function ReadingEditionChrome({
           {readerStatus}
         </p>
       )}
-      <header className={styles.runningHeader} data-settings-open={sheet === "settings" ? "true" : "false"}>
+      <header className={styles.runningHeader}>
         <Link href="/" className={`${styles.runningBrand} ignore-opencc`} aria-label={`返回${site.brandCN}首页`}><i /><span className={styles.runningBrandName}>{site.brandCN}</span></Link>
         <nav className={styles.runningSections} aria-label="全站导航">
           {GLOBAL_NAV_ITEMS.map((item) => (
@@ -1813,19 +1832,7 @@ export default function ReadingEditionChrome({
               <span className={styles.hanSimplified}>简</span>
             </span>
           </button>
-          <button
-            className={styles.settingsButton}
-            type="button"
-            onClick={(event) => {
-              if (sheet === "settings") closeSheet();
-              else openSheet("settings", event.currentTarget);
-            }}
-            aria-label="阅读习惯"
-            aria-haspopup="dialog"
-            aria-expanded={sheet === "settings"}
-          >
-            <span className={styles.settingsGlyph} aria-hidden="true"><i /><i /><i /></span>
-          </button>
+          {sheet !== "settings" && settingsControl("header")}
         </div>
         <span className={styles.topRule} data-rail-progress={desktopDesk ? "true" : "false"} aria-hidden="true">
           <span className={styles.topProgress} style={{ width: `${pct}%` }} />
@@ -1841,12 +1848,12 @@ export default function ReadingEditionChrome({
                 {previousReference && (sheet === "annotation" || sheet === "source") && <button type="button" className={styles.referenceBack} onClick={returnToPreviousReference}>← 返回{previousReference.kind === "annotation" ? "注释" : "文献"} {previousReference.label}</button>}
                 <div><h2>{sheet === "toc" ? "文章目录" : sheet === "settings" ? "阅读习惯" : sheet === "annotation" ? "注释" : "文献"}</h2></div>
               </div>
-              {sheet !== "settings" && (
-                <div className={styles.sheetHeaderActions}>
-                  {(sheet === "annotation" || sheet === "source") && referenceCounter(sheet, "sheet")}
-                  <button type="button" onClick={closeSheet} aria-label="关闭">×</button>
-                </div>
-              )}
+              <div className={styles.sheetHeaderActions}>
+                {(sheet === "annotation" || sheet === "source") && referenceCounter(sheet, "sheet")}
+                {sheet === "settings"
+                  ? settingsControl("sheet")
+                  : <button type="button" onClick={closeSheet} aria-label="关闭">×</button>}
+              </div>
             </header>
             {sheet === "toc" ? <>
               {lineNavigator}

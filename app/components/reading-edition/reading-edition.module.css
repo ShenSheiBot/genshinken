@@ -71,20 +71,6 @@
   background: var(--bg);
 }
 
-.runningHeader[data-settings-open="true"] {
-  z-index: 130;
-  pointer-events: none;
-  background: transparent;
-}
-
-.runningHeader[data-settings-open="true"]::after,
-.runningHeader[data-settings-open="true"] .topRule { display: none; }
-
-.runningHeader[data-settings-open="true"] > :not(.runningTools),
-.runningHeader[data-settings-open="true"] .runningTools > :not(.settingsButton) { visibility: hidden; }
-
-.runningHeader[data-settings-open="true"] .settingsButton { pointer-events: auto; }
-
 .runningBrand {
   display: inline-flex;
   align-items: center;
@@ -154,7 +140,8 @@
 
 .runningTools { justify-self: end; display: flex; align-items: center; }
 
-.runningTools button {
+.runningTools button,
+.sheetHeader .settingsButton {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -259,7 +246,9 @@
 }
 
 .runningTools button:hover,
-.runningTools button:focus-visible {
+.runningTools button:focus-visible,
+.sheetHeader .settingsButton:hover,
+.sheetHeader .settingsButton:focus-visible {
   color: var(--solid-ink);
   background: var(--solid);
   outline: none;
@@ -271,7 +260,7 @@
   }
 
   :global(html[data-reading-chrome-entry="route"]) .hanScriptButton,
-  :global(html[data-reading-chrome-entry="route"]) .settingsButton {
+  :global(html[data-reading-chrome-entry="route"]) .runningTools .settingsButton {
     animation: reading-tool-enter 340ms cubic-bezier(.2, .75, .3, 1) 70ms both;
   }
 
@@ -280,7 +269,7 @@
   }
 
   :global(html[data-reading-chrome-exit="route"]) .hanScriptButton,
-  :global(html[data-reading-chrome-exit="route"]) .settingsButton {
+  :global(html[data-reading-chrome-exit="route"]) .runningTools .settingsButton {
     animation: reading-tool-exit 340ms cubic-bezier(.4, 0, .8, .25) both;
   }
 }
@@ -1902,7 +1891,8 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
   }
   .mobileSectionButton span { overflow: hidden; font-family: var(--reader-title-family); font-size: 13px; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; }
   .mobileSectionButton b { margin-left: 8px; color: var(--accent); }
-  .runningTools button { width: 34px; border: 0; }
+  .runningTools button,
+  .sheetHeader .settingsButton { width: 34px; border: 0; }
   .runningTools .themeButton { display: none; }
 
   .dossierCover {

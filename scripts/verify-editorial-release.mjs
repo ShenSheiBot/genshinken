@@ -170,6 +170,10 @@ const readingEditionSource = fs.readFileSync(
   path.join(process.cwd(), "app", "components", "reading-edition", "ReadingEdition.tsx"),
   "utf8"
 );
+const topBarSource = fs.readFileSync(
+  path.join(process.cwd(), "app", "components", "TopBar.tsx"),
+  "utf8"
+);
 const postsSource = fs.readFileSync(path.join(process.cwd(), "lib", "posts.ts"), "utf8");
 const globalStylesSource = fs.readFileSync(path.join(process.cwd(), "app", "globals.css"), "utf8");
 const bookStylesSource = fs.readFileSync(
@@ -217,43 +221,43 @@ assert.match(
 );
 assert.match(
   readingChromeSource,
-  /themeButton[\s\S]*?settingsButton[\s\S]*?settingsGlyph[\s\S]*?<i \/><i \/><i \/>/,
-  "theme and three-line reading-habits controls must use the confirmed order"
+  /const settingsControl[\s\S]*?className=\{styles\.settingsButton\}[\s\S]*?settingsGlyph[\s\S]*?<i \/><i \/><i \/>/,
+  "the shared reading-habits control must retain its three-line glyph"
 );
 assert.match(
   readingChromeSource,
-  /themeButton[\s\S]*?hanScriptButton[\s\S]*?settingsButton/,
+  /className=\{styles\.runningTools\}[\s\S]*?themeButton[\s\S]*?hanScriptButton[\s\S]*?settingsControl\("header"\)/,
   "theme, Han-script, and reading-habits controls must use the confirmed order"
 );
 assert.equal(
   readingChromeSource.match(/className=\{styles\.settingsButton\}/g)?.length,
   1,
-  "the fixed reading-habits control must remain the only settings button"
+  "the shared reading-habits control renderer must define one button implementation"
 );
 assert.match(
   readingChromeSource,
-  /className=\{styles\.settingsButton\}[\s\S]*?if \(sheet === "settings"\) closeSheet\(\);[\s\S]*?else openSheet\("settings", event\.currentTarget\);/,
-  "the fixed reading-habits control must toggle its own panel"
+  /const settingsControl = \(location: "header" \| "sheet"\)[\s\S]*?if \(location === "sheet"\) closeSheet\(\);[\s\S]*?else openSheet\("settings", event\.currentTarget\);/,
+  "one reading-habits control implementation must open from the header and close from the sheet"
 );
 assert.match(
   readingChromeSource,
-  /const settingsTrigger = sheet === "settings"[\s\S]*?\[settingsTrigger, \.\.\.dialogFocusable\]/,
-  "the external reading-habits control must participate in the settings focus loop"
+  /\{sheet !== "settings" && settingsControl\("header"\)\}/,
+  "the reading-habits control must leave the running tools while its sheet is open"
 );
 assert.match(
   readingChromeSource,
-  /\{sheet !== "settings" && \([\s\S]*?className=\{styles\.sheetHeaderActions\}[\s\S]*?aria-label="关闭"/,
-  "only non-settings sheets may render an independent close button"
+  /sheet === "settings"[\s\S]*?settingsControl\("sheet"\)[\s\S]*?: <button[^>]*onClick=\{closeSheet\} aria-label="关闭">×<\/button>/,
+  "the settings sheet must use the migrated reading-habits control while other sheets retain their close button"
 );
 assert.doesNotMatch(
   readingChromeSource,
-  /settingsCloseLeft/,
-  "the reading-habits control must not be replaced by a dynamically positioned close button"
+  /const settingsTrigger = sheet === "settings"/,
+  "the modal focus loop must not include an external settings trigger"
 );
 assert.match(
   readingStylesSource,
-  /\.runningHeader\[data-settings-open="true"\][\s\S]*?z-index:\s*130;[\s\S]*?\.settingsButton\s*\{\s*pointer-events:\s*auto;/,
-  "the fixed reading-habits control must stay above the open settings panel"
+  /\.runningTools button,\s*\.sheetHeader \.settingsButton\s*\{/,
+  "the migrated reading-habits control must retain the running-tool visual contract"
 );
 assert.doesNotMatch(
   globalStylesSource,
@@ -262,17 +266,22 @@ assert.doesNotMatch(
 );
 assert.match(
   readingStylesSource,
-  /data-reading-chrome-entry="route"[\s\S]*?themeButton[\s\S]*?reading-theme-shift-left[\s\S]*?hanScriptButton[\s\S]*?settingsButton[\s\S]*?reading-tool-enter/,
+  /data-reading-chrome-entry="route"[\s\S]*?themeButton[\s\S]*?reading-theme-shift-left[\s\S]*?hanScriptButton[\s\S]*?runningTools \.settingsButton[\s\S]*?reading-tool-enter/,
   "route entry must shift theme left while revealing Han-script and reading-habits controls together"
 );
 assert.match(
+  topBarSource,
+  /!isReadingRoute\(previousPathname\)[\s\S]*?isReadingRoute\(pathname\)[\s\S]*?readingChromeEntry = "route"/,
+  "TopBar must use the shared Reader route predicate for route entry"
+);
+assert.match(
   readingChromeSource,
-  /readingChromeExit[\s\S]*?destination\.pathname\.startsWith\("\/posts\/"\)[\s\S]*?readingChromeExit = "route"[\s\S]*?router\.push\(href\)/,
-  "reader links to non-post routes must wait for the reverse chrome transition"
+  /isReadingRoute\(destination\.pathname\)[\s\S]*?readingChromeExit = "route"[\s\S]*?router\.push\(href\)/,
+  "reader links to non-Reader routes must wait for the reverse chrome transition"
 );
 assert.match(
   readingStylesSource,
-  /data-reading-chrome-exit="route"[\s\S]*?themeButton[\s\S]*?reading-theme-shift-right[\s\S]*?hanScriptButton[\s\S]*?settingsButton[\s\S]*?reading-tool-exit/,
+  /data-reading-chrome-exit="route"[\s\S]*?themeButton[\s\S]*?reading-theme-shift-right[\s\S]*?hanScriptButton[\s\S]*?runningTools \.settingsButton[\s\S]*?reading-tool-exit/,
   "route exit must shift theme right while hiding Han-script and reading-habits controls together"
 );
 assert.match(

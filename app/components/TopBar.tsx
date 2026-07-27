@@ -4,7 +4,7 @@ import { Suspense, useCallback, useEffect, useLayoutEffect, useMemo, useRef, use
 import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
 import { site } from "@/lib/site";
-import { GLOBAL_NAV_ITEMS } from "@/lib/navigation";
+import { GLOBAL_NAV_ITEMS, isReadingRoute } from "@/lib/navigation";
 import { useArticleHeader } from "./ArticleHeader";
 import CreditLinks from "./CreditLinks";
 import { toggleTheme, useTheme } from "./useTheme";
@@ -601,8 +601,8 @@ export default function TopBar() {
     delete root.dataset.readingChromeEntry;
     if (
       previousPathname !== null
-      && !previousPathname.startsWith("/posts/")
-      && pathname.startsWith("/posts/")
+      && !isReadingRoute(previousPathname)
+      && isReadingRoute(pathname)
     ) {
       root.dataset.readingChromeEntry = "route";
     }

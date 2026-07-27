@@ -1,6 +1,27 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import path from "node:path";
+import { isReadingRoute } from "../lib/navigation.ts";
+
+for (const pathname of [
+  "/posts/example",
+  "/posts/example/",
+  "/books/example/chapters/chapter-1",
+  "/books/example/chapters/chapter-1/",
+]) {
+  assert.equal(isReadingRoute(pathname), true, `${pathname} must be a Reader route`);
+}
+
+for (const pathname of [
+  "/posts/",
+  "/posts/example/extra",
+  "/books/example",
+  "/books/example/chapters/",
+  "/books/example/chapters/chapter-1/extra",
+  "/media/example",
+]) {
+  assert.equal(isReadingRoute(pathname), false, `${pathname} must not be a Reader route`);
+}
 
 const staticDynamicRoutes = [
   "app/posts/[slug]/page.tsx",
