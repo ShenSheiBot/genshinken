@@ -34,6 +34,7 @@ flowchart LR
 - 已发布书籍章节生成独立 canonical 和 sitemap 项；构建期按 manifest anchor 切分 Markdown，并只附带本章引用的注释。书籍构建源不生成 `/posts/` 页面。
 - 书籍 manifest 的每个章节节点可以声明独立 `tags` 字符串数组；未声明或为空时继承对应 `book_document` Markdown 的 front matter 标签。章节标签必须非空且去重。
 - 章节 `presentation` 区分正文、附属材料与纯导航节点，但首页和文库都把同一本书折叠为一个 `/books/<slug>` 连载条目。独立章节 URL 继承书籍条目的全站号与栏目号，不再各自占号。
+- 同一父章标题下的连续分篇不进入 manifest 递归章节节点，而记录在父章 `sections` 元数据中：父章 anchor 仍是切分边界，已发布分篇以正文内稳定 `h3` 存在，由渲染标题数据生成 hash 导航；待更新分篇不得提前进入正文。只有确实需要独立 canonical 的章节才增加 chapter／children 节点。
 - 内容日期驱动 metadata、sitemap `lastmod` 和 RSS；IndexNow 由公开内容源文件的路径变更触发。构建时间不能伪装为内容更新时间。
 
 ## 3. 解析、安全与渲染

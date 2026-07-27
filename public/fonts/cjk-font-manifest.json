@@ -1,6 +1,6 @@
 {
   "conversion": "opencc-js:cn2t+t2cn",
-  "corpusFileCount": 99,
+  "corpusFileCount": 100,
   "fonts": {
     "UN Canon STFangsong": {
       "bytes": 1212932,

@@ -13,6 +13,7 @@ import {
   getPublishedBookChapters,
   getValidatedBookDocument,
   isPublishedBookChapter,
+  isPublishedBookChapterSection,
   type Book,
   type BookChapter,
 } from "@/lib/books";
@@ -67,6 +68,33 @@ function ChapterCatalogue({
                 <div><strong>{chapter.title}</strong></div>
                 <small>待更新</small>
               </div>
+            )}
+            {chapter.sections.length > 0 && (
+              <ol className={styles.chapterChildren} aria-label={`${chapter.title}的分篇`}>
+                {chapter.sections.map((section) => (
+                  <li key={section.id} data-section-status={section.status}>
+                    {isPublishedBookChapterSection(section) && published ? (
+                      <Link
+                        href={`${bookChapterHref(book, chapter)}#${encodeURIComponent(section.anchor)}`}
+                        className={`${styles.chapterRow} ${styles.chapterLink}`}
+                      >
+                        <span>{section.number}</span>
+                        <div>
+                          <strong>{section.title}</strong>
+                          <time dateTime={section.publishedAt}>{section.publishedAt}</time>
+                        </div>
+                        <small>阅读 <b aria-hidden="true">→</b></small>
+                      </Link>
+                    ) : (
+                      <div className={`${styles.chapterRow} ${styles.chapterForthcoming}`}>
+                        <span>{section.number}</span>
+                        <div><strong>{section.title}</strong></div>
+                        <small>待更新</small>
+                      </div>
+                    )}
+                  </li>
+                ))}
+              </ol>
             )}
             {chapter.children.length > 0 && (
               <ChapterCatalogue book={book} chapters={chapter.children} depth={depth + 1} />

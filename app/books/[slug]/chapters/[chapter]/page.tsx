@@ -69,12 +69,24 @@ function readingBookTocItem(
     status: chapter.status,
     href,
     current: chapter.id === currentChapterId,
-    sections: href && document
-      ? document.headings.map((heading) => ({
+    sections: [
+      ...(href && document
+        ? document.headings.map((heading) => ({
           ...heading,
+          status: "published" as const,
           href: `${href}#${encodeURIComponent(heading.id)}`,
         }))
-      : [],
+        : []),
+      ...chapter.sections.flatMap((section) => section.status === "forthcoming"
+        ? [{
+            id: section.id,
+            title: section.title,
+            level: 3,
+            status: "forthcoming" as const,
+            href: null,
+          }]
+        : []),
+    ],
     children: chapter.children.map((child) => readingBookTocItem(book, child, currentChapterId, documents)),
   };
 }

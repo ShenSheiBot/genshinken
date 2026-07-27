@@ -16,7 +16,13 @@ export const test = base.extend<{ localWebKitCspBridge: void }>({
         });
       }
 
-      await use();
+      try {
+        await use();
+      } finally {
+        if (browserName === "webkit") {
+          await context.unrouteAll({ behavior: "wait" });
+        }
+      }
     },
     { auto: true },
   ],

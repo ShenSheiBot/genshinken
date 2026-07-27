@@ -260,7 +260,7 @@
   }
 
   :global(html[data-reading-chrome-entry="route"]) .hanScriptButton,
-  :global(html[data-reading-chrome-entry="route"]) .runningTools .settingsButton {
+  :global(html[data-reading-chrome-entry="route"]) .runningTools .settingsButton:not([data-returned-to-header="true"]) {
     animation: reading-tool-enter 340ms cubic-bezier(.2, .75, .3, 1) 70ms both;
   }
 
@@ -430,12 +430,6 @@
 
 .body :global(h3) { margin-top: 2.3rem; font-size: 21px; }
 .body :global(h4) { margin-top: 2.1rem; font-size: 18px; border-top: 0; padding-top: 0; }
-
-.body :global(.chapter-anchor-alias) {
-  display: block;
-  height: 0;
-  scroll-margin-top: calc(var(--reading-rail-top) + 12px);
-}
 
 .body :global(h1::before),
 .body :global(h2::before),
@@ -1308,7 +1302,19 @@ input.lineCurrent::selection { color: var(--solid-ink); background: var(--solid)
 .bookTocSectionLink[data-level="3"] b { padding-left: 6px; }
 .bookTocSectionLink[data-level="4"] b { padding-left: 12px; }
 
-.bookTocSectionLink:hover,
+.bookTocSectionLink[data-status="forthcoming"] {
+  grid-template-columns: 16px minmax(0, 1fr) auto;
+  color: var(--ink-faint);
+}
+
+.bookTocSectionLink small {
+  color: var(--ink-faint);
+  font-family: var(--reader-interface-family);
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.bookTocSectionLink:not([data-status="forthcoming"]):hover,
 .bookTocSectionLink:focus-visible,
 .bookTocSectionLink[aria-current="location"] { color: var(--ink); outline: none; }
 
@@ -1566,6 +1572,11 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
 
 .sheetLayer[data-closing="true"] .sheet {
   animation: reading-sheet-slide-out 260ms cubic-bezier(.4, 0, .8, .25) both;
+}
+
+.sheet[data-sheet="settings"],
+.sheetLayer[data-closing="true"] .sheet[data-sheet="settings"] {
+  animation: none;
 }
 
 @keyframes reading-sheet-slide-in {

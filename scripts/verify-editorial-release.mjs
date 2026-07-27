@@ -74,6 +74,12 @@ function flattenBookChapters(chapters, depth = 0) {
     ...flattenBookChapters(chapter.children, depth + 1),
   ]);
 }
+function flattenBookSections(chapters) {
+  return (chapters ?? []).flatMap((chapter) => [
+    ...(chapter.sections ?? []).map((section) => ({ ...section, chapterId: chapter.id })),
+    ...flattenBookSections(chapter.children),
+  ]);
+}
 function postLibraryFacets(slug) {
   const { data } = parsePostFrontMatter(
     fs.readFileSync(path.join(process.cwd(), "source", "_posts", `${slug}.md`), "utf8")
@@ -241,12 +247,22 @@ assert.match(
 );
 assert.match(
   readingChromeSource,
+  /settingsHasMigratedRef\.current = true;[\s\S]*?data-returned-to-header=\{location === "header" && settingsHasMigratedRef\.current/,
+  "the returned header control must suppress only its own repeated entry animation"
+);
+assert.doesNotMatch(
+  readingChromeSource,
+  /next === "settings"[^\n]*delete document\.documentElement\.dataset\.readingChromeEntry/,
+  "opening reading habits must not cancel sibling header entry animations"
+);
+assert.match(
+  readingChromeSource,
   /\{sheet !== "settings" && settingsControl\("header"\)\}/,
   "the reading-habits control must leave the running tools while its sheet is open"
 );
 assert.match(
   readingChromeSource,
-  /sheet === "settings"[\s\S]*?settingsControl\("sheet"\)[\s\S]*?: <button[^>]*onClick=\{closeSheet\} aria-label="关闭">×<\/button>/,
+  /sheet === "settings"[\s\S]*?settingsControl\("sheet"\)[\s\S]*?: <button[^>]*onClick=\{(?:closeSheet|\(\) => closeSheet\(\))\} aria-label="关闭">×<\/button>/,
   "the settings sheet must use the migrated reading-habits control while other sheets retain their close button"
 );
 assert.doesNotMatch(
@@ -259,6 +275,11 @@ assert.match(
   /\.runningTools button,\s*\.sheetHeader \.settingsButton\s*\{/,
   "the migrated reading-habits control must retain the running-tool visual contract"
 );
+assert.match(
+  readingStylesSource,
+  /\.sheet\[data-sheet="settings"\],\s*\.sheetLayer\[data-closing="true"\] \.sheet\[data-sheet="settings"\]\s*\{\s*animation:\s*none;/,
+  "the settings sheet must keep its migrated reading-habits control inside the viewport"
+);
 assert.doesNotMatch(
   globalStylesSource,
   /reading-edition-page[^}]*scrollbar-gutter:\s*auto/,
@@ -266,7 +287,7 @@ assert.doesNotMatch(
 );
 assert.match(
   readingStylesSource,
-  /data-reading-chrome-entry="route"[\s\S]*?themeButton[\s\S]*?reading-theme-shift-left[\s\S]*?hanScriptButton[\s\S]*?runningTools \.settingsButton[\s\S]*?reading-tool-enter/,
+  /data-reading-chrome-entry="route"[\s\S]*?themeButton[\s\S]*?reading-theme-shift-left[\s\S]*?hanScriptButton[\s\S]*?runningTools \.settingsButton:not\(\[data-returned-to-header="true"\]\)[\s\S]*?reading-tool-enter/,
   "route entry must shift theme left while revealing Han-script and reading-habits controls together"
 );
 assert.match(
@@ -297,7 +318,7 @@ assert.doesNotMatch(
 assert.match(
   readingStylesSource,
   /reading-sheet-slide-in[\s\S]*?reading-sheet-slide-out[\s\S]*?reading-sheet-dim-in[\s\S]*?reading-sheet-dim-out/,
-  "reading habits must animate the drawer and page dimming in both directions"
+  "non-settings reader sheets must retain slide keyframes while every sheet retains page dimming"
 );
 assert.doesNotMatch(
   readingChromeSource,
@@ -716,6 +737,9 @@ const shulginManifest = readBookManifest("shulgin-dni");
 const shulginChapters = flattenBookChapters(shulginManifest.chapters);
 const shulginPublishedChapters = shulginChapters.filter((chapter) => chapter.status === "published");
 const shulginForthcomingChapters = shulginChapters.filter((chapter) => chapter.status === "forthcoming");
+const shulginSections = flattenBookSections(shulginManifest.chapters);
+const shulginPublishedSections = shulginSections.filter((section) => section.status === "published");
+const shulginForthcomingSections = shulginSections.filter((section) => section.status === "forthcoming");
 const shulginDocumentFacets = postLibraryFacets(shulginManifest.documentSlug);
 const shulginSourceMarkdown = fs.readFileSync(
   path.join(process.cwd(), "source", "_posts", "shulgin-dni.md"),
@@ -744,9 +768,26 @@ assert.doesNotMatch(
   /(?:^|\n)(?:---|\*\*\*)$/,
   "historical-materialism-theses must not end with a redundant thematic break"
 );
-assert.equal(shulginChapters.length, 16, "shulgin-dni catalogue must contain 16 nodes");
-assert.equal(shulginPublishedChapters.length, 7, "shulgin-dni current release must publish 7 nodes");
-assert.equal(shulginForthcomingChapters.length, 9, "shulgin-dni current release must retain 9 forthcoming nodes");
+assert.equal(shulginChapters.length, 8, "shulgin-dni catalogue must contain 8 chapter pages");
+assert.equal(shulginPublishedChapters.length, 6, "shulgin-dni current release must publish 6 chapter pages");
+assert.equal(shulginForthcomingChapters.length, 2, "shulgin-dni current release must retain 2 forthcoming chapter pages");
+assert.equal(shulginSections.length, 8, "shulgin-dni must retain all 8 inline date sections");
+assert.equal(shulginPublishedSections.length, 1, "shulgin-dni must publish one inline date section");
+assert.equal(shulginForthcomingSections.length, 7, "shulgin-dni must retain seven forthcoming inline date sections");
+assert.deepEqual(
+  shulginSections.map((section) => section.id),
+  [
+    "penultimate-1916-11-03",
+    "penultimate-1916-11-12",
+    "penultimate-1917-02-26",
+    "last-1917-02-27",
+    "last-1917-02-28",
+    "last-1917-03-01",
+    "last-1917-03-02",
+    "last-1917-03-03",
+  ],
+  "shulgin-dni inline date sections must preserve their editorial order"
+);
 assert.deepEqual(
   shulginPublishedChapters.map((chapter) => chapter.id),
   [
@@ -756,9 +797,8 @@ assert.deepEqual(
     "constitutional-day-two",
     "constitutional-day-three",
     "penultimate-days",
-    "penultimate-1916-11-03",
   ],
-  "shulgin-dni current release must contain Proof.00 through Proof.04 catalogue entries"
+  "shulgin-dni current release must contain the six published top-level units through chapter 05"
 );
 assert.deepEqual(
   shulginOriginalNoteIds,
@@ -799,10 +839,19 @@ assert.ok(
   ),
   "shulgin-dni forthcoming entries must omit anchor and publishedAt"
 );
-assert.ok(
-  shulginChapters.some((chapter) => chapter.depth > 0),
-  "shulgin-dni must exercise recursive catalogue children"
-);
+for (const [chapterId, sectionCount] of [["penultimate-days", 3], ["last-days", 5]]) {
+  const chapter = shulginManifest.chapters.find((entry) => entry.id === chapterId);
+  assert.equal(
+    chapter?.children?.length ?? 0,
+    0,
+    `shulgin-dni ${chapterId} date parts must remain subtitles inside one chapter page`
+  );
+  assert.equal(
+    chapter?.sections?.length ?? 0,
+    sectionCount,
+    `shulgin-dni ${chapterId} must retain its inline date-section plan`
+  );
+}
 assert.ok(
   shulginPublishedChapters.some((chapter) => chapter.id === shulginManifest.latestChapterId),
   "shulgin-dni latestChapterId must identify a published catalogue entry"
@@ -1750,14 +1799,20 @@ for (const chapter of shulginChapters) {
     `shulgin-dni catalogue must expose ${chapter.number} ${chapter.title}`
   );
 }
+for (const section of shulginSections) {
+  assert.ok(
+    shulginText.includes(section.title),
+    `shulgin-dni catalogue must expose inline section ${section.number} ${section.title}`
+  );
+}
 assert.ok(
   shulginText.includes(`已发布 ${shulginPublishedChapters.length} / 全部 ${shulginChapters.length}`),
   "shulgin-dni detail must report recursively published/all catalogue counts"
 );
 assert.equal(
   (shulginText.match(/待更新/g) ?? []).length,
-  shulginForthcomingChapters.length,
-  "every shulgin-dni forthcoming entry must expose a visible pending state"
+  shulginForthcomingChapters.length + shulginForthcomingSections.length,
+  "every shulgin-dni forthcoming chapter and inline section must expose a visible pending state"
 );
 const shulginStatusRows = tags(shulginBook.html, "li")
   .map((tag) => attribute(tag, "data-chapter-status"))
@@ -1777,6 +1832,24 @@ assert.equal(
   shulginForthcomingChapters.length,
   "shulgin-dni rendered forthcoming count must match its source manifest"
 );
+const shulginSectionStatusRows = tags(shulginBook.html, "li")
+  .map((tag) => attribute(tag, "data-section-status"))
+  .filter(Boolean);
+assert.equal(
+  shulginSectionStatusRows.length,
+  shulginSections.length,
+  "shulgin-dni must render every inline date section exactly once"
+);
+assert.equal(
+  shulginSectionStatusRows.filter((status) => status === "published").length,
+  shulginPublishedSections.length,
+  "shulgin-dni rendered published sections must match its source manifest"
+);
+assert.equal(
+  shulginSectionStatusRows.filter((status) => status === "forthcoming").length,
+  shulginForthcomingSections.length,
+  "shulgin-dni rendered forthcoming sections must match its source manifest"
+);
 
 const expectedShulginChapterPaths = shulginPublishedChapters
   .map((chapter) => `/books/shulgin-dni/chapters/${encodeURIComponent(chapter.id)}`)
@@ -1784,12 +1857,18 @@ const expectedShulginChapterPaths = shulginPublishedChapters
 const linkedShulginChapterPaths = [...new Set(
   links(shulginBook.html)
     .map((link) => link.href)
-    .filter((href) => href.startsWith("/books/shulgin-dni/chapters/"))
+    .filter((href) => href.startsWith("/books/shulgin-dni/chapters/") && !href.includes("#"))
 )].sort();
 assert.deepEqual(
   linkedShulginChapterPaths,
   expectedShulginChapterPaths,
   "shulgin-dni must link published entries and keep forthcoming entries inert"
+);
+assert.ok(
+  links(shulginBook.html).some((link) =>
+    link.href === "/books/shulgin-dni/chapters/penultimate-days#1916%E5%B9%B411%E6%9C%883%E6%97%A5"
+  ),
+  "shulgin-dni detail must link a published inline section to its parent chapter anchor"
 );
 const latestShulginPath = `/books/shulgin-dni/chapters/${encodeURIComponent(shulginManifest.latestChapterId)}`;
 assert.ok(
@@ -1848,25 +1927,54 @@ for (const [index, result] of shulginChapterPages.entries()) {
   );
 }
 
-const shulginSectionLanding = shulginChapterPages[
+const shulginPenultimateChapter = shulginChapterPages[
   shulginPublishedChapters.findIndex((chapter) => chapter.id === "penultimate-days")
 ];
-assert.match(shulginSectionLanding.html, /本节目录/);
-assert.ok(
-  links(shulginSectionLanding.html).some((link) =>
-    link.href === "/books/shulgin-dni/chapters/penultimate-1916-11-03"
-  ),
-  "a published parent node sharing a source heading must become a section landing"
-);
-const shulginPenultimateChapter = shulginChapterPages[
-  shulginPublishedChapters.findIndex((chapter) => chapter.id === "penultimate-1916-11-03")
-];
+assert.doesNotMatch(shulginPenultimateChapter.html, /本节目录/);
 assert.match(shulginPenultimateChapter.html, /四下里静极了/);
-assert.doesNotMatch(
+assert.match(
   shulginPenultimateChapter.html,
-  /href=["']#1916年11月3日["']/,
-  "independent chapter pages must not depend on the removed continuous-document alias"
+  /<h3\b[^>]*id=["']1916年11月3日["'][^>]*>\s*1916年11月3日\s*<\/h3>/u,
+  "shared-title date parts must render as subtitles inside their parent chapter"
 );
+assert.ok(
+  shulginPenultimateChapter.html.includes(
+    "/books/shulgin-dni/chapters/penultimate-days#1916%E5%B9%B411%E6%9C%883%E6%97%A5"
+  ),
+  "full-book navigation must link a chapter subtitle to the parent page anchor"
+);
+for (const section of shulginForthcomingSections) {
+  assert.ok(
+    visibleText(shulginPenultimateChapter.html).includes(section.title),
+    `full-book navigation must retain forthcoming inline section ${section.id}`
+  );
+}
+const shulginPenultimateNavigation = elements(shulginPenultimateChapter.html, "nav")
+  .find((element) => /aria-label=["']章节导航["']/u.test(element.opening));
+assert.ok(shulginPenultimateNavigation, "the latest shulgin chapter must expose chapter navigation");
+assert.deepEqual(
+  links(shulginPenultimateNavigation.inner).map((link) => link.href),
+  [
+    "/books/shulgin-dni/chapters/constitutional-day-three",
+    "/books/shulgin-dni",
+  ],
+  "inline sections must not occupy previous/next chapter navigation positions"
+);
+const shulginSectionRouteResponses = await Promise.all(
+  shulginSections.flatMap((section) => [
+    fetch(`${base}/books/shulgin-dni/chapters/${encodeURIComponent(section.id)}`, { redirect: "manual" }),
+    fetch(`${base}/books/shulgin-dni/chapters/${encodeURIComponent(section.id)}/cite.bib`, { redirect: "manual" }),
+  ])
+);
+for (const [index, response] of shulginSectionRouteResponses.entries()) {
+  const section = shulginSections[Math.floor(index / 2)];
+  const surface = index % 2 === 0 ? "chapter" : "citation";
+  assert.equal(
+    response.status,
+    404,
+    `inline section ${section.id} must not expose a standalone ${surface} route`
+  );
+}
 
 const shulginForthcomingResponses = await Promise.all(
   shulginForthcomingChapters.map((chapter) =>

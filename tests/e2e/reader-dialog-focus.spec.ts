@@ -1,5 +1,69 @@
 import { expect, test } from "./fixtures";
 
+type SettingsButtonFrame = { count: number; visibleCount: number };
+
+async function captureReadingSettingsButtonFrames(
+  page: import("./fixtures").Page,
+  action: () => Promise<void>
+): Promise<SettingsButtonFrame[]> {
+  await page.evaluate(() => {
+    const scope = window as typeof window & {
+      __readingSettingsCapture?: { done: boolean; frames: SettingsButtonFrame[] };
+    };
+    const capture = { done: false, frames: [] as SettingsButtonFrame[] };
+    scope.__readingSettingsCapture = capture;
+    const startedAt = performance.now();
+    const sample = () => {
+      const buttons = Array.from(document.querySelectorAll<HTMLElement>(
+        'button[aria-label="阅读习惯"]'
+      ));
+      const visibleCount = buttons.filter((button) => {
+        const rect = button.getBoundingClientRect();
+        if (rect.width <= 0 || rect.height <= 0) return false;
+        let ancestor: HTMLElement | null = button;
+        while (ancestor) {
+          const style = getComputedStyle(ancestor);
+          if (style.display === "none"
+            || style.visibility === "hidden"
+            || style.contentVisibility === "hidden"
+            || Number(style.opacity) <= 0) return false;
+          ancestor = ancestor.parentElement;
+        }
+        const left = Math.max(0, rect.left);
+        const right = Math.min(window.innerWidth, rect.right);
+        const top = Math.max(0, rect.top);
+        const bottom = Math.min(window.innerHeight, rect.bottom);
+        return right > left && bottom > top;
+      }).length;
+      capture.frames.push({ count: buttons.length, visibleCount });
+      if (performance.now() - startedAt >= 360) {
+        capture.done = true;
+        return;
+      }
+      requestAnimationFrame(sample);
+    };
+    requestAnimationFrame(sample);
+  });
+
+  await action();
+  await page.waitForFunction(() => (
+    window as typeof window & { __readingSettingsCapture?: { done: boolean } }
+  ).__readingSettingsCapture?.done === true);
+  return page.evaluate(() => {
+    const scope = window as typeof window & {
+      __readingSettingsCapture?: { done: boolean; frames: SettingsButtonFrame[] };
+    };
+    const frames = scope.__readingSettingsCapture?.frames ?? [];
+    delete scope.__readingSettingsCapture;
+    return frames;
+  });
+}
+
+function expectContinuousSettingsButton(frames: SettingsButtonFrame[]) {
+  expect(frames.length).toBeGreaterThan(1);
+  expect(frames.every((frame) => frame.count === 1 && frame.visibleCount === 1)).toBe(true);
+}
+
 test("reading settings traps focus and restores its trigger", async ({ page }) => {
   await page.goto("/posts/guxiang-de-bianzhengfa");
 
@@ -7,7 +71,11 @@ test("reading settings traps focus and restores its trigger", async ({ page }) =
   await trigger.focus();
   await expect(trigger).toBeFocused();
   const triggerBoxBeforeOpen = await trigger.boundingBox();
-  await page.keyboard.press("Enter");
+  const openingFrames = await captureReadingSettingsButtonFrames(
+    page,
+    () => page.keyboard.press("Enter")
+  );
+  expectContinuousSettingsButton(openingFrames);
   const dialog = page.getByRole("dialog", { name: "阅读习惯" });
   const dialogHeader = dialog.locator("header").first();
   const dialogHeading = dialogHeader.getByRole("heading", { name: "阅读习惯", exact: true });
@@ -41,7 +109,11 @@ test("reading settings traps focus and restores its trigger", async ({ page }) =
   await page.keyboard.press("Shift+Tab");
   await expect(dialogTrigger).toBeFocused();
 
-  await page.keyboard.press("Enter");
+  const closingFrames = await captureReadingSettingsButtonFrames(
+    page,
+    () => page.keyboard.press("Enter")
+  );
+  expectContinuousSettingsButton(closingFrames);
   await expect(dialog).toBeHidden();
   await expect(trigger).toBeFocused();
 

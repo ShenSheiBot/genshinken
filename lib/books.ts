@@ -20,6 +20,7 @@ import {
   type CitationRecord,
 } from "./citations";
 import { isHanScript, type HanScript } from "./han-script";
+import { validateBookChapterSectionHeadings } from "./book-section-contract.mjs";
 
 const BOOKS_DIR = path.join(process.cwd(), "source", "_books");
 const STABLE_ID = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
@@ -39,6 +40,25 @@ const BOOK_STATUS_ORDER: Record<BookStatus, number> = {
   complete: 2,
 };
 
+interface BookChapterSectionBase {
+  id: string;
+  number: string;
+  title: string;
+  status: BookChapterStatus;
+}
+
+export interface PublishedBookChapterSection extends BookChapterSectionBase {
+  status: "published";
+  anchor: string;
+  publishedAt: string;
+}
+
+export interface ForthcomingBookChapterSection extends BookChapterSectionBase {
+  status: "forthcoming";
+}
+
+export type BookChapterSection = PublishedBookChapterSection | ForthcomingBookChapterSection;
+
 interface BookChapterBase {
   id: string;
   number: string;
@@ -46,6 +66,7 @@ interface BookChapterBase {
   tags: string[];
   status: BookChapterStatus;
   presentation: BookChapterPresentation;
+  sections: BookChapterSection[];
   children: BookChapter[];
 }
 
@@ -186,6 +207,51 @@ function validateContributorNames(names: string[], field: string, source: string
   });
 }
 
+function parseChapterSection(
+  value: unknown,
+  index: number,
+  source: string,
+  parentForthcoming: boolean
+): BookChapterSection {
+  const sectionSource = `${source} section ${index + 1}`;
+  if (!isRecord(value)) fail(sectionSource, "entry", "must be an object");
+
+  if (value.status === undefined) {
+    fail(sectionSource, "status", "must be declared explicitly");
+  }
+  const declaredStatus = requiredString(value, "status", sectionSource);
+  if (!BOOK_CHAPTER_STATUSES.includes(declaredStatus as BookChapterStatus)) {
+    fail(sectionSource, "status", `must be one of ${BOOK_CHAPTER_STATUSES.join(", ")}`);
+  }
+  const status = declaredStatus as BookChapterStatus;
+  if (parentForthcoming && status === "published") {
+    fail(sectionSource, "status", "cannot be published beneath a forthcoming chapter");
+  }
+
+  const base = {
+    id: stableId(value, "id", sectionSource),
+    number: requiredString(value, "number", sectionSource),
+    title: requiredString(value, "title", sectionSource),
+  };
+
+  if (status === "published") {
+    return {
+      ...base,
+      status,
+      anchor: requiredString(value, "anchor", sectionSource),
+      publishedAt: dateString(value, "publishedAt", sectionSource),
+    };
+  }
+
+  for (const field of ["anchor", "publishedAt"]) {
+    if (Object.prototype.hasOwnProperty.call(value, field)) {
+      fail(sectionSource, field, "must be omitted for a forthcoming section");
+    }
+  }
+
+  return { ...base, status };
+}
+
 function parseChapter(
   value: unknown,
   index: number,
@@ -216,12 +282,33 @@ function parseChapter(
     );
   }
 
+  let sections: BookChapterSection[] = [];
+  if (value.sections !== undefined) {
+    if (!Array.isArray(value.sections)) fail(chapterSource, "sections", "must be an array when provided");
+    sections = value.sections.map((section, sectionIndex) =>
+      parseChapterSection(section, sectionIndex, chapterSource, status === "forthcoming")
+    );
+    let encounteredForthcoming = false;
+    sections.forEach((section) => {
+      if (section.status === "forthcoming") encounteredForthcoming = true;
+      else if (encounteredForthcoming) {
+        fail(chapterSource, "sections", "published sections must precede forthcoming sections");
+      }
+    });
+    if (declaredPresentation !== "reading") {
+      fail(chapterSource, "sections", "are only supported by reading chapters");
+    }
+  }
+
   let children: BookChapter[] = [];
   if (value.children !== undefined) {
     if (!Array.isArray(value.children)) fail(chapterSource, "children", "must be an array when provided");
     children = value.children.map((child, childIndex) =>
       parseChapter(child, childIndex, chapterSource, ancestorForthcoming || status === "forthcoming")
     );
+  }
+  if (sections.length > 0 && children.length > 0) {
+    fail(chapterSource, "sections", "cannot be combined with child chapter routes");
   }
 
   const base = {
@@ -230,6 +317,7 @@ function parseChapter(
     title: requiredString(value, "title", chapterSource),
     tags: Array.from(new Set(optionalStringList(value, "tags", chapterSource))),
     presentation: declaredPresentation as BookChapterPresentation,
+    sections,
     children,
   };
 
@@ -262,6 +350,12 @@ export function isPublishedBookChapter(chapter: BookChapter): chapter is Publish
   return chapter.status === "published";
 }
 
+export function isPublishedBookChapterSection(
+  section: BookChapterSection
+): section is PublishedBookChapterSection {
+  return section.status === "published";
+}
+
 function parseManifest(value: unknown, source: string): Book {
   if (!isRecord(value)) fail(source, "manifest", "must contain a JSON object");
 
@@ -276,14 +370,31 @@ function parseManifest(value: unknown, source: string): Book {
   const chapters = value.chapters.map((chapter, index) => parseChapter(chapter, index, source));
   const allChapters = flattenChapters(chapters);
   const chapterIds = new Set<string>();
+  const chapterNumbers = new Set<string>();
   const chapterAnchors = new Set<string>();
   allChapters.forEach((chapter) => {
     if (chapterIds.has(chapter.id)) fail(source, "chapters", `contains duplicate id ${chapter.id}`);
+    if (chapterNumbers.has(chapter.number)) {
+      fail(source, "chapters", `contains duplicate number ${chapter.number}`);
+    }
     if (isPublishedBookChapter(chapter) && chapterAnchors.has(chapter.anchor)) {
       fail(source, "chapters", `contains duplicate anchor ${chapter.anchor}`);
     }
     chapterIds.add(chapter.id);
+    chapterNumbers.add(chapter.number);
     if (isPublishedBookChapter(chapter)) chapterAnchors.add(chapter.anchor);
+    chapter.sections.forEach((section) => {
+      if (chapterIds.has(section.id)) fail(source, "chapters", `contains duplicate id ${section.id}`);
+      if (chapterNumbers.has(section.number)) {
+        fail(source, "chapters", `contains duplicate number ${section.number}`);
+      }
+      if (isPublishedBookChapterSection(section) && chapterAnchors.has(section.anchor)) {
+        fail(source, "chapters", `contains duplicate anchor ${section.anchor}`);
+      }
+      chapterIds.add(section.id);
+      chapterNumbers.add(section.number);
+      if (isPublishedBookChapterSection(section)) chapterAnchors.add(section.anchor);
+    });
   });
 
   const latestChapterId = stableId(value, "latestChapterId", source);
@@ -506,6 +617,13 @@ export async function getValidatedBookDocument(book: Book): Promise<Post> {
       throw new Error(
         `[books] ${book.slug}: chapter ${chapter.id} points to missing rendered id #${chapter.anchor}`
       );
+    }
+    for (const section of chapter.sections) {
+      if (isPublishedBookChapterSection(section) && !ids.has(section.anchor)) {
+        throw new Error(
+          `[books] ${book.slug}: section ${section.id} points to missing rendered id #${section.anchor}`
+        );
+      }
     }
   }
   return post;
@@ -738,11 +856,13 @@ export async function getBookChapterDocuments(book: Book): Promise<BookChapterDo
         `${book.slug}/${chapter.id}`
       );
       const html = markdown ? await renderMarkdown(markdown) : "";
+      const headings = renderedChapterHeadings(html);
+      validateBookChapterSectionHeadings(book.slug, chapter, headings);
       const sectionNo = await getBookChapterSectionNumber(book.documentSlug, chapter.id);
       return {
         chapter,
         html,
-        headings: renderedChapterHeadings(html),
+        headings,
         contentRevision: hashRenderedContent(html),
         readMin: html ? readMinutes(html) : 0,
         isSectionLanding,

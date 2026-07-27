@@ -41,7 +41,8 @@ export type ReadingBookTocSection = {
   id: string;
   title: string;
   level: number;
-  href: string;
+  status: "published" | "forthcoming";
+  href: string | null;
 };
 export type ReadingBookTocItem = {
   id: string;
@@ -436,6 +437,7 @@ export default function ReadingEditionChrome({
   const lastSheetTrigger = useRef<HTMLElement | null>(null);
   const sheetRef = useRef<HTMLElement | null>(null);
   const settingsButtonRef = useRef<HTMLButtonElement | null>(null);
+  const settingsHasMigratedRef = useRef(false);
   const pendingFocusRestoreRef = useRef<HTMLElement | "settings" | null>(null);
   const sheetCloseTimerRef = useRef<number | null>(null);
   const exitNavigationTimerRef = useRef<number | null>(null);
@@ -1065,7 +1067,7 @@ export default function ReadingEditionChrome({
     selectReference(previous.kind, previous.id, "sheet");
   }, [referenceTrail, selectReference]);
 
-  const closeSheet = useCallback(() => {
+  const closeSheet = useCallback((restoreFocus = true) => {
     if (sheet === null || sheetClosing) return;
     const wasSettings = sheet === "settings";
     const wasReference = sheet === "annotation" || sheet === "source";
@@ -1079,9 +1081,9 @@ export default function ReadingEditionChrome({
       history.replaceState(history.state, "", window.location.pathname + window.location.search);
     }
     if (sheetCloseTimerRef.current != null) window.clearTimeout(sheetCloseTimerRef.current);
-    pendingFocusRestoreRef.current = wasSettings
-      ? "settings"
-      : lastNoteAnchor.current || lastSheetTrigger.current;
+    pendingFocusRestoreRef.current = restoreFocus
+      ? (wasSettings ? "settings" : lastNoteAnchor.current || lastSheetTrigger.current)
+      : null;
     sheetCloseTimerRef.current = window.setTimeout(() => {
       sheetCloseTimerRef.current = null;
       setSheet(null);
@@ -1155,7 +1157,7 @@ export default function ReadingEditionChrome({
       sheetCloseTimerRef.current = null;
     }
     setSheetClosing(false);
-    if (next === "settings") delete document.documentElement.dataset.readingChromeEntry;
+    if (next === "settings") settingsHasMigratedRef.current = true;
     if (trigger) lastSheetTrigger.current = trigger;
     if (next !== "annotation" && next !== "source") lastNoteAnchor.current = null;
     setReferenceTrail([]);
@@ -1164,7 +1166,7 @@ export default function ReadingEditionChrome({
 
   const jumpToHeading = (id: string, retainHash = false) => {
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    closeSheet();
+    closeSheet(false);
     requestAnimationFrame(() => requestAnimationFrame(() => {
       const target = document.getElementById(id);
       target?.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
@@ -1330,7 +1332,7 @@ export default function ReadingEditionChrome({
       : referenceLinksRef.current.find((link) => link.target.id === id)?.anchor;
     if (!anchor) return;
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    closeSheet();
+    closeSheet(false);
     requestAnimationFrame(() => requestAnimationFrame(() => {
       const top = anchor.getBoundingClientRect().top + window.scrollY - visualAnchor() + 1;
       window.scrollTo({ top: Math.max(0, top), behavior: reduce ? "auto" : "smooth" });
@@ -1482,7 +1484,17 @@ export default function ReadingEditionChrome({
             inert={!expanded}
           >
             <div className={styles.bookTocSectionsInner}>
-              {item.sections.map((section) => item.current ? (
+              {item.sections.map((section) => section.status === "forthcoming" ? (
+                <div
+                  className={styles.bookTocSectionLink}
+                  data-level={section.level}
+                  data-status="forthcoming"
+                  aria-disabled="true"
+                  key={section.id}
+                >
+                  <span aria-hidden="true">↳</span><b>{section.title}</b><small>待更新</small>
+                </div>
+              ) : item.current ? (
                 <button
                   type="button"
                   className={styles.bookTocSectionLink}
@@ -1497,7 +1509,7 @@ export default function ReadingEditionChrome({
                 <Link
                   className={styles.bookTocSectionLink}
                   data-level={section.level}
-                  href={section.href}
+                  href={section.href!}
                   key={section.id}
                 >
                   <span aria-hidden="true">↳</span><b>{section.title}</b>
@@ -1789,6 +1801,7 @@ export default function ReadingEditionChrome({
       aria-label="阅读习惯"
       aria-haspopup="dialog"
       aria-expanded={location === "sheet"}
+      data-returned-to-header={location === "header" && settingsHasMigratedRef.current ? "true" : undefined}
     >
       <span className={styles.settingsGlyph} aria-hidden="true"><i /><i /><i /></span>
     </button>
@@ -1852,7 +1865,7 @@ export default function ReadingEditionChrome({
                 {(sheet === "annotation" || sheet === "source") && referenceCounter(sheet, "sheet")}
                 {sheet === "settings"
                   ? settingsControl("sheet")
-                  : <button type="button" onClick={closeSheet} aria-label="关闭">×</button>}
+                  : <button type="button" onClick={() => closeSheet()} aria-label="关闭">×</button>}
               </div>
             </header>
             {sheet === "toc" ? <>

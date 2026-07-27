@@ -53,7 +53,12 @@ function displayDate(iso: string): string {
 function latestReadingDate(book: Book, documents: BookChapterDocument[]): string {
   return documents
     .filter((document) => document.chapter.presentation === "reading")
-    .map((document) => document.chapter.publishedAt)
+    .flatMap((document) => [
+      document.chapter.publishedAt,
+      ...document.chapter.sections.flatMap((section) =>
+        section.status === "published" ? [section.publishedAt] : []
+      ),
+    ])
     .sort((a, b) => b.localeCompare(a))[0] ?? book.publishedAt;
 }
 

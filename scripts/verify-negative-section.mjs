@@ -1,6 +1,9 @@
 import assert from "node:assert/strict";
+import { spawnSync } from "node:child_process";
 import fs from "node:fs";
+import os from "node:os";
 import path from "node:path";
+import { validateBookChapterSectionHeadings } from "../lib/book-section-contract.mjs";
 import {
   assignPostNumbers,
   comparePostNumbersDescending,
@@ -150,4 +153,217 @@ assert.match(
   "library classifications must display the section label before its section number"
 );
 
-console.log("negative editorial section verification passed");
+const repositoryRoot = process.cwd();
+const manifestRelativePath = path.join("source", "_books", "shulgin-dni.json");
+const bookBaseline = JSON.parse(
+  fs.readFileSync(path.join(repositoryRoot, manifestRelativePath), "utf8")
+);
+
+function bookFixture(mutate) {
+  const value = structuredClone(bookBaseline);
+  mutate(value);
+  return value;
+}
+
+function bookChapter(value, id) {
+  const match = value.chapters.find((candidate) => candidate.id === id);
+  assert.ok(match, `fixture must contain chapter ${id}`);
+  return match;
+}
+
+const sectionMutationCases = [
+  {
+    name: "missing-status",
+    mutate(value) {
+      delete bookChapter(value, "penultimate-days").sections[0].status;
+    },
+    pattern: /sections\[0\].*status/u,
+  },
+  {
+    name: "published-after-forthcoming",
+    mutate(value) {
+      const parent = bookChapter(value, "penultimate-days");
+      const sections = parent.sections;
+      parent.sections = [sections[1], sections[0], sections[2]];
+    },
+    pattern: /sections\[1\].*published.*forthcoming/u,
+  },
+  {
+    name: "published-under-forthcoming",
+    mutate(value) {
+      const section = bookChapter(value, "last-days").sections[0];
+      section.status = "published";
+      section.anchor = section.title;
+      section.publishedAt = "2026-07-23";
+    },
+    pattern: /sections\[0\].*published.*forthcoming/u,
+  },
+  {
+    name: "published-without-anchor",
+    mutate(value) {
+      delete bookChapter(value, "penultimate-days").sections[0].anchor;
+    },
+    pattern: /sections\[0\].*anchor/u,
+  },
+  {
+    name: "published-without-date",
+    mutate(value) {
+      delete bookChapter(value, "penultimate-days").sections[0].publishedAt;
+    },
+    pattern: /sections\[0\].*publishedAt/u,
+  },
+  {
+    name: "forthcoming-with-anchor",
+    mutate(value) {
+      bookChapter(value, "penultimate-days").sections[1].anchor = "future-anchor";
+    },
+    pattern: /sections\[1\].*anchor/u,
+  },
+  {
+    name: "forthcoming-with-date",
+    mutate(value) {
+      bookChapter(value, "penultimate-days").sections[1].publishedAt = "2026-07-23";
+    },
+    pattern: /sections\[1\].*publishedAt/u,
+  },
+  {
+    name: "sections-on-reference",
+    mutate(value) {
+      bookChapter(value, "penultimate-days").presentation = "reference";
+    },
+    pattern: /reading.*sections|sections.*reading/u,
+  },
+  {
+    name: "sections-with-children",
+    mutate(value) {
+      bookChapter(value, "penultimate-days").children = [{
+        id: "fixture-child",
+        number: "05.x",
+        title: "Fixture child",
+        status: "forthcoming",
+      }];
+    },
+    pattern: /sections.*children|children.*sections/u,
+  },
+  {
+    name: "duplicate-section-id",
+    mutate(value) {
+      bookChapter(value, "penultimate-days").sections[0].id = "constitutional-day-three";
+    },
+    pattern: /sections\[0\].*id.*constitutional-day-three/u,
+  },
+  {
+    name: "duplicate-section-number",
+    mutate(value) {
+      bookChapter(value, "penultimate-days").sections[0].number = "04";
+    },
+    pattern: /sections\[0\].*number.*04/u,
+  },
+  {
+    name: "duplicate-section-anchor",
+    mutate(value) {
+      const parent = bookChapter(value, "penultimate-days");
+      parent.sections[0].anchor = parent.anchor;
+    },
+    pattern: /sections\[0\].*anchor/u,
+  },
+];
+
+const validatorPath = path.join(repositoryRoot, "scripts", "validate-content.mjs");
+const sectionFixtureRoot = fs.mkdtempSync(path.join(os.tmpdir(), "un-canon-book-sections-"));
+try {
+  fs.cpSync(path.join(repositoryRoot, "source"), path.join(sectionFixtureRoot, "source"), {
+    recursive: true,
+  });
+  fs.cpSync(path.join(repositoryRoot, "public"), path.join(sectionFixtureRoot, "public"), {
+    recursive: true,
+  });
+
+  const validateFixture = (value) => {
+    fs.writeFileSync(
+      path.join(sectionFixtureRoot, manifestRelativePath),
+      `${JSON.stringify(value, null, 2)}\n`,
+      "utf8"
+    );
+    return spawnSync(
+      process.execPath,
+      ["--experimental-strip-types", "--no-warnings", validatorPath],
+      {
+        cwd: sectionFixtureRoot,
+        encoding: "utf8",
+        env: process.env,
+        maxBuffer: 10 * 1024 * 1024,
+      }
+    );
+  };
+
+  const validResult = validateFixture(structuredClone(bookBaseline));
+  assert.equal(
+    validResult.status,
+    0,
+    `the unmodified book fixture must pass:\n${validResult.stdout}\n${validResult.stderr}`
+  );
+  for (const fixtureCase of sectionMutationCases) {
+    const result = validateFixture(bookFixture(fixtureCase.mutate));
+    assert.notEqual(result.status, 0, `${fixtureCase.name} must fail the content gate`);
+    assert.match(
+      `${result.stdout}\n${result.stderr}`,
+      fixtureCase.pattern,
+      `${fixtureCase.name} must fail for the expected inline-section rule`
+    );
+  }
+} finally {
+  fs.rmSync(sectionFixtureRoot, { recursive: true, force: true });
+}
+
+const multipartChapter = bookChapter(bookBaseline, "penultimate-days");
+const publishedSection = multipartChapter.sections.find((section) => section.status === "published");
+const forthcomingSection = multipartChapter.sections.find((section) => section.status === "forthcoming");
+assert.ok(publishedSection && forthcomingSection, "fixture must contain both section states");
+const validSectionHeadings = [
+  { id: publishedSection.anchor, title: publishedSection.title, level: 3 },
+];
+validateBookChapterSectionHeadings(bookBaseline.slug, multipartChapter, validSectionHeadings);
+
+for (const fixtureCase of [
+  {
+    name: "missing rendered subtitle",
+    headings: [],
+    pattern: /must have one heading inside chapter/u,
+  },
+  {
+    name: "duplicate rendered subtitle",
+    headings: [...validSectionHeadings, ...validSectionHeadings],
+    pattern: /must have one heading inside chapter/u,
+  },
+  {
+    name: "wrong rendered heading level",
+    headings: [{ ...validSectionHeadings[0], level: 2 }],
+    pattern: /must use an h3 subtitle/u,
+  },
+  {
+    name: "drifted rendered title",
+    headings: [{ ...validSectionHeadings[0], title: "Wrong title" }],
+    pattern: /title differs from heading/u,
+  },
+  {
+    name: "forthcoming subtitle published early",
+    headings: [
+      ...validSectionHeadings,
+      { id: "future-heading", title: forthcomingSection.title, level: 3 },
+    ],
+    pattern: /forthcoming section .* already exists in chapter/u,
+  },
+]) {
+  assert.throws(
+    () => validateBookChapterSectionHeadings(
+      bookBaseline.slug,
+      multipartChapter,
+      fixtureCase.headings
+    ),
+    fixtureCase.pattern,
+    `${fixtureCase.name} must be rejected`
+  );
+}
+
+console.log("negative editorial and inline-section verification passed");

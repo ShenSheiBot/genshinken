@@ -292,6 +292,7 @@ type BookChapterNumberInput = {
   status?: unknown;
   presentation?: unknown;
   publishedAt?: unknown;
+  sections?: unknown;
   children?: unknown;
 };
 
@@ -339,7 +340,21 @@ function publicSectionPages(posts: Post[], visiblePosts: Post[]): PublicSectionP
     const published = chapters.filter((chapter) => (chapter.status ?? "published") === "published");
     const readingDates = published
       .filter((chapter) => (chapter.presentation ?? "reading") === "reading")
-      .map((chapter) => typeof chapter.publishedAt === "string" ? chapter.publishedAt.trim() : "")
+      .flatMap((chapter) => {
+        const sectionDates = Array.isArray(chapter.sections)
+          ? chapter.sections.flatMap((section) => {
+              if (!section || typeof section !== "object" || Array.isArray(section)) return [];
+              const input = section as { status?: unknown; publishedAt?: unknown };
+              return input.status === "published" && typeof input.publishedAt === "string"
+                ? [input.publishedAt.trim()]
+                : [];
+            })
+          : [];
+        return [
+          typeof chapter.publishedAt === "string" ? chapter.publishedAt.trim() : "",
+          ...sectionDates,
+        ];
+      })
       .filter((date) => Number.isFinite(Date.parse(date)))
       .sort((a, b) => b.localeCompare(a));
     const publishedAt = readingDates[0]

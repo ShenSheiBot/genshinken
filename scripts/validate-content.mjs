@@ -950,10 +950,83 @@ const bookRecords = jsonFiles(booksDirectory)
           set.add(candidate);
         }
 
+        let inlineSections = [];
+        if (hasOwn(value, "sections")) {
+          if (!Array.isArray(value.sections)) {
+            report(errors, label, "sections 如填写必须是分篇数组");
+          } else {
+            inlineSections = value.sections;
+            if (presentation !== "reading") {
+              report(errors, label, "只有 reading 章节可以声明 sections");
+            }
+            let encounteredForthcomingSection = false;
+            value.sections.forEach((section, sectionIndex) => {
+              const sectionLabel = `${label}.sections[${sectionIndex}]`;
+              if (!isRecord(section)) {
+                report(errors, sectionLabel, "分篇必须是对象");
+                return;
+              }
+              const sectionId = stableRecordId(section, "id", sectionLabel);
+              const sectionNumber = requiredRecordString(section, "number", sectionLabel);
+              requiredRecordString(section, "title", sectionLabel);
+              if (!hasOwn(section, "status")) {
+                report(errors, sectionLabel, "分篇必须显式填写 status");
+              }
+              const sectionStatus = hasOwn(section, "status")
+                ? requiredRecordString(section, "status", sectionLabel)
+                : "published";
+              if (sectionStatus && !validBookChapterStatuses.has(sectionStatus)) {
+                report(errors, sectionLabel, "status 必须是 published / forthcoming 之一");
+              }
+              const sectionPublished = sectionStatus === "published";
+              if (sectionStatus === "forthcoming") encounteredForthcomingSection = true;
+              else if (sectionPublished && encounteredForthcomingSection) {
+                report(errors, sectionLabel, "published 分篇必须排在 forthcoming 分篇之前");
+              }
+              if (sectionPublished && status === "forthcoming") {
+                report(errors, sectionLabel, "published 分篇不得位于 forthcoming 章节之下");
+              }
+              let sectionAnchor = "";
+              let sectionDate = "";
+              if (sectionPublished) {
+                sectionAnchor = requiredRecordString(section, "anchor", sectionLabel);
+                sectionDate = recordDate(section, "publishedAt", sectionLabel);
+              } else if (sectionStatus === "forthcoming") {
+                if (hasOwn(section, "anchor")) report(errors, sectionLabel, "forthcoming 分篇不得填写 anchor");
+                if (hasOwn(section, "publishedAt")) {
+                  report(errors, sectionLabel, "forthcoming 分篇不得填写 publishedAt");
+                }
+              }
+              if (sectionDate && updatedAt && sectionDate > updatedAt) {
+                report(errors, sectionLabel, "publishedAt 不能晚于书籍 updatedAt");
+              }
+              if (sectionDate > publicationCutoffISO) {
+                report(
+                  errors,
+                  sectionLabel,
+                  `publishedAt (${sectionDate}) 晚于公开构建日期 (${publicationCutoffISO})`
+                );
+              }
+              for (const [set, candidate, field] of [
+                [chapterIds, sectionId, "id"],
+                [chapterNumbers, sectionNumber, "number"],
+                [chapterAnchors, sectionPublished ? sectionAnchor : "", "anchor"],
+              ]) {
+                if (!candidate) continue;
+                if (set.has(candidate)) report(errors, sectionLabel, `${field} 重复：${candidate}`);
+                set.add(candidate);
+              }
+            });
+          }
+        }
+
         if (hasOwn(value, "children")) {
           if (!Array.isArray(value.children)) {
             report(errors, label, "children 如填写必须是章节数组");
           } else {
+            if (inlineSections.length > 0 && value.children.length > 0) {
+              report(errors, label, "sections 不得与 children 章节路由同时使用");
+            }
             value.children.forEach((child, childIndex) => {
               validateChapter(
                 child,

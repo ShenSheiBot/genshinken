@@ -11,7 +11,7 @@
   "translators": ["yu-shulue"],
   "publishedAt": "2026-07-20",
   "updatedAt": "2026-07-23",
-  "latestChapterId": "penultimate-1916-11-03",
+  "latestChapterId": "penultimate-days",
   "citations": {
     "original": {
       "itemType": "book",
@@ -81,10 +81,9 @@
       "number": "05",
       "title": "“立宪”的倒数第二日",
       "status": "published",
-      "presentation": "navigation",
       "anchor": "立宪的倒数第二日",
       "publishedAt": "2026-07-23",
-      "children": [
+      "sections": [
         {
           "id": "penultimate-1916-11-03",
           "number": "05.1",
@@ -112,7 +111,7 @@
       "number": "06",
       "title": "“立宪”的最后几天",
       "status": "forthcoming",
-      "children": [
+      "sections": [
         {
           "id": "last-1917-02-27",
           "number": "06.1",
