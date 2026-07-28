@@ -4,6 +4,9 @@
   color: var(--ink);
   background: var(--bg);
   border-bottom: 1px solid var(--hair-strong);
+  transition:
+    color var(--theme-surface-duration) var(--theme-surface-easing),
+    background var(--theme-surface-duration) var(--theme-surface-easing);
 }
 
 .masthead {
@@ -195,7 +198,10 @@
   overflow: hidden;
   color: var(--card-ink);
   background: var(--card-bg);
-  transition: color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+  transition:
+    color var(--theme-surface-duration) var(--theme-surface-easing),
+    background var(--theme-surface-duration) var(--theme-surface-easing),
+    box-shadow 180ms ease;
 }
 
 .cardPrimaryLink {

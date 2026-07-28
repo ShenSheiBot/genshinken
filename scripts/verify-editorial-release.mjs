@@ -1645,7 +1645,7 @@ assert.doesNotMatch(
 );
 assert.match(
   shulginChapterCoverText,
-  /连载\s*往日\s*·\s*忆一九〇五年立宪与一九一七年二月革命\s*第二章/u,
+  /连载\s*往日：忆一九〇五年立宪与一九一七年二月革命\s*第二章/u,
   "book chapter covers must place the serial title and Chinese chapter unit above the article title"
 );
 assert.match(
@@ -1660,6 +1660,13 @@ assert.equal(
   shulginCatalogueReturn.text,
   "← 返回目录",
   "the chapter-cover catalogue action must not repeat the book title"
+);
+const shulginSeriesLink = links(shulginChapterCover.inner)
+  .find((link) => link.href === "/books/shulgin-dni" && link.text !== "← 返回目录");
+assert.equal(
+  shulginSeriesLink?.text,
+  "往日：忆一九〇五年立宪与一九一七年二月革命",
+  "the complete serial title and subtitle must share one catalogue link"
 );
 const currentShulginChapter = shulginPublishedChapters
   .find((chapter) => chapter.id === "constitutional-day-one");

@@ -54,6 +54,37 @@ function displayCredits(post: Post): Credit[] {
   return post.credits;
 }
 
+const READER_TITLE_PUNCTUATION = new Map<string, "open" | "close">([
+  ["\u201c", "open"],
+  ["\u2018", "open"],
+  ["\u300a", "open"],
+  ["\u3008", "open"],
+  ["\u300c", "open"],
+  ["\u300e", "open"],
+  ["\u201d", "close"],
+  ["\u2019", "close"],
+  ["\u300b", "close"],
+  ["\u3009", "close"],
+  ["\u300d", "close"],
+  ["\u300f", "close"],
+]);
+
+export function ReaderTitleText({ text }: { text: string }) {
+  return Array.from(text).map((glyph, index) => {
+    const side = READER_TITLE_PUNCTUATION.get(glyph);
+    return side ? (
+      <span
+        data-reader-title-punctuation={side}
+        key={`${glyph}-${index}`}
+      >
+        {glyph}
+      </span>
+    ) : (
+      <Fragment key={`${glyph}-${index}`}>{glyph}</Fragment>
+    );
+  });
+}
+
 /** Keep the editorial role marks visible in every reading-cover direction. */
 function CreditLine({ credits }: { credits: Credit[] }) {
   return (
@@ -70,7 +101,7 @@ function CreditLine({ credits }: { credits: Credit[] }) {
 function PreferredTitle({ post }: { post: PostSummary }) {
   return post.titleBreaks.map((segment, index) => (
     <Fragment key={`${segment}-${index}`}>
-      <span className={styles.titleSegment}>{segment}</span>
+      <span className={styles.titleSegment}><ReaderTitleText text={segment} /></span>
       {index < post.titleBreaks.length - 1 && <wbr />}
     </Fragment>
   ));

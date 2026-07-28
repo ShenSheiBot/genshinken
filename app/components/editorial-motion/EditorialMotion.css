@@ -57,8 +57,8 @@
     transition:
       opacity 340ms var(--editorial-motion-ease),
       transform 340ms var(--editorial-motion-ease),
-      color 180ms ease,
-      background 180ms ease,
+      color var(--theme-surface-duration) var(--theme-surface-easing),
+      background var(--theme-surface-duration) var(--theme-surface-easing),
       box-shadow 180ms ease;
   }
 

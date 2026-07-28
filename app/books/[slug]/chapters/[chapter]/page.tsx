@@ -33,6 +33,7 @@ import ReadingEditionChrome, {
 import {
   DossierCover,
   DossierReading,
+  ReaderTitleText,
   ReadingDossierRoot,
   splitArticle,
 } from "@/app/components/reading-edition/ReadingEdition";
@@ -294,12 +295,13 @@ export default async function BookChapterPage({
             </div>
             <p className={bookStyles.chapterSeriesLine}>
               <b>连载</b>
-              <Link href={bookHref(book)}>{book.title}</Link>
-              {book.subtitle && <><span aria-hidden="true">·</span><span>{book.subtitle}</span></>}
+              <Link href={bookHref(book)}>
+                {book.subtitle ? `${book.title}：${book.subtitle}` : book.title}
+              </Link>
               <strong>{chapterUnitLabel(chapter.number)}</strong>
             </p>
           </div>
-          <h1 className="art-title">{chapter.title}</h1>
+          <h1 className="art-title"><ReaderTitleText text={chapter.title} /></h1>
           <p className={readerStyles.dek}>{book.description}</p>
           <p className={readerStyles.byline}>
             <CreditLinks

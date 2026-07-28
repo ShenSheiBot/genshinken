@@ -423,10 +423,13 @@
 }
 
 .body :global(h1),
-.body :global(h2) {
+.body :global(h2),
+.body :global(h3) {
   counter-increment: reading-section;
-  font-size: 27px;
 }
+
+.body :global(h1),
+.body :global(h2) { font-size: 27px; }
 
 .body :global(h3) { margin-top: 2.3rem; font-size: 21px; }
 .body :global(h4) { margin-top: 2.1rem; font-size: 18px; border-top: 0; padding-top: 0; }
@@ -454,7 +457,9 @@
   text-align: right;
 }
 
-.body :global(h3::before) { content: "—"; color: var(--ink-faint); }
+/* A word joiner removes the break opportunity after an inline footnote marker
+   without changing the marker's inline metrics or the paragraph's justification. */
+.body :global(a[data-footnote-ref]::after) { content: "\2060"; }
 
 .body :global(blockquote) {
   margin: 2.15rem 0 2.25rem;
@@ -1957,7 +1962,8 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
   }
   .body :global(h3) { margin-top: 2.9rem; font-size: 20px; line-height: 1.45; }
   .body :global(h1::before),
-  .body :global(h2::before) {
+  .body :global(h2::before),
+  .body :global(h3::before) {
     position: static;
     display: block;
     width: auto;
