@@ -126,4 +126,18 @@ assert.ok(
   "U+4337 must be wrapped for the cross-platform rare Han fallback"
 );
 
+const editorialNoteHtml = await renderMarkdown(`**编按：**按文 Georgia`);
+assert.match(
+  editorialNoteHtml,
+  /<p class="editorial-note"><strong>编按：<\/strong>/u,
+  "editorial notes must receive their semantic paragraph class"
+);
+
+const speakerTurnHtml = await renderMarkdown(`**瓦萨波洛**　“请谈谈当时的经历。”`);
+assert.match(
+  speakerTurnHtml,
+  /<p class="speaker-turn"><strong>瓦萨波洛<\/strong>　/u,
+  "speaker turns must receive their non-indented paragraph class"
+);
+
 console.log("markdown typography verification passed");

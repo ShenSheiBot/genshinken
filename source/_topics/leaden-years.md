@@ -2,7 +2,7 @@
 title: 铅色年代
 subtitle: 意大利工人自治、学生运动与革命组织
 summary: 从工人与学生的相遇，到危机条件下的组织与夺权问题，两篇译文勾勒意大利社会冲突转折中的政治经验。
-status: complete
+status: ongoing
 published: 2026-07-31
 updated: 2026-07-31
 groups:

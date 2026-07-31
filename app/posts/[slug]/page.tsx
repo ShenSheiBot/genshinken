@@ -138,7 +138,7 @@ export default async function ArticlePage({
       />
       <ReadingDossier
         post={post}
-        parts={splitArticle(post.html)}
+        parts={splitArticle(post.html, post.titleNoteHtml)}
         posts={posts}
         topicMemberships={topicMemberships}
         citationBibtex={citationToBibtex(citation)}

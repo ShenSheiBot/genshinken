@@ -38,14 +38,22 @@ function pullSection(html: string, className: string): { html: string; rest: str
   return { html: match[0], rest: html.replace(match[0], "") };
 }
 
-export function splitArticle(html: string): ArticleParts {
+function withTitleNote(footnotesHtml: string, titleNoteHtml: string): string {
+  if (!titleNoteHtml) return footnotesHtml;
+  const item = `<li id="title-note-0" class="title-note" data-reference-label="*">${titleNoteHtml}<a href="#article-title" data-footnote-backref aria-label="返回主标题">↑</a></li>`;
+  if (footnotesHtml) return footnotesHtml.replace(/(<ol\b[^>]*>)/i, `$1${item}`);
+  return `<section class="footnotes" data-footnotes><h2 class="sr-only" id="footnote-label">注释</h2><ol>${item}</ol></section>`;
+}
+
+export function splitArticle(html: string, titleNoteHtml = ""): ArticleParts {
   const footnotes = pullSection(html, "footnotes");
   const sourceNotes = pullSection(footnotes.rest, "source-notes");
+  const notes = withTitleNote(footnotes.html, titleNoteHtml);
   return {
     main: sourceNotes.rest,
-    notes: footnotes.html,
+    notes,
     sources: sourceNotes.html,
-    noteCount: (footnotes.html.match(/<li\b/gi) ?? []).length,
+    noteCount: (notes.match(/<li\b/gi) ?? []).length,
     sourceCount: (sourceNotes.html.match(/<li\b/gi) ?? []).length,
   };
 }
@@ -409,7 +417,14 @@ export function ReadingDossier({
               </nav>
             )}
           </div>
-          <h1 className="art-title"><PreferredTitle post={post} /></h1>
+          <h1 id="article-title" className="art-title">
+            <PreferredTitle post={post} />
+            {post.titleNote && (
+              <sup className={styles.titleNoteRef}>
+                <a href="#title-note-0" aria-label="标题注释">*</a>
+              </sup>
+            )}
+          </h1>
           {post.subtitle && <p className={styles.subtitle}>{post.subtitle}</p>}
           <p className={styles.dek}>{post.excerpt}</p>
           <p className={styles.byline}><CreditLine credits={displayCredits(post)} /></p>

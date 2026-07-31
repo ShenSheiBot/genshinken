@@ -171,18 +171,21 @@ function rehypeRewrite() {
           break;
         }
 
-        const first = (node.children ?? []).find((child) => {
+        const firstIndex = (node.children ?? []).findIndex((child) => {
           const item = child as { type?: string; value?: string };
           return item.type !== "text" || /\S/.test(item.value ?? "");
-        }) as Element | undefined;
+        });
+        const first = firstIndex >= 0 ? node.children?.[firstIndex] as Element | undefined : undefined;
         if (first?.type === "element" && first.tagName === "strong") {
           const label = elementText(first);
-          if (/^(摘　要|关键词)：/.test(label)) {
-            const cn = props.className as unknown;
-            props.className = Array.isArray(cn)
-              ? [...cn, "article-summary-meta"]
-              : cn ? [String(cn), "article-summary-meta"] : ["article-summary-meta"];
-          }
+          const next = node.children?.[firstIndex + 1] as { type?: string; value?: string } | undefined;
+          const classNames = Array.isArray(props.className)
+            ? [...props.className]
+            : props.className ? [String(props.className)] : [];
+          if (/^(摘　要|关键词)：/.test(label)) classNames.push("article-summary-meta");
+          if (label === "编按：") classNames.push("editorial-note");
+          if (next?.type === "text" && next.value?.startsWith("　")) classNames.push("speaker-turn");
+          if (classNames.length > 0) props.className = Array.from(new Set(classNames));
         }
       }
 

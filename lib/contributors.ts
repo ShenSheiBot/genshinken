@@ -124,8 +124,8 @@ export const CONTRIBUTORS = [
   },
   {
     id: "potere-operaio",
-    displayName: "Potere operaio",
-    aliases: ["Potere operario", "工人力量"],
+    displayName: "工人力量（Potere operaio）",
+    aliases: ["Potere operaio", "Potere operario", "工人力量"],
     teamMember: false,
   },
   {

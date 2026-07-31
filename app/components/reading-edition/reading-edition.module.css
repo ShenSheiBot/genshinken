@@ -401,7 +401,20 @@
 .body :global(ul + p),
 .body :global(ol + p),
 .body :global(p.article-summary-meta),
+.body :global(p.editorial-note),
+.body :global(p.speaker-turn),
 .body :global(p.cont) { text-indent: 0; }
+
+.body :global(p.editorial-note) { font-family: var(--f-cjk-kaiti); }
+.body :global(p.editorial-note .latin-run) { font-family: var(--f-editorial-note-latin); }
+.body :global(p.editorial-note > strong:first-child),
+.body :global(p.speaker-turn > strong:first-child),
+.body :global(p.editorial-note > strong:first-child .latin-run),
+.body :global(p.speaker-turn > strong:first-child .latin-run) {
+  font-family: var(--f-cjk-dengxian);
+  font-weight: 700;
+  letter-spacing: 0;
+}
 
 .body :global(h1),
 .body :global(h2),
@@ -618,6 +631,13 @@
 
 .appendixContent :global(.footnotes ol),
 .appendixContent :global(.source-notes ol) { padding-left: 1.8em; }
+
+.appendixContent :global(.footnotes li.title-note::marker) {
+  content: "* ";
+  color: var(--accent);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 700;
+}
 
 .appendixContent :global(.footnotes li),
 .appendixContent :global(.source-notes li) {
@@ -880,6 +900,18 @@
 }
 
 .titleSegment { white-space: nowrap; }
+
+.titleNoteRef {
+  display: inline-block;
+  margin-left: .12em;
+  vertical-align: top;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: .34em;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.titleNoteRef a { color: var(--accent); text-decoration: none; }
 
 .subtitle {
   margin: 22px 0 0;

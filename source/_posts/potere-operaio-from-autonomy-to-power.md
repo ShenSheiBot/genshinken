@@ -3,7 +3,7 @@ title: 从工人自治到夺权斗争
 title_breaks:
 - 从工人自治到夺权斗争
 subtitle: “工人力量”论危机与革命组织
-section: essay
+section: translation
 script: hans
 categories:
 - 历史
@@ -11,18 +11,19 @@ tags:
 - 意大利
 - 工人自治
 - 工人力量
-date: 2026-07-28
-updated: 2026-07-28
-post_author: Potere operaio
+date: 2026-07-31
+updated: 2026-07-31
+post_author: 工人力量（Potere operaio）
 translator: 南新风
 proofreader: 南新风
 slug: potere-operaio-from-autonomy-to-power
+original_title: «materiali per la formazione dei quadri»
+original_publication: 《工人力量》（Potere operaio）
+original_date: 1971-12-01
+title_note: >-
+  本“档案”栏目由此开始完整刊载《工人力量》报。此处收入前十期，出版日期从1969年9月18—25日至1970年11月27日—12月3日。今后还将刊载该组织的其他材料：小册子、宣言、传单、会议记录等。作为本次开篇介绍的文件题为“干部培训材料”，摘自1971年12月的《工人力量》；该页面于2021年9月16日发布。另可参见马尔科·斯卡维诺所著《工人力量：历史与理论》第一卷（DeriveApprodi，2018年）。（参见[https://www.machina-deriveapprodi.com/post/potere-operaio-1](https://www.machina-deriveapprodi.com/post/potere-operaio-1)）
 excerpt: 当危机夺走工厂斗争的旧日主动，一种从经济斗争通向夺权斗争的行动构想，开始在时代的断裂处锻造革命。
 ---
-
-## 编者按
-
-本“档案”栏目由此开始完整刊载《工人力量》报。此处收入前十期，出版日期从1969年9月18—25日至1970年11月27日—12月3日。今后还将刊载该组织的其他材料：小册子、宣言、传单、会议记录等。作为本次开篇介绍的文件题为“干部培训材料”，摘自1971年12月的《工人力量》；该页面于2021年9月16日发布。另可参见马尔科·斯卡维诺所著《工人力量：历史与理论》第一卷（DeriveApprodi，2018年）。（参见<https://www.machina-deriveapprodi.com/post/potere-operaio-1>）
 
 ## 第一部分　什么是“工人力量”
 

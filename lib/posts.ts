@@ -52,6 +52,7 @@ export interface PostSummary {
   titleBreaks: string[];
   homeTitleBreaks: string[];
   subtitle: string;
+  titleNote: string;
   draft: boolean;
   bookDocument: boolean; // 仅作为书籍章节的构建源，不生成公开文章页面
   category: string;
@@ -79,6 +80,7 @@ export interface Post extends PostSummary {
   originalTitle: string;
   originalPublication: string;
   originalDate: string;
+  titleNoteHtml: string;
   html: string;
   markdown: string;
   sortOrder: number;
@@ -461,6 +463,8 @@ async function loadRaw(): Promise<Post[]> {
         ? []
         : titleBreaks(homeTitleBreaksValue, title, file, "home_title_breaks");
       const subtitle = String(data.subtitle ?? "").trim();
+      const titleNote = metadataText(data.title_note ?? data.titleNote);
+      const titleNoteHtml = titleNote ? await renderMarkdown(titleNote) : "";
       const draft = isDraft(data.draft);
       const bookDocument = isDraft(data.book_document);
       const category = categories[0] ?? tags[0] ?? "未分类";
@@ -510,6 +514,7 @@ async function loadRaw(): Promise<Post[]> {
         titleBreaks: preferredTitleBreaks,
         homeTitleBreaks: preferredHomeTitleBreaks,
         subtitle,
+        titleNote,
         draft,
         bookDocument,
         category,
@@ -522,13 +527,13 @@ async function loadRaw(): Promise<Post[]> {
         displayDateDisplay: fmtDisplay(displayDate),
         displayDateISO: fmtISO(displayDate),
         updatedISO: +updated > 0 ? fmtISO(updated) : fmtISO(date),
-        contentRevision: hashRenderedContent(html),
+        contentRevision: hashRenderedContent(html + titleNoteHtml),
         timestamp: +date,
         sortOrder: toSortOrder(data.sort_order ?? data.sortOrder ?? data.order),
         excerpt: deriveExcerpt(html, data.excerpt, title),
         relatedPosts: Array.from(new Set(toList(data.related_posts))),
         featuredOrder: toSortOrder(data.featured_order),
-        readMin: readMinutes(html),
+        readMin: readMinutes(html + titleNoteHtml),
         no: "00",
         sectionNo: "00",
         citation,
@@ -540,6 +545,7 @@ async function loadRaw(): Promise<Post[]> {
             data["原刊"]
         ),
         originalDate,
+        titleNoteHtml,
         html,
         markdown: content,
       };
@@ -583,6 +589,7 @@ const strip = ({
   originalTitle,
   originalPublication,
   originalDate,
+  titleNoteHtml,
   ...rest
 }: Post): PostSummary => rest;
 

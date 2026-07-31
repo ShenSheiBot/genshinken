@@ -611,7 +611,8 @@ export default function ReadingEditionChrome({
 
     const links: ReferenceLink[] = [];
     const labels = new Map<string, string>();
-    body.querySelectorAll<HTMLAnchorElement>('a[href^="#"]').forEach((anchor) => {
+    const readingRoot = document.querySelector<HTMLElement>(".reading-edition-page") ?? body;
+    readingRoot.querySelectorAll<HTMLAnchorElement>('a[href^="#"]').forEach((anchor) => {
       const target = safeTarget(anchor.getAttribute("href") || "");
       if (!target?.closest(".footnotes, .source-notes")) return;
       const kind: ReferenceKind = target.closest(".source-notes") ? "source" : "annotation";
@@ -622,7 +623,12 @@ export default function ReadingEditionChrome({
 
     const annotationItems = Array.from(document.querySelectorAll<HTMLElement>(".reading-edition-appendix .footnotes li")).map((target, index) => {
       if (!target.id) target.id = `reading-annotation-${index + 1}`;
-      return referenceItem(target, "annotation", index, labels.get(target.id) || String(index + 1));
+      return referenceItem(
+        target,
+        "annotation",
+        index,
+        labels.get(target.id) || target.dataset.referenceLabel || String(index + 1)
+      );
     });
     const sourceItems = Array.from(document.querySelectorAll<HTMLElement>(".reading-edition-appendix .source-notes li")).map((target, index) => {
       if (!target.id) target.id = `reading-source-${index + 1}`;
@@ -1026,7 +1032,7 @@ export default function ReadingEditionChrome({
   }, []);
 
   useEffect(() => {
-    const flow = document.querySelector<HTMLElement>(".reading-edition-flow");
+    const flow = document.querySelector<HTMLElement>(".reading-edition-page");
     if (!flow) return;
     const onClick = (event: MouseEvent) => {
       const anchor = (event.target as HTMLElement | null)?.closest<HTMLAnchorElement>('a[href^="#"]');
