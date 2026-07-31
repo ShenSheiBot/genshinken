@@ -3,6 +3,7 @@ import { notFound, permanentRedirect } from "next/navigation";
 import { getPostBySlug, getPreviewableSlugs, type CreditRole } from "@/lib/posts";
 import { getAllPublicContent } from "@/lib/public-content";
 import { site } from "@/lib/site";
+import { contributorEntityType } from "@/lib/contributors";
 import { postPath } from "@/lib/editorial";
 import { getTopicMembershipsForPost } from "@/lib/topics";
 import { bookHref, getBookByDocumentSlug } from "@/lib/books";
@@ -80,7 +81,7 @@ function buildJsonLd(
     const key = roles[credit.role];
     const people = credits[key] ?? [];
     people.push({
-      "@type": "Person",
+      "@type": contributorEntityType(credit.contributorId) === "organization" ? "Organization" : "Person",
       name: credit.name,
       url: `${site.url}/library?contributor=${encodeURIComponent(credit.contributorId)}`,
     });

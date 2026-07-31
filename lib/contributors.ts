@@ -11,6 +11,7 @@ export interface Contributor {
   aliases: readonly string[];
   /** Team membership is opt-in; publishing a contribution does not imply membership. */
   teamMember: boolean;
+  entityType?: "person" | "organization";
   teamTitle?: string;
   teamOrder?: number;
   bio?: string;
@@ -124,9 +125,10 @@ export const CONTRIBUTORS = [
   },
   {
     id: "potere-operaio",
-    displayName: "工人力量（Potere operaio）",
-    aliases: ["Potere operaio", "Potere operario", "工人力量"],
+    displayName: "“工人力量”社",
+    aliases: ["Potere operaio", "Potere operario", "工人力量", "工人力量社"],
     teamMember: false,
+    entityType: "organization",
   },
   {
     id: "nan-xinfeng",
@@ -181,6 +183,11 @@ export function findContributor(id: string): (typeof CONTRIBUTORS)[number] | nul
 
 export function findContributorByName(name: string): (typeof CONTRIBUTORS)[number] | null {
   return contributorByName.get(normalizeName(name)) ?? null;
+}
+
+export function contributorEntityType(id: string): "person" | "organization" {
+  const contributor = contributorById.get(id as ContributorId) as Contributor | undefined;
+  return contributor?.entityType ?? "person";
 }
 
 export function getTeamMembers(): Contributor[] {
