@@ -95,6 +95,7 @@ test("reading settings drawer slides while the header tools stay fixed", async (
   const hanButton = reader.getByRole("button", { name: /切换为(?:简体|繁体)中文/ });
   const themeButton = reader.getByRole("button", { name: "切换明暗主题", exact: true });
   const tools = isMobile ? [hanButton, trigger] : [themeButton, hanButton, trigger];
+  const runningHeader = trigger.locator("xpath=ancestor::header[1]");
   const positionsBefore = await toolPositions(tools);
 
   const opening = await captureSettingsMotion(page, () => trigger.click());
@@ -104,6 +105,19 @@ test("reading settings drawer slides while the header tools stay fixed", async (
   expect(await toolPositions(tools)).toEqual(positionsBefore);
 
   const dialog = page.getByRole("dialog", { name: "阅读习惯" });
+  const panelHeader = dialog.locator("header").first();
+  const [runningHeaderBox, panelHeaderBox, dialogBox] = await Promise.all([
+    runningHeader.boundingBox(),
+    panelHeader.boundingBox(),
+    dialog.boundingBox(),
+  ]);
+  expect(runningHeaderBox).not.toBeNull();
+  expect(panelHeaderBox).not.toBeNull();
+  expect(dialogBox).not.toBeNull();
+  expect(panelHeaderBox!.y).toBeCloseTo(runningHeaderBox!.y, 0);
+  expect(panelHeaderBox!.height).toBeCloseTo(runningHeaderBox!.height, 0);
+  expect(dialogBox!.y).toBeCloseTo(runningHeaderBox!.y, 0);
+
   const close = dialog.getByRole("button", { name: "关闭", exact: true });
   const closing = await captureSettingsMotion(page, () => close.click());
   expect(closing.sawDialog).toBe(true);

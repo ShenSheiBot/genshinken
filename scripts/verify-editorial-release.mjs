@@ -265,10 +265,10 @@ assert.doesNotMatch(
   /\.sheet\[data-sheet="settings"\][\s\S]{0,160}?animation:\s*none/,
   "the settings drawer must use the shared horizontal slide animation"
 );
-assert.match(
+assert.doesNotMatch(
   readingStylesSource,
   /\.sheetLayer\[data-sheet="settings"\]\s*\{[^}]*top:\s*var\(--reading-header-bottom\)/,
-  "the settings drawer must slide below the stable reader header"
+  "the settings drawer must cover the reader header so both header rows share the same top edge"
 );
 assert.doesNotMatch(
   globalStylesSource,

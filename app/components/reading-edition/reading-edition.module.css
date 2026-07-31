@@ -1540,10 +1540,6 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
   background: transparent;
 }
 
-.sheetLayer[data-sheet="settings"] {
-  top: var(--reading-header-bottom);
-}
-
 .sheetLayer::before {
   position: absolute;
   inset: 0;
