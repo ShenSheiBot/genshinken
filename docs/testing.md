@@ -55,7 +55,7 @@ Quality 与 Browser workflow 都会独立安装、检查和构建调用方代码
 | `tests/e2e/reader-smoke.spec.ts` | `implemented` | 正式 Reader 根契约、正文完成、原型残留、水平溢出、设置入口和浏览器错误。 |
 | `tests/e2e/reader-mobile.spec.ts` | `implemented` | 移动工具、目录 sheet、visual viewport 与正文水平溢出。 |
 | `tests/e2e/reader-cross-tab.spec.ts` | `implemented` | Desktop Chromium 中的保存位置恢复、显式 hash 优先和远端关闭记录后的待写取消。 |
-| `tests/e2e/reader-dialog-focus.spec.ts` | `implemented` | 设置与移动注释 dialog 的焦点循环、关闭、触发点恢复，以及阅读习惯按钮在面板开合过渡中的真实视口相交。 |
+| `tests/e2e/reader-dialog-focus.spec.ts` | `implemented` | 设置与移动注释 dialog 的焦点循环、关闭、触发点恢复，以及阅读习惯抽屉开合期间页眉三键的 DOM 与几何稳定性。 |
 | `tests/e2e/reader-book-chapter.spec.ts` | `implemented` | 章节案卷编号与普通正文一致、数字动画、本章结束语义、全书目录复合编号的真实行盒，以及共享章题的分篇保持在同一 canonical 页并执行章内／跨章 hash 跳转。 |
 | `tests/e2e/reader-chrome-transition.spec.ts` | `implemented` | 连载页进入章节的页眉入场、离开 Reader 的反向动效，以及章节间导航不误触发离场。 |
 | `tests/e2e/reader-clipboard.spec.ts` | `implemented` | BibTeX 写入数据、成功 live status、拒绝反馈和重试能力。 |

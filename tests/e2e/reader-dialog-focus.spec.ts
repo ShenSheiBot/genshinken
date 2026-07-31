@@ -76,38 +76,26 @@ test("reading settings traps focus and restores its trigger", async ({ page }) =
     () => page.keyboard.press("Enter")
   );
   expectContinuousSettingsButton(openingFrames);
+
   const dialog = page.getByRole("dialog", { name: "阅读习惯" });
-  const dialogHeader = dialog.locator("header").first();
-  const dialogHeading = dialogHeader.getByRole("heading", { name: "阅读习惯", exact: true });
-  const dialogTrigger = dialogHeader.getByRole("button", { name: "阅读习惯", exact: true });
+  const close = dialog.getByRole("button", { name: "关闭", exact: true });
   const first = dialog.getByRole("button", { name: "字 衬线" });
   const last = dialog.getByRole("button", { name: "清除全部记录" });
 
   await expect(dialog).toBeFocused();
-  await expect(page.getByRole("button", { name: "阅读习惯", exact: true })).toHaveCount(1);
-  await expect(dialogTrigger).toBeVisible();
-  await expect(dialog.getByRole("button", { name: "关闭", exact: true })).toHaveCount(0);
-  await expect(dialog.getByText("×", { exact: true })).toHaveCount(0);
-  const [headingBox, triggerBox] = await Promise.all([
-    dialogHeading.boundingBox(),
-    dialogTrigger.boundingBox(),
-  ]);
-  expect(headingBox).not.toBeNull();
-  expect(triggerBox).not.toBeNull();
-  expect(triggerBoxBeforeOpen).not.toBeNull();
-  expect(triggerBox!.width).toBe(triggerBoxBeforeOpen!.width);
-  expect(triggerBox!.height).toBe(triggerBoxBeforeOpen!.height);
-  expect(triggerBox!.x).toBeGreaterThan(headingBox!.x + headingBox!.width);
-  expect(Math.min(headingBox!.y + headingBox!.height, triggerBox!.y + triggerBox!.height)
-    - Math.max(headingBox!.y, triggerBox!.y)).toBeGreaterThan(0);
+  await expect(trigger).toHaveAttribute("aria-expanded", "true");
+  await expect(close).toBeVisible();
+  await expect(trigger).toHaveJSProperty("isConnected", true);
+  expect(await trigger.boundingBox()).toEqual(triggerBoxBeforeOpen);
+
   await page.keyboard.press("Shift+Tab");
   await expect(last).toBeFocused();
   await page.keyboard.press("Tab");
-  await expect(dialogTrigger).toBeFocused();
+  await expect(close).toBeFocused();
   await page.keyboard.press("Tab");
   await expect(first).toBeFocused();
   await page.keyboard.press("Shift+Tab");
-  await expect(dialogTrigger).toBeFocused();
+  await expect(close).toBeFocused();
 
   const closingFrames = await captureReadingSettingsButtonFrames(
     page,
@@ -116,6 +104,8 @@ test("reading settings traps focus and restores its trigger", async ({ page }) =
   expectContinuousSettingsButton(closingFrames);
   await expect(dialog).toBeHidden();
   await expect(trigger).toBeFocused();
+  await expect(trigger).toHaveAttribute("aria-expanded", "false");
+  expect(await trigger.boundingBox()).toEqual(triggerBoxBeforeOpen);
 
   await page.keyboard.press("Enter");
   await expect(dialog).toBeFocused();

@@ -1,4 +1,5 @@
 import { expect, test } from "./fixtures";
+import type { Locator } from "@playwright/test";
 
 type MotionCapture = {
   maxActiveAnimations: number;
@@ -75,17 +76,39 @@ async function captureSettingsMotion(
   });
 }
 
-test("reading settings panel animates while opening and closing", async ({ page }) => {
+async function toolPositions(tools: Locator[]) {
+  return Promise.all(tools.map((tool) => tool.evaluate((element) => {
+    const rect = element.getBoundingClientRect();
+    return { left: rect.left, top: rect.top, width: rect.width, height: rect.height };
+  })));
+}
+
+test("reading settings drawer slides while the header tools stay fixed", async ({
+  isMobile,
+  page,
+}) => {
+  await page.emulateMedia({ reducedMotion: "no-preference" });
   await page.goto("/posts/guxiang-de-bianzhengfa");
-  const trigger = page.getByRole("button", { name: "阅读习惯", exact: true });
 
-  const opening = await captureSettingsMotion(page, () => trigger.click({ force: true }));
+  const reader = page.locator(".reading-edition-page");
+  const trigger = reader.getByRole("button", { name: "阅读习惯", exact: true });
+  const hanButton = reader.getByRole("button", { name: /切换为(?:简体|繁体)中文/ });
+  const themeButton = reader.getByRole("button", { name: "切换明暗主题", exact: true });
+  const tools = isMobile ? [hanButton, trigger] : [themeButton, hanButton, trigger];
+  const positionsBefore = await toolPositions(tools);
+
+  const opening = await captureSettingsMotion(page, () => trigger.click());
   expect(opening.sawDialog).toBe(true);
-  expect(opening.animationNames.some((name) => name.includes("reading-settings-panel-in"))).toBe(true);
+  expect(opening.animationNames.some((name) => name.includes("reading-sheet-slide-in"))).toBe(true);
+  await expect(trigger).toHaveAttribute("aria-expanded", "true");
+  expect(await toolPositions(tools)).toEqual(positionsBefore);
 
-  const dialogTrigger = page.getByRole("dialog", { name: "阅读习惯" })
-    .getByRole("button", { name: "阅读习惯", exact: true });
-  const closing = await captureSettingsMotion(page, () => dialogTrigger.click({ force: true }));
+  const dialog = page.getByRole("dialog", { name: "阅读习惯" });
+  const close = dialog.getByRole("button", { name: "关闭", exact: true });
+  const closing = await captureSettingsMotion(page, () => close.click());
   expect(closing.sawDialog).toBe(true);
-  expect(closing.animationNames.some((name) => name.includes("reading-settings-panel-out"))).toBe(true);
+  expect(closing.animationNames.some((name) => name.includes("reading-sheet-slide-out"))).toBe(true);
+  await expect(dialog).toBeHidden();
+  await expect(trigger).toBeFocused();
+  expect(await toolPositions(tools)).toEqual(positionsBefore);
 });

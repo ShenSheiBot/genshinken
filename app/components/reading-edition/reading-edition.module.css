@@ -140,8 +140,7 @@
 
 .runningTools { justify-self: end; display: flex; align-items: center; }
 
-.runningTools button,
-.sheetHeader .settingsButton {
+.runningTools button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -246,9 +245,7 @@
 }
 
 .runningTools button:hover,
-.runningTools button:focus-visible,
-.sheetHeader .settingsButton:hover,
-.sheetHeader .settingsButton:focus-visible {
+.runningTools button:focus-visible {
   color: var(--solid-ink);
   background: var(--solid);
   outline: none;
@@ -260,7 +257,7 @@
   }
 
   :global(html[data-reading-chrome-entry="route"]) .hanScriptButton,
-  :global(html[data-reading-chrome-entry="route"]) .runningTools .settingsButton:not([data-returned-to-header="true"]) {
+  :global(html[data-reading-chrome-entry="route"]) .runningTools .settingsButton {
     animation: reading-tool-enter 340ms cubic-bezier(.2, .75, .3, 1) 70ms both;
   }
 
@@ -1543,6 +1540,10 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
   background: transparent;
 }
 
+.sheetLayer[data-sheet="settings"] {
+  top: var(--reading-header-bottom);
+}
+
 .sheetLayer::before {
   position: absolute;
   inset: 0;
@@ -1579,56 +1580,6 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
   animation: reading-sheet-slide-out 260ms cubic-bezier(.4, 0, .8, .25) both;
 }
 
-.sheet[data-sheet="settings"],
-.sheetLayer[data-closing="true"] .sheet[data-sheet="settings"] {
-  animation: none;
-  background: transparent;
-  isolation: isolate;
-}
-
-.sheet[data-sheet="settings"]::before {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  content: "";
-  background: var(--bg);
-  transform-origin: right center;
-  animation: reading-settings-panel-in 260ms cubic-bezier(.2, .75, .3, 1) both;
-}
-
-.sheetLayer[data-closing="true"] .sheet[data-sheet="settings"]::before {
-  animation: reading-settings-panel-out 260ms cubic-bezier(.4, 0, .8, .25) both;
-}
-
-.sheet[data-sheet="settings"] .sheetHeading,
-.sheet[data-sheet="settings"] > :not(.sheetHandle):not(.sheetHeader) {
-  animation: reading-settings-content-in 220ms ease 40ms both;
-}
-
-.sheetLayer[data-closing="true"] .sheet[data-sheet="settings"] .sheetHeading,
-.sheetLayer[data-closing="true"] .sheet[data-sheet="settings"] > :not(.sheetHandle):not(.sheetHeader) {
-  animation: reading-settings-content-out 180ms ease both;
-}
-
-@keyframes reading-settings-panel-in {
-  from { opacity: 0; transform: scaleX(.94); }
-  to { opacity: 1; transform: scaleX(1); }
-}
-
-@keyframes reading-settings-panel-out {
-  from { opacity: 1; transform: scaleX(1); }
-  to { opacity: 0; transform: scaleX(.94); }
-}
-
-@keyframes reading-settings-content-in {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes reading-settings-content-out {
-  from { opacity: 1; transform: translateY(0); }
-  to { opacity: 0; transform: translateY(6px); }
-}
 
 @keyframes reading-sheet-slide-in {
   from { transform: translateX(100%); }
@@ -1953,8 +1904,7 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
   }
   .mobileSectionButton span { overflow: hidden; font-family: var(--reader-title-family); font-size: 13px; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; }
   .mobileSectionButton b { margin-left: 8px; color: var(--accent); }
-  .runningTools button,
-  .sheetHeader .settingsButton { width: 34px; border: 0; }
+  .runningTools button { width: 34px; border: 0; }
   .runningTools .themeButton { display: none; }
 
   .dossierCover {
@@ -2117,10 +2067,7 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
 
 @media (prefers-reduced-motion: reduce) {
   .sheetLayer::before,
-  .sheet,
-  .sheet[data-sheet="settings"]::before,
-  .sheet[data-sheet="settings"] .sheetHeading,
-  .sheet[data-sheet="settings"] > :not(.sheetHandle):not(.sheetHeader) { animation: none !important; }
+  .sheet { animation: none !important; }
   .root *,
   .root *::before,
   .root *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }

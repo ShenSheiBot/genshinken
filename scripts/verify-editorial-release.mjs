@@ -232,53 +232,43 @@ assert.match(
 );
 assert.match(
   readingChromeSource,
-  /className=\{styles\.runningTools\}[\s\S]*?themeButton[\s\S]*?hanScriptButton[\s\S]*?settingsControl\("header"\)/,
+  /className=\{styles\.runningTools\}[\s\S]*?themeButton[\s\S]*?hanScriptButton[\s\S]*?\{settingsControl\}/,
   "theme, Han-script, and reading-habits controls must use the confirmed order"
 );
 assert.equal(
   readingChromeSource.match(/className=\{styles\.settingsButton\}/g)?.length,
   1,
-  "the shared reading-habits control renderer must define one button implementation"
+  "the reading-habits trigger must have one stable header implementation"
 );
 assert.match(
   readingChromeSource,
-  /const settingsControl = \(location: "header" \| "sheet"\)[\s\S]*?if \(location === "sheet"\) closeSheet\(\);[\s\S]*?else openSheet\("settings", event\.currentTarget\);/,
-  "one reading-habits control implementation must open from the header and close from the sheet"
+  /const settingsControl = \([\s\S]*?openSheet\("settings", event\.currentTarget\)[\s\S]*?aria-expanded=\{sheet === "settings"\}/,
+  "the stable header reading-habits trigger must open the settings drawer and expose its state"
 );
 assert.match(
   readingChromeSource,
-  /settingsHasMigratedRef\.current = true;[\s\S]*?data-returned-to-header=\{location === "header" && settingsHasMigratedRef\.current/,
-  "the returned header control must suppress only its own repeated entry animation"
+  /<div className=\{styles\.runningTools\}>[\s\S]*?\{settingsControl\}[\s\S]*?<\/div>/,
+  "the reading-habits trigger must remain in the running tools while its drawer is open"
 );
 assert.doesNotMatch(
   readingChromeSource,
-  /next === "settings"[^\n]*delete document\.documentElement\.dataset\.readingChromeEntry/,
-  "opening reading habits must not cancel sibling header entry animations"
+  /settingsHasMigratedRef|data-returned-to-header|settingsControl\("sheet"\)|sheet !== "settings" && settingsControl/,
+  "the reading-habits trigger must not migrate into or remount around the settings drawer"
 );
 assert.match(
   readingChromeSource,
-  /\{sheet !== "settings" && settingsControl\("header"\)\}/,
-  "the reading-habits control must leave the running tools while its sheet is open"
-);
-assert.match(
-  readingChromeSource,
-  /sheet === "settings"[\s\S]*?settingsControl\("sheet"\)[\s\S]*?: <button[^>]*onClick=\{(?:closeSheet|\(\) => closeSheet\(\))\} aria-label="关闭">×<\/button>/,
-  "the settings sheet must use the migrated reading-habits control while other sheets retain their close button"
+  /sheetHeaderActions[\s\S]*?<button[^>]*onClick=\{\(\) => closeSheet\(\)\}[^>]*aria-label=\{?"\u5173\u95ed"\}?/,
+  "the settings drawer must provide its own close button"
 );
 assert.doesNotMatch(
-  readingChromeSource,
-  /const settingsTrigger = sheet === "settings"/,
-  "the modal focus loop must not include an external settings trigger"
+  readingStylesSource,
+  /\.sheet\[data-sheet="settings"\][\s\S]{0,160}?animation:\s*none/,
+  "the settings drawer must use the shared horizontal slide animation"
 );
 assert.match(
   readingStylesSource,
-  /\.runningTools button,\s*\.sheetHeader \.settingsButton\s*\{/,
-  "the migrated reading-habits control must retain the running-tool visual contract"
-);
-assert.match(
-  readingStylesSource,
-  /\.sheet\[data-sheet="settings"\],\s*\.sheetLayer\[data-closing="true"\] \.sheet\[data-sheet="settings"\]\s*\{\s*animation:\s*none;/,
-  "the settings sheet must keep its migrated reading-habits control inside the viewport"
+  /\.sheetLayer\[data-sheet="settings"\]\s*\{[^}]*top:\s*var\(--reading-header-bottom\)/,
+  "the settings drawer must slide below the stable reader header"
 );
 assert.doesNotMatch(
   globalStylesSource,
@@ -287,7 +277,7 @@ assert.doesNotMatch(
 );
 assert.match(
   readingStylesSource,
-  /data-reading-chrome-entry="route"[\s\S]*?themeButton[\s\S]*?reading-theme-shift-left[\s\S]*?hanScriptButton[\s\S]*?runningTools \.settingsButton:not\(\[data-returned-to-header="true"\]\)[\s\S]*?reading-tool-enter/,
+  /data-reading-chrome-entry="route"[\s\S]*?themeButton[\s\S]*?reading-theme-shift-left[\s\S]*?hanScriptButton[\s\S]*?runningTools \.settingsButton[\s\S]*?reading-tool-enter/,
   "route entry must shift theme left while revealing Han-script and reading-habits controls together"
 );
 assert.match(
@@ -318,7 +308,7 @@ assert.doesNotMatch(
 assert.match(
   readingStylesSource,
   /reading-sheet-slide-in[\s\S]*?reading-sheet-slide-out[\s\S]*?reading-sheet-dim-in[\s\S]*?reading-sheet-dim-out/,
-  "non-settings reader sheets must retain slide keyframes while every sheet retains page dimming"
+  "all reader sheets, including reading habits, must retain horizontal slide keyframes and page dimming"
 );
 assert.doesNotMatch(
   readingChromeSource,

@@ -437,7 +437,6 @@ export default function ReadingEditionChrome({
   const lastSheetTrigger = useRef<HTMLElement | null>(null);
   const sheetRef = useRef<HTMLElement | null>(null);
   const settingsButtonRef = useRef<HTMLButtonElement | null>(null);
-  const settingsHasMigratedRef = useRef(false);
   const pendingFocusRestoreRef = useRef<HTMLElement | "settings" | null>(null);
   const sheetCloseTimerRef = useRef<number | null>(null);
   const exitNavigationTimerRef = useRef<number | null>(null);
@@ -1157,7 +1156,6 @@ export default function ReadingEditionChrome({
       sheetCloseTimerRef.current = null;
     }
     setSheetClosing(false);
-    if (next === "settings") settingsHasMigratedRef.current = true;
     if (trigger) lastSheetTrigger.current = trigger;
     if (next !== "annotation" && next !== "source") lastNoteAnchor.current = null;
     setReferenceTrail([]);
@@ -1789,19 +1787,18 @@ export default function ReadingEditionChrome({
     document.documentElement.dataset.readerFont = font;
     writeLocalSetting("ub_reader_font", font);
   };
-  const settingsControl = (location: "header" | "sheet") => (
+  const settingsControl = (
     <button
       ref={settingsButtonRef}
       className={styles.settingsButton}
       type="button"
       onClick={(event) => {
-        if (location === "sheet") closeSheet();
+        if (sheet === "settings") closeSheet();
         else openSheet("settings", event.currentTarget);
       }}
-      aria-label="阅读习惯"
+      aria-label={"阅读习惯"}
       aria-haspopup="dialog"
-      aria-expanded={location === "sheet"}
-      data-returned-to-header={location === "header" && settingsHasMigratedRef.current ? "true" : undefined}
+      aria-expanded={sheet === "settings"}
     >
       <span className={styles.settingsGlyph} aria-hidden="true"><i /><i /><i /></span>
     </button>
@@ -1845,7 +1842,7 @@ export default function ReadingEditionChrome({
               <span className={styles.hanSimplified}>简</span>
             </span>
           </button>
-          {sheet !== "settings" && settingsControl("header")}
+          {settingsControl}
         </div>
         <span className={styles.topRule} data-rail-progress={desktopDesk ? "true" : "false"} aria-hidden="true">
           <span className={styles.topProgress} style={{ width: `${pct}%` }} />
@@ -1863,9 +1860,7 @@ export default function ReadingEditionChrome({
               </div>
               <div className={styles.sheetHeaderActions}>
                 {(sheet === "annotation" || sheet === "source") && referenceCounter(sheet, "sheet")}
-                {sheet === "settings"
-                  ? settingsControl("sheet")
-                  : <button type="button" onClick={() => closeSheet()} aria-label="关闭">×</button>}
+                <button type="button" onClick={() => closeSheet()} aria-label={"关闭"}>{"×"}</button>
               </div>
             </header>
             {sheet === "toc" ? <>
