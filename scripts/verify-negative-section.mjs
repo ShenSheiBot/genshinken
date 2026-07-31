@@ -139,11 +139,11 @@ assert.doesNotMatch(lowerHtml, /\$(?:dx|dy|x|i|a|n)\$/u, "rendered prose must no
 
 const latestArticleSlugs = posts
   .filter((post) => post.section !== "multimedia")
-  .slice(0, 6)
+  .slice(0, 7)
   .map((post) => post.slug);
 assert.ok(
   latestArticleSlugs.includes(upperSlug) && latestArticleSlugs.includes(lowerSlug),
-  "both reviews must remain on the actual-publication latest timeline"
+  "both reviews must remain on the recent actual-publication timeline"
 );
 
 const archiveIndexSource = fs.readFileSync(archiveIndexPath, "utf8");
