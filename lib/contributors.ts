@@ -116,6 +116,24 @@ export const CONTRIBUTORS = [
     aliases: [],
     teamMember: false,
   },
+  {
+    id: "franco-piperno",
+    displayName: "弗朗科·皮佩尔诺",
+    aliases: ["Franco Piperno"],
+    teamMember: false,
+  },
+  {
+    id: "potere-operaio",
+    displayName: "Potere operaio",
+    aliases: ["Potere operario", "工人力量"],
+    teamMember: false,
+  },
+  {
+    id: "nan-xinfeng",
+    displayName: "南新风",
+    aliases: [],
+    teamMember: false,
+  },
 ] as const satisfies readonly Contributor[];
 
 export type ContributorId = (typeof CONTRIBUTORS)[number]["id"];

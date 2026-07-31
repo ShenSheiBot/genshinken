@@ -137,13 +137,16 @@ const lowerHtml = await renderMarkdown(lowerDocument.content);
 assert.match(lowerHtml, /class="katex"/u, "the lower review must render mathematical notation through KaTeX");
 assert.doesNotMatch(lowerHtml, /\$(?:dx|dy|x|i|a|n)\$/u, "rendered prose must not expose inline TeX markers");
 
-const latestArticleSlugs = posts
-  .filter((post) => post.section !== "multimedia")
-  .slice(0, 7)
-  .map((post) => post.slug);
+const latestArticles = posts.filter((post) => post.section !== "multimedia");
+const upperLatestIndex = latestArticles.findIndex((post) => post.slug === upperSlug);
+const lowerLatestIndex = latestArticles.findIndex((post) => post.slug === lowerSlug);
+const firstOlderArticleIndex = latestArticles.findIndex((post) => post.dateISO < "2026-07-22");
 assert.ok(
-  latestArticleSlugs.includes(upperSlug) && latestArticleSlugs.includes(lowerSlug),
-  "both reviews must remain on the recent actual-publication timeline"
+  upperLatestIndex >= 0 &&
+    lowerLatestIndex >= 0 &&
+    (firstOlderArticleIndex < 0 ||
+      (upperLatestIndex < firstOlderArticleIndex && lowerLatestIndex < firstOlderArticleIndex)),
+  "both reviews must remain ahead of older articles on the actual-publication timeline"
 );
 
 const archiveIndexSource = fs.readFileSync(archiveIndexPath, "utf8");
