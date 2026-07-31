@@ -876,8 +876,14 @@ assert.deepEqual(
 );
 assert.deepEqual(
   mullahologyTopicItems,
-  ["/posts/mullahology-00", "/posts/mullahology-01", "/posts/mullahology-02", "/posts/mullahology-03"],
-  "mullahology must retain its four published source units in authored order"
+  [
+    "/posts/mullahology-00",
+    "/posts/mullahology-01",
+    "/posts/mullahology-02",
+    "/posts/mullahology-03",
+    "/posts/mullahology-04",
+  ],
+  "mullahology must retain its five published source units in authored order"
 );
 
 const [
@@ -896,6 +902,7 @@ const [
   mullahologyChapter,
   mullahologyChapterTwo,
   mullahologyChapterThree,
+  mullahologyChapterFour,
   books,
   book,
   shulginBook,
@@ -919,6 +926,7 @@ const [
   page("/posts/mullahology-01"),
   page("/posts/mullahology-02"),
   page("/posts/mullahology-03"),
+  page("/posts/mullahology-04"),
   page("/books"),
   page("/books/soviet-planned-economy-retrospective"),
   page("/books/shulgin-dni"),
@@ -1418,6 +1426,7 @@ assert.match(mullahologyText, /一份关于克苏鲁的调查报告/);
 assert.match(mullahologyText, /斩断伊斯兰这片绿色的叶子/);
 assert.match(mullahologyText, /叶公好龙/);
 assert.match(mullahologyText, /作茧自缚/);
+assert.match(mullahologyText, /图德党/);
 assert.deepEqual(
   (mullahologyLd.hasPart ?? []).map((item) => normalizedPath(item.url)),
   mullahologyTopicItems,
@@ -1479,6 +1488,24 @@ assert.deepEqual(
   links(mullahologyChapterThreeTopics.inner).map(({ href, text }) => ({ href, text })),
   [{ href: "/topics/mullahology", text: "毛拉学 03" }],
   "mullahology chapter three lead must link its topic unit"
+);
+assertBlogPostingMetadata("mullahology chapter four", mullahologyChapterFour, "/posts/mullahology-04");
+assert.equal(
+  elements(mullahologyChapterFour.html, "h2").length,
+  0,
+  "mullahology chapter four must preserve the heading-free prose structure of chapters one through three"
+);
+const mullahologyChapterFourTopics = elements(mullahologyChapterFour.html, "nav").find((nav) =>
+  attribute(nav.opening, "aria-label") === "所属专题"
+);
+assert.ok(
+  mullahologyChapterFourTopics,
+  "mullahology chapter four must expose its topic unit beside the article lead"
+);
+assert.deepEqual(
+  links(mullahologyChapterFourTopics.inner).map(({ href, text }) => ({ href, text })),
+  [{ href: "/topics/mullahology", text: "毛拉学 04" }],
+  "mullahology chapter four lead must link its topic unit"
 );
 
 const booksLd = assertMetadata("books index", books, "/books", "CollectionPage");
@@ -2055,6 +2082,7 @@ for (const requiredPath of [
   "/posts/mullahology-01",
   "/posts/mullahology-02",
   "/posts/mullahology-03",
+  "/posts/mullahology-04",
   "/posts/lih-lenin-disputed",
   "/media/csa",
 ]) {
