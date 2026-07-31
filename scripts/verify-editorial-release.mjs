@@ -1499,6 +1499,11 @@ assert.equal(
   0,
   "mullahology chapter four must preserve the heading-free prose structure of chapters one through three"
 );
+assert.equal(
+  elements(mullahologyChapterFourBody.inner, "p").length,
+  27,
+  "mullahology chapter four must retain the compressed editorial paragraph structure"
+);
 const mullahologyChapterFourTopics = elements(mullahologyChapterFour.html, "nav").find((nav) =>
   attribute(nav.opening, "aria-label") === "所属专题"
 );
