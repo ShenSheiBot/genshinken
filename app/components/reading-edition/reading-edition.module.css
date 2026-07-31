@@ -1582,6 +1582,52 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
 .sheet[data-sheet="settings"],
 .sheetLayer[data-closing="true"] .sheet[data-sheet="settings"] {
   animation: none;
+  background: transparent;
+  isolation: isolate;
+}
+
+.sheet[data-sheet="settings"]::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  background: var(--bg);
+  transform-origin: right center;
+  animation: reading-settings-panel-in 260ms cubic-bezier(.2, .75, .3, 1) both;
+}
+
+.sheetLayer[data-closing="true"] .sheet[data-sheet="settings"]::before {
+  animation: reading-settings-panel-out 260ms cubic-bezier(.4, 0, .8, .25) both;
+}
+
+.sheet[data-sheet="settings"] .sheetHeading,
+.sheet[data-sheet="settings"] > :not(.sheetHandle):not(.sheetHeader) {
+  animation: reading-settings-content-in 220ms ease 40ms both;
+}
+
+.sheetLayer[data-closing="true"] .sheet[data-sheet="settings"] .sheetHeading,
+.sheetLayer[data-closing="true"] .sheet[data-sheet="settings"] > :not(.sheetHandle):not(.sheetHeader) {
+  animation: reading-settings-content-out 180ms ease both;
+}
+
+@keyframes reading-settings-panel-in {
+  from { opacity: 0; transform: scaleX(.94); }
+  to { opacity: 1; transform: scaleX(1); }
+}
+
+@keyframes reading-settings-panel-out {
+  from { opacity: 1; transform: scaleX(1); }
+  to { opacity: 0; transform: scaleX(.94); }
+}
+
+@keyframes reading-settings-content-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes reading-settings-content-out {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(6px); }
 }
 
 @keyframes reading-sheet-slide-in {
@@ -2071,7 +2117,10 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
 
 @media (prefers-reduced-motion: reduce) {
   .sheetLayer::before,
-  .sheet { animation: none !important; }
+  .sheet,
+  .sheet[data-sheet="settings"]::before,
+  .sheet[data-sheet="settings"] .sheetHeading,
+  .sheet[data-sheet="settings"] > :not(.sheetHandle):not(.sheetHeader) { animation: none !important; }
   .root *,
   .root *::before,
   .root *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
