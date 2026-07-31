@@ -1490,8 +1490,12 @@ assert.deepEqual(
   "mullahology chapter three lead must link its topic unit"
 );
 assertBlogPostingMetadata("mullahology chapter four", mullahologyChapterFour, "/posts/mullahology-04");
+const mullahologyChapterFourBody = elements(mullahologyChapterFour.html, "article").find((article) =>
+  /\bclass=["'][^"']*\bart-body\b/u.test(article.opening)
+);
+assert.ok(mullahologyChapterFourBody, "mullahology chapter four must render its prose body");
 assert.equal(
-  elements(mullahologyChapterFour.html, "h2").length,
+  elements(mullahologyChapterFourBody.inner, "h2").length,
   0,
   "mullahology chapter four must preserve the heading-free prose structure of chapters one through three"
 );
