@@ -1751,8 +1751,13 @@ assert.match(
 );
 assert.match(
   readingChromeSource,
-  /"目录与全书目录切换"[\s\S]*?hasFigureIndex\s*&&[\s\S]*?aria-label="图录"[\s\S]*?aria-label="全书目录"/,
+  /"目录与全书目录切换"[\s\S]*?hasFigureIndex\s*&&[\s\S]*?aria-label="图表"[\s\S]*?aria-label="全书目录"/,
   "book chapters must expose the full-book table-of-contents tab"
+);
+assert.match(
+  readingChromeSource,
+  /querySelectorAll<HTMLElement>\("figure\.article-table, img"\)[\s\S]*?kind === "table"[\s\S]*?`表\$\{item\.index\}`/,
+  "the reader visual index must include semantic tables as well as images"
 );
 assert.match(
   readingChromeSource,

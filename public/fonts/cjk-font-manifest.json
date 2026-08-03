@@ -1,38 +1,38 @@
 {
   "conversion": "opencc-js:cn2t+t2cn",
-  "corpusFileCount": 115,
+  "corpusFileCount": 117,
   "fonts": {
     "UN Canon STFangsong": {
-      "bytes": 1256232,
-      "codePointCount": 4907,
+      "bytes": 1331696,
+      "codePointCount": 5176,
       "file": "un-canon-st-fangsong.woff2",
-      "sha256": "2c23f751bb103015a3454d9b01fe078a02fe918e3d91bd559d546b302b93a87c",
+      "sha256": "3f6cec1f1d4afc9a174bc4b592b351c11303a61af82ff61644f895a5fbda03b0",
       "source": "STFangsong.ttf",
       "sourceSha256": "e6326459e8e60e436c7d60e34d273bda3ba4eea2d2a5b309ff8f1b73200f2e38"
     },
     "UN Canon STKaiti": {
-      "bytes": 1534872,
-      "codePointCount": 4907,
+      "bytes": 1625852,
+      "codePointCount": 5176,
       "file": "un-canon-st-kaiti.woff2",
-      "sha256": "8a8d72de1009913d1698234a6c7cf4827ace963280cbb6c85ee346593af9ff00",
+      "sha256": "e57546a489699355905619be036dd004dee655f5ac4c84b18d922d960d429d52",
       "source": "STKaiti.ttf",
       "sourceSha256": "a29c99c161fc43ce6aba2d7c152065359c2cb3019be4ae6248171178cb7d04d5"
     },
     "UN Canon STSong": {
-      "bytes": 1238060,
-      "codePointCount": 4907,
+      "bytes": 1310520,
+      "codePointCount": 5176,
       "file": "un-canon-st-song.woff2",
-      "sha256": "351038b21d31b8fe4b305312f774f3a7710ca3558881515f2687b5b41b48f5d5",
+      "sha256": "372786bacac7bac1095bea1c1d8200f53e7e2de4c0ca80d9a6019fcacb133b01",
       "source": "STSong.ttf",
       "sourceSha256": "c5cc2ed5e2c0e6385013fe82d950eee6960d805bd602b86c53ff454783f382c4"
     }
   },
-  "siteCodePointCount": 4915,
-  "siteCodePointSha256": "51b38a0772804022c8eb27a44f69403f0a47dce1431ed61757e709022f27c038",
-  "sourceCodePointCount": 3644,
-  "sourceCodePointSha256": "9c9cc80c0349f031c76262ba07126affad18c5fca8ff7e0f091a22c9d02dcebe",
+  "siteCodePointCount": 5184,
+  "siteCodePointSha256": "3e230d719b8f5bc5473797d8e020c730cf5c0350445e09665ed736a5b0862161",
+  "sourceCodePointCount": 3841,
+  "sourceCodePointSha256": "3979e89828dc0f9bfc5ee36f5d75e1e147b53d090f407e508854aac785fe551d",
   "strategy": "site-corpus-opencc-closure",
-  "subsetCodePointCount": 4907,
+  "subsetCodePointCount": 5176,
   "unsupportedSiteCodePointRanges": [
     "U+2012",
     "U+202F",

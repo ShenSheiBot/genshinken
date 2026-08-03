@@ -36,7 +36,7 @@ type Sheet = "toc" | "settings" | ReferenceKind | null;
 type FigureIndexMode = "toc" | "figures" | "book";
 type TocItem = { id: string; title: string; level: number };
 type TocNode = TocItem & { children: TocNode[] };
-type FigureIndexItem = { id: string; index: number; caption: string };
+type FigureIndexItem = { id: string; index: number; caption: string; kind: "figure" | "table" };
 export type ReadingBookTocSection = {
   id: string;
   title: string;
@@ -422,7 +422,7 @@ export default function ReadingEditionChrome({
 
   const tocRef = useRef<TocItem[]>([]);
   const figureItemsRef = useRef<FigureIndexItem[]>([]);
-  const figureElementsRef = useRef<Map<string, HTMLImageElement>>(new Map());
+  const figureElementsRef = useRef<Map<string, HTMLElement>>(new Map());
   const figureScrollRequestRef = useRef(0);
   const figureScrollCleanupRef = useRef<(() => void) | null>(null);
   const bodyRef = useRef<HTMLElement | null>(null);
@@ -533,7 +533,7 @@ export default function ReadingEditionChrome({
   const showFigureIndex = desktopDesk && hasFigureIndex;
   const showReadingIndexTabs = hasFigureIndex || Boolean(bookToc);
   const readingIndexTabsLabel = hasFigureIndex
-    ? bookToc ? "目录、图录与全书目录切换" : "目录与图录切换"
+    ? bookToc ? "目录、图表与全书目录切换" : "目录与图表切换"
     : "目录与全书目录切换";
   const {
     trackingEnabled: readingProgressEnabled,
@@ -600,13 +600,21 @@ export default function ReadingEditionChrome({
     tocRef.current = headings;
     setToc(headings);
 
-    const figures = Array.from(body.querySelectorAll<HTMLImageElement>("img")).map((image, index) => {
-      if (!image.id) image.id = `reading-figure-${index + 1}`;
-      const caption = image.closest("figure")?.querySelector("figcaption")?.textContent?.trim() ?? "";
-      return { id: image.id, index: index + 1, caption };
-    });
+    let figureNumber = 0;
+    let tableNumber = 0;
+    const figures = Array.from(body.querySelectorAll<HTMLElement>("figure.article-table, img"))
+      .filter((element) => !(element instanceof HTMLImageElement) || !element.closest("figure.article-table"))
+      .map((element) => {
+        const kind: FigureIndexItem["kind"] = element.matches("figure.article-table") ? "table" : "figure";
+        const index = kind === "table" ? ++tableNumber : ++figureNumber;
+        if (!element.id) element.id = `reading-${kind}-${index}`;
+        const caption = kind === "table"
+          ? element.querySelector("figcaption")?.textContent?.trim() ?? ""
+          : element.closest("figure")?.querySelector("figcaption")?.textContent?.trim() ?? "";
+        return { id: element.id, index, caption, kind };
+      });
     figureItemsRef.current = figures;
-    figureElementsRef.current = new Map(figures.map((item) => [item.id, document.getElementById(item.id) as HTMLImageElement]));
+    figureElementsRef.current = new Map(figures.map((item) => [item.id, document.getElementById(item.id) as HTMLElement]));
     setFigureItems(figures);
 
     const links: ReferenceLink[] = [];
@@ -1200,7 +1208,7 @@ export default function ReadingEditionChrome({
     const alignmentImages = figureItemsRef.current
       .slice(0, targetIndex < 0 ? undefined : targetIndex + 1)
       .map((item) => figureElementsRef.current.get(item.id))
-      .filter((item): item is HTMLImageElement => Boolean(item));
+      .filter((item): item is HTMLImageElement => item instanceof HTMLImageElement);
     alignmentImages.forEach((item) => { item.loading = "eager"; });
     await Promise.all(alignmentImages.map(async (item) => {
       try {
@@ -1567,15 +1575,15 @@ export default function ReadingEditionChrome({
       data-figure-index-mode={figureIndexMode}
       data-has-figures={hasFigureIndex ? "true" : "false"}
       data-has-book={bookToc ? "true" : "false"}
-      aria-label={figureIndexMode === "toc" ? "文章目录" : figureIndexMode === "figures" ? "文章图录" : "全书目录"}
+      aria-label={figureIndexMode === "toc" ? "文章目录" : figureIndexMode === "figures" ? "文章图表索引" : "全书目录"}
     >
       <header className={styles.figureIndexTabs} data-has-figures={hasFigureIndex ? "true" : "false"} data-has-book={bookToc ? "true" : "false"} role="tablist" aria-label={readingIndexTabsLabel}>
         <span className={styles.figureIndexThumb} aria-hidden="true" />
         <b className={styles.figureIndexTabLabel} data-slot="toc" data-selected={figureIndexMode === "toc" ? "true" : "false"} aria-hidden="true">目录</b>
-        {hasFigureIndex && <b className={styles.figureIndexTabLabel} data-slot="figures" data-selected={figureIndexMode === "figures" ? "true" : "false"} aria-hidden="true">图录</b>}
+        {hasFigureIndex && <b className={styles.figureIndexTabLabel} data-slot="figures" data-selected={figureIndexMode === "figures" ? "true" : "false"} aria-hidden="true">图表</b>}
         {bookToc && <b className={styles.figureIndexTabLabel} data-slot="book" data-selected={figureIndexMode === "book" ? "true" : "false"} aria-hidden="true">全书目录</b>}
         <button data-slot="toc" type="button" role="tab" aria-label="目录" aria-selected={figureIndexMode === "toc"} aria-controls="reading-index-toc" onClick={() => setFigureIndexMode("toc")} />
-        {hasFigureIndex && <button data-slot="figures" type="button" role="tab" aria-label="图录" aria-selected={figureIndexMode === "figures"} aria-controls="reading-index-figures" onClick={() => setFigureIndexMode("figures")} />}
+        {hasFigureIndex && <button data-slot="figures" type="button" role="tab" aria-label="图表" aria-selected={figureIndexMode === "figures"} aria-controls="reading-index-figures" onClick={() => setFigureIndexMode("figures")} />}
         {bookToc && <button data-slot="book" type="button" role="tab" aria-label="全书目录" aria-selected={figureIndexMode === "book"} aria-controls="reading-index-book" onClick={() => setFigureIndexMode("book")} />}
       </header>
       <div className={styles.figureIndexViewport}>
@@ -1609,7 +1617,7 @@ export default function ReadingEditionChrome({
                   onClick={() => jumpToFigure(item.id)}
                   key={item.id}
                 >
-                  <span>图{item.index}</span>
+                  <span>{item.kind === "table" ? `表${item.index}` : `图${item.index}`}</span>
                   {item.caption && <b>{item.caption}</b>}
                 </button>
               );

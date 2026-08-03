@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import { renderMarkdown } from "../lib/markdown.ts";
 
 const bibliography = "Gaido, Daniel 2003, ‘“The American Worker” and the Theory of Permanent Revolution: Karl Kautsky on Werner Sombart’s *Why Is There No Socialism in the United States?*’, *Historical Materialism*, 11, 4: 79-123.";
@@ -98,6 +99,65 @@ assert.match(
   "existing custom class, id and data attributes must survive sanitization"
 );
 assert.match(richArticleHtml, /<table>[\s\S]*?<th align="left">/u, "GFM tables must survive sanitization");
+const semanticTableHtml = await renderMarkdown(`
+[表题] 朝鲜两个道农民的收支，1931年（日元）
+
+| 类别 | 总收入 |
+| --- | ---: |
+| 自耕农 | 679 |
+
+[表注] <sup>a</sup> 估算值。
+
+[表注] 资料来源：李勳求，《朝鲜的土地利用与农村经济》。
+`);
+assert.match(
+  semanticTableHtml,
+  /<figure class="article-table"><figcaption class="article-table-caption">朝鲜两个道农民的收支，(?:<span class="latin-run">)?1931(?:<\/span>)?年（日元）<\/figcaption>/u,
+  "marked table titles must become semantic figure captions"
+);
+assert.match(
+  semanticTableHtml,
+  /<div class="article-table-scroll"><table class="article-table-grid">/u,
+  "semantic tables must retain a horizontally scrollable table region"
+);
+assert.match(
+  semanticTableHtml,
+  /<div class="article-table-notes"><p class="article-table-note"><sup>(?:<span class="latin-run">)?a(?:<\/span>)?<\/sup>\s+估算值。<\/p><p class="article-table-note">资料来源：/u,
+  "marked table notes and sources must be grouped beneath the table"
+);
+assert.doesNotMatch(semanticTableHtml, /\[表(?:题|注)\]/u, "table source markers must never render");
+
+const ladejinskySource = await readFile(
+  new URL("../source/_posts/ladejinsky-agrarian-reform-as-unfinished-business.md", import.meta.url),
+  "utf8"
+);
+assert.match(ladejinskySource, /^subtitle: 雷正琪文选$/mu, "the selected-papers subtitle must use 雷正琪");
+assert.match(ladejinskySource, /^translator: 王揆$/mu, "the selected-papers byline must credit 王揆");
+assert.match(
+  ladejinskySource,
+  /^## 日本人土地所有权上升$/mu,
+  "the Japanese land-ownership line must be a second-level section heading"
+);
+assert.equal(
+  (ladejinskySource.match(/^\[表题\]/gmu) ?? []).length,
+  5,
+  "every published table in the selected papers must have an indexed caption"
+);
+assert.doesNotMatch(
+  ladejinskySource,
+  /\d{1,3}(?:,\d{3})+/u,
+  "Arabic numerals in the selected papers must use four-digit grouping rather than commas"
+);
+assert.doesNotMatch(
+  ladejinskySource,
+  /英亩|英里|蒲式耳|英尺|英寸|盎司/u,
+  "imperial measurements in the selected papers must be converted to Han land units or metric units"
+);
+assert.match(
+  ladejinskySource,
+  /每3\.8公斤日元10元6角[^\n]+每3\.8公斤日元5元7角/u,
+  "fractional yen amounts must use the 日元X元Y角 convention"
+);
 assert.match(
   richArticleHtml,
   /<a href="https:\/\/example\.org\/read" target="_blank" rel="noopener noreferrer">/u,

@@ -142,6 +142,19 @@ export const CONTRIBUTORS = [
     aliases: ["Charlotte Robertson"],
     teamMember: false,
   },
+  {
+    id: "wolf-ladejinsky",
+    displayName: "雷正琪",
+    aliases: ["沃尔夫·拉迪金斯基", "Wolf Ladejinsky", "Wolf Isaac Ladejinsky"],
+    teamMember: false,
+  },
+  {
+    id: "western-un-canon-translation-group",
+    displayName: "西方负典编译组",
+    aliases: [],
+    teamMember: false,
+    entityType: "organization",
+  },
 ] as const satisfies readonly Contributor[];
 
 export type ContributorId = (typeof CONTRIBUTORS)[number]["id"];

@@ -556,6 +556,122 @@ function rehypeLatinRuns() {
   return (tree: Root) => walk(tree as unknown as { children: unknown[] });
 }
 
+const TABLE_CAPTION_MARKER = "[表题]";
+const TABLE_NOTE_MARKER = "[表注]";
+
+type TableFigureNode = {
+  type?: string;
+  tagName?: string;
+  value?: string;
+  properties?: Record<string, unknown>;
+  children?: TableFigureNode[];
+};
+
+function markerParagraph(node: TableFigureNode | undefined, marker: string): node is TableFigureNode {
+  if (node?.type !== "element" || node.tagName !== "p") return false;
+  return elementText(node as Element).trimStart().startsWith(marker);
+}
+
+function stripParagraphMarker(node: TableFigureNode, marker: string): void {
+  const strip = (current: TableFigureNode): boolean => {
+    if (current.type === "text" && typeof current.value === "string") {
+      const leading = current.value.match(/^\s*/u)?.[0].length ?? 0;
+      if (current.value.slice(leading).startsWith(marker)) {
+        current.value = current.value.slice(leading + marker.length).replace(/^\s*/u, "");
+        return true;
+      }
+    }
+    for (const child of current.children ?? []) {
+      if (strip(child)) return true;
+    }
+    return false;
+  };
+  strip(node);
+}
+
+function significantSibling(children: TableFigureNode[], start: number, direction: -1 | 1): number {
+  for (let index = start; index >= 0 && index < children.length; index += direction) {
+    const node = children[index];
+    if (node.type !== "text" || /\S/u.test(node.value ?? "")) return index;
+  }
+  return -1;
+}
+
+function rehypeTableFigures() {
+  const walk = (parent: TableFigureNode) => {
+    const children = parent.children;
+    if (!children) return;
+
+    for (let index = 0; index < children.length; index += 1) {
+      const table = children[index];
+      if (table.type !== "element" || table.tagName !== "table") continue;
+
+      const captionIndex = significantSibling(children, index - 1, -1);
+      const caption = captionIndex >= 0 ? children[captionIndex] : undefined;
+      if (!markerParagraph(caption, TABLE_CAPTION_MARKER)) continue;
+      stripParagraphMarker(caption, TABLE_CAPTION_MARKER);
+
+      const notes: TableFigureNode[] = [];
+      let endIndex = index;
+      let nextIndex = significantSibling(children, index + 1, 1);
+      while (nextIndex >= 0 && markerParagraph(children[nextIndex], TABLE_NOTE_MARKER)) {
+        const note = children[nextIndex];
+        stripParagraphMarker(note, TABLE_NOTE_MARKER);
+        note.properties = { ...(note.properties ?? {}), className: ["article-table-note"] };
+        notes.push(note);
+        endIndex = nextIndex;
+        nextIndex = significantSibling(children, nextIndex + 1, 1);
+      }
+
+      const className = table.properties?.className;
+      table.properties = {
+        ...(table.properties ?? {}),
+        className: Array.from(new Set([
+          ...(Array.isArray(className) ? className.map(String) : className ? [String(className)] : []),
+          "article-table-grid",
+        ])),
+      };
+
+      const figure: TableFigureNode = {
+        type: "element",
+        tagName: "figure",
+        properties: { className: ["article-table"] },
+        children: [
+          {
+            type: "element",
+            tagName: "figcaption",
+            properties: { className: ["article-table-caption"] },
+            children: caption.children ?? [],
+          },
+          {
+            type: "element",
+            tagName: "div",
+            properties: { className: ["article-table-scroll"] },
+            children: [table],
+          },
+          ...(notes.length > 0
+            ? [{
+                type: "element",
+                tagName: "div",
+                properties: { className: ["article-table-notes"] },
+                children: notes,
+              } satisfies TableFigureNode]
+            : []),
+        ],
+      };
+
+      children.splice(captionIndex, endIndex - captionIndex + 1, figure);
+      index = captionIndex;
+    }
+
+    for (const child of children) {
+      if (child.type === "element") walk(child);
+    }
+  };
+
+  return (tree: Root) => walk(tree as unknown as TableFigureNode);
+}
+
 const processor = unified()
   .use(remarkParse)
   .use(remarkGfm)
@@ -575,6 +691,7 @@ const processor = unified()
   })
   .use(rehypeSlug)
   .use(rehypeRewrite)
+  .use(rehypeTableFigures)
   .use(rehypeCjkEmphasis)
   .use(rehypeSmartQuotes)
   .use(rehypeCjkInterpuncts)
