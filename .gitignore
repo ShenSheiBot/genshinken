@@ -43,3 +43,6 @@ next-env.d.ts
 /claude-design-package/
 /claude-design-package.zip
 /UN-CANON-BLOG.zip
+
+# Codex local task artifacts
+/.codex/
