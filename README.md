@@ -10,9 +10,11 @@
 
 ## 写作 / 发布流程
 
-1. 在 `source/_posts/` 下新建一个 `.md` 文件。
-2. 填写 front-matter（见下），写正文。
-3. 提交并推送到 `main` 分支 —— Vercel 会自动构建上线。
+1. 外部原稿／Outline 文档先完整保存到 `editorial-sources/`，不得边读取边重写。
+2. 在 `editorial-sources/preservation-manifest.json` 登记来源、SHA-256、派生方式、唯一允许的机械转换及逐项授权修订。
+3. 运行 `npm run sync:preserved` 确定性生成受保护正文；普通原创稿才直接写入 `source/_posts/`。
+4. 填写或复核 front-matter；确认既有快照未被改写、允许转换后的正文保留率为 100%、未授权差异为 0，再运行 `npm run verify:snapshot-history`、`npm run verify:preservation`、`npm run check`、`npm run build`。
+5. 提交并推送到 `main` 分支 —— Vercel 会自动构建上线。
 
 > **发布前请逐项核对交付标准：[`docs/delivery-standards.md`](docs/delivery-standards.md)**
 > （slug 全 ASCII、front-matter 完整、弯引号、脚注 `[^n]` 可跳转、作者署名等）。
@@ -22,6 +24,7 @@
 
 ## 文档索引
 
+- [`docs/pre-translation.md`](docs/pre-translation.md)：译前处理、机械清洗边界与禁止重写的保真契约。
 - [`docs/delivery-standards.md`](docs/delivery-standards.md)：内容字段、编辑规范与发布要求。
 - [`docs/frontend-product-spec.md`](docs/frontend-product-spec.md)：公开页面、响应式行为和产品验收标准。
 - [`docs/architecture/reader-runtime.md`](docs/architecture/reader-runtime.md)：正式正文组件、状态边界、位置恢复与回滚。
@@ -155,11 +158,14 @@ lib/
   posts.ts            读取 / 解析文章
   markdown.ts         Markdown → HTML 渲染管线
   site.ts             站点常量（品牌、简介等）
+editorial-sources/      不可变源文快照、来源哈希与派生清单
 source/_posts/        文章内容（Markdown）
 source/_books/        书籍与章节清单（JSON）
 source/_topics/       人工策展专题（Markdown）
 public/               静态资源（attachments / img）
-scripts/              内容、字体、路由、引用与发布验证
+scripts/              内容、保真、字体、路由、引用与发布验证
+  verify-editorial-snapshot-history.mjs  既有源文快照追加式历史校验
+  verify-source-preservation.mjs  源文快照与博客派生稿严格校验
 tests/e2e/            博客自有 Playwright specs 与本地 WebKit 测试 fixture
 docs/testing.md       测试策略、执行、平台权责与证据边界
 docs/testing/         可重复执行的 test charters

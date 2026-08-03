@@ -1,0 +1,77 @@
+import assert from "node:assert/strict";
+import { execFileSync } from "node:child_process";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const POLICY_FILES = new Set([
+  "editorial-sources/README.md",
+  "editorial-sources/preservation-manifest.json",
+]);
+
+function git(args, allowFailure = false) {
+  try {
+    return execFileSync("git", args, { cwd: ROOT, encoding: "utf8", stdio: ["ignore", "pipe", "pipe"] }).trim();
+  } catch (error) {
+    if (allowFailure) return "";
+    const stderr = error.stderr?.toString().trim();
+    throw new Error(`git ${args.join(" ")} failed${stderr ? `: ${stderr}` : ""}`);
+  }
+}
+
+function commitExists(reference) {
+  if (!reference || /^0+$/.test(reference)) return false;
+  return git(["rev-parse", "--verify", `${reference}^{commit}`], true).length > 0;
+}
+
+function defaultBaseReference() {
+  const configured = process.env.PRESERVATION_BASE_REF?.trim();
+  if (commitExists(configured)) return configured;
+
+  const branch = git(["branch", "--show-current"], true);
+  if (branch && branch !== "main" && commitExists("origin/main")) {
+    const mergeBase = git(["merge-base", "HEAD", "origin/main"], true);
+    if (commitExists(mergeBase)) return mergeBase;
+  }
+
+  return "HEAD";
+}
+
+function protectedSnapshot(pathname) {
+  const normalized = pathname.replaceAll("\\", "/");
+  return normalized.startsWith("editorial-sources/") && !POLICY_FILES.has(normalized);
+}
+
+function changedProtectedSnapshots(baseReference) {
+  const output = git([
+    "diff",
+    "--name-status",
+    "--find-renames",
+    "--diff-filter=MDTR",
+    baseReference,
+    "--",
+    "editorial-sources",
+  ]);
+  if (!output) return [];
+
+  const violations = [];
+  for (const line of output.split("\n")) {
+    const [status, ...paths] = line.split("\t");
+    const protectedPaths = paths.filter(protectedSnapshot);
+    if (protectedPaths.length > 0) violations.push({ status, paths: protectedPaths });
+  }
+  return violations;
+}
+
+const baseReference = defaultBaseReference();
+assert.ok(commitExists(baseReference), `cannot resolve preservation baseline ${baseReference}`);
+const violations = changedProtectedSnapshots(baseReference);
+if (violations.length > 0) {
+  const details = violations.map(({ status, paths }) => `  ${status}\t${paths.join(" -> ")}`).join("\n");
+  throw new Error(
+    `registered editorial snapshots are append-only relative to ${baseReference}.\n` +
+      `${details}\n` +
+      "Do not modify, delete, or rename an existing snapshot. Add a versioned source file and update the manifest instead.",
+  );
+}
+console.log(`editorial snapshot history is append-only relative to ${baseReference}`);

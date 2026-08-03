@@ -20,11 +20,27 @@
 - [ ] **书籍清单同步**：递归目录 id／number 稳定，已发布节点的 anchor 有效，`latestChapterId` 只指向已发布节点，`updatedAt` 与 `book_document` 构建源一致
 - [ ] **专题引用有效**：分组顺序正确，`post / media / book` 类型与目标一致，导语和编者按已复核
 - [ ] **链接有效**：外链正常；无残留的 Outline `mention://` 内链
+- [ ] **原稿保真门禁通过**：源文已快照；允许转换归一化后的正文保留率 100%、未授权差异 0；逐项授权修订已登记；`npm run verify:preservation` 通过
 - [ ] **提交作者 = `un-canon <un-canon@hotmail.com>`**
 - [ ] 本地 `npm run check` 与 `npm run build` 通过，再推送
 
 ---
 
+## 0.1 原稿保真与派生稿边界
+
+本标准中的“编辑”不授权重写原稿。清洗阶段的最高优先级是保持原文内容、风格与节奏，完整规则以 [`pre-translation.md`](pre-translation.md) §0 为准。
+
+- 原稿先存入 `editorial-sources/`，再生成博客派生稿；已登记快照不得原地修改。
+- `preservation-manifest.json` 固定源文件哈希、来源、拼接顺序、允许的机械转换和逐项授权修订。
+- 保真门禁不设模糊阈值：归一化并扣除已声明转换／修订后，正文字符保留率必须为 100%，段落边界与顺序完全一致，未授权差异必须为 0。
+- OCR 订正和用户指定字词修订必须逐项登记 `authorizedChanges`，记录精确替换、理由、证据、授权人和日期；唯一匹配失败或跨段修改时直接失败。
+- `npm run verify:snapshot-history` 依据 Git 基线禁止修改、删除或改名既有快照，只允许新增版本文件。
+- 受保护正文只能由 `npm run sync:preserved` 重建；程序先验证全部清单和源哈希再写入，禁止手工“顺便润色”。
+- `npm run verify:preservation` 对正文严格比较；任一未授权字符新增、删除、替换、重排或段落结构改变均直接失败。
+- 实质性改写必须另立文档和 slug，保留原稿及其公开 URL，不得静默顶替。
+- Outline 更新前保存文档 ID、修订号和全文，更新后回读全文；失败时先恢复，不得继续批量处理。
+
+---
 ## 1. 文件与 URL：必须 ASCII
 
 `slug` 决定公开 URL：普通文章为 `/posts/<slug>`，`section: multimedia` 为 `/media/<slug>`，
@@ -341,6 +357,8 @@ groups:
 ### 12.1 确定性静态与逻辑门禁
 
 - `npm run validate:content`：贡献者登记和署名、文章字段、书籍／章节 JSON、专题分组、跨实体引用、日期同步和唯一性。
+- `npm run verify:snapshot-history`：按 Git 基线检查 `editorial-sources/` 的追加式历史；既有快照修改、删除或改名即失败。
+- `npm run verify:preservation`：源文快照哈希、派生顺序、允许机械转换及逐项授权修订；执行正文 100% 保留／未授权差异 0 的零差异门禁。
 - `npm run validate:media-html`：多媒体资料 HTML 允许列表、主动内容和危险属性。
 - `npm run verify:typography`：Markdown 排版、标题、表格、脚注、媒体和危险协议契约。
 - `npm run verify:negative`：负栏目及其既有内容回归。

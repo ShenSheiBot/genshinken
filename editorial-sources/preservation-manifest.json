@@ -1,0 +1,122 @@
+{
+    "version":  2,
+    "hashAlgorithm":  "sha256",
+    "policy":  "source-preserving-v2",
+    "retentionContract":  {
+                              "normalizedTextRetention":  "100%",
+                              "unauthorizedChangesAllowed":  0,
+                              "paragraphOrder":  "exact"
+                          },
+    "documents":  [
+                      {
+                          "post":  "source/_posts/mullahology-10.md",
+                          "mode":  "section-merge",
+                          "transforms":  [
+                                             "smart-double-quotes"
+                                         ],
+                          "sources":  [
+                                          {
+                                              "path":  "editorial-sources/mullahology/resistance-economy-upper.md",
+                                              "sha256":  "8ae71057153a5452f62c30211d32173c4e64e1028596065040cd84a9d31f309c",
+                                              "origin":  "https://wiki.un-canon.com/doc/5y2b44cb5oq15oqx57up5rwo77yi5lik77yj-LX8LcEhvxV",
+                                              "heading":  "上"
+                                          },
+                                          {
+                                              "path":  "editorial-sources/mullahology/resistance-economy-middle.md",
+                                              "sha256":  "682058158e2c2f0a57c54861a82209fc9db7aed576e80c708f12d01a15c1b306",
+                                              "origin":  "https://wiki.un-canon.com/doc/5y2b5lia44cb5oq15oqx57up5rwo77yi5lit77yj-hyhThhknvK",
+                                              "heading":  "中"
+                                          },
+                                          {
+                                              "path":  "editorial-sources/mullahology/resistance-economy-lower.md",
+                                              "sha256":  "fe8f1c2569ca31f9f5a28c4daa9e514e3225808e4b11e1d2f832bbeaec57d1d0",
+                                              "origin":  "https://wiki.un-canon.com/doc/57wc44cb5oq15oqx57up5rwo77yi5lil77yj-Zie21Jn6Re",
+                                              "heading":  "下"
+                                          }
+                                      ],
+                          "authorizedChanges":  [
+                                                    {
+                                                        "id":  "remove-upper-transition-line",
+                                                        "kind":  "user-specified-wording",
+                                                        "find":  "这就是后面的内容了",
+                                                        "replacement":  "",
+                                                        "reason":  "删除用户明确指定不保留的过渡句。",
+                                                        "evidence":  "用户在 2026-08-03 的当前 Codex 任务中逐字指定删除“这就是后面的内容了”。",
+                                                        "authorizedBy":  "用户（当前 Codex 任务）",
+                                                        "authorizedAt":  "2026-08-03"
+                                                    },
+                                                    {
+                                                        "id":  "remove-middle-next-installment-line",
+                                                        "kind":  "user-specified-wording",
+                                                        "find":  "下一期，我们将回到绿色文化大革命的进程之中，去看看巴列维所缔造的社会是如何被焚烧为一片焦土的，也就是从那时起，一种来自地狱的烈火便不可避免地缠绕了伊朗40余年……",
+                                                        "replacement":  "",
+                                                        "reason":  "删除用户明确指定不保留的下期预告句。",
+                                                        "evidence":  "用户在 2026-08-03 的当前 Codex 任务中逐字指定删除该完整句子。",
+                                                        "authorizedBy":  "用户（当前 Codex 任务）",
+                                                        "authorizedAt":  "2026-08-03"
+                                                    },
+                                                    {
+                                                        "id":  "remove-lower-series-finale-prefix",
+                                                        "kind":  "user-specified-wording",
+                                                        "find":  "这是本系列的完结篇，",
+                                                        "replacement":  "",
+                                                        "reason":  "删除用户明确指定不保留的完结篇表述，保留同段其余原文。",
+                                                        "evidence":  "用户在 2026-08-03 的当前 Codex 任务中逐字指定删除“这是本系列的完结篇，”。",
+                                                        "authorizedBy":  "用户（当前 Codex 任务）",
+                                                        "authorizedAt":  "2026-08-03"
+                                                    }
+                                                ]
+                      },
+                      {
+                          "post":  "source/_posts/mullahology-mobilization.md",
+                          "mode":  "verbatim",
+                          "transforms":  [
+
+                                         ],
+                          "sources":  [
+                                          {
+                                              "path":  "editorial-sources/mullahology/mobilization.md",
+                                              "sha256":  "bc563aca0a01666e398afae41ca258ff577dafe8c996f1ad55cd578c199d6025",
+                                              "origin":  "https://wiki.un-canon.com/doc/5yqo5zgy-0I9qSKCSAK"
+                                          }
+                                      ],
+                          "authorizedChanges":  [
+
+                                                ]
+                      },
+                      {
+                          "post":  "source/_posts/mullahology-urbanization.md",
+                          "mode":  "verbatim",
+                          "transforms":  [
+
+                                         ],
+                          "sources":  [
+                                          {
+                                              "path":  "editorial-sources/mullahology/urbanization.md",
+                                              "sha256":  "49161d606aa4f0271a8731589aac739388f41e94df6c791d0a8f5d7e8e03db80",
+                                              "origin":  "https://wiki.un-canon.com/doc/5zo5bic5yyw-fDujIImWr5"
+                                          }
+                                      ],
+                          "authorizedChanges":  [
+
+                                                ]
+                      },
+                      {
+                          "post":  "source/_posts/mullahology-bazaar-merchants.md",
+                          "mode":  "verbatim",
+                          "transforms":  [
+
+                                         ],
+                          "sources":  [
+                                          {
+                                              "path":  "editorial-sources/mullahology/bazaar-merchants.md",
+                                              "sha256":  "0e48e7c87464674f2a9195a6e55bc5d6abdc991a74aa4e2726feb60568120106",
+                                              "origin":  "https://wiki.un-canon.com/doc/5be05omo5zwg5lq6-Vr0zmHTuVx"
+                                          }
+                                      ],
+                          "authorizedChanges":  [
+
+                                                ]
+                      }
+                  ]
+}
