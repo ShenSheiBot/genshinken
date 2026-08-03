@@ -583,8 +583,12 @@ const processor = unified()
   .use(rehypeKatex)
   .use(rehypeStringify, { allowDangerousHtml: true });
 
+function normalizeInlinePageMarkers(markdown: string): string {
+  return markdown.replace(/^(<!--[ \t]*page\b[^>]*-->)[ \t]*(?=\S)/gimu, "$1\n\n");
+}
+
 export async function renderMarkdown(md: string): Promise<string> {
   const { markdown, sourceNotes } = extractSourceNotes(md);
-  const file = await processor.process(markdown);
+  const file = await processor.process(normalizeInlinePageMarkers(markdown));
   return sanitizePublicContentHtml(String(file) + await renderSourceNotes(sourceNotes));
 }

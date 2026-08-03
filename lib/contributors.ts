@@ -136,6 +136,12 @@ export const CONTRIBUTORS = [
     aliases: [],
     teamMember: false,
   },
+  {
+    id: "charlotte-robertson",
+    displayName: "夏洛特·罗伯逊",
+    aliases: ["Charlotte Robertson"],
+    teamMember: false,
+  },
 ] as const satisfies readonly Contributor[];
 
 export type ContributorId = (typeof CONTRIBUTORS)[number]["id"];

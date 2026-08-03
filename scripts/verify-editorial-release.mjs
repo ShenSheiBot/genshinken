@@ -724,6 +724,14 @@ function assertBlogPostingMetadata(label, result, expectedPath) {
 }
 
 const shulginManifest = readBookManifest("shulgin-dni");
+const capitalUntamedManifest = readBookManifest("capital-untamed");
+const capitalUntamedPublishedChapters = flattenBookChapters(capitalUntamedManifest.chapters)
+  .filter((chapter) => chapter.status === "published");
+assert.equal(
+  capitalUntamedManifest.title,
+  "不驯的资本",
+  "capital-untamed must use the current translated title"
+);
 const shulginChapters = flattenBookChapters(shulginManifest.chapters);
 const shulginPublishedChapters = shulginChapters.filter((chapter) => chapter.status === "published");
 const shulginForthcomingChapters = shulginChapters.filter((chapter) => chapter.status === "forthcoming");
@@ -872,8 +880,17 @@ assert.deepEqual(
     "/posts/mullahology-02",
     "/posts/mullahology-03",
     "/posts/mullahology-04",
+    "/posts/mullahology-05",
+    "/posts/mullahology-06",
+    "/posts/mullahology-07",
+    "/posts/mullahology-08",
+    "/posts/mullahology-09",
+    "/posts/mullahology-10",
+    "/posts/mullahology-mobilization",
+    "/posts/mullahology-urbanization",
+    "/posts/mullahology-bazaar-merchants",
   ],
-  "mullahology must retain its five published source units in authored order"
+  "mullahology must retain all published source units in authored order"
 );
 
 const [
@@ -925,6 +942,21 @@ const [
   page("/does-not-exist"),
   page("/sitemap.xml"),
 ]);
+
+const capitalUntamedChapterPages = await Promise.all(
+  capitalUntamedPublishedChapters.map((chapter) =>
+    page(`/books/capital-untamed/chapters/${encodeURIComponent(chapter.id)}`)
+  )
+);
+for (const [index, result] of capitalUntamedChapterPages.entries()) {
+  const chapter = capitalUntamedPublishedChapters[index];
+  assert.equal(result.response.status, 200, `capital-untamed chapter ${chapter.id} must render`);
+  assert.doesNotMatch(
+    result.html,
+    /\[\^[^\r\n]+?\]/u,
+    `capital-untamed chapter ${chapter.id} must not expose raw footnote markers`
+  );
+}
 
 for (const [label, result] of Object.entries({
   home,

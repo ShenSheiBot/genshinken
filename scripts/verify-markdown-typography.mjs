@@ -47,6 +47,20 @@ assert.doesNotMatch(
   "GFM footnote backreferences must not retain the default English accessible name"
 );
 
+const inlinePageMarkerFootnoteHtml = await renderMarkdown(
+  "<!-- page 126 -->正文引用[^page-1]。\n\n<!-- page 127 --> 连续引用[^page-2]。\n\n[^page-1]: 第一条注释。\n\n[^page-2]: 第二条注释。"
+);
+assert.doesNotMatch(
+  inlinePageMarkerFootnoteHtml,
+  /\[\^page-[12]\]/u,
+  "inline page markers must not leave footnote references unparsed"
+);
+assert.equal(
+  (inlinePageMarkerFootnoteHtml.match(/data-footnote-ref/gu) ?? []).length,
+  2,
+  "inline page markers must preserve every following footnote reference"
+);
+
 const mathHtml = await renderMarkdown("Inline $E=mc^2$\n\n$$\n\\int_0^1 x^2\\,dx\n$$");
 assert.match(mathHtml, /class="katex"/, "inline math must render with KaTeX");
 assert.match(mathHtml, /class="katex-display"/, "display math must render with KaTeX");
