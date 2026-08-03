@@ -12,6 +12,8 @@
   "publishedAt": "2026-08-03",
   "updatedAt": "2026-08-03",
   "latestChapterId": "bibliography",
+  "pdfUrl": "/downloads/capital-untamed.pdf",
+  "epubUrl": "/downloads/capital-untamed.epub",
   "citations": {
     "original": {
       "itemType": "book",
@@ -32,11 +34,24 @@
     },
     "translation": {
       "itemType": "book",
-      "citationKey": "robertson2026capitalUntamedZH",
-      "language": "zh-Hans",
-      "publisher": "西方负典编译组",
-      "rights": "非商业性阅读用译本，未获原出版社授权，不作出版发行之用。",
-      "extra": "据 The University of Chicago Press 2026 年版译出。"
+      "citationKey": "__2026",
+      "title": "不驯的资本：十九世纪法国的金融政治",
+      "shortTitle": "不驯的资本",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "夏洛特",
+          "lastName": "罗伯逊"
+        },
+        {
+          "creatorType": "translator",
+          "name": "王揆"
+        }
+      ],
+      "edition": "1",
+      "date": "2026-08",
+      "language": "zh",
+      "publisher": "負典編譯"
     }
   },
   "chapters": [

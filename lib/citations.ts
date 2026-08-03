@@ -307,6 +307,7 @@ export function mergeCitation(
   if (
     citation.url?.startsWith(`${SITE_ORIGIN}/`)
     && ZOTERO_PUBLISHER_ITEM_TYPES.has(citation.itemType)
+    && overrides?.publisher == null
   ) {
     citation.publisher = SITE_PUBLISHER;
   }
@@ -534,10 +535,7 @@ export function citationToBibtex(citation: CitationRecord): string {
     add("volume", citation.volume);
   }
   add("edition", citation.edition);
-  add(
-    "publisher",
-    citation.url?.startsWith(`${SITE_ORIGIN}/`) ? SITE_PUBLISHER : citation.publisher
-  );
+  add("publisher", citation.publisher ?? (citation.url?.startsWith(`${SITE_ORIGIN}/`) ? SITE_PUBLISHER : undefined));
   add("address", citation.place);
   if (citation.itemType === "thesis") add("school", citation.university);
 

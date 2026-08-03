@@ -18,12 +18,13 @@ original_title: "Capital Untamed: The Politics of Finance in Nineteenth-Century 
 original_publication: The University of Chicago Press
 citation:
   itemType: book
-  citationKey: robertson2026capitalUntamedZHFullText
-  date: "2026"
-  language: zh-Hans
-  publisher: 西方负典编译组
-  ISBN: "978-0-226-84758-0"
-  extra: "据 The University of Chicago Press 2026 年版译出；非商业性阅读用译本。"
+  citationKey: __2026_fulltext
+  title: "不驯的资本：十九世纪法国的金融政治"
+  shortTitle: 不驯的资本
+  edition: "1"
+  date: "2026-08"
+  language: zh
+  publisher: 負典編譯
 ---
 
 <!--

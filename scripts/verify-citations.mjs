@@ -312,8 +312,8 @@ for (const book of bookManifests) {
   assert.equal(translationCitation.itemType, "book");
   assert.equal(
     translationCitation.language,
-    book.script === "hant" ? "zh-Hant" : "zh-Hans",
-    `${book.slug} translation language must follow its manifest script`
+    book.citations.translation.language ?? (book.script === "hant" ? "zh-Hant" : "zh-Hans"),
+    `${book.slug} translation language must follow its explicit metadata or manifest script`
   );
   assert.equal(
     translationCitation.url,
@@ -323,7 +323,22 @@ for (const book of bookManifests) {
   const bibtex = citationToBibtex(translationCitation);
   assert.ok(bibtex.startsWith("@book{"), `${book.slug} translation must export as @book`);
   assert.match(bibtex, new RegExp(`url = \\{https://un-canon\\.blog/books/${book.slug}\\}`));
-  assert.match(bibtex, /publisher = \{西方負典編譯組\}/);
+  const expectedPublisher = book.citations.translation.publisher ?? "西方負典編譯組";
+  assert.ok(
+    bibtex.includes(`publisher = {${expectedPublisher}}`),
+    `${book.slug} translation must preserve its explicit publisher`
+  );
+  if (book.slug === "capital-untamed") {
+    assert.ok(bibtex.startsWith("@book{__2026,"));
+    assert.ok(bibtex.includes("author = {罗伯逊, 夏洛特}"));
+    assert.ok(bibtex.includes("translator = {{王揆}}"));
+    assert.ok(bibtex.includes("title = {不驯的资本：十九世纪法国的金融政治}"));
+    assert.ok(bibtex.includes("shorttitle = {不驯的资本}"));
+    assert.ok(bibtex.includes("month = {aug}"));
+    assert.ok(bibtex.includes("year = {2026}"));
+    assert.ok(bibtex.includes("edition = {1}"));
+    assert.ok(bibtex.includes("language = {zh}"));
+  }
   assert.doesNotMatch(bibtex, /series = \{西方負典文库\}/);
   assert.doesNotMatch(bibtex, /copyright\s*=/);
   assert.doesNotMatch(bibtex, /note = \{Status: serializing\}/);
