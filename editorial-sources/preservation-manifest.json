@@ -1,122 +1,3493 @@
 {
-    "version":  2,
-    "hashAlgorithm":  "sha256",
-    "policy":  "source-preserving-v2",
-    "retentionContract":  {
-                              "normalizedTextRetention":  "100%",
-                              "unauthorizedChangesAllowed":  0,
-                              "paragraphOrder":  "exact"
-                          },
-    "documents":  [
-                      {
-                          "post":  "source/_posts/mullahology-10.md",
-                          "mode":  "section-merge",
-                          "transforms":  [
-                                             "smart-double-quotes"
-                                         ],
-                          "sources":  [
-                                          {
-                                              "path":  "editorial-sources/mullahology/resistance-economy-upper.md",
-                                              "sha256":  "8ae71057153a5452f62c30211d32173c4e64e1028596065040cd84a9d31f309c",
-                                              "origin":  "https://wiki.un-canon.com/doc/5y2b44cb5oq15oqx57up5rwo77yi5lik77yj-LX8LcEhvxV",
-                                              "heading":  "上"
-                                          },
-                                          {
-                                              "path":  "editorial-sources/mullahology/resistance-economy-middle.md",
-                                              "sha256":  "682058158e2c2f0a57c54861a82209fc9db7aed576e80c708f12d01a15c1b306",
-                                              "origin":  "https://wiki.un-canon.com/doc/5y2b5lia44cb5oq15oqx57up5rwo77yi5lit77yj-hyhThhknvK",
-                                              "heading":  "中"
-                                          },
-                                          {
-                                              "path":  "editorial-sources/mullahology/resistance-economy-lower.md",
-                                              "sha256":  "fe8f1c2569ca31f9f5a28c4daa9e514e3225808e4b11e1d2f832bbeaec57d1d0",
-                                              "origin":  "https://wiki.un-canon.com/doc/57wc44cb5oq15oqx57up5rwo77yi5lil77yj-Zie21Jn6Re",
-                                              "heading":  "下"
-                                          }
-                                      ],
-                          "authorizedChanges":  [
-                                                    {
-                                                        "id":  "remove-upper-transition-line",
-                                                        "kind":  "user-specified-wording",
-                                                        "find":  "这就是后面的内容了",
-                                                        "replacement":  "",
-                                                        "reason":  "删除用户明确指定不保留的过渡句。",
-                                                        "evidence":  "用户在 2026-08-03 的当前 Codex 任务中逐字指定删除“这就是后面的内容了”。",
-                                                        "authorizedBy":  "用户（当前 Codex 任务）",
-                                                        "authorizedAt":  "2026-08-03"
-                                                    },
-                                                    {
-                                                        "id":  "remove-middle-next-installment-line",
-                                                        "kind":  "user-specified-wording",
-                                                        "find":  "下一期，我们将回到绿色文化大革命的进程之中，去看看巴列维所缔造的社会是如何被焚烧为一片焦土的，也就是从那时起，一种来自地狱的烈火便不可避免地缠绕了伊朗40余年……",
-                                                        "replacement":  "",
-                                                        "reason":  "删除用户明确指定不保留的下期预告句。",
-                                                        "evidence":  "用户在 2026-08-03 的当前 Codex 任务中逐字指定删除该完整句子。",
-                                                        "authorizedBy":  "用户（当前 Codex 任务）",
-                                                        "authorizedAt":  "2026-08-03"
-                                                    },
-                                                    {
-                                                        "id":  "remove-lower-series-finale-prefix",
-                                                        "kind":  "user-specified-wording",
-                                                        "find":  "这是本系列的完结篇，",
-                                                        "replacement":  "",
-                                                        "reason":  "删除用户明确指定不保留的完结篇表述，保留同段其余原文。",
-                                                        "evidence":  "用户在 2026-08-03 的当前 Codex 任务中逐字指定删除“这是本系列的完结篇，”。",
-                                                        "authorizedBy":  "用户（当前 Codex 任务）",
-                                                        "authorizedAt":  "2026-08-03"
-                                                    }
-                                                ]
-                      },
-                      {
-                          "post":  "source/_posts/mullahology-mobilization.md",
-                          "mode":  "verbatim",
-                          "transforms":  [
-
-                                         ],
-                          "sources":  [
-                                          {
-                                              "path":  "editorial-sources/mullahology/mobilization.md",
-                                              "sha256":  "bc563aca0a01666e398afae41ca258ff577dafe8c996f1ad55cd578c199d6025",
-                                              "origin":  "https://wiki.un-canon.com/doc/5yqo5zgy-0I9qSKCSAK"
-                                          }
-                                      ],
-                          "authorizedChanges":  [
-
-                                                ]
-                      },
-                      {
-                          "post":  "source/_posts/mullahology-urbanization.md",
-                          "mode":  "verbatim",
-                          "transforms":  [
-
-                                         ],
-                          "sources":  [
-                                          {
-                                              "path":  "editorial-sources/mullahology/urbanization.md",
-                                              "sha256":  "49161d606aa4f0271a8731589aac739388f41e94df6c791d0a8f5d7e8e03db80",
-                                              "origin":  "https://wiki.un-canon.com/doc/5zo5bic5yyw-fDujIImWr5"
-                                          }
-                                      ],
-                          "authorizedChanges":  [
-
-                                                ]
-                      },
-                      {
-                          "post":  "source/_posts/mullahology-bazaar-merchants.md",
-                          "mode":  "verbatim",
-                          "transforms":  [
-
-                                         ],
-                          "sources":  [
-                                          {
-                                              "path":  "editorial-sources/mullahology/bazaar-merchants.md",
-                                              "sha256":  "0e48e7c87464674f2a9195a6e55bc5d6abdc991a74aa4e2726feb60568120106",
-                                              "origin":  "https://wiki.un-canon.com/doc/5be05omo5zwg5lq6-Vr0zmHTuVx"
-                                          }
-                                      ],
-                          "authorizedChanges":  [
-
-                                                ]
-                      }
-                  ]
+  "version": 2,
+  "hashAlgorithm": "sha256",
+  "policy": "source-preserving-v2",
+  "retentionContract": {
+    "normalizedTextRetention": "100%",
+    "unauthorizedChangesAllowed": 0,
+    "paragraphOrder": "exact"
+  },
+  "documents": [
+    {
+      "post": "source/_posts/mullahology-10.md",
+      "mode": "section-merge",
+      "transforms": [
+        "smart-double-quotes"
+      ],
+      "sources": [
+        {
+          "path": "editorial-sources/mullahology/resistance-economy-upper.md",
+          "sha256": "8ae71057153a5452f62c30211d32173c4e64e1028596065040cd84a9d31f309c",
+          "origin": "https://wiki.un-canon.com/doc/5y2b44cb5oq15oqx57up5rwo77yi5lik77yj-LX8LcEhvxV",
+          "heading": "上"
+        },
+        {
+          "path": "editorial-sources/mullahology/resistance-economy-middle.md",
+          "sha256": "682058158e2c2f0a57c54861a82209fc9db7aed576e80c708f12d01a15c1b306",
+          "origin": "https://wiki.un-canon.com/doc/5y2b5lia44cb5oq15oqx57up5rwo77yi5lit77yj-hyhThhknvK",
+          "heading": "中"
+        },
+        {
+          "path": "editorial-sources/mullahology/resistance-economy-lower.md",
+          "sha256": "fe8f1c2569ca31f9f5a28c4daa9e514e3225808e4b11e1d2f832bbeaec57d1d0",
+          "origin": "https://wiki.un-canon.com/doc/57wc44cb5oq15oqx57up5rwo77yi5lil77yj-Zie21Jn6Re",
+          "heading": "下"
+        }
+      ],
+      "authorizedChanges": [
+        {
+          "id": "remove-upper-transition-line",
+          "kind": "user-specified-wording",
+          "find": "这就是后面的内容了",
+          "replacement": "",
+          "reason": "删除用户明确指定不保留的过渡句。",
+          "evidence": "用户在 2026-08-03 的当前 Codex 任务中逐字指定删除“这就是后面的内容了”。",
+          "authorizedBy": "用户（当前 Codex 任务）",
+          "authorizedAt": "2026-08-03"
+        },
+        {
+          "id": "remove-middle-next-installment-line",
+          "kind": "user-specified-wording",
+          "find": "下一期，我们将回到绿色文化大革命的进程之中，去看看巴列维所缔造的社会是如何被焚烧为一片焦土的，也就是从那时起，一种来自地狱的烈火便不可避免地缠绕了伊朗40余年……",
+          "replacement": "",
+          "reason": "删除用户明确指定不保留的下期预告句。",
+          "evidence": "用户在 2026-08-03 的当前 Codex 任务中逐字指定删除该完整句子。",
+          "authorizedBy": "用户（当前 Codex 任务）",
+          "authorizedAt": "2026-08-03"
+        },
+        {
+          "id": "remove-lower-series-finale-prefix",
+          "kind": "user-specified-wording",
+          "find": "这是本系列的完结篇，",
+          "replacement": "",
+          "reason": "删除用户明确指定不保留的完结篇表述，保留同段其余原文。",
+          "evidence": "用户在 2026-08-03 的当前 Codex 任务中逐字指定删除“这是本系列的完结篇，”。",
+          "authorizedBy": "用户（当前 Codex 任务）",
+          "authorizedAt": "2026-08-03"
+        },
+        {
+          "id": "cleanup-001",
+          "kind": "user-specified-wording",
+          "find": "对此，左，右翼都毫不吃惊，如",
+          "replacement": "对此，左、右翼都毫不吃惊，如",
+          "reason": "连续名词之间改用顿号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-002",
+          "kind": "user-specified-wording",
+          "find": "人员的解读，都是符合神圣性的",
+          "replacement": "人员的解读，都是符合神圣性的。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-003",
+          "kind": "user-specified-wording",
+          "find": "桑-巴尼-萨德尔和穆罕默德-",
+          "replacement": "桑-巴尼-萨德尔和穆罕默德－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-004",
+          "kind": "user-specified-wording",
+          "find": "员，以及阿博尔-哈桑-巴尼-",
+          "replacement": "员，以及阿博尔-哈桑-巴尼－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-005",
+          "kind": "user-specified-wording",
+          "find": "左翼成员，以及阿博尔-哈桑-",
+          "replacement": "左翼成员，以及阿博尔-哈桑－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-006",
+          "kind": "user-specified-wording",
+          "find": "如世俗左翼成员，以及阿博尔-",
+          "replacement": "如世俗左翼成员，以及阿博尔－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-007",
+          "kind": "user-specified-wording",
+          "find": "“伊朗伊斯兰共和国的经济由三",
+          "replacement": "> “伊朗伊斯兰共和国的经济由三",
+          "reason": "整段引文改用引用样式。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-008",
+          "kind": "user-specified-wording",
+          "find": "，并将其变成外国消费品的地方",
+          "replacement": "，并将其变成外国消费品的地方。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-009",
+          "kind": "user-specified-wording",
+          "find": "理之下来实施《宪法》第44条",
+          "replacement": "理之下来实施《宪法》第44条。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-010",
+          "kind": "user-specified-wording",
+          "find": "员，以及试图破坏由总理米尔-",
+          "replacement": "员，以及试图破坏由总理米尔－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-011",
+          "kind": "user-specified-wording",
+          "find": "的政府，它应该为贫困者工作”",
+          "replacement": "的政府，它应该为贫困者工作。”",
+          "reason": "补上引文末尾遗漏的句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-012",
+          "kind": "user-specified-wording",
+          "find": "“但不是所有的人民，只有光着",
+          "replacement": "> “但不是所有的人民，只有光着",
+          "reason": "整段引文改用引用样式。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-013",
+          "kind": "user-specified-wording",
+          "find": "“你不应该放弃这个集市。也就",
+          "replacement": "> “你不应该放弃这个集市。也就",
+          "reason": "整段引文改用引用样式。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-014",
+          "kind": "user-specified-wording",
+          "find": "0年代所创立的集市暗网的成员",
+          "replacement": "0年代所创立的集市暗网的成员。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-015",
+          "kind": "user-specified-wording",
+          "find": "包括商务部部长（1981-3",
+          "replacement": "包括商务部部长（1981－1983",
+          "reason": "年份区间补全为完整年份，并改用全角连接号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-016",
+          "kind": "user-specified-wording",
+          "find": "比真主党的成员阿斯加拉拉迪-",
+          "replacement": "比真主党的成员阿斯加拉拉迪－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-017",
+          "kind": "user-specified-wording",
+          "find": "，并一直在商务部工作。阿里-",
+          "replacement": "，并一直在商务部工作。阿里－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-018",
+          "kind": "user-specified-wording",
+          "find": "人，一直是商会的支柱。阿里-",
+          "replacement": "人，一直是商会的支柱。阿里－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-019",
+          "kind": "user-specified-wording",
+          "find": "兄弟阿萨杜拉·阿斯加拉拉迪-",
+          "replacement": "兄弟阿萨杜拉·阿斯加拉拉迪－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-020",
+          "kind": "user-specified-wording",
+          "find": "1985-7年、1990-3",
+          "replacement": "1985-7年、1990－1993",
+          "reason": "年份区间补全为完整年份，并改用全角连接号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-021",
+          "kind": "user-specified-wording",
+          "find": "，在1979年、1985-7",
+          "replacement": "，在1979年、1985－1987",
+          "reason": "年份区间补全为完整年份，并改用全角连接号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-022",
+          "kind": "user-specified-wording",
+          "find": "987-90年和1993-7",
+          "replacement": "987-90年和1993－1997",
+          "reason": "年份区间补全为完整年份，并改用全角连接号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-023",
+          "kind": "user-specified-wording",
+          "find": "980-4年、1987-90",
+          "replacement": "980-4年、1987－1990",
+          "reason": "年份区间补全为完整年份，并改用全角连接号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-024",
+          "kind": "user-specified-wording",
+          "find": "政策。私人资本在1980-4",
+          "replacement": "政策。私人资本在1980－1984",
+          "reason": "年份区间补全为完整年份，并改用全角连接号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-025",
+          "kind": "user-specified-wording",
+          "find": "的走私开始驱逐巴扎商人的地盘",
+          "replacement": "的走私开始驱逐巴扎商人的地盘。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-026",
+          "kind": "user-specified-wording",
+          "find": "（以及后来的总统，1989-",
+          "replacement": "（以及后来的总统，1989－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-027",
+          "kind": "user-specified-wording",
+          "find": "哈什米-拉夫桑贾尼（以及后来",
+          "replacement": "哈什米－拉夫桑贾尼（以及后来",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-028",
+          "kind": "user-specified-wording",
+          "find": "利和囤积活动和威胁来控制集市",
+          "replacement": "利和囤积活动和威胁来控制集市。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-029",
+          "kind": "user-specified-wording",
+          "find": "普遍。世界银行对1995-8",
+          "replacement": "普遍。世界银行对1995－1998",
+          "reason": "年份区间补全为完整年份，并改用全角连接号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-030",
+          "kind": "user-specified-wording",
+          "find": "持下，巩固了经济的大部分内容",
+          "replacement": "持下，巩固了经济的大部分内容。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-031",
+          "kind": "user-specified-wording",
+          "find": "经济和商业政策发展的最新信息",
+          "replacement": "经济和商业政策发展的最新信息。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-032",
+          "kind": "user-specified-wording",
+          "find": "管该基金会的负责人没有被定罪",
+          "replacement": "管该基金会的负责人没有被定罪。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-033",
+          "kind": "user-specified-wording",
+          "find": "革派的哈塔米政府（1997-",
+          "replacement": "革派的哈塔米政府（1997－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-034",
+          "kind": "user-specified-wording",
+          "find": "夫桑贾尼政府（1989-97",
+          "replacement": "夫桑贾尼政府（1989－1997",
+          "reason": "年份区间补全为完整年份，并改用全角连接号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-035",
+          "kind": "user-specified-wording",
+          "find": "尽管亲私营部门的哈什米-拉夫",
+          "replacement": "尽管亲私营部门的哈什米－拉夫",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-036",
+          "kind": "user-specified-wording",
+          "find": "组织（器官）负责建造这些港口",
+          "replacement": "组织（器官）负责建造这些港口。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-037",
+          "kind": "user-specified-wording",
+          "find": "填补了他们所破坏的经济生态位",
+          "replacement": "填补了他们所破坏的经济生态位。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-038",
+          "kind": "user-specified-wording",
+          "find": "代了正式机构和集市的商业网络",
+          "replacement": "代了正式机构和集市的商业网络。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-039",
+          "kind": "user-specified-wording",
+          "find": "法律漏洞来规避和超越贸易限制",
+          "replacement": "法律漏洞来规避和超越贸易限制。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-040",
+          "kind": "user-specified-wording",
+          "find": "法律、金融和商业交通基础设施",
+          "replacement": "法律、金融和商业交通基础设施。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-041",
+          "kind": "user-specified-wording",
+          "find": "贸易区、边境市场和边境合作社",
+          "replacement": "贸易区、边境市场和边境合作社。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-042",
+          "kind": "user-specified-wording",
+          "find": "式经济和非正式经济之间的衔接",
+          "replacement": "式经济和非正式经济之间的衔接。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-043",
+          "kind": "user-specified-wording",
+          "find": "政府是跨国交流的关键角色之一",
+          "replacement": "政府是跨国交流的关键角色之一。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-044",
+          "kind": "user-specified-wording",
+          "find": "我们将会反过来再来讲述这一点",
+          "replacement": "我们将会反过来再来讲述这一点。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-045",
+          "kind": "user-specified-wording",
+          "find": "城市南部、西部和东部的终点站",
+          "replacement": "城市南部、西部和东部的终点站。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-046",
+          "kind": "user-specified-wording",
+          "find": "贸易流动越来越集中在海湾地区",
+          "replacement": "贸易流动越来越集中在海湾地区。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-047",
+          "kind": "user-specified-wording",
+          "find": "定的物理空间或环境交织在一起",
+          "replacement": "定的物理空间或环境交织在一起。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-048",
+          "kind": "user-specified-wording",
+          "find": "兰以外的地方和在集市内一样多",
+          "replacement": "兰以外的地方和在集市内一样多。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-049",
+          "kind": "user-specified-wording",
+          "find": "无能，私密马赛！下面就是正文",
+          "replacement": "无能，私密马赛！下面就是正文。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-050",
+          "kind": "user-specified-wording",
+          "find": "齐阿巴德、哈扎内、迈丹-伊-",
+          "replacement": "齐阿巴德、哈扎内、迈丹-伊－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-051",
+          "kind": "user-specified-wording",
+          "find": "、纳齐阿巴德、哈扎内、迈丹-",
+          "replacement": "、纳齐阿巴德、哈扎内、迈丹－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-052",
+          "kind": "user-specified-wording",
+          "find": "1978年1月，在巴布-伊-",
+          "replacement": "1978年1月，在巴布-伊－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-053",
+          "kind": "user-specified-wording",
+          "find": "1978年1月，在巴布-伊－",
+          "replacement": "1978年1月，在巴布－伊－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-054",
+          "kind": "user-specified-wording",
+          "find": "巴列维基金会的换壳。但到5-",
+          "replacement": "巴列维基金会的换壳。但到5－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-055",
+          "kind": "user-specified-wording",
+          "find": "基金会系统，军队系统，社会保障与养老金系统，宗教圣墓基金系统，市政与承建商系统",
+          "replacement": "基金会系统、军队系统、社会保障与养老金系统、宗教圣墓基金系统、市政与承建商系统",
+          "reason": "连续名词之间改用顿号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-056",
+          "kind": "user-specified-wording",
+          "find": "第一阶段（1979-1989",
+          "replacement": "第一阶段（1979－1989",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-057",
+          "kind": "user-specified-wording",
+          "find": "第二阶段（1989-2005",
+          "replacement": "第二阶段（1989－2005",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        }
+      ]
+    },
+    {
+      "post": "source/_posts/mullahology-mobilization.md",
+      "mode": "verbatim",
+      "transforms": [],
+      "sources": [
+        {
+          "path": "editorial-sources/mullahology/mobilization.md",
+          "sha256": "bc563aca0a01666e398afae41ca258ff577dafe8c996f1ad55cd578c199d6025",
+          "origin": "https://wiki.un-canon.com/doc/5yqo5zgy-0I9qSKCSAK"
+        }
+      ],
+      "authorizedChanges": [
+        {
+          "id": "cleanup-001",
+          "kind": "user-specified-wording",
+          "find": "须被限制，国家必须干预价值链",
+          "replacement": "须被限制，国家必须干预价值链。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-002",
+          "kind": "user-specified-wording",
+          "find": "本外逃，和工业部门的生产下降",
+          "replacement": "本外逃，和工业部门的生产下降。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-003",
+          "kind": "user-specified-wording",
+          "find": "导致腐败，资本外逃，和工业部门",
+          "replacement": "导致腐败、资本外逃和工业部门",
+          "reason": "连续名词之间改用顿号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-004",
+          "kind": "user-specified-wording",
+          "find": "沿着伦敦修道院花园路线的市场",
+          "replacement": "沿着伦敦修道院花园路线的市场。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-005",
+          "kind": "user-specified-wording",
+          "find": "阶层群体，集市几乎一直在罢工",
+          "replacement": "阶层群体，集市几乎一直在罢工。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-006",
+          "kind": "user-specified-wording",
+          "find": "忆说，当商人，工匠协会和行会",
+          "replacement": "忆说，当商人、工匠协会和行会",
+          "reason": "连续名词之间改用顿号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-007",
+          "kind": "user-specified-wording",
+          "find": "些活动都扩大了革命的社会基础",
+          "replacement": "些活动都扩大了革命的社会基础。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-008",
+          "kind": "user-specified-wording",
+          "find": "重要的是，它表明，与清真寺-",
+          "replacement": "重要的是，它表明，与清真寺－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-009",
+          "kind": "user-specified-wording",
+          "find": "集市清真寺动员结构浮出水面、",
+          "replacement": "集市清真寺动员结构浮出水面。",
+          "reason": "段末误用顿号／逗号，改为句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-010",
+          "kind": "user-specified-wording",
+          "find": "跟踪和询问。72.1977年10月",
+          "replacement": "跟踪和询问。1977年10月",
+          "reason": "删除混入正文的脚注编号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-011",
+          "kind": "user-specified-wording",
+          "find": "。进行了一系列研究的二级文献",
+          "replacement": "。进行了一系列研究的二级文献。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-012",
+          "kind": "user-specified-wording",
+          "find": "奠基事件之一。781975年6月5日",
+          "replacement": "奠基事件之一。1975年6月5日",
+          "reason": "删除混入正文的脚注编号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-013",
+          "kind": "user-specified-wording",
+          "find": "师支持和参与之前进行集体行动",
+          "replacement": "师支持和参与之前进行集体行动。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-014",
+          "kind": "user-specified-wording",
+          "find": "和集市集体行动并不像清真寺-",
+          "replacement": "和集市集体行动并不像清真寺－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-015",
+          "kind": "user-specified-wording",
+          "find": "清真寺-集市联盟假说的经验不",
+          "replacement": "清真寺－集市联盟假说的经验不",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-016",
+          "kind": "user-specified-wording",
+          "find": "的分裂在集市的成员中也很普遍",
+          "replacement": "的分裂在集市的成员中也很普遍。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-017",
+          "kind": "user-specified-wording",
+          "find": "发商在1963年和1978-",
+          "replacement": "发商在1963年和1978－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-018",
+          "kind": "user-specified-wording",
+          "find": "在1882年和1905-11",
+          "replacement": "在1882年和1905－1911",
+          "reason": "年份区间补全为完整年份，并改用全角连接号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-019",
+          "kind": "user-specified-wording",
+          "find": "不把宗教作为一种政治意识形态",
+          "replacement": "不把宗教作为一种政治意识形态。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-020",
+          "kind": "user-specified-wording",
+          "find": "政治愿景之前建立伊斯兰共和国",
+          "replacement": "政治愿景之前建立伊斯兰共和国。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-021",
+          "kind": "user-specified-wording",
+          "find": "紧张或意识形态议程的具体支持",
+          "replacement": "紧张或意识形态议程的具体支持。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-022",
+          "kind": "user-specified-wording",
+          "find": "稳步垄断了所有的国家权力机构",
+          "replacement": "稳步垄断了所有的国家权力机构。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-023",
+          "kind": "user-specified-wording",
+          "find": "萨德尔总统（1979年1月-",
+          "replacement": "萨德尔总统（1979年1月－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-024",
+          "kind": "user-specified-wording",
+          "find": "梅尼还干预阻止了集市对巴尼-",
+          "replacement": "梅尼还干预阻止了集市对巴尼－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-025",
+          "kind": "user-specified-wording",
+          "find": "，99，并口头攻击穆罕默德-",
+          "replacement": "，99，并口头攻击穆罕默德－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-026",
+          "kind": "user-specified-wording",
+          "find": "组织的会议，99，并口头攻击",
+          "replacement": "组织的会议，并口头攻击",
+          "reason": "删除混入正文的脚注编号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-027",
+          "kind": "user-specified-wording",
+          "find": "的议会代表，后者因保卫巴尼-",
+          "replacement": "的议会代表，后者因保卫巴尼－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-028",
+          "kind": "user-specified-wording",
+          "find": "当巴尼-萨德尔的外交部长被捕",
+          "replacement": "当巴尼－萨德尔的外交部长被捕",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-029",
+          "kind": "user-specified-wording",
+          "find": "活动人士。104.1981年7月",
+          "replacement": "活动人士。1981年7月",
+          "reason": "删除混入正文的脚注编号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-030",
+          "kind": "user-specified-wording",
+          "find": "政府被迫关闭了集市。在巴尼-",
+          "replacement": "政府被迫关闭了集市。在巴尼－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-031",
+          "kind": "user-specified-wording",
+          "find": "有一个省使萨布泽瓦尔成为首都",
+          "replacement": "有一个省使萨布泽瓦尔成为首都。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-032",
+          "kind": "user-specified-wording",
+          "find": "万张选票，或接近80%的选票",
+          "replacement": "万张选票，或接近80%的选票）。",
+          "reason": "补上遗漏的右括号与段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-033",
+          "kind": "user-specified-wording",
+          "find": "讨论，都围绕着是否投票的决定",
+          "replacement": "讨论，都围绕着是否投票的决定。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-034",
+          "kind": "user-specified-wording",
+          "find": "定的结构中央集市和他们的资源",
+          "replacement": "定的结构中央集市和他们的资源。”",
+          "reason": "补上遗漏的引文结束引号与句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-035",
+          "kind": "user-specified-wording",
+          "find": "通过共享的文化理解。“转向伊朗",
+          "replacement": "通过共享的文化理解。”转向伊朗",
+          "reason": "订正引号方向：此处为引文结束，应为下引号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        }
+      ]
+    },
+    {
+      "post": "source/_posts/mullahology-urbanization.md",
+      "mode": "verbatim",
+      "transforms": [],
+      "sources": [
+        {
+          "path": "editorial-sources/mullahology/urbanization.md",
+          "sha256": "49161d606aa4f0271a8731589aac739388f41e94df6c791d0a8f5d7e8e03db80",
+          "origin": "https://wiki.un-canon.com/doc/5zo5bic5yyw-fDujIImWr5"
+        }
+      ],
+      "authorizedChanges": [
+        {
+          "id": "cleanup-001",
+          "kind": "user-specified-wording",
+          "find": "或花园生产，以满足他们的需要",
+          "replacement": "或花园生产，以满足他们的需要。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-002",
+          "kind": "user-specified-wording",
+          "find": "19世纪80-85%至85%",
+          "replacement": "19世纪80－85%至85%",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-003",
+          "kind": "user-specified-wording",
+          "find": "系为城市工作和生计提供了框架",
+          "replacement": "系为城市工作和生计提供了框架。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-004",
+          "kind": "user-specified-wording",
+          "find": "塑造了游牧游牧民的迁徙和袭击",
+          "replacement": "塑造了游牧游牧民的迁徙和袭击。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-005",
+          "kind": "user-specified-wording",
+          "find": "确认身份的联合活动创造了机会",
+          "replacement": "确认身份的联合活动创造了机会。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-006",
+          "kind": "user-specified-wording",
+          "find": "游牧民日常生活分离的统治阶层",
+          "replacement": "游牧民日常生活分离的统治阶层。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-007",
+          "kind": "user-specified-wording",
+          "find": "些至少在大多数城市定居点出现",
+          "replacement": "些至少在大多数城市定居点出现。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-008",
+          "kind": "user-specified-wording",
+          "find": "阿明-扎布（约1835-98",
+          "replacement": "阿明-扎布（约1835－1898",
+          "reason": "年份区间补全为完整年份，并改用全角连接号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-009",
+          "kind": "user-specified-wording",
+          "find": "哈吉·穆罕默德·哈桑·阿明-",
+          "replacement": "哈吉·穆罕默德·哈桑·阿明－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-010",
+          "kind": "user-specified-wording",
+          "find": "，表达了持久的社会秩序的看法",
+          "replacement": "，表达了持久的社会秩序的看法。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-011",
+          "kind": "user-specified-wording",
+          "find": "伊朗社区之间和内部建立了关系",
+          "replacement": "伊朗社区之间和内部建立了关系。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-012",
+          "kind": "user-specified-wording",
+          "find": "，并为他们的还款人承诺了收入",
+          "replacement": "，并为他们的还款人承诺了收入。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-013",
+          "kind": "user-specified-wording",
+          "find": "反映出进口比出口多出30%-",
+          "replacement": "反映出进口比出口多出30%－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-014",
+          "kind": "user-specified-wording",
+          "find": "生产的头两年（1912-14",
+          "replacement": "生产的头两年（1912－1914",
+          "reason": "年份区间补全为完整年份，并改用全角连接号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-015",
+          "kind": "user-specified-wording",
+          "find": "理邻近性维持了个人和文化联系",
+          "replacement": "理邻近性维持了个人和文化联系。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-016",
+          "kind": "user-specified-wording",
+          "find": "的冲突和对手辩论中的暴力冲突",
+          "replacement": "的冲突和对手辩论中的暴力冲突。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-017",
+          "kind": "user-specified-wording",
+          "find": "律和传统的翻译和传递者的角色",
+          "replacement": "律和传统的翻译和传递者的角色。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-018",
+          "kind": "user-specified-wording",
+          "find": "方信仰的宗教和统治机构的鼓励",
+          "replacement": "方信仰的宗教和统治机构的鼓励。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-019",
+          "kind": "user-specified-wording",
+          "find": "什叶派基础叙事的意义联系起来",
+          "replacement": "什叶派基础叙事的意义联系起来。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-020",
+          "kind": "user-specified-wording",
+          "find": "）到召唤当地传说中的圣人和他",
+          "replacement": "）到召唤当地传说中的圣人和他。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-021",
+          "kind": "user-specified-wording",
+          "find": "0%的伊朗农村耕种者和13-",
+          "replacement": "0%的伊朗农村耕种者和13－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-022",
+          "kind": "user-specified-wording",
+          "find": "不是一个影响所有伊朗人的过程",
+          "replacement": "不是一个影响所有伊朗人的过程。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-023",
+          "kind": "user-specified-wording",
+          "find": "中包括6个超过10万人的城市",
+          "replacement": "中包括6个超过10万人的城市。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-024",
+          "kind": "user-specified-wording",
+          "find": "用的新的专业、行政和知识群体",
+          "replacement": "用的新的专业、行政和知识群体。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-025",
+          "kind": "user-specified-wording",
+          "find": "中化，德黑兰的重要性不断增加",
+          "replacement": "中化，德黑兰的重要性不断增加。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-026",
+          "kind": "user-specified-wording",
+          "find": "是对变革和变革的新热情的产物",
+          "replacement": "是对变革和变革的新热情的产物。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-027",
+          "kind": "user-specified-wording",
+          "find": "心，因此也成为伊朗政府的核心",
+          "replacement": "心，因此也成为伊朗政府的核心。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-028",
+          "kind": "user-specified-wording",
+          "find": "司，从1936年起被称为英-",
+          "replacement": "司，从1936年起被称为英－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-029",
+          "kind": "user-specified-wording",
+          "find": "一出口产品，而英国拥有的英-",
+          "replacement": "一出口产品，而英国拥有的英－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-030",
+          "kind": "user-specified-wording",
+          "find": "0年更广泛和戏剧性的影响相比",
+          "replacement": "0年更广泛和戏剧性的影响相比。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-031",
+          "kind": "user-specified-wording",
+          "find": "在这一时期的伊朗文化中的作用",
+          "replacement": "在这一时期的伊朗文化中的作用。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-032",
+          "kind": "user-specified-wording",
+          "find": "度中文化变化和坚持的交织元素",
+          "replacement": "度中文化变化和坚持的交织元素。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-033",
+          "kind": "user-specified-wording",
+          "find": "化，是质量的变化和数量的变化",
+          "replacement": "化，是质量的变化和数量的变化。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-034",
+          "kind": "user-specified-wording",
+          "find": "纪发展起来，在1939-45",
+          "replacement": "纪发展起来，在1939－1945",
+          "reason": "年份区间补全为完整年份，并改用全角连接号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-035",
+          "kind": "user-specified-wording",
+          "find": "地改革所产生的推动因素的产物",
+          "replacement": "地改革所产生的推动因素的产物。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-036",
+          "kind": "user-specified-wording",
+          "find": "得土地。然而，他们让70%-",
+          "replacement": "得土地。然而，他们让70%－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-037",
+          "kind": "user-specified-wording",
+          "find": "及对现代工业的进口资本和技术",
+          "replacement": "及对现代工业的进口资本和技术。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-038",
+          "kind": "user-specified-wording",
+          "find": "分或定期移民允许家庭独立居住",
+          "replacement": "分或定期移民允许家庭独立居住。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-039",
+          "kind": "user-specified-wording",
+          "find": "首次在农村社区发挥了重要作用",
+          "replacement": "首次在农村社区发挥了重要作用。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-040",
+          "kind": "user-specified-wording",
+          "find": "，与家庭组织和支持网络相交叉",
+          "replacement": "，与家庭组织和支持网络相交叉。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-041",
+          "kind": "user-specified-wording",
+          "find": "式的入侵，遵循他们自己的判断",
+          "replacement": "式的入侵，遵循他们自己的判断。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-042",
+          "kind": "user-specified-wording",
+          "find": "那里已经建立的资源联系在一起",
+          "replacement": "那里已经建立的资源联系在一起。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-043",
+          "kind": "user-specified-wording",
+          "find": "列新的决策，并改变了性别分歧",
+          "replacement": "列新的决策，并改变了性别分歧。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-044",
+          "kind": "user-specified-wording",
+          "find": "识，并在他人身上承认和尊重它",
+          "replacement": "识，并在他人身上承认和尊重它。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-045",
+          "kind": "user-specified-wording",
+          "find": "些人对宗教服务的要求提出评论",
+          "replacement": "些人对宗教服务的要求提出评论。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-046",
+          "kind": "user-specified-wording",
+          "find": "育。然而，关于1978-79",
+          "replacement": "育。然而，关于1978－1979",
+          "reason": "年份区间补全为完整年份，并改用全角连接号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-047",
+          "kind": "user-specified-wording",
+          "find": "和伊斯玛·伊利斯，科尔的氛围",
+          "replacement": "和伊斯玛·伊利斯，科尔的氛围。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-048",
+          "kind": "user-specified-wording",
+          "find": "它既不是静态的，也不是单一的",
+          "replacement": "它既不是静态的，也不是单一的。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-049",
+          "kind": "user-specified-wording",
+          "find": "认影响力、地位和权力）的界限",
+          "replacement": "认影响力、地位和权力）的界限。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-050",
+          "kind": "user-specified-wording",
+          "find": "著，但在伊朗其他城市也有特色",
+          "replacement": "著，但在伊朗其他城市也有特色。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-051",
+          "kind": "user-specified-wording",
+          "find": "富而不稳定的混合，塑造了个人",
+          "replacement": "富而不稳定的混合，塑造了个人。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-052",
+          "kind": "user-specified-wording",
+          "find": "略既体现了“旧”和“新”元素",
+          "replacement": "略既体现了“旧”和“新”元素。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-053",
+          "kind": "user-specified-wording",
+          "find": "新的商业领域的贸易或工艺生产",
+          "replacement": "新的商业领域的贸易或工艺生产。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-054",
+          "kind": "user-specified-wording",
+          "find": "，具有重要的选择和流动性因素",
+          "replacement": "，具有重要的选择和流动性因素。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-055",
+          "kind": "user-specified-wording",
+          "find": "的形象与实质性女性的关注较少",
+          "replacement": "的形象与实质性女性的关注较少。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-056",
+          "kind": "user-specified-wording",
+          "find": "塑造了城市生活和文化的新模式",
+          "replacement": "塑造了城市生活和文化的新模式。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-057",
+          "kind": "user-specified-wording",
+          "find": "力/特权和其他人之间的不平等",
+          "replacement": "力/特权和其他人之间的不平等。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-058",
+          "kind": "user-specified-wording",
+          "find": "王子小时候对他施加的羞辱一样",
+          "replacement": "王子小时候对他施加的羞辱一样。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-059",
+          "kind": "user-specified-wording",
+          "find": "织在石油工人在1979-80",
+          "replacement": "织在石油工人在1979－1980",
+          "reason": "年份区间补全为完整年份，并改用全角连接号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-060",
+          "kind": "user-specified-wording",
+          "find": "这种联系出现在1978-81",
+          "replacement": "这种联系出现在1978－1981",
+          "reason": "年份区间补全为完整年份，并改用全角连接号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-061",
+          "kind": "user-specified-wording",
+          "find": "生了重大变化。1972-73",
+          "replacement": "生了重大变化。1972－1973",
+          "reason": "年份区间补全为完整年份，并改用全角连接号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-062",
+          "kind": "user-specified-wording",
+          "find": "7.75%；到1977-78",
+          "replacement": "7.75%；到1977－1978",
+          "reason": "年份区间补全为完整年份，并改用全角连接号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-063",
+          "kind": "user-specified-wording",
+          "find": "人开放了它们。1961-62",
+          "replacement": "人开放了它们。1961－1962",
+          "reason": "年份区间补全为完整年份，并改用全角连接号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-064",
+          "kind": "user-specified-wording",
+          "find": "关注一个关于文化和社区的故事",
+          "replacement": "关注一个关于文化和社区的故事。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-065",
+          "kind": "user-specified-wording",
+          "find": "教反对乌拉马的消极和保守角色",
+          "replacement": "教反对乌拉马的消极和保守角色。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-066",
+          "kind": "user-specified-wording",
+          "find": "放松和重组了城市生活的旧特征",
+          "replacement": "放松和重组了城市生活的旧特征。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-067",
+          "kind": "user-specified-wording",
+          "find": "维护政府体系，它具有政治层面",
+          "replacement": "维护政府体系，它具有政治层面。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-068",
+          "kind": "user-specified-wording",
+          "find": "途贸易进行熟练制造的协调中心",
+          "replacement": "途贸易进行熟练制造的协调中心。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-069",
+          "kind": "user-specified-wording",
+          "find": "村和城市社区之间维持这些联系",
+          "replacement": "村和城市社区之间维持这些联系。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-070",
+          "kind": "user-specified-wording",
+          "find": "“宗教”和“社会”的赞助人-",
+          "replacement": "“宗教”和“社会”的赞助人－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-071",
+          "kind": "user-specified-wording",
+          "find": "宗教活动提供了大量的财政支持",
+          "replacement": "宗教活动提供了大量的财政支持。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-072",
+          "kind": "user-specified-wording",
+          "find": "商人、乌拉马和工匠之间的关系",
+          "replacement": "商人、乌拉马和工匠之间的关系。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-073",
+          "kind": "user-specified-wording",
+          "find": "、经济自主权和集体身份的核心",
+          "replacement": "、经济自主权和集体身份的核心。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-074",
+          "kind": "user-specified-wording",
+          "find": "关系涉及怨恨、愤世嫉俗和敌意",
+          "replacement": "关系涉及怨恨、愤世嫉俗和敌意。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-075",
+          "kind": "user-specified-wording",
+          "find": "着物质生活以及政治或文化活动",
+          "replacement": "着物质生活以及政治或文化活动。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-076",
+          "kind": "user-specified-wording",
+          "find": "、就业、学习和劳动形式的适应",
+          "replacement": "、就业、学习和劳动形式的适应。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-077",
+          "kind": "user-specified-wording",
+          "find": "的干预主义和现代化的政府议程",
+          "replacement": "的干预主义和现代化的政府议程。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-078",
+          "kind": "user-specified-wording",
+          "find": "府和集市活动和利益的物质联系",
+          "replacement": "府和集市活动和利益的物质联系。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-079",
+          "kind": "user-specified-wording",
+          "find": "支付地主作为土地改革的一部分",
+          "replacement": "支付地主作为土地改革的一部分。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-080",
+          "kind": "user-specified-wording",
+          "find": "济变化，在关于1977-81",
+          "replacement": "济变化，在关于1977－1981",
+          "reason": "年份区间补全为完整年份，并改用全角连接号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-081",
+          "kind": "user-specified-wording",
+          "find": "占外汇的87%和伊朗出口的、",
+          "replacement": "占外汇的87%和伊朗出口的。",
+          "reason": "段末误用顿号／逗号，改为句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-082",
+          "kind": "user-specified-wording",
+          "find": "和通信建设。到1977-78",
+          "replacement": "和通信建设。到1977－1978",
+          "reason": "年份区间补全为完整年份，并改用全角连接号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-083",
+          "kind": "user-specified-wording",
+          "find": "天然气收入，在1962-72",
+          "replacement": "天然气收入，在1962－1972",
+          "reason": "年份区间补全为完整年份，并改用全角连接号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-084",
+          "kind": "user-specified-wording",
+          "find": "的粮食数量（到1977-81",
+          "replacement": "的粮食数量（到1977－1981",
+          "reason": "年份区间补全为完整年份，并改用全角连接号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-085",
+          "kind": "user-specified-wording",
+          "find": "家的冲突，是另一个复杂的例子",
+          "replacement": "家的冲突，是另一个复杂的例子。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-086",
+          "kind": "user-specified-wording",
+          "find": "经历这样的不连续和接近的生活",
+          "replacement": "经历这样的不连续和接近的生活。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-087",
+          "kind": "user-specified-wording",
+          "find": "会，帮助了巴扎尔和街头的创业",
+          "replacement": "会，帮助了巴扎尔和街头的创业。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-088",
+          "kind": "user-specified-wording",
+          "find": "9%以上下降到1977-78",
+          "replacement": "9%以上下降到1977－1978",
+          "reason": "年份区间补全为完整年份，并改用全角连接号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-089",
+          "kind": "user-specified-wording",
+          "find": "产总值的比例从1963-64",
+          "replacement": "产总值的比例从1963－1964",
+          "reason": "年份区间补全为完整年份，并改用全角连接号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-090",
+          "kind": "user-specified-wording",
+          "find": "1974年期间实际上有所下降",
+          "replacement": "1974年期间实际上有所下降。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-091",
+          "kind": "user-specified-wording",
+          "find": "和国家权力之间产生了重大后果",
+          "replacement": "和国家权力之间产生了重大后果。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-092",
+          "kind": "user-specified-wording",
+          "find": "重要的是，大片土地（约10-",
+          "replacement": "重要的是，大片土地（约10－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-093",
+          "kind": "user-specified-wording",
+          "find": "f行政人员侵占和挪用了其财产",
+          "replacement": "f行政人员侵占和挪用了其财产。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-094",
+          "kind": "user-specified-wording",
+          "find": "17.2万人（约占总数的8-",
+          "replacement": "17.2万人（约占总数的8－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-095",
+          "kind": "user-specified-wording",
+          "find": "支持的更重要贡献来自其他地方",
+          "replacement": "支持的更重要贡献来自其他地方。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-096",
+          "kind": "user-specified-wording",
+          "find": "20世纪70年代，只有10-",
+          "replacement": "20世纪70年代，只有10－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-097",
+          "kind": "user-specified-wording",
+          "find": "动力和材料，向穆拉斯和罗泽-",
+          "replacement": "动力和材料，向穆拉斯和罗泽－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-098",
+          "kind": "user-specified-wording",
+          "find": "俗独裁秩序，如果不是反对的话",
+          "replacement": "俗独裁秩序，如果不是反对的话。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-099",
+          "kind": "user-specified-wording",
+          "find": "空间，但没有完全消除旧的联系",
+          "replacement": "空间，但没有完全消除旧的联系。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-100",
+          "kind": "user-specified-wording",
+          "find": "判的程序所取代，即审查和耻辱",
+          "replacement": "判的程序所取代，即审查和耻辱。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-101",
+          "kind": "user-specified-wording",
+          "find": "区将利用这种能力产生历史效果",
+          "replacement": "区将利用这种能力产生历史效果。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-102",
+          "kind": "user-specified-wording",
+          "find": "年的烟草抗议和1905-11",
+          "replacement": "年的烟草抗议和1905－1911",
+          "reason": "年份区间补全为完整年份，并改用全角连接号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-103",
+          "kind": "user-specified-wording",
+          "find": "的出现是一个普遍发现的现象，",
+          "replacement": "的出现是一个普遍发现的现象。",
+          "reason": "段末误用顿号／逗号，改为句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-104",
+          "kind": "user-specified-wording",
+          "find": "印度教的流行病，加尔文主义的牧师，犹太拉比，以及",
+          "replacement": "印度教的流行病、加尔文主义的牧师、犹太拉比，以及",
+          "reason": "连续名词之间改用顿号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-105",
+          "kind": "user-specified-wording",
+          "find": "在公元260年/873-74",
+          "replacement": "在公元260年/873－874",
+          "reason": "年份区间补全为完整年份，并改用全角连接号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-106",
+          "kind": "user-specified-wording",
+          "find": "“社会”85个权威来源的竞争",
+          "replacement": "“社会”85个权威来源的竞争。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-107",
+          "kind": "user-specified-wording",
+          "find": "乌拉玛声称尊重虔诚和精神品质",
+          "replacement": "乌拉玛声称尊重虔诚和精神品质。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-108",
+          "kind": "user-specified-wording",
+          "find": "在统治者序列的赞助和物质支持",
+          "replacement": "在统治者序列的赞助和物质支持。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-109",
+          "kind": "user-specified-wording",
+          "find": "的专业发展有抱负的ulama",
+          "replacement": "的专业发展有抱负的ulama。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-110",
+          "kind": "user-specified-wording",
+          "find": "身份，以及新的联盟和赞助人-",
+          "replacement": "身份，以及新的联盟和赞助人－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-111",
+          "kind": "user-specified-wording",
+          "find": "定部分。学生-教师和赞助人-",
+          "replacement": "定部分。学生-教师和赞助人－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-112",
+          "kind": "user-specified-wording",
+          "find": "地机构的一个特定部分。学生-",
+          "replacement": "地机构的一个特定部分。学生－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-113",
+          "kind": "user-specified-wording",
+          "find": "在18世纪取得了一些统治地位",
+          "replacement": "在18世纪取得了一些统治地位。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-114",
+          "kind": "user-specified-wording",
+          "find": "治的法斯阿里国王（1797-",
+          "replacement": "治的法斯阿里国王（1797－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-115",
+          "kind": "user-specified-wording",
+          "find": "0年代早期，在1819-20",
+          "replacement": "0年代早期，在1819－1820",
+          "reason": "年份区间补全为完整年份，并改用全角连接号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-116",
+          "kind": "user-specified-wording",
+          "find": "伊玛目和信徒之间的中介的作用",
+          "replacement": "伊玛目和信徒之间的中介的作用。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-117",
+          "kind": "user-specified-wording",
+          "find": "力、正确信仰和政治秩序的问题",
+          "replacement": "力、正确信仰和政治秩序的问题。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-118",
+          "kind": "user-specified-wording",
+          "find": "和法律权威的挑战，以及巴比-",
+          "replacement": "和法律权威的挑战，以及巴比－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-119",
+          "kind": "user-specified-wording",
+          "find": "纪的历史中继承下来的各种资源",
+          "replacement": "纪的历史中继承下来的各种资源。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-120",
+          "kind": "user-specified-wording",
+          "find": "“非正统”他人的妖魔化的限制",
+          "replacement": "“非正统”他人的妖魔化的限制。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-121",
+          "kind": "user-specified-wording",
+          "find": "当非结构化特征的症状和原因、",
+          "replacement": "当非结构化特征的症状和原因。",
+          "reason": "段末误用顿号／逗号，改为句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-122",
+          "kind": "user-specified-wording",
+          "find": "大，使用来自信徒的资金，以及关于领导的共识",
+          "replacement": "大，使用来自信徒的资金，以及关于领导的共识。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-123",
+          "kind": "user-specified-wording",
+          "find": "想带到他们建立自己的社区一样",
+          "replacement": "想带到他们建立自己的社区一样。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-124",
+          "kind": "user-specified-wording",
+          "find": "婚其他主要学者和穆伊塔赫德，如贝贝哈尼的后裔和巴尔·乌勒姆（伊拉克的主要主角）通婚，儿子追求宗教事业，并与乌拉马和印度的其他家族通婚",
+          "replacement": "婚其他主要学者和穆伊塔赫德，如贝贝哈尼的后裔和巴尔·乌勒姆（伊拉克的主要主角）通婚，儿子追求宗教事业，并与乌拉马和印度的其他家族通婚。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-125",
+          "kind": "user-specified-wording",
+          "find": "方法，他们通过同伴、赞助人-",
+          "replacement": "方法，他们通过同伴、赞助人－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-126",
+          "kind": "user-specified-wording",
+          "find": "社区的担忧也影响了他们的政治",
+          "replacement": "社区的担忧也影响了他们的政治。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-127",
+          "kind": "user-specified-wording",
+          "find": "们暴露在盟友的压力和要求之下",
+          "replacement": "们暴露在盟友的压力和要求之下。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-128",
+          "kind": "user-specified-wording",
+          "find": "多独立于乌拉马支持的资源一样",
+          "replacement": "多独立于乌拉马支持的资源一样。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-129",
+          "kind": "user-specified-wording",
+          "find": "存在着物质和政治上的紧张关系",
+          "replacement": "存在着物质和政治上的紧张关系。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-130",
+          "kind": "user-specified-wording",
+          "find": "了他们在下个世纪所面临的情况",
+          "replacement": "了他们在下个世纪所面临的情况。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-131",
+          "kind": "user-specified-wording",
+          "find": "职业财富都有了他们自己的进程",
+          "replacement": "职业财富都有了他们自己的进程。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-132",
+          "kind": "user-specified-wording",
+          "find": "评，不应与实质性的变化相混淆",
+          "replacement": "评，不应与实质性的变化相混淆。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-133",
+          "kind": "user-specified-wording",
+          "find": "“宪法时代”（1905-11",
+          "replacement": "“宪法时代”（1905－1911",
+          "reason": "年份区间补全为完整年份，并改用全角连接号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-134",
+          "kind": "user-specified-wording",
+          "find": "某种系统性的变革和具体的变革",
+          "replacement": "某种系统性的变革和具体的变革。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-135",
+          "kind": "user-specified-wording",
+          "find": "拉希姆·塔勒布夫”这样的作家",
+          "replacement": "拉希姆·塔勒布夫”这样的作家。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-136",
+          "kind": "user-specified-wording",
+          "find": "解放思想，以及1906-10",
+          "replacement": "解放思想，以及1906－1910",
+          "reason": "年份区间补全为完整年份，并改用全角连接号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-137",
+          "kind": "user-specified-wording",
+          "find": "受权力者掠夺的方案。像苏尔-",
+          "replacement": "受权力者掠夺的方案。像苏尔－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-138",
+          "kind": "user-specified-wording",
+          "find": "、参与性政治和人民权利的愿望",
+          "replacement": "、参与性政治和人民权利的愿望。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-139",
+          "kind": "user-specified-wording",
+          "find": "的民主/爱国政治中得到了体现",
+          "replacement": "的民主/爱国政治中得到了体现。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-140",
+          "kind": "user-specified-wording",
+          "find": "物质改善、政治制度和社会关系",
+          "replacement": "物质改善、政治制度和社会关系。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-141",
+          "kind": "user-specified-wording",
+          "find": "文化的世俗化改变了交战的条款",
+          "replacement": "文化的世俗化改变了交战的条款。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-142",
+          "kind": "user-specified-wording",
+          "find": "由主义国家内部的一个独特分支",
+          "replacement": "由主义国家内部的一个独特分支。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-143",
+          "kind": "user-specified-wording",
+          "find": "产生了混合和不一致的改革方法",
+          "replacement": "产生了混合和不一致的改革方法。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-144",
+          "kind": "user-specified-wording",
+          "find": "来的传统，以及部落军事的传统",
+          "replacement": "来的传统，以及部落军事的传统。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-145",
+          "kind": "user-specified-wording",
+          "find": "距离和缺乏对其主体的直接权力",
+          "replacement": "距离和缺乏对其主体的直接权力。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-146",
+          "kind": "user-specified-wording",
+          "find": "国王的荣誉，礼物和赞助的分配",
+          "replacement": "国王的荣誉、礼物和赞助的分配",
+          "reason": "连续名词之间改用顿号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-147",
+          "kind": "user-specified-wording",
+          "find": "的（不断与其他权力行使者谈判",
+          "replacement": "的（不断与其他权力行使者谈判。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-148",
+          "kind": "user-specified-wording",
+          "find": "破坏了其一些持续的传统和关系",
+          "replacement": "破坏了其一些持续的传统和关系。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-149",
+          "kind": "user-specified-wording",
+          "find": "巴斯·阿马纳特认为是杜拉特-",
+          "replacement": "巴斯·阿马纳特认为是杜拉特－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-150",
+          "kind": "user-specified-wording",
+          "find": "和差异，这发现了各种政治表达",
+          "replacement": "和差异，这发现了各种政治表达。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        }
+      ]
+    },
+    {
+      "post": "source/_posts/mullahology-bazaar-merchants.md",
+      "mode": "verbatim",
+      "transforms": [],
+      "sources": [
+        {
+          "path": "editorial-sources/mullahology/bazaar-merchants.md",
+          "sha256": "0e48e7c87464674f2a9195a6e55bc5d6abdc991a74aa4e2726feb60568120106",
+          "origin": "https://wiki.un-canon.com/doc/5be05omo5zwg5lq6-Vr0zmHTuVx"
+        }
+      ],
+      "authorizedChanges": [
+        {
+          "id": "cleanup-001",
+          "kind": "user-specified-wording",
+          "find": "作为抵押和拒付支票的时代并置",
+          "replacement": "作为抵押和拒付支票的时代并置。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-002",
+          "kind": "user-specified-wording",
+          "find": "期间产生不同的强制性等级制度",
+          "replacement": "期间产生不同的强制性等级制度。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-003",
+          "kind": "user-specified-wording",
+          "find": "置中的有目的的行动联系在一起",
+          "replacement": "置中的有目的的行动联系在一起。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-004",
+          "kind": "user-specified-wording",
+          "find": "存在着重要的不平等和内部差异",
+          "replacement": "存在着重要的不平等和内部差异。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-005",
+          "kind": "user-specified-wording",
+          "find": "的作用，其商业活动达到了规模",
+          "replacement": "的作用，其商业活动达到了规模。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-006",
+          "kind": "user-specified-wording",
+          "find": "够在其批发业务中增加进口业务",
+          "replacement": "够在其批发业务中增加进口业务。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-007",
+          "kind": "user-specified-wording",
+          "find": "会很容易地把客户推荐给其他人",
+          "replacement": "会很容易地把客户推荐给其他人。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-008",
+          "kind": "user-specified-wording",
+          "find": "销能力继续提供这些特定的商品",
+          "replacement": "销能力继续提供这些特定的商品。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-009",
+          "kind": "user-specified-wording",
+          "find": "市场因素干扰的情况下进行交易",
+          "replacement": "市场因素干扰的情况下进行交易。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-010",
+          "kind": "user-specified-wording",
+          "find": "增加佣金，或偏袒一方或另一方",
+          "replacement": "增加佣金，或偏袒一方或另一方。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-011",
+          "kind": "user-specified-wording",
+          "find": "商业职位是衡量知识的重要指标",
+          "replacement": "商业职位是衡量知识的重要指标。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-012",
+          "kind": "user-specified-wording",
+          "find": "现实世界中的委托-代理问题是",
+          "replacement": "现实世界中的委托－代理问题是",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-013",
+          "kind": "user-specified-wording",
+          "find": "，分层的群体，贸易关系的模式",
+          "replacement": "，分层的群体，贸易关系的模式。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-014",
+          "kind": "user-specified-wording",
+          "find": "石油收入作为补贴信贷进行分配",
+          "replacement": "石油收入作为补贴信贷进行分配。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-015",
+          "kind": "user-specified-wording",
+          "find": "民和许多普通伊朗人的主要手段",
+          "replacement": "民和许多普通伊朗人的主要手段。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-016",
+          "kind": "user-specified-wording",
+          "find": "账可以保存多年，甚至代代相传",
+          "replacement": "账可以保存多年，甚至代代相传。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-017",
+          "kind": "user-specified-wording",
+          "find": "分配信贷来补充他们的商业活动",
+          "replacement": "分配信贷来补充他们的商业活动。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-018",
+          "kind": "user-specified-wording",
+          "find": "无担保本票（安全）或过期支票",
+          "replacement": "无担保本票（安全）或过期支票。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-019",
+          "kind": "user-specified-wording",
+          "find": "机构，这将比公共更慢和更昂贵",
+          "replacement": "机构，这将比公共更慢和更昂贵。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-020",
+          "kind": "user-specified-wording",
+          "find": "架，并让第三方参与裁决和赔偿",
+          "replacement": "架，并让第三方参与裁决和赔偿。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-021",
+          "kind": "user-specified-wording",
+          "find": "地区背景也有助于区分集市的人",
+          "replacement": "地区背景也有助于区分集市的人。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-022",
+          "kind": "user-specified-wording",
+          "find": "-10%）、阿拉伯语（约3-",
+          "replacement": "-10%）、阿拉伯语（约3－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-023",
+          "kind": "user-specified-wording",
+          "find": "约25%）、库尔德语（约8-",
+          "replacement": "约25%）、库尔德语（约8－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-024",
+          "kind": "user-specified-wording",
+          "find": "真寺），吸引了来自吉兰省的人",
+          "replacement": "真寺），吸引了来自吉兰省的人。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-025",
+          "kind": "user-specified-wording",
+          "find": "间和时间，并在成员的家中轮流",
+          "replacement": "间和时间，并在成员的家中轮流。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-026",
+          "kind": "user-specified-wording",
+          "find": "殊类型的嵌入，包含了公共属性",
+          "replacement": "殊类型的嵌入，包含了公共属性。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-027",
+          "kind": "user-specified-wording",
+          "find": "“囤积者”、“骗子”（科拉-",
+          "replacement": "“囤积者”、“骗子”（科拉－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-028",
+          "kind": "user-specified-wording",
+          "find": "和工业机构直接获得租金的机会",
+          "replacement": "和工业机构直接获得租金的机会。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-029",
+          "kind": "user-specified-wording",
+          "find": "他们隶属于地位更高的集市社区",
+          "replacement": "他们隶属于地位更高的集市社区。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-030",
+          "kind": "user-specified-wording",
+          "find": "（卡姆萨贝赫）和骗子（科拉-",
+          "replacement": "（卡姆萨贝赫）和骗子（科拉－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-031",
+          "kind": "user-specified-wording",
+          "find": "关系的合作层次结构还没有恢复",
+          "replacement": "关系的合作层次结构还没有恢复。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-032",
+          "kind": "user-specified-wording",
+          "find": "，已成为国际贸易的主要行动者",
+          "replacement": "，已成为国际贸易的主要行动者。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-033",
+          "kind": "user-specified-wording",
+          "find": "地区的人捐赠食物、衣服和车辆",
+          "replacement": "地区的人捐赠食物、衣服和车辆。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-034",
+          "kind": "user-specified-wording",
+          "find": "经济和社会生活不那么容易重叠",
+          "replacement": "经济和社会生活不那么容易重叠。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-035",
+          "kind": "user-specified-wording",
+          "find": "行或亲密朋友的集市聚会所取代",
+          "replacement": "行或亲密朋友的集市聚会所取代。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-036",
+          "kind": "user-specified-wording",
+          "find": "的朋友们也不一定参与商业活动",
+          "replacement": "的朋友们也不一定参与商业活动。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-037",
+          "kind": "user-specified-wording",
+          "find": "以及影响深远的声誉体系的发展",
+          "replacement": "以及影响深远的声誉体系的发展。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-038",
+          "kind": "user-specified-wording",
+          "find": "制性的层次，而不是合作的层次",
+          "replacement": "制性的层次，而不是合作的层次。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-039",
+          "kind": "user-specified-wording",
+          "find": "导和说服，被动地灌输这些规范",
+          "replacement": "导和说服，被动地灌输这些规范。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-040",
+          "kind": "user-specified-wording",
+          "find": "、展示声誉和使用多边制裁技巧",
+          "replacement": "、展示声誉和使用多边制裁技巧。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-041",
+          "kind": "user-specified-wording",
+          "find": "完善信息的复杂环境中提供指导",
+          "replacement": "完善信息的复杂环境中提供指导。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-042",
+          "kind": "user-specified-wording",
+          "find": "差异，限制了滥用权力的可能性",
+          "replacement": "差异，限制了滥用权力的可能性。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-043",
+          "kind": "user-specified-wording",
+          "find": "并不一定需要绝对或相对的平等",
+          "replacement": "并不一定需要绝对或相对的平等。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-044",
+          "kind": "user-specified-wording",
+          "find": "，以及集市在政策矩阵中的地位",
+          "replacement": "，以及集市在政策矩阵中的地位。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-045",
+          "kind": "user-specified-wording",
+          "find": "没有哲学上的犹豫就会成为阻碍",
+          "replacement": "没有哲学上的犹豫就会成为阻碍。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-046",
+          "kind": "user-specified-wording",
+          "find": "设他们认为的更重要的著名项目",
+          "replacement": "设他们认为的更重要的著名项目。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-047",
+          "kind": "user-specified-wording",
+          "find": "售到批发，适应了新的经济状况",
+          "replacement": "售到批发，适应了新的经济状况。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-048",
+          "kind": "user-specified-wording",
+          "find": "人研究“西方历史序列”来理解",
+          "replacement": "人研究“西方历史序列”来理解。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-049",
+          "kind": "user-specified-wording",
+          "find": "是就像现代主义妇女的情况一样",
+          "replacement": "是就像现代主义妇女的情况一样。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-050",
+          "kind": "user-specified-wording",
+          "find": "有任何关系，”一个集市总结道",
+          "replacement": "有任何关系，”一个集市总结道。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-051",
+          "kind": "user-specified-wording",
+          "find": "这是在国家的变革议程的范围内",
+          "replacement": "这是在国家的变革议程的范围内。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-052",
+          "kind": "user-specified-wording",
+          "find": "因此被用于征税，但相当不成功",
+          "replacement": "因此被用于征税，但相当不成功。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-053",
+          "kind": "user-specified-wording",
+          "find": "新的经济和政治局势中重新出现",
+          "replacement": "新的经济和政治局势中重新出现。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-054",
+          "kind": "user-specified-wording",
+          "find": "使它们高于大多数中等收入国家",
+          "replacement": "使它们高于大多数中等收入国家。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-055",
+          "kind": "user-specified-wording",
+          "find": "所需的制成品或资本品来满足的",
+          "replacement": "所需的制成品或资本品来满足的。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-056",
+          "kind": "user-specified-wording",
+          "find": "市的活动，也没有施加强制手段",
+          "replacement": "市的活动，也没有施加强制手段。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-057",
+          "kind": "user-specified-wording",
+          "find": "的机构不合并使其能够继续使用",
+          "replacement": "的机构不合并使其能够继续使用。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-058",
+          "kind": "user-specified-wording",
+          "find": "和的气候和泉水。在1956-",
+          "replacement": "和的气候和泉水。在1956－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-059",
+          "kind": "user-specified-wording",
+          "find": "的果园，大片的土地，温和的气候和泉水",
+          "replacement": "的果园、大片的土地、温和的气候和泉水",
+          "reason": "连续名词之间改用顿号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-060",
+          "kind": "user-specified-wording",
+          "find": "住宅迁到城市的北部或西部地区",
+          "replacement": "住宅迁到城市的北部或西部地区。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-061",
+          "kind": "user-specified-wording",
+          "find": "域的商业家庭，仍然位于集市区",
+          "replacement": "域的商业家庭，仍然位于集市区。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-062",
+          "kind": "user-specified-wording",
+          "find": "北部的中上阶级和前爱国者社区",
+          "replacement": "北部的中上阶级和前爱国者社区。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-063",
+          "kind": "user-specified-wording",
+          "find": "为商业和工业走廊的卓越作用，",
+          "replacement": "为商业和工业走廊的卓越作用。",
+          "reason": "段末误用顿号／逗号，改为句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-064",
+          "kind": "user-specified-wording",
+          "find": "的自治和从国家自治的持续存在",
+          "replacement": "的自治和从国家自治的持续存在。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-065",
+          "kind": "user-specified-wording",
+          "find": "节描绘了一幅完全不同的国家-",
+          "replacement": "节描绘了一幅完全不同的国家－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-066",
+          "kind": "user-specified-wording",
+          "find": "在1978-1979年德黑兰",
+          "replacement": "在1978－1979年德黑兰",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-067",
+          "kind": "user-specified-wording",
+          "find": "济恐怖分子标签的私营部门成员",
+          "replacement": "济恐怖分子标签的私营部门成员。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-068",
+          "kind": "user-specified-wording",
+          "find": "桑-巴尼-萨德尔和穆罕默德-",
+          "replacement": "桑-巴尼-萨德尔和穆罕默德－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-069",
+          "kind": "user-specified-wording",
+          "find": "员，以及阿博尔-哈桑-巴尼-",
+          "replacement": "员，以及阿博尔-哈桑-巴尼－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-070",
+          "kind": "user-specified-wording",
+          "find": "左翼成员，以及阿博尔-哈桑-",
+          "replacement": "左翼成员，以及阿博尔-哈桑－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-071",
+          "kind": "user-specified-wording",
+          "find": "如世俗左翼成员，以及阿博尔-",
+          "replacement": "如世俗左翼成员，以及阿博尔－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-072",
+          "kind": "user-specified-wording",
+          "find": "和人们离开战区而失业的失业者",
+          "replacement": "和人们离开战区而失业的失业者。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-073",
+          "kind": "user-specified-wording",
+          "find": "的、有宗教信仰的、有技能的人",
+          "replacement": "的、有宗教信仰的、有技能的人。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-074",
+          "kind": "user-specified-wording",
+          "find": "监督1988年即决处决政治犯",
+          "replacement": "监督1988年即决处决政治犯。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-075",
+          "kind": "user-specified-wording",
+          "find": "，并一直在商务部工作。阿里-",
+          "replacement": "，并一直在商务部工作。阿里－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-076",
+          "kind": "user-specified-wording",
+          "find": "人，一直是商会的支柱。阿里-",
+          "replacement": "人，一直是商会的支柱。阿里－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-077",
+          "kind": "user-specified-wording",
+          "find": "兄弟阿萨多拉·阿斯加拉拉迪-",
+          "replacement": "兄弟阿萨多拉·阿斯加拉拉迪－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-078",
+          "kind": "user-specified-wording",
+          "find": "包括商务部部长（1981-3",
+          "replacement": "包括商务部部长（1981－1983",
+          "reason": "年份区间补全为完整年份，并改用全角连接号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-079",
+          "kind": "user-specified-wording",
+          "find": "，哈比真主党的阿斯加拉拉迪-",
+          "replacement": "，哈比真主党的阿斯加拉拉迪－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-080",
+          "kind": "user-specified-wording",
+          "find": "拥有资产的50名实业家名单上",
+          "replacement": "拥有资产的50名实业家名单上。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-081",
+          "kind": "user-specified-wording",
+          "find": "度来看，这种赞助和模糊国家-",
+          "replacement": "度来看，这种赞助和模糊国家－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-082",
+          "kind": "user-specified-wording",
+          "find": "的情况下管制经济活动是合理的",
+          "replacement": "的情况下管制经济活动是合理的。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-083",
+          "kind": "user-specified-wording",
+          "find": "国家合并的处理，修改了该公司",
+          "replacement": "国家合并的处理，修改了该公司。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-084",
+          "kind": "user-specified-wording",
+          "find": "允许并产生精英派系主义和竞争",
+          "replacement": "允许并产生精英派系主义和竞争。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-085",
+          "kind": "user-specified-wording",
+          "find": "，阿里·哈梅内伊，1988-",
+          "replacement": "，阿里·哈梅内伊，1988－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-086",
+          "kind": "user-specified-wording",
+          "find": "0年（霍梅尼，1979-88",
+          "replacement": "0年（霍梅尼，1979－1988",
+          "reason": "年份区间补全为完整年份，并改用全角连接号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-087",
+          "kind": "user-specified-wording",
+          "find": "润的服务和交易，包括外汇投机",
+          "replacement": "润的服务和交易，包括外汇投机。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-088",
+          "kind": "user-specified-wording",
+          "find": "供支持，而不是以金钱提供支持",
+          "replacement": "供支持，而不是以金钱提供支持。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-089",
+          "kind": "user-specified-wording",
+          "find": "（以及后来的总统，1989-",
+          "replacement": "（以及后来的总统，1989－",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-090",
+          "kind": "user-specified-wording",
+          "find": "哈什米-拉夫桑贾尼（以及后来",
+          "replacement": "哈什米－拉夫桑贾尼（以及后来",
+          "reason": "连接号由半角改为全角。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-091",
+          "kind": "user-specified-wording",
+          "find": "府说的话，从不为我们做任何事",
+          "replacement": "府说的话，从不为我们做任何事。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-092",
+          "kind": "user-specified-wording",
+          "find": "品走私的同一司法机构来处理的",
+          "replacement": "品走私的同一司法机构来处理的。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-093",
+          "kind": "user-specified-wording",
+          "find": "普遍。世界银行对1995-8",
+          "replacement": "普遍。世界银行对1995－1998",
+          "reason": "年份区间补全为完整年份，并改用全角连接号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-094",
+          "kind": "user-specified-wording",
+          "find": "得的信息和资源不会与他人共享",
+          "replacement": "得的信息和资源不会与他人共享。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-095",
+          "kind": "user-specified-wording",
+          "find": "的州预算，但它还是很受欢迎的",
+          "replacement": "的州预算，但它还是很受欢迎的。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "cleanup-096",
+          "kind": "user-specified-wording",
+          "find": "家建筑公司，238家贸易企业",
+          "replacement": "家建筑公司，238家贸易企业。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        }
+      ]
+    }
+  ]
 }
