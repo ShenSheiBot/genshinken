@@ -634,6 +634,16 @@
           "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
           "authorizedBy": "用户（当前 Claude Code 任务）",
           "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "tail-001",
+          "kind": "user-specified-wording",
+          "find": "巴斯港和中亚（通过萨拉克斯）",
+          "replacement": "巴斯港和中亚（通过萨拉克斯）。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定补齐四篇毛拉学文稿遗漏的段末标点。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
         }
       ]
     },
@@ -996,6 +1006,16 @@
           "replacement": "通过共享的文化理解。”转向伊朗",
           "reason": "订正引号方向：此处为引文结束，应为下引号。",
           "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "tail-001",
+          "kind": "user-specified-wording",
+          "find": "（Melli银行的“账户”）",
+          "replacement": "（Melli银行的“账户”）。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定补齐四篇毛拉学文稿遗漏的段末标点。",
           "authorizedBy": "用户（当前 Claude Code 任务）",
           "authorizedAt": "2026-08-04"
         }
@@ -2512,6 +2532,26 @@
           "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
           "authorizedBy": "用户（当前 Claude Code 任务）",
           "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "tail-001",
+          "kind": "user-specified-wording",
+          "find": "（宗教assemblies）",
+          "replacement": "（宗教assemblies）。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定补齐四篇毛拉学文稿遗漏的段末标点。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "tail-002",
+          "kind": "user-specified-wording",
+          "find": "作为社区的合法领袖（伊玛目）",
+          "replacement": "作为社区的合法领袖（伊玛目）。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定补齐四篇毛拉学文稿遗漏的段末标点。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
         }
       ]
     },
@@ -3484,6 +3524,16 @@
           "replacement": "家建筑公司，238家贸易企业。",
           "reason": "补上遗漏的段末句号。",
           "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定清洗四篇毛拉学文稿：补句末标点、连续名词改用顿号、订正笔误、半角连接号改全角、年份区间写全、整段引文改用引用样式。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "tail-001",
+          "kind": "user-specified-wording",
+          "find": "般是原材料、重型机械和主食）",
+          "replacement": "般是原材料、重型机械和主食）。",
+          "reason": "补上遗漏的段末句号。",
+          "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定补齐四篇毛拉学文稿遗漏的段末标点。",
           "authorizedBy": "用户（当前 Claude Code 任务）",
           "authorizedAt": "2026-08-04"
         }
