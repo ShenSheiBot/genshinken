@@ -332,7 +332,7 @@ for (const book of bookManifests) {
     assert.ok(bibtex.startsWith("@book{__2026,"));
     assert.ok(bibtex.includes("author = {罗伯逊, 夏洛特}"));
     assert.ok(bibtex.includes("translator = {{王揆}}"));
-    assert.ok(bibtex.includes("title = {不驯的资本：十九世纪法国的金融政治}"));
+    assert.ok(bibtex.includes("title = {不驯的资本：十九世纪法兰西的金融政治}"));
     assert.ok(bibtex.includes("shorttitle = {不驯的资本}"));
     assert.ok(bibtex.includes("month = {aug}"));
     assert.ok(bibtex.includes("year = {2026}"));

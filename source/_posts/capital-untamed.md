@@ -1,7 +1,7 @@
 ---
 title: 不驯的资本
 title_breaks: ["不驯的资本"]
-subtitle: 十九世纪法国的金融政治
+subtitle: 十九世纪法兰西的金融政治
 date: 2026-08-03
 updated: 2026-08-05
 draft: false
@@ -19,7 +19,7 @@ original_publication: The University of Chicago Press
 citation:
   itemType: book
   citationKey: __2026_fulltext
-  title: "不驯的资本：十九世纪法国的金融政治"
+  title: "不驯的资本：十九世纪法兰西的金融政治"
   shortTitle: 不驯的资本
   edition: "1"
   date: "2026-08"
