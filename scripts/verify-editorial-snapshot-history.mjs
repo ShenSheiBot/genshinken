@@ -63,6 +63,15 @@ function changedProtectedSnapshots(baseReference) {
   return violations;
 }
 
+const hasGitRepository = Boolean(git(["rev-parse", "--git-dir"], true));
+if (!hasGitRepository) {
+  if (process.env.VERCEL === "1") {
+    console.log("editorial snapshot history check skipped: Vercel build archive has no .git metadata");
+    process.exit(0);
+  }
+  assert.fail("cannot resolve preservation baseline: no Git repository metadata");
+}
+
 const baseReference = defaultBaseReference();
 assert.ok(commitExists(baseReference), `cannot resolve preservation baseline ${baseReference}`);
 const violations = changedProtectedSnapshots(baseReference);
