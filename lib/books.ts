@@ -82,19 +82,17 @@ export interface ForthcomingBookChapter extends BookChapterBase {
 
 export type BookChapter = PublishedBookChapter | ForthcomingBookChapter;
 
-export interface BookCoverAssets {
-  catalog: string;
-  detail: string;
+export interface BookCoverAsset {
+  src: string;
 }
 
-const BOOK_COVER_ASSETS: Record<string, BookCoverAssets> = {
+const BOOK_COVER_ASSETS: Record<string, BookCoverAsset> = {
   "capital-untamed": {
-    catalog: "/img/capital-untamed-cover-small.jpg",
-    detail: "/img/capital-untamed-cover-large.jpg",
+    src: "/img/capital-untamed-cover.png",
   },
 };
 
-export function getBookCoverAssets(slug: string): BookCoverAssets | undefined {
+export function getBookCoverAssets(slug: string): BookCoverAsset | undefined {
   return BOOK_COVER_ASSETS[slug];
 }
 

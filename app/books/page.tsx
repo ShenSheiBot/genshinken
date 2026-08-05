@@ -88,10 +88,10 @@ export default function BooksPage() {
                     >
                       {coverAssets ? (
                         <Image
-                          src={coverAssets.catalog}
+                          src={coverAssets.src}
                           alt=""
-                          width={112}
-                          height={159}
+                          fill
+                          sizes="(max-width: 760px) 80px, (max-width: 980px) 100px, 112px"
                           className={styles.coverImage}
                         />
                       ) : (

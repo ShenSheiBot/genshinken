@@ -212,10 +212,10 @@ export default async function BookPage({
           >
             {coverAssets ? (
               <Image
-                src={coverAssets.detail}
+                src={coverAssets.src}
                 alt=""
-                width={210}
-                height={298}
+                fill
+                sizes="(max-width: 520px) 120px, (max-width: 760px) 136px, (max-width: 980px) 190px, 210px"
                 className={styles.coverImage}
               />
             ) : (
