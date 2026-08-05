@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import {
   bookHref,
   bookStatusLabel,
   getAllBookChapters,
   getAllBooks,
+  getBookCoverAssets,
   getBookCredits,
   getPublishedBookChapters,
 } from "@/lib/books";
@@ -74,15 +76,31 @@ export default function BooksPage() {
               const authors = credits.filter((credit) => credit.role === "author");
               const translators = credits.filter((credit) => credit.role === "translator");
               const proofreaders = credits.filter((credit) => credit.role === "proofreader");
+              const coverAssets = getBookCoverAssets(book.slug);
               const allChapters = getAllBookChapters(book);
               const publishedChapters = getPublishedBookChapters(book);
               return (
                 <li key={book.id}>
                   <article className={styles.catalogBook} data-book-status={book.status}>
-                    <div className={styles.catalogCover} aria-hidden="true">
-                      <span>西方負典文库</span>
-                      <strong>{book.title}</strong>
-                      <small>{String(index + 1).padStart(2, "0")} / 书籍</small>
+                    <div
+                      className={`${styles.catalogCover}${coverAssets ? ` ${styles.coverWithImage}` : ""}`}
+                      aria-hidden="true"
+                    >
+                      {coverAssets ? (
+                        <Image
+                          src={coverAssets.catalog}
+                          alt=""
+                          width={112}
+                          height={159}
+                          className={styles.coverImage}
+                        />
+                      ) : (
+                        <>
+                          <span>西方負典文库</span>
+                          <strong>{book.title}</strong>
+                          <small>{String(index + 1).padStart(2, "0")} / 书籍</small>
+                        </>
+                      )}
                     </div>
                     <div className={styles.catalogBody}>
                       <div className={styles.catalogTopline}>

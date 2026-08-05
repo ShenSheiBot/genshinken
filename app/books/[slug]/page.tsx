@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
@@ -7,6 +8,7 @@ import {
   bookStatusLabel,
   getAllBookChapters,
   getAllBooks,
+  getBookCoverAssets,
   getBookCredits,
   getBookBySlug,
   getLatestBookChapter,
@@ -152,6 +154,7 @@ export default async function BookPage({
   const publishedChapters = getPublishedBookChapters(book);
   const firstChapter = publishedChapters[0];
   const credits = getBookCredits(book);
+  const coverAssets = getBookCoverAssets(book.slug);
   const authors = credits.filter((credit) => credit.role === "author");
   const translators = credits.filter((credit) => credit.role === "translator");
   const proofreaders = credits.filter((credit) => credit.role === "proofreader");
@@ -203,10 +206,25 @@ export default async function BookPage({
         </nav>
 
         <header className={styles.publicationHeader}>
-          <div className={styles.bookCover} aria-hidden="true">
-            <span>西方負典文库</span>
-            <strong>{book.title}</strong>
-            <small>西方負典版</small>
+          <div
+            className={`${styles.bookCover}${coverAssets ? ` ${styles.coverWithImage}` : ""}`}
+            aria-hidden="true"
+          >
+            {coverAssets ? (
+              <Image
+                src={coverAssets.detail}
+                alt=""
+                width={210}
+                height={298}
+                className={styles.coverImage}
+              />
+            ) : (
+              <>
+                <span>西方負典文库</span>
+                <strong>{book.title}</strong>
+                <small>西方負典版</small>
+              </>
+            )}
           </div>
 
           <div className={styles.publicationIdentity}>
