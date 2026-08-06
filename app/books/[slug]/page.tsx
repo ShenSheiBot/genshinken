@@ -230,7 +230,7 @@ export default async function BookPage({
           <div className={styles.publicationIdentity}>
             <p className={styles.sectionLabel}>{bookStatusLabel(book.status)} · 书籍</p>
             <h1>{book.title}</h1>
-            <p className={styles.bookSubtitle}>{book.subtitle}</p>
+            {book.subtitle ? <p className={styles.bookSubtitle}>{book.subtitle}</p> : null}
             <div className={styles.responsibility}>
               <div><span>作者</span><CreditLinks credits={authors} showMarks={false} separator="·" /></div>
               <div><span>译者</span><CreditLinks credits={translators} showMarks={false} separator="·" /></div>

@@ -279,7 +279,7 @@ function resolveBookReference(
   return {
     ...item,
     title: book.title,
-    subtitle: book.subtitle,
+    subtitle: book.subtitle ?? "",
     summary: book.description,
     href: bookHref(book),
     section: "book",

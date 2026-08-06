@@ -63,7 +63,7 @@
 
 @font-face {
   font-family: "UN Canon STSong";
-  src: url("/fonts/un-canon-st-song.woff2?v=a3190603b7fa") format("woff2");
+  src: url("/fonts/un-canon-st-song.woff2?v=00a9836a3545") format("woff2");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -71,7 +71,7 @@
 
 @font-face {
   font-family: "UN Canon STFangsong";
-  src: url("/fonts/un-canon-st-fangsong.woff2?v=8b3cf3443bf7") format("woff2");
+  src: url("/fonts/un-canon-st-fangsong.woff2?v=9348a461bc97") format("woff2");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -79,7 +79,7 @@
 
 @font-face {
   font-family: "UN Canon STKaiti";
-  src: url("/fonts/un-canon-st-kaiti.woff2?v=15091ecba44c") format("woff2");
+  src: url("/fonts/un-canon-st-kaiti.woff2?v=42f89f335cee") format("woff2");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -623,6 +623,47 @@ body:has(main[data-archive-page="true"]) {
   font-weight: 700;
 }
 .art-body tbody tr + tr td { border-top: 1px solid var(--hair); }
+.art-body figure.article-figure {
+  margin: 42px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.art-body figure.article-figure > img { margin: 0 auto; }
+/* Plate widths mirror the print edition: portraits sit small, charts run full measure. */
+.art-body figure.article-figure[data-width="25"] > img { width: 25%; }
+.art-body figure.article-figure[data-width="33"] > img { width: 33%; }
+.art-body figure.article-figure[data-width="50"] > img { width: 50%; }
+.art-body figure.article-figure[data-width="66"] > img { width: 66%; }
+.art-body figure.article-figure[data-width="75"] > img { width: 75%; }
+.art-body figure.article-figure[data-width="100"] > img { width: 100%; }
+.art-body figure.article-figure > figcaption.article-figure-caption {
+  margin: 12px 0 0;
+  font-family: var(--f-note);
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  text-align: center;
+  text-indent: 0;
+  max-width: 100%;
+}
+.art-body .article-figure-notes { margin-top: 8px; max-width: 100%; }
+.art-body .article-figure-notes p.article-figure-note {
+  margin: 0 0 6px;
+  font-family: var(--f-note);
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  text-align: center;
+  text-indent: 0;
+}
+.art-body .article-figure-notes p.article-figure-note:last-child { margin-bottom: 0; }
+@media (max-width: 640px) {
+  /* Narrow columns cannot afford a quarter-width plate; floor every figure at half. */
+  .art-body figure.article-figure[data-width="25"] > img,
+  .art-body figure.article-figure[data-width="33"] > img { width: 50%; }
+}
+
 .art-body figure.article-table {
   margin: 42px 0;
 }

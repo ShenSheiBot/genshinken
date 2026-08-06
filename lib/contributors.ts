@@ -149,6 +149,18 @@ export const CONTRIBUTORS = [
     teamMember: false,
   },
   {
+    id: "francois-crouzet",
+    displayName: "顾鲁泽",
+    aliases: ["François Crouzet", "Francois Crouzet", "弗朗索瓦·顾鲁泽"],
+    teamMember: false,
+  },
+  {
+    id: "takafusa-nakamura",
+    displayName: "中村隆英",
+    aliases: ["Nakamura Takafusa", "Takafusa Nakamura"],
+    teamMember: false,
+  },
+  {
     id: "western-un-canon-translation-group",
     displayName: "西方负典编译组",
     aliases: [],

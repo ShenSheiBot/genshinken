@@ -514,6 +514,12 @@ function requiredRecordString(record, field, file) {
   return value.trim();
 }
 
+/** Absent is fine; present but blank is not. Used for fields a source edition may simply lack. */
+function optionalRecordString(record, field, file) {
+  if (record[field] == null) return undefined;
+  return requiredRecordString(record, field, file);
+}
+
 function stableRecordId(record, field, file) {
   const value = requiredRecordString(record, field, file);
   if (value && !slugPattern.test(value)) {
@@ -788,7 +794,7 @@ const bookRecords = jsonFiles(booksDirectory)
       report(errors, file, "script 必须显式填写 hans 或 hant");
     }
     const title = requiredRecordString(data, "title", file);
-    requiredRecordString(data, "subtitle", file);
+    optionalRecordString(data, "subtitle", file);
     requiredRecordString(data, "description", file);
     const status = requiredRecordString(data, "status", file);
     if (status && !validBookStatuses.has(status)) {

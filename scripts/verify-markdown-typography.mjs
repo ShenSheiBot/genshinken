@@ -127,6 +127,38 @@ assert.match(
 );
 assert.doesNotMatch(semanticTableHtml, /\[表(?:题|注)\]/u, "table source markers must never render");
 
+const semanticFigureHtml = await renderMarkdown(`
+[图题] 滨口雄幸
+
+![滨口雄幸](attachments/plate.png "=25%")
+
+[图注] 出自印本第26页。
+`);
+assert.match(
+  semanticFigureHtml,
+  /<figure class="article-figure" data-width="25"><img src="\/attachments\/plate\.png"/u,
+  "marked plates must become semantic figures carrying their print width"
+);
+assert.match(
+  semanticFigureHtml,
+  /<figcaption class="article-figure-caption">滨口雄幸<\/figcaption>/u,
+  "figure captions must render beneath the plate, not only as alt text"
+);
+assert.match(
+  semanticFigureHtml,
+  /<div class="article-figure-notes"><p class="article-figure-note">出自印本第(?:<span class="latin-run">)?26(?:<\/span>)?页。<\/p><\/div>/u,
+  "marked figure notes must be grouped beneath the caption"
+);
+assert.doesNotMatch(semanticFigureHtml, /\[图(?:题|注)\]/u, "figure markers must never render");
+assert.doesNotMatch(semanticFigureHtml, /title="/u, "a consumed width hint must not survive as a title");
+
+const unmarkedFigureHtml = await renderMarkdown('![配图1](attachments/plate.png)');
+assert.doesNotMatch(
+  unmarkedFigureHtml,
+  /<figure|<figcaption/u,
+  "images without a 图题 marker must stay bare so placeholder alt text never becomes a caption"
+);
+
 const ladejinskySource = await readFile(
   new URL("../source/_posts/ladejinsky-agrarian-reform-as-unfinished-business.md", import.meta.url),
   "utf8"

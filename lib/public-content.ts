@@ -92,7 +92,7 @@ function bookEntry(
     slug: book.slug,
     script: book.script,
     title: book.title,
-    subtitle: book.subtitle,
+    subtitle: book.subtitle ?? "",
     bookDocument: false,
     tags,
     author: authors.join("　"),

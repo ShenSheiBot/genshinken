@@ -672,6 +672,103 @@ function rehypeTableFigures() {
   return (tree: Root) => walk(tree as unknown as TableFigureNode);
 }
 
+const FIGURE_CAPTION_MARKER = "[图题]";
+const FIGURE_NOTE_MARKER = "[图注]";
+/** Discrete display widths; each needs a matching rule in globals.css. */
+const FIGURE_WIDTHS = new Set(["25", "33", "50", "66", "75", "100"]);
+const FIGURE_WIDTH_TITLE = /^\s*=\s*(\d{1,3})%\s*$/u;
+
+/** The lone `img` of an image-only paragraph, or undefined when the paragraph holds anything else. */
+function soleImage(node: TableFigureNode | undefined): TableFigureNode | undefined {
+  if (node?.type !== "element" || node.tagName !== "p") return undefined;
+  const elements = (node.children ?? []).filter(
+    (child) => child.type !== "text" || /\S/u.test(child.value ?? "")
+  );
+  if (elements.length !== 1) return undefined;
+  const only = elements[0];
+  return only.type === "element" && only.tagName === "img" ? only : undefined;
+}
+
+/**
+ * Turn a `[图题]` paragraph plus the image that follows it into a captioned
+ * `<figure>`, with the caption printed below the plate as in the source editions.
+ * Images without the marker are left alone, so alt text that is a placeholder
+ * rather than a legend never leaks into the page.
+ */
+function rehypeImageFigures() {
+  const walk = (parent: TableFigureNode) => {
+    const children = parent.children;
+    if (!children) return;
+
+    for (let index = 0; index < children.length; index += 1) {
+      const caption = children[index];
+      if (!markerParagraph(caption, FIGURE_CAPTION_MARKER)) continue;
+
+      const imageIndex = significantSibling(children, index + 1, 1);
+      const paragraph = imageIndex >= 0 ? children[imageIndex] : undefined;
+      const image = soleImage(paragraph);
+      if (!image) continue;
+      stripParagraphMarker(caption, FIGURE_CAPTION_MARKER);
+
+      let width: string | undefined;
+      const title = image.properties?.title;
+      if (typeof title === "string") {
+        const match = FIGURE_WIDTH_TITLE.exec(title);
+        if (match && FIGURE_WIDTHS.has(match[1])) {
+          width = match[1];
+          delete image.properties?.title;
+        }
+      }
+
+      const notes: TableFigureNode[] = [];
+      let endIndex = imageIndex;
+      let nextIndex = significantSibling(children, imageIndex + 1, 1);
+      while (nextIndex >= 0 && markerParagraph(children[nextIndex], FIGURE_NOTE_MARKER)) {
+        const note = children[nextIndex];
+        stripParagraphMarker(note, FIGURE_NOTE_MARKER);
+        note.properties = { ...(note.properties ?? {}), className: ["article-figure-note"] };
+        notes.push(note);
+        endIndex = nextIndex;
+        nextIndex = significantSibling(children, nextIndex + 1, 1);
+      }
+
+      const figure: TableFigureNode = {
+        type: "element",
+        tagName: "figure",
+        properties: {
+          className: ["article-figure"],
+          ...(width ? { "data-width": width } : {}),
+        },
+        children: [
+          image,
+          {
+            type: "element",
+            tagName: "figcaption",
+            properties: { className: ["article-figure-caption"] },
+            children: caption.children ?? [],
+          },
+          ...(notes.length > 0
+            ? [{
+                type: "element",
+                tagName: "div",
+                properties: { className: ["article-figure-notes"] },
+                children: notes,
+              } satisfies TableFigureNode]
+            : []),
+        ],
+      };
+
+      children.splice(index, endIndex - index + 1, figure);
+    }
+
+    for (const child of children) {
+      if (child.type === "element") walk(child);
+    }
+  };
+
+  return (tree: Root) => walk(tree as unknown as TableFigureNode);
+}
+
 const processor = unified()
   .use(remarkParse)
   .use(remarkGfm)
@@ -692,6 +789,7 @@ const processor = unified()
   .use(rehypeSlug)
   .use(rehypeRewrite)
   .use(rehypeTableFigures)
+  .use(rehypeImageFigures)
   .use(rehypeCjkEmphasis)
   .use(rehypeSmartQuotes)
   .use(rehypeCjkInterpuncts)

@@ -90,6 +90,12 @@ const BOOK_COVER_ASSETS: Record<string, BookCoverAsset> = {
   "capital-untamed": {
     src: "/img/capital-untamed-cover.png",
   },
+  "crouzet-la-grande-inflation": {
+    src: "/img/crouzet-la-grande-inflation-cover.jpg",
+  },
+  "nakamura-showa-kyoko-to-keizai-seisaku": {
+    src: "/img/nakamura-showa-kyoko-to-keizai-seisaku-cover.jpg",
+  },
 };
 
 export function getBookCoverAssets(slug: string): BookCoverAsset | undefined {
@@ -118,7 +124,8 @@ export interface Book {
   id: string;
   slug: string;
   title: string;
-  subtitle: string;
+  /** Optional: books whose original edition carries no subtitle omit it rather than invent one. */
+  subtitle?: string;
   description: string;
   documentSlug: string;
   script: HanScript;
@@ -428,7 +435,7 @@ function parseManifest(value: unknown, source: string): Book {
   validateContributorNames(proofreaders, "proofreaders", source);
   const slug = stableId(value, "slug", source);
   const title = requiredString(value, "title", source);
-  const subtitle = requiredString(value, "subtitle", source);
+  const subtitle = optionalString(value, "subtitle", source);
   const description = requiredString(value, "description", source);
   const rawScript = requiredString(value, "script", source);
   if (!isHanScript(rawScript)) {
@@ -819,7 +826,7 @@ export function getBookChapterCitation(
     citationKey: `${parent.citationKey}_${chapter.id.replaceAll("-", "_")}`,
     title: chapter.title,
     creators: parent.creators,
-    abstractNote: `${book.title}（${book.subtitle}）${chapter.number}：${chapter.title}`,
+    abstractNote: `${book.subtitle ? `${book.title}（${book.subtitle}）` : book.title}${chapter.number}：${chapter.title}`,
     date: chapter.publishedAt,
     url: `https://un-canon.blog${bookChapterHref(book, chapter)}`,
     language: parent.language,

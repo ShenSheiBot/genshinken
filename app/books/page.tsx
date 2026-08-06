@@ -110,7 +110,7 @@ export default function BooksPage() {
                       <h3 className={styles.catalogTitle}>
                         <Link href={bookHref(book)}>{book.title}</Link>
                       </h3>
-                      <p className={styles.catalogSubtitle}>{book.subtitle}</p>
+                      {book.subtitle ? <p className={styles.catalogSubtitle}>{book.subtitle}</p> : null}
                       <div className={styles.catalogCredits}>
                         <div><span>作者</span><CreditLinks credits={authors} showMarks={false} separator="·" /></div>
                         <div><span>译者</span><CreditLinks credits={translators} showMarks={false} separator="·" /></div>
