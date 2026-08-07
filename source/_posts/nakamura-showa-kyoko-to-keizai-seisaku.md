@@ -2,7 +2,7 @@
 title: 昭和危机与经济政策
 title_breaks: ["昭和危机与经济政策"]
 date: 2026-08-06
-updated: 2026-08-06
+updated: 2026-08-07
 draft: false
 book_document: true
 slug: nakamura-showa-kyoko-to-keizai-seisaku
@@ -11,7 +11,7 @@ categories: [历史]
 section: translation
 tags: [日本, 昭和危机, 金本位, 经济政策]
 post_author: 中村隆英
-translator: 西方负典编译组
+translator: 王揆
 excerpt: 井上准之助主导的解除黄金出口禁令，从酝酿、实施到在大萧条与满洲事变的风暴中崩溃；中村隆英把经济政策的制订与实施当作政治过程来追踪，并以平成萧条为附论作照。
 original_title: 昭和恐慌と経済政策
 original_publication: 講談社学術文庫

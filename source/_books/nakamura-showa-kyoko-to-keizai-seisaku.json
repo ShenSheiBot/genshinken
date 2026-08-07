@@ -7,9 +7,9 @@
   "script": "hans",
   "status": "complete",
   "authors": ["takafusa-nakamura"],
-  "translators": ["western-un-canon-translation-group"],
+  "translators": ["wang-kui"],
   "publishedAt": "2026-08-06",
-  "updatedAt": "2026-08-06",
+  "updatedAt": "2026-08-07",
   "latestChapterId": "edition-note",
   "pdfUrl": "/downloads/nakamura-showa-kyoko-to-keizai-seisaku.pdf",
   "epubUrl": "/downloads/nakamura-showa-kyoko-to-keizai-seisaku.epub",
@@ -44,7 +44,7 @@
         },
         {
           "creatorType": "translator",
-          "name": "西方负典编译组"
+          "name": "王揆"
         }
       ],
       "edition": "1",
