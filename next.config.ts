@@ -59,6 +59,14 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       { source: "/:path*", headers: securityHeaders },
+      {
+        // BibTeX 导出是 application/x-bibtex 响应，物理上无法携带
+        // rel=canonical，却被每页 head 的 alternates.types 广告给爬虫，
+        // 曾是 GSC「重复网页，用户未选定规范网页」的主体。noindex 让它
+        // 们保持可下载、可发现，但不再进入索引。
+        source: "/:path*/cite.bib",
+        headers: [{ key: "X-Robots-Tag", value: "noindex" }],
+      },
     ];
   },
   async redirects() {

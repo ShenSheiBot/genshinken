@@ -7,7 +7,6 @@ import {
   DEFAULT_HAN_SCRIPT,
   HAN_SCRIPT_STORAGE_KEY,
 } from "@/lib/han-script";
-
 // Latin / Cyrillic / Greek 字体自托管（next/font：同源、自动预载、内联字体 CSS），
 // 取代此前渲染阻塞的第三方 Google Fonts <link>。含 cyrillic/greek 子集，保住
 // 俄语/希腊语引文在衬线与 Garamond 栈里的呈现。CJK 使用 globals.css 中按需加载的
@@ -62,8 +61,10 @@ export const metadata: Metadata = {
     siteName: site.tabTitle,
     type: "website",
   },
+  // 注意：这里绝不能声明 canonical。layout 级 canonical 会被所有
+  // 忘写 alternates 的页面继承，把它们的规范网址静默指到首页
+  // （章节页曾整批中招）。首页的 canonical 在 app/page.tsx 自持。
   alternates: {
-    canonical: "/",
     types: { "application/rss+xml": [{ url: "/rss.xml", title: site.brand }] },
   },
 };

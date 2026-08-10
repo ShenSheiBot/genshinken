@@ -116,7 +116,20 @@ for (const file of pageFiles) {
     /force-dynamic/u,
     `${relative} must stay statically renderable`
   );
+  assert.match(
+    source,
+    /canonical/u,
+    `${relative} must declare its own canonical (the root layout intentionally sets none)`
+  );
 }
+
+// 根 layout 的 canonical 会被所有未声明 alternates 的页面继承，曾把整批
+// 章节页的规范网址静默指到首页——layout 里永远不允许出现 canonical 声明。
+assert.doesNotMatch(
+  fs.readFileSync(path.join(process.cwd(), "app", "layout.tsx"), "utf8"),
+  /canonical\s*:/u,
+  "app/layout.tsx must never declare an inheritable canonical"
+);
 
 console.log(
   `static routing verification passed for ${staticDynamicRoutes.length} routes and ${pageFiles.length} static pages`

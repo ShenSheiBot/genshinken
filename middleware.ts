@@ -25,10 +25,14 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  // The dated matcher is intentionally broad enough for old encoded titles;
-  // the middleware itself validates the calendar-shaped prefix before acting.
+  // The matcher constrains the dated shape with digit patterns so the
+  // middleware only ever runs for calendar-prefixed legacy URLs — the old
+  // unconstrained `/:year/:month/:day/:path*` compiled to "any path with
+  // three or more segments" and fired on every /_next/static chunk and
+  // cite.bib request. The handler still re-validates via
+  // `legacyHexoArticlePath` as defence in depth.
   matcher: [
-    "/:year/:month/:day/:path*",
+    "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/:path*",
     "/archives/:path*",
     "/categories/:path*",
     "/tags/:path*",

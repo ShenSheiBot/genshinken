@@ -2141,6 +2141,23 @@ assert.equal(mediaRedirect.status, 308, "legacy multimedia post URL must redirec
 assert.equal(normalizedPath(mediaRedirect.headers.get("location")), "/media/csa");
 assert.equal(chapterPage.status, 200, "published chapter routes must render independent pages");
 
+// BibTeX 导出无法携带 rel=canonical（非 HTML 响应），却被每页 head 的
+// alternates.types 广告给爬虫——必须以 X-Robots-Tag: noindex 退出索引，
+// 同时保持 200 可下载（robots 不得 Disallow，否则爬虫看不到该头）。
+const citationExports = await Promise.all([
+  fetch(`${base}/posts/lih-lenin-disputed/cite.bib`, { redirect: "manual" }),
+  fetch(`${base}/books/shulgin-dni/cite.bib`, { redirect: "manual" }),
+  fetch(`${base}/books/shulgin-dni/chapters/constitutional-day-one/cite.bib`, { redirect: "manual" }),
+]);
+for (const response of citationExports) {
+  assert.equal(response.status, 200, `citation export must stay downloadable: ${response.url}`);
+  assert.match(
+    response.headers.get("x-robots-tag") || "",
+    /noindex/,
+    `citation export must carry X-Robots-Tag: noindex: ${response.url}`
+  );
+}
+
 const retiredBookDocuments = await Promise.all([
   "/posts/shulgin-dni",
   "/posts/lih-bread-and-authority-in-russia",
