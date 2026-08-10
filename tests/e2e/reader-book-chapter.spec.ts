@@ -1,3 +1,4 @@
+import fs from "node:fs";
 import { expect, test } from "./fixtures";
 
 const CHAPTER_PATH = "/books/lih-bread-and-authority-in-russia/chapters/chapter-3";
@@ -5,7 +6,26 @@ const ARTICLE_PATH = "/posts/guxiang-de-bianzhengfa";
 const MULTIPART_CHAPTER_PATH = "/books/shulgin-dni/chapters/penultimate-days";
 const LEGACY_PART_PATH = "/books/shulgin-dni/chapters/penultimate-1916-11-03";
 const BEFORE_MULTIPART_CHAPTER_PATH = "/books/shulgin-dni/chapters/constitutional-day-three";
-const MULTIPART_SECTION_TITLE = "1916年11月3日";
+
+// 分篇的发布状态随连载推进变化（05.2 于 2026-08-10 转已发布），期望一律
+// 从书籍清单推导，不写死篇名与条数（C3）。
+type SectionPlan = { id: string; number: string; title: string; status: string; anchor?: string };
+const shulginManifest = JSON.parse(
+  fs.readFileSync("source/_books/shulgin-dni.json", "utf8")
+) as { chapters: Array<{ id: string; sections?: SectionPlan[] }> };
+const penultimateSectionPlan =
+  shulginManifest.chapters.find((chapter) => chapter.id === "penultimate-days")?.sections ?? [];
+const publishedPenultimateSections = penultimateSectionPlan.filter(
+  (section) => section.status === "published"
+);
+const forthcomingPenultimateSections = penultimateSectionPlan.filter(
+  (section) => section.status === "forthcoming"
+);
+const allShulginSections = shulginManifest.chapters.flatMap((chapter) => chapter.sections ?? []);
+const forthcomingShulginSections = allShulginSections.filter(
+  (section) => section.status === "forthcoming"
+);
+const MULTIPART_SECTION_TITLE = publishedPenultimateSections[0].title;
 const MULTIPART_SECTION_PATH = `${MULTIPART_CHAPTER_PATH}#${encodeURIComponent(MULTIPART_SECTION_TITLE)}`;
 
 const docketNumber = (page: import("./fixtures").Page) =>
@@ -129,8 +149,13 @@ test("shared chapter parts render as subtitles on one chapter page", async ({ is
 
   await expect(page.getByRole("heading", { name: "本节目录", exact: true })).toHaveCount(0);
   await expect(page.getByRole("heading", { name: "“立宪”的倒数第二日", level: 1 })).toBeVisible();
+  for (const section of publishedPenultimateSections) {
+    await expect(
+      page.locator("article.reading-edition-body h3").filter({ hasText: section.title })
+    ).toBeVisible();
+  }
   const publishedSubtitle = page.locator("article.reading-edition-body h3").filter({
-    hasText: "1916年11月3日",
+    hasText: MULTIPART_SECTION_TITLE,
   });
   await expect(publishedSubtitle).toBeVisible();
   const subtitleMarker = await publishedSubtitle.evaluate((heading) => {
@@ -167,11 +192,20 @@ test("shared chapter parts render as subtitles on one chapter page", async ({ is
   await fullBookTab.click();
   const fullBookPanel = page.locator("#reading-index-book");
   const penultimateSections = fullBookPanel.getByLabel("“立宪”的倒数第二日的次级标题");
-  await expect(penultimateSections.getByRole("button", { name: "1916年11月3日" })).toBeVisible();
-  await expect(penultimateSections.locator('[data-status="forthcoming"]')).toHaveCount(2);
-  await expect(penultimateSections.locator('[data-status="forthcoming"]').filter({ hasText: "1916年11月至12月" })).toHaveAttribute("aria-disabled", "true");
-  await expect(penultimateSections.locator('[data-status="forthcoming"]').filter({ hasText: "1917年2月26日" })).toHaveAttribute("aria-disabled", "true");
-  await expect(penultimateSections.locator('a, button').filter({ hasText: /1916年11月至12月|1917年2月26日/ })).toHaveCount(0);
+  for (const section of publishedPenultimateSections) {
+    await expect(penultimateSections.getByRole("button", { name: section.title })).toBeVisible();
+  }
+  await expect(penultimateSections.locator('[data-status="forthcoming"]')).toHaveCount(
+    forthcomingPenultimateSections.length
+  );
+  for (const section of forthcomingPenultimateSections) {
+    await expect(
+      penultimateSections.locator('[data-status="forthcoming"]').filter({ hasText: section.title })
+    ).toHaveAttribute("aria-disabled", "true");
+    await expect(
+      penultimateSections.locator("a, button").filter({ hasText: section.title })
+    ).toHaveCount(0);
+  }
 
   const lastDaysDisclosure = fullBookPanel.getByRole("button", {
     name: /(?:展开|折叠)“立宪”的最后几天的次级标题/,
@@ -185,9 +219,16 @@ test("shared chapter parts render as subtitles on one chapter page", async ({ is
   await page.goto("/books/shulgin-dni");
   await expect(page.getByText("已发布 6 / 全部 8", { exact: false })).toBeVisible();
   const sectionRows = page.locator("li[data-section-status]");
-  await expect(sectionRows).toHaveCount(8);
-  await expect(page.locator('li[data-section-status="published"] a[href="/books/shulgin-dni/chapters/penultimate-days#1916%E5%B9%B411%E6%9C%883%E6%97%A5"]')).toHaveCount(1);
-  await expect(page.locator('li[data-section-status="forthcoming"]')).toHaveCount(7);
+  await expect(sectionRows).toHaveCount(allShulginSections.length);
+  for (const section of publishedPenultimateSections) {
+    const href = `${MULTIPART_CHAPTER_PATH}#${encodeURIComponent(section.anchor ?? section.title)}`;
+    await expect(
+      page.locator(`li[data-section-status="published"] a[href="${href}"]`)
+    ).toHaveCount(1);
+  }
+  await expect(page.locator('li[data-section-status="forthcoming"]')).toHaveCount(
+    forthcomingShulginSections.length
+  );
   await expect(page.locator('li[data-section-status="forthcoming"] a, li[data-section-status="forthcoming"] button')).toHaveCount(0);
 
   const legacyResponse = await page.goto(LEGACY_PART_PATH);

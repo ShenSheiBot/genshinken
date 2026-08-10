@@ -10,7 +10,7 @@
   "authors": ["vasily-shulgin"],
   "translators": ["yu-shulue"],
   "publishedAt": "2026-07-20",
-  "updatedAt": "2026-07-23",
+  "updatedAt": "2026-08-10",
   "latestChapterId": "penultimate-days",
   "citations": {
     "original": {
@@ -96,7 +96,9 @@
           "id": "penultimate-1916-11-12",
           "number": "05.2",
           "title": "1916年11月至12月",
-          "status": "forthcoming"
+          "status": "published",
+          "anchor": "1916年11月至12月",
+          "publishedAt": "2026-08-10"
         },
         {
           "id": "penultimate-1917-02-26",

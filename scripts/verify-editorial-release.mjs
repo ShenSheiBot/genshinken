@@ -765,10 +765,14 @@ const shulginSourceMarkdown = fs.readFileSync(
   path.join(process.cwd(), "source", "_posts", "shulgin-dni.md"),
   "utf8"
 );
+// 印刷页在段中断开处，页锚必须内联（保跨页段落完整）。判定依据是
+// .T9N 的 01_sources/ru/pages/page-0NN.jpeg：该页首行不缩进（或为断词）
+// 即续段。清单随单元发布逐步增长，不可由文稿自动推导，故显式登记。
 const shulginInlinePageBreaks = [
   "006", "007", "017", "018", "019", "023", "028", "029", "031",
   "032", "048", "049", "051", "053", "055", "056", "058",
   "059", "060", "062", "063", "065", "066",
+  "069", "072", "073", "074", "078", "080", "081", "082", "085",
 ];
 for (const pageNumber of shulginInlinePageBreaks) {
   assert.doesNotMatch(
@@ -779,6 +783,27 @@ for (const pageNumber of shulginInlinePageBreaks) {
 }
 const shulginOriginalNoteIds = [...shulginSourceMarkdown.matchAll(/^\[\^(\d+)\]:/gm)]
   .map((match) => Number(match[1]));
+// 原书尾注由 .T9N 的 tools/inject-notes.py 按各单元实际引用注入，注号随
+// 单元发布增长。锁「注入的定义 == 正文的引用」这条守恒律，而非注号快照：
+// 悬空引用与孤立注文两个方向都会被抓住。
+const shulginProseWithoutDefinitions = shulginSourceMarkdown
+  .split("\n")
+  .reduce((kept, line) => {
+    if (/^\[\^[^\]]+\]:/u.test(line)) return { ...kept, inDefinition: true };
+    if (kept.inDefinition && (line.startsWith("    ") || line.trim() === "")) return kept;
+    return { inDefinition: false, lines: [...kept.lines, line] };
+  }, { inDefinition: false, lines: [] })
+  .lines.join("\n");
+const shulginReferencedNoteIds = [
+  ...new Set(
+    [...shulginProseWithoutDefinitions.matchAll(/\[\^(\d+)\]/gu)].map((match) => Number(match[1]))
+  ),
+].sort((left, right) => left - right);
+assert.deepEqual(
+  shulginOriginalNoteIds,
+  shulginReferencedNoteIds,
+  "shulgin-dni injected original notes must match the notes referenced by published units"
+);
 const historicalMaterialismSource = fs.readFileSync(
   path.join(process.cwd(), "source", "_posts", "historical-materialism-theses.md"),
   "utf8"
@@ -792,8 +817,27 @@ assert.equal(shulginChapters.length, 8, "shulgin-dni catalogue must contain 8 ch
 assert.equal(shulginPublishedChapters.length, 6, "shulgin-dni current release must publish 6 chapter pages");
 assert.equal(shulginForthcomingChapters.length, 2, "shulgin-dni current release must retain 2 forthcoming chapter pages");
 assert.equal(shulginSections.length, 8, "shulgin-dni must retain all 8 inline date sections");
-assert.equal(shulginPublishedSections.length, 1, "shulgin-dni must publish one inline date section");
-assert.equal(shulginForthcomingSections.length, 7, "shulgin-dni must retain seven forthcoming inline date sections");
+// 已发布分篇的条数随连载推进增长，故锁不变量而非快照：至少一篇已发布、
+// 两种状态互斥且合计守恒、已发布必带 anchor 与 publishedAt、待发布必须都没有。
+assert.ok(
+  shulginPublishedSections.length >= 1,
+  "shulgin-dni must publish at least one inline date section"
+);
+assert.equal(
+  shulginPublishedSections.length + shulginForthcomingSections.length,
+  shulginSections.length,
+  "shulgin-dni inline date sections must all declare published or forthcoming"
+);
+assert.ok(
+  shulginPublishedSections.every((section) => section.anchor && section.publishedAt),
+  "shulgin-dni published inline sections must declare anchor and publishedAt"
+);
+assert.ok(
+  shulginForthcomingSections.every(
+    (section) => !Object.hasOwn(section, "anchor") && !Object.hasOwn(section, "publishedAt")
+  ),
+  "shulgin-dni forthcoming inline sections must omit anchor and publishedAt"
+);
 assert.deepEqual(
   shulginSections.map((section) => section.id),
   [
@@ -820,16 +864,14 @@ assert.deepEqual(
   ],
   "shulgin-dni current release must contain the six published top-level units through chapter 05"
 );
+assert.ok(
+  shulginOriginalNoteIds.length >= 59,
+  "shulgin-dni must retain the original notes injected for the published units"
+);
 assert.deepEqual(
   shulginOriginalNoteIds,
-  [
-    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
-    15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28,
-    31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44,
-    45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58,
-    59, 60, 61, 62, 63,
-  ],
-  "shulgin-dni current release must include only original notes referenced by published units"
+  [...shulginOriginalNoteIds].sort((left, right) => left - right),
+  "shulgin-dni injected original notes must stay in ascending note order"
 );
 assert.ok(
   shulginChapters.every((chapter) => chapter.status === "published" || chapter.status === "forthcoming"),

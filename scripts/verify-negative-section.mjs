@@ -174,22 +174,36 @@ function bookChapter(value, id) {
   return match;
 }
 
+// 分篇夹具一律按「状态」取用，不按固定下标（C3：期望由内容推导）。
+// 2026-08-10 把 05.2 从 forthcoming 转 published 时，写死下标的夹具会连
+// 规则都触发不了——published 与 forthcoming 的位置随连载推进而移动。
+function sectionIndexByStatus(chapterId, status) {
+  const sections = bookChapter(bookBaseline, chapterId).sections;
+  const index = sections.findIndex((section) => section.status === status);
+  assert.notEqual(index, -1, `chapter ${chapterId} must contain a ${status} section`);
+  return index;
+}
+const publishedSectionIndex = sectionIndexByStatus("penultimate-days", "published");
+const forthcomingSectionIndex = sectionIndexByStatus("penultimate-days", "forthcoming");
+const sectionPattern = (index, tail) => new RegExp(`sections\\[${index}\\].*${tail}`, "u");
+
 const sectionMutationCases = [
   {
     name: "missing-status",
     mutate(value) {
-      delete bookChapter(value, "penultimate-days").sections[0].status;
+      delete bookChapter(value, "penultimate-days").sections[publishedSectionIndex].status;
     },
-    pattern: /sections\[0\].*status/u,
+    pattern: sectionPattern(publishedSectionIndex, "status"),
   },
   {
     name: "published-after-forthcoming",
     mutate(value) {
-      const parent = bookChapter(value, "penultimate-days");
-      const sections = parent.sections;
-      parent.sections = [sections[1], sections[0], sections[2]];
+      // 把首个 forthcoming 分篇提到首个 published 之前，published 因此后移一位。
+      const sections = bookChapter(value, "penultimate-days").sections;
+      const [forthcoming] = sections.splice(forthcomingSectionIndex, 1);
+      sections.splice(publishedSectionIndex, 0, forthcoming);
     },
-    pattern: /sections\[1\].*published.*forthcoming/u,
+    pattern: sectionPattern(publishedSectionIndex + 1, "published.*forthcoming"),
   },
   {
     name: "published-under-forthcoming",
@@ -204,30 +218,30 @@ const sectionMutationCases = [
   {
     name: "published-without-anchor",
     mutate(value) {
-      delete bookChapter(value, "penultimate-days").sections[0].anchor;
+      delete bookChapter(value, "penultimate-days").sections[publishedSectionIndex].anchor;
     },
-    pattern: /sections\[0\].*anchor/u,
+    pattern: sectionPattern(publishedSectionIndex, "anchor"),
   },
   {
     name: "published-without-date",
     mutate(value) {
-      delete bookChapter(value, "penultimate-days").sections[0].publishedAt;
+      delete bookChapter(value, "penultimate-days").sections[publishedSectionIndex].publishedAt;
     },
-    pattern: /sections\[0\].*publishedAt/u,
+    pattern: sectionPattern(publishedSectionIndex, "publishedAt"),
   },
   {
     name: "forthcoming-with-anchor",
     mutate(value) {
-      bookChapter(value, "penultimate-days").sections[1].anchor = "future-anchor";
+      bookChapter(value, "penultimate-days").sections[forthcomingSectionIndex].anchor = "future-anchor";
     },
-    pattern: /sections\[1\].*anchor/u,
+    pattern: sectionPattern(forthcomingSectionIndex, "anchor"),
   },
   {
     name: "forthcoming-with-date",
     mutate(value) {
-      bookChapter(value, "penultimate-days").sections[1].publishedAt = "2026-07-23";
+      bookChapter(value, "penultimate-days").sections[forthcomingSectionIndex].publishedAt = "2026-07-23";
     },
-    pattern: /sections\[1\].*publishedAt/u,
+    pattern: sectionPattern(forthcomingSectionIndex, "publishedAt"),
   },
   {
     name: "sections-on-reference",
@@ -251,24 +265,24 @@ const sectionMutationCases = [
   {
     name: "duplicate-section-id",
     mutate(value) {
-      bookChapter(value, "penultimate-days").sections[0].id = "constitutional-day-three";
+      bookChapter(value, "penultimate-days").sections[publishedSectionIndex].id = "constitutional-day-three";
     },
-    pattern: /sections\[0\].*id.*constitutional-day-three/u,
+    pattern: sectionPattern(publishedSectionIndex, "id.*constitutional-day-three"),
   },
   {
     name: "duplicate-section-number",
     mutate(value) {
-      bookChapter(value, "penultimate-days").sections[0].number = "04";
+      bookChapter(value, "penultimate-days").sections[publishedSectionIndex].number = "04";
     },
-    pattern: /sections\[0\].*number.*04/u,
+    pattern: sectionPattern(publishedSectionIndex, "number.*04"),
   },
   {
     name: "duplicate-section-anchor",
     mutate(value) {
       const parent = bookChapter(value, "penultimate-days");
-      parent.sections[0].anchor = parent.anchor;
+      parent.sections[publishedSectionIndex].anchor = parent.anchor;
     },
-    pattern: /sections\[0\].*anchor/u,
+    pattern: sectionPattern(publishedSectionIndex, "anchor"),
   },
 ];
 
@@ -320,12 +334,15 @@ try {
 }
 
 const multipartChapter = bookChapter(bookBaseline, "penultimate-days");
-const publishedSection = multipartChapter.sections.find((section) => section.status === "published");
+const publishedSections = multipartChapter.sections.filter((section) => section.status === "published");
 const forthcomingSection = multipartChapter.sections.find((section) => section.status === "forthcoming");
-assert.ok(publishedSection && forthcomingSection, "fixture must contain both section states");
-const validSectionHeadings = [
-  { id: publishedSection.anchor, title: publishedSection.title, level: 3 },
-];
+assert.ok(publishedSections.length > 0 && forthcomingSection, "fixture must contain both section states");
+// 已发布分篇每篇一个 h3——数量随连载推进增长，故由清单推导而非写死一条。
+const validSectionHeadings = publishedSections.map((section) => ({
+  id: section.anchor,
+  title: section.title,
+  level: 3,
+}));
 validateBookChapterSectionHeadings(bookBaseline.slug, multipartChapter, validSectionHeadings);
 
 for (const fixtureCase of [
@@ -341,12 +358,12 @@ for (const fixtureCase of [
   },
   {
     name: "wrong rendered heading level",
-    headings: [{ ...validSectionHeadings[0], level: 2 }],
+    headings: [{ ...validSectionHeadings[0], level: 2 }, ...validSectionHeadings.slice(1)],
     pattern: /must use an h3 subtitle/u,
   },
   {
     name: "drifted rendered title",
-    headings: [{ ...validSectionHeadings[0], title: "Wrong title" }],
+    headings: [{ ...validSectionHeadings[0], title: "Wrong title" }, ...validSectionHeadings.slice(1)],
     pattern: /title differs from heading/u,
   },
   {
