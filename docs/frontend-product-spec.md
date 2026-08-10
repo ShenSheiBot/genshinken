@@ -72,10 +72,11 @@
 
 ### 3.1 URL 状态
 
-- 唯一 canonical 路由为 `/library`，当前不提供文字搜索框。旧 `/search` 必须以 `308` 永久跳转，并原样保留合法或未知查询参数。
+- 唯一 canonical 路由为 `/library`，当前不提供文字搜索框。旧 `/search` 必须以 `308` 永久跳转（`next.config.ts` 的 `redirects()`，查询参数自动透传），不再由任何服务端函数承接。
+- **整页静态预渲染（SSG）**：`/library` 及其所有 `?…` 筛选变体命中同一份 CDN 文档，禁止 `searchParams` 驱动的请求期渲染（由 `scripts/verify-static-routing.mjs` 强制）。筛选完全在客户端按查询串应用：行以 `data-lib-*` 属性携带筛选凭据，内联预过滤脚本在首绘前隐藏不匹配行以消除闪烁，`LibraryClient` 水合后接管（共享 `lib/library-filter.ts` 的纯函数语义）。所有变体的 canonical 均为 `/library`；robots 屏蔽 `/library?` 的抓取以免爬虫枚举组合空间。
 - 支持至多各一个 `section`、`category`、`tag`、`contributor`、`role` 查询参数；五个参数可组合、可分享、刷新后状态不丢失。
 - `contributor` 使用 `lib/contributors.ts` 中稳定的 ASCII id；`role` 只能是 `author / translator`。姓名或显示文字不得充当 URL 身份。
-- 取消某一筛选时只移除对应参数，保留其余有效条件。手工输入的无效筛选值以 `307` 重定向到只保留其余有效条件的规范 URL，而不是悄然显示无关的全量结果。
+- 取消某一筛选时只移除对应参数，保留其余有效条件。手工输入的无效筛选值由客户端 `router.replace` 规范化到只保留其余有效条件的 URL（旧实现为服务端 `307`），而不是悄然显示无关的全量结果。
 - 手工构造的互斥 URL 可以显示空状态；正常界面路径不得把用户带入零结果状态。
 
 ### 3.2 SKU 式组合筛选

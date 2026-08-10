@@ -1,6 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { EDITORIAL_SECTION_META } from "@/lib/editorial";
-import type { PublicContentEntry } from "@/lib/public-content";
+import type { LibraryRow } from "@/lib/library-filter";
 import CreditLinks from "@/app/components/CreditLinks";
 import styles from "./archive.module.css";
 import ResponsiveFacetDetails from "./ResponsiveFacetDetails";
@@ -15,7 +17,7 @@ export type ArchiveFacetOption = {
 };
 
 type ArchiveIndexProps = {
-  posts: PublicContentEntry[];
+  posts: LibraryRow[];
   total: number;
   resetHref: string;
   hasFilters: boolean;
@@ -86,7 +88,7 @@ function FacetGroup({
   );
 }
 
-function tagsFor(post: PublicContentEntry): string {
+function tagsFor(post: LibraryRow): string {
   if (post.tags.length === 0) return "无标签";
   const visible = post.tags.slice(0, 2).map((tag) => `#${tag}`).join("　");
   const remaining = post.tags.length - 2;
@@ -157,7 +159,20 @@ export default function ArchiveIndex({
               {posts.map((post) => {
                 const section = EDITORIAL_SECTION_META[post.section];
                 return (
-                  <li key={post.slug} className={styles.row} data-reveal>
+                  <li
+                    key={post.slug}
+                    className={styles.row}
+                    data-reveal
+                    // 预过滤引导脚本按这些属性在首绘前隐藏不匹配的行。
+                    // `|` 包裹保证子串匹配不会串值（如 tag「史」误中「历史」）。
+                    data-lib-row=""
+                    data-lib-section={`|${post.section}|`}
+                    data-lib-category={`|${post.category}|`}
+                    data-lib-tags={`|${post.tags.join("|")}|`}
+                    data-lib-contributors={`|${[...new Set(post.credits.map((c) => c.contributorId))].join("|")}|`}
+                    data-lib-roles={`|${[...new Set(post.credits.map((c) => c.role))].join("|")}|`}
+                    data-lib-credits={`|${post.credits.map((c) => `${c.role}:${c.contributorId}`).join("|")}|`}
+                  >
                     <Link
                       className={styles.rowLink}
                       href={post.href}

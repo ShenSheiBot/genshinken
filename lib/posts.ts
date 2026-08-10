@@ -34,7 +34,9 @@ const BOOKS_DIR = path.join(process.cwd(), "source", "_books");
 
 const bookChapterSectionNumbers = new Map<string, string>();
 
-export type CreditRole = "author" | "translator" | "proofreader";
+export type { CreditRole } from "./credit-roles";
+export { CREDIT_ROLE_META, CREDIT_ROLES } from "./credit-roles";
+import { CREDIT_ROLE_META, type CreditRole } from "./credit-roles";
 
 /** 一条署名对应一个贡献者；多人署名会展开为多条记录。 */
 export interface Credit {
@@ -125,18 +127,6 @@ function toList(v: unknown): string[] {
     .map((x) => x.trim())
     .filter(Boolean);
 }
-
-// 署名角色 → 方块标记。作者实心，其余空心。可在 front-matter 用任一历史 key 填写。
-export const CREDIT_ROLE_META: Record<
-  CreditRole,
-  { label: string; mark: string; solid: boolean }
-> = {
-  author: { label: "作者", mark: "作", solid: true },
-  translator: { label: "译者", mark: "译", solid: false },
-  proofreader: { label: "校对", mark: "校", solid: false },
-};
-
-export const CREDIT_ROLES = Object.keys(CREDIT_ROLE_META) as CreditRole[];
 
 const CREDIT_FIELDS: { role: CreditRole; keys: string[] }[] = [
   { role: "author", keys: ["post_author", "author", "作者"] },

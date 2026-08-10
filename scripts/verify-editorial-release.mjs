@@ -1120,15 +1120,27 @@ assert.doesNotMatch(home.html, /href=["']\/posts\/(?:shulgin-dni|lih-bread-and-a
 assert.doesNotMatch(home.html, /href=["']\/search(?:[?"'])/, "new navigation must not emit /search links");
 assert.doesNotMatch(home.html, /motion-prototype-switcher|ub_motion_prototype|LOCAL_MOTION_PROTOTYPE/);
 
+// /library 静态化后，任何查询串变体都命中同一份预渲染文档（canonical
+// /library），无效 facet 由客户端 router.replace 规范化——服务端不再 307。
 assert.equal(
   invalidLibrary.response.status,
-  307,
-  "invalid library filters must normalize instead of silently showing unrelated records"
+  200,
+  "library filter variants must all resolve to the prerendered document"
 );
 assert.equal(
-  normalizedPath(invalidLibrary.response.headers.get("location") || ""),
-  "/library?role=translator",
-  "invalid library filters must preserve valid facets"
+  normalizedPath(canonical(invalidLibrary.html) || ""),
+  "/library",
+  "library filter variants must stay canonical to /library"
+);
+assert.match(
+  invalidLibrary.html,
+  /id="library-prefilter-script"/,
+  "the library document must ship the pre-paint prefilter bootstrap"
+);
+assert.doesNotMatch(
+  invalidLibrary.response.headers.get("cache-control") || "",
+  /no-store/,
+  "library must be served as cacheable prerendered content, not per-request SSR"
 );
 
 const sectionLabels = {
@@ -1289,14 +1301,33 @@ const libraryRecords = publicLibraryRecords;
 const articleFacetLandings = await Promise.all(
   articleFacetTargets.map(({ href }) => page(href))
 );
+// /library 静态化：筛选结果不再由服务端渲染，而由行上的 data-lib-* 属性
+// 驱动（预过滤脚本 + 客户端筛选共用）。这里从内容源派生期望（C3），再
+// 验证静态文档中每行属性编码出与旧服务端过滤完全相同的集合。
+function libraryRowRecords(html) {
+  return elements(html, "li")
+    .filter((row) => /\bdata-lib-row\b/.test(row.opening))
+    .map((row) => ({
+      href: links(row.inner)
+        .map((link) => link.href)
+        .find((href) => /^\/(?:posts|media)\/|^\/books\/[^/]+$/.test(href)) ?? "",
+      section: decodeHtml(attribute(row.opening, "data-lib-section") || ""),
+      tags: decodeHtml(attribute(row.opening, "data-lib-tags") || ""),
+      contributors: decodeHtml(attribute(row.opening, "data-lib-contributors") || ""),
+      credits: decodeHtml(attribute(row.opening, "data-lib-credits") || ""),
+    }));
+}
 for (const [index, landing] of articleFacetLandings.entries()) {
   const target = articleFacetTargets[index];
   assert.equal(landing.response.status, 200, `${target.label} library filter must resolve`);
   assert.equal(normalizedPath(canonical(landing.html) || ""), "/library");
+  assert.match(
+    landing.html,
+    /id="library-prefilter-script"/,
+    `${target.label} library filter must ship the pre-paint prefilter`
+  );
   const activeFacet = links(landing.html).find((link) => link.href === target.href);
   assert.ok(activeFacet, `${target.label} library filter must remain addressable`);
-  assert.equal(attribute(activeFacet.opening, "data-active"), "true");
-  assert.equal(attribute(activeFacet.opening, "aria-current"), "true");
   const params = new URL(target.href, productionOrigin).searchParams;
   const expectedResults = libraryRecords
     .filter((record) =>
@@ -1305,15 +1336,17 @@ for (const [index, landing] of articleFacetLandings.entries()) {
     )
     .map((record) => record.href)
     .sort();
-  const actualResults = [...new Set(
-    links(landing.html)
-      .map((link) => link.href)
-      .filter((href) => /^\/(?:posts|media)\/|^\/books\/[^/]+$/.test(href))
-  )].sort();
+  const actualResults = libraryRowRecords(landing.html)
+    .filter((row) =>
+      (!params.get("section") || row.section.includes(`|${params.get("section")}|`))
+      && (!params.get("tag") || row.tags.includes(`|${params.get("tag")}|`))
+    )
+    .map((row) => row.href)
+    .sort();
   assert.deepEqual(
     actualResults,
     expectedResults,
-    `${target.label} library filter must return exactly its matching records`
+    `${target.label} library rows must encode exactly the records the filter selects`
   );
 }
 const readingHeader = elements(article.html, "header").find((header) =>
@@ -1396,10 +1429,38 @@ assert.match(visibleText(rolePanel.outer), /作者/);
 assert.match(visibleText(rolePanel.outer), /译者/);
 assert.match(visibleText(rolePanel.outer), /校对/);
 assert.doesNotMatch(visibleText(rolePanel.outer), /编辑/);
-assert.match(filteredLibrary.html, /列宁之争/);
-assert.doesNotMatch(filteredLibrary.html, /学龄前的歌利亚/);
-assert.match(fangLibrary.html, /一份关于克苏鲁的调查报告/);
-assert.match(fangLibrary.html, /斩断伊斯兰这片绿色的叶子/);
+// 筛选语义由行属性承载（客户端过滤）：wang-yu 的译者行必须带
+// translator:wang-yu 组合凭据；不相关的行不得携带。fang-cao 的两条
+// 记录靠 data-lib-contributors 命中。文档本身包含全量行。
+const libraryRows = libraryRowRecords(library.html);
+function libraryRowByTitle(title) {
+  const row = elements(library.html, "li")
+    .filter((candidate) => /\bdata-lib-row\b/.test(candidate.opening))
+    .find((candidate) => visibleText(candidate.inner).includes(title));
+  assert.ok(row, `library must list ${title}`);
+  return row;
+}
+assert.match(
+  attribute(libraryRowByTitle("列宁之争").opening, "data-lib-credits") || "",
+  /\|translator:wang-yu\|/,
+  "列宁之争 must expose its translator credit for client-side filtering"
+);
+assert.doesNotMatch(
+  attribute(libraryRowByTitle("学龄前的歌利亚").opening, "data-lib-credits") || "",
+  /translator:wang-yu/,
+  "unrelated records must not match the wang-yu translator filter"
+);
+for (const title of ["一份关于克苏鲁的调查报告", "斩断伊斯兰这片绿色的叶子"]) {
+  assert.match(
+    attribute(libraryRowByTitle(title).opening, "data-lib-contributors") || "",
+    /\|fang-cao\|/,
+    `${title} must remain addressable through the fang-cao contributor filter`
+  );
+}
+assert.ok(
+  libraryRows.every((row) => row.href),
+  "every library row must link its record"
+);
 
 assertMetadata("about", about, "/about");
 const aboutMains = elements(about.html, "main")

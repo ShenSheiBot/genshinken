@@ -16,7 +16,7 @@ import {
 import { topicMembershipNumber } from "../lib/topic-numbering.ts";
 
 const postsDirectory = path.join(process.cwd(), "source", "_posts");
-const archiveIndexPath = path.join(process.cwd(), "app", "search", "ArchiveIndex.tsx");
+const archiveIndexPath = path.join(process.cwd(), "app", "library", "ArchiveIndex.tsx");
 const upperSlug = "deleuze-difference-repetition-review-1";
 const lowerSlug = "deleuze-difference-repetition-review-2";
 

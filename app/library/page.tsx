@@ -1,25 +1,11 @@
 import type { Metadata } from "next";
-import { redirect } from "next/navigation";
-import {
-  EDITORIAL_SECTIONS,
-  EDITORIAL_SECTION_META,
-  editorialSectionFrom,
-  type EditorialSection,
-} from "@/lib/editorial";
-import {
-  CREDIT_ROLES,
-  CREDIT_ROLE_META,
-  type CreditRole,
-} from "@/lib/posts";
 import { getAllPublicContent, type PublicContentEntry } from "@/lib/public-content";
-import {
-  findContributor,
-  isContributorId,
-  type ContributorId,
-} from "@/lib/contributors";
-import ArchiveIndex, { type ArchiveFacetOption } from "@/app/search/ArchiveIndex";
-import { site } from "@/lib/site";
+import { findContributor } from "@/lib/contributors";
 import { comparePostNumbersDescending } from "@/lib/post-numbering";
+import { site } from "@/lib/site";
+import type { LibraryFacetValues, LibraryRow } from "@/lib/library-filter";
+import LibraryClient from "./LibraryClient";
+import { libraryPrefilterBootstrap } from "./library-prefilter-bootstrap";
 
 const pageDescription = "浏览西方負典的文章和多媒体，并按栏目、主题、标签、贡献者与署名位置筛选。";
 export const metadata: Metadata = {
@@ -35,246 +21,64 @@ export const metadata: Metadata = {
   },
 };
 
-type SearchParamValue = string | string[] | undefined;
-type SearchParams = Record<string, SearchParamValue>;
-type ActiveFilters = {
-  section: EditorialSection | null;
-  category: string | null;
-  tag: string | null;
-  contributor: ContributorId | null;
-  role: CreditRole | null;
-};
-type Facet = { value: string; count: number };
-
-function first(value: SearchParamValue): string {
-  return Array.isArray(value) ? value[0] ?? "" : value ?? "";
+/**
+ * /library 整页静态预渲染：`?section=…` 等筛选完全由客户端按查询串
+ * 应用（见 LibraryClient / library-prefilter-bootstrap），因此所有
+ * `/library?…` 变体命中同一份 CDN 文档并共享 canonical /library ——
+ * 这既是 Fluid CPU 的止血阀，也是 GSC 重复索引治理的前提。
+ */
+function toLibraryRow(entry: PublicContentEntry): LibraryRow {
+  return {
+    slug: entry.slug,
+    href: entry.href,
+    title: entry.title,
+    section: entry.section,
+    category: entry.category,
+    tags: entry.tags,
+    credits: entry.credits,
+    author: entry.author,
+    no: entry.no,
+    sectionNo: entry.sectionNo,
+    displayDateISO: entry.displayDateISO,
+    readMin: entry.readMin,
+  };
 }
 
-function normalize(value: string): string {
-  return value.normalize("NFKC").trim().toLocaleLowerCase("zh-CN");
-}
-
-function facetsFor(values: string[], sortByCount = false): Facet[] {
+/** zh-CN collation 只在构建期发生；客户端沿用这里定下的值序。 */
+function orderedFacetValues(values: string[], sortByCount = false): string[] {
   const counts = new Map<string, number>();
   values.forEach((value) => counts.set(value, (counts.get(value) ?? 0) + 1));
   return [...counts]
-    .map(([value, count]) => ({ value, count }))
-    .sort((a, b) =>
+    .sort(([aValue, aCount], [bValue, bCount]) =>
       sortByCount
-        ? b.count - a.count || a.value.localeCompare(b.value, "zh-CN")
-        : a.value.localeCompare(b.value, "zh-CN")
-    );
-}
-
-function resolveFacet(requested: string, facets: Facet[]): string | null {
-  const key = normalize(requested);
-  if (!key) return null;
-  return facets.find((facet) => normalize(facet.value) === key)?.value ?? null;
-}
-
-function resolveContributor(requested: string, available: Set<ContributorId>): ContributorId | null {
-  const id = requested.trim().toLocaleLowerCase("en-US");
-  return isContributorId(id) && available.has(id) ? id : null;
-}
-
-function resolveRole(requested: string): CreditRole | null {
-  const value = requested.trim().toLocaleLowerCase("en-US");
-  return CREDIT_ROLES.includes(value as CreditRole) ? value as CreditRole : null;
-}
-
-function filterHref(filters: ActiveFilters, update: Partial<ActiveFilters> = {}): string {
-  const next = { ...filters, ...update };
-  const params = new URLSearchParams();
-  (["section", "category", "tag", "contributor", "role"] as const).forEach((key) => {
-    const value = next[key];
-    if (value) params.set(key, value);
-  });
-  const query = params.toString();
-  return query ? `/library?${query}` : "/library";
-}
-
-function postMatches(post: PublicContentEntry, filters: ActiveFilters): boolean {
-  if (filters.section && post.section !== filters.section) return false;
-  if (filters.category && post.category !== filters.category) return false;
-  if (filters.tag && !post.tags.includes(filters.tag)) return false;
-  if (
-    (filters.contributor || filters.role) &&
-    !post.credits.some((credit) =>
-      (!filters.contributor || credit.contributorId === filters.contributor) &&
-      (!filters.role || credit.role === filters.role)
+        ? bCount - aCount || aValue.localeCompare(bValue, "zh-CN")
+        : aValue.localeCompare(bValue, "zh-CN")
     )
-  ) return false;
-  return true;
+    .map(([value]) => value);
 }
 
-export default async function LibraryPage({
-  searchParams,
-}: {
-  searchParams: Promise<SearchParams>;
-}) {
-  const [posts, rawParams] = await Promise.all([getAllPublicContent(), searchParams]);
-  const categories = facetsFor(posts.map((post) => post.category));
-  const tags = facetsFor(posts.flatMap((post) => post.tags), true);
-  const availableContributors = new Set(posts.flatMap((post) =>
-    post.credits.map((credit) => credit.contributorId)
-  ));
-  const contributorRecords = [...availableContributors]
-    .map((id) => findContributor(id))
-    .filter((contributor) => contributor != null)
-    .sort((a, b) => a.displayName.localeCompare(b.displayName, "zh-CN"));
-
-  const requested = {
-    section: first(rawParams.section),
-    category: first(rawParams.category),
-    tag: first(rawParams.tag),
-    contributor: first(rawParams.contributor),
-    role: first(rawParams.role),
+export default async function LibraryPage() {
+  const entries = await getAllPublicContent();
+  const rows = entries.map(toLibraryRow).sort(comparePostNumbersDescending);
+  const facets: LibraryFacetValues = {
+    categories: orderedFacetValues(entries.map((entry) => entry.category)),
+    tags: orderedFacetValues(entries.flatMap((entry) => entry.tags), true),
+    contributors: [...new Set(entries.flatMap((entry) =>
+      entry.credits.map((credit) => credit.contributorId)
+    ))]
+      .map((id) => findContributor(id))
+      .filter((contributor) => contributor != null)
+      .sort((a, b) => a.displayName.localeCompare(b.displayName, "zh-CN"))
+      .map((contributor) => ({ id: contributor.id, name: contributor.displayName })),
   };
-  const filters: ActiveFilters = {
-    section: editorialSectionFrom(requested.section),
-    category: resolveFacet(requested.category, categories),
-    tag: resolveFacet(requested.tag, tags),
-    contributor: resolveContributor(requested.contributor, availableContributors),
-    role: resolveRole(requested.role),
-  };
-  const hasInvalidFilter = Boolean(
-    (requested.section && !filters.section) ||
-    (requested.category && !filters.category) ||
-    (requested.tag && !filters.tag) ||
-    (requested.contributor && !filters.contributor) ||
-    (requested.role && !filters.role)
-  );
-  if (hasInvalidFilter) redirect(filterHref(filters));
-
-  const filtered = posts
-    .filter((post) => postMatches(post, filters))
-    .sort(comparePostNumbersDescending);
-  const countWith = (update: Partial<ActiveFilters>) =>
-    posts.filter((post) => postMatches(post, { ...filters, ...update })).length;
-
-  const sectionOptions: ArchiveFacetOption[] = [
-    {
-      key: "all",
-      label: "全部",
-      count: countWith({ section: null }),
-      active: !filters.section,
-      disabled: false,
-      href: filterHref(filters, { section: null }),
-    },
-    ...EDITORIAL_SECTIONS.map((section) => {
-      const count = countWith({ section });
-      return {
-        key: section,
-        label: EDITORIAL_SECTION_META[section].label,
-        count,
-        active: filters.section === section,
-        disabled: count === 0 && filters.section !== section,
-        href: filterHref(filters, { section: filters.section === section ? null : section }),
-      };
-    }),
-  ];
-  const categoryOptions: ArchiveFacetOption[] = [
-    {
-      key: "all",
-      label: "全部",
-      count: countWith({ category: null }),
-      active: !filters.category,
-      disabled: false,
-      href: filterHref(filters, { category: null }),
-    },
-    ...categories.map((category) => {
-      const count = countWith({ category: category.value });
-      return {
-        key: category.value,
-        label: category.value,
-        count,
-        active: filters.category === category.value,
-        disabled: count === 0 && filters.category !== category.value,
-        href: filterHref(filters, {
-          category: filters.category === category.value ? null : category.value,
-        }),
-      };
-    }),
-  ];
-  const tagOptions: ArchiveFacetOption[] = [
-    {
-      key: "all",
-      label: "全部",
-      count: countWith({ tag: null }),
-      active: !filters.tag,
-      disabled: false,
-      href: filterHref(filters, { tag: null }),
-    },
-    ...tags.map((tag) => {
-      const count = countWith({ tag: tag.value });
-      return {
-        key: tag.value,
-        label: `#${tag.value}`,
-        count,
-        active: filters.tag === tag.value,
-        disabled: count === 0 && filters.tag !== tag.value,
-        href: filterHref(filters, { tag: filters.tag === tag.value ? null : tag.value }),
-      };
-    }),
-  ];
-  const contributorOptions: ArchiveFacetOption[] = [
-    {
-      key: "all",
-      label: "全部",
-      count: countWith({ contributor: null }),
-      active: !filters.contributor,
-      disabled: false,
-      href: filterHref(filters, { contributor: null }),
-    },
-    ...contributorRecords.map((contributor) => {
-      const count = countWith({ contributor: contributor.id });
-      return {
-        key: contributor.id,
-        label: contributor.displayName,
-        count,
-        active: filters.contributor === contributor.id,
-        disabled: count === 0 && filters.contributor !== contributor.id,
-        href: filterHref(filters, {
-          contributor: filters.contributor === contributor.id ? null : contributor.id,
-        }),
-      };
-    }),
-  ];
-  const roleOptions: ArchiveFacetOption[] = [
-    {
-      key: "all",
-      label: "全部",
-      count: countWith({ role: null }),
-      active: !filters.role,
-      disabled: false,
-      href: filterHref(filters, { role: null }),
-    },
-    ...CREDIT_ROLES.map((role) => {
-      const count = countWith({ role });
-      return {
-        key: role,
-        label: CREDIT_ROLE_META[role].label,
-        count,
-        active: filters.role === role,
-        disabled: count === 0 && filters.role !== role,
-        href: filterHref(filters, { role: filters.role === role ? null : role }),
-      };
-    }),
-  ];
 
   return (
-    <ArchiveIndex
-      posts={filtered}
-      total={posts.length}
-      resetHref="/library"
-      hasFilters={Boolean(
-        filters.section || filters.category || filters.tag || filters.contributor || filters.role
-      )}
-      sectionOptions={sectionOptions}
-      categoryOptions={categoryOptions}
-      tagOptions={tagOptions}
-      contributorOptions={contributorOptions}
-      roleOptions={roleOptions}
-    />
+    <>
+      <script
+        id="library-prefilter-script"
+        dangerouslySetInnerHTML={{ __html: libraryPrefilterBootstrap }}
+      />
+      <LibraryClient rows={rows} facets={facets} />
+    </>
   );
 }

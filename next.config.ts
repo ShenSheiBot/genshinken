@@ -7,8 +7,9 @@ function buildTimestamp(value = process.env.UN_CANON_BUILD_TIMESTAMP): string {
 }
 
 // Content Security Policy. Script/style keep 'unsafe-inline' because the site
-// ships two inline bootstrap scripts (theme, reveal) plus Next's framework
-// inline runtime, and SSG pages cannot carry per-request nonces. The value is
+// ships four inline bootstrap scripts (theme, han-script, editorial reveal,
+// library prefilter) plus JSON-LD blocks and Next's framework inline runtime,
+// and SSG pages cannot carry per-request nonces. The value is
 // in constraining object/base/frame/default and pairing with the header set
 // below; the real XSS injection path is closed at the content gate (see
 // scripts/validate-content.mjs).
@@ -56,7 +57,20 @@ const nextConfig: NextConfig = {
     NEXT_PUBLIC_BUILD_TIMESTAMP: buildTimestamp(),
   },
   async headers() {
-    return [{ source: "/:path*", headers: securityHeaders }];
+    return [
+      { source: "/:path*", headers: securityHeaders },
+    ];
+  },
+  async redirects() {
+    return [
+      {
+        // 旧归档页。查询串会自动透传（/search?tag=x → /library?tag=x），
+        // 与此前动态 页面级 permanentRedirect 行为一致，但不再消耗函数调用。
+        source: "/search",
+        destination: "/library",
+        permanent: true,
+      },
+    ];
   },
 };
 
