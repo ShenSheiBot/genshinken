@@ -43,11 +43,12 @@ test("facet filtering stays client-applied on the prerendered document", async (
     page.getByLabel(`当前显示 ${expected} 项，共 ${total} 项`)
   ).toBeVisible();
 
-  // 清除筛选恢复全量;等 URL 落定再做硬加载,避免 WebKit CSP 桥接
-  // fixture 在导航交叠时报 "Route is already handled"。
+  // 清除筛选恢复全量；等 URL 与网络都落定再做硬加载，别让上一次导航的
+  // 在飞请求撞上下一次导航（WebKit 走 CSP 桥接，交叠时 route 会被接管）。
   await page.getByRole("link", { name: "清除全部" }).click();
   await expect(rows).toHaveCount(total);
   await expect(page).toHaveURL(/\/library$/);
+  await page.waitForLoadState("networkidle");
 
   // 硬加载筛选地址：同一份静态文档 + canonical 恒为 /library，水合后行集收窄。
   await page.goto(href!);
