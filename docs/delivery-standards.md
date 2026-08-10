@@ -121,6 +121,50 @@ featured_order: 0        # 可选；同栏目首页推荐优先级，数值越�
 
 > 注意：front-matter 的值、图片 `title` 等**不经过**正文引号规范化，写时务必直接用弯引号或避免引号。
 
+### 4.1 正文段落标点契约（TYPO-P 系列）
+
+以下规则源自 2026-08 的两轮手工标点清扫（提交 8573c815、d23f1346 共 343 处修复），
+此前只存在于提交信息中，现成文并纳入自动门禁。**适用范围：非 `book_document` 的文稿正文段落**
+（译制书籍源含索引、参考书目、表格等结构，段末规则不适用；书籍排版由译制仓库的交付规范约束）。
+
+- **[TYPO-P1] 段末句读**：正文段落必须以句读收尾（`。！？…—：；` 或西文 `.!?`），
+  其后允许紧跟闭合符（`”’》〉」』）】"')]`）。合法的非句读段尾：演讲记录的舞台指示
+  （`【掌声】`）、引文出处括号（`。”（《列宁全集》第 5 卷）`，句读与 `（` 之间允许闭合符，
+  如引文以 `〔……〕”` 收尾）、`——` 起头的题词署名行、`[图题]` 等标记行、表格状文本、
+  站外资源行（段内含链接且链接以外文字不超过 24 字，如网盘入口与提取码）、
+  与 front-matter `title` 完全相同的标题回显行（多媒体条目的「原始说明」按存档原样以标题起头）。
+- **[TYPO-P2] 段末顿号/逗号**：段落不得以 `、` 或 `，` 收尾（P1 的白名单自然涵盖）。
+- **[TYPO-P3] 括号引号闭合**：括号与引号必须成对闭合。多段引文可按中文惯例在每段重开引号，
+  故不做逐段自动配平（人工审读职责）；引文收尾漏句号的情形由 P1 捕获。
+- **[TYPO-P4] 全角连接号**：汉字（或汉字与数字）之间的连接号必须用全角 `－`，
+  不得用半角 `-`（音译人名的连写、城-乡之类的对举均适用）。
+- **[TYPO-P5] 年份区间**：中文语境的年份区间必须写全并用全角连接号（`1981－1983`），
+  不得缩写（`1981-3`）或用半角连字符。西文书目/标题内的 `1789-1799` 不受此限。
+- **[TYPO-P6] 连续名词用顿号**：连续并列名词之间用 `、` 而非 `，`（语义性强，不做自动断言，人工审读职责）。
+- **[TYPO-P7] 脚注编号不入正文**：正文中不得残留纯文本脚注编号（见 §5 脚注规则；由脚注转换流程保证）。
+- **[TYPO-P8] 整段引文用引用样式**：整段引述他人文字须用 blockquote，不得以普通段落加引号呈现
+  （语义性强，不做自动断言，人工审读职责）。
+
+### 4.2 版面排版契约（TYPO-L 系列）
+
+段落层面的规则管文稿，行层面的规则管版面——两端对齐的汉语正文若被浏览器拉出「过撑行」，
+文稿本身并无错处，责任在样式与引擎行为。
+
+- **[TYPO-L1] 不得出现过撑行**：桌面阅读版的正文行，字面平均步进不得超过 **1.45em**。
+  已知触发源是 CSS `text-autospace`（Chromium 137+ 默认即 `normal`）：开启时断行会在汉字与
+  `.latin-run`（数字／百分号／拉丁词）交界处提前收行，未首行缩进的段落实测 680px 只排 23 字，
+  再被两端对齐拉满，字距 1.556em。故 `app/globals.css` 的 `.art-body` 必须显式声明
+  `text-autospace: no-autospace`。**这类缺陷不得靠改文稿规避**——受害段落只会随度量漂移换一批。
+
+**执法**：L1 由 `tests/e2e/reader-line-justification.spec.ts` 枚举 sitemap 全部阅读路由逐行测量。
+P1/P2/P4/P5 由 `scripts/validate-content.mjs` 的 `validateProseTypography` 在构建期强制
+（段尾字符白名单 + 字符类禁令，不做坏模式枚举）。存量违规登记于
+`scripts/typography-grandfathered.json` 豁免清单，**只减不增**——修复一处必须同步移除对应条目，
+清单条目失效（文本已改动）也会报错。**该清单已于 2026-08-10 清空**（40 处存量：35 处直接修复、
+受保护文稿 5 处经 `editorial-sources/preservation-manifest.json` 的 `authorizedChanges` 授权后
+由 `npm run sync:preserved` 落盘），此后任何违规都是新增违规。规则与检查的对应关系由 `scripts/verify-typography-registry.mjs`
+强制：本文档新增 `[TYPO-*]` 规则而未登记执法方式时，CI 直接失败。
+
 ---
 
 ## 5. 脚注与链接：前端必须可渲染、可跳转
@@ -380,14 +424,16 @@ groups:
 - `npm run verify:snapshot-history`：按 Git 基线检查 `editorial-sources/` 的追加式历史；既有快照修改、删除或改名即失败。
 - `npm run verify:preservation`：源文快照哈希、派生顺序、允许机械转换及逐项授权修订；执行正文 100% 保留／未授权差异 0 的零差异门禁。
 - `npm run validate:media-html`：多媒体资料 HTML 允许列表、主动内容和危险属性。
-- `npm run verify:typography`：Markdown 排版、标题、表格、脚注、媒体和危险协议契约。
+- `npm run verify:typography`：Markdown 排版、标题、表格、脚注、媒体和危险协议契约，外加全语料渲染扫描（任何 `[图题]/[图注]/[表题]/[表注]` 标记或非法 `=NN%` 宽度存活到输出即失败）。
+- `npm run verify:typography-registry`：§4.1／§4.2 的 `[TYPO-*]` 规则 ID 与执法检查的对应关系；文档新增规则而未登记检查或豁免即失败（执法方也可以是 e2e 规格，如 [TYPO-L1] 由 `tests/e2e/reader-line-justification.spec.ts` 把关）。
 - `npm run verify:negative`：负栏目及其既有内容回归。
 - `npm run verify:fonts`：CJK 语料、OpenCC 闭包、字体文件、大小、哈希与 CSS 缓存键。
 - `npm run verify:reading-progress`：阅读记录数据、恢复优先级、跨版本和跨标签页纯逻辑契约。
 - `npm run verify:han-script`：繁简偏好、转换方向、文章源文字系统和媒体指纹。
 - `npm run verify:citations`：Zotero／BibTeX 类型、字段和引用路由。
 - `npm run verify:dependencies`：当前依赖组合的兼容边界。
-- `npm run verify:routing`：静态动态路由、`generateStaticParams` 与未知实体行为。
+- `npm run verify:routing`：静态动态路由、`generateStaticParams` 与未知实体行为；另强制全站零请求期渲染（任何 `page.tsx` 出现 `searchParams`/`next/headers`/`force-dynamic` 即失败）、每页自持 canonical、根 layout 禁止可继承 canonical。
+- `npm run verify:library`：文库客户端筛选的纯函数语义契约（解析、别名、无效值规范化、`contributor+role` 同条署名匹配、href 往返）。
 - `npm run typecheck`：严格 TypeScript 检查，不生成文件。
 - `npm run lint`：非交互 ESLint；任何警告也视为失败。
 - `npm run check`：按 `package.json` 串行执行以上全部门禁，适合作为提交前确定性检查。

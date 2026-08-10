@@ -494,9 +494,17 @@ body:has(.reading-edition-page) { background-image: none; }
 /* ---- 正文（渲染后的 Markdown）---- */
 .art-body {
   max-width: var(--art-w); margin: 0 auto; padding: 56px 40px 0; position: relative; z-index: 2;
-  /* 仿 xeCJK / ctex 排版：标点挤压（全角标点吸收两端对齐的余量，而非撑开汉字间距）+ 中西文自动间距 */
+  /* 仿 xeCJK / ctex 排版：标点挤压（全角标点吸收两端对齐的余量，而非撑开汉字间距）。 */
   text-spacing-trim: normal;
-  text-autospace: normal;
+  /* 中西文自动间距必须显式关掉（no-autospace 而非 normal——normal 即初始值，
+     Chromium 137+ 默认就在做 autospace）。开启时 Chromium 的断行会在汉字与
+     latin-run（数字/百分号/拉丁词）交界处提前收行：正文若不首行缩进，实测
+     680px 的行只排 23 字便断开，再被两端对齐拉满，字距达 1.556em，肉眼可见
+     的「过撑行」。成因在浏览器而不在文稿——改文稿只会让受害段落换一批
+     （已实测：调字距后另有 4 章出现同类过撑）。代价是汉字与数字间少 1/8 em
+     间隙，而 Safari/Firefox 本就不支持 autospace、一直如此渲染，关掉反而三
+     引擎一致。由 tests/e2e/reader-line-justification.spec.ts 全语料把关。 */
+  text-autospace: no-autospace;
 }
 .art-body > :first-child { margin-top: 0; }
 .art-body p {

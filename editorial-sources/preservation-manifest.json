@@ -2552,6 +2552,16 @@
           "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定补齐四篇毛拉学文稿遗漏的段末标点。",
           "authorizedBy": "用户（当前 Claude Code 任务）",
           "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "tail-003",
+          "kind": "user-specified-wording",
+          "find": "描述成不可理解的“其他”",
+          "replacement": "描述成不可理解的“其他”。",
+          "reason": "补上遗漏的段末句号；引号内为术语，句号置引号外（TYPO-P1）。",
+          "evidence": "用户在 2026-08-10 的当前 Claude Code 任务中指定清空 scripts/typography-grandfathered.json 的全部存量豁免，含受保护文稿 5 处段末漏句读。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-10"
         }
       ]
     },
@@ -3536,6 +3546,46 @@
           "evidence": "用户在 2026-08-04 的当前 Claude Code 任务中指定补齐四篇毛拉学文稿遗漏的段末标点。",
           "authorizedBy": "用户（当前 Claude Code 任务）",
           "authorizedAt": "2026-08-04"
+        },
+        {
+          "id": "tail-002",
+          "kind": "user-specified-wording",
+          "find": "集市体系遵循的原则是“信誉越高”",
+          "replacement": "集市体系遵循的原则是“信誉越高”。",
+          "reason": "补上遗漏的段末句号；引号内为部分引用，句号置引号外（TYPO-P1）。",
+          "evidence": "用户在 2026-08-10 的当前 Claude Code 任务中指定清空 scripts/typography-grandfathered.json 的全部存量豁免，含受保护文稿 5 处段末漏句读。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-10"
+        },
+        {
+          "id": "tail-003",
+          "kind": "user-specified-wording",
+          "find": "或对集市亚文化的认同”",
+          "replacement": "或对集市亚文化的认同。”",
+          "reason": "补上遗漏的段末句号；该段引文独立成句，句号置引号内（TYPO-P1）。",
+          "evidence": "用户在 2026-08-10 的当前 Claude Code 任务中指定清空 scripts/typography-grandfathered.json 的全部存量豁免，含受保护文稿 5 处段末漏句读。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-10"
+        },
+        {
+          "id": "tail-004",
+          "kind": "user-specified-wording",
+          "find": "“压迫者”和“腐败者”",
+          "replacement": "“压迫者”和“腐败者”。",
+          "reason": "补上遗漏的段末句号；引号内为并列词目，句号置引号外（TYPO-P1）。",
+          "evidence": "用户在 2026-08-10 的当前 Claude Code 任务中指定清空 scripts/typography-grandfathered.json 的全部存量豁免，含受保护文稿 5 处段末漏句读。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-10"
+        },
+        {
+          "id": "tail-005",
+          "kind": "user-specified-wording",
+          "find": "支持了一种“大的推动”",
+          "replacement": "支持了一种“大的推动”。",
+          "reason": "补上遗漏的段末句号；引号内为术语，句号置引号外（TYPO-P1）。",
+          "evidence": "用户在 2026-08-10 的当前 Claude Code 任务中指定清空 scripts/typography-grandfathered.json 的全部存量豁免，含受保护文稿 5 处段末漏句读。",
+          "authorizedBy": "用户（当前 Claude Code 任务）",
+          "authorizedAt": "2026-08-10"
         }
       ]
     }

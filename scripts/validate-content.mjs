@@ -198,6 +198,116 @@ function validateTypography(file, content, data) {
   inspectMetadata(data, "");
 }
 
+/* ---------------- 随笔正文排版契约（TYPO-P1/P2/P3/P4/P5） ----------------
+   2026-08 的 343 处手工标点修复（8573c815、d23f1346）暴露的规则此前只存在
+   于提交信息里，门禁从未检查。这里按「段尾字符白名单 + 字符类禁令」实现，
+   不做坏模式枚举（枚举法漏掉过以）结尾的段落）。适用范围：非 book_document
+   的文稿——译制书籍源含索引、书目、表格等结构，段末句号规则不适用。
+   存量违规登记在 scripts/typography-grandfathered.json，只减不增：修复后
+   必须同步从豁免清单移除，新增违规立即报错。 */
+const PROSE_TERMINAL = /[。！？…—：；.!?][”’》〉」』）】"')\]]*$/u;
+const STAGE_DIRECTION = /】$/u; // 演讲记录的舞台指示：【掌声】【笑声】
+// 引文出处括号：。”（《列宁全集》…）；引文以省略号收尾、后带补语括号或书名号
+// 闭合符时同属一类（〔……〕”（…）），故句读与（ 之间允许任意闭合符。
+const CITATION_PAREN = /[。！？…][”’》〉」』）】〕]*（[^（）]+）$/u;
+const MARKER_LINE = /^[[〔［]/u; // [图题]/[表注]/〔章题注〕等标记行
+const ATTRIBUTION_LINE = /^[—―─]/u; // 题词署名行：——某某
+const CJK_HALFWIDTH_HYPHEN = /\p{Script=Han}-[\p{Script=Han}0-9]|[0-9]-\p{Script=Han}/gu;
+const CJK_YEAR_SPAN = /\p{Script=Han}.{0,2}\d{4}\s*-\s*\d{1,4}(?!\d)|\d{4}\s*-\s*\d{1,4}(?!\d)(?=.{0,2}\p{Script=Han})/gu;
+
+// 按脚本自身位置解析（而非 cwd）：verify-negative-section.mjs 会在临时
+// 沙箱目录里以本脚本跑 fixture，沙箱只复制 source/ 与 public/。
+const grandfatheredTypography = JSON.parse(
+  fs.readFileSync(new URL("./typography-grandfathered.json", import.meta.url), "utf8")
+);
+const grandfatheredUnused = {
+  terminal: new Map(Object.entries(grandfatheredTypography.terminal).flatMap(([file, keys]) =>
+    keys.map((key, index) => [`${file}#${key}#${index}`, { file, key }])
+  )),
+  hyphen: new Map(Object.entries(grandfatheredTypography.hyphen).flatMap(([file, keys]) =>
+    keys.map((key, index) => [`${file}#${key}#${index}`, { file, key }])
+  )),
+};
+
+function consumeGrandfathered(kind, ledgerFile, key) {
+  for (const [id, entry] of grandfatheredUnused[kind]) {
+    if (entry.file === ledgerFile && entry.key === key) {
+      grandfatheredUnused[kind].delete(id);
+      return true;
+    }
+  }
+  return false;
+}
+
+function paragraphProseText(node) {
+  let out = "";
+  (function walk(child) {
+    if (child.type === "text" || child.type === "inlineCode") out += child.value;
+    else if (child.type === "footnoteReference" || child.type === "image") return;
+    else if (child.children) child.children.forEach(walk);
+  })(node);
+  return out.trim();
+}
+
+const tableLikeParagraph = (text) =>
+  (text.match(/\d+(?:\.\d+)?%/gu) || []).length >= 3 || (text.match(/　/gu) || []).length >= 2;
+
+/** 站外资源行：整段实质是入口链接（网盘/镜像 + 提取码），不是行文句子。
+    判据取「段内含链接，且链接以外的文字不超过 24 字」，普通行文里的内链
+    段落（链接外仍是成句的散文）因此不受豁免。 */
+function resourceLine(node) {
+  const hasLink = (node.children ?? []).some(
+    (child) => child.type === "link" || child.type === "linkReference"
+  );
+  if (!hasLink) return false;
+  let outside = "";
+  (function walk(child) {
+    if (child.type === "link" || child.type === "linkReference") return;
+    if (child.type === "text" || child.type === "inlineCode") outside += child.value;
+    else if (child.children) child.children.forEach(walk);
+  })(node);
+  return outside.trim().length <= 24;
+}
+
+function validateProseTypography(file, content, ledgerFile, title = "") {
+  const tree = unified().use(remarkParse).use(remarkGfm).parse(content);
+
+  (function walk(node, skip) {
+    if (["heading", "html", "code", "table"].includes(node.type)) return;
+    const nestedSkip = skip || ["blockquote", "list", "footnoteDefinition"].includes(node.type);
+
+    if (node.type === "paragraph" && !skip) {
+      const text = paragraphProseText(node);
+      if (
+        text && /\p{Script=Han}/u.test(text) && text.length >= 10 &&
+        !MARKER_LINE.test(text) && !ATTRIBUTION_LINE.test(text) && !tableLikeParagraph(text) &&
+        // 标题回显行：多媒体条目的「原始说明」按存档原样以标题起头。
+        text !== title && !resourceLine(node) &&
+        !PROSE_TERMINAL.test(text) && !STAGE_DIRECTION.test(text) && !CITATION_PAREN.test(text) &&
+        !consumeGrandfathered("terminal", ledgerFile, text.slice(-24))
+      ) {
+        const line = node.position?.start?.line;
+        report(errors, file, `${line ? `第 ${line} 行` : "正文"}段落未以句读收尾（…${text.slice(-18)}），正文段落须以 。！？…—：； 等终结（TYPO-P1）`);
+      }
+    }
+
+    if ((node.type === "text" || node.type === "inlineCode") && node.value && !skip) {
+      for (const match of node.value.matchAll(CJK_HALFWIDTH_HYPHEN)) {
+        const key = node.value.slice(Math.max(0, match.index - 4), match.index + 8);
+        if (consumeGrandfathered("hyphen", ledgerFile, key)) continue;
+        const line = node.position?.start?.line;
+        report(errors, file, `${line ? `第 ${line} 行` : "正文"}汉字相邻处使用半角连字符（…${key}…），须改用全角 －（TYPO-P4）`);
+      }
+      for (const match of node.value.matchAll(CJK_YEAR_SPAN)) {
+        const line = node.position?.start?.line;
+        report(errors, file, `${line ? `第 ${line} 行` : "正文"}中文语境的年份区间用了半角连字符（…${node.value.slice(Math.max(0, match.index - 4), match.index + 12)}…），须写全并用全角 －（TYPO-P5）`);
+      }
+    }
+
+    node.children?.forEach((child) => walk(child, nestedSkip));
+  })(tree, false);
+}
+
 function toList(value) {
   if (value == null || value === "") return [];
   if (Array.isArray(value)) {
@@ -561,6 +671,14 @@ const records = files.map((file) => {
   }
 
   validateTypography(file, content, data);
+  if (!bookDocument) {
+    validateProseTypography(
+      file,
+      content,
+      `source/_posts/${file}`,
+      typeof data.title === "string" ? data.title.trim() : ""
+    );
+  }
 
   if (typeof data.title !== "string" || data.title.trim() === "") {
     report(errors, file, "必须填写非空 title");
@@ -1252,6 +1370,18 @@ for (const topic of topicRecords) {
   const previous = topicsBySlug.get(topic.slug);
   if (previous) report(errors, topic.file, `slug 与 ${previous.file} 重复：${topic.slug}`);
   else topicsBySlug.set(topic.slug, topic);
+}
+
+// 排版豁免清单只减不增：被修复的存量违规必须同步从
+// scripts/typography-grandfathered.json 移除，防止清单腐化成永久后门。
+for (const [kind, unused] of Object.entries(grandfatheredUnused)) {
+  for (const { file, key } of unused.values()) {
+    report(
+      errors,
+      file,
+      `排版豁免清单存在已失效的 ${kind} 条目（…${key}…）——该处已修复或文本已变动，请从 scripts/typography-grandfathered.json 移除`
+    );
+  }
 }
 
 for (const warning of warnings) console.warn(`警告：${warning}`);

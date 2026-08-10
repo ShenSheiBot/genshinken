@@ -246,4 +246,48 @@ assert.match(
   "speaker turns must receive their non-indented paragraph class"
 );
 
+/* ---------------- 全语料渲染扫描（TYPO-G1/G3/G4） ----------------
+   上面的 fixture 只验证 renderMarkdown 自身的行为，永远不会因真实内容
+   违规而失败——[图题] 打错位置、非法 =NN% 宽度都会把字面标记静默渲染
+   进页面。这里对 source/_posts 全量渲染一遍：任何图版/表格标记存活到
+   输出即失败。形态同 reader-line-justification.spec.ts：枚举语料 →
+   测量 → 断言失败清单为空。 */
+{
+  const fs = await import("node:fs");
+  const path = await import("node:path");
+  const postsDirectory = path.join(process.cwd(), "source", "_posts");
+  const corpusFailures = [];
+  const markerLeak = /\[(?:图题|图注|表题|表注)\]/u;
+  const invalidWidth = /title="=(?!(?:25|33|50|66|75|100)%")[^"]*"/u;
+
+  const posts = fs
+    .readdirSync(postsDirectory)
+    .filter((name) => name.endsWith(".md") && !name.startsWith("_") && !name.startsWith("."));
+  for (const name of posts) {
+    const raw = fs.readFileSync(path.join(postsDirectory, name), "utf8");
+    const stripped = raw.replace(/^﻿/u, "");
+    let body = stripped;
+    if (/^---/u.test(stripped)) {
+      const end = stripped.indexOf("\n---", 3);
+      if (end !== -1) body = stripped.slice(stripped.indexOf("\n", end + 4) + 1);
+    } else {
+      const lines = stripped.split(/\r?\n/u);
+      const index = lines.findIndex((line) => /^---\s*$/u.test(line));
+      if (index !== -1) body = lines.slice(index + 1).join("\n");
+    }
+    const html = await renderMarkdown(body);
+    if (markerLeak.test(html)) {
+      corpusFailures.push(`${name}: 图版/表格标记字面渲染进了页面（[图题]/[图注]/[表题]/[表注] 位置或格式有误）`);
+    }
+    const width = invalidWidth.exec(html);
+    if (width) corpusFailures.push(`${name}: 非法图版宽度 ${width[0]}（仅允许 =25/33/50/66/75/100%）`);
+  }
+  assert.deepEqual(
+    corpusFailures,
+    [],
+    `全语料渲染扫描发现 ${corpusFailures.length} 处标记泄漏`
+  );
+  console.log(`corpus render scan passed for ${posts.length} posts`);
+}
+
 console.log("markdown typography verification passed");
