@@ -2114,3 +2114,338 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
   .appendices details:not([open]) > :not(summary) { display: block; }
   .body :global(p) { font-size: 11pt; color: #000; }
 }
+
+/* @sync-from PosterWallHome.module.css: latest-cards (related reading) — begin
+   「相关推荐」沿用首页「最新更新」卡片的视觉。此前直接跨路由 import
+   PosterWallHome.module.css，导致首页 72KB 样式被并进全站共享 CSS chunk、
+   阻塞所有页面首绘。这里按文章页实际用到的选择器分支逐字复制声明；
+   verify-editorial-release.mjs 会校验本块与源文件的声明保持一致，改
+   首页卡片样式时需同步两处。仅含文章页可达分支——latestArticle /
+   latestCardPrimaryLink / latestCredits / latestUpdatesTransition 等
+   首页专属选择器不在此列。 */
+.latestUpdates {
+  --latest-bg: #11110f;
+  --latest-ink: #e8e7e3;
+  --latest-soft: #96938a;
+  --latest-hair: #4a4944;
+  --latest-card-rule: rgb(232 231 227 / 14%);
+  --latest-hover-bg: var(--latest-ink);
+  --latest-hover-ink: #11110f;
+  --latest-hover-soft: #5f5d56;
+  --latest-accent: #ef5a4d;
+
+  margin-top: 76px;
+  color: var(--latest-ink);
+  background-color: var(--latest-bg);
+}
+
+.latestUpdates[data-surface="paper"] {
+  --latest-bg: var(--bg);
+  --latest-ink: var(--ink);
+  --latest-soft: var(--ink-soft);
+  --latest-hair: var(--hair-strong);
+  --latest-card-rule: var(--hair);
+  --latest-hover-bg: var(--solid);
+  --latest-hover-ink: var(--solid-ink);
+  --latest-hover-soft: color-mix(in srgb, var(--solid-ink) 72%, transparent);
+  --latest-accent: var(--accent);
+
+  margin-top: 72px;
+  background-image: none;
+}
+
+.latestInner {
+  width: min(100%, var(--maxw));
+  margin: 0 auto;
+  padding: 62px 40px 76px;
+}
+
+.latestHeading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 30px;
+}
+
+.latestHeading h2 {
+  margin: 0;
+  font-family: var(--f-cjk-serif);
+  font-size: clamp(52px, 7vw, 82px);
+  font-weight: 900;
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+}
+
+.latestHeading > p {
+  margin: 0 0 3px;
+  color: var(--latest-soft);
+  font-family: var(--f-mono);
+  font-size: var(--text-sm);
+  letter-spacing: 0.08em;
+}
+
+.latestHeading > p b {
+  margin-right: 7px;
+  color: var(--latest-ink);
+  font-size: 12px;
+}
+
+.viewAll {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 4px;
+  color: var(--latest-ink);
+  font-size: var(--text-caption);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  transition: color 160ms ease;
+}
+
+.viewAll b {
+  color: var(--latest-accent);
+  font-family: var(--f-grotesk);
+  font-size: 20px;
+  line-height: 1;
+  transition: transform 160ms ease;
+}
+
+.viewAll:hover,
+.viewAll:focus-visible {
+  color: var(--latest-accent);
+  outline: none;
+}
+
+.viewAll:hover b,
+.viewAll:focus-visible b {
+  transform: translateX(4px);
+}
+
+.viewAll:focus-visible {
+  box-shadow: 0 2px 0 var(--latest-accent);
+}
+
+.latestGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.latestGrid > li {
+  min-width: 0;
+}
+
+.latestGrid > li + li {
+  border-left: 1px solid var(--latest-ink);
+}
+
+.latestGrid > li:nth-child(n + 4) {
+  border-top: 1px solid var(--latest-ink);
+}
+
+.latestGrid > li:nth-child(4) {
+  border-left: 0;
+}
+
+.latestCard {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-rows: auto auto auto minmax(0, 1fr) auto;
+  min-height: 360px;
+  height: 100%;
+  padding: 27px 30px 25px;
+  pointer-events: none;
+  transition: color 170ms ease, background 170ms ease, box-shadow 170ms ease;
+}
+
+.latestCardInteractive {
+  pointer-events: auto;
+}
+
+.latestCard > header,
+.latestCard > footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  color: var(--latest-soft);
+  font-family: var(--f-mono);
+  font-size: var(--text-sm);
+  letter-spacing: 0.07em;
+}
+
+.latestCard > header {
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--latest-card-rule);
+}
+
+.latestCard > header span:last-child {
+  color: var(--latest-soft);
+}
+
+.latestCard h3 {
+  margin: 38px 0 0;
+  font-family: var(--f-cjk-serif);
+  font-size: clamp(29px, 3vw, 42px);
+  font-weight: 900;
+  line-height: 1.16;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.latestCard > p {
+  display: -webkit-box;
+  margin: 18px 0 28px;
+  overflow: hidden;
+  color: var(--latest-soft);
+  font-family: var(--f-cjk-serif);
+  font-size: 14px;
+  line-height: 1.72;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.latestCard > footer {
+  align-self: end;
+}
+
+.latestCard > footer time {
+  font-variant-numeric: tabular-nums;
+}
+
+.latestCard > footer span {
+  text-align: right;
+}
+
+.latestCard > footer b {
+  margin-left: 12px;
+  color: var(--latest-accent);
+  font-family: var(--f-grotesk);
+  font-size: 21px;
+  line-height: 0;
+}
+
+.latestCardInteractive:focus-visible {
+  color: var(--latest-hover-ink);
+  background: var(--latest-hover-bg);
+  outline: none;
+  box-shadow: inset 0 0 0 4px var(--latest-accent);
+}
+
+.latestCardInteractive:focus-visible > header,
+.latestCardInteractive:focus-visible > footer,
+.latestCardInteractive:focus-visible > p,
+.latestCardInteractive:focus-visible > header span:last-child {
+  color: var(--latest-hover-soft);
+}
+
+@media (hover: hover) {
+  .latestCardInteractive:hover {
+    color: var(--latest-hover-ink);
+    background: var(--latest-hover-bg);
+  }
+
+  .latestCardInteractive:hover > header,
+  .latestCardInteractive:hover > footer,
+  .latestCardInteractive:hover > p,
+  .latestCardInteractive:hover > header span:last-child {
+    color: var(--latest-hover-soft);
+  }
+}
+
+@media (max-width: 960px) {
+  .latestInner {
+    padding-right: 28px;
+    padding-left: 28px;
+  }
+
+  .latestGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .latestGrid > li:nth-child(n + 3) {
+    border-top: 1px solid var(--latest-ink);
+  }
+
+  .latestGrid > li:nth-child(2n + 1) {
+    border-left: 0;
+  }
+
+  .latestGrid > li:nth-child(2n) {
+    border-left: 1px solid var(--latest-ink);
+  }
+}
+
+@media (max-width: 680px) {
+  .latestUpdates {
+    margin-top: 54px;
+    background-size: 120px 100%;
+  }
+
+  .latestInner {
+    padding: 47px 20px 58px;
+  }
+
+  .latestHeading {
+    display: block;
+    margin-bottom: 24px;
+  }
+
+  .latestHeading h2 {
+    margin-top: 13px;
+    font-size: clamp(48px, 15vw, 65px);
+  }
+
+  .latestHeading > p {
+    margin-top: 20px;
+  }
+
+  .latestGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .latestGrid > li + li {
+    grid-column: auto;
+    border-top: 1px solid var(--latest-ink);
+  }
+
+  .latestGrid > li:nth-child(n) {
+    border-left: 0;
+  }
+
+  .latestCard {
+    min-height: 270px;
+    padding: 22px 21px;
+  }
+
+  .latestCard h3 {
+    margin-top: 28px;
+    font-size: clamp(28px, 8.5vw, 36px);
+  }
+
+  .latestCard > p {
+    margin-top: 18px;
+    font-size: 13px;
+    -webkit-line-clamp: 2;
+  }
+}
+
+@media (max-width: 390px) {
+  .latestCard > footer {
+    gap: 8px;
+    font-size: var(--text-xs);
+  }
+
+  .latestCard > footer span {
+    white-space: nowrap;
+  }
+
+  .latestCard > footer b {
+    margin-left: 6px;
+  }
+}
+/* @sync-from PosterWallHome.module.css: latest-cards (related reading) — end */

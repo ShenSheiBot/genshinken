@@ -623,6 +623,28 @@ async function verifyHostedCjkFonts(html) {
     assert.ok(!hashes.has(digest), `${family} must not duplicate another hosted CJK font`);
     hashes.add(digest);
   }
+
+  // 正文 STSong 是全站首屏关键资源：served HTML 必须携带与编译 CSS 中
+  // @font-face URL 完全一致的 preload（含 ?v= 缓存键），并带 crossorigin
+  // ——预载与实际请求凭据模式不同会导致双下载。
+  const stSongUrl = fontUrls.find(({ family }) => family === "UN Canon STSong")?.url;
+  const preloadedFontHrefs = tags(html, "link")
+    .filter((tag) =>
+      (attribute(tag, "rel") || "") === "preload" && (attribute(tag, "as") || "") === "font"
+    )
+    .map((tag) => ({
+      href: new URL(decodeHtml(attribute(tag, "href") || ""), base).href,
+      crossorigin: attribute(tag, "crossorigin"),
+    }));
+  const stSongPreload = preloadedFontHrefs.find((entry) => entry.href === stSongUrl?.href);
+  assert.ok(
+    stSongPreload,
+    "the served HTML must preload the STSong body face with the exact @font-face URL"
+  );
+  assert.ok(
+    stSongPreload.crossorigin != null,
+    "the STSong preload must declare crossorigin to share the CORS-mode font cache entry"
+  );
 }
 
 function assertEmailLink(html, email, label) {
@@ -2248,5 +2270,35 @@ assert.doesNotMatch(rss, /(src|href)="\//, "RSS content must use absolute intern
 assert.equal(missing.response.status, 404, "missing page must return HTTP 404");
 assert.match(missing.html, /页面不存在。/);
 assert.doesNotMatch(missing.html, /This page does not exist/);
+
+// 「相关推荐」的卡片样式是 PosterWallHome.module.css 的逐字复制（避免
+// 跨路由 import 把首页 72KB 样式拖进全站阻塞 CSS）。守卫：sync 块内每
+// 条规则的声明体必须仍能在源文件中原样找到——改首页卡片样式而忘记同步
+// 时在此失败。
+{
+  const readingCss = fs.readFileSync(
+    path.join(process.cwd(), "app", "components", "reading-edition", "reading-edition.module.css"),
+    "utf8"
+  );
+  const homeCss = fs.readFileSync(
+    path.join(process.cwd(), "app", "components", "editorial-home", "PosterWallHome.module.css"),
+    "utf8"
+  );
+  const syncBlock = /\/\* @sync-from PosterWallHome\.module\.css: latest-cards \(related reading\) — begin[\s\S]*?\*\/([\s\S]*?)\/\* @sync-from PosterWallHome\.module\.css: latest-cards \(related reading\) — end \*\//u
+    .exec(readingCss)?.[1];
+  assert.ok(syncBlock, "reading-edition.module.css must keep the delimited latest-cards sync block");
+  const normalize = (value) => value.replace(/\s+/gu, " ").trim();
+  const normalizedHome = normalize(homeCss);
+  const rules = [...syncBlock.matchAll(/([^{}@]+)\{([^{}]*)\}/gu)];
+  assert.ok(rules.length > 30, "the latest-cards sync block must retain its copied rules");
+  for (const [, selector, body] of rules) {
+    const normalizedBody = normalize(body);
+    if (!normalizedBody) continue;
+    assert.ok(
+      normalizedHome.includes(normalizedBody),
+      `related-reading style drifted from PosterWallHome.module.css — resync "${normalize(selector)}"`
+    );
+  }
+}
 
 console.log(`release verification passed for ${base}`);

@@ -201,13 +201,15 @@ function fingerprintReadingBlock(owner: HTMLElement, nodes: Text[]): string {
   );
 }
 
-function linesForOwner(owner: HTMLElement, nodes: Text[], body: HTMLElement): number[] {
+// bodyViewportTop 由调用方每帧读取一次后传入：此前每个 block 都在这里
+// 重读 body.getBoundingClientRect()，与随后的 range.getClientRects() 交错
+// 形成整篇文章的强制同步回流（Lighthouse 记为 forced reflow）。
+function linesForOwner(owner: HTMLElement, nodes: Text[], bodyViewportTop: number): number[] {
   const style = getComputedStyle(owner);
   const fontSize = parseFloat(style.fontSize) || 16;
   const lineHeight = parseFloat(style.lineHeight) || fontSize * 1.5;
   const tolerance = Math.max(3, Math.min(18, lineHeight * 0.46));
   const fragments: FragmentLine[] = [];
-  const bodyViewportTop = body.getBoundingClientRect().top;
   const ranges: Range[] = [];
   const precise = owner.querySelector(`${LINE_OWNER},img,svg,iframe,video,audio,canvas,[hidden],sup,sub,rt,rp`);
 
@@ -660,7 +662,8 @@ export default function ReadingEditionChrome({
   const syncReadingPosition = useCallback(() => {
     const body = bodyRef.current;
     if (!body) return;
-    const cursor = window.scrollY + visualAnchor();
+    const anchor = visualAnchor();
+    const cursor = window.scrollY + anchor;
     const bodyTop = body.getBoundingClientRect().top + window.scrollY;
     const centers = lineCentersRef.current;
     const line = centers.length ? Math.min(centers.length, upperBound(centers, cursor - bodyTop)) : 0;
@@ -670,7 +673,7 @@ export default function ReadingEditionChrome({
     let headingId = "";
     for (const item of tocRef.current) {
       const element = document.getElementById(item.id);
-      if (element && element.getBoundingClientRect().top <= visualAnchor()) headingId = item.id;
+      if (element && element.getBoundingClientRect().top <= anchor) headingId = item.id;
     }
     setActiveId((current) => current === headingId ? current : headingId);
 
@@ -764,11 +767,14 @@ export default function ReadingEditionChrome({
       let index = 0;
       const pump = () => {
         if (token !== generation) return;
+        // 每帧读取一次 body 顶部（滚动可能在帧间移动 body），供本帧全部
+        // block 复用，避免逐 block 的强制回流。
+        const bodyViewportTop = body.getBoundingClientRect().top;
         const deadline = performance.now() + 8;
         do {
           const ownerIndex = index++;
           const owner = owners[ownerIndex];
-          if (owner) blocks[ownerIndex].centers = linesForOwner(owner[0], owner[1], body);
+          if (owner) blocks[ownerIndex].centers = linesForOwner(owner[0], owner[1], bodyViewportTop);
         } while (index < owners.length && performance.now() < deadline);
         if (index < owners.length) frame = requestAnimationFrame(pump);
         else {

@@ -7,6 +7,17 @@ import {
   DEFAULT_HAN_SCRIPT,
   HAN_SCRIPT_STORAGE_KEY,
 } from "@/lib/han-script";
+import cjkFontManifest from "@/public/fonts/cjk-font-manifest.json";
+
+// 正文 CJK 衬线（华文宋体子集，约 1.3 MB）是所有页面的首屏关键资源，
+// 却要等 HTML → CSS → @font-face 三跳才开始下载。preload 把发现时机
+// 提前到 HTML 解析。href 从字体 manifest 推导，与 globals.css 里
+// verify-font-contract.mjs 强制的 ?v=<sha256[0:12]> 缓存键必然一致。
+// 仿宋/楷体不预载——它们只在含引文/题词的页面按需触发下载。
+const ST_SONG = cjkFontManifest.fonts["UN Canon STSong"];
+const stSongHref = `/fonts/${ST_SONG.file}?v=${ST_SONG.sha256.slice(0, 12)}`;
+const BRAND_FONT_HREF = "/fonts/fot-matisse-pro-eb-brand.woff2";
+
 // Latin / Cyrillic / Greek 字体自托管（next/font：同源、自动预载、内联字体 CSS），
 // 取代此前渲染阻塞的第三方 Google Fonts <link>。含 cyrillic/greek 子集，保住
 // 俄语/希腊语引文在衬线与 Garamond 栈里的呈现。CJK 使用 globals.css 中按需加载的
@@ -116,6 +127,9 @@ export default async function RootLayout({
     <html lang="zh" data-theme="light" data-chinese-script={DEFAULT_HAN_SCRIPT} data-chinese-script-requested={DEFAULT_HAN_SCRIPT} className={fontVariables} suppressHydrationWarning>
       <head>
         <meta name="darkreader-lock" />
+        {/* 字体请求走 CORS 模式，同源也必须带 crossOrigin，否则预载与实际请求凭据模式不同会双下载 */}
+        <link rel="preload" as="font" type="font/woff2" href={stSongHref} crossOrigin="anonymous" />
+        <link rel="preload" as="font" type="font/woff2" href={BRAND_FONT_HREF} crossOrigin="anonymous" />
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <script dangerouslySetInnerHTML={{ __html: hanScriptBootstrap }} />
         <script dangerouslySetInnerHTML={{ __html: editorialRevealBootstrap }} />

@@ -160,6 +160,27 @@ assert.ok(
   "the ST manifest must continue to declare U+4337 unsupported"
 );
 
+// 根 layout 对正文 STSong 做 <link rel="preload">。href 必须从本 manifest
+// 推导（sha256 前 12 位），与 globals.css 的 ?v= 缓存键同源同锁——手写
+// 字面 URL 会在字体重建后悄悄失效。运行期的一致性由
+// verify-editorial-release.mjs 的 verifyHostedCjkFonts 复核。
+const layoutSource = readUtf8(path.join(root, "app", "layout.tsx"));
+assert.match(
+  layoutSource,
+  /rel="preload"\s+as="font"\s+type="font\/woff2"\s+href=\{stSongHref\}\s+crossOrigin="anonymous"/u,
+  "app/layout.tsx must preload the STSong body face"
+);
+assert.match(
+  layoutSource,
+  /cjkFontManifest\.fonts\["UN Canon STSong"\]/u,
+  "the STSong preload must derive from cjk-font-manifest.json"
+);
+assert.match(
+  layoutSource,
+  /sha256\.slice\(0,\s*12\)/u,
+  "the STSong preload href must reuse the manifest cache key"
+);
+
 for (const expected of rareHanFonts) {
   const face = faceBlocks.find((block) =>
     new RegExp(`font-family\\s*:\\s*["']${escapeRegExp(expected.family)}["']\\s*;`).test(block)

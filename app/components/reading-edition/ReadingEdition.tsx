@@ -11,7 +11,6 @@ import {
 import ReadingEditionChrome from "@/app/components/reading-edition/ReadingEditionChrome";
 import CreditLinks from "@/app/components/CreditLinks";
 import styles from "@/app/components/reading-edition/reading-edition.module.css";
-import homeStyles from "@/app/components/editorial-home/PosterWallHome.module.css";
 import { hanScriptLanguageTag, type HanScript } from "@/lib/han-script";
 
 const sectionFor = (post: PostSummary): EditorialSection => post.section;
@@ -307,27 +306,27 @@ function RelatedReading({ current, posts }: {
   const candidates = relatedPostsFor(current, posts);
 
   return (
-    <section className={`${homeStyles.latestUpdates} ${styles.relatedReading}`} data-surface="paper" aria-labelledby="related-heading" data-reveal>
-      <div className={homeStyles.latestInner}>
-        <header className={homeStyles.latestHeading}>
+    <section className={styles.latestUpdates} data-surface="paper" aria-labelledby="related-heading" data-reveal>
+      <div className={styles.latestInner}>
+        <header className={styles.latestHeading}>
           <div>
             <h2 id="related-heading">相关推荐</h2>
           </div>
           <p>
-            <Link href="/library" className={homeStyles.viewAll}>
+            <Link href="/library" className={styles.viewAll}>
               查看全部内容 <b aria-hidden="true">→</b>
             </Link>
           </p>
         </header>
 
-        <ol className={`${homeStyles.latestGrid} ${styles.relatedGrid}`}>
+        <ol className={styles.latestGrid}>
           {candidates.map((post) => {
             const section = sectionMeta[sectionFor(post)];
             return (
               <li key={post.slug}>
                 <article>
                   <Link
-                    className={`${homeStyles.latestCard} ${homeStyles.latestCardInteractive}`}
+                    className={`${styles.latestCard} ${styles.latestCardInteractive}`}
                     href={post.href}
                   >
                     <header>

@@ -427,6 +427,18 @@ body:has(.reading-edition-page) { background-image: none; }
 .cmark { display: inline-flex; align-items: center; justify-content: center; font-family: "Microsoft YaHei", "微软雅黑", "PingFang SC", sans-serif; font-weight: 700; line-height: 1; flex: none; }
 .cmark.solid { background: var(--accent); color: var(--bg); }
 .cmark.hollow { border: 1px solid var(--accent); color: var(--accent); background: transparent; }
+/* CreditLinks 署名链接（原 CreditLinks.module.css，逐字迁入全局）：该模块曾被
+   TopBar（layout）与首页/书籍/多媒体/文库共同引用，成为 CSS 合并枢纽——strict
+   分块下会把 77KB 的阅读版样式一并拽回 layout 关键路径。转为全局类后 layout
+   不再与任何路由级 CSS Module 相接。 */
+.credit-links { display: inline-flex; min-width: 0; flex-wrap: wrap; align-items: center; gap: .45em 1em; color: inherit; }
+.credit-links-item { min-width: 0; }
+.credit-links-mark { width: 1.55em; height: 1.55em; font-size: .72em; }
+.credit-links-name { pointer-events: auto; color: inherit; text-decoration: none; text-decoration-color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: .22em; }
+.credit-links-name:hover { color: var(--accent); text-decoration-line: underline; }
+.credit-links-name:focus-visible { color: var(--accent); outline: 1px solid currentColor; outline-offset: 3px; }
+.credit-links-separator { color: var(--ink-faint); }
+.credit-links-fallback { color: inherit; }
 .sauthor .cmark { width: 18px; height: 18px; font-size: var(--text-meta); }
 .art-meta .credits { display: inline-flex; align-items: center; gap: 1em; }
 .art-meta .cmark { width: 16px; height: 16px; font-size: var(--text-caption); }

@@ -67,6 +67,16 @@ const nextConfig: NextConfig = {
         source: "/:path*/cite.bib",
         headers: [{ key: "X-Robots-Tag", value: "noindex" }],
       },
+      {
+        // /fonts 资产全部经 ?v=<sha256 前 12 位> 内容寻址（由
+        // scripts/verify-font-contract.mjs 强制），改内容必换 URL，
+        // 因此按不可变缓存一年是安全的。此前无缓存头 ⇒ max-age=0，
+        // 1.37 MB 正文字体每次访问都要重新验证。
+        source: "/fonts/:path*",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+        ],
+      },
     ];
   },
   async redirects() {

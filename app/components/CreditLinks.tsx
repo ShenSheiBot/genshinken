@@ -1,7 +1,17 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import type { Credit } from "@/lib/posts";
-import styles from "./CreditLinks.module.css";
+
+// 样式在 globals.css 的 .credit-links-* 全局类（勿改回 CSS Module：本组件被
+// layout 的 TopBar 与多个路由共用，模块化会重新成为 CSS 分块合并的枢纽）。
+const styles = {
+  links: "credit-links",
+  item: "credit-links-item",
+  mark: "credit-links-mark",
+  name: "credit-links-name",
+  separator: "credit-links-separator",
+  fallback: "credit-links-fallback",
+} as const;
 
 type CreditLinksProps = {
   credits: readonly Credit[];
