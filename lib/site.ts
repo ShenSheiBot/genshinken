@@ -10,7 +10,7 @@ export const site = {
   description:
     "以动画、漫画、游戏及相关视听文化为对象的民间批评与译介共同体。自由的人们聚集起来，以阅读、翻译、评论和讨论，为作品打开新的言论空间。",
   /** 站点正式地址（用于 OpenGraph / sitemap） */
-  url: "https://genshinken.vercel.app",
+  url: "https://roof-genshinken-a8f3d7c2.hiddengem.workers.dev",
   /** 浏览器标签页标题 */
   tabTitle: "屋顶现视研",
   /** 公开主页；正式上线前只列已经核验的入口。 */

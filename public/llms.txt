@@ -4,9 +4,9 @@
 
 ## 站点
 
-- 首页：https://genshinken.vercel.app/
-- 文章索引：https://genshinken.vercel.app/library
-- 站点地图：https://genshinken.vercel.app/sitemap.xml
+- 首页：https://roof-genshinken-a8f3d7c2.hiddengem.workers.dev/
+- 文章索引：https://roof-genshinken-a8f3d7c2.hiddengem.workers.dev/library
+- 站点地图：https://roof-genshinken-a8f3d7c2.hiddengem.workers.dev/sitemap.xml
 
 ## 访问与内容
 

@@ -818,7 +818,7 @@ export function getBookChapterCitation(
     creators: parent.creators,
     abstractNote: `${book.subtitle ? `${book.title}（${book.subtitle}）` : book.title}${chapter.number}：${chapter.title}`,
     date: chapter.publishedAt,
-    url: `https://genshinken.vercel.app${bookChapterHref(book, chapter)}`,
+    url: `https://roof-genshinken-a8f3d7c2.hiddengem.workers.dev${bookChapterHref(book, chapter)}`,
     language: parent.language,
     rights: parent.rights,
     extra: parent.extra,

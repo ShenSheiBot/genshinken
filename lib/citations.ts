@@ -1,7 +1,7 @@
 import type { EditorialSection } from "./editorial";
 import type { HanScript } from "./han-script";
 
-const SITE_ORIGIN = "https://genshinken.vercel.app";
+const SITE_ORIGIN = "https://roof-genshinken-a8f3d7c2.hiddengem.workers.dev";
 const SITE_PUBLISHER = "屋顶现视研";
 
 export const ZOTERO_ITEM_TYPES = [

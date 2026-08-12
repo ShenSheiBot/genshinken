@@ -19,6 +19,12 @@ npm run build
 npm run start -- --hostname 127.0.0.1 --port 3100
 ```
 
+Cloudflare Workers 预览地址：<https://roof-genshinken-a8f3d7c2.hiddengem.workers.dev>。更新部署：
+
+```bash
+npm run cf:deploy
+```
+
 ## 内容结构
 
 - `source/_posts/`：发布文章，使用 Markdown 与 YAML front matter。

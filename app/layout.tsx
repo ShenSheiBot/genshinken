@@ -90,7 +90,7 @@ const siteJsonLd = {
       "@id": `${site.url}/#organization`,
       name: site.brand,
       url: site.url,
-      logo: `${site.url}/icon.png`,
+      logo: `${site.url}/icon.svg`,
       description: site.description,
       sameAs: site.social.map((entry) => entry.href),
     },
