@@ -17,14 +17,14 @@ const base = {
   title: "Notes & Methods",
   creators: [author],
   date: "2026-07-24",
-  url: "https://un-canon.blog/posts/notes",
+  url: "https://genshinken.vercel.app/posts/notes",
   language: "en",
   rights: "CC0 1.0 Universal",
 };
 
 const cases = [
   {
-    citation: { ...base, itemType: "blogPost", blogTitle: "西方負典的博客" },
+    citation: { ...base, itemType: "blogPost", blogTitle: "屋顶现视研" },
     entry: "@misc{",
     zoteroType: "blogPost",
   },
@@ -101,7 +101,7 @@ for (const { citation, entry, zoteroType } of cases) {
   assert.match(bibtex, /title = \{Notes \\& Methods\}/);
   assert.match(bibtex, /year = \{2026\}/);
   assert.match(bibtex, /month = \{jul\}/);
-  assert.match(bibtex, /publisher = \{西方負典編譯組\}/);
+  assert.match(bibtex, /publisher = \{屋顶现视研\}/);
   assert.doesNotMatch(bibtex, /copyright\s*=/);
 }
 
@@ -205,7 +205,7 @@ const hantMediaCitation = pageCitationDefaults({
   creators: [{ creatorType: "author", name: "測試作者" }],
   date: "2026-07-25",
 });
-assert.equal(hantMediaCitation.url, "https://un-canon.blog/media/media-fixture");
+assert.equal(hantMediaCitation.url, "https://genshinken.vercel.app/media/media-fixture");
 assert.equal(hantMediaCitation.language, "zh-Hant");
 assert.equal(citationToMetadata(hantMediaCitation).citation_language, "zh-Hant");
 
@@ -217,7 +217,7 @@ const hansPostCitation = pageCitationDefaults({
   creators: [{ creatorType: "author", name: "测试作者" }],
   date: "2026-07-25",
 });
-assert.equal(hansPostCitation.url, "https://un-canon.blog/posts/post-fixture");
+assert.equal(hansPostCitation.url, "https://genshinken.vercel.app/posts/post-fixture");
 assert.equal(hansPostCitation.language, "zh-Hans");
 assert.equal(
   bookCitationDefaults({
@@ -317,13 +317,13 @@ for (const book of bookManifests) {
   );
   assert.equal(
     translationCitation.url,
-    `https://un-canon.blog/books/${book.slug}`,
+    `https://genshinken.vercel.app/books/${book.slug}`,
     `${book.slug} must cite its /books/ URL`
   );
   const bibtex = citationToBibtex(translationCitation);
   assert.ok(bibtex.startsWith("@book{"), `${book.slug} translation must export as @book`);
-  assert.match(bibtex, new RegExp(`url = \\{https://un-canon\\.blog/books/${book.slug}\\}`));
-  const expectedPublisher = book.citations.translation.publisher ?? "西方負典編譯組";
+  assert.match(bibtex, new RegExp(`url = \\{https://genshinken\\.vercel\\.app/books/${book.slug}\\}`));
+  const expectedPublisher = book.citations.translation.publisher ?? "屋顶现视研";
   assert.ok(
     bibtex.includes(`publisher = {${expectedPublisher}}`),
     `${book.slug} translation must preserve its explicit publisher`
@@ -339,7 +339,7 @@ for (const book of bookManifests) {
     assert.ok(bibtex.includes("edition = {1}"));
     assert.ok(bibtex.includes("language = {zh}"));
   }
-  assert.doesNotMatch(bibtex, /series = \{西方負典文库\}/);
+  assert.doesNotMatch(bibtex, /series = \{屋顶现视研文库\}/);
   assert.doesNotMatch(bibtex, /copyright\s*=/);
   assert.doesNotMatch(bibtex, /note = \{Status: serializing\}/);
 }

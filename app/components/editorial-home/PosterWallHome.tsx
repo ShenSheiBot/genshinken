@@ -112,7 +112,7 @@ function CardCredits({ post }: { post: PublicContentEntry }) {
       credits={credits}
       limit={post.section === "translation" ? undefined : 2}
       separator="·"
-      fallbackName={post.author || "西方負典编辑部"}
+      fallbackName={post.author || "屋顶现视研"}
     />
   );
 }
@@ -207,8 +207,8 @@ export default function PosterWallHome({
         <h1 id="poster-wall-heading" className={styles.screenReaderTitle}>{site.brandCN}</h1>
 
         <blockquote className={styles.mastheadQuote}>
-          <span>東流不溢</span>
-          <span><b className={styles.quotePunctuation}>，</b>孰知其故</span>
+          <span>自由的人们</span>
+          <span><b className={styles.quotePunctuation}>，</b>聚集起来协作</span>
         </blockquote>
 
         <div className={styles.manifesto}>
@@ -218,7 +218,7 @@ export default function PosterWallHome({
               <span className={styles.manifestoMonth}>{issue.replace(/\s+/g, "")}</span>
             )}
           </div>
-          <p>「西方負典」是一档关注历史、产业和文化的人文博客，希望为汉语读者提供基于观察视角的话题和内容。</p>
+          <p>{site.description}</p>
         </div>
       </header>
 

@@ -1,5 +1,5 @@
 /* ============================================================
-   西方負典 — 新粗野主义随笔站
+   屋顶现视研 — 新粗野主义批评与译介站
    参考: 瑞士工程制图 / brutalist editorial
    暖浅灰 + 墨黑 + 极少量 crimson · 扁平发丝线 · 无硬阴影
    主题令牌挂在 <html data-theme> 上以避免首屏闪烁；同时声明原生双主题，
@@ -17,7 +17,7 @@
   --text-sm: 10px;
   --text-caption: 11px;
   --text-meta: 12px;
-  --f-brand: "FOT Matisse Pro EB", "UN Canon STSong", "STSong", "华文宋体", "Songti SC", "SimSun", serif;
+  --f-brand: "UN Canon STSong", "STSong", "华文宋体", "Songti SC", "SimSun", serif;
   --f-grotesk: "Helvetica Neue", Helvetica, "PingFang SC", "Microsoft YaHei", "微软雅黑", "Noto Sans SC", Arial, sans-serif;
   --f-serif: var(--font-newsreader), "UN Canon STSong", "STSong", "华文宋体", "Songti SC", "SimSun", "Noto Serif SC", Georgia, serif;
   --f-mono: var(--font-space-mono), "PingFang SC", "Noto Sans SC", monospace;
@@ -50,15 +50,6 @@
   --accent: #b3271e;        /* crimson,极少量 */
   --panel: #e8e7e3;
   --code-bg: rgba(26, 25, 22, 0.05);
-}
-
-@font-face {
-  font-family: "FOT Matisse Pro EB";
-  src: url("/fonts/fot-matisse-pro-eb-brand.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  unicode-range: U+5178, U+65B9, U+897F, U+8CA0;
 }
 
 @font-face {
@@ -790,11 +781,10 @@ body:has(main[data-archive-page="true"]) {
 .foot-inner { max-width: var(--maxw); margin: 0 auto; padding: 0 40px; display: grid; place-items: center; }
 .foot-sign { display: grid; max-width: 100%; justify-items: center; gap: 14px; }
 .foot-lockup { display: flex; align-items: center; justify-content: center; gap: 18px; }
-.foot-logo {
-  height: 48px;
-  width: auto;
-  display: block;
-  flex: none;
+.foot-roof-mark {
+  display: grid; width: 48px; height: 48px; place-items: center; flex: none;
+  color: var(--solid-ink); background: var(--accent);
+  font-family: var(--f-cjk-serif); font-size: 24px; font-weight: 900;
 }
 .foot-brand { color: var(--ink); font-family: var(--f-brand); font-size: 22px; font-weight: 800; line-height: 1; letter-spacing: -.02em; }
 .foot-build {

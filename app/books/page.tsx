@@ -96,7 +96,7 @@ export default function BooksPage() {
                         />
                       ) : (
                         <>
-                          <span>西方負典文库</span>
+                          <span>屋顶现视研文库</span>
                           <strong>{book.title}</strong>
                           <small>{String(index + 1).padStart(2, "0")} / 书籍</small>
                         </>

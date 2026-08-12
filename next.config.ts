@@ -47,6 +47,7 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  outputFileTracingRoot: process.cwd(),
   // Markdown lives in source/_posts and is read at build time (SSG).
   // Posts reference images under /attachments — served statically from public/.
   reactStrictMode: true,

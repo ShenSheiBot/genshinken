@@ -244,7 +244,7 @@ export default async function MediaDetailPage({
           <div className={styles.poster} role="img" aria-label={`${mediaPost.title}的多媒体档案封面`}>
             <div className={styles.posterRule} aria-hidden="true" />
             <div className={styles.posterHeader}>
-              <span>西方負典</span>
+              <span>屋顶现视研</span>
               <span>多媒体</span>
             </div>
             <div className={styles.posterIndex} aria-hidden="true">

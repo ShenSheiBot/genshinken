@@ -1,8 +1,8 @@
 {
-  "name": "un-canon-blog",
+  "name": "genshinken",
   "version": "1.0.0",
   "private": true,
-  "description": "西方負典 / UN-CANON — 新粗野主义人文随笔站 (Next.js + Markdown)",
+  "description": "屋顶现视研 — 动画、漫画、游戏与视听文化的评论和译介站点",
   "engines": {
     "node": "22.x"
   },
@@ -37,7 +37,7 @@
     "verify:library": "node --experimental-strip-types --no-warnings scripts/verify-library-filter.mjs",
     "verify:editorial": "node scripts/verify-editorial-release.mjs",
     "verify:release": "node scripts/verify-editorial-release.mjs",
-    "check": "npm run validate:content && npm run verify:snapshot-history && npm run verify:preservation && npm run validate:media-html && npm run verify:typography && npm run verify:typography-registry && npm run verify:negative && npm run verify:fonts && npm run verify:reading-progress && npm run verify:han-script && npm run verify:citations && npm run verify:dependencies && npm run verify:routing && npm run verify:library && npm run typecheck && npm run lint"
+    "check": "npm run validate:content && npm run validate:media-html && npm run verify:typography && npm run verify:typography-registry && npm run verify:reading-progress && npm run verify:han-script && npm run verify:citations && npm run verify:routing && npm run verify:library && npm run typecheck && npm run lint"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

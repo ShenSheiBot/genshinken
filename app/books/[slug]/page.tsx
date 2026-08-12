@@ -220,9 +220,9 @@ export default async function BookPage({
               />
             ) : (
               <>
-                <span>西方負典文库</span>
+                <span>屋顶现视研文库</span>
                 <strong>{book.title}</strong>
-                <small>西方負典版</small>
+                <small>屋顶现视研版</small>
               </>
             )}
           </div>

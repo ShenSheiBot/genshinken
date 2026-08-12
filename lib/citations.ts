@@ -1,8 +1,8 @@
 import type { EditorialSection } from "./editorial";
 import type { HanScript } from "./han-script";
 
-const SITE_ORIGIN = "https://un-canon.blog";
-const SITE_PUBLISHER = "西方負典編譯組";
+const SITE_ORIGIN = "https://genshinken.vercel.app";
+const SITE_PUBLISHER = "屋顶现视研";
 
 export const ZOTERO_ITEM_TYPES = [
   "blogPost",
@@ -394,7 +394,7 @@ export function pageCitationDefaults(input: {
     language: citationLanguage(input.script),
     ...(input.abstractNote ? { abstractNote: input.abstractNote } : {}),
     ...(input.rights ? { rights: input.rights } : {}),
-    blogTitle: "西方負典的博客",
+    blogTitle: "屋顶现视研",
     websiteType: "博客",
   };
 }

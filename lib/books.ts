@@ -86,17 +86,7 @@ export interface BookCoverAsset {
   src: string;
 }
 
-const BOOK_COVER_ASSETS: Record<string, BookCoverAsset> = {
-  "capital-untamed": {
-    src: "/img/capital-untamed-cover.png",
-  },
-  "crouzet-la-grande-inflation": {
-    src: "/img/crouzet-la-grande-inflation-cover.jpg",
-  },
-  "nakamura-showa-kyoko-to-keizai-seisaku": {
-    src: "/img/nakamura-showa-kyoko-to-keizai-seisaku-cover.jpg",
-  },
-};
+const BOOK_COVER_ASSETS: Record<string, BookCoverAsset> = {};
 
 export function getBookCoverAssets(slug: string): BookCoverAsset | undefined {
   return BOOK_COVER_ASSETS[slug];
@@ -200,7 +190,7 @@ function optionalFileUrl(record: JsonRecord, field: string, source: string): str
 
   if (value.startsWith("/")) {
     try {
-      const base = new URL("https://un-canon.invalid");
+      const base = new URL("https://genshinken.invalid");
       if (new URL(value, base).origin === base.origin) return value;
     } catch {
       // Report the field-specific URL validation error below.
@@ -828,7 +818,7 @@ export function getBookChapterCitation(
     creators: parent.creators,
     abstractNote: `${book.subtitle ? `${book.title}（${book.subtitle}）` : book.title}${chapter.number}：${chapter.title}`,
     date: chapter.publishedAt,
-    url: `https://un-canon.blog${bookChapterHref(book, chapter)}`,
+    url: `https://genshinken.vercel.app${bookChapterHref(book, chapter)}`,
     language: parent.language,
     rights: parent.rights,
     extra: parent.extra,

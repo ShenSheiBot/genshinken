@@ -21,8 +21,7 @@ export default function Footer() {
       <div className="foot-inner">
         <div className="foot-sign">
           <div className="foot-lockup">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img className="foot-logo" src="/img/logo.webp" alt="" width={96} height={96} loading="lazy" decoding="async" />
+            <span className="foot-roof-mark" aria-hidden="true">屋</span>
             <b className="foot-brand">{site.brand}</b>
           </div>
           {buildTimestamp && <FooterBuildTimestamp {...buildTimestamp} />}

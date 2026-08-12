@@ -1,28 +1,23 @@
-/* ============================================================
-   西方負典 — 站点常量
-   ============================================================ */
+/* 屋顶现视研 — 站点常量 */
 
 export const site = {
   /** 顶栏 / 页脚显示的品牌全称 */
-  brand: "西方負典",
-  brandCN: "西方負典",
+  brand: "屋顶现视研",
+  brandCN: "屋顶现视研",
   /** <title> 默认值 */
-  title: "西方負典",
+  title: "屋顶现视研",
   /** 英雄区副标题 / meta description */
   description:
-    "「西方負典」是一档关注历史、产业和文化的人文博客，希望为汉语读者提供基于观察视角的话题和内容。",
+    "以动画、漫画、游戏及相关视听文化为对象的民间批评与译介共同体。自由的人们聚集起来，以阅读、翻译、评论和讨论，为作品打开新的言论空间。",
   /** 站点正式地址（用于 OpenGraph / sitemap） */
-  url: "https://un-canon.blog",
+  url: "https://genshinken.vercel.app",
   /** 浏览器标签页标题 */
-  tabTitle: "西方負典的博客",
-  /** 「关注 / 联系」链接：About 页与站点级 JSON-LD 的 sameAs 使用（沿用 un-canon.com，博客把「博客」换成「主页」） */
+  tabTitle: "屋顶现视研",
+  /** 公开主页；正式上线前只列已经核验的入口。 */
   social: [
-    { label: "主页", href: "https://un-canon.com/" },
-    { label: "哔哩哔哩", href: "https://space.bilibili.com/323302694" },
-    { label: "知乎", href: "https://www.zhihu.com/people/tHEREwILLbEbLOOD" },
-    { label: "YouTube", href: "https://www.youtube.com/channel/UCF7IkcI5JK-mxFttzwh0qbQ" },
-    { label: "GitHub", href: "https://github.com/un-canon" },
+    { label: "哔哩哔哩", href: "https://space.bilibili.com/355943807" },
+    { label: "GitHub", href: "https://github.com/ShenSheiBot/genshinken" },
   ],
-  infoEmail: "info@un-canon.com",
-  editorEmail: "editor@un-canon.com",
+  infoEmail: "lab_on_roof@163.com",
+  editorEmail: "a1835631041@163.com",
 } as const;

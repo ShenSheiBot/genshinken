@@ -16,7 +16,6 @@ import cjkFontManifest from "@/public/fonts/cjk-font-manifest.json";
 // 仿宋/楷体不预载——它们只在含引文/题词的页面按需触发下载。
 const ST_SONG = cjkFontManifest.fonts["UN Canon STSong"];
 const stSongHref = `/fonts/${ST_SONG.file}?v=${ST_SONG.sha256.slice(0, 12)}`;
-const BRAND_FONT_HREF = "/fonts/fot-matisse-pro-eb-brand.woff2";
 
 // Latin / Cyrillic / Greek 字体自托管（next/font：同源、自动预载、内联字体 CSS），
 // 取代此前渲染阻塞的第三方 Google Fonts <link>。含 cyrillic/greek 子集，保住
@@ -129,7 +128,6 @@ export default async function RootLayout({
         <meta name="darkreader-lock" />
         {/* 字体请求走 CORS 模式，同源也必须带 crossOrigin，否则预载与实际请求凭据模式不同会双下载 */}
         <link rel="preload" as="font" type="font/woff2" href={stSongHref} crossOrigin="anonymous" />
-        <link rel="preload" as="font" type="font/woff2" href={BRAND_FONT_HREF} crossOrigin="anonymous" />
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <script dangerouslySetInnerHTML={{ __html: hanScriptBootstrap }} />
         <script dangerouslySetInnerHTML={{ __html: editorialRevealBootstrap }} />

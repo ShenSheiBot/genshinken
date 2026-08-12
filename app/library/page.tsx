@@ -7,7 +7,7 @@ import type { LibraryFacetValues, LibraryRow } from "@/lib/library-filter";
 import LibraryClient from "./LibraryClient";
 import { libraryPrefilterBootstrap } from "./library-prefilter-bootstrap";
 
-const pageDescription = "浏览西方負典的文章和多媒体，并按栏目、主题、标签、贡献者与署名位置筛选。";
+const pageDescription = "浏览屋顶现视研的评论、译介与档案，并按栏目、主题、标签、贡献者与署名位置筛选。";
 export const metadata: Metadata = {
   title: "文库",
   description: pageDescription,
