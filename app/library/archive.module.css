@@ -334,6 +334,27 @@
 .row:hover .tags,
 .row:focus-within .tags { color: inherit; opacity: .68; }
 
+.row:hover .classification i,
+.row:focus-within .classification i,
+.row:hover .classification b,
+.row:focus-within .classification b,
+.row:hover .recordMeta small,
+.row:focus-within .recordMeta small {
+  color: var(--accent-hover);
+}
+
+.row:hover :global(.cmark.solid),
+.row:focus-within :global(.cmark.solid) {
+  background: var(--accent-hover);
+  color: var(--solid-ink);
+}
+
+.row:hover :global(.cmark.hollow),
+.row:focus-within :global(.cmark.hollow) {
+  border-color: var(--accent-hover);
+  color: var(--accent-hover);
+}
+
 .row:hover .recordMain,
 .row:focus-within .recordMain,
 .row:hover .recordMeta,

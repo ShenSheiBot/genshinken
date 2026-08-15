@@ -14,7 +14,7 @@ import { site } from "@/lib/site";
 import CreditLinks from "@/app/components/CreditLinks";
 import styles from "./books.module.css";
 
-const description = `${site.brandCN}长篇译作与书籍目录。`;
+const description = `${site.brandCN}长篇译作与系列文章目录。`;
 
 export const metadata: Metadata = {
   title: "连载",
@@ -32,6 +32,7 @@ export const metadata: Metadata = {
 export default function BooksPage() {
   const books = getAllBooks();
   const serializingCount = books.filter((book) => book.status === "serializing").length;
+  const pausedCount = books.filter((book) => book.status === "paused").length;
   const completeCount = books.filter((book) => book.status === "complete").length;
   const canonical = `${site.url}/books`;
   const jsonLd = {
@@ -63,6 +64,7 @@ export default function BooksPage() {
         </div>
         <dl className={styles.catalogStats}>
           <div><dt>连载中</dt><dd>{String(serializingCount).padStart(2, "0")}</dd></div>
+          <div><dt>暂停</dt><dd>{String(pausedCount).padStart(2, "0")}</dd></div>
           <div><dt>已完结</dt><dd>{String(completeCount).padStart(2, "0")}</dd></div>
         </dl>
       </header>
@@ -96,16 +98,16 @@ export default function BooksPage() {
                         />
                       ) : (
                         <>
-                          <span>屋顶现视研文库</span>
+                          <span>屋顶现视研连载</span>
                           <strong>{book.title}</strong>
-                          <small>{String(index + 1).padStart(2, "0")} / 书籍</small>
+                          <small>{String(index + 1).padStart(2, "0")} / 连载</small>
                         </>
                       )}
                     </div>
                     <div className={styles.catalogBody}>
                       <div className={styles.catalogTopline}>
                         <span className={styles.status}>{bookStatusLabel(book.status)}</span>
-                        <span>书籍</span>
+                        <span>连载</span>
                       </div>
                       <h3 className={styles.catalogTitle}>
                         <Link href={bookHref(book)}>{book.title}</Link>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { CSSProperties } from "react";
 import type { PublicContentEntry } from "@/lib/public-content";
 import { site } from "@/lib/site";
@@ -16,6 +17,7 @@ const POSTER_SECTION_PRIORITY: PosterSection[] = [
   "essay",
   "review",
   "translation",
+  "community",
   "multimedia",
 ];
 
@@ -23,6 +25,7 @@ const FEATURED_TREATMENT: Record<PosterSection, string> = {
   essay: styles.leadWide,
   review: styles.leadNarrow,
   translation: styles.featureWide,
+  community: styles.thirdCompact,
   multimedia: styles.featureNarrow,
 };
 
@@ -133,6 +136,7 @@ function groupPostsBySection(posts: PosterPost[]): Record<PosterSection, PosterP
     essay: [],
     review: [],
     translation: [],
+    community: [],
     multimedia: [],
   };
   posts.forEach((post) => grouped[post.section].push(post));
@@ -158,12 +162,14 @@ function orderAsWall(posts: PublicContentEntry[]): {
     essay: grouped.essay.filter((post) => !leadSlugs.has(post.slug)),
     review: grouped.review.filter((post) => !leadSlugs.has(post.slug)),
     translation: grouped.translation.filter((post) => !leadSlugs.has(post.slug)),
+    community: grouped.community.filter((post) => !leadSlugs.has(post.slug)),
     multimedia: grouped.multimedia.filter((post) => !leadSlugs.has(post.slug)),
   };
   const tailOffsets: Record<PosterSection, number> = {
     essay: 0,
     review: 0,
     translation: 0,
+    community: 0,
     multimedia: 0,
   };
   // Preserve the existing cross-section rhythm while replacing each section's
@@ -189,12 +195,13 @@ export default function PosterWallHome({
   issue: string;
 }) {
   const { ordered, grouped } = orderAsWall(posts);
-  // 四个完整视觉带共容纳十张；限制墙体高度，避免尾项单独开启第五带。
+  // 完整视觉带共容纳十张；限制墙体高度，避免尾项单独开启新带。
   const wallPosts = ordered.slice(0, 10);
   const firstSlug: Partial<Record<PosterSection, string>> = {
     review: grouped.review[0]?.slug,
     essay: grouped.essay[0]?.slug,
     translation: grouped.translation[0]?.slug,
+    community: grouped.community[0]?.slug,
     multimedia: grouped.multimedia[0]?.slug,
   };
   const latestArticles = posts
@@ -206,10 +213,15 @@ export default function PosterWallHome({
       <header className={styles.masthead} data-reveal-sequence="masthead">
         <h1 id="poster-wall-heading" className={styles.screenReaderTitle}>{site.brandCN}</h1>
 
-        <blockquote className={styles.mastheadQuote}>
-          <span>自由的人们</span>
-          <span><b className={styles.quotePunctuation}>，</b>聚集起来协作</span>
-        </blockquote>
+        <div className={styles.mastheadVisual} aria-hidden="true">
+          <Image
+            src="/roof-elements/roof-masthead.webp"
+            alt=""
+            width={2224}
+            height={1094}
+            priority
+          />
+        </div>
 
         <div className={styles.manifesto}>
           <div className={styles.manifestoMeta}>
@@ -232,6 +244,9 @@ export default function PosterWallHome({
           wallPosts.map((post, index) => {
             const section = post.section;
             const meta = EDITORIAL_SECTION_META[section];
+            const sectionArtIndex = ordered
+              .slice(0, index)
+              .filter((candidate) => candidate.section === section).length;
             const isFirstOfSection = post.slug === firstSlug[section];
             const treatment = isFirstOfSection
               ? FEATURED_TREATMENT[section]
@@ -249,6 +264,7 @@ export default function PosterWallHome({
                 id={isFirstOfSection ? `poster-${section}` : undefined}
                  className={`${styles.tile} ${treatment}`}
                  data-section={section}
+                 data-art-variant={sectionArtIndex % 2}
                  data-featured={isFirstOfSection ? "true" : undefined}
                  data-treatment={treatmentName}
                  data-reveal

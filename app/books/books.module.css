@@ -567,11 +567,16 @@
 .chapterForthcoming > span,
 .chapterForthcoming small { color: var(--ink-faint); }
 
-.chapterLink:hover,
-.chapterLink:focus-visible {
+.chapterList .chapterLink:hover,
+.chapterList .chapterLink:focus-visible {
   color: var(--solid-ink);
   background: var(--solid);
   outline: none;
+}
+
+.chapterList li[data-latest="true"] > .chapterLink:hover,
+.chapterList li[data-latest="true"] > .chapterLink:focus-visible {
+  background: var(--solid);
 }
 
 .chapterLink:hover time,
