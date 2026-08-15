@@ -48,3 +48,8 @@ next-env.d.ts
 
 # Codex local task artifacts
 /.codex/
+
+# Exact crawler snapshots stay as local editorial evidence. Commit the
+# human-authored cv*-evidence/editorial-note Markdown, not complete page state.
+/editorial-sources/roof-archive/cv*.json
+/editorial-sources/roof-archive/cv*/source.json

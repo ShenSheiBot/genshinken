@@ -11,6 +11,7 @@ import {
   citationToBibtex,
   citationToJsonLd,
   citationToMetadata,
+  licenseUrlFromRights,
   type CitationRecord,
 } from "@/lib/citations";
 import {
@@ -71,6 +72,7 @@ function buildJsonLd(
   post: NonNullable<Awaited<ReturnType<typeof getPostBySlug>>>,
   citation: CitationRecord
 ) {
+  const license = licenseUrlFromRights(citation.rights);
   const roles: Record<CreditRole, "author" | "translator" | "contributor"> = {
     author: "author",
     translator: "translator",
@@ -106,7 +108,7 @@ function buildJsonLd(
     ...credits,
     ...(post.tags.length ? { keywords: post.tags.join(",") } : {}),
     articleSection: post.category,
-    license: "https://creativecommons.org/publicdomain/zero/1.0/",
+    ...(license ? { license } : {}),
     publisher: { "@type": "Organization", name: site.brand, url: site.url },
   };
 }

@@ -12,6 +12,7 @@ const eslintConfig = [
       ".open-next/**",
       ".wrangler/**",
       ".codex/**",
+      ".local-archive/**",
       "out/**",
       "build/**",
       "node_modules/**",

@@ -10,7 +10,7 @@
 
 - [ ] **slug / 文件名全 ASCII**：短横线连字，无中文、空格、全角符号
 - [ ] **YAML front-matter 完整**：标题、日期、分类、标签、署名等全部写进头部，不散落正文
-- [ ] **编辑栏目已填写**：`section` 只能是 `essay / review / translation / multimedia`
+- [ ] **编辑栏目已填写**：`section` 只能是 `essay / review / translation / community / multimedia`
 - [ ] **署名均已登记**：每位作者、译者、校对者都有稳定贡献者 id，姓名和别名不冲突
 - [ ] **修订旧文补 `updated` 字段**：实质性修订（改译文、补脚注）时在 front-matter 写 `updated: YYYY-MM-DD`——驱动 sitemap lastmod / RSS / 结构化数据，搜索引擎据此重抓
 - [ ] **分类不重复进标签**：`categories` 与 `tags` 不重叠（前端会分别渲染）
@@ -30,7 +30,8 @@
 
 本标准中的“编辑”不授权重写原稿。清洗阶段的最高优先级是保持原文内容、风格与节奏，完整规则以 [`pre-translation.md`](pre-translation.md) §0 为准。
 
-- 原稿先存入 `editorial-sources/`，再生成博客派生稿；已登记快照不得原地修改。
+- 原稿先存入本地来源档案，再生成博客派生稿；只有 preservation 清单明确登记的精简快照进入 `editorial-sources/`。批量抓取的完整页面状态 JSON 留在 Git 忽略的本地档案，不复制进产品仓库。
+- `cv*-editorial-note.md` / `cv*-evidence.md` 是应提交的人工编辑证据：记录来源判断、署名、结构、图像删留与版本关系，但不得包含访问令牌、Cookie、私人通信或与公开来源无关的个人资料，也不得直接显示在网站正文。
 - `preservation-manifest.json` 固定源文件哈希、来源、拼接顺序、允许的机械转换和逐项授权修订。
 - 保真门禁不设模糊阈值：归一化并扣除已声明转换／修订后，正文字符保留率必须为 100%，段落边界与顺序完全一致，未授权差异必须为 0。
 - OCR 订正和用户指定字词修订必须逐项登记 `authorizedChanges`，记录精确替换、理由、证据、授权人和日期；唯一匹配失败或跨段修改时直接失败。
@@ -92,6 +93,7 @@ featured_order: 0        # 可选；同栏目首页推荐优先级，数值越�
   - `essay`：论
   - `review`：评
   - `translation`：译
+  - `community`：社
   - `multimedia`：多媒体
 - `section` 与 `categories` 相互独立；不要用“历史 / 哲学”等主题分类代替栏目，也不要只依赖译者署名推断「译」栏目。
 - `featured_order` 可用于任一栏目，必须是有限数值；缺省为 `0`，数值越大则在同栏目首页越靠前。
@@ -168,6 +170,8 @@ P1/P2/P4/P5 由 `scripts/validate-content.mjs` 的 `validateProseTypography` 在
 ---
 
 ## 5. 脚注与链接：前端必须可渲染、可跳转
+
+有序列表的序号后必须留一个空格，例如 `4. 由于……`；`4.由于……` 会被 CommonMark 当成普通段落，并由内容校验直接拦截。列表密集稿还须在构建产物中核对 `<ol>` 的项目数量和连续性。
 
 ### 脚注
 
@@ -353,6 +357,7 @@ P1/P2/P4/P5 由 `scripts/validate-content.mjs` 的 `validateProseTypography` 在
 ```
 
 - `id / slug / documentSlug / chapter.id / latestChapterId` 均使用稳定 ASCII kebab-case；文件名与书籍 slug 一致。`children` 可以在任意目录节点下继续嵌套；父子数组的书写顺序共同构成公开目录顺序。
+- 书级 `authors / translators / proofreaders` 是全书默认署名。章节确有不同署名时，可在章节节点上填写同名字段覆盖对应角色；字段缺省表示继承书级署名，显式空数组表示该章未署该角色。章节 `authors` 如填写不得为空。不要把只参与个别篇章的人合并成全书共同署名。
 - 书籍 `status` 只能是 `serializing / complete / paused`。每个新增或修改的目录节点必须显式填写 `status: published / forthcoming`；旧清单中缺省 `status` 的平铺节点仅为兼容既有内容而按 `published` 读取，不得在新书中继续省略。节点 `id / number` 在整棵目录树内不得重复，不能只在同一层检查唯一性。
 - `/books` 书目必须按 `serializing → paused → complete` 排列，同一状态内再按 `updatedAt` 降序和书名稳定排序。连载中书籍永远排在已完结书目之前；发布或更新完结书不得改变这一优先级。
 - `published` 节点必须填写非空 `anchor` 与有效 `publishedAt`，anchor 在整棵目录树内唯一。`forthcoming` 节点必须省略 `anchor / publishedAt`；它只展示待更新目录，不参与锚点存在性校验，也不得包含状态为 `published` 的后代。
@@ -420,6 +425,7 @@ groups:
 
 ### 12.1 确定性静态与逻辑门禁
 
+- `npm run audit:roof-archive`：对照本地 376 份屋顶原始稿，报告逐字节 JSON 快照、专篇证据和公开正文引用覆盖；它是迁移进度审计，不替代人工审校，也不因重复稿没有独立路由而自行报错。
 - `npm run validate:content`：贡献者登记和署名、文章字段、书籍／章节 JSON、专题分组、跨实体引用、日期同步和唯一性。
 - `npm run verify:snapshot-history`：按 Git 基线检查 `editorial-sources/` 的追加式历史；既有快照修改、删除或改名即失败。
 - `npm run verify:preservation`：源文快照哈希、派生顺序、允许机械转换及逐项授权修订；执行正文 100% 保留／未授权差异 0 的零差异门禁。

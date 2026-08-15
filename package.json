@@ -24,6 +24,8 @@
     "lint": "eslint . --max-warnings=0",
     "typecheck": "tsc --noEmit --incremental false",
     "validate:content": "node --experimental-strip-types --no-warnings scripts/validate-content.mjs",
+    "audit:roof-archive": "node scripts/audit-roof-archive.mjs",
+    "audit:tags": "node scripts/audit-tags.mjs",
     "verify:snapshot-history": "node scripts/verify-editorial-snapshot-history.mjs",
     "verify:preservation": "node scripts/verify-source-preservation.mjs",
     "sync:preserved": "node scripts/verify-source-preservation.mjs --write",

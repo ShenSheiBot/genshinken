@@ -68,6 +68,10 @@ interface BookChapterBase {
   presentation: BookChapterPresentation;
   sections: BookChapterSection[];
   children: BookChapter[];
+  /** When omitted, the role inherits the book-level credits; an empty list explicitly clears it. */
+  authors?: string[];
+  translators?: string[];
+  proofreaders?: string[];
 }
 
 export interface PublishedBookChapter extends BookChapterBase {
@@ -173,6 +177,18 @@ function stringList(record: JsonRecord, field: string, source: string): string[]
 
 function optionalStringList(record: JsonRecord, field: string, source: string): string[] {
   return record[field] == null ? [] : stringList(record, field, source);
+}
+
+function chapterCreditOverride(
+  record: JsonRecord,
+  field: "authors" | "translators" | "proofreaders",
+  source: string
+): string[] | undefined {
+  if (!Object.prototype.hasOwnProperty.call(record, field)) return undefined;
+  const names = stringList(record, field, source);
+  if (field === "authors" && names.length === 0) fail(source, field, "must not be empty when provided");
+  validateContributorNames(names, field, source);
+  return names;
 }
 
 function optionalString(record: JsonRecord, field: string, source: string): string | undefined {
@@ -330,6 +346,9 @@ function parseChapter(
     presentation: declaredPresentation as BookChapterPresentation,
     sections,
     children,
+    authors: chapterCreditOverride(value, "authors", chapterSource),
+    translators: chapterCreditOverride(value, "translators", chapterSource),
+    proofreaders: chapterCreditOverride(value, "proofreaders", chapterSource),
   };
 
   if (status === "published") {
@@ -577,6 +596,15 @@ export function getBookCredits(
   }));
 }
 
+export function getBookChapterCredits(book: Book, chapter: BookChapter): Credit[] {
+  return getBookCredits({
+    slug: `${book.slug}/${chapter.id}`,
+    authors: chapter.authors ?? book.authors,
+    translators: chapter.translators ?? book.translators,
+    proofreaders: chapter.proofreaders ?? book.proofreaders,
+  });
+}
+
 export function getAllBookChapters(book: Pick<Book, "chapters">): BookChapter[] {
   return flattenChapters(book.chapters);
 }
@@ -811,11 +839,17 @@ export function getBookChapterCitation(
   chapter: PublishedBookChapter
 ): CitationRecord {
   const parent = book.translationCitation;
+  const credits = getBookChapterCredits(book, chapter);
   return {
     itemType: "bookSection",
     citationKey: `${parent.citationKey}_${chapter.id.replaceAll("-", "_")}`,
     title: chapter.title,
-    creators: parent.creators,
+    creators: credits
+      .filter((credit) => credit.role === "author" || credit.role === "translator")
+      .map((credit): CitationCreator => ({
+        creatorType: credit.role === "author" ? "author" : "translator",
+        name: credit.name,
+      })),
     abstractNote: `${book.subtitle ? `${book.title}（${book.subtitle}）` : book.title}${chapter.number}：${chapter.title}`,
     date: chapter.publishedAt,
     url: `https://roof-genshinken-a8f3d7c2.hiddengem.workers.dev${bookChapterHref(book, chapter)}`,

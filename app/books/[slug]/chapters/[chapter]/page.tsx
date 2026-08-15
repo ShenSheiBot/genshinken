@@ -8,8 +8,8 @@ import {
   getBookBySlug,
   getBookChapter,
   getBookChapterCitation,
+  getBookChapterCredits,
   getBookChapterDocuments,
-  getBookCredits,
   getPublishedBookChapters,
   isPublishedBookChapter,
   type Book,
@@ -243,7 +243,7 @@ export default async function BookChapterPage({
   const next = documents[index + 1]?.chapter;
   const parts = splitArticle(document.html);
   const citation = getBookChapterCitation(book, chapter);
-  const credits = getBookCredits(book);
+  const credits = getBookChapterCredits(book, chapter);
   const section = EDITORIAL_SECTION_META[document.section];
   const chapterCode = publication?.sectionNo ?? chapter.number.replace(/\s+/gu, "");
   const publicationNo = publication?.no;

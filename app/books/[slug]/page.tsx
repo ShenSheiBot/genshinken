@@ -220,7 +220,7 @@ export default async function BookPage({
               />
             ) : (
               <>
-                <span>屋顶现视研文库</span>
+                <span>屋顶现视研连载</span>
                 <strong>{book.title}</strong>
                 <small>屋顶现视研版</small>
               </>
@@ -228,7 +228,7 @@ export default async function BookPage({
           </div>
 
           <div className={styles.publicationIdentity}>
-            <p className={styles.sectionLabel}>{bookStatusLabel(book.status)} · 书籍</p>
+            <p className={styles.sectionLabel}>{bookStatusLabel(book.status)} · 连载</p>
             <h1>{book.title}</h1>
             {book.subtitle ? <p className={styles.bookSubtitle}>{book.subtitle}</p> : null}
             <div className={styles.responsibility}>

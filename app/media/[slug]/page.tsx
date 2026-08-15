@@ -12,7 +12,7 @@ import {
 import { site } from "@/lib/site";
 import { postPath } from "@/lib/editorial";
 import { sanitizeMediaMaterial } from "@/lib/media-material";
-import { citationToBibtex, citationToMetadata } from "@/lib/citations";
+import { citationToBibtex, citationToMetadata, licenseUrlFromRights } from "@/lib/citations";
 import { hanScriptLanguageTag } from "@/lib/han-script";
 import CitationCopyButton from "@/app/components/CitationCopyButton";
 import CreditLinks from "@/app/components/CreditLinks";
@@ -122,6 +122,7 @@ function RelatedPostCard({
 
 function buildJsonLd(post: Post, destinations: Destination[]) {
   const canonical = `${site.url}${postPath(post)}`;
+  const license = licenseUrlFromRights(post.citation.rights);
   const roleProperties: Record<CreditRole, "author" | "translator" | "contributor"> = {
     author: "author",
     translator: "translator",
@@ -156,7 +157,7 @@ function buildJsonLd(post: Post, destinations: Destination[]) {
     ...(post.tags.length ? { keywords: post.tags.join(",") } : {}),
     genre: post.category,
     ...(destinations.length ? { sameAs: destinations.map((destination) => destination.href) } : {}),
-    license: "https://creativecommons.org/publicdomain/zero/1.0/",
+    ...(license ? { license } : {}),
     publisher: { "@type": "Organization", name: site.brand, url: site.url },
   };
 }

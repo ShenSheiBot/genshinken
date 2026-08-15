@@ -5,10 +5,22 @@ import {
   bookCitationDefaults,
   citationToBibtex,
   citationToMetadata,
+  licenseUrlFromRights,
   mergeCitation,
   pageCitationDefaults,
   parseCitationInput,
 } from "../lib/citations.ts";
+
+assert.equal(
+  licenseUrlFromRights("CC BY-NC-SA 4.0"),
+  "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+  "CC BY-NC-SA rights must map to their canonical license URL",
+);
+assert.equal(
+  licenseUrlFromRights(),
+  undefined,
+  "missing rights must not be advertised as CC0",
+);
 
 const author = { creatorType: "author", firstName: "Ada", lastName: "Lovelace" };
 const base = {

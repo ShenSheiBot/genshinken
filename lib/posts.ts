@@ -182,7 +182,7 @@ function resolveSection(data: Record<string, unknown>, file: string): EditorialS
   const declared = typeof data.section === "string" ? data.section.trim().toLowerCase() : "";
   if (isEditorialSection(declared)) return declared;
   throw new Error(
-    `${file}: front-matter section 必须是 essay / review / translation / multimedia / negative 之一`
+    `${file}: front-matter section 必须是 essay / review / translation / community / multimedia / negative 之一`
   );
 }
 

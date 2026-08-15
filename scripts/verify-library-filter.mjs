@@ -56,6 +56,7 @@ function parse(query) {
   });
 }
 assert.equal(parse("section=论").filters.section, "essay", "section aliases must resolve");
+assert.equal(parse("section=社").filters.section, "community", "community alias must resolve");
 assert.equal(parse("section=ESSAY").filters.section, "essay", "section must be case-insensitive");
 assert.equal(parse("contributor=WANG-YU").filters.contributor, "wang-yu");
 assert.equal(parse("category=历史").filters.category, "历史");

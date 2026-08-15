@@ -20,19 +20,24 @@ import {
 const postsDirectory = path.join(process.cwd(), "source", "_posts");
 const booksDirectory = path.join(process.cwd(), "source", "_books");
 const topicsDirectory = path.join(process.cwd(), "source", "_topics");
+const tagAliasFile = path.join(process.cwd(), "editorial-sources", "tag-aliases.json");
 const publicDirectory = path.join(process.cwd(), "public");
-const validSections = new Set(["essay", "review", "translation", "multimedia", "negative"]);
+const validSections = new Set(["essay", "review", "translation", "community", "multimedia", "negative"]);
 const validHanScripts = new Set(["hans", "hant"]);
 const validBookStatuses = new Set(["serializing", "complete", "paused"]);
 const validBookChapterStatuses = new Set(["published", "forthcoming"]);
 const validBookChapterPresentations = new Set(["reading", "reference", "navigation"]);
 const validTopicStatuses = new Set(["ongoing", "complete", "archived"]);
 const validTopicItemTypes = new Set(["post", "book", "media"]);
+const tagAliases = fs.existsSync(tagAliasFile)
+  ? JSON.parse(fs.readFileSync(tagAliasFile, "utf8")).aliases ?? {}
+  : {};
 const slugPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const prohibitedMediaElement = /<\s*\/?\s*(?:iframe|video|audio|object|embed|script|style)\b/i;
 const inlineEventHandler = /\son[a-z][\w:-]*\s*=/i;
 const dangerousHtmlUrl = /\s(?:href|src)\s*=\s*["']?\s*(?:javascript|vbscript):/i;
 const protocolLessAngleLink = /<www\.[^<>\s]+>/iu;
+const brokenOrderedListMarker = /^\s{0,3}\d{1,2}\.(?=\p{Script=Han})/u;
 
 assert.match(
   "<www.example.org/path>",
@@ -44,6 +49,8 @@ assert.doesNotMatch(
   protocolLessAngleLink,
   "valid HTTP(S) autolinks must remain accepted"
 );
+assert.match("4.由于举办经验不足", brokenOrderedListMarker, "missing list-marker space must be detected");
+assert.doesNotMatch("4. 由于举办经验不足", brokenOrderedListMarker, "valid ordered lists must remain accepted");
 const errors = [];
 const warnings = [];
 
@@ -138,6 +145,16 @@ function straightQuoteKinds(value) {
 }
 
 function validateTypography(file, content, data) {
+  content.split(/\r?\n/u).forEach((line, index) => {
+    if (brokenOrderedListMarker.test(line)) {
+      report(
+        errors,
+        file,
+        `第 ${index + 1} 行疑似有序列表序号后缺少空格；请写成“${line.trimStart().match(/^\d+\./u)?.[0]} …”`,
+      );
+    }
+  });
+
   const tree = unified().use(remarkParse).use(remarkGfm).parse(content);
 
   visit(tree, (node) => {
@@ -332,6 +349,19 @@ function duplicates(values) {
     seen.add(key);
   }
   return [...duplicateValues];
+}
+
+function validateControlledTags(file, tags) {
+  const repeatedTags = duplicates(tags);
+  if (repeatedTags.length > 0) {
+    report(errors, file, `标签存在重复：${repeatedTags.join("、")}`);
+  }
+
+  const deprecatedTags = tags.filter((tag) => Object.prototype.hasOwnProperty.call(tagAliases, tag));
+  if (deprecatedTags.length > 0) {
+    const replacements = deprecatedTags.map((tag) => `${tag}→${tagAliases[tag]}`);
+    report(errors, file, `标签使用已裁定别名，请改用规范词：${replacements.join("、")}`);
+  }
 }
 
 function isDraft(value) {
@@ -785,7 +815,7 @@ const records = files.map((file) => {
     report(
       errors,
       file,
-      "section 必须是 essay / review / translation / multimedia / negative 之一"
+      "section 必须是 essay / review / translation / community / multimedia / negative 之一"
     );
   }
 
@@ -802,10 +832,7 @@ const records = files.map((file) => {
     report(errors, file, `主题分类存在重复：${repeatedCategories.join("、")}`);
   }
 
-  const repeatedTags = duplicates(tags);
-  if (repeatedTags.length > 0) {
-    report(errors, file, `标签存在重复：${repeatedTags.join("、")}`);
-  }
+  validateControlledTags(file, tags);
 
   const categoryKeys = new Set(categories.map(normalized));
   const overlap = tags.filter((tag) => categoryKeys.has(normalized(tag)));
@@ -1036,10 +1063,16 @@ const bookRecords = jsonFiles(booksDirectory)
 
         if (hasOwn(value, "tags")) {
           const chapterTags = stringArray(value.tags, label, "tags");
-          const repeatedChapterTags = duplicates(chapterTags);
-          if (repeatedChapterTags.length > 0) {
-            report(errors, label, `tags 存在重复项：${repeatedChapterTags.join("、")}`);
+          validateControlledTags(label, chapterTags);
+        }
+
+        for (const field of ["authors", "translators", "proofreaders"]) {
+          if (!hasOwn(value, field)) continue;
+          const names = stringArray(value[field], label, field);
+          if (field === "authors" && names.length === 0) {
+            report(errors, label, "authors 如填写不得为空");
           }
+          validateContributorNames(label, field, names, { required: field === "authors" });
         }
 
         const published = status === "published";

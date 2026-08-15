@@ -86,6 +86,18 @@ export interface CitationRecord {
   websiteType?: string;
 }
 
+/** Return a canonical license URL only when the recorded rights text names a known license. */
+export function licenseUrlFromRights(rights?: string): string | undefined {
+  const normalized = String(rights ?? "").normalize("NFKC").trim().toUpperCase();
+  if (/\bCC\s+BY-NC-SA\s+4\.0\b/u.test(normalized)) {
+    return "https://creativecommons.org/licenses/by-nc-sa/4.0/";
+  }
+  if (/\bCC0\s+1\.0\b/u.test(normalized)) {
+    return "https://creativecommons.org/publicdomain/zero/1.0/";
+  }
+  return undefined;
+}
+
 export type CitationInput = Partial<CitationRecord>;
 export type CitationMetadata = Record<string, string | string[]>;
 

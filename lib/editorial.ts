@@ -2,6 +2,7 @@ export const EDITORIAL_SECTIONS = [
   "essay",
   "review",
   "translation",
+  "community",
   "multimedia",
   "negative",
 ] as const;
@@ -18,13 +19,17 @@ export const EDITORIAL_SECTION_META: Record<
     label: "译",
     number: "03",
   },
+  community: {
+    label: "社",
+    number: "04",
+  },
   multimedia: {
     label: "多媒体",
-    number: "04",
+    number: "05",
   },
   negative: {
     label: "负",
-    number: "05",
+    number: "06",
   },
 };
 
@@ -38,6 +43,8 @@ const SECTION_ALIASES: Record<string, EditorialSection> = {
   译: "translation",
   // 兼容已经发布的旧 front matter；面向读者的栏目名称统一显示为“译”。
   译介: "translation",
+  community: "community",
+  社: "community",
   multimedia: "multimedia",
   media: "multimedia",
   多媒体: "multimedia",

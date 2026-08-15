@@ -7,6 +7,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const POLICY_FILES = new Set([
   "editorial-sources/README.md",
   "editorial-sources/preservation-manifest.json",
+  "editorial-sources/roof-archive/README.md",
 ]);
 
 function git(args, allowFailure = false) {
