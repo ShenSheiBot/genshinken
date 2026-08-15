@@ -1,0 +1,4 @@
+# 在西方眼中：女性主义学术研究和殖民话语（1984）
+
+- 来源：https://mp.weixin.qq.com/s/yLL0n4dxFTFuCqk8P5AzSg
+- 来源正文明确采用 CC BY-NC-SA 4.0；公开稿保留两张正文图片与四组脚注。
