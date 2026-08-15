@@ -6,7 +6,7 @@ date: 2020-03-31
 updated: 2020-04-01
 slug: formal-style-scientism-izumi-critique-part-1
 script: hans
-categories: [评论与批评]
+categories: [漫画]
 section: review
 tags: [漫画研究, 形式风格, 泉信行, 魔法老师, 构图]
 post_author: 鲜奶饼干

@@ -4,7 +4,7 @@ title_breaks: [回答丨如何评价日剧, 《Legal High》？]
 date: 2019-08-04
 slug: legal-high-justice-after-the-collapse
 script: hans
-categories: [影视]
+categories: [电影与影视]
 section: review
 tags: [Legal High, 正义, 犬儒主义, 政治正确, 角色研究]
 post_author: 实在狗子
@@ -28,7 +28,7 @@ citation:
 
 难怪这部剧的每一集基本上都会描写代表“大正义”之人的不可靠性——以虐待警察，贪污官员、骗子国民级作曲家为代表——一方面他们确实没有坏到极点，另一方面他们确实也靠不住。这又是一种典型的Capitalist犬儒逻辑：因为他们不够坏，所以没有必要完全否定；另一方面他们靠不住，所以我只能相信我自己。不是去改变社会，而是改变自己对于社会的看法。（这正是黛（幕府将军那一集）对于政治的态度之改变）。
 
-[图题] 小正义
+*小正义。*
 
 ![古美门陈述“小正义”](attachments/roof-archive/cv3239912/02-small-justice.png)
 
@@ -38,7 +38,7 @@ citation:
 
 所以叙事推进的，并非古美门的变化，而是看古美门的视线发生的变化，发现他人性中的“闪光点”。这就好比有个通过剥削所有人获利、害死成千上万的家庭的奴隶主/资本家私底下喜欢一只猫，就突然变得“人性”起来一般。
 
-[图题] 喜欢扮作猫的骗子？
+*喜欢扮作猫的骗子？*
 
 ![古美门的漫画式表演](attachments/roof-archive/cv3239912/03-cat-swindler.png)
 

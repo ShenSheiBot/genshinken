@@ -4,7 +4,7 @@ title_breaks: [从动物性回到人性：, 《Beastars》的隐喻和缺憾]
 date: 2020-01-06
 slug: beastars-from-animality-to-humanity
 script: hans
-categories: [评论与批评]
+categories: [动画]
 section: review
 tags: [BEASTARS, 动物性, 人类中心主义, 精神分析]
 post_author: 钟子默

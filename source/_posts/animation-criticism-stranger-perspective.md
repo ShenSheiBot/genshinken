@@ -6,7 +6,7 @@ slug: animation-criticism-stranger-perspective
 script: hans
 categories: [御宅文化]
 section: essay
-tags: [动画评论, 陌生人, 齐美尔, 结构性思维, 亚文化, 御宅族]
+tags: [动画评论, 陌生人, 齐美尔, 结构性思维, 亚文化, 御宅研究]
 post_author: 钟子默
 excerpt: 从动画评论所遭遇的理论排斥与话语权争议出发，引入齐美尔的“陌生人”视角，讨论漫评的广度、深度与结构性思维。
 featured_order: 0
@@ -86,6 +86,6 @@ citation:
 
 对待 “漫评”应包容大于批判。更希望兼顾经验的同时总结理论，照顾作品论的同时注意背后的文化。以及我们对这一身份的某种自觉。
 
-**有感而发，能力有限，言尽于此，辛苦浏览，欢迎指正，在此谢过。**
+**有感而发，能力有限，言尽于此，辛苦浏览，欢迎指正，在此谢过。*。*
 
 ![“99号台车炉 燃料投下”收束图](attachments/roof-archive/cv1652116/10-fuel-drop-closing.png)

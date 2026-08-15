@@ -6,9 +6,13 @@
   "documentSlug": "slow-anime-three-dimensions",
   "script": "hans",
   "status": "complete",
-  "authors": ["鲜奶饼干"],
+  "authors": [
+    "鲜奶饼干"
+  ],
   "translators": [],
-  "proofreaders": ["伦勃朗"],
+  "proofreaders": [
+    "伦勃朗"
+  ],
   "publishedAt": "2019-06-27",
   "updatedAt": "2020-03-31",
   "latestChapterId": "love-transcendence-time-image",
@@ -27,10 +31,20 @@
       "status": "published",
       "anchor": "space-realism",
       "publishedAt": "2019-06-27",
-      "authors": ["鲜奶饼干"],
+      "authors": [
+        "鲜奶饼干"
+      ],
       "translators": [],
-      "proofreaders": ["伦勃朗"],
-      "tags": ["缓慢动画", "动画美学", "押井守", "机动警察", "场面调度"]
+      "proofreaders": [
+        "伦勃朗"
+      ],
+      "tags": [
+        "缓慢动画",
+        "动画美学",
+        "押井守",
+        "机动警察",
+        "场面调度"
+      ]
     },
     {
       "id": "love-transcendence-time-image",
@@ -39,10 +53,19 @@
       "status": "published",
       "anchor": "love-transcendence-time-image",
       "publishedAt": "2019-06-28",
-      "authors": ["鲜奶饼干"],
+      "authors": [
+        "鲜奶饼干"
+      ],
       "translators": [],
-      "proofreaders": ["伦勃朗"],
-      "tags": ["缓慢动画", "动画美学", "时间－影像", "长镜头"]
+      "proofreaders": [
+        "伦勃朗"
+      ],
+      "tags": [
+        "缓慢动画",
+        "动画美学",
+        "时间－影像",
+        "长镜头"
+      ]
     }
   ]
 }

@@ -6,7 +6,7 @@ slug: four-works-representing-2018-japanese-anime
 script: hans
 categories: [动画]
 section: review
-tags: [日本动画, 零的执行人, POP TEAM EPIC, 朝花夕誓, 恶魔人 Crybaby, 动画产业]
+tags: [日本动画, 零的执行人, POP TEAM EPIC, 朝花夕誓, 恶魔人 Crybaby, 动画制作]
 post_author: 塔塔君 Minkun
 excerpt: 以社会现象、网络模因、女性创作者与海外流媒体四条线索，挑选四部作品回望2018年日本动画的新动向。
 featured_order: 0
@@ -184,7 +184,7 @@ citation:
 
 该作的监督樱木优平，在《日本动画人博览会》这个短片动画企划崭露头角的CG动画监督，曾经和宫崎骏合作在吉卜力美术馆上映的短片《毛虫のボロ》被宫崎骏折磨的死去活来，这位也是值得期待的新晋监督，明年1月他的新作剧场版动画《即便明天世界终结》上映。
 
-[图题] 《Ingress》
+*《Ingress》。*
 
 ![《Ingress》动画宣传图](attachments/roof-archive/cv1775632/17-ingress.jpg)
 

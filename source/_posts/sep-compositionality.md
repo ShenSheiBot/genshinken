@@ -45,94 +45,94 @@ citation:
 
 ![组合性词条中译第1页：目录](attachments/roof-archive/cv6691318/page-01.png)
 
-*p1*
+*p1。*
 
 ![组合性词条中译第2页：第1节“澄清”](attachments/roof-archive/cv6691318/page-02.png)
 
-*p2*
+*p2。*
 
 ![组合性词条中译第3页：第1.2节“意义”](attachments/roof-archive/cv6691318/page-03.png)
 
-*P3*
+*P3。*
 
 ![组合性词条中译第4页：第1.3节“结构”](attachments/roof-archive/cv6691318/page-04.png)
 
-*P4*
+*P4。*
 
 ![组合性词条中译第5页：第1.4节“决定”](attachments/roof-archive/cv6691318/page-05.png)
 
-*P5*
+*P5。*
 
 ![组合性词条中译第6页：第1节论述续页](attachments/roof-archive/cv6691318/page-06.png)
 
-*P6*
+*P6。*
 
 ![组合性词条中译第7页：第1.5节“语境”](attachments/roof-archive/cv6691318/page-07.png)
 
-*P7*
+*P7。*
 
 ![组合性词条中译第8页：第1.6节“相关原则”](attachments/roof-archive/cv6691318/page-08.png)
 
-*P8*
+*P8。*
 
 ![组合性词条中译第9页：同义替换与规则对应原则](attachments/roof-archive/cv6691318/page-09.png)
 
-*P9*
+*P9。*
 
 ![组合性词条中译第10页：词语优先性与弗雷格语境原则](attachments/roof-archive/cv6691318/page-10.png)
 
-*P10*
+*P10。*
 
 ![组合性词条中译第11页：相关原则续页](attachments/roof-archive/cv6691318/page-11.png)
 
-*P11*
+*P11。*
 
 ![组合性词条中译第12页：第2节“形式陈述”](attachments/roof-archive/cv6691318/page-12.png)
 
-*P12*
+*P12。*
 
 ![组合性词条中译第13页：形式陈述续页](attachments/roof-archive/cv6691318/page-13.png)
 
-*P13*
+*P13。*
 
 ![组合性词条中译第14页：第3节“支持组合性的论证”](attachments/roof-archive/cv6691318/page-14.png)
 
-*P14*
+*P14。*
 
 ![组合性词条中译第15页：第3.2节“系统性”](attachments/roof-archive/cv6691318/page-15.png)
 
-*P15*
+*P15。*
 
 ![组合性词条中译第16页：方法论与反对组合性的论证](attachments/roof-archive/cv6691318/page-16.png)
 
-*P16*
+*P16。*
 
 ![组合性词条中译第17页：组合性如何可能失效](attachments/roof-archive/cv6691318/page-17.png)
 
-*P17*
+*P17。*
 
 ![组合性词条中译第18页：条件句](attachments/roof-archive/cv6691318/page-18.png)
 
-*P18*
+*P18。*
 
 ![组合性词条中译第19页：跨句回指与形容词](attachments/roof-archive/cv6691318/page-19.png)
 
-*P19*
+*P19。*
 
 ![组合性词条中译第20页：命题态度](attachments/roof-archive/cv6691318/page-20.png)
 
-*P20*
+*P20。*
 
 ![组合性词条中译第21页：作者尾注](attachments/roof-archive/cv6691318/page-21.png)
 
-*P21*
+*P21。*
 
 ![组合性词条中译第22页：作者尾注](attachments/roof-archive/cv6691318/page-22.png)
 
-*P22*
+*P22。*
 
 ![组合性词条中译第23页：作者尾注](attachments/roof-archive/cv6691318/page-23.png)
 
-*P23*
+*P23。*
 
 ![江之岛语义淆与煎饼果子俱乐部QQ群二维码](attachments/roof-archive/cv6691318/translation-group-qr.png)

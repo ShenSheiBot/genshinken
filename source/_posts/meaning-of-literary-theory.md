@@ -18,7 +18,7 @@ citation:
   blogTitle: 屋顶现视研
   url: "https://www.bilibili.com/read/cv7971122/"
   language: zh-CN
-  extra: 发布页内嵌原问题全文，但没有题主、外部问题页或更早发布渠道；正文作者卡署“实在狗子”，并以“潜在狗子”自称。
+  extra: 本文为问题回答，作者实在狗子（亦用名潜在狗子）；更早问答页与发布渠道未详。
 ---
 
 ![实在狗子作者卡及题句“在没有世界的时代，传播无意义之爱”](attachments/roof-archive/cv7971122/01-shi-zai-gou-zi-author-card.png "=100%")

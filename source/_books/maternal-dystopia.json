@@ -1,0 +1,179 @@
+{
+  "id": "maternal-dystopia",
+  "slug": "maternal-dystopia",
+  "title": "母性的敌托邦",
+  "subtitle": "宫崎骏论、富野由悠季论与终章中文选译",
+  "description": "宇野常宽以宫崎骏、富野由悠季及战后影像史为轴，讨论母性乌托邦与母性敌托邦如何塑造日本动画的政治想象。",
+  "documentSlug": "hayao-miyazaki-maternal-utopia-upper",
+  "script": "hans",
+  "status": "paused",
+  "authors": [
+    "宇野常宽"
+  ],
+  "translators": [],
+  "proofreaders": [],
+  "publishedAt": "2022-03-25",
+  "updatedAt": "2023-10-09",
+  "latestChapterId": "image-century-upper",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "maternaldystopiaRoofZH",
+      "title": "母性的敌托邦",
+      "date": "2017-10-26",
+      "publisher": "集英社",
+      "ISBN": "9784087711196",
+      "language": "zh-CN",
+      "extra": "宫崎骏论、富野由悠季论与终章中文选译；各篇译者与校对见章节署名。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "miyazaki-upper",
+      "number": "01",
+      "title": "宫崎骏与“母性乌托邦”（上）",
+      "status": "published",
+      "anchor": "miyazaki-upper",
+      "publishedAt": "2022-03-25",
+      "authors": [
+        "宇野常宽"
+      ],
+      "translators": [
+        "Va-11 Hall-A"
+      ],
+      "proofreaders": [],
+      "tags": [
+        "宇野常宽",
+        "宫崎骏",
+        "日本动画史",
+        "性别研究"
+      ]
+    },
+    {
+      "id": "miyazaki-lower",
+      "number": "02",
+      "title": "宫崎骏与“母性乌托邦”（下）",
+      "status": "published",
+      "anchor": "miyazaki-lower",
+      "publishedAt": "2022-03-27",
+      "authors": [
+        "宇野常宽"
+      ],
+      "translators": [
+        "Va-11 Hall-A"
+      ],
+      "proofreaders": [
+        "柴来人"
+      ],
+      "tags": [
+        "宇野常宽",
+        "宫崎骏",
+        "日本动画史",
+        "性别研究",
+        "父权制",
+        "战后日本",
+        "起风了"
+      ]
+    },
+    {
+      "id": "tomino-upper",
+      "number": "03",
+      "title": "富野由悠季与“母性敌托邦”（上）",
+      "status": "published",
+      "anchor": "tomino-upper",
+      "publishedAt": "2022-05-03",
+      "authors": [
+        "宇野常宽"
+      ],
+      "translators": [
+        "Nonnegative"
+      ],
+      "proofreaders": [
+        "柴来人"
+      ],
+      "tags": [
+        "宇野常宽",
+        "富野由悠季",
+        "高达",
+        "日本动画史",
+        "机器人动画"
+      ]
+    },
+    {
+      "id": "tomino-middle",
+      "number": "04",
+      "title": "富野由悠季与“母性敌托邦”（中）——从《伊迪安》到《逆袭的夏亚》",
+      "status": "published",
+      "anchor": "tomino-middle",
+      "publishedAt": "2023-06-26",
+      "authors": [
+        "宇野常宽"
+      ],
+      "translators": [
+        "Lockwood",
+        "Ud Trn",
+        "茕孑零"
+      ],
+      "proofreaders": [
+        "柴来人"
+      ],
+      "tags": [
+        "宇野常宽",
+        "富野由悠季",
+        "高达",
+        "日本动画史",
+        "机器人动画"
+      ]
+    },
+    {
+      "id": "tomino-lower",
+      "number": "05",
+      "title": "富野由悠季与“母性敌托邦”（下）",
+      "status": "published",
+      "anchor": "tomino-lower",
+      "publishedAt": "2023-07-02",
+      "authors": [
+        "宇野常宽"
+      ],
+      "translators": [
+        "米岡",
+        "Ud Trn"
+      ],
+      "proofreaders": [
+        "柴来人"
+      ],
+      "tags": [
+        "宇野常宽",
+        "富野由悠季",
+        "高达",
+        "日本动画史",
+        "机器人动画",
+        "母性敌托邦"
+      ]
+    },
+    {
+      "id": "image-century-upper",
+      "number": "06",
+      "title": "“映像的世纪”的终结与“政治和文学”的重新设定（上）",
+      "status": "published",
+      "anchor": "image-century-upper",
+      "publishedAt": "2023-10-09",
+      "authors": [
+        "宇野常宽"
+      ],
+      "translators": [
+        "Disordered Heaven"
+      ],
+      "proofreaders": [
+        "柴来人"
+      ],
+      "tags": [
+        "宇野常宽",
+        "母性敌托邦",
+        "日本动画史",
+        "战后日本",
+        "新哥斯拉"
+      ]
+    }
+  ]
+}

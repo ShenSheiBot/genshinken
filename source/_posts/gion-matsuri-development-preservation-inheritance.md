@@ -35,7 +35,7 @@ citation:
 
 ![京都八坂神社](attachments/roof-archive/cv2739780/02-yasaka-shrine.png)
 
-*京都八坂神社*
+*京都八坂神社。*
 
 祭典由宗教性的祭祀仪式到民间参与的、娱乐性、商业性活动的转变是由生产力的快速发展和商人阶层力量的扩大所导致的。笔者将日本祭典的转变划分为了三个阶段：
 
@@ -49,11 +49,11 @@ citation:
 
 ![19世纪初的祇园祭](attachments/roof-archive/cv2739780/03-gion-festival-early-19th-century.png)
 
-*19世纪初的祇园祭*
+*19世纪初的祇园祭。*
 
 ![20世纪初的祇园祭](attachments/roof-archive/cv2739780/04-gion-festival-early-20th-century.png)
 
-*20世纪初的祇园祭*
+*20世纪初的祇园祭。*
 
 ### 第三阶段：都市化、现代化
 

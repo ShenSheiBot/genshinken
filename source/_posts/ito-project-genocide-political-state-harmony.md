@@ -16,7 +16,6 @@ citation:
   date: "2020-03-06"
   blogTitle: 屋顶现视研
   url: "https://www.bilibili.com/read/cv4975791/"
-  extra: "作者卡署名：秘则为花。"
 ---
 
 ![秘则为花作者卡及题句“高岸为谷，深谷为陵”](attachments/roof-archive/cv4975791/01-mi-ze-wei-hua-author-card.png)

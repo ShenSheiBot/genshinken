@@ -17,7 +17,7 @@ citation:
   date: "2020-01-14"
   blogTitle: 屋顶现视研
   url: "https://www.bilibili.com/read/cv4348266/"
-  extra: "原作者：Espen Aarseth；译者未具名，由屋顶现视研发布。原文刊于 Intermédialités / Intermediality 9（2007）：35—44。"
+  extra: "原作者：Espen Aarseth。原文刊于 Intermédialités / Intermediality 9（2007）：35—44。"
 ---
 
 > **作者：** Espen Aarseth<br />

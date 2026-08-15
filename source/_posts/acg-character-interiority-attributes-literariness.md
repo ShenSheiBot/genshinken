@@ -6,7 +6,7 @@ slug: acg-character-interiority-attributes-literariness
 script: hans
 categories: [御宅文化]
 section: essay
-tags: [角色研究, 轻小说, 漫画, 大塚英志]
+tags: [角色研究, 轻小说, 漫画研究, 大塚英志]
 post_author: 红茶泡海苔
 excerpt: 从角色属性与意愿的冲突出发，串联手冢治虫、辉夜大小姐、长门有希与里村茜，讨论轻小说和漫画如何借角色的内面纠葛获得文学性。
 featured_order: 0

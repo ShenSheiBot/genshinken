@@ -1,0 +1,75 @@
+{
+  "id": "wednesday-no-work",
+  "slug": "wednesday-no-work",
+  "title": "水曜日は働かない",
+  "subtitle": "“2020年代的想象力”中文选译",
+  "description": "宇野常宽以《EVA新剧场版：终》和《花束般的恋爱》为例，批评当代故事对现实、亲密关系与未知经验的退却。",
+  "documentSlug": "uno-shin-evangelion-not-needed",
+  "script": "hans",
+  "status": "paused",
+  "authors": [
+    "宇野常宽"
+  ],
+  "translators": [],
+  "proofreaders": [],
+  "publishedAt": "2022-08-29",
+  "updatedAt": "2022-08-31",
+  "latestChapterId": "essay-07",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "wednesdaynoworkRoofZH",
+      "title": "水曜日は働かない",
+      "date": "2022-05-26",
+      "publisher": "集英社",
+      "ISBN": "9784834253603",
+      "language": "zh-CN",
+      "extra": "“2020年代的想象力”中文选译；各篇译者与校对见章节署名。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "essay-06",
+      "number": "01",
+      "title": "如今的我们并不需要新世纪福音战士",
+      "status": "published",
+      "anchor": "essay-06",
+      "publishedAt": "2022-08-29",
+      "authors": [
+        "宇野常宽"
+      ],
+      "translators": [
+        "人吉尔朗"
+      ],
+      "proofreaders": [],
+      "tags": [
+        "新世纪福音战士",
+        "宇野常宽",
+        "庵野秀明",
+        "动画评论",
+        "日本动画史"
+      ]
+    },
+    {
+      "id": "essay-07",
+      "number": "02",
+      "title": "“花束般的恋爱”谈不来",
+      "status": "published",
+      "anchor": "essay-07",
+      "publishedAt": "2022-08-31",
+      "authors": [
+        "宇野常宽"
+      ],
+      "translators": [
+        "静希"
+      ],
+      "proofreaders": [],
+      "tags": [
+        "宇野常宽",
+        "花束般的恋爱",
+        "坂元裕二",
+        "恋爱叙事"
+      ]
+    }
+  ]
+}

@@ -18,7 +18,7 @@ citation:
   url: "https://www.bilibili.com/read/cv1984621/"
 ---
 
-**——对《朋友，请停下你们手中的过度合理化评论》的评论**
+**——对《朋友，请停下你们手中的过度合理化评论》的评论*。*
 
 ![Austoria 作者卡及个人简介](attachments/roof-archive/cv1984621/01-austoria-author-card.jpg)
 

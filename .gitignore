@@ -53,3 +53,4 @@ next-env.d.ts
 # human-authored cv*-evidence/editorial-note Markdown, not complete page state.
 /editorial-sources/roof-archive/cv*.json
 /editorial-sources/roof-archive/cv*/source.json
+/public/roof-archive/

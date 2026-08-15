@@ -4,7 +4,7 @@ title_breaks: [《立餐师列传》的作者押井守]
 date: 2019-08-12
 slug: author-of-tachiguishi-oshii
 script: hans
-categories: [评论与批评]
+categories: [电影与影视]
 section: review
 tags: [押井守, 立餐师列传, 元动画, 纪录片, 电影理论, 作者研究]
 post_author: 新宿森林

@@ -6,7 +6,9 @@
   "documentSlug": "relational-form-analysis-love-triangle-biyakuya",
   "script": "hans",
   "status": "paused",
-  "authors": ["钟子默"],
+  "authors": [
+    "钟子默"
+  ],
   "translators": [],
   "proofreaders": [],
   "publishedAt": "2018-12-05",
@@ -27,10 +29,15 @@
       "status": "published",
       "anchor": "love-triangle-biyakuya",
       "publishedAt": "2018-12-05",
-      "authors": ["钟子默"],
+      "authors": [
+        "钟子默"
+      ],
       "translators": [],
       "proofreaders": [],
-      "tags": ["关系形式", "白夜行"]
+      "tags": [
+        "关系形式",
+        "白夜行"
+      ]
     },
     {
       "id": "cultural-transmission",
@@ -39,10 +46,17 @@
       "status": "published",
       "anchor": "cultural-transmission",
       "publishedAt": "2018-12-26",
-      "authors": ["钟子默"],
+      "authors": [
+        "钟子默"
+      ],
       "translators": [],
       "proofreaders": [],
-      "tags": ["关系形式", "文化传播", "互文性", "意识形态"]
+      "tags": [
+        "关系形式",
+        "文化传播",
+        "互文性",
+        "意识形态"
+      ]
     },
     {
       "id": "people-and-culture",

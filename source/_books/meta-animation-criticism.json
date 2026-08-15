@@ -6,7 +6,9 @@
   "documentSlug": "meta-animation-criticism-expression",
   "script": "hans",
   "status": "paused",
-  "authors": ["Austoria"],
+  "authors": [
+    "Austoria"
+  ],
   "translators": [],
   "proofreaders": [],
   "publishedAt": "2018-12-19",
@@ -27,10 +29,17 @@
       "status": "published",
       "anchor": "i-expression",
       "publishedAt": "2018-12-19",
-      "authors": ["Austoria"],
+      "authors": [
+        "Austoria"
+      ],
       "translators": [],
       "proofreaders": [],
-      "tags": ["动画评论", "元评论", "冰菓", "隐喻"]
+      "tags": [
+        "动画评论",
+        "元评论",
+        "冰菓",
+        "隐喻"
+      ]
     },
     {
       "id": "i-i-sublime-tide",
@@ -39,10 +48,18 @@
       "status": "published",
       "anchor": "i-i-sublime-tide",
       "publishedAt": "2019-01-19",
-      "authors": ["Austoria"],
+      "authors": [
+        "Austoria"
+      ],
       "translators": [],
       "proofreaders": [],
-      "tags": ["动画评论", "元评论", "崇高", "偶像文化", "Vtuber"]
+      "tags": [
+        "动画评论",
+        "元评论",
+        "崇高",
+        "偶像文化",
+        "Vtuber"
+      ]
     },
     {
       "id": "ii-profundity",
@@ -51,10 +68,16 @@
       "status": "published",
       "anchor": "ii-profundity",
       "publishedAt": "2019-03-03",
-      "authors": ["Austoria"],
+      "authors": [
+        "Austoria"
+      ],
       "translators": [],
       "proofreaders": [],
-      "tags": ["动画评论", "元评论", "深刻性"]
+      "tags": [
+        "动画评论",
+        "元评论",
+        "深刻性"
+      ]
     },
     {
       "id": "two-one-macross7",
@@ -63,10 +86,19 @@
       "status": "published",
       "anchor": "two-one-macross7",
       "publishedAt": "2019-07-12",
-      "authors": ["Austoria"],
+      "authors": [
+        "Austoria"
+      ],
       "translators": [],
-      "proofreaders": ["伦勃朗"],
-      "tags": ["动画评论", "元评论", "Macross7", "深刻性"]
+      "proofreaders": [
+        "伦勃朗"
+      ],
+      "tags": [
+        "动画评论",
+        "元评论",
+        "Macross7",
+        "深刻性"
+      ]
     }
   ]
 }

@@ -102,6 +102,21 @@ export type ParsedLibraryFilters = {
 };
 
 /**
+ * 标签 facet 只展示至少连接两个公开条目的词。单篇标签仍保留在
+ * 行数据中供全文检索与未来复用；第二个条目出现时会自动进入 facet。
+ */
+export function connectedTagFacetValues(values: readonly string[]): string[] {
+  const counts = new Map<string, number>();
+  values.forEach((value) => counts.set(value, (counts.get(value) ?? 0) + 1));
+  return [...counts]
+    .filter(([, count]) => count >= 2)
+    .sort(([aValue, aCount], [bValue, bCount]) =>
+      bCount - aCount || aValue.localeCompare(bValue, "zh-CN")
+    )
+    .map(([value]) => value);
+}
+
+/**
  * 与旧服务端语义一致：无法解析的值视为无效并给出去除该值后的
  * 规范化地址（旧实现用 307 redirect，现由客户端 router.replace 完成）。
  */

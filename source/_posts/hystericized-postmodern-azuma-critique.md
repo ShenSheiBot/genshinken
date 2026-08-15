@@ -6,7 +6,7 @@ slug: hystericized-postmodern-azuma-critique
 script: hans
 categories: [御宅文化]
 section: essay
-tags: [东浩纪, 动物化的后现代, 拉康, 欲望, 消费社会, 精神分析]
+tags: [东浩纪, 动物化的后现代, 拉康, 欲望, 消费文化, 精神分析]
 post_author: 鱼板
 excerpt: 以拉康的需求、要求与欲望三元组重新审视东浩纪的“动物化”，并从消费社会的政治经济学解释御宅文化为何不断生产新的欲望对象。
 featured_order: 0

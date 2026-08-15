@@ -1,0 +1,207 @@
+{
+  "id": "char-counterattack-friendship-club",
+  "slug": "char-counterattack-friendship-club",
+  "title": "逆袭的夏亚友之会",
+  "subtitle": "七篇中文选译",
+  "description": "《逆袭的夏亚友之会》七篇中文译文，包含开篇寄语、两篇寄稿与四篇对谈；本组为1993年同人本的选译，不代表全书完整翻译。",
+  "documentSlug": "char-counterattack-friendship-club-opening-message",
+  "script": "hans",
+  "status": "paused",
+  "authors": [
+    "庵野秀明",
+    "会川升",
+    "大月俊伦",
+    "小黑祐一郎",
+    "出渕裕",
+    "铃木敏夫",
+    "押井守",
+    "几原邦彦"
+  ],
+  "translators": [
+    "冰-koori"
+  ],
+  "proofreaders": [],
+  "publishedAt": "2022-06-29",
+  "updatedAt": "2022-07-28",
+  "latestChapterId": "anno-ikuhara-dialogue",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "anno1993CharCounterattackFriendshipClubSelectedZH",
+      "title": "逆袭的夏亚友之会",
+      "date": "1993",
+      "language": "zh-CN",
+      "extra": "七篇中文译文选自1993年同人本《逆袭的夏亚友之会》，不代表全书完整翻译；冰-koori译，中文首发于微博专栏。现有译文未附同人本版次、完整目录、页码或微博原始链接。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "opening-message",
+      "number": "01",
+      "title": "开篇寄语",
+      "status": "published",
+      "anchor": "opening-message",
+      "publishedAt": "2022-06-29",
+      "authors": [
+        "庵野秀明"
+      ],
+      "translators": [
+        "冰-koori"
+      ],
+      "proofreaders": [],
+      "tags": [
+        "逆袭的夏亚",
+        "庵野秀明",
+        "同人文化",
+        "动画评论",
+        "日本动画史"
+      ]
+    },
+    {
+      "id": "animation-film-preference",
+      "number": "02",
+      "title": "动画电影喜好论——会川升寄稿",
+      "status": "published",
+      "anchor": "animation-film-preference",
+      "publishedAt": "2022-06-30",
+      "authors": [
+        "会川升"
+      ],
+      "translators": [
+        "冰-koori"
+      ],
+      "proofreaders": [],
+      "tags": [
+        "逆袭的夏亚",
+        "会川升",
+        "富野由悠季",
+        "动画评论",
+        "机器人动画",
+        "日本动画史"
+      ]
+    },
+    {
+      "id": "light-of-hope",
+      "number": "03",
+      "title": "希望的光芒——大月俊伦寄稿",
+      "status": "published",
+      "anchor": "light-of-hope",
+      "publishedAt": "2022-07-01",
+      "authors": [
+        "大月俊伦"
+      ],
+      "translators": [
+        "冰-koori"
+      ],
+      "proofreaders": [],
+      "tags": [
+        "逆袭的夏亚",
+        "高达",
+        "大月俊伦",
+        "富野由悠季",
+        "机器人动画",
+        "日本动画史"
+      ]
+    },
+    {
+      "id": "oguro-anno-izubuchi-dialogue",
+      "number": "04",
+      "title": "小黑祐一郎×庵野秀明×出渕裕对谈",
+      "status": "published",
+      "anchor": "oguro-anno-izubuchi-dialogue",
+      "publishedAt": "2022-07-22",
+      "authors": [
+        "小黑祐一郎",
+        "庵野秀明",
+        "出渕裕"
+      ],
+      "translators": [
+        "冰-koori"
+      ],
+      "proofreaders": [],
+      "tags": [
+        "逆袭的夏亚",
+        "高达",
+        "富野由悠季",
+        "机器人动画",
+        "机械设计",
+        "动画制作"
+      ]
+    },
+    {
+      "id": "oguro-anno-suzuki-dialogue",
+      "number": "05",
+      "title": "小黑祐一郎×庵野秀明×铃木敏夫对谈",
+      "status": "published",
+      "anchor": "oguro-anno-suzuki-dialogue",
+      "publishedAt": "2022-07-23",
+      "authors": [
+        "小黑祐一郎",
+        "庵野秀明",
+        "铃木敏夫"
+      ],
+      "translators": [
+        "冰-koori"
+      ],
+      "proofreaders": [],
+      "tags": [
+        "逆袭的夏亚",
+        "高达",
+        "铃木敏夫",
+        "富野由悠季",
+        "动画杂志",
+        "日本动画史"
+      ]
+    },
+    {
+      "id": "oguro-anno-oshii-dialogue",
+      "number": "06",
+      "title": "小黑祐一郎×庵野秀明×押井守对谈",
+      "status": "published",
+      "anchor": "oguro-anno-oshii-dialogue",
+      "publishedAt": "2022-07-27",
+      "authors": [
+        "小黑祐一郎",
+        "庵野秀明",
+        "押井守"
+      ],
+      "translators": [
+        "冰-koori"
+      ],
+      "proofreaders": [],
+      "tags": [
+        "逆袭的夏亚",
+        "高达",
+        "富野由悠季",
+        "押井守",
+        "庵野秀明",
+        "动画电影"
+      ]
+    },
+    {
+      "id": "anno-ikuhara-dialogue",
+      "number": "07",
+      "title": "庵野秀明×几原邦彦对谈",
+      "status": "published",
+      "anchor": "anno-ikuhara-dialogue",
+      "publishedAt": "2022-07-28",
+      "authors": [
+        "庵野秀明",
+        "几原邦彦",
+        "小黑祐一郎"
+      ],
+      "translators": [
+        "冰-koori"
+      ],
+      "proofreaders": [],
+      "tags": [
+        "逆袭的夏亚",
+        "高达",
+        "庵野秀明",
+        "几原邦彦",
+        "富野由悠季",
+        "日本动画史"
+      ]
+    }
+  ]
+}

@@ -4,7 +4,7 @@ title_breaks: [回答：如何评价日剧, 《半泽直树》？]
 date: 2019-08-23
 slug: hanzawa-naoki-suburb-city-and-bank
 script: hans
-categories: [影视]
+categories: [电影与影视]
 section: review
 tags: [半泽直树, 日剧, 日本社会, 昭和怀旧]
 post_author: 实在狗子

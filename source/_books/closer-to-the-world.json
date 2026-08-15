@@ -1,0 +1,165 @@
+{
+  "id": "closer-to-the-world",
+  "slug": "closer-to-the-world",
+  "title": "离世界更近",
+  "subtitle": "东浩纪《离世界更近——脱离现实之文学的诸问题》中文译文",
+  "description": "东浩纪通过新井素子、法月纶太郎、押井守与小松左京，讨论与现实分离的文学如何重新接近家庭、恋爱、社会和未来。",
+  "documentSlug": "closer-to-the-world-chapter-1-arai-motoko-family",
+  "script": "hans",
+  "status": "complete",
+  "authors": [
+    "东浩纪"
+  ],
+  "translators": [],
+  "proofreaders": [],
+  "publishedAt": "2020-12-19",
+  "updatedAt": "2021-02-18",
+  "latestChapterId": "chapter-04-lower",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "azuma2013CloserToWorldRoofZH",
+      "title": "セカイからもっと近くに——現実から切り離された文学の諸問題",
+      "language": "zh-CN",
+      "extra": "第一至第四章完整中文译文；第三、第四章各分上下两次发布。各篇译者与校对见章节署名。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "chapter-01",
+      "number": "01",
+      "title": "《离世界更近》第一章：新井素子与家庭问题",
+      "status": "published",
+      "anchor": "chapter-01",
+      "publishedAt": "2020-12-19",
+      "authors": [
+        "东浩纪"
+      ],
+      "translators": [
+        "有电拍拍"
+      ],
+      "proofreaders": [],
+      "tags": [
+        "东浩纪",
+        "世界系",
+        "新井素子",
+        "日本文学",
+        "家庭",
+        "角色小说"
+      ]
+    },
+    {
+      "id": "chapter-02",
+      "number": "02",
+      "title": "《离世界更近》第二章：法月纶太郎与恋爱问题",
+      "status": "published",
+      "anchor": "chapter-02",
+      "publishedAt": "2021-01-31",
+      "authors": [
+        "东浩纪"
+      ],
+      "translators": [
+        "有电拍拍"
+      ],
+      "proofreaders": [],
+      "tags": [
+        "东浩纪",
+        "法月纶太郎",
+        "推理小说",
+        "世界系",
+        "家庭"
+      ]
+    },
+    {
+      "id": "chapter-03-upper",
+      "number": "03a",
+      "title": "《离世界更近》第三章（上）：押井守和 Loop 的问题",
+      "status": "published",
+      "anchor": "chapter-03-upper",
+      "publishedAt": "2021-01-24",
+      "authors": [
+        "东浩纪"
+      ],
+      "translators": [
+        "柴来人"
+      ],
+      "proofreaders": [],
+      "tags": [
+        "东浩纪",
+        "押井守",
+        "世界系",
+        "机动警察",
+        "福星小子",
+        "空中杀手"
+      ]
+    },
+    {
+      "id": "chapter-03-lower",
+      "number": "03b",
+      "title": "《离世界更近》第三章（下）：押井守和 Loop 的问题",
+      "status": "published",
+      "anchor": "chapter-03-lower",
+      "publishedAt": "2021-02-07",
+      "authors": [
+        "东浩纪"
+      ],
+      "translators": [
+        "Even"
+      ],
+      "proofreaders": [
+        "柴来人"
+      ],
+      "tags": [
+        "东浩纪",
+        "押井守",
+        "世界系",
+        "空中杀手",
+        "福星小子"
+      ]
+    },
+    {
+      "id": "chapter-04-upper",
+      "number": "04a",
+      "title": "《离世界更近》第四章（上）：小松左京与未来的问题",
+      "status": "published",
+      "anchor": "chapter-04-upper",
+      "publishedAt": "2021-02-18",
+      "authors": [
+        "东浩纪"
+      ],
+      "translators": [
+        "有电拍拍"
+      ],
+      "proofreaders": [],
+      "tags": [
+        "东浩纪",
+        "小松左京",
+        "世界系",
+        "日本科幻",
+        "日本沉没"
+      ]
+    },
+    {
+      "id": "chapter-04-lower",
+      "number": "04b",
+      "title": "《离世界更近》第四章（下）：小松左京与未来的问题",
+      "status": "published",
+      "anchor": "chapter-04-lower",
+      "publishedAt": "2021-02-18",
+      "authors": [
+        "东浩纪"
+      ],
+      "translators": [
+        "有电拍拍"
+      ],
+      "proofreaders": [],
+      "tags": [
+        "东浩纪",
+        "小松左京",
+        "世界系",
+        "日本科幻",
+        "日本沉没"
+      ]
+    }
+  ]
+}

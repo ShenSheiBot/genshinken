@@ -7,7 +7,9 @@
   "documentSlug": "mad-women-yandere-darkening-cultural-analysis-part-1",
   "script": "hans",
   "status": "complete",
-  "authors": ["钟子默"],
+  "authors": [
+    "钟子默"
+  ],
   "translators": [],
   "proofreaders": [],
   "publishedAt": "2020-03-16",
@@ -28,8 +30,16 @@
       "status": "published",
       "anchor": "part-one",
       "publishedAt": "2020-03-16",
-      "authors": ["钟子默"],
-      "tags": ["疯女人", "黑化", "病娇", "女性主义", "少女文化"]
+      "authors": [
+        "钟子默"
+      ],
+      "tags": [
+        "疯女人",
+        "黑化",
+        "病娇",
+        "女性主义",
+        "少女文化"
+      ]
     },
     {
       "id": "part-two",
@@ -38,8 +48,16 @@
       "status": "published",
       "anchor": "part-two",
       "publishedAt": "2020-03-21",
-      "authors": ["钟子默"],
-      "tags": ["疯女人", "黑化", "病娇", "女性主义", "精神分析"]
+      "authors": [
+        "钟子默"
+      ],
+      "tags": [
+        "疯女人",
+        "黑化",
+        "病娇",
+        "女性主义",
+        "精神分析"
+      ]
     },
     {
       "id": "part-three",
@@ -48,8 +66,16 @@
       "status": "published",
       "anchor": "part-three",
       "publishedAt": "2020-03-27",
-      "authors": ["钟子默"],
-      "tags": ["疯女人", "黑化", "病娇", "女性主义", "精神分析"]
+      "authors": [
+        "钟子默"
+      ],
+      "tags": [
+        "疯女人",
+        "黑化",
+        "病娇",
+        "女性主义",
+        "精神分析"
+      ]
     }
   ]
 }

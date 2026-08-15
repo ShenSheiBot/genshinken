@@ -4,7 +4,7 @@ title_breaks: ["《攻壳机动队》，或一个", 太过模糊的押井守]
 date: 2019-09-12
 slug: ghost-in-the-shell-too-blurry-oshii
 script: hans
-categories: [评论与批评]
+categories: [动画]
 section: review
 tags: [攻壳机动队, 押井守, 电影理论, 时间－影像, 精神分析, 齐泽克]
 post_author: Hisui

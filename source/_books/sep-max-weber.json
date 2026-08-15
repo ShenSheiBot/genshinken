@@ -7,9 +7,15 @@
   "documentSlug": "sep-max-weber-sections-1-2",
   "script": "hans",
   "status": "paused",
-  "authors": ["Sung Ho Kim"],
-  "translators": ["Jeremiah"],
-  "proofreaders": ["柴来人"],
+  "authors": [
+    "Sung Ho Kim"
+  ],
+  "translators": [
+    "Jeremiah"
+  ],
+  "proofreaders": [
+    "柴来人"
+  ],
   "publishedAt": "2020-06-21",
   "updatedAt": "2020-09-19",
   "latestChapterId": "sections-3-5",
@@ -29,7 +35,11 @@
       "status": "published",
       "anchor": "sections-1-2",
       "publishedAt": "2020-06-21",
-      "tags": ["马克斯·韦伯", "新康德主义", "尼采"]
+      "tags": [
+        "马克斯·韦伯",
+        "新康德主义",
+        "尼采"
+      ]
     },
     {
       "id": "sections-3-5",
@@ -38,7 +48,12 @@
       "status": "published",
       "anchor": "sections-3-5",
       "publishedAt": "2020-09-19",
-      "tags": ["马克斯·韦伯", "理性化", "现代性", "社会科学方法论"]
+      "tags": [
+        "马克斯·韦伯",
+        "理性化",
+        "现代性",
+        "社会科学方法论"
+      ]
     },
     {
       "id": "section-6",

@@ -1,0 +1,91 @@
+{
+  "id": "intensive-lectures-japanese-modern-thought",
+  "slug": "intensive-lectures-japanese-modern-thought",
+  "title": "集中讲义！日本的现代思想",
+  "subtitle": "第二讲与第七讲中文选译",
+  "description": "仲正昌樹回顾日本新左翼、大众社会与后现代思想的兴衰，从吉本隆明、广松涉一路谈到《批评空间》与东浩纪。",
+  "documentSlug": "intensive-lectures-japanese-modern-thought-lecture-2",
+  "script": "hans",
+  "status": "paused",
+  "authors": [
+    "仲正昌樹"
+  ],
+  "translators": [],
+  "proofreaders": [],
+  "publishedAt": "2021-12-31",
+  "updatedAt": "2022-02-01",
+  "latestChapterId": "lecture-07",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "intensivelecturesjapanesemodernthoughtRoofZH",
+      "title": "集中讲义！日本的现代思想",
+      "date": "2011",
+      "publisher": "NHK出版",
+      "language": "zh-CN",
+      "extra": "第二讲与第七讲中文选译；各篇译者与校对见章节署名。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "lecture-02",
+      "number": "01",
+      "title": "第二讲 大众社会的左翼思想",
+      "status": "published",
+      "anchor": "lecture-02",
+      "publishedAt": "2021-12-31",
+      "authors": [
+        "仲正昌樹"
+      ],
+      "translators": [
+        "川井ルナ",
+        "杉原 音",
+        "志賀四季",
+        "柴来人",
+        "兔引",
+        "静希草十郎"
+      ],
+      "proofreaders": [
+        "柴来人",
+        "静希草十郎",
+        "人吉尔朗"
+      ],
+      "tags": [
+        "日本思想史",
+        "现代思想",
+        "新左翼",
+        "大众社会",
+        "吉本隆明",
+        "广松涉"
+      ]
+    },
+    {
+      "id": "lecture-07",
+      "number": "02",
+      "title": "第七讲 “现代思想”为何“终结”了呢？",
+      "status": "published",
+      "anchor": "lecture-07",
+      "publishedAt": "2022-02-01",
+      "authors": [
+        "仲正昌樹"
+      ],
+      "translators": [
+        "Va-11 Hall-A",
+        "杉原 音",
+        "川井ルナ",
+        "柴来人"
+      ],
+      "proofreaders": [
+        "恐怖如斯",
+        "人吉尔朗"
+      ],
+      "tags": [
+        "日本思想史",
+        "现代思想",
+        "后现代",
+        "东浩纪",
+        "批评空间"
+      ]
+    }
+  ]
+}

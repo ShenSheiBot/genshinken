@@ -40,6 +40,1362 @@
       "contentType": "image/jpeg"
     },
     {
+      "key": "roof-archive/cv10030952/01-karatani-portrait.jpg",
+      "bytes": 10276,
+      "sha256": "92f14ff80cd25032ebe4c1c8ba29c5597cd774e029e33dc2e2b4b75cf2d716da",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv10066872/figure-1.jpg",
+      "bytes": 43408,
+      "sha256": "952807adc5139ef122cf1c55d0772d683d4a174021717a355c96250029f34093",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv10137308/28fe49e37a92084c6a838d7e7526bd95694ebde2.jpg",
+      "bytes": 15363,
+      "sha256": "c0576ddf39e0109234ea23b534868562945b639053b7f02500968081692f504c",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv10137308/8de8ab784b543707754a7802dd1c68751968f2d4.jpg",
+      "bytes": 18982,
+      "sha256": "a0cea33280c8c0c267efb088e67b429194352bc82a5c51bc8fdec2e42fe0b8bb",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv10307966/figure-01.gif",
+      "bytes": 2412812,
+      "sha256": "be40e31d8c5072bc3e95f505f1b8f56d2bd7f58add904014dcce2e1bc0d80b94",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv10307966/figure-02.gif",
+      "bytes": 5698254,
+      "sha256": "6560cde4ea992cef13865c386aa3dcf4a3dd09115deb29baca7ddd9c4aa72bc9",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv10307966/figure-03.jpg",
+      "bytes": 277952,
+      "sha256": "d9d93fb25274ba38213c5d3208c7ee0996744ad76a90f303718763aa2b82fa68",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv10307966/figure-04.jpg",
+      "bytes": 469751,
+      "sha256": "96f29352128f367d1f579dca1ecc6edc3e0158701e11c1a86d9a762007085981",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv10307966/figure-05.gif",
+      "bytes": 8125424,
+      "sha256": "be9e8ad02403a5d56f5b423710373362a67e00dfb87f37ef4ff76013f7897c70",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv10307966/figure-06.jpg",
+      "bytes": 114248,
+      "sha256": "888bf97fa5b7c7417fda0969843ff7d6ba51dd8191885cdd54995992164731bc",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv10307966/figure-07.png",
+      "bytes": 1746051,
+      "sha256": "af17c626defe26272720322889723e517c82ce71422bda512517dcc8b2d04817",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv10307966/figure-08.png",
+      "bytes": 2938063,
+      "sha256": "f9b745e193e2a16e265fbde8c316afbed9241fb901a97de8cf05530cb6033e94",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv10307966/figure-09.gif",
+      "bytes": 8811417,
+      "sha256": "5a0edfc605dbb7b28b73d62b085b52bc0cd5d600993a58efad5be088baad0f86",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv10307966/figure-10.gif",
+      "bytes": 9391345,
+      "sha256": "542f28be2aa2c15e2d5ef88eafde27b37b1aa8a04fd341a1220bc1621157341b",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv10307966/figure-11.gif",
+      "bytes": 8968714,
+      "sha256": "073940abc6cdf5ea282f73211fc65215db18de8f13e987b98775d48048a711de",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv10307966/figure-12.gif",
+      "bytes": 10665145,
+      "sha256": "32edf60e6d17e70a727a290ca5a4cd77d517ed74f43ac8c73488a578c68af0eb",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv10307966/figure-13.gif",
+      "bytes": 15661813,
+      "sha256": "17df38e66f1cd7d2a231f12ba16fdf2b17a011459ad7c8d62090464f9cb4afc2",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv10307966/figure-14.gif",
+      "bytes": 7830704,
+      "sha256": "524e041a5eb1f1ebd817cca4e3955f6d6496a97c07ad54317308af3b0eef3b71",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv10307966/figure-15.png",
+      "bytes": 1440807,
+      "sha256": "0078b0debbab2313c213f646abde0824b768d3f989ffe92bdfcca19b138cdd44",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv10307966/figure-16.gif",
+      "bytes": 10248031,
+      "sha256": "cecb1d1cea3d2b437405c0105b5bb878bdeb3db0a2e498893b2fbac8721294fe",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv10307966/figure-17.png",
+      "bytes": 3665698,
+      "sha256": "b205dfc76b61adade7ad9f12f54a1102ed0b1a52720fe5d9b5b1fb548ec6cf84",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv10307966/figure-18.gif",
+      "bytes": 1339927,
+      "sha256": "bc63983eafc292ac75707bf3d865cbd1bc65235da3999277a1bdce73533d5a85",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv10307966/figure-19.gif",
+      "bytes": 10365018,
+      "sha256": "6e3e8abe3ed4d6374eb789d321b49c389edce590398457058879416192fc66a6",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv10307966/figure-20.jpg",
+      "bytes": 175309,
+      "sha256": "39d8a96ed0840a150a1d8db691842c5eae02942b661d1095c91a6d93f743eec5",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv10307966/figure-21.jpg",
+      "bytes": 606627,
+      "sha256": "71dbc955a6a5833958b72b9fa9b99fcc8e2cb34b3d9b11af48d233de618f7586",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv10307966/figure-22.gif",
+      "bytes": 8260126,
+      "sha256": "9c9d3a516a33f1f1396450d0608e83c0f706af5299e91a73588a2d1359728900",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv10307966/figure-23.png",
+      "bytes": 3278343,
+      "sha256": "ca64b2cef4867a606468e3d38d915bf6c467ece0e912e9a7e1db0a602bb6d857",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv10307966/figure-24.gif",
+      "bytes": 14076185,
+      "sha256": "929ecf021c0fe46283f90943fa610f68da4248d0a54aabad88caa4a329a68c7d",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv10307966/figure-25.gif",
+      "bytes": 8925871,
+      "sha256": "32bdbd67ee7bc0a8f03d15f5eee4467e5b2cbbb4bfad4b2f9db94a3c28227957",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv10307966/figure-26.png",
+      "bytes": 471348,
+      "sha256": "9db27d5021a713b1577060062a427f8441f9c427627adc8ad8a2ad20ab8716ef",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv10307966/figure-27.jpg",
+      "bytes": 471295,
+      "sha256": "5ead3962057dbf4fb5ad3ee69a0fd281c294a2d6d6fc8de4197f7c5faa8e9cf6",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv10606346/01-karatani-lecture-essays.jpg",
+      "bytes": 61433,
+      "sha256": "5701edf70978f08de5f322c397ceb923a1cb2b8a6bd6ca18056f484ab9adb094",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv10909810/043de9f00e0e9fbd6cacec651c9688d3582f0e7b.jpg",
+      "bytes": 111099,
+      "sha256": "9122e7477a708461dca40e3f3df89e0ac428a7cc8c4d2da01bd50b4e929dcf42",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv10909810/05cdeeed4eea13753c48946af50085424a586195.gif",
+      "bytes": 7783511,
+      "sha256": "b84a6f9856e9df3155965b2921d9b2ba29bdcad6ac1cfc33c7bdadb35739304b",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv10909810/05dbc1abff95de03dc7ca9cc411add689340650d.jpg",
+      "bytes": 40807,
+      "sha256": "5f2fc11c06337a9f12301223df25b08202ed2af5e410270ae1e1576a4810a81e",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv10909810/0e21a9bc72aca63aa21edbf56d03bab98de6154c.jpg",
+      "bytes": 33809,
+      "sha256": "740036373558b3c8862a675190c6b730ba49b4bbc5d2f2d0c2be2d0057c7d183",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv10909810/11292dba3d6dd1659da8fb2c172ad1ad52fa77c8.png",
+      "bytes": 74090,
+      "sha256": "ce3af2ed351af531ae25fd201d3404354cc98d08fa586d98f7d3b788df140d56",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv10909810/19c1c809f826076be90a63ef784a62f428521dbd.jpg",
+      "bytes": 9311,
+      "sha256": "d56200d08d447814cad9a85eec904d221f33b960d082f8487a675d16cda05ce7",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv10909810/1e7dbad3aba51715e87cac803275a9adcc298d84.jpg",
+      "bytes": 39088,
+      "sha256": "8239484f66dc160f592859d380400cf4c2033a18a8234c73fc8d7eb33480038d",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv10909810/34c7a486a1ce7601773831ea42b6414124efbb45.gif",
+      "bytes": 960446,
+      "sha256": "ef76973200408f9b54622a3b07d0ff106ed25a94ab13f1f51a19b862e1b7e08d",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv10909810/4b13974777a14bc9f315a758fdf76b475447a1d0.jpg",
+      "bytes": 126257,
+      "sha256": "0a9e7488273b0c9d409cbdb208872eba5a67f685e275bc5041695076d308450a",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv10909810/755cd6a7b896399a8e0e5be92e2c1a61d893261e.jpg",
+      "bytes": 51207,
+      "sha256": "58d003ed78f34dd216de4b21cb77428ffa33850eaa2b2035399aa6ee6eb87a66",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv10909810/849ea457b528efa303c31aa6791d4a9460e20600.jpg",
+      "bytes": 130116,
+      "sha256": "498b5f5dcf19ddcfd360a59c861842d492b7100c27efc5697c0718ecbdfb1453",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv10909810/88b4fd4fd2df99645da9885f3d8038d61a7fae29.jpg",
+      "bytes": 113552,
+      "sha256": "3527c2f141b39f57c316af6dd4784622cab1b40475cbda36269245f37f4689bf",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv10909810/88c0494a1d9755ac6a7fc5711526868ee4aee750.jpg",
+      "bytes": 113414,
+      "sha256": "f486ad2e993d8a4036bae9ec686034833b5171bd6b990ccc898645f6646722cc",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv10909810/8aef907e8d01694080ecd73007615cc8c3caef1a.png",
+      "bytes": 80320,
+      "sha256": "cf99673524494abdbd7722085ea0f7444b6dab69db2454d85abaf279621c593b",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv10909810/8d4f8bfc713826a5412a0a27eaaac4d6b9ede1d9.png",
+      "bytes": 3803,
+      "sha256": "fa8fe17042bac09192f7465217b5c04bbaefa66f7178255b3fb084e02a51f739",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv10909810/8ec3f32d6dba01a43d2c2c32155c4c96e511d396.jpg",
+      "bytes": 28325,
+      "sha256": "c79cae4af6f9a2c282481446a4b9068e77ab4e86a0c20a402be5548aa20e5175",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv10909810/a21cc155399d39b49c5a5b68c969c6c4ab0e90b3.png",
+      "bytes": 227676,
+      "sha256": "967d1934360cb4348f361cfe44a84920948943e788d6dddf68e15b2731836a36",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv10909810/a3870a65890f84cf1d2fb737c56a1de0951c4b67.jpg",
+      "bytes": 54879,
+      "sha256": "54b4076d27d628386e08b67e118aad701e8a501c372ba80d3cb39eb7fb2963b1",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv10909810/aad278795546a81fed743f281910d7d94aa167ba.png",
+      "bytes": 108874,
+      "sha256": "a18b934e0503f5424b2ddc84a09befe68984df02bb2288d7abae6b0645cd9d32",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv10909810/ad9476b161247b30d60a7079bd54d2a778391107.jpg",
+      "bytes": 43804,
+      "sha256": "2d7dcd879c0a35a3149d67a36b37ce3cdc135df42da7fc5446f4e5b483035c6e",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv10909810/b432de57cccab2ad2dfee8621746a0cccd83db18.jpg",
+      "bytes": 35117,
+      "sha256": "82af28b3e31b54e0c15f8ac317d62bd2bf7a0574a3dfee8f5ccf4342118084f9",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv10909810/cb87d812e329e4f2f5ee5c1c5bc227c850b13b76.png",
+      "bytes": 35482,
+      "sha256": "3e85d988af408f8a9547b36adfc3c6451b3f27a791c435871c249c3a14dfa6cc",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv10909810/d0e9ff5f7485aab7c4f91ae5463bcc4b2dc62564.jpg",
+      "bytes": 44105,
+      "sha256": "95945c34f40aa13f9fc1fd4c028629d6b91c2b68b6dd955614a2fb0ec6d87d04",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv10909810/d5d75113397e0738a9ad2c4dcc92b3621d20ac28.jpg",
+      "bytes": 73855,
+      "sha256": "0cc20d431132bb2b954ec1bc0416656136fff484cec9eed9ba8a47be40560074",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv10909810/e12d68165328916d3dd82a6abf7ddd272ecb73fd.jpg",
+      "bytes": 28921,
+      "sha256": "4390d3ac9ba66721c1374af6455efda89080a399f72893b8ac0b8cea34f4bdad",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv10909810/e3b62fd1d920828c2a91ba6bb450c8e07de3104e.png",
+      "bytes": 68148,
+      "sha256": "d6d7d2af3e4f763ff92a2c3fc86a6019da16d48bcf4f66e170ebce8402a90929",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv10909810/e8232b7777397c32889a2b5bb974ed5efd2ac730.jpg",
+      "bytes": 148056,
+      "sha256": "4d8f168dffe8859a5869200a8ef087d691becd59e496fdbee546053982941d2f",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv10909810/ef9bcbc6afacc5b3ef2668017052d26bf6b8f5f2.png",
+      "bytes": 106074,
+      "sha256": "726fce34ab4caa1f5fee141d3893562f05acf53590c711bb1b3b5fc650756dac",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv10909810/f27f1d627c0a59746bf8f7fe494da815c45481ea.gif",
+      "bytes": 908423,
+      "sha256": "5b2ce15f745b9060e392d060b9fa141883aa87b135bfef403dda6adc784e9d02",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv10909810/fd0a62c8c24eb2c163a2b00177c357ac85fc698c.png",
+      "bytes": 290860,
+      "sha256": "2faa5b21bf04d48385ae3cfd5d593a31281ef3f532ca1f264977b98f5f854dd3",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv10934558/figure-1.png",
+      "bytes": 218497,
+      "sha256": "9a096432f7d3bddd3d24c3051c4249bcac30e670789a81ddd715d251f80d8912",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv10934558/figure-2.png",
+      "bytes": 1015983,
+      "sha256": "1ca5a2b2d537a0e71b1625dc142217312c5d25d0181f3d6914f2083433aaf0fb",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv10934558/figure-3.png",
+      "bytes": 4315337,
+      "sha256": "b5f728f225167e3ea176c53a27eae85bc56d1400d3e4750822f87e869ecb7d0b",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv11249482/23a57faf477d77b8c0fc96bb7edbabd0cbc9efd1.jpg",
+      "bytes": 11566,
+      "sha256": "8b327fc86ab90fcd28bb355ba05608a5a70c9a0670fec273b08dd0597b2c3a4b",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv11249482/7170235113b6afec7d1d3b896403d56d52a5abb0.jpg",
+      "bytes": 26087,
+      "sha256": "5bd3c2a14f24ab25354ffa1304e63f4e0d1d40f426dbaa2e23f6bd4c1dcf2de0",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv11559151/449cd9d6de89d998f55e9b6e875d2dd9bf6db661.png",
+      "bytes": 9398,
+      "sha256": "e4334226c54f4395fa5ff198f6e9882a6df92b29e72a8629d3c3b6d698fae163",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv11559151/5094129339b9da5874bead457458161b9f8748fd.png",
+      "bytes": 18325,
+      "sha256": "ecdf2644e9e9bfa1ea443291f11ddceb4f55d681cacabc830b02de639d249d18",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv11559151/82390733912eede6834dc73d8bf03ff353a0909c.png",
+      "bytes": 38832,
+      "sha256": "cce41a12d31297d98e80bd53354cbc47e9d12c258be71833d72896ded11bcfc1",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv11559151/e9cb264e2154262a7da82282a4b2b3665c4741d4.png",
+      "bytes": 141880,
+      "sha256": "ae22081e919ea83e2574cbe77eba5b63d91a5e6f42a0346f90a16e07956ca610",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv11593066/39a44d88a220f5e8162b2a43fec457f0ed29df67.png",
+      "bytes": 1305077,
+      "sha256": "ee7a12b45c4f7c51bfb83b9bba5b64a1fcb6a59ffc4d6e8455aa4a4d21dd97df",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv11593066/3a1ca88dafd67b2bb8b0ec58fe7423f2fe485897.png",
+      "bytes": 1880923,
+      "sha256": "26146e337df9af66585f6bf88a4600ea13104f7991fde7968e2a568c1e687cb6",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv11593066/8be7d5756b835eb738bd325a6a32a660c879adc5.png",
+      "bytes": 1878464,
+      "sha256": "773f14a5fadf6763e3566ca7d4810e215338a0c93dd73802b4f86c44e50a4ad7",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv11593066/934311b5c5a899c89b956d6410608e05c52d8de4.png",
+      "bytes": 1692695,
+      "sha256": "1e73bf722f4ed95b536d1b39b00d1d9b6567c740d1db07a7107a5551e7ce6023",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv11593066/96cfc6762399738a8ee8dc511a85462438f0bc54.png",
+      "bytes": 1898464,
+      "sha256": "7dad3b6efe15d94c78482a7df5961fa8f63ce787fcf9fb3f7c765e144afb29e8",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv11593066/af2a2313e43c5486396d08ac2d3325dbca72c8b5.png",
+      "bytes": 1793986,
+      "sha256": "48734adb9071cdfb406b33e3f0312c87f293e01163d204c41ef8fd066adbedc4",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv11593066/be5448a4935253ffa5f83088103dea33be606198.png",
+      "bytes": 653245,
+      "sha256": "8496f152d9ce8fd8b2a19464ae67519c22bc8b2ee16b54a6edec29e545096939",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv11593066/c085c95263bad747d2d063a251febeaf3cb060e5.png",
+      "bytes": 1944907,
+      "sha256": "0da9819999355b66644a9ec13cc21f2c1d681d84956e3cebf54db231e6073ae1",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv11593066/c41750d3657230bdb99ff92503df08d49000b0fb.png",
+      "bytes": 1812753,
+      "sha256": "5171a24add21804bdc9370ba6009de5e7db3a9eb6552996ef809b6b2f92bc765",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv11705836/figure-1.jpg",
+      "bytes": 20248,
+      "sha256": "33c7f10f7132a658cd86d3a98955ef0ea859ca714115ec6aef71c5c0616ebade",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv11705836/figure-2.jpg",
+      "bytes": 78493,
+      "sha256": "d85559402371efc856b8ded992bd75b0754a62f094de0774d4a563c57b4ec96d",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv11705836/figure-3.jpg",
+      "bytes": 65538,
+      "sha256": "acc25bec636448c31caf8ca4f26cd613c63a7a0a0b18fa7988449c5af356dfd0",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv11705836/figure-4.png",
+      "bytes": 207588,
+      "sha256": "3e94df6c3d0051244500e6f446d9d828280ec9dea3b7216430c059353d7e132a",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv11705836/figure-5.jpg",
+      "bytes": 24915,
+      "sha256": "fd2decdc97efa4a2c8f87747dffaf7fdb0921c10bb0b9c44b8a8b340fe2c436e",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv11705836/figure-6.jpg",
+      "bytes": 37285,
+      "sha256": "5438895a4b45c6a49b23a5d4cc1f2404c5983a305623085036e7173980b7bf2d",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv11705836/figure-7.png",
+      "bytes": 400642,
+      "sha256": "30f08ecd29132a16fee38f34c89d8856b206158ab2fd1aeb2c257fa0af6a05c4",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv11752140/figure-1.jpg",
+      "bytes": 50290,
+      "sha256": "411567cbf10395bb94b6702733dab714ad20d249b7d636ba4591049b42f8271e",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv11752140/figure-2.png",
+      "bytes": 318086,
+      "sha256": "330cd56d323c04e4685de790dc8b50923b90114ac62e9d669b2adcd121b9d396",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv11752140/figure-3.jpg",
+      "bytes": 18124,
+      "sha256": "1ea0e08fa7328e8f32e73ae2b3fbf3c6eb4ebbba21d483b217c9fbe01186188e",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv11752140/figure-4.jpg",
+      "bytes": 60133,
+      "sha256": "fb4631387f3f94fc9899818b3af3b9232950e693799acb3adeffaa4702460989",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv11752140/figure-5.jpg",
+      "bytes": 17782,
+      "sha256": "e102dc3b0c1a65031746160ff32a6fe7be2913db6f411bdec5d6ea0e53cb88f3",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv11752140/figure-6.jpg",
+      "bytes": 35769,
+      "sha256": "9153fe45709267e64b1b0d9237699b9e0af8a76c9ebed9b444576df5547a32c9",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv11752140/figure-7.jpg",
+      "bytes": 36940,
+      "sha256": "c81929af1d7a6c0384b3a23a1a0caeb1d80aeeb346686094e0a386d38600471d",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv11752140/figure-8.jpg",
+      "bytes": 42874,
+      "sha256": "a674f5d234854dd0b3e7b4954a3314d59d42225f1a5352c1b690382c7b4b093c",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv11894332/01-zizek-marx.jpg",
+      "bytes": 27705,
+      "sha256": "c33acd96a4b9dfa8929184823a55a4d130178fad325c7651e638705058a1e74b",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv12555845/168005ce47a505a81c6467d67958668534fa653c.gif",
+      "bytes": 8767417,
+      "sha256": "c3d13e5a2cac383d4742480f824eab6a0a0945d344d360b6556fb46833a26c54",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv12555845/1c76f03eb9b708bd712d810dbb6714b01a0ad442.jpg",
+      "bytes": 27295,
+      "sha256": "7bfe5b42cc91e2bb5f3cc1ac5b4969a9e9b0c131dcbd97822dd508cf773e16f3",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv12555845/1dc8c96c454a3c209dd9a81cb26b9e519414c40c.gif",
+      "bytes": 9244020,
+      "sha256": "fc3b85c63655d44a013568c1c6ecf9bfbe1c6bf66c673864e0133d309cf412ca",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv12555845/2465491db3211d45254f43b5e0aade115f503633.gif",
+      "bytes": 5469768,
+      "sha256": "c6c98d31cf27bb4e57d4730943d41c956308ca3ef60db5a7796c63bf38d72fc6",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv12555845/2841234f38b8e75f6dd748610750b05dcd256187.gif",
+      "bytes": 9705332,
+      "sha256": "60ec16cd9f3e3d544e23253631b811c815bc5040170f9919ea2491c7dd86cdc5",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv12555845/2866a73f6145b4f31a08cb617747ffff1eee8f97.jpg",
+      "bytes": 18128,
+      "sha256": "77bfcc4c610af8591027185b0e4df1a1b52ddb4204199359b8aba2a076cfd78e",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv12555845/313e3c267b62c2a027f95f423b91389680c0c05a.jpg",
+      "bytes": 33574,
+      "sha256": "2fb942bbccd51b25120db15a6a78d8b9a390afe9479c6685e95c87519aac72aa",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv12555845/3264d547210976df1d588a854f9cf64b7771e5ea.gif",
+      "bytes": 7810823,
+      "sha256": "62e3f9857920efccb55d3f4cd50ba604060ac1c29ce9f20828dd9d2cc6255649",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv12555845/3b092c708cc948d96e7a3b214583e11e8ebfeb4e.jpg",
+      "bytes": 29629,
+      "sha256": "b2f0b1cb8bc2761c7228175269f6534800e89b0109b2d9776ab7d2147b4d6f3e",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv12555845/3cd70dc9a88a6b49d61ba60827256f5797249d82.jpg",
+      "bytes": 11856,
+      "sha256": "cb55981f96ecd91d031f4b911b7641acfdb02d853b817fd7c6b8168d8351bddf",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv12555845/3fd905d9bb28848bdc6a76b7f91029237e3262a2.jpg",
+      "bytes": 21881,
+      "sha256": "fb92ed61b8004390557a16c347748359f311ae22bc2cd5577638e290e2d3a474",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv12555845/5ece3c99dac93e7a76e4abcfb62376f548138ee0.jpg",
+      "bytes": 15423,
+      "sha256": "bfcbf5857a46fd49a15d24205a7ac6a8d8088080a63ea57aaec40ea709a2714f",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv12555845/6512046cc6ab365faf4ffe893a3730d4c21bcbd5.gif",
+      "bytes": 5050002,
+      "sha256": "d67323ac5b9a6347b78a2cb23332296c3632d0c316f255d841e3481928071de3",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv12555845/6ae56f507fb3aa6ac43fd9d7884b81d6f715f143.jpg",
+      "bytes": 32469,
+      "sha256": "73a082e6d5f356e0d5bf7e9a76d1b1b5f39ef0a4232142f48640c5066b5cbec9",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv12555845/6b12cb9c43b744f71ef0eb1d5c0bf1df1b1eb8b1.gif",
+      "bytes": 5906776,
+      "sha256": "1c707c16211eadb35d55f845300ddda8c0d429de36d3d097c67eb90d7f3b30f7",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv12555845/6ea25880c5d4cbbd947a3a8c24b9bb357a7dd532.png",
+      "bytes": 577166,
+      "sha256": "cb997579b4bee351e5a78dab5395f9bf04ebb0361003bc433d201ea75a1a6729",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv12555845/731a551f4ceb18386d5d864e5fe2c65199655f55.gif",
+      "bytes": 5982254,
+      "sha256": "e95c65a5134cbbac57b9bbec44071fdcc7b2d87ce7381a515c56f934fe3d21b7",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv12555845/7380aca5f723ebd71feea5f78ed0e58f70a03ed3.png",
+      "bytes": 537442,
+      "sha256": "4f61f44187f82d78a31db90cb7eb6e0ddb3a213fda7955df8690e61ffbbd7f7d",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv12555845/908d3b97e55a4e3831182a6636bba1c431a0ebcc.jpg",
+      "bytes": 40829,
+      "sha256": "7849e65f3e5a5da1903c61ecf88062394e23f7bca11bbd5e13d44bb40beb19d4",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv12555845/987c863814966ff7eb0d51a4c65e83cc60dad55b.jpg",
+      "bytes": 25408,
+      "sha256": "183a90b2c8c67558ff1f3db4398e0d97a2881ba07bfadc63ca3dc12a655817f6",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv12555845/994f0572fab3b40181cf0f25f3fcd4033ec9c2b5.jpg",
+      "bytes": 43977,
+      "sha256": "6d514ef9a28c8833a08745679c40db15a1d0b3846735156ceb964ff67859c36f",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv12555845/9d5b0133388fbc07136c4f674f09043b2398612e.gif",
+      "bytes": 8340526,
+      "sha256": "cac9267e455af507442667a8375bd239773746c0e0c9cf010e88ebaaed482ec6",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv12555845/a56a91e12cf6dfb7acb25ee58e56089b81a9676b.gif",
+      "bytes": 6676259,
+      "sha256": "f62684a017b2e7a5fc99fee5cb33b3d8dd12337e895d9e1f889a3dfa68447df1",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv12555845/a71c4c8ba6a40de2986e6ac36038a4be380eec41.jpg",
+      "bytes": 25946,
+      "sha256": "f68652ae029167d45d5bab48bcd035ecee6f2330f94e302adb83008c63b7a41a",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv12555845/a74ef5bf0cf4359cf8d50d44b8d3dda56499283f.jpg",
+      "bytes": 24047,
+      "sha256": "165b1c53eba581409b62e20d047f90123dad9b100d3dfdf8041648818a483313",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv12555845/a79cb7d45434283580f24ee4bf5e23f094020777.jpg",
+      "bytes": 52983,
+      "sha256": "f57e30176512375e24875aa1efe7cda7a66a7a36e9e06cbd314b00bc0e332bf9",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv12555845/a7ed6348cdc1b199ab8a0de91e879ca297a490c2.jpg",
+      "bytes": 32324,
+      "sha256": "734ecb39b98adc372b35a0294ba0e68d229a5868bfb86fea8365758ed75b534a",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv12555845/a994784aee8387a5f79e7b08e7f55e63a9ffcc92.png",
+      "bytes": 1004249,
+      "sha256": "f5b01fc1718fe6a509be225b8d5a966c57261472e7b3c71b21435187d52cfdef",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv12555845/af474361b15b4e100e1e1ed5f50ff733d84ad700.jpg",
+      "bytes": 44732,
+      "sha256": "a017022641f700e6d093b15f19316df441fa21923fde36da4d94957b6ff147f6",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv12555845/b347e49f15832ab26f84a2882d83c65860878e40.gif",
+      "bytes": 9817812,
+      "sha256": "8777158fd0204375b84224b2de467b2511a067deb1744bf0a211235b67117b61",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv12555845/b5eea2b6e963ddccc9959d7eb8e0ed1ffb005190.gif",
+      "bytes": 10235957,
+      "sha256": "a26e441606be23bb607be02cff8e1547c490982a6075cb807ea7a374139d001c",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv12555845/c005fb4f9dd73c3d2934ea6df64bc1aa368b65d7.gif",
+      "bytes": 7741342,
+      "sha256": "401fecee7a9fa02b73d8ee9592f3d2f3203488e0ba032ae7534d2e7b8fe7d139",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv12555845/c284ecc472bd526f4c2c5b29648c4f3dc9eb545f.jpg",
+      "bytes": 29538,
+      "sha256": "00e981b3f0cbf93877847d970caf0a77d960e19f9aca0a6fa0c5d6be88eee63b",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv12555845/c2e5defc7a994ddd02298364a5b686d4811fba47.gif",
+      "bytes": 7610484,
+      "sha256": "1cbb8d31a3402f5005e0b1b7b1bf22e0b38ea2501d35b24281e504020663d48c",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv12555845/cad5cd5195fae3ff9df3647cc49fe62ed7c47061.jpg",
+      "bytes": 53377,
+      "sha256": "68182e6c4d241818e1b73aa080b12ba0f658e3faad3d456edb9a69f305f5aae8",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv12555845/cec417170891d45ce8fbf0478b053e51fa560491.gif",
+      "bytes": 8222176,
+      "sha256": "2b4cb7213dc15341acb3a51cdb777b861a7857fafe4b84da67f7abf857e88e01",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv12555845/d0f4cf1e1263887157d05bbc17fc04c2e94c7e43.gif",
+      "bytes": 7388534,
+      "sha256": "0a8b52355383766b49ae695ec15635536ba009d1985d6441ebf6f27776610c9e",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv12555845/d1686aae20e489a38cf3d4a2af0c9f92c377336b.gif",
+      "bytes": 7020326,
+      "sha256": "b27b1216496a1855d4b4ff8fa5871306d41c26180d3b1a33bfad31c1f7cf949a",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv12555845/d4379b6aea27136da00c566afcc77288434f3db4.jpg",
+      "bytes": 22900,
+      "sha256": "daa6a91672156dbfb145ea7da8d19e6028ddcde513f2aa720e1a4c3d8a6a56c2",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv12555845/d4d44869914fbf4ce40cd7663256092fd15eb7c5.jpg",
+      "bytes": 38470,
+      "sha256": "39d9ef284c7c7fa45835fbde3dd3f77ee4b41aa438734b3058a079721725730e",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv12555845/dbb568412d860e286f985221a4033df89649c80e.gif",
+      "bytes": 5294565,
+      "sha256": "2131ec1ba9ec9bb919c8e9efc4173d05a3adb32d4d02fb1c77fa4ca28d4ac94b",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv12555845/e4513ef6317fc588addbf5bd6926924727b1a5dc.gif",
+      "bytes": 9649037,
+      "sha256": "6674b9328d0794d47a7ffbb5cd29d700ad8ed2f13b02f49d5fc30e81959a1554",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv12555845/ea452bf3c826ddfb8799c836cb9a45da8b851268.jpg",
+      "bytes": 73343,
+      "sha256": "880838acede20e6b909b56a549cc5325563400d78895ac4ca4fbb322f798d501",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv12555845/ee3987342c197e8f445880c9836d324b7e124ffd.png",
+      "bytes": 732452,
+      "sha256": "61764ef24d75bbc9ba978d530e6afb5153492f1258cef763dbb80ad1c8be8d4d",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv12555845/f5073cb0b83294d7196b848fb133dc396400b553.gif",
+      "bytes": 10100305,
+      "sha256": "cdfd7f1cfb50d534ddfeaebc4c5205ccbe33c47c0075049e28dfe345e5055052",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv12615226/figure-1.jpg",
+      "bytes": 135230,
+      "sha256": "eab833d910eca8cd9b50420f33480cfac73d9ab852568f5251b73cf6fdd9ba0b",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv12615226/figure-2.jpg",
+      "bytes": 79761,
+      "sha256": "67a8821acf813bd6d39f7cc88b85490157e9a71fcfc8f2faae60a38ea18e8ac1",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv12615226/figure-3.jpg",
+      "bytes": 125173,
+      "sha256": "1b41171bbd935c48d4401109d61e184b92bda26678136ef4d95a33a08c4d731c",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv12615226/figure-4.jpg",
+      "bytes": 107921,
+      "sha256": "d5cf4e053314a0a9aaf82a711ed9c25cadac9adde2aac5295bad9de50feaa116",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv12615226/figure-5.jpg",
+      "bytes": 53228,
+      "sha256": "32230bea5786f5a2ed8ed71c89b6aa6c8ae4fd162f9866fc637888ba28f45bac",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv12615226/figure-6.jpg",
+      "bytes": 31815,
+      "sha256": "6899c8f7b04967fffe4327c934757966241e139fc3afa47c4f720b6e8d5c5889",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv12615226/figure-7.jpg",
+      "bytes": 33491,
+      "sha256": "7484e1208e6ade5a7143593d5bfab41ddbc58c140ad5d78f96ead9dffc861145",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv12633522/poster.png",
+      "bytes": 760014,
+      "sha256": "9894897cb50eb9d5d8a6779de773a122bc5a513ff7fcd64867158c29701b1c49",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv13590618/figure-1.jpg",
+      "bytes": 43326,
+      "sha256": "df67e8b33a0045991d64a948ca2af2a3cedc706eb3c516498d9d9f32f7e30b38",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv13590618/figure-2.jpg",
+      "bytes": 36820,
+      "sha256": "3851845a4f879a1dbb7138c74e99a46383a35d8ebdf3e38560e1b7e1be7f5f24",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv13956377/01-inquiry-i-ii-books.jpg",
+      "bytes": 27427,
+      "sha256": "3513db08a63025f06422feac0b3b4926d557ac62704afe4a49c1c59e16cdc9b6",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14068236/poster.png",
+      "bytes": 669187,
+      "sha256": "a0ac15295746cd3059959f21d19c597ca25c7fcc4b2eb6b491cadbefedf2b27c",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv14084596/figure-1.png",
+      "bytes": 283200,
+      "sha256": "f7a36170bbf549189414b8bb70f9faf38239f5f5ecd0b650b98ccc7eff9ccbd9",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv14084596/figure-2.png",
+      "bytes": 69113,
+      "sha256": "34aeec6a2cb32e4015c92a3134cda3e25f7e89a29c2a5c57c1029de590d0d0fa",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv14084596/figure-3.jpg",
+      "bytes": 46537,
+      "sha256": "8b25ac42cc8c5fac3464fd9b136212170cacbc327db3804b781df1c94bacf395",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14084596/figure-4.jpg",
+      "bytes": 57385,
+      "sha256": "f46aba32519338f070f671ad1c9e38d039e6b6eace2873f853ef8cd43a2a1c4d",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14084596/figure-5.jpg",
+      "bytes": 74427,
+      "sha256": "3a2159b56073c14809727f85b94d2ea61c0cab3d3021ff6394241fe7eb1a8b69",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14084596/figure-6.jpg",
+      "bytes": 74333,
+      "sha256": "646dee27d112c6642caaea402efa8bc383570a612a0a0d3f24702dc898d2306a",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14396454/figure-01.jpg",
+      "bytes": 114207,
+      "sha256": "09dcefb8e782eb6cecd0d7062d00b74ce12fc9e788a2029a018f487f7f838e2d",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14396454/figure-02.jpg",
+      "bytes": 61461,
+      "sha256": "3806f88cd1b430c3be17140e63d9638b3b4617e5b615ed7a35a9211259cb73a7",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14396454/figure-03.jpg",
+      "bytes": 55402,
+      "sha256": "b2de3eddb9826f9aa55196c01b21a62a738927a40d0bb6913effec6a182cc269",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14396454/figure-04.jpg",
+      "bytes": 105353,
+      "sha256": "3d1ddfd54b2357ec6ebf0603541b69e80a398224a51a0543e2552c347eb85082",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14396454/figure-05.jpg",
+      "bytes": 60030,
+      "sha256": "f920dc55196522ddf96c3edf577fc48cad0b5597c2d4a8eaa17fada5627004c5",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14396454/figure-06.jpg",
+      "bytes": 72751,
+      "sha256": "5a58bc9f88524f221627415ad8511c57dac98865d43106c6f6e77e01cb0d4290",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14396454/figure-07.jpg",
+      "bytes": 38212,
+      "sha256": "5967789530d1297d2618743e0fa684ebbaf7c2969615eb14a140e7a9c8f43077",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14396454/figure-08.jpg",
+      "bytes": 92058,
+      "sha256": "fad9d7b56fd31b617e7afc1fbb931eb0fafb0fd40332eb984e6819286d6ac9ff",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14396454/figure-09.jpg",
+      "bytes": 82454,
+      "sha256": "1c16fa43d8c6cf8741d247969a51c649a031d03788e52b1746dbe563fac8d81f",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14396454/figure-10.jpg",
+      "bytes": 83769,
+      "sha256": "225d75b0aef99cd4415ad3a7fa5a6f494e842d9460f5a5872ac97c5fdf126216",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14467863/figure-1.jpg",
+      "bytes": 106988,
+      "sha256": "69eca165aaf0926fb1f7968b9be486efe449796c65f0f34f0bbe7b2227f13f26",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14467863/figure-2.jpg",
+      "bytes": 72392,
+      "sha256": "fcc0c208ed88c2d6501b5aa1d0476b487ae10c74707876973904b515d97fb89e",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14511591/figure-1.jpg",
+      "bytes": 133362,
+      "sha256": "a7b09c56711c8c9e02032e1f5219ab9e50e37f93b4f4b1b426c763d740575ccd",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14511591/figure-2.jpg",
+      "bytes": 98399,
+      "sha256": "01f5c7570382e38ca42bbe65f4bb0cfffff6fb290372d7b0a8777d535b040e3a",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14511591/figure-3.jpg",
+      "bytes": 122050,
+      "sha256": "3143e075d1b9738220c956faa15cb3496c50d6e6d077312f55973018ce1447b8",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14511591/figure-4.jpg",
+      "bytes": 107975,
+      "sha256": "017c152dc9d44fb66d0df58a67b17097a505990c23fca96937b4f08ee861fba9",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14594447/figure-1.jpg",
+      "bytes": 29129,
+      "sha256": "ba406ba4314bd6a06a006e322ef98020a3669768601c0ca0d99a919e8274001e",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14594447/figure-2.jpg",
+      "bytes": 16738,
+      "sha256": "0d14ca4ad3303b99e4ac9aeb0ba1c8f0ac954596f074dd0e2acd0c5dada1b6b3",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14594447/figure-3.jpg",
+      "bytes": 55789,
+      "sha256": "9715c489180375e988aa6b15e754dfb9753b2a801ff599f6c03294201cc5d571",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14594447/figure-4.jpg",
+      "bytes": 12931,
+      "sha256": "9bdd0c95354d93ee6f13dfb1df76b9f3310c3222977aab88b82b8587ab3b9d13",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14594447/figure-5.jpg",
+      "bytes": 18657,
+      "sha256": "755ec88e054ff4fac93a86e99efbd4eba4c9df17d6855bcb89a0866674be5d79",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14594447/figure-6.jpg",
+      "bytes": 41002,
+      "sha256": "02c4b49b5397f69dec7d45930e9cfdeb84b88c3a842cd76c1a23f4fd15ead020",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14872738/figure-1.jpg",
+      "bytes": 163081,
+      "sha256": "a6606f847f4b75309c8dcef4a512df538dd165edad5668557016ee5c3fd75516",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14872738/figure-2.jpg",
+      "bytes": 77994,
+      "sha256": "685f9230b1f9c0930c1aa4f3cc87b733723c750009445308b05d08d4f588ba67",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14872738/figure-3.jpg",
+      "bytes": 78745,
+      "sha256": "cbd25ed097ec06ef010fdff055af89f4864e08e148cf53ed7b1cfeb7d789210d",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14872738/figure-4.jpg",
+      "bytes": 55849,
+      "sha256": "500bd3f4c52caa88dd0ccb3216643cce37ad9ee8a277859cc5aa75dc86332038",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14872738/figure-5.jpg",
+      "bytes": 89418,
+      "sha256": "4b9d3a301c581c0ca559bbcd0cc3da8bf0daa7973f9838b3a7231568f85a3ae6",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14872738/figure-6.jpg",
+      "bytes": 79280,
+      "sha256": "bb420b919c8747e841c51381fdb6903199bb2cac0de7b35af06255e2afb3aced",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14872738/figure-7.jpg",
+      "bytes": 94276,
+      "sha256": "6dc170251990b8bde0279fa467e583c6565b4f1114ea7767f444eb8e4272e111",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14950755/figure-1.jpg",
+      "bytes": 124089,
+      "sha256": "f0ad0d48f738c6b6ea5b272b0e0e38d8a29c27196eb460712e9e1a1400f9fc11",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14950755/figure-2.jpg",
+      "bytes": 143620,
+      "sha256": "2a41873b3184f8261838f032b14ab45439afc1873efddc7abd04ef82ffc10169",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14950755/figure-3.jpg",
+      "bytes": 57361,
+      "sha256": "1515be0e7b2a92fce788a60100ab020f0cfdb3ad98c8880db1fbe576bd7f8e8e",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14950755/figure-4.jpg",
+      "bytes": 134358,
+      "sha256": "1b9ab12b71ade6b27f089477a219c7931316b57141592e6570865a90c3d781cd",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14950755/figure-5.jpg",
+      "bytes": 104483,
+      "sha256": "808d96d7da676d685247124526ab2380b547035bdc6f470f5ac7f0eb99f5a45b",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15049636/2a5a2e64f43feba7be60e9e7dd9c81f1a0d0083b.jpg",
+      "bytes": 86312,
+      "sha256": "0632687a449c31187cd544db3a202c23e2e52425393c4f020b4f8a37d9741ca4",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15049636/5112bf8b8402e20f297a2646291e20c64847a64e.jpg",
+      "bytes": 117949,
+      "sha256": "b34e1d42282eaac6c6c64dcb68db88996970e76a5931946aa84397eaa3853eb8",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15049636/60411b60757dd12efc30914a3ad9c0a3b6a5a860.jpg",
+      "bytes": 278961,
+      "sha256": "53232ea4bc23b8797d6e8ed99c538f9090c27b6a64f9d494b3bbc47d8f0713b1",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15049636/73cc6f02025e719f8e94306a81d11a16e77aa3fb.jpg",
+      "bytes": 90163,
+      "sha256": "fdf28bc4f21b2b4a562a487db6d47eb506dbb0147fdfac075d79571a9acc30a0",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15049636/7fb9902094cc74fbcbb27ae5a36cc8cf46b6e5ad.jpg",
+      "bytes": 77646,
+      "sha256": "09fa10cb2f4e6c44a87e9c20a226bb625ae2770caa17ecd42a64f9744bc1fb73",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15049636/8786a52ca59e7ef2d92d7fc733167f1395c1e8f7.jpg",
+      "bytes": 33902,
+      "sha256": "1a0179a3340e731070ea88ad71a66ad38d81f5b285c6bea285a995276c28660e",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15049636/a73da03af307b752ae64509370447746a3367abd.jpg",
+      "bytes": 43703,
+      "sha256": "5028a667063c73eb2b0f585ac7cbfb380ee57bb94e640d7e88fc0a5613a86558",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15049636/da052a67afa7a3a5580a437231171c1744307e49.jpg",
+      "bytes": 46653,
+      "sha256": "09a7a8dec59e917fb21e997d7012b448d715353331cbb504dab40ff1e01ff982",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15049636/de859ee951266e64f50bef0d8c5f98b05d21b0e8.jpg",
+      "bytes": 101414,
+      "sha256": "ab159adec09f0991398575fd5f5ccb4336ad3606043f3ebe70f3b624fd95e417",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15055439/figure-1.jpg",
+      "bytes": 93464,
+      "sha256": "0e6f676d57bd164ba12ce20902360e6fec394dd8f85c44b2a676deb61a61485d",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15055439/figure-2.jpg",
+      "bytes": 138060,
+      "sha256": "90076b7b824d655ff4b14d2a0ae1f13215bc37817dd16613543ed2a193b5f9ba",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15055439/figure-3.jpg",
+      "bytes": 84346,
+      "sha256": "8b1db26c45dbc3afeb4a7016f836a183dee5f8b1eb755ad50bb7883b06c58cbd",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15055439/figure-4.jpg",
+      "bytes": 42670,
+      "sha256": "9a57fccbb0f2f3934a231e1c74e4ad217521670a442ce47ebc1450b64ebc7e30",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15065519/06a0dfbf5fed726be3af5821a6fb228e8c810aa2.jpg",
+      "bytes": 255648,
+      "sha256": "7086d4ad9afe18a1a41fc418005cb1de8be74d76efee1720b49a0060d0605524",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15065519/2f03c1132e76347a6a8d5caa3eac796e1e0f1d9b.jpg",
+      "bytes": 124629,
+      "sha256": "dc6ade8936dcb8971ab2520040d83b0fe79827e76c2303ffb2f53244883139ec",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15065519/42ffdcbb23906080a1193ef6104e901a6a1bde01.jpg",
+      "bytes": 365383,
+      "sha256": "368a94c745a1422be3bb17d99e7c9c59f9fdb47beafe9d7c90a14a548ca27c67",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15065519/726a39f8695a816d7123129e5926f88753144d53.jpg",
+      "bytes": 92946,
+      "sha256": "94531396847f5e28abc58f224886ed9585c2addb9f7c2ddb45762646b7aa70c5",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15065519/7f46e8a43892be25fccaaeb2b64bff4f072060e4.jpg",
+      "bytes": 96153,
+      "sha256": "ed9efcc196681c83a9c8dd300338349a8d8cb2eacc57a588e51256550c86c6ee",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15065519/e5f0a125ecef4b2c2bd76f087930395d3e663e1a.jpg",
+      "bytes": 272067,
+      "sha256": "b4e73e5fcaf98f31fade6227089ee1c21a5851046837f48d6b22283346f1128d",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15184511/0ddbce9ddc368003ae4b8e88fcb7844094e699ce.jpg",
+      "bytes": 94266,
+      "sha256": "a3919caf099683764ae8be4c83e0452be565a159179416f1e84b3300766574f4",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15184511/1be53a6c884883e230261976b50678425d039cbc.jpg",
+      "bytes": 20400,
+      "sha256": "3ac9c51415d7ab6d6762387701d8b97707737d530e309560e9258f5c8f5fb6f1",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15184511/34115583edd99dc68b5c05ce18eb552611de9d0c.jpg",
+      "bytes": 114244,
+      "sha256": "25fbab7260973a5da429a89b9cef5631665244aab8859bbbc342e36a56eb8c9a",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15184511/6218c0cbbb9d0ab9015afaf384c8fe799bfda17f.jpg",
+      "bytes": 28708,
+      "sha256": "395fd8ba3d858a4cc84bb351c7fb82bfb9d11b6c1becf0cd21315d75cd3320b7",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15184511/d399ae6729087d09534e386757149b6339d976d7.png",
+      "bytes": 40952,
+      "sha256": "bd700d1c5df74376a823d1c63694263d7695e66c9b0409ebc932d3ccd1ff2b6d",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv15218509/figure-1.jpg",
+      "bytes": 114244,
+      "sha256": "25fbab7260973a5da429a89b9cef5631665244aab8859bbbc342e36a56eb8c9a",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15218509/figure-2.jpg",
+      "bytes": 131955,
+      "sha256": "5150e3629efd7c15ef4a3e7028476a6829df985cbe48a50f4c1170a2dcccdae2",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15218509/figure-3.jpg",
+      "bytes": 81983,
+      "sha256": "97d4ee30898d2f425287f07bb1f35f945314f8fc41a7beb05513ca663007dc6b",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15218509/figure-4.jpg",
+      "bytes": 115177,
+      "sha256": "66b25f1383c19403ee3a9e689ca589485c255e380915f2b359e207000981d369",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15218509/figure-5.jpg",
+      "bytes": 119203,
+      "sha256": "7264c05a8640ff402b16e1ab0d5e89f0dc95cabea1e988f0c3b24df1fe1fb125",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15218509/figure-6.jpg",
+      "bytes": 128421,
+      "sha256": "7508ea14a301767961da48060140e6e416af6bd9fbdd4c2e9bb0196c45f4c3c1",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15218509/figure-7.jpg",
+      "bytes": 84990,
+      "sha256": "c6a95c6085cfbfe366b3e6540365f719ec734fa5f9a57843c3df36076bf99d16",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15218509/figure-8.jpg",
+      "bytes": 79375,
+      "sha256": "17ee47b5e645d1490669b9719e2c184d2db3f6c4f0b078524a51c7bc4501692e",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15218509/figure-9.jpg",
+      "bytes": 68346,
+      "sha256": "15d00a30d7572514da6c129708787287b4b4043602f8879c9b537d8237f98254",
+      "contentType": "image/jpeg"
+    },
+    {
       "key": "roof-archive/cv1530117/00-author-card.png",
       "bytes": 20135,
       "sha256": "ff46eeb5bb1977ec5179e164ded1f80ac5e0b0fc1e4e91cf63af966db9fa20ad",
@@ -274,6 +1630,30 @@
       "contentType": "image/jpeg"
     },
     {
+      "key": "roof-archive/cv15744566/14cb12d52fa3a80a8c725818d9d48d01d1b703d3.png",
+      "bytes": 1412932,
+      "sha256": "9cdb41608a7b129852c8fc61deaafa4f9dab05c76f33450cea298bd78998b243",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv15744566/805ce2c51389be23610b852d3b0238d95d956da5.png",
+      "bytes": 142268,
+      "sha256": "72057c9b85287948e7d2a7f399f0191380d94a7da6e140bf0e3978e41a205638",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv15744566/dffceb7ef8a2e9b2f454c7f0d6548188c84610fd.png",
+      "bytes": 337338,
+      "sha256": "cc709302753fcf32913893ac566bf6444035fba032585bd5a5648d99c45e0d76",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv15744566/fb29488f88d24541ec7828276881cd41fb9e8507.png",
+      "bytes": 698752,
+      "sha256": "4b596fce60899d97c16898c2fd950cf784e0e282d7ff802114de389682feb2fd",
+      "contentType": "image/png"
+    },
+    {
       "key": "roof-archive/cv1580903/00-author-hephaestus.png",
       "bytes": 33244,
       "sha256": "d151b7da481a1a680ff0fa61a4b9033e69723f105be5f6dc177a0f5723837110",
@@ -382,6 +1762,126 @@
       "contentType": "image/png"
     },
     {
+      "key": "roof-archive/cv15829617/0ec73a2eafe50bfd25b6e6c923012940a13d89b1.jpg",
+      "bytes": 126013,
+      "sha256": "49c21570ed74ed77f370e57545134ced9a1839f3f5c0815437be8bddf52004c6",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15829617/1c3e26d42a85babb79179db05905f953efdeeada.jpg",
+      "bytes": 271206,
+      "sha256": "6d78915a17af9fc603ce1d99f9d248f86c299854e3ab1b9937d8c22f1dacdb02",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15829617/262180eb47a8a5bf39f3397bad6d2a7ce8659a8d.jpg",
+      "bytes": 110610,
+      "sha256": "d76ebcf71c7f207754f86532bac8aec4ee92449c84f24af1674c2679b309dfec",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15829617/452fbbbb335b462cdeb59adf7d177b96234694d8.jpg",
+      "bytes": 133730,
+      "sha256": "eb66f7e6f4b7e24cdfb50f4c0b9cfdc4226c98f1131e5a46b84c51a31421df90",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15829617/5a4b4a6b94b2d7e18a73aba4c2cb86f530b71d67.jpg",
+      "bytes": 19094,
+      "sha256": "e4d092612c1ed6bc054817b31cb6d3ab48bbbb385c8f5a1cea77cc5849c4d81c",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15829617/5b2abdf788852903f74318cfdc6676c8185c04a7.jpg",
+      "bytes": 190598,
+      "sha256": "7eeb094b024ebbdb6bf2772211cee729cc336bbb1798753cf4c1cb6b4d8b6749",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15829617/5ec20d91d2c8b0015d3b06337aa8d8f287417e57.jpg",
+      "bytes": 193628,
+      "sha256": "aafbcc1ebec07888906e4ed350dbcc3e7a8cb6cd2fdcd54e6744174d61a109b6",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15829617/64c1f61a897e75728bf49303470766fb193bbb3e.jpg",
+      "bytes": 124225,
+      "sha256": "a35fa895d04d385d59eed5f05901d1f856be95cedab0f4e0de112672e1643adc",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15829617/7d9c7f93541f26c10ad1036e3bd69ccf346553ef.jpg",
+      "bytes": 100595,
+      "sha256": "f2dc1cd6e9a9e44e8c3eeb1bdf6b450ee132e1faaee1ecc62dbda5f1b9d7fb1f",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15829617/f9385da3312fba7e57ffed83da0cf1ed6e71319e.jpg",
+      "bytes": 78880,
+      "sha256": "fc2f9d2dcdc985ffdf52b7680cd332a384c4183c6b0a9e40638d67f23461e30d",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15847535/figure-1.jpg",
+      "bytes": 19083,
+      "sha256": "014f19d5f70d4b79903e6d26a9e3067014fdecc0d3a310d7e5da6aff3eafd34f",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15847535/figure-10.jpg",
+      "bytes": 169756,
+      "sha256": "cc662945455f1fd579f1e2e9f556b6e742df879ae85f7895e844deed1d51b6d5",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15847535/figure-2.jpg",
+      "bytes": 185572,
+      "sha256": "4d12b57ea841ab110bc8151c96bb9424f0b3a2c6241fa7f9033e4e27c7a2fe12",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15847535/figure-3.jpg",
+      "bytes": 51147,
+      "sha256": "729af7366e2afae17fde06da1c7e12ef9a9514d67e8d9e248b3a8bd57945b8b0",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15847535/figure-4.jpg",
+      "bytes": 104322,
+      "sha256": "b7b6a597086f0e26923ff9c222291816c479aff5e28002379caf2f2666649e00",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15847535/figure-5.jpg",
+      "bytes": 109515,
+      "sha256": "de28ebd2231370ab44bbf46773f910a27586d3aefeb569c8b32619007b63de73",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15847535/figure-6.jpg",
+      "bytes": 43611,
+      "sha256": "16098c1818d34389b8e500a03d14cd59eb4dc714299e6459d49cce43ccdac942",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15847535/figure-7.jpg",
+      "bytes": 50243,
+      "sha256": "c2082d2a30c075de0ee05fbb4f0d010796ef355255ef324258db77e5cb740e7a",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15847535/figure-8.jpg",
+      "bytes": 143830,
+      "sha256": "24efc68a61196a9aa9546a5aabee0f8cb61c6a790a0819e18707e195d0fb2207",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15847535/figure-9.jpg",
+      "bytes": 104080,
+      "sha256": "2272be0055db294de57d25d677beaf99c4c8297c328e9dfa17471db65d570135",
+      "contentType": "image/jpeg"
+    },
+    {
       "key": "roof-archive/cv1641117/darth-vader-i-am-your-father.jpg",
       "bytes": 20635,
       "sha256": "2c1f0f46af928a7dc83f85e73772498988a619a16715b054c788d26261602a70",
@@ -403,6 +1903,54 @@
       "key": "roof-archive/cv1641117/shin-godzilla-poster.jpg",
       "bytes": 79457,
       "sha256": "a49c76195e8813875ecc49fdc696d9c4b3f21e84cb3ed2dbdea61a4c1e1cfbcd",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv16437447/0e5caa030ae949b1cae5a2630246493459c0e341.png",
+      "bytes": 1905235,
+      "sha256": "d690b79a4d489597c390b6cc040c0be658b083ae722b3df63e6af6a334d1dd37",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv16437447/11e4deaf31c662c14afa07c40bb52b7ada75c4fc.png",
+      "bytes": 603330,
+      "sha256": "f3ee89612fb5b97306319e964bd3ad4f81b28244ea8bf702db538caeb4ce2a59",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv16437447/4d0574785aae2062fcf45d099aca85bf0efad362.png",
+      "bytes": 1580646,
+      "sha256": "67562246c4a9b2855a37edbc86bf84ffcb38b8ab8989ac94edc449a9ec6ae6ce",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv16437447/7988dcc40ba2d3d982c502a660a51389768718d5.png",
+      "bytes": 1506997,
+      "sha256": "4b27ba1db9e3a2a09337d7eda518b8d541448e1aa4353b4cfe986451fe84435c",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv16437447/8335bda880a16f1bf204d840b2c3ff821f45a784.jpg",
+      "bytes": 94262,
+      "sha256": "5c79a565b76690e727707d8465e88152f899ed1c3df2752abbc470e009f84e77",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv16437447/be129ed7a5b33ecb0af8c483bd48695d7b127fc7.png",
+      "bytes": 873322,
+      "sha256": "ddb0830233950766a275c21912fb757c61aab11170d2d352e449c43694fd0e84",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv16481533/66b8eed2428110ab0b001f2e33c807c014f69e02.jpg",
+      "bytes": 80133,
+      "sha256": "cac0d9548a4c8d0b6956847d2b42f410274acb440aea5eb58f95ae7e396f228f",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv16481533/8d1d726a630fd10f11284c02d4f537520f5c16d1.jpg",
+      "bytes": 30048,
+      "sha256": "4077d84f3c3e4ebe2af58be7812c990e26749e1c176f08bd92f392f01aa65295",
       "contentType": "image/jpeg"
     },
     {
@@ -562,6 +2110,12 @@
       "contentType": "image/png"
     },
     {
+      "key": "roof-archive/cv16609668/3862cdfd96f5d94cd9de80f092270ddea2ab2802.png",
+      "bytes": 2189940,
+      "sha256": "db920147a6d552324413d52dcd51731ad0b6555c8f049f4e23ca1834bd5badb4",
+      "contentType": "image/png"
+    },
+    {
       "key": "roof-archive/cv1668131/01-yan-jishi-author-introduction.jpg",
       "bytes": 42816,
       "sha256": "93d69b608a2329507497c8d26bd96cbde43797b21499c898dc96cd664c264eb9",
@@ -661,6 +2215,18 @@
       "key": "roof-archive/cv1668131/17-rimuru-gender-joke-still.jpg",
       "bytes": 43075,
       "sha256": "a683a8bc0edb3015133d52ecf091ff2ae8181fb3877dd997f2375044f6a9e340",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv16711697/figure-1.jpg",
+      "bytes": 35327,
+      "sha256": "2dd395d76d261ad415ab9162b0cabc72c9196735b05d82ed023ebbef06a71416",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv16711697/figure-2.jpg",
+      "bytes": 56576,
+      "sha256": "9bc2b32bd488223e17e226ed54933d188c68eb633a78db7b55f95b4e5252fd78",
       "contentType": "image/jpeg"
     },
     {
@@ -788,6 +2354,138 @@
       "bytes": 33054,
       "sha256": "acff34b6e9b1f75221a42f2ed1656fb5b760bdd2e875c045e0707fb714b7ba18",
       "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv16830607/05f431d22cabcd382b1e2124182cf22c9d096c8a.png",
+      "bytes": 249646,
+      "sha256": "eb605ab99073da6ed28c6736e593b5f8c8b3c87bf158208f1ed8350ef11967fb",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv16830607/0f3a5adb693070991608b1e1a79707f63c7e6f01.png",
+      "bytes": 257709,
+      "sha256": "c2939d94aa90a4522456f8ee12a04bd062d4769f2519b53ece338d802326bdff",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv16830607/1190ca092749a92f6da26ff757d620a20c0440d4.png",
+      "bytes": 141171,
+      "sha256": "9dd7c2174881618af903ec27126fb8d06d3871902474ae6cbe9133e3d3b09143",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv16830607/2ad0e863c7da458725b38b5745a4e75e01b7ee82.png",
+      "bytes": 218851,
+      "sha256": "14a9a5354f568dde02c8b55c1d40669f727dc889dcf1e3acf3d367a4c8d4c845",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv16830607/2d9d51c11c7310c0afd578741431c83181c7b043.png",
+      "bytes": 248921,
+      "sha256": "13e6f5ef39afc5864a99acb7b8d0d56d039d769588601db4f7c31e7272da983c",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv16830607/4c27d0d454d04bc630f5cfea7296d1be8f522bb6.png",
+      "bytes": 175496,
+      "sha256": "02339daec183c3888124dd3cbb9b3f6d12051b839e456a929432a65ca21397de",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv16830607/706c20c1b1653885e952864c1bdb38acd801a899.png",
+      "bytes": 2974213,
+      "sha256": "97fce6fd0bcf7d033f4275891ae3f73fdb5c7c731faade14709d10cf24748d46",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv16830607/81b56960b8cc0b5eff08ba31373ecb77407282e3.png",
+      "bytes": 10760,
+      "sha256": "31538e0596e580b23c9b5e80ae57b784cc508d7bd2a150d78045dd79c7bcdc30",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv16830607/83a8551dba4f611e1b88b391c9ee0773cd3ee22c.png",
+      "bytes": 333952,
+      "sha256": "0c7b2268029243e99d94a1225d294ace8d47f27f69ed1c2bfe99cb5b90c3eb25",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv16830607/93e861e0162bf72ba095fb76b529cc9782de090e.png",
+      "bytes": 96195,
+      "sha256": "1b9d8d31ef7d2a8aea8c3d35770e66dcd1547fcbe34a85b703d455f9a9d6145d",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv16830607/9940a5dca4416717ce526b61b987505fdd08852f.png",
+      "bytes": 380526,
+      "sha256": "7474d01402db5674042be524f49e30125e73c43a675d567ff6c70c1bbd4c4160",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv16830607/a20e7139de9a2323cfea5628b04cada60f2a0016.png",
+      "bytes": 308487,
+      "sha256": "ef118afb851c49c57dd55bb77cc6cd25d09dfa30610d24539a6c8f30f98206ef",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv16830607/a4288993fc1212dfda0a7dbc02560268016951a9.png",
+      "bytes": 310138,
+      "sha256": "fb61f84fcb2dc4d92b39a54e23e432ab53a72cbaeac554e4eb539ff8ba004010",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv16830607/abc152679b7645befacfac7f343d0061de293540.png",
+      "bytes": 217575,
+      "sha256": "f449137e179092b645d88cf09e81c4926b557aabb4e3f2cc9ad1c46bbaf63c3c",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv16830607/b5bab08eb44608e4379bfcfced085e1d5808f980.png",
+      "bytes": 434978,
+      "sha256": "f24084370eb7a9618b1433ed9f914316e6e60f9ac553d5742dc4bb7edfd83b26",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv16830607/bd9d55aa45942adc4bf2ebc32e3463421058c126.jpg",
+      "bytes": 129218,
+      "sha256": "0dc36cc2b319b140aa3ee9307472ac302f5cafbd16c9c0e6a187765ff3f98231",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv16830607/c92d6487ebad3fcbad8b83ea01adf41c076749e0.png",
+      "bytes": 15227,
+      "sha256": "1d301068ad311ab08bdc53b4073ca42ed77652c4501d94fec3e703f6488631f7",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv16830607/dceac15b486f4dcb31f9cd13d4c245742da7cb6c.png",
+      "bytes": 296589,
+      "sha256": "4df18acbbc83320b1a4b81d90ee62e32c8017d65e2af6ac1084137079f439d91",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv16830607/f1c4b1bc25c5d7adedfa274b5fb45e6f20651183.png",
+      "bytes": 30886,
+      "sha256": "3a9ea565bda2d9161c0809815337b1194ecc81f4ccc0aa4b18e398dd47b65b6f",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv16830607/f25724fafa553a36146b418f08c92e02afbbcdcd.png",
+      "bytes": 132116,
+      "sha256": "004c4edc741dacac1938555a6def81649880fbb2f670fe98a4ff5e1977f5e9c1",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv16830607/f4d213ba32d99448a39100caa4fa4a391a3f6370.png",
+      "bytes": 461839,
+      "sha256": "b9bc6ca01c64767fa9682ebc46fe4c13e34af66a0b157b0fc98b9c2b4d7b500b",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv16830607/f964d15b0829b48345b6434f1a55795080d0a007.png",
+      "bytes": 234575,
+      "sha256": "cf12b0b22065645d4f7d5b2b7abcccf5cab3220c30653c35a76dcdca6f547e07",
+      "contentType": "image/png"
     },
     {
       "key": "roof-archive/cv1686767/01-op-color-hsb-analysis.jpg",
@@ -944,6 +2642,30 @@
       "bytes": 26096,
       "sha256": "75d0a83963de0baebafc62e3e434ad4f2af1bd1c00c24f7a166ea9e214d49be5",
       "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv17018352/figure-1.jpg",
+      "bytes": 35327,
+      "sha256": "2dd395d76d261ad415ab9162b0cabc72c9196735b05d82ed023ebbef06a71416",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv17018352/figure-2.jpg",
+      "bytes": 22430,
+      "sha256": "55499a60350d87eff7a217fdc571bcbfb52e9da537f5d5e5c31b6f6c3f3e74ba",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv17018352/figure-3.png",
+      "bytes": 591872,
+      "sha256": "97ef49750b24a0510359e223c89ea69e6a3bf2f3c1b3216de69357e736fee69e",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv17018352/figure-4.png",
+      "bytes": 333031,
+      "sha256": "74ce2629a5a304b42c3f8cc3dad2dff1998ae747e7d831511a9ceb30d2107e34",
+      "contentType": "image/png"
     },
     {
       "key": "roof-archive/cv1705216/00-author-hephaestus.jpg",
@@ -1186,6 +2908,108 @@
       "contentType": "image/jpeg"
     },
     {
+      "key": "roof-archive/cv17209595/1a8863d6aa1019e3bdd99a7d2b2d728378627ce5.png",
+      "bytes": 1010826,
+      "sha256": "f3d2d19707835ecbbd2513593a04a9703f3ca90e0ba991c983b74ce86135ceb9",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv17209595/21e431627c0295b1536204b2fb5bb23d20db176a.png",
+      "bytes": 916293,
+      "sha256": "869a75e9565c7005d3cf93d9d963b02bf756604baae549095d333da236d5b77a",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv17209595/2848619b18b85bdfd09ce0b37ffcb63df66e941f.png",
+      "bytes": 403909,
+      "sha256": "9cb905dcad12a837c9e89cd48403162f638506b7e466f262220bbb54079a38df",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv17209595/3150a3d27201864a9bd63f5a70012afa12406852.png",
+      "bytes": 367245,
+      "sha256": "2ac3382343dab001c86fde20fb0a5b1e2a2e71f9f2f95d496e5132c8fa6cbec0",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv17209595/363c39d5bb5059023909955abd0a47b73568e002.png",
+      "bytes": 1413684,
+      "sha256": "cf29479dfc4bfe3b2d9689fe6fc311950b6af9c8e4d9b9e92570b0450411c5b6",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv17209595/38be7361e9476602acd5f2e6a014b9dd86d3cef4.png",
+      "bytes": 707111,
+      "sha256": "7d2d3c929da005c33b322767129328f3a9e751f2eacc397b9d3e93bc1f679b15",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv17209595/4fb7bf5e9f9c8a604709bf94b44ec4cb8d6a2c5f.png",
+      "bytes": 35745,
+      "sha256": "33ad884e332d8d063f27445597919376becb4a4662f2b65ca262cef40175cf19",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv17209595/5dd814574a73c9f4c3da0fd31703b1b5ca9a56d4.png",
+      "bytes": 1533302,
+      "sha256": "454cc4ca739e551aefeb483d2e70fea440173976052135a3fb1db7a2bcccf029",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv17209595/665f49a9863c1a9d6f76edcb45e9429811a6c975.png",
+      "bytes": 39712,
+      "sha256": "af610521f49250e5e0d2582bb235e03e9117edbfb3b77cc35a41620189c08153",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv17209595/7a13757e066df9524d2e5c6a2d66d6d5866fa9b5.png",
+      "bytes": 477940,
+      "sha256": "6f4375046881fa5488fbda05e19bca1d6eba41365cb891e02e3a89294ee3b771",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv17209595/7a71711cb29bbc2e69d19fca784eddb35b13b2e7.png",
+      "bytes": 1622888,
+      "sha256": "400d89bab6b7f66130ac34aa64545dc262da7af2b9490c84e70afb94e8c3cf24",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv17209595/7ca368064f91ed58547a8f2b4c153dc2968858a0.png",
+      "bytes": 597375,
+      "sha256": "161f871865734550ac8f95483bd53476d10586ce01e5d5252188479d3e8fbb18",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv17209595/b58777f0d82743c3ba020294294be628884ea17c.png",
+      "bytes": 721685,
+      "sha256": "5330b7552818e53ec52538fe1580c84c4509bafdd3f5a0974a5de4cbbb600c3f",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv17209595/ba6e58730ef16fa0d74859f71a9fb5e2b3f5bbd9.png",
+      "bytes": 279651,
+      "sha256": "99801f631bb9651df8329268e57fe0026277676914e242691e360258096a776d",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv17209595/c31885177787fbb402a5d891f4c1703d2eb11954.png",
+      "bytes": 997171,
+      "sha256": "3011b219df0d213e8afd348ef9e2ec4fd50b60bbd4f40a046a7e2597e8d1fa60",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv17209595/c6000831fad5fa14254f8386fcaf3a3cf7ab97d8.png",
+      "bytes": 935427,
+      "sha256": "e44c2d1df55714d5a2ce5544a31f45cf373ab6019fe1ec74ac0de3f352c85593",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv17209595/f7a6e2305e8dd82c90e755eaf8c8ce0d137f36aa.png",
+      "bytes": 598425,
+      "sha256": "fb1b14eb3b2c172f00704500c235f84cb50d2abe3767528fd0f0e967894bc89a",
+      "contentType": "image/png"
+    },
+    {
       "key": "roof-archive/cv1723561/00-author-chuangzi.jpg",
       "bytes": 17874,
       "sha256": "82698b0f8a2ca5c5ec5e71f01f04e785cfe82a479404bcdcb5cc6d3fb26843ea",
@@ -1345,6 +3169,30 @@
       "key": "roof-archive/cv1729613/14-houtarou-and-writing.jpg",
       "bytes": 168818,
       "sha256": "b9a7bb32a3e65dbff5d88fa102a6b54f73c085e225bad95e76f21c3eff88bff1",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv17322343/e0cd07895d14178cc261ee610b152dfa9202ba1d.jpg",
+      "bytes": 77867,
+      "sha256": "680c0f0f876453e7a3de341a12d3bedbe40189f2fdd73bbb595bc80e04455504",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv17343474/f9b4705ad9c6574ab95bff53cbb59a62248c36fc.jpg",
+      "bytes": 38020,
+      "sha256": "cbbb819dea93156da9df695d5ec78c73fb6481b1f4af8773afb1ab33dde6ba46",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv17364327/e2b391f61bdfd8b8a621a0576ba72fc58bd8484d.jpg",
+      "bytes": 49576,
+      "sha256": "3a6f546f81452180cc1dbce4d08692cea59b49de1986d5c93859644292083626",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv17374160/9a20f136b25e7a034657c799c54f58df2f4786ce.jpg",
+      "bytes": 53924,
+      "sha256": "0d8f50c8977bc2efbe97d71b3866450f05c9432e0836e7d13916265cdcb7cc78",
       "contentType": "image/jpeg"
     },
     {
@@ -1630,6 +3478,36 @@
       "contentType": "image/jpeg"
     },
     {
+      "key": "roof-archive/cv17693111/0889fbe58ae912a94242082d06461bcd4b9c74ab.jpg",
+      "bytes": 64023,
+      "sha256": "c49ac8a807a261db838cb7a30064d9911795547f05f69c16f5e8e9fbf1e65357",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv17693111/0ac96f88e19e788ba251ac96c2ace5b99bba27cf.jpg",
+      "bytes": 73776,
+      "sha256": "6022f3b2cd2bc4ca831846d1178253ea0f5f9e44baf85fbb20241916804f3612",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv17693111/4093da8b4e2b9b4e90c5869ec3ce9737fc991c98.jpg",
+      "bytes": 143544,
+      "sha256": "122a3a21415dadc46338a7d9dbd738d8b52377664010dcf4d6db2b8e496798df",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv17693111/7531a3edcd7ffba074792d8724ca6ea77b3ff026.jpg",
+      "bytes": 136997,
+      "sha256": "187121a9700830e08657a848cb6becf993e6704bb4f8cf1d48ef9d874183c26d",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv17711498/04f77b4ae049e84516f897288ee49436d04c7eda.jpg",
+      "bytes": 87571,
+      "sha256": "6a4eade17b02b3e13d90185c22ff2c04e87d1afce25bafd87fa961e29cca4f18",
+      "contentType": "image/jpeg"
+    },
+    {
       "key": "roof-archive/cv17732899/086c8ecd49ea3c00d7cabf19.jpg",
       "bytes": 61371,
       "sha256": "2ef56b334eb9538e8d7102d171b6b62165ca877a84c75bfa30db433b55499931",
@@ -1849,6 +3727,54 @@
       "key": "roof-archive/cv1775632/17-ingress.jpg",
       "bytes": 423562,
       "sha256": "7a6c44e125274560efb3c4cfc4226fb6b1a5525889036a766c74a07e629b1056",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv17784810/565e3d0d2b8fb28c031db6167b4a9c15e479f2a4.jpg",
+      "bytes": 127879,
+      "sha256": "51d76a857939870b55a743d138c35808832504a3528054828232996e691a9b78",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv17784810/703164b20473d9d42b40ca6fe883b85712cfe3fa.jpg",
+      "bytes": 121971,
+      "sha256": "9e8cb34ec7d5731ae633880377b257edeae025efce964cdcf57a5502ad4bdd81",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv17784810/77655d15c77b74108ac7adbbfe9d59f6795dc57d.jpg",
+      "bytes": 189133,
+      "sha256": "38a4d4e0ce7ef28f166b723f441bfd3720701ffc4b3c8a3ddee051df24e57589",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv17784810/ae744fa0d4c4f4a1badc3bab8370a8266f0705e7.jpg",
+      "bytes": 67059,
+      "sha256": "e58a9d66278035e5c854588b0d781738c4479a183422614037346342c0ca7144",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv17784810/b4e6c039a3bbe88525bee5470812477c6f41541e.jpg",
+      "bytes": 143172,
+      "sha256": "5fe1d497b83b709f0eda2033fecec2868f7d2fe67e1f4f02e1271f8d5270a2f1",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv17784810/b5ac280360f16da2a6d0404416a0997898df31b1.jpg",
+      "bytes": 143220,
+      "sha256": "f149632c21272897f0cb486cc4a2ed26bdc01908eecc2f59b928751dee90b4c6",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv17784810/e6174c26c03f4f66b155accc544e5818a8d1ecc0.jpg",
+      "bytes": 117493,
+      "sha256": "0d334c97f347a70122eaff4118b817012a7d7889fcdd1081a57d9897e5025799",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv17784810/f8a93095fcfb5ffd40434872f163b33582d4bd67.jpg",
+      "bytes": 121225,
+      "sha256": "79acce51594878d49d18192edf02fb67314f39ce21fddecd19c8d24fe0d1c8c3",
       "contentType": "image/jpeg"
     },
     {
@@ -2170,6 +4096,36 @@
       "contentType": "image/jpeg"
     },
     {
+      "key": "roof-archive/cv17809755/31b87f8ecb307540c9c511efc37ff7c1455350a1.jpg",
+      "bytes": 33363,
+      "sha256": "2674ae22dd7e6d8ff55b5e140fd6416fc5cee1fe9f426ac2233a6acf0bacc91a",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv17809755/78e1920bfd1deb6b99063c0fafbb5c855fc71965.jpg",
+      "bytes": 70165,
+      "sha256": "c29e42b8309adbf460ae898855182fa5bc2f4d6d4f1f46e15556bc8037209d9f",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv17809755/8e20e7629928ed43fbe8b397a87f014ced94a4aa.jpg",
+      "bytes": 79411,
+      "sha256": "5476ff33e6efda8e494c8dd7dfd91b63f93de8447c9b741e53f4a76ba1953738",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv17809755/9962104ec185bc6875e2de25ef2962645b4dcf27.jpg",
+      "bytes": 96841,
+      "sha256": "081f4b0afcd3f5b31cc2e207ef966ae916fcd1f8a76661155e60c6666de4b673",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv17809755/d10aaa3b6d0845edcf767a73a7dddefeb932dfbf.jpg",
+      "bytes": 159337,
+      "sha256": "35f4d79210e065efa0f2c991e5ff085a94fb3242188a5ce8ce6ac8b9a9ac5195",
+      "contentType": "image/jpeg"
+    },
+    {
       "key": "roof-archive/cv1783637/01-yu-xiao-xing-author-card.jpg",
       "bytes": 30253,
       "sha256": "d4358e8c7065a6ed6147b901ba4b3613b8e03ea013308755e176f4b62997a4c2",
@@ -2312,6 +4268,78 @@
       "bytes": 296577,
       "sha256": "7cce41677d282b9197f49b1107c1183e14f8d7d4d3488d3936680a2dd9a0604d",
       "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv18100135/807184dc48e985f18978e101364120ee2e192a82.jpg",
+      "bytes": 87207,
+      "sha256": "dfe993f39f5d3141b7648e97e8ff372b9301c11019e5d7ba5e732b484ba97f8c",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv18100135/9724f297a750d0bbe2e5fa9a5607254e7270a970.jpg",
+      "bytes": 29799,
+      "sha256": "0ee3196976b80e008179f5b2034ec6f67a7174fbffaacf46403ba0fa2ddf0f7a",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv18100135/e1f39598e034667a2fd70f75cc3abc7417691463.jpg",
+      "bytes": 79606,
+      "sha256": "5672ed86593d938ec6ff08840bafbeaa114a85005e7e0e1e252076933146ce26",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv18157737/01-eureka-hamaguchi-issue-cover.jpg",
+      "bytes": 53892,
+      "sha256": "8e1df920602ffcb090928ac878a967ca5f841af58ae4a332ce76164188563c6f",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv18157737/02-kushihashi-performance.jpg",
+      "bytes": 38854,
+      "sha256": "2eb898e0786f39469dd4a70879dc7a1a61620286cef2bec15815c91d804e0657",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv18157737/03-las-meninas.jpg",
+      "bytes": 81675,
+      "sha256": "8ed2feb388c7c62cda8274e165ff1c7e484783b35dacbf7410382e0d8c3a1b45",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv18157737/04-asako-kitchen-gaze.jpg",
+      "bytes": 63666,
+      "sha256": "8f1e2373b087bf5f81be702e2dea28ce0768982e192bc99abc663484e222d860",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv18157737/05-apartment-group-reaction.jpg",
+      "bytes": 100487,
+      "sha256": "142e5a4e828df9c43a63bb6c2fc8552a952f5dc75e279599a17c4fccad820e77",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv18157737/06-asako-across-room.jpg",
+      "bytes": 90315,
+      "sha256": "42cb27d7ceb327ab693e8381bc72926ac8aa92853b6cbc7cf7dd3711f625d52d",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv18157737/07-asako-gallery-gaze.jpg",
+      "bytes": 40429,
+      "sha256": "f907e6e7534686ea86cedd006ba8cdf6521f3fad1609e7ebc335d83a454cce8d",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv18157737/08-mugi-restaurant-arrival.jpg",
+      "bytes": 79949,
+      "sha256": "33df84862f8eeab12b701f07e45352fb613bacc2775e364b322ff1d38a5c4062",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv18157737/09-asako-taxi-window.jpg",
+      "bytes": 45264,
+      "sha256": "b41011c4a75e855127d02074df51c2da470e7bdb8ce42285ef8ef82a91fdaca1",
+      "contentType": "image/jpeg"
     },
     {
       "key": "roof-archive/cv1816281/01-episode03-money-trick-comparison.jpg",
@@ -2618,6 +4646,66 @@
       "bytes": 756839,
       "sha256": "9e8bfd3714db3694fbf74fcce81a5904a234b56401973066d725bb77aa554eb0",
       "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv18353416/01-shin-evangelion-poster.jpg",
+      "bytes": 281004,
+      "sha256": "f81ec2a8c4a360859d90f9375882a5186616cd21a7a71b147e92f0dc049cd025",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv18353416/02-evangelion-character-collage.jpg",
+      "bytes": 381739,
+      "sha256": "a9a2a9409442eb53b4ab1432003ec7abf4232ecfb35ba0b8e577d328430a7328",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv18353416/03-end-of-evangelion-poster.jpg",
+      "bytes": 198252,
+      "sha256": "6abb44e29a77209d90b89cc542463b6d665670596a1457a565c82f5ed432e212",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv18353416/04-shin-evangelion-blue-red-poster.jpg",
+      "bytes": 45040,
+      "sha256": "726d11b0bdd2d1a51639c9b99cd0bdeb66adb94dc13663f9b38b841cef4ebb9f",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv18353416/05-terrace-house-poster.jpg",
+      "bytes": 192859,
+      "sha256": "5291841780a83bc655e43e2bd019e3f6ddde044a09bd2864decefd2b6588c62c",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv18353416/06-shin-evangelion-tracks-poster.jpg",
+      "bytes": 209060,
+      "sha256": "596d6521d514b442be0e9fc6f14bbe4ca18fc6b790fbbc539cca57d2b00a527f",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv18377812/26c245f7b37238660f6aeead683b34ff5d4a7d37.jpg",
+      "bytes": 181865,
+      "sha256": "e17dff040cf17745412de73f84a87f5fbeee3d6f97b449bb21ece4cdad74c9b8",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv18377812/3af2f202532543170f02d10dd0e40bdc2678e19b.jpg",
+      "bytes": 62866,
+      "sha256": "993e89400abff63cc17a645a83743bc0b970498face82ccf90dcd3ed2bcba7a3",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv18377812/43fbe8fc7ca579d5ce4ef0c0a310ccc894a82326.jpg",
+      "bytes": 181695,
+      "sha256": "80261d3877f23aa16777accd2acae79f5cc91f0737726cb280d0d0b6f782a6fb",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv18377812/bd248b8afc39ec95497cbdfbb9fde2cd2f322ca9.jpg",
+      "bytes": 63857,
+      "sha256": "3d697085cfaa206c639938ae73a273ed2e97d9d11c383d9078baeb48944281d1",
+      "contentType": "image/jpeg"
     },
     {
       "key": "roof-archive/cv1842794/01-second-director-card.jpg",
@@ -3154,6 +5242,12 @@
       "contentType": "image/png"
     },
     {
+      "key": "roof-archive/cv19384728/24911bebfb2840a3a46ccc940b43008238b56a8b.jpg",
+      "bytes": 311967,
+      "sha256": "1d600c2aa3dd7ce10e8c535f57e12e20d17585f66e1d5a1c506f9da4fd6a0c0a",
+      "contentType": "image/jpeg"
+    },
+    {
       "key": "roof-archive/cv1938851/01-kaguya-title-visual.jpg",
       "bytes": 20251,
       "sha256": "7baa03211c4c7afe80e9e7507abf52931c25d2de1805a90836c0f17d6ca62e54",
@@ -3283,6 +5377,30 @@
       "key": "roof-archive/cv1945096/17-eboshi-new-village.png",
       "bytes": 830839,
       "sha256": "31d77e19e88bf60cab44d6cc331b3949c784bdcae9319ff32b8694583f68cd38",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv19491817/figure-1.png",
+      "bytes": 39482,
+      "sha256": "3ec9ccb72f9ddd6078e4a9352a5ff9f5fc375393d328fb77af202ff559027d08",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv19491817/toro-cat.png",
+      "bytes": 33973,
+      "sha256": "bc2e7827ba2df6189bd38e00d873053d9c6000aca5f51fd362d758bf30285db1",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv19651001/909fc9b642b2b35d87aac20e3446dede71b75671.png",
+      "bytes": 79911,
+      "sha256": "06aaab91420287471004253c2ad9e1cb7ab2f05bc12dc7cf797c2ce0961db899",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv19651001/91c904e3acc2dfd458656d2c6148f161c16c64f9.png",
+      "bytes": 131004,
+      "sha256": "e8fabc705d49f60cf7c90335ca30a8bfc20ca5d4572793a0650a944009ff6334",
       "contentType": "image/png"
     },
     {
@@ -3523,6 +5641,90 @@
       "key": "roof-archive/cv1990184/19-sumino-yoru-quotation.jpg",
       "bytes": 29036,
       "sha256": "b9a608b09d181dd2651f5ed77afc72f14f34b4c8926c5ad41eb93eecbabc601b",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv19961431/1ea4e97485935a17126b46a670850f978fb6daea.jpg",
+      "bytes": 495562,
+      "sha256": "8c3e2920dd76a0a9f614570988184761a9823c6c3b53307e96568e8f2e9d3546",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv19961431/1f4c900675e6cb8ff3f768973d58aff941cfde31.jpg",
+      "bytes": 644646,
+      "sha256": "49f93e534e1787809a4f042e99f105f0f399df939bdb3ed1fcb4b1b9a54a18ea",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv19961431/2ab7695e018f24383952f3c242e22a8c48d5c47e.jpg",
+      "bytes": 493701,
+      "sha256": "695ba4c62ea380625a4267a82b68e19a35911b2d7a82e810d5edc982bf0efbe7",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv19961431/3b6f7995ff11e2e175feb6ce9b3c548559424171.jpg",
+      "bytes": 485774,
+      "sha256": "f37318a6c0f5c81bc4b1502e34395ea4eda9a99ac092158e68b6fa132d42c207",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv19961431/42271c28073b6c19d3fe7c8cd89a94963474b10e.jpg",
+      "bytes": 137184,
+      "sha256": "7b138fbb43c322bb1e797012bc0181c8a6cc3b238e7ac2c7137d0386921289d5",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv19961431/49256519239002c85eb504f5760426185c5a486b.jpg",
+      "bytes": 418650,
+      "sha256": "ae568d36d63f36cf3ff07b001ff671390e9abf4d777c96d8c45a8c54640b5253",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv19961431/7794f7d17a4af1b1c2c0cc086734b944688eff15.jpg",
+      "bytes": 637141,
+      "sha256": "676eb7b430aedfa8ff894ee46b57e4b293fd5cf74e645dc9cdd899a4203a0702",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv19961431/8fe5b02165988ec34b82cf0ff383e474bd8dcd18.jpg",
+      "bytes": 34975,
+      "sha256": "24d10033673fda8e4667998d479bece5caf592452aaeff919fdf3a90c8936786",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv19961431/a4f216ee456f6c6a9b6d49348f6330b1cf606abb.jpg",
+      "bytes": 468632,
+      "sha256": "52e6f0c59a07ec8d3242ebe82cd83f69ef0cdd2b9ed989828b976506d66b0a8c",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv19961431/b5ca9666b28e58bc6e4f0f3918178faf59a05229.jpg",
+      "bytes": 521111,
+      "sha256": "763b637aa80475a59c46ef862f62a39c74f9c148a927548b543e60a11b260b17",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv19961431/ba6ae7b74a711054984a209863a2a0983ef91551.jpg",
+      "bytes": 382482,
+      "sha256": "eccfdc8da45ebd5c8e337c1e51686974c6436343629959a7e42f7c9ede6e6d20",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv19961431/cd92e6f53c17b7c91ac6bdc693451c0a0ab822ba.jpg",
+      "bytes": 475048,
+      "sha256": "a22885173ffbdb9da1317e3a3eee1e91c6a75f2e81e5de972f13554aa7913049",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv19961431/d4ebb9cf46060415a50fac7e20df5358f3e1bb14.jpg",
+      "bytes": 465493,
+      "sha256": "0133e28a0ec957f512726226cd1423833aed1dd21bfeef753a4f16cdc819e792",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv19961431/ec50e29617033546432a5747562624a2174b190f.jpg",
+      "bytes": 261174,
+      "sha256": "653bf3cd30e1a135a63938e3b36a3d2ff6bfb3fe3a4bb9a4e77d7763df3bb45d",
       "contentType": "image/jpeg"
     },
     {
@@ -4054,10 +6256,10 @@
       "contentType": "image/jpeg"
     },
     {
-      "key": "roof-archive/cv21792051/28.jpg",
+      "key": "roof-archive/cv21792051/28.png",
       "bytes": 117899,
       "sha256": "3414769bc426cabbf5bb73b892bb6ee7c5b601926b32fa7f8f49ab696cbc1992",
-      "contentType": "image/jpeg"
+      "contentType": "image/png"
     },
     {
       "key": "roof-archive/cv21792051/32.jpg",
@@ -4114,10 +6316,10 @@
       "contentType": "image/jpeg"
     },
     {
-      "key": "roof-archive/cv21792051/81.jpg",
+      "key": "roof-archive/cv21792051/81.png",
       "bytes": 267167,
       "sha256": "18dc5a20bf82b19c8aeafdfbe5cee094a2fabda21366abaf35faa82c073d3fa9",
-      "contentType": "image/jpeg"
+      "contentType": "image/png"
     },
     {
       "key": "roof-archive/cv21792051/93.jpg",
@@ -11791,6 +13993,2238 @@
       "key": "roof-archive/rethink-everyday-poster.jpg",
       "bytes": 199670,
       "sha256": "84a6e10509f331e975fc48dbee0eb1fe7f70df8a7c6652b1ec407ba32266fe8b",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv19777785/01-planets-black-sun-roundtable.png",
+      "bytes": 1591307,
+      "sha256": "85a809b121803e1c937bbcc8d9e2a237d237f662794a3491517fac53d0b36dce",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv19777785/02-kamen-rider-black-sun-poster.jpg",
+      "bytes": 721819,
+      "sha256": "5b901cd012ec10a2fa39c0a055c6d48fc14073ab037a7f032b9c035d4cd6a32f",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv19777785/03-black-sun-key-visual.jpg",
+      "bytes": 1348493,
+      "sha256": "2380b3a05e581cd07ccb1710efd6d9e02f03571d20b3701c3d597f8615cc68d8",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv19846696/faun-afternoon.png",
+      "bytes": 855220,
+      "sha256": "b8d6894e8280fb5f7046c3b549408371d02cd2bdccd559445c3fd9e23532d5fc",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv19846696/mallarme-portrait.png",
+      "bytes": 110675,
+      "sha256": "4ede8d524fd7ddecc60ec4065971a684fee679c3054e334e6cdfc493f39fcaff",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv19846696/notre-dame-chimera.png",
+      "bytes": 590835,
+      "sha256": "b0eee2d043228ef2f618f6a8d4dc9658029cd6e41272bec13e4cfab72b2b8180",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv19846696/wagner.png",
+      "bytes": 807695,
+      "sha256": "f12c3fbe3dc23db4622e2af5c4ed7e8188f3c106d38af10045f99e89ef82211a",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv20028261/01-little-people-book-cover.jpg",
+      "bytes": 164010,
+      "sha256": "e1d73876c9d42328db3fae1d039dd8e434115f081f78d33d05f37e3f59a77ded",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv20028261/02-kamen-rider-bluray-cover.jpg",
+      "bytes": 74389,
+      "sha256": "a8f31d7293966f2399fa4405109350008ab754b22d563b04c1e817a6092d5b23",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv20028261/03-kamen-rider-v3-cover.jpg",
+      "bytes": 610263,
+      "sha256": "4b536e92dd251cfacbac781fd04ef426bc4ef585bea7a20a1b164fc426862e6a",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv20028261/04-big-brother-little-people-table.jpg",
+      "bytes": 149202,
+      "sha256": "c5f0e8eecf8f0c9fefb8a0f2faaa6697b32720ca0176145cb905b71bbf6b81da",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv20028261/05-ultraseven-cover.png",
+      "bytes": 2309202,
+      "sha256": "2eee0370b729f0e2480d9a5213b4661ec3e380e26341813d6ebfed0cfc29b82c",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv20028261/06-tsuburaya-special-effects-exhibition.png",
+      "bytes": 2309370,
+      "sha256": "646785d9eea4f0719be2524218e211bfef1933600565b18cdef61a74fac5f672",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv20028261/07-ultraseven-monsters.jpg",
+      "bytes": 78938,
+      "sha256": "36c0fde1095ece48b904be6cc9a7709ff3983f69a708741a1d4cb283e02a6306",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv20028261/08-ultraseven-boy-scene.jpg",
+      "bytes": 239827,
+      "sha256": "b9c6a52812aa6e326bde3e7558a7a305b3952cf2fc007e276fb5842964f6b9dd",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv20028261/09-dan-moroboshi.jpg",
+      "bytes": 171605,
+      "sha256": "92a57ff001db414a2affae08f031ffe0cb55da02b2b96fde6d95d6032e069b75",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv20166209/01-little-people-book-cover.jpg",
+      "bytes": 165735,
+      "sha256": "f0e1983fc359ee129844d360c1f92cd8c52fb063c5dd98b278f6aeb65cc05ebf",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv20166209/02-kamen-rider-motorcycle.jpg",
+      "bytes": 526222,
+      "sha256": "fd4ffb54f1e07d291c12e07fa3cb3d86f28b802856358e674618be27ad9941c7",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv20166209/03-kamen-rider-snack-card.jpg",
+      "bytes": 160965,
+      "sha256": "acaf254f702948e06fba04c6ae2806093c85877b00af331b581505ad1fd13369",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv20166209/04-battle-fever-j.jpg",
+      "bytes": 239005,
+      "sha256": "16b80dc2b1b34c4892e09ecff748fb121efa8d61f1689e1021a143055fb43315",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv20166209/05-gavan-memorial.jpg",
+      "bytes": 655548,
+      "sha256": "a47466f02a4cb9160365b38c7c0a11b64b83ad4e8cb77846f91356fe029aaf27",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv20166209/06-ultraman-80.jpg",
+      "bytes": 322853,
+      "sha256": "6308529f25f7fc7ca15e6cc7d3b6b6660c0adbd1865fd7b6f4b0a2b38c9a6c45",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv20166209/07-kamen-rider-black.jpg",
+      "bytes": 615213,
+      "sha256": "90bff13745ebab8f28e980821cd96a45081c91da80a87ef480d6c61260d628dc",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv20166209/08-fiction-era-end-book-cover.jpg",
+      "bytes": 50585,
+      "sha256": "8433edf94c095e8a261a8e1830e014a3c2b84190c4c2f5278ef89528e081957c",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv22116444/01-big-brother-little-people-table.jpg",
+      "bytes": 43656,
+      "sha256": "13a529e10203fdcb23b108391999da1ab54de1040732bec0e28534eda4622042",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv22116444/02-gamera-guardian-of-the-universe-cover.jpg",
+      "bytes": 785802,
+      "sha256": "80de65b6bfab612bb6560117d5c3a15f4e0d22d85da9eb8eb6538fc339cc5dd0",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv22116444/03-gamera-2-legion-poster.jpg",
+      "bytes": 915089,
+      "sha256": "5d4c0394942ba772b282df4d1244df417cc6d7beb2b283c1c3da34e33e770eb1",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv22116444/04-ultraman-tiga.jpg",
+      "bytes": 80711,
+      "sha256": "bd33143cb633de51eb9ec82e550b4f84801fd90d5120b2287c11606b14f81362",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv22116444/05-ultraman-tiga-scenes.jpg",
+      "bytes": 113808,
+      "sha256": "68c71e238f98fb2504d3ab238e0362d29ecbf87594b1431ff01b938614599759",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv22116444/06-ultraman-gaia-poster.jpg",
+      "bytes": 58005,
+      "sha256": "c5d5ddd04c3ba926b8d438d4da63851a9551f372e2d4cb7a076ee91521bafaaa",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv22116444/07-ultraman-home-video-ad.jpg",
+      "bytes": 386922,
+      "sha256": "b5377708e3ecc79c64c911a50858c78caf62b77d748651d45b7072f45aa16794",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv22116444/08-evangelion-final-scene.jpg",
+      "bytes": 168764,
+      "sha256": "aa4745560a17bec578a3d26770a229267c7865bf2252681a5bb96cecdc71ec3e",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv22116444/09-shurato-cast.jpg",
+      "bytes": 274227,
+      "sha256": "725c4b5d839f606a4447490c854dc770cd44c62e786c53a154e120af15dc9f79",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv22116444/10-little-people-book-cover.jpg",
+      "bytes": 165735,
+      "sha256": "f0e1983fc359ee129844d360c1f92cd8c52fb063c5dd98b278f6aeb65cc05ebf",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv22801774/413eea03e33f488b61f3c885431dabdb6c75f6fd.jpg",
+      "bytes": 70630,
+      "sha256": "fc4d36a618d44be46c712b3678cfac9bcaf7c1a430869a0a4d50eab398d24bf4",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv22801774/70ba65119a0864f2b5da79ddf4cbb4a18c101325.jpg",
+      "bytes": 118704,
+      "sha256": "9b0568daaa3947d7fbb468aaf9253b128950f7667c7c546183a4b2b164f539d8",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv22801774/76177361035dd1d8d8e392e0384e39e252ee8f9e.jpg",
+      "bytes": 171555,
+      "sha256": "064093e2d6a1a343dc59844611b67ae43a04c94414ab3dc97bfcc7a6e17d203d",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv22801774/90ab69ec2de239b43406e97723cc040c10a7f9d3.jpg",
+      "bytes": 235404,
+      "sha256": "ce53f48f91cd487ce7ceca75cbd80a911809a01d15adf491865e511f63524bc5",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv22801774/b18528f1e48440200684e8d32c445911b6527f5c.jpg",
+      "bytes": 60701,
+      "sha256": "d463c652aaf677d474331b0a0c36e27553c7924f4912236aabb74668259b9d11",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv22801774/bbb038aad437d741ab66b8b097dec798a5b4d921.jpg",
+      "bytes": 290684,
+      "sha256": "dd6ae4069adf9d848052717c49d4e6a80bcd0081f109b33d0e0b3deeee018c24",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv22801774/c0fc8b767de09fb6a11bf7fc2bf3400b4aac5714.jpg",
+      "bytes": 58683,
+      "sha256": "1f26f31a097def64175a65578debce53d1e90299cd5e26fbb76838e669e01664",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv22801774/db24f333382d4ebc9aa2abe39b88a06eb11c5f7d.jpg",
+      "bytes": 79556,
+      "sha256": "3db92e3fe1d5219a0c4d6f8b0ba03148df9620aa90c870a1967814de5755b476",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv23048003/01-kamen-rider-kiva-cover.jpg",
+      "bytes": 200053,
+      "sha256": "c2de76fd4f5e8542fbc1c9c6b6bc98911c441c383b73dddecfafdcc3ed9e35ad",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv23048003/02-kamen-rider-kiva-poster.png",
+      "bytes": 703672,
+      "sha256": "f5b69a0b9a9d91dc029841ce73470414350bb9b9572aac63d5c418cb8010ce39",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv23048003/03-keisuke-nago.jpg",
+      "bytes": 136900,
+      "sha256": "1cc9d39c6563b44b99aa0595d89eceb3a2735cd1e64acf5b7205cf79d03768a9",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv23048003/04-kamen-rider-decade-promo.jpg",
+      "bytes": 486619,
+      "sha256": "d5bc16c7150363095fd9721a0ca66556a8c54c5b64d4e929588de636360ae28f",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv23048003/05-kamen-rider-decade.jpg",
+      "bytes": 237138,
+      "sha256": "1c876997dd9cf800b350045b9f6b88897858f60e1f2c3ad07e41f5f016fc585f",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv23048003/06-kamen-rider-w-heroes.jpg",
+      "bytes": 697900,
+      "sha256": "dc18e659af4653babb69ae4a60f4e97ab1a3fe96df43520ffc98c8c5144cdb37",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv23048003/07-kamen-rider-w-poster.jpg",
+      "bytes": 259645,
+      "sha256": "1c8f03edcacce921d36d231a37a7d1322f971f3dfad50999c921dbff0b392e88",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv23048003/08-tiga-dyna-gaia-book.jpg",
+      "bytes": 639064,
+      "sha256": "cb3514534da545af4a962d649a5690e27159655c72540d9af130fad13efb4dd4",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv23048003/09-shin-kamen-rider-poster.jpg",
+      "bytes": 198718,
+      "sha256": "a08bd2cf3668542d1870cd3c809ce59f2a65890479bec5f31128edeb2a90e0f2",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv22901248/niigata-nippo-clipping.jpg",
+      "bytes": 99065,
+      "sha256": "9c887d17f21ce18a77ce153a35d2ae94ca3a1efcc52add76c99c37c44a93fe17",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv23900717/01-book-cover.jpg",
+      "bytes": 100918,
+      "sha256": "845ac271d1f5d573cf7ae47457a552b32f3e51d751112f2500fd8ffd1f606946",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv23900717/02-la-signora-di-tutti-poster.jpg",
+      "bytes": 265847,
+      "sha256": "6f0acd73581a397205b2a99ae654e1ca3d76c018e5884c906b98c7977601ee8f",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv23900717/03-la-ronde-poster.jpg",
+      "bytes": 133948,
+      "sha256": "5123797b908e33077072fca2fba0d046ec394eb59559e5e0ac8e8333d8c6e9db",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv23900717/04-la-ronde-restoration-poster.jpg",
+      "bytes": 238905,
+      "sha256": "48c559dc62ad1cd303f5dc87552cff418111d6ccbf38616815563dffd2dee037",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv23900717/05-history-of-madness-book-cover.jpg",
+      "bytes": 94954,
+      "sha256": "d369974fdc9c73353454ca2ff262c63a1da29f7b45affbb01613c7c7bd9250d9",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv24605269/05855f54118826f5bf7d6ef9362b1f412fc81751.png",
+      "bytes": 253711,
+      "sha256": "0bd6f3fba3287af696f825dc187cb55488e7e9ef7c01dbf8d49c150ddc1d7b5c",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv24605269/10c64057bc6cd4258a34d298859e55309f40d5f4.png",
+      "bytes": 371501,
+      "sha256": "b5130340d780c49d987e6529811dc12830412fb13060860665d84216a00af9bb",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv24605269/1de1c31b9563e6a9f0455779775b9b1d02fb2a98.png",
+      "bytes": 1168122,
+      "sha256": "740561e491fa4d036dcbb4828ced87f01ceca060bf008e956eb78fcd3cceb68e",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv24605269/1f9c090b27c7b4c84a917fcb0fdc46aa3bef3d87.png",
+      "bytes": 1064600,
+      "sha256": "bdcec428ad75070f4a4cdcb4c7d4593a6fdb5204cd3355b3782f4b2211513d94",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv24605269/63ca704c9869f2ddd658109b056dc510492202fb.png",
+      "bytes": 399835,
+      "sha256": "2e1e2452111dda5299357fbf0c747fc8ed3b12cb5ba9a3e389ec73dc8c41ec84",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv24605269/722203327b90cd59e8f6a06add9002bc1646ce9a.png",
+      "bytes": 2060564,
+      "sha256": "45bc3a5474e8915d5fb7f07d2e8185614681c4943503fd0ef8984cc96c52b9b7",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv24605269/8272f57ab5ee2955c0c46a758c549271b435bd14.png",
+      "bytes": 160047,
+      "sha256": "f3307011441f481c1220c9326d1e2482bb21218d0da690fc342e8ee847c363da",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv24605269/8e34dc1986e5f2c2daa8277c45459889f2e0e3fe.png",
+      "bytes": 259615,
+      "sha256": "81d516af5219513945aa187a3bee9593c4cabc08bc9865283b9a411dac7bf7bb",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv24605269/9922bb6ff90e16485a51ae6d8f04e7a128d45946.png",
+      "bytes": 440160,
+      "sha256": "60dc9df3cbcd78824d69adbaf130eac0417df307007c075b84bffab9c0ce4ddb",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv24605269/99c4ce5863df0a601c40b10ba33671f29f73f25c.png",
+      "bytes": 280582,
+      "sha256": "87a55836c0ecf7ef8546790407d412450a317e96e245043087bca2fa6003309b",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv24605269/a98d635da8bd41830c71681c8cc2954e35239c0a.png",
+      "bytes": 1363751,
+      "sha256": "926da21f212b66439b692c5f0bb1e289962d50ec4f46d5dc1b48d41dafa4a68b",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv24605269/bb642b50940f543ad6f792c1f2dd77128f31a1d6.png",
+      "bytes": 469570,
+      "sha256": "520111a602ba56170e96227b8b0ee2bc21449d136f0e2529d037b55c93610064",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv24605269/c824ad8dc8702594fd83cf57ceb3c96bfa17fea0.png",
+      "bytes": 260048,
+      "sha256": "18bc47be383b41d53f5e420fe536995efda505a4eea1224f4d226690832260ad",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv24605269/c84ccd8b0002a94ea922bdcc68fd428b83ed3287.png",
+      "bytes": 254366,
+      "sha256": "f112399b8721dbacd7220a2b8d66aa2d3869a7a78e4afe649e1a5dbe57fdc0aa",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv24605269/d672d3b9ef078b3b09d20f7e22930b381b973abb.png",
+      "bytes": 3218078,
+      "sha256": "823da66ab0491180326d26f1281cddf663be35c861bce557c416f6cc99357f61",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv24605269/dcef3bd1c90f79061bc175592e332d898f839b63.png",
+      "bytes": 377086,
+      "sha256": "5739ce16d84f9470058009d94c4abf93b0a89ba6db9287b24cbeee05297ab2c6",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv24730217/0960aae0619edaaa88a952ea6f1d98bd792ee45f.png",
+      "bytes": 564067,
+      "sha256": "5f3795ae93cdcb82c82aaa350c2ea06cf953ed7d92bbd967785bc786aa3cb066",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv24730217/10ae21914cb962d8e6bd9be4426ff954d8439709.png",
+      "bytes": 2908136,
+      "sha256": "a65056d06a2bafcbd0717f71794a0d4059e1be312ecb70f4fd64baa53658423c",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv24730217/11aab104f25b49f043aac845b8cc083e12fd45c4.png",
+      "bytes": 2880347,
+      "sha256": "aeb1a6dbabb2d784ff847abd1299d1289c35877cfa9782ac0d05d9b895975e49",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv24730217/2f8f14ef0ab206f09376f3250753f87de763ef53.png",
+      "bytes": 2129483,
+      "sha256": "ddc1e24cad6148f5ee65dd681d91e380b27b7d4bcbfacb9a0435a2cb4cbf1a65",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv24730217/3f0a6dd9cab947d5ac5b212c08732889b205257f.png",
+      "bytes": 183358,
+      "sha256": "69d277346a611386f8c34cc48b64c2376f015f1d393288beafe0524810d5800c",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv24730217/4b149b4f9bf5ff93a7cd93155fc962244e217320.png",
+      "bytes": 2922136,
+      "sha256": "c19e04f28ae20bf0b2ab1b86982d262a7acf39cdf2fa410ab4cdc85eddef3110",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv24730217/53c1b66d0b08227091150de843a7f10be7b86a39.png",
+      "bytes": 2974067,
+      "sha256": "129c3c0ddaee5b13afd55ae5be9443235ede10153f37f40456c8baa565184a45",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv24730217/69ea291cc9053d07be12f2a4491a44e351103279.png",
+      "bytes": 2109986,
+      "sha256": "24208bb3822aa05058c0b20861905a9593667a8437799a1a73377272d8b427c9",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv24730217/782bfe699b420cc142f4f89fbfe751a2de8fd00c.png",
+      "bytes": 1380152,
+      "sha256": "7faff46b12abf015451e9dbcb19650c41b021700a9d0b5e3cc75c71c9f7c41ff",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv24730217/7a2dca647f1dd62711ef113d3599b75c8b543497.png",
+      "bytes": 1159659,
+      "sha256": "bf20e05f97b76efa2f06d55dedc9f60956c3e0bfce38c1b2f7b5f343dafe955d",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv24730217/7b828eb68eed2430d720dd950475f758c727156e.png",
+      "bytes": 575021,
+      "sha256": "2a64e55f317f4f6d393deb8992be685585c0e8e1e04526666a3f14484c73ab28",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv24730217/9b933376329b50e4987023475e75e7d7758c5017.png",
+      "bytes": 983903,
+      "sha256": "bfd89324543c600d66b9b2ef28ac929ddffc9cc29d09ac797d2dc8c2f66cb92d",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv24730217/bfb0bcd0771820a9828ffdc39358275b45443193.png",
+      "bytes": 3633885,
+      "sha256": "eb7d770d21a81e2760da50fe26c82be18840811c2616e8aa55eec6c0345d2a83",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv24730217/c5af64082686f8b3aa7a409b1cebe4c4d5a530f8.png",
+      "bytes": 1646322,
+      "sha256": "79f815d2f2cd08453698be8edfdfc1a3083b3d6cafdab34706ec26bd46afac36",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv24730217/d3fa6ae0ee5958d9adff4bf4753742db94548221.png",
+      "bytes": 2573593,
+      "sha256": "35f4f46afd5aedf7d713649840ebc6eb20851ca6125dc942c8cb4a3d976f2b4b",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv24730217/dc3d8fa04ad79d5e2080a44270b76aa7c11ae556.png",
+      "bytes": 841548,
+      "sha256": "fc80a7bf593bb34245e060c5034cf1b5bd1ea33edd9e07b36af2d02821079dfa",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv24730217/e05ec11915d5a6c2f6e91292c0ede0c58c1d9105.png",
+      "bytes": 414740,
+      "sha256": "09c3bf407aa4e416ff21c967ed4345ad7ae1e07da717e505fa29a53eaa80393e",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv24730217/fda40ce5c12d79d41a41178ea1cb41c58feae82b.png",
+      "bytes": 1099965,
+      "sha256": "fc3be8a27308539ec8299eb2806315533faa1b497b1d0b53712f50aaa4abdf9b",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv5803459/01-shi-zai-gou-zi-author-card.png",
+      "bytes": 189700,
+      "sha256": "af0b343e8e8d8e0c53e5b5a04ff49f462c19c172bc77571df879030e14458d7e",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv5803459/02-mishima-yukio-balcony-speech.jpg",
+      "bytes": 80017,
+      "sha256": "c3d8522f0b21b634ef5872ab6751285fecdfaa279f973992b8530f3dd6968ab1",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv5803459/03-dazai-osamu-seated-portrait.jpg",
+      "bytes": 37168,
+      "sha256": "697cd5ee013eba4f686e3940422143c6edfad4af965bb77ca692dc782c9d1e4d",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv5803459/04-dazai-osamu-standing-portrait.jpg",
+      "bytes": 39638,
+      "sha256": "b447b6cc558eab239d21b55ae614d88a33a78a8bd942a029342c200e52bcf1da",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv5803459/05-setting-sun-no-longer-human-editions.jpg",
+      "bytes": 27314,
+      "sha256": "ff57f8f65b31258ca20da939c5f84b07757ee2b8cf75d83f2e8a86d17411e3c6",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv7056740/00-shi-zai-gou-zi-author-card.png",
+      "bytes": 162502,
+      "sha256": "19e676e6aaacdef6e0c27969b6b7418f1b81cae4bf385cbb4dd2f27b0c388525",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv7056740/01-ultraman-leo-opening-credits.png",
+      "bytes": 572188,
+      "sha256": "8e3574376692283dcb824f0c725dcfc836fd41a8cbdefa19c42326ee522fa0e9",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv7056740/02-seven-dies-tokyo-sinks-title-card.png",
+      "bytes": 370229,
+      "sha256": "a579bb3dc8ac0816c0687fce07ef1c81712cb7c6ae7b09b0605621fd2c105d0a",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv7056740/03-ultraman-leo-title-card.png",
+      "bytes": 658274,
+      "sha256": "5a91a69d3a89df73f65a25b0fd3b07eec2e19a31aa1810f1bf19ec7e3c83ed9a",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv7152802/01-shi-zai-gou-zi-author-card.png",
+      "bytes": 162502,
+      "sha256": "19e676e6aaacdef6e0c27969b6b7418f1b81cae4bf385cbb4dd2f27b0c388525",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8226364/01-rags-drum-2020-results-poster.png",
+      "bytes": 1549031,
+      "sha256": "6e20449008f670d3c1976ad1771c0b993f46b788a79ef79386ab32e0508930f4",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8226364/02-rags-drum-2020-horizontal-poster.png",
+      "bytes": 514785,
+      "sha256": "2633f032da7ef7bd3ff327d8dd026b8adace0f5c8aec461d47cb6d54adebd99a",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8117440/01-fgo-babylonia-episode-5-beach.png",
+      "bytes": 405006,
+      "sha256": "ece72bf78c7c779ae420d5aa509622dba4671669c2e365842def795759967ad7",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8117440/02-episode-5-staff-credits.png",
+      "bytes": 516116,
+      "sha256": "62a5f688b4d941397d009a7f315084447dfb60e11f7c679e78a8b0403e2ef63d",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8117440/03-umehara-otani-70-cuts-post.png",
+      "bytes": 286830,
+      "sha256": "6e1a932a0593a305415ad222084b89dd49cc0a96e3feb6d89c346bf0d858aa7c",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8117440/04-love-lab-animation.gif",
+      "bytes": 6734631,
+      "sha256": "fbd1932b2e0c7eb5a3f520098d7f0c1727f8e462f800b30a437f607bdfc8bc99",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv8117440/05-sansha-sanyou-animation.gif",
+      "bytes": 9048791,
+      "sha256": "4adfebc5f48668405f36b46110336c0903fd05ad1c25f60b54d463c65cf4429b",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv8117440/06-fgo-episode-5-closeup.png",
+      "bytes": 187947,
+      "sha256": "b213562b625339b4d40a49e85a392a6aed6c25a63fd939e0f815e45cc8934f07",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8117440/07-umehara-episode-5-staff-post.png",
+      "bytes": 305951,
+      "sha256": "d7669bf61db1d94a622dc91d0e06e7e776fe850dc956008cccc84b685f515dc3",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8117440/08-gilgamesh-body-language.png",
+      "bytes": 461200,
+      "sha256": "a92a56a8ca1e743addada0f16f6b408c811568601a116a3dd1b7e2e52602744b",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8117440/09-goshozono-production-post.png",
+      "bytes": 160770,
+      "sha256": "c73b8455096841769d8d68e45dd9c9fe372258b227c576a426e675ecde15595f",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8117440/10-goshozono-key-animation.gif",
+      "bytes": 4556743,
+      "sha256": "6e80e2b2cd78d947c03df9e31c35bff26953e82e882daf17a8f2a4f0b534ac34",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv8117440/11-ken-yamamoto-key-animation.gif",
+      "bytes": 4706438,
+      "sha256": "8ba77e153028db6614854f9ae27d5d43846c31ab62df56599582c7c8f6245b77",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv8043520/01-john-rawls-and-theory-of-justice.jpg",
+      "bytes": 64805,
+      "sha256": "02c5c699c99d2369b8f1736523d1e8f4e6e08d7a7896930a871245ce5f367cb4",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv8206089/01-economic-structures-income-table.png",
+      "bytes": 15740,
+      "sha256": "34c57bdedbeb8d480fb293f55a9c52bf8a559b53b0d419e22b330a2128db6ad5",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8255716/01-yi-tiao-author-card.png",
+      "bytes": 164745,
+      "sha256": "99fea7b34578ea54f91aa42a701d78f0410bce1f1469210596a0e1a20c66d818",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8255716/02-maison-ikkoku-episode-27.png",
+      "bytes": 1147088,
+      "sha256": "d293ee862f75812f6b668b3b407c9aafd725490a8d9b54a64c8200620ed17c4a",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8255716/03-yokohama-shopping-log.png",
+      "bytes": 974212,
+      "sha256": "93143d717c6e07798285860907327b6473f39ac80af9ad975ce731850b0aeb30",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8255716/04-kimagure-orange-road-return-past.png",
+      "bytes": 1071313,
+      "sha256": "18c6dd38f13a09e94a0d34af617d70cbfe25b4e2ea6cc6a2840d0647706504af",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8255716/05-3000-leagues-layout-notes.png",
+      "bytes": 1062502,
+      "sha256": "910f14a82d9e0406cad5211855bc13752385c07f7bd584de63901f8dc0e56196",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8255716/06-3000-leagues-perspective-analysis.png",
+      "bytes": 276247,
+      "sha256": "c9f1be8edca0cbd5e7ac660feea20f2f3cf4f8684ef7fc33a521e29722887d6d",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8255716/07-kikis-delivery-service-poster.png",
+      "bytes": 4389259,
+      "sha256": "04e538260c9163a867b9be10c6623d1d8f300deb8d844bee0f2fe22bdded8143",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8255716/08-3000-leagues-episode-1.png",
+      "bytes": 776337,
+      "sha256": "0a38539eddf97a152a3f504663d107ae9369792786c861c46a8f1a2878d56709",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8255716/09-evangelion-episode-24.png",
+      "bytes": 1407520,
+      "sha256": "4b92bc77c796ce0ef2e6d4b1ad11e0d707a8ecb97c5d038a685729699429d1ce",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8255716/10-anne-episode-4.png",
+      "bytes": 311875,
+      "sha256": "d9aeea62ac42ac07c078c36fdb97e5cb6f6d77abd29a8feae5a1b4cfa5a7e793",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8255716/11-angels-egg.png",
+      "bytes": 363446,
+      "sha256": "392aa18046bc3500d56bfc42517b622841a593932b00ce4e10356ad89ac8e493",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8255716/12-matter-memory-cone.png",
+      "bytes": 37498,
+      "sha256": "8e6e4769ed502fc93150462fc22743df2a181a15eb91eb6478a30cd829ef53cb",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8255716/13-duck-rabbit-figure.png",
+      "bytes": 43845,
+      "sha256": "71bc4acecd2e4aaa773d1087860b5caa0fd3bafc598163a24d3a4c9308ca2b50",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8255716/14-cezanne-compotier-glass-apples.png",
+      "bytes": 2667274,
+      "sha256": "34c8b0497fc0a6e9198f4821938724dc3f58c6dc7f30d9b925e9c34e4cdf87aa",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8255716/15-gosenzosama-banbanzai-episode-4.png",
+      "bytes": 323366,
+      "sha256": "a3a9f5fac60881a0ecac59f8ca484b791b06fa8193b1f469722ddd2f696a93c3",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8255716/16-heidi-episode-2-cheese.png",
+      "bytes": 654242,
+      "sha256": "3d477b63c91b93099d7c98c09dc514b830ba0f2ddf4392150ffb9f273ca7ac40",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8255716/17-princess-kaguya.png",
+      "bytes": 933049,
+      "sha256": "257ca1f8fd8eea0456fd0f80435f289c992a8827f0deede432296fbfa8a2c193",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8255716/18-urusei-yatsura-2-kobayashi-art.png",
+      "bytes": 1257217,
+      "sha256": "acb509d4348a50f42dddb81a2c76012f13c2303fb74a159cf0ae5ebf4bf9875a",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8255716/19-gamba-episode-5.png",
+      "bytes": 326013,
+      "sha256": "b611488fe7b5b7314148914d48152eb035a92f9cc7763b1ec7c4937f1765b98b",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8305147/01-ye-guilty-title-art.png",
+      "bytes": 540948,
+      "sha256": "fc6e060c592269318a6b35d98844e7b43f680fbf0272dbd53ba8cacaad773907",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8275144/01-revenge-of-zombies-poster.png",
+      "bytes": 259423,
+      "sha256": "417ef94413f82116d67c5e9a80381918ae39bf9acc6f2be2ee4d856dd8def232",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8275144/02-white-zombie-poster.png",
+      "bytes": 191465,
+      "sha256": "713189958f993b49d49c11752453874de57e82709ace3aa9de9038480fdec149",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8275144/03-dawn-of-the-dead-poster.png",
+      "bytes": 172192,
+      "sha256": "2069bb8888c2c765798c688bfe6ea706c1576127822dc792ab33e7c4a4725b09",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8275144/04-28-days-later-poster.png",
+      "bytes": 144155,
+      "sha256": "5e33df9cc747761d34b8ecdddbf6cb85f83775c0c9c888601d4546b9bb5bb2b3",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8275144/05-frankenstein-cover.png",
+      "bytes": 185276,
+      "sha256": "60c38c8d2484534b0c6b559480d22dfb7feda0e7ca8f2e70b0394d141f51926f",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8275144/06-monster-dawn-engraving.png",
+      "bytes": 658188,
+      "sha256": "245018b77132d9fd1c7a5defa3b7b97db8d0bbc79261fa252c167d8790b057ea",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8322667/01-author-card.png",
+      "bytes": 79439,
+      "sha256": "debee17541ff023e88a1ae7cd6b14e94d358bf5167d8330e4c0e6d23e976df52",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8322667/02-office-427.png",
+      "bytes": 365253,
+      "sha256": "4cb8ab98b04c5880a1e0d5c73d8e062430d4c8f60eeac10cdaff5bb961d6bfcb",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8322667/03-main-menu.png",
+      "bytes": 171609,
+      "sha256": "205691ac12a082e86452f37e90bef88fa774e5a1d4d8fc190246252eaad9e1eb",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8322667/04-loading-screen.png",
+      "bytes": 15711,
+      "sha256": "98157285269741204a8f112d25ec8968acd6ccc04976a624aab8a9e6a2e7c29e",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8322667/05-button-prompt.png",
+      "bytes": 183029,
+      "sha256": "ec3bea1cc7bd6f4c098ef7cc2b67fd545c9331804373281881b8d4cbe3825884",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8322667/06-ending-flowchart.png",
+      "bytes": 181808,
+      "sha256": "93172001a9fa675facec521d587b6f55fb8960065386fb05e5e3f749578aff4e",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8322667/07-development-area.png",
+      "bytes": 440177,
+      "sha256": "edfad8fe6d5ee3e0e410113b2c5407b2ea3ae782aa8c8ce7c89758f4f4c93343",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8322667/08-story-screenshot.png",
+      "bytes": 270643,
+      "sha256": "3b9a00bd8712863d0e112ba1a7daad66eea07e5a3db74c4a65d3f93335637b2a",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8322667/09-two-doors.png",
+      "bytes": 316561,
+      "sha256": "5371bd49ef5cae32f94a9e04b69d3771f4cce93dac023bf315554247788091d4",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8322667/10-empty-lounge.png",
+      "bytes": 265496,
+      "sha256": "031749d3cf085228d46343e5d6e168f56d71bd4e8906be661a06e1ce7ed7f5b8",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8322667/11-empty-office.png",
+      "bytes": 243493,
+      "sha256": "b9fa286273258e6f7b54c2dcfb24657025abfa92b452c9a0ea2c27b1f23e3710",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8322667/12-two-door-hall.png",
+      "bytes": 316058,
+      "sha256": "3bb1845a884cb1ff4353b1ff96937f34193d5e36bfac7459b455d00e26d3da85",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8322667/13-apartment.png",
+      "bytes": 161056,
+      "sha256": "790e56e9fbf5c320b520de3da05205e07f8cd8b4fea3c6b59a901f9465af9fea",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8347885/01-cloud-gamer-triple-meme.png",
+      "bytes": 45181,
+      "sha256": "429f03ad70fabd70e7d45eb0f4dc5a80782dbb8547cc8474df16c8ee41a14fea",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8372438/01-prey-key-art.jpg",
+      "bytes": 174446,
+      "sha256": "a4106d73b1894e77c212e2aaca22a842bba5ec023d0ffb347c494918ea63b23e",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv8372438/02-january-operator.png",
+      "bytes": 525086,
+      "sha256": "4745307adfb76ed20f083f83d8a4f81450237a2b4e82253e773b56b04fbe8533",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8372438/03-morgan-testing-room.png",
+      "bytes": 350359,
+      "sha256": "f113246494cf62b2db071ce8afd6d8de0c91257e76ef7f8d0f8c98efbbdf670d",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8372438/04-alex-yu-lab.png",
+      "bytes": 506679,
+      "sha256": "e9a9f9cf41471e8dfa85713c6c44d2612675760c114076b6199d595c5375288d",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8372438/05-transcribe-device.png",
+      "bytes": 245165,
+      "sha256": "09b287b7b6faebf44ddaca7717e06ef0fc965456eec9411f1813af20b7da1cca",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8380081/01-lostbelt-no4-title.jpg",
+      "bytes": 104539,
+      "sha256": "7bb792a1ea8c0f72df2637fed9fd445591a74a7db2d4c0d82535a9746ed3c5a9",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv8380081/02-yuga-kshetra-title.jpg",
+      "bytes": 105807,
+      "sha256": "e52b161ec4f0140970076829542364358619aade8faf0f19aaeee676124e3527",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv8380081/03-family-portrait.png",
+      "bytes": 496367,
+      "sha256": "3c3f27b09ed9428f8e06f39277e1bacaaddec373dda1bc3d26693f0efafd6226",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8380081/04-karna-arjuna-battle.png",
+      "bytes": 581102,
+      "sha256": "d4474f68efda2ea01aacd896e08c218c4bb745a62fc6c678bacff49de67d8391",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8399890/01-hei-opening-still.png",
+      "bytes": 310366,
+      "sha256": "f76c3a7a16049adfabc3a9ebba45227bb6e43e4fbce2fcca5289893389ddf97e",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8399890/02-yin-hei-huang-mao-rooftop.png",
+      "bytes": 247130,
+      "sha256": "7d3dd85f48c1f9ca6b2fbbbd2c9801d264e61c659fe5886c760413e7d24a15ec",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8399890/03-yin-at-piano.png",
+      "bytes": 315999,
+      "sha256": "0b23be4d4cfc8282551d4531a108e2076fe919556017220d43636cfa4b452684",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8399890/04-yin-smile.jpg",
+      "bytes": 37545,
+      "sha256": "5531878b8d7d22e8b2bf11bd98317e84811c57570fb137f8be183a09c29423ff",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv8399890/05-hei-new-opening.png",
+      "bytes": 182728,
+      "sha256": "9746211b7fdd95a5f87d772aeb2f1a4171427e659c1505cc9d79781c25448933",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8399890/06-hei-and-yin.png",
+      "bytes": 371840,
+      "sha256": "6fee75f5fef16866ba9e60b84dc94c38d01c38eafcea7430a2dd90f7037e08d1",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8399890/07-hei-mask.png",
+      "bytes": 269865,
+      "sha256": "c9c0213e9e870c239fabd324f47b68571aca9df0e13c2eae493347f5e00502a9",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8416238/custom-noun-narrative-diagram.png",
+      "bytes": 25981,
+      "sha256": "7d13c2d53b64be8591f4f2334390b789ce89104c06e93d27a4bf242b3e18306c",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8416238/night-is-short-walk-on-girl.png",
+      "bytes": 202370,
+      "sha256": "1b4fa8d2503bf52c8fd9e912ec611d2fd8fcbed693283fe4afda1882d79cfed8",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8805808/02-project-itoh-logo.jpg",
+      "bytes": 25974,
+      "sha256": "3858dc1ba9be56fc06cfda492b4a67a4967b64fa8cc68daa18caaef98a2ad361",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv8805808/03-clavis-shepherd-oath.jpg",
+      "bytes": 66196,
+      "sha256": "4a0027625bd7aaf22e4a4b6ff94b4eda3de0663da11548bb75420ca5d9a45175",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9269052/allan-august-1983.jpg",
+      "bytes": 61827,
+      "sha256": "8d5b727450265418e575fdee0de8d4cf57ef1fce2dee0dde997ac0baffbda0bb",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9269052/barazoku-issue-46.jpg",
+      "bytes": 74861,
+      "sha256": "9f28a2749f8eac8781d22b65cb0176ea97a5bbe68d3c48d125f4afe622b5cba3",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9269052/gekko-issue-8.jpg",
+      "bytes": 80701,
+      "sha256": "ae5c29c5303d56be0703abfecc373d6cc7dc4307554c8521e378ff8fc14e5082",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9269052/june-issue-37.jpg",
+      "bytes": 99659,
+      "sha256": "4c2988c796a2b9c8dfd5c7758bb04e14149033dc6f5e2566d5c6b62c00c227e4",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9269052/sunroom-reprint.jpg",
+      "bytes": 63128,
+      "sha256": "92349ed75b4c8d6bc88a819ab7047ff605bf10a66524a1276e465dbd0a3cb131",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9562735/01-norizuki-rintaro.png",
+      "bytes": 415054,
+      "sha256": "a69a0f5704bef765ec027583a67caed456189b016c7212f773318c259f127a02",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv9562735/02-ellery-queen.png",
+      "bytes": 274029,
+      "sha256": "d03b3b7591944b5837a876839210072db9be0b307500e726e34fb83a08100d03",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv9562735/03-one-and-two-tragedies-books.png",
+      "bytes": 756653,
+      "sha256": "6ad23845568ada77cd98cfeaa1a3e2e3e32a178109f5aeb52ea560d94d75101c",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv9562735/04-lacan-smoking.png",
+      "bytes": 59242,
+      "sha256": "de005607a5c8a89e81f0e5ceb085e647c97fea752527b2bf2639fd8756ae5e0d",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv9562735/05-lacan-lecture.png",
+      "bytes": 195961,
+      "sha256": "2dc97e0599edf76f8b4cf967a4d59453920401cb6ba5b1144f392160ded54890",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv9445185/01-new-treasure-island-opening.jpg",
+      "bytes": 40442,
+      "sha256": "ffdac72e2ae0b4eb6286d606fba63376628113acaa962af5752387e871b63be0",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9445185/02-manga-road-first-reading.jpg",
+      "bytes": 98740,
+      "sha256": "f62d440e1984fe7a67bbd7400e7186f6306db1e0f8f581d4324201a74f27f0a2",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9445185/03-new-treasure-island-cover.jpg",
+      "bytes": 131174,
+      "sha256": "55bf0c0274eabaaec75d2d13575f2288d5231a119605a1d646a00d8caddb67af",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9445185/04-sakai-near-momodani-station.jpg",
+      "bytes": 60811,
+      "sha256": "aaf204a2ce35442dd020bf07135eda24dbad4f5547905da63cfb4bc3b406266d",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9445185/05-sakai-prewar-animation-and-manga.jpg",
+      "bytes": 25184,
+      "sha256": "688bccb0af6a28ab53d2adb1f62deb3c26f2b1a49ad57b2efe6d5956131d2bce",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9445185/06-kansai-manga-man-club.jpg",
+      "bytes": 94569,
+      "sha256": "52c93026059203ba451dd177154a54d3d0838257226087c0ac3aa455e3fb8821",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9445185/07-hello-manga-cover-and-octopus-pants.jpg",
+      "bytes": 53741,
+      "sha256": "bc7d0bdc2ae5f8a6289c1236bafa8973c06fc84810afb9c9176a7dab0684284e",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9445185/08-new-treasure-island-advertisement.jpg",
+      "bytes": 40129,
+      "sha256": "feee0183a6922a45dd6068e2647ed52ffc7f9a1b3579cf7ef0f20ec8a9d9fc41",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9445185/09-tezuka-diary-sketch.jpg",
+      "bytes": 112649,
+      "sha256": "21dc8e8c67303b17e06d573e428b6f79567d61eba983ae661416053194a42b6a",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9445185/10-hello-manga-issue-3.jpg",
+      "bytes": 103018,
+      "sha256": "57a7acf80ca33e60b133648be25a6e9e360f0f2e435a10c651a20232983a03c8",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9445185/11-new-treasure-island-pages.jpg",
+      "bytes": 103916,
+      "sha256": "111a326b812fcc8994b36245be945ee390bcbb4ecdd79f4312cd79fd8f7e64ed",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9445185/12-old-man-and-new-treasure-island.jpg",
+      "bytes": 96117,
+      "sha256": "1e117bd5d2276190c65451b705ad17f3b6043ac3229e2ff888f10df7b353827b",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9445185/13-donald-duck-pirate-gold.jpg",
+      "bytes": 65974,
+      "sha256": "4f0f0703366b1635ee0a92630158d277f8a1ce208aab020ddd0c7dca0abed075",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9445185/14-new-treasure-island-car-sequence.jpg",
+      "bytes": 70804,
+      "sha256": "5a9a1dfe539eddf4ba62529a104d87b530593f9128bef928140a93b63a1b6b03",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9445185/15-new-treasure-island-and-norakuro.jpg",
+      "bytes": 59938,
+      "sha256": "3f0251ac9b6328621b15a4bf0470d97e9823666ababa37c6a54137e27f60b07d",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9445185/16-mickey-animation-and-ninja-fireball-kid.jpg",
+      "bytes": 50556,
+      "sha256": "9e75a00ae262f0fa46c0921223047179349d6af98c1dcfde023221ecbf1fed9f",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9445185/17-old-man-treasure-island-onboard.jpg",
+      "bytes": 76689,
+      "sha256": "fe961022da6fc85c6b0fa051a851b0e44ff79b0c2cd3bdc34f1e375b2010ed4a",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9445185/18-bacteria-of-terror.jpg",
+      "bytes": 92787,
+      "sha256": "61ea1394c430feddc8302e1e577d31bc59dd66b89439f5af0b7e7158af4a2914",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9445185/19-the-ghost-man-cars.jpg",
+      "bytes": 62361,
+      "sha256": "64f9e430d32686c24472f5d65e10e458b23b68e0c72fb9ea7d416a3f1b4d3559",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9445185/20-until-the-day-of-victory.jpg",
+      "bytes": 101635,
+      "sha256": "e10110b6f9fe89c23cd6d09e606bbf9137a7ba8bb1e81be4df0257dfad2c5983",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9445185/21-phantom-blot-cover.jpg",
+      "bytes": 114343,
+      "sha256": "b114fd916eac7686f1ad4ed205283b13a5ccf38d1b90edbf4376f064ba4805a4",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9445185/22-new-treasure-island-phantom-blot-1.jpg",
+      "bytes": 68021,
+      "sha256": "3ca4803c041c7f91347271b134901f69e6cec1f5e13ee2fd1e00e925145cdf86",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9445185/23-new-treasure-island-phantom-blot-3.jpg",
+      "bytes": 142009,
+      "sha256": "4d4dfbf9324b095f5c1031c5c4f56a3041ad38f96915606cbd794b22600708d4",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9445185/24-new-treasure-island-phantom-blot-4.jpg",
+      "bytes": 131822,
+      "sha256": "e3a04dbdcd7a0f621d955e0398d512aceb4ce88f5999bcd4338834c9d65ec4bd",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9445185/25-new-treasure-island-phantom-blot-5.jpg",
+      "bytes": 85512,
+      "sha256": "16d7a04e4d92b3b9d4a570be0b365f7a7b0beb028d0538f8c456323f4b85dfdf",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9445185/26-new-treasure-island-phantom-blot-2.jpg",
+      "bytes": 52720,
+      "sha256": "8316b78c2268ca27e20d0737e7a8254e53f3c77c0b22e0a72849a1243ac005ca",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9445185/27-new-world-lulu-phantom-blot.jpg",
+      "bytes": 81579,
+      "sha256": "d7cd862b7504156ff14b64b922791445492670ab6d332d508a0ccc5233776be7",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9656144/01-demon-slayer-box-office.png",
+      "bytes": 628416,
+      "sha256": "7ada3cb71be1cf59c56919f2674b50c45f1c28f471559d603a1884adccc38651",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv9656144/02-ufotable-headquarters.png",
+      "bytes": 362938,
+      "sha256": "af1ff313095ca555965319e01061f843cc21ecef0a90bc385ce1750be3537114",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv9656144/03-naoko-san-oad.gif",
+      "bytes": 7751987,
+      "sha256": "84bfdf197ed313b6eb83edf3474f2cb71564e908ef3c47b4198df50e223767fb",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv9656144/04-hikaru-kondo-interview.png",
+      "bytes": 339268,
+      "sha256": "c195b9b0c73c0d33745139df7a98e80806ce6e00dc5745d8f0c81d994459aa0d",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv9656144/05-manabi-straight.gif",
+      "bytes": 5928819,
+      "sha256": "0c48a5cf58b9bb0a204bb06b7e3d61ddcbfe8ecd3b3580604c95951dbf5c3427",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv9656144/06-machi-asobi.png",
+      "bytes": 463673,
+      "sha256": "03f8666c0fd72e7f03a0fd563059ed07906f041bc276622e70afa4f388618703",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv9656144/07-emiya-family.gif",
+      "bytes": 5450856,
+      "sha256": "549b7b1dee0593782d653e8e46ed7b4346ec54c94826246d0bd71a3023015f83",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv9656144/08-ufotable-cafe.png",
+      "bytes": 406950,
+      "sha256": "b820e6359719930689ebf556d23250f0a360ef61097850b47829397c9dbe9cbf",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv9656144/09-demon-slayer-key-animation-1.png",
+      "bytes": 497071,
+      "sha256": "cce0074ed276b9a2ad0392b1a72dea37e018baf9db0e73ea2392d7cc346f7ec9",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv9656144/10-demon-slayer-key-animation-2.png",
+      "bytes": 302452,
+      "sha256": "e6def0540fccc056f6de1b26a8483a8c32cf15f4def09ceb001106cfbc071c83",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv9656144/11-demon-slayer-key-animation-3.png",
+      "bytes": 502214,
+      "sha256": "7b1e52d0b1d0d2c27fbbce871b2b5db859f4ffd99c88d1b6c6b05864b183fcbb",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv9656144/12-demon-slayer-key-animation-4.png",
+      "bytes": 286990,
+      "sha256": "234f90e39f93f61e1757c7187fad51dde58b837e3faaf9640da09f2b314c18ce",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv9656144/13-demon-slayer-key-animation-5.png",
+      "bytes": 438679,
+      "sha256": "4b72cd1d2530e8f8f3d4184e908a9aa2fd5b9dd9dbcd52f5d2cffa84beabf2bc",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv9759662/01-post-k-on-rainy-scene.jpg",
+      "bytes": 84250,
+      "sha256": "c5f66501730de2e02ab0bf5dc6c2b446a7fb104e795bdfa75ec63148470e2e3f",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9759662/02-horiguchi-influence-credits.png",
+      "bytes": 867439,
+      "sha256": "22508c557fc5843ed4899c796d40db74b2390867041875328d97d24b74286cec",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv9759662/03-ai-ohto-character-design.jpg",
+      "bytes": 43152,
+      "sha256": "0092664038b8d8c661c06cd3eb7dcd86fb22014e19e05c1cd3aa26cb8398ac59",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9759662/04-yamada-style-foot-shot.gif",
+      "bytes": 5142633,
+      "sha256": "2026218dbfcb73d022732ea6ec2e80ca716bf70c5569a7b0afcaf58ed60e4ea4",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv9759662/05-22-7-rain-window.jpg",
+      "bytes": 77450,
+      "sha256": "9e507839ed284f6a78bc43d2e411164feb2fe1cc362dd3d5fbce1f709113ce4c",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9759662/06-22-7-character-sheets.png",
+      "bytes": 779799,
+      "sha256": "25711200b2aeccad3537fffec22e2b81a1a58f38af36617f68edc8adb86903db",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv9759662/07-natural-character-animation.gif",
+      "bytes": 3181889,
+      "sha256": "822251e923e5b4ad603b160bf99a9b3be459075fa0f578a9ead0868e8184aaa1",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv9759662/08-wonder-egg-color-composition.jpg",
+      "bytes": 88895,
+      "sha256": "366969c217092fcd7db947d3a54d783e6438919837a2493b089ffe2018fe5b36",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9759662/09-flower-language-crutch.gif",
+      "bytes": 6198910,
+      "sha256": "8f7a260e127feb70d549aabe4e0286693ff1514fe5f28e276d9e47afcd12bbc9",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv9759662/10-live-action-and-animation-opening.jpg",
+      "bytes": 104611,
+      "sha256": "2db27b6b5ae8c640a7c18515d171f6eb2492f5ca34fe92816233c3ff793c89b2",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9759662/11-bullying-memory.jpg",
+      "bytes": 281829,
+      "sha256": "91f2d946aaa26677182d6685b8904ed583cf60ad5e2dc21fa318b713ab8578c3",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9759662/12-ai-ohto-action-cut.gif",
+      "bytes": 8126861,
+      "sha256": "201aedc7a0f16d0fa64427c26315ba8604ee69dcc2048d829c0409067bbc1de7",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv9759662/13-ai-keeps-distance.gif",
+      "bytes": 4843240,
+      "sha256": "ca5d7dacdb217a66c1d950fda0cdde260d660f748154097d26bb412eedcd6afc",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv9759662/14-ai-and-kurumi-reactions.png",
+      "bytes": 3349243,
+      "sha256": "f840095f4f69791fe96ac9ee385e8b613ab6730afbaccd4eebf790ff2f615477",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv9759662/15-ai-and-kurumi-conversation.jpg",
+      "bytes": 92335,
+      "sha256": "630e020ca09044802a1adafc8dec2d0984109151035b604e4f1bff0bfcd8a366",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9759662/16-episode-2-distorted-reflection.jpg",
+      "bytes": 144352,
+      "sha256": "0ad4cdf7456f0ed3cf5f54f5b904f0349b35d57d04c2c336049c53034264d6d6",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9759662/17-ai-peeking-flashback.gif",
+      "bytes": 5119920,
+      "sha256": "3657ccdb3b2a6a855b67f11975a08db36c41283d45e89a17f65965c3b44abdf4",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv9834806/239ccfdbb52d3099690e9350ef0f1c628fe27a41.gif",
+      "bytes": 6124171,
+      "sha256": "ba9f6fe379da26ca0768fd3a94299f87f02a117613b19334d65e4491172c9dea",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv9834806/1292ff5430cfabbf37bd33beea3ed43936f26bdc.gif",
+      "bytes": 6723418,
+      "sha256": "f948c47605df566e50b6a77b7558515b024cf14c4dba7f1c66df8bbb940015e6",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv9834806/8896672544121385d43aa65182fa0f5b45281e74.gif",
+      "bytes": 6098978,
+      "sha256": "b1dd280e4b68b8573e2fc76b3fa4203698bbe0bf4f70818b22e45f44ef87d312",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv9834806/7b2ee846af21571f76ffef5c36c52b645561c0c8.gif",
+      "bytes": 6761404,
+      "sha256": "f7a8c1093fc3783d76fa79918c250f8254a6f51d83875e826828775defb4ad00",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv9834806/90658e088b89430a528104b07f2d87cda5fdee82.gif",
+      "bytes": 7702081,
+      "sha256": "eb20ef91db89a2253a0690175de7927508299a25312405cf98642b1d4916a302",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv9834806/fbd4f3f08f8e4a8cfe29c025b9e2c0cf367a063e.jpg",
+      "bytes": 40492,
+      "sha256": "66d77c78703b017c23a69f3de4d32799695a7de830ba1b6a75eec74b355b5b9c",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9834806/7e225abf53e310441bd8c28d5c68befdadee0a10.jpg",
+      "bytes": 69197,
+      "sha256": "8a241788e4f5dd8f826e9bc07f9ef445c6e117f3e1707c8dade9022150d3f386",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9834806/7bdcc893e63f5eae98af54bd1d8cbb144bbaaca1.png",
+      "bytes": 1649137,
+      "sha256": "9329b77018cee9b548342d00911fe0d1e08192625b465eb0488a1a5a4939f979",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv9834806/14879d25762c8f58e9a061f2defff06a67ad0199.png",
+      "bytes": 2477167,
+      "sha256": "4c7e2fb5d1ebe1afad2b9b9e91f4b877b41eff343bfc37d531af3ac2d86df9c4",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv9834806/8ee219482418dec639368b68bd0740885fe1e915.jpg",
+      "bytes": 214733,
+      "sha256": "ee878a463e53767abadbb960dfb7e52b1d612a311563e8a3f6b381a6afda377e",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9834806/09bb3cf5eeeb6eb7457922e3a20e09040e6a2eee.jpg",
+      "bytes": 203878,
+      "sha256": "d363cbde520fcf5d4f5a46f699e2bfcab8330f96589971928d77011ab04f5da0",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9834806/282506bdfdc6a351f30b7eb877e2424d6f494403.jpg",
+      "bytes": 259692,
+      "sha256": "04880dfb2cf72f366763f8b09698b7325c9d2ad0f5dd9088a9825cbe7438c27a",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9834806/242446596815c3b43ac0d1befc7f2fcd0b523f47.png",
+      "bytes": 1622202,
+      "sha256": "5468d419227f6ce5a3285379e31f609de912f97d0487e9673d69e65b155cdde1",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv9834806/37c0e3e83d534edc167c279b3115cd97c44d8bf0.jpg",
+      "bytes": 193762,
+      "sha256": "43e986d8b68af20dbf2a82e100f1cc8591bc71c19052f73aa3113beb3a887d4d",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9834806/f69581e4669afd566d0c69696f33941ecc584b10.png",
+      "bytes": 2780873,
+      "sha256": "f95693098a8fd5507d4ac55568623dc639d23b8032c928a11daa902083a29fc6",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv9834806/fcfad8e40b24fb081b848cf5ac8ec4a38fe3116b.jpg",
+      "bytes": 114389,
+      "sha256": "ea4bfb596de488b265dbb1c93d261ed9653817e2d362a7c97d46e909f5e7e48e",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9834806/c724d7420f3fa288d799b3e7a8965ea64ee102b6.gif",
+      "bytes": 4770237,
+      "sha256": "380173f82925feb897f50ffca72c89b3b00040cbb9a7ce9b728c121547412965",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv9834806/ca9dc57c620ebdc5b3502978fe588f4ec810fddd.gif",
+      "bytes": 7504439,
+      "sha256": "9f031850cb6a5cb6113d8958ba40410df5a89556e9f98b1723d3246fbad1e1ad",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv9834806/c9f247960532d76d3aae072f1ddc32113a61e248.jpg",
+      "bytes": 203406,
+      "sha256": "19ae11d43552880036443a494bbbd2f3cbdd2ad0f47fe2a60accff8981f2c2d8",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv9834806/51bc6e5049ff2d64e1df236f4f1bef52888cc083.gif",
+      "bytes": 3535760,
+      "sha256": "3d983f3a01fd9ea494d166f200e629ad0e2f3e70dfdb0b01dea11a9cd3c325bb",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv9834806/1b90b7bcc46d0ea57adafcca407126ec2e0d14d5.gif",
+      "bytes": 2580634,
+      "sha256": "90bb2504956e463de73e9d7d6760ebf860f4468c63d8b80188a7a3b2ee2ab0e1",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv9834806/151ba7faf99dea48f5e1523fb06319fac00a199e.gif",
+      "bytes": 6484810,
+      "sha256": "e9150bcea859c25a657d1729f686b07b056a224f6b511125ed14dad93b410da8",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "roof-archive/cv9951244/01-slavoj-zizek-on-boat.png",
+      "bytes": 532774,
+      "sha256": "719fe56f2a74bd7a6d2d184a28b1dff020675fe565cab2a717699048fb2c71d7",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv9951244/02-af-quarterly-invitation.png",
+      "bytes": 1037212,
+      "sha256": "77bf8b709f8a4f08cd9d72d4d2077faae93cb80f65d99906afacea3873aef226",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv9951244/03-zizek-af-copy.png",
+      "bytes": 1361727,
+      "sha256": "3cbbb7bd38781a730d2effc24ae607068481d05b1161dc5594416c95b9c1b2bd",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv10137506/figure-1.png",
+      "bytes": 9153,
+      "sha256": "ae7f23bc0d82fcb0b0df8a986ff0591693c84e421705480a02f2ea4c4662789d",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv10137506/figure-2.png",
+      "bytes": 36405,
+      "sha256": "7cd6dc86f004e82837a045c33701ebe88617766af5d40dc705ec6dccb2538888",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv10766775/01-lacanian-objects-diagram.png",
+      "bytes": 166850,
+      "sha256": "89fd16d3d01da3d0962a16189cd56f2aa1afd8197b38fd3984d99e01111eb886",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv10766775/02-seminar-xx-diagram.png",
+      "bytes": 89394,
+      "sha256": "2d07770acbf887f63b8e0b15d5a0c89e96dc3dc543ad2062355676c3641543d4",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv10897532/figure-1.png",
+      "bytes": 94069,
+      "sha256": "61f93325b91fc1ea7ba9105ac463677a4cd25eb22d97446abb18bc8c5105b4cb",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv10897532/figure-2.png",
+      "bytes": 63170,
+      "sha256": "44b9f519c41ce06500a672a77f299f6b18fa15f5fb98e5fbb9bbc38b862de8e3",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv10897532/figure-3.png",
+      "bytes": 159846,
+      "sha256": "7d8d671e0906e587b1beab3b10216f2600f82aa43031557b222bddbb713f390a",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv11202332/01-rags-drum-2021-vertical-poster.png",
+      "bytes": 760014,
+      "sha256": "9894897cb50eb9d5d8a6779de773a122bc5a513ff7fcd64867158c29701b1c49",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv11202332/02-rags-drum-2021-horizontal-poster.png",
+      "bytes": 676359,
+      "sha256": "4de0d43044ec183b883da94f542b77d164a7132cec79d4705558d23e79648ab7",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv11663157/figure-1.png",
+      "bytes": 12559,
+      "sha256": "11b60824e28249bb1f5dd26f0273e9d5d6d6a3bf850d6889ef76deff7d5ec708",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv12803625/01-holbein-the-ambassadors.jpg",
+      "bytes": 81961,
+      "sha256": "a9286e85a49c3f3a3b2510d8ac954b64a1b15d3e40e0fcbae4bee81549c5c412",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv13739534/figure-1.png",
+      "bytes": 191949,
+      "sha256": "5797ca354b49deceec8faec03e85e9b552b8eab8e751262f228649a074544ac9",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv13739534/figure-2.png",
+      "bytes": 370314,
+      "sha256": "6adbfe7a7063a076fdf64c289e09070ad10d1f3b2b395b3f121571a5f46be634",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv13739534/figure-3.png",
+      "bytes": 63026,
+      "sha256": "10e2ad9baa35bf73acfda1c4a9ad8214086cbe54f6ed3c89ba0aae89b137a362",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv13739534/figure-4.png",
+      "bytes": 77747,
+      "sha256": "b40444ee84228fac07d3cd85d2d038967121bf4c5ef3d267bd6e7a028ba765e1",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv13739534/figure-5.png",
+      "bytes": 270951,
+      "sha256": "3f7d2790e9b9fa04b8faa365eb9a9203d223398ecfa63ce2d2853957ffa218ca",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv13739534/figure-6.png",
+      "bytes": 64444,
+      "sha256": "03625cbbfcd0ea3cf9574d045b29c9fe17804ac779b6ba12761f2d61d3c0435b",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv14124702/figure-1.png",
+      "bytes": 515574,
+      "sha256": "c33d0401a2eeb7d700be6c1baf42a8ece1d154186ac78c936c8464581bb9d15f",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv14650688/01-japanese-edition-cover.jpg",
+      "bytes": 21538,
+      "sha256": "9fae57fdd4c8db8cf0a38b0046eb1987766cfd725ecae24f78844c714def1dca",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14650688/02-hiromatsu-wataru-chinese-edition.jpg",
+      "bytes": 126985,
+      "sha256": "df1163de73eb2ac23f98857524ee4262b7a223b22512aa87a4b88d3a41f20594",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15273010/figure-1.jpg",
+      "bytes": 82271,
+      "sha256": "ca5b121328c2adecef784ac987c604684c31450c387f7dc3d6991cbdbb90e8e5",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15273010/figure-2.jpg",
+      "bytes": 53021,
+      "sha256": "0bd3a89fc2cfe1f25d7b0fa12224c78261211128c117f5127880a3ff8b865992",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15273010/figure-3.jpg",
+      "bytes": 139392,
+      "sha256": "dad332eef9b5e22cddf822e64c78abe28066b145952aabac94c3f603b6ef5972",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15273010/figure-4.jpg",
+      "bytes": 109942,
+      "sha256": "a36a60c3d15328087df846f37df8696d8ada6892ff302b6f5164164f58b8b041",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15273010/figure-5.jpg",
+      "bytes": 113539,
+      "sha256": "83f044591ce71ebd393d962e54446547363d2e87efd81b189fee45fce33368a6",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15273010/figure-6.jpg",
+      "bytes": 89745,
+      "sha256": "69487f6b6b69ba3263a462b42463adfe66c64bfb5e9c1afa754257c5600e4892",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15273010/figure-7.jpg",
+      "bytes": 116169,
+      "sha256": "dc20fe034c7b02852f8b9ec7f9c473133081d6b34ff6ad0ac380ef28a5bd8ca1",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15273010/figure-8.jpg",
+      "bytes": 74844,
+      "sha256": "d1a212c875b3884c0381c953713b399617c72308c2185b525b684941d24d4542",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15273010/figure-9.jpg",
+      "bytes": 70607,
+      "sha256": "a5be747e49b679870176cb6ca9b58d0a0c46ecb5d1393e217b02f8c836bf8a2d",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14761138/01-crying-out-love-scene.jpg",
+      "bytes": 35807,
+      "sha256": "e0ac68568f0792607c890dadbc40790bb4289fad8c3ebdbefa4c552e8da9ea24",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14761138/02-air-key-visual.jpg",
+      "bytes": 72176,
+      "sha256": "8499e6a368d613a38ef04da1bba3c6b93120909fc360fa4305ea27322555ff74",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14761138/03-welcome-to-nhk.jpg",
+      "bytes": 34077,
+      "sha256": "f5807a47be2609c08496e9675d5f989906f080d69e8541d5feddbbf4c7d696a6",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14761138/04-urusei-yatsura.jpg",
+      "bytes": 49747,
+      "sha256": "a9cbd6fd3a0ca9bf3a3a97908382bdf2850ec7eb9b6de9757073f8a334df7323",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14761138/05-ghost-in-the-shell.jpg",
+      "bytes": 93485,
+      "sha256": "9dc2296fad0d2b642ba09b3f0c1d9dc9a63bcf0304b989e179beb9d65767ab30",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14761138/06-inuyasha.jpg",
+      "bytes": 69357,
+      "sha256": "252824e666bfb479aea788e46646b97c48f99216ea702744ae8d9e0c15d858c1",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14761138/07-gundam-series-books.jpg",
+      "bytes": 94597,
+      "sha256": "f444bfeabcd929c53e26da66c1425c9a7cf651afd0d574358bd5db5a4f3440cf",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14159519/figure-1.jpg",
+      "bytes": 62323,
+      "sha256": "3071bd2665be45f3c7611dd80477c766f9f09b79dfe9b8a055b04cdd8bba6a43",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15303540/figure-1.jpg",
+      "bytes": 20118,
+      "sha256": "91bb757f0f11c38ebf81ade6fde854e2913e980e74600cf7c7513b6d95984d46",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15303540/figure-2.jpg",
+      "bytes": 96205,
+      "sha256": "8ab7147311dd463b2dc52af278bc67c46dd75497cf8f39357662cb51e7618801",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv25811703/book-cover.jpg",
+      "bytes": 58186,
+      "sha256": "54c2aaed69a24a0ab2d1fcba6c0515d5d86adc79a657de6f11e49acaef882da0",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv26954994/01-g-witch-key-visual.jpg",
+      "bytes": 237294,
+      "sha256": "6a404304dcda8d6314a24ec40314f790f13914afe4822ca98a123ffc67834125",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv26954994/02-yurikago-no-hoshi-poster.jpg",
+      "bytes": 208611,
+      "sha256": "e0870600e69eeee0440c6eb89c6d146f97de972cc02e657f3da5a32e51389a96",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv26954994/03-animage-g-witch-cover.jpg",
+      "bytes": 317251,
+      "sha256": "2e7419631604bf54e47bacda31fb920e0cf60129688ec7b317bc6236bb19f54d",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv26955234/figure-7.jpg",
+      "bytes": 556283,
+      "sha256": "8798d64229697a1ae9bbc9919ea418341f34dae5018deda49da92927bdf0978e",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv26955234/figure-21.jpg",
+      "bytes": 63538,
+      "sha256": "48440c3c49f94d266a86f21de319ca937e97161f35d1e84b85a13c37a5113d9d",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv26955234/figure-43.jpg",
+      "bytes": 63322,
+      "sha256": "b3168abd35175bae53181213d013b10dab8e4fc129131c06722b0b50a37b6d68",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv26955234/figure-48.jpg",
+      "bytes": 168394,
+      "sha256": "11458f350bdad37289fcd2d1aef38cd3d54767f52d36282f861009843bc4eb4d",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv26955234/figure-53.jpg",
+      "bytes": 81330,
+      "sha256": "855e38d719ace9c39f506454827e9b0a0ed4aeb854cc7bf245cb448b1c791b92",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv26955234/figure-57.jpg",
+      "bytes": 126244,
+      "sha256": "5f602d3d8f5a9f02818648a424f0d40a676fac01fbeaf287bf835d87eea98866",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv26955234/figure-64.jpg",
+      "bytes": 444602,
+      "sha256": "46ce7a16c0cd78c1923290a97954f346219041fb4dd02b01bdde54ece4118729",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv26955234/figure-71.jpg",
+      "bytes": 83480,
+      "sha256": "0d050f19a4f990d1c8e4c41ce961d76ab9188d165ac7f0285e60bef3417761b8",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv26955234/figure-78.jpg",
+      "bytes": 83232,
+      "sha256": "25e194b8be2a0e9f8f489820fde82cebe07b985f44977aff39319573244f9e3f",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv26955234/figure-87.jpg",
+      "bytes": 185232,
+      "sha256": "c321e6b3debc54da379e3299e0128ea57342da0fcd6ee8b47564950cbbf63026",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv26955234/figure-95.jpg",
+      "bytes": 5596869,
+      "sha256": "2a3c91775f42ccfdbd1c3b89b1bc3352c0d79e9bb7477b8073e0c26d64a35c06",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv26955234/figure-104.jpg",
+      "bytes": 129633,
+      "sha256": "12ddebac070a244028c18f291beaf31a131cfd7013431660cbc59b18578a830d",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv26955234/figure-111.jpg",
+      "bytes": 156563,
+      "sha256": "ce7f95caa9c72c205cecd0608d4b4aea89ee315387301270b01c3ab7b648f472",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv26955234/figure-121.jpg",
+      "bytes": 1411525,
+      "sha256": "c4f3b37915403f73a34fed346759f639407bcac22cc931add65416f8cf0ae270",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv26955234/figure-129.png",
+      "bytes": 842147,
+      "sha256": "4f5fd590b9607fcc5f8a33f3cedf318729bb22ff086e71a232c08563b71a4121",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv26955234/figure-154.jpg",
+      "bytes": 130818,
+      "sha256": "40e2e2464caec9caff8e1e040e5180e7b74b9be7779e1c92f0fd4f4acdf1817f",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv26955234/figure-174.jpg",
+      "bytes": 30221,
+      "sha256": "3b27635ff60a8183810353a6822e2ddf79dd0c8ffcd47edf6b9fe32d823c15c0",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv26955234/figure-180.png",
+      "bytes": 2057450,
+      "sha256": "8f1d5d027b381307727d37bbf8eb3c6b5dafbaceb2f8735857f7f11013446750",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv26955234/figure-189.jpg",
+      "bytes": 44777,
+      "sha256": "8423feb6c59056482774fe0b8d313ed576803110a04112cc26094413bc890c77",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv26955234/figure-192.png",
+      "bytes": 227495,
+      "sha256": "91071330e68118718c378c1e096071e322887d3e2d53e24c4333b23585ebea49",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv26955234/figure-205.jpg",
+      "bytes": 88205,
+      "sha256": "143857450d503c61bd0e8e8e357de2f4216833e5c4d9d97b0930989af1f83b00",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv27498335/world-variation-diagram.png",
+      "bytes": 156440,
+      "sha256": "eec9b6e4a59cda9985ffa7c20a388f838dac3644ab72c5de41eda7ab314a8fa7",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv27523636/akutagawa-book-cover.jpg",
+      "bytes": 316224,
+      "sha256": "1f6d9a564184b2e0eac09e545efe66a3f062c2da25cebbbbdf02b518cdbb812a",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv40147736/01-evangelion-cover.png",
+      "bytes": 1565655,
+      "sha256": "eba16145ecbaeb4650b95e844f5ddc427d9c04501b0dd62a4ec682cb8eed2f21",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv40147736/02-light-new-world-god.png",
+      "bytes": 407877,
+      "sha256": "28bf6d74ef4ac75fc2a7b564cade1148d3d458816f70937d55c1633fcf992fd2",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv40147736/03-kamen-rider-ryuki.png",
+      "bytes": 787685,
+      "sha256": "9646ae3b126d5c69afc1fa7c351e28c53f5a00e7e264062e3f7b1d5f6fcbbb40",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv40147736/04-light-yagami.png",
+      "bytes": 303651,
+      "sha256": "c19695b54efd4db46bd6c9abc82389d399dc87ad71d3aff30a2dca86b6941ea3",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv40147736/05-lelouch.png",
+      "bytes": 354922,
+      "sha256": "5ff7bfddba4d4b35c8b1394d494515ca4a15db39fbf6e45f7a25f686fda89e91",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv40147736/06-code-geass-ensemble.png",
+      "bytes": 1146186,
+      "sha256": "28ef84544d65953ab6211e65192e309328a36075bdb2e816f817e6e621645742",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv35624055/figure-01.jpg",
+      "bytes": 127313,
+      "sha256": "967f9057a77cf4eda54b6b438626d6660fb396dd7d1c0179f07bc3fa3b1c5862",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv35624055/figure-02.jpg",
+      "bytes": 24829,
+      "sha256": "545c775adc2838e5316e236f151ba2cbe71356bd380176965df7322e2304dee1",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv35624055/figure-03.jpg",
+      "bytes": 77332,
+      "sha256": "4c2c4018f550eb43a004961c06ab70c30091115367abdb4c4ea4aefb7841ee02",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv35624055/figure-04.jpg",
+      "bytes": 69816,
+      "sha256": "8c133a0c944e6c57843eb965689ee70153239b07e30ec57cbcaf87d0bf625e74",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv35624055/figure-05.jpg",
+      "bytes": 149666,
+      "sha256": "9138995a2d5248d77856cc5ac62a5f792dc27ddc05c37bbc89b6779fbb00ee82",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv35624055/figure-06.jpg",
+      "bytes": 120878,
+      "sha256": "408189d1ec2ef976b7eb413c538446b935ab05c03617698944e27fda17896813",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv35624055/figure-07.jpg",
+      "bytes": 88931,
+      "sha256": "498c90ea1bda3c0065b5209ad9f1986cec78a09ef2aa41cd003acff67358c7db",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv35624055/figure-08.jpg",
+      "bytes": 30725,
+      "sha256": "3187272e772a44c1be20cc7176e3c6e52f83116de3221e241fb6cfbb9a7483ca",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv35624055/figure-09.jpg",
+      "bytes": 74080,
+      "sha256": "21018b776fe9f231d638c7e3045a86f8a6090a6fd72de6a7e3d375cabe7bc67b",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv35624055/figure-10.jpg",
+      "bytes": 51027,
+      "sha256": "3782a0d0f18155bbef28965e6cfbf0d5db3d1a5acb69c10325b4f4742a76f4a5",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv35624055/figure-11.jpg",
+      "bytes": 41919,
+      "sha256": "92e019dbaa23a4949aa7aa89ec87407802f5893eba18b63e7049a25274954125",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv35624055/figure-12.jpg",
+      "bytes": 46219,
+      "sha256": "50d47f0ba41fdbcf353f9c3a5fc9bc165c2209538507321c7c8d1b854627c8b9",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv35624055/figure-13.jpg",
+      "bytes": 49378,
+      "sha256": "ab7b44bee9ec92a635cb315d8570c62583c86311171c67d7fca6544c70179c82",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv35624055/figure-14.jpg",
+      "bytes": 75818,
+      "sha256": "f1c4cc80dd3a4075b7a8a97abac2b323f848e0205dab6b6a5a09988a3df20354",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv35624055/figure-15.jpg",
+      "bytes": 78581,
+      "sha256": "28a48ffa429d3ce396ef77100e9a35d6e3b0cab9495fca9dfdadab5c6f4a098d",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv35624055/figure-16.jpg",
+      "bytes": 64531,
+      "sha256": "1ab8d785c4a3a7b6a4e9c33cad895ed71de78c95705a0e34ebc31bccdf8bf2bf",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv35624055/figure-17.jpg",
+      "bytes": 60245,
+      "sha256": "aec883be6e8c19f90c9578fa35b7cd0e04164ab4e485a1c77faecd8d66a56e7f",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv35624055/figure-18.jpg",
+      "bytes": 91035,
+      "sha256": "22a2b7054d8b1c3a83528827536b6c2b137ba2155f7167eb86dd9c67d7b6f1f0",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv35624055/figure-19.jpg",
+      "bytes": 59103,
+      "sha256": "f837822d40f4b241b0a6c92438349ea066f5ea018790181b9d3f91c8d6e2c269",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14096688/figure-1.jpg",
+      "bytes": 380173,
+      "sha256": "424fdb3f38254c5a845a448b28e1dd19c3c6fe17b82bbfe794eef355d32b04c2",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14096688/figure-22.jpg",
+      "bytes": 38755,
+      "sha256": "dccdf92c317478c1b8c7226672a406fb9b5b61d0a268f3efddbfa83ae7d1a936",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14096688/figure-33.png",
+      "bytes": 28883,
+      "sha256": "d31b9e34281143fb84c9d3a6b34d47caa6a5666e2ca3455ac075649f7ddd917e",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv14096688/figure-40.jpg",
+      "bytes": 37436,
+      "sha256": "7532708fd487a0c036693887a45afec4d35dfc882f1bd1572afe7479a99af471",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14222448/febri-talk-furukawa-2.jpg",
+      "bytes": 27426,
+      "sha256": "d514abb5f194efe91bd3e3a1ce86029bed8ba5c6be3912751b9af4df2344acfa",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14226929/febri-talk-furukawa-3.jpg",
+      "bytes": 29241,
+      "sha256": "80f05de2a3cc03b3bcc1c279b1245e5ec59e71c81407aac23e25997826fd1024",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14227022/saint-seiya-athena.jpg",
+      "bytes": 91233,
+      "sha256": "ef8e8bd00d5d89e028da45e93fb15db7b54a1936e0c16eee53d9fbb981605a0c",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14308222/01-internal-external-diagrams.jpg",
+      "bytes": 11989,
+      "sha256": "fa1dc05457e36e371a81c5d2dd4584de41a55178aff0ccf1505e4221370048d9",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14380570/01-karatani-baseball-pitcher.jpg",
+      "bytes": 36128,
+      "sha256": "c13b358c332996d95046b7c0524997a883e29fd0753af3ce74b5a108182f86ef",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14380570/02-kojin-karatani-interview.jpg",
+      "bytes": 17022,
+      "sha256": "8baef06d55a02cb15a73a03491fd95abf95a01d09f9dd213e8f656aa4a478929",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14264749/figure-6.jpg",
+      "bytes": 58551,
+      "sha256": "e3f57c6a9ed1ade64377ec7ff4b82c1d0c82058f774b91cb64c463d6e2346fc7",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14264749/figure-9.jpg",
+      "bytes": 32691,
+      "sha256": "07e618431ca2a6fb3b65ba16680c1fb5ed6080ab582a1663535cb950ab6fa5ee",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14264749/figure-12.jpg",
+      "bytes": 32809,
+      "sha256": "00f1208283e622db99a30ec4e6b1ac7400a85a410801c4f2d63d2c847e19aca7",
       "contentType": "image/jpeg"
     }
   ]

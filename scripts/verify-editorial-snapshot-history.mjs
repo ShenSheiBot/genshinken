@@ -8,6 +8,8 @@ const POLICY_FILES = new Set([
   "editorial-sources/README.md",
   "editorial-sources/preservation-manifest.json",
   "editorial-sources/roof-archive/README.md",
+  "editorial-sources/roof-archive/assets-manifest.json",
+  "editorial-sources/tag-aliases.json",
 ]);
 
 function git(args, allowFailure = false) {

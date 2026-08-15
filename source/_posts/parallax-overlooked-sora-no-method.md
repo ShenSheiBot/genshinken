@@ -21,7 +21,7 @@ citation:
 
 ![Ludwigsama 作者卡及题句“才能？ないよ！”](attachments/roof-archive/cv2422780/01-ludwigsama-author-card.jpg)
 
-**编者前言：本文阅读难度颇高，请读者朋友们提前注意并宽谅。**
+**编者前言：本文阅读难度颇高，请读者朋友们提前注意并宽谅。*。*
 
 ## 一 视差性的分裂
 

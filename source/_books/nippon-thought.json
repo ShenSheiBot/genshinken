@@ -1,0 +1,303 @@
+{
+  "id": "nippon-thought",
+  "slug": "nippon-thought",
+  "title": "Nipponの思想",
+  "subtitle": "佐佐木敦《ニッポンの思想》完整中文译文",
+  "description": "佐佐木敦从八十年代至零零年代追踪日本思想的变迁，依次讨论新学院派、莲实重彦与柄谷行人、后现代、九零年代思想家及东浩纪的登场。",
+  "documentSlug": "nippon-thought-prologue-2000s-landscape",
+  "script": "hans",
+  "status": "complete",
+  "authors": [
+    "佐佐木敦"
+  ],
+  "translators": [],
+  "proofreaders": [],
+  "publishedAt": "2020-10-12",
+  "updatedAt": "2021-12-05",
+  "latestChapterId": "chapter-08",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "sasaki2009NipponThoughtRoofZH",
+      "title": "ニッポンの思想",
+      "date": "2009-07-17",
+      "publisher": "讲谈社",
+      "edition": "讲谈社现代新书",
+      "ISBN": "9784062880091",
+      "language": "zh-CN",
+      "extra": "序章至第八章完整中文译文；第五章分上下两次发布。原书由讲谈社出版，ISBN 9784062880091；各篇译者与校对见章节署名。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "prologue",
+      "number": "00",
+      "title": "《Nipponの思想》序章：“零零年代的思想”的风景",
+      "status": "published",
+      "anchor": "prologue",
+      "publishedAt": "2020-10-12",
+      "authors": [
+        "佐佐木敦"
+      ],
+      "translators": [
+        "米岡"
+      ],
+      "proofreaders": [
+        "红茶泡海苔",
+        "人吉尔朗"
+      ],
+      "tags": [
+        "日本思想史",
+        "佐佐木敦",
+        "东浩纪",
+        "后现代"
+      ]
+    },
+    {
+      "id": "chapter-01",
+      "number": "01",
+      "title": "《Nipponの思想》第一章：“新学院派”是什么？",
+      "status": "published",
+      "anchor": "chapter-01",
+      "publishedAt": "2021-02-12",
+      "authors": [
+        "佐佐木敦"
+      ],
+      "translators": [
+        "米岡",
+        "鹿崖",
+        "Tina"
+      ],
+      "proofreaders": [
+        "柴来人"
+      ],
+      "tags": [
+        "日本思想史",
+        "佐佐木敦",
+        "浅田彰",
+        "中泽新一",
+        "后现代"
+      ]
+    },
+    {
+      "id": "chapter-02",
+      "number": "02",
+      "title": "《Nipponの思想》第二章：浅田彰与中泽新一 —— “差异化”的尽头",
+      "status": "published",
+      "anchor": "chapter-02",
+      "publishedAt": "2021-03-01",
+      "authors": [
+        "佐佐木敦"
+      ],
+      "translators": [
+        "有电拍拍"
+      ],
+      "proofreaders": [
+        "宇宙尘埃",
+        "柴来人"
+      ],
+      "tags": [
+        "日本思想史",
+        "佐佐木敦",
+        "浅田彰",
+        "中泽新一",
+        "后现代"
+      ]
+    },
+    {
+      "id": "chapter-03",
+      "number": "03",
+      "title": "《Nipponの思想》第三章：莲实重彦与柄谷行人——“文本”与“作品”",
+      "status": "published",
+      "anchor": "chapter-03",
+      "publishedAt": "2021-03-15",
+      "authors": [
+        "佐佐木敦"
+      ],
+      "translators": [
+        "T君",
+        "柴来人"
+      ],
+      "proofreaders": [
+        "柴来人"
+      ],
+      "tags": [
+        "日本思想史",
+        "佐佐木敦",
+        "莲实重彦",
+        "柄谷行人",
+        "文本",
+        "解构主义"
+      ]
+    },
+    {
+      "id": "chapter-04",
+      "number": "04",
+      "title": "《Nipponの思想》第四章：所谓“后现代”之问题",
+      "status": "published",
+      "anchor": "chapter-04",
+      "publishedAt": "2021-04-08",
+      "authors": [
+        "佐佐木敦"
+      ],
+      "translators": [
+        "鹿崖"
+      ],
+      "proofreaders": [
+        "柴来人"
+      ],
+      "tags": [
+        "日本思想史",
+        "佐佐木敦",
+        "莲实重彦",
+        "柄谷行人",
+        "后现代"
+      ]
+    },
+    {
+      "id": "chapter-05-upper",
+      "number": "05a",
+      "title": "《Nipponの思想》第五章 “九零年代”的三人——福田和也、大塚英志、宫台真司【上】",
+      "status": "published",
+      "anchor": "chapter-05-upper",
+      "publishedAt": "2021-04-19",
+      "authors": [
+        "佐佐木敦"
+      ],
+      "translators": [
+        "阿栖",
+        "柴来人"
+      ],
+      "proofreaders": [
+        "柴来人"
+      ],
+      "tags": [
+        "日本思想史",
+        "佐佐木敦",
+        "柄谷行人",
+        "浅田彰",
+        "福田和也",
+        "大塚英志",
+        "宫台真司",
+        "后现代"
+      ]
+    },
+    {
+      "id": "chapter-05-lower",
+      "number": "05b",
+      "title": "《Nipponの思想》第五章：“九零年代”的三人——福田和也、大塚英志、宫台真司（下）",
+      "status": "published",
+      "anchor": "chapter-05-lower",
+      "publishedAt": "2021-04-23",
+      "authors": [
+        "佐佐木敦"
+      ],
+      "translators": [
+        "阿栖",
+        "柴来人"
+      ],
+      "proofreaders": [
+        "柴来人"
+      ],
+      "tags": [
+        "日本思想史",
+        "佐佐木敦",
+        "大塚英志",
+        "宫台真司",
+        "御宅研究",
+        "物语消费",
+        "后现代",
+        "天皇制"
+      ]
+    },
+    {
+      "id": "chapter-06",
+      "number": "06",
+      "title": "《Nipponの思想》第六章 作为“坏的场所”的日本国",
+      "status": "published",
+      "anchor": "chapter-06",
+      "publishedAt": "2021-05-09",
+      "authors": [
+        "佐佐木敦"
+      ],
+      "translators": [
+        "萤泽",
+        "顾森"
+      ],
+      "proofreaders": [
+        "宇宙尘埃",
+        "柴来人"
+      ],
+      "tags": [
+        "日本思想史",
+        "佐佐木敦",
+        "大塚英志",
+        "宫台真司",
+        "村上隆",
+        "小林善纪",
+        "御宅研究",
+        "后现代",
+        "天皇制"
+      ]
+    },
+    {
+      "id": "chapter-07",
+      "number": "07",
+      "title": "《Nipponの思想》第七章 东浩纪的登场",
+      "status": "published",
+      "anchor": "chapter-07",
+      "publishedAt": "2021-09-25",
+      "authors": [
+        "佐佐木敦"
+      ],
+      "translators": [
+        "天な",
+        "怖い",
+        "熊君"
+      ],
+      "proofreaders": [
+        "柴来人"
+      ],
+      "tags": [
+        "日本思想史",
+        "佐佐木敦",
+        "东浩纪",
+        "柄谷行人",
+        "浅田彰",
+        "德里达",
+        "后现代"
+      ]
+    },
+    {
+      "id": "chapter-08",
+      "number": "08",
+      "title": "【完结】《Nipponの思想》第八章 “动物化”的“零零年代”",
+      "status": "published",
+      "anchor": "chapter-08",
+      "publishedAt": "2021-12-05",
+      "authors": [
+        "佐佐木敦"
+      ],
+      "translators": [
+        "加速器",
+        "相纸",
+        "萤泽"
+      ],
+      "proofreaders": [
+        "Va-11 Hall-A",
+        "柴来人"
+      ],
+      "tags": [
+        "日本思想史",
+        "佐佐木敦",
+        "东浩纪",
+        "大塚英志",
+        "宫台真司",
+        "御宅研究",
+        "后现代",
+        "数据库消费",
+        "动物化"
+      ]
+    }
+  ]
+}

@@ -4,7 +4,7 @@ title_breaks: [假面骑士Kiva：, 艺术、背叛、超越——, 挣脱命运
 date: 2019-05-04
 slug: kamen-rider-kiva-oto-ya-art-betrayal
 script: hans
-categories: [电影／影视]
+categories: [电影与影视]
 section: review
 tags: [假面骑士Kiva, 艺术哲学, 父之名]
 post_author: 五代雄介

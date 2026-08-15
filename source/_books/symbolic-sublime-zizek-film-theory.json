@@ -1,0 +1,340 @@
+{
+  "id": "symbolic-sublime-zizek-film-theory",
+  "slug": "symbolic-sublime-zizek-film-theory",
+  "title": "象征界、崇高之物与齐泽克电影理论",
+  "subtitle": "Matthew Flisfeder 全书中文译文",
+  "description": "Matthew Flisfeder 从拉康、马克思主义与意识形态批判出发，系统说明齐泽克如何借电影讨论崇高客体、阶级斗争、形式与享乐。",
+  "documentSlug": "symbolic-sublime-zizek-film-theory-introduction",
+  "script": "hans",
+  "status": "complete",
+  "authors": [
+    "Matthew Flisfeder"
+  ],
+  "translators": [],
+  "proofreaders": [],
+  "publishedAt": "2021-02-22",
+  "updatedAt": "2022-01-14",
+  "latestChapterId": "conclusion",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "flisfeder2011SymbolicSublimeRoofZH",
+      "title": "The Symbolic, The Sublime, and Slavoj Žižek’s Theory of Film",
+      "date": "2011",
+      "publisher": "Palgrave Macmillan",
+      "ISBN": "9780230344884",
+      "language": "zh-CN",
+      "extra": "全书中文译文。各篇译者与校对见章节署名。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "introduction",
+      "number": "01",
+      "title": "导言",
+      "status": "published",
+      "anchor": "introduction",
+      "publishedAt": "2021-02-22",
+      "authors": [
+        "Matthew Flisfeder"
+      ],
+      "translators": [
+        "款冬"
+      ],
+      "proofreaders": [
+        "snoper卓尔"
+      ],
+      "tags": [
+        "齐泽克",
+        "电影理论",
+        "意识形态",
+        "精神分析"
+      ]
+    },
+    {
+      "id": "chapter-01-upper",
+      "number": "02",
+      "title": "第一章 从电影理论到后－理论（上）",
+      "status": "published",
+      "anchor": "chapter-01-upper",
+      "publishedAt": "2021-03-05",
+      "authors": [
+        "Matthew Flisfeder"
+      ],
+      "translators": [
+        "祖国人",
+        "柴来人"
+      ],
+      "proofreaders": [
+        "傲傲傲娇的风学长"
+      ],
+      "tags": [
+        "齐泽克",
+        "电影理论",
+        "拉康",
+        "精神分析"
+      ]
+    },
+    {
+      "id": "chapter-01-lower",
+      "number": "03",
+      "title": "第一章 从电影理论到后－理论（下）",
+      "status": "published",
+      "anchor": "chapter-01-lower",
+      "publishedAt": "2021-03-05",
+      "authors": [
+        "Matthew Flisfeder"
+      ],
+      "translators": [
+        "祖国人",
+        "柴来人"
+      ],
+      "proofreaders": [
+        "傲傲傲娇的风学长"
+      ],
+      "tags": [
+        "齐泽克",
+        "电影理论",
+        "拉康",
+        "精神分析"
+      ]
+    },
+    {
+      "id": "chapter-02-upper",
+      "number": "04",
+      "title": "第二章 电影中的崇高客体（上）",
+      "status": "published",
+      "anchor": "chapter-02-upper",
+      "publishedAt": "2021-04-10",
+      "authors": [
+        "Matthew Flisfeder"
+      ],
+      "translators": [
+        "互联网不明白"
+      ],
+      "proofreaders": [
+        "柴来人"
+      ],
+      "tags": [
+        "齐泽克",
+        "电影理论",
+        "精神分析",
+        "意识形态"
+      ]
+    },
+    {
+      "id": "chapter-02-lower",
+      "number": "05",
+      "title": "第二章 电影中的崇高客体（下）",
+      "status": "published",
+      "anchor": "chapter-02-lower",
+      "publishedAt": "2021-04-16",
+      "authors": [
+        "Matthew Flisfeder"
+      ],
+      "translators": [
+        "加速器"
+      ],
+      "proofreaders": [
+        "snoper卓尔"
+      ],
+      "tags": [
+        "齐泽克",
+        "电影理论",
+        "精神分析",
+        "意识形态"
+      ]
+    },
+    {
+      "id": "chapter-03-upper",
+      "number": "06",
+      "title": "第三章 电影研究中的阶级斗争（上）",
+      "status": "published",
+      "anchor": "chapter-03-upper",
+      "publishedAt": "2021-06-03",
+      "authors": [
+        "Matthew Flisfeder"
+      ],
+      "translators": [
+        "snoper卓尔"
+      ],
+      "proofreaders": [],
+      "tags": [
+        "齐泽克",
+        "电影理论",
+        "精神分析",
+        "阶级斗争"
+      ]
+    },
+    {
+      "id": "chapter-03-lower",
+      "number": "07",
+      "title": "第三章 电影研究中的阶级斗争（下）",
+      "status": "published",
+      "anchor": "chapter-03-lower",
+      "publishedAt": "2021-06-05",
+      "authors": [
+        "Matthew Flisfeder"
+      ],
+      "translators": [
+        "互联网不明白",
+        "款冬"
+      ],
+      "proofreaders": [
+        "柴来人",
+        "snoper卓尔"
+      ],
+      "tags": [
+        "齐泽克",
+        "电影理论",
+        "精神分析",
+        "阶级斗争"
+      ]
+    },
+    {
+      "id": "interlude",
+      "number": "08",
+      "title": "幕间 变态者与分析家",
+      "status": "published",
+      "anchor": "interlude",
+      "publishedAt": "2021-06-10",
+      "authors": [
+        "Matthew Flisfeder"
+      ],
+      "translators": [
+        "Hyacinth"
+      ],
+      "proofreaders": [
+        "肆玖"
+      ],
+      "tags": [
+        "齐泽克",
+        "电影理论",
+        "精神分析",
+        "意识形态"
+      ]
+    },
+    {
+      "id": "chapter-04-upper",
+      "number": "09",
+      "title": "第四章 电影、意识形态与形式（上）",
+      "status": "published",
+      "anchor": "chapter-04-upper",
+      "publishedAt": "2021-06-13",
+      "authors": [
+        "Matthew Flisfeder"
+      ],
+      "translators": [
+        "snoper卓尔"
+      ],
+      "proofreaders": [
+        "肆玖"
+      ],
+      "tags": [
+        "齐泽克",
+        "电影理论",
+        "意识形态",
+        "拉康",
+        "精神分析",
+        "崇高"
+      ]
+    },
+    {
+      "id": "chapter-04-lower",
+      "number": "10",
+      "title": "第四章 电影、意识形态与形式（下）",
+      "status": "published",
+      "anchor": "chapter-04-lower",
+      "publishedAt": "2021-08-22",
+      "authors": [
+        "Matthew Flisfeder"
+      ],
+      "translators": [
+        "杰洛·齐贝林",
+        "snoper卓尔"
+      ],
+      "proofreaders": [
+        "Hyacinth"
+      ],
+      "tags": [
+        "齐泽克",
+        "电影理论",
+        "意识形态",
+        "拉康",
+        "精神分析",
+        "崇高"
+      ]
+    },
+    {
+      "id": "chapter-05-upper",
+      "number": "11",
+      "title": "第五章 电影中的享乐（上）",
+      "status": "published",
+      "anchor": "chapter-05-upper",
+      "publishedAt": "2021-10-16",
+      "authors": [
+        "Matthew Flisfeder"
+      ],
+      "translators": [
+        "互联网不明白"
+      ],
+      "proofreaders": [
+        "snoper卓尔"
+      ],
+      "tags": [
+        "齐泽克",
+        "电影理论",
+        "精神分析",
+        "享乐"
+      ]
+    },
+    {
+      "id": "chapter-05-lower",
+      "number": "12",
+      "title": "第五章 电影中的享乐（下）",
+      "status": "published",
+      "anchor": "chapter-05-lower",
+      "publishedAt": "2022-01-12",
+      "authors": [
+        "Matthew Flisfeder"
+      ],
+      "translators": [
+        "一个趣味低俗的人",
+        "kk"
+      ],
+      "proofreaders": [
+        "Hyacinth"
+      ],
+      "tags": [
+        "齐泽克",
+        "电影理论",
+        "精神分析",
+        "享乐"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "number": "13",
+      "title": "结论——作为以驱力设定的现实主义之理论",
+      "status": "published",
+      "anchor": "conclusion",
+      "publishedAt": "2022-01-14",
+      "authors": [
+        "Matthew Flisfeder"
+      ],
+      "translators": [
+        "兔引"
+      ],
+      "proofreaders": [
+        "春埼美空",
+        "旅"
+      ],
+      "tags": [
+        "齐泽克",
+        "电影理论",
+        "精神分析",
+        "享乐"
+      ]
+    }
+  ]
+}

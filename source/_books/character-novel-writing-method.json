@@ -1,0 +1,128 @@
+{
+  "id": "character-novel-writing-method",
+  "slug": "character-novel-writing-method",
+  "title": "角色小说的制作方法",
+  "subtitle": "第一、二、三与第九讲中文选译",
+  "description": "大塚英志从角色、样式、原创性与世界观入手，讲解角色小说如何借助动画、漫画和游戏的假想现实组织人物与故事。",
+  "documentSlug": "otsuka-character-novel-method-lecture-1",
+  "script": "hans",
+  "status": "paused",
+  "authors": [
+    "大塚英志"
+  ],
+  "translators": [],
+  "proofreaders": [],
+  "publishedAt": "2022-02-09",
+  "updatedAt": "2022-02-17",
+  "latestChapterId": "lecture-09",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "characternovelwritingmethodRoofZH",
+      "title": "角色小说的制作方法",
+      "date": "2006-06",
+      "publisher": "角川書店",
+      "ISBN": "9784044191221",
+      "language": "zh-CN",
+      "extra": "第一、二、三与第九讲中文选译；各篇译者与校对见章节署名。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "lecture-01",
+      "number": "01",
+      "title": "第一讲 何谓角色小说",
+      "status": "published",
+      "anchor": "lecture-01",
+      "publishedAt": "2022-02-09",
+      "authors": [
+        "大塚英志"
+      ],
+      "translators": [
+        "Va-11 Hall-A"
+      ],
+      "proofreaders": [
+        "春埼美空"
+      ],
+      "tags": [
+        "大塚英志",
+        "轻小说",
+        "角色研究",
+        "跨媒介"
+      ]
+    },
+    {
+      "id": "lecture-02",
+      "number": "02",
+      "title": "第二讲 关于虽无原创性但在小说之中能好好发挥作用的角色制作方法这件事",
+      "status": "published",
+      "anchor": "lecture-02",
+      "publishedAt": "2022-02-11",
+      "authors": [
+        "大塚英志"
+      ],
+      "translators": [
+        "米岡"
+      ],
+      "proofreaders": [
+        "春埼美空"
+      ],
+      "tags": [
+        "大塚英志",
+        "角色小说",
+        "轻小说",
+        "角色研究",
+        "小说创作",
+        "原创性"
+      ]
+    },
+    {
+      "id": "lecture-03",
+      "number": "03",
+      "title": "第三讲 角色就是样式的组合",
+      "status": "published",
+      "anchor": "lecture-03",
+      "publishedAt": "2022-02-15",
+      "authors": [
+        "大塚英志"
+      ],
+      "translators": [
+        "米岡"
+      ],
+      "proofreaders": [],
+      "tags": [
+        "大塚英志",
+        "角色小说",
+        "轻小说",
+        "角色研究",
+        "小说创作",
+        "原创性",
+        "手塚治虫"
+      ]
+    },
+    {
+      "id": "lecture-09",
+      "number": "04",
+      "title": "第九讲 作为偏差了的日常之“世界观”",
+      "status": "published",
+      "anchor": "lecture-09",
+      "publishedAt": "2022-02-17",
+      "authors": [
+        "大塚英志"
+      ],
+      "translators": [
+        "柴来人"
+      ],
+      "proofreaders": [
+        "春埼美空"
+      ],
+      "tags": [
+        "大塚英志",
+        "角色小说",
+        "世界观",
+        "小说创作",
+        "克苏鲁神话"
+      ]
+    }
+  ]
+}

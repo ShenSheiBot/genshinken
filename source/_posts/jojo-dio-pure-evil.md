@@ -4,7 +4,7 @@ title_breaks: [回答：JOJO的奇妙冒险中, DIO真的是纯粹的恶人吗�
 date: 2020-04-02
 slug: jojo-dio-pure-evil
 script: hans
-categories: [动画, 漫画]
+categories: [漫画]
 section: review
 tags: [JOJO的奇妙冒险, 女性主义]
 post_author: 实在狗子
@@ -16,7 +16,6 @@ citation:
   date: "2020-04-02"
   blogTitle: 屋顶现视研
   url: "https://www.bilibili.com/read/cv5421426/"
-  extra: "作者卡署名：实在狗子；题名与‘问题回答Q＆A’文集表明本文为问题回答，外部原答链接未见于页面。"
 ---
 
 ![实在狗子作者卡及题句“在没有世界的时代，传播无意义之爱”](attachments/roof-archive/cv5421426/01-shi-zai-gou-zi-author-card.png)

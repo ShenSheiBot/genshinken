@@ -4,7 +4,7 @@ title_breaks: [《黑暗扫描仪》：, 精神病……或更糟]
 date: 2019-11-13
 slug: a-scanner-darkly-psychosis-or-worse
 script: hans
-categories: [评论与批评]
+categories: [电影与影视]
 section: review
 tags: [黑暗扫描仪, 菲利普·K·迪克, 精神分析, 反文化]
 post_author: 一只非0的O

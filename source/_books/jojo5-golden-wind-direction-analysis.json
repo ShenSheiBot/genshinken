@@ -6,7 +6,9 @@
   "documentSlug": "jojo5-golden-wind-direction-analysis-episode-02",
   "script": "hans",
   "status": "paused",
-  "authors": ["速音"],
+  "authors": [
+    "速音"
+  ],
   "translators": [],
   "proofreaders": [],
   "publishedAt": "2018-12-10",
@@ -27,10 +29,17 @@
       "status": "published",
       "anchor": "episode-02",
       "publishedAt": "2018-12-10",
-      "authors": ["速音"],
+      "authors": [
+        "速音"
+      ],
       "translators": [],
       "proofreaders": [],
-      "tags": ["JOJO的奇妙冒险", "演出", "分镜", "构图"]
+      "tags": [
+        "JOJO的奇妙冒险",
+        "动画演出",
+        "分镜",
+        "构图"
+      ]
     },
     {
       "id": "episodes-03-07",
@@ -39,10 +48,17 @@
       "status": "published",
       "anchor": "episodes-03-07",
       "publishedAt": "2019-01-05",
-      "authors": ["速音"],
+      "authors": [
+        "速音"
+      ],
       "translators": [],
       "proofreaders": [],
-      "tags": ["JOJO的奇妙冒险", "演出", "分镜", "构图"]
+      "tags": [
+        "JOJO的奇妙冒险",
+        "动画演出",
+        "分镜",
+        "构图"
+      ]
     }
   ]
 }

@@ -30,6 +30,15 @@ const roofAssetManifestFile = path.join(
 );
 const publicDirectory = path.join(process.cwd(), "public");
 const validSections = new Set(["essay", "review", "translation", "community", "multimedia", "negative"]);
+const validCategories = new Set([
+  "动画",
+  "漫画",
+  "游戏",
+  "电影与影视",
+  "御宅文化",
+  "思想与理论",
+  "屋顶社群",
+]);
 const validHanScripts = new Set(["hans", "hant"]);
 const validBookStatuses = new Set(["serializing", "complete", "paused"]);
 const validBookChapterStatuses = new Set(["published", "forthcoming"]);
@@ -53,7 +62,10 @@ const inlineEventHandler = /\son[a-z][\w:-]*\s*=/i;
 const dangerousHtmlUrl = /\s(?:href|src)\s*=\s*["']?\s*(?:javascript|vbscript):/i;
 const protocolLessAngleLink = /<www\.[^<>\s]+>/iu;
 const brokenOrderedListMarker = /^\s{0,3}\d{1,2}\.(?=\p{Script=Han})/u;
-const internalEditorialLanguage = /(?:待逐篇清洗|清洗后纳入|原始(?:篇目|连载)证据|合并文库的构建源|快照与专篇|归档说明|档案说明|本站据.{0,40}(?:整理|归档)|连载暂列暂停|连载状态据此标为|后续.{0,20}未见发布|暂未见正式后续|不因此自动成为|并非按作品名重新聚类|不在本专题中扩收|不把.{0,40}扩入活动档案)/u;
+const unescapedDollarMarker = /(?<!\\)\$/u;
+const internalEditorialLanguage = /(?:待逐篇清洗|清洗后纳入|尚未恢复|目前归档|归档来源页|原始(?:篇目|连载)证据|合并文库的构建源|快照与专篇|归档说明|档案说明|本站据.{0,40}(?:整理|归档)|平台封面.{0,30}未纳入正文资产|连载暂列暂停|连载状态据此标为|后续.{0,20}未见发布|暂未见正式后续|不因此自动成为|并非按作品名重新聚类|不在本专题中扩收|不把.{0,40}扩入活动档案)/u;
+const publicArchiveProcessLanguage = /(?:^|\n)\s*(?:(?:>|-)\s*)?来源[：:].*(?:(?:Bilibili|哔哩哔哩|B站)\s*(?:专栏)?\s*(?:cv)?\d{5,}|\bcv\d{5,}\b)|作者卡(?:署名|显示|署)|结构化来源|未提供更早的?[^\n]{0,12}原链|原页附图|原页图注|公开稿标题|按既有贡献者登记名|在归档时已无法访问|未修改共享\s+(?:book|topic)|(?:book|topic)\s+manifest|本篇任务|原页无正文图片|\d+\s*条(?:图片)?引用均为平台|(?:^|\n)\s*>\s*(?:原页|源页)声明|(?:^|\n)\s*\[(?:图题|图注|表题|表注)\]/iu;
+const citationExtraProcessLanguage = /(?:\bcv\d{5,}\b|canonical\s+文档|按(?:既有贡献者)?登记名|屋顶现视研\s*(?:Bilibili|B站)\s*专栏)/iu;
 
 assert.match(
   "<www.example.org/path>",
@@ -72,10 +84,45 @@ assert.match(
   internalEditorialLanguage,
   "internal archive workflow language must be detected"
 );
+assert.match(
+  "平台封面与视频缩略图未纳入正文资产。",
+  internalEditorialLanguage,
+  "asset-cleaning process notes must not be public",
+);
 assert.doesNotMatch(
   "中文译文收录第一部五章与第二部前五章。",
   internalEditorialLanguage,
   "reader-facing coverage statements must remain accepted"
+);
+assert.match(
+  "> 来源：哔哩哔哩专栏 cv22901248。原文题名另据转载页核对。",
+  publicArchiveProcessLanguage,
+  "public source notes must not expose archive IDs or verification workflow"
+);
+assert.match(
+  "原页附图：《新潟日报》刊载剪页。",
+  publicArchiveProcessLanguage,
+  "a process caption must not stand in for a rendered image"
+);
+assert.match(
+  "[图题] 法月纶太郎",
+  publicArchiveProcessLanguage,
+  "editor-only caption markers must not leak into public prose"
+);
+assert.doesNotMatch(
+  "> 作者：浅田彰。译者：人气空友。",
+  publicArchiveProcessLanguage,
+  "natural reader-facing credits must remain accepted"
+);
+assert.match(
+  "屋顶现视研 cv22901248 称译文源自《新潟日报》",
+  citationExtraProcessLanguage,
+  "citation notes must not expose archive identifiers"
+);
+assert.doesNotMatch(
+  "共同通信稿；本篇据《新潟日报》刊载版本翻译。",
+  citationExtraProcessLanguage,
+  "natural bibliographic notes must remain accepted"
 );
 const errors = [];
 const warnings = [];
@@ -125,6 +172,12 @@ function validatePublicEditorialVoice(file, value, keyPath = "公开内容") {
   if (typeof value === "string") {
     if (internalEditorialLanguage.test(value)) {
       report(errors, file, `${keyPath} 泄露内部归档／清洗判断，请改写为面向读者的内容与范围说明`);
+    }
+    if (publicArchiveProcessLanguage.test(value)) {
+      report(errors, file, `${keyPath} 泄露平台 cv 编号、归档核对过程或伪图注；公开稿只保留自然的原刊、作品与署名说明`);
+    }
+    if (/(?:^|\.)extra$/u.test(keyPath) && citationExtraProcessLanguage.test(value)) {
+      report(errors, file, `${keyPath} 泄露平台编号、内部容器或署名登记过程；引用附注只保留自然的书目与收录范围`);
     }
     return;
   }
@@ -203,6 +256,13 @@ function validateTypography(file, content, data) {
         `第 ${index + 1} 行疑似有序列表序号后缺少空格；请写成“${line.trimStart().match(/^\d+\./u)?.[0]} …”`,
       );
     }
+    if (unescapedDollarMarker.test(line)) {
+      report(
+        errors,
+        file,
+        `第 ${index + 1} 行含未转义的 $；它会被 KaTeX 当作跨段公式定界符，字面符号请写成 \\$`,
+      );
+    }
   });
 
   const tree = unified().use(remarkParse).use(remarkGfm).parse(content);
@@ -233,6 +293,10 @@ function validateTypography(file, content, data) {
     }
 
     if (node.type === "image" && typeof node.url === "string") {
+      if (/^https:\/\/assets\.labonroof\.top\/roof-archive\//iu.test(node.url)) {
+        const line = node.position?.start?.line;
+        report(errors, file, `${line ? `第 ${line} 行` : "正文"}屋顶图片不得硬编码 CDN URL；请使用 attachments/roof-archive/... 本地路径并由构建改写`);
+      }
       checkLocalAsset(file, node.url, node.position?.start?.line);
     }
 
@@ -752,6 +816,7 @@ const records = files.map((file) => {
 
   validateTypography(file, content, data);
   validatePublicEditorialVoice(file, data, "front matter");
+  validatePublicEditorialVoice(file, content, "正文");
   if (!bookDocument) {
     validateProseTypography(
       file,
@@ -849,6 +914,14 @@ const records = files.map((file) => {
 
   if (categories.length === 0) {
     report(errors, file, "必须填写至少一个 categories/category");
+  } else if (categories.length !== 1) {
+    report(errors, file, "主题分类必须且只能填写一个主要领域");
+  } else if (!validCategories.has(categories[0])) {
+    report(
+      errors,
+      file,
+      `主题分类必须是以下七类之一：${[...validCategories].join(" / ")}；当前为 ${categories[0]}`
+    );
   }
 
   const fileStem = file.slice(0, -3);
@@ -925,6 +998,7 @@ const records = files.map((file) => {
     dateISO,
     updatedISO,
     citationKey,
+    content,
   };
 });
 
@@ -1266,6 +1340,7 @@ const bookRecords = jsonFiles(booksDirectory)
       publishedAt,
       updatedAt,
       citationKeys,
+      chapterIds: [...chapterIds],
     };
   })
   .filter(Boolean);
@@ -1316,6 +1391,30 @@ for (const book of bookRecords) {
 for (const document of records.filter((record) => record.bookDocument)) {
   if (!bookDocuments.has(document.slug)) {
     report(errors, document.file, "book_document: true 的文稿必须由一本书的 documentSlug 引用");
+  }
+}
+
+// 合并连载后，旧的 standalone 路由很容易残留在正文导航里。只检查明确的
+// 站内 Markdown 链接；外链、锚点和普通文本不在这个机械门禁的职责内。
+for (const record of records) {
+  for (const match of record.content.matchAll(/\]\((\/(?:posts|books)\/[^)\s]+)\)/gu)) {
+    const href = match[1].split(/[?#]/u, 1)[0].replace(/\/+$/u, "");
+    const postMatch = href.match(/^\/posts\/([a-z0-9-]+)$/u);
+    if (postMatch) {
+      if (!recordsBySlug.has(postMatch[1])) {
+        report(errors, record.file, `正文链接指向不存在的文章路由：${href}`);
+      }
+      continue;
+    }
+    const chapterMatch = href.match(/^\/books\/([a-z0-9-]+)\/chapters\/([a-z0-9-]+)$/u);
+    if (chapterMatch) {
+      const book = booksBySlug.get(chapterMatch[1]);
+      if (!book) {
+        report(errors, record.file, `正文链接指向不存在的文库：${href}`);
+      } else if (!book.chapterIds.includes(chapterMatch[2])) {
+        report(errors, record.file, `正文链接指向不存在的文库章节：${href}`);
+      }
+    }
   }
 }
 

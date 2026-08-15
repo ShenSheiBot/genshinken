@@ -1,0 +1,146 @@
+{
+  "id": "uno-tokusatsu-history-little-people-era",
+  "slug": "uno-tokusatsu-history-little-people-era",
+  "title": "《小角色的时代》第二章：英雄与公共性（选译）",
+  "description": "宇野常宽《小角色的时代》第二章“英雄与公共性”的五篇非连续中文选译，覆盖第1－2节、第4节与第6节后半、第7节、第15－16节、第17－20节。第3、5节、第6节前半、第8－14节未译，第15、18、19节另有段内省略；末篇“完结”只表示中文选译计划结束，并非第二章或全书完整。",
+  "documentSlug": "uno-tokusatsu-history-1-hero-circuit-monsters-postwar",
+  "script": "hans",
+  "status": "paused",
+  "authors": [
+    "宇野常宽"
+  ],
+  "translators": [
+    "柴来人"
+  ],
+  "proofreaders": [],
+  "publishedAt": "2022-11-25",
+  "updatedAt": "2023-04-14",
+  "latestChapterId": "sections-17-20-finale",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "uno2011LittlePeopleHeroPublicnessSelectionsBook",
+      "extra": "五篇非连续中文选译仅覆盖第二章第1－2节、第4节与第6节后半、第7节、第15－16节、第17－20节；第3、5节、第6节前半、第8－14节未译，第15、18、19节另有段内省略。末篇‘完结’仅指中文选译计划结束，并非第二章或全书完整。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "sections-1-2",
+      "number": "选译①",
+      "title": "英雄的回路，怪兽们的“战后”（第1－2节）",
+      "status": "published",
+      "anchor": "sections-1-2",
+      "publishedAt": "2022-11-25",
+      "authors": [
+        "宇野常宽"
+      ],
+      "translators": [
+        "柴来人"
+      ],
+      "proofreaders": [],
+      "tags": [
+        "宇野常宽",
+        "小角色的时代",
+        "特摄",
+        "奥特曼",
+        "奥特赛文",
+        "假面骑士",
+        "日本战后史"
+      ]
+    },
+    {
+      "id": "sections-4-and-6-latter-half",
+      "number": "选译②",
+      "title": "东映的小角色／假面骑士，机器人与消费社会（第4节、第6节后半）",
+      "status": "published",
+      "anchor": "sections-4-and-6-latter-half",
+      "publishedAt": "2022-12-01",
+      "authors": [
+        "宇野常宽"
+      ],
+      "translators": [
+        "柴来人"
+      ],
+      "proofreaders": [],
+      "tags": [
+        "宇野常宽",
+        "小角色的时代",
+        "特摄",
+        "假面骑士",
+        "超级战队",
+        "金属英雄",
+        "消费文化"
+      ]
+    },
+    {
+      "id": "section-7",
+      "number": "选译③",
+      "title": "加美拉，迪迦，盖亚与《EVA》（第7节）",
+      "status": "published",
+      "anchor": "section-7",
+      "publishedAt": "2023-03-01",
+      "authors": [
+        "宇野常宽"
+      ],
+      "translators": [
+        "柴来人"
+      ],
+      "proofreaders": [],
+      "tags": [
+        "宇野常宽",
+        "小角色的时代",
+        "特摄",
+        "加美拉",
+        "奥特曼",
+        "新世纪福音战士",
+        "日本战后史"
+      ]
+    },
+    {
+      "id": "sections-15-16",
+      "number": "选译④",
+      "title": "已经没有昭和英雄出场的场合了？变身的再定义（第15－16节）",
+      "status": "published",
+      "anchor": "sections-15-16",
+      "publishedAt": "2023-04-02",
+      "authors": [
+        "宇野常宽"
+      ],
+      "translators": [
+        "柴来人"
+      ],
+      "proofreaders": [],
+      "tags": [
+        "宇野常宽",
+        "小角色的时代",
+        "特摄",
+        "假面骑士",
+        "角色研究"
+      ]
+    },
+    {
+      "id": "sections-17-20-finale",
+      "number": "选译完结篇",
+      "title": "关于不可回避的父性、世界书库与冷酷仙境（第17－20节）",
+      "status": "published",
+      "anchor": "sections-17-20-finale",
+      "publishedAt": "2023-04-14",
+      "authors": [
+        "宇野常宽"
+      ],
+      "translators": [
+        "柴来人"
+      ],
+      "proofreaders": [],
+      "tags": [
+        "宇野常宽",
+        "小角色的时代",
+        "特摄",
+        "假面骑士",
+        "村上春树",
+        "数据库消费",
+        "消费文化"
+      ]
+    }
+  ]
+}

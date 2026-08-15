@@ -17,7 +17,7 @@ citation:
   citationKey: azuma2000imaginationAnimalZH
   date: "2000-02"
   publicationTitle: 表象
-  extra: 原文收入《サイバースペースはなぜそう呼ばれるか＋》；中文译文于2020-01-08发布于屋顶现视研B站专栏
+  extra: 原文收入《サイバースペースはなぜそう呼ばれるか＋》；中文译文于2020-01-08发布
 ---
 
 ![东浩纪与他人合影](attachments/roof-archive/cv4310554-azuma.jpg "=66%")

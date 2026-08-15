@@ -7,8 +7,12 @@
   "documentSlug": "photographic-image-surrealism-bazin-barthes",
   "script": "hans",
   "status": "paused",
-  "authors": ["Adam Lowenstein"],
-  "translators": ["will"],
+  "authors": [
+    "Adam Lowenstein"
+  ],
+  "translators": [
+    "will"
+  ],
   "proofreaders": [],
   "publishedAt": "2019-11-25",
   "updatedAt": "2020-01-11",
@@ -30,10 +34,20 @@
       "status": "published",
       "anchor": "introduction-bazin-sartre",
       "publishedAt": "2019-11-25",
-      "authors": ["Adam Lowenstein"],
-      "translators": ["will"],
+      "authors": [
+        "Adam Lowenstein"
+      ],
+      "translators": [
+        "will"
+      ],
       "proofreaders": [],
-      "tags": ["摄影", "安德烈·巴赞", "萨特", "超现实主义", "电影理论"]
+      "tags": [
+        "摄影",
+        "安德烈·巴赞",
+        "萨特",
+        "超现实主义",
+        "电影理论"
+      ]
     },
     {
       "id": "camera-lucida-enlargement",
@@ -42,10 +56,19 @@
       "status": "published",
       "anchor": "camera-lucida-enlargement",
       "publishedAt": "2020-01-11",
-      "authors": ["Adam Lowenstein"],
-      "translators": ["will"],
+      "authors": [
+        "Adam Lowenstein"
+      ],
+      "translators": [
+        "will"
+      ],
       "proofreaders": [],
-      "tags": ["摄影", "罗兰·巴特", "超现实主义", "电影理论"]
+      "tags": [
+        "摄影",
+        "罗兰·巴特",
+        "超现实主义",
+        "电影理论"
+      ]
     },
     {
       "id": "remaining-sections",

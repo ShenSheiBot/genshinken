@@ -6,7 +6,7 @@ slug: opening-black-box-1989-otaku-discourse
 script: hans
 categories: [御宅文化]
 section: translation
-tags: [御宅族, 宫崎勤事件, 媒体话语, 道德恐慌, 大塚英志, 定性内容分析]
+tags: [御宅研究, 宫崎勤事件, 媒体话语, 道德恐慌, 大塚英志, 定性内容分析]
 post_author: Björn-Ole Kamm
 translator: 王晗
 excerpt: 重访1989至1990年的报刊、杂志与司法话语，拆解“大众传媒”如何与御宅族批评者共同装配宫崎勤事件后的御宅形象。

@@ -4,7 +4,7 @@ title_breaks: [《千年女优》——今敏的宁芙]
 date: 2019-07-26
 slug: millennium-actress-nymph
 script: hans
-categories: [评论与批评]
+categories: [动画]
 section: review
 tags: [千年女优, 今敏, 影像, 记忆, 宁芙, 阿甘本, 日本电影]
 post_author: Jack Cade
@@ -17,7 +17,6 @@ citation:
   date: "2019-07-26"
   blogTitle: 屋顶现视研
   url: "https://www.bilibili.com/read/cv3165978/"
-  extra: "作者卡署名 Jack Cade；文末校对：伦勃朗。"
 ---
 
 ![Jack Cade 作者卡及题句](/attachments/roof-archive/cv3165978/01.jpg)

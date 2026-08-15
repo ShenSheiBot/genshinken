@@ -26,7 +26,7 @@ citation:
 
 **“在做什么工作，工资怎么样？”**
 
-**“怎么这么大还在看动画片？（嫌弃jpg)&amp;#34;。**
+**“怎么这么大还在看动画片？（嫌弃jpg)&amp;#34;。*。*
 
 ![“快用无敌的白金之星想点办法啊”动画画面](attachments/roof-archive/cv2005395/01-press-the-button.png)
 
@@ -84,7 +84,7 @@ OH ! NO!
 
 仗助，你的头发最……#T^\*（@￥。
 
-**编者按：**
+**编者按：*。*
 
 ![“败者食尘”点赞图标](attachments/roof-archive/cv2005395/11-bite-the-dust-like.png)
 

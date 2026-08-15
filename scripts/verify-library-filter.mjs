@@ -6,10 +6,17 @@
    ============================================================ */
 import assert from "node:assert/strict";
 import {
+  connectedTagFacetValues,
   filterHref,
   parseLibraryFilters,
   rowMatches,
 } from "../lib/library-filter.ts";
+
+assert.deepEqual(
+  connectedTagFacetValues(["单篇", "共同", "另一共同", "共同", "另一共同", "共同"]),
+  ["共同", "另一共同"],
+  "singleton tags must stay out of the default facet while connected tags sort by count"
+);
 
 const facets = {
   categories: ["历史", "政治经济学"],

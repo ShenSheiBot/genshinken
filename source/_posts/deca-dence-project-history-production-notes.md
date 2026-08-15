@@ -4,7 +4,7 @@ title_breaks: [《没落要塞》, 项目历史与制作笔记]
 date: 2020-08-30
 slug: deca-dence-project-history-production-notes
 script: hans
-categories: [动画制作]
+categories: [动画]
 section: translation
 tags: [没落要塞, 立川让, NUT, 作画分析]
 post_author: kViN

@@ -4,7 +4,7 @@ title_breaks: [《东京教父》, ——喜剧的神话]
 date: 2019-08-21
 slug: tokyo-godfathers-comedy-myth
 script: hans
-categories: [评论与批评]
+categories: [动画]
 section: review
 tags: [东京教父, 今敏, 都市·空间, 喜剧, 意识形态]
 post_author: Jack Cade
@@ -17,7 +17,6 @@ citation:
   date: "2019-08-21"
   blogTitle: 屋顶现视研
   url: "https://www.bilibili.com/read/cv3411592/"
-  extra: "作者卡署名 Jack Cade；文末校对：伦勃朗。"
 ---
 
 ![Jack Cade 作者卡及题句](attachments/roof-archive/cv3411592/01-jack-cade-author-card.jpg)

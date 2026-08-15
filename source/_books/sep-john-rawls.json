@@ -1,0 +1,65 @@
+{
+  "id": "sep-john-rawls",
+  "slug": "sep-john-rawls",
+  "title": "SEP：约翰·罗尔斯",
+  "description": "《斯坦福哲学百科》2017年秋季版“约翰·罗尔斯”词条第 1～5.6 节中文译文，涵盖其生平、方法、政治自由主义、作为公平的正义与万民法；未含第 6 节“进一步阅读”及书目附录。",
+  "documentSlug": "sep-john-rawls-sections-1-4-2",
+  "script": "hans",
+  "status": "paused",
+  "authors": [
+    "Leif Wenar"
+  ],
+  "translators": [
+    "优昙华院"
+  ],
+  "publishedAt": "2020-10-22",
+  "updatedAt": "2020-11-03",
+  "latestChapterId": "sections-4-3-5-6",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "wenarSEPJohnRawlsRoofZH",
+      "extra": "中文译文收录第 1～5.6 节，未含第 6 节及书目附录。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "sections-1-4-2",
+      "number": "01",
+      "title": "第 1～4.2 节",
+      "status": "published",
+      "anchor": "sections-1-4-2",
+      "publishedAt": "2020-10-22",
+      "authors": [
+        "Leif Wenar"
+      ],
+      "translators": [
+        "优昙华院"
+      ],
+      "tags": [
+        "罗尔斯",
+        "政治哲学",
+        "正义"
+      ]
+    },
+    {
+      "id": "sections-4-3-5-6",
+      "number": "02",
+      "title": "第 4.3～5.6 节",
+      "status": "published",
+      "anchor": "sections-4-3-5-6",
+      "publishedAt": "2020-11-03",
+      "authors": [
+        "Leif Wenar"
+      ],
+      "translators": [
+        "优昙华院"
+      ],
+      "tags": [
+        "罗尔斯",
+        "政治哲学",
+        "正义"
+      ]
+    }
+  ]
+}

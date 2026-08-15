@@ -3,7 +3,7 @@ import { getAllPublicContent, type PublicContentEntry } from "@/lib/public-conte
 import { findContributor } from "@/lib/contributors";
 import { comparePostNumbersDescending } from "@/lib/post-numbering";
 import { site } from "@/lib/site";
-import type { LibraryFacetValues, LibraryRow } from "@/lib/library-filter";
+import { connectedTagFacetValues, type LibraryFacetValues, type LibraryRow } from "@/lib/library-filter";
 import LibraryClient from "./LibraryClient";
 import { libraryPrefilterBootstrap } from "./library-prefilter-bootstrap";
 
@@ -62,7 +62,7 @@ export default async function LibraryPage() {
   const rows = entries.map(toLibraryRow).sort(comparePostNumbersDescending);
   const facets: LibraryFacetValues = {
     categories: orderedFacetValues(entries.map((entry) => entry.category)),
-    tags: orderedFacetValues(entries.flatMap((entry) => entry.tags), true),
+    tags: connectedTagFacetValues(entries.flatMap((entry) => entry.tags)),
     contributors: [...new Set(entries.flatMap((entry) =>
       entry.credits.map((credit) => credit.contributorId)
     ))]

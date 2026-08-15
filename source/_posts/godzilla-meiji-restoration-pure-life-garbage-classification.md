@@ -4,7 +4,7 @@ title_breaks: [哥斯拉的明治维新, ——关于纯粹生命的, 垃圾分�
 date: 2019-07-13
 slug: godzilla-meiji-restoration-pure-life-garbage-classification
 script: hans
-categories: [评论与批评]
+categories: [电影与影视]
 section: review
 tags: [哥斯拉, 明治维新, 纯粹生命, 黑船, 视差, 垃圾分类]
 post_author: Jack Cade
@@ -17,7 +17,6 @@ citation:
   date: "2019-07-13"
   blogTitle: 屋顶现视研
   url: "https://www.bilibili.com/read/cv3064956/"
-  extra: "作者卡署名 Jack Cade；文末校对：伦勃朗。"
 ---
 
 ![Jack Cade 作者卡及题句](/attachments/roof-archive/cv3064956/01-jack-cade-author-card.jpg)

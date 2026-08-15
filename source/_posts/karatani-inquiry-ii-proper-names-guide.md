@@ -21,11 +21,11 @@ citation:
   extra: 本文为《探究Ⅱ》第一部五章的伴随导读与合集入口，未载明开放许可。
 ---
 
-1. [柄谷行人《探究Ⅱ》第一部：关于专名｜第一章：单独性和特殊性](/posts/karatani-inquiry-ii-singularity-particularity)
-2. [柄谷行人《探究Ⅱ》第一部：关于专名｜第二章：专名与历史](/posts/karatani-inquiry-ii-proper-names-history)
-3. [柄谷行人《探究Ⅱ》第一部：关于专名｜第三章：名称与语言](/posts/karatani-inquiry-ii-names-language)
-4. [柄谷行人《探究Ⅱ》第一部：关于专名｜第四章：可能性与现实性](/posts/karatani-inquiry-ii-possibility-actuality)
-5. [柄谷行人《探究Ⅱ》第一部：关于专名｜第五章：关系的偶然性](/posts/karatani-inquiry-ii-contingency-of-relations)
+1. [柄谷行人《探究Ⅱ》第一部：关于专名｜第一章：单独性和特殊性](/books/karatani-inquiry-ii/chapters/part-1-chapter-1-singularity-particularity)
+2. [柄谷行人《探究Ⅱ》第一部：关于专名｜第二章：专名与历史](/books/karatani-inquiry-ii/chapters/part-1-chapter-2-proper-names-history)
+3. [柄谷行人《探究Ⅱ》第一部：关于专名｜第三章：名称与语言](/books/karatani-inquiry-ii/chapters/part-1-chapter-3-names-language)
+4. [柄谷行人《探究Ⅱ》第一部：关于专名｜第四章：可能性与现实性](/books/karatani-inquiry-ii/chapters/part-1-chapter-4-possibility-actuality)
+5. [柄谷行人《探究Ⅱ》第一部：关于专名｜第五章：关系的偶然性](/books/karatani-inquiry-ii/chapters/part-1-chapter-5-contingency-relations)
 
 > 在这本书（《日本现代文学的起源》）中，柄谷行人划时代地重构了日本明治维新时期现代化的历史形象和文化形象……它打动我们的主要理由，不在于他用“后现代”方法分析了由明治维新建构起来的现代自我、书写、文学和科学的客观性等制度，为我们提供了“另类历史”；而在于为我们展示了一个巨大的日本现代化的实验室，在此，我们可以用新颖的慢镜头方式，看清我们自己的现代化特点。
 >

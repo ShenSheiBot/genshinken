@@ -15,7 +15,6 @@ citation:
   date: "2020-05-27"
   blogTitle: 屋顶现视研
   url: "https://www.bilibili.com/read/cv6222686/"
-  extra: "作者卡署名 Jack Cade。"
 ---
 
 ![Jack Cade 作者卡及题句](/attachments/roof-archive/cv6222686/01-jack-cade-author-card.png)

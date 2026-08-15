@@ -4,7 +4,7 @@ title_breaks: [“悲剧英雄—, 无限弃绝骑士—, 信仰骑士”]
 date: 2019-11-09
 slug: weathering-with-you-tragic-hero-knight-of-faith
 script: hans
-categories: [评论与批评]
+categories: [动画]
 section: review
 tags: [天气之子, 新海诚, 克尔凯戈尔, 精神分析, 否定之否定]
 post_author: Ludwigsama
@@ -17,7 +17,6 @@ citation:
   date: "2019-11-09"
   blogTitle: 屋顶现视研
   url: "https://www.bilibili.com/read/cv3929743/"
-  extra: "作者卡署名 Ludwigsama；校对：伦勃朗。"
 ---
 
 ![Ludwigsama 作者卡及题句](attachments/roof-archive/cv3929743/01-ludwigsama-author-card.png)

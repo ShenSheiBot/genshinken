@@ -1,0 +1,99 @@
+{
+  "id": "feminist-film-theory-and-pretty-woman",
+  "slug": "feminist-film-theory-and-pretty-woman",
+  "title": "女性主义电影理论导论",
+  "description": "Mari Ruti《Feminist Film Theory and Pretty Woman》第一章导论的中文译文，分上下两篇介绍男性凝视、女性气质、后女性主义与性客体化；原书后半《风月俏佳人》批评实践未译。",
+  "documentSlug": "feminist-film-theory-introduction-upper",
+  "script": "hans",
+  "status": "paused",
+  "authors": [
+    "Mari Ruti"
+  ],
+  "translators": [
+    "another",
+    "小小贤者",
+    "伞",
+    "杰洛·齐贝林",
+    "E酱",
+    "杉原 音",
+    "Polaris",
+    "亡灵"
+  ],
+  "proofreaders": [
+    "柴来人",
+    "春崎美空"
+  ],
+  "publishedAt": "2022-05-20",
+  "updatedAt": "2022-06-09",
+  "latestChapterId": "introduction-lower",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "ruti2016FeministFilmTheoryPrettyWomanRoofZH",
+      "extra": "中文译文仅收录第一章 Feminist Film Theory 的导论部分，分上下两篇；原书后半《风月俏佳人》批评实践未译。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "introduction-upper",
+      "number": "01（上）",
+      "title": "导论（上）：男性凝视",
+      "status": "published",
+      "anchor": "introduction-upper",
+      "publishedAt": "2022-05-20",
+      "authors": [
+        "Mari Ruti"
+      ],
+      "translators": [
+        "another",
+        "小小贤者",
+        "伞",
+        "杰洛·齐贝林",
+        "E酱"
+      ],
+      "proofreaders": [
+        "柴来人",
+        "春崎美空"
+      ],
+      "tags": [
+        "Mari Ruti",
+        "女性主义",
+        "电影理论",
+        "男性凝视",
+        "精神分析",
+        "拉康",
+        "父权制"
+      ]
+    },
+    {
+      "id": "introduction-lower",
+      "number": "01（下）",
+      "title": "导论（下）：新自由主义女性气质",
+      "status": "published",
+      "anchor": "introduction-lower",
+      "publishedAt": "2022-06-09",
+      "authors": [
+        "Mari Ruti"
+      ],
+      "translators": [
+        "杉原 音",
+        "小小贤者",
+        "Polaris",
+        "亡灵"
+      ],
+      "proofreaders": [
+        "柴来人",
+        "春崎美空"
+      ],
+      "tags": [
+        "Mari Ruti",
+        "女性主义",
+        "电影理论",
+        "后女性主义",
+        "新自由主义",
+        "女性气质",
+        "性客体化"
+      ]
+    }
+  ]
+}

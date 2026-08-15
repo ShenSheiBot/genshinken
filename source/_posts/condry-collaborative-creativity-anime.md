@@ -4,9 +4,9 @@ title_breaks: ["创意协作，暗能量和", "日本动画产业的全球化成
 date: 2019-04-29
 slug: condry-collaborative-creativity-anime
 script: hans
-categories: [动画制作]
+categories: [动画]
 section: translation
-tags: [动画产业, 创意协作, 媒介民族志, 动画之魂, 粉丝文化]
+tags: [动画制作, 创意协作, 媒介民族志, 动画之魂, 粉丝文化]
 post_author: 伊恩·康德利
 translator: [英翻苦力bot01, "帷·幕", hirooooo, 电扇呼呼, wjk, "シャン[オルタ]", 三昧茄子, 熊猫派]
 proofreader: 熊猫派
@@ -24,7 +24,7 @@ citation:
   ISSN: "1347-2828"
   url: "https://koara.lib.keio.ac.jp/xoonips/modules/xoonips/detail.php?koara_id=0402-1301-0003"
   language: zh-CN
-  extra: 原文发表于《Keio SFC Journal》2013年第13卷第1期；中文译文经原作者同意翻译转载，2019-04-29发布于屋顶现视研B站专栏
+  extra: 原文发表于《Keio SFC Journal》2013年第13卷第1期；中文译文经原作者同意翻译转载，2019-04-29发布
 ---
 
 ## 译者按

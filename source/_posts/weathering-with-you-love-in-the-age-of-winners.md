@@ -4,7 +4,7 @@ title_breaks: [在胜者的时代，, 爱还能做到什么吗？, 恐怕没了�
 date: 2019-12-02
 slug: weathering-with-you-love-in-the-age-of-winners
 script: hans
-categories: [评论与批评]
+categories: [动画]
 section: review
 tags: [天气之子, 新海诚, 拟似家庭, 社会规训, 系统暴力, 少数主义]
 post_author: 伦勃朗

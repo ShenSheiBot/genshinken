@@ -16,7 +16,6 @@ citation:
   date: "2020-02-25"
   blogTitle: 屋顶现视研
   url: "https://www.bilibili.com/read/cv4808363/"
-  extra: "作者卡署名：实在狗子。"
 ---
 
 ![实在狗子作者卡及题句“在没有世界的时代，传播无意义之爱”](attachments/roof-archive/cv4808363/01-shi-zai-gou-zi-author-card.png)

@@ -4,7 +4,7 @@ title_breaks: ["回答“为什么新海诚", "没学过动画还是成为了", 
 date: 2019-04-06
 slug: how-shinkai-became-first-rate-animation-creator
 script: hans
-categories: [动画制作]
+categories: [动画]
 section: essay
 tags: [新海诚, Layer的美学, 蒙太奇, 星之声, 大塚英志, 日本动画史]
 post_author: 红茶泡海苔

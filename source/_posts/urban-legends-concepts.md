@@ -4,7 +4,7 @@ title_breaks: [作祟之物，或, 都市传说的, 诸种概念]
 date: 2019-08-18
 slug: urban-legends-concepts
 script: hans
-categories: [哲学／社科]
+categories: [思想与理论]
 section: essay
 tags: [都市传说, 民俗学, 谣言, 怪谈, 都市·空间, 文化传播]
 post_author: hephaestus

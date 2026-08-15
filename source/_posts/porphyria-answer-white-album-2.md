@@ -219,7 +219,7 @@ citation:
 
 ## Op.22.III Scherzo. Sehr rasch und markiert
 
-**第三节 谐谑曲，极快，强调的。**
+**第三节 谐谑曲，极快，强调的。*。*
 
 ![冬马和纱落泪画面](attachments/roof-archive/cv2071126/04-kazusa-tears.png)
 

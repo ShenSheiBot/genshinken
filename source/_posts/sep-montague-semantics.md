@@ -9,7 +9,7 @@ section: translation
 tags: [蒙太古语义学, 形式语义学, 语言哲学, 组合性原则, 模型论语义学]
 post_author: Theo M. V. Janssen
 translator: cjy
-excerpt: 《斯坦福哲学百科》“蒙太古语义学”词条导言至第3.5节中译，介绍模型论语义学、组合性原则、广义量词、内涵逻辑、辖域与句法—语义关系；原页未收录第3.6节、结语和参考文献。
+excerpt: 《斯坦福哲学百科》“蒙太古语义学”词条导言至第3.5节中译，介绍模型论语义学、组合性原则、广义量词、内涵逻辑、辖域与句法—语义关系；中文译文未收录第3.6节、结语和参考文献。
 citation:
   itemType: bookSection
   citationKey: janssen2016MontagueSemanticsZH
@@ -152,7 +152,7 @@ citation:
 
 *重写。*
 
-这些描述并不好懂而且用起来也不方便。蒙太古(1973)指出，或许间接地处理它们会更加清晰明了。因此他引进了一种叫“内涵逻辑(intensional logic)”的语言，上述引文中的操作被重新表达为[如图]。λt意味着一个t为自变量的函数，同样对于λu也是。λtλu[t = u]是一个有两个自变量的函数，当两个自变量相等时它输出为真，反之为假。前面的∧[必须注意的是，这里这个符号是一个上标，它被称作内涵算子(intensor)而不是合取符]意味着，我们将其考虑作一个从可能世界以及时刻[都为复数，possible words, moments of time]，到一个如此被定义[参照了具体的某个可能世界及时刻]的函数的函数[The preceding ∧ says that we consider a function from possible worlds and moments of time to the thus defined function]。
+这些描述并不好懂而且用起来也不方便。蒙太古(1973)指出，或许间接地处理它们会更加清晰明了。因此他引进了一种叫“内涵逻辑(intensional logic)”的语言，上述引文中的操作被重新表达为上图所示的形式。λt意味着一个t为自变量的函数，同样对于λu也是。λtλu[t = u]是一个有两个自变量的函数，当两个自变量相等时它输出为真，反之为假。前面的∧[必须注意的是，这里这个符号是一个上标，它被称作内涵算子(intensor)而不是合取符]意味着，我们将其考虑作一个从可能世界以及时刻[都为复数，possible words, moments of time]，到一个如此被定义[参照了具体的某个可能世界及时刻]的函数的函数[The preceding ∧ says that we consider a function from possible worlds and moments of time to the thus defined function]。
 
 有两个关于蒙太古的内涵逻辑的特征需要注意。
 

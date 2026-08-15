@@ -18,7 +18,6 @@ citation:
   date: "2020-03-16"
   blogTitle: 屋顶现视研
   url: "https://www.bilibili.com/read/cv5132546/"
-  extra: "作者卡署名：钟子默。"
 ---
 
 <h2 id="part-one">第一部分：疯女人，一种批评的缘起</h2>

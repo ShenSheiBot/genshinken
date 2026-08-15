@@ -4,7 +4,7 @@ title_breaks: ["“京吹”之魅：", "动画中的摄影元素分析"]
 date: 2019-04-16
 slug: hibike-euphonium-cinematography-analysis
 script: hans
-categories: [动画制作]
+categories: [动画]
 section: translation
 tags: [吹响！上低音号, 构图, 影像]
 post_author: njjgnuoy

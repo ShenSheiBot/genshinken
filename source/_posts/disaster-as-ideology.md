@@ -4,7 +4,7 @@ title_breaks: [作为意识形态的灾难]
 date: 2020-01-17
 slug: disaster-as-ideology
 script: hans
-categories: [电影／影视]
+categories: [电影与影视]
 section: review
 tags: [灾难想象, 意识形态, 哥斯拉, 电影理论]
 post_author: 实在狗子

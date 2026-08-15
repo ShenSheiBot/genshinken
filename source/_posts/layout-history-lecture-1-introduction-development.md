@@ -6,7 +6,7 @@ date: 2020-10-07
 updated: 2020-11-21
 slug: layout-history-lecture-1-introduction-development
 script: hans
-categories: [动画制作]
+categories: [动画]
 section: translation
 tags: [Layout, 透视, 构图]
 post_author: 笹木信作

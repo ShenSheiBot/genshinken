@@ -4,7 +4,7 @@ title_breaks: ["杂谈 | 当我们在看怪兽电影时，", 我们究竟在看�
 date: 2018-12-01
 slug: what-we-watch-in-monster-movies
 script: hans
-categories: [电影／影视]
+categories: [电影与影视]
 section: review
 tags: [哥斯拉, 怪兽, 特摄, 环太平洋, 人类中心主义, 生态批评]
 post_author: 屋顶现视研

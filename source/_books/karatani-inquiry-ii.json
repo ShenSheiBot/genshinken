@@ -3,18 +3,18 @@
   "slug": "karatani-inquiry-ii",
   "title": "探究Ⅱ",
   "subtitle": "柄谷行人《探究Ⅱ》中文译文",
-  "description": "柄谷行人《探究Ⅱ》的中文译文，收录第一部“关于专名”五章与第二部“关于超越论的动机”前五章，并附《第一部：关于专名》导读。",
+  "description": "柄谷行人《探究Ⅱ》的完整中文译文，收录第一部“关于专名”五章、第二部“关于超越论的动机”九章、第三部“关切于世界宗教”七章及两版后记，并附《第一部：关于专名》导读。",
   "documentSlug": "karatani-inquiry-ii-singularity-particularity",
   "script": "hans",
-  "status": "paused",
+  "status": "complete",
   "authors": [
     "柄谷行人"
   ],
   "translators": [],
   "proofreaders": [],
   "publishedAt": "2019-11-02",
-  "updatedAt": "2021-02-08",
-  "latestChapterId": "part-2-chapter-5-infinity-history",
+  "updatedAt": "2021-12-11",
+  "latestChapterId": "part-3-chapter-7-gift-exchange",
   "citations": {
     "translation": {
       "itemType": "book",
@@ -24,7 +24,7 @@
       "publisher": "讲谈社",
       "ISBN": "9784062039826",
       "language": "ja",
-      "extra": "原著于1989年6月23日由讲谈社出版；中文译文收录第一部五章、第二部前五章，并附第一部导读。"
+      "extra": "原著于1989年6月23日由讲谈社出版；中文译文收录第一部五章、第二部全部九章及第三部全部七章，并附第一部导读与两版后记。"
     }
   },
   "chapters": [
@@ -281,67 +281,264 @@
       "id": "part-2-chapter-6-passivity-will",
       "number": "11",
       "title": "第二部：关于超越论的动机｜第六章：被动性与意志",
-      "status": "forthcoming"
+      "status": "published",
+      "anchor": "part-2-chapter-6-passivity-will",
+      "publishedAt": "2021-02-14",
+      "authors": [
+        "柄谷行人"
+      ],
+      "translators": [
+        "米岡"
+      ],
+      "proofreaders": [
+        "恐怖如斯"
+      ],
+      "tags": [
+        "探究Ⅱ",
+        "柄谷行人",
+        "斯宾诺莎",
+        "意志"
+      ]
     },
     {
       "id": "part-2-chapter-7-natural-rights",
       "number": "12",
       "title": "第二部：关于超越论的动机｜第七章：自然权利",
-      "status": "forthcoming"
+      "status": "published",
+      "anchor": "part-2-chapter-7-natural-rights",
+      "publishedAt": "2021-02-21",
+      "authors": [
+        "柄谷行人"
+      ],
+      "translators": [
+        "Va-11 Hall-A"
+      ],
+      "proofreaders": [
+        "恐怖如斯"
+      ],
+      "tags": [
+        "探究Ⅱ",
+        "柄谷行人",
+        "斯宾诺莎",
+        "自然权利"
+      ]
     },
     {
       "id": "part-2-chapter-8-transcendental-self",
       "number": "13",
       "title": "第二部：关于超越论的动机｜第八章：超越论的自我",
-      "status": "forthcoming"
+      "status": "published",
+      "anchor": "part-2-chapter-8-transcendental-self",
+      "publishedAt": "2021-02-26",
+      "authors": [
+        "柄谷行人"
+      ],
+      "translators": [
+        "HMS Hood"
+      ],
+      "proofreaders": [
+        "恐怖如斯"
+      ],
+      "tags": [
+        "探究Ⅱ",
+        "柄谷行人",
+        "超越论",
+        "主体",
+        "斯宾诺莎"
+      ]
     },
     {
       "id": "part-2-chapter-9-transcendental-motive",
       "number": "14",
       "title": "第二部：关于超越论的动机｜第九章：超越论的动机",
-      "status": "forthcoming"
+      "status": "published",
+      "anchor": "part-2-chapter-9-transcendental-motive",
+      "publishedAt": "2021-02-28",
+      "authors": [
+        "柄谷行人"
+      ],
+      "translators": [
+        "HMS Hood",
+        "Ud Trn",
+        "恐怖如斯"
+      ],
+      "proofreaders": [
+        "恐怖如斯"
+      ],
+      "tags": [
+        "探究Ⅱ",
+        "柄谷行人",
+        "超越论",
+        "主体",
+        "谱系学"
+      ]
     },
     {
       "id": "part-3-chapter-1-immanence-transcendence",
       "number": "15",
       "title": "第三部：关切于世界宗教｜第一章：内在性与超越性",
-      "status": "forthcoming"
+      "status": "published",
+      "anchor": "part-3-chapter-1-immanence-transcendence",
+      "publishedAt": "2021-04-03",
+      "authors": [
+        "柄谷行人"
+      ],
+      "translators": [
+        "恐怖如斯"
+      ],
+      "proofreaders": [
+        "柴来人"
+      ],
+      "tags": [
+        "探究Ⅱ",
+        "柄谷行人",
+        "内在性",
+        "超越性",
+        "宗教"
+      ]
     },
     {
       "id": "part-3-chapter-2-jewish-matters",
       "number": "16",
       "title": "第三部：关切于世界宗教｜第二章：“犹太事物”",
-      "status": "forthcoming"
+      "status": "published",
+      "anchor": "part-3-chapter-2-jewish-matters",
+      "publishedAt": "2021-04-20",
+      "authors": [
+        "柄谷行人"
+      ],
+      "translators": [
+        "恐怖如斯"
+      ],
+      "proofreaders": [
+        "柴来人"
+      ],
+      "tags": [
+        "探究Ⅱ",
+        "柄谷行人",
+        "犹太事物",
+        "弗洛伊德",
+        "宗教"
+      ]
     },
     {
       "id": "part-3-chapter-3-exteriority-thought",
       "number": "17",
       "title": "第三部：关切于世界宗教｜第三章：思想的外部性",
-      "status": "forthcoming"
+      "status": "published",
+      "anchor": "part-3-chapter-3-exteriority-thought",
+      "publishedAt": "2021-06-06",
+      "authors": [
+        "柄谷行人"
+      ],
+      "translators": [
+        "恐怖如斯"
+      ],
+      "proofreaders": [],
+      "tags": [
+        "探究Ⅱ",
+        "柄谷行人",
+        "世界宗教",
+        "共同体",
+        "外部性"
+      ]
     },
     {
       "id": "part-3-chapter-4-other-of-psychoanalysis",
       "number": "18",
       "title": "第三部：关切于世界宗教｜第四章：精神分析的他者",
-      "status": "forthcoming"
+      "status": "published",
+      "anchor": "part-3-chapter-4-other-of-psychoanalysis",
+      "publishedAt": "2021-11-11",
+      "authors": [
+        "柄谷行人"
+      ],
+      "translators": [
+        "米岡"
+      ],
+      "proofreaders": [
+        "恐怖如斯",
+        "柴来人"
+      ],
+      "tags": [
+        "探究Ⅱ",
+        "柄谷行人",
+        "精神分析",
+        "他者",
+        "科学哲学"
+      ]
     },
     {
       "id": "part-3-chapter-5-communication-space",
       "number": "19",
       "title": "第三部：关切于世界宗教｜第五章：交往空间",
-      "status": "forthcoming"
+      "status": "published",
+      "anchor": "part-3-chapter-5-communication-space",
+      "publishedAt": "2021-11-27",
+      "authors": [
+        "柄谷行人"
+      ],
+      "translators": [
+        "米岡"
+      ],
+      "proofreaders": [
+        "柴来人"
+      ],
+      "tags": [
+        "探究Ⅱ",
+        "柄谷行人",
+        "交往空间",
+        "共同体",
+        "世界宗教"
+      ]
     },
     {
       "id": "part-3-chapter-6-infinity-indefiniteness",
       "number": "20",
       "title": "第三部：关切于世界宗教｜第六章：无限与无限定",
-      "status": "forthcoming"
+      "status": "published",
+      "anchor": "part-3-chapter-6-infinity-indefiniteness",
+      "publishedAt": "2021-12-06",
+      "authors": [
+        "柄谷行人"
+      ],
+      "translators": [
+        "お持ちなさい 、あなたの望んだその星を"
+      ],
+      "proofreaders": [
+        "想看穿着lorica hamata扔罗马长矛的高华怎么被破四旧"
+      ],
+      "tags": [
+        "探究Ⅱ",
+        "柄谷行人",
+        "无限",
+        "共同体",
+        "世界宗教"
+      ]
     },
     {
       "id": "part-3-chapter-7-gift-exchange",
       "number": "21",
       "title": "第三部：关切于世界宗教｜第七章：赠与和交换及后记",
-      "status": "forthcoming"
+      "status": "published",
+      "anchor": "part-3-chapter-7-gift-exchange",
+      "publishedAt": "2021-12-11",
+      "authors": [
+        "柄谷行人"
+      ],
+      "translators": [
+        "太玄"
+      ],
+      "proofreaders": [
+        "想看穿着lorica hamata扔罗马长矛的高华怎么被破四旧"
+      ],
+      "tags": [
+        "探究Ⅱ",
+        "柄谷行人",
+        "赠与",
+        "交换",
+        "共同体"
+      ]
     }
   ]
 }

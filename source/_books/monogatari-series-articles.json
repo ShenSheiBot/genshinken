@@ -6,7 +6,10 @@
   "documentSlug": "monogatari-love-deishu-kaiki-speech-fracture-self-deception",
   "script": "hans",
   "status": "paused",
-  "authors": ["一只非0的O", "十文字"],
+  "authors": [
+    "一只非0的O",
+    "十文字"
+  ],
   "translators": [],
   "proofreaders": [],
   "publishedAt": "2019-01-02",
@@ -27,10 +30,17 @@
       "status": "published",
       "anchor": "kaiki-speech-self-deception",
       "publishedAt": "2019-01-02",
-      "authors": ["一只非0的O"],
+      "authors": [
+        "一只非0的O"
+      ],
       "translators": [],
       "proofreaders": [],
-      "tags": ["物语系列", "西尾维新", "精神分析", "真伪"]
+      "tags": [
+        "物语系列",
+        "西尾维新",
+        "精神分析",
+        "真伪"
+      ]
     },
     {
       "id": "nisemonogatari-human-nature-authenticity",
@@ -39,10 +49,17 @@
       "status": "published",
       "anchor": "nisemonogatari-human-nature-authenticity",
       "publishedAt": "2019-03-28",
-      "authors": ["十文字"],
+      "authors": [
+        "十文字"
+      ],
       "translators": [],
       "proofreaders": [],
-      "tags": ["物语系列", "西尾维新", "性恶说", "真伪"]
+      "tags": [
+        "物语系列",
+        "西尾维新",
+        "性恶说",
+        "真伪"
+      ]
     }
   ]
 }

@@ -16,6 +16,7 @@ const publicBaseUrl = (
   process.env.ROOF_ARCHIVE_ASSET_BASE_URL ?? "https://assets.labonroof.top"
 ).replace(/\/+$/u, "");
 const command = process.argv[2];
+const keyPrefix = (process.env.ROOF_ARCHIVE_ASSET_KEY_PREFIX ?? "").trim();
 
 const mimeTypes = new Map([
   [".gif", "image/gif"],
@@ -42,6 +43,15 @@ function loadManifest() {
     throw new Error(`Unsupported asset manifest: ${manifestPath}`);
   }
   return parsed;
+}
+
+function selectAssets(assets) {
+  if (!keyPrefix) return assets;
+  const selected = assets.filter((asset) => asset.key.startsWith(keyPrefix));
+  if (selected.length === 0) {
+    throw new Error(`No manifest assets match ROOF_ARCHIVE_ASSET_KEY_PREFIX=${keyPrefix}`);
+  }
+  return selected;
 }
 
 function buildManifest() {
@@ -143,7 +153,8 @@ async function runPool(items, worker, { concurrency, startIntervalMs = 0 }) {
 
 async function upload() {
   const token = oauthToken();
-  const { assets: allAssets } = loadManifest();
+  const { assets: manifestAssets } = loadManifest();
+  const allAssets = selectAssets(manifestAssets);
   const start = Number.parseInt(process.env.ROOF_ARCHIVE_UPLOAD_START ?? "0", 10);
   const assets = allAssets.slice(Number.isFinite(start) && start > 0 ? start : 0);
   const concurrency = Number.parseInt(process.env.ROOF_ARCHIVE_UPLOAD_CONCURRENCY ?? "20", 10);
@@ -182,7 +193,8 @@ async function upload() {
 }
 
 async function verify() {
-  const { assets: allAssets } = loadManifest();
+  const { assets: manifestAssets } = loadManifest();
+  const allAssets = selectAssets(manifestAssets);
   const start = Number.parseInt(process.env.ROOF_ARCHIVE_VERIFY_START ?? "0", 10);
   const limit = Number.parseInt(process.env.ROOF_ARCHIVE_VERIFY_LIMIT ?? String(allAssets.length), 10);
   const assets = allAssets.slice(Number.isFinite(start) && start > 0 ? start : 0, start + limit);

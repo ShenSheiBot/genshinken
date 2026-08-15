@@ -6,7 +6,7 @@ slug: everyday-space-light-novel-slow-life
 script: hans
 categories: [御宅文化]
 section: essay
-tags: [都市·空间, 轻小说, 异世界, 日常, 消费社会, 文化工业]
+tags: [都市·空间, 轻小说, 异世界, 日常, 消费文化, 文化工业]
 post_author: 甚谁
 excerpt: 从网络轻小说的“慢生活”转向出发，分析异世界如何提供重新把握日常的空间，并讨论这一想象与都市劳动、消费社会及郊外共同体的关系。
 citation:
