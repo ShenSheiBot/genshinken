@@ -210,7 +210,7 @@ citation:
 
 37. Jean Bethke Elshtain, Public Man, Private Woman: Women in Social and Political Thought (Princeton, NJ: Princeton University Press, 1981),
 
-306. 
+306.
 
 38. Simone de Beauvoir, Memoirs of a Dutiful Daughter, trans. James Kirkup (Harmondsworth, UK: Penguin Books, 1963), 131.
 
