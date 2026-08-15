@@ -21,7 +21,7 @@
 - [ ] **专题引用有效**：分组顺序正确，`post / media / book` 类型与目标一致，导语和编者按已复核
 - [ ] **链接有效**：外链正常；无残留的 Outline `mention://` 内链
 - [ ] **原稿保真门禁通过**：源文已快照；允许转换归一化后的正文保留率 100%、未授权差异 0；逐项授权修订已登记；`npm run verify:preservation` 通过
-- [ ] **提交作者 = `un-canon <un-canon@hotmail.com>`**
+- [ ] **提交作者 = `ShenSheiBot <83676393+ShenSheiBot@users.noreply.github.com>`**
 - [ ] 本地 `npm run check` 与 `npm run build` 通过，再推送
 
 ---
@@ -243,11 +243,11 @@ P1/P2/P4/P5 由 `scripts/validate-content.mjs` 的 `validateProseTypography` 在
 
 ## 7. 提交与部署
 
-- **Author 与 Committer 都固定为 `un-canon <un-canon@hotmail.com>`**。在本仓库执行一次：
+- **Author 与 Committer 都固定为 `ShenSheiBot <83676393+ShenSheiBot@users.noreply.github.com>`**。在本仓库执行一次：
 
   ```bash
-  git config --local user.name un-canon
-  git config --local user.email un-canon@hotmail.com
+  git config --local user.name ShenSheiBot
+  git config --local user.email 83676393+ShenSheiBot@users.noreply.github.com
   ```
 
   不要只用 `git commit --author=...`：它不会修改 Committer。提交后同时核对四个字段：
