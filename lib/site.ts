@@ -18,6 +18,6 @@ export const site = {
     { label: "哔哩哔哩", href: "https://space.bilibili.com/355943807" },
     { label: "GitHub", href: "https://github.com/ShenSheiBot/genshinken" },
   ],
-  infoEmail: "lab_on_roof@163.com",
+  infoEmail: "a1835631041@163.com",
   editorEmail: "a1835631041@163.com",
 } as const;
