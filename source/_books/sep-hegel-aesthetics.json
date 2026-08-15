@@ -1,0 +1,105 @@
+{
+  "id": "sep-hegel-aesthetics",
+  "slug": "sep-hegel-aesthetics",
+  "title": "SEP：黑格尔美学",
+  "description": "《斯坦福哲学百科》词条《Hegel’s Aesthetics》的中文译文，从序言与哲学背景到各门艺术和体系性结论，完整收录第 0～7 节正文，未另收入词条书目附录。",
+  "documentSlug": "sep-hegel-aesthetics-sections-1-5",
+  "script": "hans",
+  "status": "complete",
+  "authors": [
+    "Stephen Houlgate"
+  ],
+  "translators": [
+    "有电拍拍",
+    "暗黑寒冰",
+    "林川登罗"
+  ],
+  "proofreaders": [
+    "绫波丽",
+    "柴来人"
+  ],
+  "publishedAt": "2020-08-03",
+  "updatedAt": "2020-08-17",
+  "latestChapterId": "sections-6-3-7",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "houlgateSEPHegelAestheticsRoofZH",
+      "extra": "《斯坦福哲学百科》词条《Hegel’s Aesthetics》的中文译文，从序言与哲学背景到各门艺术和体系性结论，完整收录第 0～7 节正文，未另收入词条书目附录。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "sections-0-5",
+      "number": "01",
+      "title": "序言与第 1～5 节",
+      "status": "published",
+      "anchor": "sections-0-5",
+      "publishedAt": "2020-08-03",
+      "authors": [
+        "Stephen Houlgate"
+      ],
+      "translators": [
+        "有电拍拍",
+        "暗黑寒冰"
+      ],
+      "proofreaders": [
+        "绫波丽",
+        "柴来人"
+      ],
+      "tags": [
+        "黑格尔",
+        "美学",
+        "艺术哲学"
+      ]
+    },
+    {
+      "id": "sections-6-1-6-2",
+      "number": "02",
+      "title": "第 6.1～6.2 节",
+      "status": "published",
+      "anchor": "sections-6-1-6-2",
+      "publishedAt": "2020-08-16",
+      "authors": [
+        "Stephen Houlgate"
+      ],
+      "translators": [
+        "有电拍拍",
+        "暗黑寒冰",
+        "林川登罗"
+      ],
+      "proofreaders": [
+        "绫波丽"
+      ],
+      "tags": [
+        "黑格尔",
+        "美学",
+        "艺术哲学"
+      ]
+    },
+    {
+      "id": "sections-6-3-7",
+      "number": "03",
+      "title": "第 6.3～7 节",
+      "status": "published",
+      "anchor": "sections-6-3-7",
+      "publishedAt": "2020-08-17",
+      "authors": [
+        "Stephen Houlgate"
+      ],
+      "translators": [
+        "有电拍拍",
+        "暗黑寒冰",
+        "林川登罗"
+      ],
+      "proofreaders": [
+        "绫波丽"
+      ],
+      "tags": [
+        "黑格尔",
+        "美学",
+        "艺术哲学"
+      ]
+    }
+  ]
+}

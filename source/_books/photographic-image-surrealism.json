@@ -1,0 +1,57 @@
+{
+  "id": "photographic-image-surrealism",
+  "slug": "photographic-image-surrealism",
+  "title": "摄影图像的超现实主义",
+  "subtitle": "巴赞、巴特与数字时代的《意外的春天》",
+  "description": "Adam Lowenstein 从萨特、巴赞与巴特出发，讨论摄影现实主义如何与超现实主义相接。现有中文摘译分两章，覆盖原论文第54—64页；《第三意义》、《意外的春天》与数字媒介部分尚未译出。",
+  "documentSlug": "photographic-image-surrealism-bazin-barthes",
+  "script": "hans",
+  "status": "paused",
+  "authors": ["Adam Lowenstein"],
+  "translators": ["will"],
+  "proofreaders": [],
+  "publishedAt": "2019-11-25",
+  "updatedAt": "2020-01-11",
+  "latestChapterId": "camera-lucida-enlargement",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "lowenstein2007SurrealismPhotographicImageRoofZHBook",
+      "title": "The Surrealism of the Photographic Image: Bazin, Barthes, and the Digital Sweet Hereafter",
+      "date": "2007",
+      "extra": "原文载 Cinema Journal 46(3), 2007, pp.54—82, DOI 10.1353/cj.2007.0024。现有中文摘译分两章，覆盖原论文第54—64页；第64页起的 Barthes, Bataille, and ‘The Third Meaning’、《意外的春天》与数字媒介部分尚未译出。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "introduction-bazin-sartre",
+      "number": "01",
+      "title": "序言＋正文1：巴赞、萨特与摄影超现实主义",
+      "status": "published",
+      "anchor": "introduction-bazin-sartre",
+      "publishedAt": "2019-11-25",
+      "authors": ["Adam Lowenstein"],
+      "translators": ["will"],
+      "proofreaders": [],
+      "tags": ["摄影", "安德烈·巴赞", "萨特", "超现实主义", "电影理论"]
+    },
+    {
+      "id": "camera-lucida-enlargement",
+      "number": "02",
+      "title": "正文2—3：巴特《明室》与超现实主义者的扩张",
+      "status": "published",
+      "anchor": "camera-lucida-enlargement",
+      "publishedAt": "2020-01-11",
+      "authors": ["Adam Lowenstein"],
+      "translators": ["will"],
+      "proofreaders": [],
+      "tags": ["摄影", "罗兰·巴特", "超现实主义", "电影理论"]
+    },
+    {
+      "id": "remaining-sections",
+      "number": "03",
+      "title": "原论文第64—82页",
+      "status": "forthcoming"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "id": "formal-style-scientism",
+  "slug": "formal-style-scientism",
+  "title": "形式风格研究与科学主义",
+  "description": "鲜奶饼干以泉信行的漫画形式论为对象，检验其选择性遗漏、单一归因、视线力学与左右配置理论。现存上下篇构成计划中的第一篇完整研究，后续第二篇未见发布，连载暂列暂停。",
+  "documentSlug": "formal-style-scientism-izumi-critique-part-1",
+  "script": "hans",
+  "status": "paused",
+  "authors": [
+    "鲜奶饼干"
+  ],
+  "translators": [],
+  "proofreaders": [],
+  "publishedAt": "2020-03-31",
+  "updatedAt": "2020-04-01",
+  "latestChapterId": "part-2",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "xianNaiBingGan2020FormalStyleScientism",
+      "extra": "鲜奶饼干以泉信行的漫画形式论为对象，检验其选择性遗漏、单一归因、视线力学与左右配置理论。现存上下篇构成计划中的第一篇完整研究，后续第二篇未见发布，连载暂列暂停。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "part-1",
+      "number": "01",
+      "title": "泉信行批评（上）",
+      "status": "published",
+      "anchor": "part-1",
+      "publishedAt": "2020-03-31",
+      "authors": [
+        "鲜奶饼干"
+      ],
+      "translators": [],
+      "proofreaders": [],
+      "tags": [
+        "漫画研究",
+        "形式风格",
+        "泉信行",
+        "魔法老师",
+        "构图"
+      ]
+    },
+    {
+      "id": "part-2",
+      "number": "02",
+      "title": "泉信行批评（下）",
+      "status": "published",
+      "anchor": "part-2",
+      "publishedAt": "2020-04-01",
+      "authors": [
+        "鲜奶饼干"
+      ],
+      "translators": [],
+      "proofreaders": [],
+      "tags": [
+        "漫画研究",
+        "形式风格",
+        "泉信行",
+        "魔法老师",
+        "构图"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "id": "sep-max-weber",
+  "slug": "sep-max-weber",
+  "title": "马克斯·韦伯",
+  "subtitle": "《斯坦福哲学百科》词条中译",
+  "description": "Sung Ho Kim 撰写的《斯坦福哲学百科》“马克斯·韦伯”词条中译。本连载包含序言及第1～5节；原词条第6～7节、注释与完整书目尚未译出，连载状态据此标为暂停。",
+  "documentSlug": "sep-max-weber-sections-1-2",
+  "script": "hans",
+  "status": "paused",
+  "authors": ["Sung Ho Kim"],
+  "translators": ["Jeremiah"],
+  "proofreaders": ["柴来人"],
+  "publishedAt": "2020-06-21",
+  "updatedAt": "2020-09-19",
+  "latestChapterId": "sections-3-5",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "kim2018maxWeberRoofZH",
+      "rights": "翻译供学习讨论；转载须注明原文出处与翻译、校对",
+      "extra": "原文载于 The Stanford Encyclopedia of Philosophy, Spring 2018 Edition；2007-08-24 初版，2017-11-27 实质修订。中译现含序言及第1～5节，未附原文注1与完整书目。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "sections-1-2",
+      "number": "01",
+      "title": "第1～2节：生活与职业、哲学的影响",
+      "status": "published",
+      "anchor": "sections-1-2",
+      "publishedAt": "2020-06-21",
+      "tags": ["马克斯·韦伯", "新康德主义", "尼采"]
+    },
+    {
+      "id": "sections-3-5",
+      "number": "02",
+      "title": "第3～5节：历史、现代性与知识",
+      "status": "published",
+      "anchor": "sections-3-5",
+      "publishedAt": "2020-09-19",
+      "tags": ["马克斯·韦伯", "理性化", "现代性", "社会科学方法论"]
+    },
+    {
+      "id": "section-6",
+      "number": "03",
+      "title": "6. Political and Social Ethics",
+      "status": "forthcoming"
+    },
+    {
+      "id": "section-7",
+      "number": "04",
+      "title": "7. Concluding Remarks",
+      "status": "forthcoming"
+    },
+    {
+      "id": "bibliography",
+      "number": "05",
+      "title": "Bibliography",
+      "status": "forthcoming"
+    }
+  ]
+}

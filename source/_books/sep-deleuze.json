@@ -1,0 +1,106 @@
+{
+  "id": "sep-deleuze",
+  "slug": "sep-deleuze",
+  "title": "SEP：德勒兹",
+  "description": "《斯坦福哲学百科》词条《Gilles Deleuze》的中文译文，依次收录生平与著作、对哲学家的阅读、差异哲学、社会与政治哲学、艺术及接受史第 1～6 节。现存正文已经完整，未另收入词条书目附录。",
+  "documentSlug": "sep-deleuze-sections-1-2",
+  "script": "hans",
+  "status": "complete",
+  "authors": [
+    "Daniel Smith",
+    "John Protevi"
+  ],
+  "translators": [
+    "aho",
+    "睡觉的Aho",
+    "阿本希",
+    "裂火"
+  ],
+  "proofreaders": [
+    "aho",
+    "斑鸠",
+    "睡觉的Aho"
+  ],
+  "publishedAt": "2020-03-24",
+  "updatedAt": "2020-05-16",
+  "latestChapterId": "sections-4-6",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "smithProteviSEPDeleuzeRoofZH",
+      "extra": "《斯坦福哲学百科》词条《Gilles Deleuze》的中文译文，依次收录生平与著作、对哲学家的阅读、差异哲学、社会与政治哲学、艺术及接受史第 1～6 节。现存正文已经完整，未另收入词条书目附录。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "sections-1-2",
+      "number": "01",
+      "title": "第 1～2 节",
+      "status": "published",
+      "anchor": "sections-1-2",
+      "publishedAt": "2020-03-24",
+      "authors": [
+        "Daniel Smith",
+        "John Protevi"
+      ],
+      "translators": [
+        "aho"
+      ],
+      "proofreaders": [
+        "aho",
+        "斑鸠"
+      ],
+      "tags": [
+        "德勒兹",
+        "康德",
+        "差异哲学"
+      ]
+    },
+    {
+      "id": "section-3",
+      "number": "02",
+      "title": "第 3 节：差异哲学",
+      "status": "published",
+      "anchor": "section-3",
+      "publishedAt": "2020-04-21",
+      "authors": [
+        "Daniel Smith",
+        "John Protevi"
+      ],
+      "translators": [
+        "睡觉的Aho",
+        "阿本希"
+      ],
+      "proofreaders": [
+        "睡觉的Aho"
+      ],
+      "tags": [
+        "德勒兹",
+        "差异哲学"
+      ]
+    },
+    {
+      "id": "sections-4-6",
+      "number": "03",
+      "title": "第 4～6 节",
+      "status": "published",
+      "anchor": "sections-4-6",
+      "publishedAt": "2020-05-16",
+      "authors": [
+        "Daniel Smith",
+        "John Protevi"
+      ],
+      "translators": [
+        "裂火",
+        "阿本希"
+      ],
+      "proofreaders": [
+        "睡觉的Aho"
+      ],
+      "tags": [
+        "德勒兹",
+        "差异哲学"
+      ]
+    }
+  ]
+}

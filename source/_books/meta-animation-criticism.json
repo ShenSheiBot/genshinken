@@ -1,0 +1,72 @@
+{
+  "id": "meta-animation-criticism",
+  "slug": "meta-animation-criticism",
+  "title": "元动画评论",
+  "description": "Austoria 对动画评论表述本身所作的系列研究。本连载现有 I《作为问题的评论表述》、I.i 番外《以佐贺与Vtuber为例，谈崇高的退潮与私人体验》、II《深刻性的多重面貌》和 2.1 番外《反对深刻的〈Macross7〉》；带小数点的篇号为番外，II 之后暂未见正式后续。",
+  "documentSlug": "meta-animation-criticism-expression",
+  "script": "hans",
+  "status": "paused",
+  "authors": ["Austoria"],
+  "translators": [],
+  "proofreaders": [],
+  "publishedAt": "2018-12-19",
+  "updatedAt": "2019-07-12",
+  "latestChapterId": "two-one-macross7",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "austoria2018metaAnimationCriticism",
+      "extra": "当前文库收录2018-12-19发布的I、2019-01-19发布的I.i番外、2019-03-03发布的II与2019-07-12发布的2.1番外；系列说明明确带小数点的篇号为番外，II之后暂未见正式后续。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "i-expression",
+      "number": "I",
+      "title": "作为问题的评论表述——白色，冰菓，团长",
+      "status": "published",
+      "anchor": "i-expression",
+      "publishedAt": "2018-12-19",
+      "authors": ["Austoria"],
+      "translators": [],
+      "proofreaders": [],
+      "tags": ["动画评论", "元评论", "冰菓", "隐喻"]
+    },
+    {
+      "id": "i-i-sublime-tide",
+      "number": "I.i",
+      "title": "番外：以佐贺与Vtuber为例，谈崇高的退潮与私人体验",
+      "status": "published",
+      "anchor": "i-i-sublime-tide",
+      "publishedAt": "2019-01-19",
+      "authors": ["Austoria"],
+      "translators": [],
+      "proofreaders": [],
+      "tags": ["动画评论", "元评论", "崇高", "偶像文化", "Vtuber"]
+    },
+    {
+      "id": "ii-profundity",
+      "number": "II",
+      "title": "深刻性的多重面貌",
+      "status": "published",
+      "anchor": "ii-profundity",
+      "publishedAt": "2019-03-03",
+      "authors": ["Austoria"],
+      "translators": [],
+      "proofreaders": [],
+      "tags": ["动画评论", "元评论", "深刻性"]
+    },
+    {
+      "id": "two-one-macross7",
+      "number": "2.1",
+      "title": "番外：反对深刻的《Macross7》",
+      "status": "published",
+      "anchor": "two-one-macross7",
+      "publishedAt": "2019-07-12",
+      "authors": ["Austoria"],
+      "translators": [],
+      "proofreaders": ["伦勃朗"],
+      "tags": ["动画评论", "元评论", "Macross7", "深刻性"]
+    }
+  ]
+}

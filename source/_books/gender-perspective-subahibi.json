@@ -1,0 +1,60 @@
+{
+  "id": "gender-perspective-subahibi",
+  "slug": "gender-perspective-subahibi",
+  "title": "性别视角下的素晴日",
+  "description": "钟子默以精神分析、酷儿理论和性别社会学为线索，对《素晴日》人物、欲望与权力关系所作的三篇系列评论。",
+  "documentSlug": "su-hari-gender-perspective-part-1",
+  "script": "hans",
+  "status": "complete",
+  "authors": ["钟子默"],
+  "translators": [],
+  "proofreaders": [],
+  "publishedAt": "2019-05-10",
+  "updatedAt": "2021-01-16",
+  "latestChapterId": "part-3",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "zhong2019genderSubahibi",
+      "extra": "本连载由2019-05-10、2019-06-14与2021-01-16发布的三章组成；各章日期与署名分别保留。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "part-1",
+      "number": "01",
+      "title": "美好的16岁：性别视角下的素晴日（上）",
+      "status": "published",
+      "anchor": "part-1",
+      "publishedAt": "2019-05-10",
+      "authors": ["钟子默"],
+      "translators": [],
+      "proofreaders": ["子厚"],
+      "tags": ["素晴日", "性别研究", "精神分析", "女性主义"]
+    },
+    {
+      "id": "part-2",
+      "number": "02",
+      "title": "性别视角下的素晴日（中）——性别操演与权力",
+      "status": "published",
+      "anchor": "part-2",
+      "publishedAt": "2019-06-14",
+      "authors": ["钟子默"],
+      "translators": [],
+      "proofreaders": ["伦勃朗"],
+      "tags": ["素晴日", "性别研究"]
+    },
+    {
+      "id": "part-3",
+      "number": "03",
+      "title": "性别视角下的素晴日（下）",
+      "status": "published",
+      "anchor": "part-3",
+      "publishedAt": "2021-01-16",
+      "authors": ["钟子默"],
+      "translators": [],
+      "proofreaders": [],
+      "tags": ["素晴日", "性别研究", "物化", "百合"]
+    }
+  ]
+}

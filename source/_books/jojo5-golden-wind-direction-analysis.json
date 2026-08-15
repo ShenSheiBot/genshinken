@@ -1,0 +1,48 @@
+{
+  "id": "jojo5-golden-wind-direction-analysis",
+  "slug": "jojo5-golden-wind-direction-analysis",
+  "title": "速音 JOJO5 黄金之风演出分析",
+  "description": "速音围绕《JOJO的奇妙冒险 黄金之风》的色彩、分镜、转场、构图与声画关系所作的逐集演出分析。本连载当前收录第02集与第03－07集两章；更早的第01集及第02集（上）仅见外部发布页。",
+  "documentSlug": "jojo5-golden-wind-direction-analysis-episode-02",
+  "script": "hans",
+  "status": "paused",
+  "authors": ["速音"],
+  "translators": [],
+  "proofreaders": [],
+  "publishedAt": "2018-12-10",
+  "updatedAt": "2019-01-05",
+  "latestChapterId": "episodes-03-07",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "suyin2018jojo5GoldenWindDirectionAnalysis",
+      "extra": "本连载当前收录2018-12-10发布的第02集分析与2019-01-05发布的第03－07集分析；更早的第01集及第02集（上）仅见外部发布页。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "episode-02",
+      "number": "01",
+      "title": "第02集演出分析",
+      "status": "published",
+      "anchor": "episode-02",
+      "publishedAt": "2018-12-10",
+      "authors": ["速音"],
+      "translators": [],
+      "proofreaders": [],
+      "tags": ["JOJO的奇妙冒险", "演出", "分镜", "构图"]
+    },
+    {
+      "id": "episodes-03-07",
+      "number": "02",
+      "title": "第03－07集演出分析",
+      "status": "published",
+      "anchor": "episodes-03-07",
+      "publishedAt": "2019-01-05",
+      "authors": ["速音"],
+      "translators": [],
+      "proofreaders": [],
+      "tags": ["JOJO的奇妙冒险", "演出", "分镜", "构图"]
+    }
+  ]
+}

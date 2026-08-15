@@ -1,0 +1,120 @@
+{
+  "id": "kaguya-sama-production-notes",
+  "slug": "kaguya-sama-production-notes",
+  "title": "《辉夜大小姐想让我告白》制作笔记",
+  "description": "kViN 对《辉夜大小姐想让我告白》前两季动画制作的逐集观察，依原文结构收录第一季与第二季各前后两篇制作笔记及季终观后感。四篇均有明确集数边界，现存两季内容已经完结。",
+  "documentSlug": "kaguya-sama-love-is-war-season-1-episodes-01-05-production-notes",
+  "script": "hans",
+  "status": "complete",
+  "authors": [
+    "kViN"
+  ],
+  "translators": [
+    "snoper卓尔",
+    "Phaedrus",
+    "KAFAK"
+  ],
+  "proofreaders": [
+    "加速器",
+    "snoper卓尔"
+  ],
+  "publishedAt": "2020-05-24",
+  "updatedAt": "2020-07-27",
+  "latestChapterId": "season-2-episodes-07-12",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "kViN2019KaguyaProductionNotesRoofZH",
+      "extra": "kViN 对《辉夜大小姐想让我告白》前两季动画制作的逐集观察，依原文结构收录第一季与第二季各前后两篇制作笔记及季终观后感。四篇均有明确集数边界，现存两季内容已经完结。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "season-1-episodes-01-05",
+      "number": "01",
+      "title": "第一季 1～5 集制作笔记",
+      "status": "published",
+      "anchor": "season-1-episodes-01-05",
+      "publishedAt": "2020-06-26",
+      "authors": [
+        "kViN"
+      ],
+      "translators": [
+        "snoper卓尔"
+      ],
+      "proofreaders": [
+        "加速器"
+      ],
+      "tags": [
+        "辉夜大小姐想让我告白",
+        "畠山守"
+      ]
+    },
+    {
+      "id": "season-1-episodes-06-12",
+      "number": "02",
+      "title": "第一季 6～12 集制作笔记及观后感",
+      "status": "published",
+      "anchor": "season-1-episodes-06-12",
+      "publishedAt": "2020-07-03",
+      "authors": [
+        "kViN"
+      ],
+      "translators": [
+        "snoper卓尔"
+      ],
+      "proofreaders": [
+        "加速器"
+      ],
+      "tags": [
+        "辉夜大小姐想让我告白",
+        "畠山守"
+      ]
+    },
+    {
+      "id": "season-2-episodes-01-06",
+      "number": "03",
+      "title": "第二季 1～6 集制作笔记",
+      "status": "published",
+      "anchor": "season-2-episodes-01-06",
+      "publishedAt": "2020-05-24",
+      "authors": [
+        "kViN"
+      ],
+      "translators": [
+        "Phaedrus",
+        "KAFAK"
+      ],
+      "proofreaders": [
+        "加速器",
+        "snoper卓尔"
+      ],
+      "tags": [
+        "辉夜大小姐想让我告白",
+        "畠山守"
+      ]
+    },
+    {
+      "id": "season-2-episodes-07-12",
+      "number": "04",
+      "title": "第二季 7～12 集制作笔记及观后感",
+      "status": "published",
+      "anchor": "season-2-episodes-07-12",
+      "publishedAt": "2020-07-27",
+      "authors": [
+        "kViN"
+      ],
+      "translators": [
+        "Phaedrus"
+      ],
+      "proofreaders": [
+        "snoper卓尔",
+        "加速器"
+      ],
+      "tags": [
+        "辉夜大小姐想让我告白",
+        "畠山守"
+      ]
+    }
+  ]
+}

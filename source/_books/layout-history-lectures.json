@@ -1,0 +1,150 @@
+{
+  "id": "layout-history-lectures",
+  "slug": "layout-history-lectures",
+  "title": "Layout 的历史",
+  "description": "日本动画人协会第六回《透视与 Layout 讲座－历史篇》的中文资料集，收录笹木信作的 Layout 发展史讲义，以及现存第一、第三、第四、第五次讲座事前提问集。原资料明确说明第二次未募集提问；现有五篇已经归并，但来源资料仍含其他参考材料，未据此宣称全系列完结。",
+  "documentSlug": "layout-history-lecture-1-introduction-development",
+  "script": "hans",
+  "status": "paused",
+  "authors": [
+    "笹木信作",
+    "德野悠我"
+  ],
+  "translators": [
+    "daicon",
+    "加速器",
+    "果壳里的墨墨",
+    "氢金_MetalH",
+    "阿栖",
+    "某不科学的逗比"
+  ],
+  "proofreaders": [
+    "スカウト",
+    "rocefactor"
+  ],
+  "publishedAt": "2020-10-07",
+  "updatedAt": "2020-11-21",
+  "latestChapterId": "fifth-lecture-questions",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "sasagi2019LayoutHistoryRoofZH",
+      "extra": "日本动画人协会第六回《透视与 Layout 讲座－历史篇》的中文资料集，收录笹木信作的 Layout 发展史讲义，以及现存第一、第三、第四、第五次讲座事前提问集。原资料明确说明第二次未募集提问，本资料集按现存五部分完整收录。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "lecture-and-history",
+      "number": "01",
+      "title": "简介与发展史",
+      "status": "published",
+      "anchor": "lecture-and-history",
+      "publishedAt": "2020-10-07",
+      "authors": [
+        "笹木信作"
+      ],
+      "translators": [
+        "daicon"
+      ],
+      "proofreaders": [
+        "スカウト"
+      ],
+      "tags": [
+        "Layout",
+        "透视",
+        "构图"
+      ]
+    },
+    {
+      "id": "first-lecture-questions",
+      "number": "02",
+      "title": "第一次讲座的提问集",
+      "status": "published",
+      "anchor": "first-lecture-questions",
+      "publishedAt": "2020-10-09",
+      "authors": [
+        "笹木信作",
+        "德野悠我"
+      ],
+      "translators": [
+        "加速器",
+        "果壳里的墨墨",
+        "氢金_MetalH"
+      ],
+      "proofreaders": [
+        "rocefactor"
+      ],
+      "tags": [
+        "Layout",
+        "透视",
+        "构图"
+      ]
+    },
+    {
+      "id": "third-lecture-questions",
+      "number": "03",
+      "title": "第三次讲座的提问集",
+      "status": "published",
+      "anchor": "third-lecture-questions",
+      "publishedAt": "2020-10-15",
+      "authors": [
+        "笹木信作"
+      ],
+      "translators": [
+        "阿栖"
+      ],
+      "proofreaders": [
+        "rocefactor"
+      ],
+      "tags": [
+        "Layout",
+        "透视",
+        "构图"
+      ]
+    },
+    {
+      "id": "fourth-lecture-questions",
+      "number": "04",
+      "title": "第四次讲座的提问集",
+      "status": "published",
+      "anchor": "fourth-lecture-questions",
+      "publishedAt": "2020-10-25",
+      "authors": [
+        "笹木信作"
+      ],
+      "translators": [
+        "某不科学的逗比"
+      ],
+      "proofreaders": [
+        "rocefactor"
+      ],
+      "tags": [
+        "Layout",
+        "透视",
+        "构图"
+      ]
+    },
+    {
+      "id": "fifth-lecture-questions",
+      "number": "05",
+      "title": "第五次讲座的提问集",
+      "status": "published",
+      "anchor": "fifth-lecture-questions",
+      "publishedAt": "2020-11-21",
+      "authors": [
+        "笹木信作"
+      ],
+      "translators": [
+        "阿栖"
+      ],
+      "proofreaders": [
+        "rocefactor"
+      ],
+      "tags": [
+        "Layout",
+        "透视",
+        "构图"
+      ]
+    }
+  ]
+}

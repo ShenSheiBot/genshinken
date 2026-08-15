@@ -1,0 +1,98 @@
+{
+  "id": "sound-euphonium-2-production-notes",
+  "slug": "sound-euphonium-2-production-notes",
+  "title": "《吹响！上低音号2》制作笔记",
+  "description": "kViN 对《吹响！上低音号2》的逐话制作观察，现收录第 1～3 话译文。现存译文未继续覆盖后续话数，连载暂列暂停。",
+  "documentSlug": "sound-euphonium-2-episode-1-production-notes",
+  "script": "hans",
+  "status": "paused",
+  "authors": [
+    "kViN"
+  ],
+  "translators": [
+    "Phaedrus"
+  ],
+  "proofreaders": [
+    "唯一指定真实August_Rush"
+  ],
+  "publishedAt": "2020-08-11",
+  "updatedAt": "2020-10-26",
+  "latestChapterId": "episode-3",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "kViN2016SoundEuphonium2ProductionNotesRoofZH",
+      "extra": "kViN 对《吹响！上低音号2》的逐话制作观察，现收录第 1～3 话译文。现存译文未继续覆盖后续话数，连载暂列暂停。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "episode-1",
+      "number": "01",
+      "title": "第一话制作笔记",
+      "status": "published",
+      "anchor": "episode-1",
+      "publishedAt": "2020-08-11",
+      "authors": [
+        "kViN"
+      ],
+      "translators": [
+        "Phaedrus"
+      ],
+      "proofreaders": [
+        "唯一指定真实August_Rush"
+      ],
+      "tags": [
+        "吹响！上低音号",
+        "京都动画",
+        "石原立也",
+        "藤田春香"
+      ]
+    },
+    {
+      "id": "episode-2",
+      "number": "02",
+      "title": "第二话制作笔记",
+      "status": "published",
+      "anchor": "episode-2",
+      "publishedAt": "2020-08-23",
+      "authors": [
+        "kViN"
+      ],
+      "translators": [
+        "Phaedrus"
+      ],
+      "proofreaders": [
+        "唯一指定真实August_Rush"
+      ],
+      "tags": [
+        "吹响！上低音号",
+        "京都动画",
+        "武本康弘",
+        "分镜"
+      ]
+    },
+    {
+      "id": "episode-3",
+      "number": "03",
+      "title": "第三话制作笔记",
+      "status": "published",
+      "anchor": "episode-3",
+      "publishedAt": "2020-10-26",
+      "authors": [
+        "kViN"
+      ],
+      "translators": [
+        "Phaedrus"
+      ],
+      "proofreaders": [
+        "唯一指定真实August_Rush"
+      ],
+      "tags": [
+        "吹响！上低音号",
+        "京都动画",
+        "Animation Do"
+      ]
+    }
+  ]
+}

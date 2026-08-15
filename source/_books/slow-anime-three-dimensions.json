@@ -1,0 +1,48 @@
+{
+  "id": "slow-anime-three-dimensions",
+  "slug": "slow-anime-three-dimensions",
+  "title": "缓慢动画的三种维度",
+  "description": "鲜奶饼干从空间写实、爱与超验、时间－影像三个维度讨论缓慢动画，依次分析押井守、高桥直人与川面真也如何借助静止、长镜头、场面调度和纯视听情境，形成有别于实拍电影的动画美学。全文两章，已经完结。",
+  "documentSlug": "slow-anime-three-dimensions",
+  "script": "hans",
+  "status": "complete",
+  "authors": ["鲜奶饼干"],
+  "translators": [],
+  "proofreaders": ["伦勃朗"],
+  "publishedAt": "2019-06-27",
+  "updatedAt": "2020-03-31",
+  "latestChapterId": "love-transcendence-time-image",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "xianNaiBingGan2019slowAnimeThreeDimensionsBook",
+      "extra": "《缓慢动画的三种维度》由2019-06-27与2019-06-28发布的正续两页组成；第二页依次承载第二、第三部分及结语，全文完结。第一章于2020-03-31补入实质更正。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "space-realism",
+      "number": "01",
+      "title": "前言／一、空间－写实",
+      "status": "published",
+      "anchor": "space-realism",
+      "publishedAt": "2019-06-27",
+      "authors": ["鲜奶饼干"],
+      "translators": [],
+      "proofreaders": ["伦勃朗"],
+      "tags": ["缓慢动画", "动画美学", "押井守", "机动警察", "场面调度"]
+    },
+    {
+      "id": "love-transcendence-time-image",
+      "number": "02",
+      "title": "二、爱与超验／三、时间－影像／四、结语",
+      "status": "published",
+      "anchor": "love-transcendence-time-image",
+      "publishedAt": "2019-06-28",
+      "authors": ["鲜奶饼干"],
+      "translators": [],
+      "proofreaders": ["伦勃朗"],
+      "tags": ["缓慢动画", "动画美学", "时间－影像", "长镜头"]
+    }
+  ]
+}

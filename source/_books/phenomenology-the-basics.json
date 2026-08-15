@@ -1,0 +1,101 @@
+{
+  "id": "phenomenology-the-basics",
+  "slug": "phenomenology-the-basics",
+  "title": "现象学：基础",
+  "description": "Dan Zahavi《Phenomenology: The Basics》中文译文，现收录前言、导言及第 1～4 章。原书后续章节尚未收入，连载暂列暂停。",
+  "documentSlug": "phenomenology-the-basics-introduction-chapters-1-2",
+  "script": "hans",
+  "status": "paused",
+  "authors": [
+    "Dan Zahavi"
+  ],
+  "translators": [
+    "飞飞",
+    "阿惜",
+    "我大笑三声哈哈哈",
+    "Wasted.",
+    "加速器",
+    "S.C.",
+    "Raymond"
+  ],
+  "proofreaders": [
+    "真红",
+    "飞飞",
+    "Va-11 Hall-A",
+    "希文",
+    "柴来人"
+  ],
+  "publishedAt": "2020-09-07",
+  "updatedAt": "2020-10-04",
+  "latestChapterId": "chapters-3-4",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "zahavi2018PhenomenologyBasicsRoofZH",
+      "extra": "Dan Zahavi《Phenomenology: The Basics》中文译文，现收录前言、导言及第 1～4 章。原书后续章节尚未收入，连载暂列暂停。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "introduction-chapters-1-2",
+      "number": "01",
+      "title": "前言、导言与第 1～2 章",
+      "status": "published",
+      "anchor": "introduction-chapters-1-2",
+      "publishedAt": "2020-09-07",
+      "authors": [
+        "Dan Zahavi"
+      ],
+      "translators": [
+        "飞飞",
+        "阿惜",
+        "我大笑三声哈哈哈",
+        "Wasted."
+      ],
+      "proofreaders": [
+        "真红",
+        "飞飞",
+        "Va-11 Hall-A",
+        "希文",
+        "柴来人"
+      ],
+      "tags": [
+        "现象学",
+        "丹·扎哈维",
+        "胡塞尔",
+        "海德格尔",
+        "意向性"
+      ]
+    },
+    {
+      "id": "chapters-3-4",
+      "number": "02",
+      "title": "第 3～4 章",
+      "status": "published",
+      "anchor": "chapters-3-4",
+      "publishedAt": "2020-10-04",
+      "authors": [
+        "Dan Zahavi"
+      ],
+      "translators": [
+        "加速器",
+        "S.C.",
+        "Raymond"
+      ],
+      "proofreaders": [
+        "真红",
+        "飞飞",
+        "Va-11 Hall-A",
+        "希文",
+        "柴来人"
+      ],
+      "tags": [
+        "现象学",
+        "丹·扎哈维",
+        "胡塞尔",
+        "海德格尔",
+        "生活世界"
+      ]
+    }
+  ]
+}

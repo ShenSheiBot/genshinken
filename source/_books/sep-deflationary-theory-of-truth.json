@@ -1,0 +1,84 @@
+{
+  "id": "sep-deflationary-theory-of-truth",
+  "slug": "sep-deflationary-theory-of-truth",
+  "title": "SEP：真之紧缩论",
+  "description": "《斯坦福哲学百科》词条《真之紧缩论》的中文译文，收录第 1～7 节正文；第 7 节集中讨论六项主要反驳。现存正文已经完整，未另收入词条书目附录。",
+  "documentSlug": "sep-deflationary-theory-truth-sections-1-6",
+  "script": "hans",
+  "status": "complete",
+  "authors": [
+    "Daniel Stoljar",
+    "Nic Damnjanovic"
+  ],
+  "translators": [
+    "luanzhao",
+    "Suetonius",
+    "一般通过ANIMA",
+    "奇怪的阿法南猿"
+  ],
+  "proofreaders": [
+    "乌有之人",
+    "Suetonius",
+    "Mefls"
+  ],
+  "publishedAt": "2020-04-12",
+  "updatedAt": "2020-04-22",
+  "latestChapterId": "section-7",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "stoljarDamnjanovicSEPDeflationaryTruthRoofZH",
+      "extra": "《斯坦福哲学百科》词条《真之紧缩论》的中文译文，收录第 1～7 节正文；第 7 节集中讨论六项主要反驳。现存正文已经完整，未另收入词条书目附录。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "sections-1-6",
+      "number": "01",
+      "title": "第 1～6 节",
+      "status": "published",
+      "anchor": "sections-1-6",
+      "publishedAt": "2020-04-12",
+      "authors": [
+        "Daniel Stoljar",
+        "Nic Damnjanovic"
+      ],
+      "translators": [
+        "luanzhao",
+        "Suetonius",
+        "一般通过ANIMA",
+        "奇怪的阿法南猿"
+      ],
+      "proofreaders": [
+        "乌有之人",
+        "Suetonius"
+      ],
+      "tags": [
+        "真之紧缩论",
+        "逻辑学"
+      ]
+    },
+    {
+      "id": "section-7",
+      "number": "02",
+      "title": "第 7 节：对紧缩论的反驳",
+      "status": "published",
+      "anchor": "section-7",
+      "publishedAt": "2020-04-22",
+      "authors": [
+        "Daniel Stoljar",
+        "Nic Damnjanovic"
+      ],
+      "translators": [
+        "Suetonius"
+      ],
+      "proofreaders": [
+        "Mefls"
+      ],
+      "tags": [
+        "真之紧缩论",
+        "逻辑学"
+      ]
+    }
+  ]
+}

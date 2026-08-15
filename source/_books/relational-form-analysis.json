@@ -1,0 +1,54 @@
+{
+  "id": "relational-form-analysis",
+  "slug": "relational-form-analysis",
+  "title": "迈向关系形式的分析",
+  "description": "钟子默从剧中人物的三角恋与“白夜行”模式出发，进一步讨论作者、作品与读者之间的文化传播、编码与解码及互文关系。本连载现有两章；第二章明确预告的“人与文化”一章尚未发布。",
+  "documentSlug": "relational-form-analysis-love-triangle-biyakuya",
+  "script": "hans",
+  "status": "paused",
+  "authors": ["钟子默"],
+  "translators": [],
+  "proofreaders": [],
+  "publishedAt": "2018-12-05",
+  "updatedAt": "2018-12-26",
+  "latestChapterId": "cultural-transmission",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "zhong2018relationalFormAnalysis",
+      "extra": "本连载现有两章，分别发布于2018-12-05与2018-12-26；第二章明确预告第三章“人与文化”，该章尚未发布。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "love-triangle-biyakuya",
+      "number": "01",
+      "title": "二次元的三角恋与“白夜行”",
+      "status": "published",
+      "anchor": "love-triangle-biyakuya",
+      "publishedAt": "2018-12-05",
+      "authors": ["钟子默"],
+      "translators": [],
+      "proofreaders": [],
+      "tags": ["关系形式", "白夜行"]
+    },
+    {
+      "id": "cultural-transmission",
+      "number": "02",
+      "title": "文化的传递形式",
+      "status": "published",
+      "anchor": "cultural-transmission",
+      "publishedAt": "2018-12-26",
+      "authors": ["钟子默"],
+      "translators": [],
+      "proofreaders": [],
+      "tags": ["关系形式", "文化传播", "互文性", "意识形态"]
+    },
+    {
+      "id": "people-and-culture",
+      "number": "03",
+      "title": "人与文化",
+      "status": "forthcoming"
+    }
+  ]
+}

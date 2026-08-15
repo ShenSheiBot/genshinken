@@ -1,0 +1,55 @@
+{
+  "id": "mad-women-yandere-darkening-cultural-analysis",
+  "slug": "mad-women-yandere-darkening-cultural-analysis",
+  "title": "黑化与病娇——动画“疯女人”形象的文化探析",
+  "subtitle": "钟子默的女性主义动画文化批评",
+  "description": "钟子默从“疯女人”概念出发，考察日本女性身体文化、动画性与黑化／病娇属性；现有三章组成完整论文，第三章以【完】收束。",
+  "documentSlug": "mad-women-yandere-darkening-cultural-analysis-part-1",
+  "script": "hans",
+  "status": "complete",
+  "authors": ["钟子默"],
+  "translators": [],
+  "proofreaders": [],
+  "publishedAt": "2020-03-16",
+  "updatedAt": "2020-03-27",
+  "latestChapterId": "part-three",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "zhong2020MadWomenCulturalAnalysis",
+      "extra": "三章连续正文，分别发布于2020-03-16、2020-03-21与2020-03-27；第三章以【完】收束。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "part-one",
+      "number": "01",
+      "title": "第一部分：疯女人，一种批评的缘起",
+      "status": "published",
+      "anchor": "part-one",
+      "publishedAt": "2020-03-16",
+      "authors": ["钟子默"],
+      "tags": ["疯女人", "黑化", "病娇", "女性主义", "少女文化"]
+    },
+    {
+      "id": "part-two",
+      "number": "02",
+      "title": "第二部分：疯女人的动画形象",
+      "status": "published",
+      "anchor": "part-two",
+      "publishedAt": "2020-03-21",
+      "authors": ["钟子默"],
+      "tags": ["疯女人", "黑化", "病娇", "女性主义", "精神分析"]
+    },
+    {
+      "id": "part-three",
+      "number": "03",
+      "title": "第三部分：疯女人幻想的文化批判",
+      "status": "published",
+      "anchor": "part-three",
+      "publishedAt": "2020-03-27",
+      "authors": ["钟子默"],
+      "tags": ["疯女人", "黑化", "病娇", "女性主义", "精神分析"]
+    }
+  ]
+}

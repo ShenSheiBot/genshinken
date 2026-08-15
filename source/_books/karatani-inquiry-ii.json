@@ -1,0 +1,347 @@
+{
+  "id": "karatani-inquiry-ii",
+  "slug": "karatani-inquiry-ii",
+  "title": "探究Ⅱ",
+  "subtitle": "柄谷行人《探究Ⅱ》中文译文",
+  "description": "柄谷行人《探究Ⅱ》的中文译文连载：第一部“关于专名”五章与第二部“关于超越论的动机”前五章已发布；第二部第六至九章、第三部七章已有明确原始篇目证据，待逐篇清洗后纳入。末章原题标明【完结】，但当前中文公开稿尚未覆盖全书，因此连载暂列暂停。另有《第一部：关于专名》伴随导读，不计入章节数。",
+  "documentSlug": "karatani-inquiry-ii-singularity-particularity",
+  "script": "hans",
+  "status": "paused",
+  "authors": [
+    "柄谷行人"
+  ],
+  "translators": [],
+  "proofreaders": [],
+  "publishedAt": "2019-11-02",
+  "updatedAt": "2021-02-08",
+  "latestChapterId": "part-2-chapter-5-infinity-history",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "karatani1989InquiryIIRoofZH",
+      "title": "探究Ⅱ",
+      "date": "1989",
+      "publisher": "讲谈社",
+      "ISBN": "9784062039826",
+      "language": "ja",
+      "extra": "原著于1989年6月23日由讲谈社出版。当前中文译文公开覆盖第一部五章、第二部前五章；其余十一章已由原始篇目和连载证据确认，尚待逐篇清洗。译文页面标注仅供讨论学习，未载明开放许可。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "part-1-chapter-1-singularity-particularity",
+      "number": "01",
+      "title": "第一部：关于专名｜第一章：单独性和特殊性",
+      "status": "published",
+      "anchor": "part-1-chapter-1-singularity-particularity",
+      "publishedAt": "2019-11-02",
+      "authors": [
+        "柄谷行人"
+      ],
+      "translators": [
+        "橘子",
+        "恐怖如斯",
+        "Phaedo",
+        "柴侦探"
+      ],
+      "proofreaders": [],
+      "tags": [
+        "探究Ⅱ",
+        "柄谷行人",
+        "专名",
+        "单独性"
+      ]
+    },
+    {
+      "id": "part-1-chapter-2-proper-names-history",
+      "number": "02",
+      "title": "第一部：关于专名｜第二章：专名与历史",
+      "status": "published",
+      "anchor": "part-1-chapter-2-proper-names-history",
+      "publishedAt": "2019-12-30",
+      "authors": [
+        "柄谷行人"
+      ],
+      "translators": [
+        "T君",
+        "Leontopodium Edelweiss",
+        "Achamoth",
+        "ElMY",
+        "柴侦探"
+      ],
+      "proofreaders": [],
+      "tags": [
+        "探究Ⅱ",
+        "柄谷行人",
+        "专名",
+        "单独性",
+        "历史性"
+      ]
+    },
+    {
+      "id": "part-1-chapter-3-names-language",
+      "number": "03",
+      "title": "第一部：关于专名｜第三章：名称与语言",
+      "status": "published",
+      "anchor": "part-1-chapter-3-names-language",
+      "publishedAt": "2020-03-17",
+      "authors": [
+        "柄谷行人"
+      ],
+      "translators": [
+        "元気ですか",
+        "Phaedo"
+      ],
+      "proofreaders": [
+        "柴来人"
+      ],
+      "tags": [
+        "探究Ⅱ",
+        "柄谷行人",
+        "专名",
+        "形式化"
+      ]
+    },
+    {
+      "id": "part-1-chapter-4-possibility-actuality",
+      "number": "04",
+      "title": "第一部：关于专名｜第四章：可能性与现实性",
+      "status": "published",
+      "anchor": "part-1-chapter-4-possibility-actuality",
+      "publishedAt": "2020-03-29",
+      "authors": [
+        "柄谷行人"
+      ],
+      "translators": [
+        "有很多没用的书的学文少年",
+        "Va-11 Hall-A",
+        "will",
+        "運河遊犬",
+        "Leontopodium Edelweiss"
+      ],
+      "proofreaders": [
+        "柴来人"
+      ],
+      "tags": [
+        "探究Ⅱ",
+        "柄谷行人",
+        "专名",
+        "可能世界"
+      ]
+    },
+    {
+      "id": "part-1-chapter-5-contingency-relations",
+      "number": "05",
+      "title": "第一部：关于专名｜第五章：关系的偶然性",
+      "status": "published",
+      "anchor": "part-1-chapter-5-contingency-relations",
+      "publishedAt": "2020-04-07",
+      "authors": [
+        "柄谷行人"
+      ],
+      "translators": [
+        "みかん",
+        "恐怖如斯",
+        "will",
+        "運河遊犬",
+        "问天"
+      ],
+      "proofreaders": [
+        "柴来人"
+      ],
+      "tags": [
+        "探究Ⅱ",
+        "柄谷行人",
+        "专名",
+        "偶然性"
+      ]
+    },
+    {
+      "id": "part-2-chapter-1-place-of-spirit",
+      "number": "06",
+      "title": "第二部：关于超越论的动机｜第一章：精神的场所",
+      "status": "published",
+      "anchor": "part-2-chapter-1-place-of-spirit",
+      "publishedAt": "2020-08-03",
+      "authors": [
+        "柄谷行人"
+      ],
+      "translators": [
+        "恐怖如斯",
+        "Leontopodium Edelweiss",
+        "水小鬼koni"
+      ],
+      "proofreaders": [
+        "恐怖如斯"
+      ],
+      "tags": [
+        "探究Ⅱ",
+        "柄谷行人",
+        "笛卡尔",
+        "超越论"
+      ]
+    },
+    {
+      "id": "part-2-chapter-2-proof-of-god",
+      "number": "07",
+      "title": "第二部：关于超越论的动机｜第二章：神的证明",
+      "status": "published",
+      "anchor": "part-2-chapter-2-proof-of-god",
+      "publishedAt": "2020-09-21",
+      "authors": [
+        "柄谷行人"
+      ],
+      "translators": [
+        "恐怖如斯",
+        "啊呀",
+        "will"
+      ],
+      "proofreaders": [
+        "恐怖如斯"
+      ],
+      "tags": [
+        "探究Ⅱ",
+        "柄谷行人",
+        "笛卡尔",
+        "超越论"
+      ]
+    },
+    {
+      "id": "part-2-chapter-3-ideas-representations",
+      "number": "08",
+      "title": "第二部：关于超越论的动机｜第三章：观念和表象",
+      "status": "published",
+      "anchor": "part-2-chapter-3-ideas-representations",
+      "publishedAt": "2020-11-20",
+      "authors": [
+        "柄谷行人"
+      ],
+      "translators": [
+        "米岡",
+        "Va-11 Hall-A"
+      ],
+      "proofreaders": [
+        "恐怖如斯"
+      ],
+      "tags": [
+        "探究Ⅱ",
+        "柄谷行人",
+        "斯宾诺莎",
+        "笛卡尔"
+      ]
+    },
+    {
+      "id": "part-2-chapter-4-spinozas-geometry",
+      "number": "09",
+      "title": "第二部：关于超越论的动机｜第四章：斯宾诺莎的几何学",
+      "status": "published",
+      "anchor": "part-2-chapter-4-spinozas-geometry",
+      "publishedAt": "2021-01-23",
+      "authors": [
+        "柄谷行人"
+      ],
+      "translators": [
+        "T君",
+        "Va-11 Hall-A"
+      ],
+      "proofreaders": [
+        "恐怖如斯"
+      ],
+      "tags": [
+        "探究Ⅱ",
+        "柄谷行人",
+        "斯宾诺莎",
+        "笛卡尔"
+      ]
+    },
+    {
+      "id": "part-2-chapter-5-infinity-history",
+      "number": "10",
+      "title": "第二部：关于超越论的动机｜第五章：无限与历史",
+      "status": "published",
+      "anchor": "part-2-chapter-5-infinity-history",
+      "publishedAt": "2021-02-08",
+      "authors": [
+        "柄谷行人"
+      ],
+      "translators": [
+        "will"
+      ],
+      "proofreaders": [
+        "恐怖如斯"
+      ],
+      "tags": [
+        "探究Ⅱ",
+        "柄谷行人",
+        "斯宾诺莎",
+        "历史性"
+      ]
+    },
+    {
+      "id": "part-2-chapter-6-passivity-will",
+      "number": "11",
+      "title": "第二部：关于超越论的动机｜第六章：被动性与意志",
+      "status": "forthcoming"
+    },
+    {
+      "id": "part-2-chapter-7-natural-rights",
+      "number": "12",
+      "title": "第二部：关于超越论的动机｜第七章：自然权利",
+      "status": "forthcoming"
+    },
+    {
+      "id": "part-2-chapter-8-transcendental-self",
+      "number": "13",
+      "title": "第二部：关于超越论的动机｜第八章：超越论的自我",
+      "status": "forthcoming"
+    },
+    {
+      "id": "part-2-chapter-9-transcendental-motive",
+      "number": "14",
+      "title": "第二部：关于超越论的动机｜第九章：超越论的动机",
+      "status": "forthcoming"
+    },
+    {
+      "id": "part-3-chapter-1-immanence-transcendence",
+      "number": "15",
+      "title": "第三部：关切于世界宗教｜第一章：内在性与超越性",
+      "status": "forthcoming"
+    },
+    {
+      "id": "part-3-chapter-2-jewish-matters",
+      "number": "16",
+      "title": "第三部：关切于世界宗教｜第二章：“犹太事物”",
+      "status": "forthcoming"
+    },
+    {
+      "id": "part-3-chapter-3-exteriority-thought",
+      "number": "17",
+      "title": "第三部：关切于世界宗教｜第三章：思想的外部性",
+      "status": "forthcoming"
+    },
+    {
+      "id": "part-3-chapter-4-other-of-psychoanalysis",
+      "number": "18",
+      "title": "第三部：关切于世界宗教｜第四章：精神分析的他者",
+      "status": "forthcoming"
+    },
+    {
+      "id": "part-3-chapter-5-communication-space",
+      "number": "19",
+      "title": "第三部：关切于世界宗教｜第五章：交往空间",
+      "status": "forthcoming"
+    },
+    {
+      "id": "part-3-chapter-6-infinity-indefiniteness",
+      "number": "20",
+      "title": "第三部：关切于世界宗教｜第六章：无限与无限定",
+      "status": "forthcoming"
+    },
+    {
+      "id": "part-3-chapter-7-gift-exchange",
+      "number": "21",
+      "title": "第三部：关切于世界宗教｜第七章：赠与和交换及后记",
+      "status": "forthcoming"
+    }
+  ]
+}
