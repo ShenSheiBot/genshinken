@@ -10,7 +10,7 @@ categories: [思想与理论]
 section: translation
 tags: [探究Ⅱ, 柄谷行人, 专名, 单独性]
 post_author: 柄谷行人
-excerpt: 柄谷行人《探究Ⅱ》中文译文文库，收录第一部“关于专名”和第二部“关于超越论的动机”的已发布章节，并按原始连载证据保留后续篇目边界。
+excerpt: 柄谷行人《探究Ⅱ》中文译文，围绕专名、单称性、特殊性与超越论动机展开对主体、他者和历史的考察。
 featured_order: 0
 citation:
   itemType: blogPost
@@ -19,7 +19,7 @@ citation:
   blogTitle: 屋顶现视研
   url: "https://www.bilibili.com/read/cv3885925/"
   language: zh-CN
-  extra: 本文为《探究Ⅱ》合并文库的构建源；章节译校署名和原始页面证据见各篇快照与专篇 editorial note。
+  extra: 中文译文收录第一部“关于专名”五章与第二部“关于超越论的动机”前五章。
 ---
 
 <h2 id="part-1-chapter-1-singularity-particularity">第一部：关于专名｜第一章：单独性和特殊性</h2>

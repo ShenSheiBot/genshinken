@@ -2,7 +2,7 @@
   "id": "sep-hegel-aesthetics",
   "slug": "sep-hegel-aesthetics",
   "title": "SEP：黑格尔美学",
-  "description": "《斯坦福哲学百科》词条《Hegel’s Aesthetics》的中文译文，从序言与哲学背景到各门艺术和体系性结论，完整收录第 0～7 节正文，未另收入词条书目附录。",
+  "description": "《斯坦福哲学百科》词条《Hegel’s Aesthetics》的中文译文，从序言与哲学背景到各门艺术和体系性结论，收录第 0～7 节正文，未含原词条书目附录。",
   "documentSlug": "sep-hegel-aesthetics-sections-1-5",
   "script": "hans",
   "status": "complete",
@@ -25,7 +25,7 @@
     "translation": {
       "itemType": "book",
       "citationKey": "houlgateSEPHegelAestheticsRoofZH",
-      "extra": "《斯坦福哲学百科》词条《Hegel’s Aesthetics》的中文译文，从序言与哲学背景到各门艺术和体系性结论，完整收录第 0～7 节正文，未另收入词条书目附录。"
+      "extra": "中文译文收录第 0～7 节正文，未含原词条书目附录。"
     }
   },
   "chapters": [

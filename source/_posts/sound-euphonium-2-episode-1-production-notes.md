@@ -20,12 +20,12 @@ citation:
   blogTitle: 屋顶现视研
   url: "https://www.bilibili.com/read/cv7127720/"
   language: zh-CN
-  extra: "原文《Sound! Euphonium 2: Episode 1》由kViN发表于Sakuga Blog，2016-10-06；现存译文收录原文的第一话主体制作评论，未包含其后的Ending段落；原文链接见正文。"
+  extra: "原文《Sound! Euphonium 2: Episode 1》由kViN发表于Sakuga Blog，2016-10-06；本篇译文收录第一话主体制作评论，未含其后的Ending段落；原文链接见正文。"
 ---
 
 <h2 id="episode-1">第一话制作笔记</h2>
 
-> 原文：[Sound! Euphonium 2: Episode 1](https://blog.sakugabooru.com/2016/10/06/sound-euphonium-2-episode-1/)，作者kViN，发表于Sakuga Blog（2016年10月6日）。现存译文收录原文的第一话主体制作评论，未包含其后的“Ending”段落。
+> 原文：[Sound! Euphonium 2: Episode 1](https://blog.sakugabooru.com/2016/10/06/sound-euphonium-2-episode-1/)，作者kViN，发表于Sakuga Blog（2016年10月6日）。本篇译文收录第一话主体制作评论，未含其后的“Ending”段落。
 
 ---
 
@@ -172,7 +172,7 @@ citation:
 
 <h2 id="episode-3">第三话制作笔记</h2>
 
-> 原文：[Sound! Euphonium 2: Episode 3](https://blog.sakugabooru.com/2016/10/20/sound-euphonium-2-episode-3/)，作者kViN，发表于Sakuga Blog（2016年10月20日）。现存译文收录至原文对第二原画清线及京都、Animation Do关系的讨论，未包含其后的结语与网站支持说明。
+> 原文：[Sound! Euphonium 2: Episode 3](https://blog.sakugabooru.com/2016/10/20/sound-euphonium-2-episode-3/)，作者kViN，发表于Sakuga Blog（2016年10月20日）。本篇译文收录至原文对第二原画清线及京都、Animation Do关系的讨论，未含其后的结语与网站支持说明。
 >
 > **翻译：**Phaedrus。
 >

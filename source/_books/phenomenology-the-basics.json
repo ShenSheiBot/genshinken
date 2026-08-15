@@ -2,7 +2,7 @@
   "id": "phenomenology-the-basics",
   "slug": "phenomenology-the-basics",
   "title": "现象学：基础",
-  "description": "Dan Zahavi《Phenomenology: The Basics》中文译文，现收录前言、导言及第 1～4 章。原书后续章节尚未收入，连载暂列暂停。",
+  "description": "Dan Zahavi《Phenomenology: The Basics》中文译文，收录前言、导言及第 1～4 章，介绍现象学的方法、意向性、身体、主体间性与生活世界。",
   "documentSlug": "phenomenology-the-basics-introduction-chapters-1-2",
   "script": "hans",
   "status": "paused",
@@ -32,7 +32,7 @@
     "translation": {
       "itemType": "book",
       "citationKey": "zahavi2018PhenomenologyBasicsRoofZH",
-      "extra": "Dan Zahavi《Phenomenology: The Basics》中文译文，现收录前言、导言及第 1～4 章。原书后续章节尚未收入，连载暂列暂停。"
+      "extra": "中文译文收录前言、导言及第 1～4 章。"
     }
   },
   "chapters": [

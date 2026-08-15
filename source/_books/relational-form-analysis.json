@@ -2,7 +2,7 @@
   "id": "relational-form-analysis",
   "slug": "relational-form-analysis",
   "title": "迈向关系形式的分析",
-  "description": "钟子默从剧中人物的三角恋与“白夜行”模式出发，进一步讨论作者、作品与读者之间的文化传播、编码与解码及互文关系。本连载现有两章；第二章明确预告的“人与文化”一章尚未发布。",
+  "description": "钟子默从剧中人物的三角恋与“白夜行”模式出发，进一步讨论作者、作品与读者之间的文化传播、编码、解码及互文关系。",
   "documentSlug": "relational-form-analysis-love-triangle-biyakuya",
   "script": "hans",
   "status": "paused",
@@ -16,7 +16,7 @@
     "translation": {
       "itemType": "book",
       "citationKey": "zhong2018relationalFormAnalysis",
-      "extra": "本连载现有两章，分别发布于2018-12-05与2018-12-26；第二章明确预告第三章“人与文化”，该章尚未发布。"
+      "extra": "两章分别发布于2018-12-05与2018-12-26。"
     }
   },
   "chapters": [

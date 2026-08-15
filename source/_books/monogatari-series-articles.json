@@ -2,7 +2,7 @@
   "id": "monogatari-series-articles",
   "slug": "monogatari-series-articles",
   "title": "物语系列的文章",
-  "description": "围绕《物语》系列人物、叙述与真伪问题展开的两篇评论：一只非0的O讨论《恋物语》中贝木泥舟的言说与自我欺诈，十文字从《伪物语》进入性恶说与真伪命题。现有两章，后续文章尚未发布，文库暂停更新。",
+  "description": "围绕《物语》系列人物、叙述与真伪问题展开的两篇评论：一只非0的O讨论《恋物语》中贝木泥舟的言说与自我欺诈，十文字从《伪物语》进入性恶说与真伪命题。",
   "documentSlug": "monogatari-love-deishu-kaiki-speech-fracture-self-deception",
   "script": "hans",
   "status": "paused",
@@ -16,7 +16,7 @@
     "translation": {
       "itemType": "book",
       "citationKey": "roof2019monogatariSeriesArticles",
-      "extra": "当前文库收录2019-01-02发布的一只非0的O《物语/爱恋/贝木泥舟：言说/破碎/自我欺诈》与2019-03-28发布的十文字《伪物语/性恶说/真伪命题》；后续文章尚未发布，文库暂停更新。"
+      "extra": "收录2019-01-02发布的一只非0的O《物语/爱恋/贝木泥舟：言说/破碎/自我欺诈》与2019-03-28发布的十文字《伪物语/性恶说/真伪命题》。"
     }
   },
   "chapters": [

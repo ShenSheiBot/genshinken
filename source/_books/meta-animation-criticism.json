@@ -2,7 +2,7 @@
   "id": "meta-animation-criticism",
   "slug": "meta-animation-criticism",
   "title": "元动画评论",
-  "description": "Austoria 对动画评论表述本身所作的系列研究。本连载现有 I《作为问题的评论表述》、I.i 番外《以佐贺与Vtuber为例，谈崇高的退潮与私人体验》、II《深刻性的多重面貌》和 2.1 番外《反对深刻的〈Macross7〉》；带小数点的篇号为番外，II 之后暂未见正式后续。",
+  "description": "Austoria 对动画评论表述本身所作的系列研究，依次讨论评论表达、崇高与私人体验、深刻性的多重面貌，以及《Macross7》对深刻性的反拨；带小数点的篇号为番外。",
   "documentSlug": "meta-animation-criticism-expression",
   "script": "hans",
   "status": "paused",
@@ -16,7 +16,7 @@
     "translation": {
       "itemType": "book",
       "citationKey": "austoria2018metaAnimationCriticism",
-      "extra": "当前文库收录2018-12-19发布的I、2019-01-19发布的I.i番外、2019-03-03发布的II与2019-07-12发布的2.1番外；系列说明明确带小数点的篇号为番外，II之后暂未见正式后续。"
+      "extra": "收录I、I.i番外、II与2.1番外；带小数点的篇号为番外。"
     }
   },
   "chapters": [

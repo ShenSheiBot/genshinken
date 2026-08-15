@@ -2,7 +2,7 @@
   "id": "formal-style-scientism",
   "slug": "formal-style-scientism",
   "title": "形式风格研究与科学主义",
-  "description": "鲜奶饼干以泉信行的漫画形式论为对象，检验其选择性遗漏、单一归因、视线力学与左右配置理论。现存上下篇构成计划中的第一篇完整研究，后续第二篇未见发布，连载暂列暂停。",
+  "description": "鲜奶饼干以泉信行的漫画形式论为对象，从选择性遗漏、单一归因、视线力学与左右配置等方面，检验漫画形式分析的方法与限度。",
   "documentSlug": "formal-style-scientism-izumi-critique-part-1",
   "script": "hans",
   "status": "paused",
@@ -18,7 +18,7 @@
     "translation": {
       "itemType": "book",
       "citationKey": "xianNaiBingGan2020FormalStyleScientism",
-      "extra": "鲜奶饼干以泉信行的漫画形式论为对象，检验其选择性遗漏、单一归因、视线力学与左右配置理论。现存上下篇构成计划中的第一篇完整研究，后续第二篇未见发布，连载暂列暂停。"
+      "extra": "上下篇分别发表于2019-09-07与2019-10-05，合为作者原计划的第一篇研究。"
     }
   },
   "chapters": [

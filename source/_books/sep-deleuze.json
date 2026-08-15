@@ -2,7 +2,7 @@
   "id": "sep-deleuze",
   "slug": "sep-deleuze",
   "title": "SEP：德勒兹",
-  "description": "《斯坦福哲学百科》词条《Gilles Deleuze》的中文译文，依次收录生平与著作、对哲学家的阅读、差异哲学、社会与政治哲学、艺术及接受史第 1～6 节。现存正文已经完整，未另收入词条书目附录。",
+  "description": "《斯坦福哲学百科》词条《Gilles Deleuze》的中文译文，依次收录生平与著作、对哲学家的阅读、差异哲学、社会与政治哲学、艺术及接受史第 1～6 节，未含原词条书目附录。",
   "documentSlug": "sep-deleuze-sections-1-2",
   "script": "hans",
   "status": "complete",
@@ -28,7 +28,7 @@
     "translation": {
       "itemType": "book",
       "citationKey": "smithProteviSEPDeleuzeRoofZH",
-      "extra": "《斯坦福哲学百科》词条《Gilles Deleuze》的中文译文，依次收录生平与著作、对哲学家的阅读、差异哲学、社会与政治哲学、艺术及接受史第 1～6 节。现存正文已经完整，未另收入词条书目附录。"
+      "extra": "中文译文收录第 1～6 节正文，未含原词条书目附录。"
     }
   },
   "chapters": [

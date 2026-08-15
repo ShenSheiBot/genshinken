@@ -38,6 +38,7 @@ const inlineEventHandler = /\son[a-z][\w:-]*\s*=/i;
 const dangerousHtmlUrl = /\s(?:href|src)\s*=\s*["']?\s*(?:javascript|vbscript):/i;
 const protocolLessAngleLink = /<www\.[^<>\s]+>/iu;
 const brokenOrderedListMarker = /^\s{0,3}\d{1,2}\.(?=\p{Script=Han})/u;
+const internalEditorialLanguage = /(?:待逐篇清洗|清洗后纳入|原始(?:篇目|连载)证据|合并文库的构建源|快照与专篇|归档说明|档案说明|本站据.{0,40}(?:整理|归档)|连载暂列暂停|连载状态据此标为|后续.{0,20}未见发布|暂未见正式后续|不因此自动成为|并非按作品名重新聚类|不在本专题中扩收|不把.{0,40}扩入活动档案)/u;
 
 assert.match(
   "<www.example.org/path>",
@@ -51,6 +52,16 @@ assert.doesNotMatch(
 );
 assert.match("4.由于举办经验不足", brokenOrderedListMarker, "missing list-marker space must be detected");
 assert.doesNotMatch("4. 由于举办经验不足", brokenOrderedListMarker, "valid ordered lists must remain accepted");
+assert.match(
+  "其余十一章已有原始篇目证据，待逐篇清洗后纳入。",
+  internalEditorialLanguage,
+  "internal archive workflow language must be detected"
+);
+assert.doesNotMatch(
+  "中文译文收录第一部五章与第二部前五章。",
+  internalEditorialLanguage,
+  "reader-facing coverage statements must remain accepted"
+);
 const errors = [];
 const warnings = [];
 
@@ -92,6 +103,24 @@ function validateUntrustedHtml(file, value, label) {
   }
   if (protocolLessAngleLink.test(value)) {
     report(errors, file, `${label} 的尖括号链接必须包含 http:// 或 https:// 协议`);
+  }
+}
+
+function validatePublicEditorialVoice(file, value, keyPath = "公开内容") {
+  if (typeof value === "string") {
+    if (internalEditorialLanguage.test(value)) {
+      report(errors, file, `${keyPath} 泄露内部归档／清洗判断，请改写为面向读者的内容与范围说明`);
+    }
+    return;
+  }
+  if (Array.isArray(value)) {
+    value.forEach((item, index) => validatePublicEditorialVoice(file, item, `${keyPath}[${index}]`));
+    return;
+  }
+  if (value && typeof value === "object") {
+    for (const [key, item] of Object.entries(value)) {
+      validatePublicEditorialVoice(file, item, `${keyPath}.${key}`);
+    }
   }
 }
 
@@ -701,6 +730,7 @@ const records = files.map((file) => {
   }
 
   validateTypography(file, content, data);
+  validatePublicEditorialVoice(file, data, "front matter");
   if (!bookDocument) {
     validateProseTypography(
       file,
@@ -931,6 +961,7 @@ const bookRecords = jsonFiles(booksDirectory)
     }
 
     validateTypography(file, "", data);
+    validatePublicEditorialVoice(file, data, "书籍清单");
     const id = stableRecordId(data, "id", file);
     const slug = stableRecordId(data, "slug", file);
     const documentSlug = stableRecordId(data, "documentSlug", file);
@@ -1288,6 +1319,8 @@ const topicRecords = markdownFiles(topicsDirectory).map((fileName) => {
   const raw = fs.readFileSync(path.join(topicsDirectory, fileName), "utf8");
   const { data, header, content } = parseFrontMatter(file, raw);
   validateTypography(file, content, data);
+  validatePublicEditorialVoice(file, data, "专题清单");
+  validatePublicEditorialVoice(file, content, "专题导语");
 
   const fileStem = fileName.slice(0, -3);
   const slug = nonEmptyString(data.slug) ? data.slug.trim() : fileStem;

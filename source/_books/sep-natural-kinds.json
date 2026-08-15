@@ -2,7 +2,7 @@
   "id": "sep-natural-kinds",
   "slug": "sep-natural-kinds",
   "title": "SEP：自然类",
-  "description": "《斯坦福哲学百科》词条《Natural Kinds》的中文译文，完整收录导言及第 1～3 节，涵盖自然类的形而上学、各门科学中的自然类与自然类词项语义学；未另收入词条书目附录。",
+  "description": "《斯坦福哲学百科》词条《Natural Kinds》的中文译文，收录导言及第 1～3 节，涵盖自然类的形而上学、各门科学中的自然类与自然类词项语义学，未含原词条书目附录。",
   "documentSlug": "sep-natural-kinds-intro-section-1",
   "script": "hans",
   "status": "complete",
@@ -24,7 +24,7 @@
     "translation": {
       "itemType": "book",
       "citationKey": "birdTobinSEPNaturalKindsRoofZH",
-      "extra": "《斯坦福哲学百科》词条《Natural Kinds》的中文译文，完整收录导言及第 1～3 节，涵盖自然类的形而上学、各门科学中的自然类与自然类词项语义学；未另收入词条书目附录。"
+      "extra": "中文译文收录导言及第 1～3 节，未含原词条书目附录。"
     }
   },
   "chapters": [

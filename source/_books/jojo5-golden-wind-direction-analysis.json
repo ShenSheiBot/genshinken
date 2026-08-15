@@ -2,7 +2,7 @@
   "id": "jojo5-golden-wind-direction-analysis",
   "slug": "jojo5-golden-wind-direction-analysis",
   "title": "速音 JOJO5 黄金之风演出分析",
-  "description": "速音围绕《JOJO的奇妙冒险 黄金之风》的色彩、分镜、转场、构图与声画关系所作的逐集演出分析。本连载当前收录第02集与第03－07集两章；更早的第01集及第02集（上）仅见外部发布页。",
+  "description": "速音围绕《JOJO的奇妙冒险 黄金之风》的色彩、分镜、转场、构图与声画关系所作的逐集演出分析，收录第02集与第03－07集两组文章。",
   "documentSlug": "jojo5-golden-wind-direction-analysis-episode-02",
   "script": "hans",
   "status": "paused",
@@ -16,7 +16,7 @@
     "translation": {
       "itemType": "book",
       "citationKey": "suyin2018jojo5GoldenWindDirectionAnalysis",
-      "extra": "本连载当前收录2018-12-10发布的第02集分析与2019-01-05发布的第03－07集分析；更早的第01集及第02集（上）仅见外部发布页。"
+      "extra": "收录2018-12-10发布的第02集分析与2019-01-05发布的第03－07集分析。"
     }
   },
   "chapters": [

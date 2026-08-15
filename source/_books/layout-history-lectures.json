@@ -2,7 +2,7 @@
   "id": "layout-history-lectures",
   "slug": "layout-history-lectures",
   "title": "Layout 的历史",
-  "description": "日本动画人协会第六回《透视与 Layout 讲座－历史篇》的中文资料集，收录笹木信作的 Layout 发展史讲义，以及现存第一、第三、第四、第五次讲座事前提问集。原资料明确说明第二次未募集提问；现有五篇已经归并，但来源资料仍含其他参考材料，未据此宣称全系列完结。",
+  "description": "日本动画人协会第六回《透视与 Layout 讲座－历史篇》的中文资料集，收录笹木信作的 Layout 发展史讲义，以及第一、第三、第四、第五次讲座事前提问集。",
   "documentSlug": "layout-history-lecture-1-introduction-development",
   "script": "hans",
   "status": "paused",
@@ -29,7 +29,7 @@
     "translation": {
       "itemType": "book",
       "citationKey": "sasagi2019LayoutHistoryRoofZH",
-      "extra": "日本动画人协会第六回《透视与 Layout 讲座－历史篇》的中文资料集，收录笹木信作的 Layout 发展史讲义，以及现存第一、第三、第四、第五次讲座事前提问集。原资料明确说明第二次未募集提问，本资料集按现存五部分完整收录。"
+      "extra": "中文资料集由 Layout 发展史讲义与第一、第三、第四、第五次讲座事前提问集组成；第二次讲座未募集提问。"
     }
   },
   "chapters": [
