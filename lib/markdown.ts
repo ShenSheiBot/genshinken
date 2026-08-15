@@ -4,7 +4,7 @@
    - CJK 友好的强调（**中文：**后接中文也能加粗）
    - 标题加 id（便于锚点）
    - 脚注 _ftn/_ftnref 互锚（Word/Outline 导出的脚注可往返跳转）
-   - 相对图片路径 attachments/x → /attachments/x；清理 Typora 尺寸标注
+   - 文章归档图片指向 R2；其他相对图片路径 attachments/x → /attachments/x
    - 外链 target=_blank；失效的 mention:// 链接降级为纯文本
    ============================================================ */
 import { unified } from "unified";
@@ -19,6 +19,7 @@ import rehypeStringify from "rehype-stringify";
 import { visit } from "unist-util-visit";
 import type { Root, Element } from "hast";
 import { sanitizePublicContentHtml } from "./media-material-runtime.mjs";
+import { rewriteRoofArchiveAssetUrl } from "./archive-assets-runtime.mjs";
 
 const SIZE_TITLE = /^\s*=(\d+)x(\d+)\s*$/; // Typora/Hexo 图片尺寸标注
 
@@ -126,6 +127,7 @@ function rehypeRewrite() {
         const isAbsolute =
           /^https?:\/\//.test(src) || src.startsWith("/") || src.startsWith("data:");
         if (!isAbsolute) props.src = "/" + src.replace(/^\.?\//, "");
+        props.src = rewriteRoofArchiveAssetUrl(String(props.src));
         // 清理 " =1535x1024" 这类尺寸标注，转成 width/height 以减少布局抖动
         if (typeof props.title === "string") {
           const m = props.title.match(SIZE_TITLE);

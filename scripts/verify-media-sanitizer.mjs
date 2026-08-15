@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import { sanitizeMediaMaterial, sanitizePublicContentHtml } from "../lib/media-material.ts";
+import { renderMarkdown } from "../lib/markdown.ts";
 
 const malicious = `
   <p class="keep" data-state="safe" aria-label="正文" onclick="alert(1)" style="color:red">
@@ -49,6 +50,15 @@ assert.equal(
   pageCommentClean,
   "<p>前文<!-- p.006 -->后文</p>",
   "numeric source-page comments must survive in place while arbitrary comments are removed"
+);
+
+const archiveImage = await renderMarkdown(
+  "![归档插图](attachments/roof-archive/cv1530117/01-shanghai-skyline.jpg)"
+);
+assert.match(
+  archiveImage,
+  /src="https:\/\/assets\.labonroof\.top\/roof-archive\/cv1530117\/01-shanghai-skyline\.jpg"/u,
+  "roof archive images must render from the R2 custom domain"
 );
 
 console.log("media material sanitizer verification passed");

@@ -16,11 +16,18 @@ import {
   pageCitationDefaults,
   parseCitationInput,
 } from "../lib/citations.ts";
+import { roofArchiveAssetKey } from "../lib/archive-assets.ts";
 
 const postsDirectory = path.join(process.cwd(), "source", "_posts");
 const booksDirectory = path.join(process.cwd(), "source", "_books");
 const topicsDirectory = path.join(process.cwd(), "source", "_topics");
 const tagAliasFile = path.join(process.cwd(), "editorial-sources", "tag-aliases.json");
+const roofAssetManifestFile = path.join(
+  process.cwd(),
+  "editorial-sources",
+  "roof-archive",
+  "assets-manifest.json"
+);
 const publicDirectory = path.join(process.cwd(), "public");
 const validSections = new Set(["essay", "review", "translation", "community", "multimedia", "negative"]);
 const validHanScripts = new Set(["hans", "hant"]);
@@ -32,6 +39,14 @@ const validTopicItemTypes = new Set(["post", "book", "media"]);
 const tagAliases = fs.existsSync(tagAliasFile)
   ? JSON.parse(fs.readFileSync(tagAliasFile, "utf8")).aliases ?? {}
   : {};
+const roofAssetManifest = fs.existsSync(roofAssetManifestFile)
+  ? JSON.parse(fs.readFileSync(roofAssetManifestFile, "utf8"))
+  : { assets: [] };
+const roofAssetKeys = new Set(
+  Array.isArray(roofAssetManifest.assets)
+    ? roofAssetManifest.assets.map((asset) => asset?.key).filter((key) => typeof key === "string")
+    : []
+);
 const slugPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const prohibitedMediaElement = /<\s*\/?\s*(?:iframe|video|audio|object|embed|script|style)\b/i;
 const inlineEventHandler = /\son[a-z][\w:-]*\s*=/i;
@@ -124,11 +139,17 @@ function validatePublicEditorialVoice(file, value, keyPath = "公开内容") {
   }
 }
 
-// 正文本地图片存在性校验：src 映射到 public/ 下（渲染管线把 attachments/x 与 /x
-// 都改写为 /attachments/... 或 /x）；写错图名会静默上线 404 破图，这里在构建期拦下。
+// 屋顶归档图片以提交的 R2 清单为准；其他相对图片仍映射到 public/ 下。
 function checkLocalAsset(file, rawSrc, line) {
   const src = String(rawSrc ?? "").trim();
   if (!src || /^(https?:|data:|mailto:|tel:|#)/i.test(src) || src.startsWith("//")) return;
+  const roofAssetKey = roofArchiveAssetKey(src);
+  if (roofAssetKey) {
+    if (!roofAssetKeys.has(roofAssetKey)) {
+      report(errors, file, `${line ? `第 ${line} 行` : "正文"}图片未登记在 R2 资产清单：${src}`);
+    }
+    return;
+  }
   const pathname = src.replace(/^\.?\//, "").split(/[?#]/, 1)[0];
   if (!pathname) return;
   const root = path.resolve(publicDirectory);
