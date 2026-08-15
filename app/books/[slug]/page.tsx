@@ -233,7 +233,9 @@ export default async function BookPage({
             {book.subtitle ? <p className={styles.bookSubtitle}>{book.subtitle}</p> : null}
             <div className={styles.responsibility}>
               <div><span>作者</span><CreditLinks credits={authors} showMarks={false} separator="·" /></div>
-              <div><span>译者</span><CreditLinks credits={translators} showMarks={false} separator="·" /></div>
+              {translators.length > 0 ? (
+                <div><span>译者</span><CreditLinks credits={translators} showMarks={false} separator="·" /></div>
+              ) : null}
               {proofreaders.length > 0 && (
                 <div><span>校对</span><CreditLinks credits={proofreaders} showMarks={false} separator="·" /></div>
               )}
