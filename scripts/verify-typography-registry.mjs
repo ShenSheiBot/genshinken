@@ -37,8 +37,9 @@ const REGISTRY = {
     manualReview: "顿号/逗号的名词并列判定是语义问题，自动断言误报率过高。",
   },
   "TYPO-P7": {
-    manualReview:
-      "正文残留脚注编号需与合法数字上标区分，现阶段靠脚注转换流程与人工审读；后续可在语料扫描中试验模式。",
+    // 仅执法已复现的低误报形态：独立“注释/脚注”行后紧跟普通编号列表。
+    // 其他裸编号仍需人工判断，避免把数学编号、页码和正常枚举误判为脚注。
+    enforcedBy: { script: "scripts/validate-content.mjs", anchor: "manualFootnoteSection" },
   },
   "TYPO-P8": {
     manualReview: "整段引文是否该转 blockquote 是编辑判断，无法自动断言。",

@@ -30,62 +30,62 @@ citation:
 
 
 
-尤其要注意的是，齐泽克公开吸收了两种直球反列宁主义方法论，以重塑辩证唯物主义理论。在第一种方法中，他完全站到了列宁在1908年所著的《唯物主义与经验批判主义》的反面，并热情地庆祝“物质的消失“——这一现象据说在量子物理中被观测过[1] （更近一些时候，在弦理论中，该现象的观测结果更加显著）。在第二种方法中，齐泽克颠覆了要在唯心主义/观念论中发现唯物主义的观点（这部分出自列宁在《哲学笔记》中对黑格尔《小逻辑》的评论[2]），转而坚持认为（这也隐秘契合了卡尔.马克思在十一条《关于费尔巴哈的提纲》中提出的第一种方法[3]），在唯心主义/观念论中注入唯物主义迫在眉睫，尤其是观念论中的超越论部分与后康德主义三道九流[4]。当然，齐泽克虽然在哲学理论层面上反列宁主义，但在政治态度上（可以说和实践哲学处在同一级别）却是（某种程度上）坚定的列宁主义者。这里我插几句，这也就是说，第一，齐泽克对辩证唯物主义的反列宁式修正，在唯心主义（即非唯物主义nonmaterialist）的歧途上走的太远了；第二，齐泽克用自己黑格尔－拉康式的辩证唯物主义理论，去沟通‘自然与精神（Natur und Geist，按照黑格尔的说法）’和‘实在与现实（按照拉康的说法）’二者的关系，会引发致命的问题，这些问题不仅悬而未决，还带有危险的模糊性，时不时会让齐泽克的唯物主义理论与同时代的“唯物主义理论”之间呈现出令人不安的相似性，而对于后者齐泽克又曾清晰且正确地斥责它们为“伪唯物主义（pseudomaterialist）”。
+尤其要注意的是，齐泽克公开吸收了两种直球反列宁主义方法论，以重塑辩证唯物主义理论。在第一种方法中，他完全站到了列宁在1908年所著的《唯物主义与经验批判主义》的反面，并热情地庆祝“物质的消失“——这一现象据说在量子物理中被观测过[^zizek-materialism-1] （更近一些时候，在弦理论中，该现象的观测结果更加显著）。在第二种方法中，齐泽克颠覆了要在唯心主义/观念论中发现唯物主义的观点（这部分出自列宁在《哲学笔记》中对黑格尔《小逻辑》的评论[^zizek-materialism-2]），转而坚持认为（这也隐秘契合了卡尔.马克思在十一条《关于费尔巴哈的提纲》中提出的第一种方法[^zizek-materialism-3]），在唯心主义/观念论中注入唯物主义迫在眉睫，尤其是观念论中的超越论部分与后康德主义三道九流[^zizek-materialism-4]。当然，齐泽克虽然在哲学理论层面上反列宁主义，但在政治态度上（可以说和实践哲学处在同一级别）却是（某种程度上）坚定的列宁主义者。这里我插几句，这也就是说，第一，齐泽克对辩证唯物主义的反列宁式修正，在唯心主义（即非唯物主义nonmaterialist）的歧途上走的太远了；第二，齐泽克用自己黑格尔－拉康式的辩证唯物主义理论，去沟通‘自然与精神（Natur und Geist，按照黑格尔的说法）’和‘实在与现实（按照拉康的说法）’二者的关系，会引发致命的问题，这些问题不仅悬而未决，还带有危险的模糊性，时不时会让齐泽克的唯物主义理论与同时代的“唯物主义理论”之间呈现出令人不安的相似性，而对于后者齐泽克又曾清晰且正确地斥责它们为“伪唯物主义（pseudomaterialist）”。
 
 
 
 
-在《绝对反弹》的开篇，齐泽克呼吁对《唯物主义和经验批判主义》进行内部的批判。众所周知，列宁在这本书中最为关心的问题，就是对抗那群唯心主义科学家和哲学家，利用当时推翻牛顿学说的物理学革命性剧变。在这位《唯物主义与经验批判主义》的作者看来，这群科学、意识形态意义上的剥削者是在伺机利用自然科学的危机，以直接或间接地攻击唯物主义的地位，而在列宁看来，该地位是马克思主义总体性（überhaupt）的一部分[5]。
+在《绝对反弹》的开篇，齐泽克呼吁对《唯物主义和经验批判主义》进行内部的批判。众所周知，列宁在这本书中最为关心的问题，就是对抗那群唯心主义科学家和哲学家，利用当时推翻牛顿学说的物理学革命性剧变。在这位《唯物主义与经验批判主义》的作者看来，这群科学、意识形态意义上的剥削者是在伺机利用自然科学的危机，以直接或间接地攻击唯物主义的地位，而在列宁看来，该地位是马克思主义总体性（überhaupt）的一部分[^zizek-materialism-5]。
 
 
 
 
-齐泽克在2014年出版的《绝对反弹》的开篇词中（这是2012年的杰作《少于无》的续作）准确抨击了这种论断，他认为列宁在激烈捍卫唯物主义坚定的实在论原则的过程中，没能守住恩格斯与他本人支持的那种唯物主义标准[6]。在《唯物主义与经验批判主义》的第五章，列宁援引恩格斯的观点，认为唯物主义需要随着科学上的新发现，改变自身的形式，列宁还把这一点用在了恩格斯身上。[7]”齐泽克继续说：
+齐泽克在2014年出版的《绝对反弹》的开篇词中（这是2012年的杰作《少于无》的续作）准确抨击了这种论断，他认为列宁在激烈捍卫唯物主义坚定的实在论原则的过程中，没能守住恩格斯与他本人支持的那种唯物主义标准[^zizek-materialism-6]。在《唯物主义与经验批判主义》的第五章，列宁援引恩格斯的观点，认为唯物主义需要随着科学上的新发现，改变自身的形式，列宁还把这一点用在了恩格斯身上。[^zizek-materialism-7]”齐泽克继续说：
 
 
 
 
-相应的，今天我们要把这句名言用在列宁本人身上：如果他的《唯物主义和经验批判主义》明显没能成功应对那种将哲学唯物主义上升至相对论和量子力学层面带来的挑战，同时也没法帮助我们把握来自其他领域的突破（比如弗洛伊德的精神分析），那就更不用提21世纪共产主义的失败了[8]。
+相应的，今天我们要把这句名言用在列宁本人身上：如果他的《唯物主义和经验批判主义》明显没能成功应对那种将哲学唯物主义上升至相对论和量子力学层面带来的挑战，同时也没法帮助我们把握来自其他领域的突破（比如弗洛伊德的精神分析），那就更不用提21世纪共产主义的失败了[^zizek-materialism-8]。
 
 
 
 
-对于《唯物主义和经验批判主义》这本书，尽管我们猜测其本义是想要及时发动攻击，出其不意地打压那种为反唯物主义和反实在论立场提供（伪）科学依据的行为，但它却忽视了从一开始，辩证唯物主义理论的潜力恰恰正是隐藏在后牛顿主义物理学之中（当然，在《少于无》和《绝对反弹》以及他早期的著作中，齐泽克一直都致力于沟通（interface）量子物理和他混合德国观念论/马克思主义/拉康哲学三家理论的框架[3]）。而列宁却仅仅将物理学视为被理论与意识形态敌人盗用的武器。除此以外，列宁的唯物主义理论在论战进攻上过于粗糙（虽然这种粗糙本身是经过仔细计算的，是他精明的政治与意识形态战略的一部分），看不出有严肃使用过辩证法的痕迹。换句话说，这篇写于1908年的论文在和对手正面交锋时，似乎没能真正提出一种辩证唯物主义的替代方案，以取代它猛烈抨击的世界观。考虑到这些局限性，齐泽克的所作所为确实是有道理的：他强调需要“重复列宁”（无论是哲学层面还是政治层面），并在21世纪早期即《唯物主义与经验批判主义》出版一百年后，通过上演列宁本人的姿态（列宁认为，和恩格斯相比，这种姿态更值得效仿），从而超越列宁。
+对于《唯物主义和经验批判主义》这本书，尽管我们猜测其本义是想要及时发动攻击，出其不意地打压那种为反唯物主义和反实在论立场提供（伪）科学依据的行为，但它却忽视了从一开始，辩证唯物主义理论的潜力恰恰正是隐藏在后牛顿主义物理学之中（当然，在《少于无》和《绝对反弹》以及他早期的著作中，齐泽克一直都致力于沟通（interface）量子物理和他混合德国观念论/马克思主义/拉康哲学三家理论的框架[^zizek-materialism-3]）。而列宁却仅仅将物理学视为被理论与意识形态敌人盗用的武器。除此以外，列宁的唯物主义理论在论战进攻上过于粗糙（虽然这种粗糙本身是经过仔细计算的，是他精明的政治与意识形态战略的一部分），看不出有严肃使用过辩证法的痕迹。换句话说，这篇写于1908年的论文在和对手正面交锋时，似乎没能真正提出一种辩证唯物主义的替代方案，以取代它猛烈抨击的世界观。考虑到这些局限性，齐泽克的所作所为确实是有道理的：他强调需要“重复列宁”（无论是哲学层面还是政治层面），并在21世纪早期即《唯物主义与经验批判主义》出版一百年后，通过上演列宁本人的姿态（列宁认为，和恩格斯相比，这种姿态更值得效仿），从而超越列宁。
 
 
 
 
-虽然《唯物主义与经验批判主义》一书没能促就唯物主义哲学与量子物理接触——补充一句，齐泽克在很多场合都曾有理有据地批判过此书，认为这部1908年著作中的唯物主义甚至犯下了马克思早在“论文一”[10]中就批判过“主观冥想式（contemplative）”（缺乏历史性与辩证性；译者注：指费尔巴哈唯物主义中的错误）错误——但对列宁做一些魔鬼式的宣传也没什么不妥。这是因为，列宁写作《唯物主义与经验批判主义》的初衷，就不是想要建立一套完整、自足的辩证唯物主义理论总体性陈述（更不用讲应对共产主义本身的问题或是弗洛伊德精神分析了）。尼古拉.布哈林曾讲过一些标准的（苏联式）台词，其中一句是说列宁主义的辩证唯物主义是（或者应当是）建立在《哲学笔记》中的辩证法和《唯物主义与经验批判主义》中的唯物主义，二者结合的共同基础之上[11]。人们可能会勉强承认齐泽克所说的，《哲学笔记》没有回到新物理学的论题上。但历史事实却是（尤其是被劳伦.R.格雷汉姆[Loren.R.Graham 哈佛大学和麻省理工学院苏联科学史专家]一丝不苟地清晰记录下来的历史），很多苏联哲学家和科学家都曾主动抵制《唯物主义与经验批判主义》和《哲学笔记》所讲的辩证唯物主义，并严肃地实践和解释量子力学、相对论、宇宙学和天体演化学之类的科学（更不用提物理学以外的化学和生命科学了）。
+虽然《唯物主义与经验批判主义》一书没能促就唯物主义哲学与量子物理接触——补充一句，齐泽克在很多场合都曾有理有据地批判过此书，认为这部1908年著作中的唯物主义甚至犯下了马克思早在“论文一”[^zizek-materialism-10]中就批判过“主观冥想式（contemplative）”（缺乏历史性与辩证性；译者注：指费尔巴哈唯物主义中的错误）错误——但对列宁做一些魔鬼式的宣传也没什么不妥。这是因为，列宁写作《唯物主义与经验批判主义》的初衷，就不是想要建立一套完整、自足的辩证唯物主义理论总体性陈述（更不用讲应对共产主义本身的问题或是弗洛伊德精神分析了）。尼古拉.布哈林曾讲过一些标准的（苏联式）台词，其中一句是说列宁主义的辩证唯物主义是（或者应当是）建立在《哲学笔记》中的辩证法和《唯物主义与经验批判主义》中的唯物主义，二者结合的共同基础之上[^zizek-materialism-11]。人们可能会勉强承认齐泽克所说的，《哲学笔记》没有回到新物理学的论题上。但历史事实却是（尤其是被劳伦.R.格雷汉姆[Loren.R.Graham 哈佛大学和麻省理工学院苏联科学史专家]一丝不苟地清晰记录下来的历史），很多苏联哲学家和科学家都曾主动抵制《唯物主义与经验批判主义》和《哲学笔记》所讲的辩证唯物主义，并严肃地实践和解释量子力学、相对论、宇宙学和天体演化学之类的科学（更不用提物理学以外的化学和生命科学了）。
 
 
 
 
-我坚持认为，在柏林墙倒塌与20世纪末的一系列事件后，无数激进左翼都对“共产主义理想（the idea of Communism 阿兰.巴迪欧语）”的嘈杂喧嚣与横空天降表示抗议，抗议本身固然正确，但当上文所述的苏联科学家和科学辩证唯物主义哲学家的劳动成果遭到无声地践踏时，他们却对此视而不见，装聋作哑。这也就是说，虽然当代马克思主义者强烈反对将马克思主义政治学无脑地与斯大林画上等号这种庸俗的反马克思主义姿态，但在大多数情况下，这些马克思主义者却对那种将苏联式马克思主义理论（即恩格斯－列宁主义辩证法）庸俗化为李森特一人的行为，反抗有限（如果有进行过反对的话）[12]。在我看来，哲学与科学的灾难以及政治－意识形态的灾难，恰恰源于苏联及其附属国实存社会主义（Really Existing Socialism）的崩溃(这又悲哀地证明了本雅明在《历史哲学论纲》中发出的警告：“要是敌人获胜，即便死者也会失去安全。而这个要做胜利者的敌人从来不愿善罢甘休”[13])。我担心齐泽克对《唯物主义与经验批判主义》的迅速摒弃，无意之中可能会给这些受到不公正对待，并且不曾被哀悼之人（losses）的坟墓上，堆积更多的尘土，从而使坟墓更难以发现。但除此以外，我还是相信，通过重新审视自列宁时代的苏联以降的多学科理念与围绕《自然辩证法（Naturdialektik）》展开的诸多争论，我们会发现，齐泽克的唯物主义与起死回生的辩证唯物主义，总体而言是颇有助益的，无论是从知识－历史深度还是从哲学与政治深度而言都是如此。
+我坚持认为，在柏林墙倒塌与20世纪末的一系列事件后，无数激进左翼都对“共产主义理想（the idea of Communism 阿兰.巴迪欧语）”的嘈杂喧嚣与横空天降表示抗议，抗议本身固然正确，但当上文所述的苏联科学家和科学辩证唯物主义哲学家的劳动成果遭到无声地践踏时，他们却对此视而不见，装聋作哑。这也就是说，虽然当代马克思主义者强烈反对将马克思主义政治学无脑地与斯大林画上等号这种庸俗的反马克思主义姿态，但在大多数情况下，这些马克思主义者却对那种将苏联式马克思主义理论（即恩格斯－列宁主义辩证法）庸俗化为李森特一人的行为，反抗有限（如果有进行过反对的话）[^zizek-materialism-12]。在我看来，哲学与科学的灾难以及政治－意识形态的灾难，恰恰源于苏联及其附属国实存社会主义（Really Existing Socialism）的崩溃(这又悲哀地证明了本雅明在《历史哲学论纲》中发出的警告：“要是敌人获胜，即便死者也会失去安全。而这个要做胜利者的敌人从来不愿善罢甘休”[^zizek-materialism-13])。我担心齐泽克对《唯物主义与经验批判主义》的迅速摒弃，无意之中可能会给这些受到不公正对待，并且不曾被哀悼之人（losses）的坟墓上，堆积更多的尘土，从而使坟墓更难以发现。但除此以外，我还是相信，通过重新审视自列宁时代的苏联以降的多学科理念与围绕《自然辩证法（Naturdialektik）》展开的诸多争论，我们会发现，齐泽克的唯物主义与起死回生的辩证唯物主义，总体而言是颇有助益的，无论是从知识－历史深度还是从哲学与政治深度而言都是如此。
 
 
 
 
-诚然，在《少于无》中，齐泽克一度简要提到了苏联式辩证唯物主义，并对此表示称赞；此外他还极富创意地回顾了历史唯物主义与辩证唯物主义的区别，并在本体论层面认为这种区别反映出了一种“视差间隙（parallax gap）”，是内在于人类的作为自然存在和社会历史存在的对抗与分裂[14]。这种创造性的姿态隐秘地反对了青年卢卡奇提出的，运用中介（mediating）/被中介的（mediated）人类实践的历史唯物主义，攻击与自然过程直接接触的辩证唯物主义的观点——他在1923年出版的《历史与阶级意识》与其他相关文章中说到，为了成为完全的历史唯物主义马克思主义者，人们必须将“自然”与自然科学纯然视为意识形让步后，社会建构的人工构造（artificial configuration）[15]。这和恩格斯主义自然辩证法及其理论分支中狂妄拙劣的自然主义和实在论形成鲜明对比[16]。对卢卡奇的反对一开始是隐秘含蓄的，但后来在《少于无》中，齐泽克公然确认了对卢卡奇（包括他不少的西马后继者）的批评，批评卢卡奇过于急切地试图复苏黑格尔的自然哲学（Naturphilosophie）和马克思的自然辩证法（Naturdialektik）[17]。简而言之（齐泽克在《绝对反弹》中同样谈过这点[18]），卢卡奇的《历史与阶级意识》一书，以及其挑拨离间历史唯物主义与辩证唯物主义关系的行为，造就了后来西方（欧洲）马克思主义与东方（苏联）马克思主义的决定性分歧。
+诚然，在《少于无》中，齐泽克一度简要提到了苏联式辩证唯物主义，并对此表示称赞；此外他还极富创意地回顾了历史唯物主义与辩证唯物主义的区别，并在本体论层面认为这种区别反映出了一种“视差间隙（parallax gap）”，是内在于人类的作为自然存在和社会历史存在的对抗与分裂[^zizek-materialism-14]。这种创造性的姿态隐秘地反对了青年卢卡奇提出的，运用中介（mediating）/被中介的（mediated）人类实践的历史唯物主义，攻击与自然过程直接接触的辩证唯物主义的观点——他在1923年出版的《历史与阶级意识》与其他相关文章中说到，为了成为完全的历史唯物主义马克思主义者，人们必须将“自然”与自然科学纯然视为意识形让步后，社会建构的人工构造（artificial configuration）[^zizek-materialism-15]。这和恩格斯主义自然辩证法及其理论分支中狂妄拙劣的自然主义和实在论形成鲜明对比[^zizek-materialism-16]。对卢卡奇的反对一开始是隐秘含蓄的，但后来在《少于无》中，齐泽克公然确认了对卢卡奇（包括他不少的西马后继者）的批评，批评卢卡奇过于急切地试图复苏黑格尔的自然哲学（Naturphilosophie）和马克思的自然辩证法（Naturdialektik）[^zizek-materialism-17]。简而言之（齐泽克在《绝对反弹》中同样谈过这点[^zizek-materialism-18]），卢卡奇的《历史与阶级意识》一书，以及其挑拨离间历史唯物主义与辩证唯物主义关系的行为，造就了后来西方（欧洲）马克思主义与东方（苏联）马克思主义的决定性分歧。
 
 
 
 
-和阿尔弗雷德.施密特类似（施密特于1962年写出了《马克思的自然概念》一书，虽然此书实际上是在霍克海默与阿多诺的指导下完成的博士论文[在实证式、经验式的自然科学方面，他们是卢卡奇主义者]，但也反映了法兰克福学派内部的异见与分歧，至少从自然主义唯物主义方面如此），齐泽克试图在历史唯物主义的历史主义社会建构主义（historicist social constructivism）与辩证唯物主义的实在论（准）自然主义（realist quasi-naturalism）之间，达成一种微妙的平衡[21]。正如齐泽克在1996年的访谈中所说，“不是所有事物都是文化的……虽然你无法确定一个纯粹自然的时刻，一个没有被文化中介的时刻，但你仍然不能得出结论，说所有事物都是文化的。否则，你就陷入了话语唯心主义[22]（这一说法在《绝对反弹》中也出现过[23]）。”如果对自然（作为实在界）与文化（作为想象界－象征界现实）的区分是内在于后者的[24]，如果无论如何都要证实反唯心主义的唯物主义（是反对例如青年卢卡奇的历史唯物主义，“话语唯心主义”等等的），那么，我们或许能得出这样一个结论，那就是我们需要一种元－辩证唯物主义，用以描述处在辩证唯物主义（比如，作为自然的实在界）和历史唯物主义（例如，作为文化的想象界－象征界现实）之间的辩证法[25]。换句话说，如果如《绝对反弹》所说的那样，“用以将实在界从象征界中分离出来的界限，同时内在于并外在于象征界[26]”，那么我们在建立这样一种唯物主义的时候，就需要在（元）辩证法层面施以巧计，因为我们不得不在前-/非辩证的唯物主义以及唯心主义（包括伪马克思主义）之间如履薄冰、腹背受敌地前进。
+和阿尔弗雷德.施密特类似（施密特于1962年写出了《马克思的自然概念》一书，虽然此书实际上是在霍克海默与阿多诺的指导下完成的博士论文[在实证式、经验式的自然科学方面，他们是卢卡奇主义者]，但也反映了法兰克福学派内部的异见与分歧，至少从自然主义唯物主义方面如此），齐泽克试图在历史唯物主义的历史主义社会建构主义（historicist social constructivism）与辩证唯物主义的实在论（准）自然主义（realist quasi-naturalism）之间，达成一种微妙的平衡[^zizek-materialism-21]。正如齐泽克在1996年的访谈中所说，“不是所有事物都是文化的……虽然你无法确定一个纯粹自然的时刻，一个没有被文化中介的时刻，但你仍然不能得出结论，说所有事物都是文化的。否则，你就陷入了话语唯心主义[^zizek-materialism-22]（这一说法在《绝对反弹》中也出现过[^zizek-materialism-23]）。”如果对自然（作为实在界）与文化（作为想象界－象征界现实）的区分是内在于后者的[^zizek-materialism-24]，如果无论如何都要证实反唯心主义的唯物主义（是反对例如青年卢卡奇的历史唯物主义，“话语唯心主义”等等的），那么，我们或许能得出这样一个结论，那就是我们需要一种元－辩证唯物主义，用以描述处在辩证唯物主义（比如，作为自然的实在界）和历史唯物主义（例如，作为文化的想象界－象征界现实）之间的辩证法[^zizek-materialism-25]。换句话说，如果如《绝对反弹》所说的那样，“用以将实在界从象征界中分离出来的界限，同时内在于并外在于象征界[^zizek-materialism-26]”，那么我们在建立这样一种唯物主义的时候，就需要在（元）辩证法层面施以巧计，因为我们不得不在前-/非辩证的唯物主义以及唯心主义（包括伪马克思主义）之间如履薄冰、腹背受敌地前进。
 
 
 
 
-正如我早已说明的那样，齐泽克含沙射影地指出，1908年的列宁试图使马克思主义退行到1845年的状态，退行到费尔巴哈和18世纪法国唯物主义先驱们“主观冥想（contemplative）”的姿态。但是，在齐泽克近期推进当代辩证唯物主义重构的工作中，马克思本人同样没能躲过他的批判。齐泽克不仅借马克思批评列宁，还借黑格尔批判了马克思。在《少于无》中，齐泽克坚称“今天，人们应当从马克思回到黑格尔那里，并实施对马克思本人的‘唯物主义逆转’。[27]”除此以外，齐泽克还对青年马克思（1845年以前）提出了阿尔都赛式的诉讼，指责他过于亚里士多德主义，竟认为存在未被异化的人类本质是有效且可能的[28]。我建议你们在阅读《少于无》中的这个批判时，要配合《绝对反弹》一起阅读：“在今天成为一名真正的唯物主义者的唯一方式就是将唯心主义推到极限[29]。”（在这个例子中，在今天成为一名真正的马克思主义历史/辩证唯物主义者的唯一方法，就是将黑格尔的绝对唯心主义推至极限——齐泽克暗示说马克思本人在他成熟期的作品中，开始具体地研究涉及“现实的抽象”的结构和现象[30]）齐泽克后来使用巴迪欧在《世界的逻辑》中的概念和语言，拓展了他的论著[31]。
+正如我早已说明的那样，齐泽克含沙射影地指出，1908年的列宁试图使马克思主义退行到1845年的状态，退行到费尔巴哈和18世纪法国唯物主义先驱们“主观冥想（contemplative）”的姿态。但是，在齐泽克近期推进当代辩证唯物主义重构的工作中，马克思本人同样没能躲过他的批判。齐泽克不仅借马克思批评列宁，还借黑格尔批判了马克思。在《少于无》中，齐泽克坚称“今天，人们应当从马克思回到黑格尔那里，并实施对马克思本人的‘唯物主义逆转’。[^zizek-materialism-27]”除此以外，齐泽克还对青年马克思（1845年以前）提出了阿尔都赛式的诉讼，指责他过于亚里士多德主义，竟认为存在未被异化的人类本质是有效且可能的[^zizek-materialism-28]。我建议你们在阅读《少于无》中的这个批判时，要配合《绝对反弹》一起阅读：“在今天成为一名真正的唯物主义者的唯一方式就是将唯心主义推到极限[^zizek-materialism-29]。”（在这个例子中，在今天成为一名真正的马克思主义历史/辩证唯物主义者的唯一方法，就是将黑格尔的绝对唯心主义推至极限——齐泽克暗示说马克思本人在他成熟期的作品中，开始具体地研究涉及“现实的抽象”的结构和现象[^zizek-materialism-30]）齐泽克后来使用巴迪欧在《世界的逻辑》中的概念和语言，拓展了他的论著[^zizek-materialism-31]。
 
 
 
 
-今天，支配性的哲学斗争发生在唯物主义的领域内，发生在民主唯物主义（democratic materialism）与辨证唯物主义之间——辩证唯物主义的一大特色就是它吸收了唯心主义的遗产，从而去反抗披着各式各样伪装的庸俗的民主唯物主义（从科学主义的自然主义到后德勒兹主义所谓精神化的“活力”物质（vibrant matter））。首先，辩证唯物主义是一种没有物质的唯物主义（materialism without matter），它没有形而上学的物质概念，这种概念认为物质是被实质填满的实体（matter as a full substantial entity）——在辩证唯物主义中，物质“消失”在一套纯粹的形式关系中。其次，辩证唯物主义虽然是没有物质的唯物主义，但也不是没有观念（idea）的唯心主义（Idealism）——它是一种有观念（Idea）的唯物主义，确证了在唯心主义的空间之外的永恒观念。唯心主义的问题在于，如果我们的出发点是观念的永恒秩序（eternal order of Ideas），那又该如何解释短暂而有限的现实；唯物主义则于此相反，唯物主义的问题在于如何解释从困于有限的历史境遇中的人类活动中产生的永恒观念[32]。
+今天，支配性的哲学斗争发生在唯物主义的领域内，发生在民主唯物主义（democratic materialism）与辨证唯物主义之间——辩证唯物主义的一大特色就是它吸收了唯心主义的遗产，从而去反抗披着各式各样伪装的庸俗的民主唯物主义（从科学主义的自然主义到后德勒兹主义所谓精神化的“活力”物质（vibrant matter））。首先，辩证唯物主义是一种没有物质的唯物主义（materialism without matter），它没有形而上学的物质概念，这种概念认为物质是被实质填满的实体（matter as a full substantial entity）——在辩证唯物主义中，物质“消失”在一套纯粹的形式关系中。其次，辩证唯物主义虽然是没有物质的唯物主义，但也不是没有观念（idea）的唯心主义（Idealism）——它是一种有观念（Idea）的唯物主义，确证了在唯心主义的空间之外的永恒观念。唯心主义的问题在于，如果我们的出发点是观念的永恒秩序（eternal order of Ideas），那又该如何解释短暂而有限的现实；唯物主义则于此相反，唯物主义的问题在于如何解释从困于有限的历史境遇中的人类活动中产生的永恒观念[^zizek-materialism-32]。
 
 
 
 
-在《绝对反弹》的开头部分，齐泽克提出了一份简洁但深刻的清单，列举了当前非辩证的唯物主义思想（他将所有这些思想都归到巴迪欧“民主唯物主义”的名下），他指出这些思想都没有吸收康德主义，尤其是后康德主义德国观念论哲学思想（这些思想，尤其是黑格尔的绝对唯心主义，标志着“唯心主义遗产”的巅峰）[33]。除此以外，齐泽克尽管在《少于无》和《绝对反弹》中曾多次诟病过巴迪欧式的唯物主义[34]，但从根本上还是支持《世界的逻辑》中的“唯物辩证法（materialist dialectic）”的（通过将其与民主唯物主义比较[35]），认为它是21世纪真正的、值得进一步发展的辩证唯物主义。和巴迪欧类似，齐泽克在《少于无》的结语中，呼吁一种能超越福柯－阿甘本动物般“赤裸生命”的生命政治界限的唯物主义理论[36]。
+在《绝对反弹》的开头部分，齐泽克提出了一份简洁但深刻的清单，列举了当前非辩证的唯物主义思想（他将所有这些思想都归到巴迪欧“民主唯物主义”的名下），他指出这些思想都没有吸收康德主义，尤其是后康德主义德国观念论哲学思想（这些思想，尤其是黑格尔的绝对唯心主义，标志着“唯心主义遗产”的巅峰）[^zizek-materialism-33]。除此以外，齐泽克尽管在《少于无》和《绝对反弹》中曾多次诟病过巴迪欧式的唯物主义[^zizek-materialism-34]，但从根本上还是支持《世界的逻辑》中的“唯物辩证法（materialist dialectic）”的（通过将其与民主唯物主义比较[^zizek-materialism-35]），认为它是21世纪真正的、值得进一步发展的辩证唯物主义。和巴迪欧类似，齐泽克在《少于无》的结语中，呼吁一种能超越福柯－阿甘本动物般“赤裸生命”的生命政治界限的唯物主义理论[^zizek-materialism-36]。
 
 
 
@@ -162,302 +162,316 @@ citation:
 
 最后，齐泽克虽然明智地意识到量子不确定性并不等同于主体的自由[即自我决定]（这就好像偶然性和随机性并不等于自治和能动）[58]，但他在对必要条件和充分条件进行简单但重要的区分时，却将自己展现为一名认知主义者。对于与作为分裂精神泛心论的伪唯物主义本体论相对的，当今真正的辩证唯物主义来说，作为自然的虚弱性/腐烂性的存在的不完备性为\$的出现提供了可能性，但同时又没有自动地或不可避免地使\$的出现成为现实。换句话说，被划杠的实在界是被划杠主体的必要条件，而非充分条件。此外，从方法论上讲，沿着康德与后康德主义德国唯心论的某些观点，这种超越论的，同时又是自然/唯物的主体性催化剂（它们本身是前/非主体性的）能够，并且应该从同一种主体性中，在事后通过反向工程创造出来。维持必要条件和充分条件的区别必然会有助于保护自己不落入“存在巨链”的枷锁之中。除了廉价空虚的没有唯物主义的（复数）唯物主义，不会有什么损失的。
 
+**原注 9：**
 
+- Žižek, The Indivisible Remainder, pp. 189–236.
+- Žižek, Less Than Nothing, pp. 740, 744, 910, 912, 914–915, 918–926, 929, 932–933, 945–946.
+- Žižek, Absolute Recoil, pp. 222, 225, 380–381, 390–391.
+- Adrian Johnston, Adventures in Transcendental Materialism: Dialogues with Contemporary Thinkers (Edinburgh: Edinburgh University Press, 2014), pp. 165–183.
 
+**原注 19：**
 
+- Herbert Marcuse, Soviet Marxism: A Critical Analysis (New York: Penguin, 1971), pp. 115, 118–121.
+- Timpanaro, On Materialism, pp. 7, 15–16, 29, 32, 35–36, 43–45, 47–48, 56, 58, 73–74, 76, 129, 209, 216–217, 232–233.
+- Graham, Science and Philosophy in the Soviet Union, pp. 29–30, 41.
+- Sheehan, Marxism and the Philosophy of Science, pp. 255, 258–259, 263, 277–279, 282.
 
+**原注 20：**
 
+- Max Horkheimer and Theodor W. Adorno, Dialectic of Enlightenment: Philosophical Fragments [ed. Gunzelin Schmid Noerr; trans. Edmund Jephcott] (Stanford: Stanford University Press, 2002), pp. xi–xii, xiv–xv, 3–4, 7, 65–66, 68, 201–202, 232.
 
-注释：
+[^zizek-materialism-1]: V. I. Lenin, Materialism and Empirio-Criticism (Peking: Foreign Languages
 
-1. V. I. Lenin, Materialism and Empirio-Criticism (Peking: Foreign Languages
+    Press, 1972), pp. 308–318.
 
-Press, 1972), pp. 308–318.
+    Slavoj Žižek, The Indivisible Remainder: An Essay on Schelling and Related
 
-Slavoj Žižek, The Indivisible Remainder: An Essay on Schelling and Related
+    Matters (London: Verso, 1996), pp. 165, 230–231.
 
-Matters (London: Verso, 1996), pp. 165, 230–231.
+    Slavoj Žižek, Organs without Bodies: On Deleuze and Consequences (New
 
-Slavoj Žižek, Organs without Bodies: On Deleuze and Consequences (New
+    York: Routledge, 2004), pp. 24–25.
 
-York: Routledge, 2004), pp. 24–25.
+    Slavoj Žižek, The Parallax View (Cambridge, MA: MIT Press, 2006), pp. 165, 239.
 
-Slavoj Žižek, The Parallax View (Cambridge, MA: MIT Press, 2006), pp. 165, 239.
+    Slavoj Žižek, Less Than Nothing: Hegel and the Shadow of Dialectical
 
-Slavoj Žižek, Less Than Nothing: Hegel and the Shadow of Dialectical
+    Materialism (New York: Verso, 2012), pp. 807, 929.
 
-Materialism (New York: Verso, 2012), pp. 807, 929.
+    Slavoj Žižek, Absolute Recoil: Towards a New Foundation of Dialectical
 
-Slavoj Žižek, Absolute Recoil: Towards a New Foundation of Dialectical
+    Materialism (London: Verso, 2014), pp. 5, 73.
 
-Materialism (London: Verso, 2014), pp. 5, 73.
+    Adrian Johnston, Žižek’s Ontology: A Transcendental Materialist Theory
 
-Adrian Johnston, Žižek’s Ontology: A Transcendental Materialist Theory
+    of Subjectivity (Evanston: Northwestern University Press, 2008), pp. 200–203.
 
-of Subjectivity (Evanston: Northwestern University Press, 2008), pp. 200–203.
+[^zizek-materialism-2]: V. I. Lenin, “Conspectus of Hegel’s Book The Science of Logic,” Collected Works,
 
-2. V. I. Lenin, “Conspectus of Hegel’s Book The Science of Logic,” Collected Works,
+    Volume 38: Philosophical Notebooks [trans. Clemence Dutt] (Moscow: Progress
 
-Volume 38: Philosophical Notebooks [trans. Clemence Dutt] (Moscow: Progress
+    Publishers, 1976), pp. 89, 91–93, 103–104, 110, 123, 130, 141, 147, 169, 175,
 
-Publishers, 1976), pp. 89, 91–93, 103–104, 110, 123, 130, 141, 147, 169, 175,
+    183, 189, 196–199, 201, 207, 222.
 
-183, 189, 196–199, 201, 207, 222.
+[^zizek-materialism-3]: Karl Marx, “Theses on Feuerbach” [trans. S. Ryazanskaya], in Karl Marx, Karl
 
-3. Karl Marx, “Theses on Feuerbach” [trans. S. Ryazanskaya], in Karl Marx, Karl
+    Marx: Selected Writings [ed. David McLellan] (Oxford: Oxford University
 
-Marx: Selected Writings [ed. David McLellan] (Oxford: Oxford University
+    Press, 1977), pp. 156–158.
 
-Press, 1977), pp. 156–158.
+[^zizek-materialism-4]: Žižek, Less Than Nothing, pp. 657–658, 660, 905–907, 909.
 
-4. Žižek, Less Than Nothing, pp. 657–658, 660, 905–907, 909.
+     Žižek, Absolute Recoil, pp. 31, 72–73.
 
- Žižek, Absolute Recoil, pp. 31, 72–73.
+[^zizek-materialism-5]: Lenin, Materialism and Empirio-Criticism, pp. 309–314, 318, 340, 342, 372,
 
-5. Lenin, Materialism and Empirio-Criticism, pp. 309–314, 318, 340, 342, 372,
+    376–378, 434.
 
-376–378, 434.
+[^zizek-materialism-6]: Friedrich Engels, Ludwig Feuerbach and the Outcome of Classical German
 
-6. Friedrich Engels, Ludwig Feuerbach and the Outcome of Classical German
+    Philosophy [trans. C. P. Dutt] (New York: International, 1941), pp. 25–27,
 
-Philosophy [trans. C. P. Dutt] (New York: International, 1941), pp. 25–27,
+    46–47.
 
-46–47.
+     Lenin, Materialism and Empirio-Criticism, pp. 298–301.
 
- Lenin, Materialism and Empirio-Criticism, pp. 298–301.
+[^zizek-materialism-7]: Žižek, Absolute Recoil, p. 1.
 
-7. Žižek, Absolute Recoil, p. 1.
+[^zizek-materialism-8]: Ibid.
 
-8. Ibid.
+[^zizek-materialism-10]: Slavoj Žižek, “Postface: Georg Lukács as the Philosopher of Leninism,” in
 
-9. Žižek, The Indivisible Remainder, pp. 189–236.
+    Georg Lukács, A Defense of “History and Class Consciousness”: Tailism and the
 
-Žižek, Less Than Nothing, pp. 740, 744, 910, 912, 914–915, 918–926, 929,
+    Dialectic [trans. Esther Leslie] (London: Verso, 2000), pp. 179–180.
 
-932–933, 945–946.
+    Slavoj Žižek, “Afterword: Lenin’s Choice,” in V. I. Lenin, Revolution at the
 
-Žižek, Absolute Recoil, pp. 222, 225, 380–381, 390–391.
+    Gates: Selected Writings of Lenin from 1917 [ed. Slavoj Žižek] (London: Verso,
 
-Adrian Johnston, Adventures in Transcendental Materialism: Dialogues with
+    2002), pp. 178–181.
 
-Contemporary Thinkers (Edinburgh: Edinburgh University Press, 2014), pp.
+    Žižek, The Parallax View, p. 168.
 
-165–183.
+    Slavoj Žižek, “An Answer to Two Questions,” in Adrian Johnston, Badiou,
 
-10. Slavoj Žižek, “Postface: Georg Lukács as the Philosopher of Leninism,” in
+    Žižek, and Political Transformations: The Cadence of Change (Evanston:
 
-Georg Lukács, A Defense of “History and Class Consciousness”: Tailism and the
+    Northwestern University Press, 2009), p. 214.
 
-Dialectic [trans. Esther Leslie] (London: Verso, 2000), pp. 179–180.
+    Slavoj Žižek, “The Fear of Four Words: A Modest Plea for the Hegelian Reading
 
-Slavoj Žižek, “Afterword: Lenin’s Choice,” in V. I. Lenin, Revolution at the
+    of Christianity,” in Slavoj Žižek and John Milbank, The Monstrosity of Christ:
 
-Gates: Selected Writings of Lenin from 1917 [ed. Slavoj Žižek] (London: Verso,
+    Paradox or Dialectic? [ed. Creston Davis] (Cambridge: MIT Press, 2009), pp. 97, 100.
 
-2002), pp. 178–181.
+    Žižek, Less Than Nothing, pp. 642–644, 646–647, 905–909.
 
-Žižek, The Parallax View, p. 168.
+    Slavoj Žižek and Glyn Daly, Conversations with Žižek (Cambridge: Polity,
 
-Slavoj Žižek, “An Answer to Two Questions,” in Adrian Johnston, Badiou,
+    2004), pp. 96–97.
 
-Žižek, and Political Transformations: The Cadence of Change (Evanston:
+[^zizek-materialism-11]: Nikolai Bukharin, Philosophical Arabesques [trans. Renfrey Clarke] (New York:
 
-Northwestern University Press, 2009), p. 214.
+    Monthly Review Press, 2005), pp. 307, 372.
 
-Slavoj Žižek, “The Fear of Four Words: A Modest Plea for the Hegelian Reading
+    Gustav A. Wetter, Dialectical Materialism: A Historical and Systematic Survey
 
-of Christianity,” in Slavoj Žižek and John Milbank, The Monstrosity of Christ:
+    of Philosophy in the Soviet Union [trans. Peter Heath] (New York: Frederick A.
 
-Paradox or Dialectic? [ed. Creston Davis] (Cambridge: MIT Press, 2009), pp. 97, 100.
+    Praeger, 1958), pp. 130–131.
 
-Žižek, Less Than Nothing, pp. 642–644, 646–647, 905–909.
+    Loren R. Graham, Science and Philosophy in the Soviet Union (New York:
 
-Slavoj Žižek and Glyn Daly, Conversations with Žižek (Cambridge: Polity,
+    Alfred A. Knopf, 1972), pp. 36–37.
 
-2004), pp. 96–97.
+[^zizek-materialism-12]: Sebastiano Timpanaro, On Materialism [trans. Lawrence Garner] (London:
 
-11. Nikolai Bukharin, Philosophical Arabesques [trans. Renfrey Clarke] (New York:
+    Verso, 1980), p. 33.
 
-Monthly Review Press, 2005), pp. 307, 372.
+    Richard Levins and Richard Lewontin, The Dialectical Biologist (Cambridge:
 
-Gustav A. Wetter, Dialectical Materialism: A Historical and Systematic Survey
+    Harvard University Press, 1985), pp. 163–196.
 
-of Philosophy in the Soviet Union [trans. Peter Heath] (New York: Frederick A.
+    Graham, Science and Philosophy in the Soviet Union, p. 450.
 
-Praeger, 1958), pp. 130–131.
+    Helena Sheehan, Marxism and the Philosophy of Science: A Critical History—
 
-Loren R. Graham, Science and Philosophy in the Soviet Union (New York:
+    The First Hundred Years (Amherst: Humanity Books, 1993) [second edition],
 
-Alfred A. Knopf, 1972), pp. 36–37.
+    pp. 220–228.
 
-12. Sebastiano Timpanaro, On Materialism [trans. Lawrence Garner] (London:
+    Lucien Sève, “Pour en finir avec l’anarchronisme,” Sciences et dialectiques de la
 
-Verso, 1980), p. 33.
+    nature [ed. Lucien Sève] (Paris: La Dispute, 1998), pp. 13–14, 20–21.
 
-Richard Levins and Richard Lewontin, The Dialectical Biologist (Cambridge:
+    Lucien Sève, “Nature, science, dialectique: Un chantier à rouvrir,” Sciences et
 
-Harvard University Press, 1985), pp. 163–196.
+    dialectiques de la nature [ed. Lucien Sève] (Paris: La Dispute, 1998), pp. 94–107.
 
-Graham, Science and Philosophy in the Soviet Union, p. 450.
+    Adrian Johnston, “Repeating Engels: Renewing the Cause of the Materialist
 
-Helena Sheehan, Marxism and the Philosophy of Science: A Critical History—
+    Wager for the Twenty-First Century,” Theory @ Buffalo, special issue: “animal.
 
-The First Hundred Years (Amherst: Humanity Books, 1993) [second edition],
+    machine.sovereign,” no. 15, 2011, pp. 141–182.
 
-pp. 220–228.
+    Adrian Johnston, “From Scientific Socialism to Socialist Science:
 
-Lucien Sève, “Pour en finir avec l’anarchronisme,” Sciences et dialectiques de la
+    Naturdialektik Then and Now,” The Idea of Communism 2: The New York
 
-nature [ed. Lucien Sève] (Paris: La Dispute, 1998), pp. 13–14, 20–21.
+    Conference [ed. Slavoj Žižek] (London: Verso, 2013), pp. 103–136.
 
-Lucien Sève, “Nature, science, dialectique: Un chantier à rouvrir,” Sciences et
+    Adrian Johnston, “This is Orthodox Marxism: The Shared Materialist
 
-dialectiques de la nature [ed. Lucien Sève] (Paris: La Dispute, 1998), pp. 94–107.
+    Weltanschauung of Marx and Engels,” Quaderni materialisti, special issue: “On
 
-Adrian Johnston, “Repeating Engels: Renewing the Cause of the Materialist
+    Sebastiano Timpanaro,” 2015 [forthcoming].
 
-Wager for the Twenty-First Century,” Theory @ Buffalo, special issue: “animal.
+    Adrian Johnston, Prolegomena to Any Future Materialism, Volume Two: A Weak
 
-machine.sovereign,” no. 15, 2011, pp. 141–182.
+    Nature Alone (Evanston: Northwestern University Press, 2016) [forthcoming].
 
-Adrian Johnston, “From Scientific Socialism to Socialist Science:
+[^zizek-materialism-13]: Walter Benjamin, “Theses on the Philosophy of History,” Illuminations: Essays
 
-Naturdialektik Then and Now,” The Idea of Communism 2: The New York
+    and Reflections [ed. Hannah Arendt; trans. Harry Zohn] (New York: Schocken
 
-Conference [ed. Slavoj Žižek] (London: Verso, 2013), pp. 103–136.
+    Books, 1969), p. 255.
 
-Adrian Johnston, “This is Orthodox Marxism: The Shared Materialist
+[^zizek-materialism-14]: Žižek, Less Than Nothing, pp. 393–394.
 
-Weltanschauung of Marx and Engels,” Quaderni materialisti, special issue: “On
+[^zizek-materialism-15]: Georg Lukács, “What is Orthodox Marxism?,” History and Class Consciousness:
 
-Sebastiano Timpanaro,” 2015 [forthcoming].
+    Studies in Marxist Dialectics [trans. Rodney Livingstone] (Cambridge: MIT
 
-Adrian Johnston, Prolegomena to Any Future Materialism, Volume Two: A Weak
+    Press, 1971), p. 24.
 
-Nature Alone (Evanston: Northwestern University Press, 2016) [forthcoming].
+    Georg Lukács, “Reification and the Consciousness of the Proletariat,”
 
-13. Walter Benjamin, “Theses on the Philosophy of History,” Illuminations: Essays
+    History and Class Consciousness, pp. 88–91, 98–99, 102–104, 109–110.
 
-and Reflections [ed. Hannah Arendt; trans. Harry Zohn] (New York: Schocken
+    Georg Lukács, “The Changing Function of Historical Materialism,” History
 
-Books, 1969), p. 255.
+    and Class Consciousness, p. 234.
 
-14. Žižek, Less Than Nothing, pp. 393–394.
+    Georg Lukács, “N. Bukharin: Historical Materialism,” Tactics and Ethics:
 
-15. Georg Lukács, “What is Orthodox Marxism?,” History and Class Consciousness:
+    Political Writings, 1919–1929 [ed. Rodney Livingstone; trans. Michael
 
-Studies in Marxist Dialectics [trans. Rodney Livingstone] (Cambridge: MIT
+    McColgan] (London: New Left Books, 1972), pp. 136, 139–142.
 
-Press, 1971), p. 24.
+    Georg Lukács, “Karl August Wittfogel: The Science of Bourgeois Society,”
 
-Georg Lukács, “Reification and the Consciousness of the Proletariat,”
+    Tactics and Ethics, pp. 144–145.
 
-History and Class Consciousness, pp. 88–91, 98–99, 102–104, 109–110.
+    Georg Lukács, “Tailism and the Dialectic,” A Defense of “History and Class
 
-Georg Lukács, “The Changing Function of Historical Materialism,” History
+    Consciousness” [trans. Esther Leslie] (London: Verso, 2000).
 
-and Class Consciousness, p. 234.
+[^zizek-materialism-16]: Bukharin, Philosophical Arabesques, pp. 217–218.
 
-Georg Lukács, “N. Bukharin: Historical Materialism,” Tactics and Ethics:
+     Wetter, Dialectical Materialism, pp. 449–450.
 
-Political Writings, 1919–1929 [ed. Rodney Livingstone; trans. Michael
+     Graham, Science and Philosophy in the Soviet Union, p. 60.
 
-McColgan] (London: New Left Books, 1972), pp. 136, 139–142.
+[^zizek-materialism-17]: Žižek, Less Than Nothing, p. 461.
 
-Georg Lukács, “Karl August Wittfogel: The Science of Bourgeois Society,”
+[^zizek-materialism-18]: Žižek, Absolute Recoil, p. 93.
 
-Tactics and Ethics, pp. 144–145.
+[^zizek-materialism-21]: Alfred Schmidt, The Concept of Nature in Marx [trans. Ben Fowkes] (London:
 
-Georg Lukács, “Tailism and the Dialectic,” A Defense of “History and Class
+    Verso, 2014), pp. 10, 32–33, 45, 50, 69–70, 96, 98, 124–126, 134, 166–167,
 
-Consciousness” [trans. Esther Leslie] (London: Verso, 2000).
+    213, 228.
 
-16. Bukharin, Philosophical Arabesques, pp. 217–218.
+    Žižek, Less Than Nothing, pp. 907–908.
 
- Wetter, Dialectical Materialism, pp. 449–450.
+    Johnston, Žižek’s Ontology, p. 150.
 
- Graham, Science and Philosophy in the Soviet Union, p. 60.
+[^zizek-materialism-22]: Slavoj Žižek and Renata Salecl, “Lacan in Slovenia (An Interview with Slavoj 
 
-17. Žižek, Less Than Nothing, p. 461.
+    Žižek and Renata Salecl [with Peter Osborne]),” A Critical Sense: Interviews
 
-18. Žižek, Absolute Recoil, p. 93.
+    with Intellectuals [ed. Peter Osborne] (New York: Routledge, 1996), p. 41.
 
-19. Herbert Marcuse, Soviet Marxism: A Critical Analysis (New York: Penguin,
+[^zizek-materialism-23]: Žižek, Absolute Recoil, p. 205.
 
-1971), pp. 115, 118–121.
+[^zizek-materialism-24]: Slavoj Žižek, Tarrying with the Negative: Kant, Hegel, and the Critique of Ideology
 
-Timpanaro, On Materialism, pp. 7, 15–16, 29, 32, 35–36, 43–45, 47–48, 56,
+    (Durham: Duke University Press, 1993), pp. 128–129.
 
-58, 73–74, 76, 129, 209, 216–217, 232–233.
+[^zizek-materialism-25]: Bukharin, Philosophical Arabesques, p. 337.
 
-Graham, Science and Philosophy in the Soviet Union, pp. 29–30, 41.
+    Žižek, Absolute Recoil, p. 89.
 
-Sheehan, Marxism and the Philosophy of Science, pp. 255, 258–259, 263,
+[^zizek-materialism-26]: Žižek, Absolute Recoil, p. 223.
 
-277–279, 282.
+[^zizek-materialism-27]: Žižek, Less Than Nothing, p. 207.
 
-20. Max Horkheimer and Theodor W. Adorno, Dialectic of Enlightenment: Philo-
+[^zizek-materialism-28]: Ibid., pp. 250–251, 857–858.
 
-sophical Fragments [ed. Gunzelin Schmid Noerr; trans. Edmund Jephcott]
+[^zizek-materialism-29]: Žižek, Absolute Recoil, p. 31.
 
-(Stanford: Stanford University Press, 2002), pp. xi–xii, xiv–xv, 3–4, 7, 65–66,
+[^zizek-materialism-30]: Žižek, Less Than Nothing, pp. 244–245, 252–253, 359–364, 395–396, 398.
 
-68, 201–202, 232.
+[^zizek-materialism-31]: Alain Badiou, Logics of Worlds: Being and Event, 2 [trans. Alberto Toscano]
 
-21. Alfred Schmidt, The Concept of Nature in Marx [trans. Ben Fowkes] (London:
+    (London: Continuum, 2009), pp. 1–9.
 
-Verso, 2014), pp. 10, 32–33, 45, 50, 69–70, 96, 98, 124–126, 134, 166–167,
+[^zizek-materialism-32]: Žižek, Absolute Recoil, pp. 72–73, emphasis in original.
 
-213, 228.
+[^zizek-materialism-33]: Ibid., pp. 5–6.
 
-Žižek, Less Than Nothing, pp. 907–908.
+[^zizek-materialism-34]: Žižek, Less Than Nothing, pp. 193–194, 622–623, 663–664, 807–809, 821–826,
 
-Johnston, Žižek’s Ontology, p. 150.
+    835–836, 842–844.
 
-22. Slavoj Žižek and Renata Salecl, “Lacan in Slovenia (An Interview with Slavoj 
+    Žižek, Absolute Recoil, pp. 75, 77–78, 87.
 
-Žižek and Renata Salecl [with Peter Osborne]),” A Critical Sense: Interviews
+[^zizek-materialism-35]: Žižek, Less Than Nothing, pp. 40–42.
 
-with Intellectuals [ed. Peter Osborne] (New York: Routledge, 1996), p. 41.
+    Žižek, Absolute Recoil, p. 80.
 
-23. Žižek, Absolute Recoil, p. 205.
+[^zizek-materialism-36]: Žižek, Less Than Nothing, pp. 985–986, 988.
 
-24. Slavoj Žižek, Tarrying with the Negative: Kant, Hegel, and the Critique of Ideology
 
-(Durham: Duke University Press, 1993), pp. 128–129.
 
-25. Bukharin, Philosophical Arabesques, p. 337.
 
-Žižek, Absolute Recoil, p. 89.
 
-26. Žižek, Absolute Recoil, p. 223.
 
-27. Žižek, Less Than Nothing, p. 207.
 
-28. Ibid., pp. 250–251, 857–858.
 
-29. Žižek, Absolute Recoil, p. 31.
 
-30. Žižek, Less Than Nothing, pp. 244–245, 252–253, 359–364, 395–396, 398.
 
-31. Alain Badiou, Logics of Worlds: Being and Event, 2 [trans. Alberto Toscano]
 
-(London: Continuum, 2009), pp. 1–9.
 
-32. Žižek, Absolute Recoil, pp. 72–73, emphasis in original.
 
-33. Ibid., pp. 5–6.
 
-34. Žižek, Less Than Nothing, pp. 193–194, 622–623, 663–664, 807–809, 821–826,
 
-835–836, 842–844.
 
-Žižek, Absolute Recoil, pp. 75, 77–78, 87.
 
-35. Žižek, Less Than Nothing, pp. 40–42.
 
-Žižek, Absolute Recoil, p. 80.
 
-36. Žižek, Less Than Nothing, pp. 985–986, 988.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 未完，见评论区

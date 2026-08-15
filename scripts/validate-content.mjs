@@ -248,6 +248,20 @@ function straightQuoteKinds(value) {
 }
 
 function validateTypography(file, content, data) {
+  // TYPO-P7: a standalone notes heading followed by a plain numbered list is not
+  // a footnote system. It renders as ordinary article text and severs every
+  // backlink between the prose and its note. This is deliberately narrower than
+  // a generic numeric-reference heuristic: it only rejects the reproduced defect.
+  const manualFootnoteSection = /^(?:#{2,6}\s*)?(?:注释|脚注)[：:]?\s*$\n(?:\s*\n)*(?:1[.、．]|☆1|\[1\]|[（(]1[）)])\s+/gmu;
+  for (const match of content.matchAll(manualFootnoteSection)) {
+    const line = content.slice(0, match.index).split(/\r?\n/u).length;
+    report(
+      errors,
+      file,
+      `第 ${line} 行以普通编号列表手写注释；须恢复正文调用与 GFM 脚注定义（TYPO-P7）`,
+    );
+  }
+
   content.split(/\r?\n/u).forEach((line, index) => {
     if (brokenOrderedListMarker.test(line)) {
       report(
