@@ -5,7 +5,8 @@ date: 2022-11-03
 slug: azuma-norizuki-dialogue-1-mystery-and-cryptography
 script: hans
 categories: [思想与理论]
-section: translation
+section: interview
+format: interview
 tags: [东浩纪, 法月纶太郎, 推理小说, 否定神学, 后现代, 角色文化]
 post_author: [东浩纪, 法月纶太郎]
 translator: 帕底亚的拍拍

@@ -16,7 +16,7 @@ import {
   pageCitationDefaults,
   parseCitationInput,
 } from "../lib/citations.ts";
-import { roofArchiveAssetKey } from "../lib/archive-assets.ts";
+import { archiveAssetKey } from "../lib/archive-assets.ts";
 
 const postsDirectory = path.join(process.cwd(), "source", "_posts");
 const booksDirectory = path.join(process.cwd(), "source", "_books");
@@ -28,8 +28,15 @@ const roofAssetManifestFile = path.join(
   "roof-archive",
   "assets-manifest.json"
 );
+const wechatAssetManifestFile = path.join(
+  process.cwd(),
+  "editorial-sources",
+  "wechat",
+  "assets-manifest.json"
+);
 const publicDirectory = path.join(process.cwd(), "public");
-const validSections = new Set(["essay", "review", "translation", "community", "multimedia", "negative"]);
+const validSections = new Set(["essay", "review", "translation", "interview", "community", "multimedia", "negative"]);
+const validContentFormats = new Set(["article", "interview", "qa"]);
 const validCategories = new Set([
   "动画",
   "漫画",
@@ -56,6 +63,17 @@ const roofAssetKeys = new Set(
     ? roofAssetManifest.assets.map((asset) => asset?.key).filter((key) => typeof key === "string")
     : []
 );
+const wechatAssetManifest = fs.existsSync(wechatAssetManifestFile)
+  ? JSON.parse(fs.readFileSync(wechatAssetManifestFile, "utf8"))
+  : { assets: [] };
+const archiveAssetKeys = new Set([
+  ...roofAssetKeys,
+  ...(Array.isArray(wechatAssetManifest.assets)
+    ? wechatAssetManifest.assets
+      .map((asset) => asset?.key)
+      .filter((key) => typeof key === "string")
+    : []),
+]);
 const slugPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const prohibitedMediaElement = /<\s*\/?\s*(?:iframe|video|audio|object|embed|script|style)\b/i;
 const inlineEventHandler = /\son[a-z][\w:-]*\s*=/i;
@@ -192,13 +210,13 @@ function validatePublicEditorialVoice(file, value, keyPath = "公开内容") {
   }
 }
 
-// 屋顶归档图片以提交的 R2 清单为准；其他相对图片仍映射到 public/ 下。
+// 屋顶归档与微信图片以提交的 R2 清单为准；其他相对图片仍映射到 public/ 下。
 function checkLocalAsset(file, rawSrc, line) {
   const src = String(rawSrc ?? "").trim();
   if (!src || /^(https?:|data:|mailto:|tel:|#)/i.test(src) || src.startsWith("//")) return;
-  const roofAssetKey = roofArchiveAssetKey(src);
-  if (roofAssetKey) {
-    if (!roofAssetKeys.has(roofAssetKey)) {
+  const managedAssetKey = archiveAssetKey(src);
+  if (managedAssetKey) {
+    if (!archiveAssetKeys.has(managedAssetKey)) {
       report(errors, file, `${line ? `第 ${line} 行` : "正文"}图片未登记在 R2 资产清单：${src}`);
     }
     return;
@@ -816,6 +834,9 @@ const records = files.map((file) => {
   const { data, header, content } = parseFrontMatter(file, raw);
   const slug = typeof data.slug === "string" ? data.slug.trim() : "";
   const section = typeof data.section === "string" ? data.section.trim().toLowerCase() : "";
+  const format = typeof data.format === "string"
+    ? data.format.trim().toLowerCase()
+    : (section === "interview" ? "interview" : "article");
   const script = typeof data.script === "string" ? data.script.trim().toLowerCase() : "";
   const categories = toList(data.categories ?? data.category);
   const tags = toList(data.tags);
@@ -953,8 +974,14 @@ const records = files.map((file) => {
     report(
       errors,
       file,
-      "section 必须是 essay / review / translation / community / multimedia / negative 之一"
+      "section 必须是 essay / review / translation / interview / community / multimedia / negative 之一"
     );
+  }
+  if (!validContentFormats.has(format)) {
+    report(errors, file, "format 必须是 article / interview / qa 之一");
+  }
+  if (section === "interview" && format === "article") {
+    report(errors, file, "section: interview 必须使用 format: interview 或 format: qa");
   }
 
   if (!validHanScripts.has(script)) {
@@ -1199,6 +1226,12 @@ const bookRecords = jsonFiles(booksDirectory)
           : "reading";
         if (presentation && !validBookChapterPresentations.has(presentation)) {
           report(errors, label, "presentation 必须是 reading / reference / navigation 之一");
+        }
+        const format = hasOwn(value, "format")
+          ? requiredRecordString(value, "format", label)
+          : "article";
+        if (format && !validContentFormats.has(format)) {
+          report(errors, label, "format 必须是 article / interview / qa 之一");
         }
 
         if (hasOwn(value, "tags")) {

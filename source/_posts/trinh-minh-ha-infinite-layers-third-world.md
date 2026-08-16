@@ -11,6 +11,7 @@ translator: Mac
 proofreader: Valen
 excerpt: Trinh T. Minh-ha 从“第三世界”这一称谓的歧义出发，讨论殖民主义、文化霸权与女性主义话语中的种族化分类。
 script: hans
+license: CC BY-NC-SA 4.0
 citation:
   itemType: blogPost
   citationKey: trinh-infinite-layers-third-world-2023

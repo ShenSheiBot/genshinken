@@ -4,7 +4,7 @@
    - CJK 友好的强调（**中文：**后接中文也能加粗）
    - 标题加 id（便于锚点）
    - 脚注 _ftn/_ftnref 互锚（Word/Outline 导出的脚注可往返跳转）
-   - 文章归档图片指向 R2；其他相对图片路径 attachments/x → /attachments/x
+   - 文章归档与微信图片指向 R2；其他相对图片路径 attachments/x → /attachments/x
    - 外链 target=_blank；失效的 mention:// 链接降级为纯文本
    ============================================================ */
 import { unified } from "unified";
@@ -19,7 +19,8 @@ import rehypeStringify from "rehype-stringify";
 import { visit } from "unist-util-visit";
 import type { Root, Element } from "hast";
 import { sanitizePublicContentHtml } from "./media-material-runtime.mjs";
-import { rewriteRoofArchiveAssetUrl } from "./archive-assets-runtime.mjs";
+import { rewriteArchiveAssetUrl } from "./archive-assets-runtime.mjs";
+import type { ContentFormat } from "./posts";
 
 const SIZE_TITLE = /^\s*=(\d+)x(\d+)\s*$/; // Typora/Hexo 图片尺寸标注
 
@@ -117,7 +118,7 @@ async function renderSourceNotes(sourceNotes: SourceNote[]): Promise<string> {
 }
 
 /** 修正相对资源路径、外链行为、脚注锚点 */
-function rehypeRewrite() {
+function rehypeRewrite(format: ContentFormat = "article") {
   return (tree: Root) => {
     visit(tree, "element", (node: Element, index, parent) => {
       const props = node.properties ?? {};
@@ -127,7 +128,7 @@ function rehypeRewrite() {
         const isAbsolute =
           /^https?:\/\//.test(src) || src.startsWith("/") || src.startsWith("data:");
         if (!isAbsolute) props.src = "/" + src.replace(/^\.?\//, "");
-        props.src = rewriteRoofArchiveAssetUrl(String(props.src));
+        props.src = rewriteArchiveAssetUrl(String(props.src));
         // 清理 " =1535x1024" 这类尺寸标注，转成 width/height 以减少布局抖动
         if (typeof props.title === "string") {
           const m = props.title.match(SIZE_TITLE);
@@ -173,10 +174,33 @@ function rehypeRewrite() {
           break;
         }
 
-        const firstIndex = (node.children ?? []).findIndex((child) => {
+        let firstIndex = (node.children ?? []).findIndex((child) => {
           const item = child as { type?: string; value?: string };
           return item.type !== "text" || /\S/.test(item.value ?? "");
         });
+        if ((format === "interview" || format === "qa") && firstIndex >= 0) {
+          const firstText = node.children?.[firstIndex] as { type?: string; value?: string } | undefined;
+          const match = firstText?.type === "text"
+            ? firstText.value?.match(/^((?:Q|A|[\p{L}\p{N}·・（）()／/、 ]{1,24})[：:])\s*/u)
+            : null;
+          const isCreditOrSourceLabel = match
+            ? /^(?:翻译|译者|校对|编辑|原文|来源|采访|摄影|整理|受访者)[：:]$/u.test(match[1])
+            : false;
+          if (match && !isCreditOrSourceLabel && firstText?.value != null) {
+            const label = match[1];
+            const remainder = firstText.value.slice(match[0].length);
+            node.children?.splice(
+              firstIndex,
+              1,
+              { type: "element", tagName: "strong", properties: {}, children: [{ type: "text", value: label }] },
+              ...(remainder ? [{ type: "text", value: remainder } as const] : [])
+            );
+            firstIndex = (node.children ?? []).findIndex((child) => {
+              const item = child as { type?: string; value?: string };
+              return item.type !== "text" || /\S/.test(item.value ?? "");
+            });
+          }
+        }
         const first = firstIndex >= 0 ? node.children?.[firstIndex] as Element | undefined : undefined;
         if (first?.type === "element" && first.tagName === "strong") {
           const label = elementText(first);
@@ -184,9 +208,17 @@ function rehypeRewrite() {
           const classNames = Array.isArray(props.className)
             ? [...props.className]
             : props.className ? [String(props.className)] : [];
-          if (/^(摘　要|关键词)：/.test(label)) classNames.push("article-summary-meta");
-          if (label === "编按：") classNames.push("editorial-note");
-          if (next?.type === "text" && next.value?.startsWith("　")) classNames.push("speaker-turn");
+          const isSummaryLabel = /^(摘　要|关键词)：/.test(label);
+          const isEditorialLabel = label === "编按：";
+          if (isSummaryLabel) classNames.push("article-summary-meta");
+          if (isEditorialLabel) classNames.push("editorial-note");
+          const isSpeakerLabel = !isSummaryLabel && !isEditorialLabel
+            && /^[\p{L}\p{N}·・—－（）()／/、 ]{1,24}[：:]$/u.test(label);
+          const isInterviewPrompt = /^——\S/u.test(label) && firstIndex === (node.children?.length ?? 0) - 1;
+          const hasExplicitSpeakerGap = next?.type === "text" && next.value?.startsWith("　");
+          if (hasExplicitSpeakerGap || (isSpeakerLabel && next?.type === "text") || isInterviewPrompt) {
+            classNames.push("speaker-turn");
+          }
           if (classNames.length > 0) props.className = Array.from(new Set(classNames));
         }
       }
@@ -771,7 +803,8 @@ function rehypeImageFigures() {
   return (tree: Root) => walk(tree as unknown as TableFigureNode);
 }
 
-const processor = unified()
+function createProcessor(format: ContentFormat = "article") {
+  return unified()
   .use(remarkParse)
   .use(remarkGfm)
   .use(remarkMath)
@@ -789,7 +822,7 @@ const processor = unified()
     footnoteBackContent: "↑",
   })
   .use(rehypeSlug)
-  .use(rehypeRewrite)
+  .use(rehypeRewrite, format)
   .use(rehypeTableFigures)
   .use(rehypeImageFigures)
   .use(rehypeCjkEmphasis)
@@ -799,13 +832,22 @@ const processor = unified()
   .use(rehypeLatinRuns)
   .use(rehypeKatex)
   .use(rehypeStringify, { allowDangerousHtml: true });
+}
+
+const processor = createProcessor();
 
 function normalizeInlinePageMarkers(markdown: string): string {
   return markdown.replace(/^(<!--[ \t]*page\b[^>]*-->)[ \t]*(?=\S)/gimu, "$1\n\n");
 }
 
-export async function renderMarkdown(md: string): Promise<string> {
+export async function renderMarkdown(
+  md: string,
+  options: { format?: ContentFormat } = {}
+): Promise<string> {
   const { markdown, sourceNotes } = extractSourceNotes(md);
-  const file = await processor.process(normalizeInlinePageMarkers(markdown));
+  const activeProcessor = options.format && options.format !== "article"
+    ? createProcessor(options.format)
+    : processor;
+  const file = await activeProcessor.process(normalizeInlinePageMarkers(markdown));
   return sanitizePublicContentHtml(String(file) + await renderSourceNotes(sourceNotes));
 }

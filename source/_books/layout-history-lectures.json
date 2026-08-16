@@ -62,6 +62,7 @@
       "status": "published",
       "anchor": "first-lecture-questions",
       "publishedAt": "2020-10-09",
+      "format": "qa",
       "authors": [
         "笹木信作",
         "德野悠我"
@@ -87,6 +88,7 @@
       "status": "published",
       "anchor": "third-lecture-questions",
       "publishedAt": "2020-10-15",
+      "format": "qa",
       "authors": [
         "笹木信作"
       ],
@@ -109,6 +111,7 @@
       "status": "published",
       "anchor": "fourth-lecture-questions",
       "publishedAt": "2020-10-25",
+      "format": "qa",
       "authors": [
         "笹木信作"
       ],
@@ -131,6 +134,7 @@
       "status": "published",
       "anchor": "fifth-lecture-questions",
       "publishedAt": "2020-11-21",
+      "format": "qa",
       "authors": [
         "笹木信作"
       ],

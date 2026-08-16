@@ -9,6 +9,8 @@ const POLICY_FILES = new Set([
   "editorial-sources/preservation-manifest.json",
   "editorial-sources/roof-archive/README.md",
   "editorial-sources/roof-archive/assets-manifest.json",
+  "editorial-sources/wechat/assets-manifest.json",
+  "editorial-sources/wechat/preservation-manifest.json",
   "editorial-sources/tag-aliases.json",
 ]);
 
@@ -42,8 +44,22 @@ function defaultBaseReference() {
 
 function protectedSnapshot(pathname) {
   const normalized = pathname.replaceAll("\\", "/");
-  return normalized.startsWith("editorial-sources/") && !POLICY_FILES.has(normalized);
+  const editableEditorialNote = /-editorial-note\.md$/u.test(normalized);
+  return normalized.startsWith("editorial-sources/")
+    && !POLICY_FILES.has(normalized)
+    && !editableEditorialNote;
 }
+
+assert.equal(
+  protectedSnapshot("editorial-sources/wechat/example-editorial-note.md"),
+  false,
+  "human editorial notes must remain directly correctable",
+);
+assert.equal(
+  protectedSnapshot("editorial-sources/wechat/example-source.json"),
+  true,
+  "source snapshots must remain append-only",
+);
 
 function changedProtectedSnapshots(baseReference) {
   const output = git([
@@ -83,7 +99,7 @@ if (violations.length > 0) {
   throw new Error(
     `registered editorial snapshots are append-only relative to ${baseReference}.\n` +
       `${details}\n` +
-      "Do not modify, delete, or rename an existing snapshot. Add a versioned source file and update the manifest instead.",
+      "Do not modify, delete, or rename an existing source snapshot. Human editorial notes and policy manifests are exempt.",
   );
 }
 console.log(`editorial snapshot history is append-only relative to ${baseReference}`);

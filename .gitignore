@@ -54,3 +54,7 @@ next-env.d.ts
 /editorial-sources/roof-archive/cv*.json
 /editorial-sources/roof-archive/cv*/source.json
 /public/roof-archive/
+
+# WeChat crawl assets stay local. Existing published files under this path remain
+# tracked, but Git must not acquire new crawler images from it.
+/public/attachments/wechat/

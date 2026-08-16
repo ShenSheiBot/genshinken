@@ -1,0 +1,416 @@
+{
+  "version": 1,
+  "bucket": "roof-genshinken-archive-assets",
+  "publicBaseUrl": "https://assets.labonroof.top",
+  "public": true,
+  "assets": [
+    {
+      "key": "wechat/6GsF0ip94QFMycA6_P1tEw/002.jpg",
+      "bytes": 63773,
+      "sha256": "66bfc9f3d88a2e364d175dc7c3b7d88cf46b114329912f020c7562638febc5ae",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/6GsF0ip94QFMycA6_P1tEw/003.jpg",
+      "bytes": 34013,
+      "sha256": "0592b3379ec9a005c276ce2292d82b7c1d4a7f76dd1be46e80ffc3b4d74ccfe5",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/6GsF0ip94QFMycA6_P1tEw/004.jpg",
+      "bytes": 44774,
+      "sha256": "b9d0b02a792979cf6074b2b96b2afcc6e1a481f61796662c592d9901cc5067fe",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/7nE0SvdejgnZGGtx_sx4Lg/002.jpg",
+      "bytes": 42368,
+      "sha256": "3eef5aaca8471d0373a8a6e69c51a12171721f323083436ca1ac7beea71b84c5",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/abd5LvWmC8hLehsCPcm8aw/001.jpg",
+      "bytes": 144282,
+      "sha256": "df8467976554d522e2f8caa4963fc9ba2d59a52fa3b651dc57a70b7dcc2ac7a2",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/DdFErGBP0IlTmf5WnEI2VQ/002.png",
+      "bytes": 254510,
+      "sha256": "dc7f5afde706b7e4b348d4e4a30ac99e532a0ad8b2076e2fa2dff20a8d1771c2",
+      "contentType": "image/png"
+    },
+    {
+      "key": "wechat/DdFErGBP0IlTmf5WnEI2VQ/003.png",
+      "bytes": 187308,
+      "sha256": "69edb69363a00c0a27c52d6a593fc49356a2fb3d1e39748ce82b32a5f57e7ea9",
+      "contentType": "image/png"
+    },
+    {
+      "key": "wechat/DdFErGBP0IlTmf5WnEI2VQ/004.png",
+      "bytes": 227842,
+      "sha256": "e7c9e689e0b725fe99738d6fd8df9bb1fe97d4ae3f81eed4035c1773106291ca",
+      "contentType": "image/png"
+    },
+    {
+      "key": "wechat/DdFErGBP0IlTmf5WnEI2VQ/005.png",
+      "bytes": 349766,
+      "sha256": "f3194b084ff40a8d70f6117b27b762465f8682c685e6e8ee7692d76fc760c8a2",
+      "contentType": "image/png"
+    },
+    {
+      "key": "wechat/DdFErGBP0IlTmf5WnEI2VQ/006.png",
+      "bytes": 353751,
+      "sha256": "27f48d70739e5489ce3400ceebaccbfd66f02601a71400ef80169c15b7877094",
+      "contentType": "image/png"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/001.png",
+      "bytes": 945469,
+      "sha256": "b0ed6152970b3afccab57bc605757f4fa56ff359d903bf9bc7754688e4f90c0e",
+      "contentType": "image/png"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/002.jpg",
+      "bytes": 42334,
+      "sha256": "552bc60710638c667dd9052d2ca2e32f644f60a6e01b7882e4fe35726487c672",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/003.jpg",
+      "bytes": 13872,
+      "sha256": "c9e1b3e6af9f9c1785b42b85a8a7704a47ae007278660916fa70393b3cb1c22c",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/004.jpg",
+      "bytes": 6860,
+      "sha256": "f4a261e82dda0ed95306c120973c1d02191d1968a69ffef65740d800eba6a51e",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/005.jpg",
+      "bytes": 9353,
+      "sha256": "9092fdbfe42f32a9324ac0fdb6719fa2da01e67de1552a28d7b22240d9e03c96",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/006.jpg",
+      "bytes": 70969,
+      "sha256": "efab5f51f04e3b3b9b7007a78cef8267048a7ecbeb5f0db3003ced71091db5c7",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/007.jpg",
+      "bytes": 74777,
+      "sha256": "739ff45f015c92c85705fdd24d9b57341d9479f229793b5200c00c7cb904d944",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/008.jpg",
+      "bytes": 7743,
+      "sha256": "4816f8c2c003a51f1ac3eee890e5ee087ffc62ef5ac9024b69bda4f427a5dde2",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/009.jpg",
+      "bytes": 361241,
+      "sha256": "fae676507a1a30ac34dea1ea652677ab6f0d0030338027858af374b94e0b0a19",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/010.jpg",
+      "bytes": 50107,
+      "sha256": "000e39082641311d5e0469fd9e670a870e82dfd1c2a98cc9c14192d2167e8f16",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/011.jpg",
+      "bytes": 92035,
+      "sha256": "8f21d9ba5b65a6ae314630e6797599a8dfea0e8698a56692fceb57a87e0d9ed4",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/012.jpg",
+      "bytes": 206810,
+      "sha256": "b056ae060593a7a47880d114de7f2593949152103969a4ba8b866cc9aa007a6b",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/013.jpg",
+      "bytes": 43982,
+      "sha256": "3b56677ff7786055b206b1df6082b7b57c5b2f815f5a75aa20ec678c79506474",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/014.jpg",
+      "bytes": 37095,
+      "sha256": "80991f406015fcafe0e28c11239130e31bd32743a0b2ff3c78fba559bcd42b32",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/015.jpg",
+      "bytes": 12449,
+      "sha256": "8b5fe2453ed4d6fff6d105fd9e24c9e862ee9098caafea61dce8a6d36d38cccb",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/016.jpg",
+      "bytes": 194599,
+      "sha256": "0ee1c03e950121dc431fa48c41906735d97a61870f618712928e613c041492af",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/017.jpg",
+      "bytes": 64661,
+      "sha256": "eef8d958d0f5ce6cc578f9c6a718a2bba4c2d069ae25bfea156fb41eb30ae0db",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/018.jpg",
+      "bytes": 21530,
+      "sha256": "1d921cf7c74cca25cbab4c6fcc6a943811725e83c97c0e038ab5bb732ee716df",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/019.jpg",
+      "bytes": 34094,
+      "sha256": "3370a8c9ded1a596a2db7131f97c3ed496e88dc64bb6e7d60e33998b1815164d",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/020.jpg",
+      "bytes": 11649,
+      "sha256": "677c5035e64113ca39de1660633f021e1235050e9f9b91ae381de5b2b02562d7",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/021.jpg",
+      "bytes": 8138,
+      "sha256": "79879df1ac9525012f65aea7175ad17f948975cde1a2b3cebdc75e3fc0e55401",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/022.jpg",
+      "bytes": 39387,
+      "sha256": "1a63d3bfbdd6da55c0b6b466e8c5d0dea34bc56cfb885d0c91798648969254e0",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/023.webp",
+      "bytes": 111384,
+      "sha256": "4a699ac0320153e2e11c2a5b2082ab9b3c483789cb2d3ca74a05c5949caec7e6",
+      "contentType": "image/webp"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/024.jpg",
+      "bytes": 34769,
+      "sha256": "c6b3b1b9965a523ae91861dddd436b260ef7755fcffc336604166fd8058b5e89",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/025.jpg",
+      "bytes": 25381,
+      "sha256": "38381a63f0336425492ac4001e0587a265ca3411adfeaec1a11f786e130b03ca",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/026.jpg",
+      "bytes": 29157,
+      "sha256": "720f95fa4b187af667553202637ae6b085be79e0a102dc750e5f3880b6ad93cf",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/027.jpg",
+      "bytes": 11769,
+      "sha256": "b5d0f859f06337601d1f77b9d9a25db31c0be28cfbdead033c9189ee8f9959ed",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/028.jpg",
+      "bytes": 99525,
+      "sha256": "6709aac252dd1ad44adc903d85be022cabe4c6eede22dd9e43749987ff6b0e16",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/029.jpg",
+      "bytes": 44143,
+      "sha256": "b40e6bc2448f8277e0f29ee09a85a87d97068150e98c0ff5a6c058a9be2d301e",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/030.jpg",
+      "bytes": 51369,
+      "sha256": "7e3209365b6db9fef1f717956796da0c47f7f97821d0957589651942126736ae",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/031.jpg",
+      "bytes": 11425,
+      "sha256": "91b3970d49f48592454240cdbe0748cfd61171381216b7560e4f3f546f3fe11c",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/032.jpg",
+      "bytes": 65036,
+      "sha256": "5d7852de95ee7f508c96e16745ada92d3fb9e3042e7311e1c3e24bd3865bad58",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/033.jpg",
+      "bytes": 26314,
+      "sha256": "d7a33d1e5c054be8f16085a4a15acc3e9cfade5fd44659b3c49a892ffe7c3e7c",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/034.jpg",
+      "bytes": 54812,
+      "sha256": "e60df2859927822ce2ba83165bc9da784a6d4c8b12e2836a7c97e1d611dac5c6",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/035.jpg",
+      "bytes": 66908,
+      "sha256": "b6023ee0d722f15aea84d649b8538de6d52db6b94e16829ad5f0e24fceb91c53",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/036.jpg",
+      "bytes": 35033,
+      "sha256": "dca2d04443486f4b84a252be90eb50dcb3b0853b9940b8c5a6ebbeccf9c00ee6",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/037.jpg",
+      "bytes": 19161,
+      "sha256": "eb60c8b4c117745800c4c650c422df5572dc39a92d2e5eacaada01f1a3c380de",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/038.jpg",
+      "bytes": 45977,
+      "sha256": "1003384cd88e17268076104550504150387ffdf5277a8422917a9505be88ca81",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/039.jpg",
+      "bytes": 10003,
+      "sha256": "bb6b50cdc643043f554bfc761e8255ed38fd196cf8e100e90cf8984698ae762b",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/040.jpg",
+      "bytes": 29904,
+      "sha256": "fd694d2671d9e5e2dc2acecd46032d43770525a1607ee815c279219d88b2b960",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/041.jpg",
+      "bytes": 45944,
+      "sha256": "3dbc87acd7580cd7c1d7a77c94af541c6d32477f07baa674f09f53bbdabefcc2",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/042.png",
+      "bytes": 772005,
+      "sha256": "77198eb162b780d2244a3e66dc83d6203007b97a09c321a1ea6cb330df26b694",
+      "contentType": "image/png"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/043.jpg",
+      "bytes": 167641,
+      "sha256": "5371ce93e7437e32ab7455990d951e5d01eb71225dbb5d7599b14be6ebf38321",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/044.jpg",
+      "bytes": 45768,
+      "sha256": "8605cdabd7352fa1b418a2a9dd28105b9a10396df1bb047f72d550fb45daf1aa",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/045.png",
+      "bytes": 259322,
+      "sha256": "3b97ba4400fa61844dcfb073dd9e6857eb1adbe463a8a153bc86e84bccc397fc",
+      "contentType": "image/png"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/046.png",
+      "bytes": 288491,
+      "sha256": "5c7375a3de8babdbbf40039a5146b70fb299aae9f006ceddf8113cc59e03de96",
+      "contentType": "image/png"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/047.jpg",
+      "bytes": 19845,
+      "sha256": "5ce2c6c06a1a3e1f4834c03d1bfeaf0ac2ffbfea3d421bd7ab6dff932ac80617",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dxhLMHKR4T14AhOvsrj3zA/048.jpg",
+      "bytes": 87183,
+      "sha256": "3781ca708dab191144fcb36881b6c7ba315b2bd0dc3f91106c1746184381f099",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/IEVEx4-XbxzlpArHzHL0Og/001.jpg",
+      "bytes": 101789,
+      "sha256": "2679d3b0b06067ff407a9bf4410c64acbaabf29766dd56ae76474fee4b715294",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/IEVEx4-XbxzlpArHzHL0Og/002.jpg",
+      "bytes": 10964,
+      "sha256": "eb034b77da1a60587e4f474f6f841ce29b348b6472dbad4824e881de0f126984",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/IEVEx4-XbxzlpArHzHL0Og/003.jpg",
+      "bytes": 24392,
+      "sha256": "d9abf8d310dc20db581dcf0d6a5b77f874b34726cfb36e0878203eb6be4c5e36",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/IEVEx4-XbxzlpArHzHL0Og/004.jpg",
+      "bytes": 13711,
+      "sha256": "a70abfb9ffd3068dbdda02f845d9b8fa00542c309c65d4cbda69dcb72ab798d6",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/UzKroS0kc55AXb-jRnGyqQ/001.png",
+      "bytes": 622378,
+      "sha256": "d5f927b15c7d2cbe17de8a2f31efcff8fdc5747ab70060fe3efea28e97ff8bd6",
+      "contentType": "image/png"
+    },
+    {
+      "key": "wechat/UzKroS0kc55AXb-jRnGyqQ/002.png",
+      "bytes": 578834,
+      "sha256": "ac84cadfda37099729e1b40d227bfe39335100723dd9f19329015729457e17da",
+      "contentType": "image/png"
+    },
+    {
+      "key": "wechat/UzKroS0kc55AXb-jRnGyqQ/003.png",
+      "bytes": 519743,
+      "sha256": "4059bf51282f150db3e6994f90312489da62520b8dc5a330ef04376d1ab1c1ee",
+      "contentType": "image/png"
+    },
+    {
+      "key": "wechat/UzKroS0kc55AXb-jRnGyqQ/004.png",
+      "bytes": 418583,
+      "sha256": "cd11a063ee06a5c706fa01f7835056e855c8167a11c1a4ddf6da663384c37b66",
+      "contentType": "image/png"
+    },
+    {
+      "key": "wechat/yLL0n4dxFTFuCqk8P5AzSg/002.jpg",
+      "bytes": 70174,
+      "sha256": "2450aa1e859c0cca2de3c4534b5b511fe5a09055f34fea46590934ca36f3a366",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/yLL0n4dxFTFuCqk8P5AzSg/003.png",
+      "bytes": 896963,
+      "sha256": "3b3ebfe158c5fd1a068f0fe92f7889707fe13fa2a9c1a28989754ea582be7b0b",
+      "contentType": "image/png"
+    }
+  ]
+}

@@ -5,28 +5,29 @@ import type { PublicContentEntry } from "@/lib/public-content";
 import { site } from "@/lib/site";
 import {
   EDITORIAL_SECTION_META,
-  type EditorialSection,
+  READER_EDITORIAL_SECTIONS,
+  type ReaderEditorialSection,
 } from "@/lib/editorial";
 import CreditLinks from "@/app/components/CreditLinks";
 import styles from "./PosterWallHome.module.css";
 
-type PosterSection = Exclude<EditorialSection, "negative">;
+type PosterSection = ReaderEditorialSection;
 type PosterPost = PublicContentEntry & { section: PosterSection };
 
 const POSTER_SECTION_PRIORITY: PosterSection[] = [
   "essay",
   "review",
   "translation",
+  "interview",
   "community",
-  "multimedia",
 ];
 
 const FEATURED_TREATMENT: Record<PosterSection, string> = {
   essay: styles.leadWide,
   review: styles.leadNarrow,
   translation: styles.featureWide,
+  interview: styles.featureNarrow,
   community: styles.thirdCompact,
-  multimedia: styles.featureNarrow,
 };
 
 type TileStyle = CSSProperties & {
@@ -128,7 +129,7 @@ function visibleHomeCredits(post: PublicContentEntry) {
 }
 
 function isPosterPost(post: PublicContentEntry): post is PosterPost {
-  return post.section !== "negative";
+  return READER_EDITORIAL_SECTIONS.includes(post.section as ReaderEditorialSection);
 }
 
 function groupPostsBySection(posts: PosterPost[]): Record<PosterSection, PosterPost[]> {
@@ -136,8 +137,8 @@ function groupPostsBySection(posts: PosterPost[]): Record<PosterSection, PosterP
     essay: [],
     review: [],
     translation: [],
+    interview: [],
     community: [],
-    multimedia: [],
   };
   posts.forEach((post) => grouped[post.section].push(post));
   for (const section of POSTER_SECTION_PRIORITY) {
@@ -162,15 +163,15 @@ function orderAsWall(posts: PublicContentEntry[]): {
     essay: grouped.essay.filter((post) => !leadSlugs.has(post.slug)),
     review: grouped.review.filter((post) => !leadSlugs.has(post.slug)),
     translation: grouped.translation.filter((post) => !leadSlugs.has(post.slug)),
+    interview: grouped.interview.filter((post) => !leadSlugs.has(post.slug)),
     community: grouped.community.filter((post) => !leadSlugs.has(post.slug)),
-    multimedia: grouped.multimedia.filter((post) => !leadSlugs.has(post.slug)),
   };
   const tailOffsets: Record<PosterSection, number> = {
     essay: 0,
     review: 0,
     translation: 0,
+    interview: 0,
     community: 0,
-    multimedia: 0,
   };
   // Preserve the existing cross-section rhythm while replacing each section's
   // occupied slots with that section's explicit editorial order.
@@ -201,11 +202,11 @@ export default function PosterWallHome({
     review: grouped.review[0]?.slug,
     essay: grouped.essay[0]?.slug,
     translation: grouped.translation[0]?.slug,
+    interview: grouped.interview[0]?.slug,
     community: grouped.community[0]?.slug,
-    multimedia: grouped.multimedia[0]?.slug,
   };
   const latestArticles = posts
-    .filter((post) => post.section !== "multimedia")
+    .filter(isPosterPost)
     .slice(0, 6);
 
   return (
@@ -300,21 +301,9 @@ export default function PosterWallHome({
                     <p className={styles.excerpt}>{overviewFor(post)}</p>
                   </div>
 
-                  {section === "multimedia" && (
-                    <div className={styles.platformStrip} aria-label="发布平台与站内资料">
-                      <span>发布入口</span>
-                      <b>站外来源 ↗</b>
-                      <b>站内资料 →</b>
-                    </div>
-                  )}
-
                   <div className={styles.cardFooter}>
-                    <span>
-                      {section === "multimedia"
-                        ? "站内详情 · 简介 · 关联文稿"
-                        : `预计阅读 ${post.readMin} 分钟`}
-                    </span>
-                    <strong>{section === "multimedia" ? "查看详情" : "阅读全文"} ↗</strong>
+                    <span>预计阅读 {post.readMin} 分钟</span>
+                    <strong>阅读全文 ↗</strong>
                   </div>
                 </div>
               </article>

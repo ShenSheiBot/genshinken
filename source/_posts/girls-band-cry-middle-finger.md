@@ -11,6 +11,8 @@ translator: [6x1, Yisensei04, salzivelm, 河豚, 伊鸥柚, ethci]
 proofreader: [Yisensei04, 竹上青]
 excerpt: 本文沿着摇滚、朋克、青春动画与女性主义的历史，追问《Girls Band Cry》中仁菜的中指究竟指向谁。
 script: hans
+license: CC BY-NC-SA 4.0
+original_publication: Mercure des Arts「小人閑居為不善日記」
 citation:
   itemType: blogPost
   citationKey: noirse-girls-band-cry-middle-finger-2024

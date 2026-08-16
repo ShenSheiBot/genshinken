@@ -4,21 +4,32 @@ import path from "node:path";
 
 const root = process.cwd();
 const sourceDirectory = path.resolve(
-  process.env.ROOF_ARCHIVE_ASSET_DIR ?? path.join(root, "public", "attachments", "roof-archive")
+  process.env.ARCHIVE_ASSET_DIR
+    ?? process.env.ROOF_ARCHIVE_ASSET_DIR
+    ?? path.join(root, "public", "attachments", "roof-archive")
 );
 const manifestPath = path.resolve(
-  process.env.ROOF_ARCHIVE_ASSET_MANIFEST ??
+  process.env.ARCHIVE_ASSET_MANIFEST ?? process.env.ROOF_ARCHIVE_ASSET_MANIFEST ??
     path.join(root, "editorial-sources", "roof-archive", "assets-manifest.json")
 );
 const accountId = process.env.CLOUDFLARE_ACCOUNT_ID ?? "f301160e44a0ed1c9e6a9cd6be3690f5";
-const bucketName = process.env.ROOF_ARCHIVE_R2_BUCKET ?? "roof-genshinken-archive-assets";
+const bucketName = process.env.ARCHIVE_ASSET_R2_BUCKET
+  ?? process.env.ROOF_ARCHIVE_R2_BUCKET
+  ?? "roof-genshinken-archive-assets";
 const publicBaseUrl = (
-  process.env.ROOF_ARCHIVE_ASSET_BASE_URL ?? "https://assets.labonroof.top"
+  process.env.ARCHIVE_ASSET_BASE_URL
+    ?? process.env.ROOF_ARCHIVE_ASSET_BASE_URL
+    ?? "https://assets.labonroof.top"
 ).replace(/\/+$/u, "");
 const command = process.argv[2];
-const keyPrefix = (process.env.ROOF_ARCHIVE_ASSET_KEY_PREFIX ?? "").trim();
+const assetKeyRoot = (process.env.ARCHIVE_ASSET_KEY_ROOT ?? "roof-archive").replace(/^\/+|\/+$/gu, "");
+const keyPrefix = (
+  process.env.ARCHIVE_ASSET_SELECT_PREFIX ?? process.env.ROOF_ARCHIVE_ASSET_KEY_PREFIX ?? ""
+).trim();
+const requiresPromotion = process.env.ARCHIVE_ASSET_REQUIRE_PROMOTION === "1";
 
 const mimeTypes = new Map([
+  [".avif", "image/avif"],
   [".gif", "image/gif"],
   [".jpg", "image/jpeg"],
   [".jpeg", "image/jpeg"],
@@ -65,7 +76,7 @@ function buildManifest() {
       const contentType = mimeTypes.get(extension);
       if (!contentType) throw new Error(`Unsupported asset extension: ${relative}`);
       return {
-        key: `roof-archive/${relative}`,
+        key: `${assetKeyRoot}/${relative}`,
         bytes: body.length,
         sha256: sha256(body),
         contentType,
@@ -75,6 +86,7 @@ function buildManifest() {
     version: 1,
     bucket: bucketName,
     publicBaseUrl,
+    ...(requiresPromotion ? { public: false } : {}),
     assets,
   };
   fs.writeFileSync(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`);
@@ -95,7 +107,7 @@ function oauthToken() {
 }
 
 function localPathFor(asset) {
-  const prefix = "roof-archive/";
+  const prefix = `${assetKeyRoot}/`;
   if (!asset.key.startsWith(prefix)) throw new Error(`Unexpected R2 key: ${asset.key}`);
   return path.join(sourceDirectory, ...asset.key.slice(prefix.length).split("/"));
 }
@@ -155,10 +167,23 @@ async function upload() {
   const token = oauthToken();
   const { assets: manifestAssets } = loadManifest();
   const allAssets = selectAssets(manifestAssets);
-  const start = Number.parseInt(process.env.ROOF_ARCHIVE_UPLOAD_START ?? "0", 10);
+  const start = Number.parseInt(
+    process.env.ARCHIVE_ASSET_UPLOAD_START ?? process.env.ROOF_ARCHIVE_UPLOAD_START ?? "0",
+    10,
+  );
   const assets = allAssets.slice(Number.isFinite(start) && start > 0 ? start : 0);
-  const concurrency = Number.parseInt(process.env.ROOF_ARCHIVE_UPLOAD_CONCURRENCY ?? "20", 10);
-  const startIntervalMs = Number.parseInt(process.env.ROOF_ARCHIVE_UPLOAD_INTERVAL_MS ?? "280", 10);
+  const concurrency = Number.parseInt(
+    process.env.ARCHIVE_ASSET_UPLOAD_CONCURRENCY
+      ?? process.env.ROOF_ARCHIVE_UPLOAD_CONCURRENCY
+      ?? "20",
+    10,
+  );
+  const startIntervalMs = Number.parseInt(
+    process.env.ARCHIVE_ASSET_UPLOAD_INTERVAL_MS
+      ?? process.env.ROOF_ARCHIVE_UPLOAD_INTERVAL_MS
+      ?? "280",
+    10,
+  );
   await runPool(
     assets,
     async (asset) => {
@@ -195,8 +220,16 @@ async function upload() {
 async function verify() {
   const { assets: manifestAssets } = loadManifest();
   const allAssets = selectAssets(manifestAssets);
-  const start = Number.parseInt(process.env.ROOF_ARCHIVE_VERIFY_START ?? "0", 10);
-  const limit = Number.parseInt(process.env.ROOF_ARCHIVE_VERIFY_LIMIT ?? String(allAssets.length), 10);
+  const start = Number.parseInt(
+    process.env.ARCHIVE_ASSET_VERIFY_START ?? process.env.ROOF_ARCHIVE_VERIFY_START ?? "0",
+    10,
+  );
+  const limit = Number.parseInt(
+    process.env.ARCHIVE_ASSET_VERIFY_LIMIT
+      ?? process.env.ROOF_ARCHIVE_VERIFY_LIMIT
+      ?? String(allAssets.length),
+    10,
+  );
   const assets = allAssets.slice(Number.isFinite(start) && start > 0 ? start : 0, start + limit);
   await runPool(
     assets,
@@ -220,10 +253,26 @@ async function verify() {
   );
 }
 
+async function release() {
+  if (!requiresPromotion) {
+    throw new Error("release is only available for an asset collection that requires promotion");
+  }
+  if (keyPrefix) {
+    throw new Error("release requires the complete manifest; remove the asset selection prefix");
+  }
+  await upload();
+  await verify();
+  const manifest = loadManifest();
+  manifest.public = true;
+  fs.writeFileSync(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`);
+  console.log(`Promoted ${manifest.assets.length} verified assets for public CDN rewriting`);
+}
+
 if (command === "build") buildManifest();
 else if (command === "upload") await upload();
 else if (command === "verify") await verify();
+else if (command === "release") await release();
 else {
-  console.error("Usage: node scripts/manage-roof-assets.mjs <build|upload|verify>");
+  console.error("Usage: node scripts/manage-roof-assets.mjs <build|upload|verify|release>");
   process.exitCode = 1;
 }

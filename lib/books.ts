@@ -8,6 +8,8 @@ import {
   readMinutes,
   type Credit,
   type CreditRole,
+  CONTENT_FORMATS,
+  type ContentFormat,
   type Post,
 } from "./posts";
 import { renderMarkdown } from "./markdown";
@@ -66,6 +68,7 @@ interface BookChapterBase {
   tags: string[];
   status: BookChapterStatus;
   presentation: BookChapterPresentation;
+  format: ContentFormat;
   sections: BookChapterSection[];
   children: BookChapter[];
   /** When omitted, the role inherits the book-level credits; an empty list explicitly clears it. */
@@ -308,6 +311,12 @@ function parseChapter(
       `must be one of ${BOOK_CHAPTER_PRESENTATIONS.join(", ")}`
     );
   }
+  const declaredFormat = value.format === undefined
+    ? "article"
+    : requiredString(value, "format", chapterSource);
+  if (!CONTENT_FORMATS.includes(declaredFormat as ContentFormat)) {
+    fail(chapterSource, "format", `must be one of ${CONTENT_FORMATS.join(", ")}`);
+  }
 
   let sections: BookChapterSection[] = [];
   if (value.sections !== undefined) {
@@ -344,6 +353,7 @@ function parseChapter(
     title: requiredString(value, "title", chapterSource),
     tags: Array.from(new Set(optionalStringList(value, "tags", chapterSource))),
     presentation: declaredPresentation as BookChapterPresentation,
+    format: declaredFormat as ContentFormat,
     sections,
     children,
     authors: chapterCreditOverride(value, "authors", chapterSource),
@@ -900,7 +910,7 @@ export async function getBookChapterDocuments(book: Book): Promise<BookChapterDo
         definitions,
         `${book.slug}/${chapter.id}`
       );
-      const html = markdown ? await renderMarkdown(markdown) : "";
+      const html = markdown ? await renderMarkdown(markdown, { format: chapter.format }) : "";
       const headings = renderedChapterHeadings(html);
       validateBookChapterSectionHeadings(book.slug, chapter, headings);
       const sectionNo = await getBookChapterSectionNumber(book.documentSlug, chapter.id);

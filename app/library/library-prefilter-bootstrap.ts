@@ -8,7 +8,7 @@ export const libraryPrefilterBootstrap = String.raw`(function(){try{
 var q=new URLSearchParams(location.search);
 function pick(k){var v=q.get(k);if(v==null)return null;v=v.trim();return v?v:null;}
 var s=pick("section"),c=pick("category"),t=pick("tag"),p=pick("contributor"),r=pick("role");
-if(s&&["essay","review","translation","multimedia","negative"].indexOf(s)<0)s=null;
+if(s&&["essay","review","translation","interview","community"].indexOf(s)<0)s=null;
 if(r&&["author","translator","proofreader"].indexOf(r)<0)r=null;
 var sel=[];
 function esc(v){return v.replace(/\\/g,"\\\\").replace(/"/g,'\\"');}

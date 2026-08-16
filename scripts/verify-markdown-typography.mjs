@@ -214,6 +214,29 @@ assert.match(
   "speaker turns must receive their non-indented paragraph class"
 );
 
+const colonSpeakerTurnHtml = await renderMarkdown(`**古川：**回答不应沿用普通正文缩进。`);
+assert.match(
+  colonSpeakerTurnHtml,
+  /<p class="speaker-turn"><strong>古川：<\/strong>/u,
+  "colon-labelled speaker turns must be recognized without requiring a special space"
+);
+
+const interviewPromptHtml = await renderMarkdown(`**——第一部作品对您意味着什么？**`);
+assert.match(
+  interviewPromptHtml,
+  /<p class="speaker-turn"><strong>——第一部作品对您意味着什么？<\/strong><\/p>/u,
+  "bold interviewer prompts must use the interview turn layout"
+);
+
+const plainInterviewTurnHtml = await renderMarkdown(`莲实：请谈谈这个镜头。`, {
+  format: "interview",
+});
+assert.match(
+  plainInterviewTurnHtml,
+  /<p class="speaker-turn"><strong>莲实：<\/strong>请谈谈这个镜头。<\/p>/u,
+  "interview format must structure an unmarked speaker label without article-specific cleanup"
+);
+
 /* ---------------- 全语料渲染扫描（TYPO-G1/G3/G4） ----------------
    上面的 fixture 只验证 renderMarkdown 自身的行为，永远不会因真实内容
    违规而失败——[图题] 打错位置、非法 =NN% 宽度都会把字面标记静默渲染

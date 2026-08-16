@@ -5,12 +5,14 @@ date: 2026-08-08
 slug: kizumonogatari-architecture-landscape
 categories: [动画]
 section: translation
-tags: [物语系列, 建筑, 都市·空间]
+tags: [物语系列, 建筑]
 post_author: あにもに
 translator: shiki
 proofreader: shiki
 excerpt: 从山梨文化会馆、香川县厅舍到东云运河公寓与二子玉川双子塔，本文考察《伤物语》如何借现代建筑重写战后日本的风景。
 script: hans
+license: CC BY-NC-SA 4.0
+original_publication: シャフト批評合同誌『号外もにも～ど』第40－47页
 citation:
   itemType: blogPost
   citationKey: animoni-kizumonogatari-architecture-2026

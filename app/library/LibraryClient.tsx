@@ -3,8 +3,8 @@
 import { Suspense, useCallback, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import {
-  EDITORIAL_SECTIONS,
   EDITORIAL_SECTION_META,
+  READER_EDITORIAL_SECTIONS,
 } from "@/lib/editorial";
 import { CREDIT_ROLES, CREDIT_ROLE_META } from "@/lib/credit-roles";
 import {
@@ -70,7 +70,7 @@ export default function LibraryClient({
       disabled: false,
       href: filterHref(filters, { section: null }),
     },
-    ...EDITORIAL_SECTIONS.map((section) => {
+    ...READER_EDITORIAL_SECTIONS.map((section) => {
       const count = countWith({ section });
       return {
         key: section,

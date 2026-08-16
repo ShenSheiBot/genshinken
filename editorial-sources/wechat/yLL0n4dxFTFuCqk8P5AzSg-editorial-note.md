@@ -2,3 +2,4 @@
 
 - 来源：https://mp.weixin.qq.com/s/yLL0n4dxFTFuCqk8P5AzSg
 - 来源正文明确采用 CC BY-NC-SA 4.0；公开稿保留两张正文图片与四组脚注。
+- 第三条原注的霍米·巴巴引文按来源全文保留，不以编辑摘要代替。

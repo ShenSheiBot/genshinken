@@ -10,6 +10,7 @@ post_author: Frederick Douglass
 translator: KoPaNo
 excerpt: 弗雷德里克·道格拉斯在 1888 年国际妇女理事会演讲中回顾妇女选举权运动的历史，主张女性应成为这场运动的主要发言者。
 script: hans
+license: CC BY-NC-SA 4.0
 citation:
   itemType: blogPost
   citationKey: douglass-womens-suffrage-2023

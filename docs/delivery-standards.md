@@ -93,8 +93,10 @@ featured_order: 0        # 可选；同栏目首页推荐优先级，数值越�
   - `essay`：论
   - `review`：评
   - `translation`：译
+  - `interview`：访（完整访谈、对谈、圆桌或问卷；是否翻译另由署名与 citation 表达）
   - `community`：社
-  - `multimedia`：多媒体
+- `multimedia` 与 `negative` 只保留旧内容解析和旧 URL 兼容，不进入当前读者栏目筛选或首页推荐。
+- `format` 可取 `article / interview / qa`。完整访谈页使用 `section: interview`；混合书籍只在相应 chapter 节点写 `format: interview` 或 `format: qa`，不得把整本书误归为访谈。
 - `section` 与 `categories` 相互独立；不要用“历史 / 哲学”等主题分类代替栏目，也不要只依赖译者署名推断「译」栏目。
 - `featured_order` 可用于任一栏目，必须是有限数值；缺省为 `0`，数值越大则在同栏目首页越靠前。
 - 首页推荐卡页眉由 `section` 与 `categories` 组合为「栏目 · 主题分类」，不得手写 `#03` 一类类别编号。「译」栏目推荐只展示 `post_author`，完整译者署名留在正文和文库。
@@ -212,6 +214,19 @@ P1/P2/P4/P5 由 `scripts/validate-content.mjs` 的 `validateProseTypography` 在
 ```markdown
 ![说明](attachments/your-image.png)
 ```
+
+屋顶历史归档与微信归档图片使用 R2 管理路径，不随普通 Git 图片交付：
+
+- 屋顶历史归档：`attachments/roof-archive/...`，使用既有 `assets:manifest / assets:upload / assets:verify`。
+- 微信归档：`attachments/wechat/...`。新文件保留在被忽略的本地目录，依次运行
+  `assets:wechat:manifest` 和 `assets:wechat:release`；后者会上传完整清单、逐项回读校验
+  HTTP 状态、MIME、字节数与 SHA-256，全部通过后才把清单标为 `public: true` 并启用 CDN URL 改写。
+- 微信清单尚未公开时，只有已经受 Git 跟踪的旧图片可以继续使用本地路径；任何新图片既未受跟踪、清单又未完成 R2 promotion 时，`verify:wechat-assets-ready`、pre-commit 与 `npm run check` 都会失败。
+- `assets:wechat:manifest` 每次重建都会把 `public` 重置为 `false`，因此新增一张图片后必须重新完成整批上传与远端验收，不能沿用上次的公开状态。
+- 每篇微信公开稿还必须登记在 `editorial-sources/wechat/preservation-manifest.json`。先运行
+  `npm run preservation:wechat:build -- --accept-reviewed-omissions`，逐条复核命令列出的未进入公开稿的源文本块；
+  清单会固定 `raw.html`／精确 `#js_content` 的哈希、正文图角色与顺序、公开正文、脚注调用及完整定义。
+  `verify:wechat-preservation` 同时进入 pre-commit 与 `npm run check`，正文静默删改、封面冒充正文图、图片错序或脚注截断都会阻止交付。
 
 ### 图题、图注与图版宽度
 

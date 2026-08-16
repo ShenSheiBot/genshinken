@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import fs from "node:fs";
 import { sanitizeMediaMaterial, sanitizePublicContentHtml } from "../lib/media-material.ts";
 import { renderMarkdown } from "../lib/markdown.ts";
 
@@ -60,5 +61,25 @@ assert.match(
   /src="https:\/\/assets\.labonroof\.top\/roof-archive\/cv1530117\/01-shanghai-skyline\.jpg"/u,
   "roof archive images must render from the R2 custom domain"
 );
+
+const wechatImage = await renderMarkdown(
+  "![微信正文插图](attachments/wechat/example/body-001.jpg)"
+);
+const wechatManifest = JSON.parse(
+  fs.readFileSync("editorial-sources/wechat/assets-manifest.json", "utf8")
+);
+if (wechatManifest.public) {
+  assert.match(
+    wechatImage,
+    /src="https:\/\/assets\.labonroof\.top\/wechat\/example\/body-001\.jpg"/u,
+    "promoted WeChat body images must render from the R2 custom domain"
+  );
+} else {
+  assert.match(
+    wechatImage,
+    /src="\/attachments\/wechat\/example\/body-001\.jpg"/u,
+    "pending WeChat assets must keep their tracked local path"
+  );
+}
 
 console.log("media material sanitizer verification passed");

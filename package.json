@@ -29,6 +29,11 @@
     "assets:manifest": "node scripts/manage-roof-assets.mjs build",
     "assets:upload": "node scripts/manage-roof-assets.mjs upload",
     "assets:verify": "node scripts/manage-roof-assets.mjs verify",
+    "assets:wechat:manifest": "node scripts/manage-wechat-assets.mjs build",
+    "assets:wechat:upload": "node scripts/manage-wechat-assets.mjs upload",
+    "assets:wechat:verify": "node scripts/manage-wechat-assets.mjs verify",
+    "assets:wechat:release": "node scripts/manage-wechat-assets.mjs release",
+    "preservation:wechat:build": "node scripts/manage-wechat-preservation.mjs build",
     "verify:snapshot-history": "node scripts/verify-editorial-snapshot-history.mjs",
     "verify:preservation": "node scripts/verify-source-preservation.mjs",
     "sync:preserved": "node scripts/verify-source-preservation.mjs --write",
@@ -44,8 +49,11 @@
     "verify:routing": "node --experimental-strip-types --no-warnings scripts/verify-static-routing.mjs",
     "verify:library": "node --experimental-strip-types --no-warnings scripts/verify-library-filter.mjs",
     "verify:editorial": "node scripts/verify-editorial-release.mjs",
+    "verify:no-new-wechat-assets": "node scripts/verify-no-new-wechat-assets.mjs",
+    "verify:wechat-assets-ready": "node scripts/verify-wechat-assets-ready.mjs",
+    "verify:wechat-preservation": "node scripts/manage-wechat-preservation.mjs verify",
     "verify:release": "node scripts/verify-editorial-release.mjs",
-    "check": "npm run validate:content && npm run validate:media-html && npm run verify:typography && npm run verify:typography-registry && npm run verify:reading-progress && npm run verify:han-script && npm run verify:citations && npm run verify:routing && npm run verify:library && npm run typecheck && npm run lint"
+    "check": "npm run validate:content && npm run validate:media-html && npm run verify:wechat-assets-ready && npm run verify:wechat-preservation && npm run verify:typography && npm run verify:typography-registry && npm run verify:reading-progress && npm run verify:han-script && npm run verify:citations && npm run verify:routing && npm run verify:library && npm run typecheck && npm run lint"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

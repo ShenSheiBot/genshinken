@@ -5,7 +5,8 @@ date: 2021-11-30
 slug: furukawa-tomohiro-interview-1-saint-seiya-style
 script: hans
 categories: [动画]
-section: translation
+section: interview
+format: interview
 tags: [圣斗士星矢, 动画演出, 少女☆歌剧 Revue Starlight]
 post_author: furukawa-tomohiro
 translator: solntse

@@ -415,6 +415,7 @@
   font-weight: 700;
   letter-spacing: 0;
 }
+.body :global(p.speaker-turn > strong:first-child:not(:last-child)) { margin-inline-end: .5em; }
 
 .body :global(h1),
 .body :global(h2),

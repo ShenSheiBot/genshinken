@@ -5,7 +5,8 @@ date: 2021-11-30
 slug: furukawa-tomohiro-interview-3-precure-storyboards
 script: hans
 categories: [动画]
-section: translation
+section: interview
+format: interview
 tags: [光之美少女, 动画演出, 分镜]
 post_author: furukawa-tomohiro
 translator: august-rush

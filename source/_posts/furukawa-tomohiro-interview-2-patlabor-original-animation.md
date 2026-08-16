@@ -5,7 +5,8 @@ date: 2021-11-30
 slug: furukawa-tomohiro-interview-2-patlabor-original-animation
 script: hans
 categories: [动画]
-section: translation
+section: interview
+format: interview
 tags: [机动警察, 动画演出, 押井守]
 post_author: furukawa-tomohiro
 translator: august-rush

@@ -110,6 +110,7 @@
       "status": "published",
       "anchor": "oguro-anno-izubuchi-dialogue",
       "publishedAt": "2022-07-22",
+      "format": "interview",
       "authors": [
         "小黑祐一郎",
         "庵野秀明",
@@ -135,6 +136,7 @@
       "status": "published",
       "anchor": "oguro-anno-suzuki-dialogue",
       "publishedAt": "2022-07-23",
+      "format": "interview",
       "authors": [
         "小黑祐一郎",
         "庵野秀明",
@@ -160,6 +162,7 @@
       "status": "published",
       "anchor": "oguro-anno-oshii-dialogue",
       "publishedAt": "2022-07-27",
+      "format": "interview",
       "authors": [
         "小黑祐一郎",
         "庵野秀明",
@@ -185,6 +188,7 @@
       "status": "published",
       "anchor": "anno-ikuhara-dialogue",
       "publishedAt": "2022-07-28",
+      "format": "interview",
       "authors": [
         "庵野秀明",
         "几原邦彦",

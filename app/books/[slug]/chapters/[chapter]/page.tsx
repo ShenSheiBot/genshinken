@@ -244,7 +244,10 @@ export default async function BookChapterPage({
   const parts = splitArticle(document.html);
   const citation = getBookChapterCitation(book, chapter);
   const credits = getBookChapterCredits(book, chapter);
-  const section = EDITORIAL_SECTION_META[document.section];
+  const readerSection = chapter.format === "interview" || chapter.format === "qa"
+    ? "interview"
+    : document.section;
+  const section = EDITORIAL_SECTION_META[readerSection];
   const chapterCode = publication?.sectionNo ?? chapter.number.replace(/\s+/gu, "");
   const publicationNo = publication?.no;
   const canonical = `${site.url}${bookChapterHref(book, chapter)}`;
@@ -281,7 +284,7 @@ export default async function BookChapterPage({
       />
 
       <DossierCover
-        sectionHref={`/library?section=${encodeURIComponent(document.section)}`}
+        sectionHref={`/library?section=${encodeURIComponent(readerSection)}`}
         sectionLabel={section.label}
         sectionNumber={chapterCode}
         className={bookStyles.chapterReaderCover}

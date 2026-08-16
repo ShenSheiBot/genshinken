@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
 import { getAllPublicContent, type PublicContentEntry } from "@/lib/public-content";
+import {
+  bookChapterHref,
+  getAllBooks,
+  getBookChapterCredits,
+  getBookChapterDocuments,
+} from "@/lib/books";
 import { findContributor } from "@/lib/contributors";
 import { comparePostNumbersDescending } from "@/lib/post-numbering";
 import { site } from "@/lib/site";
@@ -7,7 +13,7 @@ import { connectedTagFacetValues, type LibraryFacetValues, type LibraryRow } fro
 import LibraryClient from "./LibraryClient";
 import { libraryPrefilterBootstrap } from "./library-prefilter-bootstrap";
 
-const pageDescription = "浏览屋顶现视研的评论、译介与档案，并按栏目、主题、标签、贡献者与署名位置筛选。";
+const pageDescription = "浏览屋顶现视研的论述、评论、译介、访谈与社群档案，并按栏目、主题、标签、贡献者与署名位置筛选。";
 export const metadata: Metadata = {
   title: "文库",
   description: pageDescription,
@@ -59,11 +65,41 @@ function orderedFacetValues(values: string[], sortByCount = false): string[] {
 
 export default async function LibraryPage() {
   const entries = await getAllPublicContent();
-  const rows = entries.map(toLibraryRow).sort(comparePostNumbersDescending);
+  const publicationByBook = new Map(
+    entries
+      .filter((entry) => entry.kind === "book" && entry.bookSlug)
+      .map((entry) => [entry.bookSlug as string, entry])
+  );
+  const interviewChapterRows = (
+    await Promise.all(getAllBooks().map(async (book): Promise<LibraryRow[]> => {
+      const publication = publicationByBook.get(book.slug);
+      return (await getBookChapterDocuments(book))
+        .filter(({ chapter }) => chapter.format === "interview" || chapter.format === "qa")
+        .map(({ chapter, readMin, tags }) => {
+          const credits = getBookChapterCredits(book, chapter);
+          return {
+            slug: `${book.slug}--${chapter.id}`,
+            href: bookChapterHref(book, chapter),
+            title: `${book.title}｜${chapter.title}`,
+            section: "interview" as const,
+            category: publication?.category ?? "未分类",
+            tags,
+            credits,
+            author: credits.filter((credit) => credit.role === "author").map((credit) => credit.name).join("　"),
+            no: publication?.no ?? "00",
+            sectionNo: chapter.number.replace(/\s+/gu, ""),
+            displayDateISO: chapter.publishedAt,
+            readMin,
+          };
+        });
+    }))
+  ).flat();
+  const rows = [...entries.map(toLibraryRow), ...interviewChapterRows]
+    .sort(comparePostNumbersDescending);
   const facets: LibraryFacetValues = {
-    categories: orderedFacetValues(entries.map((entry) => entry.category)),
-    tags: connectedTagFacetValues(entries.flatMap((entry) => entry.tags)),
-    contributors: [...new Set(entries.flatMap((entry) =>
+    categories: orderedFacetValues(rows.map((entry) => entry.category)),
+    tags: connectedTagFacetValues(rows.flatMap((entry) => entry.tags)),
+    contributors: [...new Set(rows.flatMap((entry) =>
       entry.credits.map((credit) => credit.contributorId)
     ))]
       .map((id) => findContributor(id))

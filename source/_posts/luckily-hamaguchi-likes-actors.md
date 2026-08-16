@@ -5,7 +5,8 @@ date: 2022-07-24
 slug: luckily-hamaguchi-likes-actors
 script: hans
 categories: [电影与影视]
-section: translation
+section: interview
+format: interview
 tags: [滨口龙介, 莲实重彦, 夜以继日, 电影理论, 表演, 三浦哲哉]
 post_author: [滨口龙介, 莲实重彦, 三浦哲哉]
 translator: [一条, 静希]

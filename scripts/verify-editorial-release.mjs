@@ -1211,7 +1211,8 @@ const sectionLabels = {
   essay: "论",
   review: "评",
   translation: "译",
-  multimedia: "多媒体",
+  interview: "访",
+  community: "社",
 };
 const editorialCards = elements(home.html, "article")
   .map((card) => ({ ...card, section: attribute(card.opening, "data-section") }))
@@ -1286,12 +1287,14 @@ assert.doesNotMatch(
   "translation recommendations must not invent original-author/translator display fields"
 );
 
-const multimediaCard = editorialCards.find((card) => card.section === "multimedia");
-assert.ok(multimediaCard, "homepage must include a multimedia card");
-assert.match(multimediaCard.outer, /aria-label=["']发布平台与站内资料["']/);
-for (const label of ["发布入口", "站外来源", "站内资料"]) {
-  assert.ok(visibleText(multimediaCard.outer).includes(label), `multimedia card must retain ${label}`);
-}
+assert.ok(
+  editorialCards.some((card) => card.section === "interview"),
+  "homepage must expose the reader-facing interview section"
+);
+assert.ok(
+  !editorialCards.some((card) => card.section === "multimedia" || card.section === "negative"),
+  "empty legacy compatibility sections must stay off the reader-facing wall"
+);
 for (const section of ["review", "translation"]) {
   for (const card of editorialCards.filter((candidate) => candidate.section === section)) {
     assert.doesNotMatch(card.outer, /<hr\b/i, `${section} cards must not render an authored divider`);

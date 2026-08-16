@@ -545,6 +545,7 @@ body:has(main[data-archive-page="true"]) {
   font-weight: 700;
   letter-spacing: 0;
 }
+.art-body p.speaker-turn > strong:first-child:not(:last-child) { margin-inline-end: .5em; }
 .art-body em { font-style: italic; }
 .art-body p .latin-run,
 .art-body li .latin-run,

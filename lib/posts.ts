@@ -34,6 +34,9 @@ const BOOKS_DIR = path.join(process.cwd(), "source", "_books");
 
 const bookChapterSectionNumbers = new Map<string, string>();
 
+export const CONTENT_FORMATS = ["article", "interview", "qa"] as const;
+export type ContentFormat = (typeof CONTENT_FORMATS)[number];
+
 export type { CreditRole } from "./credit-roles";
 export { CREDIT_ROLE_META, CREDIT_ROLES } from "./credit-roles";
 import { CREDIT_ROLE_META, type CreditRole } from "./credit-roles";
@@ -59,6 +62,7 @@ export interface PostSummary {
   bookDocument: boolean; // 仅作为书籍章节的构建源，不生成公开文章页面
   category: string;
   section: EditorialSection;
+  format: ContentFormat;
   tags: string[];
   author: string;
   credits: Credit[];
@@ -445,7 +449,6 @@ async function loadRaw(): Promise<Post[]> {
 
       const date = toDate(data.date);
       const updated = toDate(data.updated);
-      const html = await renderMarkdown(content);
       const title = String(data.title ?? baseName).trim();
       const preferredTitleBreaks = titleBreaks(data.title_breaks ?? data.titleBreaks, title, file);
       const homeTitleBreaksValue = data.home_title_breaks ?? data.homeTitleBreaks;
@@ -461,6 +464,15 @@ async function loadRaw(): Promise<Post[]> {
       const uniqueTags = Array.from(new Set(tags));
       const credits = buildCredits(data, file);
       const section = resolveSection(data, file);
+      const formatValue = metadataText(data.format) || (section === "interview" ? "interview" : "article");
+      if (!CONTENT_FORMATS.includes(formatValue as ContentFormat)) {
+        throw new Error(`${file}: format 必须是 ${CONTENT_FORMATS.join(" / ")} 之一`);
+      }
+      const format = formatValue as ContentFormat;
+      if (section === "interview" && format === "article") {
+        throw new Error(`${file}: section: interview 必须使用 format: interview 或 format: qa`);
+      }
+      const html = await renderMarkdown(content, { format });
       const script = resolveHanScript(data, file);
       const originalDate = metadataText(data.original_date ?? data.originalDate ?? data["原文日期"]);
       if (section === "negative" && !isISODate(originalDate)) {
@@ -509,6 +521,7 @@ async function loadRaw(): Promise<Post[]> {
         bookDocument,
         category,
         section,
+        format,
         tags: uniqueTags,
         author: authors.join("　") || String(data.post_author ?? data.author ?? "").trim(),
         credits,
