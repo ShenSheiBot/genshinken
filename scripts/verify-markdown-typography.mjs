@@ -138,6 +138,16 @@ assert.match(
   /<figure class="article-figure" data-width="25"><img src="\/attachments\/plate\.png"/u,
   "marked plates must become semantic figures carrying their print width"
 );
+
+const compactFigureHtml = await renderMarkdown(`[图题] 紧凑图题\n![图](attachments/compact.png "=25%")\n[图注] 紧凑图注。`);
+assert.match(
+  compactFigureHtml,
+  /<figure class="article-figure" data-width="25"><img src="\/attachments\/compact\.png"/u,
+  "compact marker syntax must become the same semantic figure"
+);
+assert.doesNotMatch(compactFigureHtml, /\[(?:图题|图注)\]/u);
+const attachedFigureHtml = await renderMarkdown(`前一段没有空行。\n[图题] 紧凑图题\n![图](attachments/compact.png "=25%")\n[图注] 紧凑图注。`);
+assert.match(attachedFigureHtml, /<p>前一段没有空行。<\/p><figure class="article-figure"/u);
 assert.match(
   semanticFigureHtml,
   /<figcaption class="article-figure-caption">滨口雄幸<\/figcaption>/u,
@@ -150,6 +160,73 @@ assert.match(
 );
 assert.doesNotMatch(semanticFigureHtml, /\[图(?:题|注)\]/u, "figure markers must never render");
 assert.doesNotMatch(semanticFigureHtml, /title="/u, "a consumed width hint must not survive as a title");
+
+const semanticProfileHtml = await renderMarkdown(`
+[人物] 理查德·卡里奇曼
+
+![理查德·卡里奇曼肖像](attachments/calichman.jpg "=25%")
+
+[人物简介] 纽约市立大学教授，研究日本近现代思想史与后殖民理论。
+`);
+assert.match(
+  semanticProfileHtml,
+  /<figure class="article-profile" data-width="25"><img src="\/attachments\/calichman\.jpg"/u,
+  "marked profiles must become semantic portrait records carrying their plate width"
+);
+assert.match(
+  semanticProfileHtml,
+  /<figcaption class="article-profile-name">理查德(?:<span class="cjk-interpunct">)?·(?:<\/span>)?卡里奇曼<\/figcaption>/u,
+  "profile names must remain concise figure captions"
+);
+assert.match(
+  semanticProfileHtml,
+  /<div class="article-profile-copy"><p class="article-profile-bio">纽约市立大学教授/u,
+  "profile biographies must remain associated with the portrait without entering its short caption"
+);
+assert.doesNotMatch(semanticProfileHtml, /\[人物(?:简介)?\]/u, "profile markers must never render");
+
+const semanticGalleryHtml = await renderMarkdown(`
+[图组] 前后对照
+
+[图题] 修改前
+
+![修改前](attachments/before.png)
+
+[图题] 修改后
+
+![修改后](attachments/after.png)
+
+[图组结束]
+`);
+assert.match(
+  semanticGalleryHtml,
+  /<figure class="article-gallery" data-count="2"><figcaption class="article-gallery-title">前后对照<\/figcaption><div class="article-gallery-grid">/u,
+  "explicitly delimited figures must become one semantic gallery"
+);
+assert.equal((semanticGalleryHtml.match(/class="article-figure"/gu) ?? []).length, 2);
+assert.doesNotMatch(semanticGalleryHtml, /\[图组(?:结束)?\]/u);
+
+const semanticSlidesHtml = await renderMarkdown(`
+[幻灯] 连续扫描页
+
+[图题] 第1页
+
+![第1页](attachments/page-01.png)
+
+[图题] 第2页
+
+![第2页](attachments/page-02.png)
+
+[幻灯结束]
+`);
+assert.match(
+  semanticSlidesHtml,
+  /<figure class="article-slides" data-count="2"><figcaption class="article-slides-title">连续扫描页<\/figcaption><div class="article-slides-track" role="region" aria-label="连续图版" tabindex="0">/u,
+  "explicitly delimited ordered figures must become one scroll-snapping sequence"
+);
+assert.match(semanticSlidesHtml, /data-slide="1" data-total="2"/u);
+assert.match(semanticSlidesHtml, /data-slide="2" data-total="2"/u);
+assert.doesNotMatch(semanticSlidesHtml, /\[幻灯(?:结束)?\]/u);
 
 const unmarkedFigureHtml = await renderMarkdown('![配图1](attachments/plate.png)');
 assert.doesNotMatch(
@@ -248,7 +325,7 @@ assert.match(
   const path = await import("node:path");
   const postsDirectory = path.join(process.cwd(), "source", "_posts");
   const corpusFailures = [];
-  const markerLeak = /\[(?:图题|图注|表题|表注)\]/u;
+  const markerLeak = /\[(?:图题|图注|表题|表注|人物|人物简介|图组|图组结束|幻灯|幻灯结束)\]/u;
   const invalidWidth = /title="=(?!(?:25|33|50|66|75|100)%")[^"]*"/u;
 
   const posts = fs

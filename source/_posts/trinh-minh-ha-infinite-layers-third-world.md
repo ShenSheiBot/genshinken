@@ -22,9 +22,9 @@ citation:
   language: zh-CN
 ---
 
-![黑白三联肖像中的三位塞内加尔女性，中央人物直视镜头并露出微笑](attachments/wechat/7nE0SvdejgnZGGtx_sx4Lg/002.jpg)
+[图题] 郑明河，重装（Reassemblage），拍摄於塞内加尔，1982年。
 
-*图：郑明河，重装（Reassemblage），拍摄於塞内加尔，1982年。*
+![黑白三联肖像中的三位塞内加尔女性，中央人物直视镜头并露出微笑](attachments/wechat/7nE0SvdejgnZGGtx_sx4Lg/002.jpg "=75%")
 
 ### “Infinite Layers/Third World?”
 

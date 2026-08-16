@@ -273,11 +273,21 @@ citation:
 
 至于驾笼真太郎这样的鬼才，甚至可以利用立体空间的多维性来多角度呈现故事，在《抽象》中，直接将分镜化形为建筑物来表达情绪。
 
+[图组] 《抽象》中的建筑化分镜
+
+[图题] 立体分镜
+
 ![《抽象》中的立体分镜](attachments/roof-archive/cv3522753/36-abstraction-01.png)
+
+[图题] 建筑化分镜
 
 ![《抽象》中的建筑化分镜](attachments/roof-archive/cv3522753/37-abstraction-02.png)
 
+[图题] 多维空间
+
 ![《抽象》中的多维空间](attachments/roof-archive/cv3522753/38-abstraction-03.png)
+
+[图组结束]
 
 ## 后记：自言自语
 

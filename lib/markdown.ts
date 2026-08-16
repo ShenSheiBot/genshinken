@@ -601,7 +601,12 @@ type TableFigureNode = {
   children?: TableFigureNode[];
 };
 
-function markerParagraph(node: TableFigureNode | undefined, marker: string): node is TableFigureNode {
+type MarkerParagraphNode = TableFigureNode & {
+  type: "element";
+  tagName: "p";
+};
+
+function markerParagraph(node: TableFigureNode | undefined, marker: string): node is MarkerParagraphNode {
   if (node?.type !== "element" || node.tagName !== "p") return false;
   return elementText(node as Element).trimStart().startsWith(marker);
 }
@@ -708,9 +713,96 @@ function rehypeTableFigures() {
 
 const FIGURE_CAPTION_MARKER = "[图题]";
 const FIGURE_NOTE_MARKER = "[图注]";
+const PROFILE_NAME_MARKER = "[人物]";
+const PROFILE_BIO_MARKER = "[人物简介]";
+const GALLERY_TITLE_MARKER = "[图组]";
+const GALLERY_END_MARKER = "[图组结束]";
+const SLIDES_TITLE_MARKER = "[幻灯]";
+const SLIDES_END_MARKER = "[幻灯结束]";
 /** Discrete display widths; each needs a matching rule in globals.css. */
 const FIGURE_WIDTHS = new Set(["25", "33", "50", "66", "75", "100"]);
 const FIGURE_WIDTH_TITLE = /^\s*=\s*(\d{1,3})%\s*$/u;
+const BLOCK_MEDIA_MARKERS = [
+  FIGURE_CAPTION_MARKER,
+  FIGURE_NOTE_MARKER,
+  PROFILE_NAME_MARKER,
+  PROFILE_BIO_MARKER,
+] as const;
+
+function hasNodeClass(node: TableFigureNode, name: string) {
+  const className = node.properties?.className;
+  return Array.isArray(className) && className.includes(name);
+}
+
+/**
+ * CommonMark keeps consecutive marker/image lines in one paragraph unless
+ * authors insert blank lines. Split that compact spelling into real block
+ * siblings before the semantic figure transforms run.
+ */
+function rehypeSplitCompactMediaMarkers() {
+  const walk = (parent: TableFigureNode) => {
+    const children = parent.children;
+    if (!children) return;
+
+    for (let index = 0; index < children.length; index += 1) {
+      const paragraph = children[index];
+      if (paragraph.type !== "element" || paragraph.tagName !== "p" || !paragraph.children) continue;
+      const imageIndex = paragraph.children.findIndex(
+        (child) => child.type === "element" && child.tagName === "img"
+      );
+      if (imageIndex < 0) continue;
+      if (paragraph.children.filter((child) => child.type === "element" && child.tagName === "img").length !== 1) continue;
+
+      const before = paragraph.children.slice(0, imageIndex);
+      const after = paragraph.children.slice(imageIndex + 1);
+      if (!before.every((child) => child.type === "text") || !after.every((child) => child.type === "text")) continue;
+      const rawBeforeText = before.map((child) => child.value ?? "").join("");
+      const afterText = after.map((child) => child.value ?? "").join("").trim();
+      const markerOffset = BLOCK_MEDIA_MARKERS.reduce((found, marker) => {
+        const offset = rawBeforeText.lastIndexOf(`\n${marker}`);
+        return Math.max(found, offset >= 0 ? offset + 1 : rawBeforeText.startsWith(marker) ? 0 : -1);
+      }, -1);
+      if (markerOffset < 0) continue;
+      const leadingText = rawBeforeText.slice(0, markerOffset).trim();
+      const beforeText = rawBeforeText.slice(markerOffset).trim();
+      if (afterText && !BLOCK_MEDIA_MARKERS.some((marker) => afterText.startsWith(marker))) continue;
+
+      const replacement: TableFigureNode[] = [
+        ...(leadingText
+          ? [{
+              type: "element" as const,
+              tagName: "p",
+              properties: {},
+              children: [{ type: "text" as const, value: leadingText }],
+            }]
+          : []),
+        { type: "element", tagName: "p", properties: {}, children: [{ type: "text", value: beforeText }] },
+        {
+          type: "element",
+          tagName: "p",
+          properties: {},
+          children: [paragraph.children[imageIndex]],
+        },
+      ];
+      if (afterText) {
+        replacement.push({
+          type: "element",
+          tagName: "p",
+          properties: {},
+          children: [{ type: "text", value: afterText }],
+        });
+      }
+      children.splice(index, 1, ...replacement);
+      index += replacement.length - 1;
+    }
+
+    for (const child of children) {
+      if (child.type === "element") walk(child);
+    }
+  };
+
+  return (tree: Root) => walk(tree as unknown as TableFigureNode);
+}
 
 /** The lone `img` of an image-only paragraph, or undefined when the paragraph holds anything else. */
 function soleImage(node: TableFigureNode | undefined): TableFigureNode | undefined {
@@ -803,6 +895,219 @@ function rehypeImageFigures() {
   return (tree: Root) => walk(tree as unknown as TableFigureNode);
 }
 
+/**
+ * Turn a compact portrait record into a semantic profile plate. Profiles use
+ * the same discrete image widths as ordinary figures, but keep the person's
+ * name separate from the longer biographical note so the figure index remains
+ * concise.
+ */
+function rehypeProfileFigures() {
+  const walk = (parent: TableFigureNode) => {
+    const children = parent.children;
+    if (!children) return;
+
+    for (let index = 0; index < children.length; index += 1) {
+      const name = children[index];
+      if (!markerParagraph(name, PROFILE_NAME_MARKER)) continue;
+
+      const imageIndex = significantSibling(children, index + 1, 1);
+      const paragraph = imageIndex >= 0 ? children[imageIndex] : undefined;
+      const image = soleImage(paragraph);
+      if (!image) continue;
+      stripParagraphMarker(name, PROFILE_NAME_MARKER);
+
+      let width = "25";
+      const title = image.properties?.title;
+      if (typeof title === "string") {
+        const match = FIGURE_WIDTH_TITLE.exec(title);
+        if (match && FIGURE_WIDTHS.has(match[1])) {
+          width = match[1];
+          delete image.properties?.title;
+        }
+      }
+
+      const bios: TableFigureNode[] = [];
+      let endIndex = imageIndex;
+      let nextIndex = significantSibling(children, imageIndex + 1, 1);
+      while (nextIndex >= 0 && markerParagraph(children[nextIndex], PROFILE_BIO_MARKER)) {
+        const bio = children[nextIndex];
+        stripParagraphMarker(bio, PROFILE_BIO_MARKER);
+        bio.properties = { ...(bio.properties ?? {}), className: ["article-profile-bio"] };
+        bios.push(bio);
+        endIndex = nextIndex;
+        nextIndex = significantSibling(children, nextIndex + 1, 1);
+      }
+
+      const profile: TableFigureNode = {
+        type: "element",
+        tagName: "figure",
+        properties: {
+          className: ["article-profile"],
+          "data-width": width,
+        },
+        children: [
+          image,
+          {
+            type: "element",
+            tagName: "figcaption",
+            properties: { className: ["article-profile-name"] },
+            children: name.children ?? [],
+          },
+          ...(bios.length > 0
+            ? [{
+                type: "element",
+                tagName: "div",
+                properties: { className: ["article-profile-copy"] },
+                children: bios,
+              } satisfies TableFigureNode]
+            : []),
+        ],
+      };
+
+      children.splice(index, endIndex - index + 1, profile);
+    }
+
+    for (const child of children) {
+      if (child.type === "element") walk(child);
+    }
+  };
+
+  return (tree: Root) => walk(tree as unknown as TableFigureNode);
+}
+
+/**
+ * Group explicitly delimited semantic figures into a comparison grid. The
+ * closing marker makes the editorial decision visible in Markdown and avoids
+ * treating merely adjacent illustrations as a gallery.
+ */
+function rehypeImageGalleries() {
+  const walk = (parent: TableFigureNode) => {
+    const children = parent.children;
+    if (!children) return;
+
+    for (let index = 0; index < children.length; index += 1) {
+      const title = children[index];
+      if (!markerParagraph(title, GALLERY_TITLE_MARKER)) continue;
+
+      const figures: TableFigureNode[] = [];
+      let cursor = significantSibling(children, index + 1, 1);
+      let endIndex = -1;
+      while (cursor >= 0) {
+        const node = children[cursor];
+        if (markerParagraph(node, GALLERY_END_MARKER)) {
+          endIndex = cursor;
+          break;
+        }
+        if (node.type !== "element" || node.tagName !== "figure" || !hasNodeClass(node, "article-figure")) break;
+        figures.push(node);
+        cursor = significantSibling(children, cursor + 1, 1);
+      }
+      if (endIndex < 0 || figures.length < 2) continue;
+
+      stripParagraphMarker(title, GALLERY_TITLE_MARKER);
+      const gallery: TableFigureNode = {
+        type: "element",
+        tagName: "figure",
+        properties: { className: ["article-gallery"], "data-count": String(figures.length) },
+        children: [
+          {
+            type: "element",
+            tagName: "figcaption",
+            properties: { className: ["article-gallery-title"] },
+            children: title.children ?? [],
+          },
+          {
+            type: "element",
+            tagName: "div",
+            properties: { className: ["article-gallery-grid"] },
+            children: figures,
+          },
+        ],
+      };
+      children.splice(index, endIndex - index + 1, gallery);
+    }
+
+    for (const child of children) {
+      if (child.type === "element") walk(child);
+    }
+  };
+
+  return (tree: Root) => walk(tree as unknown as TableFigureNode);
+}
+
+/**
+ * Turn an explicitly delimited run of captioned figures into a horizontal,
+ * scroll-snapping sequence. This is reserved for page-by-page scans and
+ * consecutive frames whose order matters; ordinary adjacent images stay in
+ * the document flow.
+ */
+function rehypeImageSlides() {
+  const walk = (parent: TableFigureNode) => {
+    const children = parent.children;
+    if (!children) return;
+
+    for (let index = 0; index < children.length; index += 1) {
+      const title = children[index];
+      if (!markerParagraph(title, SLIDES_TITLE_MARKER)) continue;
+
+      const figures: TableFigureNode[] = [];
+      let cursor = significantSibling(children, index + 1, 1);
+      let endIndex = -1;
+      while (cursor >= 0) {
+        const node = children[cursor];
+        if (markerParagraph(node, SLIDES_END_MARKER)) {
+          endIndex = cursor;
+          break;
+        }
+        if (node.type !== "element" || node.tagName !== "figure" || !hasNodeClass(node, "article-figure")) break;
+        figures.push(node);
+        cursor = significantSibling(children, cursor + 1, 1);
+      }
+      if (endIndex < 0 || figures.length < 2) continue;
+
+      stripParagraphMarker(title, SLIDES_TITLE_MARKER);
+      figures.forEach((figure, figureIndex) => {
+        figure.properties = {
+          ...(figure.properties ?? {}),
+          "data-slide": String(figureIndex + 1),
+          "data-total": String(figures.length),
+        };
+      });
+      const slides: TableFigureNode = {
+        type: "element",
+        tagName: "figure",
+        properties: { className: ["article-slides"], "data-count": String(figures.length) },
+        children: [
+          {
+            type: "element",
+            tagName: "figcaption",
+            properties: { className: ["article-slides-title"] },
+            children: title.children ?? [],
+          },
+          {
+            type: "element",
+            tagName: "div",
+            properties: {
+              className: ["article-slides-track"],
+              role: "region",
+              "aria-label": "连续图版",
+              tabIndex: 0,
+            },
+            children: figures,
+          },
+        ],
+      };
+      children.splice(index, endIndex - index + 1, slides);
+    }
+
+    for (const child of children) {
+      if (child.type === "element") walk(child);
+    }
+  };
+
+  return (tree: Root) => walk(tree as unknown as TableFigureNode);
+}
+
 function createProcessor(format: ContentFormat = "article") {
   return unified()
   .use(remarkParse)
@@ -824,7 +1129,11 @@ function createProcessor(format: ContentFormat = "article") {
   .use(rehypeSlug)
   .use(rehypeRewrite, format)
   .use(rehypeTableFigures)
+  .use(rehypeSplitCompactMediaMarkers)
+  .use(rehypeProfileFigures)
   .use(rehypeImageFigures)
+  .use(rehypeImageGalleries)
+  .use(rehypeImageSlides)
   .use(rehypeCjkEmphasis)
   .use(rehypeSmartQuotes)
   .use(rehypeCjkInterpuncts)

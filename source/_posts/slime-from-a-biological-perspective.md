@@ -35,7 +35,11 @@ citation:
 
 虽然《疯狂山脉》中的修格斯已经初具雏形，但“史莱姆”这一名称第一次出现是在美国作家Joseph Payne Brennan于1953年发表的中篇小说《Slime》中。小说里的史莱姆由于火山喷发，来到陆地袭击人类。
 
-![1953年《Weird Tales》杂志所刊《Slime》封面](attachments/roof-archive/cv1668131/03-slime-weird-tales-cover.jpg "=50%")
+[图题] 《Slime》
+
+![1953年《Weird Tales》杂志所刊《Slime》封面](attachments/roof-archive/cv1668131/03-slime-weird-tales-cover.jpg "=25%")
+
+[图注] Joseph Payne Brennan著；1953年。
 
 《龙与地下城》中的史莱姆，视种类而定，具备多种不同抗性，亦是与玩家作对的难缠角色。无底深渊第222层即被命名为“Slime Pits”。
 

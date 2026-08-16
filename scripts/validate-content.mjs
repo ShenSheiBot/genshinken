@@ -82,7 +82,7 @@ const protocolLessAngleLink = /<www\.[^<>\s]+>/iu;
 const brokenOrderedListMarker = /^\s{0,3}\d{1,2}\.(?=\p{Script=Han})/u;
 const unescapedDollarMarker = /(?<!\\)\$/u;
 const internalEditorialLanguage = /(?:待逐篇清洗|清洗后纳入|尚未恢复|目前归档|归档来源页|原始(?:篇目|连载)证据|合并文库的构建源|快照与专篇|归档说明|档案说明|本站据.{0,40}(?:整理|归档)|平台封面.{0,30}未纳入正文资产|连载暂列暂停|连载状态据此标为|后续.{0,20}未见发布|暂未见正式后续|不因此自动成为|并非按作品名重新聚类|不在本专题中扩收|不把.{0,40}扩入活动档案)/u;
-const publicArchiveProcessLanguage = /(?:^|\n)\s*(?:(?:>|-)\s*)?来源[：:].*(?:(?:Bilibili|哔哩哔哩|B站)\s*(?:专栏)?\s*(?:cv)?\d{5,}|\bcv\d{5,}\b)|作者卡(?:署名|显示|署)|结构化来源|未提供更早的?[^\n]{0,12}原链|原页附图|原页图注|公开稿标题|按既有贡献者登记名|在归档时已无法访问|未修改共享\s+(?:book|topic)|(?:book|topic)\s+manifest|本篇任务|原页无正文图片|\d+\s*条(?:图片)?引用均为平台|(?:^|\n)\s*>\s*(?:原页|源页)声明|(?:^|\n)\s*\[(?:图题|图注|表题|表注)\]/iu;
+const publicArchiveProcessLanguage = /(?:^|\n)\s*(?:(?:>|-)\s*)?来源[：:].*(?:(?:Bilibili|哔哩哔哩|B站)\s*(?:专栏)?\s*(?:cv)?\d{5,}|\bcv\d{5,}\b)|作者卡(?:署名|显示|署)|结构化来源|未提供更早的?[^\n]{0,12}原链|原页附图|原页图注|公开稿标题|按既有贡献者登记名|在归档时已无法访问|未修改共享\s+(?:book|topic)|(?:book|topic)\s+manifest|本篇任务|原页无正文图片|\d+\s*条(?:图片)?引用均为平台|(?:^|\n)\s*>\s*(?:原页|源页)声明/iu;
 const citationExtraProcessLanguage = /(?:\bcv\d{5,}\b|canonical\s+文档|按(?:既有贡献者)?登记名|屋顶现视研\s*(?:Bilibili|B站)\s*专栏)/iu;
 
 assert.match(
@@ -122,10 +122,10 @@ assert.match(
   publicArchiveProcessLanguage,
   "a process caption must not stand in for a rendered image"
 );
-assert.match(
+assert.doesNotMatch(
   "[图题] 法月纶太郎",
   publicArchiveProcessLanguage,
-  "editor-only caption markers must not leak into public prose"
+  "semantic media markers are consumed by the Markdown renderer, not archive process language"
 );
 assert.doesNotMatch(
   "> 作者：浅田彰。译者：人气空友。",
