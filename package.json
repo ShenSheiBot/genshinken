@@ -55,7 +55,7 @@
     "verify:structured-credits": "node scripts/verify-structured-credit-lines.mjs",
     "verify:license-placement": "node scripts/verify-license-placement.mjs",
     "verify:release": "node scripts/verify-editorial-release.mjs",
-    "check": "npm run validate:content && npm run validate:media-html && npm run verify:wechat-assets-ready && npm run verify:wechat-preservation && npm run verify:structured-credits && npm run verify:license-placement && npm run verify:typography && npm run verify:typography-registry && npm run verify:reading-progress && npm run verify:han-script && npm run verify:citations && npm run verify:routing && npm run verify:library && npm run typecheck && npm run lint"
+    "check": "npm run validate:content && npm run validate:media-html && npm run verify:wechat-assets-ready && npm run verify:wechat-preservation && npm run verify:structured-credits && npm run verify:license-placement && npm run verify:typography && npm run verify:typography-registry && npm run verify:reading-progress && npm run verify:han-script && npm run verify:citations && npm run verify:routing && npm run verify:library && npm run verify:fonts && npm run typecheck && npm run lint"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
