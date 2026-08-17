@@ -6,23 +6,35 @@ slug: beauvoir-butler-feminist-thought
 categories: [思想与理论]
 section: translation
 tags: [女性主义, 西蒙娜·德·波伏娃, 朱迪斯·巴特勒]
-post_author: [Rosemaire Tong, Tina Fernandes Botts]
+post_author: [Rosemarie Tong, Tina Fernandes Botts]
 translator: Snoper卓尔
 proofreader: 柴来人
 excerpt: 本文从存在主义与后结构主义两个方向梳理波伏娃和巴特勒对性别、他者性、社会建构与操演性的讨论，并列出对相关理论的批评。
 script: hans
 license: CC BY-NC-SA 4.0
 citation:
-  itemType: blogPost
-  citationKey: tong-botts-beauvoir-butler-2023
-  title: 波伏娃与巴特勒的女性主义思想：存在主义与后结构主义女性主义
-  date: "2023-04-28"
-  blogTitle: 屋顶现视研
+  itemType: bookSection
+  citationKey: tongBotts2018ExistentialistPoststructuralPostmodernZH
+  title: Existentialist, Poststructural, and Postmodern Feminisms
+  creators:
+    - creatorType: author
+      name: Rosemarie Tong
+    - creatorType: author
+      name: Tina Fernandes Botts
+    - creatorType: translator
+      name: Snoper卓尔
+  date: "2018"
+  bookTitle: "Feminist Thought: A More Comprehensive Introduction"
+  edition: "5"
+  publisher: Westview Press
   url: https://mp.weixin.qq.com/s/6GsF0ip94QFMycA6_P1tEw
+  extra: 摘译自第五版第九章；中文摘译于2023-04-28发布，柴来人校对。
   language: zh-CN
 ---
 
 摘译选自：《女性主义思潮导论》（Feminist Thought: A More Comprehensive Introduction) 第九章 存在主义，后结构与后现代女性主义（Existentialist, Poststructural, and Postmodern Feminisms)。
+
+---
 
 译者注：
 
@@ -36,11 +48,15 @@ citation:
 
 5) Mystic特指修女，不应和一般意义上的神秘主义者混淆。谁也无法否认神秘主义者薇依对社会解放的贡献吧，卡巴拉和威卡女巫结社本身就是反对所谓某种人格化的“至高无上之主体”，启蒙时代神秘主义和启蒙理性为了共同的敌人教会，甚至还有短暂的联盟。陶铁柱这里将mystic翻译成修女，应该也是考虑到了这点。
 
+6) 本文可与[《女性主义电影理论导论（上）：男性凝视》](/posts/feminist-film-theory-introduction-upper)配合阅读。
 
-
-*动画画面：三名少女站在自动售货机前，画面上方显示“残り数317枚”。*
+[图题] 来自《放浪息子》，图文有关。
 
 ![动画画面：三名少女站在自动售货机前，画面上方显示“残り数317枚”。](attachments/wechat/6GsF0ip94QFMycA6_P1tEw/002.jpg)
+
+---
+
+## 存在主义女性主义：西蒙娜·德·波伏娃
 
 波伏娃使用存在主义本体论以及伦理学的语言，指出男人(men)将“男/人(man)”称为自我，将“女人”称为他者。他者会对自我构成威胁，因此女人自然就是男人的威胁。男人要想维持自由，就必须令女人屈服。当然，性别压迫并不是唯一的压迫形式。其它形式的压迫随处可见——有色人种知道白人在压迫他们，穷人也知道富人在压迫他们。尽管如此，多萝西·考夫曼·麦卡尔(Dorothy Kaufmann McCall)依然坚称，男性对女性的压迫有两个独特之处：（1）性别压迫与种族和阶级的压迫不同，它不是一个偶然的历史事实，不是一个时不时会受到挑战乃至颠覆的事件。女性自始至终都处于男性的支配下。（2）女性已经内化了异己的观点，即男人是必不可少的，女人则是无关紧要的[^m12]。
 
@@ -66,7 +82,7 @@ citation:
 
 
 
-*黑白肖像：西蒙娜·德·波伏娃站在街道上。*
+[图题] 西蒙娜·德·波伏娃。
 
 ![黑白肖像：西蒙娜·德·波伏娃站在街道上。](attachments/wechat/6GsF0ip94QFMycA6_P1tEw/003.jpg)
 
@@ -117,10 +133,13 @@ citation:
 4）波伏娃有西方中心主义倾向，缺少对非西方女性境遇的分析。
 
 5）波伏娃在本质主义和社会建构理论之间反复摇摆，因此时不时会说出自相矛盾的话来。她的理论根植于经验，强调女性身份的社会化建构，却默认女性存在某种“普遍真理”以及某种“亘古不变性别压迫本质”。
+
+## 后结构主义女性主义：朱迪斯·巴特勒
+
 朱迪斯·巴特勒的思想受过多位思想家的启发，但最主要的灵感来源还是福柯以及后结构主义理论。在《性别麻烦》一书中，巴特勒挑战了通常的性别观点，这种观点认为生理性别（sex）、社会性别（gender）和性取向（sexuality）构成了一个无缝的网络，即如果一个人生物上是女性（有两个X染色体），她就会表现出女性特质并且找男性当性伴侣。巴特勒反对这种观点，她认为，一个人的生理性别和社会性别之间没有必然联系。她更进一步说明，“事实上从定义上来说，我们将看到生理性别其实自始至终就是社会性别[^m59]。”她赞同西蒙娜·德·波伏娃的观点，即女人不是生来就是女人，而是后天变成女人的[^m60]。
 
 
-*朱迪斯·巴特勒接受采访时的半身肖像。*
+[图题] 朱迪斯·巴特勒。
 
 ![朱迪斯·巴特勒接受采访时的半身肖像。](attachments/wechat/6GsF0ip94QFMycA6_P1tEw/004.jpg)
 
@@ -136,7 +155,7 @@ citation:
 
 在萨里看来，叙述性语句/施效行为仅用于报告和描述某事，而操演性语句/施事行为，则使所说的事情发生。施效语言（perlocutionary statement）/行为是观察性语言(statement)，如“今天是有风的一天”或“我的连衣裙是蓝色的”。相反，施事语言/行为则是一种权力语言，如在婚礼上说：“我愿意娶你做我的妻子”。讲了这些话，字面意义上你就成为丈夫了。同样地，萨里评论说，在巴特勒的体系中，“当医生或护士宣称‘是个女孩/男孩！’时，他们并不是简单地对自己所见的进行报告……而是在为一个身体分配生理性别和社会性别，这个身体不在话语之外[^m64]。”换句话说，要生存在这个世界上，就必须适应这些类别。要完全摆脱“女孩和男孩”的游戏，就需要另一种个体分类的方法。为了表达清楚她的观点，巴特勒又提到了一幅漫画，其中一个婴儿被宣布既不是男孩也不是女孩，而是一个女同性恋者。萨里说，她这样做是为了引入这样一种想法，即“有可能以另一套话语组成的属性为基础，来指定或赋予身份[^m65]”。但这只是一种可能性。许多巴特勒的解释者认为，她的底线是悲观的：至少在我们的有生之年，我们很难从占据我们注意力的性别游戏和困扰我们的等级制度中解放出来。
 
-对后结构主义的批评：
+## 对后结构主义的批评
 
 后结构主义的黑话太太太多了。
 

@@ -47,6 +47,20 @@ assert.doesNotMatch(
   "GFM footnote backreferences must not retain the default English accessible name"
 );
 
+const groupedFootnoteHtml = await renderMarkdown(
+  "正文引用[^translation-1]。\n\n## 译注\n\n[^translation-1]: 译者说明。"
+);
+assert.doesNotMatch(
+  groupedFootnoteHtml,
+  /<h2[^>]*>译注<\/h2>/u,
+  "a source-side footnote grouping title must not survive as an empty article heading"
+);
+assert.match(
+  groupedFootnoteHtml,
+  /id="user-content-fn-translation-1"/u,
+  "removing the detached grouping title must preserve the footnote definition"
+);
+
 const inlinePageMarkerFootnoteHtml = await renderMarkdown(
   "<!-- page 126 -->正文引用[^page-1]。\n\n<!-- page 127 --> 连续引用[^page-2]。\n\n[^page-1]: 第一条注释。\n\n[^page-2]: 第二条注释。"
 );
@@ -312,6 +326,15 @@ assert.match(
   plainInterviewTurnHtml,
   /<p class="speaker-turn"><strong>莲实：<\/strong>请谈谈这个镜头。<\/p>/u,
   "interview format must structure an unmarked speaker label without article-specific cleanup"
+);
+
+const interviewPostscriptHtml = await renderMarkdown(`追记1：这是文后补充，不是新的发言人。`, {
+  format: "interview",
+});
+assert.doesNotMatch(
+  interviewPostscriptHtml,
+  /speaker-turn/u,
+  "interview postscripts must not be misclassified as speaker turns"
 );
 
 /* ---------------- 全语料渲染扫描（TYPO-G1/G3/G4） ----------------

@@ -4,6 +4,7 @@ title_breaks: ["没有唯物主义的唯物主义：", "斯拉沃热·齐泽克�
 date: 2021-06-26
 slug: zizek-materialism-without-materialism
 script: hans
+license: CC BY-NC-SA 4.0
 categories: [思想与理论]
 section: translation
 tags: [齐泽克, 辩证唯物主义, 马克思主义, 精神分析]
@@ -19,10 +20,8 @@ citation:
   extra: "原文：Materialism without Materialism: Slavoj Žižek and the Disappearance of Matter；作者 Adrian Johnston；译者 snoper卓尔；CC BY-NC-SA 4.0。"
 ---
 
-> 原文：*Materialism without Materialism: Slavoj Žižek and the Disappearance of Matter*。作者：Adrian Johnston。翻译：snoper卓尔。
+> 原文：*Materialism without Materialism: Slavoj Žižek and the Disappearance of Matter*。
 >
-> 本文基于 CC BY-NC-SA 4.0 发布，仅供个人学习。
-
 ![齐泽克与马克思](attachments/roof-archive/cv11894332/01-zizek-marx.jpg)
 
 齐泽克新出版了两本大部头哲学著作：《少于无：黑格尔与辩证唯物主义的阴影》（Less Than Nothing: Hegel and the Shadow of Dialectical Materialism, 2012）和《绝对反弹：向着辩证唯物主义的新基础前进》（Absolute Recoil: Towards a New Foundation of Dialectical Materialism, 2014）。恰如其副标题所示，两本书都在努力重塑21世纪的“辩证唯物主义”马克思主义传统。尽管这一哲学标签总令人不禁想起某些名字（比如最著名的两个：黑格尔和列宁），齐泽克仍试图寻求一种有别于经典恩格斯理论与苏联式唯物主义理论的结果。于是，正如他所期待的那样，齐泽克通过将德国观念论与精神分析理论极具特色地融合在一起，实现了他的理想，他利用黑格尔与雅克.拉康的著作，创造性地更新了辩证唯物主义理论。

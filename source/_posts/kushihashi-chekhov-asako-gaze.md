@@ -31,9 +31,8 @@ citation:
   extra: "原文刊于《ユリイカ》2018年9月号‘特集＝濱口竜介’；三浦哲哉著，相纸译，静希作少量校对；中文译文于2022-08-18发布。"
 ---
 
-> 原载：[《ユリイカ》2018年9月号“特集＝濱口竜介”](https://www.seidosha.co.jp/book/index.php?id=3201)。原作者：三浦哲哉。
+> 原载：[《ユリイカ》2018年9月号“特集＝濱口竜介”](https://www.seidosha.co.jp/book/index.php?id=3201)。
 >
-> 翻译：相纸。少量校对：静希。
 
 ![《ユリイカ》2018年9月号滨口龙介特辑封面](/attachments/roof-archive/cv18157737/01-eureka-hamaguchi-issue-cover.jpg)
 

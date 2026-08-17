@@ -294,10 +294,10 @@
 .tile[data-section="community"][data-art-variant="1"] .generatedCover {
   --card-art: url("/roof-elements/overhead-leaves.webp");
 }
-.tile[data-section="multimedia"] .generatedCover {
+.tile[data-section="interview"] .generatedCover {
   --card-art: url("/roof-elements/ripples.webp");
 }
-.tile[data-section="multimedia"][data-art-variant="1"] .generatedCover {
+.tile[data-section="interview"][data-art-variant="1"] .generatedCover {
   --card-art: url("/roof-elements/boat-water.webp");
 }
 

@@ -10,6 +10,7 @@ tags: [Re:从零开始的异世界生活, 渡边政治, 动画改编, 动画演�
 post_author: kViN
 translator: 晚钟送别此日
 proofreader: 加速器
+editor: KAFAK
 excerpt: 回顾《Re：从零开始的异世界生活》第一季的监督方针、制作规划与外包体系，并由核心人员和工作室的变化考察第二季续作的制作前景。
 featured_order: 0
 citation:
@@ -23,7 +24,6 @@ citation:
 
 > 原文：[RE:ZERO PRODUCTION JOURNAL – STARTING A SEQUEL IN A SIMILAR YET DIFFERENT WORLD](https://blog.sakugabooru.com/2020/06/18/rezero-production-journal/)，作者kViN，发表于 Sakuga Blog（2020年6月18日）。
 
-*编辑：KAFAK。*
 
 随着Re:0第二季即将开播，是时候对将原作改编得如此成功的团队和环境进行一番长篇回顾了，此外还有它们伴随时间所发生的演变，以及这些对本次续集制作的意义。
 

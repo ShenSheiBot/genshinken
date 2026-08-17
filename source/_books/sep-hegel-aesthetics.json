@@ -2,7 +2,7 @@
   "id": "sep-hegel-aesthetics",
   "slug": "sep-hegel-aesthetics",
   "title": "SEP：黑格尔美学",
-  "description": "《斯坦福哲学百科》词条《Hegel’s Aesthetics》的中文译文，从序言与哲学背景到各门艺术和体系性结论，收录第 0～7 节正文，未含原词条书目附录。",
+  "description": "《斯坦福哲学百科》词条《Hegel’s Aesthetics》的中文译文，从序言与哲学背景到各门艺术和体系性结论，收录第 0～7 节正文及完整参考文献。",
   "documentSlug": "sep-hegel-aesthetics-sections-1-5",
   "script": "hans",
   "status": "complete",
@@ -19,13 +19,13 @@
     "柴来人"
   ],
   "publishedAt": "2020-08-03",
-  "updatedAt": "2020-08-17",
+  "updatedAt": "2021-11-18",
   "latestChapterId": "sections-6-3-7",
   "citations": {
     "translation": {
       "itemType": "book",
       "citationKey": "houlgateSEPHegelAestheticsRoofZH",
-      "extra": "中文译文收录第 0～7 节正文，未含原词条书目附录。"
+      "extra": "中文译文收录第 0～7 节正文；2021-11-18 后发版本补全原词条参考文献。"
     }
   },
   "chapters": [

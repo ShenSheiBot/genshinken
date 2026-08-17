@@ -81,7 +81,7 @@ const dangerousHtmlUrl = /\s(?:href|src)\s*=\s*["']?\s*(?:javascript|vbscript):/
 const protocolLessAngleLink = /<www\.[^<>\s]+>/iu;
 const brokenOrderedListMarker = /^\s{0,3}\d{1,2}\.(?=\p{Script=Han})/u;
 const unescapedDollarMarker = /(?<!\\)\$/u;
-const internalEditorialLanguage = /(?:待逐篇清洗|清洗后纳入|尚未恢复|目前归档|归档来源页|原始(?:篇目|连载)证据|合并文库的构建源|快照与专篇|归档说明|档案说明|本站据.{0,40}(?:整理|归档)|平台封面.{0,30}未纳入正文资产|连载暂列暂停|连载状态据此标为|后续.{0,20}未见发布|暂未见正式后续|不因此自动成为|并非按作品名重新聚类|不在本专题中扩收|不把.{0,40}扩入活动档案)/u;
+const internalEditorialLanguage = /(?:待逐篇清洗|清洗后纳入|尚未恢复|目前归档|归档来源页|原始(?:篇目|连载)证据|合并文库的构建源|快照与专篇|归档说明|档案说明|来源补充\s*\d+|此注(?:释)?未随.{0,30}收录|本站据.{0,40}(?:整理|归档)|平台封面.{0,30}未纳入正文资产|连载暂列暂停|连载状态据此标为|后续.{0,20}未见发布|暂未见正式后续|不因此自动成为|并非按作品名重新聚类|不在本专题中扩收|不把.{0,40}扩入活动档案)/u;
 const publicArchiveProcessLanguage = /(?:^|\n)\s*(?:(?:>|-)\s*)?来源[：:].*(?:(?:Bilibili|哔哩哔哩|B站)\s*(?:专栏)?\s*(?:cv)?\d{5,}|\bcv\d{5,}\b)|作者卡(?:署名|显示|署)|结构化来源|未提供更早的?[^\n]{0,12}原链|原页附图|原页图注|公开稿标题|按既有贡献者登记名|在归档时已无法访问|未修改共享\s+(?:book|topic)|(?:book|topic)\s+manifest|本篇任务|原页无正文图片|\d+\s*条(?:图片)?引用均为平台|(?:^|\n)\s*>\s*(?:原页|源页)声明/iu;
 const citationExtraProcessLanguage = /(?:\bcv\d{5,}\b|canonical\s+文档|按(?:既有贡献者)?登记名|屋顶现视研\s*(?:Bilibili|B站)\s*专栏)/iu;
 
@@ -161,11 +161,16 @@ function berlinDateISO(value = process.env.UN_CANON_BUILD_TIMESTAMP) {
 const publicationCutoffISO = berlinDateISO();
 
 const creditFields = [
-  { role: "作者", keys: ["post_author", "author", "作者"], required: true },
-  { role: "译者", keys: ["translator", "译者", "翻译"], required: false },
-  { role: "校对", keys: ["proofreader", "校对", "校对者", "校"], required: false },
+  { role: "作者", creatorType: "author", keys: ["post_author", "author", "作者"] },
+  { role: "受访", creatorType: "interviewee", keys: ["interviewee", "受访", "受访者"] },
+  { role: "采访", creatorType: "interviewer", keys: ["interviewer", "采访", "采访者"] },
+  { role: "与谈", keys: ["participant", "participants", "与谈", "与谈者"] },
+  { role: "主讲", keys: ["speaker", "speakers", "主讲", "主讲人"] },
+  { role: "译者", creatorType: "translator", keys: ["translator", "译者", "翻译"] },
+  { role: "校对", keys: ["proofreader", "校对", "校对者", "校"] },
+  { role: "编辑", keys: ["editor", "editors", "编辑", "润色"] },
 ];
-const unsupportedCreditFields = ["editor", "编者", "编辑"];
+const unsupportedCreditFields = ["proofreaders", "编者"];
 
 function report(collection, file, message) {
   collection.push(`${file}: ${message}`);
@@ -278,6 +283,50 @@ function validateTypography(file, content, data) {
       file,
       `第 ${line} 行以普通编号列表手写注释；须恢复正文调用与 GFM 脚注定义（TYPO-P7）`,
     );
+  }
+
+  // TYPO-P9: reject a half-converted footnote system. A bare numeric marker is
+  // ordinary Markdown text, so it cannot reach a numeric GFM definition that
+  // exists in the same article. Keep unmatched source markers legal: an archive
+  // may genuinely provide a call without its note, and inventing that note would
+  // be worse than preserving the non-linking marker.
+  const numericFootnoteDefinitions = new Set(
+    [...content.matchAll(/^\[\^(\d+)\]:/gmu)].map((match) => match[1]),
+  );
+  if (numericFootnoteDefinitions.size > 0) {
+    const firstNumericDefinition = content.search(/^\[\^\d+\]:/mu);
+    const proseBeforeDefinitions = firstNumericDefinition >= 0 ? content.slice(0, firstNumericDefinition) : content;
+    const bareNumericFootnoteCall = /(?<![!^])\[(\d+)\](?!\s*\()/gmu;
+    for (const match of proseBeforeDefinitions.matchAll(bareNumericFootnoteCall)) {
+      if (!numericFootnoteDefinitions.has(match[1])) continue;
+      const line = proseBeforeDefinitions.slice(0, match.index).split(/\r?\n/u).length;
+      report(
+        errors,
+        file,
+        `第 ${line} 行裸注号 [${match[1]}] 已有对应 GFM 定义；调用必须写成 [^${match[1]}]（TYPO-P9）`,
+      );
+    }
+  }
+
+  // WeChat cleanup is a current migration path with exact raw HTML available.
+  // A GFM call without a definition is a broken link; a definition without a
+  // call is hidden from readers. Source-side one-sided notes must remain plain
+  // source text or a visible reference item, as the editorial contract requires.
+  const wechatCitation = JSON.stringify(data.citation ?? {}).includes("mp.weixin.qq.com");
+  if (wechatCitation) {
+    const definitions = [...content.matchAll(/^\[\^([^\]]+)\]:/gmu)].map((match) => match[1]);
+    const calls = [...content.matchAll(/\[\^([^\]]+)\](?!:)/gmu)].map((match) => match[1]);
+    const definitionCounts = new Map();
+    definitions.forEach((id) => definitionCounts.set(id, (definitionCounts.get(id) ?? 0) + 1));
+    const definitionSet = new Set(definitions);
+    const callSet = new Set(calls);
+    for (const [id, count] of definitionCounts) {
+      if (count > 1) report(errors, file, `微信稿 GFM 脚注定义重复：${id}（${count} 次）`);
+      if (!callSet.has(id)) report(errors, file, `微信稿 GFM 脚注定义没有正文调用：${id}`);
+    }
+    for (const id of callSet) {
+      if (!definitionSet.has(id)) report(errors, file, `微信稿 GFM 脚注调用没有定义：${id}`);
+    }
   }
 
   content.split(/\r?\n/u).forEach((line, index) => {
@@ -618,6 +667,9 @@ function suggestTitleBreaks(title) {
 function validateTitleBreaks(file, data) {
   const title = nonEmptyString(data.title) ? data.title.trim() : "";
   if (!title) return;
+  if (/^(?:【(?:译文|编译|翻译)】|译札\s*[｜|]\s*)/u.test(title)) {
+    report(errors, file, "title 含平台内容类型前缀；请由 section/format 表达，并保留自然文章标题");
+  }
   if (hasOwn(data, "home_title_breaks")) {
     const homeSegments = stringArray(
       data.home_title_breaks,
@@ -828,8 +880,19 @@ if (!fs.existsSync(postsDirectory)) {
 }
 
 const files = markdownFiles(postsDirectory);
+const validUtf8Files = files.filter((file) => {
+  try {
+    new TextDecoder("utf-8", { fatal: true }).decode(
+      fs.readFileSync(path.join(postsDirectory, file)),
+    );
+    return true;
+  } catch {
+    report(errors, file, "文件不是有效的 UTF-8；禁止以替换字符或损坏字节继续构建");
+    return false;
+  }
+});
 
-const records = files.map((file) => {
+const records = validUtf8Files.map((file) => {
   const raw = fs.readFileSync(path.join(postsDirectory, file), "utf8");
   const { data, header, content } = parseFrontMatter(file, raw);
   const slug = typeof data.slug === "string" ? data.slug.trim() : "";
@@ -872,7 +935,17 @@ const records = files.map((file) => {
       return value != null && (Array.isArray(value) ? value.length > 0 : String(value).trim() !== "");
     });
     const names = key ? splitCreditNames(data[key]) : [];
-    validateContributorNames(file, field.role, names, { required: field.required });
+    validateContributorNames(file, field.role, names);
+  }
+  const primaryCreditNames = creditFields.slice(0, 5).flatMap((field) => {
+    const key = field.keys.find((candidate) => {
+      const value = data[candidate];
+      return value != null && (Array.isArray(value) ? value.length > 0 : String(value).trim() !== "");
+    });
+    return key ? splitCreditNames(data[key]) : [];
+  });
+  if (primaryCreditNames.length === 0) {
+    report(errors, file, "至少需要一位作者、受访者、采访者、与谈者或主讲人");
   }
 
   let citationKey = "";
@@ -884,14 +957,13 @@ const records = files.map((file) => {
       report(errors, file, "citation.itemType 必须显式填写 Zotero item type");
     }
     const creators = creditFields.flatMap((field) => {
-      if (field.role === "校对") return [];
+      if (!field.creatorType) return [];
       const key = field.keys.find((candidate) => {
         const value = data[candidate];
         return value != null && (Array.isArray(value) ? value.length > 0 : String(value).trim() !== "");
       });
       if (!key) return [];
-      const creatorType = field.role === "译者" ? "translator" : "author";
-      return splitCreditNames(data[key]).map((name) => ({ creatorType, name }));
+      return splitCreditNames(data[key]).map((name) => ({ creatorType: field.creatorType, name }));
     });
     const citation = mergeCitation(
       pageCitationDefaults({
@@ -915,7 +987,7 @@ const records = files.map((file) => {
 
   for (const field of unsupportedCreditFields) {
     if (hasOwn(data, field)) {
-      report(errors, file, `${field} 不是受支持的署名字段；只允许作者、译者与校对`);
+      report(errors, file, `${field} 不是受支持的署名字段`);
     }
   }
 
@@ -1129,9 +1201,13 @@ const bookRecords = jsonFiles(booksDirectory)
     const proofreaders = data.proofreaders == null
       ? []
       : stringArray(data.proofreaders, file, "proofreaders");
+    const editors = data.editors == null
+      ? []
+      : stringArray(data.editors, file, "editors");
     validateContributorNames(file, "authors", authors, { required: true });
     validateContributorNames(file, "translators", translators);
     validateContributorNames(file, "proofreaders", proofreaders);
+    validateContributorNames(file, "editors", editors);
     validateBookDownloadUrl(file, "pdfUrl", data.pdfUrl);
     validateBookDownloadUrl(file, "epubUrl", data.epubUrl);
     if (hasOwn(data, "originalBibtex") || hasOwn(data, "translationBibtex")) {
@@ -1239,7 +1315,7 @@ const bookRecords = jsonFiles(booksDirectory)
           validateControlledTags(label, chapterTags);
         }
 
-        for (const field of ["authors", "translators", "proofreaders"]) {
+        for (const field of ["authors", "translators", "proofreaders", "editors"]) {
           if (!hasOwn(value, field)) continue;
           const names = stringArray(value[field], label, field);
           if (field === "authors" && names.length === 0) {

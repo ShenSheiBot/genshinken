@@ -21,7 +21,6 @@ citation:
   extra: "原补充词条2020-02-24初版、2020-05-05实质修订；本篇译稿署明2020-08-04译成，2020-08-10发表于屋顶现视研，题署第3部分，收录原补充词条第6节全文；书目见主词条Bibliography。"
 ---
 
-> **翻译：**Meowth。
 >
 > **原地址：**<https://plato.stanford.edu/entries/carnap/reconstruct-sci-theories.html>
 >

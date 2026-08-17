@@ -1,6 +1,6 @@
 ---
 title: 仁菜应该向谁竖起中指——评《Girls Band Cry》
-title_breaks: ["仁菜应该向谁竖起中指", "——评《Girls Band Cry》"]
+title_breaks: ["仁菜应该向谁竖起中指——", "评《Girls Band Cry》"]
 date: 2024-08-18
 slug: girls-band-cry-middle-finger
 categories: [动画]
@@ -10,6 +10,7 @@ post_author: noirse
 translator: [6x1, Yisensei04, salzivelm, 河豚, 伊鸥柚, ethci]
 proofreader: [Yisensei04, 竹上青]
 excerpt: 本文沿着摇滚、朋克、青春动画与女性主义的历史，追问《Girls Band Cry》中仁菜的中指究竟指向谁。
+editor: 夜深人静
 script: hans
 license: CC BY-NC-SA 4.0
 original_publication: Mercure des Arts「小人閑居為不善日記」

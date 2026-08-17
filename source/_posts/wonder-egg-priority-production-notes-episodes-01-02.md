@@ -22,6 +22,9 @@ translator:
 proofreader:
   - liebestram
   - 加速器
+editor:
+  - -_-__-_-
+  - 我大笑三声哈哈哈
 excerpt: kViN《奇蛋物语》一、二集制作笔记中译，从山田尚子与堀口悠纪子的影响出发，分析若林信如何以演出、作画和团队配置建立作品独特的视觉语言。
 featured_order: 0
 citation:
@@ -35,10 +38,6 @@ citation:
   extra: 原文发表于 Sakuga Blog；生活支线玩家、blur、晚钟送别此日译；中文译文于2021-02-10发布。
 ---
 
-> **原作：kViN**\\
-> **翻译：生活支线玩家、blur、晚钟送别此日**\\
-> **校对：Liebestram、加速器**\\
-> **编辑：-_-__-_-、我大笑三声哈哈哈**
 
 ---
 

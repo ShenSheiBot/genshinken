@@ -8,7 +8,8 @@ categories: [动画]
 section: interview
 format: interview
 tags: [机动警察, 动画演出, 押井守]
-post_author: furukawa-tomohiro
+interviewee: furukawa-tomohiro
+interviewer: 前田久
 translator: august-rush
 proofreader: kurisu-kurias
 excerpt: 古川知宏从押井守《机动警察》谈到几原邦彦的现场方法，说明素材选择、角色设计与制片意识如何共同支撑原创动画。
@@ -28,7 +29,7 @@ citation:
   extra: Febri Talk 古川知宏访谈连载第2回；屋顶现视研中文译文。
 ---
 
-> 受访：古川知宏。采访、编辑：前田久。翻译：唯一指定真实August_Rush。校对：栗栖Kurias。原文：[Febri Talk 第2回](https://febri.jp/febri_talk/furukawa_tomohiro_2/)。
+> 原文：[Febri Talk 第2回](https://febri.jp/febri_talk/furukawa_tomohiro_2/)。
 
 ![Febri Talk 古川知宏访谈第二回题图](attachments/roof-archive/cv14222448/febri-talk-furukawa-2.jpg)
 

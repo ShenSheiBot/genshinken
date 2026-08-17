@@ -28,7 +28,7 @@ citation:
   extra: "宇野常宽著，人吉尔郎译；日文原文发表于2023-07-06，中文译文发表于2023-10-09。"
 ---
 
-> 原文：[宇野常宽《『機動戦士ガンダム 水星の魔女』と「戦争」の問題》](https://note.com/wakusei2nduno/n/n3880c7db03ba)。翻译：人吉尔郎。本译文以 CC BY-NC-SA 4.0 许可发布。
+> 原文：[宇野常宽《『機動戦士ガンダム 水星の魔女』と「戦争」の問題》](https://note.com/wakusei2nduno/n/n3880c7db03ba)。
 
 ![《机动战士高达 水星的魔女》主视觉](/attachments/roof-archive/cv26954994/01-g-witch-key-visual.jpg)
 

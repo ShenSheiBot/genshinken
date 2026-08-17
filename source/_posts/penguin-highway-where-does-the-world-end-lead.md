@@ -199,7 +199,6 @@ citation:
 
 > what is important is not that the myth is repeated, but that each time it is repeated, its meaning is added to and thereby transformed. This transformation means that even if the original myth is a manifestation of the childhood desire to kill the father, this is no longer true of the subsequent versions.
 我想这个批评也适用于一些拉康的读者。
-> 校对：伦勃朗
 编者按：比起梦的内容，或许可以关注梦的形式。
 
 ## 参考

@@ -78,6 +78,7 @@ export default function BooksPage() {
               const authors = credits.filter((credit) => credit.role === "author");
               const translators = credits.filter((credit) => credit.role === "translator");
               const proofreaders = credits.filter((credit) => credit.role === "proofreader");
+              const editors = credits.filter((credit) => credit.role === "editor");
               const coverAssets = getBookCoverAssets(book.slug);
               const allChapters = getAllBookChapters(book);
               const publishedChapters = getPublishedBookChapters(book);
@@ -120,6 +121,9 @@ export default function BooksPage() {
                         ) : null}
                         {proofreaders.length > 0 && (
                           <div><span>校对</span><CreditLinks credits={proofreaders} showMarks={false} separator="·" /></div>
+                        )}
+                        {editors.length > 0 && (
+                          <div><span>编辑</span><CreditLinks credits={editors} showMarks={false} separator="·" /></div>
                         )}
                       </div>
                     </div>

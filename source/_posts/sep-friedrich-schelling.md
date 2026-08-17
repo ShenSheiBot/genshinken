@@ -9,6 +9,7 @@ section: translation
 tags: [谢林, 德国观念论, 自然哲学, 黑格尔]
 post_author: Andrew Bowie
 translator: 何啸风
+proofreader: 网哲邻人部
 excerpt: 《斯坦福哲学百科》“弗里德里希·谢林”词条中译，从生平、先验哲学与自然哲学、同一哲学、世界时代，论至肯定哲学、否定哲学及其对黑格尔的批判。
 citation:
   itemType: bookSection
@@ -24,9 +25,7 @@ citation:
 
 > 原文：[Friedrich Wilhelm Joseph von Schelling](https://plato.stanford.edu/archives/sum2020/entries/schelling/)，作者Andrew Bowie，载《斯坦福哲学百科》2020年夏季版；词条初版于2001年10月22日，2020年5月18日实质修订。
 >
-> **翻译：**何啸风。
 >
-> **校对：**若干网哲邻人部部员。
 >
 > 翻译供学习讨论，转载请注明原文出处与翻译、校对；欢迎友善讨论与指出翻译不足。
 >

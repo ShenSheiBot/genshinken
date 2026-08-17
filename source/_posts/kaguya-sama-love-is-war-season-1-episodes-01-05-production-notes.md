@@ -28,8 +28,6 @@ citation:
 
 > 编者按：上次有读者反映，尾注的链接点不开，上下翻动也影响阅读。所以这一次把原链接的GIF与图片都放在对应段落下了。文字对应的图片用序号标出，没有序号的图片就是原文的配图啦。
 
-*编辑：snoper卓尔。*
-
 ![《辉夜大小姐：恋爱即战争》第一季制作画面](attachments/roof-archive/cv6542868/01-production-cover.jpg)
 
 让我们把眼光放远一点，仔细审视《辉夜大小姐：恋爱即战争》最初几集的演出效果，揭秘制作团队的点点滴滴，探索这部漫改番剧的精神气质——《辉夜大小姐》的改编不但忠实原作，而且充满新意，灵韵十足，足以克服原作漫画设下的枷锁。
@@ -94,7 +92,7 @@ citation:
 
 > 原文：[Kaguya-sama: Love is War Production Notes 06-12 and Final Impressions](https://blog.sakugabooru.com/2019/03/31/kaguya-sama-love-is-war-production-notes-06-12-and-final-impressions/)，作者kViN，发表于 Sakuga Blog（2019年3月31日）。本文为摘译。
 
-*编辑：snoper卓尔；屋顶现视研－群青七号楼志愿翻译。*
+*屋顶现视研－群青七号楼志愿翻译。*
 
 ---
 
@@ -176,7 +174,7 @@ citation:
 
 > 编者按：在Sakuga Blog上的原文中，原作者用超链接的方式给出了大量补充信息，便于文章的理解。其中大部分是推特上的视频和推文，也有其他相关文章。为了方便读者，维持阅读体验的连续性，原文中的超链接将在尾注中给出，并附上目标链接的文字与图片内容，视频内容可以点开链接查看。
 
-*编辑：snoper卓尔；屋顶现视研－群青七号楼志愿翻译。*
+*屋顶现视研－群青七号楼志愿翻译。*
 
 ![《辉夜大小姐：恋爱即战争第二季》制作过程画面](attachments/roof-archive/cv6177490/01-production-key-visual.png)
 
@@ -413,8 +411,6 @@ citation:
 <h2 id="season-2-episodes-07-12">第二季 7～12 集制作笔记及观后感</h2>
 
 > 原文：[Kaguya-sama: Love is War Season 2 07-12 – Production Notes and Final Impressions](https://blog.sakugabooru.com/2020/06/29/kaguya-sama-love-is-war-season-2-07-12-production-notes-and-final-impressions/)，作者kViN，发表于 Sakuga Blog（2020年6月29日）。
-
-*编辑：snoper卓尔。*
 
 ---
 

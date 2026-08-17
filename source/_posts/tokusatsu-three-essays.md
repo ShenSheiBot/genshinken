@@ -8,7 +8,7 @@ categories: [动画]
 section: essay
 tags: [特摄, 雷欧奥特曼, 镜子超人, 拉康, 怪兽, 父之名]
 post_author: 屋顶现视研
-proofreaders: [伦勃朗]
+proofreader: 子厚
 excerpt: 一组关于特摄的三篇旧文，分别从《雷欧奥特曼》的怪兽、镜像与父亲召唤出发，讨论真实界、规训和想象秩序。
 citation:
   itemType: blogPost
@@ -280,6 +280,5 @@ Invader的不断入侵就是提示了那个不在场的母亲之存在，这破�
 
 ————————
 
-校对：子厚
 
 编者按：有空补一补昭和特摄史。

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound, permanentRedirect } from "next/navigation";
-import { getPostBySlug, getPreviewableSlugs, type CreditRole } from "@/lib/posts";
+import { getPostBySlug, getPreviewableSlugs, PRIMARY_CREDIT_ROLES, type CreditRole } from "@/lib/posts";
 import { getAllPublicContent } from "@/lib/public-content";
 import { site } from "@/lib/site";
 import { contributorEntityType } from "@/lib/contributors";
@@ -61,7 +61,7 @@ export async function generateMetadata({
           publishedTime: post.dateISO,
           modifiedTime: post.updatedISO,
           authors: post.credits
-            .filter((credit) => credit.role === "author")
+            .filter((credit) => PRIMARY_CREDIT_ROLES.includes(credit.role))
             .map((credit) => credit.name),
           tags: post.tags,
         },
@@ -75,8 +75,13 @@ function buildJsonLd(
   const license = licenseUrlFromRights(citation.rights);
   const roles: Record<CreditRole, "author" | "translator" | "contributor"> = {
     author: "author",
+    interviewee: "contributor",
+    interviewer: "contributor",
+    participant: "contributor",
+    speaker: "contributor",
     translator: "translator",
     proofreader: "contributor",
+    editor: "contributor",
   };
   const credits: Record<string, Array<Record<string, string>>> = {};
   for (const credit of post.credits) {

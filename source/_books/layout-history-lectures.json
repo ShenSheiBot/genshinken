@@ -22,6 +22,9 @@
     "スカウト",
     "rocefactor"
   ],
+  "editors": [
+    "daicon"
+  ],
   "publishedAt": "2020-10-07",
   "updatedAt": "2020-11-21",
   "latestChapterId": "fifth-lecture-questions",

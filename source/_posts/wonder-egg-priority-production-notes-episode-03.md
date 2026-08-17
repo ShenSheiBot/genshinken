@@ -10,6 +10,7 @@ tags: [奇蛋物语, 动画制作, 动画演出, 作画分析]
 post_author: kViN
 translator: [生活支线玩家, blur, 晚钟送别此日]
 proofreader: 我大笑三声哈哈哈
+editor: 我大笑三声哈哈哈
 excerpt: kViN 评析《奇蛋物语》第三集的制作，聚焦米森雄纪的演出处女作、角色作画、触觉语言以及循环于写实与夸张之间的影像表达。
 citation:
   itemType: blogPost
@@ -20,8 +21,6 @@ citation:
 ---
 
 > 原文：kViN，[Wonder Egg Priority Production Notes 03](https://blog.sakugabooru.com/2021/01/28/wonder-egg-priority-production-notes-03/)，2021年1月28日\\
-> 翻译：生活支线玩家、blur、晚钟送别此日\\
-> 校对、编辑：我大笑三声哈哈哈
 
 ## 奇蛋物语 第三集制作笔记
 

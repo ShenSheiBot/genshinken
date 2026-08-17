@@ -44,6 +44,11 @@ const REGISTRY = {
   "TYPO-P8": {
     manualReview: "整段引文是否该转 blockquote 是编辑判断，无法自动断言。",
   },
+  "TYPO-P9": {
+    // 只拒绝同篇已有直接数字定义时仍留在定义块之前的裸数字调用；
+    // 没有定义的来源缺口仍可忠实保留为非链接标记。
+    enforcedBy: { script: "scripts/validate-content.mjs", anchor: "numericFootnoteDefinitions" },
+  },
   "TYPO-L1": {
     // 过撑行是版面缺陷，只有真实排版能测量：全语料枚举阅读路由 + 逐行字面步进。
     enforcedBy: {

@@ -25,9 +25,7 @@ citation:
 
 > 原文：[Social Ontology](https://plato.stanford.edu/archives/sum2018/entries/social-ontology/)，作者Brian Epstein，载《斯坦福哲学百科》2018年夏季版；词条初版于2018年3月21日。
 >
-> **翻译：**Austoria。
 >
-> **校对：**Hufflepuff piggy。
 >
 > **特别致谢：**李思楠。
 >

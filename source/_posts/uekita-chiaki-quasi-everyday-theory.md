@@ -29,8 +29,6 @@ citation:
 >
 > **原文地址：[擬日常論 – 新・批評家育成サイト](https://school.genron.co.jp/works/critics/2015/students/kamikita/1065/)**
 >
-> **翻译：问天、野菜一日分、王晗**<br />
-> **校对：王晗**
 
 ## 1. 料理与铁道漫画《花与娇妻》
 

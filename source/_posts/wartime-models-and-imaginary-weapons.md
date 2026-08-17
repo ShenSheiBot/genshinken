@@ -20,9 +20,6 @@ citation:
   url: "https://www.bilibili.com/read/cv3017064/"
 ---
 
-> 原作：松井广志
-> 译者：Leontopodium Edelweiss、远月、红茶泡海苔
-> 校对：红茶泡海苔
 > 图片出典：红茶泡海苔；图片处理：一个趣味低俗的人
 
 ## 序——战后军事模型的起源

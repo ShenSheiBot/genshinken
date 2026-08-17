@@ -6,6 +6,7 @@ date: 2021-02-22
 updated: 2022-01-14
 slug: symbolic-sublime-zizek-film-theory-introduction
 script: hans
+license: CC BY-NC-SA 4.0
 categories: [思想与理论]
 section: translation
 tags: [齐泽克, 电影理论, 拉康, 精神分析, 意识形态]
@@ -26,10 +27,8 @@ citation:
 
 <h2 id="introduction">导言</h2>
 
-> 原名：The Symbolic, The Sublime, and Slavoj Žižek’s Theory of Film。原作者：Matthew Flisfeder。翻译：款冬；校对、编辑：snoper卓尔。
+> 原名：The Symbolic, The Sublime, and Slavoj Žižek’s Theory of Film。
 >
-> 本文基于 CC BY-NC-SA 4.0 发布，仅供个人学习。
-
 ![斯拉沃热·齐泽克乘船照片](attachments/roof-archive/cv9951244/01-slavoj-zizek-on-boat.png "斯拉沃热·齐泽克乘船照片")
 
 ## 全书目录
@@ -221,10 +220,8 @@ citation:
 
 <h2 id="chapter-01-upper">第一章 从电影理论到后－理论（上）</h2>
 
-> 原名：The Symbolic, The Sublime, and Slavoj Žižek’s Theory of Film。原作者：Matthew Flisfeder。翻译：祖国人、柴来人；校对：傲傲傲娇的风学长。
+> 原名：The Symbolic, The Sublime, and Slavoj Žižek’s Theory of Film。
 >
-> 本文基于 CC BY-NC-SA 4.0 发布，仅供个人学习。
-
 ## 从电影理论到后-（电影）理论
 
 ## 齐泽克和拉康派电影理论
@@ -305,11 +302,7 @@ citation:
 
 <h2 id="chapter-01-lower">第一章 从电影理论到后－理论（下）</h2>
 
-> 原名：The Symbolic, The Sublime, and Slavoj Žižek’s Theory of Film\\
-> 原作者：Matthew Flisfeder\\
-> 翻译：祖国人、柴来人\\
-> 校对：傲傲傲娇的风学长\\
-> 本译文采用 CC BY-NC-SA 4.0 许可。
+> 原名：The Symbolic, The Sublime, and Slavoj Žižek’s Theory of Film。
 
 本文承接上篇，继续第一章后半部分。
 
@@ -497,10 +490,6 @@ citation:
 
 <h2 id="chapter-02-upper">第二章 电影中的崇高客体（上）</h2>
 
-> 原作者：Matthew Flisfeder。翻译：互联网不明白。校对：柴来人。编辑：snoper卓尔。
->
-> 本文基于 CC BY-NC-SA 4.0 发布，仅供个人学习。
-
 ## 第二章 电影中的崇高客体
 
 ### 普遍性的个体／独一
@@ -671,9 +660,7 @@ citation:
 
 <h2 id="chapter-02-lower">第二章 电影中的崇高客体（下）</h2>
 
-> 原作者：Matthew Flisfeder。翻译：加速器。校对、编辑：snoper卓尔。
->
-> 本文基于 CC BY-NC-SA 4.0 发布，仅供个人学习；内容接续第二章上篇。
+> 内容接续第二章上篇。
 
 ### 作为寓言的电影：希区柯克的案例
 
@@ -829,10 +816,8 @@ citation:
 
 <h2 id="chapter-03-upper">第三章 电影研究中的阶级斗争（上）</h2>
 
-> 原名：The Symbolic, The Sublime, and Slavoj Žižek’s Theory of Film。原作者：Matthew Flisfeder。翻译、编辑：snoper卓尔。
+> 原名：The Symbolic, The Sublime, and Slavoj Žižek’s Theory of Film。
 >
-> 本文基于 CC BY-NC-SA 4.0 发布，仅供个人学习。
-
 
 
 
@@ -954,8 +939,6 @@ citation:
 
 <h2 id="chapter-03-lower">第三章 电影研究中的阶级斗争（下）</h2>
 
-> 原作者：Matthew Flisfeder。翻译：互联网不明白、款冬；校对：柴来人、snoper卓尔；编辑：snoper卓尔。
->
 > 本篇以原刊扫描页呈现，九页按原次序排列。
 
 ![第三章下篇扫描页 1](attachments/roof-archive/cv11593066/39a44d88a220f5e8162b2a43fec457f0ed29df67.png "第三章下篇扫描页 1")
@@ -978,10 +961,6 @@ citation:
 
 
 <h2 id="interlude">幕间 变态者与分析家</h2>
-
-> 原作者：Matthew Flisfeder。翻译：Hyacinth；校对：肆玖。
->
-> 本文基于 CC BY-NC-SA 4.0 发布，仅供个人学习。
 
 ## 精神分析：在电影与意识形态之间
 
@@ -1314,10 +1293,6 @@ Vighi同样也对弗朗索瓦·特吕弗（François Truffaut）的《祖与占�
 
 <h2 id="chapter-05-upper">第五章 电影中的享乐（上）</h2>
 
-> 原作者：Matthew Flisfeder。翻译：互联网不明白；校对：snoper卓尔。
->
-> 本文基于 CC BY-NC-SA 4.0 发布，仅供个人学习。
-
 ## 电影的哪种主体
 
 电影和大众文化有研究价值，因为它们表现了民众日常生活的方方面面和部分文化，这有助于了解人们是如何应对权力压迫和剥削的死结。电影理论是对意识形态理论的出色补充，而齐泽克式的电影分析，不止是简单的补充，还起到了意识形态批判的作用。电影分析和意识形态批判之间重叠的领域位于享乐的范畴。对齐泽克来说，享乐，或者说原乐，是与意识形态相联系的政治问题。通过分析和阐释电影中的享乐，齐泽克扩充了对意识形态中享乐的理解。齐泽克的电影分析虽然对电影媒介的特殊性关注有限，但却发展出了更有力的分析策略，去分析意识形态的调停。本章将要介绍的，是聚焦于观影行为（spectatorship）及意识形态中的享乐生产的齐泽克式电影分析。
@@ -1431,10 +1406,6 @@ Vighi同样也对弗朗索瓦·特吕弗（François Truffaut）的《祖与占�
 [^chapter-05-upper-symbolic-sublime-29]: On this point, see Renata Salecl, On Anxiety (New York: Routledge, 2004), and The Tyranny of Choice (London: Profile, 2011).
 
 <h2 id="chapter-05-lower">第五章 电影中的享乐（下）</h2>
-
-> 原作者：Matthew Flisfeder。翻译：一个趣味低俗的人、kk；校对：Hyacinth。
->
-> 本文基于 CC BY-NC-SA 4.0 发布，仅供个人学习。
 
 ## 符号性委任
 
@@ -1586,10 +1557,6 @@ Vighi同样也对弗朗索瓦·特吕弗（François Truffaut）的《祖与占�
 [^chapter-05-lower-symbolic-sublime-61]: Žižek, Fright of Real Tears, 52.
 
 <h2 id="conclusion">结论——作为以驱力设定的现实主义之理论</h2>
-
-> 原作者：Matthew Flisfeder。翻译：兔引；校对：春埼美空、旅。
->
-> 本文基于 CC BY-NC-SA 4.0 发布，仅供个人学习。
 
 ## 结论：作为以驱力设定的现实主义之理论
 

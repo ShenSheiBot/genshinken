@@ -18,7 +18,6 @@ citation:
   blogTitle: 屋顶现视研
 ---
 
-> 作者：屋顶现视研。
 
 ![《告白的女优论》相关画面](/attachments/roof-archive/cv12555845/d4379b6aea27136da00c566afcc77288434f3db4.jpg)
 

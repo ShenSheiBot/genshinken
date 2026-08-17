@@ -8,7 +8,8 @@ categories: [动画]
 section: interview
 format: interview
 tags: [圣斗士星矢, 动画演出, 少女☆歌剧 Revue Starlight]
-post_author: furukawa-tomohiro
+interviewee: furukawa-tomohiro
+interviewer: 前田久
 translator: solntse
 proofreader: solntse
 excerpt: 古川知宏回顾《圣斗士星矢：真红少年传说》如何以山内重保的样式美、禁忌氛围与少年叙事，塑造他最早的动画体验。
@@ -28,7 +29,7 @@ citation:
   extra: Febri Talk 古川知宏访谈连载第1回；屋顶现视研中文译文。
 ---
 
-> 受访：古川知宏。采访、编辑：前田久。翻译：Солнце。校对：Солнце。原文：[Febri Talk 第1回](https://febri.jp/febri_talk/furukawa_tomohiro_1/)。
+> 原文：[Febri Talk 第1回](https://febri.jp/febri_talk/furukawa_tomohiro_1/)。
 
 ![《圣斗士星矢：真红少年传说》中雅典娜拥抱星矢的画面](attachments/roof-archive/cv14227022/saint-seiya-athena.jpg)
 

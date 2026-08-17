@@ -1,0 +1,80 @@
+[
+  {
+    "sourceId": "R-i7qtQNhRKqIK2ukpUfcg",
+    "reason": "superseded",
+    "canonicalPost": "source/_posts/rethink-everyday.md",
+    "evidenceNote": "editorial-sources/wechat/0039-R-i7qtQNhRKqIK2ukpUfcg-duplicate-note.md"
+  },
+  {
+    "sourceId": "vHaRUVsI-JMR6qED6RH2sQ",
+    "reason": "superseded",
+    "canonicalPost": "source/_posts/rethink-everyday.md",
+    "evidenceNote": "editorial-sources/wechat/0040-vHaRUVsI-JMR6qED6RH2sQ-duplicate-note.md"
+  },
+  {
+    "sourceId": "SUuVq4q0Nh4j7yLH5xpeVA",
+    "reason": "duplicate",
+    "canonicalPost": "source/_posts/lamarre-otaku-movement-2006-a.md",
+    "evidenceNote": "editorial-sources/wechat/0056-SUuVq4q0Nh4j7yLH5xpeVA-editorial-note.md"
+  },
+  {
+    "sourceId": "Vf5uyeAQECLU6JHwmOzGlA",
+    "reason": "superseded",
+    "canonicalPost": "source/_posts/evolution-of-bl-playing-with-gender.md",
+    "evidenceNote": "editorial-sources/wechat/0065-Vf5uyeAQECLU6JHwmOzGlA-editorial-note.md"
+  },
+  {
+    "sourceId": "BhkuEt05W86mzn4Yp2d2qA",
+    "reason": "superseded",
+    "canonicalPost": "source/_posts/lesbian-love-womanhood.md",
+    "evidenceNote": "editorial-sources/wechat/BhkuEt05W86mzn4Yp2d2qA-editorial-note.md"
+  },
+  {
+    "sourceId": "QjEP0giIfNNvhT-eDFP_CQ",
+    "reason": "superseded",
+    "canonicalSourceId": "LP8kSlPJrp3z_N3hGmZa8g",
+    "canonicalPost": "source/_posts/living-between-infrastructures-commuter-networks-revised.md",
+    "evidenceNote": "editorial-sources/wechat/QjEP0giIfNNvhT-eDFP_CQ-editorial-note.md",
+    "rawHtmlSha256": "47ec7ce333b155c43747707110b03cee6ba25b12f59edeb0c88155d1e35e0bc7",
+    "bodyHtmlSha256": "38566df66f8e1c394c394d28c099c03c5ffac74d11d83b824ab0a980e03ff434"
+  },
+  {
+    "sourceId": "OUpfBb2vxSkL3Upv6ptWgg",
+    "reason": "duplicate",
+    "canonicalSourceId": "WsadxSDomgnjaW4b_7arWQ",
+    "canonicalPost": "source/_posts/distant-view-everyday-k-on.md",
+    "evidenceNote": "editorial-sources/wechat/OUpfBb2vxSkL3Upv6ptWgg-editorial-note.md",
+    "rawHtmlSha256": "24bc9c75e1dea4c5611b3566d0be7ae4265986d117e28d11bcdea9ac28a2b3af",
+    "bodyHtmlSha256": "5bbb4330e632e81cbcf854aea6cdf592c6c0501c2674d28ee8a356c68adc120a"
+  },
+  {
+    "sourceId": "TpnIURwFyBzW7T3DHs0e6g",
+    "reason": "superseded",
+    "canonicalPost": "source/_posts/rethink-everyday.md",
+    "evidenceNote": "editorial-sources/wechat/TpnIURwFyBzW7T3DHs0e6g-editorial-note.md"
+  },
+  {
+    "sourceId": "lef2TlHETXEJNKvlc4BQtA",
+    "reason": "duplicate",
+    "canonicalPost": "source/_posts/kasai-uno-sekaikei-state-of-exception.md",
+    "evidenceNote": "editorial-sources/wechat/lef2TlHETXEJNKvlc4BQtA-editorial-note.md"
+  },
+  {
+    "sourceId": "lv3qj2HxqqwiLteF-eduyA",
+    "reason": "superseded",
+    "canonicalPost": "source/_posts/rethink-everyday.md",
+    "evidenceNote": "editorial-sources/wechat/lv3qj2HxqqwiLteF-eduyA-editorial-note.md"
+  },
+  {
+    "sourceId": "p-FtTJfyy_pne0YMW9rHvA",
+    "reason": "superseded",
+    "canonicalPost": "source/_posts/rethink-everyday.md",
+    "evidenceNote": "editorial-sources/wechat/p-FtTJfyy_pne0YMW9rHvA-editorial-note.md"
+  },
+  {
+    "sourceId": "raUp_J5SgoF4L81lrT4fHw",
+    "reason": "superseded",
+    "canonicalPost": "source/_posts/rethink-everyday.md",
+    "evidenceNote": "editorial-sources/wechat/raUp_J5SgoF4L81lrT4fHw-editorial-note.md"
+  }
+]

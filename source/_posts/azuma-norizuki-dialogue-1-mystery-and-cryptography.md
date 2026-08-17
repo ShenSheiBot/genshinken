@@ -8,7 +8,7 @@ categories: [思想与理论]
 section: interview
 format: interview
 tags: [东浩纪, 法月纶太郎, 推理小说, 否定神学, 后现代, 角色文化]
-post_author: [东浩纪, 法月纶太郎]
+participant: [东浩纪, 法月纶太郎]
 translator: 帕底亚的拍拍
 excerpt: 东浩纪与法月纶太郎从埃勒里·奎因与新本格推理谈起，讨论否定神学、移情、社会派、拟像与密码如何共同改变小说和交流模式。
 citation:
@@ -21,6 +21,11 @@ citation:
   ISBN: "9784309410692"
   url: "https://www.kawade.co.jp/np/isbn/9784309410692/"
   language: zh-CN
+  creators:
+    - creatorType: author
+      name: 东浩纪
+    - creatorType: author
+      name: 法月纶太郎
   extra: "屋顶现视研中文译文；译者帕底亚的拍拍；2022-11-03发布。原页称原对话另有下篇，但译稿因电脑故障遗失且尚未重做，本篇仅收录对话·1。"
 ---
 

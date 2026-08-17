@@ -21,13 +21,11 @@ citation:
   extra: "原补充词条2020-02-24初版、2020-05-05实质修订；中文译稿署明2020-07-10译成，2020-07-22发表于屋顶现视研；正文以13页扫描完整收录，文内引文所涉书目见主词条Bibliography。"
 ---
 
-**翻译：**Meowth。
 
 **原地址：**<https://plato.stanford.edu/entries/carnap/inductive-logic.html>
 
 （Supplement to Rudolf Carnap）
 
-**作者：**Hannes Leitgeb <Hannes.Leitgeb@lmu.de>；André Carus <awcarus@mac.com>。
 
 **版本：**First published Mon Feb 24, 2020; substantive revision Tue May 5, 2020。
 

@@ -75,6 +75,7 @@ interface BookChapterBase {
   authors?: string[];
   translators?: string[];
   proofreaders?: string[];
+  editors?: string[];
 }
 
 export interface PublishedBookChapter extends BookChapterBase {
@@ -130,6 +131,7 @@ export interface Book {
   authors: string[];
   translators: string[];
   proofreaders: string[];
+  editors: string[];
   publishedAt: string;
   updatedAt: string;
   latestChapterId: string;
@@ -184,7 +186,7 @@ function optionalStringList(record: JsonRecord, field: string, source: string): 
 
 function chapterCreditOverride(
   record: JsonRecord,
-  field: "authors" | "translators" | "proofreaders",
+  field: "authors" | "translators" | "proofreaders" | "editors",
   source: string
 ): string[] | undefined {
   if (!Object.prototype.hasOwnProperty.call(record, field)) return undefined;
@@ -359,6 +361,7 @@ function parseChapter(
     authors: chapterCreditOverride(value, "authors", chapterSource),
     translators: chapterCreditOverride(value, "translators", chapterSource),
     proofreaders: chapterCreditOverride(value, "proofreaders", chapterSource),
+    editors: chapterCreditOverride(value, "editors", chapterSource),
   };
 
   if (status === "published") {
@@ -449,9 +452,11 @@ function parseManifest(value: unknown, source: string): Book {
   const authors = stringList(value, "authors", source);
   const translators = stringList(value, "translators", source);
   const proofreaders = optionalStringList(value, "proofreaders", source);
+  const editors = optionalStringList(value, "editors", source);
   validateContributorNames(authors, "authors", source);
   validateContributorNames(translators, "translators", source);
   validateContributorNames(proofreaders, "proofreaders", source);
+  validateContributorNames(editors, "editors", source);
   const slug = stableId(value, "slug", source);
   const title = requiredString(value, "title", source);
   const subtitle = optionalString(value, "subtitle", source);
@@ -469,6 +474,10 @@ function parseManifest(value: unknown, source: string): Book {
     })),
     ...translators.map((name): CitationCreator => ({
       creatorType: "translator",
+      name: resolveContributor(name)?.displayName ?? name,
+    })),
+    ...editors.map((name): CitationCreator => ({
+      creatorType: "editor",
       name: resolveContributor(name)?.displayName ?? name,
     })),
   ];
@@ -522,6 +531,7 @@ function parseManifest(value: unknown, source: string): Book {
     authors,
     translators,
     proofreaders,
+    editors,
     publishedAt,
     updatedAt: dateString(value, "updatedAt", source),
     latestChapterId,
@@ -584,12 +594,13 @@ export function getBookByDocumentSlug(documentSlug: string): Book | null {
 }
 
 export function getBookCredits(
-  book: Pick<Book, "slug" | "authors" | "translators" | "proofreaders">
+  book: Pick<Book, "slug" | "authors" | "translators" | "proofreaders" | "editors">
 ): Credit[] {
   const rows: Array<{ role: CreditRole; names: string[] }> = [
     { role: "author", names: book.authors },
     { role: "translator", names: book.translators },
     { role: "proofreader", names: book.proofreaders },
+    { role: "editor", names: book.editors },
   ];
 
   return rows.flatMap(({ role, names }) => names.map((name) => {
@@ -612,6 +623,7 @@ export function getBookChapterCredits(book: Book, chapter: BookChapter): Credit[
     authors: chapter.authors ?? book.authors,
     translators: chapter.translators ?? book.translators,
     proofreaders: chapter.proofreaders ?? book.proofreaders,
+    editors: chapter.editors ?? book.editors,
   });
 }
 
@@ -855,9 +867,15 @@ export function getBookChapterCitation(
     citationKey: `${parent.citationKey}_${chapter.id.replaceAll("-", "_")}`,
     title: chapter.title,
     creators: credits
-      .filter((credit) => credit.role === "author" || credit.role === "translator")
+      .filter((credit) => (
+        credit.role === "author" || credit.role === "translator" || credit.role === "editor"
+      ))
       .map((credit): CitationCreator => ({
-        creatorType: credit.role === "author" ? "author" : "translator",
+        creatorType: credit.role === "author"
+          ? "author"
+          : credit.role === "translator"
+            ? "translator"
+            : "editor",
         name: credit.name,
       })),
     abstractNote: `${book.subtitle ? `${book.title}（${book.subtitle}）` : book.title}${chapter.number}：${chapter.title}`,

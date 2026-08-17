@@ -10,6 +10,7 @@ tags: [战斗美少女, 性别研究, 百合, 动画声音, 飞跃巅峰, 美少
 post_author: 石田美纪
 translator: 塔塔君
 proofreader: [Leontopodium Edelweiss, 伦勃朗]
+editor: 子厚
 excerpt: 从《战斗吧！！伊库萨1》《飞跃巅峰》到《美少女战士S》和《少女革命》，考察战斗美少女、少女文化与动画声音如何共同拓展百合表现的边界。
 featured_order: 0
 citation:
@@ -152,6 +153,5 @@ citation:
 
 [^7]: 几原邦彦「少女革命ウテナ　テアトルＡＮ上映カシラ」，<http://www.starchild.co.jp/special/utena/1208.html>（最后检索日：2014年11月7日）。
 
-**润色：** 子厚
 
 **编者按：**战斗美少女比起简单的“美”，其实还有更深层，更复杂的内容在。

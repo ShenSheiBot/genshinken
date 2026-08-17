@@ -20,4 +20,7 @@ export const site = {
   ],
   infoEmail: "a1835631041@163.com",
   editorEmail: "a1835631041@163.com",
+  /** 全站文章默认许可与转载提示；另有明确许可者从其特别说明。 */
+  rightsNotice:
+    "除另有说明外，本站内容采用 CC BY-NC-SA 4.0 许可。欢迎规范转载。如有侵犯您的布尔乔亚法权，请联系并提醒号主立刻践行游士删文跑路伦理。",
 } as const;

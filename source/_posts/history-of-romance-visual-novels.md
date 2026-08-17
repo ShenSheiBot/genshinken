@@ -10,6 +10,7 @@ tags: [视觉小说, 恋爱游戏, 美少女游戏, 游戏史]
 post_author: Warudo Chaos
 translator: [波尔艾南, Liebestram, 伞泽直美, 人参果味砒霜, 香饵]
 proofreader: [人参果味砒霜, Liebestram]
+editor: Liebestram
 excerpt: Warudo Chaos梳理从二十世纪八十年代成人游戏、恋爱养成游戏到视觉小说及泣系作品的发展，讨论恋爱游戏的分类、机制与叙事转向。
 citation:
   itemType: blogPost
@@ -24,13 +25,9 @@ citation:
 
 > 原生肉视频的文稿版来源于：[History of Romance Visual Novels: Eroge, Hentai Games, Dating Sims, Bishoujo Games, Galge, Nakige, etc.](https://warudochaos.wordpress.com/2022/01/23/history-of-romance-visual-novels-eroge-hentai-games-dating-sims-bishoujo-games-galge-nakige-etc/)
 >
-> 原作者：Warudo Chaos
 >
-> 翻译：波尔艾南、liebestram、伞泽直美、人参果味砒霜、香饵
 >
-> 校对：人参果味砒霜、liebestram
 >
-> 编辑：liebestram
 >
 > 协力：l夢
 

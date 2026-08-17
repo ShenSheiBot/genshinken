@@ -16226,6 +16226,126 @@
       "bytes": 32809,
       "sha256": "00f1208283e622db99a30ec4e6b1ac7400a85a410801c4f2d63d2c847e19aca7",
       "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv13941587/001.jpg",
+      "bytes": 58365,
+      "sha256": "09468e35a9ca0869bd6d7e8eee4c48516ff71e7b5e15a177790592f360141234",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv13941587/002.jpg",
+      "bytes": 27877,
+      "sha256": "5daa352bf751d6b12e9723bae98f8d617ac3cae91dad87681b103752181c6411",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv13941587/003.jpg",
+      "bytes": 118296,
+      "sha256": "ef1961beefa4eadb861f1a0fe15f7213392030e5ee5a1b20d12c25e526313e1f",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv13969249/001.jpg",
+      "bytes": 26143,
+      "sha256": "9ca5cb5cd05655985e8c73c465e2ec8b78a3e430170ebfdb1d2f49e09b670b8a",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv13969249/002.jpg",
+      "bytes": 149241,
+      "sha256": "4214d52a23aed2add463e332f4a31eca372ba53a367dcbf0d14c9c7bc7334030",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv13969249/003.png",
+      "bytes": 519163,
+      "sha256": "1e6aca5bc0747f471f778d255855d298d28035aeac5b0da25ff02e56aa73099b",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv13969249/004.jpg",
+      "bytes": 99634,
+      "sha256": "6484d4e4d7420c5786f0e39b3de006cb057b6c0712ac9d4da50be06b53d49299",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14115713/001.jpg",
+      "bytes": 13415,
+      "sha256": "c06115b0f1c4c2171dc7b2580e21e749419c671040bea573e0eef880033b6f19",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14115713/002.jpg",
+      "bytes": 25557,
+      "sha256": "c60f14bb56d2b36decc09af9ca3154991858ff5dad47fb82795f245ae77465c0",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14115713/003.jpg",
+      "bytes": 105193,
+      "sha256": "acb3da87f3b39b5cf1eae12a9430f2dbfa443d2b8b72024fd00470226ac20a06",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14115713/004.jpg",
+      "bytes": 339466,
+      "sha256": "be86d33ce2287c28cfee40220b6a63fed125f3aaaa8702411ece0efea8016c1d",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv15087848/01-opening-still.jpg",
+      "bytes": 57212,
+      "sha256": "d88fde149f902c321a9f04c68278bf7b79852e75da93ea584f777e1629ffbee5",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv19442841/02-figure-1.jpg",
+      "bytes": 37795,
+      "sha256": "4785045a3440c58a0fc176574ceed01933766da20e068af66722683f600f1244",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv19442841/03-figure-2.jpg",
+      "bytes": 35136,
+      "sha256": "bf4fb2199b535a7e0a5adb73d9f493f27aedb0250c58d78c0d634c6c4ec9faa5",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv19442841/04-figure-3.jpg",
+      "bytes": 39007,
+      "sha256": "b16c9e648bb92f382d2848f79f1f2ebb4bf5e98ea8a47e26bd9a293b4909dd99",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv2148303/02-kaguya-how-cute.jpg",
+      "bytes": 33207,
+      "sha256": "dd6f142c3feabd1c967c972679eec70380c39598e9c4ba12ce3ebc997c1ac922",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv23048003/04b-keisuke-nago-magazine.jpg",
+      "bytes": 41051,
+      "sha256": "a43be8286bb88fdc596edf51ad8e9ff91bf1c48b7481277170940092aeb924a7",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv23048003/05b-kamen-rider-decade-poster.jpg",
+      "bytes": 74903,
+      "sha256": "e4b2324388b2c7dc4db13276ba126b5456090ba2142759f6b420c7d4026cd339",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv23048003/06b-kamen-rider-w-dvd-vol-10.jpg",
+      "bytes": 163827,
+      "sha256": "411c4345ed253850ea03c4623da4566343a8af3eeddef9b0781b3eace973d6e2",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv8322667/00-opening-office.jpg",
+      "bytes": 18245,
+      "sha256": "3d0554e3ea75fda703fc00eb6c9a790fcda92541a4d2186a3dc17de21dc0d0fc",
+      "contentType": "image/jpeg"
     }
   ]
 }

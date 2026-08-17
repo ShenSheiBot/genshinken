@@ -11,7 +11,7 @@
 - [ ] **slug / 文件名全 ASCII**：短横线连字，无中文、空格、全角符号
 - [ ] **YAML front-matter 完整**：标题、日期、分类、标签、署名等全部写进头部，不散落正文
 - [ ] **编辑栏目已填写**：`section` 只能是 `essay / review / translation / community / multimedia`
-- [ ] **署名均已登记**：每位作者、译者、校对者都有稳定贡献者 id，姓名和别名不冲突
+- [ ] **署名均已登记**：每位作者、受访者、采访者、与谈者、主讲人、译者、校对者与编辑都有稳定贡献者 id，姓名和别名不冲突
 - [ ] **修订旧文补 `updated` 字段**：实质性修订（改译文、补脚注）时在 front-matter 写 `updated: YYYY-MM-DD`——驱动 sitemap lastmod / RSS / 结构化数据，搜索引擎据此重抓
 - [ ] **分类不重复进标签**：`categories` 与 `tags` 不重叠（前端会分别渲染）
 - [ ] **引号全为方向性弯引号** `“ ” ‘ ’`，正文无 ASCII 直引号 `" '`
@@ -85,7 +85,7 @@ featured_order: 0        # 可选；同栏目首页推荐优先级，数值越�
 ---
 ```
 
-- 署名角色为作者、译者与校对，顺序固定为 作者 → 译者 → 校对；一个角色多人优先写 YAML 数组，也兼容逗号、顿号、分号、换行或全角空格分隔。`editor` 等未定义角色仍不得写入。
+- 署名角色依次为作者、受访者、采访者、与谈者、主讲人、译者、校对与编辑；一个角色多人优先写 YAML 数组，也兼容逗号、顿号、分号、换行或全角空格分隔。采访稿不得为了满足旧作者字段而把受访者、采访者或座谈参与者标成“作者”：分别使用 `interviewee`、`interviewer`、`participant`，广播或演讲使用 `speaker`；润色与文字编辑使用 `editor`。
 - `title_breaks` 明确标题在空间不足时的优先断点。标题能在一行显示时不会强制换行；确实需要换行时，编辑应避免第二行以「的／之／与」等非实词开头，避免切进实词内部，并使相邻两行长度不过度悬殊。短标题仍填写单项数组，例如 `title_breaks: ["列宁之争"]`。字段缺失时内容校验给出建议和非阻塞警告；拼接后不等于 `title`、类型错误或空数组会阻止构建。
 - 每个署名必须能按显示名、稳定 id 或登记别名解析到 `lib/contributors.ts` 的唯一记录；未登记署名会阻止校验和构建。
 - `categories` 只用于分类标记，**不会**再混进标签行（`lib/posts.ts` 已分离二者）。
@@ -107,7 +107,7 @@ featured_order: 0        # 可选；同栏目首页推荐优先级，数值越�
 ## 3. 贡献者登记与姓名链接
 
 - `lib/contributors.ts` 是公开人物身份的唯一登记簿。`id` 使用小写 ASCII kebab-case，一经发布保持稳定；显示名变化通过 `displayName` 与 `aliases` 兼容，不从姓名临时生成 URL。
-- 显示名和任何别名必须全局唯一。新增文章署名前，先登记作者、译者或校对者；书籍清单中的三类署名也使用同一登记簿。
+- 显示名和任何别名必须全局唯一。新增文章署名前，先登记所有公开署名者；书籍清单中的三类署名也使用同一登记簿。
 - `teamMember` 默认且通常为 `false`。一次投稿、翻译或被转载不意味着属于编辑部；只有取得明确公开授权后才设为 `true`，并按需填写 `teamTitle / teamOrder / bio / links`。
 - 前端只有姓名进入 `/library?contributor=<id>` 链接。前面的「作／译／校」角色方块不属于链接；默认姓名链接也不附加 `role`，角色细分交给文库筛选面板。
 - 同一人在不同署名位置出现时必须复用同一 id，文库据此跨作者、译者和校对角色聚合。
@@ -147,6 +147,7 @@ featured_order: 0        # 可选；同栏目首页推荐优先级，数值越�
 - **[TYPO-P6] 连续名词用顿号**：连续并列名词之间用 `、` 而非 `，`（语义性强，不做自动断言，人工审读职责）。
 - **[TYPO-P7] 脚注编号不入正文**：正文中不得残留纯文本脚注编号（见 §5 脚注规则；由脚注转换流程保证）。
 - **[TYPO-P8] 整段引文用引用样式**：整段引述他人文字须用 blockquote，不得以普通段落加引号呈现
+- **[TYPO-P9] 脚注调用与定义不得半转换**：同篇已有数字 GFM 脚注定义时，定义块之前对应的正文调用不得仍写成普通 `[n]`；须写成 `[^n]`。来源只有注号而没有定义时，保留非链接注号，不得据此伪造定义。
   （语义性强，不做自动断言，人工审读职责）。
 
 ### 4.2 版面排版契约（TYPO-L 系列）
@@ -224,7 +225,9 @@ P1/P2/P4/P5 由 `scripts/validate-content.mjs` 的 `validateProseTypography` 在
 - 微信清单尚未公开时，只有已经受 Git 跟踪的旧图片可以继续使用本地路径；任何新图片既未受跟踪、清单又未完成 R2 promotion 时，`verify:wechat-assets-ready`、pre-commit 与 `npm run check` 都会失败。
 - `assets:wechat:manifest` 每次重建都会把 `public` 重置为 `false`，因此新增一张图片后必须重新完成整批上传与远端验收，不能沿用上次的公开状态。
 - 每篇微信公开稿还必须登记在 `editorial-sources/wechat/preservation-manifest.json`。先运行
-  `npm run preservation:wechat:build -- --accept-reviewed-omissions`，逐条复核命令列出的未进入公开稿的源文本块；
+  `npm run preservation:wechat:build`。清单以来源 ID 与文本哈希记住已经逐条复核过的遗漏；已有遗漏保持不变或正文补回内容时可直接重建，
+  只有新增遗漏才会中止。逐条对照 `raw.html` 确认新增项确属平台导航、通用宣传或已经结构化表达的信息后，才可运行
+  `npm run preservation:wechat:build -- --accept-new-reviewed-omissions`；不得用该参数跳过未读的源文本。
   清单会固定 `raw.html`／精确 `#js_content` 的哈希、正文图角色与顺序、公开正文、脚注调用及完整定义。
   `verify:wechat-preservation` 同时进入 pre-commit 与 `npm run check`，正文静默删改、封面冒充正文图、图片错序或脚注截断都会阻止交付。
 
@@ -316,6 +319,7 @@ P1/P2/P4/P5 由 `scripts/validate-content.mjs` 的 `validateProseTypography` 在
   "authors": ["作者显示名"],
   "translators": ["译者显示名"],
   "proofreaders": ["校对者显示名"],
+  "editors": ["编辑显示名"],
   "publishedAt": "2026-07-18",
   "updatedAt": "2026-07-18",
   "latestChapterId": "chapter-one",
@@ -372,7 +376,7 @@ P1/P2/P4/P5 由 `scripts/validate-content.mjs` 的 `validateProseTypography` 在
 ```
 
 - `id / slug / documentSlug / chapter.id / latestChapterId` 均使用稳定 ASCII kebab-case；文件名与书籍 slug 一致。`children` 可以在任意目录节点下继续嵌套；父子数组的书写顺序共同构成公开目录顺序。
-- 书级 `authors / translators / proofreaders` 是全书默认署名。章节确有不同署名时，可在章节节点上填写同名字段覆盖对应角色；字段缺省表示继承书级署名，显式空数组表示该章未署该角色。章节 `authors` 如填写不得为空。不要把只参与个别篇章的人合并成全书共同署名。
+- 书级 `authors / translators / proofreaders / editors` 是全书默认署名。章节确有不同署名时，可在章节节点上填写同名字段覆盖对应角色；字段缺省表示继承书级署名，显式空数组表示该章未署该角色。章节 `authors` 如填写不得为空。不要把只参与个别篇章的人合并成全书共同署名。
 - 书籍 `status` 只能是 `serializing / complete / paused`。每个新增或修改的目录节点必须显式填写 `status: published / forthcoming`；旧清单中缺省 `status` 的平铺节点仅为兼容既有内容而按 `published` 读取，不得在新书中继续省略。节点 `id / number` 在整棵目录树内不得重复，不能只在同一层检查唯一性。
 - `/books` 书目必须按 `serializing → paused → complete` 排列，同一状态内再按 `updatedAt` 降序和书名稳定排序。连载中书籍永远排在已完结书目之前；发布或更新完结书不得改变这一优先级。
 - `published` 节点必须填写非空 `anchor` 与有效 `publishedAt`，anchor 在整棵目录树内唯一。`forthcoming` 节点必须省略 `anchor / publishedAt`；它只展示待更新目录，不参与锚点存在性校验，也不得包含状态为 `published` 的后代。

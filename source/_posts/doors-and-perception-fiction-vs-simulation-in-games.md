@@ -20,7 +20,6 @@ citation:
   extra: "原作者：Espen Aarseth。原文刊于 Intermédialités / Intermediality 9（2007）：35—44。"
 ---
 
-> **作者：** Espen Aarseth<br />
 > **原文：** [Doors and Perception: Fiction vs. Simulation in Games](https://doi.org/10.7202/1005528ar)<br />
 > **译者按：** 本文作者是《游戏研究》的创刊人，也是现代游戏学研究的开山者，他以独特的视角，区分了游戏中虚构，虚拟，模拟，现实这几个不同层面，通过对于游戏中人物设定，背景，玩家，以及游戏途径的探讨来对游戏进行分析。译者水平有限，故若有失误和不通顺之处欢迎指正交流。
 

@@ -28,8 +28,6 @@ citation:
 
 > 原文：[John Rawls](https://plato.stanford.edu/archives/fall2017/entries/rawls/)，作者 Leif Wenar，载《斯坦福哲学百科》2017 年秋季版；词条初版于 2008 年 3 月 25 日，2017 年 1 月 9 日实质修订。
 >
-> **翻译：**优昙华院。
-
 约翰·罗尔斯（生于1921年，卒于2002年）是自由派传统的美国政治哲学家。 他的**作为公平的正义理论justice as fairness**描述了一个拥有平等基本权利并在平等经济体系内合作的自由公民社会a society of free citizens holding equal basic rights and cooperating within an egalitarian economic system。 他的**政治自由主义理论political liberalism**描述了民主国家中政治权力的合法使用，并设想了在自由制度允许的世界观多样化下，公民团结将如何持续下去。 他关于**万民法the law of peoples**的著作提出了一项自由的外交政策，旨在建立一个永久和平与宽容的国际秩序。
 
 - 1.工作与生平 Life and Work
@@ -273,8 +271,6 @@ citation:
 
 > 原文：[John Rawls](https://plato.stanford.edu/archives/fall2017/entries/rawls/)，作者 Leif Wenar，载《斯坦福哲学百科》2017 年秋季版。
 >
-> **翻译：**优昙华院。
-
 ### 4.3 作为公平的正义的两个原则The Two Principles of Justice as Fairness
 
 作为公平的正义的指导思想，其制度性形式由两条正义原则构成。

@@ -8,7 +8,7 @@ categories: [动画]
 section: translation
 tags: [日本动画, 灾难想象, 3·11, 日本沉没2020]
 post_author: Pause and Select
-translator: [一般通过ANIMONK, 十文字, repapec i, snoper卓尔, fahh]
+translator: [一般通过ANIMONK, 十文字, repapec i, snoper卓尔, fahh, 红茶泡海苔]
 proofreader: [ΟΔΥΣΣΕΙΑ, 唯一指定真实August_Rush, 烦一句]
 excerpt: 通过《日本沉没2020》的灾难群像与影像策略，讨论日本灾难叙事在“3·11”之后的变化，以及作品如何重写“何为日本人”。
 citation:
@@ -16,10 +16,10 @@ citation:
   citationKey: pauseSelectJapanSinks2020
   date: "2020"
   title: "Japan Sinks 2020: The War of Disaster Images"
-  extra: "原作者 Pause and Select；中文翻译由一般通过ANIMONK、十文字、repapec i、snoper卓尔、fahh完成。"
+  extra: "原作者 Pause and Select；主催与时间轴为唯一指定真实August_Rush、烦一句；中文翻译由一般通过ANIMONK、十文字、repapec i、snoper卓尔、fahh完成，红茶泡海苔协力翻译。"
 ---
 
-> 原作者：Pause and Select。本文为其视频《[Japan Sinks 2020: The War of Disaster Images](https://www.youtube.com/watch?v=jjcaqxoJ0bw)》的中文文字版。主催：唯一指定真实August_Rush。翻译：一般通过ANIMONK、十文字、repapec i、snoper卓尔、fahh。校对：ΟΔΥΣΣΕΙΑ、唯一指定真实August_Rush、烦一句。时间轴：烦一句。感谢红茶泡海苔协力翻译。
+> 本文为视频《[Japan Sinks 2020: The War of Disaster Images](https://www.youtube.com/watch?v=jjcaqxoJ0bw)》的中文文字版。
 
 ## 《日本沉沒2020》：灾难的影像战争
 

@@ -95,10 +95,6 @@ citation:
 
 > 原文：[Sound! Euphonium 2: Episode 2](https://blog.sakugabooru.com/2016/10/13/sound-euphonium-2-episode-2/)，作者kViN，发表于 Sakuga Blog（2016年10月13日）。本文译出正文分析，未收入原文末段对下一话的预告与网站支持说明。
 >
-> **翻译：**Phaedrus。
->
-> **校对：**唯一指定真实August_Rush。
-
 ---
 
 *优异的执行力和有趣的内容虽没达到最亮眼的发挥，但年轻的人才也乘着东风澎湃向前。*
@@ -174,10 +170,6 @@ citation:
 
 > 原文：[Sound! Euphonium 2: Episode 3](https://blog.sakugabooru.com/2016/10/20/sound-euphonium-2-episode-3/)，作者kViN，发表于Sakuga Blog（2016年10月20日）。本篇译文收录至原文对第二原画清线及京都、Animation Do关系的讨论，未含其后的结语与网站支持说明。
 >
-> **翻译：**Phaedrus。
->
-> **校对：**唯一指定真实August_Rush。
-
 ---
 
 *就用如此惊艳的这集一探解业界的一二！*

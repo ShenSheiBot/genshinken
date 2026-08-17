@@ -26,7 +26,6 @@ citation:
   extra: "PLANETS YouTubeチャンネル视频《批評座談会〈仮面ライダーBLACK SUN〉》免费部分的中文听译概括；原视频发布于2022-11-02：https://www.youtube.com/watch?v=rPpZ-cLDz0E。原页说明概括含有意译，括号部分包含译者理解。"
 ---
 
-> 评论者：宇野常宽。译者：柴来人。
 >
 > 本文为原视频免费部分的听译概括，包含意译；括号部分为译者的理解补充，其余部分基本为宇野原意。原视频：[《批評座談会〈仮面ライダーBLACK SUN〉》](https://www.youtube.com/watch?v=rPpZ-cLDz0E)。
 

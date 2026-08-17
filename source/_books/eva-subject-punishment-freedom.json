@@ -1,0 +1,67 @@
+{
+  "id": "eva-subject-punishment-freedom",
+  "slug": "eva-subject-punishment-freedom",
+  "title": "对EVA的审视：神罚与自由的主体",
+  "description": "霜路组合从理性主义立场分析《新世纪福音战士》中的神罚、自由与主体问题。全文原分上、下两篇发布，依次讨论世界系、明日香的自我创伤、TV版结局、旧剧场版的补完与反作者中心主义解读。",
+  "documentSlug": "eva-subject-punishment-freedom",
+  "script": "hans",
+  "status": "complete",
+  "authors": [
+    "霜路组合"
+  ],
+  "translators": [],
+  "proofreaders": [],
+  "editors": [
+    "路觉"
+  ],
+  "publishedAt": "2025-11-09",
+  "updatedAt": "2025-11-09",
+  "latestChapterId": "part-2",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "shuanglu2025evaSubjectPunishmentFreedom",
+      "extra": "原载知乎回答；2025-11-09由屋顶现视研分上、下两篇发布，作者署霜路组合（寒霜血蝶、路觉），排版、编辑为路觉。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "part-1",
+      "number": "01",
+      "title": "上篇：世界系与明日香的自我创伤",
+      "status": "published",
+      "anchor": "part-1",
+      "publishedAt": "2025-11-09",
+      "authors": [
+        "霜路组合"
+      ],
+      "translators": [],
+      "proofreaders": [],
+      "tags": [
+        "新世纪福音战士",
+        "世界系",
+        "主体",
+        "自由"
+      ]
+    },
+    {
+      "id": "part-2",
+      "number": "02",
+      "title": "下篇：完结的世界、补完与文本解读",
+      "status": "published",
+      "anchor": "part-2",
+      "publishedAt": "2025-11-09",
+      "authors": [
+        "霜路组合"
+      ],
+      "translators": [],
+      "proofreaders": [],
+      "tags": [
+        "新世纪福音战士",
+        "主体",
+        "自由",
+        "文本解读"
+      ]
+    }
+  ]
+}

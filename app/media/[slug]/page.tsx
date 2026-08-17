@@ -6,6 +6,7 @@ import {
   getPreviewablePosts,
   getPostBySlug,
   type CreditRole,
+  PRIMARY_CREDIT_ROLES,
   type Post,
   type PostSummary,
 } from "@/lib/posts";
@@ -125,8 +126,13 @@ function buildJsonLd(post: Post, destinations: Destination[]) {
   const license = licenseUrlFromRights(post.citation.rights);
   const roleProperties: Record<CreditRole, "author" | "translator" | "contributor"> = {
     author: "author",
+    interviewee: "contributor",
+    interviewer: "contributor",
+    participant: "contributor",
+    speaker: "contributor",
     translator: "translator",
     proofreader: "contributor",
+    editor: "contributor",
   };
   const people: Partial<
     Record<"author" | "translator" | "contributor", Array<Record<string, string>>>
@@ -197,7 +203,7 @@ export async function generateMetadata({
       publishedTime: post.dateISO,
       modifiedTime: post.updatedISO,
       authors: post.credits
-        .filter((credit) => credit.role === "author")
+        .filter((credit) => PRIMARY_CREDIT_ROLES.includes(credit.role))
         .map((credit) => credit.name),
       tags: post.tags,
     },

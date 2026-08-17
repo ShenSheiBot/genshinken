@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import type { Credit } from "@/lib/posts";
+import { CREDIT_ROLE_META } from "@/lib/credit-roles";
 
 // 样式在 globals.css 的 .credit-links-* 全局类（勿改回 CSS Module：本组件被
 // layout 的 TopBar 与多个路由共用，模块化会重新成为 CSS 分块合并的枢纽）。
@@ -76,11 +77,7 @@ export default function CreditLinks({
                   markClassName
                 )}
                 role="img"
-                aria-label={
-                  credit.role === "author"
-                    ? "作者"
-                    : credit.role === "translator" ? "译者" : "校对"
-                }
+                aria-label={CREDIT_ROLE_META[credit.role].label}
               >
                 {credit.mark}
               </span>

@@ -443,7 +443,9 @@ export function ReadingDossier({
           )}
       </DossierCover>
 
-      <DossierReading parts={parts} sourceScript={post.script} />
+      <DossierReading parts={parts} sourceScript={post.script}>
+        <p className={styles.rightsNotice}>{site.rightsNotice}</p>
+      </DossierReading>
       <RelatedReading current={post} posts={posts} />
     </ReadingDossierRoot>
   );

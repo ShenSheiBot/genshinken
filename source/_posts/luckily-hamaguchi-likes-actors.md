@@ -8,7 +8,7 @@ categories: [电影与影视]
 section: interview
 format: interview
 tags: [滨口龙介, 莲实重彦, 夜以继日, 电影理论, 表演, 三浦哲哉]
-post_author: [滨口龙介, 莲实重彦, 三浦哲哉]
+participant: [滨口龙介, 莲实重彦, 三浦哲哉]
 translator: [一条, 静希]
 excerpt: 滨口龙介与莲实重彦围绕《夜以继日》的创作、表演、摄影与剪辑展开长篇对谈，三浦哲哉补充追问其中的电影观。
 featured_order: 0
@@ -40,7 +40,6 @@ citation:
 
 > 原载：[《ユリイカ》2018年9月号“特集＝濱口竜介”](https://www.seidosha.co.jp/book/index.php?id=3201)。对谈：滨口龙介、莲实重彦；取材·构成：三浦哲哉。
 >
-> 翻译：一条、静希。
 
 ![《ユリイカ》访谈题页及滨口龙介、莲实重彦照片](attachments/roof-archive/cv17732899/086c8ecd49ea3c00d7cabf19.jpg)
 

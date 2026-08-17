@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { Credit } from "@/lib/posts";
+import { CREDIT_ROLE_META } from "@/lib/credit-roles";
 import type { HanScript } from "@/lib/han-script";
 import { site } from "@/lib/site";
 import { GLOBAL_NAV_ITEMS, isReadingRoute } from "@/lib/navigation";
@@ -1663,11 +1664,7 @@ export default function ReadingEditionChrome({
                 className={styles.creditMark}
                 data-solid={credit.solid ? "true" : "false"}
                 role="img"
-                aria-label={
-                  credit.role === "author"
-                    ? "作者"
-                    : credit.role === "translator" ? "译者" : "校对"
-                }
+                aria-label={CREDIT_ROLE_META[credit.role].label}
               >
                 {credit.mark}
               </span>

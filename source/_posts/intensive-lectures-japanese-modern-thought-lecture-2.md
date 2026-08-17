@@ -3,7 +3,7 @@ book_document: true
 title: 集中讲义！日本的现代思想
 title_breaks: [集中讲义！日本的现代思想]
 date: 2021-12-31
-updated: 2022-02-01
+updated: 2022-02-21
 slug: intensive-lectures-japanese-modern-thought-lecture-2
 script: hans
 categories: [思想与理论]
@@ -171,7 +171,7 @@ citation:
 
 <h2 id="lecture-07">第七讲 “现代思想”为何“终结”了呢？</h2>
 
-> 原作者：仲正昌樹。翻译：Va-11 Hall-A、杉原 音、川井ルナ、柴来人。校对：恐怖如斯、人吉尔朗。
+![第七讲开篇动画剧照](attachments/roof-archive/cv15087848/01-opening-still.jpg?v=d88fde14)
 
 ## 后八零年代的状况
 

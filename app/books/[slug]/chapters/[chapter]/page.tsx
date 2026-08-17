@@ -337,6 +337,7 @@ export default async function BookChapterPage({
         leftRailLabel="署名、行数与本章目录"
       >
         {document.isSectionLanding && <SectionChildren book={book} chapters={chapter.children} />}
+        <p className={readerStyles.rightsNotice}>{site.rightsNotice}</p>
         <ChapterNavigation book={book} previous={previous} next={next} />
       </DossierReading>
     </ReadingDossierRoot>

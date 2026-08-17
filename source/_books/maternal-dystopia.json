@@ -2,8 +2,8 @@
   "id": "maternal-dystopia",
   "slug": "maternal-dystopia",
   "title": "母性的敌托邦",
-  "subtitle": "宫崎骏论、富野由悠季论与终章中文选译",
-  "description": "宇野常宽以宫崎骏、富野由悠季及战后影像史为轴，讨论母性乌托邦与母性敌托邦如何塑造日本动画的政治想象。",
+  "subtitle": "宫崎骏论、富野由悠季论、押井守论与终章中文选译",
+  "description": "宇野常宽以宫崎骏、富野由悠季、押井守及战后影像史为轴，讨论母性乌托邦与母性敌托邦如何塑造日本动画的政治想象。",
   "documentSlug": "hayao-miyazaki-maternal-utopia-upper",
   "script": "hans",
   "status": "paused",
@@ -13,8 +13,8 @@
   "translators": [],
   "proofreaders": [],
   "publishedAt": "2022-03-25",
-  "updatedAt": "2023-10-09",
-  "latestChapterId": "image-century-upper",
+  "updatedAt": "2024-10-14",
+  "latestChapterId": "oshii-image-century-1",
   "citations": {
     "translation": {
       "itemType": "book",
@@ -24,7 +24,8 @@
       "publisher": "集英社",
       "ISBN": "9784087711196",
       "language": "zh-CN",
-      "extra": "宫崎骏论、富野由悠季论与终章中文选译；各篇译者与校对见章节署名。"
+      "rights": "CC BY-NC-SA 4.0",
+      "extra": "宫崎骏论、富野由悠季论、押井守论与终章中文选译；各篇译者与校对见章节署名。"
     }
   },
   "chapters": [
@@ -152,8 +153,36 @@
       ]
     },
     {
-      "id": "image-century-upper",
+      "id": "oshii-image-century-1",
       "number": "06",
+      "title": "押井守与“母性敌托邦”——押井守与《影像的世纪》（一）",
+      "status": "published",
+      "anchor": "oshii-image-century-1",
+      "publishedAt": "2024-10-14",
+      "authors": [
+        "宇野常宽"
+      ],
+      "translators": [
+        "骁骑校尉"
+      ],
+      "proofreaders": [
+        "夜深人静",
+        "bot的妙妙工具"
+      ],
+      "editors": [
+        "夜深人静"
+      ],
+      "tags": [
+        "宇野常宽",
+        "押井守",
+        "母性敌托邦",
+        "日本动画史",
+        "电影理论"
+      ]
+    },
+    {
+      "id": "image-century-upper",
+      "number": "07",
       "title": "“映像的世纪”的终结与“政治和文学”的重新设定（上）",
       "status": "published",
       "anchor": "image-century-upper",

@@ -9,6 +9,7 @@ section: essay
 tags: [Vtuber, 中之人, 空名]
 post_author: 鲜奶饼干
 proofreader: 子厚
+editor: 伦勃朗
 excerpt: 由神乐mea事件引出的复杂心情出发，借《宝石之国》的魂、骨、肉结构追问Vtuber的中之人、言行与虚拟形象如何共同构成被爱恋的对象。
 featured_order: 0
 citation:
@@ -85,6 +86,5 @@ Vtuber这种特殊的复杂意蕴还可以在一些事实中加以佐证。我�
 
 [^3]: **编者注**：鄙夷＋1。
 
-**润色**：伦勃朗
 
 **编者注**：佩服作者敢于表达感情的魔法使之魂（笑）。

@@ -1,5 +1,7 @@
 # cv14115713 编辑证据
 
+> 跨平台版本复核（2026-08-16）：2021-11-27 微信版（`0439-CGPwCGC3tHfByUE3td5ijA`）保留四幅 B站结构快照未收录的正文图：章节题图、《Fate／stay night》剧照、《戏言系列》书影与《新本格魔法少女莉丝佳》书影。现已按原位置加入书页第六章；正文、引文与译校不改。下文“没有正文图片段落”的旧判断仅适用于 B站快照。
+
 - 来源：`https://www.bilibili.com/read/cv14115713/`
 - 快照：`editorial-sources/roof-archive/cv14115713.json`（SHA-256：`13b8dd8e93c766ce43d1b2280a8bf2f8e0e1b1a798e277013ed4cde5d5c2d4bc`）
 - Bilibili 发布时间：2021-11-22（`publish_time` 按 Asia/Shanghai 转换）。

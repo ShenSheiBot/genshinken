@@ -1,0 +1,339 @@
+{
+  "id": "confronting-capital-and-empire",
+  "slug": "confronting-capital-and-empire",
+  "title": "直面资本与帝国：重思京都学派哲学",
+  "subtitle": "Confronting Capital and Empire: Rethinking Kyoto School Philosophy",
+  "description": "Viren Murthy、Fabian Schäfer 与 Max Ward 编《Confronting Capital and Empire》讨论京都学派、马克思主义与资本主义现代性的思想关系，并考察日本哲学在帝国与世界历史中的位置。",
+  "documentSlug": "studying-kyoto-school-philosophy-intellectual-history",
+  "script": "hans",
+  "status": "complete",
+  "authors": [
+    "慕唯仁",
+    "Fabian Schäfer",
+    "Max Ward",
+    "哈若图宁",
+    "威廉·哈弗",
+    "埃莱娜·朗格",
+    "克里斯蒂安·乌尔",
+    "酒井直树",
+    "樹本健",
+    "Gavin Walker",
+    "Aaron S. Moore",
+    "Satofumi Kawamura",
+    "Katsuhiko Endo"
+  ],
+  "translators": [
+    "单字一兔",
+    "Modus",
+    "水色文书",
+    "正義の味方",
+    "九畹采萧",
+    "北島ひろ"
+  ],
+  "proofreaders": [
+    "单字一兔"
+  ],
+  "publishedAt": "2026-07-17",
+  "updatedAt": "2026-07-18",
+  "latestChapterId": "chapter-12-tosaka-secret-history",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "murthy2017ConfrontingCapitalEmpireRoofZH",
+      "title": "Confronting Capital and Empire: Rethinking Kyoto School Philosophy",
+      "date": "2017",
+      "publisher": "Brill",
+      "DOI": "10.1163/9789004343900",
+      "language": "zh-CN",
+      "rights": "CC BY-NC-SA 4.0",
+      "extra": "全书导论及十二章中文译文；各章作者、译者、校对者与中文首发日期见章节记录。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "introduction",
+      "number": "00",
+      "title": "导论：研究京都學派：哲学、思想史与马克思对现代性的批判",
+      "status": "published",
+      "anchor": "introduction",
+      "publishedAt": "2026-07-17",
+      "authors": [
+        "慕唯仁",
+        "Fabian Schäfer",
+        "Max Ward"
+      ],
+      "translators": [
+        "单字一兔"
+      ],
+      "proofreaders": [],
+      "tags": [
+        "京都学派",
+        "马克思主义",
+        "现代性",
+        "日本思想史"
+      ]
+    },
+    {
+      "id": "chapter-01-philosophy-answerability",
+      "number": "01",
+      "title": "第一章：哲学与应答性：京都学派与世界史的顿悟时刻",
+      "status": "published",
+      "anchor": "chapter-01-philosophy-answerability",
+      "publishedAt": "2026-07-17",
+      "authors": [
+        "哈若图宁"
+      ],
+      "translators": [
+        "单字一兔"
+      ],
+      "proofreaders": [],
+      "tags": [
+        "京都学派",
+        "世界史哲学",
+        "马克思主义"
+      ]
+    },
+    {
+      "id": "chapter-02-labor-process-historical-time",
+      "number": "02",
+      "title": "第二章：劳动过程与历史时间的发生：与马克思一道，与西田一道",
+      "status": "published",
+      "anchor": "chapter-02-labor-process-historical-time",
+      "publishedAt": "2026-07-17",
+      "authors": [
+        "威廉·哈弗"
+      ],
+      "translators": [
+        "Modus"
+      ],
+      "proofreaders": [
+        "单字一兔"
+      ],
+      "tags": [
+        "京都学派",
+        "世界史哲学",
+        "马克思主义"
+      ]
+    },
+    {
+      "id": "chapter-03-commodity-fetishism",
+      "number": "03",
+      "title": "第三章：商品的拜物教性质与无的拜物教：论马克思与西田的颠倒问题",
+      "status": "published",
+      "anchor": "chapter-03-commodity-fetishism",
+      "publishedAt": "2026-07-17",
+      "authors": [
+        "埃莱娜·朗格"
+      ],
+      "translators": [
+        "Modus"
+      ],
+      "proofreaders": [
+        "单字一兔"
+      ],
+      "tags": [
+        "京都学派",
+        "世界史哲学",
+        "马克思主义"
+      ]
+    },
+    {
+      "id": "chapter-04-nishida-antinomy",
+      "number": "04",
+      "title": "第四章：西田几多郎与资产阶级哲学的二律背反",
+      "status": "published",
+      "anchor": "chapter-04-nishida-antinomy",
+      "publishedAt": "2026-07-17",
+      "authors": [
+        "克里斯蒂安·乌尔"
+      ],
+      "translators": [
+        "Modus"
+      ],
+      "proofreaders": [
+        "单字一兔"
+      ],
+      "tags": [
+        "京都学派",
+        "世界史哲学",
+        "马克思主义"
+      ]
+    },
+    {
+      "id": "chapter-05-ethnicity-species",
+      "number": "05",
+      "title": "第五章：族群性与种：论多族群国家哲学与日本帝国主义",
+      "status": "published",
+      "anchor": "chapter-05-ethnicity-species",
+      "publishedAt": "2026-07-17",
+      "authors": [
+        "酒井直树"
+      ],
+      "translators": [
+        "水色文书"
+      ],
+      "proofreaders": [
+        "单字一兔"
+      ],
+      "tags": [
+        "京都学派",
+        "世界史哲学",
+        "马克思主义"
+      ]
+    },
+    {
+      "id": "chapter-06-aleatory-dialectic",
+      "number": "06",
+      "title": "第六章：偶然辩证法：田边元同马克思的对话",
+      "status": "published",
+      "anchor": "chapter-06-aleatory-dialectic",
+      "publishedAt": "2026-07-17",
+      "authors": [
+        "樹本健"
+      ],
+      "translators": [
+        "水色文书"
+      ],
+      "proofreaders": [
+        "单字一兔"
+      ],
+      "tags": [
+        "京都学派",
+        "世界史哲学",
+        "马克思主义"
+      ]
+    },
+    {
+      "id": "chapter-07-tanabe-storyteller",
+      "number": "07",
+      "title": "第七章：作为故事讲述者的田辺元：或，将《作为忏悔道的哲学》作为叙事来阅读",
+      "status": "published",
+      "anchor": "chapter-07-tanabe-storyteller",
+      "publishedAt": "2026-07-17",
+      "authors": [
+        "马克斯·沃德"
+      ],
+      "translators": [
+        "正義の味方"
+      ],
+      "proofreaders": [
+        "单字一兔"
+      ],
+      "tags": [
+        "京都学派",
+        "世界史哲学",
+        "马克思主义"
+      ]
+    },
+    {
+      "id": "chapter-08-subjective-drive",
+      "number": "08",
+      "title": "第八章：资本的主体性驱力：梯明秀的物质现象学",
+      "status": "published",
+      "anchor": "chapter-08-subjective-drive",
+      "publishedAt": "2026-07-18",
+      "authors": [
+        "Gavin Walker"
+      ],
+      "translators": [
+        "九畹采萧"
+      ],
+      "proofreaders": [
+        "单字一兔"
+      ],
+      "tags": [
+        "日本思想史",
+        "马克思主义",
+        "主体性",
+        "京都学派"
+      ]
+    },
+    {
+      "id": "chapter-09-umemoto-nothingness",
+      "number": "09",
+      "title": "第九章：梅本克己、主体的虚无与对市民社会的批判",
+      "status": "published",
+      "anchor": "chapter-09-umemoto-nothingness",
+      "publishedAt": "2026-07-18",
+      "authors": [
+        "慕唯仁"
+      ],
+      "translators": [
+        "单字一兔"
+      ],
+      "proofreaders": [],
+      "tags": [
+        "日本思想史",
+        "马克思主义",
+        "主体性",
+        "京都学派",
+        "市民社会"
+      ]
+    },
+    {
+      "id": "chapter-10-afternoon-rest",
+      "number": "10",
+      "title": "第十章：在那休憩与反省的午后",
+      "status": "published",
+      "anchor": "chapter-10-afternoon-rest",
+      "publishedAt": "2026-07-18",
+      "authors": [
+        "Aaron S. Moore"
+      ],
+      "translators": [
+        "单字一兔"
+      ],
+      "proofreaders": [],
+      "tags": [
+        "中井正一",
+        "政治实践",
+        "京都学派",
+        "马克思主义"
+      ]
+    },
+    {
+      "id": "chapter-11-yanagida-negation",
+      "number": "11",
+      "title": "第十一章：否定到底：柳田謙十郎、西田哲学与宗教式马克思主义",
+      "status": "published",
+      "anchor": "chapter-11-yanagida-negation",
+      "publishedAt": "2026-07-18",
+      "authors": [
+        "Satofumi Kawamura"
+      ],
+      "translators": [
+        "单字一兔"
+      ],
+      "proofreaders": [],
+      "tags": [
+        "柳田謙十郎",
+        "西田幾多郎",
+        "京都学派",
+        "马克思主义"
+      ]
+    },
+    {
+      "id": "chapter-12-tosaka-secret-history",
+      "number": "12",
+      "title": "第十二章：一段隐秘的历史：户坂润与诸京都学派",
+      "status": "published",
+      "anchor": "chapter-12-tosaka-secret-history",
+      "publishedAt": "2026-07-18",
+      "authors": [
+        "Katsuhiko Endo"
+      ],
+      "translators": [
+        "北島ひろ"
+      ],
+      "proofreaders": [
+        "单字一兔"
+      ],
+      "tags": [
+        "户坂润",
+        "京都学派",
+        "日本主义",
+        "马克思主义"
+      ]
+    }
+  ]
+}

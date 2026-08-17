@@ -1,0 +1,95 @@
+{
+  "id": "psychoanalysis-desire",
+  "slug": "psychoanalysis-desire",
+  "title": "精神分析的欲望",
+  "subtitle": "Gabriel Tupinambá 著作连续译稿",
+  "description": "Gabriel Tupinambá《精神分析的欲望》中文连续译稿，考察拉康派精神分析的政治、意识形态、机构历史与普遍性问题。",
+  "documentSlug": "psychoanalysis-desire-3-lacanian-impasse",
+  "script": "hans",
+  "status": "paused",
+  "authors": [
+    "Gabriel Tupinambá"
+  ],
+  "translators": [
+    "Jack Cade"
+  ],
+  "proofreaders": [
+    "我魔法少女呢",
+    "五光十色的垃圾场"
+  ],
+  "publishedAt": "2023-04-15",
+  "updatedAt": "2023-04-15",
+  "latestChapterId": "chapter-3-lacanian-impasse",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "tupinambaDesirePsychoanalysisRoofZH",
+      "title": "The Desire of Psychoanalysis",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Gabriel",
+          "lastName": "Tupinambá"
+        }
+      ],
+      "date": "2021",
+      "publisher": "Northwestern University Press",
+      "language": "en",
+      "extra": "屋顶现视研以第0至第4篇连续发布中文译稿。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "chapter-0-foreword-introduction",
+      "number": "00",
+      "title": "精神分析的欲望0：齐泽克序言·作者引言",
+      "status": "forthcoming",
+      "authors": ["Gabriel Tupinambá"],
+      "translators": ["Jack Cade"],
+      "proofreaders": ["我魔法少女呢", "五光十色的垃圾场"],
+      "tags": ["精神分析的欲望", "拉康", "精神分析"]
+    },
+    {
+      "id": "chapter-1-psychoanalysis-politics-after-2017",
+      "number": "01",
+      "title": "精神分析的欲望1：2017年后的精神分析与政治",
+      "status": "forthcoming",
+      "authors": ["Gabriel Tupinambá"],
+      "translators": ["Jack Cade"],
+      "proofreaders": ["我魔法少女呢", "五光十色的垃圾场"],
+      "tags": ["精神分析的欲望", "拉康", "精神分析"]
+    },
+    {
+      "id": "chapter-2-foundations-lacanian-ideology",
+      "number": "02",
+      "title": "精神分析的欲望2：拉康意识形态的基础",
+      "status": "forthcoming",
+      "authors": ["Gabriel Tupinambá"],
+      "translators": ["Jack Cade"],
+      "proofreaders": ["我魔法少女呢", "五光十色的垃圾场"],
+      "tags": ["精神分析的欲望", "拉康", "精神分析"]
+    },
+    {
+      "id": "chapter-3-lacanian-impasse",
+      "number": "03",
+      "title": "精神分析的欲望3：拉康派思想中的僵局历史",
+      "status": "published",
+      "anchor": "chapter-3-lacanian-impasse",
+      "publishedAt": "2023-04-15",
+      "authors": ["Gabriel Tupinambá"],
+      "translators": ["Jack Cade"],
+      "proofreaders": ["我魔法少女呢", "五光十色的垃圾场"],
+      "tags": ["精神分析的欲望", "拉康", "精神分析"]
+    },
+    {
+      "id": "chapter-4-universal-perspective",
+      "number": "04",
+      "title": "精神分析的欲望4：精神分析中的普遍视角",
+      "status": "forthcoming",
+      "authors": ["Gabriel Tupinambá"],
+      "translators": ["Jack Cade"],
+      "proofreaders": ["我魔法少女呢", "五光十色的垃圾场"],
+      "tags": ["精神分析的欲望", "拉康", "精神分析"]
+    }
+  ]
+}

@@ -13,14 +13,28 @@ excerpt: Trinh T. Minh-ha 从“第三世界”这一称谓的歧义出发，讨
 script: hans
 license: CC BY-NC-SA 4.0
 citation:
-  itemType: blogPost
-  citationKey: trinh-infinite-layers-third-world-2023
-  title: “无限层/第三世界？”
-  date: "2023-01-07"
-  blogTitle: 屋顶现视研
+  itemType: bookSection
+  citationKey: trinh-infinite-layers-third-world-2016
+  title: "Infinite Layers/Third World?"
+  creators:
+    - creatorType: author
+      name: "Trinh T. Minh-ha"
+    - creatorType: editor
+      name: "Susan Archer Mann"
+    - creatorType: editor
+      name: "Ashly Suzanne Patterson"
+    - creatorType: translator
+      name: "Mac"
+  date: "2016"
+  bookTitle: "Reading Feminist Theory: From Modernity to Postmodernity"
+  publisher: "Oxford University Press"
+  pages: "505"
   url: https://mp.weixin.qq.com/s/7nE0SvdejgnZGGtx_sx4Lg
+  extra: "选文126；节选自 Trinh T. Minh-ha 1989 年著作 Woman, Native, Other: Writing Postcoloniality and Feminism；中文译文于2023-01-07发布。"
   language: zh-CN
 ---
+
+本文为《导读女性主义理论：从现代性到后现代》选文 126。
 
 [图题] 郑明河，重装（Reassemblage），拍摄於塞内加尔，1982年。
 
@@ -36,6 +50,6 @@ citation:
 
 显然，对于白人女性学者来说，把黑人女性归为“女人（woman）”是“不方便的”，甚至是如爱丽丝·沃克*（Alice Walker）所说的“反直觉的”——搞得就好像“女人”一词已经被她们申索来仅限己用一样（参考白人男性和“人（man）” 一词的关系）。【*爱丽丝·沃克（1944-），美国作家和社会活动家】在种族主义的逻辑之下，只要现在白人女性想被叫做“女人”（women）（之前她们叫“女士（lady）”，那时候黑人女性还能被归为“女人（women）”，奈何如今已时移俗易），那么黑人女性就必须去找其它词来用、成为别的什么东西。
 
-还有个颇具启发性的例子，是沃克提过布鲁克林博物馆女性画家展的故事，也反映了这种体现出分离主义思想的多数派心态：当被问及“这没有黑人女画家的作品吗？”（显然是没有的），一位白人女权主义者不假思索地回答说：“拜托，这是一个女性画家展！”瞧，不同的历史背景总有不同的语义内容...
+还有个颇具启发性的例子，是沃克提过布鲁克林博物馆女性画家展的故事，也反映了这种体现出分离主义思想的多数派心态：当被问及“这没有黑人女画家的作品吗？”（显然是没有的），一位白人女权主义者不假思索地回答说：“拜托，这是一个**女性**画家展！”瞧，不同的历史背景总有不同的语义内容...
 
 (1989)

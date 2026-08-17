@@ -10,6 +10,7 @@ tags: [吹响！上低音号, 构图, 影像]
 post_author: njjgnuoy
 translator: Jumbohard
 proofreader: [唯一真实, 子厚]
+editor: 伦勃朗
 excerpt: 以《吹响吧！上低音号》的大量镜头为例，从三分法、框架、引导线、景深与光影五个方面说明动画如何运用摄影和构图语言完成视觉叙事。
 featured_order: 0
 citation:
@@ -224,9 +225,7 @@ citation:
 
 - Washi’s Blog: Depth in Anime: Photography, Compositing and Animation
 
-**润色**：伦勃朗
 
-**校对**：子厚
 
 ## 编者按
 

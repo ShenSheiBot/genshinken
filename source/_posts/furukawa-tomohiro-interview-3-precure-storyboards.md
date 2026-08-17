@@ -8,7 +8,8 @@ categories: [动画]
 section: interview
 format: interview
 tags: [光之美少女, 动画演出, 分镜]
-post_author: furukawa-tomohiro
+interviewee: furukawa-tomohiro
+interviewer: 前田久
 translator: august-rush
 proofreader: august-rush
 excerpt: 古川知宏回顾《光之美少女》第八话如何让他第一次看清分镜与演出的具体工作，并影响其后来的职业选择与创作方法。
@@ -28,7 +29,7 @@ citation:
   extra: Febri Talk 古川知宏访谈连载第3回；屋顶现视研中文译文。
 ---
 
-> 受访：古川知宏。采访、编辑：前田久。翻译：唯一指定真实August_Rush。校对：唯一指定真实August_Rush。原文：[Febri Talk 第3回](https://febri.jp/febri_talk/furukawa_tomohiro_3/)。
+> 原文：[Febri Talk 第3回](https://febri.jp/febri_talk/furukawa_tomohiro_3/)。
 
 ![Febri Talk 古川知宏访谈第三回题图](attachments/roof-archive/cv14226929/febri-talk-furukawa-3.jpg)
 

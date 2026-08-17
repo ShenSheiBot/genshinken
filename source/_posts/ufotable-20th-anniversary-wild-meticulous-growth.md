@@ -10,6 +10,7 @@ tags: [ufotable, 动画公司, 动画制作, 平尾隆之, 近藤光]
 post_author: kvin
 translator: [dong-ye-lv-ren, cthugha, arkgrayhe, shan-ze-zhi-mei, liebestram, lieriheart]
 proofreader: [jia-su-qi, ju-yu]
+editor: [Liebestram, -_-__-_-]
 excerpt: kViN回顾ufotable成立二十年来从大胆实验到稳定制作体系的历程，梳理平尾隆之、近藤光、寺尾优一等人与工作室理念、技术和商业模式的相互塑造。
 featured_order: 0
 citation:
@@ -24,9 +25,7 @@ citation:
 
 > 原文：[Ufotable’s 20th Anniversary: A Tale of Wild But Meticulous Growth](https://blog.sakugabooru.com/2020/11/13/ufotables-20th-anniversary-a-tale-of-wild-but-meticulous-growth/)，作者 kViN，发表于 Sakuga Blog（2020年11月13日）。
 >
-> 翻译：冬夜旅人（序言和第一部分）、Cthugha（第二部分）、Arkgrayhe（第三部分前半）、伞泽直美（第三部分后半）、liebestram（第四部分）、lieriheart（第五部分）。
 >
-> 校对：加速器、举寓；编辑：liebestram、-_-__-_-。
 
 动画公司ufotable最近迎来了他们的20周年纪念日，这一年他们获得了**迄今为止最大的成功**。ufotable的历史以贯彻一致的理念为标志，但他们仍然经历了**截然不同**的时期——包括一些日本商业动画中最为疯狂的尝试。这是一段狂野而谨慎的成长传奇。
 

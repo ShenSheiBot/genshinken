@@ -9,7 +9,7 @@ var q=new URLSearchParams(location.search);
 function pick(k){var v=q.get(k);if(v==null)return null;v=v.trim();return v?v:null;}
 var s=pick("section"),c=pick("category"),t=pick("tag"),p=pick("contributor"),r=pick("role");
 if(s&&["essay","review","translation","interview","community"].indexOf(s)<0)s=null;
-if(r&&["author","translator","proofreader"].indexOf(r)<0)r=null;
+if(r&&["author","interviewee","interviewer","participant","speaker","translator","proofreader","editor"].indexOf(r)<0)r=null;
 var sel=[];
 function esc(v){return v.replace(/\\/g,"\\\\").replace(/"/g,'\\"');}
 function need(a,v){sel.push('li[data-lib-row]:not(['+a+'*="|'+esc(v)+'|"])');}

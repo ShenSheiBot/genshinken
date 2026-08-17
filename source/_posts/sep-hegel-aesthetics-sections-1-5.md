@@ -3,7 +3,7 @@ book_document: true
 title: SEP：黑格尔美学（Hegel’s Aesthetics）第1～5节
 title_breaks: [SEP：黑格尔美学, （Hegel’s Aesthetics）, 第1～5节]
 date: 2020-08-03
-updated: 2020-08-17
+updated: 2021-11-18
 slug: sep-hegel-aesthetics-sections-1-5
 script: hans
 categories: [思想与理论]
@@ -22,7 +22,7 @@ citation:
   publisher: Metaphysics Research Lab, Stanford University
   url: "https://plato.stanford.edu/archives/sum2020/entries/hegel-aesthetics/"
   rights: 翻译供学习讨论，转载请注明原文出处与翻译校对
-  extra: "原词条2009-01-20初版、2020-02-27实质修订；译文由网哲邻人部授权转载，本篇收录序言及第1至5节，不含第6至7节与参考文献。"
+  extra: "原词条2009-01-20初版、2020-02-27实质修订；译文由网哲邻人部授权转载，本书页收录序言、第1至7节及后发版本补全的参考文献。"
 ---
 
 <h2 id="sections-0-5">序言与第 1～5 节</h2>
@@ -137,10 +137,6 @@ citation:
 <h2 id="sections-6-1-6-2">第 6.1～6.2 节</h2>
 
 > 原文：[Hegel’s Aesthetics](https://plato.stanford.edu/archives/sum2020/entries/hegel-aesthetics/)，作者Stephen Houlgate，载《斯坦福哲学百科》2020年夏季版；词条初版于2009年1月20日，2020年2月27日实质修订。
->
-> **翻译：**有电拍拍、暗黑寒冰、林川登罗。
->
-> **校对：**绫波丽。
 >
 > 文中脚注为校对撰写的补充说明。
 >
@@ -333,10 +329,6 @@ citation:
 <h2 id="sections-6-3-7">第 6.3～7 节</h2>
 
 > 原文：[Hegel’s Aesthetics](https://plato.stanford.edu/archives/sum2020/entries/hegel-aesthetics/)，作者Stephen Houlgate，载《斯坦福哲学百科》2020年夏季版；词条初版于2009年1月20日，2020年2月27日实质修订。
->
-> **翻译：**有电拍拍、暗黑寒冰、林川登罗。
->
-> **校对：**绫波丽。
 >
 > 文中脚注为翻译、校对撰写的补充说明。
 >
@@ -533,7 +525,77 @@ citation:
 - –––, 2008, “The Absence of Aesthetics in Hegel’s Aesthetics,” in The Cambridge Companion to Hegel and Nineteenth-Century Philosophy, ed. F.C. Beiser, Cambridge: Cambridge University Press, 394–418.
 - –––, 2014, After the Beautiful: Hegel and the Philosophy of Pictorial Modernism, Chicago: University of Chicago Press.
 
-……（更多参考见原地址）
+- Roche, Mark William, 1998, _Tragedy and Comedy. A Systematic Study and a Critique of Hegel_, Albany: SUNY Press.
+- Rush, Fred, 2010, “Hegel, Humour, and the Ends of Art,” _Bulletin of the Hegel Society of Great Britain_, 62(Autumn/Winter): 1–22.
+- –––, 2016, _Irony and Idealism. Rereading Schlegel, Hegel, and Kierkegaard_, Oxford: Oxford University Press.
+- Rutter, Benjamin, 2010, _Hegel on the Modern Arts_, Cambridge: Cambridge University Press.
+- Sallis, John, 1994, _Stone_, Bloomington: Indiana University Press.
+- –––, 2011, _Transfigurements: On the True Sense of Art_, Chicago: University of Chicago Press.
+- Schmidt, Dennis J., 2001, _On Germans and Other Greeks. Tragedy and Ethical Life_, Bloomington: Indiana University Press.
+- Snyder, Stephen, 2018, _End-of-Art Philosophy in Hegel, Nietzsche and Danto_, Basingstoke: Palgrave Macmillan.
+- Speight, Allen, 2008, “Hegel and Aesthetics: The Practice and ‘Pastness’ of Art,” in _The Cambridge Companion to Hegel and Nineteenth-Century Philosophy_, ed. F.C. Beiser, Cambridge: Cambridge University Press, 378–93.
+- –––, 2010, “Hegel and Lukàcs on the Novel,” _Bulletin of the Hegel Society of Great Britain_, 62(Autumn/Winter): 23–34.
+- –––, 2013, “Artisans, Artists and Hegel’s History of Art,” _Hegel Bulletin_, 68: 203–22.
+- Steinkraus, Warren, and Schmitz, Kenneth (eds.), 1980, _Art and Logic in Hegel’s Philosophy_, New Jersey: Humanities Press.
+- Taft, Richard, 1987, “Art and Philosophy in the Early Development of Hegel’s System,” _The Owl of Minerva_, 18(2): 145–62.
+- Taminiaux, Jacques, 1999, “The Hegelian Legacy in Heidegger’s Overcoming of Aesthetics,” in _Endings. Questions of Memory in Hegel and Heidegger_, eds. R. Comay and J. McCumber, Evanston, Ill.: Northwestern University Press, 114–38.
+- Tsakiridou, Cornelia A., 1991, “_Darstellung_: Reflections on Art, Logic, and System in Hegel,” _The Owl of Minerva_, 23(1): 15–28.
+- Westphal, Kenneth, 1997, “Hegel, Formalism, and Robert Turner’s Ceramic Art,” _Jahrbuch für Hegelforschung_, 3: 259–83.
+- Wicks, Robert, 1993, “Hegel’s Aesthetics: An Overview,” in _The Cambridge Companion to Hegel_, ed. F.C. Beiser, Cambridge: Cambridge University Press, 348–77.
+- –––, 1994, _Hegel’s Theory of Aesthetic Judgment_, New York: Peter Lang.
+- Winfield, Richard Dien, 1994, “The Individuality of Art and the Collapse of Metaphysical Aesthetics,” _American Philosophical Quarterly_, 31(1): 39–51.
+- –––, 1995, “Hegel, Romanticism, and Modernity,” _The Owl of Minerva_, 27(1): 3–18.
+- –––, 1996, _Stylistics. Rethinking the Artforms after Hegel_, Albany: SUNY Press.
+- Wyss, Beat, 1999, _Hegel’s Art History and the Critique of Modernity_, Cambridge: Cambridge University Press.
+
+### Secondary Literature in German
+
+- Arndt, Andreas, Bal, Karol, and Ottmann, Henning (eds.), 1999/2000, _Hegels Ästhetik. Die Kunst der Politik — Die Politik der Kunst_, 2 vols., Berlin: Akademie Verlag.
+- Arndt, Andreas, Kruck, Günter, and Zovko, Jure (eds.), 2014, _Gebrochene Schönheit. Hegels Ästhetik – Kontexte und Rezeptionen_, Berlin: de Gruyter.
+- Belli, Alessandra Lazzerini, 1998/99, “Hegel und Rossini. Das Singen, das man in der Seele empfindet,” _Jahrbuch für Hegelforschung_, 4/5: 231–61.
+- Braune-Krickau, Tobias, Erne, Thomas, and Scholl, Katharina (eds.), 2014, _Vom Ende her gedacht. Hegels Ästhetik zwischen Religion und Kunst_, Freiburg: Verlag Karl Alber.
+- Bubner, Rüdiger, 1990, “Gibt es ästhetische Erfahrung bei Hegel?,” in _Hegel und die “Kritik der Urteilskraft,”_, eds. H.-F. Fulda and R.-P. Horstmann, Stuttgart: Klett-Cotta, 69-80.
+- Düsing, Klaus, 2012, _Aufhebung der Tradition im dialektischen Denken. Untersuchungen zu Hegels Logik, Ethik und Ästhetik_, Munich: Wilhelm Fink Verlag.
+- Espiña, Yolanda, 1997, “Kunst als Grenze: Die Musik bei Hegel,” _Jahrbuch für Hegelforschung_, 3: 103–33.
+- Franke, Ursula, and Gethmann-Siefert, Annemarie, 2005, _Kulturpolitik und Kunstgeschichte. Perspektiven der Hegelschen Ästhetik_, Hamburg: Felix Meiner.
+- Gethmann-Siefert, Annemarie, 1984, _Die Funktion der Kunst in der Geschichte. Untersuchungen zu Hegels Ästhetik_, Bonn: Bouvier Verlag.
+- –––, and Pöggeler, Otto (eds.), 1986, _Welt und Wirkung von Hegels Ästhetik_, Bonn: Bouvier Verlag.
+- ––– (ed.), 1992, _Phänomen versus System: Zum Verhältnis von philosophischer Systematik und Kunsturteil in Hegels Berliner Vorlesungen über Ästhetik oder Philosophie der Kunst_, Bonn: Bouvier Verlag.
+- –––, 1993, “Hegel über Kunst und Alltäglichkeit: Zur Rehabilitierung der schönen Kunst und des ästhetischen Genusses,” _Hegel-Studien_, 28: 215–65.
+- –––, 2005, _Einführung in Hegels Ästhetik_, Stuttgart: UTB.
+- Gethmann-Siefert, Annemarie, _et al_ (eds.), 2013, _Hegels Ästhetik als Theorie der Moderne_, Berlin: Akademie Verlag.
+- Haas, Bruno, 2003, _Die freie Kunst. Beiträge zu Hegels Wissenschaft der Logik, der Kunst und des Religiösen_, Berlin: Duncker und Humblot.
+- Hast, Klaus, 1991, _Hegels ästhetische Reflexion des freien Subjekts. Der Satz vom Ende der Kunst im Lichte eines vernachlässigten Aspekts_, New York: Peter Lang.
+- Hebing, Niklas, 2015, _Hegels Ästhetik des Komischen_, Hamburg: Felix Meiner.
+- –––, 2016, “Die Außenwelt der Innenwelt: Hegel über Architektur,” _Verifiche_, XLV(1–2): 105–48.
+- Hilmer, Brigitte, 1997, _Scheinen des Begriffs. Hegels Logik der Kunst_, Hamburg: Felix Meiner Verlag.
+- Ianelli, Francesca, 2007, _Das Siegel der Moderne. Hegels Bestimmung des Hässlichen in den Vorlesungen zur Ästhetik und die Rezeption bei den Hegelianern_, Munich: Wilhelm Fink Verlag.
+- Kwon, Dae-Joong, 2004, _Das Ende der Kunst. Analyse und Kritik der Voraussetzungen von Hegels These_, Würzburg: Königshausen und Neumann.
+- Kwon, Jeong-Im, 2001, _Hegels Bestimmung der Kunst. Die Bedeutung der “symbolischen Kunstform” in Hegels Ästhetik_, Munich: Wilhelm Fink Verlag.
+- –––, 2012, “Eine Untersuchung zu Hegels Auffassung der modernen Musik,” _Journal of the Faculty of Letters_, 37: 7–25.
+- Oetjen, Malte, 2003, _Das Ende der Kunst bei Hegel_, Norderstedt: GRIN Verlag.
+- Pocai, Romano, 2014, _Philosophie, Kunst und Moderne. Überlegungen mit Hegel und Adorno_, Berlin: Xenomoi Verlag.
+- Pöggeler, Otto, 1984, _Die Frage nach der Kunst. Von Hegel zu Heidegger_, Freiburg: Verlag Karl Alber.
+- Pöggeler, Otto _et al_ (eds.), 1981, _Hegel in Berlin. Preußische Kulturpolitik und idealistische Ästhetik. Zum 150. Todestag des Philosophen_, Berlin: Staatsbibliothek Preußischer Kulturbesitz.
+- Pöggeler, Otto, und Gethmann-Siefert, Annemarie (eds.), 1983, _Kunsterfahrung und Kulturpolitik im Berlin Hegels_, Bonn: Bouvier Verlag.
+- Rinaldi, Giacomo, 2002/03, “Musik und Philosophie im Ausgang von Hegel,” _Jahrbuch für Hegelforschung_, 8/9: 109–117.
+- Roche, Mark William, 2002/03, “Größe und Grenzen von Hegels Theorie der Tragödie,” _Jahrbuch für Hegelforschung_, 8/9: 53–81.
+- –––, 2002/03, “Hegels Theorie der Komödie im Kontext hegelianischer und moderner Überlegungen zur Komödie,” _Jahrbuch für Hegelforschung_, 8/9: 83–108.
+- Rollmann, Veit-Justus, 2005, _Das Kunstschöne in Hegels Ästhetik am Beispiel der Musik_, Marburg: Tectum.
+- Sandkaulen, Birgit (ed.), 2018, _G.W.F. Hegel: Vorlesungen über die Ästhetik_, Berlin: De Gruyter.
+- Schneider, Helmut, 1995, “Hegels Theorie der Komik und die Auflösung der schönen Kunst,” _Jahrbuch für Hegelforschung_, 1: 81–110.
+- Simon, Ralf, 2013, _Die Idee der Prosa. Zur Ästhetikgeschichte von Baumgarten bis Hegel mit einem Schwerpunkt bei Jean Paul_, Munich: Wilhelm Fink Verlag.
+- Vieweg, Klaus, 2019, _Hegel. Der Philosoph der Freiheit. Biographie_, München: C.H. Beck.
+- Ziemer, Elisabeth, 1993, _Heinrich Gustav Hotho (1802–1873). Ein Berliner Kunsthistoriker, Kunstkritiker und Philosoph_, Berlin: Reimer Verlag.
+
+### Other Relevant Works
+
+- Adorno, T.W., _Aesthetic Theory_, trans. R. Hullot-Kentor, London: Athlone Press, 1977.
+- Gethmann-Siefert, Annemarie, and Pöggeler, Otto (eds.), 1995, _Kunst als Kulturgut. Die Bildersammlung der Brüder Boisserée_, Bonn: Bouvier Verlag.
+- Herodotus, _The Histories_, trans. A de Sélincourt, rev. J. Marincola, Harmondsworth: Penguin Books, 2003.
+- Kant, Immanuel, _Critique of the Power of Judgment_, trans. P. Guyer and E. Matthews, Cambridge: Cambridge University Press, 2000.
+- Pippin, Robert, 2005, _The Persistence of Subjectivity. On the Kantian Aftermath_, Cambridge: Cambridge University Press.
+- Schiller, Friedrich, 1793, “Kallias or Concerning Beauty: Letters to Gottfried Körner”, in _Classical and Romantic German Aesthetics_, ed. J.M. Bernstein, Cambridge: Cambridge University Press, 2003, 145–83.
 
 [^sections-6-3-7-editor-1]: 指各个部分物尽其用。
 [^sections-6-3-7-editor-2]: 直球带货。

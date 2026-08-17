@@ -9,6 +9,7 @@ section: essay
 tags: [祇园祭, 日本祭典, 非物质文化遗产, 文化保护, 保存会, 数字化保护]
 post_author: wyn
 proofreader: 子厚
+editor: 伦勃朗
 excerpt: 以京都祇园祭为例，梳理日本祭典从宗教仪式到都市庆典的发展，介绍山鉾巡行、保存会制度、文化遗产法制及数字化保护如何共同维系传统。
 featured_order: 0
 citation:
@@ -167,6 +168,5 @@ citation:
 5. 陈宗花：《在日常生活中保护非物质文化遗产——以日本无形民俗文化财“祗园祭”为例》，《南京艺术学院学报（美术与设计版）》，2011年第1期，第23—26、177页。
 6. L. Li, W. Choi, K. Hachimura, K. Yano, T. Nishiura, and H. T. Tanaka, “Virtual yamahoko parade experience system with vibration simulation,” *ITE Transactions on Media Technology and Applications*, vol. 2, no. 3, pp. 248–255, 2014.
 
-**润色：** 伦勃朗
 
 **编者按：**真好啊真好，编者也想去祇园祭呢……

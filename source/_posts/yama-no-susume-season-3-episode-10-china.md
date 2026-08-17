@@ -8,8 +8,9 @@ categories: [动画]
 section: review
 tags: [向山进发, ちな, 动画演出]
 post_author: FAR
-translator: [伞泽直美, 一样, fahh]
-proofreader: [Arkgrayhe, Liebestram]
+translator: [C7, 伞泽直美, 一样, fahh]
+proofreader: [C7, Arkgrayhe, Liebestram]
+editor: C7
 excerpt: FAR 分析《向山进发》第三季第十集的演出，通过构图、光线、动作与比喻手法，讨论ちな如何呈现日向与小葵的情感距离及其变化。
 citation:
   itemType: blogPost
@@ -23,9 +24,7 @@ citation:
 
 > 原文：[China’s Warm Emotional Theater](https://artistunknown.info/2019/08/06/yama-no-susume-third-season-10-chinas-warm-emotional-theater/)，作者 FAR。
 >
-> 翻译：C7、伞泽直美、一样、fahh。
 >
-> 校对：C7、Arkgrayhe、Liebestram。
 >
 > 本文经原作者授权翻译转载。
 

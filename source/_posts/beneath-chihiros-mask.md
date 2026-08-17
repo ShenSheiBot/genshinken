@@ -9,6 +9,7 @@ section: review
 tags: [宫崎骏, 千与千寻, 隐喻]
 post_author: 窗子
 proofreader: 伦勃朗
+editor: 子厚
 excerpt: 从宫崎骏“解甲归田”后的隐喻转向出发，沿千寻的成长、无脸男的面具、童年的堕落与被污染的翅膀，追问人在神隐般的社会中如何与罪恶共存并寻回名字。
 featured_order: 0
 citation:
@@ -148,6 +149,5 @@ citation:
 
 ![《千与千寻》官方海报](attachments/roof-archive/cv2944298/11-spirited-away-poster.jpg)
 
-**润色**：子厚
 
 **编者注**：我们是否真要把希望寄托在小女孩（当然，作为隐喻的）的童真与执着上，还是说这是黑暗之中唯一的光？我们是否还能找到其他的道路？我想是可以的。

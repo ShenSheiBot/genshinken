@@ -38,8 +38,8 @@ export const CONTENT_FORMATS = ["article", "interview", "qa"] as const;
 export type ContentFormat = (typeof CONTENT_FORMATS)[number];
 
 export type { CreditRole } from "./credit-roles";
-export { CREDIT_ROLE_META, CREDIT_ROLES } from "./credit-roles";
-import { CREDIT_ROLE_META, type CreditRole } from "./credit-roles";
+export { CREDIT_ROLE_META, CREDIT_ROLES, PRIMARY_CREDIT_ROLES } from "./credit-roles";
+import { CREDIT_ROLE_META, PRIMARY_CREDIT_ROLES, type CreditRole } from "./credit-roles";
 
 /** 一条署名对应一个贡献者；多人署名会展开为多条记录。 */
 export interface Credit {
@@ -134,8 +134,13 @@ function toList(v: unknown): string[] {
 
 const CREDIT_FIELDS: { role: CreditRole; keys: string[] }[] = [
   { role: "author", keys: ["post_author", "author", "作者"] },
+  { role: "interviewee", keys: ["interviewee", "受访", "受访者"] },
+  { role: "interviewer", keys: ["interviewer", "采访", "采访者"] },
+  { role: "participant", keys: ["participant", "participants", "与谈", "与谈者"] },
+  { role: "speaker", keys: ["speaker", "speakers", "主讲", "主讲人"] },
   { role: "translator", keys: ["translator", "译者", "翻译"] },
   { role: "proofreader", keys: ["proofreader", "校对", "校对者", "校"] },
+  { role: "editor", keys: ["editor", "editors", "编辑", "润色"] },
 ];
 
 /**
@@ -480,13 +485,13 @@ async function loadRaw(): Promise<Post[]> {
       }
       const displayDate = section === "negative" ? toDate(originalDate) : date;
       const authors = credits
-        .filter((credit) => credit.role === "author")
+        .filter((credit) => PRIMARY_CREDIT_ROLES.includes(credit.role))
         .map((credit) => credit.name);
-      const citationCreators: CitationCreator[] = credits.flatMap((credit) =>
-        credit.role === "proofreader"
-          ? []
-          : [{ creatorType: credit.role, name: credit.name }]
-      );
+      const citationCreators: CitationCreator[] = credits.flatMap((credit) => {
+        if (credit.role === "proofreader" || credit.role === "editor"
+          || credit.role === "participant" || credit.role === "speaker") return [];
+        return [{ creatorType: credit.role, name: credit.name }];
+      });
       const citationInput = data.citation == null
         ? undefined
         : parseCitationInput(data.citation, `${file}: citation`);

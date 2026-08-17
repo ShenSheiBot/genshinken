@@ -32,6 +32,12 @@ type SourceNote = {
   refs: string[];
 };
 
+type MarkdownNode = {
+  type?: string;
+  value?: string;
+  children?: MarkdownNode[];
+};
+
 const SOURCE_NOTE_DEF = /^\[\^w(\d+)\]:[ \t]*(.*)$/gm;
 const SOURCE_NOTE_REF = /\[\^w(\d+)\]/g;
 
@@ -96,6 +102,29 @@ function extractSourceNotes(md: string): { markdown: string; sourceNotes: Source
 function appendBackrefs(html: string, backrefs: string): string {
   if (!backrefs) return html;
   return /<\/p>\s*$/.test(html) ? html.replace(/<\/p>\s*$/, `${backrefs}</p>`) : html + backrefs;
+}
+
+function markdownNodeText(node: MarkdownNode): string {
+  if (typeof node.value === "string") return node.value;
+  return (node.children ?? []).map(markdownNodeText).join("");
+}
+
+/**
+ * GFM moves footnote definitions into a generated notes section. Source-side
+ * grouping headings immediately before those definitions would otherwise stay
+ * behind as empty headings in the article body.
+ */
+function remarkRemoveDetachedNoteHeadings() {
+  const noteHeading = /^(?:译注|附录|注释|脚注)$/u;
+  return (tree: MarkdownNode) => {
+    const children = tree.children ?? [];
+    for (let index = children.length - 2; index >= 0; index -= 1) {
+      const node = children[index];
+      const next = children[index + 1];
+      if (node.type !== "heading" || next.type !== "footnoteDefinition") continue;
+      if (noteHeading.test(markdownNodeText(node).trim())) children.splice(index, 1);
+    }
+  };
 }
 
 async function renderSourceNotes(sourceNotes: SourceNote[]): Promise<string> {
@@ -184,7 +213,7 @@ function rehypeRewrite(format: ContentFormat = "article") {
             ? firstText.value?.match(/^((?:Q|A|[\p{L}\p{N}·・（）()／/、 ]{1,24})[：:])\s*/u)
             : null;
           const isCreditOrSourceLabel = match
-            ? /^(?:翻译|译者|校对|编辑|原文|来源|采访|摄影|整理|受访者)[：:]$/u.test(match[1])
+            ? /^(?:翻译|译者|校对|编辑|原文|来源|采访|摄影|整理|受访者|追记\d*|后记|附记)[：:]$/u.test(match[1])
             : false;
           if (match && !isCreditOrSourceLabel && firstText?.value != null) {
             const label = match[1];
@@ -1114,6 +1143,7 @@ function createProcessor(format: ContentFormat = "article") {
   .use(remarkGfm)
   .use(remarkMath)
   .use(remarkCjkFriendly)
+  .use(remarkRemoveDetachedNoteHeadings)
   .use(remarkRehype, {
     allowDangerousHtml: true,
     // GFM 脚注区标签本地化为「注释」，并去掉默认的 sr-only 类（本站将其作为可见的文章要件标题，由 CSS 单独定样式）

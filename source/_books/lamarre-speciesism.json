@@ -1,0 +1,81 @@
+{
+  "id": "lamarre-speciesism",
+  "slug": "lamarre-speciesism",
+  "title": "物种主义",
+  "subtitle": "托马斯·拉马尔动画研究",
+  "description": "托马斯·拉马尔考察种族差异如何在动画中被转译为人类与动物的物种关系，并由此追问战时帝国想象、种族主义与动物政治的纠葛。",
+  "documentSlug": "lamarre-speciesism-wartime-animation",
+  "script": "hans",
+  "status": "paused",
+  "authors": [
+    "拉马尔"
+  ],
+  "translators": [
+    "FISHERMAN"
+  ],
+  "proofreaders": [
+    "Cfox",
+    "郁远集"
+  ],
+  "editors": [
+    "夜深人静"
+  ],
+  "publishedAt": "2024-10-29",
+  "updatedAt": "2024-10-29",
+  "latestChapterId": "part-1-wartime-animation",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "lamarreSpeciesismRoofZH",
+      "title": "Speciesism, Part I: Translating Races into Animals in Wartime Animation",
+      "date": "2008",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Thomas",
+          "lastName": "LaMarre"
+        },
+        {
+          "creatorType": "translator",
+          "name": "FISHERMAN"
+        },
+        {
+          "creatorType": "editor",
+          "name": "夜深人静"
+        }
+      ],
+      "language": "zh-CN",
+      "extra": "原载《Mechademia》第3卷第1期（2008），第75—95页，DOI 10.1353/mec.0.0069；FISHERMAN 译；中文译文于2024-10-29发布。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "part-1-wartime-animation",
+      "number": "01",
+      "title": "物种主义（上）——在战时动画中将种族转译成动物",
+      "status": "published",
+      "anchor": "part-1-wartime-animation",
+      "publishedAt": "2024-10-29",
+      "authors": [
+        "拉马尔"
+      ],
+      "translators": [
+        "FISHERMAN"
+      ],
+      "proofreaders": [
+        "Cfox",
+        "郁远集"
+      ],
+      "editors": [
+        "夜深人静"
+      ],
+      "tags": [
+        "托马斯·拉马尔",
+        "物种主义",
+        "战时动画",
+        "种族主义",
+        "动物政治"
+      ]
+    }
+  ]
+}
