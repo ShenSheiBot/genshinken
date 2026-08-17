@@ -197,6 +197,31 @@ async function renderSourceNotes(sourceNotes: SourceNote[]): Promise<string> {
 /** 修正相对资源路径、外链行为、脚注锚点 */
 function rehypeRewrite(format: ContentFormat = "article") {
   return (tree: Root) => {
+    // Plain-text speaker labels are recovered only when the same label recurs in
+    // the top-level interview transcript.  A single early colon is much more
+    // likely to be prose or metadata ("原文：", "Tracklist：", a clock time,
+    // or "https:") than a speaker turn.  Limiting inference to top-level,
+    // repeated labels also keeps ordered lists such as track listings intact.
+    const implicitSpeakerCounts = new Map<string, number>();
+    if (format === "interview" || format === "qa") {
+      visit(tree, "element", (node: Element, _index, parent) => {
+        if (node.tagName !== "p" || parent?.type !== "root") return;
+        const first = (node.children ?? []).find((child) => {
+          const item = child as { type?: string; value?: string };
+          return item.type !== "text" || /\S/.test(item.value ?? "");
+        }) as { type?: string; value?: string } | undefined;
+        const match = first?.type === "text"
+          ? first.value?.match(/^((?:Q|A|[\p{L}\p{N}·・（）()／/、 ]{1,24})[：:])\s*/u)
+          : null;
+        const excluded = match
+          ? /^(?:https?|翻译|译者|校对|编辑|原文|来源|采访|摄影|整理|受访者|追记\d*|后记|附记)[：:]$/u.test(match[1])
+          : false;
+        if (match && !excluded) {
+          implicitSpeakerCounts.set(match[1], (implicitSpeakerCounts.get(match[1]) ?? 0) + 1);
+        }
+      });
+    }
+
     visit(tree, "element", (node: Element, index, parent) => {
       const props = node.properties ?? {};
 
@@ -255,15 +280,28 @@ function rehypeRewrite(format: ContentFormat = "article") {
           const item = child as { type?: string; value?: string };
           return item.type !== "text" || /\S/.test(item.value ?? "");
         });
-        if ((format === "interview" || format === "qa") && firstIndex >= 0) {
+        if (
+          (format === "interview" || format === "qa")
+          && parent?.type === "root"
+          && firstIndex >= 0
+        ) {
           const firstText = node.children?.[firstIndex] as { type?: string; value?: string } | undefined;
           const match = firstText?.type === "text"
             ? firstText.value?.match(/^((?:Q|A|[\p{L}\p{N}·・（）()／/、 ]{1,24})[：:])\s*/u)
             : null;
           const isCreditOrSourceLabel = match
-            ? /^(?:翻译|译者|校对|编辑|原文|来源|采访|摄影|整理|受访者|追记\d*|后记|附记)[：:]$/u.test(match[1])
+            ? /^(?:https?|翻译|译者|校对|编辑|原文|来源|采访|摄影|整理|受访者|追记\d*|后记|附记)[：:]$/u.test(match[1])
             : false;
-          if (match && !isCreditOrSourceLabel && firstText?.value != null) {
+          const isRepeatedSpeaker = match
+            ? (implicitSpeakerCounts.get(match[1]) ?? 0) >= 2
+            : false;
+          const isQuestionAnswerLabel = match ? /^(?:Q|A)[：:]$/u.test(match[1]) : false;
+          if (
+            match
+            && !isCreditOrSourceLabel
+            && (isRepeatedSpeaker || isQuestionAnswerLabel)
+            && firstText?.value != null
+          ) {
             const label = match[1];
             const remainder = firstText.value.slice(match[0].length);
             node.children?.splice(

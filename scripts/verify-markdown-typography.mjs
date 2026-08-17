@@ -342,13 +342,53 @@ assert.match(
   "bold interviewer prompts must use the interview turn layout"
 );
 
-const plainInterviewTurnHtml = await renderMarkdown(`莲实：请谈谈这个镜头。`, {
+const plainInterviewTurnHtml = await renderMarkdown(`莲实：请谈谈这个镜头。
+
+滨口：这是回答。
+
+莲实：请继续。
+
+滨口：好的。`, {
   format: "interview",
 });
 assert.match(
   plainInterviewTurnHtml,
   /<p class="speaker-turn"><strong>莲实：<\/strong>请谈谈这个镜头。<\/p>/u,
-  "interview format must structure an unmarked speaker label without article-specific cleanup"
+  "interview format must structure recurring unmarked speaker labels without article-specific cleanup"
+);
+assert.match(
+  plainInterviewTurnHtml,
+  /<p class="speaker-turn"><strong>滨口：<\/strong>这是回答。<\/p>/u,
+  "each recurring unmarked speaker must receive the interview turn layout"
+);
+
+const interviewTracklistHtml = await renderMarkdown(`Tracklist：
+
+1. Eva（2:50）
+2. Rei（2:39）
+3. serial experiments lain（1:51）`, {
+  format: "interview",
+});
+assert.doesNotMatch(
+  interviewTracklistHtml,
+  /speaker-turn|<strong>/u,
+  "interview inference must not treat track labels or clock times as speaker turns"
+);
+assert.match(
+  interviewTracklistHtml,
+  /<li><span class="latin-run">Eva<\/span>（<span class="latin-run">2:50<\/span>）<\/li>/u,
+  "track titles and durations must retain uniform weight"
+);
+
+const interviewUrlHtml = await renderMarkdown(`https://example.com/a
+
+https://example.com/b`, {
+  format: "interview",
+});
+assert.doesNotMatch(
+  interviewUrlHtml,
+  /speaker-turn|<strong>https:<\/strong>/u,
+  "repeated URL schemes must not become speaker labels"
 );
 
 const interviewPostscriptHtml = await renderMarkdown(`追记1：这是文后补充，不是新的发言人。`, {
