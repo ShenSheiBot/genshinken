@@ -126,17 +126,17 @@ citation:
 
 本篇论文最初是为德国媒介研究协会（German Association of Media Studies，GfM）内的“动画”和“漫画”研究工作组于2016年11月在汉诺威举行的联办年会所撰写的主题讲稿；本文也是这篇文章的修订版——杰奎琳·伯恩特：<“手中手”：河野史代漫画 [谢谢你，在世界的角落找到我] 与片渊须直改编动画电影的对比>（Hand in Hand: Kouno Fumiyo’s Mangaserie Kono sekai no katasumi ni (In this corner of the world) im Vergleich zur Anime-Adaptation durch Katabuchi Sunao），《手工性的美学：对动画与漫画研究的跨学科贡献》（Asthetik des Gemachten: Interdisziplinare Beitrage zur Animations-Und Comicforschung），汉斯－约阿希姆·巴克（Hans-Joachim Backe）、裘莉娅·埃克尔（Julia Eckel）、埃尔温·费耶辛格（Erwin Feyersinger）、维罗尼卡·辛娜（Véronique Sina）、扬－诺尔·索恩（Jan-Noel Thon）编辑，柏林：德古意特出版社，2018年；开放获取版本：
 
-https://www.degruyter.com/view/product/485366?format=EBOK，2018年10月18日读取。
+[德古意特开放获取版本](https://www.degruyter.com/view/product/485366?format=EBOK)，2018年10月18日读取。
 
-https://www.telegraph.co.uk/films/0/in-this-corner-of-the-world-review-a-dream-like-portrait-of-what/，2018年10月18日读取.
+[《每日电讯报》影评](https://www.telegraph.co.uk/films/0/in-this-corner-of-the-world-review-a-dream-like-portrait-of-what/)，2018年10月18日读取。
 
-https://journals.ateneo.edu/ojs/index.php/kk/article/view/KK2016.02613，2018年10月18日读取；本文的DOI为http://dx.doi.org/10.13185/KK2016.02613。
+[《角落》相关研究](https://journals.ateneo.edu/ojs/index.php/kk/article/view/KK2016.02613)，2018年10月18日读取；本文的[DOI](http://dx.doi.org/10.13185/KK2016.02613)。
 
-https://www.japantimes.co.jp/culture/2016/11/16/films/filmreviews/corner-world-katabuchis-war-film-human-heart/#.W9CGAy97HsE，2018年10月18日读取.
+[《日本时报》影评](https://www.japantimes.co.jp/culture/2016/11/16/films/filmreviews/corner-world-katabuchis-war-film-human-heart/#.W9CGAy97HsE)，2018年10月18日读取。
 
 ## 作者介绍
 
-截止发稿时，杰奎琳·伯恩特任斯德哥尔摩大学日本语言与文化系正教授一职。1991至2016年间，她在日本任教，并最终在京都精华大学的漫画学部取得了正教授职称。她分别于1987年和1991年在柏林洪堡大学取得了日本研究的学士学位、与美学/艺术理论（Kunstwissenschaft）的博士学位。伯恩特的学术作品专注于研究图像叙事、日本动画、与现代日本艺术，并受到了媒介美学与展览研究（exhibition studies）的影响。她用日语、德语和英语发表过许多研究作品，例如，与他人合编的《日本漫画的文化交汇点》（Manga’s Cultural Crossroads，2013年），以及专著《日本漫画的现象》（Phänomen Manga，1995年）和《日本漫画：媒介、艺术与物质》（Manga: Medium, Art and Material ，2015年）。更多信息，另请参见她的个人网页：https://jberndt.net。
+截止发稿时，杰奎琳·伯恩特任斯德哥尔摩大学日本语言与文化系正教授一职。1991至2016年间，她在日本任教，并最终在京都精华大学的漫画学部取得了正教授职称。她分别于1987年和1991年在柏林洪堡大学取得了日本研究的学士学位、与美学/艺术理论（Kunstwissenschaft）的博士学位。伯恩特的学术作品专注于研究图像叙事、日本动画、与现代日本艺术，并受到了媒介美学与展览研究（exhibition studies）的影响。她用日语、德语和英语发表过许多研究作品，例如，与他人合编的《日本漫画的文化交汇点》（Manga’s Cultural Crossroads，2013年），以及专著《日本漫画的现象》（Phänomen Manga，1995年）和《日本漫画：媒介、艺术与物质》（Manga: Medium, Art and Material ，2015年）。更多信息，另请参见她的[个人网页](https://jberndt.net)。
 
 ## 译注与原文注释
 

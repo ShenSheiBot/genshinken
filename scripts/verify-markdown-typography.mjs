@@ -35,6 +35,29 @@ assert.match(
   "quotes enclosing CJK text must remain in the CJK run"
 );
 
+const cjkAutolinkHtml = await renderMarkdown(
+  "官网：http://www.sfwj.or.jp）第三届主席的同时，帮助设立了日本SF大奖。"
+);
+assert.match(
+  cjkAutolinkHtml,
+  /<a href="http:\/\/www\.sfwj\.or\.jp"[^>]*>[\s\S]*?<\/a>）第三届主席/u,
+  "a bare URL must stop before full-width punctuation and following CJK prose"
+);
+assert.doesNotMatch(
+  cjkAutolinkHtml,
+  /href="[^"]*%(?:EF%BC|E3%80)/iu,
+  "CJK punctuation must never be percent-encoded into an autolink target"
+);
+
+const cjkOpeningPunctuationHtml = await renderMarkdown(
+  "资料：https://example.org/read（2024年访问）。"
+);
+assert.match(
+  cjkOpeningPunctuationHtml,
+  /<a href="https:\/\/example\.org\/read"[^>]*>[\s\S]*?<\/a>（[\s\S]*?年访问）/u,
+  "a bare URL must also stop before opening full-width punctuation"
+);
+
 const footnoteHtml = await renderMarkdown("正文引用[^1]。\n\n[^1]: 注释正文。");
 assert.match(
   footnoteHtml,
@@ -350,6 +373,7 @@ assert.doesNotMatch(
   const corpusFailures = [];
   const markerLeak = /\[(?:图题|图注|表题|表注|人物|人物简介|图组|图组结束|幻灯|幻灯结束)\]/u;
   const invalidWidth = /title="=(?!(?:25|33|50|66|75|100)%")[^"]*"/u;
+  const malformedCjkHref = /href="https?:\/\/[^"]*%(?:EF%BC(?:%8C|%88|%89|%9B|%9A|%81|%9F)|EF%BC(?:%BB|%BD)|E3%80(?:%81|%82|%90|%91|%8A|%8B|%8C|%8D)|E2%80(?:%98|%99|%9C|%9D))[^"]*"/iu;
 
   const posts = fs
     .readdirSync(postsDirectory)
@@ -372,6 +396,8 @@ assert.doesNotMatch(
     }
     const width = invalidWidth.exec(html);
     if (width) corpusFailures.push(`${name}: 非法图版宽度 ${width[0]}（仅允许 =25/33/50/66/75/100%）`);
+    const malformedLink = malformedCjkHref.exec(html);
+    if (malformedLink) corpusFailures.push(`${name}: 裸 URL 吞入了中文标点或后续正文`);
   }
   assert.deepEqual(
     corpusFailures,

@@ -35,6 +35,7 @@ type SourceNote = {
 type MarkdownNode = {
   type?: string;
   value?: string;
+  url?: string;
   children?: MarkdownNode[];
 };
 
@@ -124,6 +125,53 @@ function remarkRemoveDetachedNoteHeadings() {
       if (node.type !== "heading" || next.type !== "footnoteDefinition") continue;
       if (noteHeading.test(markdownNodeText(node).trim())) children.splice(index, 1);
     }
+  };
+}
+
+/**
+ * remark-gfm treats CJK punctuation as part of an autolink literal. A source
+ * such as `https://example.com）后文` would therefore turn the entire
+ * remainder of the paragraph into the link target. Explicit Markdown links
+ * are left untouched; this only trims literal links whose visible text is the
+ * URL itself.
+ */
+function remarkTrimCjkAutolinkTail() {
+  const cjkBoundary = /[，。；：！？、（）［］【】《》“”‘’]/u;
+
+  return (tree: MarkdownNode) => {
+    const walk = (node: MarkdownNode) => {
+      const children = node.children ?? [];
+      for (let index = 0; index < children.length; index += 1) {
+        const child = children[index];
+        const visible = child.children?.length === 1 && child.children[0].type === "text"
+          ? child.children[0].value
+          : undefined;
+        if (
+          child.type === "link"
+          && typeof child.url === "string"
+          && typeof visible === "string"
+          && (
+            visible === child.url
+            || `http://${visible}` === child.url
+            || `https://${visible}` === child.url
+          )
+        ) {
+          const visibleBoundary = visible.search(cjkBoundary);
+          const urlBoundary = child.url.search(cjkBoundary);
+          if (visibleBoundary > 0 && urlBoundary > 0) {
+            const url = child.url.slice(0, urlBoundary);
+            const visibleUrl = visible.slice(0, visibleBoundary);
+            const tail = visible.slice(visibleBoundary);
+            child.url = url;
+            child.children![0].value = visibleUrl;
+            children.splice(index + 1, 0, { type: "text", value: tail });
+            index += 1;
+          }
+        }
+        walk(child);
+      }
+    };
+    walk(tree);
   };
 }
 
@@ -1143,6 +1191,7 @@ function createProcessor(format: ContentFormat = "article") {
   .use(remarkGfm)
   .use(remarkMath)
   .use(remarkCjkFriendly)
+  .use(remarkTrimCjkAutolinkTail)
   .use(remarkRemoveDetachedNoteHeadings)
   .use(remarkRehype, {
     allowDangerousHtml: true,

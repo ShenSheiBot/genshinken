@@ -129,7 +129,7 @@ citation:
 
 [^1]: 自由撰稿人，笔名“饼干”、“鲜奶饼干”、“cyclotron”。
 
-[^2]: Tamerlane，“Why Over Sixty Years of Animation History Still Remains Obscure”，2018-11-20，https://wavemotioncannon.com/2016/01/08/why-over-sixty-years-of-animation-history-still-remains-obscure/，翻译取自https://weibo.com/ttarticle/p/show?id=2309403948634805820883#_0
+[^2]: Tamerlane，[“Why Over Sixty Years of Animation History Still Remains Obscure”](https://wavemotioncannon.com/2016/01/08/why-over-sixty-years-of-animation-history-still-remains-obscure/)，2018-11-20；[中文翻译来源](https://weibo.com/ttarticle/p/show?id=2309403948634805820883#_0)。
 
 [^3]: 林松辉《蔡明亮与缓慢电影》，台北：台大出版中心2016年版，第17—19页。
 
