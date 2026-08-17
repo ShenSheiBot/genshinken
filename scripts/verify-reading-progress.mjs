@@ -195,5 +195,42 @@ assert.match(
   "same-tab records must receive monotonically increasing timestamps"
 );
 
+const chromeSource = fs.readFileSync(
+  path.join(
+    process.cwd(),
+    "app",
+    "components",
+    "reading-edition",
+    "ReadingEditionChrome.tsx"
+  ),
+  "utf8"
+);
+assert.match(
+  chromeSource,
+  /document\.documentElement\.clientHeight \|\| window\.innerHeight/u,
+  "the reading cursor must use the stable layout viewport"
+);
+assert.doesNotMatch(
+  chromeSource,
+  /visualViewport\?\.addEventListener\("(?:resize|scroll)", schedule\)/u,
+  "Android browser-chrome animation must not drive reader-header state"
+);
+
+const chromeStyles = fs.readFileSync(
+  path.join(
+    process.cwd(),
+    "app",
+    "components",
+    "reading-edition",
+    "reading-edition.module.css"
+  ),
+  "utf8"
+);
+assert.match(
+  chromeStyles,
+  /\.runningHeader\s*\{[\s\S]*?transform:\s*translateZ\(0\);[\s\S]*?backface-visibility:\s*hidden;/u,
+  "the fixed reading header must remain on a stable compositor layer"
+);
+
 delete globalThis.window;
 console.log("reading progress verification passed");

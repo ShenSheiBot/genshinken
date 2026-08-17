@@ -46,6 +46,12 @@
   --running-header-inline: var(--reading-canvas-start);
 
   position: fixed;
+  /* Android Chrome repaints the visual viewport while its browser bars move.
+     Keep the fixed reader header on one compositor layer instead of letting
+     the changing progress child invalidate the whole header surface. */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: transform;
   inset: 0 0 auto;
   z-index: 90;
   display: grid;

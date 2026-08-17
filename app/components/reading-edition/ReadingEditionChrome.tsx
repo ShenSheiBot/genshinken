@@ -115,8 +115,11 @@ function upperBound(values: number[], target: number): number {
 }
 
 function visualAnchor(): number {
-  const viewport = window.visualViewport;
-  return (viewport?.offsetTop ?? 0) + (viewport?.height ?? window.innerHeight) * 0.36;
+  // Keep the reading cursor tied to the layout viewport. Android browsers
+  // animate visualViewport while their address bar collapses; using that
+  // moving viewport here made the fixed header and progress state repaint
+  // throughout the browser-chrome animation.
+  return (document.documentElement.clientHeight || window.innerHeight) * 0.36;
 }
 
 function readingRailTop(): number {
@@ -708,15 +711,11 @@ export default function ReadingEditionChrome({
     };
     window.addEventListener("scroll", schedule, { passive: true });
     window.addEventListener("resize", schedule);
-    window.visualViewport?.addEventListener("resize", schedule);
-    window.visualViewport?.addEventListener("scroll", schedule);
     schedule();
     return () => {
       cancelAnimationFrame(frame);
       window.removeEventListener("scroll", schedule);
       window.removeEventListener("resize", schedule);
-      window.visualViewport?.removeEventListener("resize", schedule);
-      window.visualViewport?.removeEventListener("scroll", schedule);
     };
   }, [syncReadingPosition]);
 
