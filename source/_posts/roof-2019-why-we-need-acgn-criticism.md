@@ -1,6 +1,6 @@
 ---
 title: 屋顶现视研2019：为什么还需要屋顶现视研及其ACGN评论
-title_breaks: [屋顶现视研2019：为什么, 还需要, 屋顶现视研及其ACGN评论]
+title_breaks: [屋顶现视研2019：, 为什么还需要, 屋顶现视研及其ACGN评论]
 date: 2020-01-01
 slug: roof-2019-why-we-need-acgn-criticism
 script: hans

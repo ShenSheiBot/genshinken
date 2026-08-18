@@ -1,6 +1,6 @@
 ---
 title: 白银是怎样炼成的——贩卖焦虑非硬核，现实非可欲，爱情非拜金阴谋论
-title_breaks: ["白银是怎样炼成的", "——贩卖焦虑非硬核，", "现实非可欲，爱情非拜金阴谋论"]
+title_breaks: ["白银是怎样炼成的——", "贩卖焦虑非硬核，", "现实非可欲，", "爱情非拜金阴谋论"]
 date: 2019-03-30
 slug: how-shirogane-was-forged-countercritique
 script: hans

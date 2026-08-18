@@ -1,6 +1,6 @@
 ---
 title: 日本祭典文化的发展、保护、传承——以京都祇园祭为例分析
-title_breaks: ["日本祭典文化的发展、保护、传承", "——以京都祇园祭为例分析"]
+title_breaks: ["日本祭典文化的", "发展、保护、传承——以", "京都祇园祭为例分析"]
 date: 2019-05-23
 slug: gion-matsuri-development-preservation-inheritance
 script: hans

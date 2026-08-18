@@ -1,6 +1,6 @@
 ---
 title: 你玩游戏，还是游戏玩你——论《史丹利的寓言》与电子游戏
-title_breaks: [你玩游戏，还是游戏玩你, ——论《史丹利的寓言》与电子游戏]
+title_breaks: [你玩游戏，, 还是游戏玩你——, 论《史丹利的寓言》与, 电子游戏]
 date: 2020-11-11
 updated: 2020-12-01
 slug: stanley-parable-video-games

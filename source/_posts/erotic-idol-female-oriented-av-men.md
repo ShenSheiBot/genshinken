@@ -1,6 +1,6 @@
 ---
 title: "作为“情色偶像”的女性向AV男优——青春·本真·面孔"
-title_breaks: ["作为“情色偶像”的女性向AV男优——青春·本真·面孔"]
+title_breaks: ["作为“情色偶像”的", "女性向AV男优——", "青春·本真·面孔"]
 date: 2025-06-09
 slug: erotic-idol-female-oriented-av-men
 categories: ["思想与理论"]

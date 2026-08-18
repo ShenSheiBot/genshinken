@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Fragment } from "react";
 import { notFound } from "next/navigation";
 import {
   bookChapterHref,
@@ -304,7 +305,20 @@ export default async function BookChapterPage({
               <strong>{chapterUnitLabel(chapter.number)}</strong>
             </p>
           </div>
-          <h1 className="art-title"><ReaderTitleText text={chapter.title} /></h1>
+          <h1 className="art-title">
+            {chapter.titleBreaks ? chapter.titleBreaks.map((segment, segmentIndex, segments) => (
+              <Fragment key={`${segment}-${segmentIndex}`}>
+                <span className={readerStyles.titleSegment} data-reader-title-segment>
+                  <ReaderTitleText text={segment} />
+                </span>
+                {segmentIndex < segments.length - 1 && <wbr />}
+              </Fragment>
+            )) : (
+              <span data-reader-title-segment>
+                <ReaderTitleText text={chapter.title} />
+              </span>
+            )}
+          </h1>
           <p className={readerStyles.dek}>{book.description}</p>
           <p className={readerStyles.byline}>
             <CreditLinks

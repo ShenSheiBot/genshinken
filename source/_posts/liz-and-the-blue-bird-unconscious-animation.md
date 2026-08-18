@@ -1,6 +1,6 @@
 ---
 title: "《莉兹与青鸟》：山田尚子的无意识动画手法"
-title_breaks: ["《莉兹与青鸟》：山田尚子的无意识动画手法"]
+title_breaks: ["《莉兹与青鸟》：", "山田尚子的", "无意识动画手法"]
 date: 2025-05-15
 slug: liz-and-the-blue-bird-unconscious-animation
 categories: ["动画"]

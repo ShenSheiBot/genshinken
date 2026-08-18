@@ -1,6 +1,6 @@
 ---
 title: "日常中的远景──以“漫无止境的八月”解读《轻音少女》"
-title_breaks: ["日常中的远景──以“漫无止境的八月”解读《轻音少女》"]
+title_breaks: ["日常中的远景──以", "“漫无止境的八月”", "解读《轻音少女》"]
 date: 2025-02-28
 slug: distant-view-everyday-k-on
 categories: ["动画"]

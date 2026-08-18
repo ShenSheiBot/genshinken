@@ -1,6 +1,6 @@
 ---
 title: 伊藤计划、大屠杀、政治国家与《和谐<harmony/>》
-title_breaks: [伊藤计划、大屠杀、政治国家与, 《和谐<harmony/>》]
+title_breaks: [伊藤计划、大屠杀、, 政治国家与, 《和谐<harmony/>》]
 date: 2020-03-06
 slug: ito-project-genocide-political-state-harmony
 script: hans

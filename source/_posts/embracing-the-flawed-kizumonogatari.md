@@ -1,6 +1,6 @@
 ---
 title: "拥抱着残缺之物──电影《伤物语》与动画的政治性"
-title_breaks: ["拥抱着残缺之物──电影《伤物语》与动画的政治性"]
+title_breaks: ["拥抱着残缺之物──", "电影《伤物语》与", "动画的政治性"]
 date: 2025-04-16
 slug: embracing-the-flawed-kizumonogatari
 categories: ["动画"]

@@ -1,6 +1,6 @@
 ---
 title: 轻小说的定义是什么？概念分析
-title_breaks: [轻小说的定义是什么？概念分析]
+title_breaks: [轻小说的定义是什么？, 概念分析]
 date: 2019-02-02
 slug: what-is-light-novel-concept-analysis
 script: hans

@@ -1,6 +1,6 @@
 ---
 title: 由手，相连结——漫画《在这世界的角落》中的美学物质性
-title_breaks: ["由手，相连结——漫画", "《在这世界的角落》中的美学物质性"]
+title_breaks: ["由手，相连结——", "漫画《在这世界的角落》", "中的美学物质性"]
 date: 2026-05-24
 slug: conjoined-by-hand-aesthetic-materiality
 categories: [漫画]

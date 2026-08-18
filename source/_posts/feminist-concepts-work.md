@@ -1,6 +1,6 @@
 ---
 title: "照护的去女子力化，工作的去大男子化——导读女性主义关键概念与论争：工作Work"
-title_breaks: ["照护的去女子力化，工作的去大男子化——导读女性主义关键概念与论争：工作Work"]
+title_breaks: ["照护的去女子力化，", "工作的去大男子化——", "导读女性主义", "关键概念与论争：", "工作Work"]
 date: 2025-05-12
 slug: feminist-concepts-work
 categories: ["思想与理论"]

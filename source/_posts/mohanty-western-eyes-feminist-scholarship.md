@@ -1,6 +1,6 @@
 ---
 title: 在西方眼中：女性主义学术研究和殖民话语（1984）
-title_breaks: ["在西方眼中", "：女性主义学术研究", "和殖民话语（1984）"]
+title_breaks: ["在西方眼中：", "女性主义学术研究", "和殖民话语（1984）"]
 date: 2023-08-12
 updated: 2026-08-15
 slug: mohanty-western-eyes-feminist-scholarship

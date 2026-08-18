@@ -1,6 +1,6 @@
 ---
 title: “幸运的是，滨口先生也是喜欢演员的”——围绕《夜以继日》的三个问题点
-title_breaks: [“幸运的是，滨口先生也是喜欢演员的”, ——围绕《夜以继日》的三个问题点]
+title_breaks: [“幸运的是，, 滨口先生也是, 喜欢演员的”——, 围绕《夜以继日》的, 三个问题点]
 date: 2022-07-24
 slug: luckily-hamaguchi-likes-actors
 script: hans

@@ -1,6 +1,6 @@
 ---
 title: 1959世代与演出中心主义——高畑勋与东映动画，漫长的六十年代
-title_breaks: ["1959世代与演出中心主义——", "高畑勋与东映动画，漫长的六十年代"]
+title_breaks: ["1959世代与", "演出中心主义——", "高畑勋与东映动画，", "漫长的六十年代"]
 date: 2025-09-07
 slug: kimura-1959-generation-toei-animation
 categories: [动画]

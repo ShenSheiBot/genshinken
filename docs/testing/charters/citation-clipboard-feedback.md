@@ -15,7 +15,7 @@
 | 场景 | 状态 | Projects | 素材 |
 | --- | --- | --- | --- |
 | 正文 BibTeX 成功／拒绝反馈 | `implemented` | `chromium`、`mobile-chromium`、`mobile-webkit` | `/posts/guxiang-de-bianzhengfa` 与其 `/cite.bib` |
-| 书籍原书／译本两个复制位 | `planned` | 待定 | `/books/shulgin-dni` |
+| 书籍原书／译本两个复制位 | `planned` | 待定 | `tests/fixtures/books/inline-sections.json`（数据契约；公开页面待真实内容采用后验收） |
 | Chromium 原生 clipboard permission 与读回 | `planned` | `chromium` | 公开 BibTeX |
 | WebKit／iOS 系统剪贴板 | `not-covered` | 无稳定自动环境 | 实体系统 |
 
@@ -35,7 +35,7 @@
 
 以下仍为 `planned`：
 
-- `/books/shulgin-dni` 原书和译本两个复制位分别匹配各自生成数据，缺失资料不借用另一版本；
+- 原书和译本两个复制位分别匹配各自生成数据，缺失资料不借用另一版本；当前由非公开夹具守住数据契约，待真实文库采用后再增加页面验收；
 - Chromium 隔离 context 中授予 clipboard permission 后的原生写入／读回；
 - `navigator.clipboard` 不存在时 `document.execCommand("copy")` fallback 的兼容分支；
 - 多次快速点击、状态复位和组件卸载时 timer 清理；

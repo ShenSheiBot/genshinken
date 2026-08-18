@@ -1,6 +1,6 @@
 ---
 title: 去殖民化日本动画研究：一篇绪论
-title_breaks: ["去殖民化日本动画研究", "：一篇绪论"]
+title_breaks: ["去殖民化日本动画研究：", "一篇绪论"]
 date: 2026-03-18
 updated: 2026-08-15
 slug: decolonising-anime-studies-prolegomenon

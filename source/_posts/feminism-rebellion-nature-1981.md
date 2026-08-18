@@ -1,6 +1,6 @@
 ---
 title: 女性主义和自然的反叛（1981）
-title_breaks: [女性主义和自然的反叛（1981）]
+title_breaks: [女性主义和自然的, 反叛（1981）]
 date: 2023-03-29
 slug: feminism-rebellion-nature-1981
 categories: [思想与理论]

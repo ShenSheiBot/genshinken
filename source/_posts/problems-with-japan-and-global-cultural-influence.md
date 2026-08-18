@@ -1,6 +1,6 @@
 ---
 title: 日本有哪些糟糕之处？为什么日本文化对世界的影响力这么大？
-title_breaks: ["日本有哪些糟糕之处？为什么", "日本文化对世界的影响力", "这么大？"]
+title_breaks: ["日本有哪些糟糕之处？", "为什么日本文化对世界的", "影响力这么大？"]
 date: 2019-04-03
 slug: problems-with-japan-and-global-cultural-influence
 script: hans

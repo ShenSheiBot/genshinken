@@ -1,6 +1,6 @@
 ---
 title: "「形影相追」——《莉兹与青鸟》中音效、配乐、叙事与动画的有机结合"
-title_breaks: ["「形影相追」——《莉兹与青鸟》中", "音效、配乐、叙事与动画的有机结合"]
+title_breaks: ["「形影相追」——", "《莉兹与青鸟》中", "音效、配乐、叙事与", "动画的有机结合"]
 date: 2025-01-18
 slug: liz-blue-bird-sound-music-narrative
 categories: ["动画"]

@@ -1,6 +1,6 @@
 ---
 title: 从《新哥斯拉》聊起｜日本社会的那些“矫情”从哪儿来？
-title_breaks: ["从《新哥斯拉》聊起｜", "日本社会的那些“矫情”从哪儿来？"]
+title_breaks: ["从《新哥斯拉》聊起｜", "日本社会的那些“矫情”", "从哪儿来？"]
 date: 2019-01-24
 slug: shin-godzilla-japanese-society-groupism
 script: hans

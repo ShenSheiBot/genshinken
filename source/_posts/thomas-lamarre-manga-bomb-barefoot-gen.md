@@ -1,6 +1,6 @@
 ---
 title: 漫画炸弹：《赤足小子》的线条之间
-title_breaks: ["漫画炸弹：《赤足小子》的线条之间"]
+title_breaks: ["漫画炸弹：", "《赤足小子》的", "线条之间"]
 date: 2026-07-20
 slug: thomas-lamarre-manga-bomb-barefoot-gen
 categories: [思想与理论]

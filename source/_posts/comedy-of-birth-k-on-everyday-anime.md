@@ -1,6 +1,6 @@
 ---
 title: "诞生的喜剧——动画《轻音少女！》与日常系的临界点"
-title_breaks: ["诞生的喜剧——动画《轻音少女！》与日常系的临界点"]
+title_breaks: ["诞生的喜剧——", "动画《轻音少女！》与", "日常系的临界点"]
 date: 2025-03-12
 slug: comedy-of-birth-k-on-everyday-anime
 categories: ["动画"]

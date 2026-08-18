@@ -272,6 +272,33 @@ assert.doesNotMatch(
   "images without a 图题 marker must stay bare so placeholder alt text never becomes a caption"
 );
 
+function semanticCoverImagesWithoutWidth(markdown) {
+  const lines = markdown.split(/\r?\n/u);
+  const failures = [];
+  const coverAlt = /(?:书封|书籍封面|期刊封面|杂志封面)/u;
+  const explicitWidth = /\s+"=(?:25|33|50|66|75|100)%"\s*$/u;
+
+  for (let index = 0; index < lines.length; index += 1) {
+    const image = /^!\[([^\]]*)\]\((.*)\)\s*$/u.exec(lines[index]);
+    if (!image || !coverAlt.test(image[1]) || explicitWidth.test(image[2])) continue;
+    let previous = index - 1;
+    while (previous >= 0 && lines[previous].trim() === "") previous -= 1;
+    if (previous >= 0 && lines[previous].startsWith("[图题]")) failures.push(index + 1);
+  }
+  return failures;
+}
+
+assert.deepEqual(
+  semanticCoverImagesWithoutWidth('[图题] 书目\n\n![某书书封](attachments/book.jpg)'),
+  [3],
+  "a semantic book cover must explicitly choose its plate width"
+);
+assert.deepEqual(
+  semanticCoverImagesWithoutWidth('[图题] 书目\n\n![某书书封](attachments/book.jpg "=25%")'),
+  [],
+  "a semantic book cover with an explicit print width must pass"
+);
+
 assert.match(
   richArticleHtml,
   /<a href="https:\/\/example\.org\/read" target="_blank" rel="noopener noreferrer">/u,
@@ -412,6 +439,7 @@ assert.doesNotMatch(
   const postsDirectory = path.join(process.cwd(), "source", "_posts");
   const corpusFailures = [];
   const markerLeak = /\[(?:图题|图注|表题|表注|人物|人物简介|图组|图组结束|幻灯|幻灯结束)\]/u;
+  const legacyItalicCaption = /^\*(?:图题[:：]|图[0-9]+[.．：:]).*\*$/mu;
   const invalidWidth = /title="=(?!(?:25|33|50|66|75|100)%")[^"]*"/u;
   const malformedCjkHref = /href="https?:\/\/[^"]*%(?:EF%BC(?:%8C|%88|%89|%9B|%9A|%81|%9F)|EF%BC(?:%BB|%BD)|E3%80(?:%81|%82|%90|%91|%8A|%8B|%8C|%8D)|E2%80(?:%98|%99|%9C|%9D))[^"]*"/iu;
 
@@ -429,6 +457,12 @@ assert.doesNotMatch(
       const lines = stripped.split(/\r?\n/u);
       const index = lines.findIndex((line) => /^---\s*$/u.test(line));
       if (index !== -1) body = lines.slice(index + 1).join("\n");
+    }
+    if (legacyItalicCaption.test(body)) {
+      corpusFailures.push(`${name}: 遗留斜体图题必须迁移为图片前的 [图题] 语义标记`);
+    }
+    for (const line of semanticCoverImagesWithoutWidth(body)) {
+      corpusFailures.push(`${name}:${line}: 语义书影必须显式指定图版宽度（单本通常 25/33%，复合书影按构图选择）`);
     }
     const html = await renderMarkdown(body);
     if (markerLeak.test(html)) {

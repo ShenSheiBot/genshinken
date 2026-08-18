@@ -1,6 +1,6 @@
 ---
 title: "空间化的身体VS身体化的空间：日本动漫的空间与身体想象"
-title_breaks: ["空间化的身体VS身体化的空间：", "日本动漫的空间与身体想象"]
+title_breaks: ["空间化的身体", "VS身体化的空间：", "日本动漫的空间与", "身体想象"]
 date: 2021-11-23
 slug: spatialized-body-embodied-space-anime
 script: hans

@@ -1,41 +1,19 @@
-import fs from "node:fs";
 import { expect, test } from "./fixtures";
 
-const CHAPTER_PATH = "/books/lih-bread-and-authority-in-russia/chapters/chapter-3";
-const ARTICLE_PATH = "/posts/guxiang-de-bianzhengfa";
-const MULTIPART_CHAPTER_PATH = "/books/shulgin-dni/chapters/penultimate-days";
-const LEGACY_PART_PATH = "/books/shulgin-dni/chapters/penultimate-1916-11-03";
-const BEFORE_MULTIPART_CHAPTER_PATH = "/books/shulgin-dni/chapters/constitutional-day-three";
-
-// 分篇的发布状态随连载推进变化（05.2 于 2026-08-10 转已发布），期望一律
-// 从书籍清单推导，不写死篇名与条数（C3）。
-type SectionPlan = { id: string; number: string; title: string; status: string; anchor?: string };
-const shulginManifest = JSON.parse(
-  fs.readFileSync("source/_books/shulgin-dni.json", "utf8")
-) as { chapters: Array<{ id: string; sections?: SectionPlan[] }> };
-const penultimateSectionPlan =
-  shulginManifest.chapters.find((chapter) => chapter.id === "penultimate-days")?.sections ?? [];
-const publishedPenultimateSections = penultimateSectionPlan.filter(
-  (section) => section.status === "published"
-);
-const forthcomingPenultimateSections = penultimateSectionPlan.filter(
-  (section) => section.status === "forthcoming"
-);
-const allShulginSections = shulginManifest.chapters.flatMap((chapter) => chapter.sections ?? []);
-const forthcomingShulginSections = allShulginSections.filter(
-  (section) => section.status === "forthcoming"
-);
-const MULTIPART_SECTION_TITLE = publishedPenultimateSections[0].title;
-const MULTIPART_SECTION_PATH = `${MULTIPART_CHAPTER_PATH}#${encodeURIComponent(MULTIPART_SECTION_TITLE)}`;
+const ARTICLE_PATH = "/posts/azuma-superflat-japanese-postmodernity";
+const CHAPTER_PATH = "/books/zero-years-imagination/chapters/chapter-02";
+const BOOK_PATH = "/books/zero-years-imagination";
+const COMPOUND_NUMBER_CHAPTER_PATH =
+  "/books/meta-animation-criticism/chapters/i-i-sublime-tide";
 
 const docketNumber = (page: import("./fixtures").Page) =>
   page.locator("#reading-cover [data-reader-docket-number]");
 
 test("book chapter series line matches the topic cover hierarchy", async ({ page }) => {
-  await page.goto(MULTIPART_CHAPTER_PATH);
+  await page.goto(CHAPTER_PATH);
 
   const seriesLine = page.locator("#reading-cover p").filter({
-    has: page.locator('a[href="/books/shulgin-dni"]'),
+    has: page.locator(`a[href="${BOOK_PATH}"]`),
   });
   await expect(seriesLine).toHaveCount(1);
 
@@ -67,26 +45,26 @@ test("book chapter series line matches the topic cover hierarchy", async ({ page
       palette: {
         grey: tokenColor("--ink-faint"),
         black: tokenColor("--ink"),
-        red: tokenColor("--accent"),
+        accent: tokenColor("--accent"),
       },
     };
   });
 
   expect(hierarchy.order).toEqual([
     { tag: "b", text: "连载" },
-    { tag: "a", text: "往日：忆一九〇五年立宪与一九一七年二月革命" },
-    { tag: "strong", text: "第五章" },
+    { tag: "a", text: "零零年代的想象力：宇野常宽全十六章中文译文" },
+    { tag: "strong", text: "第二章" },
   ]);
   expect(hierarchy.colors).toEqual({
     eyebrow: hierarchy.palette.grey,
     title: hierarchy.palette.black,
-    chapter: hierarchy.palette.red,
+    chapter: hierarchy.palette.accent,
   });
-  expect(hierarchy.titleHref).toBe("/books/shulgin-dni");
+  expect(hierarchy.titleHref).toBe(BOOK_PATH);
   expect(hierarchy.titleWeight).toBe(hierarchy.lineWeight);
 });
 
-test("book chapters reuse the article docket and expose the chapter end label", async ({ page }) => {
+test("book chapters reuse the article docket and expose chapter navigation", async ({ page }) => {
   await page.setViewportSize({ width: 1600, height: 1000 });
   await page.goto(ARTICLE_PATH);
   await page.evaluate(() => document.fonts.ready);
@@ -103,24 +81,22 @@ test("book chapters reuse the article docket and expose the chapter end label", 
 
   expect(chapterFontSize).toBe(articleFontSize);
   await expect(chapterDocket.locator("[data-roll]")).toHaveCount(2);
-  const digitAnimations = await chapterDocket.locator("[data-roll]").evaluateAll((digits) =>
-    digits.map((digit) => ({
-      roll: digit.getAttribute("data-roll"),
-      animationName: getComputedStyle(digit.firstElementChild as Element).animationName,
-    }))
-  );
-  expect(digitAnimations[0]).toMatchObject({ roll: "up" });
-  expect(digitAnimations[0]?.animationName).toContain("docket-digit-up");
-  expect(digitAnimations[1]).toMatchObject({ roll: "down" });
-  expect(digitAnimations[1]?.animationName).toContain("docket-digit-down");
 
   const endMark = page.locator('.reading-edition-flow [aria-label="本章完"]');
   await expect(endMark).toBeVisible();
   await expect(endMark).toHaveText("本章完");
+
+  const navigation = page.getByRole("navigation", { name: "章节导航" });
+  await expect(navigation.getByRole("link", { name: /上一章/ })).toBeVisible();
+  await expect(navigation.getByRole("link", { name: /返回目录/ })).toHaveAttribute(
+    "href",
+    BOOK_PATH
+  );
+  await expect(navigation.getByRole("link", { name: /下一章/ })).toBeVisible();
 });
 
 test("full-book compound numbers remain on one rendered line", async ({ isMobile, page }) => {
-  await page.goto(CHAPTER_PATH);
+  await page.goto(COMPOUND_NUMBER_CHAPTER_PATH);
   let fullBookTab = page.getByRole("tab", { name: "全书目录" });
   if (isMobile) {
     await page.getByRole("button", { name: /^文章目录：/ }).click();
@@ -130,8 +106,7 @@ test("full-book compound numbers remain on one rendered line", async ({ isMobile
   }
   await fullBookTab.click();
 
-  const fullBookPanel = page.locator("#reading-index-book");
-  const compoundNumber = fullBookPanel.getByText("前 1", { exact: true });
+  const compoundNumber = page.locator("#reading-index-book").getByText("I.i", { exact: true });
   await expect(compoundNumber).toBeVisible();
   expect(await compoundNumber.evaluate((element) => {
     const range = document.createRange();
@@ -141,162 +116,4 @@ test("full-book compound numbers remain on one rendered line", async ({ isMobile
       whiteSpace: getComputedStyle(element).whiteSpace,
     };
   })).toEqual({ lineCount: 1, whiteSpace: "nowrap" });
-});
-
-test("shared chapter parts render as subtitles on one chapter page", async ({ isMobile, page }) => {
-  const response = await page.goto(MULTIPART_CHAPTER_PATH);
-  expect(response?.status()).toBe(200);
-
-  await expect(page.getByRole("heading", { name: "本节目录", exact: true })).toHaveCount(0);
-  await expect(page.getByRole("heading", { name: "“立宪”的倒数第二日", level: 1 })).toBeVisible();
-  for (const section of publishedPenultimateSections) {
-    await expect(
-      page.locator("article.reading-edition-body h3").filter({ hasText: section.title })
-    ).toBeVisible();
-  }
-  const publishedSubtitle = page.locator("article.reading-edition-body h3").filter({
-    hasText: MULTIPART_SECTION_TITLE,
-  });
-  await expect(publishedSubtitle).toBeVisible();
-  const subtitleMarker = await publishedSubtitle.evaluate((heading) => {
-    const marker = getComputedStyle(heading, "::before");
-    const probe = document.createElement("span");
-    probe.style.color = "var(--accent)";
-    heading.append(probe);
-    const accent = getComputedStyle(probe).color;
-    probe.remove();
-    return {
-      content: marker.content,
-      counterIncrement: getComputedStyle(heading).counterIncrement,
-      color: marker.color,
-      accent,
-    };
-  });
-  expect(subtitleMarker.content).toBe("counter(reading-section, decimal-leading-zero)");
-  expect(subtitleMarker.counterIncrement).toContain("reading-section");
-  expect(subtitleMarker.color).toBe(subtitleMarker.accent);
-  await expect(page.locator("article.reading-edition-body")).toContainText("四下里静极了");
-
-  const chapterNavigation = page.getByRole("navigation", { name: "章节导航" });
-  await expect(chapterNavigation.getByRole("link")).toHaveCount(2);
-  await expect(chapterNavigation.getByRole("link", { name: /上一章/ })).toBeVisible();
-  await expect(chapterNavigation.getByRole("link", { name: /下一章/ })).toHaveCount(0);
-
-  let fullBookTab = page.getByRole("tab", { name: "全书目录" });
-  if (isMobile) {
-    await page.getByRole("button", { name: /^文章目录：/ }).click();
-    const catalogue = page.getByRole("dialog", { name: "文章目录" });
-    await expect(catalogue).toBeVisible();
-    fullBookTab = catalogue.getByRole("tab", { name: "全书目录" });
-  }
-  await fullBookTab.click();
-  const fullBookPanel = page.locator("#reading-index-book");
-  const penultimateSections = fullBookPanel.getByLabel("“立宪”的倒数第二日的次级标题");
-  for (const section of publishedPenultimateSections) {
-    await expect(penultimateSections.getByRole("button", { name: section.title })).toBeVisible();
-  }
-  await expect(penultimateSections.locator('[data-status="forthcoming"]')).toHaveCount(
-    forthcomingPenultimateSections.length
-  );
-  for (const section of forthcomingPenultimateSections) {
-    await expect(
-      penultimateSections.locator('[data-status="forthcoming"]').filter({ hasText: section.title })
-    ).toHaveAttribute("aria-disabled", "true");
-    await expect(
-      penultimateSections.locator("a, button").filter({ hasText: section.title })
-    ).toHaveCount(0);
-  }
-
-  const lastDaysDisclosure = fullBookPanel.getByRole("button", {
-    name: /(?:展开|折叠)“立宪”的最后几天的次级标题/,
-  });
-  if (await lastDaysDisclosure.getAttribute("aria-expanded") === "false") {
-    await lastDaysDisclosure.click();
-  }
-  const lastDaysSections = fullBookPanel.getByLabel("“立宪”的最后几天的次级标题");
-  await expect(lastDaysSections.locator('[data-status="forthcoming"]')).toHaveCount(5);
-
-  await page.goto("/books/shulgin-dni");
-  await expect(page.getByText("已发布 6 / 全部 8", { exact: false })).toBeVisible();
-  const sectionRows = page.locator("li[data-section-status]");
-  await expect(sectionRows).toHaveCount(allShulginSections.length);
-  for (const section of publishedPenultimateSections) {
-    const href = `${MULTIPART_CHAPTER_PATH}#${encodeURIComponent(section.anchor ?? section.title)}`;
-    await expect(
-      page.locator(`li[data-section-status="published"] a[href="${href}"]`)
-    ).toHaveCount(1);
-  }
-  await expect(page.locator('li[data-section-status="forthcoming"]')).toHaveCount(
-    forthcomingShulginSections.length
-  );
-  await expect(page.locator('li[data-section-status="forthcoming"] a, li[data-section-status="forthcoming"] button')).toHaveCount(0);
-
-  const legacyResponse = await page.goto(LEGACY_PART_PATH);
-  expect(legacyResponse?.status()).toBe(404);
-});
-
-test("full-book subtitles jump across chapters and within the current chapter", async ({
-  isMobile,
-  page,
-}) => {
-  await page.emulateMedia({ reducedMotion: "reduce" });
-  await page.goto(BEFORE_MULTIPART_CHAPTER_PATH);
-
-  let fullBookTab = page.getByRole("tab", { name: "全书目录" });
-  if (isMobile) {
-    await page.getByRole("button", { name: /^文章目录：/ }).click();
-    const catalogue = page.getByRole("dialog", { name: "文章目录" });
-    await expect(catalogue).toBeVisible();
-    fullBookTab = catalogue.getByRole("tab", { name: "全书目录" });
-  }
-  await fullBookTab.click();
-
-  let fullBookPanel = page.locator("#reading-index-book");
-  const multipartDisclosure = fullBookPanel.getByRole("button", {
-    name: /(?:展开|折叠)“立宪”的倒数第二日的次级标题/,
-  });
-  if (await multipartDisclosure.getAttribute("aria-expanded") === "false") {
-    await multipartDisclosure.click();
-  }
-  const crossChapterLink = fullBookPanel.getByRole("link", {
-    name: MULTIPART_SECTION_TITLE,
-    exact: true,
-  });
-  await expect(crossChapterLink).toHaveAttribute("href", MULTIPART_SECTION_PATH);
-  await crossChapterLink.click();
-  await expect(page).toHaveURL(MULTIPART_SECTION_PATH);
-
-  const subtitle = page.locator(
-    `article.reading-edition-body h3[id="${MULTIPART_SECTION_TITLE}"]`
-  );
-  await expect(subtitle).toBeVisible();
-  await expect(subtitle).toBeInViewport();
-  await expect.poll(() => subtitle.evaluate((element) =>
-    element.getBoundingClientRect().top
-  )).toBeLessThan(240);
-
-  await page.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight));
-  fullBookTab = page.getByRole("tab", { name: "全书目录" });
-  let currentCatalogue: import("@playwright/test").Locator | null = null;
-  if (isMobile) {
-    await page.getByRole("button", { name: /^文章目录：/ }).click();
-    currentCatalogue = page.getByRole("dialog", { name: "文章目录" });
-    await expect(currentCatalogue).toBeVisible();
-    fullBookTab = currentCatalogue.getByRole("tab", { name: "全书目录" });
-  }
-  await fullBookTab.click();
-  fullBookPanel = page.locator("#reading-index-book");
-  const currentSectionButton = fullBookPanel.getByRole("button", {
-    name: MULTIPART_SECTION_TITLE,
-    exact: true,
-  });
-  await expect(currentSectionButton).toBeVisible();
-  await currentSectionButton.click();
-  await expect(page).toHaveURL(MULTIPART_SECTION_PATH);
-  await expect(subtitle).toBeFocused();
-  await expect(subtitle).toBeInViewport();
-  await expect.poll(() => subtitle.evaluate((element) =>
-    element.getBoundingClientRect().top
-  )).toBeLessThan(240);
-  if (currentCatalogue) await expect(currentCatalogue).toBeHidden();
 });

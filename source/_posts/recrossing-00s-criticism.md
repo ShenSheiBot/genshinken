@@ -1,6 +1,6 @@
 ---
 title: "让〇〇年代批评再交织——东浩纪/宇野常宽/低志会的解离"
-title_breaks: ["让〇〇年代批评再交织——", "东浩纪/宇野常宽/低志会的解离"]
+title_breaks: ["让〇〇年代批评再交织——", "东浩纪/宇野常宽/", "低志会的解离"]
 date: 2025-06-19
 slug: recrossing-00s-criticism
 categories: ["思想与理论"]
@@ -150,7 +150,7 @@ citation:
 
 [图题] <strong>樱坂洋《Slum Online》和雨宫处凛《活下去！》（文库版）</strong> <strong>摄影=编辑部</strong>
 
-![《生きさせろ！》与漫画书封的桌面照片](attachments/wechat/SyBlT9_8dJPmFq8c8TgEog/005.png)
+![《生きさせろ！》与漫画书封的桌面照片](attachments/wechat/SyBlT9_8dJPmFq8c8TgEog/005.png "=66%")
 
 那么，这种兼具游戏性与劳动性的元现实将走向何方呢？以东浩纪为例，他将《All You Need Is Kill》的核心归结为“选择的残酷性”。
 
@@ -174,7 +174,7 @@ citation:
 
 [图题] <strong>宇野常宽《〇〇年代的想象力》与《母性敌托邦》（文库版）</strong>
 
-![三本关于母性的日语书籍封面](attachments/wechat/SyBlT9_8dJPmFq8c8TgEog/006.png)
+![三本关于母性的日语书籍封面](attachments/wechat/SyBlT9_8dJPmFq8c8TgEog/006.png "=66%")
 
 [图注] <strong>摄影=编辑部</strong>
 
@@ -320,7 +320,7 @@ citation:
 
 [图题] <strong>马克思&amp;恩格斯《共产党宣言》与东浩纪《量子家族》（文库版）</strong>
 
-![《共産党宣言》与东浩纪《クォンタム・ファミリーズ》的书封照片](attachments/wechat/SyBlT9_8dJPmFq8c8TgEog/012.png)
+![《共産党宣言》与东浩纪《クォンタム・ファミリーズ》的书封照片](attachments/wechat/SyBlT9_8dJPmFq8c8TgEog/012.png "=66%")
 
 [图注] <strong>摄影=编辑部</strong>
 

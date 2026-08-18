@@ -1,6 +1,6 @@
 ---
 title: 《机动战士高达》与太平洋战争——战争表象的深层与主人公的创伤
-title_breaks: ["《机动战士高达》与太平洋战争——", "战争表象的深层与主人公的创伤"]
+title_breaks: ["《机动战士高达》与", "太平洋战争——", "战争表象的深层与", "主人公的创伤"]
 date: 2025-10-18
 slug: gundam-pacific-war-war-trauma
 categories: [动画]

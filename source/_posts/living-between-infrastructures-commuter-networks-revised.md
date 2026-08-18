@@ -1,6 +1,6 @@
 ---
 title: 生活在基础设施的间隙中：通勤网络、广播电视与移动电话
-title_breaks: ["生活在基础设施的间隙中：", "通勤网络、广播电视与移动电话"]
+title_breaks: ["生活在基础设施的", "间隙中：", "通勤网络、广播电视与", "移动电话"]
 date: 2026-05-27
 updated: 2026-05-28
 slug: living-between-infrastructures-commuter-networks-revised
@@ -73,7 +73,7 @@ citation:
 
 [图题] 迈克尔·菲什：《通勤梦魇：东京地铁与机器的人类学》。
 
-![《An Anthropology of the Machine》书籍封面](attachments/wechat/LP8kSlPJrp3z_N3hGmZa8g/003.jpg)
+![《An Anthropology of the Machine》书籍封面](attachments/wechat/LP8kSlPJrp3z_N3hGmZa8g/003.jpg "=25%")
 
 因此，通勤网络的迷宫特质有别于德·塞尔托想要在与摩天大楼的对比中赞扬的，日常生活无法识别的（illegible）组成部分：「城市平凡生活的实践者生活在『下面』，生活在可见性的阈值之下……这些移动的、相互交错的『书写』所构成的网络，组成了一段没有作者也没有观众的多重历史。」[^m11]正如菲什所示，迷宫成为了可识别波动的来源：后者表现出神经能（为某套调控性的基础设施系统提供动力）的特征。
 

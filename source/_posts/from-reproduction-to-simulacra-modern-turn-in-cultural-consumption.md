@@ -1,6 +1,6 @@
 ---
 title: "从复制品到拟像：文艺消费的现代转向"
-title_breaks: ["从复制品到拟像：文艺消费的现代转向"]
+title_breaks: ["从复制品到拟像：", "文艺消费的现代转向"]
 date: 2021-06-16
 slug: from-reproduction-to-simulacra-modern-turn-in-cultural-consumption
 script: hans

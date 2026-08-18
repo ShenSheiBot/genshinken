@@ -1,6 +1,6 @@
 ---
 title: "数据库中的动物——飛浩隆科幻作品中的文本、空间、与集体存在"
-title_breaks: ["数据库中的动物——飛浩隆科幻作品中的文本、空间、与集体存在"]
+title_breaks: ["数据库中的动物——", "飛浩隆科幻作品中的", "文本、空间、与", "集体存在"]
 date: 2025-05-09
 slug: animals-in-database-flying-takahiro
 categories: ["动画"]

@@ -1,6 +1,6 @@
 ---
 title: 视差之见，那为我们所忽略的——浅谈动画《天体的秩序》
-title_breaks: [视差之见，那为我们所忽略的——, 浅谈动画《天体的秩序》]
+title_breaks: [视差之见，, 那为我们所忽略的——, 浅谈动画《天体的秩序》]
 date: 2019-04-10
 slug: parallax-overlooked-sora-no-method
 script: hans

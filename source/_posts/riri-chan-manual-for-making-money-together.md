@@ -1,6 +1,6 @@
 ---
 title: 一个月捞取1000万的捞女莉莉酱的《让大家一起赚钱的手册》
-title_breaks: [一个月捞取1000万的捞女莉莉酱的, 《让大家一起赚钱的手册》]
+title_breaks: [一个月捞取1000万的, 捞女莉莉酱的, 《让大家一起赚钱的手册》]
 date: 2024-06-19
 slug: riri-chan-manual-for-making-money-together
 script: hans

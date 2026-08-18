@@ -1,6 +1,6 @@
 ---
 title: "作为机器的动画：高畑勋批判，兼论拉马尔如何错失了‘动画－机器’"
-title_breaks: ["作为机器的动画：高畑勋批判，", "兼论拉马尔如何错失了‘动画－机器’"]
+title_breaks: ["作为机器的动画：", "高畑勋批判，", "兼论拉马尔如何", "错失了‘动画－机器’"]
 date: 2021-05-12
 slug: animation-as-machine-takahata-lamarre-critique
 script: hans

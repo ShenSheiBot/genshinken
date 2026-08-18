@@ -1,6 +1,6 @@
 ---
 title: "后日常系动画的硬核——室内空间的解体与《某科学的超电磁炮S》"
-title_breaks: ["后日常系动画的硬核——室内空间的解体与《某科学的超电磁炮S》"]
+title_breaks: ["后日常系动画的硬核——", "室内空间的解体与", "《某科学的超电磁炮S》"]
 date: 2025-05-08
 slug: hardcore-post-everyday-anime
 categories: ["动画"]
@@ -177,7 +177,7 @@ citation:
 
 [^hardcore-post-everyday-anime-1]:《研讨会！日常系动画的软核》影像＋汇总 #日常系软核 - Togetter
 
-[^hardcore-post-everyday-anime-2]:关于这一点，志津A在《日常中的远景——以“漫无止境的的八月”解读《轻音少女》》（《Anime-luka》vol.2，2010年，9-20页）中进行了详细且令人信服的论述。请结合本评论集收录的志津A氏的论文一同参阅。屋顶译文参见<a href="https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&amp;mid=2247488968&amp;idx=2&amp;sn=ca372de5d6d947461152c4f2fba3a5e7&amp;scene=21#wechat_redirect" style="" data-textvalue="日常中的远景──以“漫无止境的八月”解读《轻音少女》" data-itemshowtype="0" target="_blank" data-linktype="2">日常中的远景──以“漫无止境的八月”解读《轻音少女》</a>
+[^hardcore-post-everyday-anime-2]:关于这一点，志津A在《日常中的远景——以“漫无止境的的八月”解读《轻音少女》》（《Anime-luka》vol.2，2010年，9-20页）中进行了详细且令人信服的论述。请结合本评论集收录的志津A氏的论文一同参阅。屋顶译文参见[日常中的远景──以“漫无止境的八月”解读《轻音少女》](/posts/distant-view-everyday-k-on)
 
 [^hardcore-post-everyday-anime-3]:需要说明的是，这首曲并非动画原创，而是由Rhodanthe\*翻唱的中塚武与土岐麻子的二重唱，原曲收录于中塚的专辑《GIRLS&BOYS》（2006年）。
 

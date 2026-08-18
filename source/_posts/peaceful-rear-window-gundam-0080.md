@@ -1,6 +1,6 @@
 ---
 title: "和平的后窗——《机动战士高达0080：口袋里的战争》浅记"
-title_breaks: ["和平的后窗——《机动战士高达", "0080：口袋里的战争》浅记"]
+title_breaks: ["和平的后窗——", "《机动战士高达0080：", "口袋里的战争》浅记"]
 date: 2021-01-17
 slug: peaceful-rear-window-gundam-0080
 script: hans

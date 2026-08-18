@@ -1,6 +1,6 @@
 ---
 title: "晋江长佩扫文&光遇跑图打卡活动来啦"
-title_breaks: ["晋江长佩扫文&光遇跑图打卡活动来啦"]
+title_breaks: ["晋江长佩扫文&", "光遇跑图打卡活动来啦"]
 date: 2023-12-17
 slug: jinjiang-changpei-reading-walk-event
 categories: ["屋顶社群"]

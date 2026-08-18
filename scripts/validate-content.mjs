@@ -427,8 +427,8 @@ const ATTRIBUTION_LINE = /^[—―─]/u; // 题词署名行：——某某
 const CJK_HALFWIDTH_HYPHEN = /\p{Script=Han}-[\p{Script=Han}0-9]|[0-9]-\p{Script=Han}/gu;
 const CJK_YEAR_SPAN = /\p{Script=Han}.{0,2}\d{4}\s*-\s*\d{1,4}(?!\d)|\d{4}\s*-\s*\d{1,4}(?!\d)(?=.{0,2}\p{Script=Han})/gu;
 
-// 按脚本自身位置解析（而非 cwd）：verify-negative-section.mjs 会在临时
-// 沙箱目录里以本脚本跑 fixture，沙箱只复制 source/ 与 public/。
+// 按脚本自身位置解析（而非 cwd）：能力门禁会在临时沙箱目录里以本脚本
+// 跑 fixture，不能从 cwd 寻找这份规则表。
 const grandfatheredTypography = JSON.parse(
   fs.readFileSync(new URL("./typography-grandfathered.json", import.meta.url), "utf8")
 );
@@ -619,9 +619,10 @@ function stringArray(value, file, field, { required = false } = {}) {
 }
 
 const titleFunctionWordStart = /^[的之与及而或于在把被从向为以]/u;
+const titleForbiddenLineStart = /^[，。！？；：、）》】〕〉」』”’]/u;
 
 function badTitleStart(value) {
-  return titleFunctionWordStart.test(value) && !/^(为何|为了|为着)/u.test(value);
+  return titleFunctionWordStart.test(value) && !/^(为何|为什么|为了|为着|从哪|从何)/u.test(value);
 }
 
 function titleLength(value) {
@@ -699,6 +700,9 @@ function validateTitleBreaks(file, data) {
   segments.slice(0, -1).forEach((segment, index) => {
     offset += segment.length;
     const next = segments[index + 1];
+    if (titleForbiddenLineStart.test(next)) {
+      report(errors, file, `title_breaks[${index + 1}] 以闭标点“${next[0]}”开头；请将标点留在上一段`);
+    }
     if (badTitleStart(next)) {
       report(warnings, file, `title_breaks[${index + 1}] 以非实词“${next[0]}”开头，建议前移断点`);
     }
@@ -706,14 +710,6 @@ function validateTitleBreaks(file, data) {
       report(warnings, file, `title_breaks 在“${segment.slice(-3)}｜${next.slice(0, 3)}”之间可能切入实词`);
     }
   });
-  if (segments.length === 2) {
-    const lengths = segments.map(titleLength);
-    const shorter = Math.min(...lengths);
-    const longer = Math.max(...lengths);
-    if (shorter / longer < 0.5) {
-      report(warnings, file, `title_breaks 两行长度差距过大（${lengths.join(" / ")}），请重新平衡`);
-    }
-  }
 }
 
 function validateBookDownloadUrl(file, field, value) {
@@ -1290,7 +1286,23 @@ const bookRecords = jsonFiles(booksDirectory)
         }
         const chapterId = stableRecordId(value, "id", label);
         const number = requiredRecordString(value, "number", label);
-        requiredRecordString(value, "title", label);
+        const chapterTitle = requiredRecordString(value, "title", label);
+        if (hasOwn(value, "titleBreaks")) {
+          const titleBreaks = stringArray(value.titleBreaks, label, "titleBreaks", { required: true });
+          if (titleBreaks.length === 0 || titleBreaks.join("") !== chapterTitle) {
+            report(errors, label, "titleBreaks 按顺序拼接后必须与 title 完全一致");
+          } else {
+            titleBreaks.slice(1).forEach((segment, segmentIndex) => {
+              if (titleForbiddenLineStart.test(segment)) {
+                report(
+                  errors,
+                  label,
+                  `titleBreaks[${segmentIndex + 1}] 以闭标点“${segment[0]}”开头；请将标点留在上一段`
+                );
+              }
+            });
+          }
+        }
         const status = hasOwn(value, "status")
           ? requiredRecordString(value, "status", label)
           : "published";

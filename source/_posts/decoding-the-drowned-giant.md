@@ -1,6 +1,6 @@
 ---
 title: "破译《溺水的巨人》——一种关于“巨人”隐喻的解读"
-title_breaks: ["破译《溺水的巨人》", "——一种关于“巨人”隐喻的解读"]
+title_breaks: ["破译《溺水的巨人》——", "一种关于“巨人”", "隐喻的解读"]
 date: 2021-11-24
 slug: decoding-the-drowned-giant
 script: hans

@@ -1,6 +1,6 @@
 ---
 title: 拾荒战略 Repeat Vol.1：重思日常
-title_breaks: ["拾荒战略 Repeat Vol.1：重思日常"]
+title_breaks: ["拾荒战略 Repeat Vol.1：", "重思日常"]
 date: 2026-03-22
 updated: 2026-08-12
 slug: rethink-everyday

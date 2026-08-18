@@ -1,6 +1,6 @@
 ---
 title: 恋上不存在的你——评《明天，我会死去。你将重生》
-title_breaks: ["恋上不存在的你——", "评《明天，我会死去。你将重生》"]
+title_breaks: ["恋上不存在的你——", "评《明天，我会死去。", "你将重生》"]
 date: 2019-03-05
 slug: loving-the-nonexistent-you
 script: hans

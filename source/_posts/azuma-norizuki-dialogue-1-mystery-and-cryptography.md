@@ -1,6 +1,6 @@
 ---
 title: 东浩纪×法月纶太郎对谈·1：否定神学、社会派与加密之物
-title_breaks: ["东浩纪×法月纶太郎对谈·1：", "否定神学、社会派与加密之物"]
+title_breaks: ["东浩纪×法月纶太郎", "对谈·1：否定神学、", "社会派与加密之物"]
 date: 2022-11-03
 slug: azuma-norizuki-dialogue-1-mystery-and-cryptography
 script: hans

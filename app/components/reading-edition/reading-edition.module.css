@@ -673,6 +673,7 @@
   font-size: calc(var(--reader-font) - 1px);
   line-height: 1.78;
   font-family: var(--reader-body-family);
+  overflow-wrap: anywhere;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -911,11 +912,12 @@
   letter-spacing: -.035em;
   line-break: strict;
   overflow-wrap: normal;
-  text-wrap: wrap;
+  text-wrap: balance;
   word-break: normal;
 }
 
 .titleSegment { white-space: nowrap; }
+.titleWord { white-space: nowrap; }
 
 .titleNoteRef {
   display: inline-block;

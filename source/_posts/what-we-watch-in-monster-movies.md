@@ -1,6 +1,6 @@
 ---
 title: 杂谈 | 当我们在看怪兽电影时，我们究竟在看什么
-title_breaks: ["杂谈 | 当我们在看怪兽电影时，", 我们究竟在看什么]
+title_breaks: ["杂谈 | 当我们在看", 怪兽电影时，, 我们究竟在看什么]
 date: 2018-12-01
 slug: what-we-watch-in-monster-movies
 script: hans

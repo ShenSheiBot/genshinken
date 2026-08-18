@@ -1,0 +1,80 @@
+{
+  "id": "inline-section-contract-fixture",
+  "slug": "inline-section-contract-fixture",
+  "title": "分篇与双书目测试夹具",
+  "description": "仅供自动化验证分篇状态、锚点和原书／译本双书目，不属于公开内容。",
+  "documentSlug": "inline-section-contract-fixture",
+  "script": "hans",
+  "status": "paused",
+  "authors": [
+    "屋顶现视研"
+  ],
+  "translators": [],
+  "proofreaders": [],
+  "publishedAt": "2020-01-01",
+  "updatedAt": "2020-01-02",
+  "latestChapterId": "dated-installments",
+  "citations": {
+    "original": {
+      "itemType": "book",
+      "citationKey": "fixtureOriginal2020",
+      "title": "Fixture Original",
+      "creators": [
+        {
+          "creatorType": "author",
+          "name": "Fixture Author"
+        }
+      ],
+      "date": "2019",
+      "language": "en"
+    },
+    "translation": {
+      "itemType": "book",
+      "citationKey": "fixtureTranslation2020",
+      "rights": "测试夹具"
+    }
+  },
+  "chapters": [
+    {
+      "id": "introduction",
+      "number": "01",
+      "title": "导言",
+      "titleBreaks": [
+        "导言"
+      ],
+      "status": "published",
+      "anchor": "introduction",
+      "publishedAt": "2020-01-01"
+    },
+    {
+      "id": "dated-installments",
+      "number": "02",
+      "title": "分日连载",
+      "status": "published",
+      "anchor": "dated-installments",
+      "publishedAt": "2020-01-02",
+      "sections": [
+        {
+          "id": "dated-installment-one",
+          "number": "02.1",
+          "title": "第一日",
+          "status": "published",
+          "anchor": "first-day",
+          "publishedAt": "2020-01-02"
+        },
+        {
+          "id": "dated-installment-two",
+          "number": "02.2",
+          "title": "第二日",
+          "status": "forthcoming"
+        }
+      ]
+    },
+    {
+      "id": "appendix",
+      "number": "03",
+      "title": "附录",
+      "status": "forthcoming"
+    }
+  ]
+}

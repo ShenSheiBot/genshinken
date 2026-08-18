@@ -1,6 +1,6 @@
 ---
 title: "近期出版日本亚文化与社会评论书籍推介"
-title_breaks: ["近期出版日本亚文化与社会评论书籍推介"]
+title_breaks: ["近期出版日本亚文化与", "社会评论书籍推介"]
 date: 2024-11-10
 slug: japanese-subculture-books-recommendations
 categories: ["屋顶社群"]

@@ -1,6 +1,6 @@
 ---
 title: 宇野常宽锐评《假面骑士 BLACK SUN》
-title_breaks: ["宇野常宽锐评《假面骑士 BLACK SUN》"]
+title_breaks: ["宇野常宽锐评", "《假面骑士 BLACK SUN》"]
 date: 2022-11-15
 slug: uno-kamen-rider-black-sun
 script: hans

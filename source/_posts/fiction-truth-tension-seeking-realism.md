@@ -1,6 +1,6 @@
 ---
 title: "虚构与真之间的张力——如何在虚构的故事里寻求真实感"
-title_breaks: ["虚构与真之间的张力——", "如何在虚构的故事里寻求真实感"]
+title_breaks: ["虚构与真之间的", "张力——", "如何在虚构的故事里", "寻求真实感"]
 date: 2019-02-09
 slug: fiction-truth-tension-seeking-realism
 script: hans

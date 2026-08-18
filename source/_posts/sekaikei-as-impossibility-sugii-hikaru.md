@@ -1,6 +1,6 @@
 ---
 title: "作为不可能性的世界系——论杉井光的忘却之否定神学"
-title_breaks: ["作为不可能性的世界系——论杉井光的忘却之否定神学"]
+title_breaks: ["作为不可能性的世界系——", "论杉井光的", "忘却之否定神学"]
 date: 2025-03-21
 slug: sekaikei-as-impossibility-sugii-hikaru
 categories: ["思想与理论"]

@@ -1,6 +1,6 @@
 ---
 title: "导读女性主义关键概念与论争：性SEX"
-title_breaks: ["导读女性主义关键概念与论争：性SEX"]
+title_breaks: ["导读女性主义", "关键概念与论争：", "性SEX"]
 date: 2025-06-09
 slug: feminist-concepts-sex
 categories: ["思想与理论"]

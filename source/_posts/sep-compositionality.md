@@ -1,6 +1,6 @@
 ---
 title: SEP：组合性（Compositionality）
-title_breaks: [SEP：组合性（Compositionality）]
+title_breaks: [SEP：组合性, （Compositionality）]
 date: 2020-07-08
 slug: sep-compositionality
 script: hans

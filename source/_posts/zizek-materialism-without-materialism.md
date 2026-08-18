@@ -1,6 +1,6 @@
 ---
 title: "没有唯物主义的唯物主义：斯拉沃热·齐泽克与物质的消失"
-title_breaks: ["没有唯物主义的唯物主义：", "斯拉沃热·齐泽克与物质的消失"]
+title_breaks: ["没有唯物主义的", "唯物主义：", "斯拉沃热·齐泽克与", "物质的消失"]
 date: 2021-06-26
 slug: zizek-materialism-without-materialism
 script: hans

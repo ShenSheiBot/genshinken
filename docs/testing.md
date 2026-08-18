@@ -59,6 +59,7 @@ Quality 与 Browser workflow 都会独立安装、检查和构建调用方代码
 | `tests/e2e/reader-book-chapter.spec.ts` | `implemented` | 章节案卷编号与普通正文一致、数字动画、本章结束语义、全书目录复合编号的真实行盒，以及共享章题的分篇保持在同一 canonical 页并执行章内／跨章 hash 跳转。 |
 | `tests/e2e/reader-chrome-transition.spec.ts` | `implemented` | 连载页进入章节的页眉入场、离开 Reader 的反向动效，以及章节间导航不误触发离场。 |
 | `tests/e2e/reader-clipboard.spec.ts` | `implemented` | BibTeX 写入数据、成功 live status、拒绝反馈和重试能力。 |
+| `tests/e2e/reader-title-fit.spec.ts` | `implemented` | 枚举 sitemap 中全部文章与章节，在 1024px／1440px 真实标题字体下阻止标题段越出标题栏、页面横向溢出、视觉行以闭标点起头、单字孤行、实词跨行及超过五行的封面标题。 |
 
 测试优先使用角色、中文可访问名称、稳定 URL 与内容语义。只有验证 Reader 内部组件协作时才使用 `reading-edition-*` 等内部协议；更名时生产者、使用者、验证脚本和本文映射必须原子更新。
 
@@ -70,8 +71,8 @@ Quality 与 Browser workflow 都会独立安装、检查和构建调用方代码
 | --- | --- |
 | `/posts/guxiang-de-bianzhengfa` | 普通 Reader、移动布局、设置、阅读记录和本页 BibTeX。 |
 | `/posts/lih-lenin-disputed` | 同时具有大量注释、文献与跨引用的长正文。 |
-| `/posts/shulgin-dni` | 连续阅读、嵌套章节与本机位置恢复；对应浏览器扩展当前为 `planned`。 |
-| `/books/shulgin-dni` | 原书和译本两个独立 BibTeX 表面；当前相关浏览器扩展仍为 `planned`。 |
+| `tests/fixtures/books/inline-sections.json` | 不进入公开路由的能力夹具：连续分篇、已发布／待发布状态与原书／译本双书目。 |
+| `/books/zero-years-imagination/chapters/chapter-02` | 当前公开文库的章节封面、目录返回与前后章导航。 |
 
 若内容修改破坏某项素材能力，应在同一变更中更新 spec 与本表；不能为保持绿色而删除产品断言或猜造内容。
 

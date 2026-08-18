@@ -1,6 +1,6 @@
 ---
 title: 宇野常宽锐评《水星的魔女》：宇宙战争与学园箱庭的短路连接
-title_breaks: ["宇野常宽锐评《水星的魔女》：", "宇宙战争与学园箱庭的短路连接"]
+title_breaks: ["宇野常宽锐评", "《水星的魔女》：", "宇宙战争与", "学园箱庭的短路连接"]
 date: 2023-10-09
 slug: uno-gundam-witch-from-mercury-war-school-diorama
 script: hans

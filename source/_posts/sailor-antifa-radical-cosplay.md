@@ -1,6 +1,6 @@
 ---
 title: 美少女战士与Antifa——智利抗议（2019-2020）期间的激进Cosplay实践
-title_breaks: ["美少女战士与Antifa——智利抗议", "（2019-2020）期间的激进Cosplay实践"]
+title_breaks: ["美少女战士与Antifa——", "智利抗议（2019-2020）", "期间的激进Cosplay实践"]
 date: 2025-07-15
 slug: sailor-antifa-radical-cosplay
 categories: [动画]

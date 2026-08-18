@@ -65,6 +65,7 @@ interface BookChapterBase {
   id: string;
   number: string;
   title: string;
+  titleBreaks?: string[];
   tags: string[];
   status: BookChapterStatus;
   presentation: BookChapterPresentation;
@@ -182,6 +183,21 @@ function stringList(record: JsonRecord, field: string, source: string): string[]
 
 function optionalStringList(record: JsonRecord, field: string, source: string): string[] {
   return record[field] == null ? [] : stringList(record, field, source);
+}
+
+function chapterTitleBreaks(record: JsonRecord, title: string, source: string): string[] | undefined {
+  if (record.titleBreaks == null) return undefined;
+  const segments = stringList(record, "titleBreaks", source);
+  if (segments.length === 0 || segments.join("") !== title) {
+    fail(source, "titleBreaks", "must reconstruct title exactly in display order");
+  }
+  const forbiddenLineStart = /^[，。！？；：、）》】〕〉」』”’]/u;
+  segments.slice(1).forEach((segment) => {
+    if (forbiddenLineStart.test(segment)) {
+      fail(source, "titleBreaks", `must not start a segment with closing punctuation ${segment[0]}`);
+    }
+  });
+  return segments;
 }
 
 function chapterCreditOverride(
@@ -349,10 +365,12 @@ function parseChapter(
     fail(chapterSource, "sections", "cannot be combined with child chapter routes");
   }
 
+  const title = requiredString(value, "title", chapterSource);
   const base = {
     id: stableId(value, "id", chapterSource),
     number: requiredString(value, "number", chapterSource),
-    title: requiredString(value, "title", chapterSource),
+    title,
+    titleBreaks: chapterTitleBreaks(value, title, chapterSource),
     tags: Array.from(new Set(optionalStringList(value, "tags", chapterSource))),
     presentation: declaredPresentation as BookChapterPresentation,
     format: declaredFormat as ContentFormat,

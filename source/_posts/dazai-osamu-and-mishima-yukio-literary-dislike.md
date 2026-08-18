@@ -1,6 +1,6 @@
 ---
 title: 回答：如何评价太宰治这个人？三岛由纪夫为什么不喜欢太宰治的文学作品？
-title_breaks: [回答：如何评价太宰治这个人？, 三岛由纪夫为什么不喜欢, 太宰治的文学作品？]
+title_breaks: [回答：如何评价, 太宰治这个人？, 三岛由纪夫为什么, 不喜欢, 太宰治的文学作品？]
 date: 2020-04-08
 slug: dazai-osamu-and-mishima-yukio-literary-dislike
 script: hans

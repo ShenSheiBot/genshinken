@@ -1,6 +1,6 @@
 ---
 title: SEP词条：鲁道夫·卡尔纳普——补充词条E：科学理论的重构（3）
-title_breaks: [SEP词条：鲁道夫·卡尔纳普——, 补充词条E：科学理论的重构, （3）]
+title_breaks: [SEP词条：, 鲁道夫·卡尔纳普——, 补充词条E：, 科学理论的重构（3）]
 date: 2020-08-10
 slug: sep-rudolf-carnap-supplement-e-scientific-theory-reconstruction-part-3
 script: hans

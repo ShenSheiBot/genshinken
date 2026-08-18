@@ -35,7 +35,7 @@ citation:
 
 译者按：
 
-这篇雄文很有历史意义。它曾今引发了日本社会的思潮（见[【完结】《Nipponの思想》第八章 “动物化”的“零零年代”](https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247486830&idx=1&sn=d624f211ec7eeeb4ebfcb327ba4ac1e0&scene=21#wechat_redirect)），以此或许可以理解当今日本社会的右转和军国主义倾向。（当然，作为“体验服”，也有借鉴意义）
+这篇雄文很有历史意义。它曾今引发了日本社会的思潮（见[【完结】《Nipponの思想》第八章 “动物化”的“零零年代”](/books/nippon-thought/chapters/chapter-08)），以此或许可以理解当今日本社会的右转和军国主义倾向。（当然，作为“体验服”，也有借鉴意义）
 
 翻译的时候有润色要素。
 

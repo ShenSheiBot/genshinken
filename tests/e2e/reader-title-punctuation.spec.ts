@@ -6,13 +6,13 @@ const CLOSE_PUNCTUATION = new Set(["\u201d", "\u2019", "\u300b", "\u3009"]);
 const TITLE_CASES = [
   {
     label: "Chinese quotation marks",
-    path: "/books/shulgin-dni/chapters/penultimate-days",
-    title: "“立宪”的倒数第二日",
+    path: "/posts/azuma-superflat-japanese-postmodernity",
+    title: "“超扁平”的日本后现代性",
   },
   {
     label: "Chinese book-title marks",
-    path: "/posts/bozhong-zhi-yao",
-    title: "《播种之谣》——在无父的时代重构时代传承的想象力",
+    path: "/posts/decoding-the-drowned-giant",
+    title: "破译《溺水的巨人》——一种关于“巨人”隐喻的解读",
   },
 ] as const;
 

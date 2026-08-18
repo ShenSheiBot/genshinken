@@ -1,6 +1,6 @@
 ---
 title: 金发傲娇？粉发病娇？日本动画发色与性格关联之量化分析
-title_breaks: [金发傲娇？粉发病娇？, 日本动画发色与性格关联之量化分析]
+title_breaks: [金发傲娇？, 粉发病娇？, 日本动画发色与, 性格关联之量化分析]
 date: 2023-02-13
 slug: anime-hair-color-personality-quantitative-analysis
 script: hans

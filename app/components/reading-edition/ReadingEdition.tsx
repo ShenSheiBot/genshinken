@@ -76,18 +76,42 @@ const READER_TITLE_PUNCTUATION = new Map<string, "open" | "close">([
   ["\u300f", "close"],
 ]);
 
-export function ReaderTitleText({ text }: { text: string }) {
+const READER_TITLE_SEGMENTER = new Intl.Segmenter("zh-CN", { granularity: "word" });
+
+function ReaderTitleGlyphs({ text, keyPrefix }: { text: string; keyPrefix: string }) {
   return Array.from(text).map((glyph, index) => {
+    if (glyph === " ") {
+      return (
+        <Fragment key={`${keyPrefix}-space-${index}`}>
+          {" "}<wbr />
+        </Fragment>
+      );
+    }
     const side = READER_TITLE_PUNCTUATION.get(glyph);
     return side ? (
       <span
         data-reader-title-punctuation={side}
-        key={`${glyph}-${index}`}
+        key={`${keyPrefix}-${glyph}-${index}`}
       >
         {glyph}
       </span>
     ) : (
-      <Fragment key={`${glyph}-${index}`}>{glyph}</Fragment>
+      <Fragment key={`${keyPrefix}-${glyph}-${index}`}>{glyph}</Fragment>
+    );
+  });
+}
+
+export function ReaderTitleText({ text }: { text: string }) {
+  return Array.from(READER_TITLE_SEGMENTER.segment(text)).map((segment, index) => {
+    const glyphs = (
+      <ReaderTitleGlyphs text={segment.segment} keyPrefix={`segment-${index}`} />
+    );
+    return segment.isWordLike ? (
+      <span className={styles.titleWord} data-reader-title-word key={`word-${index}`}>
+        {glyphs}
+      </span>
+    ) : (
+      <Fragment key={`separator-${index}`}>{glyphs}</Fragment>
     );
   });
 }
@@ -108,7 +132,9 @@ function CreditLine({ credits }: { credits: Credit[] }) {
 function PreferredTitle({ post }: { post: PostSummary }) {
   return post.titleBreaks.map((segment, index) => (
     <Fragment key={`${segment}-${index}`}>
-      <span className={styles.titleSegment}><ReaderTitleText text={segment} /></span>
+      <span className={styles.titleSegment} data-reader-title-segment>
+        <ReaderTitleText text={segment} />
+      </span>
       {index < post.titleBreaks.length - 1 && <wbr />}
     </Fragment>
   ));

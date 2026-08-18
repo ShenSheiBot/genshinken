@@ -1,6 +1,6 @@
 ---
 title: 波伏娃与巴特勒的女性主义思想：存在主义与后结构主义女性主义
-title_breaks: ["波伏娃与巴特勒的女性主义思想", "：存在主义与后结构主义女性主义"]
+title_breaks: ["波伏娃与巴特勒的", "女性主义思想：", "存在主义与", "后结构主义女性主义"]
 date: 2023-04-28
 slug: beauvoir-butler-feminist-thought
 categories: [思想与理论]
