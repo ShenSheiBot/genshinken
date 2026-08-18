@@ -3,9 +3,6 @@ work_id: monogatari-kaiki-speech-self-deception
 source_type: book-chapter
 source_book_slug: monogatari-series-articles
 source_chapter_id: kaiki-speech-self-deception
-book_slug: monogatari-series-essays
-book_title: Essays on the Monogatari Series
-book_excerpt: Two essays on the characters, narration, and problem of authenticity in the Monogatari series, moving from Deishuu Kaiki in Koimonogatari to the ethics of human nature and imitation in Nisemonogatari.
 slug: kaiki-speech-fracture-self-deception
 language: en
 status: review

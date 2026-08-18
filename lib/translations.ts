@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { parseYamlFrontMatter } from "./safe-front-matter.mjs";
-import { renderMarkdown } from "./markdown";
+import { countRenderedListItems, renderMarkdown, splitRenderedApparatus } from "./markdown";
 import {
   hashRenderedContent,
   readMinutes,
@@ -30,6 +30,10 @@ import {
   readBookChapterTranslationSource,
   readPostTranslationSource,
 } from "./translation-source.mjs";
+import {
+  assertChapterUsesTranslationBookManifest,
+  readTranslationBookManifest,
+} from "./translation-book-manifest.mjs";
 
 export const TRANSLATION_LOCALES = ["en", "ja"] as const;
 export type TranslationLocale = (typeof TRANSLATION_LOCALES)[number];
@@ -152,17 +156,6 @@ function renderedText(html: string): string {
     .trim();
 }
 
-function renderedSection(html: string, className: string): string {
-  return html.match(new RegExp(
-    `<section\\b[^>]*class="[^"]*\\b${className}\\b[^"]*"[^>]*>[\\s\\S]*?<\\/section>`,
-    "iu"
-  ))?.[0] ?? "";
-}
-
-function countListItems(html: string): number {
-  return (html.match(/<li\b/giu) ?? []).length;
-}
-
 function indexRenderedTranslation(html: string): { html: string; documentIndex: TranslationDocumentIndex } {
   const visuals: TranslationIndexVisual[] = [];
   let figure = 0;
@@ -185,17 +178,20 @@ function indexRenderedTranslation(html: string): { html: string; documentIndex: 
     /(<section\b[^>]*class="[^"]*\bsource-notes\b[^"]*"[^>]*>\s*<h2)(?!\b[^>]*\bid=)/iu,
     '$1 id="source-note-label"'
   );
-  const footnotes = renderedSection(indexedHtml, "footnotes");
-  const sourceNotes = renderedSection(indexedHtml, "source-notes");
-  const main = indexedHtml.replace(footnotes, "").replace(sourceNotes, "");
-  const headings = [...main.matchAll(/<h([1-6])\b([^>]*)>([\s\S]*?)<\/h\1>/giu)].flatMap((match) => {
+  const parts = splitRenderedApparatus(indexedHtml);
+  const headings = [...parts.main.matchAll(/<h([1-6])\b([^>]*)>([\s\S]*?)<\/h\1>/giu)].flatMap((match) => {
     const id = /\bid=["']([^"']+)["']/iu.exec(match[2])?.[1];
     const title = renderedText(match[3]);
     return id && title ? [{ id, title, level: Number(match[1]) }] : [];
   });
   return {
     html: indexedHtml,
-    documentIndex: { headings, visuals, noteCount: countListItems(footnotes), sourceCount: countListItems(sourceNotes) },
+    documentIndex: {
+      headings,
+      visuals,
+      noteCount: countRenderedListItems(parts.notes),
+      sourceCount: countRenderedListItems(parts.sources),
+    },
   };
 }
 
@@ -434,15 +430,16 @@ async function loadLocale(locale: TranslationLocale): Promise<TranslationEdition
     const slug = stableId(data, "slug", sourcePath);
     const filenameSlug = path.basename(sourcePath, ".md");
     if (slug !== filenameSlug) throw new Error(`${sourcePath}: slug must match filename ${filenameSlug}`);
-    const bookSlug = sourceRef.type === "book-chapter" ? stableId(data, "book_slug", sourcePath) : "";
-    const bookTitle = sourceRef.type === "book-chapter" ? requiredText(data, "book_title", sourcePath) : "";
-    const bookSubtitle = sourceRef.type === "book-chapter" ? optionalText(data, "book_subtitle") : "";
-    const bookExcerpt = sourceRef.type === "book-chapter" ? requiredText(data, "book_excerpt", sourcePath) : "";
-    if (sourceRef.type === "book-chapter" && resolvedSource.book?.subtitle && !bookSubtitle) {
-      throw new Error(`${sourcePath}: book_subtitle is required because the source book has a subtitle`);
-    }
-    if (sourceRef.type === "book-chapter" && path.basename(path.dirname(sourcePath)) !== bookSlug) {
-      throw new Error(`${sourcePath}: book_slug must match its translation directory`);
+    if (sourceRef.type === "book-chapter") assertChapterUsesTranslationBookManifest(data, sourcePath);
+    const bookManifest = sourceRef.type === "book-chapter"
+      ? readTranslationBookManifest(path.dirname(sourcePath), { locale, sourceBookSlug: sourceRef.bookSlug })
+      : null;
+    const bookSlug = bookManifest?.slug ?? "";
+    const bookTitle = bookManifest?.title ?? "";
+    const bookSubtitle = bookManifest?.subtitle ?? "";
+    const bookExcerpt = bookManifest?.excerpt ?? "";
+    if (bookManifest && resolvedSource.book?.subtitle && !bookSubtitle) {
+      throw new Error(`${bookManifest.source}: subtitle is required because the source book has a subtitle`);
     }
 
     const lifecycle = translationLifecycleValues(data, status, sourcePath);

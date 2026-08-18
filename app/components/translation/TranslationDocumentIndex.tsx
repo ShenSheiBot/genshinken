@@ -6,6 +6,7 @@ import type {
   TranslationLocale,
 } from "@/lib/translations";
 import styles from "./translation-edition.module.css";
+import { translationReferenceUi } from "./translationUi";
 
 const copy = {
   en: {
@@ -14,8 +15,8 @@ const copy = {
     figures: "Figures & tables",
     figure: "Fig.",
     table: "Table",
-    notes: "Notes",
-    sources: "Sources",
+    notes: translationReferenceUi.en.notes,
+    sources: translationReferenceUi.en.sources,
   },
   ja: {
     label: "記事内ナビゲーション",
@@ -23,8 +24,8 @@ const copy = {
     figures: "図表",
     figure: "図",
     table: "表",
-    notes: "注",
-    sources: "文献",
+    notes: translationReferenceUi.ja.notes,
+    sources: translationReferenceUi.ja.sources,
   },
 } as const;
 

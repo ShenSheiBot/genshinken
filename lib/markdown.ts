@@ -34,6 +34,36 @@ type SourceNote = {
 
 type RenderLanguage = "zh" | "en" | "ja";
 
+export type RenderedApparatusParts = {
+  main: string;
+  notes: string;
+  sources: string;
+};
+
+function pullRenderedSection(html: string, className: string): { html: string; rest: string } {
+  const pattern = new RegExp(
+    `<section\\b[^>]*class="[^"]*\\b${className}\\b[^"]*"[^>]*>[\\s\\S]*?<\\/section>`,
+    "iu"
+  );
+  const match = html.match(pattern);
+  if (!match) return { html: "", rest: html };
+  return { html: match[0], rest: html.replace(match[0], "") };
+}
+
+export function splitRenderedApparatus(html: string): RenderedApparatusParts {
+  const notes = pullRenderedSection(html, "footnotes");
+  const sources = pullRenderedSection(notes.rest, "source-notes");
+  return {
+    main: sources.rest,
+    notes: notes.html,
+    sources: sources.html,
+  };
+}
+
+export function countRenderedListItems(html: string): number {
+  return (html.match(/<li\b/giu) ?? []).length;
+}
+
 const RENDER_LABELS = {
   zh: {
     notes: "注释",

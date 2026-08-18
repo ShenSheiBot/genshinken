@@ -3,9 +3,6 @@ work_id: monogatari-kaiki-speech-self-deception
 source_type: book-chapter
 source_book_slug: monogatari-series-articles
 source_chapter_id: kaiki-speech-self-deception
-book_slug: monogatari-series-ronko
-book_title: 〈物語〉シリーズ論考
-book_excerpt: 〈物語〉シリーズの人物・語り・真偽をめぐる評論。本章では『恋物語』の貝木泥舟を、嘘と欲望、物語の当事者性から読み解く。
 slug: kaiki-gensetsu-hasai-jiko-giman
 language: ja
 status: review

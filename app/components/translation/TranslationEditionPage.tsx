@@ -6,8 +6,12 @@ import type {
   TranslationLocale,
   TranslationSource,
 } from "@/lib/translations";
+import type { RenderedApparatusParts } from "@/lib/markdown";
+import { splitRenderedApparatus } from "@/lib/markdown";
 import LanguageSwitcher from "./LanguageSwitcher";
 import TranslationDocumentIndex from "./TranslationDocumentIndex";
+import TranslationReferences from "./TranslationReferences";
+import { translationReferenceUi } from "./translationUi";
 import styles from "./translation-edition.module.css";
 
 const ui = {
@@ -35,6 +39,8 @@ const ui = {
     source: "Read the Chinese edition",
     cite: "Cite this edition",
     contents: "Contents",
+    notes: translationReferenceUi.en.notes,
+    sources: translationReferenceUi.en.sources,
     footer: "Criticism, translation, and visual culture from Lab on Roof.",
   },
   ja: {
@@ -61,6 +67,8 @@ const ui = {
     source: "中国語版を読む",
     cite: "この版を引用",
     contents: "目次",
+    notes: translationReferenceUi.ja.notes,
+    sources: translationReferenceUi.ja.sources,
     footer: "屋頂現視研による批評・翻訳・視覚文化のアーカイブ。",
   },
 } as const;
@@ -101,6 +109,37 @@ export type TranslationChapterNavigation = {
   next?: { href: string; number: string; title: string; translated: boolean };
 };
 
+function TranslationAppendices({
+  locale,
+  parts,
+  noteCount,
+  sourceCount,
+}: {
+  locale: TranslationLocale;
+  parts: RenderedApparatusParts;
+  noteCount: number;
+  sourceCount: number;
+}) {
+  const labels = ui[locale];
+  if (!parts.notes && !parts.sources) return null;
+  return (
+    <div className={styles.translationAppendices} data-translation-appendices>
+      {parts.notes && (
+        <details open>
+          <summary><span>{labels.notes}</span><b>{String(noteCount).padStart(2, "0")}</b></summary>
+          <div className={`art-body ${styles.translationAppendixContent}`} dangerouslySetInnerHTML={{ __html: parts.notes }} />
+        </details>
+      )}
+      {parts.sources && (
+        <details>
+          <summary><span>{labels.sources}</span><b>{String(sourceCount).padStart(2, "0")}</b></summary>
+          <div className={`art-body ${styles.translationAppendixContent}`} dangerouslySetInnerHTML={{ __html: parts.sources }} />
+        </details>
+      )}
+    </div>
+  );
+}
+
 export default function TranslationEditionPage({
   locale,
   source,
@@ -120,6 +159,8 @@ export default function TranslationEditionPage({
     credit.role === "translator" || credit.role === "proofreader" || credit.role === "editor"
   );
   const sourceHref = source.href;
+  const parts = splitRenderedApparatus(edition.html);
+  const hasReferences = Boolean(parts.notes || parts.sources);
 
   return (
     <main
@@ -199,7 +240,7 @@ export default function TranslationEditionPage({
         </div>
       </section>
 
-      <section className={styles.reading}>
+      <section className={`${styles.reading} ${hasReferences ? styles.readingWithReferences : ""}`}>
         <aside className={styles.readingAside}>
           <TranslationDocumentIndex locale={locale} index={edition.documentIndex} />
           <div className={styles.asideActions}>
@@ -216,11 +257,18 @@ export default function TranslationEditionPage({
           <article
             className="art-body"
             lang={locale}
-            dangerouslySetInnerHTML={{ __html: edition.html }}
+            data-translation-body
+            dangerouslySetInnerHTML={{ __html: parts.main }}
           />
           <div className={styles.endMark} aria-label={labels.end}>
             <i /><b>{labels.end}</b><i />
           </div>
+          <TranslationAppendices
+            locale={locale}
+            parts={parts}
+            noteCount={edition.documentIndex.noteCount}
+            sourceCount={edition.documentIndex.sourceCount}
+          />
           {chapterNavigation && (chapterNavigation.previous || chapterNavigation.next) && (
             <nav className={styles.chapterNavigation} aria-label={locale === "en" ? "Chapter navigation" : "章ナビゲーション"}>
               {chapterNavigation.previous ? (
@@ -242,6 +290,15 @@ export default function TranslationEditionPage({
             </nav>
           )}
         </div>
+        {hasReferences && (
+          <aside
+            className={styles.referenceAside}
+            data-translation-reference-rail
+            aria-label={parts.notes && parts.sources ? `${labels.notes} / ${labels.sources}` : parts.sources ? labels.sources : labels.notes}
+          >
+            <TranslationReferences locale={locale} contentRevision={edition.contentRevision} />
+          </aside>
+        )}
       </section>
 
       <footer className={styles.footer}>

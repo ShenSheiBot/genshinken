@@ -25,7 +25,7 @@ MANIFEST_PATH = OUTPUT_DIR / "translation-font-manifest.json"
 CSS_PATH = ROOT / "app" / "translation-fonts.generated.css"
 CACHE_DIR = ROOT / ".local-archive" / "font-sources" / "google-fonts-e1118da9"
 UPSTREAM_COMMIT = "e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7"
-TEXT_EXTENSIONS = {".css", ".md", ".ts", ".tsx"}
+TEXT_EXTENSIONS = {".css", ".json", ".md", ".ts", ".tsx"}
 CORPUS_ROOTS = (
     ROOT / "source" / "_translations" / "ja",
     ROOT / "app" / "[locale]",

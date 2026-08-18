@@ -6,8 +6,10 @@ Independent translations are optional additions stored by language:
 ```text
 source/_translations/
   en/posts/<english-slug>.md
+  en/books/<english-book-slug>/book.json
   en/books/<english-book-slug>/<english-chapter-slug>.md
   ja/posts/<japanese-slug>.md
+  ja/books/<japanese-book-slug>/book.json
   ja/books/<japanese-book-slug>/<japanese-chapter-slug>.md
 ```
 
@@ -20,11 +22,10 @@ Each real edition uses YAML front matter with these fields:
 - stable `work_id`
 - `source_type`: `post` or `book-chapter`
 - `source_slug`, or `source_book_slug` plus `source_chapter_id`
-- language-specific `slug`, plus language-specific `book_slug` for chapters
+- language-specific chapter `slug`; the parent directory's `book.json` owns the target book route and metadata
 - `language`: `en` or `ja`
 - `status`: `draft`, `review`, or `published`
 - `title`, optional source-preserving `subtitle`, and `title_breaks`
-- translated `book_title`, source-preserving `book_subtitle`, and `book_excerpt` for book chapters
 - `excerpt`
 - structured `credits` with registry-backed `role`, `contributor_id`, and optional `scope` / `note`
 - `translation_method`: `agent` or `human`, identifying production responsibility
@@ -35,6 +36,11 @@ Each real edition uses YAML front matter with these fields:
 - `published` (required only when status is `published`) and `updated`
 - `rights`
 - `format`: `article`, `interview`, or `qa`
+
+Every translated-book directory contains one `book.json` with `version: 1`,
+`source_book_slug`, target-language `slug`, `language`, `title`, optional
+source-preserving `subtitle`, and `excerpt`. These book-level values must not be
+repeated in chapter front matter.
 
 Only `published` editions enter the sitemap and reciprocal `hreflang` links.
 Draft and review files remain invisible in ordinary production builds: their

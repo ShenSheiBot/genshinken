@@ -205,10 +205,40 @@ const chromeSource = fs.readFileSync(
   ),
   "utf8"
 );
+const progressSource = fs.readFileSync(
+  path.join(
+    process.cwd(),
+    "app",
+    "components",
+    "reading-edition",
+    "reading-progress.ts"
+  ),
+  "utf8"
+);
+assert.match(
+  progressSource,
+  /document\.documentElement\.clientHeight \|\| window\.innerHeight/u,
+  "the shared reading anchor must use the stable layout viewport"
+);
 assert.match(
   chromeSource,
-  /document\.documentElement\.clientHeight \|\| window\.innerHeight/u,
-  "the reading cursor must use the stable layout viewport"
+  /readingViewportAnchor as visualAnchor/u,
+  "the Chinese reader must consume the shared reading anchor"
+);
+const translationReferencesSource = fs.readFileSync(
+  path.join(
+    process.cwd(),
+    "app",
+    "components",
+    "translation",
+    "TranslationReferences.tsx"
+  ),
+  "utf8"
+);
+assert.match(
+  translationReferencesSource,
+  /scrollElementToReadingAnchor/u,
+  "translated endnotes must consume the shared reading anchor"
 );
 assert.doesNotMatch(
   chromeSource,

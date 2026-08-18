@@ -12,6 +12,10 @@ import {
   readBookChapterTranslationSource,
   readPostTranslationSource,
 } from "../lib/translation-source.mjs";
+import {
+  assertChapterUsesTranslationBookManifest,
+  readTranslationBookManifest,
+} from "../lib/translation-book-manifest.mjs";
 
 const root = process.cwd();
 const translationsRoot = path.join(root, "source", "_translations");
@@ -65,18 +69,15 @@ function sourceFor(data, file) {
   throw new Error(`${file}: source_type must be post / book-chapter`);
 }
 
-function editionRoute(data, locale, source, file) {
+function editionRoute(data, locale, source, file, bookManifest) {
   const slug = requiredStableId(data, "slug", file);
   if (path.basename(file, ".md") !== slug) throw new Error(`${file}: slug must match its filename`);
   if (source.type === "post") return `/${locale}/posts/${slug}`;
-  const bookSlug = requiredStableId(data, "book_slug", file);
-  requiredText(data, "book_title", file);
-  if (source.manifest?.subtitle) requiredText(data, "book_subtitle", file);
-  requiredText(data, "book_excerpt", file);
-  if (path.basename(path.dirname(file)) !== bookSlug) {
-    throw new Error(`${file}: book_slug must match its directory`);
+  if (!bookManifest) throw new Error(`${file}: translated book manifest was not loaded`);
+  if (source.manifest?.subtitle && !bookManifest.subtitle) {
+    throw new Error(`${bookManifest.source}: subtitle is required because the source book has a subtitle`);
   }
-  return `/${locale}/books/${bookSlug}/chapters/${slug}`;
+  return `/${locale}/books/${bookManifest.slug}/chapters/${slug}`;
 }
 
 function verifyCredits(value, file) {
@@ -174,6 +175,10 @@ for (const file of [...locales].flatMap((locale) => walk(path.join(translationsR
   }
   if (requiredText(data, "language", file) !== locale) throw new Error(`${file}: language must match locale directory`);
   const source = sourceFor(data, file);
+  if (source.type === "book-chapter") assertChapterUsesTranslationBookManifest(data, file);
+  const bookManifest = source.type === "book-chapter"
+    ? readTranslationBookManifest(path.dirname(file), { locale, sourceBookSlug: source.bookSlug })
+    : null;
   const lifecycle = translationLifecycleValues(data, status, file);
   const revision = lifecycle.sourceRevision;
   const scope = requiredText(data, "source_revision_scope", file);
@@ -195,9 +200,10 @@ for (const file of [...locales].flatMap((locale) => walk(path.join(translationsR
     locale,
     status,
     workId,
-    route: editionRoute(data, locale, source, file),
+    route: editionRoute(data, locale, source, file, bookManifest),
     revision,
     source,
+    bookManifest,
   });
 }
 
@@ -226,19 +232,20 @@ for (const edition of editions) {
   }
   sourceWorks.set(sourceIdentity, edition.workId);
   if (edition.source.type === "book-chapter") {
-    const data = parseYamlFrontMatter(fs.readFileSync(edition.file, "utf8")).data;
+    const manifest = edition.bookManifest;
+    if (!manifest) throw new Error(`${edition.file}: translated book manifest was not loaded`);
     const sourceBookKey = `${edition.locale}:${edition.source.bookSlug}`;
     const bookIdentity = JSON.stringify({
-      slug: requiredStableId(data, "book_slug", edition.file),
-      title: requiredText(data, "book_title", edition.file),
-      subtitle: typeof data.book_subtitle === "string" ? data.book_subtitle.trim() : "",
-      excerpt: requiredText(data, "book_excerpt", edition.file),
+      slug: manifest.slug,
+      title: manifest.title,
+      subtitle: manifest.subtitle,
+      excerpt: manifest.excerpt,
     });
     if (translatedBooks.has(sourceBookKey) && translatedBooks.get(sourceBookKey) !== bookIdentity) {
       throw new Error(`translated book ${sourceBookKey} has inconsistent route or metadata`);
     }
     translatedBooks.set(sourceBookKey, bookIdentity);
-    const targetBookKey = `${edition.locale}:${requiredStableId(data, "book_slug", edition.file)}`;
+    const targetBookKey = `${edition.locale}:${manifest.slug}`;
     if (translatedBookRoutes.has(targetBookKey) && translatedBookRoutes.get(targetBookKey) !== edition.source.bookSlug) {
       throw new Error(`translated book route ${targetBookKey} maps to multiple source books`);
     }

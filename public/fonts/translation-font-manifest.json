@@ -1,5 +1,5 @@
 {
-  "corpusFileCount": 14,
+  "corpusFileCount": 17,
   "corpusFiles": [
     "app/[locale]/books/[book]/chapters/[chapter]/cite.bib/route.ts",
     "app/[locale]/books/[book]/chapters/[chapter]/page.tsx",
@@ -12,29 +12,32 @@
     "app/components/translation/TranslationDocumentIndex.tsx",
     "app/components/translation/TranslationEditionPage.tsx",
     "app/components/translation/TranslationPlaceholder.tsx",
+    "app/components/translation/TranslationReferences.tsx",
     "app/components/translation/translation-edition.module.css",
+    "app/components/translation/translationUi.ts",
+    "source/_translations/ja/books/monogatari-series-ronko/book.json",
     "source/_translations/ja/books/monogatari-series-ronko/kaiki-gensetsu-hasai-jiko-giman.md",
     "source/_translations/ja/posts/fear-of-monsters-america-home-of-titans.md"
   ],
-  "corpusSha256": "3582ceb4d596808b4905048587e2d34de0aaf969931fb019f309c8b131529f8e",
+  "corpusSha256": "06b08f856f00703284e900d3370ab1959ca34991c950166f23eade8982d3d58d",
   "fonts": {
     "Roof Noto Sans JP": {
-      "bytes": 453764,
+      "bytes": 454088,
       "codePointCount": 1394,
       "family": "Roof Noto Sans JP",
       "file": "roof-noto-sans-jp.woff2",
-      "sha256": "15165af9bd2799a0da61daf6e5a31ec6793483d7568b6b2f76d628d2b8403f3c",
+      "sha256": "64c508184adbb7a1c953ce90624ed2d23305a05b302502ed65ed526117df5774",
       "source": "NotoSansJP.ttf",
       "sourceSha256": "c2f3b4d463500a2ddcd3849cded1fceeb9fd6d1c32e6cbecd568453ba50fc68f",
       "sourceUrl": "https://raw.githubusercontent.com/google/fonts/e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7/ofl/notosansjp/NotoSansJP%5Bwght%5D.ttf",
       "weight": "100 900"
     },
     "Roof Noto Serif JP": {
-      "bytes": 638048,
+      "bytes": 638920,
       "codePointCount": 1394,
       "family": "Roof Noto Serif JP",
       "file": "roof-noto-serif-jp.woff2",
-      "sha256": "984850a09354ca991726579d318983a58c5ea22e2ce1728ac15bb315eadaeb93",
+      "sha256": "ad57c521e50115ec530b7d589c0cc99ab7eafd3c78b24d25984817f119006598",
       "source": "NotoSerifJP.ttf",
       "sourceSha256": "2fd527ba12b6a44ec30d796d633360da0aeba6c5d4af1304ce12bb4dc15a7dfc",
       "sourceUrl": "https://raw.githubusercontent.com/google/fonts/e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7/ofl/notoserifjp/NotoSerifJP%5Bwght%5D.ttf",

@@ -14,6 +14,7 @@ import styles from "@/app/components/reading-edition/reading-edition.module.css"
 import { hanScriptLanguageTag, type HanScript } from "@/lib/han-script";
 import LanguageSwitcher from "@/app/components/translation/LanguageSwitcher";
 import type { EditionLanguageLink } from "@/lib/translations";
+import { countRenderedListItems, splitRenderedApparatus } from "@/lib/markdown";
 
 const sectionFor = (post: PostSummary): EditorialSection => post.section;
 const sectionMeta = EDITORIAL_SECTION_META;
@@ -29,16 +30,6 @@ export type ArticleParts = {
   sourceCount: number;
 };
 
-function pullSection(html: string, className: string): { html: string; rest: string } {
-  const pattern = new RegExp(
-    `<section\\b[^>]*class="[^"]*\\b${className}\\b[^"]*"[^>]*>[\\s\\S]*?<\\/section>`,
-    "i"
-  );
-  const match = html.match(pattern);
-  if (!match) return { html: "", rest: html };
-  return { html: match[0], rest: html.replace(match[0], "") };
-}
-
 function withTitleNote(footnotesHtml: string, titleNoteHtml: string): string {
   if (!titleNoteHtml) return footnotesHtml;
   const item = `<li id="title-note-0" class="title-note" data-reference-label="*">${titleNoteHtml}<a href="#article-title" data-footnote-backref aria-label="返回主标题">↑</a></li>`;
@@ -47,15 +38,14 @@ function withTitleNote(footnotesHtml: string, titleNoteHtml: string): string {
 }
 
 export function splitArticle(html: string, titleNoteHtml = ""): ArticleParts {
-  const footnotes = pullSection(html, "footnotes");
-  const sourceNotes = pullSection(footnotes.rest, "source-notes");
-  const notes = withTitleNote(footnotes.html, titleNoteHtml);
+  const parts = splitRenderedApparatus(html);
+  const notes = withTitleNote(parts.notes, titleNoteHtml);
   return {
-    main: sourceNotes.rest,
+    main: parts.main,
     notes,
-    sources: sourceNotes.html,
-    noteCount: (notes.match(/<li\b/gi) ?? []).length,
-    sourceCount: (sourceNotes.html.match(/<li\b/gi) ?? []).length,
+    sources: parts.sources,
+    noteCount: countRenderedListItems(notes),
+    sourceCount: countRenderedListItems(parts.sources),
   };
 }
 

@@ -1,5 +1,20 @@
 export const READING_PROGRESS_PREFIX = "ub_reading:v1:post:";
 export const READING_PROGRESS_ENABLED_KEY = "ub_reading:enabled";
+export const READING_VIEWPORT_ANCHOR_RATIO = 0.36;
+
+export function readingViewportAnchor(): number {
+  // Use the stable layout viewport. Android browsers animate visualViewport
+  // while their address bar collapses, which must not move the reading line.
+  return (document.documentElement.clientHeight || window.innerHeight) * READING_VIEWPORT_ANCHOR_RATIO;
+}
+
+export function scrollElementToReadingAnchor(target: HTMLElement, offset = 0): void {
+  const top = target.getBoundingClientRect().top + window.scrollY - readingViewportAnchor() + offset;
+  window.scrollTo({
+    top: Math.max(0, top),
+    behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+  });
+}
 
 export type ReadingProgressStatus = "reading" | "completed";
 

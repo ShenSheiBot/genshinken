@@ -1,4 +1,7 @@
 import assert from "node:assert/strict";
+import fs from "node:fs";
+import os from "node:os";
+import path from "node:path";
 import test from "node:test";
 import {
   publicationDecisionValue,
@@ -12,6 +15,50 @@ import {
   postTranslationPayloadRevision,
 } from "../lib/translation-source.mjs";
 import { parseYamlFrontMatter } from "../lib/safe-front-matter.mjs";
+import {
+  assertChapterUsesTranslationBookManifest,
+  readTranslationBookManifest,
+} from "../lib/translation-book-manifest.mjs";
+
+test("translated book metadata has one directory-level source of truth", () => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), "roof-translation-book-"));
+  const directory = path.join(root, "target-book");
+  fs.mkdirSync(directory);
+  fs.writeFileSync(path.join(directory, "book.json"), JSON.stringify({
+    version: 1,
+    source_book_slug: "source-book",
+    slug: "target-book",
+    language: "en",
+    title: "Target Book",
+    excerpt: "One translated book description.",
+  }));
+  try {
+    assert.deepEqual(
+      readTranslationBookManifest(directory, { locale: "en", sourceBookSlug: "source-book" }),
+      {
+        version: 1,
+        source: path.join(directory, "book.json"),
+        sourceBookSlug: "source-book",
+        slug: "target-book",
+        language: "en",
+        title: "Target Book",
+        subtitle: "",
+        excerpt: "One translated book description.",
+      }
+    );
+    assert.doesNotThrow(() => assertChapterUsesTranslationBookManifest({ title: "Chapter" }, "chapter.md"));
+    assert.throws(
+      () => assertChapterUsesTranslationBookManifest({ book_title: "Duplicate" }, "chapter.md"),
+      /book_title belongs in book\.json/u
+    );
+    assert.throws(
+      () => readTranslationBookManifest(directory, { locale: "ja", sourceBookSlug: "source-book" }),
+      /language must match locale directory ja/u
+    );
+  } finally {
+    fs.rmSync(root, { recursive: true, force: true });
+  }
+});
 
 test("unquoted YAML dates survive the review-to-published lifecycle", () => {
   const revision = sha256("complete source file");

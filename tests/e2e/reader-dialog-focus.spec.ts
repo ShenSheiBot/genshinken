@@ -145,6 +145,51 @@ test("mobile annotation dialog returns focus to the footnote", async ({ isMobile
   await expect(footnote).toBeFocused();
 });
 
+test("article footnotes preserve the reading position and return to their source", async ({ isMobile, page }) => {
+  await page.goto("/books/monogatari-series-articles/chapters/kaiki-speech-self-deception");
+  await page.evaluate(async () => {
+    await document.fonts.ready;
+    await Promise.all(
+      document.getAnimations()
+        .filter((animation) => animation.playState === "running")
+        .map((animation) => animation.finished.catch(() => undefined))
+    );
+  });
+  const footnote = page.locator("article.reading-edition-body a[data-footnote-ref]").first();
+  await footnote.scrollIntoViewIfNeeded();
+  await page.waitForTimeout(300);
+  const before = await page.evaluate(() => window.scrollY);
+  await footnote.click();
+
+  const referenceSurface = isMobile
+    ? page.getByRole("dialog", { name: "文章注释" })
+    : page.locator("#reading-right-rail").locator('[data-kind="annotation"]');
+  await expect(referenceSurface).toBeVisible();
+  expect(Math.abs((await page.evaluate(() => window.scrollY)) - before)).toBeLessThan(8);
+
+  await referenceSurface.getByRole("button", { name: "原文位置" }).click();
+  await expect(footnote).toBeFocused();
+  await expect(footnote).toBeInViewport();
+});
+
+test("article endnote backrefs return to the stable reading line", async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.goto("/books/monogatari-series-articles/chapters/kaiki-speech-self-deception");
+  const backref = page.locator(".reading-edition-appendix a[data-footnote-backref]").first();
+  const href = await backref.getAttribute("href");
+  expect(href).toMatch(/^#/u);
+  const source = page.locator(href!);
+  await backref.scrollIntoViewIfNeeded();
+  await backref.click();
+  await expect(source).toBeFocused();
+  await expect(page).toHaveURL(new RegExp(`${href as string}$`, "u"));
+  const position = await source.evaluate((element) => ({
+    actual: element.getBoundingClientRect().top,
+    expected: (document.documentElement.clientHeight || window.innerHeight) * 0.36,
+  }));
+  expect(Math.abs(position.actual - position.expected)).toBeLessThan(3);
+});
+
 test("mobile annotation deep link restores focus to its source", async ({ isMobile, page }) => {
   test.skip(!isMobile, "annotation references use the compact dialog on mobile projects");
 

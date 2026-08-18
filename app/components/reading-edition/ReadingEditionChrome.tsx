@@ -16,6 +16,8 @@ import CitationCopyButton from "@/app/components/CitationCopyButton";
 import {
   fingerprintReadingNodes,
   fingerprintReadingText,
+  readingViewportAnchor as visualAnchor,
+  scrollElementToReadingAnchor,
 } from "@/app/components/reading-edition/reading-progress";
 import {
   useReadingProgress,
@@ -112,14 +114,6 @@ function upperBound(values: number[], target: number): number {
     else high = middle;
   }
   return low;
-}
-
-function visualAnchor(): number {
-  // Keep the reading cursor tied to the layout viewport. Android browsers
-  // animate visualViewport while their address bar collapses; using that
-  // moving viewport here made the fixed header and progress state repaint
-  // throughout the browser-chrome animation.
-  return (document.documentElement.clientHeight || window.innerHeight) * 0.36;
 }
 
 function readingRailTop(): number {
@@ -1052,6 +1046,17 @@ export default function ReadingEditionChrome({
       const anchor = (event.target as HTMLElement | null)?.closest<HTMLAnchorElement>('a[href^="#"]');
       if (!anchor || !flow.contains(anchor)) return;
       const target = safeTarget(anchor.getAttribute("href") || "");
+      if (target && anchor.closest(".reading-edition-appendix, .footnotes, .source-notes") && bodyRef.current?.contains(target)) {
+        event.preventDefault();
+        history.replaceState(
+          history.state,
+          "",
+          `${window.location.pathname}${window.location.search}#${encodeURIComponent(target.id)}`
+        );
+        scrollElementToReadingAnchor(target, 1);
+        target.focus({ preventScroll: true });
+        return;
+      }
       if (!target?.closest(".footnotes, .source-notes")) return;
       event.preventDefault();
       activateReference(anchor, target);

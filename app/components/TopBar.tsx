@@ -8,6 +8,7 @@ import { GLOBAL_NAV_ITEMS, isReadingRoute } from "@/lib/navigation";
 import { useArticleHeader } from "./ArticleHeader";
 import CreditLinks from "./CreditLinks";
 import { toggleTheme, useTheme } from "./useTheme";
+import { READING_VIEWPORT_ANCHOR_RATIO } from "./reading-edition/reading-progress";
 
 type MobileSection = { key: string; title: string; level: number };
 type SectionRef = MobileSection & { el: HTMLElement; top: number; parentH2Key: string };
@@ -72,7 +73,7 @@ export default function TopBar() {
 
     const syncActive = () => {
       if (!alive) return;
-      const cursor = window.scrollY + Math.min(window.innerHeight * 0.36, 260);
+      const cursor = window.scrollY + Math.min(window.innerHeight * READING_VIEWPORT_ANCHOR_RATIO, 260);
       let activeHeading = "";
       let activeH2 = "";
       for (const item of sectionRefs.current) {
