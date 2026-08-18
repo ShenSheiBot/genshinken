@@ -359,6 +359,7 @@ for (const book of bookManifests) {
 const mediaRoute = path.join(
   process.cwd(),
   "app",
+  "(site)",
   "media",
   "[slug]",
   "cite.bib",
@@ -367,12 +368,13 @@ const mediaRoute = path.join(
 const legacyPostRoute = path.join(
   process.cwd(),
   "app",
+  "(site)",
   "posts",
   "[slug]",
   "cite.bib",
   "route.ts"
 );
-const mediaPage = path.join(process.cwd(), "app", "media", "[slug]", "page.tsx");
+const mediaPage = path.join(process.cwd(), "app", "(site)", "media", "[slug]", "page.tsx");
 assert.ok(fs.existsSync(mediaRoute), "canonical /media/[slug]/cite.bib route must exist");
 assert.match(
   fs.readFileSync(mediaRoute, "utf8"),

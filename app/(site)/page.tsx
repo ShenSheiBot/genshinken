@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { getAllPublicContent, getPublicContentIssue } from "@/lib/public-content";
-import PosterWallHome from "./components/editorial-home/PosterWallHome";
+import PosterWallHome from "@/app/components/editorial-home/PosterWallHome";
 
 // 根 layout 不再下发可继承的 canonical（防“忘写 alternates 的页面
 // 全部规范化到首页”），因此首页在这里自持 canonical，并重申 RSS

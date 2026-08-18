@@ -103,6 +103,8 @@ export function getBookCoverAssets(slug: string): BookCoverAsset | undefined {
 
 export interface BookChapterDocument {
   chapter: PublishedBookChapter;
+  /** Canonical chapter slice after referenced footnote definitions are restored. */
+  markdown: string;
   html: string;
   headings: BookChapterHeading[];
   contentRevision: string;
@@ -952,6 +954,7 @@ export async function getBookChapterDocuments(book: Book): Promise<BookChapterDo
       const sectionNo = await getBookChapterSectionNumber(book.documentSlug, chapter.id);
       return {
         chapter,
+        markdown,
         html,
         headings,
         contentRevision: hashRenderedContent(html),

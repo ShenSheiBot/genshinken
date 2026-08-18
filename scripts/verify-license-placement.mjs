@@ -23,7 +23,7 @@ const readingSource = fs.readFileSync(
   "utf8",
 );
 const bookChapterSource = fs.readFileSync(
-  path.join(process.cwd(), "app", "books", "[slug]", "chapters", "[chapter]", "page.tsx"),
+  path.join(process.cwd(), "app", "(site)", "books", "[slug]", "chapters", "[chapter]", "page.tsx"),
   "utf8",
 );
 if (!siteSource.includes("CC BY-NC-SA 4.0")

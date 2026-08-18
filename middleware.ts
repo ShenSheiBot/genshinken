@@ -2,6 +2,7 @@ import { NextResponse, type NextRequest } from "next/server";
 
 const legacyHexoArticlePath = /^\/(?:19|20)\d{2}\/(?:0[1-9]|1[0-2])\/(?:0[1-9]|[12]\d|3[01])(?:\/|$)/u;
 const legacyHexoIndexPath = /^\/(?:archives|categories|tags|page)(?:\/|$)/u;
+const localizedEditionPath = /^\/(en|ja)(?:\/|$)/u;
 
 /**
  * The retired Hexo site used dated article permalinks plus generated archive,
@@ -11,6 +12,12 @@ const legacyHexoIndexPath = /^\/(?:archives|categories|tags|page)(?:\/|$)/u;
  */
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
+  const localizedEdition = pathname.match(localizedEditionPath);
+  if (localizedEdition) {
+    const response = NextResponse.next();
+    response.headers.set("Content-Language", localizedEdition[1]);
+    return response;
+  }
   if (!legacyHexoArticlePath.test(pathname) && !legacyHexoIndexPath.test(pathname)) {
     return NextResponse.next();
   }
@@ -37,5 +44,7 @@ export const config = {
     "/categories/:path*",
     "/tags/:path*",
     "/page/:path*",
+    "/en/:path*",
+    "/ja/:path*",
   ],
 };

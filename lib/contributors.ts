@@ -187,6 +187,13 @@ export const CONTRIBUTORS = [
   { id: "jack-cade", displayName: "Jack Cade", aliases: [], teamMember: false },
   { id: "xin-su-sen-lin", displayName: "新宿森林", aliases: [], teamMember: false },
   { id: "shen-shui", displayName: "甚谁", aliases: [], teamMember: false },
+  {
+    id: "shen-shui-bot",
+    displayName: "甚谁Bot",
+    aliases: [],
+    teamMember: false,
+    entityType: "organization",
+  },
   { id: "lin-pei-ying", displayName: "林沛颖", aliases: [], teamMember: false },
   { id: "hisui", displayName: "Hisui", aliases: [], teamMember: false },
   { id: "ako-de-hong", displayName: "Ako的红", aliases: [], teamMember: false },

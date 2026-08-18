@@ -8,6 +8,12 @@ import { postPath } from "@/lib/editorial";
 import { getTopicMembershipsForPost } from "@/lib/topics";
 import { bookHref, getBookByDocumentSlug } from "@/lib/books";
 import {
+  getEditionLanguageLinks,
+  getPublishedTranslationEditions,
+  resolveTranslationSource,
+  type TranslationEdition,
+} from "@/lib/translations";
+import {
   citationToBibtex,
   citationToJsonLd,
   citationToMetadata,
@@ -38,6 +44,19 @@ export async function generateMetadata({
   const citation = book?.translationCitation ?? post.citation;
   const description = post.excerpt || site.description;
   const canonical = postPath(post);
+  const translationSource = await resolveTranslationSource({ type: "post", slug: post.slug });
+  const publishedTranslations = translationSource
+    ? await getPublishedTranslationEditions(translationSource)
+    : [];
+  const languages = publishedTranslations.length > 0
+    ? Object.fromEntries([
+        [post.script === "hant" ? "zh-Hant" : "zh-Hans", canonical],
+        ...publishedTranslations.map((edition) => [
+          edition.locale,
+          edition.href,
+        ]),
+      ])
+    : undefined;
   const citationPath = book ? bookHref(book) : canonical;
   const openGraphBase = {
     title: post.title,
@@ -50,6 +69,7 @@ export async function generateMetadata({
     description,
     alternates: {
       canonical,
+      ...(languages ? { languages } : {}),
       types: { "application/x-bibtex": `${citationPath}/cite.bib` },
     },
     other: citationToMetadata(citation),
@@ -70,7 +90,8 @@ export async function generateMetadata({
 
 function buildJsonLd(
   post: NonNullable<Awaited<ReturnType<typeof getPostBySlug>>>,
-  citation: CitationRecord
+  citation: CitationRecord,
+  translations: TranslationEdition[]
 ) {
   const license = licenseUrlFromRights(citation.rights);
   const roles: Record<CreditRole, "author" | "translator" | "contributor"> = {
@@ -94,8 +115,12 @@ function buildJsonLd(
     });
     credits[key] = people;
   }
+  const canonical = `${site.url}${postPath(post)}`;
   return {
     ...citationToJsonLd(citation),
+    "@id": `${canonical}#work`,
+    url: canonical,
+    mainEntityOfPage: `${canonical}#webpage`,
     inLanguage: post.script === "hant" ? "zh-Hant" : "zh-Hans",
     ...(post.subtitle ? { alternativeHeadline: post.subtitle } : {}),
     description: post.excerpt || site.description,
@@ -115,6 +140,20 @@ function buildJsonLd(
     articleSection: post.category,
     ...(license ? { license } : {}),
     publisher: { "@type": "Organization", name: site.brand, url: site.url },
+    ...(translations.length > 0
+      ? {
+          workTranslation: translations.map((edition) => {
+            const url = `${site.url}${edition.href}`;
+            return {
+              "@type": post.format === "interview" ? "Interview" : "Article",
+              "@id": `${url}#work`,
+              url,
+              name: edition.title,
+              inLanguage: edition.locale,
+            };
+          }),
+        }
+      : {}),
   };
 }
 
@@ -131,9 +170,13 @@ export default async function ArticlePage({
   const book = getBookByDocumentSlug(post.slug);
   const citation = book?.translationCitation ?? post.citation;
 
-  const [posts, topicMemberships] = await Promise.all([
+  const translationSource = await resolveTranslationSource({ type: "post", slug: post.slug });
+  if (!translationSource) notFound();
+  const [posts, topicMemberships, languageLinks, publishedTranslations] = await Promise.all([
     getAllPublicContent(),
     getTopicMembershipsForPost(post.slug),
+    getEditionLanguageLinks(translationSource),
+    getPublishedTranslationEditions(translationSource),
   ]);
 
   return (
@@ -141,7 +184,7 @@ export default async function ArticlePage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(buildJsonLd(post, citation)).replace(/</g, "\\u003c"),
+          __html: JSON.stringify(buildJsonLd(post, citation, publishedTranslations)).replace(/</g, "\\u003c"),
         }}
       />
       <ReadingDossier
@@ -151,6 +194,7 @@ export default async function ArticlePage({
         topicMemberships={topicMemberships}
         citationBibtex={citationToBibtex(citation)}
         citationHref={`${book ? bookHref(book) : postPath(post)}/cite.bib`}
+        languageLinks={languageLinks}
       />
     </>
   );

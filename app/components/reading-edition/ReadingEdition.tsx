@@ -12,6 +12,8 @@ import ReadingEditionChrome from "@/app/components/reading-edition/ReadingEditio
 import CreditLinks from "@/app/components/CreditLinks";
 import styles from "@/app/components/reading-edition/reading-edition.module.css";
 import { hanScriptLanguageTag, type HanScript } from "@/lib/han-script";
+import LanguageSwitcher from "@/app/components/translation/LanguageSwitcher";
+import type { EditionLanguageLink } from "@/lib/translations";
 
 const sectionFor = (post: PostSummary): EditorialSection => post.section;
 const sectionMeta = EDITORIAL_SECTION_META;
@@ -383,6 +385,7 @@ export function ReadingDossier({
   topicMemberships = [],
   citationBibtex,
   citationHref,
+  languageLinks = [],
 }: {
   post: Post;
   parts: ArticleParts;
@@ -390,6 +393,7 @@ export function ReadingDossier({
   topicMemberships?: TopicMembership[];
   citationBibtex?: string;
   citationHref?: string;
+  languageLinks?: EditionLanguageLink[];
 }) {
   const section = sectionMeta[sectionFor(post)];
   return (
@@ -426,6 +430,14 @@ export function ReadingDossier({
               </time>
               <span>{post.readMin} 分钟</span>
             </div>
+            {languageLinks.length > 0 && (
+              <div className={styles.coverLanguages}>
+                <LanguageSwitcher
+                  current={hanScriptLanguageTag(post.script)}
+                  links={languageLinks}
+                />
+              </div>
+            )}
             {topicMemberships.length > 0 && (
               <nav className={styles.coverTopics} aria-label="所属专题">
                 <span className={styles.coverTopicEyebrow}>专题</span>

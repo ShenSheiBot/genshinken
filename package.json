@@ -43,9 +43,11 @@
     "verify:typography-registry": "node scripts/verify-typography-registry.mjs",
     "verify:book-capabilities": "node --experimental-strip-types --no-warnings scripts/verify-book-capabilities.mjs",
     "verify:fonts": "node scripts/verify-font-contract.mjs",
+    "fonts:translations:build": "python scripts/build-translation-font-subsets.py",
     "verify:reading-progress": "node --experimental-strip-types --no-warnings scripts/verify-reading-progress.mjs",
     "verify:han-script": "node --experimental-strip-types --no-warnings scripts/verify-han-script.mjs",
     "verify:citations": "node --experimental-strip-types --no-warnings scripts/verify-citations.mjs",
+    "verify:translations": "node --test tests/translation-contract.test.mjs && PYTHONDONTWRITEBYTECODE=1 python3 -m unittest tests/audit_translation_structure_test.py && node --experimental-strip-types --no-warnings scripts/verify-translations.mjs",
     "verify:internal-links": "node scripts/verify-internal-link-canonicalization.mjs",
     "verify:dependencies": "node scripts/verify-dependency-contract.mjs",
     "verify:routing": "node --experimental-strip-types --no-warnings scripts/verify-static-routing.mjs",
@@ -57,7 +59,7 @@
     "verify:structured-credits": "node scripts/verify-structured-credit-lines.mjs",
     "verify:license-placement": "node scripts/verify-license-placement.mjs",
     "verify:release": "node scripts/verify-editorial-release.mjs",
-    "check": "npm run validate:content && npm run validate:media-html && npm run verify:wechat-assets-ready && npm run verify:wechat-preservation && npm run verify:structured-credits && npm run verify:license-placement && npm run verify:typography && npm run verify:typography-registry && npm run verify:book-capabilities && npm run verify:reading-progress && npm run verify:han-script && npm run verify:citations && npm run verify:internal-links && npm run verify:routing && npm run verify:library && npm run verify:fonts && npm run typecheck && npm run lint"
+    "check": "npm run validate:content && npm run validate:media-html && npm run verify:wechat-assets-ready && npm run verify:wechat-preservation && npm run verify:structured-credits && npm run verify:license-placement && npm run verify:typography && npm run verify:typography-registry && npm run verify:book-capabilities && npm run verify:reading-progress && npm run verify:han-script && npm run verify:citations && npm run verify:translations && npm run verify:internal-links && npm run verify:routing && npm run verify:library && npm run verify:fonts && npm run typecheck && npm run lint"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

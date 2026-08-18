@@ -24,15 +24,20 @@ for (const pathname of [
 }
 
 const staticDynamicRoutes = [
-  "app/posts/[slug]/page.tsx",
-  "app/posts/[slug]/cite.bib/route.ts",
-  "app/media/[slug]/page.tsx",
-  "app/media/[slug]/cite.bib/route.ts",
-  "app/topics/[slug]/page.tsx",
-  "app/books/[slug]/page.tsx",
-  "app/books/[slug]/chapters/[chapter]/page.tsx",
-  "app/books/[slug]/chapters/[chapter]/cite.bib/route.ts",
-  "app/books/[slug]/cite.bib/route.ts",
+  "app/(site)/posts/[slug]/page.tsx",
+  "app/(site)/posts/[slug]/cite.bib/route.ts",
+  "app/[locale]/posts/[slug]/page.tsx",
+  "app/[locale]/posts/[slug]/cite.bib/route.ts",
+  "app/[locale]/books/[book]/page.tsx",
+  "app/[locale]/books/[book]/chapters/[chapter]/page.tsx",
+  "app/[locale]/books/[book]/chapters/[chapter]/cite.bib/route.ts",
+  "app/(site)/media/[slug]/page.tsx",
+  "app/(site)/media/[slug]/cite.bib/route.ts",
+  "app/(site)/topics/[slug]/page.tsx",
+  "app/(site)/books/[slug]/page.tsx",
+  "app/(site)/books/[slug]/chapters/[chapter]/page.tsx",
+  "app/(site)/books/[slug]/chapters/[chapter]/cite.bib/route.ts",
+  "app/(site)/books/[slug]/cite.bib/route.ts",
 ];
 
 for (const route of staticDynamicRoutes) {
@@ -63,8 +68,8 @@ assert.match(
   "post and citation params must retain local draft previews"
 );
 for (const route of [
-  "app/posts/[slug]/page.tsx",
-  "app/posts/[slug]/cite.bib/route.ts",
+  "app/(site)/posts/[slug]/page.tsx",
+  "app/(site)/posts/[slug]/cite.bib/route.ts",
 ]) {
   assert.match(
     fs.readFileSync(path.join(process.cwd(), ...route.split("/")), "utf8"),
@@ -73,8 +78,8 @@ for (const route of [
   );
 }
 for (const route of [
-  "app/media/[slug]/page.tsx",
-  "app/media/[slug]/cite.bib/route.ts",
+  "app/(site)/media/[slug]/page.tsx",
+  "app/(site)/media/[slug]/cite.bib/route.ts",
 ]) {
   assert.match(
     fs.readFileSync(path.join(process.cwd(), ...route.split("/")), "utf8"),
@@ -125,11 +130,13 @@ for (const file of pageFiles) {
 
 // 根 layout 的 canonical 会被所有未声明 alternates 的页面继承，曾把整批
 // 章节页的规范网址静默指到首页——layout 里永远不允许出现 canonical 声明。
-assert.doesNotMatch(
-  fs.readFileSync(path.join(process.cwd(), "app", "layout.tsx"), "utf8"),
-  /canonical\s*:/u,
-  "app/layout.tsx must never declare an inheritable canonical"
-);
+for (const layout of ["app/(site)/layout.tsx", "app/[locale]/layout.tsx"]) {
+  assert.doesNotMatch(
+    fs.readFileSync(path.join(process.cwd(), ...layout.split("/")), "utf8"),
+    /canonical\s*:/u,
+    `${layout} must never declare an inheritable canonical`
+  );
+}
 
 console.log(
   `static routing verification passed for ${staticDynamicRoutes.length} routes and ${pageFiles.length} static pages`

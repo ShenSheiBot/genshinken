@@ -26,11 +26,11 @@ const validatorPath = path.join(root, "scripts", "validate-content.mjs");
 const baseline = JSON.parse(fs.readFileSync(fixtureManifestPath, "utf8"));
 
 const chapterPageSource = fs.readFileSync(
-  path.join(root, "app", "books", "[slug]", "chapters", "[chapter]", "page.tsx"),
+  path.join(root, "app", "(site)", "books", "[slug]", "chapters", "[chapter]", "page.tsx"),
   "utf8"
 );
 const bookPageSource = fs.readFileSync(
-  path.join(root, "app", "books", "[slug]", "page.tsx"),
+  path.join(root, "app", "(site)", "books", "[slug]", "page.tsx"),
   "utf8"
 );
 const readingChromeSource = fs.readFileSync(
@@ -44,7 +44,7 @@ const readingChromeSource = fs.readFileSync(
   "utf8"
 );
 const bookResourcesSource = fs.readFileSync(
-  path.join(root, "app", "books", "BookResources.tsx"),
+  path.join(root, "app", "(site)", "books", "BookResources.tsx"),
   "utf8"
 );
 

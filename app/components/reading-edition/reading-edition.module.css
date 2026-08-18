@@ -865,6 +865,8 @@
 
 .coverKicker a { color: var(--ink); }
 
+.coverLanguages { margin-top: 14px; }
+
 .coverTopics {
   display: flex;
   align-items: baseline;

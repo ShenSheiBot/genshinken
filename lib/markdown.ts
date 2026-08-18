@@ -32,6 +32,35 @@ type SourceNote = {
   refs: string[];
 };
 
+type RenderLanguage = "zh" | "en" | "ja";
+
+const RENDER_LABELS = {
+  zh: {
+    notes: "注释",
+    sources: "文献",
+    source: "文献",
+    backToBody: "返回正文引用",
+    backToSource: "返回文献",
+    slides: "连续图版",
+  },
+  en: {
+    notes: "Notes",
+    sources: "Sources",
+    source: "Source",
+    backToBody: "Back to text reference",
+    backToSource: "Back to source",
+    slides: "Image sequence",
+  },
+  ja: {
+    notes: "注釈",
+    sources: "文献",
+    source: "文献",
+    backToBody: "本文の参照箇所に戻る",
+    backToSource: "文献に戻る",
+    slides: "連続図版",
+  },
+} as const;
+
 type MarkdownNode = {
   type?: string;
   value?: string;
@@ -70,8 +99,12 @@ function toRoman(n: number): string {
 
 const CJK_TEXT = /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Hangul}]/u;
 
-function extractSourceNotes(md: string): { markdown: string; sourceNotes: SourceNote[] } {
+function extractSourceNotes(
+  md: string,
+  language: RenderLanguage
+): { markdown: string; sourceNotes: SourceNote[] } {
   const defs = new Map<string, SourceNote>();
+  const labels = RENDER_LABELS[language];
 
   let markdown = md.replace(SOURCE_NOTE_DEF, (_match, rawNum: string, text: string) => {
     const num = Number(rawNum);
@@ -91,7 +124,7 @@ function extractSourceNotes(md: string): { markdown: string; sourceNotes: Source
     const refId = `source-ref-${key}-${next}`;
     note.refs.push(refId);
 
-    return `<sup class="source-ref" id="${refId}"><a href="#source-note-${key}" aria-label="文献 ${note.label}">${note.label}</a></sup>`;
+    return `<sup class="source-ref" id="${refId}"><a href="#source-note-${key}" aria-label="${labels.source} ${note.label}">${note.label}</a></sup>`;
   });
 
   return {
@@ -116,7 +149,7 @@ function markdownNodeText(node: MarkdownNode): string {
  * behind as empty headings in the article body.
  */
 function remarkRemoveDetachedNoteHeadings() {
-  const noteHeading = /^(?:译注|附录|注释|脚注)$/u;
+  const noteHeading = /^(?:译注|附录|注释|脚注|Notes?|Footnotes?|注釈)$/iu;
   return (tree: MarkdownNode) => {
     const children = tree.children ?? [];
     for (let index = children.length - 2; index >= 0; index -= 1) {
@@ -175,23 +208,28 @@ function remarkTrimCjkAutolinkTail() {
   };
 }
 
-async function renderSourceNotes(sourceNotes: SourceNote[]): Promise<string> {
+async function renderSourceNotes(
+  sourceNotes: SourceNote[],
+  language: RenderLanguage,
+  activeProcessor: ReturnType<typeof createProcessor>
+): Promise<string> {
   if (sourceNotes.length === 0) return "";
+  const labels = RENDER_LABELS[language];
 
   const items = await Promise.all(
     sourceNotes.map(async (note) => {
       const backrefs = note.refs
         .map(
           (refId) =>
-            `<a href="#${refId}" class="source-backref" aria-label="返回文献 ${note.label}">↑</a>`
+            `<a href="#${refId}" class="source-backref" aria-label="${labels.backToSource} ${note.label}">↑</a>`
         )
         .join("");
-      const html = String(await processor.process(note.text)).trim();
+      const html = String(await activeProcessor.process(note.text)).trim();
       return `<li id="source-note-${note.key}" value="${note.num}">${appendBackrefs(html, backrefs)}</li>`;
     })
   );
 
-  return `<section class="source-notes" data-source-notes><h2>文献</h2><ol>${items.join("")}</ol></section>`;
+  return `<section class="source-notes" data-source-notes><h2>${labels.sources}</h2><ol>${items.join("")}</ol></section>`;
 }
 
 /** 修正相对资源路径、外链行为、脚注锚点 */
@@ -1156,7 +1194,7 @@ function rehypeImageGalleries() {
  * consecutive frames whose order matters; ordinary adjacent images stay in
  * the document flow.
  */
-function rehypeImageSlides() {
+function rehypeImageSlides(language: RenderLanguage = "zh") {
   const walk = (parent: TableFigureNode) => {
     const children = parent.children;
     if (!children) return;
@@ -1205,7 +1243,7 @@ function rehypeImageSlides() {
             properties: {
               className: ["article-slides-track"],
               role: "region",
-              "aria-label": "连续图版",
+              "aria-label": RENDER_LABELS[language].slides,
               tabIndex: 0,
             },
             children: figures,
@@ -1223,7 +1261,11 @@ function rehypeImageSlides() {
   return (tree: Root) => walk(tree as unknown as TableFigureNode);
 }
 
-function createProcessor(format: ContentFormat = "article") {
+function createProcessor(
+  format: ContentFormat = "article",
+  language: RenderLanguage = "zh"
+) {
+  const labels = RENDER_LABELS[language];
   return unified()
   .use(remarkParse)
   .use(remarkGfm)
@@ -1234,11 +1276,11 @@ function createProcessor(format: ContentFormat = "article") {
   .use(remarkRehype, {
     allowDangerousHtml: true,
     // GFM 脚注区标签本地化为「注释」，并去掉默认的 sr-only 类（本站将其作为可见的文章要件标题，由 CSS 单独定样式）
-    footnoteLabel: "注释",
+    footnoteLabel: labels.notes,
     footnoteLabelTagName: "h2",
     footnoteLabelProperties: {},
     footnoteBackLabel(referenceIndex, rereferenceIndex) {
-      return `返回正文引用 ${referenceIndex + 1}${rereferenceIndex > 1 ? `-${rereferenceIndex}` : ""}`;
+      return `${labels.backToBody} ${referenceIndex + 1}${rereferenceIndex > 1 ? `-${rereferenceIndex}` : ""}`;
     },
     // 返回角标用 ↑(U+2191)，避免默认的 ↩(U+21A9) 在移动端被渲染成彩色 emoji，破坏美术资产一致性
     footnoteBackContent: "↑",
@@ -1250,7 +1292,7 @@ function createProcessor(format: ContentFormat = "article") {
   .use(rehypeProfileFigures)
   .use(rehypeImageFigures)
   .use(rehypeImageGalleries)
-  .use(rehypeImageSlides)
+  .use(() => rehypeImageSlides(language))
   .use(rehypeCjkEmphasis)
   .use(rehypeSmartQuotes)
   .use(rehypeCjkInterpuncts)
@@ -1268,12 +1310,15 @@ function normalizeInlinePageMarkers(markdown: string): string {
 
 export async function renderMarkdown(
   md: string,
-  options: { format?: ContentFormat } = {}
+  options: { format?: ContentFormat; language?: RenderLanguage } = {}
 ): Promise<string> {
-  const { markdown, sourceNotes } = extractSourceNotes(md);
-  const activeProcessor = options.format && options.format !== "article"
-    ? createProcessor(options.format)
-    : processor;
+  const language = options.language ?? "zh";
+  const { markdown, sourceNotes } = extractSourceNotes(md, language);
+  const activeProcessor = language === "zh" && (!options.format || options.format === "article")
+    ? processor
+    : createProcessor(options.format ?? "article", language);
   const file = await activeProcessor.process(normalizeInlinePageMarkers(markdown));
-  return sanitizePublicContentHtml(String(file) + await renderSourceNotes(sourceNotes));
+  return sanitizePublicContentHtml(
+    String(file) + await renderSourceNotes(sourceNotes, language, activeProcessor)
+  );
 }

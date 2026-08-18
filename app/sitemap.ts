@@ -9,9 +9,14 @@ import { getAllPosts } from "@/lib/posts";
 import { site } from "@/lib/site";
 import { postPath } from "@/lib/editorial";
 import { getAllTopics } from "@/lib/topics";
+import { getPublishedTranslationEditions, translationHref } from "@/lib/translations";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const [posts, topics] = await Promise.all([getAllPosts(), getAllTopics()]);
+  const [posts, topics, translations] = await Promise.all([
+    getAllPosts(),
+    getAllTopics(),
+    getPublishedTranslationEditions(),
+  ]);
   const books = getAllBooks();
   const postEntries: MetadataRoute.Sitemap = posts.map((p) => ({
     url: `${site.url}${postPath(p)}`,
@@ -30,6 +35,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const topicEntries: MetadataRoute.Sitemap = topics.map((topic) => ({
     url: `${site.url}/topics/${encodeURIComponent(topic.slug)}`,
     lastModified: topic.updated,
+  }));
+  const translationEntries: MetadataRoute.Sitemap = translations.map((edition) => ({
+    url: `${site.url}${translationHref(edition)}`,
+    lastModified: edition.updatedISO || edition.publishedISO || undefined,
   }));
 
   // 聚合页 lastmod 取其真实数据源最近一次变动，不使用构建日期。
@@ -52,5 +61,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...bookEntries,
     ...chapterEntries,
     ...postEntries,
+    ...translationEntries,
   ];
 }

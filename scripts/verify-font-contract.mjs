@@ -16,7 +16,16 @@ const readerPath = path.join(
   "reading-edition",
   "reading-edition.module.css"
 );
+const translationPath = path.join(
+  root,
+  "app",
+  "components",
+  "translation",
+  "translation-edition.module.css"
+);
 const manifestPath = path.join(root, "public", "fonts", "cjk-font-manifest.json");
+const translationFontCssPath = path.join(root, "app", "translation-fonts.generated.css");
+const translationFontManifestPath = path.join(root, "public", "fonts", "translation-font-manifest.json");
 
 const expectedFonts = [
   {
@@ -52,8 +61,33 @@ const rareHanFonts = [
   },
 ];
 
+const japaneseFonts = [
+  {
+    family: "Roof Noto Serif JP",
+    file: "roof-noto-serif-jp.woff2",
+    source: "NotoSerifJP.ttf",
+    sourceSha256: "2fd527ba12b6a44ec30d796d633360da0aeba6c5d4af1304ce12bb4dc15a7dfc",
+    variable: "--font-roof-noto-serif-jp",
+    weight: "200 900",
+  },
+  {
+    family: "Roof Noto Sans JP",
+    file: "roof-noto-sans-jp.woff2",
+    source: "NotoSansJP.ttf",
+    sourceSha256: "c2f3b4d463500a2ddcd3849cded1fceeb9fd6d1c32e6cbecd568453ba50fc68f",
+    variable: "--font-roof-noto-sans-jp",
+    weight: "100 900",
+  },
+];
+
 const textExtensions = new Set([".css", ".json", ".md", ".mjs", ".ts", ".tsx", ".txt"]);
 const corpusRoots = ["app", "lib", "source"];
+const localeFontOwnedRoots = [
+  "app/[locale]/",
+  "app/components/translation/",
+  "app/translation-fonts.generated.css",
+  "source/_translations/",
+];
 const alwaysInclude = "西方負典华文宋体仿宋楷体衬线无衬线，。；：？！“”‘’（）《》〈〉【】——……·";
 
 function escapeRegExp(value) {
@@ -97,8 +131,12 @@ function propertyValue(css, property) {
 
 const globalsCss = readUtf8(globalsPath);
 const readerCss = readUtf8(readerPath);
+const translationCss = readUtf8(translationPath);
+const translationFontCss = readUtf8(translationFontCssPath);
 assert.ok(fs.existsSync(manifestPath), "missing generated CJK font manifest; run scripts/build-cjk-font-subsets.py");
 const manifest = JSON.parse(readUtf8(manifestPath));
+assert.ok(fs.existsSync(translationFontManifestPath), "missing generated Japanese translation font manifest");
+const translationFontManifest = JSON.parse(readUtf8(translationFontManifestPath));
 assert.equal(manifest.version, 3, "unsupported CJK font manifest version");
 assert.equal(
   manifest.strategy,
@@ -164,19 +202,20 @@ assert.ok(
 // 推导（sha256 前 12 位），与 globals.css 的 ?v= 缓存键同源同锁——手写
 // 字面 URL 会在字体重建后悄悄失效。运行期的一致性由
 // verify-editorial-release.mjs 的 verifyHostedCjkFonts 复核。
-const layoutSource = readUtf8(path.join(root, "app", "layout.tsx"));
+const layoutSource = readUtf8(path.join(root, "app", "(site)", "layout.tsx"));
+const foundationSource = readUtf8(path.join(root, "app", "document-foundation.ts"));
 assert.match(
   layoutSource,
   /rel="preload"\s+as="font"\s+type="font\/woff2"\s+href=\{stSongHref\}\s+crossOrigin="anonymous"/u,
-  "app/layout.tsx must preload the STSong body face"
+  "app/(site)/layout.tsx must preload the STSong body face"
 );
 assert.match(
-  layoutSource,
+  foundationSource,
   /cjkFontManifest\.fonts\["UN Canon STSong"\]/u,
   "the STSong preload must derive from cjk-font-manifest.json"
 );
 assert.match(
-  layoutSource,
+  foundationSource,
   /sha256\.slice\(0,\s*12\)/u,
   "the STSong preload href must reuse the manifest cache key"
 );
@@ -225,12 +264,135 @@ assert.match(
   readerCss,
   /\.root :global\(\.rare-han\)\s*{[\s\S]*?font-family\s*:\s*["']UN Canon Rare Han Serif["']\s*;/
 );
+
+const japaneseEditionRule = /\.page:lang\(ja\)\s*\{([\s\S]*?)\}/u.exec(translationCss)?.[1];
+assert.ok(japaneseEditionRule, "missing Japanese translation-edition font rule");
+assert.match(
+  propertyValue(japaneseEditionRule, "--translation-serif"),
+  /^var\(--font-roof-noto-serif-jp\)$/u,
+  "Japanese editions must use the corpus-subset serif face without device fallback"
+);
+assert.match(
+  propertyValue(japaneseEditionRule, "--translation-sans"),
+  /^var\(--font-roof-noto-sans-jp\)$/u,
+  "Japanese editions must use the corpus-subset sans face without device fallback"
+);
+assert.match(
+  translationCss,
+  /\.page:lang\(ja\) \.body :global\(\.art-body p\)[\s\S]*?font-family\s*:\s*var\(--translation-serif\)\s*;/u,
+  "Japanese body paragraphs must explicitly consume the hosted Japanese face"
+);
+assert.doesNotMatch(foundationSource, /Noto_(?:Serif|Sans)_JP/u, "Japanese fonts must not use next/font's full shard set");
+assert.match(
+  translationCss,
+  /\.page:lang\(en\) \.body :global\(\.art-body blockquote\)[\s\S]*?font-family\s*:\s*var\(--font-eb-garamond\)/u,
+  "English block quotations must consume the Latin quotation face"
+);
 assert.match(
   readerCss,
   /html\[data-reader-font="sans"\][\s\S]*?\.rare-han[\s\S]*?font-family\s*:\s*["']UN Canon Rare Han Sans["']\s*;/
 );
 
-const corpusFiles = corpusRoots.flatMap((directory) => walkTextFiles(path.join(root, directory)));
+assert.equal(translationFontManifest.version, 1, "unsupported Japanese translation font manifest version");
+assert.equal(
+  translationFontManifest.strategy,
+  "japanese-translation-corpus-variable-fonts",
+  "Japanese fonts must be generated from the localized corpus"
+);
+assert.equal(
+  translationFontManifest.upstreamCommit,
+  "e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7",
+  "Japanese font source commit changed without review"
+);
+assert.ok(translationFontManifest.subsetCodePointCount >= 1_000, "Japanese font corpus is unexpectedly small");
+
+const translationFaceBlocks = [...translationFontCss.matchAll(/@font-face\s*{[\s\S]*?}/g)].map((match) => match[0]);
+let japaneseFontBytes = 0;
+for (const expected of japaneseFonts) {
+  const record = translationFontManifest.fonts?.[expected.family];
+  assert.ok(record, `Japanese font manifest is missing ${expected.family}`);
+  assert.equal(record.file, expected.file);
+  assert.equal(record.source, expected.source);
+  assert.equal(record.sourceSha256, expected.sourceSha256);
+  assert.equal(record.weight, expected.weight);
+  assert.equal(record.codePointCount, translationFontManifest.subsetCodePointCount);
+  assert.match(record.sourceUrl, new RegExp(`${translationFontManifest.upstreamCommit}/`));
+  const assetPath = path.join(root, "public", "fonts", expected.file);
+  assert.ok(fs.existsSync(assetPath), `missing ${expected.file}`);
+  const bytes = fs.readFileSync(assetPath);
+  japaneseFontBytes += bytes.length;
+  assert.equal(bytes.subarray(0, 4).toString("ascii"), "wOF2", `${expected.file} is not WOFF2`);
+  assert.ok(bytes.length >= 100_000, `${expected.file} is implausibly small`);
+  assert.ok(bytes.length <= 800_000, `${expected.file} exceeds its 800 KB corpus-subset budget`);
+  const digest = crypto.createHash("sha256").update(bytes).digest("hex");
+  assert.equal(record.bytes, bytes.length);
+  assert.equal(record.sha256, digest);
+  const face = translationFaceBlocks.find((block) => (
+    new RegExp(`font-family\\s*:\\s*["']${escapeRegExp(expected.family)}["']\\s*;`).test(block)
+  ));
+  assert.ok(face, `missing generated @font-face for ${expected.family}`);
+  assert.match(
+    face,
+    new RegExp(`url\\(["']?/fonts/${escapeRegExp(expected.file)}\\?v=${digest.slice(0, 12)}["']?\\)`),
+    `${expected.file} cache key must match its digest`
+  );
+  assert.match(face, new RegExp(`font-weight\\s*:\\s*${expected.weight.replace(" ", "\\s+")}\\s*;`));
+  assert.match(face, /font-display\s*:\s*swap\s*;/u);
+  assert.equal(propertyValue(translationFontCss, expected.variable), `"${expected.family}"`);
+}
+assert.ok(japaneseFontBytes <= 1_250_000, "Japanese serif + sans payload exceeds the 1.25 MB page budget");
+
+const translationCorpusRoots = [
+  "source/_translations/ja",
+  "app/[locale]",
+  "app/components/translation",
+];
+const translationCorpusFiles = translationCorpusRoots
+  .flatMap((directory) => walkTextFiles(path.join(root, directory)))
+  .filter((file) => textExtensions.has(path.extname(file)))
+  .sort();
+const translationCorpusRelative = translationCorpusFiles.map((file) => (
+  path.relative(root, file).split(path.sep).join("/")
+));
+assert.deepEqual(
+  translationFontManifest.corpusFiles,
+  translationCorpusRelative,
+  "Japanese font corpus inventory is stale; run python scripts/build-translation-font-subsets.py"
+);
+const translationCorpusDigest = crypto.createHash("sha256");
+for (const file of translationCorpusFiles) {
+  const relative = Buffer.from(path.relative(root, file).split(path.sep).join("/"), "utf8");
+  const payload = fs.readFileSync(file);
+  const relativeLength = Buffer.alloc(4);
+  relativeLength.writeUInt32BE(relative.length);
+  const payloadLength = Buffer.alloc(8);
+  payloadLength.writeBigUInt64BE(BigInt(payload.length));
+  translationCorpusDigest.update(relativeLength).update(relative).update(payloadLength).update(payload);
+}
+assert.equal(translationFontManifest.corpusFileCount, translationCorpusFiles.length);
+assert.equal(
+  translationFontManifest.corpusSha256,
+  translationCorpusDigest.digest("hex"),
+  "Japanese translation corpus changed; regenerate its two font subsets"
+);
+assert.match(
+  foundationSource,
+  /translationFontManifest\.fonts\["Roof Noto Serif JP"\]/u,
+  "the Japanese preload must derive from translation-font-manifest.json"
+);
+const localeLayoutSource = readUtf8(path.join(root, "app", "[locale]", "layout.tsx"));
+assert.match(
+  localeLayoutSource,
+  /locale === "ja"[\s\S]*?rel="preload"[\s\S]*?href=\{japaneseSerifHref\}/u,
+  "Japanese localized routes must preload the corpus serif face"
+);
+
+const corpusFiles = corpusRoots
+  .flatMap((directory) => walkTextFiles(path.join(root, directory)))
+  .filter((file) => {
+    const relative = path.relative(root, file).split(path.sep).join("/");
+    return !localeFontOwnedRoots.some((prefix) => relative.startsWith(prefix));
+  });
 const publicText = path.join(root, "public", "llms.txt");
 if (fs.existsSync(publicText)) corpusFiles.push(publicText);
 assert.equal(
@@ -292,5 +454,7 @@ for (const character of "軟頭髮後臺幹頁網絡閱讀記錄開啓專題連"
 }
 
 console.log(
-  `hosted CJK font contract passed (${manifest.subsetCodePointCount} OpenCC-closed corpus code points plus ${rareHanFonts.length} rare Han fallbacks)`
+  `hosted font contract passed (${manifest.subsetCodePointCount} OpenCC-closed CJK points, `
+  + `${translationFontManifest.subsetCodePointCount} Japanese corpus points in ${japaneseFontBytes.toLocaleString()} bytes, `
+  + `${rareHanFonts.length} rare Han faces)`
 );

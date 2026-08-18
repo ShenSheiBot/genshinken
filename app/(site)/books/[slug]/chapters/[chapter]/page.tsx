@@ -26,7 +26,14 @@ import {
 } from "@/lib/citations";
 import { EDITORIAL_SECTION_META } from "@/lib/editorial";
 import { getBookPublicContent } from "@/lib/public-content";
+import { hanScriptLanguageTag } from "@/lib/han-script";
+import {
+  getEditionLanguageLinks,
+  getPublishedTranslationEditions,
+  resolveTranslationSource,
+} from "@/lib/translations";
 import CreditLinks from "@/app/components/CreditLinks";
+import LanguageSwitcher from "@/app/components/translation/LanguageSwitcher";
 import ReadingEditionChrome, {
   type ReadingBookToc,
   type ReadingBookTocItem,
@@ -141,6 +148,14 @@ export async function generateMetadata({
   if (!chapter) return {};
 
   const canonical = bookChapterHref(book, chapter);
+  const translationSource = await resolveTranslationSource({
+    type: "book-chapter",
+    bookSlug: book.slug,
+    chapterId: chapter.id,
+  });
+  const publishedTranslations = translationSource
+    ? await getPublishedTranslationEditions(translationSource)
+    : [];
   const citation = getBookChapterCitation(book, chapter);
   const description = `《${book.title}》${chapter.number}：${chapter.title}`;
   return {
@@ -148,6 +163,12 @@ export async function generateMetadata({
     description,
     alternates: {
       canonical,
+      ...(translationSource && publishedTranslations.length > 0 ? {
+        languages: Object.fromEntries([
+          [translationSource.language, translationSource.href],
+          ...publishedTranslations.map((edition) => [edition.locale, edition.href]),
+        ]),
+      } : {}),
       types: { "application/x-bibtex": `${canonical}/cite.bib` },
     },
     other: citationToMetadata(citation),
@@ -265,6 +286,12 @@ export default async function BookChapterPage({
     },
     publisher: { "@type": "Organization", name: site.brand, url: site.url },
   };
+  const translationSource = await resolveTranslationSource({
+    type: "book-chapter",
+    bookSlug: book.slug,
+    chapterId: chapter.id,
+  });
+  const languageLinks = translationSource ? await getEditionLanguageLinks(translationSource) : [];
 
   return (
     <ReadingDossierRoot sourceScript={book.script}>
@@ -297,6 +324,11 @@ export default async function BookChapterPage({
               <time dateTime={chapter.publishedAt}>{chapter.publishedAt.replaceAll("-", ".")}</time>
               {document.readMin > 0 && <span>预计阅读 {document.readMin} 分钟</span>}
             </div>
+            {languageLinks.length > 0 && (
+              <div className={readerStyles.coverLanguages}>
+                <LanguageSwitcher current={hanScriptLanguageTag(book.script)} links={languageLinks} />
+              </div>
+            )}
             <p className={bookStyles.chapterSeriesLine}>
               <b>连载</b>
               <Link href={bookHref(book)}>

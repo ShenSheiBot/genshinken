@@ -30,6 +30,12 @@ MANIFEST_PATH = OUTPUT_DIR / "cjk-font-manifest.json"
 CONVERTER_PATH = ROOT / "scripts" / "convert-cjk-font-corpus.mjs"
 TEXT_EXTENSIONS = {".css", ".json", ".md", ".mjs", ".ts", ".tsx", ".txt"}
 CORPUS_ROOTS = (ROOT / "app", ROOT / "lib", ROOT / "source")
+LOCALE_FONT_OWNED_ROOTS = (
+    ROOT / "app" / "[locale]",
+    ROOT / "app" / "components" / "translation",
+    ROOT / "app" / "translation-fonts.generated.css",
+    ROOT / "source" / "_translations",
+)
 ALWAYS_INCLUDE = "西方負典华文宋体仿宋楷体衬线无衬线，。；：？！“”‘’（）《》〈〉【】——……·"
 
 FONTS = (
@@ -58,7 +64,9 @@ def text_files() -> list[Path]:
         files.extend(
             path
             for path in directory.rglob("*")
-            if path.is_file() and path.suffix.lower() in TEXT_EXTENSIONS
+            if path.is_file()
+            and path.suffix.lower() in TEXT_EXTENSIONS
+            and not any(path.is_relative_to(locale_root) for locale_root in LOCALE_FONT_OWNED_ROOTS)
         )
     public_text = ROOT / "public" / "llms.txt"
     if public_text.exists():
