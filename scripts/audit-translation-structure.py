@@ -72,7 +72,13 @@ def resource_map(entries: list[object], label: str) -> dict[str, str]:
 
 
 def normalize_resource(value: str, mapping: dict[str, str]) -> str:
-    return mapping.get(value, value)
+    normalized = mapping.get(value, value)
+    # A localized edition may legitimately point to the same canonical Roof
+    # work through its locale-prefixed route (`/en/...` or `/ja/...`).  The
+    # structure audit compares protected destinations, not locale routing;
+    # strip only that leading locale so the semantic destination remains
+    # comparable.  Locale correctness is checked by the internal-link gate.
+    return re.sub(r"^/(?:en|ja)(?=/(?:posts|books)/)", "", normalized)
 
 
 def destination_at(text: str, opening: int) -> tuple[int, str] | None:

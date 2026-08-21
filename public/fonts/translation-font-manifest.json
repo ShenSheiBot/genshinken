@@ -1,5 +1,5 @@
 {
-  "corpusFileCount": 17,
+  "corpusFileCount": 35,
   "corpusFiles": [
     "app/[locale]/books/[book]/chapters/[chapter]/cite.bib/route.ts",
     "app/[locale]/books/[book]/chapters/[chapter]/page.tsx",
@@ -15,37 +15,151 @@
     "app/components/translation/TranslationReferences.tsx",
     "app/components/translation/translation-edition.module.css",
     "app/components/translation/translationUi.ts",
+    "source/_translations/external-originals.json",
+    "source/_translations/ja/books/kankei-keishiki-bunseki/book.json",
+    "source/_translations/ja/books/kankei-keishiki-bunseki/sankaku-kankei-biyakuya.md",
     "source/_translations/ja/books/monogatari-series-ronko/book.json",
     "source/_translations/ja/books/monogatari-series-ronko/kaiki-gensetsu-hasai-jiko-giman.md",
-    "source/_translations/ja/posts/fear-of-monsters-america-home-of-titans.md"
+    "source/_translations/ja/posts/animation-criticism-stranger-perspective.md",
+    "source/_translations/ja/posts/butsuri-kukan-fukei-hatsukoi-shikioriori.md",
+    "source/_translations/ja/posts/death-and-rebirth-in-isekai-reincarnation.md",
+    "source/_translations/ja/posts/decoding-the-drowned-giant.md",
+    "source/_translations/ja/posts/diaosi-culture-logic-of-counterattack.md",
+    "source/_translations/ja/posts/fear-of-monsters-america-home-of-titans.md",
+    "source/_translations/ja/posts/furukawa-tomohiro-interview-1-saint-seiya-style.md",
+    "source/_translations/ja/posts/furukawa-tomohiro-interview-2-patlabor-original-animation.md",
+    "source/_translations/ja/posts/furukawa-tomohiro-interview-3-precure-storyboards.md",
+    "source/_translations/ja/posts/kara-no-kyoukai-garden-of-sinners.md",
+    "source/_translations/ja/posts/kojimas-sekaikei.md",
+    "source/_translations/ja/posts/persona-5-picaresque-bunka-haikei.md",
+    "source/_translations/ja/posts/revue-starlight-reproduction-through-revue.md",
+    "source/_translations/ja/posts/understanding-disaster-video-series.md",
+    "source/_translations/ja/posts/what-we-watch-in-monster-movies.md",
+    "source/_translations/ja/posts/witcher-wilderness-detective.md"
   ],
-  "corpusSha256": "06b08f856f00703284e900d3370ab1959ca34991c950166f23eade8982d3d58d",
+  "corpusSha256": "58a7f107aacfdf693f283715d1fddc6724a4dcc0dbfda29baea0ede8e5b6b2fc",
+  "fallbackCodePointCount": 50,
   "fonts": {
+    "Roof EB Garamond Fallback": {
+      "bytes": 3888,
+      "codePointCount": 2,
+      "family": "Roof EB Garamond Fallback",
+      "file": "roof-eb-garamond-fallback.woff2",
+      "kind": "fallback-latin",
+      "sha256": "0712a8acf528142ca492a4552670727467f4588606c4bbe8e750cad5026f0162",
+      "source": "EBGaramond.ttf",
+      "sourceSha256": "ef9512f92f6d579e5dc75af59a5a4b1b8b47d2eda89e00b954d44520e5369027",
+      "sourceUrl": "https://raw.githubusercontent.com/google/fonts/e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7/ofl/ebgaramond/EBGaramond%5Bwght%5D.ttf",
+      "unicodeRange": "U+03AF U+1F01",
+      "variable": "--font-roof-eb-garamond-fallback",
+      "weight": "400"
+    },
+    "Roof Noto Music Fallback": {
+      "bytes": 2680,
+      "codePointCount": 1,
+      "family": "Roof Noto Music Fallback",
+      "file": "roof-noto-music-fallback.woff2",
+      "kind": "fallback-music",
+      "sha256": "1ebf5362fc071b59e39de203e53c57e99427f7585877b0e2dac4d5f1f2e26e52",
+      "source": "NotoMusic.ttf",
+      "sourceSha256": "e913be269fe16723d1dea0afc3c31a28be6958f6a7f0e6d5be6e98506c4022bd",
+      "sourceUrl": "https://raw.githubusercontent.com/google/fonts/e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7/ofl/notomusic/NotoMusic-Regular.ttf",
+      "unicodeRange": "U+1D107",
+      "variable": "--font-roof-noto-music-fallback",
+      "weight": "400"
+    },
     "Roof Noto Sans JP": {
-      "bytes": 454088,
-      "codePointCount": 1394,
+      "bytes": 705100,
+      "codePointCount": 2268,
       "family": "Roof Noto Sans JP",
       "file": "roof-noto-sans-jp.woff2",
-      "sha256": "64c508184adbb7a1c953ce90624ed2d23305a05b302502ed65ed526117df5774",
+      "kind": "primary-sans",
+      "sha256": "f1590d1d03de28adc0ba609f431cc07803937f8439f3535880998fc079539a8a",
       "source": "NotoSansJP.ttf",
       "sourceSha256": "c2f3b4d463500a2ddcd3849cded1fceeb9fd6d1c32e6cbecd568453ba50fc68f",
       "sourceUrl": "https://raw.githubusercontent.com/google/fonts/e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7/ofl/notosansjp/NotoSansJP%5Bwght%5D.ttf",
+      "variable": "--font-roof-noto-sans-jp",
+      "weight": "100 900"
+    },
+    "Roof Noto Sans SC Fallback": {
+      "bytes": 18304,
+      "codePointCount": 47,
+      "family": "Roof Noto Sans SC Fallback",
+      "file": "roof-noto-sans-sc-fallback.woff2",
+      "kind": "fallback-sans",
+      "sha256": "4a2cbf5ee05f30a4a0d2028380be604f435d5f83a53cef4d2689d8f6a86f7ee5",
+      "source": "NotoSansSC.ttf",
+      "sourceSha256": "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da",
+      "sourceUrl": "https://raw.githubusercontent.com/google/fonts/e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7/ofl/notosanssc/NotoSansSC%5Bwght%5D.ttf",
+      "unicodeRange": "U+4E1D U+4E3A U+4E49 U+4E66 U+5219 U+52A1 U+52A8 U+534E U+55B5 U+56FE U+575B U+5987 U+5B9E U+5E05 U+6001 U+61D2 U+6218 U+62E5 U+62E8-62E9 U+6682 U+672F U+6742 U+67AB U+6811 U+6C49 U+73AF U+7535 U+7EA7 U+7EB9 U+7EF4 U+7F16 U+89C8 U+8BBA U+8BC6 U+8BD1 U+8BDA U+8BDD U+8BED U+8C14 U+8DB4 U+9009 U+94B1 U+9884 U+9986 U+9C81 U+9E2D",
+      "variable": "--font-roof-noto-sans-sc-fallback",
       "weight": "100 900"
     },
     "Roof Noto Serif JP": {
-      "bytes": 638920,
-      "codePointCount": 1394,
+      "bytes": 978160,
+      "codePointCount": 2268,
       "family": "Roof Noto Serif JP",
       "file": "roof-noto-serif-jp.woff2",
-      "sha256": "ad57c521e50115ec530b7d589c0cc99ab7eafd3c78b24d25984817f119006598",
+      "kind": "primary-serif",
+      "sha256": "002b307aba7579135d03f05515b58db5de5278831e2bfab6acda5b5b685b07df",
       "source": "NotoSerifJP.ttf",
       "sourceSha256": "2fd527ba12b6a44ec30d796d633360da0aeba6c5d4af1304ce12bb4dc15a7dfc",
       "sourceUrl": "https://raw.githubusercontent.com/google/fonts/e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7/ofl/notoserifjp/NotoSerifJP%5Bwght%5D.ttf",
+      "variable": "--font-roof-noto-serif-jp",
+      "weight": "200 900"
+    },
+    "Roof Noto Serif SC Fallback": {
+      "bytes": 22404,
+      "codePointCount": 47,
+      "family": "Roof Noto Serif SC Fallback",
+      "file": "roof-noto-serif-sc-fallback.woff2",
+      "kind": "fallback-serif",
+      "sha256": "03059e123b4e30086d803342243f70079ad5f71cef14cf08d1eefbe6b7a49350",
+      "source": "NotoSerifSC.ttf",
+      "sourceSha256": "050080d9255a86808f2945bffac582b31ef32bc36411ce29563b4961670c66f9",
+      "sourceUrl": "https://raw.githubusercontent.com/google/fonts/e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7/ofl/notoserifsc/NotoSerifSC%5Bwght%5D.ttf",
+      "unicodeRange": "U+4E1D U+4E3A U+4E49 U+4E66 U+5219 U+52A1 U+52A8 U+534E U+55B5 U+56FE U+575B U+5987 U+5B9E U+5E05 U+6001 U+61D2 U+6218 U+62E5 U+62E8-62E9 U+6682 U+672F U+6742 U+67AB U+6811 U+6C49 U+73AF U+7535 U+7EA7 U+7EB9 U+7EF4 U+7F16 U+89C8 U+8BBA U+8BC6 U+8BD1 U+8BDA U+8BDD U+8BED U+8C14 U+8DB4 U+9009 U+94B1 U+9884 U+9986 U+9C81 U+9E2D",
+      "variable": "--font-roof-noto-serif-sc-fallback",
       "weight": "200 900"
     }
   },
-  "strategy": "japanese-translation-corpus-variable-fonts",
-  "subsetCodePointCount": 1394,
+  "stacks": {
+    "sans": {
+      "families": [
+        "Roof Noto Sans JP",
+        "Roof Noto Sans SC Fallback",
+        "Roof EB Garamond Fallback",
+        "Roof Noto Music Fallback"
+      ],
+      "kinds": [
+        "primary-sans",
+        "fallback-sans",
+        "fallback-latin",
+        "fallback-music"
+      ],
+      "variable": "--font-roof-translation-sans-stack"
+    },
+    "serif": {
+      "families": [
+        "Roof Noto Serif JP",
+        "Roof Noto Serif SC Fallback",
+        "Roof EB Garamond Fallback",
+        "Roof Noto Music Fallback"
+      ],
+      "kinds": [
+        "primary-serif",
+        "fallback-serif",
+        "fallback-latin",
+        "fallback-music"
+      ],
+      "variable": "--font-roof-translation-serif-stack"
+    }
+  },
+  "strategy": "japanese-translation-corpus-variable-fonts-with-generated-fallbacks",
+  "subsetCodePointCount": 2268,
+  "targetCodePointCount": 2073,
+  "targetCodePointSha256": "87a8b365fdc68c14eb4d2142e28643c76ca0aca80110dc83f533ec8419463133",
+  "uncoveredCodePointRanges": [],
   "upstreamCommit": "e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7",
   "version": 1
 }

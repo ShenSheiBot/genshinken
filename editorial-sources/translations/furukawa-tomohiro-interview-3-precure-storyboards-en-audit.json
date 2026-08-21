@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "target_path": "source/_translations/en/posts/furukawa-tomohiro-interview-3-precure-storyboards.md",
+  "target_language": "en",
+  "segments": [
+    {"id":"roof-opening","source_path":"source/_posts/furukawa-tomohiro-interview-3-precure-storyboards.md","source_range":{"start":null,"end":"## “让我见识到名为“演出”的工作到底为何”"},"target_range":{"start":null,"end":"## It Showed Me What the Job of “Direction” Actually Is"},"base_edition":"roof-zh","source_revision":"sha256:8ca4c4169c1464a91d1e13def274eb021f225203a6de8fb1ffd0959d2897e99e","roof_presence":"complete","relationship":"direct"},
+    {"id":"febri-body","source_path":"editorial-sources/translations/furukawa-tomohiro-interview-3-precure-storyboards-source-ja.md","source_range":{"start":"## 「演出」とはどういう仕事なのかを見せてもらえた","end":null},"target_range":{"start":"## It Showed Me What the Job of “Direction” Actually Is","end":"In this series:"},"base_edition":"febri-ja","source_revision":"sha256:9d5f7afc6e889a67384de23d778c85c445b78eb3b8ff68cdd0958c8197ee6e04","roof_presence":"complete","relationship":"direct-original-ja"},
+    {"id":"roof-series-nav","source_path":"source/_posts/furukawa-tomohiro-interview-3-precure-storyboards.md","source_range":{"start":"同系列：","end":null},"target_range":{"start":"In this series:","end":null},"base_edition":"roof-zh","source_revision":"sha256:8ca4c4169c1464a91d1e13def274eb021f225203a6de8fb1ffd0959d2897e99e","roof_presence":"complete","relationship":"direct"}
+  ],
+  "resource_equivalences":{"media":[],"links":[]}
+}

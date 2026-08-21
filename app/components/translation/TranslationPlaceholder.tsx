@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type {
   EditionLanguageLink,
+  ExternalOriginal,
   TranslationLocale,
   TranslationSource,
 } from "@/lib/translations";
@@ -28,16 +29,39 @@ const copy = {
   },
 } as const;
 
+const externalCopy = {
+  en: {
+    edition: "Original English edition",
+    eyebrow: "Original edition · external",
+    title: "Read the original English edition.",
+    body: "Rather than reconstructing the original through another-language edition, this page points to the verified publication and its official access routes.",
+    original: "Publication details",
+    labels: { read: "Read the original", publisher: "View at publisher", purchase: "Buy the book", library: "Find in a library" },
+  },
+  ja: {
+    edition: "日本語原文",
+    eyebrow: "原著 · 外部公開",
+    title: "日本語原文は正式に刊行されています。",
+    body: "別言語版から日本語へ再翻訳せず、確認済みの書誌情報と正規の入手先をご案内します。",
+    original: "原版情報",
+    labels: { read: "原文を読む", publisher: "出版社で確認する", purchase: "書籍を購入する", library: "図書館で探す" },
+  },
+} as const;
+
 export default function TranslationPlaceholder({
   locale,
   source,
   links,
+  externalOriginal,
 }: {
   locale: TranslationLocale;
   source: TranslationSource;
   links: EditionLanguageLink[];
+  externalOriginal?: ExternalOriginal | null;
 }) {
-  const labels = copy[locale];
+  const baseLabels = copy[locale];
+  const externalLabels = externalCopy[locale];
+  const labels = externalOriginal ? externalLabels : baseLabels;
   const sourceHref = source.href;
   const sourceLanguage = source.language;
 
@@ -50,26 +74,40 @@ export default function TranslationPlaceholder({
       data-reveal-zone="translation"
     >
       <header className={styles.header}>
-        <Link href="/" className={styles.brand} aria-label={labels.brand}>
+        <Link href="/" className={styles.brand} aria-label={baseLabels.brand}>
           <i aria-hidden="true" />
-          <span>{labels.brand}</span>
+          <span>{baseLabels.brand}</span>
         </Link>
         <span className={styles.headerContext}>{labels.edition}</span>
         <LanguageSwitcher current={locale} links={links} />
       </header>
       <section className={styles.placeholder}>
-        <div className={styles.placeholderCard}>
+        <div className={styles.placeholderCard} data-kind={externalOriginal ? "external-original" : "missing"}>
           <p className={styles.placeholderEyebrow}>{labels.eyebrow}</p>
           <h1>{labels.title}</h1>
           <p className={styles.placeholderCopy}>{labels.body}</p>
-          <div className={styles.originalCard} lang={sourceLanguage}>
+          <div className={styles.originalCard} lang={externalOriginal ? locale : sourceLanguage}>
             <span>{labels.original}</span>
-            <b>{source.title}</b>
+            <b>{externalOriginal?.title ?? source.title}</b>
+            {externalOriginal ? (
+              <dl className={styles.originalMetadata}>
+                <div><dt>{locale === "ja" ? "著者" : "Author"}</dt><dd>{externalOriginal.creator}</dd></div>
+                <div><dt>{locale === "ja" ? "刊行" : "Publication"}</dt><dd>{[externalOriginal.publication, externalOriginal.published].filter(Boolean).join(" · ")}</dd></div>
+                {externalOriginal.coverage ? <div><dt>{locale === "ja" ? "該当箇所" : "Coverage"}</dt><dd>{externalOriginal.coverage}</dd></div> : null}
+                {externalOriginal.identifier ? <div><dt>{locale === "ja" ? "書誌番号" : "Identifier"}</dt><dd>{externalOriginal.identifier}</dd></div> : null}
+              </dl>
+            ) : null}
           </div>
           <div className={styles.placeholderActions}>
-            <Link className={styles.primaryAction} href={sourceHref} hrefLang={sourceLanguage}>
-              {labels.action} →
-            </Link>
+            {externalOriginal ? externalOriginal.links.map((link) => (
+              <a className={styles.primaryAction} href={link.url} key={`${link.kind}:${link.url}`} rel="noreferrer" target="_blank">
+                {externalLabels.labels[link.kind]} →
+              </a>
+            )) : (
+              <Link className={styles.primaryAction} href={sourceHref} hrefLang={sourceLanguage}>
+                {baseLabels.action} →
+              </Link>
+            )}
           </div>
         </div>
       </section>

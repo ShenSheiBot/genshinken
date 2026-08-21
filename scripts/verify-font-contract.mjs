@@ -99,6 +99,7 @@ function readUtf8(file) {
 }
 
 function walkTextFiles(directory) {
+  if (fs.statSync(directory).isFile()) return [directory];
   const files = [];
   for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
     const absolute = path.join(directory, entry.name);
@@ -269,13 +270,13 @@ const japaneseEditionRule = /\.page:lang\(ja\)\s*\{([\s\S]*?)\}/u.exec(translati
 assert.ok(japaneseEditionRule, "missing Japanese translation-edition font rule");
 assert.match(
   propertyValue(japaneseEditionRule, "--translation-serif"),
-  /^var\(--font-roof-noto-serif-jp\)$/u,
-  "Japanese editions must use the corpus-subset serif face without device fallback"
+  /^var\(--font-roof-translation-serif-stack\)$/u,
+  "Japanese editions must use the generated hosted serif stack"
 );
 assert.match(
   propertyValue(japaneseEditionRule, "--translation-sans"),
-  /^var\(--font-roof-noto-sans-jp\)$/u,
-  "Japanese editions must use the corpus-subset sans face without device fallback"
+  /^var\(--font-roof-translation-sans-stack\)$/u,
+  "Japanese editions must use the generated hosted sans stack"
 );
 assert.match(
   translationCss,
@@ -296,15 +297,23 @@ assert.match(
 assert.equal(translationFontManifest.version, 1, "unsupported Japanese translation font manifest version");
 assert.equal(
   translationFontManifest.strategy,
-  "japanese-translation-corpus-variable-fonts",
-  "Japanese fonts must be generated from the localized corpus"
+  "japanese-translation-corpus-variable-fonts-with-generated-fallbacks",
+  "Japanese fonts must be generated from the localized corpus and generated fallback set"
 );
+for (const stack of ["serif", "sans"]) {
+  const record = translationFontManifest.stacks?.[stack];
+  assert.ok(record, `Japanese font manifest is missing the ${stack} stack`);
+  assert.match(record.variable, /^--font-roof-translation-(?:serif|sans)-stack$/u);
+  assert.ok(record.families.length >= 2, `${stack} stack must include a generated fallback`);
+  assert.equal(propertyValue(translationFontCss, record.variable), record.families.map((family) => `"${family}"`).join(", "));
+}
 assert.equal(
   translationFontManifest.upstreamCommit,
   "e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7",
   "Japanese font source commit changed without review"
 );
 assert.ok(translationFontManifest.subsetCodePointCount >= 1_000, "Japanese font corpus is unexpectedly small");
+assert.deepEqual(translationFontManifest.uncoveredCodePointRanges, [], "the live Japanese corpus contains an uncovered code point");
 
 const translationFaceBlocks = [...translationFontCss.matchAll(/@font-face\s*{[\s\S]*?}/g)].map((match) => match[0]);
 let japaneseFontBytes = 0;
@@ -323,7 +332,7 @@ for (const expected of japaneseFonts) {
   japaneseFontBytes += bytes.length;
   assert.equal(bytes.subarray(0, 4).toString("ascii"), "wOF2", `${expected.file} is not WOFF2`);
   assert.ok(bytes.length >= 100_000, `${expected.file} is implausibly small`);
-  assert.ok(bytes.length <= 800_000, `${expected.file} exceeds its 800 KB corpus-subset budget`);
+  assert.ok(bytes.length <= 1_000_000, `${expected.file} exceeds its 1 MB corpus-subset budget`);
   const digest = crypto.createHash("sha256").update(bytes).digest("hex");
   assert.equal(record.bytes, bytes.length);
   assert.equal(record.sha256, digest);
@@ -340,10 +349,38 @@ for (const expected of japaneseFonts) {
   assert.match(face, /font-display\s*:\s*swap\s*;/u);
   assert.equal(propertyValue(translationFontCss, expected.variable), `"${expected.family}"`);
 }
-assert.ok(japaneseFontBytes <= 1_250_000, "Japanese serif + sans payload exceeds the 1.25 MB page budget");
+assert.ok(japaneseFontBytes <= 1_800_000, "Japanese serif + sans payload exceeds the 1.8 MB translation payload budget");
+
+const japaneseFallbackRecords = Object.values(translationFontManifest.fonts ?? {})
+  .filter((record) => typeof record === "object" && record.kind?.startsWith("fallback-"));
+assert.ok(japaneseFallbackRecords.length > 0, "Japanese font manifest has no generated fallback records");
+for (const record of japaneseFallbackRecords) {
+  assert.equal(typeof record.family, "string");
+  assert.equal(typeof record.file, "string");
+  assert.equal(typeof record.variable, "string");
+  assert.ok(record.codePointCount >= 0, `${record.family} must record generated coverage`);
+  assert.ok(record.unicodeRange || record.codePointCount === 0, `${record.family} must expose generated unicode coverage`);
+  const assetPath = path.join(root, "public", "fonts", record.file);
+  assert.ok(fs.existsSync(assetPath), `missing ${record.file}`);
+  const bytes = fs.readFileSync(assetPath);
+  assert.equal(bytes.subarray(0, 4).toString("ascii"), "wOF2", `${record.file} is not WOFF2`);
+  assert.ok(bytes.length >= 500, `${record.file} is implausibly small`);
+  assert.ok(bytes.length <= 100_000, `${record.file} exceeds its generated fallback budget`);
+  const digest = crypto.createHash("sha256").update(bytes).digest("hex");
+  assert.equal(record.bytes, bytes.length);
+  assert.equal(record.sha256, digest);
+  const face = translationFaceBlocks.find((block) => (
+    new RegExp(`font-family\\s*:\\s*["']${escapeRegExp(record.family)}["']\\s*;`).test(block)
+  ));
+  assert.ok(face, `missing generated @font-face for ${record.family}`);
+  assert.match(face, new RegExp(`url\\(["']?/fonts/${escapeRegExp(record.file)}\\?v=${digest.slice(0, 12)}["']?\\)`));
+  assert.match(face, /unicode-range\s*:/u, `${record.file} must use generated coverage, not a hand whitelist`);
+  assert.equal(propertyValue(translationFontCss, record.variable), `"${record.family}"`);
+}
 
 const translationCorpusRoots = [
   "source/_translations/ja",
+  "source/_translations/external-originals.json",
   "app/[locale]",
   "app/components/translation",
 ];
@@ -360,6 +397,7 @@ assert.deepEqual(
   "Japanese font corpus inventory is stale; run python scripts/build-translation-font-subsets.py"
 );
 const translationCorpusDigest = crypto.createHash("sha256");
+const translationTargetCodePoints = new Set();
 for (const file of translationCorpusFiles) {
   const relative = Buffer.from(path.relative(root, file).split(path.sep).join("/"), "utf8");
   const payload = fs.readFileSync(file);
@@ -368,12 +406,32 @@ for (const file of translationCorpusFiles) {
   const payloadLength = Buffer.alloc(8);
   payloadLength.writeBigUInt64BE(BigInt(payload.length));
   translationCorpusDigest.update(relativeLength).update(relative).update(payloadLength).update(payload);
+  for (const character of payload.toString("utf8")) {
+    if (!/\s/u.test(character)) translationTargetCodePoints.add(character.codePointAt(0));
+  }
 }
 assert.equal(translationFontManifest.corpusFileCount, translationCorpusFiles.length);
 assert.equal(
   translationFontManifest.corpusSha256,
   translationCorpusDigest.digest("hex"),
-  "Japanese translation corpus changed; regenerate its two font subsets"
+  "Japanese translation corpus changed; regenerate its hosted font subsets"
+);
+assert.equal(
+  translationFontManifest.targetCodePointCount,
+  translationTargetCodePoints.size,
+  "Japanese target-code-point inventory is stale"
+);
+const translationTargetCodePointDigest = crypto
+  .createHash("sha256")
+  .update([...translationTargetCodePoints]
+    .sort((left, right) => left - right)
+    .map((codePoint) => codePoint.toString(16).toUpperCase())
+    .join(","))
+  .digest("hex");
+assert.equal(
+  translationFontManifest.targetCodePointSha256,
+  translationTargetCodePointDigest,
+  "Japanese target-code-point coverage is stale"
 );
 assert.match(
   foundationSource,

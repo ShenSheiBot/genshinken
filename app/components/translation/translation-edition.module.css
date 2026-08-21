@@ -33,6 +33,7 @@
 
 .languageSwitcher a[data-state="available"] i { background: var(--accent); border-color: var(--accent); }
 .languageSwitcher a[data-state="preview"] i { border-color: var(--accent); }
+.languageSwitcher a[data-state="external-original"] i { border-color: var(--accent); transform: rotate(45deg); }
 .languageSwitcher a[data-state="missing"] { color: var(--ink-faint); }
 .languageSwitcher a[data-state="missing"] i { opacity: .55; }
 
@@ -69,8 +70,11 @@
 }
 
 .page:lang(ja) {
-  --translation-serif: var(--font-roof-noto-serif-jp);
-  --translation-sans: var(--font-roof-noto-sans-jp);
+  /* The SC/Latin/music faces are generated from the live corpus and contain
+     only glyphs absent from the primary JP faces.  Keep the whole stack
+     hosted and generated; never rely on a device's arbitrary CJK fallback. */
+  --translation-serif: var(--font-roof-translation-serif-stack);
+  --translation-sans: var(--font-roof-translation-sans-stack);
   --f-grotesk: var(--translation-sans);
   --f-cjk-fangsong: var(--translation-serif);
   --f-note: var(--translation-serif);
@@ -78,7 +82,7 @@
 
 .page :lang(zh-Hans),
 .page :lang(zh-Hant) {
-  font-family: "UN Canon STSong", "Songti SC", serif;
+  font-family: "UN Canon STSong", var(--font-roof-noto-serif-sc-fallback), var(--font-roof-eb-garamond-fallback), serif;
 }
 
 .header {
@@ -348,12 +352,20 @@
   pointer-events: none;
 }
 
+.placeholderCard[data-kind="external-original"]::after { content: "↗"; }
+
 .placeholderEyebrow { margin: 0 0 34px; color: var(--accent); font-family: var(--f-mono); font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
 .placeholderCard h1 { position: relative; z-index: 1; max-width: 720px; margin: 0; font-family: var(--f-serif); font-size: clamp(42px, 7vw, 78px); line-height: 1.02; letter-spacing: -.04em; text-wrap: balance; }
 .placeholderCopy { position: relative; z-index: 1; max-width: 620px; margin: 30px 0 0; color: var(--ink-soft); font-family: var(--f-serif); font-size: 18px; line-height: 1.72; }
+.page:lang(ja) .placeholderCard h1,
+.page:lang(ja) .placeholderCopy { font-family: var(--translation-serif); }
 .originalCard { position: relative; z-index: 1; max-width: 680px; margin: 48px 0 0; padding-top: 18px; border-top: 1px solid var(--hair); }
 .originalCard span { display: block; margin-bottom: 8px; color: var(--ink-faint); font-family: var(--f-mono); font-size: 9px; letter-spacing: .12em; text-transform: uppercase; }
 .originalCard b { font-family: var(--f-cjk-serif); font-size: 18px; line-height: 1.45; }
+.originalMetadata { display: grid; gap: 8px; margin: 18px 0 0; }
+.originalMetadata div { display: grid; grid-template-columns: minmax(76px, max-content) 1fr; gap: 18px; }
+.originalMetadata dt { color: var(--ink-faint); font-family: var(--f-mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
+.originalMetadata dd { margin: 0; color: var(--ink-soft); font-family: var(--translation-serif); font-size: 15px; line-height: 1.5; }
 .placeholderActions { position: relative; z-index: 1; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; margin-top: 38px; }
 .primaryAction { display: inline-flex; align-items: center; min-height: 42px; padding: 0 18px; color: var(--solid-ink); background: var(--solid); font-family: var(--f-grotesk); font-size: 12px; font-weight: 700; }
 

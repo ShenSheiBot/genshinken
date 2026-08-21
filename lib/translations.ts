@@ -34,6 +34,7 @@ import {
   assertChapterUsesTranslationBookManifest,
   readTranslationBookManifest,
 } from "./translation-book-manifest.mjs";
+import { readExternalOriginals } from "./translation-external-originals.mjs";
 
 export const TRANSLATION_LOCALES = ["en", "ja"] as const;
 export type TranslationLocale = (typeof TRANSLATION_LOCALES)[number];
@@ -127,7 +128,25 @@ export type TranslationDocumentIndex = {
   sourceCount: number;
 };
 
-export type EditionLinkState = "available" | "preview" | "missing";
+export type ExternalOriginalLink = {
+  kind: "read" | "publisher" | "purchase" | "library";
+  url: string;
+};
+export type ExternalOriginal = {
+  sourceRef: TranslationSourceRef;
+  sourceKey: string;
+  locale: TranslationLocale;
+  format: "web" | "book" | "journal";
+  title: string;
+  creator: string;
+  publication: string;
+  published: string;
+  identifier: string;
+  coverage: string;
+  links: ExternalOriginalLink[];
+};
+
+export type EditionLinkState = "available" | "preview" | "external-original" | "missing";
 export type EditionLanguageLink = {
   language: "zh-Hans" | "zh-Hant" | TranslationLocale;
   label: string;
@@ -136,6 +155,7 @@ export type EditionLanguageLink = {
 };
 
 const TRANSLATIONS_ROOT = path.join(process.cwd(), "source", "_translations");
+const EXTERNAL_ORIGINALS = readExternalOriginals(TRANSLATIONS_ROOT) as ExternalOriginal[];
 const STABLE_ID = /^[a-z0-9]+(?:-[a-z0-9]+)*$/u;
 
 const HTML_ENTITIES: Record<string, string> = {
@@ -217,6 +237,15 @@ export function translationPlaceholderHref(locale: TranslationLocale, source: Tr
 
 export function translationPreviewEnabled(): boolean {
   return process.env.ROOF_TRANSLATION_PREVIEW === "1";
+}
+
+export function getExternalOriginal(
+  locale: TranslationLocale,
+  source: TranslationSource
+): ExternalOriginal | null {
+  return EXTERNAL_ORIGINALS.find(
+    (candidate) => candidate.locale === locale && candidate.sourceKey === source.key
+  ) ?? null;
 }
 
 function requiredText(data: Record<string, unknown>, key: string, source: string): string {
@@ -613,6 +642,7 @@ export async function getEditionLanguageLinks(source: TranslationSource): Promis
     { language: source.language, label: "中", href: source.href, state: "available" },
     ...TRANSLATION_LOCALES.map((locale): EditionLanguageLink => {
       const edition = byLocale.get(locale);
+      const externalOriginal = getExternalOriginal(locale, source);
       const previewEnabled = translationPreviewEnabled();
       const visible = Boolean(edition && translationEditionIsVisible(edition.status, previewEnabled));
       const preview = Boolean(visible && edition?.status !== "published");
@@ -620,7 +650,13 @@ export async function getEditionLanguageLinks(source: TranslationSource): Promis
         language: locale,
         label: locale === "en" ? "EN" : "日",
         href: visible && edition ? edition.href : translationPlaceholderHref(locale, source),
-        state: edition?.status === "published" ? "available" : preview ? "preview" : "missing",
+        state: edition?.status === "published"
+          ? "available"
+          : preview
+            ? "preview"
+            : externalOriginal
+              ? "external-original"
+              : "missing",
       };
     }),
   ];

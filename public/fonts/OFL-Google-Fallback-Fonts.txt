@@ -1,0 +1,10 @@
+The generated fallback subsets in this directory are derived from these Google
+Fonts source families, all distributed under the SIL Open Font License 1.1:
+
+* Noto Serif SC / Noto Sans SC — Copyright 2014 The Noto Project Authors.
+* EB Garamond — Copyright 2010 The EB Garamond Project Authors.
+* Noto Music — Copyright 2015 The Noto Project Authors.
+
+The complete license text is included in OFL-Noto-CJK.txt and is also available
+at https://scripts.sil.org/OFL. The generated files are modified font software
+subsets and retain the SIL Open Font License.

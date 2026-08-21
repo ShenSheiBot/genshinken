@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "target_path": "source/_translations/en/posts/furukawa-tomohiro-interview-1-saint-seiya-style.md",
+  "target_language": "en",
+  "segments": [
+    {
+      "id": "roof-opening",
+      "source_path": "source/_posts/furukawa-tomohiro-interview-1-saint-seiya-style.md",
+      "source_range": {
+        "start": null,
+        "end": "古川知宏在《少女☆歌剧Revue Starlight》给动画粉丝带来了冲击性的影像体验。"
+      },
+      "target_range": {
+        "start": null,
+        "end": "Tomohiro Furukawa gave anime fans a striking visual experience with *Revue Starlight*."
+      },
+      "base_edition": "roof-zh",
+      "source_revision": "sha256:90998e24196107793e838da783e8c953882692269a983a23dd9b0f19bed11811",
+      "roof_presence": "complete",
+      "relationship": "direct"
+    },
+    {
+      "id": "febri-body-alignment",
+      "source_path": "source/_posts/furukawa-tomohiro-interview-1-saint-seiya-style.md",
+      "source_range": {
+        "start": "古川知宏在《少女☆歌剧Revue Starlight》给动画粉丝带来了冲击性的影像体验。",
+        "end": "同系列："
+      },
+      "target_range": {
+        "start": "Tomohiro Furukawa gave anime fans a striking visual experience with *Revue Starlight*.",
+        "end": "In this series:"
+      },
+      "base_edition": "febri-ja-verified-via-roof-alignment",
+      "source_revision": "sha256:90998e24196107793e838da783e8c953882692269a983a23dd9b0f19bed11811",
+      "roof_presence": "complete",
+      "relationship": "direct-original-ja"
+    },
+    {
+      "id": "roof-series-nav",
+      "source_path": "source/_posts/furukawa-tomohiro-interview-1-saint-seiya-style.md",
+      "source_range": {
+        "start": "同系列：",
+        "end": null
+      },
+      "target_range": {
+        "start": "In this series:",
+        "end": null
+      },
+      "base_edition": "roof-zh",
+      "source_revision": "sha256:90998e24196107793e838da783e8c953882692269a983a23dd9b0f19bed11811",
+      "roof_presence": "complete",
+      "relationship": "direct"
+    }
+  ],
+  "resource_equivalences": {
+    "media": [],
+    "links": []
+  }
+}

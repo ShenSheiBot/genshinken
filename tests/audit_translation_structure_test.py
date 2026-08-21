@@ -67,6 +67,11 @@ class ProtectedStructureTests(unittest.TestCase):
         target = f"![Translated caption]({target_url})\n"
         self.assertEqual(self.failures(source, target, mapping), [])
 
+    def test_localized_internal_route_is_same_protected_destination(self) -> None:
+        source = "See [Part 2](/posts/part-2).\n"
+        target = "See [第2回](/ja/posts/part-2).\n"
+        self.assertEqual(self.failures(source, target), [])
+
     def test_mixed_source_manifest_compares_each_real_segment(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

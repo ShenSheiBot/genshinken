@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "target_path": "source/_translations/en/posts/kojimas-sekaikei.md",
+  "target_language": "en",
+  "segments": [
+    {
+      "id": "roof-structural-shell",
+      "source_path": "source/_posts/kojimas-sekaikei.md",
+      "source_range": {},
+      "target_range": {},
+      "base_edition": "roof-zh",
+      "source_revision": "sha256:e16c16180f918297321c123e9654792e062c9535acf5e58311218d2d54643f76",
+      "roof_presence": "complete",
+      "relationship": "compilation"
+    }
+  ],
+  "resource_equivalences": {"media": [], "links": []}
+}

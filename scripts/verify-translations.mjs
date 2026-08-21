@@ -16,6 +16,7 @@ import {
   assertChapterUsesTranslationBookManifest,
   readTranslationBookManifest,
 } from "../lib/translation-book-manifest.mjs";
+import { readExternalOriginals } from "../lib/translation-external-originals.mjs";
 
 const root = process.cwd();
 const translationsRoot = path.join(root, "source", "_translations");
@@ -31,6 +32,7 @@ const methods = new Set(["agent", "human"]);
 const sourceRelationships = new Set(["direct", "relay", "mixed"]);
 const roles = new Set(["translator", "reviewer", "proofreader", "editor"]);
 const stableId = /^[a-z0-9]+(?:-[a-z0-9]+)*$/u;
+const externalOriginals = readExternalOriginals(translationsRoot);
 
 function requiredText(data, field, source) {
   const value = data[field];
@@ -252,6 +254,31 @@ for (const edition of editions) {
     translatedBookRoutes.set(targetBookKey, edition.source.bookSlug);
   }
   verifyDossier(edition);
+}
+
+for (const original of externalOriginals) {
+  const source = original.sourceRef.type === "post"
+    ? { type: "post", slug: original.sourceRef.slug, ...readPostTranslationSource(original.sourceRef.slug) }
+    : {
+        type: "book-chapter",
+        bookSlug: original.sourceRef.bookSlug,
+        chapterId: original.sourceRef.chapterId,
+        ...readBookChapterTranslationSource(original.sourceRef.bookSlug, original.sourceRef.chapterId),
+      };
+  const sourceIdentity = source.type === "post"
+    ? `post:${source.slug}`
+    : `book:${source.bookSlug}:${source.chapterId}`;
+  if (sourceIdentity !== original.sourceKey) {
+    throw new Error(`${original.source}: source identity does not resolve to ${original.sourceKey}`);
+  }
+  if (editions.some((edition) => {
+    const editionSource = edition.source.type === "post"
+      ? `post:${edition.source.slug}`
+      : `book:${edition.source.bookSlug}:${edition.source.chapterId}`;
+    return edition.locale === original.locale && edition.status === "published" && editionSource === original.sourceKey;
+  })) {
+    throw new Error(`${original.source}: published on-site edition makes the external-original entry stale`);
+  }
 }
 
 const temporary = fs.mkdtempSync(path.join(os.tmpdir(), "roof-translation-audit-"));

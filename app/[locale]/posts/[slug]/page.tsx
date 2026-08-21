@@ -9,6 +9,7 @@ import { translationJsonLd } from "@/lib/translation-jsonld";
 import {
   getAllTranslationEditions,
   getEditionLanguageLinks,
+  getExternalOriginal,
   getPublishedTranslationEditions,
   getTranslationEditionByRoute,
   resolveTranslationSource,
@@ -17,6 +18,7 @@ import {
   translationPlaceholderHref,
   translationPreviewEnabled,
   type TranslationEdition,
+  type ExternalOriginal,
   type TranslationLocale,
   type TranslationSource,
 } from "@/lib/translations";
@@ -53,6 +55,7 @@ const missingTitles = {
 async function resolveRoute(locale: TranslationLocale, slug: string): Promise<{
   source: TranslationSource;
   edition: TranslationEdition | null;
+  externalOriginal: ExternalOriginal | null;
   href: string;
 } | null> {
   const routedEdition = await getTranslationEditionByRoute(locale, { type: "post", slug });
@@ -60,11 +63,11 @@ async function resolveRoute(locale: TranslationLocale, slug: string): Promise<{
     const source = await resolveTranslationSource(routedEdition.sourceRef);
     if (!source) return null;
     const visible = routedEdition.status === "published" || translationPreviewEnabled();
-    return { source, edition: visible ? routedEdition : null, href: routedEdition.href };
+    return { source, edition: visible ? routedEdition : null, externalOriginal: getExternalOriginal(locale, source), href: routedEdition.href };
   }
   const source = await resolveTranslationSource({ type: "post", slug });
   if (!source) return null;
-  return { source, edition: null, href: translationPlaceholderHref(locale, source) };
+  return { source, edition: null, externalOriginal: getExternalOriginal(locale, source), href: translationPlaceholderHref(locale, source) };
 }
 
 async function languageAlternates(source: TranslationSource) {
@@ -85,13 +88,15 @@ export async function generateMetadata({
   if (!locale) return {};
   const resolved = await resolveRoute(locale, decodeURIComponent(rawSlug));
   if (!resolved) return {};
-  const { source, edition, href } = resolved;
+  const { source, edition, externalOriginal, href } = resolved;
   if (!edition) {
     return {
-      title: `${source.title} — ${missingTitles[locale]}`,
-      description: locale === "en"
-        ? "This work is available in Chinese; an English edition has not been published."
-        : "この作品は中国語で公開されています。日本語版は未公開です。",
+      title: externalOriginal ? externalOriginal.title : `${source.title} — ${missingTitles[locale]}`,
+      description: externalOriginal
+        ? (locale === "en" ? "Verified publication details and official access routes for the original English edition." : "日本語原文の書誌情報と正規の入手先をご案内します。")
+        : locale === "en"
+          ? "This work is available in Chinese; an English edition has not been published."
+          : "この作品は中国語で公開されています。日本語版は未公開です。",
       alternates: { canonical: href },
       robots: { index: false, follow: true },
     };
@@ -140,7 +145,7 @@ export default async function LocalizedPostPage({
   if (!resolved) notFound();
   const links = await getEditionLanguageLinks(resolved.source);
   if (!resolved.edition) {
-    return <TranslationPlaceholder locale={locale} source={resolved.source} links={links} />;
+    return <TranslationPlaceholder locale={locale} source={resolved.source} links={links} externalOriginal={resolved.externalOriginal} />;
   }
   return (
     <>

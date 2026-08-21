@@ -17,6 +17,12 @@ Do not create empty Markdown files for untranslated works. The localized route
 renders its own non-indexable availability page when the corresponding file is
 absent.
 
+When the requested language is the verified language of an externally published
+original, record it in `external-originals.json` instead of fabricating a
+back-translation. The localized route then becomes a non-indexable source gateway
+with verified publication metadata and official reading, publisher, purchase, or
+library links. An on-site edition always takes precedence over that gateway.
+
 Each real edition uses YAML front matter with these fields:
 
 - stable `work_id`

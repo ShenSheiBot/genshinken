@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "source_type": "post",
+      "source_slug": "azuma-criticism-as-illness",
+      "locale": "ja",
+      "format": "journal",
+      "title": "批評という病",
+      "creator": "東浩紀",
+      "publication": "『ゲンロン4』",
+      "published": "2016-11-15",
+      "identifier": "ISBN 978-4-907188-19-1",
+      "coverage": "30–48頁",
+      "links": [
+        {
+          "kind": "purchase",
+          "url": "https://shop.genron.co.jp/products/89"
+        },
+        {
+          "kind": "library",
+          "url": "https://cir.nii.ac.jp/crid/1523951029808901888"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "azuma-heidegger-beyond-wittgenstein",
+      "locale": "ja",
+      "format": "book",
+      "title": "存在論的、郵便的―ジャック・デリダについて―",
+      "creator": "東浩紀",
+      "publication": "新潮社",
+      "published": "1998-10-30",
+      "identifier": "ISBN 978-4-10-426201-4",
+      "coverage": "第四章「存在論的、郵便的」第1節「論理的」（224–236頁）",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.shinchosha.co.jp/book/426201/"
+        },
+        {
+          "kind": "library",
+          "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I000002718029"
+        }
+      ]
+    }
+  ]
+}

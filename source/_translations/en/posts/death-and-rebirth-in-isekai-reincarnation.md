@@ -1,0 +1,127 @@
+---
+work_id: death-and-rebirth-in-isekai-reincarnation
+source_type: post
+source_slug: death-and-rebirth-in-isekai-reincarnation
+slug: death-and-rebirth-in-isekai-reincarnation
+language: en
+status: review
+title: "How Does Death Become “New Life”? Death in Isekai-Reincarnation Stories"
+title_breaks: ["How Does Death Become “New Life”?", " Death in Isekai-Reincarnation Stories"]
+excerpt: "Tracing the shift from fantasy and isekai transfer to reincarnation, this essay asks why protagonists must die before beginning again and what this reveals about labor, social exclusion, and fantasies of restarting life in Japan and China."
+credits:
+  - role: translator
+    contributor_id: shen-shui-bot
+    scope: complete work
+translation_method: agent
+source_relationship: mixed
+base_language: zh-Hans
+source_revision: "sha256:71698722826dcb8bc923fe9dc3315937286894bc81a00a35ecee426ac5291136"
+source_revision_scope: translation-payload
+updated: 2026-08-19
+rights: CC BY-NC-SA 4.0
+format: article
+---
+
+![Mountain wilderness in another world](/attachments/roof-archive/cv14159519/figure-1.jpg)
+
+> **Abstract:** “Isekai reincarnation” (異世界転生) is a story pattern in which a protagonist dies in the original world, reincarnates in another world, and begins a new life. With the rise of user-generated web-fiction platforms such as Shōsetsuka ni Narō, this pattern has become one of the most popular subjects in Japanese light novels. Works of this kind have attracted enormous audiences and discussion in both Japan and China. Yet commentary on isekai reincarnation still often remains trapped in a simple model that treats light novels as cultural commodities made to satisfy otaku fantasies. Such a model has difficulty producing useful criticism from the isekai texts themselves, even though those texts have swept through otaku cultures across East Asia and even Europe and North America. This essay returns to a range of isekai works and asks why isekai became such a popular narrative form of otaku consumption in the 2010s, and what kind of “transcendence” might be at stake in that consumption.
+
+## I. “Isekai” and “Fantasy”
+
+What first made me treat the “isekai” story pattern as a problem in its own right was the Chinese internet debate over “web fiction versus Japanese light novels,” a debate colored by strong nationalism and by a kind of progressive literary-cultural history. One side combines two contradictory beliefs—“whoever wrote it first is better than whoever wrote it later” and “whoever has written longer and produced more is better than a newcomer”—both of which submit completely to the production logic of the culture industry. From that standpoint, Chinese web fiction, as the “earlier” tradition to write stories about crossing into other worlds and activating overpowered cheats, must obviously be ahead of Japanese light novels, which supposedly invented isekai only in recent years. To rebut that claim, the other side answers that Japanese light novels had already made this pattern popular long before Chinese web fiction did.
+
+I will return later to this dispute, and to a comparison between Japanese light novels’ isekai pattern and Chinese web fiction’s transmigration pattern. During the debate, however, another distinction began to circulate: between “good isekai with an original world” and “bad isekai that simply borrows a video-game world.” From there came the familiar claim that old isekai novels used to be excellent whereas Japanese light novels today have declined in quality. Encountering this claim made one key question visible: what exactly separates the isekai popular in recent years from the fantasy (ファンタジー) that has been popular in Japan since the 1990s? Why does the line extending from “high-quality” fantasy seem to lead into “low-quality” isekai? What does this supposed “degeneration” actually mean?
+
+If we begin from a cultural-studies framework of production, circulation, and consumption, the question seems easy to answer: the transition from fantasy to isekai is, at bottom, a change in who the producers are. Consider the afterword to Volume 1 of Ao Jūmonji’s *Grimgar of Fantasy and Ash*, a work that can itself be classed within the isekai pattern:
+
+> *Dragon Quest*, *Wizardry*, *Final Fantasy*, *Megami Tensei*, *Metal Max*, *Romancing SaGa*, *Breath of Fire*, *Live A Live*, *Chrono Trigger*, *Arc the Lad*, *Tactics Ogre*, *Suikoden*, the *Tales* series, *Wild Arms*, *Final Fantasy Tactics*, *Star Ocean*, *Atelier Marie*, *SaGa Frontier*, *Xenogears* … Console RPGs like these, or games containing strong RPG elements, were always a kind of salvation in my life.
+
+> (Passage omitted.)
+
+> People sometimes ask why I started writing novels. I think games were probably the biggest influence. If I had never encountered RPGs, I almost certainly would never have begun writing fiction. In particular, if I had not become so absorbed in online RPGs, my debut work *Bara no Maria* could not have come into being, and neither could this book. And if I had never read novels built around role-playing games—Ryō Mizuno’s *Record of Lodoss War* or Benny Matsuyama’s *Tonari Awase no Hai to Seishun*, for example—then even if I had somehow become a novelist, I might not have written the novels I write now.
+
+> (Ao Jūmonji, *Grimgar of Fantasy and Ash*, Ching Win Publishing, Vol. 1.)
+
+Under the influence of RPGs, Jūmonji wanted to write novels that felt like RPGs. The “gamification” for which isekai is so often criticized clearly comes from the personal experience of a newer generation of authors. As social media and personal fiction-posting sites developed, readers who loved RPGs and fantasy increasingly began to participate in creation themselves. As amateur producers, the works they created were naturally often somewhat less “professional.”
+
+But is the problem really solved that easily? In fact, the very concept of the light novel has contained this sort of cross-media quality—media mix—from the beginning. In *How to Make Character Novels*, Eiji Ōtsuka divides light novels into three types: “juvenile literature,” which existed before the 1970s; “girls’ novels,” which emerged after the 1980s; and “game-like novels,” which began to be written after the introduction of TRPG methods in the 1980s. The example Hiroki Azuma uses to represent the third category, the “game-like novel,” is precisely one of the fantasy works that many people today try to separate from isekai: *Record of Lodoss War*. Azuma introduces it as follows:
+
+> The starting point of *Record of Lodoss War* was a serialized account in a specialist magazine of a group playing a well-known tabletop role-playing game. The report was produced by the creative group Group SNE. The project’s original planner was the group’s representative, and the novelist Ryō Mizuno was one of its members. The serialization proved highly popular, but the game on which the play report was based did not belong to Group SNE. The group therefore turned the report into a novel for publication while also adapting the underlying game into a proprietary tabletop RPG that foregrounded the world of *Record of Lodoss War*. The former became *Record of Lodoss War*; the latter was published the following year, in 1989, as *Record of Lodoss War Companion*.
+
+> (Hiroki Azuma, *The Birth of Game-Like Realism: Animalizing Postmodernity 2*, Tonsan Publishing.)
+
+So if we explain the transition from fantasy to isekai merely as a degeneration in which consumers become creators, as a consequence of cross-media influence, or even as nothing more than a problem of creators’ professional competence, we fail to touch the core question: how did isekai detach itself from fantasy? Where exactly is the dividing line?
+
+## II. “Reincarnation” and “Transfer”
+
+The most useful entry point into the isekai problem is precisely “death.” Just as Azuma, after citing Ōtsuka’s internal distinction within light novels, naturally moves on to Ōtsuka’s account of how character death is represented, so character death is a crucial component of “game-like” isekai fiction.
+
+Yet my concern differs from the problem Azuma summarizes through the concept of game-like realism: “the game itself as a metanarrative system that generates multiple stories, and its effect on the production of stories.” What I want to discuss here is not the kind of game-like realist story represented by *All You Need Is Kill* or *Ever17*, with loop mechanics in which the protagonist dies repeatedly and starts over again and again. I am interested in a single and unique death: the death through which the protagonist leaves the original world and arrives in another world. In other words, I am interested in the difference between “reincarnation” (転生) and “transfer” (転移).
+
+Within Shōsetsuka ni Narō itself—the site mentioned above, which might be called a stronghold of isekai fiction—isekai works came to be divided into precisely these two categories: reincarnation and transfer. Put simply, reincarnation begins with the protagonist’s death. Their life in the original world suddenly comes to an end; under the influence of some factor, they arrive in another world and begin a new life. Transfer, by contrast, takes the protagonist in their existing state and moves them directly from the original world to another world through some factor. Once we make this distinction and look at actual works, it is not difficult to see that reincarnation and transfer are not merely internal variants of the isekai pattern. They also map onto the distinction raised above between fantasy and isekai.
+
+Fantasy as a category since the 1990s can be divided into works with and without a character who crosses worlds. Works that do contain such a character all center on a protagonist being transferred to another world: in the 1990s, *The Twelve Kingdoms* and *Magic Knight Rayearth*; in the 2000s, *The Familiar of Zero* and *Kyo Kara Maoh!*. Stories in which the protagonist dies and begins again as an entirely new life are almost nonexistent.
+
+We can therefore define the fantasy-to-isekai lineage as a shift from fantasizing about oneself as the protagonist of an adventure in a fantasy world—indeed, this is essentially what *Record of Lodoss War*, whose model was an actual TRPG play record, already does—to fantasizing about beginning an entirely new life in a fantasy world. The subtitle of the most influential isekai-reincarnation work, *Mushoku Tensei*, sums it up perfectly: *Mushoku Tensei: Isekai Ittara Honki Dasu*—*Jobless Reincarnation: I’ll Seriously Try If I Go to Another World*. Up to this point, the transformation from fantasy to isekai can be summarized as follows:
+
+> Fantasy stories modeled on myth, history, and folklore
+
+> ↓
+
+> Participatory media culture modeled on fantasy stories
+
+> (TRPGs, digital RPGs)
+
+> ↓
+
+> Stories modeled on the TRPG pattern, in which an ordinary person from the real world plays the role of a character in a fantasy world
+
+> (transfer-type isekai works since the 1990s)
+
+> ↓
+
+> Stories likewise modeled on the TRPG pattern, in which an ordinary person from the real world dies and begins an entirely new life in another world
+
+> (*Mushoku Tensei*)
+
+The function of “death” here is to draw the boundary between the former life and the present one. In transfer stories, the protagonist remains the same person as before. However mysterious the cause of the transfer may be, “return” is still one of the protagonist’s goals. The tension between the protagonist’s desire to return to ordinary life and the adventure in the fantasy world is often exactly what such works emphasize, as in *The Familiar of Zero*. In fact, works that depict a protagonist torn between ordinary and extraordinary life are even more common outside isekai. Manga and light novels featuring supernatural elements, especially those popular since the 2000s, repeatedly use a similar pattern: the protagonist is drawn into a strange supernatural incident and is brought close to death or actually dies; a girl associated with the supernatural side saves him by using, or activating, supernatural powers already within him so that he recovers or is reborn. The price is that the male protagonist is separated from his former ordinary life and from then on enters a fantasy world governed by supernatural forces. On the one hand, he wants to return to his quiet everyday life; on the other, he cannot abandon the heroine and others, and wants to take responsibility. Such stories often end with the protagonist, accompanied by a group of peers, completing the fantasy adventure, defeating the antagonist, growing through the experience, and returning with new companions to ordinary life. There are so many works of this kind that I will not list them here. Once they are also placed within the isekai pattern, it becomes easier to understand why some critics classify the *Sword Art Online* series, whose story unfolds in video-game worlds, as a kind of isekai as well.
+
+Whether we look at isekai-transfer stories organized around return—or even frequent returns, as *Kyo Kara Maoh!* turns the protagonist’s repeated movement back and forth into a recurring source of conflict—or at school-supernatural stories whose spaces are extremely close together, their sense of proximity is exactly what isekai-reincarnation works reject most strongly. In the latter kind of school story, the protagonist and supernatural companions often simply become classmates or even live together. To destroy this feeling that the other world remains within arm’s reach, authors of reincarnation stories choose one decisive device: they kill the protagonist. Death completely divides the protagonist’s former life from the present one. *Mushoku Tensei*, a representative work of the pattern, even devotes an entire chapter to the scene before the protagonist’s death: a thirty-four-year-old unemployed otaku who has been thrown out of his home dies “like a crushed tomato” between a truck and a concrete wall.
+
+## III. The Protagonist Who Must Die and Life as a RE-TAKE
+
+The reality authors make the dead protagonist confront is that, apart from memory, the person in the new life is no longer the same person as in the previous one. Put differently, if an author wants to write a story about a protagonist beginning an entirely new life in another world, the protagonist has to die. But why must the protagonist begin a new life in another world at all? Could the protagonist not change in the original world? Boys grow through adventure; young adults find a catalyst and keep struggling forward. These are ordinary developments in novels and manga. The answer given by works such as *Mushoku Tensei* is no.
+
+> うん。悪くない。年甲斐もなくワクワクする。そんな世界に記憶を持って転生できたのだ。これでワクワクしないやつはニートになんかならない。よし、決めた。俺はこの世界で本気で生きていこう。もう、二度と後悔はしないように。全力で。
+
+> Yeah. Not bad. I’m getting excited even at my age. I’ve been reincarnated into a world like this with my memories intact. Anyone who wouldn’t get excited about that could never have become a NEET in the first place. All right, I’ve decided. I’m going to live seriously in this world. With everything I have, so that I never regret it again.
+
+> (*Mushoku Tensei: Isekai Ittara Honki Dasu*, web version, Chapter 1.)
+
+“Anyone who wouldn’t get excited about being reincarnated into a world like this could never have become a NEET.” Turn the sentence around and it becomes: “It was precisely because he hoped to be reincarnated into a world like this that he became a NEET.” In *Mushoku Tensei*, school bullying is the trigger that leads the protagonist to become a NEET. Faced with bullying, he ultimately chooses unemployment and withdrawal, sealing himself in his room and fleeing into two-dimensional media. From the moment he refuses contact with the outside world and becomes a NEET, he is, in effect, already dead within modern society. When his parents die and he is driven out of the house, he is forced to leave that state of death. Yet the point is not that he is simply maladapted to this world. On the contrary, he has adapted to its rules all too thoroughly:
+
+> 仕事を探す方法がわからない。いや、なんとなくだが、ハロワにいけばいいということはわかる。が、伊達に十年以上引きこもっていたわけじゃない。ハロワの場所なんかわかるわけもなし。それに、ハロワにいっても仕事を紹介されるだけだと聞いたことがある。紹介された所に履歴書を持っていき、面接をうけるわけだ。この、エッチな液体で袖とかカピカピなって、ところどころに血が付いた服で面接を？受かるわけがない。俺だったらこんなクレイジーな格好した奴は絶対に採用しない。共感は覚えるかもしれないが、絶対に採用はしない。そもそも履歴書の売っている店もわからない。文房具屋か？コンビニか？コンビニぐらいは歩いてればあるかもしれないが、金は持っていない。もし、それらがクリアできたとしよう。運よく金融機関か何かで金を借りることが出来て、服を新調して、履歴書と筆記用具を買ったとしよう。履歴書というものは住所が無いと書けない、と聞いたことがある。詰んだ。ここにきて、俺は人生が完全に詰んだのを自覚した。
+
+> I don’t know how to look for a job. No, vaguely speaking, I know I’m supposed to go to Hello Work. But I didn’t spend more than ten years shut in for nothing. Of course I don’t know where the place is. And I’ve heard that even if I go there, all they do is refer you to jobs. Then I’d have to take a résumé to the place they introduce me to and sit for an interview. An interview in these clothes, with the sleeves crusted with sexual fluids and blood all over them? No chance I’d get hired. If I were the employer, I would never hire somebody dressed this insanely. I might sympathize, but I definitely wouldn’t hire him. I don’t even know what sort of shop sells blank résumés. A stationery store? A convenience store? I might find a convenience store if I walked around long enough, but I don’t have any money. Suppose I somehow solved all of that. Suppose I got lucky and managed to borrow money from a financial institution or somewhere, bought new clothes, and bought a résumé form and writing supplies. I’ve heard you can’t fill out a résumé without an address. Checkmate. At that point I realized my life was completely over.
+
+> (*Mushoku Tensei: Isekai Ittara Honki Dasu*, web version, prologue.)
+
+He knows that survival requires work; he knows he can look for opportunities at an employment office; he knows that money for clothes, résumé forms, and stationery might in principle be borrowed; he knows that an address would let him fill out the résumé. But he may not be able to borrow money, and he has nowhere to live. Therefore he cannot get a job and cannot begin a new life. Had the protagonist chosen to struggle desperately to survive, gradually getting his life back on track, the result might have resembled the inspirational stories often written by authors such as Hiro Arikawa, in which a discouraged young adult pulls himself together. But precisely because he understands so well the status and position of a homeless, unemployed, thirty-four-year-old NEET in the real world—precisely because he understands the world’s rules so well—he has “always regretted” his life. To avoid more regret and obtain at least some satisfaction, he chooses to save someone and dies as a result. After death he arrives in a fantasy world of swords and magic, a world like an RPG. Why does arriving there make him need to “get serious” in order not to regret things again? The answer is not simply that he gets to “redo his life.” More importantly, the operating logic of this world is the logic of the two-dimensional and game worlds he already accepts, not the logic of the world he came from. Because he knows that logic, and because the parts resembling his former world are also things he has already experienced once, he no longer has a reason to run away. He has to live seriously. And in order to eliminate the very possibility of such an excuse, the protagonist has to die in the original world.
+
+Put another way, isekai-reincarnation works have displaced much of the older fantasy / isekai-transfer mode because they release a social mood that refuses to identify with the present society’s model of striving-and-success, yet also recognizes that refusing this model leaves one marginalized and excluded. If the detailed characterization of *Mushoku Tensei* makes this conclusion feel too dependent on the specifics of one work, consider Azusa, the protagonist of *I’ve Been Killing Slimes for 300 Years and Maxed Out My Level*. In that story, Azusa Aizawa is an ordinary office worker who dies at her desk after excessive overtime. Favored by a goddess, she reincarnates in another world as an ageless, immortal witch. Yet even after receiving what amounts to a cheat ability, she does not choose luxury. She continues living like an ordinary worker, killing a fixed number of slimes each day and maintaining an ordinary routine.
+
+Azusa too confronts a fate of “necessary death.” I do not mean physiological death here. The point is that she must either choose the corporate-drone mode of work that she inwardly resists or choose to leave it. Once she leaves, judged by the life-script of the corporate drone, she is already dead. It is like the recurring line in *Hanzawa Naoki* that being shunted off to an outside posting means the end of a banker’s career. The more difficult question is what comes after leaving. If the entire real-world social environment is saturated with the same homogenized way of life, and if the protagonist only comes to realize after reincarnating that her former way of living was foolish, then she has no genuine option to leave. At most, she can temporarily escape.
+
+As stories with a counter-urbanization impulse—“return to the regions,” “escape the city”—gradually decline, younger creators with relatively little practical social experience ultimately choose another world. They choose a world modeled on the game systems they know, a world in which effort reliably yields reward, and use it to reset their everyday lives—and their lives as a whole.
+
+## IV. The Different Structures of Japanese and Chinese Isekai Reincarnation
+
+Once we turn to the topic of “resetting one’s life,” we have to mention the recently discussed *Remake Our Life!* and the “restart” meme that has circulated on the Chinese internet for years. These two can serve as entry points for a brief comparison of the structures of Japanese and Chinese isekai reincarnation, while also adding a few qualifications to the argument above.
+
+Begin with *Remake Our Life!*. It is a time-reset story about a twenty-eight-year-old protagonist who dreams of working in games. He enters the game industry from an unrelated academic background but never gets the opportunity to show what he can do. After the company goes bankrupt, he returns home in despair, only to wake up at the moment when he originally chose which university to attend. He decides to seize the opportunity, enroll in an arts university, and pursue his dream. If the spin-off *Remake Our Life! Ver.β*, in which the protagonist does not go back in time, and the earlier stories of young working adults striving toward success still transmit the straightforward values of “don’t forget why you started” and “keep going,” then time-reset stories are in fact even more delusional and harmful than works such as *Mushoku Tensei*. Time-reset stories do not coexist with the logics and values they reject in the way inspirational stories do, nor do they open an entirely new world as isekai-reincarnation stories do. Instead, they return to the past and use knowledge of the outcome to become winners within the very value system in question. *Remake Our Life!* is not the most extreme example. Chinese web-fiction transmigration novels are far more obvious. In fact, most Chinese web fiction can be classified as “restart fiction”: the author designs a world whose operating logic and values are fundamentally no different from those of reality, then gives the protagonist every possible advantage through one mechanism or another so that he can become outstanding within it. Xuanhuan, fantasy, historical fiction, urban fiction—none is an exception to the pattern. The protagonist does not reject the logic of the real world. What he rejects is the fact that he is a loser under that logic and those values. If given another chance, he therefore must succeed.
+
+The popularity of “restart” and “being reborn” memes emerged from exactly this kind of social mood. People become obsessed with starting over precisely because they accept the logic of a stratified society, want to join the ranks of the strong within it, and want to enjoy a superior life. More than the culture industry that sells pastoral dreams, what we should be wary of is the absurd mentality that has been thoroughly reshaped into believing that only the “strong” are entitled to possess an ordinary life of their own.
+
+## Conclusion: Death and New Life
+
+`/remake` is a command in *League of Legends* used to restart a match when a teammate disconnects; it is also one expression of the currently popular “restart” meme. Using game terminology to express one’s feelings and problems is one form taken by the imagination of young people today. But can cultural consumption stretch the boundaries of that imagination further? Can it break free from the already existing logic of a real world in which we are alive yet somehow still want to restart, and imagine instead a world that makes us want to get serious—a world in which there is no room to escape or simply give up? This, perhaps, is the transcendence that Japanese isekai-reincarnation stories reveal through the protagonist’s necessary death. And just as the metaphor of cheating, hacks, and game cheat tools already suggests: once we make ourselves invincible in an imaginary world, what kind of new life do we actually want to live?

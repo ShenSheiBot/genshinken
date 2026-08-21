@@ -7,7 +7,7 @@ language: en
 status: review
 title: "Monster-Fear: Why America Became the Homeland of the Titans"
 title_breaks: ["Monster-Fear: Why America Became", "the Homeland of the Titans"]
-excerpt: From colonial reports of giant remains and the American incognitum to King Kong's rebirth on screen, 哲哥 traces how the United States drew on the giant-beast imaginary to define the boundaries of nation, nature, and civilization.
+excerpt: From colonial reports of giant remains and the American incognitum to King Kong's rebirth on screen, this essay traces how the United States drew on the giant-beast imaginary to define the boundaries of nation, nature, and civilization.
 credits:
   - role: translator
     contributor_id: shen-shui-bot

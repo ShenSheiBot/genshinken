@@ -48,6 +48,30 @@ npm run verify:fonts
 `verify:fonts` checks the corpus inventory, OpenCC closure, output hashes, byte
 sizes, cache keys and rare Han fallback contract.
 
+## Japanese translation fonts
+
+`scripts/build-translation-font-subsets.py` scans the complete Japanese
+translation tree, localized translation components, and
+`source/_translations/external-originals.json`. It builds the primary Noto
+Serif/Sans JP subsets plus tiny generated SC, Latin and music subsets for code
+points absent from the JP sources. These are controlled hosted fallbacks, not a
+character whitelist: new text is covered automatically when one of the pinned
+sources contains it, otherwise generation fails and reports the unsupported
+code point.
+
+The primary and fallback source files are downloaded from the pinned
+`google/fonts` commit into the ignored `.local-archive/font-sources` cache.
+Regenerate after changing Japanese content or localized bibliographic metadata:
+
+```bash
+python scripts/build-translation-font-subsets.py
+npm run verify:fonts
+```
+
+The output manifest fingerprints both the complete input-file inventory and
+its literal code-point set, preventing an external-original card or component
+string from silently escaping the hosted font contract.
+
 ## Rare Han fallbacks
 
 `un-canon-rare-han-serif.woff2` and `un-canon-rare-han-sans.woff2` are

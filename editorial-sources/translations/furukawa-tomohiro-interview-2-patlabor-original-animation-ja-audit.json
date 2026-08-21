@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "target_path": "source/_translations/ja/posts/furukawa-tomohiro-interview-2-patlabor-original-animation.md",
+  "target_language": "ja",
+  "segments": [
+    {
+      "id": "roof-opening",
+      "source_path": "source/_posts/furukawa-tomohiro-interview-2-patlabor-original-animation.md",
+      "source_range": {"start": null, "end": "## 初次接触到的角色论和“职场动画”"},
+      "target_range": {"start": null, "end": "## 初めて触れたキャラクター論と「お仕事もの」アニメ"},
+      "base_edition": "roof-zh",
+      "source_revision": "sha256:caaa67076c54997e677746d7aa266d96ea8bf0a02ddc9e094f89fc992c853b79",
+      "roof_presence": "complete",
+      "relationship": "direct"
+    },
+    {
+      "id": "febri-body",
+      "source_path": "editorial-sources/translations/furukawa-tomohiro-interview-2-patlabor-original-animation-source-ja.md",
+      "source_range": {"start": "## 初めて触れたキャラクター論と「お仕事もの」アニメ", "end": null},
+      "target_range": {"start": "## 初めて触れたキャラクター論と「お仕事もの」アニメ", "end": "同シリーズ："},
+      "base_edition": "febri-ja",
+      "source_revision": "sha256:3bf99ca7346e5f7dfe05eaf5c8d303289f0ce603d4cf6870d49af43706604df8",
+      "roof_presence": "complete",
+      "relationship": "restore-original-ja"
+    },
+    {
+      "id": "roof-series-nav",
+      "source_path": "source/_posts/furukawa-tomohiro-interview-2-patlabor-original-animation.md",
+      "source_range": {"start": "同系列：", "end": null},
+      "target_range": {"start": "同シリーズ：", "end": null},
+      "base_edition": "roof-zh",
+      "source_revision": "sha256:caaa67076c54997e677746d7aa266d96ea8bf0a02ddc9e094f89fc992c853b79",
+      "roof_presence": "complete",
+      "relationship": "direct"
+    }
+  ],
+  "resource_equivalences": {"media": [], "links": []}
+}

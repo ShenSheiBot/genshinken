@@ -19,6 +19,7 @@ import {
   assertChapterUsesTranslationBookManifest,
   readTranslationBookManifest,
 } from "../lib/translation-book-manifest.mjs";
+import { readExternalOriginals } from "../lib/translation-external-originals.mjs";
 
 test("translated book metadata has one directory-level source of truth", () => {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), "roof-translation-book-"));
@@ -55,6 +56,45 @@ test("translated book metadata has one directory-level source of truth", () => {
       () => readTranslationBookManifest(directory, { locale: "ja", sourceBookSlug: "source-book" }),
       /language must match locale directory ja/u
     );
+  } finally {
+    fs.rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test("external originals provide one validated source-language gateway per work and locale", () => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), "roof-external-original-"));
+  const manifest = {
+    version: 1,
+    items: [{
+      source_type: "post",
+      source_slug: "example-work",
+      locale: "ja",
+      format: "book",
+      title: "原著",
+      creator: "著者",
+      publication: "出版社",
+      links: [{ kind: "publisher", url: "https://example.test/book" }],
+    }],
+  };
+  fs.writeFileSync(path.join(root, "external-originals.json"), JSON.stringify(manifest));
+  try {
+    assert.deepEqual(readExternalOriginals(root), [{
+      source: `${path.join(root, "external-originals.json")}: items[0]`,
+      sourceRef: { type: "post", slug: "example-work" },
+      sourceKey: "post:example-work",
+      locale: "ja",
+      format: "book",
+      title: "原著",
+      creator: "著者",
+      publication: "出版社",
+      published: "",
+      identifier: "",
+      coverage: "",
+      links: [{ kind: "publisher", url: "https://example.test/book" }],
+    }]);
+    manifest.items.push({ ...manifest.items[0] });
+    fs.writeFileSync(path.join(root, "external-originals.json"), JSON.stringify(manifest));
+    assert.throws(() => readExternalOriginals(root), /duplicate external original/u);
   } finally {
     fs.rmSync(root, { recursive: true, force: true });
   }
