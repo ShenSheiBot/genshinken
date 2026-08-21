@@ -6,8 +6,11 @@ import { getAllBooks, getBookBySlug, getPublishedBookChapters } from "@/lib/book
 import { hanScriptLanguageTag } from "@/lib/han-script";
 import { site } from "@/lib/site";
 import { translationEditionIsVisible } from "@/lib/translation-contract.mjs";
+import { translationAvailabilityState } from "@/lib/translation-language-dispositions.mjs";
 import {
   getAllTranslationEditions,
+  getLanguageDisposition,
+  resolveTranslationSource,
   TRANSLATION_LOCALES,
   translationPreviewEnabled,
   type EditionLanguageLink,
@@ -57,13 +60,24 @@ async function resolveBook(locale: TranslationLocale, routeBookSlug: string) {
   return { allEditions, sourceBook, targetEditions: visibleEditions, isTargetRoute };
 }
 
-function bookLanguageLinks(
-  locale: TranslationLocale,
+async function bookLanguageLinks(
   sourceBook: NonNullable<ReturnType<typeof getBookBySlug>>,
   allEditions: TranslationEdition[]
-): EditionLanguageLink[] {
+): Promise<EditionLanguageLink[]> {
   const sourceBookSlug = sourceBook.slug;
   const previewEnabled = translationPreviewEnabled();
+  const chapters = getPublishedBookChapters(sourceBook);
+  const dispositionState = async (target: TranslationLocale) => {
+    const states = (await Promise.all(chapters.map(async (chapter) => {
+      const source = await resolveTranslationSource({
+        type: "book-chapter",
+        bookSlug: sourceBookSlug,
+        chapterId: chapter.id,
+      });
+      return source ? getLanguageDisposition(target, source)?.state ?? "" : "";
+    }))).filter(Boolean);
+    return states.length === chapters.length && new Set(states).size === 1 ? states[0] : "";
+  };
   return [
     {
       language: hanScriptLanguageTag(sourceBook.script),
@@ -71,23 +85,27 @@ function bookLanguageLinks(
       href: `/books/${encodeURIComponent(sourceBookSlug)}`,
       state: "available",
     },
-    ...TRANSLATION_LOCALES.map((target): EditionLanguageLink => {
+    ...await Promise.all(TRANSLATION_LOCALES.map(async (target): Promise<EditionLanguageLink> => {
       const edition = allEditions.find((candidate) =>
         candidate.locale === target &&
         candidate.sourceRef.type === "book-chapter" &&
-        candidate.sourceRef.bookSlug === sourceBookSlug &&
-        translationEditionIsVisible(candidate.status, previewEnabled)
+        candidate.sourceRef.bookSlug === sourceBookSlug
       );
-      const preview = Boolean(edition && edition.status !== "published" && previewEnabled);
+      const state = translationAvailabilityState(
+        edition?.status ?? "",
+        previewEnabled,
+        edition ? "" : await dispositionState(target)
+      ) as EditionLanguageLink["state"];
+      const visible = Boolean(edition && translationEditionIsVisible(edition.status, previewEnabled));
       return {
         language: target,
         label: target === "en" ? "EN" : "日",
-        href: edition
+        href: visible && edition
           ? `/${target}/books/${encodeURIComponent(edition.bookSlug)}`
           : `/${target}/books/${encodeURIComponent(sourceBookSlug)}`,
-        state: edition?.status === "published" ? "available" : preview ? "preview" : "missing",
+        state,
       };
-    }),
+    })),
   ];
 }
 
@@ -100,7 +118,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const title = resolved.targetEditions[0]?.bookTitle ?? resolved.sourceBook.title;
   const canonical = `/${locale}/books/${encodeURIComponent(decodeURIComponent(rawBook))}`;
   const published = resolved.targetEditions.some((edition) => edition.status === "published");
-  const languageLinks = bookLanguageLinks(locale, resolved.sourceBook, resolved.allEditions);
+  const languageLinks = await bookLanguageLinks(resolved.sourceBook, resolved.allEditions);
   return {
     title,
     description: resolved.targetEditions[0]?.bookExcerpt ?? resolved.sourceBook.description,
@@ -129,13 +147,23 @@ export default async function LocalizedBookPage({ params }: { params: Promise<{ 
   const subtitle = sample?.bookSubtitle ?? sourceBook.subtitle;
   const labels = locale === "en" ? {
     brand: "Lab on Roof", status: isTargetRoute ? "Translated book" : "Edition unavailable",
-    original: "Chinese edition", chapters: "Chapters", translated: "Translated", missing: "Chinese only",
+    original: "Chinese edition", chapters: "Chapters", translated: "Translated", external: "Original off-site",
+    notAvailable: "Not offered", missing: "Chinese only",
   } : {
     brand: "屋頂現視研", status: isTargetRoute ? "翻訳文庫" : "未公開の言語版",
-    original: "中国語版", chapters: "章一覧", translated: "翻訳あり", missing: "中国語のみ",
+    original: "中国語版", chapters: "章一覧", translated: "翻訳あり", external: "原文は外部",
+    notAvailable: "提供対象外", missing: "中国語のみ",
   };
   const chapters = getPublishedBookChapters(sourceBook);
-  const links = bookLanguageLinks(locale, sourceBook, allEditions);
+  const links = await bookLanguageLinks(sourceBook, allEditions);
+  const chapterDispositions = new Map(await Promise.all(chapters.map(async (chapter) => {
+    const source = await resolveTranslationSource({
+      type: "book-chapter",
+      bookSlug: sourceBook.slug,
+      chapterId: chapter.id,
+    });
+    return [chapter.id, source ? getLanguageDisposition(locale, source) : null] as const;
+  })));
   const bookHref = `/${locale}/books/${encodeURIComponent(routeBookSlug)}`;
   const publisherName = locale === "en" ? "Lab on Roof" : "屋頂現視研";
   const jsonLd = sample ? {
@@ -198,6 +226,7 @@ export default async function LocalizedBookPage({ params }: { params: Promise<{ 
             const edition = targetEditions.find((candidate) =>
               candidate.sourceRef.type === "book-chapter" && candidate.sourceRef.chapterId === chapter.id
             );
+            const disposition = chapterDispositions.get(chapter.id);
             const href = edition?.href ?? `/${locale}/books/${encodeURIComponent(routeBookSlug)}/chapters/${encodeURIComponent(chapter.id)}`;
             return (
               <li key={chapter.id}>
@@ -206,7 +235,13 @@ export default async function LocalizedBookPage({ params }: { params: Promise<{ 
                   <strong lang={edition ? locale : sourceBook.script === "hant" ? "zh-Hant" : "zh-Hans"}>
                     {edition?.title ?? chapter.title}
                   </strong>
-                  <small>{edition ? labels.translated : labels.missing}</small>
+                  <small>{edition
+                    ? labels.translated
+                    : disposition?.state === "external-original"
+                      ? labels.external
+                      : disposition?.state === "not-available"
+                        ? labels.notAvailable
+                        : labels.missing}</small>
                 </Link>
               </li>
             );

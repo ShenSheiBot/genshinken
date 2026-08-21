@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type {
   EditionLanguageLink,
-  ExternalOriginal,
+  LanguageDisposition,
   TranslationLocale,
   TranslationSource,
 } from "@/lib/translations";
@@ -41,10 +41,27 @@ const externalCopy = {
   ja: {
     edition: "日本語原文",
     eyebrow: "原著 · 外部公開",
-    title: "日本語原文は正式に刊行されています。",
+    title: "日本語原文は正規の公開・刊行先で読めます。",
     body: "別言語版から日本語へ再翻訳せず、確認済みの書誌情報と正規の入手先をご案内します。",
     original: "原版情報",
     labels: { read: "原文を読む", publisher: "出版社で確認する", purchase: "書籍を購入する", library: "図書館で探す" },
+  },
+} as const;
+
+const notAvailableCopy = {
+  en: {
+    edition: "English edition",
+    eyebrow: "Not offered · EN",
+    title: "This work is not offered in English.",
+    body: "This publication is a Chinese translation of a Japanese-language work. Under this site's language policy, it is not retranslated into English.",
+    original: "Chinese edition",
+  },
+  ja: {
+    edition: "日本語版",
+    eyebrow: "提供対象外 · JA",
+    title: "この作品の日本語版は提供していません。",
+    body: "本稿は英語作品の中国語訳です。当サイトの言語方針により、日本語への再翻訳は行いません。",
+    original: "中国語版",
   },
 } as const;
 
@@ -52,16 +69,23 @@ export default function TranslationPlaceholder({
   locale,
   source,
   links,
-  externalOriginal,
+  disposition,
 }: {
   locale: TranslationLocale;
   source: TranslationSource;
   links: EditionLanguageLink[];
-  externalOriginal?: ExternalOriginal | null;
+  disposition?: LanguageDisposition | null;
 }) {
   const baseLabels = copy[locale];
   const externalLabels = externalCopy[locale];
-  const labels = externalOriginal ? externalLabels : baseLabels;
+  const unavailableLabels = notAvailableCopy[locale];
+  const externalOriginal = disposition?.state === "external-original" ? disposition : null;
+  const notAvailable = disposition?.state === "not-available";
+  const labels = externalOriginal
+    ? externalLabels
+    : notAvailable
+      ? unavailableLabels
+      : baseLabels;
   const sourceHref = source.href;
   const sourceLanguage = source.language;
 
@@ -82,7 +106,7 @@ export default function TranslationPlaceholder({
         <LanguageSwitcher current={locale} links={links} />
       </header>
       <section className={styles.placeholder}>
-        <div className={styles.placeholderCard} data-kind={externalOriginal ? "external-original" : "missing"}>
+        <div className={styles.placeholderCard} data-kind={disposition?.state ?? "missing"}>
           <p className={styles.placeholderEyebrow}>{labels.eyebrow}</p>
           <h1>{labels.title}</h1>
           <p className={styles.placeholderCopy}>{labels.body}</p>

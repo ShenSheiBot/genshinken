@@ -2,16 +2,22 @@
 work_id: furukawa-tomohiro-interview-1-saint-seiya-style
 translation_group: furukawa-tomohiro-interview-1-saint-seiya-style
 publication:
-  decision: local-preview
+  decision: language-dispositions
+  decided_at: 2026-08-21
+  prior_candidate_commit: 4390b076de58662e23604db6ea26d2b0a930e4fa
 targets:
   - language: en
-    path: source/_translations/en/posts/furukawa-tomohiro-interview-1-saint-seiya-style.md
     route: /en/posts/furukawa-tomohiro-interview-1-saint-seiya-style
-    status: review
+    disposition: not-available
+    reason: cross-language-translation
+    prior_path: source/_translations/en/posts/furukawa-tomohiro-interview-1-saint-seiya-style.md
+    prior_status: review
   - language: ja
-    path: source/_translations/ja/posts/furukawa-tomohiro-interview-1-saint-seiya-style.md
     route: /ja/posts/furukawa-tomohiro-interview-1-saint-seiya-style
-    status: review
+    disposition: external-original
+    official_url: https://febri.jp/febri_talk/furukawa_tomohiro_1/
+    prior_path: source/_translations/ja/posts/furukawa-tomohiro-interview-1-saint-seiya-style.md
+    prior_status: review
 sources:
   - id: roof-zh
     language: zh-Hans
@@ -101,6 +107,12 @@ reviews:
   whole_work: Both editions were checked for names, titles, formal-beauty terminology, speaker sequence, pull quote, image, all twenty logical paragraphs, and translated series-navigation labels with protected canonical destinations.
   rendered: English mixed-source manifest audit passed with zero failures and two inspected numeric-token localization warnings. Japanese mixed-source manifest audit passed with zero failures and zero warnings. Browser rendering is deferred to checkpoint.
 ---
+
+## Superseding publication decision (2026-08-21)
+
+The owner decided not to publish an English retranslation of a Japanese work that Roof already translated into Chinese. The English route therefore uses the explicit `not-available` disposition. The verified Japanese original remains publicly readable at Febri, but Febri grants no open reuse licence and its terms reserve reproduction and public transmission; the Japanese route therefore uses an `external-original` gateway rather than an on-site mirror.
+
+The complete reviewed EN and JA candidates remain recoverable from Git commit `4390b076de58662e23604db6ea26d2b0a930e4fa`. The candidate-era translation and rendering evidence below is retained as editorial history; it is not current publication authorization.
 
 ## Discourse map
 

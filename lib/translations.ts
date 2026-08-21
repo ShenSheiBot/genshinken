@@ -34,7 +34,10 @@ import {
   assertChapterUsesTranslationBookManifest,
   readTranslationBookManifest,
 } from "./translation-book-manifest.mjs";
-import { readExternalOriginals } from "./translation-external-originals.mjs";
+import {
+  readLanguageDispositions,
+  translationAvailabilityState,
+} from "./translation-language-dispositions.mjs";
 
 export const TRANSLATION_LOCALES = ["en", "ja"] as const;
 export type TranslationLocale = (typeof TRANSLATION_LOCALES)[number];
@@ -133,6 +136,7 @@ export type ExternalOriginalLink = {
   url: string;
 };
 export type ExternalOriginal = {
+  state: "external-original";
   sourceRef: TranslationSourceRef;
   sourceKey: string;
   locale: TranslationLocale;
@@ -145,8 +149,22 @@ export type ExternalOriginal = {
   coverage: string;
   links: ExternalOriginalLink[];
 };
+export type NotAvailableDisposition = {
+  state: "not-available";
+  sourceRef: TranslationSourceRef;
+  sourceKey: string;
+  locale: TranslationLocale;
+  reason: "cross-language-translation";
+  originalLanguage: TranslationLocale;
+};
+export type LanguageDisposition = ExternalOriginal | NotAvailableDisposition;
 
-export type EditionLinkState = "available" | "preview" | "external-original" | "missing";
+export type EditionLinkState =
+  | "available"
+  | "preview"
+  | "external-original"
+  | "not-available"
+  | "missing";
 export type EditionLanguageLink = {
   language: "zh-Hans" | "zh-Hant" | TranslationLocale;
   label: string;
@@ -155,7 +173,7 @@ export type EditionLanguageLink = {
 };
 
 const TRANSLATIONS_ROOT = path.join(process.cwd(), "source", "_translations");
-const EXTERNAL_ORIGINALS = readExternalOriginals(TRANSLATIONS_ROOT) as ExternalOriginal[];
+const LANGUAGE_DISPOSITIONS = readLanguageDispositions(TRANSLATIONS_ROOT) as LanguageDisposition[];
 const STABLE_ID = /^[a-z0-9]+(?:-[a-z0-9]+)*$/u;
 
 const HTML_ENTITIES: Record<string, string> = {
@@ -239,11 +257,11 @@ export function translationPreviewEnabled(): boolean {
   return process.env.ROOF_TRANSLATION_PREVIEW === "1";
 }
 
-export function getExternalOriginal(
+export function getLanguageDisposition(
   locale: TranslationLocale,
   source: TranslationSource
-): ExternalOriginal | null {
-  return EXTERNAL_ORIGINALS.find(
+): LanguageDisposition | null {
+  return LANGUAGE_DISPOSITIONS.find(
     (candidate) => candidate.locale === locale && candidate.sourceKey === source.key
   ) ?? null;
 }
@@ -642,21 +660,19 @@ export async function getEditionLanguageLinks(source: TranslationSource): Promis
     { language: source.language, label: "中", href: source.href, state: "available" },
     ...TRANSLATION_LOCALES.map((locale): EditionLanguageLink => {
       const edition = byLocale.get(locale);
-      const externalOriginal = getExternalOriginal(locale, source);
+      const disposition = getLanguageDisposition(locale, source);
       const previewEnabled = translationPreviewEnabled();
+      const state = translationAvailabilityState(
+        edition?.status ?? "",
+        previewEnabled,
+        disposition?.state ?? ""
+      ) as EditionLinkState;
       const visible = Boolean(edition && translationEditionIsVisible(edition.status, previewEnabled));
-      const preview = Boolean(visible && edition?.status !== "published");
       return {
         language: locale,
         label: locale === "en" ? "EN" : "日",
         href: visible && edition ? edition.href : translationPlaceholderHref(locale, source),
-        state: edition?.status === "published"
-          ? "available"
-          : preview
-            ? "preview"
-            : externalOriginal
-              ? "external-original"
-              : "missing",
+        state,
       };
     }),
   ];

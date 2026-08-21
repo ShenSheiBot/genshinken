@@ -1,0 +1,172 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "source_type": "post",
+      "source_slug": "azuma-criticism-as-illness",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "journal",
+      "title": "批評という病",
+      "creator": "東浩紀",
+      "publication": "『ゲンロン4』",
+      "published": "2016-11-15",
+      "identifier": "ISBN 978-4-907188-19-1",
+      "coverage": "30–48頁",
+      "links": [
+        {
+          "kind": "purchase",
+          "url": "https://shop.genron.co.jp/products/89"
+        },
+        {
+          "kind": "library",
+          "url": "https://cir.nii.ac.jp/crid/1523951029808901888"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "azuma-criticism-as-illness",
+      "locale": "en",
+      "state": "not-available",
+      "reason": "cross-language-translation",
+      "original_language": "ja"
+    },
+    {
+      "source_type": "post",
+      "source_slug": "azuma-heidegger-beyond-wittgenstein",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "存在論的、郵便的―ジャック・デリダについて―",
+      "creator": "東浩紀",
+      "publication": "新潮社",
+      "published": "1998-10-30",
+      "identifier": "ISBN 978-4-10-426201-4",
+      "coverage": "第四章「存在論的、郵便的」第1節「論理的」（224–236頁）",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.shinchosha.co.jp/book/426201/"
+        },
+        {
+          "kind": "library",
+          "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I000002718029"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "azuma-heidegger-beyond-wittgenstein",
+      "locale": "en",
+      "state": "not-available",
+      "reason": "cross-language-translation",
+      "original_language": "ja"
+    },
+    {
+      "source_type": "post",
+      "source_slug": "furukawa-tomohiro-interview-1-saint-seiya-style",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "web",
+      "title": "古川知宏① 作家の「様式美」が詰まった『聖闘士星矢 真紅の少年伝説』",
+      "creator": "古川知宏（取材・文：前田 久）",
+      "publication": "Febri",
+      "published": "2021-11-15",
+      "coverage": "古川知宏インタビュー 第1回",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://febri.jp/febri_talk/furukawa_tomohiro_1/"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "furukawa-tomohiro-interview-1-saint-seiya-style",
+      "locale": "en",
+      "state": "not-available",
+      "reason": "cross-language-translation",
+      "original_language": "ja"
+    },
+    {
+      "source_type": "post",
+      "source_slug": "furukawa-tomohiro-interview-2-patlabor-original-animation",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "web",
+      "title": "古川知宏② 押井守の「演出論」を学んだ『機動警察パトレイバー the Movie』",
+      "creator": "古川知宏（取材・文：前田 久）",
+      "publication": "Febri",
+      "published": "2021-11-17",
+      "coverage": "古川知宏インタビュー 第2回",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://febri.jp/febri_talk/furukawa_tomohiro_2/"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "furukawa-tomohiro-interview-2-patlabor-original-animation",
+      "locale": "en",
+      "state": "not-available",
+      "reason": "cross-language-translation",
+      "original_language": "ja"
+    },
+    {
+      "source_type": "post",
+      "source_slug": "furukawa-tomohiro-interview-3-precure-storyboards",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "web",
+      "title": "古川知宏③ 絵コンテの力に気づいた『ふたりはプリキュア』",
+      "creator": "古川知宏（取材・文：前田 久）",
+      "publication": "Febri",
+      "published": "2021-11-19",
+      "coverage": "古川知宏インタビュー 第3回",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://febri.jp/febri_talk/furukawa_tomohiro_3/"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "furukawa-tomohiro-interview-3-precure-storyboards",
+      "locale": "en",
+      "state": "not-available",
+      "reason": "cross-language-translation",
+      "original_language": "ja"
+    },
+    {
+      "source_type": "post",
+      "source_slug": "opening-black-box-1989-otaku-discourse",
+      "locale": "en",
+      "state": "external-original",
+      "format": "book",
+      "title": "Opening the Black Box of the 1989 Otaku Discourse",
+      "creator": "Björn-Ole Kamm",
+      "publication": "Debating Otaku in Contemporary Japan · Bloomsbury Academic",
+      "published": "2015",
+      "identifier": "DOI 10.5040/9781474263894.ch-003",
+      "coverage": "pp. 51–70",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://doi.org/10.5040/9781474263894.ch-003"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "opening-black-box-1989-otaku-discourse",
+      "locale": "ja",
+      "state": "not-available",
+      "reason": "cross-language-translation",
+      "original_language": "en"
+    }
+  ]
+}

@@ -12,10 +12,10 @@ const labels = {
 } as const;
 
 const stateLabels = {
-  "zh-Hans": { available: "已有译文", preview: "译文预览", "external-original": "原版在站外", missing: "暂无译文" },
-  "zh-Hant": { available: "已有譯文", preview: "譯文預覽", "external-original": "原版在站外", missing: "暫無譯文" },
-  en: { available: "available", preview: "preview", "external-original": "original off-site", missing: "not available" },
-  ja: { available: "公開版あり", preview: "プレビュー", "external-original": "原文は外部", missing: "未公開" },
+  "zh-Hans": { available: "已有译文", preview: "译文预览", "external-original": "原版在站外", "not-available": "不提供此语言版", missing: "暂无译文" },
+  "zh-Hant": { available: "已有譯文", preview: "譯文預覽", "external-original": "原版在站外", "not-available": "不提供此語言版", missing: "暫無譯文" },
+  en: { available: "available", preview: "preview", "external-original": "original off-site", "not-available": "not offered", missing: "not yet available" },
+  ja: { available: "公開版あり", preview: "プレビュー", "external-original": "原文は外部", "not-available": "提供対象外", missing: "未公開" },
 } as const;
 
 export default function LanguageSwitcher({

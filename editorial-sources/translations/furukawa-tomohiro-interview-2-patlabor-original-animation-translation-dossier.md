@@ -2,16 +2,22 @@
 work_id: furukawa-tomohiro-interview-2-patlabor-original-animation
 translation_group: furukawa-tomohiro-interview-2-patlabor-original-animation
 publication:
-  decision: local-preview
+  decision: language-dispositions
+  decided_at: 2026-08-21
+  prior_candidate_commit: 4390b076de58662e23604db6ea26d2b0a930e4fa
 targets:
   - language: en
-    path: source/_translations/en/posts/furukawa-tomohiro-interview-2-patlabor-original-animation.md
     route: /en/posts/furukawa-tomohiro-interview-2-patlabor-original-animation
-    status: review
+    disposition: not-available
+    reason: cross-language-translation
+    prior_path: source/_translations/en/posts/furukawa-tomohiro-interview-2-patlabor-original-animation.md
+    prior_status: review
   - language: ja
-    path: source/_translations/ja/posts/furukawa-tomohiro-interview-2-patlabor-original-animation.md
     route: /ja/posts/furukawa-tomohiro-interview-2-patlabor-original-animation
-    status: review
+    disposition: external-original
+    official_url: https://febri.jp/febri_talk/furukawa_tomohiro_2/
+    prior_path: source/_translations/ja/posts/furukawa-tomohiro-interview-2-patlabor-original-animation.md
+    prior_status: review
 sources:
   - id: roof-zh
     language: zh-Hans
@@ -79,6 +85,12 @@ reviews:
   whole_work: "Both editions preserve the heading, speaker sequence, Roof paragraph split, local image, source link, terminology, and series-navigation destinations. Japanese translation responsibility is explicitly limited to Roof-specific apparatus rather than the restored Febri body."
   rendered: "Final isolated local preview: EN and JA candidate routes returned HTTP 200. Desktop 1440x1000 and mobile 390x844 were checked with no horizontal overflow; the retained image loaded at 720x417; the source link and both series links were present; no source footnotes are expected or rendered; no process-note markers were found; Chinese/EN/JA navigation was visible and EN→JA was clicked successfully. After a clean preview restart, the JA page rendered the bounded credit `翻訳: 甚谁Bot · Roof独自の要約・導入・画像代替テキスト・シリーズナビ`."
 ---
+
+## Superseding publication decision (2026-08-21)
+
+The owner decided not to publish an English retranslation of a Japanese work that Roof already translated into Chinese. The English route therefore uses the explicit `not-available` disposition. The verified Japanese original remains publicly readable at Febri, but Febri grants no open reuse licence and its terms reserve reproduction and public transmission; the Japanese route therefore uses an `external-original` gateway rather than an on-site mirror.
+
+The complete reviewed EN and JA candidates remain recoverable from Git commit `4390b076de58662e23604db6ea26d2b0a930e4fa`. The candidate-era translation and rendering evidence below is retained as editorial history; it is not current publication authorization.
 
 ## Research log
 

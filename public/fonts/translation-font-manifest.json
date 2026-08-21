@@ -1,5 +1,5 @@
 {
-  "corpusFileCount": 35,
+  "corpusFileCount": 32,
   "corpusFiles": [
     "app/[locale]/books/[book]/chapters/[chapter]/cite.bib/route.ts",
     "app/[locale]/books/[book]/chapters/[chapter]/page.tsx",
@@ -15,7 +15,6 @@
     "app/components/translation/TranslationReferences.tsx",
     "app/components/translation/translation-edition.module.css",
     "app/components/translation/translationUi.ts",
-    "source/_translations/external-originals.json",
     "source/_translations/ja/books/kankei-keishiki-bunseki/book.json",
     "source/_translations/ja/books/kankei-keishiki-bunseki/sankaku-kankei-biyakuya.md",
     "source/_translations/ja/books/monogatari-series-ronko/book.json",
@@ -26,18 +25,16 @@
     "source/_translations/ja/posts/decoding-the-drowned-giant.md",
     "source/_translations/ja/posts/diaosi-culture-logic-of-counterattack.md",
     "source/_translations/ja/posts/fear-of-monsters-america-home-of-titans.md",
-    "source/_translations/ja/posts/furukawa-tomohiro-interview-1-saint-seiya-style.md",
-    "source/_translations/ja/posts/furukawa-tomohiro-interview-2-patlabor-original-animation.md",
-    "source/_translations/ja/posts/furukawa-tomohiro-interview-3-precure-storyboards.md",
     "source/_translations/ja/posts/kara-no-kyoukai-garden-of-sinners.md",
     "source/_translations/ja/posts/kojimas-sekaikei.md",
     "source/_translations/ja/posts/persona-5-picaresque-bunka-haikei.md",
     "source/_translations/ja/posts/revue-starlight-reproduction-through-revue.md",
     "source/_translations/ja/posts/understanding-disaster-video-series.md",
     "source/_translations/ja/posts/what-we-watch-in-monster-movies.md",
-    "source/_translations/ja/posts/witcher-wilderness-detective.md"
+    "source/_translations/ja/posts/witcher-wilderness-detective.md",
+    "source/_translations/language-dispositions.json"
   ],
-  "corpusSha256": "58a7f107aacfdf693f283715d1fddc6724a4dcc0dbfda29baea0ede8e5b6b2fc",
+  "corpusSha256": "3e4bb1681aca663159424a4c4e9b52a9c829d0be378c92ac4377a65f0e84a0b1",
   "fallbackCodePointCount": 50,
   "fonts": {
     "Roof EB Garamond Fallback": {
@@ -69,12 +66,12 @@
       "weight": "400"
     },
     "Roof Noto Sans JP": {
-      "bytes": 705100,
-      "codePointCount": 2268,
+      "bytes": 697644,
+      "codePointCount": 2242,
       "family": "Roof Noto Sans JP",
       "file": "roof-noto-sans-jp.woff2",
       "kind": "primary-sans",
-      "sha256": "f1590d1d03de28adc0ba609f431cc07803937f8439f3535880998fc079539a8a",
+      "sha256": "ed6a23c374862ad1941d50c1ec55eca627e74b86424c33b040c26ca61a045383",
       "source": "NotoSansJP.ttf",
       "sourceSha256": "c2f3b4d463500a2ddcd3849cded1fceeb9fd6d1c32e6cbecd568453ba50fc68f",
       "sourceUrl": "https://raw.githubusercontent.com/google/fonts/e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7/ofl/notosansjp/NotoSansJP%5Bwght%5D.ttf",
@@ -82,12 +79,12 @@
       "weight": "100 900"
     },
     "Roof Noto Sans SC Fallback": {
-      "bytes": 18304,
+      "bytes": 18236,
       "codePointCount": 47,
       "family": "Roof Noto Sans SC Fallback",
       "file": "roof-noto-sans-sc-fallback.woff2",
       "kind": "fallback-sans",
-      "sha256": "4a2cbf5ee05f30a4a0d2028380be604f435d5f83a53cef4d2689d8f6a86f7ee5",
+      "sha256": "c0794ee01969625acec6f3c44bf6bec308858edc69ecd2fe9d4b1aa4f84efd26",
       "source": "NotoSansSC.ttf",
       "sourceSha256": "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da",
       "sourceUrl": "https://raw.githubusercontent.com/google/fonts/e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7/ofl/notosanssc/NotoSansSC%5Bwght%5D.ttf",
@@ -96,12 +93,12 @@
       "weight": "100 900"
     },
     "Roof Noto Serif JP": {
-      "bytes": 978160,
-      "codePointCount": 2268,
+      "bytes": 967344,
+      "codePointCount": 2242,
       "family": "Roof Noto Serif JP",
       "file": "roof-noto-serif-jp.woff2",
       "kind": "primary-serif",
-      "sha256": "002b307aba7579135d03f05515b58db5de5278831e2bfab6acda5b5b685b07df",
+      "sha256": "407761f04dfb52a4be58c15321b136584a8dc1eb5873584584c60ae831a6f1b1",
       "source": "NotoSerifJP.ttf",
       "sourceSha256": "2fd527ba12b6a44ec30d796d633360da0aeba6c5d4af1304ce12bb4dc15a7dfc",
       "sourceUrl": "https://raw.githubusercontent.com/google/fonts/e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7/ofl/notoserifjp/NotoSerifJP%5Bwght%5D.ttf",
@@ -109,12 +106,12 @@
       "weight": "200 900"
     },
     "Roof Noto Serif SC Fallback": {
-      "bytes": 22404,
+      "bytes": 22464,
       "codePointCount": 47,
       "family": "Roof Noto Serif SC Fallback",
       "file": "roof-noto-serif-sc-fallback.woff2",
       "kind": "fallback-serif",
-      "sha256": "03059e123b4e30086d803342243f70079ad5f71cef14cf08d1eefbe6b7a49350",
+      "sha256": "1578ac4bbf3fb74aa8c9945a08cf37493ad17a649b5a4861b9a33ae73098f141",
       "source": "NotoSerifSC.ttf",
       "sourceSha256": "050080d9255a86808f2945bffac582b31ef32bc36411ce29563b4961670c66f9",
       "sourceUrl": "https://raw.githubusercontent.com/google/fonts/e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7/ofl/notoserifsc/NotoSerifSC%5Bwght%5D.ttf",
@@ -156,9 +153,9 @@
     }
   },
   "strategy": "japanese-translation-corpus-variable-fonts-with-generated-fallbacks",
-  "subsetCodePointCount": 2268,
-  "targetCodePointCount": 2073,
-  "targetCodePointSha256": "87a8b365fdc68c14eb4d2142e28643c76ca0aca80110dc83f533ec8419463133",
+  "subsetCodePointCount": 2242,
+  "targetCodePointCount": 2047,
+  "targetCodePointSha256": "c9d3ebafe0d4e4fa8e52a369af607b0795a823dcb4aafe3d811c597dae3bfcf9",
   "uncoveredCodePointRanges": [],
   "upstreamCommit": "e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7",
   "version": 1

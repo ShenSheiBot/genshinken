@@ -16,7 +16,7 @@ import {
   assertChapterUsesTranslationBookManifest,
   readTranslationBookManifest,
 } from "../lib/translation-book-manifest.mjs";
-import { readExternalOriginals } from "../lib/translation-external-originals.mjs";
+import { readLanguageDispositions } from "../lib/translation-language-dispositions.mjs";
 
 const root = process.cwd();
 const translationsRoot = path.join(root, "source", "_translations");
@@ -32,7 +32,7 @@ const methods = new Set(["agent", "human"]);
 const sourceRelationships = new Set(["direct", "relay", "mixed"]);
 const roles = new Set(["translator", "reviewer", "proofreader", "editor"]);
 const stableId = /^[a-z0-9]+(?:-[a-z0-9]+)*$/u;
-const externalOriginals = readExternalOriginals(translationsRoot);
+const languageDispositions = readLanguageDispositions(translationsRoot);
 
 function requiredText(data, field, source) {
   const value = data[field];
@@ -256,28 +256,28 @@ for (const edition of editions) {
   verifyDossier(edition);
 }
 
-for (const original of externalOriginals) {
-  const source = original.sourceRef.type === "post"
-    ? { type: "post", slug: original.sourceRef.slug, ...readPostTranslationSource(original.sourceRef.slug) }
+for (const disposition of languageDispositions) {
+  const source = disposition.sourceRef.type === "post"
+    ? { type: "post", slug: disposition.sourceRef.slug, ...readPostTranslationSource(disposition.sourceRef.slug) }
     : {
         type: "book-chapter",
-        bookSlug: original.sourceRef.bookSlug,
-        chapterId: original.sourceRef.chapterId,
-        ...readBookChapterTranslationSource(original.sourceRef.bookSlug, original.sourceRef.chapterId),
+        bookSlug: disposition.sourceRef.bookSlug,
+        chapterId: disposition.sourceRef.chapterId,
+        ...readBookChapterTranslationSource(disposition.sourceRef.bookSlug, disposition.sourceRef.chapterId),
       };
   const sourceIdentity = source.type === "post"
     ? `post:${source.slug}`
     : `book:${source.bookSlug}:${source.chapterId}`;
-  if (sourceIdentity !== original.sourceKey) {
-    throw new Error(`${original.source}: source identity does not resolve to ${original.sourceKey}`);
+  if (sourceIdentity !== disposition.sourceKey) {
+    throw new Error(`${disposition.source}: source identity does not resolve to ${disposition.sourceKey}`);
   }
   if (editions.some((edition) => {
     const editionSource = edition.source.type === "post"
       ? `post:${edition.source.slug}`
       : `book:${edition.source.bookSlug}:${edition.source.chapterId}`;
-    return edition.locale === original.locale && edition.status === "published" && editionSource === original.sourceKey;
+    return edition.locale === disposition.locale && editionSource === disposition.sourceKey;
   })) {
-    throw new Error(`${original.source}: published on-site edition makes the external-original entry stale`);
+    throw new Error(`${disposition.source}: an on-site edition conflicts with the ${disposition.state} disposition`);
   }
 }
 
@@ -294,4 +294,4 @@ try {
 }
 
 warnings.forEach((warning) => console.warn(`Translation structure review: ${warning}`));
-console.log(`Translation contract passed: ${editions.length} editions; ${warnings.length} inspected structure warnings.`);
+console.log(`Translation contract passed: ${editions.length} editions; ${languageDispositions.length} language dispositions; ${warnings.length} inspected structure warnings.`);

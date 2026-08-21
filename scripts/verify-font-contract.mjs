@@ -380,7 +380,7 @@ for (const record of japaneseFallbackRecords) {
 
 const translationCorpusRoots = [
   "source/_translations/ja",
-  "source/_translations/external-originals.json",
+  "source/_translations/language-dispositions.json",
   "app/[locale]",
   "app/components/translation",
 ];

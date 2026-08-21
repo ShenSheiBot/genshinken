@@ -19,7 +19,10 @@ import {
   assertChapterUsesTranslationBookManifest,
   readTranslationBookManifest,
 } from "../lib/translation-book-manifest.mjs";
-import { readExternalOriginals } from "../lib/translation-external-originals.mjs";
+import {
+  readLanguageDispositions,
+  translationAvailabilityState,
+} from "../lib/translation-language-dispositions.mjs";
 
 test("translated book metadata has one directory-level source of truth", () => {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), "roof-translation-book-"));
@@ -61,43 +64,79 @@ test("translated book metadata has one directory-level source of truth", () => {
   }
 });
 
-test("external originals provide one validated source-language gateway per work and locale", () => {
-  const root = fs.mkdtempSync(path.join(os.tmpdir(), "roof-external-original-"));
+test("language dispositions keep external originals and deliberate absence in one registry", () => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), "roof-language-disposition-"));
   const manifest = {
     version: 1,
-    items: [{
-      source_type: "post",
-      source_slug: "example-work",
-      locale: "ja",
-      format: "book",
-      title: "原著",
-      creator: "著者",
-      publication: "出版社",
-      links: [{ kind: "publisher", url: "https://example.test/book" }],
-    }],
+    items: [
+      {
+        source_type: "post",
+        source_slug: "example-work",
+        locale: "ja",
+        state: "external-original",
+        format: "book",
+        title: "原著",
+        creator: "著者",
+        publication: "出版社",
+        links: [{ kind: "publisher", url: "https://example.test/book" }],
+      },
+      {
+        source_type: "post",
+        source_slug: "example-work",
+        locale: "en",
+        state: "not-available",
+        reason: "cross-language-translation",
+        original_language: "ja",
+      },
+    ],
   };
-  fs.writeFileSync(path.join(root, "external-originals.json"), JSON.stringify(manifest));
+  fs.writeFileSync(path.join(root, "language-dispositions.json"), JSON.stringify(manifest));
   try {
-    assert.deepEqual(readExternalOriginals(root), [{
-      source: `${path.join(root, "external-originals.json")}: items[0]`,
-      sourceRef: { type: "post", slug: "example-work" },
-      sourceKey: "post:example-work",
-      locale: "ja",
-      format: "book",
-      title: "原著",
-      creator: "著者",
-      publication: "出版社",
-      published: "",
-      identifier: "",
-      coverage: "",
-      links: [{ kind: "publisher", url: "https://example.test/book" }],
-    }]);
+    assert.deepEqual(readLanguageDispositions(root), [
+      {
+        source: `${path.join(root, "language-dispositions.json")}: items[0]`,
+        sourceRef: { type: "post", slug: "example-work" },
+        sourceKey: "post:example-work",
+        locale: "ja",
+        state: "external-original",
+        format: "book",
+        title: "原著",
+        creator: "著者",
+        publication: "出版社",
+        published: "",
+        identifier: "",
+        coverage: "",
+        links: [{ kind: "publisher", url: "https://example.test/book" }],
+      },
+      {
+        source: `${path.join(root, "language-dispositions.json")}: items[1]`,
+        sourceRef: { type: "post", slug: "example-work" },
+        sourceKey: "post:example-work",
+        locale: "en",
+        state: "not-available",
+        reason: "cross-language-translation",
+        originalLanguage: "ja",
+      },
+    ]);
     manifest.items.push({ ...manifest.items[0] });
-    fs.writeFileSync(path.join(root, "external-originals.json"), JSON.stringify(manifest));
-    assert.throws(() => readExternalOriginals(root), /duplicate external original/u);
+    fs.writeFileSync(path.join(root, "language-dispositions.json"), JSON.stringify(manifest));
+    assert.throws(() => readLanguageDispositions(root), /duplicate language disposition/u);
   } finally {
     fs.rmSync(root, { recursive: true, force: true });
   }
+});
+
+test("translation availability keeps edition lifecycle separate from absence policy", () => {
+  assert.equal(translationAvailabilityState("published", false), "available");
+  assert.equal(translationAvailabilityState("review", true), "preview");
+  assert.equal(translationAvailabilityState("review", false), "missing");
+  assert.equal(translationAvailabilityState("", false, "external-original"), "external-original");
+  assert.equal(translationAvailabilityState("", false, "not-available"), "not-available");
+  assert.equal(translationAvailabilityState("", false), "missing");
+  assert.throws(
+    () => translationAvailabilityState("draft", true, "not-available"),
+    /cannot have both/u
+  );
 });
 
 test("unquoted YAML dates survive the review-to-published lifecycle", () => {

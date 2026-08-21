@@ -11,7 +11,7 @@ import { translationJsonLd } from "@/lib/translation-jsonld";
 import {
   getAllTranslationEditions,
   getEditionLanguageLinks,
-  getExternalOriginal,
+  getLanguageDisposition,
   getPublishedTranslationEditions,
   getTranslationEditionByRoute,
   resolveTranslationSource,
@@ -20,7 +20,7 @@ import {
   translationPlaceholderHref,
   translationPreviewEnabled,
   type TranslationEdition,
-  type ExternalOriginal,
+  type LanguageDisposition,
   type TranslationLocale,
   type TranslationSource,
 } from "@/lib/translations";
@@ -61,7 +61,7 @@ function localeFrom(value: string): TranslationLocale | null {
 async function resolveRoute(locale: TranslationLocale, bookSlug: string, chapterSlug: string): Promise<{
   source: TranslationSource;
   edition: TranslationEdition | null;
-  externalOriginal: ExternalOriginal | null;
+  disposition: LanguageDisposition | null;
   href: string;
 } | null> {
   const routedEdition = await getTranslationEditionByRoute(locale, {
@@ -73,7 +73,7 @@ async function resolveRoute(locale: TranslationLocale, bookSlug: string, chapter
     const source = await resolveTranslationSource(routedEdition.sourceRef);
     if (!source) return null;
     const visible = routedEdition.status === "published" || translationPreviewEnabled();
-    return { source, edition: visible ? routedEdition : null, externalOriginal: getExternalOriginal(locale, source), href: routedEdition.href };
+    return { source, edition: visible ? routedEdition : null, disposition: getLanguageDisposition(locale, source), href: routedEdition.href };
   }
   const editions = await getAllTranslationEditions();
   const bookEdition = editions.find((candidate) =>
@@ -90,13 +90,13 @@ async function resolveRoute(locale: TranslationLocale, bookSlug: string, chapter
     if (source) return {
       source,
       edition: null,
-      externalOriginal: getExternalOriginal(locale, source),
+      disposition: getLanguageDisposition(locale, source),
       href: `/${locale}/books/${encodeURIComponent(bookSlug)}/chapters/${encodeURIComponent(chapterSlug)}`,
     };
   }
   const source = await resolveTranslationSource({ type: "book-chapter", bookSlug, chapterId: chapterSlug });
   if (!source) return null;
-  return { source, edition: null, externalOriginal: getExternalOriginal(locale, source), href: translationPlaceholderHref(locale, source) };
+  return { source, edition: null, disposition: getLanguageDisposition(locale, source), href: translationPlaceholderHref(locale, source) };
 }
 
 async function chapterNavigation(
@@ -152,12 +152,26 @@ export async function generateMetadata({
   if (!locale) return {};
   const resolved = await resolveRoute(locale, decodeURIComponent(rawBook), decodeURIComponent(rawChapter));
   if (!resolved) return {};
-  const { source, edition, externalOriginal, href } = resolved;
+  const { source, edition, disposition, href } = resolved;
+  const externalOriginal = disposition?.state === "external-original" ? disposition : null;
+  const notAvailable = disposition?.state === "not-available";
   if (!edition) {
     return {
-      title: externalOriginal ? externalOriginal.title : locale === "en" ? `${source.title} — English edition unavailable` : `${source.title} — 日本語版は未公開です`,
+      title: externalOriginal
+        ? externalOriginal.title
+        : notAvailable
+          ? locale === "en"
+            ? `${source.title} — Not offered in English`
+            : `${source.title} — 日本語版は提供対象外です`
+          : locale === "en"
+            ? `${source.title} — English edition unavailable`
+            : `${source.title} — 日本語版は未公開です`,
       description: externalOriginal
         ? (locale === "en" ? "Verified publication details and official access routes for the original English edition." : "日本語原文の書誌情報と正規の入手先をご案内します。")
+        : notAvailable
+          ? locale === "en"
+            ? "This Chinese translation is not retranslated into English."
+            : "英語作品の中国語訳であるため、日本語への再翻訳は提供していません。"
         : locale === "en"
           ? "This chapter remains available in Chinese; an English edition has not been published."
           : "この章は中国語で公開されています。日本語版は未公開です。",
@@ -208,7 +222,7 @@ export default async function LocalizedBookChapterPage({
   if (!resolved) notFound();
   const links = await getEditionLanguageLinks(resolved.source);
   if (!resolved.edition) {
-    return <TranslationPlaceholder locale={locale} source={resolved.source} links={links} externalOriginal={resolved.externalOriginal} />;
+    return <TranslationPlaceholder locale={locale} source={resolved.source} links={links} disposition={resolved.disposition} />;
   }
   return (
     <>

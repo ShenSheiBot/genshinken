@@ -31,10 +31,10 @@ UPSTREAM_COMMIT = "e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7"
 TEXT_EXTENSIONS = {".css", ".json", ".md", ".ts", ".tsx"}
 CORPUS_ROOTS = (
     ROOT / "source" / "_translations" / "ja",
-    # External-original cards are rendered in the target locale too. Keep
+    # Language-disposition cards are rendered in the target locale too. Keep
     # their bibliographic titles in the hosted Japanese subset so a rare kanji
     # cannot silently fall back to a platform font.
-    ROOT / "source" / "_translations" / "external-originals.json",
+    ROOT / "source" / "_translations" / "language-dispositions.json",
     ROOT / "app" / "[locale]",
     ROOT / "app" / "components" / "translation",
 )
@@ -157,7 +157,7 @@ def corpus_code_points(files: list[Path]) -> set[int]:
 def rendered_corpus_code_points(files: list[Path]) -> set[int]:
     """Return every literal code point in files that can reach a JA route.
 
-    This intentionally includes localized component copy and external-original
+    This intentionally includes localized component copy and language-disposition
     metadata.  BASE_CODE_POINTS are excluded because they are a preload budget,
     not literal rendered content.
     """

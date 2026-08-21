@@ -17,11 +17,23 @@ Do not create empty Markdown files for untranslated works. The localized route
 renders its own non-indexable availability page when the corresponding file is
 absent.
 
-When the requested language is the verified language of an externally published
-original, record it in `external-originals.json` instead of fabricating a
-back-translation. The localized route then becomes a non-indexable source gateway
-with verified publication metadata and official reading, publisher, purchase, or
-library links. An on-site edition always takes precedence over that gateway.
+`language-dispositions.json` records deliberate outcomes for a source/language
+pair that has no on-site edition:
+
+- `external-original`: the requested language is the verified language of an
+  externally published original, but the current rights decision does not publish
+  an on-site copy. The localized route becomes a non-indexable source gateway with verified
+  publication metadata and official reading, publisher, purchase, or library
+  links.
+- `not-available`: the Roof publication is already a Chinese translation between
+  English and Japanese, so the site deliberately does not make a third-language
+  retranslation into the other language. The localized route explains that
+  editorial decision and keeps the Chinese edition reachable.
+
+Do not register a disposition merely because a draft is unfinished. Missing,
+draft, review, and published remain edition-lifecycle facts; dispositions are
+publication decisions. A source/language pair cannot have both an edition file
+and a disposition.
 
 Each real edition uses YAML front matter with these fields:
 
