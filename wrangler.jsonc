@@ -13,5 +13,19 @@
   },
   "observability": {
     "enabled": true
+  },
+  "env": {
+    "preview": {
+      "name": "roof-genshinken-a8f3d7c2",
+      "vars": {
+        "ROOF_TRANSLATION_PREVIEW": "1"
+      }
+    },
+    "production": {
+      "name": "roof-genshinken-production",
+      "vars": {
+        "ROOF_TRANSLATION_PREVIEW": "0"
+      }
+    }
   }
 }

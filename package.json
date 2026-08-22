@@ -16,9 +16,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "cf:build": "opennextjs-cloudflare build",
-    "cf:preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
-    "cf:deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "cf:build:preview": "node scripts/deploy-cloudflare.mjs preview --build-only",
+    "cf:build:production": "node scripts/deploy-cloudflare.mjs production --build-only",
+    "cf:deploy:preview": "node scripts/deploy-cloudflare.mjs preview",
+    "cf:deploy:production": "node scripts/deploy-cloudflare.mjs production",
     "start": "next start",
     "test:e2e": "playwright test",
     "lint": "eslint . --max-warnings=0",
