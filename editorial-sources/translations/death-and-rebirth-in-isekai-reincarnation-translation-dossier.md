@@ -16,7 +16,7 @@ sources:
   - id: roof-zh
     language: zh-Hans
     path: source/_posts/death-and-rebirth-in-isekai-reincarnation.md
-    revision: sha256:71698722826dcb8bc923fe9dc3315937286894bc81a00a35ecee426ac5291136
+    revision: sha256:f573e57ff830a88ae34b5217acae1cb5ba39d593648b7e8cb705ab7b15dcb1c5
     title: 死亡何以“新生”：异世界转生作品中的死亡研究
     author: 甚谁
     coverage: "Complete Roof Chinese original: one image, abstract, four numbered sections, conclusion, four long block quotations plus source-attribution lines, and the two Japanese Mushoku Tensei web quotations already preserved in the canonical."
@@ -93,7 +93,7 @@ segments:
     role: roof-original-body
     source_language: zh-Hans
     base_edition: roof-zh
-    source_revision: sha256:71698722826dcb8bc923fe9dc3315937286894bc81a00a35ecee426ac5291136
+    source_revision: sha256:f573e57ff830a88ae34b5217acae1cb5ba39d593648b7e8cb705ab7b15dcb1c5
     source_locator: Complete Markdown body after front matter, excluding separately routed embedded quotations.
     roof_presence: complete
     coverage: complete
@@ -103,7 +103,7 @@ segments:
     role: quotation
     source_language: ja
     base_edition: roof-zh
-    source_revision: sha256:71698722826dcb8bc923fe9dc3315937286894bc81a00a35ecee426ac5291136
+    source_revision: sha256:f573e57ff830a88ae34b5217acae1cb5ba39d593648b7e8cb705ab7b15dcb1c5
     source_locator: Two Japanese quotations already preserved verbatim in section III, followed by Roof Chinese translations.
     roof_presence: complete
     coverage: two quoted spans
@@ -113,7 +113,7 @@ segments:
     role: quotation
     source_language: zh-Hans
     base_edition: roof-zh
-    source_revision: sha256:71698722826dcb8bc923fe9dc3315937286894bc81a00a35ecee426ac5291136
+    source_revision: sha256:f573e57ff830a88ae34b5217acae1cb5ba39d593648b7e8cb705ab7b15dcb1c5
     source_locator: Section I block quotation attributed to 十文字青, Chinese translation of a Japanese afterword.
     roof_presence: complete
     coverage: quoted span only
@@ -123,7 +123,7 @@ segments:
     role: quotation
     source_language: zh-Hans
     base_edition: roof-zh
-    source_revision: sha256:71698722826dcb8bc923fe9dc3315937286894bc81a00a35ecee426ac5291136
+    source_revision: sha256:f573e57ff830a88ae34b5217acae1cb5ba39d593648b7e8cb705ab7b15dcb1c5
     source_locator: Section I block quotation attributed to 東浩紀, Chinese translation of a Japanese book passage.
     roof_presence: complete
     coverage: quoted span only
@@ -133,7 +133,7 @@ segments:
     role: caption
     source_language: zh-Hans
     base_edition: roof-zh
-    source_revision: sha256:71698722826dcb8bc923fe9dc3315937286894bc81a00a35ecee426ac5291136
+    source_revision: sha256:f573e57ff830a88ae34b5217acae1cb5ba39d593648b7e8cb705ab7b15dcb1c5
     source_locator: Opening Markdown image alt text.
     roof_presence: complete
     coverage: one image

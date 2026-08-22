@@ -15,7 +15,7 @@
         "end": "> （『無職転生 ～異世界行ったら本気だす～』、web版第1話。）"
       },
       "base_edition": "roof-zh-with-ja-original",
-      "source_revision": "sha256:8bb9db620fbe6fc0744c2655c700f9253a685955fa64574e82ddef11ba06c2e3",
+      "source_revision": "sha256:073b1001141e7a7ae801f026281cbe9fefeeff960294cd186f96ef1bfdb99813",
       "roof_presence": "complete",
       "relationship": "direct-ja; adjacent Chinese reader gloss omitted"
     },
@@ -31,7 +31,7 @@
         "end": "> （『無職転生 ～異世界行ったら本気だす～』、web版序章。）"
       },
       "base_edition": "roof-zh-with-ja-original",
-      "source_revision": "sha256:8bb9db620fbe6fc0744c2655c700f9253a685955fa64574e82ddef11ba06c2e3",
+      "source_revision": "sha256:073b1001141e7a7ae801f026281cbe9fefeeff960294cd186f96ef1bfdb99813",
       "roof_presence": "complete",
       "relationship": "direct-ja; adjacent Chinese reader gloss omitted"
     },
@@ -47,7 +47,7 @@
         "end": null
       },
       "base_edition": "roof-zh-with-ja-original",
-      "source_revision": "sha256:8bb9db620fbe6fc0744c2655c700f9253a685955fa64574e82ddef11ba06c2e3",
+      "source_revision": "sha256:073b1001141e7a7ae801f026281cbe9fefeeff960294cd186f96ef1bfdb99813",
       "roof_presence": "complete",
       "relationship": "direct-ja; adjacent Chinese reader gloss omitted"
     }

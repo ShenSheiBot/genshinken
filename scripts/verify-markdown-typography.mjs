@@ -84,6 +84,43 @@ assert.match(
   "removing the detached grouping title must preserve the footnote definition"
 );
 
+const mergedQuotationHtml = await renderMarkdown(
+  "> 第一段引文。\n\n> 第二段引文。\n\n> ——出处。"
+);
+assert.equal(
+  (mergedQuotationHtml.match(/<blockquote>/gu) ?? []).length,
+  1,
+  "adjacent blockquotes must render as one quotation container"
+);
+assert.match(
+  mergedQuotationHtml,
+  /<blockquote>\s*<p>第一段引文。<\/p>\s*<p>第二段引文。<\/p>\s*<p>——出处。<\/p>\s*<\/blockquote>/u,
+  "merging quotation containers must preserve paragraph and attribution boundaries"
+);
+
+const separatedQuotationHtml = await renderMarkdown(
+  "> 第一则引文。\n\n<!--separate-quotations-->\n\n> 第二则引文。"
+);
+assert.equal(
+  (separatedQuotationHtml.match(/<blockquote>/gu) ?? []).length,
+  2,
+  "the explicit separator must preserve deliberately independent quotations"
+);
+assert.doesNotMatch(
+  separatedQuotationHtml,
+  /separate-quotations/u,
+  "the quotation separator is an editorial marker and must not enter public HTML"
+);
+
+const interruptedQuotationHtml = await renderMarkdown(
+  "> 第一则引文。\n\n正文说明。\n\n> 第二则引文。"
+);
+assert.equal(
+  (interruptedQuotationHtml.match(/<blockquote>/gu) ?? []).length,
+  2,
+  "ordinary content between quotations must remain a semantic boundary"
+);
+
 const inlinePageMarkerFootnoteHtml = await renderMarkdown(
   "<!-- page 126 -->正文引用[^page-1]。\n\n<!-- page 127 --> 连续引用[^page-2]。\n\n[^page-1]: 第一条注释。\n\n[^page-2]: 第二条注释。"
 );

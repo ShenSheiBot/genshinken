@@ -15,7 +15,7 @@ credits:
 translation_method: agent
 source_relationship: mixed
 base_language: zh-Hans
-source_revision: "sha256:71698722826dcb8bc923fe9dc3315937286894bc81a00a35ecee426ac5291136"
+source_revision: "sha256:f573e57ff830a88ae34b5217acae1cb5ba39d593648b7e8cb705ab7b15dcb1c5"
 source_revision_scope: translation-payload
 updated: 2026-08-19
 rights: CC BY-NC-SA 4.0
@@ -64,24 +64,15 @@ Fantasy as a category since the 1990s can be divided into works with and without
 
 We can therefore define the fantasy-to-isekai lineage as a shift from fantasizing about oneself as the protagonist of an adventure in a fantasy world—indeed, this is essentially what *Record of Lodoss War*, whose model was an actual TRPG play record, already does—to fantasizing about beginning an entirely new life in a fantasy world. The subtitle of the most influential isekai-reincarnation work, *Mushoku Tensei*, sums it up perfectly: *Mushoku Tensei: Isekai Ittara Honki Dasu*—*Jobless Reincarnation: I’ll Seriously Try If I Go to Another World*. Up to this point, the transformation from fantasy to isekai can be summarized as follows:
 
-> Fantasy stories modeled on myth, history, and folklore
-
-> ↓
-
-> Participatory media culture modeled on fantasy stories
-
-> (TRPGs, digital RPGs)
-
-> ↓
-
-> Stories modeled on the TRPG pattern, in which an ordinary person from the real world plays the role of a character in a fantasy world
-
-> (transfer-type isekai works since the 1990s)
-
-> ↓
-
-> Stories likewise modeled on the TRPG pattern, in which an ordinary person from the real world dies and begins an entirely new life in another world
-
+> Fantasy stories modeled on myth, history, and folklore<br>
+> ↓<br>
+> Participatory media culture modeled on fantasy stories<br>
+> (TRPGs, digital RPGs)<br>
+> ↓<br>
+> Stories modeled on the TRPG pattern, in which an ordinary person from the real world plays the role of a character in a fantasy world<br>
+> (transfer-type isekai works since the 1990s)<br>
+> ↓<br>
+> Stories likewise modeled on the TRPG pattern, in which an ordinary person from the real world dies and begins an entirely new life in another world<br>
 > (*Mushoku Tensei*)
 
 The function of “death” here is to draw the boundary between the former life and the present one. In transfer stories, the protagonist remains the same person as before. However mysterious the cause of the transfer may be, “return” is still one of the protagonist’s goals. The tension between the protagonist’s desire to return to ordinary life and the adventure in the fantasy world is often exactly what such works emphasize, as in *The Familiar of Zero*. In fact, works that depict a protagonist torn between ordinary and extraordinary life are even more common outside isekai. Manga and light novels featuring supernatural elements, especially those popular since the 2000s, repeatedly use a similar pattern: the protagonist is drawn into a strange supernatural incident and is brought close to death or actually dies; a girl associated with the supernatural side saves him by using, or activating, supernatural powers already within him so that he recovers or is reborn. The price is that the male protagonist is separated from his former ordinary life and from then on enters a fantasy world governed by supernatural forces. On the one hand, he wants to return to his quiet everyday life; on the other, he cannot abandon the heroine and others, and wants to take responsibility. Such stories often end with the protagonist, accompanied by a group of peers, completing the fantasy adventure, defeating the antagonist, growing through the experience, and returning with new companions to ordinary life. There are so many works of this kind that I will not list them here. Once they are also placed within the isekai pattern, it becomes easier to understand why some critics classify the *Sword Art Online* series, whose story unfolds in video-game worlds, as a kind of isekai as well.

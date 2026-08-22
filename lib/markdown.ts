@@ -191,6 +191,58 @@ function remarkRemoveDetachedNoteHeadings() {
   };
 }
 
+const SEPARATE_QUOTATIONS_MARKER = /^\s*<!--\s*separate-quotations\s*-->\s*$/iu;
+
+/**
+ * CommonMark treats blockquotes separated by a blank line as independent
+ * containers. Archive sources frequently use those blank lines only to keep
+ * paragraphs, translations and attributions readable, so preserving the raw
+ * Markdown nodes would draw a new quotation rail around every paragraph.
+ *
+ * Merge adjacent blockquotes by default while keeping their child blocks
+ * distinct. Editors can preserve a deliberate boundary with the exact marker
+ * `<!--separate-quotations-->` between two quotations.
+ */
+function remarkMergeAdjacentBlockquotes() {
+  return (tree: MarkdownNode) => {
+    const walk = (node: MarkdownNode) => {
+      const children = node.children;
+      if (!children) return;
+
+      let index = 0;
+      while (index < children.length - 1) {
+        const current = children[index];
+        const next = children[index + 1];
+
+        if (
+          current.type === "blockquote"
+          && next.type === "html"
+          && typeof next.value === "string"
+          && SEPARATE_QUOTATIONS_MARKER.test(next.value)
+          && children[index + 2]?.type === "blockquote"
+        ) {
+          children.splice(index + 1, 1);
+          index += 1;
+          continue;
+        }
+
+        if (current.type === "blockquote" && next.type === "blockquote") {
+          current.children ??= [];
+          current.children.push(...(next.children ?? []));
+          children.splice(index + 1, 1);
+          continue;
+        }
+
+        index += 1;
+      }
+
+      for (const child of children) walk(child);
+    };
+
+    walk(tree);
+  };
+}
+
 /**
  * remark-gfm treats CJK punctuation as part of an autolink literal. A source
  * such as `https://example.com）后文` would therefore turn the entire
@@ -1303,6 +1355,7 @@ function createProcessor(
   .use(remarkCjkFriendly)
   .use(remarkTrimCjkAutolinkTail)
   .use(remarkRemoveDetachedNoteHeadings)
+  .use(remarkMergeAdjacentBlockquotes)
   .use(remarkRehype, {
     allowDangerousHtml: true,
     // GFM 脚注区标签本地化为「注释」，并去掉默认的 sr-only 类（本站将其作为可见的文章要件标题，由 CSS 单独定样式）

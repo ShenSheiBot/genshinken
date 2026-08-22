@@ -42,7 +42,7 @@ const REGISTRY = {
     enforcedBy: { script: "scripts/validate-content.mjs", anchor: "manualFootnoteSection" },
   },
   "TYPO-P8": {
-    manualReview: "整段引文是否该转 blockquote 是编辑判断，无法自动断言。",
+    manualReview: "整段文字是否属于引文仍需编辑判断；已相邻的 blockquote 由共享 Markdown 渲染器自动归为一个引文组，显式分隔符另有渲染回归。",
   },
   "TYPO-P9": {
     // 只拒绝同篇已有直接数字定义时仍留在定义块之前的裸数字调用；
