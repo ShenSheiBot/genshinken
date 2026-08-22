@@ -35,6 +35,13 @@ assert.match(
   "quotes enclosing CJK text must remain in the CJK run"
 );
 
+const primedFormalLabelHtml = await renderMarkdown("将 (C′) 与 (2″) 代入公式。");
+assert.match(
+  primedFormalLabelHtml,
+  /将 <span class="latin-run">\(C′\)<\/span> 与 <span class="latin-run">\(2″\)<\/span> 代入公式/u,
+  "formal labels with prime marks must keep both parentheses in one Latin font run"
+);
+
 const cjkAutolinkHtml = await renderMarkdown(
   "官网：http://www.sfwj.or.jp）第三届主席的同时，帮助设立了日本SF大奖。"
 );
@@ -141,6 +148,42 @@ assert.match(mathHtml, /class="katex-display"/, "display math must render with K
 assert.match(mathHtml, /<math\b[^>]*><semantics><mrow>/u, "KaTeX MathML must survive sanitization");
 assert.match(mathHtml, /<annotation encoding="application\/x-tex">/u);
 assert.match(mathHtml, /style="height:[^"]+"/u, "KaTeX layout styles must survive sanitization");
+
+const currencyHtml = await renderMarkdown(
+  "Tickets cost $5 and $10.00. 中文价格是$5，会员价$10。字面符号写作 \\$。"
+);
+assert.doesNotMatch(
+  currencyHtml,
+  /class="katex"/u,
+  "ordinary prices and escaped dollar signs must not be parsed as formulae"
+);
+assert.equal(
+  (currencyHtml.match(/\$/gu) ?? []).length,
+  5,
+  "literal currency signs must remain visible in rendered prose"
+);
+
+const numericMathHtml = await renderMarkdown("Numeric formulae still work: $5$ and $2x+1$.");
+assert.equal(
+  (numericMathHtml.match(/class="katex"/gu) ?? []).length,
+  2,
+  "protecting currency signs must not disable numeric inline formulae"
+);
+
+const currencyBeforeMathHtml = await renderMarkdown(
+  "The total is $5 million and formula $x$."
+);
+assert.equal(
+  (currencyBeforeMathHtml.match(/class="katex"/gu) ?? []).length,
+  1,
+  "currency prose must remain literal while a later inline formula still renders"
+);
+assert.match(
+  currencyBeforeMathHtml,
+  /\$<span class="latin-run">5 million and formula<\/span>/u,
+  "the literal price and its prose must remain visible"
+);
+assert.doesNotMatch(currencyBeforeMathHtml, /x\$\./u, "the closing formula dollar must not leak");
 
 const radicalHtml = await renderMarkdown("$\\sqrt{x}$");
 assert.match(
@@ -302,12 +345,42 @@ assert.match(semanticSlidesHtml, /data-slide="1" data-total="2"/u);
 assert.match(semanticSlidesHtml, /data-slide="2" data-total="2"/u);
 assert.doesNotMatch(semanticSlidesHtml, /\[幻灯(?:结束)?\]/u);
 
+const semanticLayoutHtml = await renderMarkdown(`
+[版式:时间轴]
+
+神化41年6月 披头士来日本武道馆演出。
+
+这是同一日期下的补充说明。
+
+[版式结束]
+`);
+assert.match(
+  semanticLayoutHtml,
+  /<section class="article-layout article-layout-timeline" data-layout="timeline">/u,
+  "an explicit article-layout range must become one semantic section"
+);
+assert.match(
+  semanticLayoutHtml,
+  /<p class="article-timeline-item"><time class="article-timeline-date">神化(?:<span class="latin-run">)?41(?:<\/span>)?年(?:<span class="latin-run">)?6(?:<\/span>)?月<\/time>披头士/u,
+  "a declared timeline must expose its leading date as a dedicated label"
+);
+assert.match(semanticLayoutHtml, /<p>这是同一日期下的补充说明。<\/p>/u);
+assert.doesNotMatch(semanticLayoutHtml, /\[版式/u, "article-layout markers must never render");
+
 const unmarkedFigureHtml = await renderMarkdown('![配图1](attachments/plate.png)');
 assert.doesNotMatch(
   unmarkedFigureHtml,
   /<figure|<figcaption/u,
   "images without a 图题 marker must stay bare so placeholder alt text never becomes a caption"
 );
+
+const sizedBareImageHtml = await renderMarkdown('![配图1](attachments/plate.png "=33%")');
+assert.match(
+  sizedBareImageHtml,
+  /<p class="article-image" data-width="33"><img src="\/attachments\/plate\.png" alt="配图1"[^>]*><\/p>/u,
+  "a bare image width hint must become layout semantics without inventing a caption"
+);
+assert.doesNotMatch(sizedBareImageHtml, /<figure|<figcaption|title=/u);
 
 function semanticCoverImagesWithoutWidth(markdown) {
   const lines = markdown.split(/\r?\n/u);
@@ -325,6 +398,36 @@ function semanticCoverImagesWithoutWidth(markdown) {
   return failures;
 }
 
+function unclassifiedItalicImageNeighbors(markdown) {
+  const lines = markdown.split(/\r?\n/u);
+  const failures = [];
+  const italicOnly = /^\*(?!\*)[^*].*\*$/u;
+  const isImage = (line) => /^!\[[^\]]*\]\([^\n]+\)\s*$/u.test(line.trim());
+  const previousSignificant = (index) => {
+    for (let cursor = index - 1; cursor >= 0; cursor -= 1) {
+      if (lines[cursor].trim()) return cursor;
+    }
+    return -1;
+  };
+  const nextSignificant = (index) => {
+    for (let cursor = index + 1; cursor < lines.length; cursor += 1) {
+      if (lines[cursor].trim()) return cursor;
+    }
+    return -1;
+  };
+
+  for (let index = 0; index < lines.length; index += 1) {
+    if (!italicOnly.test(lines[index].trim())) continue;
+    const previous = previousSignificant(index);
+    if (previous >= 0 && lines[previous].trim() === "<!--standalone-emphasis-->") continue;
+    const next = nextSignificant(index);
+    if ((previous >= 0 && isImage(lines[previous])) || (next >= 0 && isImage(lines[next]))) {
+      failures.push(index + 1);
+    }
+  }
+  return failures;
+}
+
 assert.deepEqual(
   semanticCoverImagesWithoutWidth('[图题] 书目\n\n![某书书封](attachments/book.jpg)'),
   [3],
@@ -335,6 +438,19 @@ assert.deepEqual(
   [],
   "a semantic book cover with an explicit print width must pass"
 );
+
+assert.deepEqual(
+  unclassifiedItalicImageNeighbors('![图](attachments/a.jpg)\n\n*看似图题。*'),
+  [3],
+  "an italic-only paragraph beside an image must be classified instead of relying on visual proximity"
+);
+assert.deepEqual(
+  unclassifiedItalicImageNeighbors('![图](attachments/a.jpg)\n\n<!--standalone-emphasis-->\n*确为独立说明。*'),
+  [],
+  "a deliberate standalone italic beside an image needs an explicit source decision"
+);
+const standaloneEmphasisHtml = await renderMarkdown('![图](attachments/a.jpg)\n\n<!--standalone-emphasis-->\n*确为独立说明。*');
+assert.doesNotMatch(standaloneEmphasisHtml, /standalone-emphasis/u, "standalone-emphasis markers must not enter public HTML");
 
 assert.match(
   richArticleHtml,
@@ -475,9 +591,17 @@ assert.doesNotMatch(
   const path = await import("node:path");
   const postsDirectory = path.join(process.cwd(), "source", "_posts");
   const corpusFailures = [];
-  const markerLeak = /\[(?:图题|图注|表题|表注|人物|人物简介|图组|图组结束|幻灯|幻灯结束)\]/u;
+  const markerLeak = /\[(?:图题|图注|表题|表注|人物|人物简介|图组|图组结束|幻灯|幻灯结束|版式(?::(?:资料目录|时间轴|阅读路径|播客|联络卡|漫画)|结束))\]/u;
   const legacyItalicCaption = /^\*(?:图题[:：]|图[0-9]+[.．：:]).*\*$/mu;
   const invalidWidth = /title="=(?!(?:25|33|50|66|75|100)%")[^"]*"/u;
+  const plainCompositionalityLabel = /(?<!\$)\((?:C(?:′)?|H|RR|P|F(?:all|any|cofinal)|[1-8](?:′|″)?)\)(?!\$)/u;
+  const italicCompositionalityVariable = /\*e(?:′|″)?\*/u;
+  const nonRomanCompositionalitySubscript = /(?:C|S|F)_\{(?:ref|local|coll|cross|stand|occ|singular|plural|all|any|cofinal)\}/u;
+  const ocrReflowPosts = new Set([
+    "sep-compositionality.md",
+    "sep-rudolf-carnap-supplement-c-inductive-logic.md",
+    "sep-rudolf-carnap-supplement-e-scientific-theory-reconstruction-part-3.md",
+  ]);
   const malformedCjkHref = /href="https?:\/\/[^"]*%(?:EF%BC(?:%8C|%88|%89|%9B|%9A|%81|%9F)|EF%BC(?:%BB|%BD)|E3%80(?:%81|%82|%90|%91|%8A|%8B|%8C|%8D)|E2%80(?:%98|%99|%9C|%9D))[^"]*"/iu;
 
   const posts = fs
@@ -498,6 +622,20 @@ assert.doesNotMatch(
     if (legacyItalicCaption.test(body)) {
       corpusFailures.push(`${name}: 遗留斜体图题必须迁移为图片前的 [图题] 语义标记`);
     }
+    for (const line of unclassifiedItalicImageNeighbors(body)) {
+      corpusFailures.push(`${name}:${line}: 图片相邻的独立斜体必须迁移为 [图题]/[图注]，确属独立文字时显式标记`);
+    }
+    if (name === "sep-compositionality.md") {
+      if (plainCompositionalityLabel.test(body) || italicCompositionalityVariable.test(body)) {
+        corpusFailures.push(`${name}: 形式原则／例句标签或变量仍混用了正文西文字体，必须统一进入 KaTeX`);
+      }
+      if (nonRomanCompositionalitySubscript.test(body)) {
+        corpusFailures.push(`${name}: 形式原则的语义下标必须使用 \\mathrm{}`);
+      }
+    }
+    if (ocrReflowPosts.has(name) && /[，。！？；：、）】》”’] +(?=\S)/u.test(body)) {
+      corpusFailures.push(`${name}: OCR 正文仍有中文标点后的半角空格`);
+    }
     for (const line of semanticCoverImagesWithoutWidth(body)) {
       corpusFailures.push(`${name}:${line}: 语义书影必须显式指定图版宽度（单本通常 25/33%，复合书影按构图选择）`);
     }
@@ -510,12 +648,37 @@ assert.doesNotMatch(
     const malformedLink = malformedCjkHref.exec(html);
     if (malformedLink) corpusFailures.push(`${name}: 裸 URL 吞入了中文标点或后续正文`);
   }
+  const translationRoot = path.join(process.cwd(), "source", "_translations");
+  const translationFiles = (directory) => fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
+    const file = path.join(directory, entry.name);
+    return entry.isDirectory() ? translationFiles(file) : entry.name.endsWith(".md") ? [file] : [];
+  });
+  for (const file of translationFiles(translationRoot)) {
+    const relative = path.relative(process.cwd(), file);
+    const raw = fs.readFileSync(file, "utf8").replace(/^﻿/u, "");
+    const end = raw.indexOf("\n---", 3);
+    const body = /^---/u.test(raw) && end !== -1
+      ? raw.slice(raw.indexOf("\n", end + 4) + 1)
+      : raw;
+    for (const line of unclassifiedItalicImageNeighbors(body)) {
+      corpusFailures.push(`${relative}:${line}: 译文中图片相邻的独立斜体必须迁移为 [图题]/[图注]`);
+    }
+    for (const line of semanticCoverImagesWithoutWidth(body)) {
+      corpusFailures.push(`${relative}:${line}: 译文语义书影必须显式指定图版宽度`);
+    }
+    const language = relative.includes(`${path.sep}ja${path.sep}`) ? "ja" : "en";
+    const html = await renderMarkdown(body, { language });
+    if (markerLeak.test(html)) corpusFailures.push(`${relative}: 译文图版／特殊版式标记字面渲染进页面`);
+    const width = invalidWidth.exec(html);
+    if (width) corpusFailures.push(`${relative}: 非法图版宽度 ${width[0]}`);
+    if (malformedCjkHref.test(html)) corpusFailures.push(`${relative}: 译文裸 URL 吞入了中文标点或后续正文`);
+  }
   assert.deepEqual(
     corpusFailures,
     [],
     `全语料渲染扫描发现 ${corpusFailures.length} 处标记泄漏`
   );
-  console.log(`corpus render scan passed for ${posts.length} posts`);
+  console.log(`corpus render scan passed for ${posts.length} posts and ${translationFiles(translationRoot).length} translations`);
 }
 
 console.log("markdown typography verification passed");

@@ -16,7 +16,7 @@ sources:
   - id: roof-zh
     language: zh-Hans
     path: source/_posts/physical-space-landscape-first-love-flavors-of-youth.md
-    revision: sha256:6ab42b7dd79c254f1d938f2f5661bf6f18bf7f495766bca99375f34d6ae99aa8
+    revision: sha256:cef71b736b38fc4ae1bb60bf6a792e5f2387a443d7ad80fbf8d8eb5abc7e3d2c
     title: 新番新语丨物理空间，风景，初恋——从《肆式青春》谈起
     author: T君
     coverage: Complete Roof essay with two numbered sections, nine figures, editor's note, and a two-item interview-source list.
@@ -27,7 +27,7 @@ segments:
     role: roof-original-body
     source_language: zh-Hans
     base_edition: roof-zh
-    source_revision: sha256:6ab42b7dd79c254f1d938f2f5661bf6f18bf7f495766bca99375f34d6ae99aa8
+    source_revision: sha256:cef71b736b38fc4ae1bb60bf6a792e5f2387a443d7ad80fbf8d8eb5abc7e3d2c
     source_locator: Complete Markdown body after front matter.
     roof_presence: complete
     coverage: complete

@@ -20,7 +20,7 @@ citation:
   date: "1993-12-22"
   language: zh-CN
   url: "https://www.bilibili.com/read/cv17322343/"
-  extra: "原文署名为企画、发行、责任编辑庵野秀明；冰-koori译，首发于微博专栏；原页未提供同人本版次、页码或微博原始链接。"
+  extra: "企画、发行、责任编辑：庵野秀明；翻译：冰-koori；中文译文首发于微博专栏。"
 ---
 
 <h2 id="opening-message">开篇寄语</h2>

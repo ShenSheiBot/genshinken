@@ -18,7 +18,7 @@ citation:
   edition: Spring 2016
   publisher: Metaphysics Research Lab, Stanford University
   url: "https://plato.stanford.edu/archives/spr2016/entries/montague-semantics/"
-  extra: "原词条2011-11-07初版、2016-02-25实质修订；中文译文首发于豆瓣笔记（https://www.douban.com/note/761585870/），原发日期未核明，2020-06-29发表于屋顶现视研；公开译文载至第3.5节，不含第3.6节、第4节及Bibliography。"
+  extra: "原词条2011-11-07初版、2016-02-25实质修订；中文译文首发于豆瓣笔记（https://www.douban.com/note/761585870/），2020-06-29发表于屋顶现视研；公开译文载至第3.5节，不含第3.6节、第4节及Bibliography。"
 ---
 
 >
@@ -141,15 +141,15 @@ citation:
 
 一个表达式或许会被直接联系为模型中的元素。比如，“walk”和一些关于个体的集合。然后同样的，一些意义上的操作也需要被直接指定，这导致了这样的一些形式化，例如[直接语义解释]：
 
-![蒙太古的直接语义解释公式](attachments/roof-archive/cv6584358/01-direct-semantic-interpretation.png)
+[图题] 直接语义解释。
 
-*直接语义解释。*
+![蒙太古的直接语义解释公式](attachments/roof-archive/cv6584358/01-direct-semantic-interpretation.png)
 
 [重写后的间接语义解释]:
 
-![内涵逻辑重写公式](attachments/roof-archive/cv6584358/02-intensional-logic-rewrite.png)
+[图题] 重写。
 
-*重写。*
+![内涵逻辑重写公式](attachments/roof-archive/cv6584358/02-intensional-logic-rewrite.png)
 
 这些描述并不好懂而且用起来也不方便。蒙太古(1973)指出，或许间接地处理它们会更加清晰明了。因此他引进了一种叫“内涵逻辑(intensional logic)”的语言，上述引文中的操作被重新表达为上图所示的形式。λt意味着一个t为自变量的函数，同样对于λu也是。λtλu[t = u]是一个有两个自变量的函数，当两个自变量相等时它输出为真，反之为假。前面的∧[必须注意的是，这里这个符号是一个上标，它被称作内涵算子(intensor)而不是合取符]意味着，我们将其考虑作一个从可能世界以及时刻[都为复数，possible words, moments of time]，到一个如此被定义[参照了具体的某个可能世界及时刻]的函数的函数[The preceding ∧ says that we consider a function from possible worlds and moments of time to the thus defined function]。
 
@@ -217,9 +217,9 @@ Frege(1892)引进了涵义(sense[英], sinn[德])与意谓(reference[英], bedeu
 
 有一些人称蒙太古自己没有用组合性原则去处理代词相关的问题，但是这没有关系，为了更好的理解对代词的组合性的处理，Janssen (1997) 与Dowty (2007)解释了变项怎么在逻辑中得到解释的，我们则遵循这种理解。考虑对于以下式子，来自于传统的塔斯基式对谓词逻辑的解释。
 
-![塔斯基式谓词逻辑解释公式](attachments/roof-archive/cv6584358/03-tarskian-interpretation.png)
+[图题] 塔斯基对谓词逻辑的解释。
 
-*塔斯基对谓词逻辑的解释。*
+![塔斯基式谓词逻辑解释公式](attachments/roof-archive/cv6584358/03-tarskian-interpretation.png)
 
 第一个式子声称ϕ ∧ ψ在指派(assignment)g下是真的，当且仅当在指派g下ϕ与ψ都是真的。而第二个式子引入了指派h，它和指派g是相等的，除了它们可能都指派了变项x的值这种情况。蒙太古运用了相同的格式，但有个不同是，在上标中，包括g，他还有i，这与时间相关，以及j，与可能世界相关。
 

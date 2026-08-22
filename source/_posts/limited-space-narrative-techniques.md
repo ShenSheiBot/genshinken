@@ -35,7 +35,7 @@ citation:
 
 但这些也往往是日常轻松向的小短篇构成的连载作品，**没有办法讲述具有完整主线脉络的深刻故事**。
 
-*《千绪的上学路》。*
+[图题] 《千绪的上学路》。
 
 ![《千绪的上学路》画面](attachments/roof-archive/cv3522753/02-chio-school-road.png)
 
@@ -53,13 +53,13 @@ citation:
 
 在《翼年代记》中，作者CLAMP先前20部作品中的角色全部作为平行次元中的人物被放进了这部漫画中，例如我们较为熟知的《魔卡少女樱》中的小樱和小狼，在《翼年代记》中作为“玖楼国公主小樱”和“旅行家之子小狼”存在。
 
-*所以总有人以为《翼》是《魔卡》的续集。*
+[图题] 所以总有人以为《翼》是《魔卡》的续集。
 
 ![《翼年代记》角色群像](attachments/roof-archive/cv3522753/03-tsubasa-cast.png)
 
 故事的发生则是让主角们不断地穿越“次元空间”，来到不同年代、不同设定背景的次元中进行冒险。且同期连载的《XXXholic》中发生的事件会与《翼年代记》中的事件**互相关联产生连锁反应**。
 
-*两部作品的联动非常巧妙。*
+[图题] 两部作品的联动非常巧妙。
 
 ![《翼年代记》与《xxxHOLiC》角色联动](attachments/roof-archive/cv3522753/04-tsubasa-xxxholic-crossover.png)
 
@@ -105,11 +105,11 @@ citation:
 
 《xxxholic》的剧场版《仲夏夜之梦》中，创作者将故事场景限制在了一栋洋房里，然而因为诅咒的缘故，这栋洋房的布局随时在改变。
 
-*洋房的外部。*
+[图题] 洋房的外部。
 
 ![《xxxHOLiC 仲夏夜之梦》中的洋房外观](attachments/roof-archive/cv3522753/11-xxxholic-mansion-exterior.png)
 
-*进入了一个夏夜的场景。*
+[图注] 进入了一个夏夜的场景。
 
 ![洋房中出现的夏夜场景](attachments/roof-archive/cv3522753/12-xxxholic-summer-night.png)
 
@@ -117,7 +117,7 @@ citation:
 
 所有被邀请到洋房中的收藏家，最终都被精灵变成了收藏品，并使洋房多出一个新的“收藏房间”。
 
-*图中的人柱是历代“被收藏”起来的收藏家们。*
+[图题] 图中的人柱是历代“被收藏”起来的收藏家们。
 
 ![洋房中被收藏的收藏家](attachments/roof-archive/cv3522753/13-xxxholic-collectors.png)
 
@@ -151,9 +151,9 @@ citation:
 
 内部不但布置了老人奇形怪状的收藏品，电车顶层还有竹林和温泉，已经远远超过了一个电车的普通概念。
 
-![森见登美彦作品中的奇异电车](attachments/roof-archive/cv3522753/18-morimi-magic-train.gif)
+[图题] 电车内部。
 
-*电车内部。*
+![森见登美彦作品中的奇异电车](attachments/roof-archive/cv3522753/18-morimi-magic-train.gif)
 
 ![奇异电车内部](attachments/roof-archive/cv3522753/19-magic-train-interior.png)
 
@@ -257,13 +257,13 @@ citation:
 
 抽屉中的实景－实景中的抽屉相挂钩，有一种博伊德称之为“多重空间”的感觉，即“世界中的世界中的世界”，“可能中的可能中的可能”。[^iv]
 
+[图题] 巨大的房间与渺小的有钱人之间的对比。
+
 ![《抽屉里的温室箱》中的空间套叠](attachments/roof-archive/cv3522753/31-drawer-greenhouse.png)
 
-*巨大的房间与渺小的有钱人之间的对比。*
+[图题] 巨大的房间与渺小的有钱人之间的对比。
 
 ![《有钱人的家》中的巨大房间与人物](attachments/roof-archive/cv3522753/32-rich-person-house-01.png)
-
-*巨大的房间与渺小的有钱人之间的对比。*
 
 ![《有钱人的家》中的空间对比](attachments/roof-archive/cv3522753/33-rich-person-house-02.png)
 

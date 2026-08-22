@@ -20,6 +20,7 @@ import { visit } from "unist-util-visit";
 import type { Root, Element } from "hast";
 import { sanitizePublicContentHtml } from "./media-material-runtime.mjs";
 import { rewriteArchiveAssetUrl } from "./archive-assets-runtime.mjs";
+import { escapeLiteralCurrencyDollars } from "./markdown-math.mjs";
 import type { ContentFormat } from "./posts";
 
 const SIZE_TITLE = /^\s*=(\d+)x(\d+)\s*$/; // Typora/Hexo 图片尺寸标注
@@ -306,7 +307,7 @@ async function renderSourceNotes(
             `<a href="#${refId}" class="source-backref" aria-label="${labels.backToSource} ${note.label}">↑</a>`
         )
         .join("");
-      const html = String(await activeProcessor.process(note.text)).trim();
+      const html = String(await activeProcessor.process(escapeLiteralCurrencyDollars(note.text))).trim();
       return `<li id="source-note-${note.key}" value="${note.num}">${appendBackrefs(html, backrefs)}</li>`;
     })
   );
@@ -508,7 +509,7 @@ const LATIN_SKIP = new Set([
   "h6",
 ]);
 const LATIN_RUN =
-  /[\p{Script=Latin}\p{Script=Cyrillic}\p{Script=Greek}0-9 \t\u00a0.,;:!?'\u2018\u2019\u201c\u201d"()[\]{}<>/\\&+%№§#@*=_~\-–—]*[\p{Script=Latin}\p{Script=Cyrillic}\p{Script=Greek}0-9][\p{Script=Latin}\p{Script=Cyrillic}\p{Script=Greek}0-9 \t\u00a0.,;:!?'\u2018\u2019\u201c\u201d"()[\]{}<>/\\&+%№§#@*=_~\-–—]*/gu;
+  /[\p{Script=Latin}\p{Script=Cyrillic}\p{Script=Greek}0-9 \t\u00a0.,;:!?'′″\u2018\u2019\u201c\u201d"()[\]{}<>/\\&+%№§#@*=_~\-–—]*[\p{Script=Latin}\p{Script=Cyrillic}\p{Script=Greek}0-9][\p{Script=Latin}\p{Script=Cyrillic}\p{Script=Greek}0-9 \t\u00a0.,;:!?'′″\u2018\u2019\u201c\u201d"()[\]{}<>/\\&+%№§#@*=_~\-–—]*/gu;
 const LATIN_WORD_CHAR = /[\p{Script=Latin}\p{Script=Cyrillic}\p{Script=Greek}0-9]/u;
 const CJK_INTERPUNCT = /[·・…]/u;
 
@@ -954,6 +955,16 @@ const GALLERY_TITLE_MARKER = "[图组]";
 const GALLERY_END_MARKER = "[图组结束]";
 const SLIDES_TITLE_MARKER = "[幻灯]";
 const SLIDES_END_MARKER = "[幻灯结束]";
+const ARTICLE_LAYOUT_END_MARKER = "[版式结束]";
+const ARTICLE_LAYOUT_MARKERS = new Map([
+  ["[版式:资料目录]", "resources"],
+  ["[版式:时间轴]", "timeline"],
+  ["[版式:阅读路径]", "reading-path"],
+  ["[版式:书单]", "book-list"],
+  ["[版式:播客]", "podcast"],
+  ["[版式:联络卡]", "contact"],
+  ["[版式:漫画]", "comic"],
+] as const);
 /** Discrete display widths; each needs a matching rule in globals.css. */
 const FIGURE_WIDTHS = new Set(["25", "33", "50", "66", "75", "100"]);
 const FIGURE_WIDTH_TITLE = /^\s*=\s*(\d{1,3})%\s*$/u;
@@ -967,6 +978,83 @@ const BLOCK_MEDIA_MARKERS = [
 function hasNodeClass(node: TableFigureNode, name: string) {
   const className = node.properties?.className;
   return Array.isArray(className) && className.includes(name);
+}
+
+function addTimelineDate(node: TableFigureNode): boolean {
+  if (node.type !== "element" || node.tagName !== "p") return false;
+  const pattern = /^(神化\d+年(?:\d+月)?)\s+/u;
+  const strip = (current: TableFigureNode): string | undefined => {
+    if (current.type === "text" && typeof current.value === "string") {
+      const match = pattern.exec(current.value);
+      if (!match) return undefined;
+      current.value = current.value.slice(match[0].length);
+      return match[1];
+    }
+    for (const child of current.children ?? []) {
+      const date = strip(child);
+      if (date) return date;
+    }
+    return undefined;
+  };
+  const date = strip(node);
+  if (!date) return false;
+  node.properties = { ...(node.properties ?? {}), className: ["article-timeline-item"] };
+  node.children = [
+    {
+      type: "element",
+      tagName: "time",
+      properties: { className: ["article-timeline-date"] },
+      children: [{ type: "text", value: date }],
+    },
+    ...(node.children ?? []),
+  ];
+  return true;
+}
+
+/**
+ * Wrap explicitly declared non-essay content in one reusable semantic shell.
+ * Markdown owns the editorial choice; the renderer never guesses from image
+ * count, link density, or a title. Variants remain CSS concerns, except that a
+ * declared timeline exposes its leading date as a real <time> label.
+ */
+function rehypeArticleLayouts() {
+  const walk = (parent: TableFigureNode) => {
+    const children = parent.children;
+    if (!children) return;
+
+    for (let index = 0; index < children.length; index += 1) {
+      const start = children[index];
+      const layout = Array.from(ARTICLE_LAYOUT_MARKERS.entries()).find(([marker]) => markerParagraph(start, marker));
+      if (!layout) continue;
+
+      let endIndex = significantSibling(children, index + 1, 1);
+      while (endIndex >= 0 && !markerParagraph(children[endIndex], ARTICLE_LAYOUT_END_MARKER)) {
+        endIndex = significantSibling(children, endIndex + 1, 1);
+      }
+      if (endIndex < 0) continue;
+
+      const [, variant] = layout;
+      const content = children.slice(index + 1, endIndex);
+      if (variant === "timeline") {
+        for (const node of content) addTimelineDate(node);
+      }
+      children.splice(index, endIndex - index + 1, {
+        type: "element",
+        tagName: "section",
+        properties: {
+          className: ["article-layout", `article-layout-${variant}`],
+          "data-layout": variant,
+        },
+        children: content,
+      });
+    }
+
+    for (const child of children) {
+      if (child.type === "element") walk(child);
+    }
+  };
+
+  return (tree: Root) => walk(tree as unknown as TableFigureNode);
 }
 
 /**
@@ -1343,6 +1431,37 @@ function rehypeImageSlides(language: RenderLanguage = "zh") {
   return (tree: Root) => walk(tree as unknown as TableFigureNode);
 }
 
+/**
+ * Consume an explicit print-width hint on an otherwise bare image paragraph.
+ * Width is independent from caption semantics: alt text remains accessibility
+ * text and must not become a visible legend merely because an editor sized the
+ * plate.
+ */
+function rehypeBareImageWidths() {
+  const walk = (parent: TableFigureNode) => {
+    for (const node of parent.children ?? []) {
+      if (node.type !== "element") continue;
+      if (node.tagName === "p") {
+        const image = soleImage(node);
+        const title = image?.properties?.title;
+        if (image && typeof title === "string") {
+          const match = FIGURE_WIDTH_TITLE.exec(title);
+          if (match && FIGURE_WIDTHS.has(match[1])) {
+            delete image.properties?.title;
+            node.properties = {
+              ...(node.properties ?? {}),
+              className: ["article-image"],
+              "data-width": match[1],
+            };
+          }
+        }
+      }
+      walk(node);
+    }
+  };
+  return (tree: Root) => walk(tree as unknown as TableFigureNode);
+}
+
 function createProcessor(
   format: ContentFormat = "article",
   language: RenderLanguage = "zh"
@@ -1370,12 +1489,14 @@ function createProcessor(
   })
   .use(rehypeSlug)
   .use(rehypeRewrite, format)
+  .use(rehypeArticleLayouts)
   .use(rehypeTableFigures)
   .use(rehypeSplitCompactMediaMarkers)
   .use(rehypeProfileFigures)
   .use(rehypeImageFigures)
   .use(rehypeImageGalleries)
   .use(() => rehypeImageSlides(language))
+  .use(rehypeBareImageWidths)
   .use(rehypeCjkEmphasis)
   .use(rehypeSmartQuotes)
   .use(rehypeCjkInterpuncts)
@@ -1400,7 +1521,9 @@ export async function renderMarkdown(
   const activeProcessor = language === "zh" && (!options.format || options.format === "article")
     ? processor
     : createProcessor(options.format ?? "article", language);
-  const file = await activeProcessor.process(normalizeInlinePageMarkers(markdown));
+  const file = await activeProcessor.process(
+    escapeLiteralCurrencyDollars(normalizeInlinePageMarkers(markdown))
+  );
   return sanitizePublicContentHtml(
     String(file) + await renderSourceNotes(sourceNotes, language, activeProcessor)
   );

@@ -22,7 +22,7 @@ citation:
   publisher: Metaphysics Research Lab, Stanford University
   url: "https://plato.stanford.edu/archives/spr2018/entries/natural-kinds/"
   rights: 翻译仅供学习讨论，转载请注明原文出处与翻译校对
-  extra: 原词条2008-09-17初版、2017-02-15实质修订；中文译文首发于知乎专栏“网哲邻人部”，后受托由屋顶现视研在B站长期代发，本篇于2020-03-12发布，知乎首发日期未查明
+  extra: 原词条2008-09-17初版、2017-02-15实质修订；中文译文首发于知乎专栏“网哲邻人部”，后受托由屋顶现视研在B站长期代发，本篇于2020-03-12发布
 ---
 
 <h2 id="introduction-section-1">导言与第 1 节</h2>

@@ -11,7 +11,7 @@ section: translation
 tags: [摄影, 安德烈·巴赞, 罗兰·巴特, 萨特, 超现实主义, 电影理论]
 post_author: Adam Lowenstein
 translator: will
-excerpt: Adam Lowenstein 由萨特、巴赞与巴特重审摄影现实主义的超现实主义维度；现有两章摘译覆盖原论文第54—64页，后半尚未译出。
+excerpt: Adam Lowenstein 由萨特、巴赞与巴特重审摄影现实主义的超现实主义维度；两章摘译覆盖原论文第54—64页。
 featured_order: 0
 citation:
   itemType: journalArticle
@@ -25,7 +25,7 @@ citation:
   DOI: 10.1353/cj.2007.0024
   url: "https://doi.org/10.1353/cj.2007.0024"
   language: en
-  extra: will 所译摘文现分两章，覆盖原论文第54—64页；第64页起的《第三意义》、《意外的春天》与数字媒介论述尚未译出。
+  extra: will 所译摘文分两章，收录原论文第54—64页。
 ---
 
 <h2 id="introduction-bazin-sartre">序言＋正文1：巴赞、萨特与摄影超现实主义</h2>

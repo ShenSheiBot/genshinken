@@ -18,9 +18,9 @@ citation:
   url: "https://www.bilibili.com/read/cv19651001/"
 ---
 
-![署名‘「　」’的作者卡片](/attachments/roof-archive/cv19651001/91c904e3acc2dfd458656d2c6148f161c16c64f9.png)
+[图题] 作者君↑。本文系屋顶年度征稿活动·拾荒战略前夜祭获奖稿件。
 
-*作者君↑。本文系屋顶年度征稿活动·拾荒战略前夜祭获奖稿件。*
+![署名‘「　」’的作者卡片](/attachments/roof-archive/cv19651001/91c904e3acc2dfd458656d2c6148f161c16c64f9.png)
 
 ## 目次
 

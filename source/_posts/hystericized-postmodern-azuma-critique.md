@@ -16,7 +16,7 @@ citation:
   date: "2018-04"
   blogTitle: 后拟像时代的ACGN
   url: "https://www.bilibili.com/read/cv1801559/"
-  extra: "作者鱼板；原文首发于知乎专栏‘后拟像时代的ACGN’，文中自述写于2018年4月，原始 URL 与具体日期未核明；2019-01-01发布于屋顶现视研。"
+  extra: "作者鱼板；原文首发于知乎专栏‘后拟像时代的ACGN’，文中自述写于2018年4月；2019-01-01发布于屋顶现视研。"
 ---
 
 ![鱼板作者卡与题词](attachments/roof-archive/cv1801559/01-yu-ban-author-card.jpg)

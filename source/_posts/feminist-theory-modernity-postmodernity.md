@@ -49,6 +49,8 @@ citation:
 
 *像任何社会理论选集一样，这个文本中的读物提出的都是大问题：“现在正在发生些什么事？我们身上发生了什么事？我们生活于其中的这个世界、这个时期、此时此刻到底是什么？”（Best和Kellner引自福柯，2001:5）。读者们可以通过一系列多样的试图理解并分析社会世界的读物来回答这些问题。因为这是一个女性主义理论选集，所以它的注意力集中在若干社会变革对于性别关系和对不同阶级、种族、性取向和地理位置的女性所产生的影响上。这些差异化的社会位置为观察世界提供了多样化的视角。每个理论家都提供了她或他的关于“消失的当下历史”的见解，以便于我们能够更好的理解自己。(Spivak, [1999) 2006).1。*
 
+[版式:阅读路径]
+
 [全书导论＆术语表](https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247486999&idx=2&sn=e6a9bfb635da6686cf4de20fea7ccdbb&chksm=cfc58f22f8b20634f172b7cc0ec69366ce862b629e576247279b5059fdc46763c1f7df86629c&scene=21&cur_album_id=2217188105374187520#wechat_redirect)
 
 [第二章 自由主义女性主义 导论](https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247487043&idx=1&sn=5f5b25a02b1618ad5cb24bdcbdad2a23&scene=21#wechat_redirect)
@@ -68,3 +70,5 @@ citation:
 [第九章 晚期现代的女性主义与帝国主义](https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247487284&idx=1&sn=893b2a9da956be75bab31c9f0f87d38a&scene=21#wechat_redirect)
 
 [第十章 后现代的女性主义与帝国主义](https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247487298&idx=1&sn=bd92b08461a2b40e88c65fe4341d6b02&scene=21#wechat_redirect)
+
+[版式结束]

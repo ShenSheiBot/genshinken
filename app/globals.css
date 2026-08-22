@@ -578,6 +578,17 @@ body:has(main[data-archive-page="true"]) {
 }
 .art-body .signature-block p:last-child { margin-bottom: 0; }
 .art-body img { display: block; max-width: 100%; height: auto; margin: 36px auto; border: 1px solid var(--hair-strong); }
+.art-body p.article-image {
+  margin: 36px auto;
+  text-indent: 0;
+}
+.art-body p.article-image[data-width="25"] { width: 25%; }
+.art-body p.article-image[data-width="33"] { width: 33%; }
+.art-body p.article-image[data-width="50"] { width: 50%; }
+.art-body p.article-image[data-width="66"] { width: 66%; }
+.art-body p.article-image[data-width="75"] { width: 75%; }
+.art-body p.article-image[data-width="100"] { width: 100%; }
+.art-body p.article-image > img { width: 100%; margin: 0; }
 .art-body figure { margin: 36px 0; }
 .art-body figcaption { font-family: var(--f-mono); font-size: 12px; color: var(--ink-faint); text-align: center; margin-top: 10px; }
 .art-body hr { border: none; border-top: 1px solid var(--hair-strong); margin: 48px 0; }
@@ -591,6 +602,20 @@ body:has(main[data-archive-page="true"]) {
   padding: 20px 22px; overflow-x: auto; margin: 32px 0;
 }
 .art-body pre code { background: none; border: none; padding: 0; font-size: inherit; }
+.art-body .katex {
+  max-width: 100%;
+}
+/* KaTeX defaults every formula to 1.21em. Keep that hierarchy for display
+   mathematics, but inline notation must share the prose size and line box. */
+.art-body :not(.katex-display) > .katex {
+  font-size: 1em;
+}
+.art-body .katex-display {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 4px;
+}
 .art-body table {
   width: 100%;
   margin: 34px 0;
@@ -774,10 +799,246 @@ body:has(main[data-archive-page="true"]) {
 .art-body .article-slides-track > figure.article-figure > figcaption.article-figure-caption {
   margin-top: 10px;
 }
+
+/* Explicit article layouts: editors opt into these in Markdown; the renderer
+   never infers them from link or image counts. All variants share one shell so
+   the product boundary stays small while the reading rhythm can differ. */
+.art-body .article-layout {
+  margin: 44px 0;
+}
+.art-body .article-layout > :first-child { margin-top: 0; }
+.art-body .article-layout > :last-child { margin-bottom: 0; }
+
+.art-body .article-layout-resources {
+  padding: 26px 0 8px;
+  border-top: 1px solid var(--hair-strong);
+}
+.art-body .article-layout-resources > h2 {
+  margin-top: 58px;
+  padding-top: 18px;
+  border-top: 1px solid var(--hair);
+}
+.art-body .article-layout-resources > h2:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+.art-body .article-layout-resources > ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  padding: 0;
+  list-style: none;
+}
+.art-body .article-layout-resources > ul > li {
+  position: relative;
+  margin: 0;
+  padding: 13px 15px 13px 30px;
+  border: 1px solid var(--hair);
+  background: color-mix(in srgb, var(--paper) 72%, transparent);
+}
+.art-body .article-layout-resources > ul > li::before {
+  position: absolute;
+  top: 1.15em;
+  left: 14px;
+  width: 6px;
+  height: 6px;
+  content: "";
+  background: var(--accent);
+}
+.art-body .article-layout-resources > p:has(> img:only-child) {
+  margin: 28px auto;
+  text-indent: 0;
+}
+.art-body .article-layout-resources > p > img:only-child {
+  width: auto;
+  max-width: min(75%, 720px);
+  max-height: 520px;
+  object-fit: contain;
+}
+
+.art-body .article-layout-timeline {
+  position: relative;
+  padding: 8px 0 8px 34px;
+  border-left: 1px solid var(--hair-strong);
+}
+.art-body .article-layout-timeline > p {
+  margin: 0 0 18px;
+  text-indent: 0;
+}
+.art-body .article-layout-timeline > p:not(.article-timeline-item) {
+  padding-left: 18px;
+  color: var(--ink-soft);
+}
+.art-body .article-layout-timeline > .article-timeline-item {
+  position: relative;
+  padding: 0 0 0 18px;
+}
+.art-body .article-layout-timeline > .article-timeline-item::before {
+  position: absolute;
+  top: .72em;
+  left: -38px;
+  width: 7px;
+  height: 7px;
+  content: "";
+  background: var(--accent);
+  outline: 7px solid var(--bg);
+}
+.art-body .article-timeline-date {
+  display: block;
+  margin: 0 0 4px;
+  color: var(--accent);
+  font-family: var(--f-mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+.art-body .article-layout-timeline > p:has(> img:only-child) {
+  padding-left: 0;
+  text-indent: 0;
+}
+
+.art-body .article-layout-reading-path {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  counter-reset: reading-path;
+}
+.art-body .article-layout-reading-path > p {
+  position: relative;
+  min-height: 76px;
+  margin: 0;
+  padding: 15px 16px 14px 52px;
+  border: 1px solid var(--hair);
+  text-align: left;
+  text-indent: 0;
+  counter-increment: reading-path;
+}
+.art-body .article-layout-reading-path > p::before {
+  position: absolute;
+  top: 17px;
+  left: 16px;
+  content: counter(reading-path, decimal-leading-zero);
+  color: var(--accent);
+  font-family: var(--f-mono);
+  font-size: 11px;
+  font-weight: 700;
+}
+.art-body .article-layout-reading-path > p > a {
+  border-bottom: 0;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+.art-body .article-layout-book-list > ul {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0 0 24px;
+  padding: 0;
+  list-style: none;
+  counter-reset: book-list;
+}
+.art-body .article-layout-book-list > ul > li {
+  position: relative;
+  min-height: 108px;
+  margin: 0;
+  padding: 42px 16px 16px;
+  border: 1px solid var(--hair);
+  background: color-mix(in srgb, var(--accent) 5%, var(--paper));
+  font-weight: 700;
+  line-height: 1.65;
+  counter-increment: book-list;
+}
+.art-body .article-layout-book-list > ul > li::before {
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  content: "BOOK " counter(book-list, decimal-leading-zero);
+  color: var(--accent);
+  font-family: var(--f-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .1em;
+}
+.art-body .article-layout-book-list > p {
+  margin: 0;
+  color: var(--ink-soft);
+  text-indent: 0;
+}
+
+.art-body .article-layout-podcast {
+  padding: 24px 0 4px;
+  border-top: 3px solid var(--accent);
+}
+.art-body .article-layout-podcast > p:first-child {
+  margin: 0 0 34px;
+  padding: 20px 22px;
+  border: 1px solid var(--hair-strong);
+  background: color-mix(in srgb, var(--accent) 7%, var(--paper));
+  font-family: var(--f-note);
+  font-size: 14px;
+  line-height: 1.75;
+  text-indent: 0;
+}
+.art-body .article-layout-podcast > p:first-child::before {
+  display: block;
+  margin-bottom: 7px;
+  content: "AUDIO / EPISODE";
+  color: var(--accent);
+  font-family: var(--f-mono);
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: .12em;
+}
+.art-body .article-layout-podcast > h2 {
+  margin-top: 48px;
+  padding-top: 16px;
+  border-top: 1px solid var(--hair);
+}
+
+.art-body .article-layout-contact {
+  width: min(460px, 100%);
+  margin-right: auto;
+  margin-left: auto;
+  padding: 28px;
+  border: 1px solid var(--hair-strong);
+  background: color-mix(in srgb, var(--accent) 5%, var(--paper));
+}
+.art-body .article-layout-contact > p {
+  margin: 0;
+  text-align: center;
+  text-indent: 0;
+}
+.art-body .article-layout-contact img {
+  width: min(100%, 360px);
+  margin: 0 auto;
+  border: 0;
+}
+
+.art-body .article-layout-comic {
+  width: min(920px, calc(100vw - 64px));
+  margin-right: 0;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+.art-body .article-layout-comic > p {
+  margin: 0 0 18px;
+  text-indent: 0;
+}
+.art-body .article-layout-comic > p > img:only-child {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  border-color: var(--hair);
+}
 @media (max-width: 640px) {
   /* Narrow columns cannot afford a quarter-width plate; floor every figure at half. */
   .art-body figure.article-figure[data-width="25"] > img,
   .art-body figure.article-figure[data-width="33"] > img { width: 50%; }
+  .art-body p.article-image[data-width="25"],
+  .art-body p.article-image[data-width="33"] { width: 50%; }
   .art-body figure.article-profile,
   .art-body figure.article-profile[data-width="33"],
   .art-body figure.article-profile[data-width="50"] {
@@ -802,6 +1063,14 @@ body:has(main[data-archive-page="true"]) {
   .art-body .article-slides-track > figure.article-figure > img {
     max-height: 68vh;
   }
+  .art-body .article-layout-resources > ul,
+  .art-body .article-layout-reading-path,
+  .art-body .article-layout-book-list > ul { grid-template-columns: 1fr; }
+  .art-body .article-layout-resources > p > img:only-child { max-width: 100%; }
+  .art-body .article-layout-timeline { padding-left: 24px; }
+  .art-body .article-layout-timeline > .article-timeline-item::before { left: -28px; }
+  .art-body .article-layout-contact { padding: 18px; }
+  .art-body .article-layout-comic { width: calc(100vw - 24px); }
 }
 
 .art-body figure.article-table {

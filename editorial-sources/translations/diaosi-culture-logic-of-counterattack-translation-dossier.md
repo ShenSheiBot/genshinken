@@ -16,7 +16,7 @@ sources:
   - id: roof-zh
     language: zh-Hans
     path: source/_posts/diaosi-culture-logic-of-counterattack.md
-    revision: sha256:c0217d62e6c739133ec9737dcfcff80337a0e2acb2da93137b0a2520f37352a1
+    revision: sha256:27c1a92457ed3c6189d8ffbf300b853896eb35d25f2fb0a2451ed01850bbf7fa
     file_sha256: sha256:66cc52ff0eacf9b72eea1ca034210f616d4d10824232f1abbec0b74155ae17d7
     title: 小谈吊丝文化：逆袭的逻辑
     author: 实在狗子
@@ -28,7 +28,7 @@ segments:
     role: roof-original-body
     source_language: zh-Hans
     base_edition: roof-zh
-    source_revision: sha256:c0217d62e6c739133ec9737dcfcff80337a0e2acb2da93137b0a2520f37352a1
+    source_revision: sha256:27c1a92457ed3c6189d8ffbf300b853896eb35d25f2fb0a2451ed01850bbf7fa
     source_locator: Complete Markdown body after front matter.
     roof_presence: complete
     coverage: complete

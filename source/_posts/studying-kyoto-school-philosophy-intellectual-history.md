@@ -49,6 +49,7 @@ citation:
 
 ![海边蓝色海水前、穿格纹泳装的浅绿色长发女性插画](attachments/wechat/gP04aas1lCQJFJZzsSQ9MA/001.jpg)
 
+<!--standalone-emphasis-->
 *试译记：慕唯仁（Viren Murthy）、法比安·舍费尔（Fabian Schäfer）、马克斯·沃德（Max Ward），Studying the Kyoto School: Philosophy, Intellectual History, and Marx’s Critique of Modernity，收录于 Confronting Capital and Empire（2017）。全书译毕；注释从省，仅供学习交流、留存参考。*
 
 在东亚哲学中，京都學派占据着一个相当特殊的位置。许多被归入「亚洲哲学」名下的思想家——譬如孔子、老子与道元——根本就不曾听说过「哲学」这一术语，而京都學派的思想家，却正是作为哲学家受训的，他们与自己在欧洲的同时代人展开对话，因而会将自身的智识活动界定为「哲学」。当然，「哲学」这一范畴并非中立，亚洲各地的大学对其运用也各不相同。例如在中国，从孔子、朱熹、荻生徂徠到西田幾多郎与柄谷行人，其思想活动都被界定为「哲学」（zhexue）。然而在日本，大学却作出一个重要的区分：在那里，二十世纪之前亚洲的绝大多数智识活动都被归类为「思想史」（shisōshi），而唯有二十世纪的思想才被视为「哲学」。从这一视角看来，德川时代的儒者荻生徂徠会被当作思想史加以研究，而像西田这样的京都學派哲学家则会被当作哲学加以研究。
@@ -957,9 +958,8 @@ citation:
 
 ![两名蓝绿色头发人物亲吻的四格插画](attachments/wechat/bPILC0RtiCv5V3mOY3kEew/001.jpg)
 
+<!--standalone-emphasis-->
 *试译记。原作：Christian Uhl（克里斯蒂安·乌尔），〈Nishida Kitarō and the Antinomies of Bourgeois Philosophy〉，载《Confronting Capital and Empire》（2017）。封面来自 @kebo。来源说明标注“注释从省，仅供学习交流、留存参考”。*
-
-*本篇原页所配音频：初音未来〈Last Night, Good Night〉，时长 6 分 20 秒。*
 
 ### 前提
 
@@ -2367,6 +2367,7 @@ Hegel, Phenomenology of Spirit，页 213。关于黑格尔论作品与个体性�
 
 ![两名动漫人物相吻的彩色插画](attachments/wechat/Q1aksRvxSgHOrMJPe5uOrQ/body-001.png)
 
+<!--standalone-emphasis-->
 *原文配乐：toe〈むこう岸が視る夢〉（4分42秒）。*
 
 世界的统一性并不在于它的存在，尽管它的存在是其统一性的前提，因为世界必须先存在，然后才谈得上是统一的。而在我们视野所及的范围之外，存在始终是一个悬而未决的问题。世界真正的统一性在于它的物质性，而这种物质性不是靠魔术师的三两句话所能证明的，而是要由哲学和自然科学长期而艰苦的发展来证明的。
@@ -2707,6 +2708,7 @@ Furihata Setsuo, Furihata Setsuo chosakushū [Collected works of Furihata Setsuo
 
 ![两名动漫人物在户外相拥起舞的彩色插画](attachments/wechat/iYoVj0TRlBDCjy4LGHvdtA/body-001.png)
 
+<!--standalone-emphasis-->
 *原文配乐：Foreground Eclipse〈(I Don’t Need Any Titles To This Song!)〉（4分32秒）。*
 
 *慕唯仁（Viren Murthy）著，单字一兔试译。原作〈Umemoto Katsumi, Subjective Nothingness, and the Critique of Civil Society〉载《Confronting Capital and Empire》（2017）；原发布说明：“注释从省，仅供学习交流、留存参考。”*

@@ -92,6 +92,7 @@ citation:
 
 > 原文：[Kaguya-sama: Love is War Production Notes 06-12 and Final Impressions](https://blog.sakugabooru.com/2019/03/31/kaguya-sama-love-is-war-production-notes-06-12-and-final-impressions/)，作者kViN，发表于 Sakuga Blog（2019年3月31日）。本文为摘译。
 
+<!--standalone-emphasis-->
 *屋顶现视研－群青七号楼志愿翻译。*
 
 ---
@@ -174,6 +175,7 @@ citation:
 
 > 编者按：在Sakuga Blog上的原文中，原作者用超链接的方式给出了大量补充信息，便于文章的理解。其中大部分是推特上的视频和推文，也有其他相关文章。为了方便读者，维持阅读体验的连续性，原文中的超链接将在尾注中给出，并附上目标链接的文字与图片内容，视频内容可以点开链接查看。
 
+<!--standalone-emphasis-->
 *屋顶现视研－群青七号楼志愿翻译。*
 
 ![《辉夜大小姐：恋爱即战争第二季》制作过程画面](attachments/roof-archive/cv6177490/01-production-key-visual.png)

@@ -12814,6 +12814,12 @@
       "contentType": "image/png"
     },
     {
+      "key": "roof-archive/cv6691318/no-left-turn-sign.png",
+      "bytes": 8418,
+      "sha256": "59714328b3690d3cc34be29127bc888b896d1e2400f60c4ea228def436419f7e",
+      "contentType": "image/png"
+    },
+    {
       "key": "roof-archive/cv6691318/page-01.png",
       "bytes": 172150,
       "sha256": "67053be02ca4dea8f1dcb675102697e2d31bfee6ea475601b41641f0128bd2c6",
@@ -12949,6 +12955,18 @@
       "key": "roof-archive/cv6691318/page-23.png",
       "bytes": 795799,
       "sha256": "bfd1e79cb24a75a9761d755dbcfdf99ca80a0edca4434f2530b20cb320a8c9a6",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv6691318/traffic-sign-minimal-pair.png",
+      "bytes": 16045,
+      "sha256": "7e2515e76ec95717d1836f3a6def2f2028470f5af678fb1d634381f5a34daca7",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv6691318/traffic-sign-system.png",
+      "bytes": 36226,
+      "sha256": "5a0ddff4ad0194ee7d414d79756e1414419a9b600cbd6ed12c54ce78d573d427",
       "contentType": "image/png"
     },
     {

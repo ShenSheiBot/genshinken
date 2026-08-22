@@ -109,9 +109,9 @@ citation:
 
 像SK8这样的骨头社的项目中请来业界知名人士，如前京阿尼原画师植野千世子和鸭居知世接手最重要、最触动人心的场景。
 
-![《22/7 那一天的她们》角色设定稿](attachments/roof-archive/cv9759662/06-22-7-character-sheets.png)
+[图题] 原画：左为鸭居知世，右为植野千世子。
 
-*原画：左为鸭居知世，右为植野千世子。*
+![《22/7 那一天的她们》角色设定稿](attachments/roof-archive/cv9759662/06-22-7-character-sheets.png)
 
 另一个像咒术回战这样下了大功夫的动画作品，正是靠藤田纱英子用优美、自然可信的方式来处理它转描的ED，如同另一位前京阿尼动画师处理[《辉夜大小姐》的ED](https://www.bilibili.com/video/BV19b411k7d2)一般。
 

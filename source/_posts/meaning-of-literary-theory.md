@@ -21,9 +21,9 @@ citation:
   extra: 本文为问题回答，作者实在狗子（亦用名潜在狗子）；更早问答页与发布渠道未详。
 ---
 
-![实在狗子作者卡及题句“在没有世界的时代，传播无意义之爱”](attachments/roof-archive/cv7971122/01-shi-zai-gou-zi-author-card.png "=100%")
+[图题] “我想对世界施虐。”——潜在狗子。
 
-*“我想对世界施虐。”——潜在狗子。*
+![实在狗子作者卡及题句“在没有世界的时代，传播无意义之爱”](attachments/roof-archive/cv7971122/01-shi-zai-gou-zi-author-card.png "=100%")
 
 > 原题目：
 >

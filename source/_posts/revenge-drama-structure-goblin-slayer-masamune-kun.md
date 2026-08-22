@@ -16,7 +16,7 @@ citation:
   date: "2018-12-09"
   blogTitle: 屋顶现视研
   url: "https://www.bilibili.com/read/cv1679758/"
-  extra: "作者钟子默；经授权转载；原文首发于甚哥哥的知乎专栏“后拟像时代的ACGN”，原发日期未核明。"
+  extra: "作者钟子默；经授权转载；原文首发于甚哥哥的知乎专栏“后拟像时代的ACGN”。"
 ---
 
 ![钟子默作者卡，列有其研究兴趣与自我介绍](attachments/roof-archive/cv1679758/01-zhong-zimo-author-card.jpg)

@@ -23,7 +23,7 @@ citation:
   publisher: Metaphysics Research Lab, Stanford University
   url: "https://plato.stanford.edu/archives/spr2018/entries/truth-deflationary/"
   rights: 翻译仅供学习讨论，转载注明原文出处与翻译校对
-  extra: "原词条1997-08-28初版、2010-10-04实质修订；中文译文首发于知乎专栏‘网哲邻人部’，后受托由屋顶现视研在B站长期代发，本篇于2020-04-12发布，知乎首发日期未查明"
+  extra: "原词条1997-08-28初版、2010-10-04实质修订；中文译文首发于知乎专栏‘网哲邻人部’，后受托由屋顶现视研在B站长期代发，本篇于2020-04-12发布"
 ---
 
 <h2 id="sections-1-6">第 1～6 节</h2>

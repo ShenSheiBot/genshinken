@@ -42,6 +42,8 @@ citation:
 
 ---
 
+[版式:漫画]
+
 ![《Lain》同人漫画页：少女面孔、眼睛与缠绕的线路](attachments/wechat/OmAv8Kzzo0rcMUYAmhZouQ/body-001.jpg)
 
 ![《Lain》同人漫画页：显示器与多层屏幕构成的房间](attachments/wechat/OmAv8Kzzo0rcMUYAmhZouQ/body-002.jpg)
@@ -73,3 +75,5 @@ citation:
 ![《Lain》同人漫画页：少女面孔与城市影像重叠](attachments/wechat/OmAv8Kzzo0rcMUYAmhZouQ/body-015.jpg)
 
 ![《Lain》同人漫画页：人物独立站在夜色与城市背景中](attachments/wechat/OmAv8Kzzo0rcMUYAmhZouQ/body-016.jpg)
+
+[版式结束]

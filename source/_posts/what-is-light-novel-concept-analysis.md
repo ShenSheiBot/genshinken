@@ -70,7 +70,7 @@ citation:
 
 7. 主题：社会性话题的缺乏
 
-*屋顶娘强烈推荐本作《明日，我将死去，你将重生》。*
+[图题] 屋顶娘强烈推荐本作《明日，我将死去，你将重生》。
 
 ![《明日，我将死去，你将重生》作品图](attachments/roof-archive/cv1980660/03-tomorrow-i-will-die-series.png)
 

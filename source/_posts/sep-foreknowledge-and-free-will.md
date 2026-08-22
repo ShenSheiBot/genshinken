@@ -21,7 +21,7 @@ citation:
   publisher: Metaphysics Research Lab, Stanford University
   url: "https://plato.stanford.edu/archives/spr2018/entries/free-will-foreknowledge/"
   rights: 翻译仅供学习讨论，转载请注明原文出处与翻译校对
-  extra: 原词条2004-07-06初版、2017-04-13实质修订；中文译文首发于知乎专栏“网哲邻人部”，后受托由屋顶现视研在B站长期代发，本篇于2020-03-29发布，知乎首发日期未查明；原发布页所附参考文献止于Brüntrup与Schneider（2011），完整书目未附
+  extra: 原词条2004-07-06初版、2017-04-13实质修订；中文译文首发于知乎专栏“网哲邻人部”，后受托由屋顶现视研在B站长期代发，本篇于2020-03-29发布；本译文所附参考文献止于Brüntrup与Schneider（2011）
 ---
 
 宿命论的观点是，人的行为的发生具有必然性，因此是不自由的。神学宿命论的观点是，对人的行为的不可错（infallible）地预知使该行为必然如此并因此是不自由的。若有一种存在不可错地知道完全的未来，则没有人类行为是自由的。

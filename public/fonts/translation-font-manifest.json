@@ -34,8 +34,8 @@
     "source/_translations/ja/posts/witcher-wilderness-detective.md",
     "source/_translations/language-dispositions.json"
   ],
-  "corpusSha256": "44e2514d509d1acb538352b4efac15da468a34ff33c4c42eb22c12c8e7f8846f",
-  "fallbackCodePointCount": 50,
+  "corpusSha256": "381573a92ae2238d3406afbf2a04ab10069c2d65871f0d55aa75ca092e389712",
+  "fallbackCodePointCount": 51,
   "fonts": {
     "Roof EB Garamond Fallback": {
       "bytes": 3888,
@@ -79,16 +79,16 @@
       "weight": "100 900"
     },
     "Roof Noto Sans SC Fallback": {
-      "bytes": 18236,
-      "codePointCount": 47,
+      "bytes": 18672,
+      "codePointCount": 48,
       "family": "Roof Noto Sans SC Fallback",
       "file": "roof-noto-sans-sc-fallback.woff2",
       "kind": "fallback-sans",
-      "sha256": "c0794ee01969625acec6f3c44bf6bec308858edc69ecd2fe9d4b1aa4f84efd26",
+      "sha256": "2e2238b0d511efc85b1e50c0da18c6e65d22cae23f4a098558235cd78f31e24a",
       "source": "NotoSansSC.ttf",
       "sourceSha256": "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da",
       "sourceUrl": "https://raw.githubusercontent.com/google/fonts/e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7/ofl/notosanssc/NotoSansSC%5Bwght%5D.ttf",
-      "unicodeRange": "U+4E1D U+4E3A U+4E49 U+4E66 U+5219 U+52A1 U+52A8 U+534E U+55B5 U+56FE U+575B U+5987 U+5B9E U+5E05 U+6001 U+61D2 U+6218 U+62E5 U+62E8-62E9 U+6682 U+672F U+6742 U+67AB U+6811 U+6C49 U+73AF U+7535 U+7EA7 U+7EB9 U+7EF4 U+7F16 U+89C8 U+8BBA U+8BC6 U+8BD1 U+8BDA U+8BDD U+8BED U+8C14 U+8DB4 U+9009 U+94B1 U+9884 U+9986 U+9C81 U+9E2D",
+      "unicodeRange": "U+4E1D U+4E3A U+4E49 U+4E66 U+5219 U+52A1 U+52A8 U+534E U+55B5 U+56FE U+575B U+5987 U+5B9E U+5E05 U+6001 U+61D2 U+6218 U+62E5 U+62E8-62E9 U+6682 U+672F U+6742 U+67AB U+6811 U+6C49 U+73AF U+7535 U+7EA7 U+7EB9 U+7EF4 U+7F16 U+89C8 U+8BBA U+8BC6 U+8BD1 U+8BDA U+8BDD U+8BED U+8C14 U+8DB4 U+9009 U+94B1 U+9884 U+9898 U+9986 U+9C81 U+9E2D",
       "variable": "--font-roof-noto-sans-sc-fallback",
       "weight": "100 900"
     },
@@ -106,16 +106,16 @@
       "weight": "200 900"
     },
     "Roof Noto Serif SC Fallback": {
-      "bytes": 22464,
-      "codePointCount": 47,
+      "bytes": 23012,
+      "codePointCount": 48,
       "family": "Roof Noto Serif SC Fallback",
       "file": "roof-noto-serif-sc-fallback.woff2",
       "kind": "fallback-serif",
-      "sha256": "1578ac4bbf3fb74aa8c9945a08cf37493ad17a649b5a4861b9a33ae73098f141",
+      "sha256": "1922b9ca80452eb0b91370ab4f994898268b5c90cc4ab16ae51e1e6c91d348c7",
       "source": "NotoSerifSC.ttf",
       "sourceSha256": "050080d9255a86808f2945bffac582b31ef32bc36411ce29563b4961670c66f9",
       "sourceUrl": "https://raw.githubusercontent.com/google/fonts/e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7/ofl/notoserifsc/NotoSerifSC%5Bwght%5D.ttf",
-      "unicodeRange": "U+4E1D U+4E3A U+4E49 U+4E66 U+5219 U+52A1 U+52A8 U+534E U+55B5 U+56FE U+575B U+5987 U+5B9E U+5E05 U+6001 U+61D2 U+6218 U+62E5 U+62E8-62E9 U+6682 U+672F U+6742 U+67AB U+6811 U+6C49 U+73AF U+7535 U+7EA7 U+7EB9 U+7EF4 U+7F16 U+89C8 U+8BBA U+8BC6 U+8BD1 U+8BDA U+8BDD U+8BED U+8C14 U+8DB4 U+9009 U+94B1 U+9884 U+9986 U+9C81 U+9E2D",
+      "unicodeRange": "U+4E1D U+4E3A U+4E49 U+4E66 U+5219 U+52A1 U+52A8 U+534E U+55B5 U+56FE U+575B U+5987 U+5B9E U+5E05 U+6001 U+61D2 U+6218 U+62E5 U+62E8-62E9 U+6682 U+672F U+6742 U+67AB U+6811 U+6C49 U+73AF U+7535 U+7EA7 U+7EB9 U+7EF4 U+7F16 U+89C8 U+8BBA U+8BC6 U+8BD1 U+8BDA U+8BDD U+8BED U+8C14 U+8DB4 U+9009 U+94B1 U+9884 U+9898 U+9986 U+9C81 U+9E2D",
       "variable": "--font-roof-noto-serif-sc-fallback",
       "weight": "200 900"
     }
@@ -154,8 +154,8 @@
   },
   "strategy": "japanese-translation-corpus-variable-fonts-with-generated-fallbacks",
   "subsetCodePointCount": 2238,
-  "targetCodePointCount": 2043,
-  "targetCodePointSha256": "08e5dfcb48ac18a2da358dbaf00fcfe0fe81f168dad01775223aea12eb3bd99a",
+  "targetCodePointCount": 2044,
+  "targetCodePointSha256": "b1048b293d5d9aeb68c5baae2dc273da923ad6130991835547516854951222a5",
   "toolchainSha256": "b192f1da4344abea6d8568a33b15e3ecfb6d9f8242b22257639c7cf28d4424c3",
   "uncoveredCodePointRanges": [],
   "upstreamCommit": "e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7",

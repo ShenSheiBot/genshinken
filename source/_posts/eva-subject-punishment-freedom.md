@@ -27,9 +27,9 @@ citation:
 
 <h2 id="part-1">上篇</h2>
 
-![《EVA》文章标题卡：神罚与自由的主体](attachments/wechat/7Xru7YVhciDU1Rc5q0246w/body-001.png)
+[图题] 高橋洋子《残酷天使的行动纲领》｜Kritik备用号｜4分05秒
 
-*高橋洋子《残酷天使的行动纲领》｜Kritik备用号｜4分05秒*
+![《EVA》文章标题卡：神罚与自由的主体](attachments/wechat/7Xru7YVhciDU1Rc5q0246w/body-001.png)
 
 <strong>前言：</strong>
 
@@ -183,9 +183,9 @@ TV版的《EVA》是以某种危机性的事件打破「日常生活」作为开
 
 <h2 id="part-2">下篇</h2>
 
-![《EVA》文章下篇标题卡：对“爱”的审视——神罚与自由的主体](attachments/wechat/-DLlcdtQYm6QfGpbiRl3tw/body-001.png)
+[图题] 高橋洋子《魂のルフラン（Tabris Mix）》｜专辑《〜refrain〜》｜5分29秒
 
-*高橋洋子《魂のルフラン（Tabris Mix）》｜专辑《〜refrain〜》｜5分29秒*
+![《EVA》文章下篇标题卡：对“爱”的审视——神罚与自由的主体](attachments/wechat/-DLlcdtQYm6QfGpbiRl3tw/body-001.png)
 
 ## 三、完结的世界
 

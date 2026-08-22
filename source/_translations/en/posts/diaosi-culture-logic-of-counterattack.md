@@ -15,7 +15,7 @@ credits:
 translation_method: agent
 source_relationship: direct
 base_language: zh-Hans
-source_revision: "sha256:c0217d62e6c739133ec9737dcfcff80337a0e2acb2da93137b0a2520f37352a1"
+source_revision: "sha256:27c1a92457ed3c6189d8ffbf300b853896eb35d25f2fb0a2451ed01850bbf7fa"
 source_revision_scope: translation-payload
 updated: 2026-08-19
 rights: CC BY-NC-SA 4.0
@@ -30,9 +30,9 @@ Of course, what matters more seems to be the difference between Ah Q and the dia
 
 Here I want to stress that the diaosi discussed in this essay is mainly the kind with a cynical attitude. To put it more plainly: a diaosi with a “sense of humor.” They like to mock all kinds of things and often believe—at least judging from the attitude conveyed by their words and actions—that they understand society very “thoroughly.” This is precisely one reason they call themselves diaosi: I know perfectly well that, socially speaking, I am “not doing so great” right now, and I also know perfectly well that I am powerless to change society, so I maintain an ironic distance from it.
 
-![Male internet stock-photo figure wearing fur and sunglasses](attachments/roof-archive/cv4224834/02-high-rich-handsome-stock-photo.jpg)
+[图题] Internet image.
 
-*Internet image.*
+![Male internet stock-photo figure wearing fur and sunglasses](attachments/roof-archive/cv4224834/02-high-rich-handsome-stock-photo.jpg)
 
 Given that Li Yi Bar, the famous birthplace of diaosi culture, rests on precisely this kind of cynicism, I think this definition is acceptable. Do not forget that Li Yi Bar users love to emphasize “depth” and think they have an incredible sense of humor.
 
@@ -40,9 +40,9 @@ Diaosi culture likes to objectify all kinds of things: “tall-rich-handsome,”
 
 Nor do they forget to “objectify” themselves. But they place themselves in a privileged position, which I will describe in detail below. This is a crucial theme that, in my view, absolutely cannot be ignored when discussing diaosi culture: being a diaosi itself represents a victory.
 
-![Animated characters talking on a bed](attachments/roof-archive/cv4224834/03-anime-bedroom-still.jpg)
+[图题] Just putting some pictures here for the sake of it.
 
-*Just putting some pictures here for the sake of it.*
+![Animated characters talking on a bed](attachments/roof-archive/cv4224834/03-anime-bedroom-still.jpg)
 
 So how do they objectify themselves? With the genit\*ls. The genit\*ls represent their sexual anxiety, and also their attitude of “giving up on themselves,” because genit\*ls are something society does not (directly) accept. On the other hand, the diaosi also knows perfectly well that this society is intimately bound up with genit\*ls (sex). One of their basic fantasies is that although the tall-rich-handsome looks glamorous and respectable all day long, behind the scenes he is having sex with the fair-rich-beautiful all day long.
 
@@ -52,9 +52,9 @@ This brings us to an absolutely crucial point in diaosi culture: the tall-rich-h
 
 It is precisely this objective gaze that gives the diaosi the illusion that “I can see through society,” and precisely this illusion that leads the diaosi toward another fundamental fantasy: the diaosi counterattack.
 
-![Key visual for 『恋×シンアイ彼女』](attachments/roof-archive/cv4224834/04-koikake-shojo-visual.jpg)
+[图题] Just putting some pictures here for the sake of it.
 
-*Just putting some pictures here for the sake of it.*
+![Key visual for 『恋×シンアイ彼女』](attachments/roof-archive/cv4224834/04-koikake-shojo-visual.jpg)
 
 The diaosi counterattack is the truth of diaosi culture, its real secret. A person is willing to call himself a diaosi precisely because he always keeps “the possibility of counterattack” in mind. Here again, the diaosi places himself in a privileged position where he absolutely cannot lose:
 
@@ -71,9 +71,9 @@ And in some respects the diaosi is worse than Ah Q. Ah Q’s past leaves him dis
 
 So we have to understand the sentence “a diaosi can never become tall-rich-handsome” literally. Because the diaosi gets too much pleasure from the very word diaosi (counterattack), even if he becomes tall-rich-handsome by his own standards, he will absolutely not let go of the word “counterattack.” He can keep counterattacking, because the possibility of counterattack is itself a kind of pleasure. The possibility of counterattack is doubled, until “being in a state where one can counterattack” itself becomes a counterattack.
 
-![Animated girl on a springtime street](attachments/roof-archive/cv4224834/05-anime-girl-spring.jpg)
+[图题] Just putting some pictures here for the sake of it.
 
-*Just putting some pictures here for the sake of it.*
+![Animated girl on a springtime street](attachments/roof-archive/cv4224834/05-anime-girl-spring.jpg)
 
 Finally, let us look once more at the word diaosi itself. Do not forget that the diaosi, disgustingly, reduces all women to genit\*ls. The question, then, is why the diaosi does not reduce the “tall-rich-handsome” to genit\*ls. Why, according to their fantasy, is he not “tall-rich-long”? Because the real genit\*ls are on the side of the diaosi. The diaosi knows the secret of organizing pleasure. The tall-rich-handsome, by contrast, is a “castrated” diaosi: a poor wretch with no opportunity to counterattack, always liable to be counterattacked.
 

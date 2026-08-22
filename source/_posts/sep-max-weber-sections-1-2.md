@@ -22,7 +22,7 @@ citation:
   publisher: Metaphysics Research Lab, Stanford University
   url: "https://plato.stanford.edu/archives/spr2018/entries/weber/"
   rights: 翻译供学习讨论；转载须注明原文出处与翻译、校对
-  extra: 原文2007-08-24初版、2017-11-27实质修订；中文译文首发于知乎专栏“网哲邻人部”，后受托由屋顶现视研在B站长期代发，2020-06-21发布于B站，知乎首发日期未查明
+  extra: 原文2007-08-24初版、2017-11-27实质修订；中文译文首发于知乎专栏“网哲邻人部”，后受托由屋顶现视研在B站长期代发，2020-06-21发布于B站
 updated: 2020-09-19
 ---
 

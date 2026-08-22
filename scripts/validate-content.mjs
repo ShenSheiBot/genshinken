@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import path from "node:path";
 import remarkGfm from "remark-gfm";
+import remarkMath from "remark-math";
 import remarkParse from "remark-parse";
 import { unified } from "unified";
 import { visit } from "unist-util-visit";
@@ -17,6 +18,7 @@ import {
   parseCitationInput,
 } from "../lib/citations.ts";
 import { archiveAssetKey } from "../lib/archive-assets.ts";
+import { hasUnpairedMathDelimiter } from "../lib/markdown-math.mjs";
 
 const postsDirectory = path.join(process.cwd(), "source", "_posts");
 const booksDirectory = path.join(process.cwd(), "source", "_books");
@@ -80,10 +82,10 @@ const inlineEventHandler = /\son[a-z][\w:-]*\s*=/i;
 const dangerousHtmlUrl = /\s(?:href|src)\s*=\s*["']?\s*(?:javascript|vbscript):/i;
 const protocolLessAngleLink = /<www\.[^<>\s]+>/iu;
 const brokenOrderedListMarker = /^\s{0,3}\d{1,2}\.(?=\p{Script=Han})/u;
-const unescapedDollarMarker = /(?<!\\)\$/u;
+const splitInlineMathParentheses = /\(\$[^$\r\n]+\$\)/u;
 const internalEditorialLanguage = /(?:待逐篇清洗|清洗后纳入|尚未恢复|目前归档|归档来源页|原始(?:篇目|连载)证据|合并文库的构建源|快照与专篇|归档说明|档案说明|来源补充\s*\d+|此注(?:释)?未随.{0,30}收录|本站据.{0,40}(?:整理|归档)|平台封面.{0,30}未纳入正文资产|连载暂列暂停|连载状态据此标为|后续.{0,20}未见发布|暂未见正式后续|不因此自动成为|并非按作品名重新聚类|不在本专题中扩收|不把.{0,40}扩入活动档案)/u;
-const publicArchiveProcessLanguage = /(?:^|\n)\s*(?:(?:>|-)\s*)?来源[：:].*(?:(?:Bilibili|哔哩哔哩|B站)\s*(?:专栏)?\s*(?:cv)?\d{5,}|\bcv\d{5,}\b)|作者卡(?:署名|显示|署)|结构化来源|未提供更早的?[^\n]{0,12}原链|原页附图|原页图注|公开稿标题|按既有贡献者登记名|在归档时已无法访问|未修改共享\s+(?:book|topic)|(?:book|topic)\s+manifest|本篇任务|原页无正文图片|\d+\s*条(?:图片)?引用均为平台|(?:^|\n)\s*>\s*(?:原页|源页)声明/iu;
-const citationExtraProcessLanguage = /(?:\bcv\d{5,}\b|canonical\s+文档|按(?:既有贡献者)?登记名|屋顶现视研\s*(?:Bilibili|B站)\s*专栏)/iu;
+const publicArchiveProcessLanguage = /(?:^|\n)\s*(?:(?:>|-)\s*)?来源[：:].*(?:(?:Bilibili|哔哩哔哩|B站)\s*(?:专栏)?\s*(?:cv)?\d{5,}|\bcv\d{5,}\b)|作者卡(?:署名|显示|署)|结构化来源|未提供更早的?[^\n]{0,12}原链|原页附图|原页图注|公开稿标题|按既有贡献者登记名|在归档时已无法访问|未修改共享\s+(?:book|topic)|(?:book|topic)\s+manifest|本篇任务|原页无正文图片|\d+\s*条(?:图片)?引用均为平台|(?:^|\n)\s*>\s*(?:原页|源页)声明|原文另嵌.{0,40}(?:现存页面|暂不支持|不可辨)|(?:原页|源页|现存页面).{0,60}(?:未提供|未附|未收录|暂不支持|不可辨|所配音频)|(?:本篇|本文).{0,30}未收录(?:注释)?正文|注释未收录|原文此处未附链接/iu;
+const citationExtraProcessLanguage = /(?:\bcv\d{5,}\b|canonical\s+文档|按(?:既有贡献者)?登记名|屋顶现视研\s*(?:Bilibili|B站)\s*专栏|未核明|未查明|尚未重做|尚未译出|(?:原页|源页).{0,50}(?:未提供|未附|说明|称)|(?:现有译文|中译|本译文).{0,30}未附)/iu;
 
 assert.match(
   "<www.example.org/path>",
@@ -97,6 +99,36 @@ assert.doesNotMatch(
 );
 assert.match("4.由于举办经验不足", brokenOrderedListMarker, "missing list-marker space must be detected");
 assert.doesNotMatch("4. 由于举办经验不足", brokenOrderedListMarker, "valid ordered lists must remain accepted");
+assert.match(
+  "定义 ($C_{occ}$) 如下。",
+  splitInlineMathParentheses,
+  "parentheses split outside an inline formula must be detected",
+);
+assert.doesNotMatch(
+  "定义 $(C_{occ})$ 如下。",
+  splitInlineMathParentheses,
+  "parentheses included in an inline formula must remain accepted",
+);
+assert.equal(
+  hasUnpairedMathDelimiter("价格是$5，会员价$10。"),
+  false,
+  "ordinary currency signs must not be rejected as unmatched math delimiters",
+);
+assert.equal(
+  hasUnpairedMathDelimiter("The total is $5 million and formula $x$."),
+  false,
+  "currency prose before a later formula must not steal the formula delimiter",
+);
+assert.equal(
+  hasUnpairedMathDelimiter("公式 $e"),
+  true,
+  "a genuinely unmatched formula delimiter must still be rejected",
+);
+assert.equal(
+  hasUnpairedMathDelimiter("公式 $5$ 与 $2x+1$。"),
+  false,
+  "paired numeric formulae must remain accepted",
+);
 assert.match(
   "其余十一章已有原始篇目证据，待逐篇清洗后纳入。",
   internalEditorialLanguage,
@@ -122,6 +154,21 @@ assert.match(
   publicArchiveProcessLanguage,
   "a process caption must not stand in for a rendered image"
 );
+assert.match(
+  "原文另嵌一张视频卡，现存页面仅显示“暂不支持”，题名与链接均不可辨。",
+  publicArchiveProcessLanguage,
+  "an unresolved source-card note must not leak into reader-facing copy",
+);
+assert.match(
+  "本篇未收录注释正文，以下保留原有注号并标明缺注。",
+  publicArchiveProcessLanguage,
+  "missing-apparatus workflow notes must stay in editorial evidence",
+);
+assert.match(
+  "本篇原页所配音频：初音未来〈Last Night, Good Night〉。",
+  publicArchiveProcessLanguage,
+  "source-page handling language must be rewritten as natural reader-facing copy",
+);
 assert.doesNotMatch(
   "[图题] 法月纶太郎",
   publicArchiveProcessLanguage,
@@ -137,10 +184,25 @@ assert.match(
   citationExtraProcessLanguage,
   "citation notes must not expose archive identifiers"
 );
+assert.match(
+  "原文首发于知乎，原发日期未核明。",
+  citationExtraProcessLanguage,
+  "citation notes must not expose unresolved verification status",
+);
+assert.match(
+  "原页未提供期号、页码或原始链接。",
+  citationExtraProcessLanguage,
+  "citation notes must not duplicate archive gaps into reader-facing metadata",
+);
 assert.doesNotMatch(
   "共同通信稿；本篇据《新潟日报》刊载版本翻译。",
   citationExtraProcessLanguage,
   "natural bibliographic notes must remain accepted"
+);
+assert.doesNotMatch(
+  "本译文收录第一至第三节，不含第四节。",
+  citationExtraProcessLanguage,
+  "durable edition-coverage statements must remain accepted",
 );
 const errors = [];
 const warnings = [];
@@ -337,16 +399,26 @@ function validateTypography(file, content, data) {
         `第 ${index + 1} 行疑似有序列表序号后缺少空格；请写成“${line.trimStart().match(/^\d+\./u)?.[0]} …”`,
       );
     }
-    if (unescapedDollarMarker.test(line)) {
+    if (hasUnpairedMathDelimiter(line)) {
       report(
         errors,
         file,
-        `第 ${index + 1} 行含未转义的 $；它会被 KaTeX 当作跨段公式定界符，字面符号请写成 \\$`,
+        `第 ${index + 1} 行含未配对的 $；它会被 KaTeX 当作跨段公式定界符，字面符号请写成 \\$`,
+      );
+    }
+    if (splitInlineMathParentheses.test(line)) {
+      report(
+        errors,
+        file,
+        `第 ${index + 1} 行把紧贴公式的括号留在 KaTeX 外；请将“($…$)”写成“$(…)$”以保持整式字体一致`,
       );
     }
   });
 
-  const tree = unified().use(remarkParse).use(remarkGfm).parse(content);
+  // Parse formulas with the same grammar as the public renderer. Otherwise
+  // TeX primes such as $e'$ are exposed as ordinary prose and falsely rejected
+  // as ASCII quotation marks.
+  const tree = unified().use(remarkParse).use(remarkGfm).use(remarkMath).parse(content);
 
   visit(tree, (node) => {
     if (node.type === "text") {

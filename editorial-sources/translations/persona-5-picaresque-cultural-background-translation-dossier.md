@@ -16,7 +16,7 @@ sources:
   - id: roof-zh
     language: zh-Hans
     path: source/_posts/persona-5-picaresque-cultural-background.md
-    revision: sha256:47e0baf036051c60ca59457ce38d4359cb3609ff54c623233a25ebcf31576134
+    revision: sha256:23512b0f9cdf7592c76979652ff07a21cf7f122e1f9cdc16247749ca825bcf02
     title: 专题探讨丨流浪的倨傲者的歌吟 浅谈女神异闻录5的文化背景
     author: hephaestus
     coverage: Complete Roof essay, two main sections, eleven figures, multiple quotations, acknowledgement/source notes, and four Frankenstein-name bullets.
@@ -27,7 +27,7 @@ segments:
     role: roof-original-body
     source_language: zh-Hans
     base_edition: roof-zh
-    source_revision: sha256:47e0baf036051c60ca59457ce38d4359cb3609ff54c623233a25ebcf31576134
+    source_revision: sha256:23512b0f9cdf7592c76979652ff07a21cf7f122e1f9cdc16247749ca825bcf02
     source_locator: Complete Markdown body after front matter.
     roof_presence: complete
     coverage: complete
@@ -37,7 +37,7 @@ segments:
     role: quotation
     source_language: en
     base_edition: English wording printed in the Roof source
-    source_revision: sha256:47e0baf036051c60ca59457ce38d4359cb3609ff54c623233a25ebcf31576134
+    source_revision: sha256:23512b0f9cdf7592c76979652ff07a21cf7f122e1f9cdc16247749ca825bcf02
     source_locator: Doctor Faustus and Tamburlaine block quotations near the end of section 2.
     roof_presence: complete
     coverage: selected lines
@@ -47,7 +47,7 @@ segments:
     role: quotation
     source_language: en
     base_edition: Tennyson, Ulysses
-    source_revision: sha256:47e0baf036051c60ca59457ce38d4359cb3609ff54c623233a25ebcf31576134
+    source_revision: sha256:23512b0f9cdf7592c76979652ff07a21cf7f122e1f9cdc16247749ca825bcf02
     source_locator: Chinese rendering in the opening discussion of Odysseus.
     roof_presence: translated quotation
     coverage: two lines of sense
@@ -57,7 +57,7 @@ segments:
     role: quotation
     source_language: ja
     base_edition: Roof Chinese relay, with selected Hashino wording checked against Famitsu
-    source_revision: sha256:47e0baf036051c60ca59457ce38d4359cb3609ff54c623233a25ebcf31576134
+    source_revision: sha256:23512b0f9cdf7592c76979652ff07a21cf7f122e1f9cdc16247749ca825bcf02
     source_locator: Hashino interview statements, Persona 5 NPC/dialogue lines, Chihaya and Yoshida dialogue.
     roof_presence: Chinese relay
     coverage: multiple selected passages

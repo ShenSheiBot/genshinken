@@ -23,4 +23,8 @@ citation:
   extra: "屋顶现视研 2024 夏读者群公告；正文未另列译者、校对或编辑，未标注许可。"
   language: zh-CN
 ---
+[版式:联络卡]
+
 ![屋顶现视研 2024 夏读者群二维码，图中标注群号 862806192](attachments/wechat/P5z7npOwC6fYqPICMxuZuw/001.jpg)
+
+[版式结束]

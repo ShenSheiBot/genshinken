@@ -17,7 +17,7 @@ citation:
   url: "https://www.bilibili.com/read/cv3706352/"
 ---
 
-*竖海报，由一般有趣哥哥制作。*
+[图题] 竖海报，由一般有趣哥哥制作。
 
 ![“混凝土拱廊街”静止系MAD祭典2019竖海报](attachments/roof-archive/cv3706352/01-vertical-poster.png)
 
@@ -75,7 +75,7 @@ citation:
 
    **屋顶钢琴制造厂，293608304**。
 
-![活动讨论群“屋顶钢琴制造厂”二维码](attachments/roof-archive/cv3706352/02-activity-group-qr.png)
+![活动讨论群“屋顶钢琴制造厂”二维码](attachments/roof-archive/cv3706352/02-activity-group-qr.png "=33%")
 
 [^1]: 鉴于PV概念潜在涵盖的范围较大，谨说明我们期望参与祭典的PV指：与静止系有手法、形式等方面亲缘性较强的原创非商业PV，不包含BGA；纯视觉设计方向的短片与MG动画，也不在参与范围。我们将在静止系祭典的主题下以同一坐标系进行评价。
 
@@ -109,7 +109,7 @@ citation:
 
 ## 四、关于混凝土拱廊街、屋顶现视研、ZERO MAD TEAM
 
-*横海报，由一般有趣哥哥制作。*
+[图题] 横海报，由一般有趣哥哥制作。
 
 ![“混凝土拱廊街”静止系MAD祭典2019横海报](attachments/roof-archive/cv3706352/03-horizontal-poster.png)
 
