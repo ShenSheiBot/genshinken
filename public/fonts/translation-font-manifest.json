@@ -34,7 +34,7 @@
     "source/_translations/ja/posts/witcher-wilderness-detective.md",
     "source/_translations/language-dispositions.json"
   ],
-  "corpusSha256": "3e4bb1681aca663159424a4c4e9b52a9c829d0be378c92ac4377a65f0e84a0b1",
+  "corpusSha256": "b9f53098c7c30f383d3afef91ea5bc58bfcd888f41dda6c0bd45e79d5738bd3e",
   "fallbackCodePointCount": 50,
   "fonts": {
     "Roof EB Garamond Fallback": {
@@ -66,12 +66,12 @@
       "weight": "400"
     },
     "Roof Noto Sans JP": {
-      "bytes": 697644,
+      "bytes": 697864,
       "codePointCount": 2242,
       "family": "Roof Noto Sans JP",
       "file": "roof-noto-sans-jp.woff2",
       "kind": "primary-sans",
-      "sha256": "ed6a23c374862ad1941d50c1ec55eca627e74b86424c33b040c26ca61a045383",
+      "sha256": "e04c7bf02d786de1acba19efdb7240fc774ecae6c43fddb1f8d5572a55ff34ab",
       "source": "NotoSansJP.ttf",
       "sourceSha256": "c2f3b4d463500a2ddcd3849cded1fceeb9fd6d1c32e6cbecd568453ba50fc68f",
       "sourceUrl": "https://raw.githubusercontent.com/google/fonts/e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7/ofl/notosansjp/NotoSansJP%5Bwght%5D.ttf",
@@ -79,12 +79,12 @@
       "weight": "100 900"
     },
     "Roof Noto Sans SC Fallback": {
-      "bytes": 18236,
+      "bytes": 18304,
       "codePointCount": 47,
       "family": "Roof Noto Sans SC Fallback",
       "file": "roof-noto-sans-sc-fallback.woff2",
       "kind": "fallback-sans",
-      "sha256": "c0794ee01969625acec6f3c44bf6bec308858edc69ecd2fe9d4b1aa4f84efd26",
+      "sha256": "4a2cbf5ee05f30a4a0d2028380be604f435d5f83a53cef4d2689d8f6a86f7ee5",
       "source": "NotoSansSC.ttf",
       "sourceSha256": "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da",
       "sourceUrl": "https://raw.githubusercontent.com/google/fonts/e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7/ofl/notosanssc/NotoSansSC%5Bwght%5D.ttf",
@@ -93,12 +93,12 @@
       "weight": "100 900"
     },
     "Roof Noto Serif JP": {
-      "bytes": 967344,
+      "bytes": 967076,
       "codePointCount": 2242,
       "family": "Roof Noto Serif JP",
       "file": "roof-noto-serif-jp.woff2",
       "kind": "primary-serif",
-      "sha256": "407761f04dfb52a4be58c15321b136584a8dc1eb5873584584c60ae831a6f1b1",
+      "sha256": "e7b7d31c6aa4990cac8efec6eb15670a16b5535c0c3ac7b04568ad6cd87a25bb",
       "source": "NotoSerifJP.ttf",
       "sourceSha256": "2fd527ba12b6a44ec30d796d633360da0aeba6c5d4af1304ce12bb4dc15a7dfc",
       "sourceUrl": "https://raw.githubusercontent.com/google/fonts/e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7/ofl/notoserifjp/NotoSerifJP%5Bwght%5D.ttf",
@@ -106,12 +106,12 @@
       "weight": "200 900"
     },
     "Roof Noto Serif SC Fallback": {
-      "bytes": 22464,
+      "bytes": 22404,
       "codePointCount": 47,
       "family": "Roof Noto Serif SC Fallback",
       "file": "roof-noto-serif-sc-fallback.woff2",
       "kind": "fallback-serif",
-      "sha256": "1578ac4bbf3fb74aa8c9945a08cf37493ad17a649b5a4861b9a33ae73098f141",
+      "sha256": "03059e123b4e30086d803342243f70079ad5f71cef14cf08d1eefbe6b7a49350",
       "source": "NotoSerifSC.ttf",
       "sourceSha256": "050080d9255a86808f2945bffac582b31ef32bc36411ce29563b4961670c66f9",
       "sourceUrl": "https://raw.githubusercontent.com/google/fonts/e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7/ofl/notoserifsc/NotoSerifSC%5Bwght%5D.ttf",
