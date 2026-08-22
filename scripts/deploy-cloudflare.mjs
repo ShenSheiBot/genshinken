@@ -48,7 +48,13 @@ function prepareCleanBuildRoot() {
   const stageRoot = fs.mkdtempSync(path.join(path.dirname(sourceRoot), `.roof-cloudflare-${target}-`));
   try {
     run("git", ["worktree", "add", "--detach", stageRoot, "HEAD"], sourceRoot);
-    fs.symlinkSync(path.join(sourceRoot, "node_modules"), path.join(stageRoot, "node_modules"), "dir");
+    // OpenNext resolves symlinks while tracing native modules such as sharp.
+    // A copy-on-write clone keeps dependencies inside the staged path without
+    // duplicating their physical data on filesystems that support reflinks.
+    fs.cpSync(path.join(sourceRoot, "node_modules"), path.join(stageRoot, "node_modules"), {
+      recursive: true,
+      mode: fs.constants.COPYFILE_FICLONE,
+    });
     return stageRoot;
   } catch (error) {
     fs.rmSync(stageRoot, { recursive: true, force: true });
