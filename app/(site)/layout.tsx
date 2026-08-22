@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "../globals.css";
+import "../cjk-fonts.generated.css";
 import "../components/editorial-motion/EditorialMotion.css";
 import { site } from "@/lib/site";
 import { DEFAULT_HAN_SCRIPT } from "@/lib/han-script";

@@ -5,7 +5,7 @@
 }
 
 .page:lang(en) { font-family: var(--font-source-serif), Georgia, serif; }
-.page:lang(ja) { font-family: var(--font-roof-noto-serif-jp); }
+.page:lang(ja) { font-family: var(--font-roof-translation-serif-stack); }
 
 .header {
   display: flex;
@@ -30,7 +30,7 @@
 }
 
 .status { color: var(--accent); font-family: var(--f-mono); font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
-.hero h1 { max-width: 760px; margin: 14px 0 0; font-family: var(--font-newsreader), var(--font-roof-noto-serif-jp); font-size: clamp(48px, 7vw, 86px); line-height: 1.02; letter-spacing: -.045em; text-wrap: balance; }
+.hero h1 { max-width: 760px; margin: 14px 0 0; font-family: var(--font-newsreader), var(--font-roof-translation-serif-stack); font-size: clamp(48px, 7vw, 86px); line-height: 1.02; letter-spacing: -.045em; text-wrap: balance; }
 .hero .subtitle { margin-top: 16px; color: var(--ink); font-size: 22px; line-height: 1.45; }
 .hero p { max-width: 680px; margin: 28px 0 0; color: var(--ink-soft); font-size: 18px; line-height: 1.7; }
 .original { align-self: end; padding-top: 18px; border-top: 1px solid var(--hair); color: var(--ink-soft); font-family: var(--f-mono); font-size: 10px; line-height: 1.6; }
@@ -45,7 +45,7 @@
 .chapters a:focus-visible strong { text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 5px; }
 .chapters a:focus-visible { outline: none; }
 .number { color: var(--accent); font-family: var(--f-mono); font-size: 12px; }
-.chapters strong { font-family: var(--font-newsreader), var(--font-roof-noto-serif-jp); font-size: 24px; line-height: 1.25; }
+.chapters strong { font-family: var(--font-newsreader), var(--font-roof-translation-serif-stack); font-size: 24px; line-height: 1.25; }
 .chapters small { color: var(--ink-soft); font-family: var(--f-mono); font-size: 9px; letter-spacing: .06em; text-transform: uppercase; }
 
 @media (prefers-reduced-motion: no-preference) {

@@ -52,7 +52,7 @@ segments:
     roof_presence: Chinese relay
     coverage: multiple selected passages
     relationship: relay
-    target_anchor: Corresponding quotations throughout the Japanese edition.
+    target_anchor: Corresponding attributed summaries throughout the Japanese edition.
 assets:
   - id: source-figures
     source: roof-zh
@@ -60,7 +60,7 @@ assets:
     rights_evidence: Inherited from the Roof source edition; no separate asset-specific permission is asserted here.
     publication_decision: local-preview only
 reviews:
-  fidelity: Translator bilingual self-review completed for both targets against the complete Chinese source; all four sections, eight figures, quotations, emphasis, names, theological/philosophical distinctions, and the author note were checked.
+  fidelity: Translator bilingual self-review completed for both targets against the complete Chinese source; all four sections, eight figures, quotations or attributed summaries, emphasis, names, theological/philosophical distinctions, and the author note were checked.
   fluency: Translator source-free English and Japanese self-review completed; literal clause order, boundary/emptiness terminology, theological phrasing, and Japanese calques were revised while preserving the essay’s dense critical register.
   whole_work: Translator whole-work consistency review completed for Kara no Kyōkai titles, character names, Origin/boundary/emptiness vocabulary, chapter titles, Shiki/SHIKI distinctions, and all eight figure captions.
   rendered: Protected-structure audits are recorded below; independent rendered final review remains for a future review agent.
@@ -79,7 +79,7 @@ Verified reference points:
 
 The verified early subtitle is restored in both target editions. This is a bounded correction of a source transcription error, not a silent rewrite of the essay's argument. By contrast, the essay's interpretive claims about hamartia, Augustine, Buddhism, Heidegger, Gnosticism, and the Nasuverse are translated as authored claims rather than fact-corrected into a new essay.
 
-The Japanese target faces a separate provenance problem: many direct quotations in the Roof source are Chinese translations of Japanese novels, glossary entries, game/anime material, or interviews. Bounded verification does not establish the exact Japanese wording for every passage. The Japanese edition therefore carries one scoped relay notice before the first such quotation and does not pretend the subsequent passages are recovered originals.
+The Japanese target faces a separate provenance problem: many direct quotations in the Roof source are Chinese translations of Japanese novels, glossary entries, game/anime material, or interviews. Bounded verification does not establish the exact Japanese wording for every passage. The Japanese edition therefore renders the unresolved passages as explicitly labeled summaries or normal indirect discourse, without pretending they are recovered originals and without narrating that workflow to readers.
 
 ## Discourse map
 
@@ -97,7 +97,7 @@ The Japanese target faces a separate provenance problem: many direct quotations 
 - Genre: dense interpretive essay combining Nasuverse close reading with theology, philosophy, literary allusion, and etymological speculation.
 - Register: high but personal; long analytical periods alternate with direct claims, quotation blocks, and deliberately evocative metaphors.
 - English: retain `Kara no Kyōkai` where the Japanese title itself is under analysis; use official/standard character-name romanizations and translate philosophical vocabulary idiomatically.
-- Japanese: restore established names and chapter titles, use contemporary である critical prose, and make relay provenance explicit without multiplying process notes through the body.
+- Japanese: restore established names and chapter titles, use contemporary である critical prose, and represent unresolved source wording through natural attribution while keeping relay provenance in editorial evidence.
 
 ## Glossary
 
@@ -124,7 +124,7 @@ The Japanese target faces a separate provenance problem: many direct quotations 
 
 - The source typo `is noting id, noting cosmos` is corrected to the verified `……Is nothing id, nothing cosmos`; this correction is explicitly documented here.
 - The English New Testament wording printed in the Roof source is retained as supplied. Shakespeare's “sound and fury, signifying nothing” is securely identifiable and restored in English.
-- Japanese-source quotations are not silently back-translated into supposed originals. One scoped relay notice in the Japanese public edition covers those passages unless otherwise indicated.
+- Japanese-source quotations are not silently back-translated into supposed originals. Unverified wording is presented as attributed summary or indirect discourse; relay provenance remains in this dossier rather than in public process notes.
 - The malformed opening bracket before the final summary paragraph (`【`) is treated as source punctuation noise and not reproduced as content.
 - Both targets remain `review` / `local-preview`, with `shen-shui-bot` credited only as translator.
 
@@ -145,4 +145,4 @@ npm run verify:translations
 git diff --check
 ```
 
-Both protected-structure audits returned zero failures. English has one inspected numeric-token warning: `3:23` localizes the source's 罗3：23 and `1993–94` makes the source's verified 1990s LUNA SEA tour reference explicit. Japanese has one inspected logical-paragraph warning because the target adds exactly one scoped provenance paragraph identifying unverified Japanese-source quotations as relay translations from the Roof Chinese edition.
+Both protected-structure audits returned zero failures. English has one inspected numeric-token warning: `3:23` localizes the source's 罗3：23 and `1993–94` makes the source's verified 1990s LUNA SEA tour reference explicit. Japanese has one inspected logical-paragraph warning because the obsolete public provenance paragraph is intentionally absent.

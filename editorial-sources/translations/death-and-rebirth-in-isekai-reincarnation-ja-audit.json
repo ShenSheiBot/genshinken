@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "target_path": "source/_translations/ja/posts/death-and-rebirth-in-isekai-reincarnation.md",
+  "target_language": "ja",
+  "segments": [
+    {
+      "id": "before-first-chinese-gloss",
+      "source_path": "source/_posts/death-and-rebirth-in-isekai-reincarnation.md",
+      "source_range": {
+        "start": null,
+        "end": "> 译：嗯，这么大年纪了却依然兴奋起来了。"
+      },
+      "target_range": {
+        "start": null,
+        "end": "> （『無職転生 ～異世界行ったら本気だす～』、web版第1話。）"
+      },
+      "base_edition": "roof-zh-with-ja-original",
+      "source_revision": "sha256:8bb9db620fbe6fc0744c2655c700f9253a685955fa64574e82ddef11ba06c2e3",
+      "roof_presence": "complete",
+      "relationship": "direct-ja; adjacent Chinese reader gloss omitted"
+    },
+    {
+      "id": "between-chinese-glosses",
+      "source_path": "source/_posts/death-and-rebirth-in-isekai-reincarnation.md",
+      "source_range": {
+        "start": "> （『無職転生　- 異世界行ったら本気だす -』,web版第一话）。",
+        "end": "> 译：我不知道怎么找工作。"
+      },
+      "target_range": {
+        "start": "> （『無職転生 ～異世界行ったら本気だす～』、web版第1話。）",
+        "end": "> （『無職転生 ～異世界行ったら本気だす～』、web版序章。）"
+      },
+      "base_edition": "roof-zh-with-ja-original",
+      "source_revision": "sha256:8bb9db620fbe6fc0744c2655c700f9253a685955fa64574e82ddef11ba06c2e3",
+      "roof_presence": "complete",
+      "relationship": "direct-ja; adjacent Chinese reader gloss omitted"
+    },
+    {
+      "id": "after-second-chinese-gloss",
+      "source_path": "source/_posts/death-and-rebirth-in-isekai-reincarnation.md",
+      "source_range": {
+        "start": "> （『無職転生　- 異世界行ったら本気だす -』,web版序章）。",
+        "end": null
+      },
+      "target_range": {
+        "start": "> （『無職転生 ～異世界行ったら本気だす～』、web版序章。）",
+        "end": null
+      },
+      "base_edition": "roof-zh-with-ja-original",
+      "source_revision": "sha256:8bb9db620fbe6fc0744c2655c700f9253a685955fa64574e82ddef11ba06c2e3",
+      "roof_presence": "complete",
+      "relationship": "direct-ja; adjacent Chinese reader gloss omitted"
+    }
+  ],
+  "resource_equivalences": {
+    "media": [],
+    "links": []
+  }
+}

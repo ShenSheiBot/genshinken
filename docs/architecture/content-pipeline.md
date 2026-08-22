@@ -54,7 +54,7 @@ flowchart LR
 
 ## 4. 繁简与字体闭包
 
-`scripts/build-cjk-font-subsets.py` 读取 `app/`、`lib/`、`source/` 及 `public/llms.txt` 的文本，计算源字符和 OpenCC 双向转换后的并集，再生成三款站内 ST 字体子集。`public/fonts/cjk-font-manifest.json` 固定：
+`npm run fonts:sync` 是开发、检查、构建和部署共享的幂等字体入口。中文生成器读取 `app/`、`lib/`、`source/` 及 `public/llms.txt`，计算源字符和 OpenCC 双向转换后的并集；日文生成器读取日文译稿、语言状态卡及本地化组件。英文使用 Next 内置的固定 `latin / latin-ext` 自托管构建，不维护语料指纹。`public/fonts/cjk-font-manifest.json` 固定：
 
 - 语料文件数和字符摘要；
 - OpenCC 闭包策略；
@@ -62,13 +62,14 @@ flowchart LR
 - 每个 WOFF2 的字节数、字符数和 SHA-256；
 - 三款源字体共同不支持的字符范围。
 
-任何增加、删除或改写语料的变更都可能要求重建字体，即使页面视觉改动与字体无关。流程是：
+同步器只在目标字符集合、字体源版本、生成策略或锁定工具链变化时重建 WOFF2。仅改写已有字符的正文时，最多在共享锁内刷新输入清单，不重编字体；无锁快速检查始终只读。中文和日文字体源都固定到具体上游提交、下载到 Git 外缓存，并在使用前核验 SHA-256。真实重编会自动进入 `.local-archive/` 下按 requirements 摘要隔离的私有虚拟环境，不读取或修改全局 Conda。正常流程无需手工准备源字体、安装 FontTools 或更新 CSS：
 
 ```bash
-python scripts/build-cjk-font-subsets.py --source-dir <包含三个原始 TTF 的目录>
+npm run fonts:sync
+npm run verify:fonts
 ```
 
-然后把 manifest 中三个新 SHA-256 的前 12 位同步到 `app/globals.css` 对应字体 URL 的 `?v=`，再运行 `npm run verify:fonts`。源字体文件名、来源与 rare Han fallback 见 [`public/fonts/README.md`](../../public/fonts/README.md)。
+生成器分别写入 `app/cjk-fonts.generated.css` 与 `app/translation-fonts.generated.css`，不修改手写样式。源字体文件名、依赖与 rare Han fallback 见 [`public/fonts/README.md`](../../public/fonts/README.md)。
 
 ## 5. 路由与生成物
 

@@ -62,7 +62,7 @@ segments:
     roof_presence: Chinese relay
     coverage: multiple selected passages
     relationship: relay
-    target_anchor: Corresponding passages throughout both sections.
+    target_anchor: Corresponding attributed summaries and dialogue paraphrases throughout both sections.
 assets:
   - id: source-figures
     source: roof-zh
@@ -90,7 +90,7 @@ Verified reference points:
 - Project Gutenberg, Marlowe's *Tamburlaine the Great*: https://www.gutenberg.org/files/1094/1094-h/1094-h.htm — checks the English wording already printed in the Roof source.
 - Wikisource scan of Marlowe's *Doctor Faustus*: https://en.wikisource.org/wiki/Page:The_works_of_Christopher_Marlowe_-_ed._Dyce_-_1859.djvu/141 — checks the “waxen wings” wording already printed in the Roof source.
 
-The article cites many secondary fan translations and older interviews. Bounded verification does not establish an exact Japanese original for every quoted game line or every Hashino sentence. The Japanese target therefore restores only wording that can be safely identified from a verified source; otherwise it treats the Roof Chinese wording as a relay rather than inventing a Japanese “original.” The English edition likewise restores only the public-domain English poetry that is securely identified or already supplied in English by the Roof source.
+The article cites many secondary fan translations and older interviews. Bounded verification does not establish an exact Japanese original for every quoted game line or every Hashino sentence. The Japanese target therefore restores only wording that can be safely identified from a verified source; otherwise it uses attributed summary or indirect discourse rather than inventing a Japanese “original” or adding public workflow notes. The English edition likewise restores only the public-domain English poetry that is securely identified or already supplied in English by the Roof source.
 
 ## Discourse map
 
@@ -110,7 +110,7 @@ The article cites many secondary fan translations and older interviews. Bounded 
 - Authorial stance: self-deprecating about authority but polemical about shallow interpretation; frequently moves from “I” to exhortative “we.”
 - Humor: parenthetical jokes, otaku self-mockery, and colloquial NPC examples should remain visible amid the elevated prose.
 - English treatment: literary-critical but not archaic; official franchise vocabulary is preferred where it does not overwrite the source's historical wording.
-- Japanese treatment: contemporary である critical prose, preserving the essay's intensity without forcing Chinese clause order; verified Japanese interview wording may be recovered selectively, while unresolved quotations remain clearly relay-derived.
+- Japanese treatment: contemporary である critical prose, preserving the essay's intensity without forcing Chinese clause order; verified Japanese interview wording may be recovered selectively, while unresolved wording becomes naturally attributed summary or indirect discourse.
 
 ## Glossary
 
@@ -139,7 +139,7 @@ The article cites many secondary fan translations and older interviews. Bounded 
 
 ## Exceptions and review notes
 
-- Quotation provenance is mixed. Marlowe lines already printed in English by the source are preserved in English and translated from those supplied lines into Japanese. Tennyson is securely identified and may be restored in English. Other translated literary/game quotations remain translations of the Roof Chinese wording unless an exact original is safely established.
+- Quotation provenance is mixed. Marlowe lines already printed in English by the source are preserved in English and translated from those supplied lines into Japanese. Tennyson is securely identified and may be restored in English. Other translated literary/game passages follow the Roof Chinese wording unless an exact original is safely established; unresolved Japanese dialogue is presented indirectly rather than as recovered wording.
 - Famitsu verifies the general Japanese wording and concepts behind several Hashino passages, but the dossier does not claim line-for-line recovery of every sentence attributed to him by the Roof article.
 - The picaresque etymology and literary-history claims are translated as authored claims; this task does not silently fact-correct the essay.
 - Usernames, platform names, dates, article titles, and the final contributor acknowledgements are content and must not be dropped as “apparatus.”
@@ -162,4 +162,4 @@ npm run verify:translations
 git diff --check
 ```
 
-Both protected-structure audits returned zero failures. The English audit has one inspected numeric-token warning: Arabic dates and franchise numerals in the target correspond to dates and numerals written with Chinese date syntax or Chinese prose in the Roof source. The Japanese audit has one inspected logical-paragraph warning: the target adds exactly two short provenance paragraphs identifying Japanese-language interview/game quotations that remain relay translations from the Roof Chinese edition rather than pretending they are recovered Japanese originals.
+Both protected-structure audits returned zero failures. The English audit has one inspected numeric-token warning: Arabic dates and franchise numerals in the target correspond to dates and numerals written with Chinese date syntax or Chinese prose in the Roof source. The Japanese audit has an inspected logical-paragraph warning because two obsolete process notes were removed and the three short game-dialogue paragraphs were consolidated into natural indirect discourse.

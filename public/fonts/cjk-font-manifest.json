@@ -1,6 +1,6 @@
 {
   "conversion": "opencc-js:cn2t+t2cn",
-  "corpusFileCount": 465,
+  "corpusFileCount": 466,
   "fonts": {
     "UN Canon STFangsong": {
       "bytes": 1655412,
@@ -8,15 +8,17 @@
       "file": "un-canon-st-fangsong.woff2",
       "sha256": "4d854a23dc06ac32f90b4ad5c38346ce9f7669b728fdb9097950ba4b64eab74d",
       "source": "STFangsong.ttf",
-      "sourceSha256": "e6326459e8e60e436c7d60e34d273bda3ba4eea2d2a5b309ff8f1b73200f2e38"
+      "sourceSha256": "e6326459e8e60e436c7d60e34d273bda3ba4eea2d2a5b309ff8f1b73200f2e38",
+      "sourceUrl": "https://raw.githubusercontent.com/Haixing-Hu/latex-chinese-fonts/287399335ec1beb72062ce67c36eaa8bec35f386/chinese/%E4%BB%BF%E5%AE%8B%E4%BD%93/STFangsong.ttf"
     },
     "UN Canon STKaiti": {
-      "bytes": 2019292,
+      "bytes": 2018940,
       "codePointCount": 6496,
       "file": "un-canon-st-kaiti.woff2",
-      "sha256": "77da7993a3a2a6e1c290ff014d290f5cd5cdeeafb61c3e6770f32edcdc4d713e",
+      "sha256": "f4535104c9db7d81988a6df66b985862a479df4368e7b540fdc5342d21f99be0",
       "source": "STKaiti.ttf",
-      "sourceSha256": "a29c99c161fc43ce6aba2d7c152065359c2cb3019be4ae6248171178cb7d04d5"
+      "sourceSha256": "a29c99c161fc43ce6aba2d7c152065359c2cb3019be4ae6248171178cb7d04d5",
+      "sourceUrl": "https://raw.githubusercontent.com/Haixing-Hu/latex-chinese-fonts/287399335ec1beb72062ce67c36eaa8bec35f386/chinese/%E6%A5%B7%E4%BD%93/STKaiti.ttf"
     },
     "UN Canon STSong": {
       "bytes": 1626204,
@@ -24,7 +26,8 @@
       "file": "un-canon-st-song.woff2",
       "sha256": "2a2d1804797099b8d2998b61f715bc232767b1e4c8a997cf7dbf22d543b04296",
       "source": "STSong.ttf",
-      "sourceSha256": "c5cc2ed5e2c0e6385013fe82d950eee6960d805bd602b86c53ff454783f382c4"
+      "sourceSha256": "c5cc2ed5e2c0e6385013fe82d950eee6960d805bd602b86c53ff454783f382c4",
+      "sourceUrl": "https://raw.githubusercontent.com/Haixing-Hu/latex-chinese-fonts/287399335ec1beb72062ce67c36eaa8bec35f386/chinese/%E5%AE%8B%E4%BD%93/STSong.ttf"
     }
   },
   "siteCodePointCount": 6587,
@@ -33,6 +36,7 @@
   "sourceCodePointSha256": "127f446a4fe5330e0e630fd30d3ea6cdb89f700be3c41ee603062c9760359448",
   "strategy": "site-corpus-opencc-closure",
   "subsetCodePointCount": 6496,
+  "toolchainSha256": "b192f1da4344abea6d8568a33b15e3ecfb6d9f8242b22257639c7cf28d4424c3",
   "unsupportedSiteCodePointRanges": [
     "U+2027",
     "U+202C",
@@ -99,5 +103,6 @@
     "U+FAFF",
     "U+FF62-FF63"
   ],
-  "version": 3
+  "upstreamCommit": "287399335ec1beb72062ce67c36eaa8bec35f386",
+  "version": 4
 }

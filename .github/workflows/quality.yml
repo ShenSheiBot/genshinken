@@ -41,6 +41,9 @@ jobs:
       - name: 运行完整质量门禁
         run: npm run check
 
+      - name: 确认自动生成字体已提交
+        run: git diff --exit-code -- app/cjk-fonts.generated.css app/translation-fonts.generated.css public/fonts
+
       - name: 构建生产版本
         run: npm run build
 

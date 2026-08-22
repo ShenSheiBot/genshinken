@@ -32,6 +32,26 @@ sources:
     coverage: First-party verification of the Japanese work title and the work’s positioning as a representative isekai-reincarnation light novel; the official story page also confirms the 34-year-old shut-in protagonist’s death and reincarnation as Rudeus.
     rights_evidence: Bibliographic/terminology verification only; no reuse right inferred.
     publication_decision: verification-only
+  - id: mushoku-narou-chapter-1
+    language: ja
+    title: 第一話「もしかして：異世界」
+    author: 理不尽な孫の手
+    venue: 小説家になろう
+    url: https://ncode.syosetu.com/n9669bk/2/
+    accessed: 2026-08-21
+    coverage: Public author-posted source for the first Japanese quotation reproduced in section III; wording matches the Roof canonical quotation.
+    rights_evidence: Verification of an excerpt already quoted by Roof; no broader reuse right inferred.
+    publication_decision: verification-only
+  - id: mushoku-narou-prologue
+    language: ja
+    title: プロローグ
+    author: 理不尽な孫の手
+    venue: 小説家になろう
+    url: https://ncode.syosetu.com/n9669bk/1/
+    accessed: 2026-08-21
+    coverage: Public author-posted source for the second Japanese quotation reproduced in section III; wording matches the Roof canonical quotation.
+    rights_evidence: Verification of an excerpt already quoted by Roof; no broader reuse right inferred.
+    publication_decision: verification-only
   - id: slime300-official
     language: ja
     title: スライム倒して300年、知らないうちにレベルMAXになってました
@@ -126,14 +146,16 @@ assets:
     rights_evidence: Existing retained Roof archive asset; reused unchanged for local-preview targets.
     publication_decision: local-preview
 reviews:
-  fidelity: "C-01 reacceptance: English and Japanese were re-compared against all 52 logical source blocks from the canonical; the English universal transfer claim, the 重生 / reincarnation distinction, and Japanese quotation-source responsibility were corrected. Japanese quote routing was separately rechecked against the anti-back-translation rule."
+  fidelity: "C-02 corrective review: English remains aligned with the complete canonical. Japanese was re-compared against the canonical and both public Narou passages; the two exact Japanese quotations are restored directly, while the immediately following Chinese reader glosses are deliberately omitted rather than translated back into Japanese."
   fluency: "C-01 reacceptance: both final target files were reopened and reread source-free after the last edits. English generalization/calques and Japanese 重开 / game-tool wording were revised; no known target-language defect remains in the candidate files."
-  whole_work: "C-01 reacceptance: both targets preserve 52 logical blocks, five h2 headings, one image, the diagram sequence, and all quotation/source-attribution positions; terms and work titles were checked from opening through conclusion. The JA translator credit excludes restored Japanese-original quotation spans."
+  whole_work: "C-02 corrective review: both targets preserve five h2 headings, one image, the diagram sequence, and every substantive quotation/source-attribution position. The Japanese mixed-source audit records the approved omission of two Chinese gloss blocks whose exact Japanese originals immediately precede them; no substantive argument or apparatus unique to the Roof edition is omitted."
   rendered: "Isolated local editorial preview, exact candidate files: /en/posts/death-and-rebirth-in-isekai-reincarnation and /ja/posts/death-and-rebirth-in-isekai-reincarnation returned HTTP 200. Desktop 1440x1000 and mobile 390x844 were inspected visually and by DOM: article text present, image loaded at natural 720x405, no horizontal overflow, no source footnotes expected or rendered, no process-note markers, visible Chinese/EN/JA navigation, and EN→JA navigation was clicked successfully with an EN return link present. The specified main worktree cannot currently render translation routes cleanly because candidate-external source/_translations/ja/posts/furukawa-tomohiro-interview-1-saint-seiya-style.md has a pre-existing title_breaks/title mismatch; the preview used a detached temporary worktree where candidate-external title_breaks were normalized solely as a noncommitted harness workaround."
 ---
 
 ## Research log
 
+- Direct source verification: `https://ncode.syosetu.com/n9669bk/2/` matches the first quoted Japanese passage from `悪くない` through `全力で`.
+- Direct source verification: `https://ncode.syosetu.com/n9669bk/1/` matches the second quoted Japanese passage from `仕事を探す方法がわからない` through `人生が完全に詰んだのを自覚した`.
 - Query: `site:mushokutensei.jp 無職転生 異世界行ったら本気だす 公式`. Match: official anime introduction/story pages; confirms title and reincarnation premise. Included for terminology verification, not as the article base.
 - Query: `site:slime300-anime.com スライム倒して300年 公式`. Match: official anime site; confirms the Japanese and official English titles. Included for title verification only.
 - Query: `site:bokurema.com ぼくたちのリメイク 公式`. Match: official anime site; confirms title, Ver.β spin-off, and ten-year rewind premise. Included for title verification only.
@@ -187,7 +209,7 @@ reviews:
 ## Source discrepancies and routing decisions
 
 - This article is Chinese original writing by 甚谁. Lack of a Japanese “original” is not a source failure. Both target editions are based on the repository Chinese canonical except for embedded quotations that can be routed to a verified source-language passage.
-- The two *Mushoku Tensei* web quotations are already present in Japanese in the Chinese canonical. Japanese restores those Japanese blocks directly; English translates those Japanese blocks rather than translating the Chinese gloss back into English.
+- The two *Mushoku Tensei* web quotations are already present in Japanese in the Chinese canonical and match the public Narou chapters. Japanese restores those Japanese blocks directly and omits the immediately following Chinese translations, whose sole reader-facing function was to gloss the Japanese quotations for Chinese readers. English translates the Japanese originals directly.
 - The Juumonji Ao and Azuma Hiroki passages are Chinese translations of Japanese books. Exact authoritative Japanese passages matching the full Roof quotation were not established. English may use the Roof Chinese as an explicit internal relay because English is a third language. Japanese must not ghost-back-translate them into purported originals; the Japanese target therefore preserves their block-quotation positions but turns the wording into attributed summary/paraphrase rather than fake quotation text.
 - The source uses `《狩猎史莱姆三百年》`, a shortened Chinese title for *I’ve Been Killing Slimes for 300 Years and Maxed Out My Level*; targets use verified established titles without altering the Chinese canonical.
 - The source later writes `《我的重置人生》` once after consistently using `《我们的重置人生》`; context clearly refers to the same work. Targets use the verified single work identity and dossier records the source slip rather than reproducing a false second title.
@@ -217,13 +239,13 @@ reviews:
 ## Japanese translator self-review
 
 - Pass 1, bilingual fidelity: compared all 52 logical blocks against the Chinese canonical. Reincarnation/transfer, one-time death versus loop death, return versus irreversible separation, labor/social exclusion, and the direction of the China/Japan comparison were checked paragraph by paragraph.
-- Anti-back-translation check: the two *Mushoku Tensei* Japanese quotations already present in the canonical remain exact Japanese blocks. The following Roof `译：` blocks are explicitly labelled `中国語版訳の内容：` so they remain Roof Chinese-translation apparatus rather than being mistaken for source originals. The Jūmonji and Azuma book passages remain third-person attributed summaries in Japanese because exact authoritative Japanese spans were not verified; no synthetic first-person “original” was created.
+- Anti-back-translation correction: the two *Mushoku Tensei* Japanese quotations remain exact Japanese blocks. The following Roof `译：` blocks are Chinese reader glosses of those same quotations, not independent authorial content; retranslating them into Japanese created redundant near-duplicate passages and has been removed. The Jūmonji and Azuma book passages remain third-person attributed summaries in Japanese because exact authoritative Japanese spans were not verified; no synthetic first-person “original” was created.
 - Naturalness revision: `前世と今生` → `前世と今世`; `RPGゲーム` → `RPG`; `越境的なメディア性` → `メディア横断性`; `プロらしさ` → `専門性`. These remove Chinese-shaped wording without changing claims.
 - Title consistency revision: `今日から㋮王！` → `今日からマ王！`; final game title `League of Legends` → `リーグ・オブ・レジェンド`; `ゲーム改変ツール` → `ゲーム改造ツール`; the final conclusion now distinguishes `チート、ハック、ゲーム改造ツール`.
 - Pass 2, source-free fluency: reread the full essay in である style, keeping internet/game vocabulary more colloquial where the source becomes polemical (`チート`, `重开`, `人生やり直し`) and avoiding uniform academic stiffness.
 - Pass 3, whole-work consistency: verified 異世界転生 / 異世界転移, ファンタジー, ニート, 社畜, 人生リセット, 努力―成功, and all named works across abstract, body, diagram, and conclusion.
-- C-01 final fidelity corrections: `人生リセマラ小説` was removed because the Chinese `重开文` does not itself assert a gacha/reroll concept; it is now `人生やり直し小説`. The two Roof Chinese glosses after exact *Mushoku Tensei* Japanese quotations are labelled `中国語版訳の内容：` to bound responsibility explicitly.
-- Final responsibility correction: the Japanese public `translator` scope is `中国語由来の翻訳部分（日本語原文復元引用を除く）`, so the two restored *Mushoku Tensei* Japanese originals are not credited to the agent as translation.
+- C-01 changed `人生リセマラ小説` to `人生やり直し小説`, because the Chinese `重开文` does not itself assert a gacha/reroll concept. C-02 removed the two redundant Japanese retranslations of Roof's Chinese quotation glosses.
+- C-02 normalizes the public translator scope to `全文`. The detailed distinction between translated Chinese-authored prose and restored source-language quotations belongs to the internal segment map; ordinary quotation authorship is already clear from the displayed attribution.
 - Japanese protected-structure audit after revision: zero failures. The sole warning is an inspected Arabic-number-token difference caused by target-language date/title conventions; no source numeric fact is omitted or altered.
 
 ## C-01 rendered-page reacceptance (2026-08-19)

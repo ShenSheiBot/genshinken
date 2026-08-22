@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
 """Build the three self-hosted ST CJK webfont subsets.
 
-Usage:
-    python scripts/build-cjk-font-subsets.py --source-dir C:/path/to/ttfs
-
-The source directory must contain STSong.ttf, STFangsong.ttf, and STKaiti.ttf.
+Normal dev, check, build, and deploy commands invoke this script automatically.
+Pinned source fonts are cached outside Git; --source-dir may override that cache.
 Generated WOFF2 files cover every supported CJK/punctuation code point currently
 present in the rendered site corpus. The committed manifest lets CI fail when new
 site text needs the subsets to be regenerated, avoiding a permanent GB2312 payload
@@ -19,15 +17,24 @@ import json
 from pathlib import Path
 import subprocess
 from typing import Iterable
+from urllib.parse import quote
+from urllib.request import urlopen
 
-from fontTools.subset import Options, Subsetter
-from fontTools.ttLib import TTFont
-
+from font_build_support import (
+    acquire_font_build_lock,
+    ensure_pinned_font_environment,
+    font_toolchain_digest,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DIR = ROOT / "public" / "fonts"
 MANIFEST_PATH = OUTPUT_DIR / "cjk-font-manifest.json"
+CSS_PATH = ROOT / "app" / "cjk-fonts.generated.css"
 CONVERTER_PATH = ROOT / "scripts" / "convert-cjk-font-corpus.mjs"
+CACHE_DIR = ROOT / ".local-archive" / "font-sources" / "st-cjk-28739933"
+UPSTREAM_COMMIT = "287399335ec1beb72062ce67c36eaa8bec35f386"
+GENERATOR_VERSION = 4
+GENERATOR_STRATEGY = "site-corpus-opencc-closure"
 TEXT_EXTENSIONS = {".css", ".json", ".md", ".mjs", ".ts", ".tsx", ".txt"}
 CORPUS_ROOTS = (ROOT / "app", ROOT / "lib", ROOT / "source")
 LOCALE_FONT_OWNED_ROOTS = (
@@ -39,9 +46,27 @@ LOCALE_FONT_OWNED_ROOTS = (
 ALWAYS_INCLUDE = "西方負典华文宋体仿宋楷体衬线无衬线，。；：？！“”‘’（）《》〈〉【】——……·"
 
 FONTS = (
-    ("UN Canon STSong", "STSong.ttf", "un-canon-st-song.woff2"),
-    ("UN Canon STFangsong", "STFangsong.ttf", "un-canon-st-fangsong.woff2"),
-    ("UN Canon STKaiti", "STKaiti.ttf", "un-canon-st-kaiti.woff2"),
+    {
+        "family": "UN Canon STSong",
+        "source": "STSong.ttf",
+        "source_path": "chinese/宋体/STSong.ttf",
+        "source_sha256": "c5cc2ed5e2c0e6385013fe82d950eee6960d805bd602b86c53ff454783f382c4",
+        "output": "un-canon-st-song.woff2",
+    },
+    {
+        "family": "UN Canon STFangsong",
+        "source": "STFangsong.ttf",
+        "source_path": "chinese/仿宋体/STFangsong.ttf",
+        "source_sha256": "e6326459e8e60e436c7d60e34d273bda3ba4eea2d2a5b309ff8f1b73200f2e38",
+        "output": "un-canon-st-fangsong.woff2",
+    },
+    {
+        "family": "UN Canon STKaiti",
+        "source": "STKaiti.ttf",
+        "source_path": "chinese/楷体/STKaiti.ttf",
+        "source_sha256": "a29c99c161fc43ce6aba2d7c152065359c2cb3019be4ae6248171178cb7d04d5",
+        "output": "un-canon-st-kaiti.woff2",
+    },
 )
 
 
@@ -121,6 +146,31 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
+def source_url(record: dict[str, str]) -> str:
+    encoded_path = "/".join(quote(part) for part in record["source_path"].split("/"))
+    return (
+        "https://raw.githubusercontent.com/Haixing-Hu/latex-chinese-fonts/"
+        f"{UPSTREAM_COMMIT}/{encoded_path}"
+    )
+
+
+def source_font(record: dict[str, str], source_dir: Path) -> Path:
+    path = source_dir / record["source"]
+    if path.is_file() and sha256(path) == record["source_sha256"]:
+        return path
+    source_dir.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_suffix(".download")
+    with urlopen(source_url(record), timeout=60) as response:
+        temporary.write_bytes(response.read())
+    actual = sha256(temporary)
+    if actual != record["source_sha256"]:
+        raise SystemExit(
+            f"downloaded {record['source']} digest {actual} does not match pinned {record['source_sha256']}"
+        )
+    temporary.replace(path)
+    return path
+
+
 def code_point_digest(code_points: Iterable[int]) -> str:
     payload = ",".join(f"{code_point:X}" for code_point in sorted(set(code_points)))
     return hashlib.sha256(payload.encode("utf-8")).hexdigest()
@@ -148,6 +198,8 @@ def format_range(start: int, end: int) -> str:
 
 
 def font_code_points(path: Path) -> set[int]:
+    from fontTools.ttLib import TTFont
+
     font = TTFont(path, lazy=True, recalcTimestamp=False)
     try:
         cmap = font.getBestCmap()
@@ -159,6 +211,9 @@ def font_code_points(path: Path) -> set[int]:
 
 
 def subset_font(source: Path, output: Path, code_points: set[int]) -> None:
+    from fontTools.subset import Options, Subsetter
+    from fontTools.ttLib import TTFont
+
     options = Options()
     options.layout_features = ["*"]
     options.name_IDs = ["*"]
@@ -184,25 +239,134 @@ def subset_font(source: Path, output: Path, code_points: set[int]) -> None:
         font.close()
 
 
+def generated_outputs_are_current(
+    source_points: set[int],
+    site_points: set[int],
+) -> bool:
+    if not MANIFEST_PATH.is_file() or not CSS_PATH.is_file():
+        return False
+    try:
+        manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return False
+    if manifest.get("version") != GENERATOR_VERSION:
+        return False
+    if manifest.get("strategy") != GENERATOR_STRATEGY:
+        return False
+    if manifest.get("toolchainSha256") != font_toolchain_digest(ROOT):
+        return False
+    if manifest.get("sourceCodePointCount") != len(source_points):
+        return False
+    if manifest.get("sourceCodePointSha256") != code_point_digest(source_points):
+        return False
+    if manifest.get("siteCodePointCount") != len(site_points):
+        return False
+    if manifest.get("siteCodePointSha256") != code_point_digest(site_points):
+        return False
+    if manifest.get("upstreamCommit") != UPSTREAM_COMMIT:
+        return False
+    css = CSS_PATH.read_text(encoding="utf-8")
+    records = manifest.get("fonts")
+    if not isinstance(records, dict) or not records:
+        return False
+    expected_by_family = {record["family"]: record for record in FONTS}
+    if set(records) != set(expected_by_family):
+        return False
+    for family, record in records.items():
+        if not isinstance(record, dict):
+            return False
+        expected = expected_by_family[family]
+        if record.get("sourceSha256") != expected["source_sha256"]:
+            return False
+        if record.get("sourceUrl") != source_url(expected):
+            return False
+        file_name = record.get("file")
+        expected_digest = record.get("sha256")
+        if not isinstance(file_name, str) or not isinstance(expected_digest, str):
+            return False
+        output = OUTPUT_DIR / file_name
+        if not output.is_file() or sha256(output) != expected_digest:
+            return False
+        if f'/fonts/{file_name}?v={expected_digest[:12]}' not in css:
+            return False
+    return True
+
+
+def corpus_inventory_is_current(corpus_files: list[Path]) -> bool:
+    try:
+        manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return False
+    return manifest.get("corpusFileCount") == len(corpus_files)
+
+
+def refresh_corpus_inventory(corpus_files: list[Path], lock: object) -> None:
+    if getattr(lock, "closed", True):
+        raise RuntimeError("Chinese font manifest refresh requires the font-build lock")
+    manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
+    manifest["corpusFileCount"] = len(corpus_files)
+    MANIFEST_PATH.write_text(
+        json.dumps(manifest, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
+
+
+def generated_css(records: dict[str, dict[str, object]]) -> str:
+    faces: list[str] = []
+    for record in FONTS:
+        built = records[record["family"]]
+        faces.append("\n".join((
+            "@font-face {",
+            f'  font-family: "{record["family"]}";',
+            f'  src: url("/fonts/{built["file"]}?v={str(built["sha256"])[:12]}") format("woff2");',
+            "  font-style: normal;",
+            "  font-weight: 400;",
+            "  font-display: swap;",
+            "}",
+        )))
+    return "/* Generated by scripts/build-cjk-font-subsets.py. */\n" + "\n\n".join(faces) + "\n"
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--source-dir",
         type=Path,
-        required=True,
+        default=CACHE_DIR,
         help="Directory containing STSong.ttf, STFangsong.ttf, and STKaiti.ttf",
     )
+    parser.add_argument(
+        "--if-stale",
+        action="store_true",
+        help="rebuild only when the live corpus or committed generated outputs changed",
+    )
     args = parser.parse_args()
-    source_dir = args.source_dir.expanduser().resolve()
-    sources = [(family, source_dir / source_name, output_name) for family, source_name, output_name in FONTS]
-    missing = [source for _, source, _ in sources if not source.is_file()]
-    if missing:
-        raise SystemExit(f"missing source fonts: {', '.join(str(path) for path in missing)}")
-
     corpus_files = text_files()
     source_points, site_points = site_code_points(corpus_files)
+    if (
+        args.if_stale
+        and generated_outputs_are_current(source_points, site_points)
+        and corpus_inventory_is_current(corpus_files)
+    ):
+        print("Chinese font subsets already match the live corpus")
+        return
+    lock = acquire_font_build_lock(ROOT)
+    corpus_files = text_files()
+    source_points, site_points = site_code_points(corpus_files)
+    if args.if_stale and generated_outputs_are_current(source_points, site_points):
+        if not corpus_inventory_is_current(corpus_files):
+            refresh_corpus_inventory(corpus_files, lock)
+            print("refreshed Chinese font corpus inventory without rebuilding font binaries")
+        else:
+            print("Chinese font subsets were synchronized by another process")
+        lock.close()
+        return
+    toolchain_digest = ensure_pinned_font_environment(ROOT)
+    source_dir = args.source_dir.expanduser().resolve()
+    sources = [(record, source_font(record, source_dir)) for record in FONTS]
     common_supported: set[int] | None = None
-    for _, source, _ in sources:
+    for _, source in sources:
         supported = font_code_points(source)
         common_supported = supported if common_supported is None else common_supported & supported
     assert common_supported is not None
@@ -214,16 +378,17 @@ def main() -> None:
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     manifest_fonts: dict[str, dict[str, object]] = {}
-    for family, source, output_name in sources:
-        output = OUTPUT_DIR / output_name
+    for record, source in sources:
+        output = OUTPUT_DIR / record["output"]
         subset_font(source, output, subset_points)
-        manifest_fonts[family] = {
+        manifest_fonts[record["family"]] = {
             "bytes": output.stat().st_size,
             "codePointCount": len(subset_points),
-            "file": output_name,
+            "file": record["output"],
             "sha256": sha256(output),
-            "source": source.name,
+            "source": record["source"],
             "sourceSha256": sha256(source),
+            "sourceUrl": source_url(record),
         }
         print(f"built {output.relative_to(ROOT)} ({output.stat().st_size:,} bytes)")
 
@@ -235,16 +400,19 @@ def main() -> None:
         "sourceCodePointSha256": code_point_digest(source_points),
         "siteCodePointCount": len(site_points),
         "siteCodePointSha256": code_point_digest(site_points),
-        "strategy": "site-corpus-opencc-closure",
+        "strategy": GENERATOR_STRATEGY,
         "subsetCodePointCount": len(subset_points),
         "unsupportedSiteCodePointRanges": compact_ranges(unsupported_site_points),
-        "version": 3,
+        "upstreamCommit": UPSTREAM_COMMIT,
+        "toolchainSha256": toolchain_digest,
+        "version": GENERATOR_VERSION,
     }
     MANIFEST_PATH.write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
         encoding="utf-8",
         newline="\n",
     )
+    CSS_PATH.write_text(generated_css(manifest_fonts), encoding="utf-8", newline="\n")
     print(
         f"covered {len(subset_points):,} code points from {len(corpus_files)} site files; "
         f"{len(unsupported_site_points)} site code points remain on fallback"

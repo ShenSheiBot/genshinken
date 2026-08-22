@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import "../globals.css";
+import "../cjk-fonts.generated.css";
 import "../translation-fonts.generated.css";
 import "../components/editorial-motion/EditorialMotion.css";
 import { site } from "@/lib/site";

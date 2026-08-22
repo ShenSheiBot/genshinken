@@ -32,6 +32,11 @@ const methods = new Set(["agent", "human"]);
 const sourceRelationships = new Set(["direct", "relay", "mixed"]);
 const roles = new Set(["translator", "reviewer", "proofreader", "editor"]);
 const stableId = /^[a-z0-9]+(?:-[a-z0-9]+)*$/u;
+const readerFacingRelayNotices = [
+  /(?:屋頂の)?中国語版(?:に基づく|からの)重訳/u,
+  /(?:日本語|英語|原文).{0,24}逐字(?:引用|復元)/u,
+  /\b(?:based on|translated from|relay(?:ed)? from) (?:the )?(?:Roof )?Chinese (?:edition|version)\b/iu,
+];
 const languageDispositions = readLanguageDispositions(translationsRoot);
 
 function requiredText(data, field, source) {
@@ -100,6 +105,16 @@ function verifyCredits(value, file) {
   if (!translator) throw new Error(`${file}: credits must include a translator`);
 }
 
+function verifyNoReaderFacingRelayNotices(content, file) {
+  const match = readerFacingRelayNotices.find((pattern) => pattern.test(content));
+  if (match) {
+    throw new Error(
+      `${file}: reader-facing relay/source-recovery notice is forbidden; ` +
+      "keep provenance in metadata and use verified quotation or attributed indirect discourse"
+    );
+  }
+}
+
 function verifyDossier(edition) {
   const dossierFile = path.join(dossierRoot, `${edition.workId}-translation-dossier.md`);
   if (!fs.existsSync(dossierFile)) throw new Error(`${edition.file}: missing translation dossier ${dossierFile}`);
@@ -134,18 +149,25 @@ function verifyDossier(edition) {
 }
 
 function auditStructure(source, edition, tempDirectory) {
+  const manifestPath = path.join(
+    dossierRoot,
+    `${edition.workId}-${edition.locale}-audit.json`
+  );
   const sourcePath = source.type === "post"
     ? source.file
     : path.join(tempDirectory, `${edition.workId}-${edition.locale}-source.md`);
   if (source.type === "book-chapter") fs.writeFileSync(sourcePath, `${source.markdown}\n`);
-  const result = spawnSync("python3", [
-    auditScript,
-    sourcePath,
-    edition.file,
-    "--target-language",
-    edition.locale,
-    "--json",
-  ], {
+  const auditArguments = fs.existsSync(manifestPath)
+    ? [auditScript, "--manifest", manifestPath, "--json"]
+    : [
+        auditScript,
+        sourcePath,
+        edition.file,
+        "--target-language",
+        edition.locale,
+        "--json",
+      ];
+  const result = spawnSync("python3", auditArguments, {
     cwd: root,
     encoding: "utf8",
     env: { ...process.env, PYTHONDONTWRITEBYTECODE: "1" },
@@ -167,6 +189,7 @@ for (const file of [...locales].flatMap((locale) => walk(path.join(translationsR
   if (!locales.has(locale)) throw new Error(`${file}: first directory must be en / ja`);
   const parsed = parseYamlFrontMatter(fs.readFileSync(file, "utf8"));
   const data = parsed.data;
+  verifyNoReaderFacingRelayNotices(parsed.content, file);
   const status = requiredText(data, "status", file);
   if (!statuses.has(status)) throw new Error(`${file}: invalid status ${status}`);
   const method = requiredText(data, "translation_method", file);

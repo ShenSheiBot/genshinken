@@ -53,30 +53,6 @@
   --code-bg: rgba(26, 25, 22, 0.05);
 }
 
-@font-face {
-  font-family: "UN Canon STSong";
-  src: url("/fonts/un-canon-st-song.woff2?v=2a2d18047970") format("woff2");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "UN Canon STFangsong";
-  src: url("/fonts/un-canon-st-fangsong.woff2?v=4d854a23dc06") format("woff2");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "UN Canon STKaiti";
-  src: url("/fonts/un-canon-st-kaiti.woff2?v=77da7993a3a2") format("woff2");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
-
 /* U+4337 is absent from the three ST source fonts. These one-glyph Noto
    subsets prevent platform-dependent glyph and baseline fallback without
    shipping another full CJK font. */

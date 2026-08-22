@@ -14,7 +14,9 @@
     "ios_saf >= 15.6"
   ],
   "scripts": {
+    "predev": "npm run fonts:sync",
     "dev": "next dev",
+    "prebuild": "npm run fonts:sync",
     "build": "next build",
     "cf:build:preview": "node scripts/deploy-cloudflare.mjs preview --build-only",
     "cf:build:production": "node scripts/deploy-cloudflare.mjs production --build-only",
@@ -38,7 +40,11 @@
     "verify:typography-registry": "node scripts/verify-typography-registry.mjs",
     "verify:book-capabilities": "node --experimental-strip-types --no-warnings scripts/verify-book-capabilities.mjs",
     "verify:fonts": "node scripts/verify-font-contract.mjs",
+    "fonts:cjk:sync": "python scripts/build-cjk-font-subsets.py --if-stale",
+    "fonts:cjk:build": "python scripts/build-cjk-font-subsets.py",
+    "fonts:translations:sync": "python scripts/build-translation-font-subsets.py --if-stale",
     "fonts:translations:build": "python scripts/build-translation-font-subsets.py",
+    "fonts:sync": "npm run fonts:cjk:sync && npm run fonts:translations:sync",
     "verify:reading-progress": "node --experimental-strip-types --no-warnings scripts/verify-reading-progress.mjs",
     "verify:han-script": "node --experimental-strip-types --no-warnings scripts/verify-han-script.mjs",
     "verify:citations": "node --experimental-strip-types --no-warnings scripts/verify-citations.mjs",
@@ -53,7 +59,7 @@
     "verify:structured-credits": "node scripts/verify-structured-credit-lines.mjs",
     "verify:license-placement": "node scripts/verify-license-placement.mjs",
     "verify:release": "node scripts/verify-editorial-release.mjs",
-    "check": "npm run validate:content && npm run validate:media-html && npm run verify:wechat-assets-ready && npm run verify:structured-credits && npm run verify:license-placement && npm run verify:typography && npm run verify:typography-registry && npm run verify:book-capabilities && npm run verify:reading-progress && npm run verify:han-script && npm run verify:citations && npm run verify:translations && npm run verify:internal-links && npm run verify:routing && npm run verify:library && npm run verify:fonts && npm run typecheck && npm run lint"
+    "check": "npm run fonts:sync && npm run validate:content && npm run validate:media-html && npm run verify:wechat-assets-ready && npm run verify:structured-credits && npm run verify:license-placement && npm run verify:typography && npm run verify:typography-registry && npm run verify:book-capabilities && npm run verify:reading-progress && npm run verify:han-script && npm run verify:citations && npm run verify:translations && npm run verify:internal-links && npm run verify:routing && npm run verify:library && npm run verify:fonts && npm run typecheck && npm run lint"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

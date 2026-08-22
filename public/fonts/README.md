@@ -10,40 +10,40 @@ The primary self-hosted CJK assets are generated from three source fonts:
 | `un-canon-st-fangsong.woff2` | `STFangsong.ttf` | `UN Canon STFangsong` |
 | `un-canon-st-kaiti.woff2` | `STKaiti.ttf` | `UN Canon STKaiti` |
 
-The original TTF files are not committed. Their expected SHA-256 values are
-recorded as `sourceSha256` in `cjk-font-manifest.json`; never regenerate from
-an unverified font with the same display name.
+The original TTF files are not committed. The generator downloads them from a
+pinned `latex-chinese-fonts` commit into the ignored
+`.local-archive/font-sources` cache and verifies the recorded SHA-256 values;
+never regenerate from an unverified font with the same display name.
 
 `scripts/build-cjk-font-subsets.py` scans text under `app/`, `lib/`, `source/`
 and `public/llms.txt`, adds the Simplified/Traditional OpenCC closure, intersects
 the result with the code points shared by all three source fonts, and writes the
 three WOFF2 files plus `cjk-font-manifest.json`.
 
-The reproducible Python package set is pinned in
-`scripts/requirements-font-subsets.txt`. The current build is verified with
-Python 3.11.9; install the pinned packages before regenerating:
+Normal development, checks, builds, and deployments all run the idempotent
+font synchronizer automatically:
 
 ```bash
 npm ci
-python -m pip install -r scripts/requirements-font-subsets.txt
-python scripts/build-cjk-font-subsets.py --source-dir <verified-source-directory>
+npm run fonts:sync
 ```
 
-`npm ci` is required because corpus expansion calls
+If a real rebuild is needed, the generator automatically creates an ignored
+repository-private virtual environment under `.local-archive/` and installs
+the exact package set pinned in `scripts/requirements-font-subsets.txt`.
+Normal development therefore does not depend on, alter, or inherit a global
+Conda or system FontTools installation. The requirements digest is part of the
+generated-manifest contract, so a toolchain or generator-strategy change makes
+the outputs stale just like a source-font or code-point change.
+
+`npm ci` is also required because corpus expansion calls
 `scripts/convert-cjk-font-corpus.mjs`, which imports the locked `opencc-js`
 dependency.
 
-The source directory must contain the exact three required filenames. On
-Windows, the installed STFangsong file may be physically named
-`C:\Windows\Fonts\STFANGSO.TTF`; copy it to a temporary source directory as
-`STFangsong.ttf` and verify the SHA before running the script.
-
-After generation, update the three `app/globals.css` font URL cache keys to the
-first 12 characters of their new manifest SHA-256 values, then run:
-
-```bash
-npm run verify:fonts
-```
+The Chinese generator writes `app/cjk-fonts.generated.css`; the Japanese
+generator writes `app/translation-fonts.generated.css`. Neither generator
+edits hand-maintained CSS. Cache keys, WOFF2 files, and manifests are updated
+together.
 
 `verify:fonts` checks the corpus inventory, OpenCC closure, output hashes, byte
 sizes, cache keys and rare Han fallback contract.
@@ -61,16 +61,17 @@ code point.
 
 The primary and fallback source files are downloaded from the pinned
 `google/fonts` commit into the ignored `.local-archive/font-sources` cache.
-Regenerate after changing Japanese content or localized bibliographic metadata:
+Japanese content and localized bibliographic metadata use the same automatic
+sync path:
 
 ```bash
-python scripts/build-translation-font-subsets.py
-npm run verify:fonts
+npm run fonts:sync
 ```
 
-The output manifest fingerprints both the complete input-file inventory and
-its literal code-point set, preventing a language-disposition card or component
-string from silently escaping the hosted font contract.
+The output manifest records the complete input-file inventory and literal
+code-point set. Prose-only rewrites refresh the inventory under the shared
+font-build lock without rebuilding the font binaries; only a code-point-set,
+pinned-source, generator-strategy, or pinned-toolchain change rebuilds them.
 
 ## Rare Han fallbacks
 

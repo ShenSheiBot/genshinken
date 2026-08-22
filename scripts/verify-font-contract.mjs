@@ -24,8 +24,14 @@ const translationPath = path.join(
   "translation-edition.module.css"
 );
 const manifestPath = path.join(root, "public", "fonts", "cjk-font-manifest.json");
+const cjkFontCssPath = path.join(root, "app", "cjk-fonts.generated.css");
 const translationFontCssPath = path.join(root, "app", "translation-fonts.generated.css");
 const translationFontManifestPath = path.join(root, "public", "fonts", "translation-font-manifest.json");
+const fontRequirementsPath = path.join(root, "scripts", "requirements-font-subsets.txt");
+const fontToolchainDigest = crypto
+  .createHash("sha256")
+  .update(fs.readFileSync(fontRequirementsPath))
+  .digest("hex");
 
 const expectedFonts = [
   {
@@ -131,6 +137,7 @@ function propertyValue(css, property) {
 }
 
 const globalsCss = readUtf8(globalsPath);
+const cjkFontCss = readUtf8(cjkFontCssPath);
 const readerCss = readUtf8(readerPath);
 const translationCss = readUtf8(translationPath);
 const translationFontCss = readUtf8(translationFontCssPath);
@@ -138,16 +145,26 @@ assert.ok(fs.existsSync(manifestPath), "missing generated CJK font manifest; run
 const manifest = JSON.parse(readUtf8(manifestPath));
 assert.ok(fs.existsSync(translationFontManifestPath), "missing generated Japanese translation font manifest");
 const translationFontManifest = JSON.parse(readUtf8(translationFontManifestPath));
-assert.equal(manifest.version, 3, "unsupported CJK font manifest version");
+assert.equal(manifest.version, 4, "unsupported CJK font manifest version");
 assert.equal(
   manifest.strategy,
   "site-corpus-opencc-closure",
   "CJK font subsets must cover the rendered corpus and its OpenCC conversion closure"
 );
+assert.equal(
+  manifest.toolchainSha256,
+  fontToolchainDigest,
+  "CJK font outputs were not built with the pinned repository-private toolchain"
+);
+assert.equal(
+  manifest.upstreamCommit,
+  "287399335ec1beb72062ce67c36eaa8bec35f386",
+  "CJK font source commit changed without review"
+);
 assert.equal(manifest.conversion, "opencc-js:cn2t+t2cn");
 assert.ok(manifest.subsetCodePointCount >= 2_500, "hosted CJK subsets are unexpectedly small");
 
-const faceBlocks = [...globalsCss.matchAll(/@font-face\s*{[\s\S]*?}/g)].map((match) => match[0]);
+const faceBlocks = [...`${globalsCss}\n${cjkFontCss}`.matchAll(/@font-face\s*{[\s\S]*?}/g)].map((match) => match[0]);
 const hashes = new Set();
 
 for (const expected of expectedFonts) {
@@ -294,11 +311,16 @@ assert.match(
   /html\[data-reader-font="sans"\][\s\S]*?\.rare-han[\s\S]*?font-family\s*:\s*["']UN Canon Rare Han Sans["']\s*;/
 );
 
-assert.equal(translationFontManifest.version, 1, "unsupported Japanese translation font manifest version");
+assert.equal(translationFontManifest.version, 2, "unsupported Japanese translation font manifest version");
 assert.equal(
   translationFontManifest.strategy,
   "japanese-translation-corpus-variable-fonts-with-generated-fallbacks",
   "Japanese fonts must be generated from the localized corpus and generated fallback set"
+);
+assert.equal(
+  translationFontManifest.toolchainSha256,
+  fontToolchainDigest,
+  "Japanese font outputs were not built with the pinned repository-private toolchain"
 );
 for (const stack of ["serif", "sans"]) {
   const record = translationFontManifest.stacks?.[stack];
@@ -443,6 +465,17 @@ assert.match(
   localeLayoutSource,
   /locale === "ja"[\s\S]*?rel="preload"[\s\S]*?href=\{japaneseSerifHref\}/u,
   "Japanese localized routes must preload the corpus serif face"
+);
+const translationBookCss = readUtf8(path.join(root, "app", "[locale]", "books", "[book]", "translation-book.module.css"));
+assert.match(
+  translationBookCss,
+  /\.page:lang\(ja\)\s*\{[^}]*font-family\s*:\s*var\(--font-roof-translation-serif-stack\)/u,
+  "Japanese translation-book pages must consume the complete hosted serif stack"
+);
+assert.doesNotMatch(
+  translationBookCss,
+  /font-family\s*:[^;]*var\(--font-roof-noto-(?:serif|sans)-jp\)/u,
+  "Japanese translation-book consumers must not bypass generated fallback stacks"
 );
 
 const corpusFiles = corpusRoots

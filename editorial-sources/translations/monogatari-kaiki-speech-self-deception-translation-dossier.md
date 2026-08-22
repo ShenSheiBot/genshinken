@@ -60,9 +60,9 @@ assets:
     rights_evidence: Inherited from the Roof source chapter; asset-specific rights are not separately asserted.
     publication_decision: local-preview reference only
 reviews:
-  fidelity: Independent bilingual final reviews completed for both editions; the Japanese relay quotation is explicitly identified and no unverified back-translation is presented as an original-language quotation.
+  fidelity: Independent bilingual final reviews completed for both editions; the unverified Japanese dialogue is presented as an attributed summary rather than as recovered wording or a reader-facing relay notice.
   fluency: Independent source-free whole-chapter reads completed in English and Japanese; material semantic and idiomatic defects were directly repaired.
-  whole_work: Chapter boundaries, title, author, seven figures, three block quotations, editor's note, one footnote, localized book identity, and the untranslated next-chapter relation were checked.
+  whole_work: Chapter boundaries, title, author, seven figures, two exact quotation blocks, one labeled summary callout, editor's note, one footnote, localized book identity, and the untranslated next-chapter relation were checked.
   rendered: Local production preview passed at 1440x1000 and 390x844 for both targets; all seven figures decoded, contents and note links round-tripped, hosted target-language fonts loaded, and no failed requests, console errors, or horizontal overflow occurred.
 ---
 
@@ -98,19 +98,19 @@ reviews:
 - The translated chapter excludes the host document's chapter-root h2 because the localized route supplies its own title. The audited source slice uses the same boundary.
 - All seven source media URLs remain unchanged and in source order. Alt text is translated without adding visual claims.
 - The source's section 003 quotation alternates supplied Japanese lyrics with a Chinese rendering. English keeps the Japanese and adds an English rendering; Japanese keeps the supplied Japanese once rather than duplicating each line.
-- The longer dialogue from *Koimonogatari* is rendered from the Roof Chinese text. An exact cited-edition Japanese passage was not established in this bounded review, so the Japanese target uses complete indirect discourse and tells the reader that it is a relay based on the Roof Chinese edition, not a verbatim quotation from the Japanese original.
+- The longer dialogue from *Koimonogatari* is rendered from the Roof Chinese text. An exact cited-edition Japanese passage was not established in this bounded review, so the Japanese target uses complete indirect discourse in a clearly labeled `返答の要旨` callout. Relay provenance remains here rather than being repeated to readers.
 - The closing four lines were identified as Coleridge's “Dejection: An Ode.” English restores the attested wording; Japanese translates from that English rather than back-translating the Roof Chinese.
 - The editor's wordplay around 解脱 and “大约的确” is intentionally not regularized into an unambiguous statement of Kaiki's death.
 - The song lyric was checked against the authorized Uta-Net page for 「木枯らしセンティメント」. The Roof source's Japanese line omits `未来`, while its Chinese rendering preserves the meaning; both targets restore the complete final sense and the dossier records the discrepancy rather than silently treating the incomplete line as authoritative.
 - The English Coleridge quotation was checked against the University of Toronto Representative Poetry Online text of “Dejection: An Ode,” lines 21–24; the Japanese wording was reviewed from that English source.
 - The Japanese first-figure alt uses the attested Japanese title 『汝の症候を楽しめ――ハリウッドVSラカン』. Its localized book excerpt describes only this translated chapter and does not claim that the untranslated second chapter is present.
 - Independent English review repaired the lyric's final meaning, the force of `退治`, `空话` as an empty truism, and the logical collapse of a lie once it attains the Real. It also made local rhythm and alt-text repairs without replacing the essay wholesale.
-- Independent Japanese review repaired the relay-quotation claim, lyric, established book title, localized book coverage, abstract title wording, and several subject, agency, and collocation errors. Most of the draft remained intact; substantive rewriting was concentrated in the unverified quotation and a small number of key sentences.
+- Independent Japanese review repaired the unverified quotation as an attributed summary, removed the public process notice, and also repaired the lyric, established book title, localized book coverage, abstract title wording, and several subject, agency, and collocation errors. Most of the draft remained intact; substantive rewriting was concentrated in the unverified quotation and a small number of key sentences.
 - Both targets remain `review`. The owner requested a localhost reference, not publication.
 
 ## Verification evidence
 
-- Product-side protected-structure audit: four sections, seven figures, three block quotations, and one footnote are present in both targets; only the inspected `001–004` versus `01–04` number-token warning remains.
+- Product-side protected-structure audit: four sections, seven figures, two exact quotation blocks, one summary callout, and one footnote are present in the Japanese target; only the inspected `001–004` versus `01–04` number-token warning remains.
 - `npm run check` passed after both independent reviews and the multilingual contract repairs.
 - Default production build passed with 2,028 static pages. Hidden review book routes do not leak into production language links.
 - Local preview build passed with 2,032 static pages. Both chapter routes returned HTTP 200 with server-rendered `html lang`, localized skip links and JSON-LD.

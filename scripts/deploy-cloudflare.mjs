@@ -42,6 +42,10 @@ function assertTrackedWorktreeClean() {
   }
 }
 
+function syncFonts(root) {
+  run("npm", ["run", "fonts:sync"], root);
+}
+
 function prepareCleanBuildRoot() {
   // Keep the staged tree beside the source tree. Next.js output tracing follows
   // the shared node_modules symlink and requires both paths to share a writable root.
@@ -93,6 +97,10 @@ let staged = false;
 
 try {
   if (!buildOnly) {
+    // Reconcile deterministic font assets before enforcing the clean-commit
+    // deployment boundary. Normal check/build commands do the same, so this is
+    // a no-op unless an editor skipped them after changing the Japanese corpus.
+    syncFonts(sourceRoot);
     assertTrackedWorktreeClean();
     buildRoot = prepareCleanBuildRoot();
     staged = true;
