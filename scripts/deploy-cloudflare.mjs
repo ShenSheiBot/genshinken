@@ -54,6 +54,7 @@ function prepareCleanBuildRoot() {
     fs.cpSync(path.join(sourceRoot, "node_modules"), path.join(stageRoot, "node_modules"), {
       recursive: true,
       mode: fs.constants.COPYFILE_FICLONE,
+      verbatimSymlinks: true,
     });
     return stageRoot;
   } catch (error) {
