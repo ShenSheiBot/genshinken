@@ -16,6 +16,8 @@ export interface Contributor {
   teamOrder?: number;
   bio?: string;
   links?: readonly ContributorLink[];
+  /** Public disclosure shown next to the byline without becoming part of the contributor name. */
+  attributionDisclosure?: string;
 }
 
 /**
@@ -193,6 +195,7 @@ export const CONTRIBUTORS = [
     aliases: [],
     teamMember: false,
     entityType: "organization",
+    attributionDisclosure: "AI assisted",
   },
   { id: "lin-pei-ying", displayName: "林沛颖", aliases: [], teamMember: false },
   { id: "hisui", displayName: "Hisui", aliases: [], teamMember: false },

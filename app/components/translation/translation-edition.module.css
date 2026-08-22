@@ -151,6 +151,16 @@
 .credits span { color: var(--ink-soft); }
 .credits b { color: var(--ink); }
 .credits small { font: inherit; color: var(--ink-faint); }
+.credits .creditDisclosure {
+  margin-left: .45em;
+  color: var(--accent);
+  font-family: var(--f-mono);
+  font-size: .78em;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: .03em;
+  white-space: nowrap;
+}
 .previewBadge { display: inline-flex; align-items: center; min-height: 24px; padding: 0 8px; color: var(--accent); border: 1px solid var(--accent); font-family: var(--f-mono); font-size: 9px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
 
 .reading {

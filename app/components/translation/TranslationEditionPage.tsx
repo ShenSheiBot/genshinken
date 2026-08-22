@@ -232,6 +232,7 @@ export default function TranslationEditionPage({
             {edition.credits.map((credit) => (
               <span key={`${credit.role}:${credit.contributorId}:${credit.scope}`}>
                 {labels[credit.role]}: <b>{credit.name}</b>
+                {credit.disclosure && <em className={styles.creditDisclosure}>[{credit.disclosure}]</em>}
                 {credit.scope && <small> · {credit.scope}</small>}
                 {credit.note && <small> · {credit.note}</small>}
               </span>

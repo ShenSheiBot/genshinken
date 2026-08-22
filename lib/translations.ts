@@ -56,6 +56,7 @@ export type TranslationCredit = {
   contributorId: string;
   name: string;
   entityType: "person" | "organization";
+  disclosure?: string;
   scope: string;
   note: string;
 };
@@ -335,6 +336,7 @@ function parseCredits(value: unknown, source: string, locale: TranslationLocale)
       contributorId,
       name: localizedContributorName(contributorId, contributor.displayName, locale),
       entityType: "entityType" in contributor ? contributor.entityType : "person",
+      disclosure: "attributionDisclosure" in contributor ? contributor.attributionDisclosure : undefined,
       scope: optionalText(record, "scope"),
       note: optionalText(record, "note"),
     };
