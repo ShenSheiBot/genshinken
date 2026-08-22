@@ -1,6 +1,5 @@
 import { spawnSync } from "node:child_process";
 import fs from "node:fs";
-import os from "node:os";
 import path from "node:path";
 
 const sourceRoot = process.cwd();
@@ -44,7 +43,9 @@ function assertTrackedWorktreeClean() {
 }
 
 function prepareCleanBuildRoot() {
-  const stageRoot = fs.mkdtempSync(path.join(os.tmpdir(), `roof-cloudflare-${target}-`));
+  // Keep the staged tree beside the source tree. Next.js output tracing follows
+  // the shared node_modules symlink and requires both paths to share a writable root.
+  const stageRoot = fs.mkdtempSync(path.join(path.dirname(sourceRoot), `.roof-cloudflare-${target}-`));
   try {
     run("git", ["worktree", "add", "--detach", stageRoot, "HEAD"], sourceRoot);
     fs.symlinkSync(path.join(sourceRoot, "node_modules"), path.join(stageRoot, "node_modules"), "dir");
