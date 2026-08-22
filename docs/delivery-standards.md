@@ -19,7 +19,7 @@
 - [ ] **首行缩进交给前端**：勿手敲全角空格；承接段用 `<!--continue-->` 标记（见 §8）
 - [ ] **书籍清单同步**：递归目录 id／number 稳定，已发布节点的 anchor 有效，`latestChapterId` 只指向已发布节点，`updatedAt` 与 `book_document` 构建源一致
 - [ ] **专题引用有效**：分组顺序正确，`post / media / book` 类型与目标一致，导语和编者按已复核
-- [ ] **链接有效**：正文引用的本站已收录文章／章节使用稳定站内 canonical 路径；出处字段、第三方文章及尚未收录内容保留外链；新增微信来源后运行 `npm run wechat:identities:build`，使历史正文中的同源公众号链接立即进入门禁；无残留的 Outline `mention://` 内链；`npm run verify:internal-links` 通过
+- [ ] **链接有效**：正文引用的本站已收录文章／章节使用稳定站内 canonical 路径；出处字段、第三方文章及尚未收录内容保留外链；新增微信来源时同步登记其公开来源身份，使历史正文中的同源公众号链接立即进入门禁；无残留的 Outline `mention://` 内链；`npm run verify:internal-links` 通过
 - [ ] **原稿保真门禁通过**：源文已快照；允许转换归一化后的正文保留率 100%、未授权差异 0；逐项授权修订已登记；`npm run verify:preservation` 通过
 - [ ] **提交作者 = `ShenSheiBot <83676393+ShenSheiBot@users.noreply.github.com>`**
 - [ ] 本地 `npm run check` 与 `npm run build` 通过，再推送
@@ -219,17 +219,13 @@ P1/P2/P4/P5 由 `scripts/validate-content.mjs` 的 `validateProseTypography` 在
 屋顶历史归档与微信归档图片使用 R2 管理路径，不随普通 Git 图片交付：
 
 - 屋顶历史归档：`attachments/roof-archive/...`，使用既有 `assets:manifest / assets:upload / assets:verify`。
-- 微信归档：`attachments/wechat/...`。新文件保留在被忽略的本地目录，依次运行
-  `assets:wechat:manifest` 和 `assets:wechat:release`；后者会上传完整清单、逐项回读校验
-  HTTP 状态、MIME、字节数与 SHA-256，全部通过后才把清单标为 `public: true` 并启用 CDN URL 改写。
-- 微信清单尚未公开时，只有已经受 Git 跟踪的旧图片可以继续使用本地路径；任何新图片既未受跟踪、清单又未完成 R2 promotion 时，`verify:wechat-assets-ready`、pre-commit 与 `npm run check` 都会失败。
-- `assets:wechat:manifest` 每次重建都会把 `public` 重置为 `false`，因此新增一张图片后必须重新完成整批上传与远端验收，不能沿用上次的公开状态。
-- 每篇微信公开稿还必须登记在 `editorial-sources/wechat/preservation-manifest.json`。先运行
-  `npm run preservation:wechat:build`。清单以来源 ID 与文本哈希记住已经逐条复核过的遗漏；已有遗漏保持不变或正文补回内容时可直接重建，
-  只有新增遗漏才会中止。逐条对照 `raw.html` 确认新增项确属平台导航、通用宣传或已经结构化表达的信息后，才可运行
-  `npm run preservation:wechat:build -- --accept-new-reviewed-omissions`；不得用该参数跳过未读的源文本。
-  清单会固定 `raw.html`／精确 `#js_content` 的哈希、正文图角色与顺序、公开正文、脚注调用及完整定义。
-  `verify:wechat-preservation` 同时进入 pre-commit 与 `npm run check`，正文静默删改、封面冒充正文图、图片错序或脚注截断都会阻止交付。
+- 微信归档：`attachments/wechat/...`。原始抓取、未采用图片与批量上传库存保留在 Git 外；预先上传到 R2 不代表进入本站公开合同。
+- 产品仓库只登记公开 Markdown 实际使用的 R2 键。提交文章前，将最终采用的图片键、字节数、MIME 与 SHA-256 并入
+  `editorial-sources/wechat/assets-manifest.json`，且该清单必须保持 `public: true`。
+- `verify:wechat-assets-ready` 会在 clean clone 中确认每个公开引用都有已发布清单记录；运行时不读取整份清单，凡已提交的
+  `attachments/wechat/...` 路径都会直接改写到 `assets.labonroof.top`。
+- raw HTML 对照、正文遗漏裁决、来源身份抽取和库存上传属于提交前的本地归档流程，不进入产品运行时，也不要求 GitHub CI 访问
+  `.local-archive`。公开稿仍须提交专篇 evidence；任何正文、脚注或图片删改通过普通 Git diff 和内容门禁接受审阅。
 
 ### 图题、图注与图版宽度
 

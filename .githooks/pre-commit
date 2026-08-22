@@ -3,5 +3,4 @@ set -eu
 
 repo_root=$(git rev-parse --show-toplevel)
 node "$repo_root/scripts/verify-no-new-wechat-assets.mjs"
-node "$repo_root/scripts/verify-wechat-assets-ready.mjs"
-exec node "$repo_root/scripts/manage-wechat-preservation.mjs" verify
+exec node "$repo_root/scripts/verify-wechat-assets-ready.mjs"

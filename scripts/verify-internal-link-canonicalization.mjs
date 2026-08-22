@@ -119,7 +119,7 @@ for (const article of preservation.articles ?? []) {
     const identity = identityIndex.sources?.[sourceId];
     if (!identity) {
       failures.push(
-        `${identityIndexPath}: missing ${sourceId}; run npm run wechat:identities:build after importing the source`,
+        `${identityIndexPath}: missing published source identity ${sourceId}`,
       );
       continue;
     }
@@ -149,7 +149,7 @@ for (const entry of mappings) {
   for (const sourceId of entry.sourceIds ?? []) {
     if (!identityIndex.sources?.[sourceId]) {
       failures.push(
-        `${identityIndexPath}: missing mapped source ${sourceId}; run npm run wechat:identities:build`,
+        `${identityIndexPath}: missing mapped published source ${sourceId}`,
       );
       continue;
     }
