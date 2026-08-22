@@ -17,14 +17,14 @@ source_relationship: mixed
 base_language: zh-Hans
 source_revision: "sha256:494200cb54306310705438f82d046a05e2920d67d56280c064929fed9274c844"
 source_revision_scope: translation-payload
-updated: 2026-08-19
+updated: 2026-08-21
 rights: CC BY-NC-SA 4.0
 format: article
 ---
 
 ![Poster for the 1954 film Godzilla](attachments/roof-archive/cv1641117/godzilla-1954-poster.jpg)
 
-Monster movies are an enduring branch of cinema, with a history that can be traced back as far as Merian C. Cooper’s 1933 *King Kong*.[^1] After that came 1953’s *The Beast from 20,000 Fathoms* and 1954’s *Godzilla*. The monster boom kicked off by *Godzilla* produced many more monster films of wildly uneven quality. But after the 1998 American *Zilla* (with all due respect, I would rather you make me watch *情迷弗朗西斯* or *The Lost Village* ten times than watch that embarrassing thing crawl around New York) and Japan’s 2004 *Godzilla: Final Wars*, excellent monster movies became rare. Before *Pacific Rim* opened, its trailers drew plenty of attention. Once it did, people discovered that it was simply “a Mexican director taking Hollywood money to make a Japanese monster movie.” (Personally, I think the best thing about it—by far—is its first-rate effects, which deserve praise even today.)
+Monster movies are an enduring branch of cinema, with a history that can be traced back as far as Merian C. Cooper’s 1933 *King Kong*.[^1] After that came 1953’s *The Beast from 20,000 Fathoms* and 1954’s *Godzilla*. The monster boom kicked off by *Godzilla* produced many more monster films of wildly uneven quality. But after the 1998 American *Zilla* (with all due respect, I would rather you make me watch *DARLING in the FRANXX* or *The Lost Village* ten times than watch that embarrassing thing crawl around New York) and Japan’s 2004 *Godzilla: Final Wars*, excellent monster movies became rare. Before *Pacific Rim* opened, its trailers drew plenty of attention. Once it did, people discovered that it was simply “a Mexican director taking Hollywood money to make a Japanese monster movie.” (Personally, I think the best thing about it—by far—is its first-rate effects, which deserve praise even today.)
 
 ![Poster for Pacific Rim](attachments/roof-archive/cv1641117/pacific-rim-poster.jpg)
 

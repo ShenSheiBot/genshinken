@@ -86,7 +86,7 @@ Segment map:
 - `不具备有太大的特殊性` contains redundant wording; targets render the semantic claim without reproducing the grammatical redundancy.
 - `至始至终` is a nonstandard form of `自始至终`; targets convey “throughout” without altering source evidence.
 - The gender-neutral Latin `ta` is rendered with target-language neutral reference rather than assigning a gender.
-- `《恋与》` is retained as the source's abbreviated work reference rather than expanded to an unverified full localized title.
+- The initial pass retained `《恋与》` as an unresolved abbreviation. Independent review on 2026-08-21 identified the adjoining description as the controversial Lunar New Year advertisement for 《恋与制作人》. The target editions now use Papergames' official localized titles *Mr Love: Queen's Choice* and 『恋とプロデューサー～EVOL×LOVE～』.
 
 ## Self-review evidence
 
@@ -107,7 +107,7 @@ English fluency pass:
 Japanese fidelity pass:
 
 - Checked the same discourse-power polarity, Simmel's internal/external two-point definition, three impossibility claims, two critical-theory objections, production-consumption “implosion,” and the final progression `構造的思考 → オタクの自覚`.
-- The source-neutral `ta` is rendered without assigning gender. `《恋与》` remains abbreviated because the Chinese canonical does not establish a full localized work identity.
+- The source-neutral `ta` is rendered without assigning gender. The formerly unresolved `《恋与》` is restored as the official Japanese title 『恋とプロデューサー～EVOL×LOVE～』 after independent source review.
 
 Japanese fluency pass:
 

@@ -46,8 +46,8 @@ Segment map:
 No external original-language base search is required for this Chinese original. One incidental title required identification research because guessing an English/Japanese title would create a false work identity:
 
 - Queries attempted on 2026-08-19: `"情迷弗朗西斯" 动画`, `"情迷弗朗西斯" anime`, `情迷弗朗西斯 动画 bilibili`, `情迷弗朗西斯 豆瓣`, and `"情迷弗朗西斯" 日本 动画`, using the available Google/Bing/Baidu/Bilibili search endpoints from the workbench.
-- Google returned no usable result text; Bing results were unrelated; Baidu exposed no matching result; Bilibili returned a verification page rather than searchable results.
-- No authoritative or stable mapping to an English or Japanese title was established. Because this is only a parenthetical comparison and not the article's base text, the minimum unresolved fact is the work identity behind `情迷弗朗西斯`. Both translations preserve that Chinese title rather than inventing a localized title.
+- That pass failed to identify the title and incorrectly left `情迷弗朗西斯` in both target editions.
+- A fresh review on 2026-08-21 found direct Chinese search results identifying `情迷弗朗西斯` as a joking title for *DARLING in the FRANXX*. The work's official site and A-1 Pictures catalogue confirm the Japanese and English forms `ダーリン・イン・ザ・フランキス` and `DARLING in the FRANXX`. Both target editions now use those established titles.
 
 ## Discourse map
 
@@ -71,6 +71,7 @@ No external original-language base search is required for this Chinese original.
 | 《原子恐龙》 | The Beast from 20,000 Fathoms | 『原子怪獣現わる』 | accepted | work | Established English and Japanese release titles. |
 | 《哥斯拉 最终决战》 | Godzilla: Final Wars | 『ゴジラ FINAL WARS』 | accepted | work | Established title. |
 | 《环太平洋》 | Pacific Rim | 『パシフィック・リム』 | accepted | work | Established title. |
+| 情迷弗朗西斯 | *DARLING in the FRANXX* | 『ダーリン・イン・ザ・フランキス』 | accepted | work | Chinese joking title identified during independent review; target titles verified against the official anime site and A-1 Pictures catalogue. |
 | 《シン・ゴジラ》 | Shin Godzilla | 『シン・ゴジラ』 | accepted | work | Preserve Japanese title in ja; established English title in en. |
 | 《君の名は》 | Your Name. | 『君の名は。』 | accepted | work | Established title/punctuation. |
 | 人类中心主义 | anthropocentrism | 人間中心主義 | accepted | Li Paopao note | Stable ecological-criticism term. |
@@ -103,7 +104,7 @@ English fidelity pass:
 - Checked the causal symmetry in the monster-as-disaster paragraph: monsters are disasters to humans and their human-caused awakening/mutation is also a disaster to themselves. No side of the comparison was dropped.
 - Checked Serizawa's decision: the Oxygen Destroyer is described as stronger than nuclear weapons, and he dies with Godzilla specifically to prevent wartime human use.
 - Checked Li Paopao's deliberate reversal: monster cinema first weakens anthropocentrism by confronting humanity with nonhuman force, then strengthens anthropocentrism by constructing an irrational monster as a common enemy. Both bold claims remain opposed and the *Ultraman Gaia* synthesis follows them.
-- `情迷弗朗西斯` was not localized because research did not establish its identity; preserving the Chinese title avoids a fabricated work reference.
+- The translating agent left `情迷弗朗西斯` untranslated after an unsuccessful search. Independent review identified it as *DARLING in the FRANXX* and restored the official English title.
 
 English fluency pass:
 
@@ -114,6 +115,7 @@ Japanese fidelity pass:
 
 - Checked the same dates, 100m comparison, box-office ranking, Honda quotation, Serizawa causal chain, footnote Hyde/Frankenstein/Hulk analogy, and the two anthropocentrism theses. No polarity or responsibility role changed.
 - `怪兽篇` and `极其系列作品` are treated as the contextual typos already recorded above; the Japanese renders the intended `怪獣映画` and `『ゴジラ』とその関連作品` without modifying the Chinese canonical.
+- Independent review replaced the unresolved Chinese `情迷弗朗西斯` with the official Japanese title 『ダーリン・イン・ザ・フランキス』.
 
 Japanese fluency pass:
 

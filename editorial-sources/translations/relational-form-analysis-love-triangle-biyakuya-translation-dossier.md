@@ -84,7 +84,7 @@ No original-language search is required: the manifest establishes a Chinese-auth
 
 ## Works and names policy
 
-Established localized titles are used where identity is clear: *My Teen Romantic Comedy SNAFU* / 『やはり俺の青春ラブコメはまちがっている。』, *true tears*, *Daytime Shooting Star* / 『ひるなかの流星』, *Short Cake Cake* / 『ショートケーキケーキ』, *Journey Under the Midnight Sun* / 『白夜行』, *A Silent Voice* / 『聲の形』, and *Love, Chunibyo & Other Delusions!* / 『中二病でも恋がしたい！』. Source abbreviations or uncertain identities such as `《高恋》` and `《暗之部屋》` are not expanded into guessed target titles.
+Established localized titles are used where identity is clear: *My Teen Romantic Comedy SNAFU* / 『やはり俺の青春ラブコメはまちがっている。』, *true tears*, *Daytime Shooting Star* / 『ひるなかの流星』, *Short Cake Cake* / 『ショートケーキケーキ』, *Journey Under the Midnight Sun* / 『白夜行』, *A Silent Voice* / 『聲の形』, and *Love, Chunibyo & Other Delusions!* / 『中二病でも恋がしたい！』. Independent review on 2026-08-21 also resolved the source abbreviations `《高恋》` as *Gaokao.Love.100Days*, `《暗之部屋》` as Japanese visual novel 『暗い部屋』 / *Kurai Heya*, `魔竜院` as *AURA: Koga Maryuin's Last War* / 『AURA ～魔竜院光牙最後の闘い～』, and `梦境之药` as *Yume Miru Kusuri: A Drug That Makes You Dream* / 『ユメミルクスリ』.
 
 ## Voice card
 
@@ -112,7 +112,7 @@ English fidelity pass completed before starting Japanese:
 - The female-oriented inversion was checked separately. The draft's literal `big heroine` was revised to `heroine-centered “big female lead” pattern` so the Chinese internet label remains legible without inventing a different gender-theory category.
 - The jealousy/dissolution paragraph initially used `culture of private ownership`; it was revised to `private-property culture` to retain the source's explicit property-system analogy. The sequence jealousy → prohibition → disguise/compensation → losing subject's exit → possible same-sex desire remains unchanged.
 - The Byakuyakō section was checked for the key generalization that the third position can be society, politics, atmosphere, or the world rather than a concrete third person. The target does not turn the model back into a literal three-character plot.
-- The Romeo Tanaka passage was checked at its highest-risk points: bullying is the mediating social agent; Ryōko wants to become an ordinary girl; `现实（real）` is rendered as reality/the Real; the tension is between reality and imagination, not simply between two romantic rivals. Uncertain work labels such as `《暗之部屋》` and the source's Maryūin/dream-medicine wording are not expanded into unverified official titles.
+- The Romeo Tanaka passage was checked at its highest-risk points: bullying is the mediating social agent; Ryōko wants to become an ordinary girl; `现实（real）` is rendered as reality/the Real; the tension is between reality and imagination, not simply between two romantic rivals. The initial review failed to resolve several abbreviated Chinese work labels; independent review restored the verified target-language titles for *Kurai Heya*, *AURA*, and *Yume Miru Kusuri*.
 - The conclusion preserves the special-to-general transformation: love triangle → one subject exits → `two people – society` → Byakuyakō model → weakening/removal of political mediation.
 
 English fluency pass:
@@ -128,7 +128,7 @@ Japanese fidelity pass:
 - Checked the near/far typology in both male-oriented and female-oriented sections, including the source's asymmetry: female characters are theorized as desire objects, while the female-oriented heroine may occupy both spectator and participant positions. The target does not erase that asymmetry or silently endorse it as universal fact.
 - Checked the dissolution sequence and the deliberately provocative same-sex-desire claim; `偽装`, the losing subject's return to the Other, and the possibility of the core protagonist's withdrawal remain distinct steps.
 - Checked the Byakuyakō generalization, Baudelaire/abjection paragraph, Big Other paragraph, symbolic-order limitation, and Romeo Tanaka example. `現実（real）` remains marked as `現実界（real）`; the real/imaginary conflict is not reduced to ordinary romantic rivalry.
-- The uncertain source phrase `梦境之药` was initially carried over as unnatural `夢境の薬`. It was revised to descriptive `夢の薬`; no claim of an official Japanese title is made. `『高恋』`, `『暗之部屋』`, and `『魔竜院』` remain source-style abbreviated/uncertain labels rather than fabricated bibliographic identities.
+- The source phrase `梦境之药` was initially carried over as unnatural `夢境の薬` and then only descriptively paraphrased. Independent review identified the intended title as 『ユメミルクスリ』; the same pass restored 『AURA ～魔竜院光牙最後の闘い～』, 『暗い部屋』, and the full identity of *Gaokao.Love.100Days* rather than leaving opaque Chinese abbreviations in Japanese prose.
 
 Japanese fluency pass:
 
