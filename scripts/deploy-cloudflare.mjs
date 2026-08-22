@@ -20,7 +20,7 @@ environment.NEXT_TELEMETRY_DISABLED = "1";
 environment.ROOF_TRANSLATION_PREVIEW = target === "preview" ? "1" : "0";
 
 function run(command, args, cwd, { localBinary = false, capture = false } = {}) {
-  const executable = localBinary ? path.join(sourceRoot, "node_modules", ".bin", command) : command;
+  const executable = localBinary ? path.join(cwd, "node_modules", ".bin", command) : command;
   const result = spawnSync(executable, args, {
     cwd,
     env: environment,
