@@ -919,6 +919,7 @@
 }
 
 .titleSegment { white-space: nowrap; }
+.compactTitleSegment { white-space: nowrap; }
 .titleWord { white-space: nowrap; }
 
 .titleNoteRef {
@@ -1841,6 +1842,7 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
   .coverStory { padding: 48px 0 0; }
   .coverStory h1 { font-size: clamp(45px, 7vw, 62px); }
   .titleSegment { white-space: normal; }
+  .titleSegment.compactTitleSegment { white-space: nowrap; }
 
   .dossierReading { display: block; max-width: var(--reading-text); padding: 34px 0 0; }
   .deskRailSlot { display: none; }

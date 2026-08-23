@@ -27,6 +27,7 @@ import {
 import { EDITORIAL_SECTION_META } from "@/lib/editorial";
 import { getBookPublicContent } from "@/lib/public-content";
 import { hanScriptLanguageTag } from "@/lib/han-script";
+import { isCompactTitleSegment } from "@/lib/title-layout";
 import {
   getEditionLanguageLinks,
   getPublishedTranslationEditions,
@@ -338,14 +339,21 @@ export default async function BookChapterPage({
             </p>
           </div>
           <h1 className="art-title">
-            {chapter.titleBreaks ? chapter.titleBreaks.map((segment, segmentIndex, segments) => (
-              <Fragment key={`${segment}-${segmentIndex}`}>
-                <span className={readerStyles.titleSegment} data-reader-title-segment>
-                  <ReaderTitleText text={segment} />
-                </span>
-                {segmentIndex < segments.length - 1 && <wbr />}
-              </Fragment>
-            )) : (
+            {chapter.titleBreaks ? chapter.titleBreaks.map((segment, segmentIndex, segments) => {
+              const compact = isCompactTitleSegment(segment);
+              return (
+                <Fragment key={`${segment}-${segmentIndex}`}>
+                  <span
+                    className={`${readerStyles.titleSegment}${compact ? ` ${readerStyles.compactTitleSegment}` : ""}`}
+                    data-reader-title-segment
+                    data-reader-title-compact={compact ? "" : undefined}
+                  >
+                    <ReaderTitleText text={segment} />
+                  </span>
+                  {segmentIndex < segments.length - 1 && <wbr />}
+                </Fragment>
+              );
+            }) : (
               <span data-reader-title-segment>
                 <ReaderTitleText text={chapter.title} />
               </span>

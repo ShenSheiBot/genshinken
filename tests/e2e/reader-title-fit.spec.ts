@@ -143,3 +143,19 @@ test("all public reader titles fit the desktop column without typographic orphan
 
   expect(failures).toEqual([]);
 });
+
+test("compact editorial title segments stay on one line on mobile", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  const response = await page.goto("/posts/asada-image-evolution-theory-1986-video");
+  expect(response?.status()).toBe(200);
+  await page.evaluate(() => document.fonts.ready);
+
+  const segments = page.locator("#reading-cover h1 [data-reader-title-compact]");
+  expect(await segments.count()).toBeGreaterThan(0);
+  for (const segment of await segments.all()) {
+    expect(await segment.evaluate((element) => {
+      const lines = new Set(Array.from(element.getClientRects()).map((rect) => Math.round(rect.top)));
+      return lines.size;
+    }), await segment.textContent() ?? "compact title segment").toBe(1);
+  }
+});

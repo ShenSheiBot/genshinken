@@ -16,6 +16,7 @@ import LanguageSwitcher from "@/app/components/translation/LanguageSwitcher";
 import ArticleMediaRuntime from "@/app/components/ArticleMediaRuntime";
 import type { EditionLanguageLink } from "@/lib/translations";
 import { countRenderedListItems, splitRenderedApparatus } from "@/lib/markdown";
+import { isCompactTitleSegment } from "@/lib/title-layout";
 
 const sectionFor = (post: PostSummary): EditorialSection => post.section;
 const sectionMeta = EDITORIAL_SECTION_META;
@@ -123,14 +124,21 @@ function CreditLine({ credits }: { credits: Credit[] }) {
 }
 
 function PreferredTitle({ post }: { post: PostSummary }) {
-  return post.titleBreaks.map((segment, index) => (
-    <Fragment key={`${segment}-${index}`}>
-      <span className={styles.titleSegment} data-reader-title-segment>
-        <ReaderTitleText text={segment} />
-      </span>
-      {index < post.titleBreaks.length - 1 && <wbr />}
-    </Fragment>
-  ));
+  return post.titleBreaks.map((segment, index) => {
+    const compact = isCompactTitleSegment(segment);
+    return (
+      <Fragment key={`${segment}-${index}`}>
+        <span
+          className={`${styles.titleSegment}${compact ? ` ${styles.compactTitleSegment}` : ""}`}
+          data-reader-title-segment
+          data-reader-title-compact={compact ? "" : undefined}
+        >
+          <ReaderTitleText text={segment} />
+        </span>
+        {index < post.titleBreaks.length - 1 && <wbr />}
+      </Fragment>
+    );
+  });
 }
 
 function Appendices({ parts }: { parts: ArticleParts }) {

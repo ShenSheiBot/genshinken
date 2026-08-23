@@ -8,6 +8,7 @@ import type {
 } from "@/lib/translations";
 import type { RenderedApparatusParts } from "@/lib/markdown";
 import { splitRenderedApparatus } from "@/lib/markdown";
+import { isCompactTitleSegment } from "@/lib/title-layout";
 import LanguageSwitcher from "./LanguageSwitcher";
 import TranslationDocumentIndex from "./TranslationDocumentIndex";
 import TranslationReferences from "./TranslationReferences";
@@ -206,14 +207,20 @@ export default function TranslationEditionPage({
             )}
           </div>
           <h1 id="translated-title">
-            {edition.titleBreaks.map((segment, index) => (
-              <Fragment key={`${segment}-${index}`}>
-                <span className={styles.titleSegment}>{segment}</span>
-                {index < edition.titleBreaks.length - 1 && (
-                  <>{locale === "en" ? " " : ""}<wbr /></>
-                )}
-              </Fragment>
-            ))}
+            {edition.titleBreaks.map((segment, index) => {
+              const compact = isCompactTitleSegment(segment);
+              return (
+                <Fragment key={`${segment}-${index}`}>
+                  <span
+                    className={`${styles.titleSegment}${compact ? ` ${styles.compactTitleSegment}` : ""}`}
+                    data-reader-title-compact={compact ? "" : undefined}
+                  >{segment}</span>
+                  {index < edition.titleBreaks.length - 1 && (
+                    <>{locale === "en" ? " " : ""}<wbr /></>
+                  )}
+                </Fragment>
+              );
+            })}
           </h1>
           {edition.subtitle && <p className={styles.subtitle}>{edition.subtitle}</p>}
           <p className={styles.excerpt}>{edition.excerpt}</p>

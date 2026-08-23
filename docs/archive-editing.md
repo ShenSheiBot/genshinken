@@ -5,7 +5,8 @@
 
 ## 微信原稿
 
-1. 在当前 worktree 内定位仓库，不假设固定目录：`cd "$(git rev-parse --show-toplevel)"`。
+1. 在当前 worktree 内定位仓库，不假设固定目录：`cd "$(git rev-parse --show-toplevel)"`。新 worktree 第一次使用时运行
+   `npm ci`；不要链接另一个提交的 `node_modules`。
 2. 完整阅读该篇 `raw.html`；原始目录只读，不在里面写稿。
 3. 生成确定性底稿：
 
