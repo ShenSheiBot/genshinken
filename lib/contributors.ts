@@ -333,6 +333,8 @@ export const CONTRIBUTORS = [
   { id: "sasaki-atsushi", displayName: "佐佐木敦", aliases: [], teamMember: false },
   { id: "mi-gang", displayName: "米岡", aliases: [], teamMember: false },
   { id: "ren-ji-er-lang", displayName: "人吉尔朗", aliases: ["人吉尔郎"], teamMember: false },
+  { id: "judith-levine", displayName: "Judith Levine", aliases: [], teamMember: false },
+  { id: "peter-pan", displayName: "彼得潘", aliases: [], teamMember: false },
   { id: "de-ye-you-wo", displayName: "德野悠我", aliases: [], teamMember: false },
   { id: "guo-ke-li-de-mo-mo", displayName: "果壳里的墨墨", aliases: [], teamMember: false },
   { id: "qing-jin-metalh", displayName: "氢金_MetalH", aliases: [], teamMember: false },
@@ -530,7 +532,7 @@ export const CONTRIBUTORS = [
   { id: "yu-yuan-ji", displayName: "郁远集", aliases: [], teamMember: false },
   { id: "hattori-keisuke", displayName: "服部恵典", aliases: [], teamMember: false },
   { id: "deepseek", displayName: "DeepSeek", aliases: [], teamMember: false, entityType: "organization" },
-  { id: "sheng-ming-ti-zheng-wei-chi-cha-hua-hui", displayName: "生命体征维持茶话会", aliases: ["生命体征维护茶会"], teamMember: false, entityType: "organization" },
+  { id: "sheng-ming-ti-zheng-wei-chi-cha-hua-hui", displayName: "生命体征维持茶话会", aliases: ["生命体征维护茶会", "生命体征维持茶会"], teamMember: false, entityType: "organization" },
   { id: "deborah-cameron", displayName: "Deborah Cameron", aliases: ["DEBORAH CAMERON"], teamMember: false },
   { id: "ai-sheng-ming-ti-zheng-wei-chi-cha-hua-hui", displayName: "AI + 生命体征维持茶话会", aliases: [], teamMember: false, entityType: "organization" },
   { id: "cha-hua-hui", displayName: "茶话会", aliases: [], teamMember: false },
@@ -565,7 +567,7 @@ export const CONTRIBUTORS = [
   {
     id: "chahuahui-banweihui-bianyi",
     displayName: "茶话会班委会编译",
-    aliases: ["茶话会班委会"],
+    aliases: ["茶话会班委会", "茶话会班委"],
     teamMember: false,
     entityType: "organization",
   },
@@ -599,6 +601,10 @@ export const CONTRIBUTORS = [
   },
   { id: "you-shi-ting", displayName: "游师庭", aliases: [], teamMember: false },
   { id: "ueno-chizuko", displayName: "上野千鹤子", aliases: ["上野千鶴子"], teamMember: false },
+  { id: "margaret-sanger", displayName: "玛格丽特·桑格", aliases: ["Margaret Sanger"], teamMember: false },
+  { id: "bu-ai-he-shui-de-yu", displayName: "不爱喝水的鱼", aliases: [], teamMember: false },
+  { id: "alexandra-kollontai", displayName: "亚历山德拉·柯伦泰", aliases: ["亚·米·柯伦泰", "Alexandra Kollontai"], teamMember: false },
+  { id: "ai-wu-zhi-yang", displayName: "爱舞之阳", aliases: [], teamMember: false },
 ] as const satisfies readonly Contributor[];
 
 export type ContributorId = (typeof CONTRIBUTORS)[number]["id"];

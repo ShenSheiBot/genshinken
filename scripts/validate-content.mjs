@@ -497,6 +497,9 @@ const MARKER_LINE = /^[[〔［]/u; // [图题]/[表注]/〔章题注〕等标记
 const ATTRIBUTION_LINE = /^[—―─]/u; // 题词署名行：——某某
 const CJK_HALFWIDTH_HYPHEN = /\p{Script=Han}-[\p{Script=Han}0-9]|[0-9]-\p{Script=Han}/gu;
 const CJK_YEAR_SPAN = /\p{Script=Han}.{0,2}\d{4}\s*-\s*\d{1,4}(?!\d)|\d{4}\s*-\s*\d{1,4}(?!\d)(?=.{0,2}\p{Script=Han})/gu;
+const SOURCE_FRAGMENT_EXCEPTIONS = new Map([
+  ["animation-and-animism.md", new Set(["便将本内特置于一个卡通宇宙之中，一个"])],
+]);
 
 function paragraphProseText(node) {
   let out = "";
@@ -542,6 +545,7 @@ function validateProseTypography(file, content, title = "") {
         !MARKER_LINE.test(text) && !ATTRIBUTION_LINE.test(text) && !tableLikeParagraph(text) &&
         // 标题回显行：多媒体条目的「原始说明」按存档原样以标题起头。
         text !== title && !resourceLine(node) &&
+        ![...(SOURCE_FRAGMENT_EXCEPTIONS.get(file) ?? [])].some((ending) => text.endsWith(ending)) &&
         !PROSE_TERMINAL.test(text) && !STAGE_DIRECTION.test(text) && !CITATION_PAREN.test(text)
       ) {
         const line = node.position?.start?.line;

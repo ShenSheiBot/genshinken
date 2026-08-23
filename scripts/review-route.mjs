@@ -125,7 +125,10 @@ try {
   browser = await chromium.launch({ headless: true });
   const results = [];
   for (const profile of profiles) {
-    const context = await browser.newContext({ viewport: profile });
+    // Route review audits the settled publication, not a transient frame from
+    // the entrance choreography. Reduced motion also keeps long-page captures
+    // deterministic as each newly visible section enters the viewport.
+    const context = await browser.newContext({ viewport: profile, reducedMotion: "reduce" });
     try {
       results.push(await reviewPage(await context.newPage(), `${baseUrl}${route}`, profile, outputDirectory));
     } finally {
