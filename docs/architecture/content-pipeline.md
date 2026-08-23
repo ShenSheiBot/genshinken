@@ -29,6 +29,14 @@ flowchart LR
 | `lib/contributors.ts` | 内容校验与署名组件 | 贡献者稳定身份和文库筛选。 |
 | `public/attachments/`、`public/img/` | Next.js 静态资源 | 正文图片与公开静态材料。 |
 
+微信原始页面只在 Git 外作为编辑底本。需要生成候选 Markdown 时运行：
+
+```bash
+npm run convert:wechat -- SOURCE_DIR OUTPUT_PREFIX [ASSET_BASE]
+```
+
+转换器只映射 HTML 中明确存在的标题、段落、引文、列表、表格、强调、链接、图片和媒体节点；不判断作者职责，不删除推广或二维码，也不凭字号、边框和措辞猜测标题、图题或正文价值。无法直接表达的媒体会留下待处理标记和本地 IR 诊断，`validate:content` 会阻止该标记进入公开稿。编辑仍须完整阅读原页面，决定署名、删留、语义层级、系列关系和最终版式；IR 是临时诊断，不是提交所需的保全账簿。
+
 - 文章和书籍使用显式 ASCII slug；专题以稳定 ASCII slug 为身份，省略 front matter `slug` 时由 ASCII 文件名提供默认值。
 - `section`、分类、标签、贡献者和专题是不同维度，不能互相推导替代。
 - 已发布书籍章节生成独立 canonical 和 sitemap 项；构建期按 manifest anchor 切分 Markdown，并只附带本章引用的注释。书籍构建源不生成 `/posts/` 页面。
@@ -58,11 +66,11 @@ flowchart LR
 
 - 语料文件数和字符摘要；
 - OpenCC 闭包策略；
-- 字体源 SHA-256；
-- 每个 WOFF2 的字节数、字符数和 SHA-256；
+- 字体源版本；
+- 每个 WOFF2 的字节数和字符数；
 - 三款源字体共同不支持的字符范围。
 
-同步器只在目标字符集合、字体源版本、生成策略或锁定工具链变化时重建 WOFF2。仅改写已有字符的正文时，最多在共享锁内刷新输入清单，不重编字体；无锁快速检查始终只读。中文和日文字体源都固定到具体上游提交、下载到 Git 外缓存，并在使用前核验 SHA-256。真实重编会自动进入 `.local-archive/` 下按 requirements 摘要隔离的私有虚拟环境，不读取或修改全局 Conda。正常流程无需手工准备源字体、安装 FontTools 或更新 CSS：
+同步器只在目标字符集合、字体源版本、生成策略或锁定工具链变化时重建 WOFF2。仅改写已有字符的正文时，最多在共享锁内刷新输入清单，不重编字体；无锁快速检查始终只读。中文和日文字体源都固定到具体上游版本并下载到 Git 外缓存。真实重编会自动进入 `.local-archive/` 下按 requirements 版本隔离的私有虚拟环境，不读取或修改全局 Conda。正常流程无需手工准备源字体、安装 FontTools 或更新 CSS：
 
 ```bash
 npm run fonts:sync

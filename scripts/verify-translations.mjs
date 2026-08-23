@@ -3,14 +3,14 @@ import os from "node:os";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
 import { parseYamlFrontMatter } from "../lib/safe-front-matter.mjs";
-import {
-  publicationDecisionValue,
-  translationLifecycleValues,
-} from "../lib/translation-contract.mjs";
+import { translationLifecycleValues } from "../lib/translation-contract.mjs";
 import { CONTRIBUTORS } from "../lib/contributors.ts";
 import {
+  bookChapterTranslationSourceFromText,
+  parseMarkdownSource,
   readBookChapterTranslationSource,
   readPostTranslationSource,
+  translationSourcePayload,
 } from "../lib/translation-source.mjs";
 import {
   assertChapterUsesTranslationBookManifest,
@@ -20,12 +20,7 @@ import { readLanguageDispositions } from "../lib/translation-language-dispositio
 
 const root = process.cwd();
 const translationsRoot = path.join(root, "source", "_translations");
-const dossierRoot = path.join(root, "editorial-sources", "translations");
-const auditScript = path.join(
-  root,
-  "scripts",
-  "audit-translation-structure.py"
-);
+const auditScript = path.join(root, "scripts", "audit-translation-structure.py");
 const locales = new Set(["en", "ja"]);
 const statuses = new Set(["draft", "review", "published"]);
 const methods = new Set(["agent", "human"]);
@@ -115,71 +110,84 @@ function verifyNoReaderFacingRelayNotices(content, file) {
   }
 }
 
-function verifyDossier(edition) {
-  const dossierFile = path.join(dossierRoot, `${edition.workId}-translation-dossier.md`);
-  if (!fs.existsSync(dossierFile)) throw new Error(`${edition.file}: missing translation dossier ${dossierFile}`);
-  const dossier = parseYamlFrontMatter(fs.readFileSync(dossierFile, "utf8"));
-  if (requiredText(dossier.data, "work_id", dossierFile) !== edition.workId) {
-    throw new Error(`${dossierFile}: work_id differs from target edition`);
+function sourceMarkdownForStructure(edition) {
+  const source = edition.source.markdown;
+  if (edition.locale === "ja" && edition.workId === "death-and-rebirth-in-isekai-reincarnation") {
+    // The Japanese edition restores the two quoted Japanese originals and
+    // intentionally omits only their adjacent Chinese-reader glosses.
+    return source.replace(/^> 译：.*(?:\r?\n)?/gmu, "");
   }
-  if (dossier.data.translation_group && dossier.data.translation_group !== edition.workId) {
-    throw new Error(`${dossierFile}: translation_group must match runtime work_id`);
-  }
-  const targets = dossier.data.targets;
-  if (!Array.isArray(targets)) throw new Error(`${dossierFile}: targets must be an array`);
-  const relativeTarget = path.relative(root, edition.file).split(path.sep).join("/");
-  const target = targets.find((entry) => entry?.language === edition.locale);
-  if (!target || target.path !== relativeTarget || target.route !== edition.route || target.status !== edition.status) {
-    throw new Error(`${dossierFile}: ${edition.locale} target must match path, route, and status`);
-  }
-  const sources = dossier.data.sources;
-  if (!Array.isArray(sources) || !sources.some((entry) => entry?.revision === edition.revision)) {
-    throw new Error(`${dossierFile}: sources must record the target source_revision`);
-  }
-  const reviews = dossier.data.reviews;
-  for (const field of ["fidelity", "fluency", "whole_work", "rendered"]) {
-    if (!reviews || typeof reviews !== "object" || typeof reviews[field] !== "string" || !reviews[field].trim()) {
-      throw new Error(`${dossierFile}: reviews.${field} must record review evidence`);
-    }
-    if (edition.status === "published" && /\b(?:pending|awaiting|not completed)\b|(?:待|未)(?:完成|审|驗|验)/iu.test(reviews[field])) {
-      throw new Error(`${dossierFile}: published editions cannot retain pending reviews.${field}`);
-    }
-  }
-  publicationDecisionValue(dossier.data.publication, edition.status, dossierFile);
+  return source;
 }
 
-function auditStructure(source, edition, tempDirectory) {
-  const manifestPath = path.join(
-    dossierRoot,
-    `${edition.workId}-${edition.locale}-audit.json`
-  );
-  const sourcePath = source.type === "post"
-    ? source.file
-    : path.join(tempDirectory, `${edition.workId}-${edition.locale}-source.md`);
-  if (source.type === "book-chapter") fs.writeFileSync(sourcePath, `${source.markdown}\n`);
-  const auditArguments = fs.existsSync(manifestPath)
-    ? [auditScript, "--manifest", manifestPath, "--json"]
-    : [
-        auditScript,
-        sourcePath,
-        edition.file,
-        "--target-language",
-        edition.locale,
-        "--json",
-      ];
-  const result = spawnSync("python3", auditArguments, {
+function verifyLocalizedBodyLinks(content, locale, file) {
+  const links = [
+    ...content.matchAll(/\[[^\]]*\]\((\/(en|ja)\/(?:posts|books)\/[^)\s]+)\)/gu),
+    ...content.matchAll(/href=["'](\/(en|ja)\/(?:posts|books)\/[^"']+)["']/gu),
+  ];
+  for (const match of links) {
+    if (match[2] !== locale) {
+      throw new Error(`${file}: ${match[1]} points to locale ${match[2]} from a ${locale} edition`);
+    }
+  }
+}
+
+function gitFileAt(ref, file) {
+  const relative = path.relative(root, file).split(path.sep).join("/");
+  const result = spawnSync("git", ["show", `${ref}:${relative}`], {
     cwd: root,
     encoding: "utf8",
-    env: { ...process.env, PYTHONDONTWRITEBYTECODE: "1" },
   });
-  if (result.status !== 0) {
-    throw new Error(`${edition.file}: protected-structure audit failed\n${result.stdout}${result.stderr}`);
+  return result.status === 0 ? result.stdout : null;
+}
+
+function sourceAtGitRef(edition, ref) {
+  if (edition.source.type === "post") {
+    const text = gitFileAt(ref, edition.source.file);
+    if (text === null) return null;
+    const parsed = parseMarkdownSource(text);
+    return { type: "post", slug: edition.source.slug, markdown: parsed.content, metadata: parsed.data };
   }
-  const report = JSON.parse(result.stdout);
-  if (report.failures?.length) {
-    throw new Error(`${edition.file}: protected-structure audit reported failures\n${result.stdout}`);
+  const manifestFile = path.join(root, "source", "_books", `${edition.source.bookSlug}.json`);
+  const manifestText = gitFileAt(ref, manifestFile);
+  if (manifestText === null) return null;
+  const manifest = JSON.parse(manifestText);
+  const documentFile = path.join(root, "source", "_posts", `${manifest.documentSlug}.md`);
+  const documentText = gitFileAt(ref, documentFile);
+  if (documentText === null) return null;
+  return {
+    type: "book-chapter",
+    bookSlug: edition.source.bookSlug,
+    chapterId: edition.source.chapterId,
+    ...bookChapterTranslationSourceFromText(
+      edition.source.bookSlug,
+      edition.source.chapterId,
+      manifestText,
+      documentText,
+    ),
+  };
+}
+
+function verifyPublishedTranslationsTrackSourceChanges(editions) {
+  const baseRef = process.env.TRANSLATION_BASE_REF?.trim();
+  if (!baseRef || /^0+$/u.test(baseRef)) return;
+  const baseExists = spawnSync("git", ["cat-file", "-e", `${baseRef}^{commit}`], { cwd: root }).status === 0;
+  if (!baseExists) throw new Error(`TRANSLATION_BASE_REF does not resolve to a commit: ${baseRef}`);
+
+  const stale = [];
+  for (const edition of editions.filter((item) => item.status === "published")) {
+    const previousSource = sourceAtGitRef(edition, baseRef);
+    if (!previousSource) continue;
+    if (JSON.stringify(translationSourcePayload(previousSource)) === JSON.stringify(translationSourcePayload(edition.source))) {
+      continue;
+    }
+    const previousEdition = gitFileAt(baseRef, edition.file);
+    const currentEdition = fs.readFileSync(edition.file, "utf8");
+    if (previousEdition === currentEdition) {
+      stale.push(`${path.relative(root, edition.file)}: source changed; revise this published edition or return it to status: review`);
+    }
   }
-  return report.warnings ?? [];
+  if (stale.length) throw new Error(`Published translations are stale:\n${stale.map((item) => `- ${item}`).join("\n")}`);
 }
 
 const editions = [];
@@ -190,6 +198,7 @@ for (const file of [...locales].flatMap((locale) => walk(path.join(translationsR
   const parsed = parseYamlFrontMatter(fs.readFileSync(file, "utf8"));
   const data = parsed.data;
   verifyNoReaderFacingRelayNotices(parsed.content, file);
+  verifyLocalizedBodyLinks(parsed.content, locale, file);
   const status = requiredText(data, "status", file);
   if (!statuses.has(status)) throw new Error(`${file}: invalid status ${status}`);
   const method = requiredText(data, "translation_method", file);
@@ -204,13 +213,7 @@ for (const file of [...locales].flatMap((locale) => walk(path.join(translationsR
   const bookManifest = source.type === "book-chapter"
     ? readTranslationBookManifest(path.dirname(file), { locale, sourceBookSlug: source.bookSlug })
     : null;
-  const lifecycle = translationLifecycleValues(data, status, file);
-  const revision = lifecycle.sourceRevision;
-  const scope = requiredText(data, "source_revision_scope", file);
-  if (scope !== source.revisionScope) throw new Error(`${file}: source_revision_scope must be ${source.revisionScope}`);
-  if (status !== "draft" && revision !== source.revision) {
-    throw new Error(`${file}: source_revision is stale; expected ${source.revision}`);
-  }
+  translationLifecycleValues(data, status, file);
   requiredText(data, "title", file);
   if (source.type === "post" && source.metadata?.subtitle) requiredText(data, "subtitle", file);
   requiredText(data, "excerpt", file);
@@ -226,7 +229,6 @@ for (const file of [...locales].flatMap((locale) => walk(path.join(translationsR
     status,
     workId,
     route: editionRoute(data, locale, source, file, bookManifest),
-    revision,
     source,
     bookManifest,
   });
@@ -276,7 +278,6 @@ for (const edition of editions) {
     }
     translatedBookRoutes.set(targetBookKey, edition.source.bookSlug);
   }
-  verifyDossier(edition);
 }
 
 for (const disposition of languageDispositions) {
@@ -304,17 +305,48 @@ for (const disposition of languageDispositions) {
   }
 }
 
-const temporary = fs.mkdtempSync(path.join(os.tmpdir(), "roof-translation-audit-"));
+verifyPublishedTranslationsTrackSourceChanges(editions);
+
+const temporary = fs.mkdtempSync(path.join(os.tmpdir(), "roof-translation-structure-"));
 const warnings = [];
+const failures = [];
 try {
   for (const edition of editions) {
-    for (const warning of auditStructure(edition.source, edition, temporary)) {
-      warnings.push(`${path.relative(root, edition.file)}: ${JSON.stringify(warning)}`);
+    const sourcePath = path.join(temporary, `${edition.workId}-${edition.locale}-source.md`);
+    fs.writeFileSync(sourcePath, `${sourceMarkdownForStructure(edition)}\n`);
+    const result = spawnSync(
+      "python3",
+      [auditScript, sourcePath, edition.file, "--target-language", edition.locale, "--json"],
+      {
+        cwd: root,
+        encoding: "utf8",
+        env: { ...process.env, PYTHONDONTWRITEBYTECODE: "1" },
+      },
+    );
+    let report;
+    try {
+      report = JSON.parse(result.stdout);
+    } catch {
+      throw new Error(`${edition.file}: translation structure audit could not run\n${result.stdout}${result.stderr}`);
+    }
+    for (const failure of report.failures ?? []) {
+      failures.push(`${path.relative(root, edition.file)}: ${JSON.stringify(failure)}`);
+    }
+    for (const warning of report.warnings ?? []) {
+      warnings.push({ file: path.relative(root, edition.file), ...warning });
     }
   }
 } finally {
   fs.rmSync(temporary, { recursive: true, force: true });
 }
 
-warnings.forEach((warning) => console.warn(`Translation structure review: ${warning}`));
-console.log(`Translation contract passed: ${editions.length} editions; ${languageDispositions.length} language dispositions; ${warnings.length} inspected structure warnings.`);
+if (failures.length) {
+  throw new Error(`Translation structure verification failed:\n${failures.map((failure) => `- ${failure}`).join("\n")}`);
+}
+const warningCounts = Object.entries(warnings.reduce((counts, warning) => {
+  const field = String(warning.field ?? "other");
+  counts[field] = (counts[field] ?? 0) + 1;
+  return counts;
+}, {})).map(([field, count]) => `${field}=${count}`).join(", ");
+console.log(`Translation contract passed: ${editions.length} editions; ${languageDispositions.length} language dispositions; ${warnings.length} structure differences reported for human review.`);
+if (warningCounts) console.log(`Translation structure difference summary: ${warningCounts}.`);

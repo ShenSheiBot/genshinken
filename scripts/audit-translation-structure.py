@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """Audit ordered protected Markdown structure across a language edition.
 
-Direct mode compares one complete source and target. Manifest mode compares
-target ranges against their actual source ranges for mixed-origin editions.
+The command compares one complete source and target.
 This tool verifies machine facts only; it does not grade meaning or prose.
 """
 
@@ -10,7 +9,6 @@ from __future__ import annotations
 
 import argparse
 from collections import Counter
-from hashlib import sha256
 import json
 from pathlib import Path
 import re
@@ -32,6 +30,8 @@ REFERENCE_DEF_RE = re.compile(r"^\s*\[([^\]^][^\]]*)\]:\s*(?:<([^>]+)>|(\S+))")
 LIST_ITEM_RE = re.compile(r"^(\s*)([-+*]|\d+[.)])\s+\S")
 HORIZONTAL_RULE_RE = re.compile(r"^\s{0,3}(?:(?:\*\s*){3,}|(?:-\s*){3,}|(?:_\s*){3,})$")
 TABLE_SEPARATOR_RE = re.compile(r"^\s*\|?\s*:?-{3,}:?\s*(?:\|\s*:?-{3,}:?\s*)+\|?\s*$")
+TABLE_ROW_RE = re.compile(r"^\s*\|?.*\|.*\|?\s*$")
+SEMANTIC_CAPTION_RE = re.compile(r"^\s*\[(图题|图注|表题|表注)\]\s*(.*)$")
 NUMBER_RE = re.compile(r"(?<![\w])\d+(?:[.,:/–—-]\d+)*(?![\w])")
 PROCESS_MARKER_RE = re.compile(
     r"(?:待确认译名|待人工(?:翻译|复核)|此处未译|翻译过程|机器翻译|"
@@ -39,10 +39,6 @@ PROCESS_MARKER_RE = re.compile(
     r"未翻訳|要確認)",
     re.IGNORECASE,
 )
-
-
-class AuditInputError(ValueError):
-    pass
 
 
 def body_without_front_matter(text: str) -> str:
@@ -53,22 +49,6 @@ def body_without_front_matter(text: str) -> str:
             if re.fullmatch(r"---\s*", lines[index]):
                 return "\n".join(lines[index + 1 :])
     return text
-
-
-def resource_map(entries: list[object], label: str) -> dict[str, str]:
-    mapping: dict[str, str] = {}
-    for raw in entries:
-        if not isinstance(raw, dict) or not isinstance(raw.get("id"), str):
-            raise AuditInputError(f"{label} equivalence requires string id")
-        values = raw.get("values")
-        if not isinstance(values, list) or len(values) < 2 or not all(isinstance(value, str) for value in values):
-            raise AuditInputError(f"{label} equivalence {raw['id']} requires at least two string values")
-        identity = f"{label}:{raw['id']}"
-        for value in values:
-            if value in mapping and mapping[value] != identity:
-                raise AuditInputError(f"{label} value belongs to multiple identities: {value}")
-            mapping[value] = identity
-    return mapping
 
 
 def normalize_resource(value: str, mapping: dict[str, str]) -> str:
@@ -236,6 +216,27 @@ def logical_paragraph_count(lines: list[str]) -> int:
     return count
 
 
+def table_column_count(line: str) -> int:
+    stripped = line.strip().strip("|")
+    return len(re.split(r"(?<!\\)\|", stripped))
+
+
+def footnote_definition_has_content(lines: list[str], index: int) -> bool:
+    first = FOOTNOTE_DEF_RE.match(lines[index])
+    if first and lines[index][first.end() :].strip():
+        return True
+    cursor = index + 1
+    while cursor < len(lines):
+        line = lines[cursor]
+        if re.match(r"^(?: {2,}|\t)", line):
+            if line.strip():
+                return True
+            cursor += 1
+            continue
+        break
+    return False
+
+
 def protected_events(text: str, media_map: dict[str, str], link_map: dict[str, str]) -> tuple[list[tuple[object, ...]], list[str]]:
     references = reference_definitions(text)
     events: list[tuple[object, ...]] = []
@@ -257,8 +258,7 @@ def protected_events(text: str, media_map: dict[str, str], link_map: dict[str, s
                 fence_info = info.strip().split(maxsplit=1)[0] if info.strip() else ""
                 fence_content = []
             elif token[0] == fence_char:
-                digest = sha256("\n".join(fence_content).encode("utf-8")).hexdigest()
-                events.append(("code", fence_info, digest))
+                events.append(("code", fence_info, "\n".join(fence_content)))
                 in_fence = False
                 fence_char = ""
             else:
@@ -285,7 +285,9 @@ def protected_events(text: str, media_map: dict[str, str], link_map: dict[str, s
             events.append(("horizontal-rule",))
         table = TABLE_SEPARATOR_RE.match(line)
         if table:
-            events.append(("table-separator", line.count("|") - int(line.lstrip().startswith("|")) - int(line.rstrip().endswith("|")) + 1))
+            events.append(("table-separator", table_column_count(line)))
+        elif TABLE_ROW_RE.match(line):
+            events.append(("table-row", table_column_count(line)))
         list_item = LIST_ITEM_RE.match(line)
         if list_item:
             marker = list_item.group(2)
@@ -293,7 +295,11 @@ def protected_events(text: str, media_map: dict[str, str], link_map: dict[str, s
 
         definition = FOOTNOTE_DEF_RE.match(line)
         if definition:
-            events.append(("footnote-definition", definition.group(1)))
+            events.append(("footnote-definition", definition.group(1), footnote_definition_has_content(lines, line_number - 1)))
+
+        caption = SEMANTIC_CAPTION_RE.match(line)
+        if caption:
+            events.append(("semantic-caption", caption.group(1), bool(caption.group(2).strip())))
 
         reference = REFERENCE_DEF_RE.match(line)
         reference_span: list[tuple[int, int]] = []
@@ -409,120 +415,12 @@ def compare_structures(source: dict[str, object], target: dict[str, object], seg
     return failures, warnings
 
 
-def exact_anchor(body: str, anchor: str, label: str) -> int:
-    count = body.count(anchor)
-    if count != 1:
-        raise AuditInputError(f"{label} anchor must occur exactly once, found {count}: {anchor!r}")
-    return body.index(anchor)
-
-
-def extract_range(text: str, raw_range: object, label: str) -> tuple[str, tuple[int, int]]:
-    body = body_without_front_matter(text)
-    if raw_range is None:
-        return body, (0, len(body))
-    if not isinstance(raw_range, dict):
-        raise AuditInputError(f"{label} range must be an object or null")
-    start_anchor = raw_range.get("start")
-    end_anchor = raw_range.get("end")
-    if start_anchor is not None and not isinstance(start_anchor, str):
-        raise AuditInputError(f"{label} start must be string or null")
-    if end_anchor is not None and not isinstance(end_anchor, str):
-        raise AuditInputError(f"{label} end must be string or null")
-    start = exact_anchor(body, start_anchor, f"{label} start") if start_anchor else 0
-    end = exact_anchor(body, end_anchor, f"{label} end") if end_anchor else len(body)
-    if end <= start:
-        raise AuditInputError(f"{label} end must occur after start")
-    return body[start:end], (start, end)
-
-
-def resolve_path(raw: object, manifest_path: Path) -> Path:
-    if not isinstance(raw, str) or not raw:
-        raise AuditInputError("manifest path fields must be nonempty strings")
-    candidate = Path(raw)
-    if candidate.is_absolute():
-        return candidate
-    cwd_candidate = Path.cwd() / candidate
-    return cwd_candidate if cwd_candidate.exists() else manifest_path.parent / candidate
-
-
-def verify_source_revision(raw_revision: object, source_path: Path) -> None:
-    if not isinstance(raw_revision, str) or not re.fullmatch(r"sha256:[0-9a-fA-F]{64}", raw_revision):
-        raise AuditInputError(f"source_revision must be sha256:<64 hex> for {source_path}")
-    actual = sha256(source_path.read_bytes()).hexdigest()
-    if raw_revision.split(":", 1)[1].lower() != actual:
-        raise AuditInputError(f"source_revision does not match {source_path}")
-
-
-def audit_manifest(manifest_path: Path) -> dict[str, object]:
-    raw = json.loads(manifest_path.read_text(encoding="utf-8"))
-    if raw.get("version") != 1:
-        raise AuditInputError("manifest version must be 1")
-    target_language = raw.get("target_language")
-    if target_language not in {"zh", "en", "ja"}:
-        raise AuditInputError("target_language must be zh, en, or ja")
-    target_path = resolve_path(raw.get("target_path"), manifest_path)
-    target_text = target_path.read_text(encoding="utf-8")
-    equivalences = raw.get("resource_equivalences") or {}
-    if not isinstance(equivalences, dict):
-        raise AuditInputError("resource_equivalences must be an object")
-    media_map = resource_map(equivalences.get("media") or [], "media")
-    link_map = resource_map(equivalences.get("links") or [], "link")
-    segments = raw.get("segments")
-    if not isinstance(segments, list) or not segments:
-        raise AuditInputError("manifest requires at least one segment")
-
-    failures: list[dict[str, object]] = []
-    warnings: list[dict[str, object]] = []
-    target_intervals: list[tuple[int, int, str]] = []
-    seen_ids: set[str] = set()
-    required = {"id", "source_path", "base_edition", "source_revision", "roof_presence", "relationship"}
-    for segment in segments:
-        if not isinstance(segment, dict) or not required.issubset(segment):
-            missing = sorted(required - set(segment if isinstance(segment, dict) else {}))
-            raise AuditInputError(f"segment missing required fields: {missing}")
-        segment_id = segment["id"]
-        if not isinstance(segment_id, str) or not segment_id or segment_id in seen_ids:
-            raise AuditInputError(f"segment id must be unique nonempty string: {segment_id!r}")
-        seen_ids.add(segment_id)
-        source_path = resolve_path(segment["source_path"], manifest_path)
-        verify_source_revision(segment["source_revision"], source_path)
-        source_text = source_path.read_text(encoding="utf-8")
-        source_slice, _ = extract_range(source_text, segment.get("source_range"), f"{segment_id} source")
-        target_slice, (target_start, target_end) = extract_range(target_text, segment.get("target_range"), f"{segment_id} target")
-        target_intervals.append((target_start, target_end, segment_id))
-        segment_failures, segment_warnings = compare_structures(
-            parse_structure(source_slice, media_map, link_map),
-            parse_structure(target_slice, media_map, link_map),
-            segment_id,
-        )
-        failures.extend(segment_failures)
-        warnings.extend(segment_warnings)
-
-    ordered = sorted(target_intervals)
-    for previous, current in zip(ordered, ordered[1:]):
-        if current[0] < previous[1]:
-            failures.append({"field": "target_coverage", "message": f"target segments overlap: {previous[2]} and {current[2]}"})
-    target_body = body_without_front_matter(target_text)
-    cursor = 0
-    for start, end, segment_id in ordered:
-        if target_body[cursor:start].strip():
-            failures.append({"field": "target_coverage", "message": f"unmapped target content before segment {segment_id}"})
-        cursor = max(cursor, end)
-    if target_body[cursor:].strip():
-        failures.append({"field": "target_coverage", "message": "unmapped target content after final segment"})
-
-    markers = sorted(set(PROCESS_MARKER_RE.findall(target_body)))
-    if markers:
-        warnings.append({"field": "process_markers", "message": "possible translation-process language remains in target", "target": markers})
-    return {"mode": "manifest", "manifest": str(manifest_path), "target": str(target_path), "target_language": target_language, "failures": failures, "warnings": warnings}
-
-
 def audit_direct(source_path: Path, target_path: Path, target_language: str) -> dict[str, object]:
     source = parse_structure(source_path.read_text(encoding="utf-8"))
     target = parse_structure(target_path.read_text(encoding="utf-8"))
     failures, warnings = compare_structures(source, target)
     if target["process_markers"]:
-        warnings.append({"field": "process_markers", "message": "possible translation-process language remains in target", "target": target["process_markers"]})
+        failures.append({"field": "process_markers", "message": "translation-process language remains in target", "target": target["process_markers"]})
     return {"mode": "direct", "source": str(source_path), "target": str(target_path), "target_language": target_language, "failures": failures, "warnings": warnings}
 
 
@@ -530,8 +428,7 @@ def print_report(report: dict[str, object], as_json: bool) -> None:
     if as_json:
         print(json.dumps(report, ensure_ascii=False, indent=2))
         return
-    origin = report.get("manifest") or report.get("source")
-    print(f"Translation structure audit: {origin} -> {report['target']}")
+    print(f"Translation structure audit: {report['source']} -> {report['target']}")
     for item in report["failures"]:
         print(f"FAIL [{item['field']}] {item['message']}")
     for item in report["warnings"]:
@@ -546,23 +443,17 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("source", nargs="?", type=Path)
     parser.add_argument("target", nargs="?", type=Path)
-    parser.add_argument("--manifest", type=Path)
     parser.add_argument("--target-language", choices=("zh", "en", "ja"))
     parser.add_argument("--json", action="store_true", help="emit machine-readable JSON")
     args = parser.parse_args()
     try:
-        if args.manifest:
-            if args.source or args.target or args.target_language:
-                parser.error("--manifest cannot be combined with direct source, target, or --target-language")
-            report = audit_manifest(args.manifest)
-        else:
-            if not args.source or not args.target or not args.target_language:
-                parser.error("direct mode requires SOURCE TARGET --target-language")
-            for path in (args.source, args.target):
-                if not path.is_file():
-                    parser.error(f"file does not exist: {path}")
-            report = audit_direct(args.source, args.target, args.target_language)
-    except (AuditInputError, OSError, json.JSONDecodeError) as error:
+        if not args.source or not args.target or not args.target_language:
+            parser.error("SOURCE TARGET --target-language are required")
+        for path in (args.source, args.target):
+            if not path.is_file():
+                parser.error(f"file does not exist: {path}")
+        report = audit_direct(args.source, args.target, args.target_language)
+    except OSError as error:
         print(f"INPUT ERROR: {error}", file=sys.stderr)
         return 2
     print_report(report, args.json)

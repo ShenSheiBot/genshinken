@@ -2,8 +2,6 @@
 
 from __future__ import annotations
 
-import json
-from hashlib import sha256
 import importlib.util
 from pathlib import Path
 import tempfile
@@ -72,54 +70,29 @@ class ProtectedStructureTests(unittest.TestCase):
         target = "See [第2回](/ja/posts/part-2).\n"
         self.assertEqual(self.failures(source, target), [])
 
-    def test_mixed_source_manifest_compares_each_real_segment(self) -> None:
-        with tempfile.TemporaryDirectory() as directory:
-            root = Path(directory)
-            source_body = root / "original.md"
-            source_note = root / "roof.md"
-            target = root / "target.md"
-            manifest = root / "audit.json"
-            source_body.write_text("## A\n\n> Source quotation\n", encoding="utf-8")
-            source_note.write_text("## 译者注\n\n- 来源项目\n", encoding="utf-8")
-            target.write_text("## English A\n\n> Target quotation\n\n## Translator's Note\n\n- Target item\n", encoding="utf-8")
-            body_revision = "sha256:" + sha256(source_body.read_bytes()).hexdigest()
-            note_revision = "sha256:" + sha256(source_note.read_bytes()).hexdigest()
-            manifest.write_text(
-                json.dumps(
-                    {
-                        "version": 1,
-                        "target_path": str(target),
-                        "target_language": "en",
-                        "segments": [
-                            {
-                                "id": "body",
-                                "source_path": str(source_body),
-                                "source_range": None,
-                                "target_range": {"start": "## English A", "end": "## Translator's Note"},
-                                "base_edition": "original",
-                                "source_revision": body_revision,
-                                "roof_presence": "complete",
-                                "relationship": "direct",
-                            },
-                            {
-                                "id": "note",
-                                "source_path": str(source_note),
-                                "source_range": None,
-                                "target_range": {"start": "## Translator's Note", "end": None},
-                                "base_edition": "roof-zh",
-                                "source_revision": note_revision,
-                                "roof_presence": "complete",
-                                "relationship": "direct",
-                            },
-                        ],
-                        "resource_equivalences": {"media": [], "links": []},
-                    }
-                ),
-                encoding="utf-8",
-            )
-            report = audit.audit_manifest(manifest)
-            self.assertEqual(report["failures"], [])
+    def test_semantic_caption_removal_fails(self) -> None:
+        source = "[图题] Figure title.\n\n![Figure](/figure.png)\n"
+        target = "![Figure](/figure.png)\n"
+        self.assertTrue(self.failures(source, target))
 
+    def test_empty_footnote_definition_fails(self) -> None:
+        source = "Text[^a].\n\n[^a]: Complete note.\n"
+        target = "Text[^a].\n\n[^a]:\n"
+        self.assertTrue(self.failures(source, target))
+
+    def test_table_row_removal_fails(self) -> None:
+        source = "| A | B |\n| --- | --- |\n| 1 | 2 |\n"
+        target = "| A | B |\n| --- | --- |\n"
+        self.assertTrue(self.failures(source, target))
+
+    def test_process_marker_is_a_failure(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            source = Path(directory) / "source.md"
+            target = Path(directory) / "target.md"
+            source.write_text("Complete prose.\n", encoding="utf-8")
+            target.write_text("Complete prose. 待人工翻译。\n", encoding="utf-8")
+            report = audit.audit_direct(source, target, "ja")
+        self.assertTrue(any(item["field"] == "process_markers" for item in report["failures"]))
 
 if __name__ == "__main__":
     unittest.main()

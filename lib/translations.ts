@@ -27,10 +27,6 @@ import { translationEditionIsVisible, translationLifecycleValues } from "./trans
 import { getPostBySlug } from "./posts";
 import { site } from "./site";
 import {
-  readBookChapterTranslationSource,
-  readPostTranslationSource,
-} from "./translation-source.mjs";
-import {
   assertChapterUsesTranslationBookManifest,
   readTranslationBookManifest,
 } from "./translation-book-manifest.mjs";
@@ -45,7 +41,6 @@ export const TRANSLATION_STATUSES = ["draft", "review", "published"] as const;
 export type TranslationStatus = (typeof TRANSLATION_STATUSES)[number];
 export const TRANSLATION_CREDIT_ROLES = ["translator", "reviewer", "proofreader", "editor"] as const;
 export type TranslationCreditRole = (typeof TRANSLATION_CREDIT_ROLES)[number];
-export type SourceRevisionScope = "translation-payload" | "chapter-translation-payload";
 
 export type TranslationSourceRef =
   | { type: "post"; slug: string }
@@ -76,8 +71,6 @@ export type TranslationSource = {
   citation: CitationRecord;
   href: string;
   markdown: string;
-  revision: string;
-  revisionScope: SourceRevisionScope;
   post?: Post;
   book?: Book;
   chapter?: PublishedBookChapter;
@@ -104,8 +97,6 @@ export type TranslationEdition = {
   translationMethod: "agent" | "human";
   sourceRelationship: "direct" | "relay" | "mixed";
   baseLanguage: string;
-  sourceRevision: string;
-  sourceRevisionScope: SourceRevisionScope;
   publishedISO: string;
   updatedISO: string;
   rights: string;
@@ -351,7 +342,6 @@ export async function resolveTranslationSource(ref: TranslationSourceRef): Promi
   if (ref.type === "post") {
     const post = await getPostBySlug(ref.slug);
     if (!post || post.bookDocument) return null;
-    const sourceFile = readPostTranslationSource(post.slug);
     return {
       ref,
       key: sourceKey(ref),
@@ -367,8 +357,6 @@ export async function resolveTranslationSource(ref: TranslationSourceRef): Promi
       citation: post.citation,
       href: `/posts/${encodeURIComponent(post.slug)}`,
       markdown: post.markdown,
-      revision: sourceFile.revision,
-      revisionScope: "translation-payload",
       post,
     };
   }
@@ -379,7 +367,6 @@ export async function resolveTranslationSource(ref: TranslationSourceRef): Promi
   if (!chapter || !isPublishedBookChapter(chapter)) return null;
   const document = await getBookChapterDocument(book, chapter.id);
   if (!document) return null;
-  const sourceFile = readBookChapterTranslationSource(book.slug, chapter.id);
   return {
     ref,
     key: sourceKey(ref),
@@ -395,8 +382,6 @@ export async function resolveTranslationSource(ref: TranslationSourceRef): Promi
     citation: getBookChapterCitation(book, chapter),
     href: bookChapterHref(book, chapter),
     markdown: document.markdown,
-    revision: sourceFile.revision,
-    revisionScope: "chapter-translation-payload",
     book,
     chapter,
   };
@@ -492,14 +477,6 @@ async function loadLocale(locale: TranslationLocale): Promise<TranslationEdition
     }
 
     const lifecycle = translationLifecycleValues(data, status, sourcePath);
-    const revisionScope = requiredText(data, "source_revision_scope", sourcePath) as SourceRevisionScope;
-    if (revisionScope !== resolvedSource.revisionScope) {
-      throw new Error(`${sourcePath}: source_revision_scope must be ${resolvedSource.revisionScope}`);
-    }
-    if (status !== "draft" && lifecycle.sourceRevision !== resolvedSource.revision) {
-      throw new Error(`${sourcePath}: source_revision is stale; expected ${resolvedSource.revision}`);
-    }
-
     const title = requiredText(data, "title", sourcePath);
     const subtitle = optionalText(data, "subtitle");
     if (resolvedSource.subtitle && !subtitle) {
@@ -537,8 +514,6 @@ async function loadLocale(locale: TranslationLocale): Promise<TranslationEdition
       translationMethod: method,
       sourceRelationship,
       baseLanguage: requiredText(data, "base_language", sourcePath),
-      sourceRevision: lifecycle.sourceRevision,
-      sourceRevisionScope: revisionScope,
       publishedISO: lifecycle.publishedISO,
       updatedISO: lifecycle.updatedISO,
       rights: optionalText(data, "rights"),

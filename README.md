@@ -29,7 +29,8 @@ npm run cf:deploy
 
 - `source/_posts/`：发布文章，使用 Markdown 与 YAML front matter。
 - `public/attachments/roof-archive/`：文章配图的本地副本。
-- `editorial-sources/roof-archive/`：本次示例文章的来源网页快照与校验信息。
+- `editorial-sources/*/assets-manifest.json`：公开 R2 资产清单。
+- `editorial-sources/tag-aliases.json`：站内标签规范名。
 - `lib/site.ts`：站名、简介、联系地址与站外主页。
 
 文章支持作者、译者、校对、分类、标签、参考文献和 GFM 脚注。图片放在 `public/attachments/`，正文中使用 `attachments/...` 相对路径。

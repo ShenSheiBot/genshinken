@@ -74,7 +74,7 @@ export interface PostSummary {
   displayDateDisplay: string; // 负栏目显示原文写作日期；其他栏目显示博客发布日期
   displayDateISO: string;
   updatedISO: string; // 修订日期（front-matter `updated`），缺省回退到 dateISO
-  contentRevision: string; // 渲染后正文 HTML 的 SHA-256 短哈希
+  contentRevision: string; // 渲染后正文的内容版本标识
   timestamp: number; // 用于排序
   excerpt: string;
   relatedPosts: string[]; // 多媒体条目按编辑顺序声明的关联文章 slug

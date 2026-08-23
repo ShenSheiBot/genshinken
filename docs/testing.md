@@ -159,7 +159,7 @@ exit $testExit
 
 一次 retry 后成功的测试仍是 flake。冻结候选必须检查 HTML report 中的 retry／flaky 标记，记录失败的初始 attempt、最终 run attempt 和处置结果，不能只记录绿色总结。当前 `trace: retain-on-failure` 与 `screenshot: only-on-failure` 不会为成功态自动生成视觉证据；需要视觉签核时由 charter 明确留存截图或人工记录。
 
-artifact 有保留期限。冻结记录至少保存调用方仓库、完整博客 SHA、完整平台 SHA、run ID/attempt、artifact 名称/ID、大小、SHA-256、到期日和已知未覆盖范围；过期后的摘要不能还原原始报告。
+artifact 有保留期限。冻结记录至少保存调用方仓库、博客提交、平台提交、run ID/attempt、artifact 名称/ID、大小、到期日和已知未覆盖范围；过期后的摘要不能还原原始报告。
 
 ## 9. 冻结与回滚证据
 

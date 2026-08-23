@@ -20,7 +20,7 @@ jobs:
     timeout-minutes: 15
     env:
       NEXT_TELEMETRY_DISABLED: "1"
-      PRESERVATION_BASE_REF: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.sha || github.event.before }}
+      TRANSLATION_BASE_REF: ${{ github.event.pull_request.base.sha || github.event.before || '' }}
 
     steps:
       - name: 检出仓库

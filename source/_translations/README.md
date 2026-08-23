@@ -49,8 +49,6 @@ Each real edition uses YAML front matter with these fields:
 - `translation_method`: `agent` or `human`, identifying production responsibility
 - `source_relationship`: `direct`, `relay`, or `mixed`, identifying the edition chain
 - `base_language`
-- `source_revision`: `sha256:<digest>`; required for review and publication
-- `source_revision_scope`: `translation-payload` for posts or `chapter-translation-payload` for extracted chapters. Both payloads protect translatable title/subtitle/summary text, source credits, rights and citation provenance, and the complete Markdown body without invalidating editions for unrelated tags or display dates.
 - `published` (required only when status is `published`) and `updated`
 - `rights`
 - `format`: `article`, `interview`, or `qa`

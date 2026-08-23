@@ -19,27 +19,21 @@
 - [ ] **首行缩进交给前端**：勿手敲全角空格；承接段用 `<!--continue-->` 标记（见 §8）
 - [ ] **书籍清单同步**：递归目录 id／number 稳定，已发布节点的 anchor 有效，`latestChapterId` 只指向已发布节点，`updatedAt` 与 `book_document` 构建源一致
 - [ ] **专题引用有效**：分组顺序正确，`post / media / book` 类型与目标一致，导语和编者按已复核
-- [ ] **链接有效**：正文引用的本站已收录文章／章节使用稳定站内 canonical 路径；出处字段、第三方文章及尚未收录内容保留外链；新增微信来源时同步登记其公开来源身份，使历史正文中的同源公众号链接立即进入门禁；无残留的 Outline `mention://` 内链；`npm run verify:internal-links` 通过
-- [ ] **原稿保真门禁通过**：源文已快照；允许转换归一化后的正文保留率 100%、未授权差异 0；逐项授权修订已登记；`npm run verify:preservation` 通过
+- [ ] **链接有效**：正文引用的本站已收录文章／章节使用稳定站内 canonical 路径；出处字段、第三方文章及尚未收录内容保留外链；无残留的 Outline `mention://` 内链；`npm run verify:internal-links` 通过
 - [ ] **提交作者 = `ShenSheiBot <83676393+ShenSheiBot@users.noreply.github.com>`**
 - [ ] 本地 `npm run check` 与 `npm run build` 通过，再推送
 
 ---
 
-## 0.1 原稿保真与派生稿边界
+## 0.1 编辑原则与工作备忘
 
-本标准中的“编辑”不授权重写原稿。清洗阶段的最高优先级是保持原文内容、风格与节奏，完整规则以 [`pre-translation.md`](pre-translation.md) §0 为准。
+来源全文是编辑判断的底本，转换器只负责确定性的格式恢复，不替编辑者决定段落、署名、图题、删留、
+连载关系或措辞。编辑者必须完整阅读来源和最终稿，并直接修正文案、结构与版面问题。
+清洗可以订正有底本支持的错字、恢复语义结构并重排版面，但不得静默删掉实质信息、改写论证或抹平作者语气；真正的摘要或改写稿另立文档，不覆盖归档正文。
 
-- 原稿先存入本地来源档案，再生成博客派生稿；只有 preservation 清单明确登记的精简快照进入 `editorial-sources/`。批量抓取的完整页面状态 JSON 留在 Git 忽略的本地档案，不复制进产品仓库。
-- `cv*-editorial-note.md` / `cv*-evidence.md` 是应提交的人工编辑证据：记录来源判断、署名、结构、图像删留与版本关系，但不得包含访问令牌、Cookie、私人通信或与公开来源无关的个人资料，也不得直接显示在网站正文。
-- `preservation-manifest.json` 固定源文件哈希、来源、拼接顺序、允许的机械转换和逐项授权修订。
-- 保真门禁不设模糊阈值：归一化并扣除已声明转换／修订后，正文字符保留率必须为 100%，段落边界与顺序完全一致，未授权差异必须为 0。
-- OCR 订正和用户指定字词修订必须逐项登记 `authorizedChanges`，记录精确替换、理由、证据、授权人和日期；唯一匹配失败或跨段修改时直接失败。
-- `npm run verify:snapshot-history` 依据 Git 基线禁止修改、删除或改名既有快照，只允许新增版本文件。
-- 受保护正文只能由 `npm run sync:preserved` 重建；程序先验证全部清单和源哈希再写入，禁止手工“顺便润色”。
-- `npm run verify:preservation` 对正文严格比较；任一未授权字符新增、删除、替换、重排或段落结构改变均直接失败。
-- 实质性改写必须另立文档和 slug，保留原稿及其公开 URL，不得静默顶替。
-- Outline 更新前保存文档 ID、修订号和全文，更新后回读全文；失败时先恢复，不得继续批量处理。
+专篇备忘只记录下一位编辑确实会复用的知识，例如术语与专名、来源版本、署名分工、系列关系、
+尚未解决的事实问题和重要版式决策。它不需要记录命令执行、字符覆盖率、逐段流水账或流程自证，
+也不作为文章发布的必备附件。最终稿由普通 Git diff、内容门禁和实际页面验收负责。
 
 ---
 ## 1. 文件与 URL：必须 ASCII
@@ -167,12 +161,8 @@ featured_order: 0        # 可选；同栏目首页推荐优先级，数值越�
 
 **执法**：L1 由 `tests/e2e/reader-line-justification.spec.ts` 枚举 sitemap 全部阅读路由逐行测量。
 P1/P2/P4/P5 由 `scripts/validate-content.mjs` 的 `validateProseTypography` 在构建期强制
-（段尾字符白名单 + 字符类禁令，不做坏模式枚举）。存量违规登记于
-`scripts/typography-grandfathered.json` 豁免清单，**只减不增**——修复一处必须同步移除对应条目，
-清单条目失效（文本已改动）也会报错。**该清单已于 2026-08-10 清空**（40 处存量：35 处直接修复、
-受保护文稿 5 处经 `editorial-sources/preservation-manifest.json` 的 `authorizedChanges` 授权后
-由 `npm run sync:preserved` 落盘），此后任何违规都是新增违规。规则与检查的对应关系由 `scripts/verify-typography-registry.mjs`
-强制：本文档新增 `[TYPO-*]` 规则而未登记执法方式时，CI 直接失败。
+（段尾字符白名单 + 字符类禁令，不做坏模式枚举）。存量违规已经清零，此后任何违规直接报错；
+其余语义性排版规则由编辑通读与真实页面验收负责。
 
 ---
 
@@ -224,12 +214,12 @@ P1/P2/P4/P5 由 `scripts/validate-content.mjs` 的 `validateProseTypography` 在
 
 - 屋顶历史归档：`attachments/roof-archive/...`，使用既有 `assets:manifest / assets:upload / assets:verify`。
 - 微信归档：`attachments/wechat/...`。原始抓取、未采用图片与批量上传库存保留在 Git 外；预先上传到 R2 不代表进入本站公开合同。
-- 产品仓库只登记公开 Markdown 实际使用的 R2 键。提交文章前，将最终采用的图片键、字节数、MIME 与 SHA-256 并入
+- 产品仓库只登记公开 Markdown 实际使用的 R2 键。提交文章前，将最终采用的图片键、字节数与 MIME 并入
   `editorial-sources/wechat/assets-manifest.json`，且该清单必须保持 `public: true`。
 - `verify:wechat-assets-ready` 会在 clean clone 中确认每个公开引用都有已发布清单记录；运行时不读取整份清单，凡已提交的
   `attachments/wechat/...` 路径都会直接改写到 `assets.labonroof.top`。
-- raw HTML 对照、正文遗漏裁决、来源身份抽取和库存上传属于提交前的本地归档流程，不进入产品运行时，也不要求 GitHub CI 访问
-  `.local-archive`。公开稿仍须提交专篇 evidence；任何正文、脚注或图片删改通过普通 Git diff 和内容门禁接受审阅。
+- raw HTML、未采用图片和批量抓取库存留在 Git 外，不进入产品运行时，也不要求 GitHub CI 访问 `.local-archive`。
+  公开稿的正文、脚注和图片删改通过普通 Git diff、内容门禁与实际页面验收。
 
 微信原生视频保存在同一 R2 bucket 的 `wechat-video/` 前缀，正文只登记最终采用的 MP4，不把视频文件提交进 Git。需要在原位播放时，写一个 `[视频]` 标题段和一个或多个连续的 `attachments/wechat-video/...mp4` 链接；每个链接 title 都必须记录该源的真实分辨率：
 
@@ -249,7 +239,7 @@ P1/P2/P4/P5 由 `scripts/validate-content.mjs` 的 `validateProseTypography` 在
 [播放视频：480P](attachments/wechat-video/wxv_example/quality-480-854x480.mp4 "=854x480 12:34")
 ```
 
-链接 title 同时声明真实尺寸与 `MM:SS` 时长；同一视频的各清晰度必须重复同一时长。构建时它转换为带原生控制条、`preload="metadata"` 和 `playsinline` 的 `<video>`，但不自动播放；多档源显示站内清晰度选择器，切换时保留时间点、暂停状态和播放速度，且只按一个节目计入页面预计阅读时间。`original-WxH.mp4` 同目录必须提供 `poster-WxH.jpg`，避免元数据加载前出现黑框。只有该显式标记和 `assets.labonroof.top/wechat-video/` 下的已登记 MP4／海报能通过净化器；外站 MP4、iframe、伪造的清晰度／时长数据及手写视频 HTML 仍被拒绝。视频与海报的键、字节数、MIME、SHA-256 同样进入 `editorial-sources/wechat/assets-manifest.json`，并由 `verify:wechat-assets-ready` 在 clean clone 校验。若微信视频专页明确回指站内完整论稿，应将视频及独立视频职责并入完整论稿，而不是为平台空正文另造页面。
+链接 title 同时声明真实尺寸与 `MM:SS` 时长；同一视频的各清晰度必须重复同一时长。构建时它转换为带原生控制条、`preload="metadata"` 和 `playsinline` 的 `<video>`，但不自动播放；多档源显示站内清晰度选择器，切换时保留时间点、暂停状态和播放速度，且只按一个节目计入页面预计阅读时间。`original-WxH.mp4` 同目录必须提供 `poster-WxH.jpg`，避免元数据加载前出现黑框。只有该显式标记和 `assets.labonroof.top/wechat-video/` 下的已登记 MP4／海报能通过净化器；外站 MP4、iframe、伪造的清晰度／时长数据及手写视频 HTML 仍被拒绝。视频与海报进入 `editorial-sources/wechat/assets-manifest.json`，并由 `verify:wechat-assets-ready` 在 clean clone 校验。若微信视频专页明确回指站内完整论稿，应将视频及独立视频职责并入完整论稿，而不是为平台空正文另造页面。
 
 微信原生播客音频使用同一边界：先将真实 MP3 与节目封面归档到 `wechat-audio/<voice-id>/`，再以 `[音频]`、带 `MM:SS` 时长 title 的音频链接和一张显式尺寸封面组成播放器：
 
@@ -299,12 +289,12 @@ P1/P2/P4/P5 由 `scripts/validate-content.mjs` 的 `validateProseTypography` 在
 ### 扫描页与结构化正文
 
 - 整页扫描图若只是原平台不便排版正文、公式、脚注或表格的替代物，不是网站的最终正文格式。只要可见内容能够忠实恢复，应重排为可搜索、可复制、可响应式布局的结构化 Markdown／HTML。
-- OCR 只产生待校订底稿。开始重排前先建立逐页覆盖表，按原页顺序登记每个可见的正文、标题、引文、列表、公式、表格、链接、脚注、图题和内嵌图片；验收以原页和可见块全部闭合为准，不以 OCR 返回了多少页为准。
+- OCR 只产生待校订底稿。编辑必须按原页顺序完整读完每一页，并确认每个可见的正文、标题、引文、列表、公式、表格、链接、脚注、图题和内嵌图片都进入最终页面；无需另建逐页账簿，验收以原页与公开页面的逐页对读为准。
 - 校订分两轮进行：结构轮合并跨页段落和引文并恢复语义层级；保真轮在原始分辨率下逐页重读。逐字核对必须覆盖专名、异体符号、上下标、撇号、变量区分、成对括号和中西文标点，而且要检查同一符号的全部定义与回指，不能抽查首个实例后推定全篇一致。不得用未经目检的 OCR 文本替代原页，也不得以“公式能够渲染”代替公式语义核校。
 - 原文固定版或其他可信底本可用于找回链接、核对结构和消歧公式，但扫描页仍决定现存译稿的中文措辞；不得借核对原文之名静默重译。OCR 生成的图片描述、推测链接或重绘图示不是来源内容，内嵌图版必须保留真实源资产。
-- 原扫描页继续保存在来源归档、R2 或专篇 evidence 中，供保全与复核；不因正文完成重排而删除来源证据，也不必在公开正文中重复展示全部扫描页。
+- 原扫描页继续保存在来源归档或 R2 中供复核；不因正文完成重排而删除，也不必在公开正文中重复展示全部扫描页。
 - 当版面本身是研究对象，或内容属于漫画、手稿、艺术家书、复杂图像论文等无法无损重排的材料时，保留图像正文并使用适合的图版／阅读模式。扫描阅读器是保真需要的后备，不是平台替代型正文的默认解法。
-- OCR 订正必须由页图或其他可信底本逐项支持；模糊、裁断、缺页和无法确定的阅读顺序进入 evidence，不以语义完整为由补写。
+- OCR 订正必须由页图或其他可信底本支持；模糊、裁断、缺页和无法确定的阅读顺序在短备忘中说明，不以语义完整为由补写。
 - 完整正文必须在桌面和窄屏真实页面中从头滚动验收，核对文本可选择／搜索、标题层级、行内公式字号、陈列公式溢出、表格、链接目标、脚注闭合、图片落点及扫描页没有重复出现。长篇首屏正常不代表全篇通过；静态门禁也不能替代真实页面阅读。
 
 ### 非普通文章版式
@@ -378,7 +368,7 @@ P1/P2/P4/P5 由 `scripts/validate-content.mjs` 的 `validateProseTypography` 在
   在英国的清算联盟方案……（承接段，前端去标记并赋 .cont，不缩进首行）
   ```
 
-  该标记应在**译前处理**阶段注入，原则见 `docs/pre-translation.md`。引文本身不缩进，无需标记。
+  该标记由编辑在恢复段落结构时加入。引文本身不缩进，无需标记。
 
 ---
 
@@ -469,7 +459,7 @@ P1/P2/P4/P5 由 `scripts/validate-content.mjs` 的 `validateProseTypography` 在
 - 章节页面必须提供「目录／全书目录」索引；只有本章正文实际含图片时才在二者之间显示「图录」，不得渲染空图录标签或面板。全书目录不重复书籍首页入口；每个含正文标题的章节在右侧提供 `＋/−` 展开按钮，展开后对其他已发布章节执行带 hash 的跨页跳转、对当前章节执行章内跳转，并保留待更新节点的不可点击状态。章节行复用普通目录最小 `16px` 的自适应编号列与 `3px` 列间距，「前 1／附 1」等复合编号保持单行；次级标题只使用与编号列左缘对齐的灰色层级标记，不绘制强调色竖线。页尾上一章／返回目录／下一章使用相同的两层按钮结构与表面样式，不在封面和正文之间或页尾导航上方绘制分隔线。
 - 普通文章与书籍章节页都默认保存完全本地的阅读位置。记录只属于当前浏览器配置文件和本站域名，不上传服务器、不使用 Cookie，也不跨浏览器或设备共享；阅读设置必须允许关闭保存、清除本文记录和清除全部阅读记录，关闭时不得清除或改变主题、字族与字号设置。阅读习惯面板打开和关闭时必须作为独立右侧抽屉水平平移进出，并可覆盖在页眉上方；面板标题行的上缘和高度必须与页眉对齐；页眉中的主题、繁简与阅读习惯三个按钮必须始终保持同一 DOM 节点和同一几何位置，不得迁入面板或因面板开合重排。面板标题行提供独立关闭按钮，关闭后焦点恢复到页眉中稳定存在的阅读习惯按钮。
 - 直接进入不带 hash 的正文 URL 时自动恢复到上次语义位置，不提供「继续阅读」入口或恢复弹窗。书籍页仍只提供「从第一章阅读」与「阅读最新章节」：二者都进入相应的独立章节页；章节页的本地阅读记录只在本章 URL 内恢复。浏览器前进后退、刷新与 BFCache 等原生滚动恢复同样优先，客户端不得二次跳转。
-- 连载更新必须保留稳定标题锚点；构建产物同时以渲染后正文 HTML 的 SHA-256 短哈希标识内容版本。已读完的正文追加内容后仍恢复旧版本的原完成位置，不自动进入新增内容，由读者自行向后阅读；原块被改动或删除时按相邻语义块、章节和全文比例依次降级，不依赖旧的绝对滚动坐标。
+- 连载更新必须保留稳定标题锚点；构建产物同时保存正文内容版本标识。已读完的正文追加内容后仍恢复旧版本的原完成位置，不自动进入新增内容，由读者自行向后阅读；原块被改动或删除时按相邻语义块、章节和全文比例依次降级，不依赖旧的绝对滚动坐标。
 - `citations` 直接使用 Zotero item JSON 字段名。`translation` 必填，且 `itemType` 必须是 `book`；未覆写的译本题名、作者／译者、日期、出版社和摘要从书籍清单派生，URL 永远是 `https://un-canon.blog/books/<slug>`。`original` 可选，只有原版资料已经核验时才填写；两者分别生成独立的 BibTeX 复制位，不得拿另一版本冒充。
 - 文章页缺省为 Zotero `blogPost`。只有已核验来源类别时才在 Markdown front matter 添加 `citation` 覆写为 `bookSection / journalArticle / preprint / thesis / interview`；字段必须采用 Zotero 名称，例如 `bookTitle / publicationTitle / repository / thesisType / university / interviewMedium / creators`。构建门禁会拒绝未知字段和缺少类型必需字段的记录。
 - 经典 BibTeX 没有 Zotero `blogPost / preprint / interview` 的一一对应 entry type；本站遵循 Zotero 自带 BibTeX translator，以 `@misc` 输出这三类，并在页面嵌入 `z:itemType` 保存精确 Zotero 类型。不得虚构 `@preprint`、`@interview` 等非标准 entry type。
@@ -523,16 +513,11 @@ groups:
 
 ### 12.1 确定性静态与逻辑门禁
 
-- `npm run audit:roof-archive`：对照本地 376 份屋顶原始稿，报告逐字节 JSON 快照、专篇证据和公开正文引用覆盖；它是迁移进度审计，不替代人工审校，也不因重复稿没有独立路由而自行报错。
 - `npm run validate:content`：贡献者登记和署名、文章字段、书籍／章节 JSON、专题分组、跨实体引用、日期同步和唯一性。
-- `npm run verify:snapshot-history`：按 Git 基线检查 `editorial-sources/` 的追加式历史；既有快照修改、删除或改名即失败。
-- `npm run verify:preservation`：源文快照哈希、派生顺序、允许机械转换及逐项授权修订；执行正文 100% 保留／未授权差异 0 的零差异门禁。
 - `npm run validate:media-html`：多媒体资料 HTML 允许列表、主动内容和危险属性。
 - `npm run verify:typography`：Markdown 排版、标题、表格、脚注、媒体和危险协议契约，外加全语料渲染扫描（任何图版／特殊版式标记、未分类的图片相邻斜体、紧邻未分类图片的明确图题语言或非法 `=NN%` 宽度存活到输出即失败）。
-- `npm run audit:roof-figures`：读取本地 B 站源档，将“居中灰字”逐项回指公开稿；任何仍作为普通段落紧邻图片的精确匹配都会失败。该审计属于归档交付流程，不进入依赖 `.local-archive` 不存在的 GitHub CI。
-- `npm run verify:typography-registry`：§4.1／§4.2 的 `[TYPO-*]` 规则 ID 与执法检查的对应关系；文档新增规则而未登记检查或豁免即失败（执法方也可以是 e2e 规格，如 [TYPO-L1] 由 `tests/e2e/reader-line-justification.spec.ts` 把关）。
 - `npm run verify:book-capabilities`：非公开夹具验证文库分篇状态、锚点与原书／译本双书目契约。
-- `npm run verify:fonts`：CJK 语料、OpenCC 闭包、字体文件、大小、哈希与 CSS 缓存键。
+- `npm run verify:fonts`：CJK 语料、OpenCC 闭包、字体文件、大小与 CSS 缓存键。
 - `npm run verify:reading-progress`：阅读记录数据、恢复优先级、跨版本和跨标签页纯逻辑契约。
 - `npm run verify:han-script`：繁简偏好、转换方向、文章源文字系统和媒体指纹。
 - `npm run verify:citations`：Zotero／BibTeX 类型、字段和引用路由。

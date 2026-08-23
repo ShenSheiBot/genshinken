@@ -15,8 +15,6 @@ credits:
 translation_method: agent
 source_relationship: mixed
 base_language: zh-Hans
-source_revision: "sha256:b1c9ca8b886f56f8bf375a90f3d896c411c054ac108d160af5f967703e4d7214"
-source_revision_scope: translation-payload
 updated: 2026-08-22
 rights: CC BY-NC-SA 4.0
 format: article
