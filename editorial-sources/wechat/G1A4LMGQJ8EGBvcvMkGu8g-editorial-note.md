@@ -1,6 +1,7 @@
 # 劳动过程与历史时间的发生：与马克思一道，与西田一道：微信归档编辑记录
 
 - sourceId：`G1A4LMGQJ8EGBvcvMkGu8g`；canonical：`https://mp.weixin.qq.com/s/G1A4LMGQJ8EGBvcvMkGu8g`；公开日：2026-07-17。
+- 音乐卡复核：ハイスイノナサ〈均質化する風景〉，网易云音乐 `22716502`，5分29秒；公开稿在第二章章首恢复官方外链播放器。
 - raw.html SHA-256：`814ce365928b23cb604df2258b32adb89fbcb8403f386a4216316a71eb06ab33`；#js_content body.html SHA-256：`306a91fac65844299502cbdc8ee8cbc5a9c4d918aa2428798a1514f15885fc5e`。
 - 原作 William Haver〈The Labor Process and the Genesis of Historical Time〉，载 *Confronting Capital and Empire*（2017）；Modus 译，单字一兔 译校；正文 1 个 placement/1 个 unique body 资产。
 - 微信标明注释从省，未生成孤立脚注；保留“与马克思一道／与西田一道”章节语义。`raw.html` 的 `#js_content` 未见许可声明，因此不向公开元数据添加许可字段；此前记录的 CC BY-NC-SA 4.0 来源未核。

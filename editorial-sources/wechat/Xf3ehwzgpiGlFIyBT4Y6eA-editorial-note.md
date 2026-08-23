@@ -3,7 +3,7 @@
 - sourceId：`Xf3ehwzgpiGlFIyBT4Y6eA`；source URL：`https://mp.weixin.qq.com/s/Xf3ehwzgpiGlFIyBT4Y6eA`。
 - raw.html SHA-256：`c7649ef9bc2732c8df925b6246f00963457bdcd1be357728537c977d71b4bcc5`；精确 `#js_content` body.html SHA-256：`c4d132f8ce0441befc121345c11c501b6a13e1b96a38b5e90c199a19c3c970e9`；顶层 DOM block（含空白块）`547`，有内容 block `288`。
 - 正文图位按 raw DOM 顺序保留：`1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 → 9`；唯一下载资产 `9`，正文路径使用 token `Xf3ehwzgpiGlFIyBT4Y6eA`，封面图未冒充正文图。图像逐项目检并写入内容性 alt；图1－图8的原文页码说明保留为斜体图题。
-- 公开文本由 `body.html` 逐段恢复为 Markdown；正文中保留原文段落、标题、引文、来源说明与脚注定义。章首保留试译身份、「注释从省」、三位具名协作者致谢；封面题署 `@ヤブ蛇（pid=142014690）` 作为语义图题与首图绑定。微信音乐控件、通用“仅供学习交流/留存参考”说明及页面推荐卡片未进入正文。
+- 公开文本由 `body.html` 逐段恢复为 Markdown；正文中保留原文段落、标题、引文、来源说明与脚注定义。章首保留试译身份、「注释从省」、三位具名协作者致谢；封面题署 `@ヤブ蛇（pid=142014690）` 作为语义图题与首图绑定。原页位于章首和文末的两张音乐卡分别核实为坂本龍一〈Merry Christmas Mr. Lawrence〉（网易云音乐 `22650577`，4分42秒）与〈Mizu no Naka no Bagatelle〉（`2610262425`，3分45秒），公开稿在原落点恢复官方外链播放器；通用“仅供学习交流/留存参考”说明及页面推荐卡片未进入正文。
 - 署名证据：页面 author 与正文试译记/译校行；原作者、译者、校对者按源文分别登记在 front matter。未作 B 站同文合并。
 - 书目核查：raw 正文仅给出 `Manga Bomb: between the lines of Barefoot Gen（2010）`；京都精华大学国际漫画研究中心原文 PDF 与该卷目录将其定位为 Jaqueline Berndt 编《Comics Worlds and the World of Comics》（2010），页 263–307。因此按 bookSection 记录，并将 front matter 中误录的 245–285 更正为 263–307；不将文章题名误作 bookTitle，也不据无证据改写为 Mechademia 5。
 - 去重：微信标题索引将此条列为 `wechat-exclusive`；B 站仅有模糊候选，未发现同文 canonical，候选不作为来源关系。

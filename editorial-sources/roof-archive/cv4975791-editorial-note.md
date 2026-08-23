@@ -39,6 +39,9 @@
 
 ## 标签、重复与关系边界
 
+- 微信在 2020-09-16、2020-11-01、2021-08-26、2021-12-09、2022-03-23 五次发布同题视频页（sourceId 依次为 `0768-LJQRGtfLVE8n7-U3Ypd_rg`、`0724-_-MDgDMcHcdXG1U5-XsLWg`、`0489-01uILsZxwaqDWwQym4-6sA`、`0432-RBqJop0akBPhrfr5djR2Lw`、`0363-D3j1HOvHHrtTJZyEmDfoRQ`）。五页均指向同一视频 ID `wxv_1520578916082565121`，视频字节一致，说明文字与责任链也相同；这是同一视频的重复发布，不是五篇作品。公开 canonical 只在本文恢复一次播放器。
+- 视频说明明确文案作者秘则为花、视频制作天下丶通宵、配音杏仁、封面啊呀，与本文作者及题名直接闭环。原画为 1920×1080、384.341 秒、68,996,842 bytes、SHA-256 `82c449c401433b49f6083069a702e1682fc671125c073af0e8301ce7aa739d52`；另保留微信实际提供的 852×480 源（16,475,713 bytes，SHA-256 `03999475246d11c03f3a56f29fefe58bf834f004d1f9ce8cf8e05f428382ce55`）和代表海报（SHA-256 `36cdfb0154ef127437de94eaba1ec99b32b4cec04b2c77cde813f7979dc353ea`）。公开引用改写至 R2，不把视频二进制放进 Git。
+
 - 标签先以 `rg` 检索现有 front matter、全文和相邻词形，再通过代表性／跨文连接双检验。`伊藤计划` 是题名、两部作品及后记共同的创作者／作品群入口；`虐杀器官` 承担前三节全部论证，`和谐` 承担第四节及全套配图，两部独立作品不能只用父级创作者标签抹平；`大屠杀` 是前三节和后记反复讨论的中心问题；`现代性` 是第二节明示的解释框架，并能连接站内大量现代性／后现代性研究文章。
 - 不把只在后记列作“等待发掘”的生命政治、世界体系、暴力国家化做成标签，也不把约翰·保罗、谢泼德等普通角色、段落局部概念“生府社会／理性工程／政治国家”或泛分类词“动画”全部标签化。
 - 对全 376 篇检索完整题名、`《和谐&lt;harmony/&gt;》与“生府社会”`、“大屠杀的命令是如何下达且被人服从的”及开头特征句，仅 `cv4975791` 命中；没有旧稿、重发、修订版或转载副本。
@@ -46,5 +49,5 @@
 
 ## 交付与校验范围
 
-- 公开稿为 `source/_posts/ito-project-genocide-political-state-harmony.md`，完整 JSON 与专篇证据位于 `editorial-sources/roof-archive/`，本地资产位于 `public/attachments/roof-archive/cv4975791/`。
+- 公开稿为 `source/_posts/ito-project-genocide-political-state-harmony.md`，完整 JSON 与专篇证据位于 `editorial-sources/roof-archive/`，本地图片位于 `public/attachments/roof-archive/cv4975791/`；视频由公开 R2 合同管理。
 - 未修改 contributors、books、topics、tag aliases、preservation manifest、runtime 或 docs；依任务要求未运行 build/dev。定向门禁覆盖内容 schema、排版、引用、快照字节一致性、资产计数、远程图片和差异空白。

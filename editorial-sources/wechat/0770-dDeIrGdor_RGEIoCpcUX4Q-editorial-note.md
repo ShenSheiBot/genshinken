@@ -1,0 +1,7 @@
+# 《日本沉没》系列中的日本启示录文本：微信归档编辑记录
+
+- sourceId：`0770-dDeIrGdor_RGEIoCpcUX4Q`；source URL：`https://mp.weixin.qq.com/s/dDeIrGdor_RGEIoCpcUX4Q`；公开时间为 2020-09-14 12:02。`raw.html` SHA-256 为 `ac0264b2399e4ba8c18c0daa047b9da7723327f67d6de2c1b74123295fb6de87`，精确 `#js_content` 的 `body.html` SHA-256 为 `5df541a65dbc2e78fa1c09f116aa1371a0f58438f78bef28babacb6549c4d644`。
+- 原页是单一视频发布页。页面说明明确给出原作者 Pause and Select、原视频 `https://www.youtube.com/watch?v=sxUcbR12uHc`，以及翻译斐乐、兔狲、snoper卓尔、KAFAK、why7682、杰洛·齐贝林；校对加速器、唯一指定真实August_Rash；字幕轴 KAFAK、唯一指定真实August_Rush；后期唯一指定真实August_Rush。“August_Rash”由同一说明下一职责中的 `August_Rush` 及贡献者既有 alias 闭合为同一人，不新建拼写错误身份。
+- 原视频 ID 为 `wxv_1517727488234274820`，时长 2,083.062 秒。公开稿保留微信实际提供的 1920×1080 原画文件（295,779,430 bytes，SHA-256 `14627e7522e61600f43390afb0317f6d88e383bb2da56bd091b5fc272d79e6ca`）、852×480 较低码率源（89,223,971 bytes，SHA-256 `571e32c458236feb15e6df0ebadc7eb4e2ffbbfb82b5cbdd659052a4b9fc6513`）及目检后的代表海报（SHA-256 `3cc3d17f820258ef7afef1052082fc22651ad91fc3b29b493a4c5827c01954be`），不伪造转码档位。
+- 与 `japan-sinks-2020-disaster-image-war.md` 虽同为 Pause and Select 讨论《日本沉没》，但后者明确对应另一原视频 `jjcaqxoJ0bw`，题名与论证内容也不同；这是两件独立作品，不合并、不建版本关系。全库未找到与 `sxUcbR12uHc` 同源的文字稿或另一公开 canonical。
+- 原简介另有原作者的范围声明：“Yes, I know I didn't cover everything. Watch until the end to see why!”；这是作品特定的论述边界，公开稿以中文保留为“我知道自己没有覆盖一切；看到结尾便会知道原因”，而非当作平台宣传删除。公开稿恢复视频、原视频入口、该项说明与文章特定制作职责；没有把微信平台界面、账号模块或通用推广转成正文。R2 三项资产均已回读验证完整字节；桌面与移动端均完成原画实播、切换 480P 后再次实播，无横向溢出或控制台错误。

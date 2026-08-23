@@ -28,6 +28,9 @@ import {
   type CitationRecord,
 } from "./citations";
 import { isHanScript, type HanScript } from "./han-script";
+import { plainText, readMinutes } from "./reading-time.mjs";
+
+export { readMinutes } from "./reading-time.mjs";
 
 const POSTS_DIR = path.join(process.cwd(), "source", "_posts");
 const BOOKS_DIR = path.join(process.cwd(), "source", "_books");
@@ -227,14 +230,6 @@ function isISODate(value: string): boolean {
   return +date > 0 && fmtISO(date) === value;
 }
 
-function plainText(html: string): string {
-  return html
-    .replace(/<[^>]+>/g, " ")
-    .replace(/&[a-z]+;/gi, " ")
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
 const URL_RE = /https?:\/\/\S+/gi;
 
 function isDraft(v: unknown): boolean {
@@ -421,13 +416,6 @@ function deriveExcerpt(html: string, fmExcerpt: unknown, title: string): string 
   });
   const source = pick ?? "";
   return source;
-}
-
-export function readMinutes(html: string): number {
-  const text = plainText(html);
-  const cjk = (text.match(/[㐀-鿿豈-﫿]/g) || []).length;
-  const latin = (text.match(/[A-Za-z0-9]+/g) || []).length;
-  return Math.max(1, Math.round((cjk + latin) / 400));
 }
 
 export function hashRenderedContent(html: string): string {

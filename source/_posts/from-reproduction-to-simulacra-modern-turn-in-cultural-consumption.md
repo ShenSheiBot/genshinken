@@ -23,9 +23,9 @@ citation:
 
 [视频] 同名视频论文｜文案：米岡；视频：Loliiiico；旁白：盖井；制作：屋顶现视研视频小组
 
-[播放视频：1080P](attachments/wechat-video/wxv_2015520402189369345/original-1920x1080.mp4 "=1920x1080")
+[播放视频：1080P](attachments/wechat-video/wxv_2015520402189369345/original-1920x1080.mp4 "=1920x1080 35:53")
 
-[播放视频：480P](attachments/wechat-video/wxv_2015520402189369345/quality-480-854x480.mp4 "=854x480")
+[播放视频：480P](attachments/wechat-video/wxv_2015520402189369345/quality-480-854x480.mp4 "=854x480 35:53")
 
 ### 一、前言
 

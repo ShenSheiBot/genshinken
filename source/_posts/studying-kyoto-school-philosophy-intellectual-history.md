@@ -45,6 +45,10 @@ citation:
 
 <h2 id="introduction">导论：研究京都學派：哲学、思想史与马克思对现代性的批判</h2>
 
+[音乐] ずっと真夜中でいいのに。〈彷徨い酔い温度〉｜4分51秒
+
+[在网易云音乐收听](https://music.163.com/#/song?id=1371306566 "netease:1371306566")
+
 [图题] 封面插画：@DarkAccel（pixiv ID 146943708）。
 
 ![海边蓝色海水前、穿格纹泳装的浅绿色长发女性插画](attachments/wechat/gP04aas1lCQJFJZzsSQ9MA/001.jpg)
@@ -209,6 +213,10 @@ citation:
 因此，这些论文以出人意料的方式汇聚到一起。我们希望，当合观之时，《直面资本》诸篇论文能够使读者去思考京都學派与「哲学对历史之应答性」这一问题的关系，以及京都學派如何能够持续激发我们对自身历史时刻的批判性反思。
 
 <h2 id="chapter-01-philosophy-answerability">第一章：哲学与应答性：京都学派与世界史的顿悟时刻</h2>
+
+[音乐] Blume popo〈幸福のすべて〉｜4分25秒
+
+[在网易云音乐收听](https://music.163.com/#/song?id=1893609787 "netease:1893609787")
 
 *试译：单字一兔。原文为哈若图宁（Harry Harootunian）〈Philosophy and Answerability: The Kyoto School and the Epiphanic Moment of World History〉，载《Confronting Capital and Empire》（2017）。原发布说明：“注释从省，仅供学习交流、留存参考。”*
 
@@ -540,6 +548,10 @@ citation:
 
 <h2 id="chapter-02-labor-process-historical-time">第二章：劳动过程与历史时间的发生：与马克思一道，与西田一道</h2>
 
+[音乐] ハイスイノナサ〈均質化する風景〉｜5分29秒
+
+[在网易云音乐收听](https://music.163.com/#/song?id=22716502 "netease:22716502")
+
 ![身着女仆装的绿发人物插画](attachments/wechat/G1A4LMGQJ8EGBvcvMkGu8g/001.png)
 
 虽说资本主义自诩为某段不可避免的现代化历史的顶峰，虽说资本主义辩护称学说从不停止讴歌创新，虽说资本主义生产方式不断地自我革命，资本主义生产方式的逻辑仍然是非线性周期循环的逻辑，是关于永恒回归的现代神话。如此，资本主义将自身设想为永恒之物，便无需任何关于历史时间的概念——亦即无需「作为不可逆性的时间」这一概念：依照资本主义生产方式的逻辑，过去仅仅是当下的童年，而这一当下以本质的连续性延展至无限的未来。
@@ -667,6 +679,10 @@ citation:
 我以为，更为重要的是：与马克思一道、与西田一道，就历史时间的问题进行阅读——在如下一种时代局势中：资本主义生产方式之霸权性逻辑，作为这样的它，乃是在对创新技术（那些据说将使劳动这一概念本身变得过时的所有那些机器人们）的不断援引之中对历史和时间之可能性本身的否认——这样的阅读，或许能帮助我们去概念化、乃至抵抗那种逻辑以哲学之名的再生产。
 
 <h2 id="chapter-03-commodity-fetishism">第三章：商品的拜物教性质与无的拜物教：论马克思与西田的颠倒问题</h2>
+
+[音乐] 藍空と月〈昨日の夢〉｜5分03秒
+
+[在网易云音乐收听](https://music.163.com/#/song?id=2611341333 "netease:2611341333")
 
 *试译：Modus（@实体substance）；译校：单字一兔。原文为埃莱娜·朗格（Elena Louisa Lange）〈Commodity Fetishism and the Fetishism of Nothingness: On the Problem of Inversion in Marx and Nishida〉，载《Confronting Capital and Empire》（2017）。原发布说明：“注释从省，仅供学习交流、留存参考。”*
 
@@ -955,6 +971,10 @@ citation:
 然而，两种形式的颠倒都依赖于一种对自身条件性无意识的思维形式与其相应的施行行为之间的歧异，乃至矛盾。马克思常常被引用的「他们没有意识到这一点，但是他们这样做了」必须被理解为这一困境的一个鲜明的表达，但同样也是对这一困境的一种批判。
 
 <h2 id="chapter-04-nishida-antinomy">第四章：西田几多郎与资产阶级哲学的二律背反</h2>
+
+[音乐] livetune feat. 初音ミク〈Last Night, Good Night〉｜6分24秒
+
+[在网易云音乐收听](https://music.163.com/#/song?id=22760391 "netease:22760391")
 
 ![两名蓝绿色头发人物亲吻的四格插画](attachments/wechat/bPILC0RtiCv5V3mOY3kEew/001.jpg)
 
@@ -1463,6 +1483,10 @@ A是A，当且仅当（≡）非A是非A（反之亦然）：西田相信，这�
 
 <h2 id="chapter-05-ethnicity-species">第五章：族群性与种：论多族群国家哲学与日本帝国主义</h2>
 
+[音乐] 五月天〈晚安 地球人（Live）〉｜4分40秒
+
+[在网易云音乐收听](https://music.163.com/#/song?id=386114 "netease:386114")
+
 ![树叶间身着白衣的绿发人物插画](attachments/wechat/wAESgokp98z9MamzFCGEmQ/001.jpg)
 
 在日本帝国的战间期，即第一次世界大战结束至第二次世界大战或亚太战争结束之间，支配哲学讨论的主要问题域之一，是种与类这一分类图式的地位，这个图式是逻辑中特殊性与一般性的分配公式。人们曾作出重大的思想努力，挑战这一通常被归属于古典逻辑或亚里士多德逻辑的逻辑算法所享有的传统权威。即使在今天，一些现代日本思想研究者仍未注意到，甚至根本不了解围绕一般性与普遍性、个体性与单一性之概念区分展开的哲学论争。许多人也无法理解，为什么某些日本哲学家会考察这一算法在动物乃至人类标准分类中的具体运作。
@@ -1760,6 +1784,10 @@ Hegel, Phenomenology of Spirit，页 213。关于黑格尔论作品与个体性�
 从那些被动员起来投入日本战争努力的帝国内少数群体的角度来看，「种的逻辑」不过是对殖民暴力的背书。恰恰因为它具有普遍主义的抱负和民族使命感，它才更加具有侵略性，也更加暴力。正如它曾是世界史哲学的一个来源一样，它也促生了世界战争哲学。
 
 <h2 id="chapter-06-aleatory-dialectic">第六章：偶然辩证法：田边元同马克思的对话</h2>
+
+[音乐] 前田愛〈Days－愛情と日常〉｜4分58秒
+
+[在网易云音乐收听](https://music.163.com/#/song?id=30070592 "netease:30070592")
 
 ![两名粉发与金发动漫人物亲吻的插画](attachments/wechat/vZ6FtNQ9yx5q6bwsSVYz7A/001.jpg)
 
@@ -2151,6 +2179,10 @@ Hegel, Phenomenology of Spirit，页 213。关于黑格尔论作品与个体性�
 
 <h2 id="chapter-07-tanabe-storyteller">第七章：作为故事讲述者的田辺元：或，将《作为忏悔道的哲学》作为叙事来阅读</h2>
 
+[音乐] 五月天〈时光机〉｜3分39秒
+
+[在网易云音乐收听](https://music.163.com/#/song?id=386469 "netease:386469")
+
 ![两名粉发与灰发动漫人物相依的插画](attachments/wechat/ED2a1Da6fGE_GpODuMuf-A/001.jpg)
 
 > 去设想：在历史无所不在的笼罩与社会无情的影响之外，已然存在一个自由的领域得到庇护——无论它是文本中词语的微观经验，还是各种私人宗教的迷狂与强度——这无非是强化了必然性对于一切此类盲区的掌控，个体主体正是在这些盲区中寻求避难，追求一种纯粹个体的、仅仅是心理上的救赎计划。唯有从这样一种认识出发，才能真正摆脱此种束缚而获得解放：没有任何东西不是社会的、历史的——事实上，一切「归根结底」都是政治的。
@@ -2361,14 +2393,15 @@ Hegel, Phenomenology of Spirit，页 213。关于黑格尔论作品与个体性�
 
 <h2 id="chapter-08-subjective-drive">第八章：资本的主体性驱力：梯明秀的物质现象学</h2>
 
+[音乐] toe〈むこう岸が視る夢〉｜4分42秒
+
+[在网易云音乐收听](https://music.163.com/#/song?id=22664758 "netease:22664758")
+
 *试译：九畹采萧；译校：单字一兔。原文为 Gavin Walker〈The Subjective Drive of Capital, Kakehashi Akihide’s Phenomenology of Matter〉，载《Confronting Capital and Empire》（2017）。原发布说明：“注释从省，仅供学习交流、留存参考。”*
 
 [图题] 封面插画：@たけらか（pixiv ID 145664320）。
 
 ![两名动漫人物相吻的彩色插画](attachments/wechat/Q1aksRvxSgHOrMJPe5uOrQ/body-001.png)
-
-<!--standalone-emphasis-->
-*原文配乐：toe〈むこう岸が視る夢〉（4分42秒）。*
 
 世界的统一性并不在于它的存在，尽管它的存在是其统一性的前提，因为世界必须先存在，然后才谈得上是统一的。而在我们视野所及的范围之外，存在始终是一个悬而未决的问题。世界真正的统一性在于它的物质性，而这种物质性不是靠魔术师的三两句话所能证明的，而是要由哲学和自然科学长期而艰苦的发展来证明的。
 
@@ -2704,12 +2737,15 @@ Furihata Setsuo, Furihata Setsuo chosakushū [Collected works of Furihata Setsuo
 
 <h2 id="chapter-09-umemoto-nothingness">第九章：梅本克己、主体的虚无与对市民社会的批判</h2>
 
+[音乐] Foreground Eclipse〈(I Don’t Need Any Titles To This Song!)〉｜4分32秒
+
+[在网易云音乐收听](https://music.163.com/#/song?id=2038399484 "netease:2038399484")
+
 [图题] 封面插画：@東山小川（pixiv ID 124084930）。
 
 ![两名动漫人物在户外相拥起舞的彩色插画](attachments/wechat/iYoVj0TRlBDCjy4LGHvdtA/body-001.png)
 
 <!--standalone-emphasis-->
-*原文配乐：Foreground Eclipse〈(I Don’t Need Any Titles To This Song!)〉（4分32秒）。*
 
 *慕唯仁（Viren Murthy）著，单字一兔试译。原作〈Umemoto Katsumi, Subjective Nothingness, and the Critique of Civil Society〉载《Confronting Capital and Empire》（2017）；原发布说明：“注释从省，仅供学习交流、留存参考。”*
 
@@ -2940,6 +2976,10 @@ Furihata Setsuo, Furihata Setsuo chosakushū [Collected works of Furihata Setsuo
 [^ch09-37]: 这种主体性应如何在与资本主义的关系中被动员，是一个复杂的问题；它在很大程度上取决于人们如何理解资本主义的诸矛盾以及克服这些矛盾的可能性。对此问题的充分讨论须留待另文。
 
 <h2 id="chapter-10-afternoon-rest">第十章：在那休憩与反省的午后</h2>
+
+[音乐] TOMOO〈ソナーレ〉｜4分24秒
+
+[在网易云音乐收听](https://music.163.com/#/song?id=3328819101 "netease:3328819101")
 
 ![橙色背景上两名粉发与灰发角色相拥的插画](attachments/wechat/EmcatbI58HW7XMIVqyROgg/001.jpg)
 
@@ -3423,6 +3463,10 @@ Furihata Setsuo, Furihata Setsuo chosakushū [Collected works of Furihata Setsuo
 
 <h2 id="chapter-11-yanagida-negation">第十一章：否定到底：柳田謙十郎、西田哲学与宗教式马克思主义</h2>
 
+[音乐] 黒木渚〈あたしの心臓あげる〉｜5分46秒
+
+[在网易云音乐收听](https://music.163.com/#/song?id=26325748 "netease:26325748")
+
 *川村覚文（Satofumi Kawamura）著，单字一兔试译。原作〈Yanagida Kenjūrō: A Religious Seeker of Marxism〉载《Confronting Capital and Empire》（2017）；注释从省。*
 
 [图题] 封面：@兔猫锚（pid=144632656）。
@@ -3623,6 +3667,10 @@ Furihata Setsuo, Furihata Setsuo chosakushū [Collected works of Furihata Setsuo
 [^ch11-26]: 同上，190页。
 
 <h2 id="chapter-12-tosaka-secret-history">第十二章：一段隐秘的历史：户坂润与诸京都学派</h2>
+
+[音乐] ONE OK ROCK〈内秘心書〉｜3分37秒
+
+[在网易云音乐收听](https://music.163.com/#/song?id=794303 "netease:794303")
 
 ![两名粉发与灰发角色相拥，其中一组画面表现亲吻的插画](attachments/wechat/CVdsnEa83xASHeY6I1Ft-g/001.jpg)
 

@@ -7,7 +7,7 @@
 - 保留正文 DOM block：`98`；移出 block：`11(platform-credit/navigation), 13(platform-credit/navigation)`。移出项仅为页面信用、CC BY、投稿推广与平台导航；CC BY 仅从正文展示块移出，许可事实已结构化保留在 canonical front matter `license`/rights，未删除许可证据。
 - 正文图片按 raw DOM placement 顺序保留 `21` 个：`1:body-001.png, 2:body-002.png, 3:body-003.png, 4:body-004.png, 5:body-005.png, 6:body-006.png, 7:body-007.png, 8:body-008.png, 9:body-009.png, 10:body-010.png, 11:body-011.png, 12:body-012.png, 13:body-013.png, 14:body-014.png, 15:body-015.jpg, 16:body-016.png, 17:body-017.png, 18:body-018.png, 19:body-019.png, 20:body-020.png, 21:body-021.png`；重复 placement 按 raw DOM 保留；cover 未冒充正文图；资产路径为 `attachments/wechat/7Xru7YVhciDU1Rc5q0246w/`。
 - 公开稿从 raw `#js_content` 恢复；正文论述、标题、三组块引文、实质行内强调与 source-backed notes 保留。逐篇复核纠正了 placement 13、14、15、18 的错误图片替代文本。
-- preservation omission 二审：raw placement 5 与 6 之间的正文说明“出自《真心为你》，这段对话更是直切主题。”此前漏收，现已按原 DOM 边界补回；原文可见音频卡以题名、来源账号和时长保留。文末“有关90年代的一切”“作为战败者的日本记忆”等为公众号相关阅读导航，未进入公开正文；它们不是作者论证的一部分，链接事实留在本篇证据与正文脚注中。
+- preservation omission 二审：raw placement 5 与 6 之间的正文说明“出自《真心为你》，这段对话更是直切主题。”此前漏收，现已按原 DOM 边界补回。原生音频卡 `Mzg5MjAwMDM0Nl8yMjQ3NDg5MjY2` 已按原题名、来源账号和 4分05秒时长恢复为站内播放器；MP3 为微信源实际提供的 64 kbps 文件（1,967,527 bytes；SHA-256 `7b94952b4a005c8a4f4371c93c7bdcbf0c7b027888b79d921f3294b8c857ef38`），R2 键为 `wechat-audio/Mzg5MjAwMDM0Nl8yMjQ3NDg5MjY2/original-64kbps.mp3`，Range 请求已验证。文末“有关90年代的一切”“作为战败者的日本记忆”等为公众号相关阅读导航，未进入公开正文；它们不是作者论证的一部分，链接事实留在本篇证据与正文脚注中。
 - 脚注调用：正文 `1–14` 共 `14` 个；GFM 定义同为 `1–14`，missing `0`、uncalled `0`。raw 的作者注释逐项闭合，未新增调用或注释。
 - 内联注号审计：`无未闭合的原始内联注号。`
 - 访谈/说话人审计：`非访谈稿；无说话人轮次转换。`

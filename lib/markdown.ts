@@ -32,6 +32,7 @@ import type { ArticleVideoSource } from "./article-media-contract";
 import type { ContentFormat } from "./posts";
 
 const SIZE_TITLE = /^\s*=(\d+)x(\d+)\s*$/; // Typora/Hexo 图片尺寸标注
+const VIDEO_SOURCE_TITLE = /^\s*=(\d+)x(\d+)\s+(\d{1,3}):([0-5]\d)\s*$/u;
 
 type SourceNote = {
   key: string;
@@ -1162,9 +1163,10 @@ function soleLink(node: TableFigureNode | undefined): TableFigureNode | undefine
 }
 
 /**
- * Convert one explicit podcast marker, its R2-managed MP3 and its published
- * cover into a semantic audio figure. The native controls remain as a no-JS
- * fallback; ArticleAudioRuntime adds the themed transport after hydration.
+ * Convert one explicit audio marker and its R2-managed MP3 into a semantic
+ * audio figure. A published cover is used when present but is never invented.
+ * The native controls remain as a no-JS fallback; ArticleAudioRuntime adds the
+ * themed transport after hydration.
  */
 function rehypeArticleAudio() {
   const walk = (parent: TableFigureNode) => {
@@ -1189,34 +1191,39 @@ function rehypeArticleAudio() {
       const width = Number(cover?.properties?.width);
       const height = Number(cover?.properties?.height);
       const audioSrc = rewriteArchiveAssetUrl(href);
-      if (
-        typeof coverSrc !== "string"
-        || !isR2AudioCoverUrl(coverSrc)
-        || !width
-        || !height
-        || coverSrc.slice(0, coverSrc.lastIndexOf("/")) !== audioSrc.slice(0, audioSrc.lastIndexOf("/"))
-      ) continue;
+      const hasPublishedCover =
+        typeof coverSrc === "string"
+        && isR2AudioCoverUrl(coverSrc)
+        && Boolean(width)
+        && Boolean(height)
+        && coverSrc.slice(0, coverSrc.lastIndexOf("/")) === audioSrc.slice(0, audioSrc.lastIndexOf("/"));
 
       const expectedSeconds = Number(duration[1]) * 60 + Number(duration[2]);
       stripParagraphMarker(caption, AUDIO_CAPTION_MARKER);
       const captionText = elementText(caption as Element).trim();
-      cover!.properties = {
-        ...(cover!.properties ?? {}),
-        className: ["article-audio-cover"],
-        loading: "eager",
-      };
+      if (hasPublishedCover) {
+        cover!.properties = {
+          ...(cover!.properties ?? {}),
+          className: ["article-audio-cover"],
+          loading: "eager",
+        };
+      }
 
-      children.splice(index, coverIndex - index + 1, {
+      children.splice(index, (hasPublishedCover ? coverIndex : linkIndex) - index + 1, {
         type: "element",
         tagName: "figure",
-        properties: { className: ["article-audio"] },
+        properties: {
+          className: ["article-audio", ...(hasPublishedCover ? [] : ["article-audio-compact"])],
+        },
         children: [
-          {
-            type: "element",
-            tagName: "div",
-            properties: { className: ["article-audio-artwork"] },
-            children: [cover!],
-          },
+          ...(hasPublishedCover
+            ? [{
+                type: "element" as const,
+                tagName: "div",
+                properties: { className: ["article-audio-artwork"] },
+                children: [cover!],
+              }]
+            : []),
           {
             type: "element",
             tagName: "div",
@@ -1226,7 +1233,10 @@ function rehypeArticleAudio() {
                 type: "element",
                 tagName: "p",
                 properties: { className: ["article-audio-kicker"] },
-                children: [{ type: "text", value: "ROOF PODCAST / EPISODE" }],
+                children: [{
+                  type: "text",
+                  value: hasPublishedCover ? "ROOF PODCAST / EPISODE" : "ROOF AUDIO / ARCHIVE",
+                }],
               },
               {
                 type: "element",
@@ -1356,6 +1366,7 @@ function rehypeArticleVideos() {
       if (!markerParagraph(caption, VIDEO_CAPTION_MARKER)) continue;
 
       const sources: ArticleVideoSource[] = [];
+      const durations = new Set<number>();
       let lastLinkIndex = index;
       let linkIndex = significantSibling(children, index + 1, 1);
       while (linkIndex >= 0) {
@@ -1363,11 +1374,13 @@ function rehypeArticleVideos() {
         const href = link?.properties?.href;
         const title = link?.properties?.title;
         if (typeof href !== "string" || !isWechatVideoSource(href) || typeof title !== "string") break;
-        const size = SIZE_TITLE.exec(title);
+        const size = VIDEO_SOURCE_TITLE.exec(title);
         if (!size) break;
         const width = Number(size[1]);
         const height = Number(size[2]);
-        if (!width || !height) break;
+        const durationSeconds = Number(size[3]) * 60 + Number(size[4]);
+        if (!width || !height || !durationSeconds) break;
+        durations.add(durationSeconds);
         sources.push({
           label: `${height}P`,
           width,
@@ -1377,7 +1390,8 @@ function rehypeArticleVideos() {
         lastLinkIndex = linkIndex;
         linkIndex = significantSibling(children, linkIndex + 1, 1);
       }
-      if (sources.length === 0) continue;
+      if (sources.length === 0 || durations.size !== 1) continue;
+      const durationSeconds = [...durations][0];
       sources.sort((left, right) => right.height - left.height || right.width - left.width);
       const primary = sources[0];
       const originalHref = sources.find((source) => /\/original-\d+x\d+\.mp4$/u.test(source.src))?.src;
@@ -1400,6 +1414,7 @@ function rehypeArticleVideos() {
             properties: {
               className: ["article-video-player"],
               "data-roof-video": "r2",
+              "data-roof-video-duration": String(durationSeconds),
               ...(sources.length > 1
                 ? { "data-roof-video-sources": JSON.stringify(sources) }
                 : {}),

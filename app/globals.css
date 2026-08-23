@@ -770,6 +770,12 @@ body:has(main[data-archive-page="true"]) {
     border-color var(--theme-surface-duration) var(--theme-surface-easing),
     box-shadow var(--theme-surface-duration) var(--theme-surface-easing);
 }
+.art-body figure.article-audio-compact {
+  width: min(100%, 620px);
+}
+.art-body figure.article-audio-compact .article-audio-body {
+  padding: 22px 24px 20px;
+}
 .art-body .article-audio-artwork {
   position: relative;
   aspect-ratio: 1280 / 545;

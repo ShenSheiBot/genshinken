@@ -1,41 +1,41 @@
 {
   "conversion": "opencc-js:cn2t+t2cn",
-  "corpusFileCount": 473,
+  "corpusFileCount": 483,
   "fonts": {
     "UN Canon STFangsong": {
-      "bytes": 1655080,
-      "codePointCount": 6497,
+      "bytes": 1656188,
+      "codePointCount": 6502,
       "file": "un-canon-st-fangsong.woff2",
-      "sha256": "42094aa523e30b154d5dc66a1725c3124f9a742185d00ac221d214c94f60130d",
+      "sha256": "f0aa130ef11d16f5947aca6b1d09e6344451c7707baf4a5384c07ec5df62c94e",
       "source": "STFangsong.ttf",
       "sourceSha256": "e6326459e8e60e436c7d60e34d273bda3ba4eea2d2a5b309ff8f1b73200f2e38",
       "sourceUrl": "https://raw.githubusercontent.com/Haixing-Hu/latex-chinese-fonts/287399335ec1beb72062ce67c36eaa8bec35f386/chinese/%E4%BB%BF%E5%AE%8B%E4%BD%93/STFangsong.ttf"
     },
     "UN Canon STKaiti": {
-      "bytes": 2018872,
-      "codePointCount": 6497,
+      "bytes": 2019988,
+      "codePointCount": 6502,
       "file": "un-canon-st-kaiti.woff2",
-      "sha256": "c9216654861894e9d8e27571d6f160585621e92f0ba5e48c5b44ba969c5de353",
+      "sha256": "26e3d6ebf736c3f3d4ac380e79cc474a30128a73e264352b5bf42998b58a5860",
       "source": "STKaiti.ttf",
       "sourceSha256": "a29c99c161fc43ce6aba2d7c152065359c2cb3019be4ae6248171178cb7d04d5",
       "sourceUrl": "https://raw.githubusercontent.com/Haixing-Hu/latex-chinese-fonts/287399335ec1beb72062ce67c36eaa8bec35f386/chinese/%E6%A5%B7%E4%BD%93/STKaiti.ttf"
     },
     "UN Canon STSong": {
-      "bytes": 1625944,
-      "codePointCount": 6497,
+      "bytes": 1627412,
+      "codePointCount": 6502,
       "file": "un-canon-st-song.woff2",
-      "sha256": "eff4f484115c145fcc852066666680946cb6dd842155f68aede00006d535a7cd",
+      "sha256": "e71a22a1ddaa57c0c9d751c261a9b7425cb6e4dc2ee0d64c6d431dc22e624245",
       "source": "STSong.ttf",
       "sourceSha256": "c5cc2ed5e2c0e6385013fe82d950eee6960d805bd602b86c53ff454783f382c4",
       "sourceUrl": "https://raw.githubusercontent.com/Haixing-Hu/latex-chinese-fonts/287399335ec1beb72062ce67c36eaa8bec35f386/chinese/%E5%AE%8B%E4%BD%93/STSong.ttf"
     }
   },
-  "siteCodePointCount": 6588,
-  "siteCodePointSha256": "e7b3f3952fa3bef64d5cfd4eacf440e44a426669cb690e9776607c94a7ac4f59",
-  "sourceCodePointCount": 5681,
-  "sourceCodePointSha256": "13c8e7f50403e766807b60119811f9eb0cdeb19a89a55976a1fed76e7fb1a861",
+  "siteCodePointCount": 6593,
+  "siteCodePointSha256": "d21aa7107eee793bbe4aa00f86ca8ea564f6d098a4e21919b6ef38733ad98efb",
+  "sourceCodePointCount": 5684,
+  "sourceCodePointSha256": "54003249f1905ab6dbe3132cd0417c9e7963edabf5cf1430fd05ec3f131092fd",
   "strategy": "site-corpus-opencc-closure",
-  "subsetCodePointCount": 6497,
+  "subsetCodePointCount": 6502,
   "toolchainSha256": "b192f1da4344abea6d8568a33b15e3ecfb6d9f8242b22257639c7cf28d4424c3",
   "unsupportedSiteCodePointRanges": [
     "U+2027",

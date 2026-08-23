@@ -1,6 +1,7 @@
 # 研究京都學派：哲学、思想史与马克思对现代性的批判：微信归档编辑记录
 
 - sourceId：`gP04aas1lCQJFJZzsSQ9MA`；canonical URL：`https://mp.weixin.qq.com/s/gP04aas1lCQJFJZzsSQ9MA`。
+- 音乐卡复核：ずっと真夜中でいいのに。〈彷徨い酔い温度〉，网易云音乐 `1371306566`，4分51秒；公开稿在导论章首恢复官方外链播放器，不复制音频文件。
 - raw.html SHA-256：`cebd9fb6507fd494b48f1cb5c87f9c8bce650c575775f8ed8faa57a9b6855c8a`；精确 `#js_content` body.html SHA-256：`ee8799c58a120b3bc346a90c8f9ce3ddb8f5bed66ab371f88d3f59ec1cf1aceb`；顶层 DOM block：164（`p` 160、`section` 4）。
 - 正文图位按 raw DOM 事件顺序保留：`001.jpg`；1 个 placement、1 个 unique 资产。封面不计入正文；已按 original detail 目检为海边、浅绿色长发人物插画，公开稿使用内容性 alt，并恢复原页试译记中的 DarkAccel / pixiv ID 146943708 图题。
 - 责任链：正文试译记列出慕唯仁（Viren Murthy）、Fabian Schäfer、Max Ward；译文责任人为单字一兔。书目结构化为三位编者、Brill 2017《Confronting Capital and Empire: Rethinking Kyoto School Philosophy》全书导论；DOI：`10.1163/9789004343900_002`。微信仅作中文译文来源关系。

@@ -28,7 +28,9 @@ citation:
 
 <h2 id="part-1">上篇</h2>
 
-[图题] 高橋洋子《残酷天使的行动纲领》｜Kritik备用号｜4分05秒
+[音频] 高橋洋子《残酷天使的行动纲领》｜Kritik备用号｜4分05秒
+
+[收听原音](attachments/wechat-audio/Mzg5MjAwMDM0Nl8yMjQ3NDg5MjY2/original-64kbps.mp3 "04:05")
 
 ![《EVA》文章标题卡：神罚与自由的主体](attachments/wechat/7Xru7YVhciDU1Rc5q0246w/body-001.png)
 

@@ -48,9 +48,9 @@ citation:
 
 仅参加前夜祭并通过的稿件及其作者有 2 位：
 
-- 河豚酱酱酱，[《【作画讨论】无处不在的知觉：关于二维动画“眉目-头发”处理的体验与考据》](https://www.bilibili.com/video/BV16a411D7PA)（视频，19:02）
+- 河豚酱酱酱，[《【作画讨论】无处不在的知觉：关于二维动画“眉目－头发”处理的体验与考据》](/posts/animation-eyebrow-hair-perception-video)（视频，19:02）
 
-[![《无处不在的知觉》视频封面：二维眉目处理的体验与考据](/attachments/roof-archive/cv18100135/807184dc48e985f18978e101364120ee2e192a82.jpg)](https://www.bilibili.com/video/BV16a411D7PA)
+[![《无处不在的知觉》视频封面：二维眉目处理的体验与考据](/attachments/roof-archive/cv18100135/807184dc48e985f18978e101364120ee2e192a82.jpg)](/posts/animation-eyebrow-hair-perception-video)
 
 - 非木，[《沙耶之歌》的纯爱矩阵](https://zhuanlan.zhihu.com/p/385829684)
 

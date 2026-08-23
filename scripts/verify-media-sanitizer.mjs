@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { sanitizeMediaMaterial, sanitizePublicContentHtml } from "../lib/media-material.ts";
 import { renderMarkdown } from "../lib/markdown.ts";
+import { mediaDurationSeconds, readMinutes } from "../lib/reading-time.mjs";
 
 const malicious = `
   <p class="keep" data-state="safe" aria-label="正文" onclick="alert(1)" style="color:red">
@@ -86,6 +87,20 @@ assert.match(
 assert.match(wechatAudio, /class="article-audio-cover"/u);
 assert.doesNotMatch(wechatAudio, /\[音频\]|>收听原音</u);
 
+const coverlessWechatAudio = await renderMarkdown(`
+[音频] 高橋洋子《残酷天使的行动纲领》｜4分05秒
+
+[收听原音](attachments/wechat-audio/Mzg5MjAwMDM0Nl8yMjQ3NDg5MjY2/original-64kbps.mp3 "04:05")
+`);
+assert.match(
+  coverlessWechatAudio,
+  /<figure class="article-audio article-audio-compact">/u,
+  "a source-native audio card without published artwork must remain playable without an invented cover"
+);
+assert.match(coverlessWechatAudio, /<audio class="article-audio-native"/u);
+assert.doesNotMatch(coverlessWechatAudio, /article-audio-artwork/u);
+assert.doesNotMatch(coverlessWechatAudio, /ROOF PODCAST/u);
+
 const externalAudio = await renderMarkdown(`
 [音频] 不受信任的音频
 
@@ -122,12 +137,12 @@ assert.doesNotMatch(untrustedMusic, /<figure class="article-music"/u, "only the 
 const wechatVideo = await renderMarkdown(`
 [视频] 枫叶落在水面上的片段
 
-[播放视频](attachments/wechat-video/wxv_1831489258654580737/original-600x338.mp4 "=600x338")
+[播放视频](attachments/wechat-video/wxv_1831489258654580737/original-600x338.mp4 "=600x338 00:18")
 `);
 assert.match(wechatVideo, /<figure class="article-video">/u);
 assert.match(
   wechatVideo,
-  /<video class="article-video-player" data-roof-video="r2" src="https:\/\/assets\.labonroof\.top\/wechat-video\/wxv_1831489258654580737\/original-600x338\.mp4" poster="https:\/\/assets\.labonroof\.top\/wechat-video\/wxv_1831489258654580737\/poster-600x338\.jpg" controls preload="metadata" playsinline width="600" height="338" aria-label="枫叶落在水面上的片段"><\/video>/u,
+  /<video class="article-video-player" data-roof-video="r2" data-roof-video-duration="18" src="https:\/\/assets\.labonroof\.top\/wechat-video\/wxv_1831489258654580737\/original-600x338\.mp4" poster="https:\/\/assets\.labonroof\.top\/wechat-video\/wxv_1831489258654580737\/poster-600x338\.jpg" controls preload="metadata" playsinline width="600" height="338" aria-label="枫叶落在水面上的片段"><\/video>/u,
   "an explicit WeChat video marker must become a native player backed only by the R2 video collection"
 );
 assert.match(wechatVideo, /<figcaption class="article-video-caption">枫叶落在水面上的片段<\/figcaption>/u);
@@ -136,20 +151,35 @@ assert.doesNotMatch(wechatVideo, /\[(?:视频)\]|>播放视频</u);
 const multiQualityVideo = await renderMarkdown(`
 [视频] 同名视频论文
 
-[播放视频：1080P](attachments/wechat-video/wxv_example/original-1920x1080.mp4 "=1920x1080")
+[播放视频：1080P](attachments/wechat-video/wxv_example/original-1920x1080.mp4 "=1920x1080 01:30")
 
-[播放视频：480P](attachments/wechat-video/wxv_example/quality-480-854x480.mp4 "=854x480")
+[播放视频：480P](attachments/wechat-video/wxv_example/quality-480-854x480.mp4 "=854x480 01:30")
 `);
 assert.match(multiQualityVideo, /data-roof-video-sources=/u);
+assert.match(multiQualityVideo, /data-roof-video-duration="90"/u);
 assert.match(multiQualityVideo, /1080P/u);
 assert.match(multiQualityVideo, /480P/u);
 assert.equal((multiQualityVideo.match(/<video\b/gu) ?? []).length, 1);
 assert.doesNotMatch(multiQualityVideo, />播放视频[：:]?/u);
+assert.equal(mediaDurationSeconds(multiQualityVideo), 90, "quality alternatives must count one programme only");
+assert.equal(readMinutes(multiQualityVideo), 2, "video duration must contribute to the public reading estimate");
+assert.equal(readMinutes(wechatAudio), 86, "audio duration must contribute to the public reading estimate");
+
+const inconsistentVideoDuration = await renderMarkdown(`
+[视频] 时长声明冲突
+
+[播放视频：1080P](attachments/wechat-video/wxv_example/original-1920x1080.mp4 "=1920x1080 01:30")
+
+[播放视频：480P](attachments/wechat-video/wxv_example/quality-480-854x480.mp4 "=854x480 01:31")
+`);
+assert.doesNotMatch(inconsistentVideoDuration, /<video\b/iu, "quality alternatives must declare one shared duration");
+assert.match(inconsistentVideoDuration, /\[视频\]/u, "invalid duration metadata must remain visible for the corpus gate");
 
 const unsafeQualitySet = sanitizePublicContentHtml(`
 <video
   class="article-video-player"
   data-roof-video="r2"
+  data-roof-video-duration="90"
   data-roof-video-sources='[{"label":"1080P","width":1920,"height":1080,"src":"https://example.com/movie.mp4"}]'
   src="https://assets.labonroof.top/wechat-video/example/original-1920x1080.mp4"
   poster="https://assets.labonroof.top/wechat-video/example/poster-1920x1080.jpg"
@@ -161,7 +191,7 @@ assert.doesNotMatch(unsafeQualitySet, /<video\b/u, "a quality set may not smuggl
 const externalVideo = await renderMarkdown(`
 [视频] 不受信任的视频
 
-[播放视频](https://example.com/movie.mp4 "=600x338")
+[播放视频](https://example.com/movie.mp4 "=600x338 00:18")
 `);
 assert.doesNotMatch(externalVideo, /<video\b/iu, "external MP4 links must never become embedded players");
 

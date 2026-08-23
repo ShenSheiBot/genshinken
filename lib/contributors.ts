@@ -98,7 +98,12 @@ export const CONTRIBUTORS = [
   { id: "qian-shen", displayName: "浅神", aliases: [], teamMember: false },
   { id: "t-jun", displayName: "T君", aliases: ["T君"], teamMember: false },
   { id: "da-ping-mao", displayName: "大平猫", aliases: [], teamMember: false },
-  { id: "august-rush", displayName: "唯一指定真实August_Rush", aliases: [], teamMember: false },
+  {
+    id: "august-rush",
+    displayName: "唯一指定真实August_Rush",
+    aliases: ["唯一指定真实August_Rash"],
+    teamMember: false,
+  },
   { id: "san-yi-jun", displayName: "三翼菌", aliases: [], teamMember: false },
   { id: "leontopodium-edelweiss", displayName: "Leontopodium Edelweiss", aliases: [], teamMember: false },
   { id: "shi-zai-gou-zi", displayName: "实在狗子", aliases: ["潜在狗子"], teamMember: false },
@@ -203,7 +208,7 @@ export const CONTRIBUTORS = [
   { id: "karatani-kojin", displayName: "柄谷行人", aliases: [], teamMember: false },
   { id: "ju-zi", displayName: "橘子", aliases: [], teamMember: false },
   { id: "mikan", displayName: "みかん", aliases: [], teamMember: false },
-  { id: "kong-bu-ru-si", displayName: "恐怖如斯", aliases: [], teamMember: false },
+  { id: "kong-bu-ru-si", displayName: "恐怖如斯！", aliases: ["恐怖如斯"], teamMember: false },
   { id: "phaedo", displayName: "Phaedo", aliases: [], teamMember: false },
   { id: "phaedrus", displayName: "Phaedrus", aliases: [], teamMember: false },
   { id: "kafak", displayName: "KAFAK", aliases: [], teamMember: false },
@@ -240,6 +245,12 @@ export const CONTRIBUTORS = [
   { id: "adam-lowenstein", displayName: "Adam Lowenstein", aliases: [], teamMember: false },
   { id: "will", displayName: "will", aliases: [], teamMember: false },
   { id: "pause-and-select", displayName: "pause and select", aliases: ["Pause and Select"], teamMember: false },
+  { id: "fei-le", displayName: "斐乐", aliases: [], teamMember: false },
+  { id: "tu-sun", displayName: "兔狲", aliases: [], teamMember: false },
+  { id: "matsutaka", displayName: "Matsutaka", aliases: [], teamMember: false },
+  { id: "sai-ke-xin", displayName: "赛克心", aliases: [], teamMember: false },
+  { id: "dearbear", displayName: "dearbear", aliases: [], teamMember: false },
+  { id: "shan-qi-yi-luo", displayName: "山崎一罗", aliases: [], teamMember: false },
   {
     id: "qun-qing-qi-hao-lou",
     displayName: "群青七号楼",
@@ -432,7 +443,7 @@ export const CONTRIBUTORS = [
   { id: "tian-keng", displayName: "天坑", aliases: [], teamMember: false },
   { id: "ctfe", displayName: "CTFE", aliases: [], teamMember: false },
   { id: "yisensei04", displayName: "Yisensei04", aliases: [], teamMember: false },
-  { id: "he-tun", displayName: "河豚", aliases: [], teamMember: false },
+  { id: "he-tun", displayName: "河豚", aliases: ["河豚酱酱酱"], teamMember: false },
   { id: "shuang-zhu", displayName: "双柱", aliases: ["雙柱"], teamMember: false },
   {
     id: "omochinasai-anata-no-nozonda-sono-hoshi-o",
@@ -577,6 +588,17 @@ export const CONTRIBUTORS = [
   { id: "zuan-shi", displayName: "钻石", aliases: [], teamMember: false },
   { id: "takizawa-fumina", displayName: "滝沢文那", aliases: [], teamMember: false },
   { id: "shigawa", displayName: "シガワ", aliases: [], teamMember: false },
+  { id: "vall", displayName: "Vall", aliases: [], teamMember: false },
+  { id: "blautoothdmand", displayName: "blautoothdmand", aliases: [], teamMember: false },
+  { id: "why7682", displayName: "why7682", aliases: [], teamMember: false },
+  {
+    id: "animal-crossing-honest-official",
+    displayName: "动物之森老实人_official",
+    aliases: [],
+    teamMember: false,
+  },
+  { id: "you-shi-ting", displayName: "游师庭", aliases: [], teamMember: false },
+  { id: "ueno-chizuko", displayName: "上野千鹤子", aliases: ["上野千鶴子"], teamMember: false },
 ] as const satisfies readonly Contributor[];
 
 export type ContributorId = (typeof CONTRIBUTORS)[number]["id"];

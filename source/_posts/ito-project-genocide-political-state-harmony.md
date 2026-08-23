@@ -20,6 +20,12 @@ citation:
 
 ![秘则为花作者卡及题句“高岸为谷，深谷为陵”](attachments/roof-archive/cv4975791/01-mi-ze-wei-hua-author-card.png)
 
+[视频] 本文视频版｜制作：天下丶通宵；配音：杏仁；封面：啊呀
+
+[播放视频：1080P](attachments/wechat-video/wxv_1520578916082565121/original-1920x1080.mp4 "=1920x1080 06:24")
+
+[播放视频：480P](attachments/wechat-video/wxv_1520578916082565121/quality-480-852x480.mp4 "=852x480 06:24")
+
 ## 1. 人类恶意与大屠杀
 
 一切从《虐杀器官》开始，是关于大屠杀的故事。

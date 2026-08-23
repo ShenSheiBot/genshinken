@@ -206,6 +206,7 @@ export function sanitizePublicContentHtml(html: string): string {
       return !(
         classes.has("article-video-player") &&
         frame.attribs["data-roof-video"] === "r2" &&
+        /^[1-9]\d*$/u.test(frame.attribs["data-roof-video-duration"] || "") &&
         isR2VideoUrl(source) &&
         isR2VideoPosterUrl(poster) &&
         validVideoSourceSet(frame.attribs["data-roof-video-sources"], source)

@@ -236,7 +236,7 @@ P1/P2/P4/P5 由 `scripts/validate-content.mjs` 的 `validateProseTypography` 在
 ```markdown
 [视频] 枫叶落在水面上的片段
 
-[播放视频](attachments/wechat-video/wxv_example/original-600x338.mp4 "=600x338")
+[播放视频](attachments/wechat-video/wxv_example/original-600x338.mp4 "=600x338 01:42")
 ```
 
 源平台确实提供多个画质时，逐档登记真实文件，不把同一文件复制后伪装成多档，也不为凑选项机械转码：
@@ -244,12 +244,12 @@ P1/P2/P4/P5 由 `scripts/validate-content.mjs` 的 `validateProseTypography` 在
 ```markdown
 [视频] 同名视频论文｜文案：作者；视频：制作者；旁白：配音者
 
-[播放视频：1080P](attachments/wechat-video/wxv_example/original-1920x1080.mp4 "=1920x1080")
+[播放视频：1080P](attachments/wechat-video/wxv_example/original-1920x1080.mp4 "=1920x1080 12:34")
 
-[播放视频：480P](attachments/wechat-video/wxv_example/quality-480-854x480.mp4 "=854x480")
+[播放视频：480P](attachments/wechat-video/wxv_example/quality-480-854x480.mp4 "=854x480 12:34")
 ```
 
-构建时它转换为带原生控制条、`preload="metadata"` 和 `playsinline` 的 `<video>`，但不自动播放；多档源显示站内清晰度选择器，切换时保留时间点、暂停状态和播放速度。`original-WxH.mp4` 同目录必须提供 `poster-WxH.jpg`，避免元数据加载前出现黑框。只有该显式标记和 `assets.labonroof.top/wechat-video/` 下的已登记 MP4／海报能通过净化器；外站 MP4、iframe、伪造的清晰度数据及手写视频 HTML 仍被拒绝。视频与海报的键、字节数、MIME、SHA-256 同样进入 `editorial-sources/wechat/assets-manifest.json`，并由 `verify:wechat-assets-ready` 在 clean clone 校验。若微信视频专页明确回指站内完整论稿，应将视频及独立视频职责并入完整论稿，而不是为平台空正文另造页面。
+链接 title 同时声明真实尺寸与 `MM:SS` 时长；同一视频的各清晰度必须重复同一时长。构建时它转换为带原生控制条、`preload="metadata"` 和 `playsinline` 的 `<video>`，但不自动播放；多档源显示站内清晰度选择器，切换时保留时间点、暂停状态和播放速度，且只按一个节目计入页面预计阅读时间。`original-WxH.mp4` 同目录必须提供 `poster-WxH.jpg`，避免元数据加载前出现黑框。只有该显式标记和 `assets.labonroof.top/wechat-video/` 下的已登记 MP4／海报能通过净化器；外站 MP4、iframe、伪造的清晰度／时长数据及手写视频 HTML 仍被拒绝。视频与海报的键、字节数、MIME、SHA-256 同样进入 `editorial-sources/wechat/assets-manifest.json`，并由 `verify:wechat-assets-ready` 在 clean clone 校验。若微信视频专页明确回指站内完整论稿，应将视频及独立视频职责并入完整论稿，而不是为平台空正文另造页面。
 
 微信原生播客音频使用同一边界：先将真实 MP3 与节目封面归档到 `wechat-audio/<voice-id>/`，再以 `[音频]`、带 `MM:SS` 时长 title 的音频链接和一张显式尺寸封面组成播放器：
 
@@ -261,7 +261,7 @@ P1/P2/P4/P5 由 `scripts/validate-content.mjs` 的 `validateProseTypography` 在
 ![节目封面](attachments/wechat-audio/voice-id/poster-1280x545.jpg "=1280x545")
 ```
 
-构建产物保留原生 `<audio controls>` 作为无脚本后备；正常界面提供播放／暂停、前后15秒、进度与倍速控制，不自动播放。净化器只放行已登记的 `assets.labonroof.top/wechat-audio/` MP3；音频和封面必须逐字节校验、支持 CDN Range 请求，并进入微信公开资产合同。正文已有完整 show notes 时，播放器进入同一完整文章，不另造只有音频的空页面。
+构建产物保留原生 `<audio controls>` 作为无脚本后备；正常界面提供播放／暂停、前后15秒、进度与倍速控制，不自动播放。title 中的时长同时计入页面预计阅读时间。净化器只放行已登记的 `assets.labonroof.top/wechat-audio/` MP3；音频和封面必须逐字节校验、支持 CDN Range 请求，并进入微信公开资产合同。正文已有完整 show notes 时，播放器进入同一完整文章，不另造只有音频的空页面。
 
 原文嵌有 QQ 音乐卡而临时播放 URL 已失效时，先按曲名、表演者、专辑和时长核定同一录音，再使用国内匿名可播的网易云音乐官方外链。在原位置写 `[音乐]` 和一条同时包含官方 song URL 与同 id title 的链接：
 

@@ -1,6 +1,7 @@
 # 哲学与应答性：京都学派与世界史的顿悟时刻：微信归档编辑记录
 
 - sourceId：`Osm1T34vW_XD3YKYDzgpOw`；canonical：`https://mp.weixin.qq.com/s/Osm1T34vW_XD3YKYDzgpOw`；公开日：2026-07-17。
+- 音乐卡复核：Blume popo〈幸福のすべて〉，网易云音乐 `1893609787`，4分25秒；公开稿在第一章章首恢复官方外链播放器。
 - raw.html SHA-256：`26b62d679711de8047c3a9064e0d8548c33b6d67ae1980e795f64a038931a69a`；#js_content body.html SHA-256：`7230333f63fe20366d6fd4556ff73c622d579c6dc2fd9eeaf1e4190cd81e69cf`。
 - 原作 Harry Harootunian〈Philosophy and Answerability: The Kyoto School and the Epiphanic Moment of World History〉，载 *Confronting Capital and Empire*（2017）；页面作者字段、题名前缀“译札”和正文“试译记”共同支持译者为单字一兔，已补入章节责任链。正文 1 个图片 placement/1 个 unique body 资产，按原序保留。29 个脚注调用/29 个定义闭合。
 - 微信头部的原作/书名/试译身份、“注释从省”与学习交流说明均保留在章首来源行；封面署名 @DarkAccel（pixiv ID 132885765）恢复为语义图题。通用公众号推荐尾部删除，许可：CC BY-NC-SA 4.0。
