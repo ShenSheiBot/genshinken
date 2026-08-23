@@ -214,8 +214,9 @@ P1/P2/P4/P5 由 `scripts/validate-content.mjs` 的 `validateProseTypography` 在
 
 - 屋顶历史归档：`attachments/roof-archive/...`，使用既有 `assets:manifest / assets:upload / assets:verify`。
 - 微信归档：`attachments/wechat/...`。原始抓取、未采用图片与批量上传库存保留在 Git 外；预先上传到 R2 不代表进入本站公开合同。
-- 产品仓库只登记公开 Markdown 实际使用的 R2 键。提交文章前，将最终采用的图片键、字节数与 MIME 并入
-  `editorial-sources/wechat/assets-manifest.json`，且该清单必须保持 `public: true`。
+- 产品仓库只登记公开 Markdown 实际使用的 R2 键。完成图片删留后运行
+  `npm run assets:wechat:register -- SOURCE_DIR FINAL_MARKDOWN`；命令从该篇抓取清单机械登记最终稿采用的图片，
+  不要求编辑手填资产信息，也不会登记未采用库存。公开清单必须保持 `public: true`。
 - `verify:wechat-assets-ready` 会在 clean clone 中确认每个公开引用都有已发布清单记录；运行时不读取整份清单，凡已提交的
   `attachments/wechat/...` 路径都会直接改写到 `assets.labonroof.top`。
 - raw HTML、未采用图片和批量抓取库存留在 Git 外，不进入产品运行时，也不要求 GitHub CI 访问 `.local-archive`。

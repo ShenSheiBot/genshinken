@@ -37,6 +37,12 @@ npm run convert:wechat -- SOURCE_DIR OUTPUT_PREFIX [ASSET_BASE]
 
 转换器只映射 HTML 中明确存在的标题、段落、引文、列表、表格、强调、链接、图片和媒体节点；不判断作者职责，不删除推广或二维码，也不凭字号、边框和措辞猜测标题、图题或正文价值。无法直接表达的媒体会留下待处理标记和本地 IR 诊断，`validate:content` 会阻止该标记进入公开稿。编辑仍须完整阅读原页面，决定署名、删留、语义层级、系列关系和最终版式；IR 是临时诊断，不是提交所需的保全账簿。
 
+完成正文删留后，用同一源目录把最终 Markdown 实际采用的图片登记到公开资产合同；命令只复制抓取清单中已有的文件信息，不选择图片、不上传整批库存：
+
+```bash
+npm run assets:wechat:register -- SOURCE_DIR FINAL_MARKDOWN
+```
+
 - 文章和书籍使用显式 ASCII slug；专题以稳定 ASCII slug 为身份，省略 front matter `slug` 时由 ASCII 文件名提供默认值。
 - `section`、分类、标签、贡献者和专题是不同维度，不能互相推导替代。
 - 已发布书籍章节生成独立 canonical 和 sitemap 项；构建期按 manifest anchor 切分 Markdown，并只附带本章引用的注释。书籍构建源不生成 `/posts/` 页面。

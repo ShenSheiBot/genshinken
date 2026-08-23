@@ -416,7 +416,7 @@ const translationCorpusRelative = translationCorpusFiles.map((file) => (
 assert.deepEqual(
   translationFontManifest.corpusFiles,
   translationCorpusRelative,
-  "Japanese font corpus inventory is stale; run python scripts/build-translation-font-subsets.py"
+  "Japanese font corpus inventory is stale; run python3 scripts/build-translation-font-subsets.py"
 );
 const translationCorpusDigest = crypto.createHash("sha256");
 const translationTargetCodePoints = new Set();
