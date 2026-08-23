@@ -16,7 +16,7 @@ sources:
   - id: roof-zh
     language: zh-Hans
     path: source/_posts/fear-of-monsters-america-home-of-titans.md
-    revision: sha256:20af6322b15e4be74d35cdc513c2d4ec5595be51034be05b5e7d23e6007a653c
+    revision: sha256:1124d8ab29affbdacf6329946e4577362126a917d3b162046d75a67fe5b22921
     title: 惧兽：美国何以成为泰坦的故乡
     author: 哲哥
     coverage: Complete Roof essay, including the prize notice, four figures, five block quotations, and nine-item bibliography.
@@ -27,7 +27,7 @@ segments:
     role: roof-original-body
     source_language: zh-Hans
     base_edition: roof-zh
-    source_revision: sha256:20af6322b15e4be74d35cdc513c2d4ec5595be51034be05b5e7d23e6007a653c
+    source_revision: sha256:1124d8ab29affbdacf6329946e4577362126a917d3b162046d75a67fe5b22921
     source_locator: Complete Markdown body after front matter.
     roof_presence: complete
     coverage: complete

@@ -437,9 +437,9 @@ CODA整部完全是对于梦想的辨证，梦想只有在严重的斗争，付�
 
 ## 编者按
 
-![小木曾雪菜动画画面](attachments/roof-archive/cv2071126/11-ogiso-setsuna.png)
+[图题] 祝小木曾雪菜生日快乐。
 
-祝小木曾雪菜生日快乐。
+![小木曾雪菜动画画面](attachments/roof-archive/cv2071126/11-ogiso-setsuna.png)
 
 ### 相关文章
 

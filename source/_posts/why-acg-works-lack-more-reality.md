@@ -39,9 +39,9 @@ citation:
 
 如果我们将前者比喻为硬核死宅，他否定三次元的一切，那么后者自然就是没有那么硬核的死宅，他承认三次元，但同时热爱着二次元，如果你把二次元（妄想）从它这里抽走了，那么三次元（现实）本身也就没有意义了。
 
-![《CHAOS;HEAD NOAH》角色群像](attachments/roof-archive/cv1828906/02-chaos-head.png)
+[图题] 插入本图是因为作者喜欢《chaos head》。
 
-插入本图是因为作者喜欢《chaos head》。
+![《CHAOS;HEAD NOAH》角色群像](attachments/roof-archive/cv1828906/02-chaos-head.png)
 
 用理查德布斯比的话说，超越幻象并不是丢弃幻想，正好相反，超越幻象是使我们比以往更受幻象的支配，在这个过程了，我们与幻想的真正内核产生了超越想象的更加紧密的联系。
 

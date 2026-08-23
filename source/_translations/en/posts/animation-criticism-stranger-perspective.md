@@ -15,16 +15,16 @@ credits:
 translation_method: agent
 source_relationship: direct
 base_language: zh-Hans
-source_revision: "sha256:7fde80751e57ea0b0af33deaaa33f55d79d3fe20e7e618e8c25ed49e1d92dad9"
+source_revision: "sha256:94713cf180004691aa040584a8def4c22c7c6ef9cf7ab9c9d713a6fcd160f920"
 source_revision_scope: translation-payload
-updated: 2026-08-21
+updated: 2026-08-22
 rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-![Author card for Zhong Zimo listing his research interests and self-introduction](attachments/roof-archive/cv1652116/01-zhong-zimo-author-card.jpg)
+[图题] Teacher Zhong is very likable.
 
-Teacher Zhong is very likable.
+![Author card for Zhong Zimo listing his research interests and self-introduction](attachments/roof-archive/cv1652116/01-zhong-zimo-author-card.jpg)
 
 (This article came from a spur-of-the-moment impulse while chatting in a group. I will venture to talk about anime criticism from personal experience and share some thoughts and attitudes.)
 

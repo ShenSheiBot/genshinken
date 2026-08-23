@@ -19,9 +19,9 @@ citation:
   extra: "作者钟子默；经授权转载。"
 ---
 
-![钟子默作者卡，列有其研究兴趣与自我介绍](attachments/roof-archive/cv1652116/01-zhong-zimo-author-card.jpg)
+[图题] 钟老师令人喜欢
 
-钟老师令人喜欢
+![钟子默作者卡，列有其研究兴趣与自我介绍](attachments/roof-archive/cv1652116/01-zhong-zimo-author-card.jpg)
 
 （本文是水群时的一时兴起，斗胆从个人经验谈谈漫评话题。分享想法和态度。）
 

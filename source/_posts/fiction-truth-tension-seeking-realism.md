@@ -20,9 +20,9 @@ citation:
 
 ![乌有之人作者卡及题句](attachments/roof-archive/cv2031971/01-wu-you-zhi-ren-author-card.jpg)
 
-![《凉宫春日的忧郁》中阿虚谈虚构与真实感](attachments/roof-archive/cv2031971/02-haruhi-fiction-realism.png)
+[图题] 7图：在虚构的故事里寻求真实感的人脑子一定有问题——虚。
 
-7图：在虚构的故事里寻求真实感的人脑子一定有问题——虚。
+![《凉宫春日的忧郁》中阿虚谈虚构与真实感](attachments/roof-archive/cv2031971/02-haruhi-fiction-realism.png)
 
 不论是否看过《凉宫春日》，相信大家对于虚的这句名言都不会陌生。单凭这句话本身并不违反我们的直觉，毕竟虚构本身就不同于现实。但如果考虑这句话所处的语境——它恰恰出现于一个虚构的故事中——它就成为了一个如同说谎者一般的悖论性的语句。
 
@@ -206,6 +206,6 @@ A在SM中既不真也不假，当且仅当，A对于M的一部分经典扩张为
 
 ## 编者按
 
-![编者按配图：完全败北](attachments/roof-archive/cv2031971/13-editor-defeated.jpg)
+[图题] 完全败北
 
-完全败北
+![编者按配图：完全败北](attachments/roof-archive/cv2031971/13-editor-defeated.jpg)

@@ -15,9 +15,9 @@ credits:
 translation_method: agent
 source_relationship: mixed
 base_language: zh-Hans
-source_revision: "sha256:23512b0f9cdf7592c76979652ff07a21cf7f122e1f9cdc16247749ca825bcf02"
+source_revision: "sha256:b1c9ca8b886f56f8bf375a90f3d896c411c054ac108d160af5f967703e4d7214"
 source_revision_scope: translation-payload
-updated: 2026-08-21
+updated: 2026-08-22
 rights: CC BY-NC-SA 4.0
 format: article
 ---
@@ -64,9 +64,9 @@ format: article
 
 ――*L’arrestation d’Arsène Lupin*
 
-![東京の路上で社会問題を語る通行人の会話画面](attachments/roof-archive/cv1550227/06-tokyo-npc-dialogue.png)
+[图题] こうした社会的隠喩としてのNPCの言葉は、『P5』には非常に多い。そこに何の意味もないのだろうか。
 
-こうした社会的隠喩としてのNPCの言葉は、『P5』には非常に多い。そこに何の意味もないのだろうか。
+![東京の路上で社会問題を語る通行人の会話画面](attachments/roof-archive/cv1550227/06-tokyo-npc-dialogue.png)
 
 東京に入ると、通行人からは、警察は役に立たない「税金泥棒」だ、この国はすでに歪んでいて、まともな政治家も希望もない、といった不満が聞こえてくる。店長もまた、社会には逆らえない秩序や権力があると語る。
 

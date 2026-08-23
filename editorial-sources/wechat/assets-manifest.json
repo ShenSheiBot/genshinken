@@ -5,6 +5,48 @@
   "public": true,
   "assets": [
     {
+      "key": "wechat-audio/Mzg5MjAwMDM0Nl8yMjQ3NDg5MDU3/original-64kbps.mp3",
+      "bytes": 41128482,
+      "sha256": "6ffbb19ff9aa524bd223150c9f1dea00dba19a8609f53cc1b204002c484063a0",
+      "contentType": "audio/mpeg"
+    },
+    {
+      "key": "wechat-audio/Mzg5MjAwMDM0Nl8yMjQ3NDg5MDU3/poster-1280x545.jpg",
+      "bytes": 49875,
+      "sha256": "605e37bf2725f1a162743efaafe3b9a23b90fa97023f33f70990f5919fba977d",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat-video/wxv_1831489258654580737/original-600x338.mp4",
+      "bytes": 1116227,
+      "sha256": "161fe878b63626c0a9b32c0dc289dc590a0683bef36af834c877acae158cb85c",
+      "contentType": "video/mp4"
+    },
+    {
+      "key": "wechat-video/wxv_1831489258654580737/poster-600x338.jpg",
+      "bytes": 54240,
+      "sha256": "825c72e7cecb8bb67d9845699b3ce89e6899ba3158c368a33f689250ef2bff72",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat-video/wxv_2015520402189369345/original-1920x1080.mp4",
+      "bytes": 293193881,
+      "sha256": "a67842344ac9128f625d7ade02607105606dce21e2a9c0979f6304e006dd226e",
+      "contentType": "video/mp4"
+    },
+    {
+      "key": "wechat-video/wxv_2015520402189369345/poster-1920x1080.jpg",
+      "bytes": 194174,
+      "sha256": "572b879c46e91c2895d92ed437465daa52830a03ac945bfd59c7273de8ad780d",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat-video/wxv_2015520402189369345/quality-480-854x480.mp4",
+      "bytes": 92364302,
+      "sha256": "c03f59d225ad887bef593c80d2ef8613d406b5b41fcaa2153d603bcdf01e436c",
+      "contentType": "video/mp4"
+    },
+    {
       "key": "wechat/-DLlcdtQYm6QfGpbiRl3tw/body-001.png",
       "bytes": 506719,
       "sha256": "19fffbbbea97f64f6dacf4cb8531a4ace998f76c03c166cf4a7d5012f97bfd38",

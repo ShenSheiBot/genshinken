@@ -26,6 +26,8 @@ citation:
 
 ![《佐贺偶像是传奇》中的法兰秀秀](attachments/roof-archive/cv1705216/01-zombieland-saga-franchouchou.jpg)
 
+<!--source-centered-prose-->
+
 本文将借《佐贺》聊聊日系偶像这个狭义的偶像话题，再从更广的语境上一窥所谓精英/英雄偶像与大众/明星偶像的区别。
 
 **周四麻子、周日六花换老婆的朋友，<br>

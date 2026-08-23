@@ -13,6 +13,7 @@ import CreditLinks from "@/app/components/CreditLinks";
 import styles from "@/app/components/reading-edition/reading-edition.module.css";
 import { hanScriptLanguageTag, type HanScript } from "@/lib/han-script";
 import LanguageSwitcher from "@/app/components/translation/LanguageSwitcher";
+import ArticleMediaRuntime from "@/app/components/ArticleMediaRuntime";
 import type { EditionLanguageLink } from "@/lib/translations";
 import { countRenderedListItems, splitRenderedApparatus } from "@/lib/markdown";
 
@@ -190,6 +191,7 @@ export function ArticleFlow({
       </div>
       <Appendices parts={parts} />
       {children}
+      <ArticleMediaRuntime />
     </div>
   );
 }

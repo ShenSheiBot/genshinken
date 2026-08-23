@@ -1,6 +1,6 @@
 {
   "conversion": "opencc-js:cn2t+t2cn",
-  "corpusFileCount": 467,
+  "corpusFileCount": 473,
   "fonts": {
     "UN Canon STFangsong": {
       "bytes": 1655080,
@@ -32,8 +32,8 @@
   },
   "siteCodePointCount": 6588,
   "siteCodePointSha256": "e7b3f3952fa3bef64d5cfd4eacf440e44a426669cb690e9776607c94a7ac4f59",
-  "sourceCodePointCount": 5680,
-  "sourceCodePointSha256": "745ebac280cd829cd0d827139781a83f281022f1912dc4e214bc6dd4294ff0e0",
+  "sourceCodePointCount": 5681,
+  "sourceCodePointSha256": "13c8e7f50403e766807b60119811f9eb0cdeb19a89a55976a1fed76e7fb1a861",
   "strategy": "site-corpus-opencc-closure",
   "subsetCodePointCount": 6497,
   "toolchainSha256": "b192f1da4344abea6d8568a33b15e3ecfb6d9f8242b22257639c7cf28d4424c3",

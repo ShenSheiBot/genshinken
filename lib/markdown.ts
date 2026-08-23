@@ -21,6 +21,14 @@ import type { Root, Element } from "hast";
 import { sanitizePublicContentHtml } from "./media-material-runtime.mjs";
 import { rewriteArchiveAssetUrl } from "./archive-assets-runtime.mjs";
 import { escapeLiteralCurrencyDollars } from "./markdown-math.mjs";
+import {
+  isR2AudioCoverUrl,
+  isWechatAudioSource,
+  isWechatVideoSource,
+  neteaseSongIdFromTitle,
+  neteaseSongIdFromUrl,
+} from "./article-media-contract-runtime.mjs";
+import type { ArticleVideoSource } from "./article-media-contract";
 import type { ContentFormat } from "./posts";
 
 const SIZE_TITLE = /^\s*=(\d+)x(\d+)\s*$/; // Typora/Hexo 图片尺寸标注
@@ -949,6 +957,9 @@ function rehypeTableFigures() {
 
 const FIGURE_CAPTION_MARKER = "[图题]";
 const FIGURE_NOTE_MARKER = "[图注]";
+const AUDIO_CAPTION_MARKER = "[音频]";
+const MUSIC_CAPTION_MARKER = "[音乐]";
+const VIDEO_CAPTION_MARKER = "[视频]";
 const PROFILE_NAME_MARKER = "[人物]";
 const PROFILE_BIO_MARKER = "[人物简介]";
 const GALLERY_TITLE_MARKER = "[图组]";
@@ -968,6 +979,7 @@ const ARTICLE_LAYOUT_MARKERS = new Map([
 /** Discrete display widths; each needs a matching rule in globals.css. */
 const FIGURE_WIDTHS = new Set(["25", "33", "50", "66", "75", "100"]);
 const FIGURE_WIDTH_TITLE = /^\s*=\s*(\d{1,3})%\s*$/u;
+const AUDIO_DURATION_TITLE = /^\s*(\d{1,3}):([0-5]\d)\s*$/u;
 const BLOCK_MEDIA_MARKERS = [
   FIGURE_CAPTION_MARKER,
   FIGURE_NOTE_MARKER,
@@ -1136,6 +1148,288 @@ function soleImage(node: TableFigureNode | undefined): TableFigureNode | undefin
   if (elements.length !== 1) return undefined;
   const only = elements[0];
   return only.type === "element" && only.tagName === "img" ? only : undefined;
+}
+
+/** The lone anchor of a link-only paragraph, or undefined for mixed prose. */
+function soleLink(node: TableFigureNode | undefined): TableFigureNode | undefined {
+  if (node?.type !== "element" || node.tagName !== "p") return undefined;
+  const elements = (node.children ?? []).filter(
+    (child) => child.type !== "text" || /\S/u.test(child.value ?? "")
+  );
+  if (elements.length !== 1) return undefined;
+  const only = elements[0];
+  return only.type === "element" && only.tagName === "a" ? only : undefined;
+}
+
+/**
+ * Convert one explicit podcast marker, its R2-managed MP3 and its published
+ * cover into a semantic audio figure. The native controls remain as a no-JS
+ * fallback; ArticleAudioRuntime adds the themed transport after hydration.
+ */
+function rehypeArticleAudio() {
+  const walk = (parent: TableFigureNode) => {
+    const children = parent.children;
+    if (!children) return;
+
+    for (let index = 0; index < children.length; index += 1) {
+      const caption = children[index];
+      if (!markerParagraph(caption, AUDIO_CAPTION_MARKER)) continue;
+
+      const linkIndex = significantSibling(children, index + 1, 1);
+      const link = linkIndex >= 0 ? soleLink(children[linkIndex]) : undefined;
+      const href = link?.properties?.href;
+      const title = link?.properties?.title;
+      const duration = typeof title === "string" ? AUDIO_DURATION_TITLE.exec(title) : null;
+      if (typeof href !== "string" || !isWechatAudioSource(href) || !duration) continue;
+
+      const coverIndex = significantSibling(children, linkIndex + 1, 1);
+      const coverParagraph = coverIndex >= 0 ? children[coverIndex] : undefined;
+      const cover = soleImage(coverParagraph);
+      const coverSrc = cover?.properties?.src;
+      const width = Number(cover?.properties?.width);
+      const height = Number(cover?.properties?.height);
+      const audioSrc = rewriteArchiveAssetUrl(href);
+      if (
+        typeof coverSrc !== "string"
+        || !isR2AudioCoverUrl(coverSrc)
+        || !width
+        || !height
+        || coverSrc.slice(0, coverSrc.lastIndexOf("/")) !== audioSrc.slice(0, audioSrc.lastIndexOf("/"))
+      ) continue;
+
+      const expectedSeconds = Number(duration[1]) * 60 + Number(duration[2]);
+      stripParagraphMarker(caption, AUDIO_CAPTION_MARKER);
+      const captionText = elementText(caption as Element).trim();
+      cover!.properties = {
+        ...(cover!.properties ?? {}),
+        className: ["article-audio-cover"],
+        loading: "eager",
+      };
+
+      children.splice(index, coverIndex - index + 1, {
+        type: "element",
+        tagName: "figure",
+        properties: { className: ["article-audio"] },
+        children: [
+          {
+            type: "element",
+            tagName: "div",
+            properties: { className: ["article-audio-artwork"] },
+            children: [cover!],
+          },
+          {
+            type: "element",
+            tagName: "div",
+            properties: { className: ["article-audio-body"] },
+            children: [
+              {
+                type: "element",
+                tagName: "p",
+                properties: { className: ["article-audio-kicker"] },
+                children: [{ type: "text", value: "ROOF PODCAST / EPISODE" }],
+              },
+              {
+                type: "element",
+                tagName: "figcaption",
+                properties: { className: ["article-audio-caption"] },
+                children: caption.children ?? [],
+              },
+              {
+                type: "element",
+                tagName: "audio",
+                properties: {
+                  className: ["article-audio-native"],
+                  "data-roof-audio": "r2",
+                  "data-roof-audio-duration": String(expectedSeconds),
+                  src: audioSrc,
+                  controls: true,
+                  preload: "metadata",
+                  ...(captionText ? { "aria-label": captionText } : {}),
+                },
+                children: [],
+              },
+            ],
+          },
+        ],
+      });
+    }
+
+    for (const child of children) {
+      if (child.type === "element") walk(child);
+    }
+  };
+
+  return (tree: Root) => walk(tree as unknown as TableFigureNode);
+}
+
+/**
+ * Convert an explicit external-music marker and a verified NetEase song link
+ * into a semantic card. The server output remains a useful ordinary link;
+ * ArticleMusicRuntime adds NetEase's official outchain player after hydration.
+ */
+function rehypeArticleMusic() {
+  const walk = (parent: TableFigureNode) => {
+    const children = parent.children;
+    if (!children) return;
+
+    for (let index = 0; index < children.length; index += 1) {
+      const caption = children[index];
+      if (!markerParagraph(caption, MUSIC_CAPTION_MARKER)) continue;
+
+      const linkIndex = significantSibling(children, index + 1, 1);
+      const link = linkIndex >= 0 ? soleLink(children[linkIndex]) : undefined;
+      const href = link?.properties?.href;
+      const title = link?.properties?.title;
+      const hrefId = typeof href === "string" ? neteaseSongIdFromUrl(href) : undefined;
+      const titleId = typeof title === "string" ? neteaseSongIdFromTitle(title) : undefined;
+      if (!hrefId || hrefId !== titleId) continue;
+
+      stripParagraphMarker(caption, MUSIC_CAPTION_MARKER);
+      const captionText = elementText(caption as Element).trim();
+      delete link?.properties?.title;
+      link!.properties = {
+        ...(link!.properties ?? {}),
+        className: ["article-music-fallback"],
+        target: "_blank",
+        rel: "noopener noreferrer",
+      };
+
+      children.splice(index, linkIndex - index + 1, {
+        type: "element",
+        tagName: "figure",
+        properties: {
+          className: ["article-music"],
+          "data-roof-music": "netease",
+          "data-roof-music-id": hrefId,
+          ...(captionText ? { "aria-label": captionText } : {}),
+        },
+        children: [
+          {
+            type: "element",
+            tagName: "div",
+            properties: { className: ["article-music-head"] },
+            children: [
+              {
+                type: "element",
+                tagName: "p",
+                properties: { className: ["article-music-kicker"] },
+                children: [{ type: "text", value: "LISTEN / NETEASE CLOUD MUSIC" }],
+              },
+              {
+                type: "element",
+                tagName: "figcaption",
+                properties: { className: ["article-music-caption"] },
+                children: caption.children ?? [],
+              },
+            ],
+          },
+          {
+            type: "element",
+            tagName: "div",
+            properties: { className: ["article-music-player"], "data-music-player": "" },
+            children: [link!],
+          },
+        ],
+      });
+    }
+
+    for (const child of children) {
+      if (child.type === "element") walk(child);
+    }
+  };
+
+  return (tree: Root) => walk(tree as unknown as TableFigureNode);
+}
+
+/**
+ * Convert an explicit `[视频]` caption and one or more R2-managed MP4 links
+ * into a native player. Multiple declared sizes become an explicit quality
+ * set; arbitrary links and raw HTML never enter this path.
+ */
+function rehypeArticleVideos() {
+  const walk = (parent: TableFigureNode) => {
+    const children = parent.children;
+    if (!children) return;
+
+    for (let index = 0; index < children.length; index += 1) {
+      const caption = children[index];
+      if (!markerParagraph(caption, VIDEO_CAPTION_MARKER)) continue;
+
+      const sources: ArticleVideoSource[] = [];
+      let lastLinkIndex = index;
+      let linkIndex = significantSibling(children, index + 1, 1);
+      while (linkIndex >= 0) {
+        const link = soleLink(children[linkIndex]);
+        const href = link?.properties?.href;
+        const title = link?.properties?.title;
+        if (typeof href !== "string" || !isWechatVideoSource(href) || typeof title !== "string") break;
+        const size = SIZE_TITLE.exec(title);
+        if (!size) break;
+        const width = Number(size[1]);
+        const height = Number(size[2]);
+        if (!width || !height) break;
+        sources.push({
+          label: `${height}P`,
+          width,
+          height,
+          src: rewriteArchiveAssetUrl(href),
+        });
+        lastLinkIndex = linkIndex;
+        linkIndex = significantSibling(children, linkIndex + 1, 1);
+      }
+      if (sources.length === 0) continue;
+      sources.sort((left, right) => right.height - left.height || right.width - left.width);
+      const primary = sources[0];
+      const originalHref = sources.find((source) => /\/original-\d+x\d+\.mp4$/u.test(source.src))?.src;
+      if (!originalHref) continue;
+      const posterHref = originalHref.replace(
+        /\/original-\d+x\d+\.mp4$/u,
+        `/poster-${primary.width}x${primary.height}.jpg`
+      );
+      stripParagraphMarker(caption, VIDEO_CAPTION_MARKER);
+      const captionText = elementText(caption as Element).trim();
+
+      children.splice(index, lastLinkIndex - index + 1, {
+        type: "element",
+        tagName: "figure",
+        properties: { className: ["article-video"] },
+        children: [
+          {
+            type: "element",
+            tagName: "video",
+            properties: {
+              className: ["article-video-player"],
+              "data-roof-video": "r2",
+              ...(sources.length > 1
+                ? { "data-roof-video-sources": JSON.stringify(sources) }
+                : {}),
+              src: primary.src,
+              poster: posterHref,
+              controls: true,
+              preload: "metadata",
+              playsInline: true,
+              width: primary.width,
+              height: primary.height,
+              ...(captionText ? { "aria-label": captionText } : {}),
+            },
+            children: [],
+          },
+          {
+            type: "element",
+            tagName: "figcaption",
+            properties: { className: ["article-video-caption"] },
+            children: caption.children ?? [],
+          },
+        ],
+      });
+    }
+
+    for (const child of children) {
+      if (child.type === "element") walk(child);
+    }
+  };
+
+  return (tree: Root) => walk(tree as unknown as TableFigureNode);
 }
 
 /**
@@ -1492,6 +1786,9 @@ function createProcessor(
   .use(rehypeArticleLayouts)
   .use(rehypeTableFigures)
   .use(rehypeSplitCompactMediaMarkers)
+  .use(rehypeArticleAudio)
+  .use(rehypeArticleMusic)
+  .use(rehypeArticleVideos)
   .use(rehypeProfileFigures)
   .use(rehypeImageFigures)
   .use(rehypeImageGalleries)

@@ -18,9 +18,9 @@ citation:
   url: "https://www.bilibili.com/read/cv4145943/"
 ---
 
-![Austoria 作者卡](attachments/roof-archive/cv4145943/01-austoria-author-card.png "=66%")
+[图题] austoria做到了。
 
-austoria做到了。
+![Austoria 作者卡](attachments/roof-archive/cv4145943/01-austoria-author-card.png "=66%")
 
 ## 摘要
 

@@ -99,9 +99,9 @@ citation:
 
 ![四格抗议现场图：身穿水手服的莱斯莉·努涅斯手举标语，周围有示威者](attachments/wechat/lqXf-91n5w351LXX9dJntg/body-002.png)
 
-![抗议路口身穿水手服的莱斯莉·努涅斯站在示威者之间](attachments/wechat/lqXf-91n5w351LXX9dJntg/body-003.jpg)
+[图题] 图2 (series) & 图3. 竖起路障的抗议者破坏交通指示灯后，自发协助指挥交通的莱斯莉·努涅斯，她手举写着“!Transformacion!”的牌子；地点：维库尼亚·麦肯纳大道与圣伊莎贝尔街（Saint Isabel Street）交汇处，发布时间：2023年10月21日，录像由匿名摄影师提供。
 
-图2 (series) & 图3. 竖起路障的抗议者破坏交通指示灯后，自发协助指挥交通的莱斯莉·努涅斯，她手举写着“!Transformacion!”的牌子；地点：维库尼亚·麦肯纳大道与圣伊莎贝尔街（Saint Isabel Street）交汇处，发布时间：2023年10月21日，录像由匿名摄影师提供。
+![抗议路口身穿水手服的莱斯莉·努涅斯站在示威者之间](attachments/wechat/lqXf-91n5w351LXX9dJntg/body-003.jpg)
 
 用滑稽歌舞杂剧（burlesque）艺术家兼学者乔·威尔顿（Jo Weldon）的话说：
 

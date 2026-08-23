@@ -2,6 +2,8 @@ export const ROOF_ARCHIVE_ASSET_BASE_URL = "https://assets.labonroof.top";
 
 const ASSET_PREFIXES = new Map([
   ["attachments/roof-archive/", "roof-archive/"],
+  ["attachments/wechat-audio/", "wechat-audio/"],
+  ["attachments/wechat-video/", "wechat-video/"],
   ["attachments/wechat/", "wechat/"],
 ]);
 

@@ -15,9 +15,9 @@ credits:
 translation_method: agent
 source_relationship: mixed
 base_language: zh-Hans
-source_revision: "sha256:23512b0f9cdf7592c76979652ff07a21cf7f122e1f9cdc16247749ca825bcf02"
+source_revision: "sha256:b1c9ca8b886f56f8bf375a90f3d896c411c054ac108d160af5f967703e4d7214"
 source_revision_scope: translation-payload
-updated: 2026-08-18
+updated: 2026-08-22
 rights: CC BY-NC-SA 4.0
 format: article
 ---
@@ -64,9 +64,9 @@ As a work once characterized by what Hashino called a “picaresque romance,” 
 
 —*L’arrestation d’Arsène Lupin*
 
-![Tokyo pedestrians discussing social issues in *Persona 5*](attachments/roof-archive/cv1550227/06-tokyo-npc-dialogue.png)
+[图题] There are many NPC lines like these in *P5*, functioning as social metaphors. Are they really meaningless?
 
-There are many NPC lines like these in *P5*, functioning as social metaphors. Are they really meaningless?
+![Tokyo pedestrians discussing social issues in *Persona 5*](attachments/roof-archive/cv1550227/06-tokyo-npc-dialogue.png)
 
 After entering Tokyo, we hear a pedestrian complain: “The police are useless too. They're nothing but tax thieves.”
 

@@ -20,9 +20,9 @@ citation:
   url: "https://www.bilibili.com/read/cv2509776/"
 ---
 
-![Ophelia作者卡，题句“懒怠而卑微”](attachments/roof-archive/cv2509776/01-ophelia-author-card.jpg)
+[图题] ↑尊敬的、可爱的、博识的作者君。
 
-↑尊敬的、可爱的、博识的作者君。
+![Ophelia作者卡，题句“懒怠而卑微”](attachments/roof-archive/cv2509776/01-ophelia-author-card.jpg)
 
 > **我们到处寻找港口和海岸，**<br />
 > **旅行途中却是受尽了伤害，**<br />
@@ -41,9 +41,9 @@ citation:
 
 今年四月份《强袭魔女》四格改动画上映，十周年之际的诸多企划或许会将这个老牌IP推进一步，“强袭魔女”到“世界魔女”，或许501统合战斗航空团作为主角的故事也会在荧幕上告一段落。
 
-![强袭魔女501部队](attachments/roof-archive/cv2509776/02-strike-witches-501-unit.png)
+[图题] 强袭魔女501部队。
 
-强袭魔女501部队。
+![强袭魔女501部队](attachments/roof-archive/cv2509776/02-strike-witches-501-unit.png)
 
 从第一期魔女们与欧陆本土遥遥相望，到剧场版巴克霍隆与哈特曼隔着莱茵河眺望祖国说自己无法回去，《强袭魔女》的主角团，501统合航空战斗团这一支特殊的部队，似乎总是在硝烟弥漫中扮演着守望者的形象，**如同是海边岩石上的奥德修斯，而她们的四处支援和数次解散，也更让人想到乘船漂泊者，因战争而颠沛流离，从未真正能在哪一处停靠。**
 

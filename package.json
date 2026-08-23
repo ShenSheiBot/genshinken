@@ -28,6 +28,7 @@
     "typecheck": "tsc --noEmit --incremental false",
     "validate:content": "node --experimental-strip-types --no-warnings scripts/validate-content.mjs",
     "audit:roof-archive": "node scripts/audit-roof-archive.mjs",
+    "audit:roof-figures": "node scripts/audit-roof-figure-semantics.mjs",
     "audit:tags": "node scripts/audit-tags.mjs",
     "assets:manifest": "node scripts/manage-roof-assets.mjs build",
     "assets:upload": "node scripts/manage-roof-assets.mjs upload",

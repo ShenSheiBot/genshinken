@@ -231,6 +231,48 @@ P1/P2/P4/P5 由 `scripts/validate-content.mjs` 的 `validateProseTypography` 在
 - raw HTML 对照、正文遗漏裁决、来源身份抽取和库存上传属于提交前的本地归档流程，不进入产品运行时，也不要求 GitHub CI 访问
   `.local-archive`。公开稿仍须提交专篇 evidence；任何正文、脚注或图片删改通过普通 Git diff 和内容门禁接受审阅。
 
+微信原生视频保存在同一 R2 bucket 的 `wechat-video/` 前缀，正文只登记最终采用的 MP4，不把视频文件提交进 Git。需要在原位播放时，写一个 `[视频]` 标题段和一个或多个连续的 `attachments/wechat-video/...mp4` 链接；每个链接 title 都必须记录该源的真实分辨率：
+
+```markdown
+[视频] 枫叶落在水面上的片段
+
+[播放视频](attachments/wechat-video/wxv_example/original-600x338.mp4 "=600x338")
+```
+
+源平台确实提供多个画质时，逐档登记真实文件，不把同一文件复制后伪装成多档，也不为凑选项机械转码：
+
+```markdown
+[视频] 同名视频论文｜文案：作者；视频：制作者；旁白：配音者
+
+[播放视频：1080P](attachments/wechat-video/wxv_example/original-1920x1080.mp4 "=1920x1080")
+
+[播放视频：480P](attachments/wechat-video/wxv_example/quality-480-854x480.mp4 "=854x480")
+```
+
+构建时它转换为带原生控制条、`preload="metadata"` 和 `playsinline` 的 `<video>`，但不自动播放；多档源显示站内清晰度选择器，切换时保留时间点、暂停状态和播放速度。`original-WxH.mp4` 同目录必须提供 `poster-WxH.jpg`，避免元数据加载前出现黑框。只有该显式标记和 `assets.labonroof.top/wechat-video/` 下的已登记 MP4／海报能通过净化器；外站 MP4、iframe、伪造的清晰度数据及手写视频 HTML 仍被拒绝。视频与海报的键、字节数、MIME、SHA-256 同样进入 `editorial-sources/wechat/assets-manifest.json`，并由 `verify:wechat-assets-ready` 在 clean clone 校验。若微信视频专页明确回指站内完整论稿，应将视频及独立视频职责并入完整论稿，而不是为平台空正文另造页面。
+
+微信原生播客音频使用同一边界：先将真实 MP3 与节目封面归档到 `wechat-audio/<voice-id>/`，再以 `[音频]`、带 `MM:SS` 时长 title 的音频链接和一张显式尺寸封面组成播放器：
+
+```markdown
+[音频] 节目题名｜参与：甲、乙
+
+[收听原音](attachments/wechat-audio/voice-id/original-64kbps.mp3 "85:41")
+
+![节目封面](attachments/wechat-audio/voice-id/poster-1280x545.jpg "=1280x545")
+```
+
+构建产物保留原生 `<audio controls>` 作为无脚本后备；正常界面提供播放／暂停、前后15秒、进度与倍速控制，不自动播放。净化器只放行已登记的 `assets.labonroof.top/wechat-audio/` MP3；音频和封面必须逐字节校验、支持 CDN Range 请求，并进入微信公开资产合同。正文已有完整 show notes 时，播放器进入同一完整文章，不另造只有音频的空页面。
+
+原文嵌有 QQ 音乐卡而临时播放 URL 已失效时，先按曲名、表演者、专辑和时长核定同一录音，再使用国内匿名可播的网易云音乐官方外链。在原位置写 `[音乐]` 和一条同时包含官方 song URL 与同 id title 的链接：
+
+```markdown
+[音乐] 高橋洋子《魂のルフラン（Tabris Mix）》｜专辑《〜refrain〜》｜5分29秒
+
+[在网易云音乐收听](https://music.163.com/#/song?id=22806607 "netease:22806607")
+```
+
+构建产物先保留普通站外链接作为无脚本／地区不可用时的后备，客户端只对完全匹配的 `music.163.com/#/song?id=<数字>` 与 `netease:<同一数字>` 加载官方外链播放器；任意 iframe、第三方域名、两处 id 不一致或仅凭同名猜测的条目都不进入播放器。验收必须从目标地区网络真实点击播放，确认曲名、演唱者、版本与源卡吻合，并观察音频 Range 请求成功和播放时间前进；iframe 返回 200 不算可播证据。
+
 ### 图题、图注与图版宽度
 
 需要在页面上显示图题时，在图片**前**单独一行写 `[图题]`，图片**后**可继续写若干行 `[图注]`；
@@ -247,6 +289,7 @@ P1/P2/P4/P5 由 `scripts/validate-content.mjs` 的 `validateProseTypography` 在
 - **不加 `[图题]` 的图片保持裸 `<img>`**，不会自动把 `alt` 当作图题——`alt` 常是 `配图1` 一类占位说明，
   不应出现在版面上。图题写进 `[图题]`，`alt` 仍按无障碍需要描述图像。
 - 图片前后独占一段的斜体文字不得靠视觉邻接充当图题。它若描述图像，就迁移为图片前的 `[图题]`；若补充来源、版本、页码等信息，就迁移为图片后的 `[图注]`。确实属于与图片无关的独立斜体时，在该段前写 `<!--standalone-emphasis-->` 留下显式裁决；标记不进入公开 HTML。`verify:typography` 会拒绝未分类的图片相邻斜体。
+- 来源 HTML 中紧邻图片的居中灰字是待分类的版式证据，不能在转换时直接降为普通正文。逐项判断为图题、图注、人物说明、标题、提示或真正的正文；图题移动到对应图片前。确属普通正文时，在该段前写 `<!--source-centered-prose-->` 留下显式裁决。历史 B 站归档在本地源档可用时还须运行 `npm run audit:roof-figures`；clean-clone 门禁会另行拒绝紧邻未分类图片的“左图／右图／图 N／原画”等明确图题语言。
 - 图片 `title` 写作 `"=NN%"` 指定图版显示宽度，只接受 `25 / 33 / 50 / 66 / 75 / 100`
   （每档在 `app/globals.css` 有对应规则；窄屏下 25 与 33 自动放宽到 50）。缺省为原始尺寸上限。
   人像、肖像照一般用 `25`，横幅照片用 `50`，统计图表用 `100`。
@@ -485,7 +528,8 @@ groups:
 - `npm run verify:snapshot-history`：按 Git 基线检查 `editorial-sources/` 的追加式历史；既有快照修改、删除或改名即失败。
 - `npm run verify:preservation`：源文快照哈希、派生顺序、允许机械转换及逐项授权修订；执行正文 100% 保留／未授权差异 0 的零差异门禁。
 - `npm run validate:media-html`：多媒体资料 HTML 允许列表、主动内容和危险属性。
-- `npm run verify:typography`：Markdown 排版、标题、表格、脚注、媒体和危险协议契约，外加全语料渲染扫描（任何图版／特殊版式标记、未分类的图片相邻斜体或非法 `=NN%` 宽度存活到输出即失败）。
+- `npm run verify:typography`：Markdown 排版、标题、表格、脚注、媒体和危险协议契约，外加全语料渲染扫描（任何图版／特殊版式标记、未分类的图片相邻斜体、紧邻未分类图片的明确图题语言或非法 `=NN%` 宽度存活到输出即失败）。
+- `npm run audit:roof-figures`：读取本地 B 站源档，将“居中灰字”逐项回指公开稿；任何仍作为普通段落紧邻图片的精确匹配都会失败。该审计属于归档交付流程，不进入依赖 `.local-archive` 不存在的 GitHub CI。
 - `npm run verify:typography-registry`：§4.1／§4.2 的 `[TYPO-*]` 规则 ID 与执法检查的对应关系；文档新增规则而未登记检查或豁免即失败（执法方也可以是 e2e 规格，如 [TYPO-L1] 由 `tests/e2e/reader-line-justification.spec.ts` 把关）。
 - `npm run verify:book-capabilities`：非公开夹具验证文库分篇状态、锚点与原书／译本双书目契约。
 - `npm run verify:fonts`：CJK 语料、OpenCC 闭包、字体文件、大小、哈希与 CSS 缓存键。

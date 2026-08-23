@@ -2,6 +2,7 @@
 title: "从复制品到拟像：文艺消费的现代转向"
 title_breaks: ["从复制品到拟像：", "文艺消费的现代转向"]
 date: 2021-06-16
+updated: 2026-08-22
 slug: from-reproduction-to-simulacra-modern-turn-in-cultural-consumption
 script: hans
 categories: [御宅文化]
@@ -19,6 +20,12 @@ citation:
 ---
 
 ## 从复制品到拟像：文艺消费的现代转向
+
+[视频] 同名视频论文｜文案：米岡；视频：Loliiiico；旁白：盖井；制作：屋顶现视研视频小组
+
+[播放视频：1080P](attachments/wechat-video/wxv_2015520402189369345/original-1920x1080.mp4 "=1920x1080")
+
+[播放视频：480P](attachments/wechat-video/wxv_2015520402189369345/quality-480-854x480.mp4 "=854x480")
 
 ### 一、前言
 

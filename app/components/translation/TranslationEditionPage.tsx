@@ -11,6 +11,7 @@ import { splitRenderedApparatus } from "@/lib/markdown";
 import LanguageSwitcher from "./LanguageSwitcher";
 import TranslationDocumentIndex from "./TranslationDocumentIndex";
 import TranslationReferences from "./TranslationReferences";
+import ArticleMediaRuntime from "@/app/components/ArticleMediaRuntime";
 import { translationReferenceUi } from "./translationUi";
 import styles from "./translation-edition.module.css";
 
@@ -290,6 +291,7 @@ export default function TranslationEditionPage({
               ) : <span />}
             </nav>
           )}
+          <ArticleMediaRuntime />
         </div>
         {hasReferences && (
           <aside

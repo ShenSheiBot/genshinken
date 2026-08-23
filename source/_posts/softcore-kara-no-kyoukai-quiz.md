@@ -20,7 +20,7 @@ citation:
 
 ![hephaestus 作者卡及个人题句](attachments/roof-archive/cv2231163/01-hephaestus-author-card.png)
 
-姑且叫一份《空之境界》问卷？
+## 姑且叫一份《空之境界》问卷？
 
 你号指定软核写手又来丢人了，首先声明，这次的文章并非和其他作品一样“硬核向”，只想看各种理论阐释和严密分析的朋友可以关了。
 

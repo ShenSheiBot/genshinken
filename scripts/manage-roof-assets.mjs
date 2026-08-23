@@ -33,6 +33,8 @@ const mimeTypes = new Map([
   [".gif", "image/gif"],
   [".jpg", "image/jpeg"],
   [".jpeg", "image/jpeg"],
+  [".mp3", "audio/mpeg"],
+  [".mp4", "video/mp4"],
   [".png", "image/png"],
   [".webp", "image/webp"],
 ]);

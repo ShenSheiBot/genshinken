@@ -70,4 +70,107 @@ assert.match(
   "committed WeChat body images must render from the published R2 collection"
 );
 
+const wechatAudio = await renderMarkdown(`
+[音频] 地底人×屋顶播客｜参与：钻石、夜深人静、天坑
+
+[收听原音](attachments/wechat-audio/Mzg5MjAwMDM0Nl8yMjQ3NDg5MDU3/original.mp3 "85:41")
+
+![节目封面](attachments/wechat-audio/Mzg5MjAwMDM0Nl8yMjQ3NDg5MDU3/cover-1280x545.jpg "=1280x545")
+`);
+assert.match(wechatAudio, /<figure class="article-audio">/u);
+assert.match(
+  wechatAudio,
+  /<audio class="article-audio-native" data-roof-audio="r2" data-roof-audio-duration="5141" src="https:\/\/assets\.labonroof\.top\/wechat-audio\/Mzg5MjAwMDM0Nl8yMjQ3NDg5MDU3\/original\.mp3" controls preload="metadata" aria-label="地底人×屋顶播客｜参与：钻石、夜深人静、天坑"><\/audio>/u,
+  "an explicit WeChat audio marker must become a native fallback backed only by the R2 audio collection"
+);
+assert.match(wechatAudio, /class="article-audio-cover"/u);
+assert.doesNotMatch(wechatAudio, /\[音频\]|>收听原音</u);
+
+const externalAudio = await renderMarkdown(`
+[音频] 不受信任的音频
+
+[收听原音](https://example.com/episode.mp3 "85:41")
+
+![节目封面](attachments/wechat-audio/example/cover-1280x545.jpg "=1280x545")
+`);
+assert.doesNotMatch(externalAudio, /<audio\b/iu, "external MP3 links must never become embedded players");
+
+const neteaseMusic = await renderMarkdown(`
+[音乐] 高橋洋子《魂のルフラン（Tabris Mix）》｜5分29秒
+
+[在网易云音乐收听](https://music.163.com/#/song?id=22806607 "netease:22806607")
+`);
+assert.match(neteaseMusic, /<figure class="article-music" data-roof-music="netease" data-roof-music-id="22806607"/u);
+assert.match(neteaseMusic, /class="article-music-fallback"/u);
+assert.doesNotMatch(neteaseMusic, /<iframe\b/iu, "the external player must be added by the strict client adapter, never cross the HTML sanitizer");
+
+const mismatchedMusic = await renderMarkdown(`
+[音乐] 编号不一致的外链
+
+[在网易云音乐收听](https://music.163.com/#/song?id=22806607 "netease:29802889")
+`);
+assert.doesNotMatch(mismatchedMusic, /<figure class="article-music"/u, "a provider marker may not substitute a different song id");
+assert.match(mismatchedMusic, /\[音乐\]/u, "invalid external music markup must remain visible for editorial review");
+
+const untrustedMusic = await renderMarkdown(`
+[音乐] 不受信任的播放器
+
+[收听](https://example.com/song?id=22806607 "netease:22806607")
+`);
+assert.doesNotMatch(untrustedMusic, /<figure class="article-music"/u, "only the exact official NetEase song URL may enter the music adapter");
+
+const wechatVideo = await renderMarkdown(`
+[视频] 枫叶落在水面上的片段
+
+[播放视频](attachments/wechat-video/wxv_1831489258654580737/original-600x338.mp4 "=600x338")
+`);
+assert.match(wechatVideo, /<figure class="article-video">/u);
+assert.match(
+  wechatVideo,
+  /<video class="article-video-player" data-roof-video="r2" src="https:\/\/assets\.labonroof\.top\/wechat-video\/wxv_1831489258654580737\/original-600x338\.mp4" poster="https:\/\/assets\.labonroof\.top\/wechat-video\/wxv_1831489258654580737\/poster-600x338\.jpg" controls preload="metadata" playsinline width="600" height="338" aria-label="枫叶落在水面上的片段"><\/video>/u,
+  "an explicit WeChat video marker must become a native player backed only by the R2 video collection"
+);
+assert.match(wechatVideo, /<figcaption class="article-video-caption">枫叶落在水面上的片段<\/figcaption>/u);
+assert.doesNotMatch(wechatVideo, /\[(?:视频)\]|>播放视频</u);
+
+const multiQualityVideo = await renderMarkdown(`
+[视频] 同名视频论文
+
+[播放视频：1080P](attachments/wechat-video/wxv_example/original-1920x1080.mp4 "=1920x1080")
+
+[播放视频：480P](attachments/wechat-video/wxv_example/quality-480-854x480.mp4 "=854x480")
+`);
+assert.match(multiQualityVideo, /data-roof-video-sources=/u);
+assert.match(multiQualityVideo, /1080P/u);
+assert.match(multiQualityVideo, /480P/u);
+assert.equal((multiQualityVideo.match(/<video\b/gu) ?? []).length, 1);
+assert.doesNotMatch(multiQualityVideo, />播放视频[：:]?/u);
+
+const unsafeQualitySet = sanitizePublicContentHtml(`
+<video
+  class="article-video-player"
+  data-roof-video="r2"
+  data-roof-video-sources='[{"label":"1080P","width":1920,"height":1080,"src":"https://example.com/movie.mp4"}]'
+  src="https://assets.labonroof.top/wechat-video/example/original-1920x1080.mp4"
+  poster="https://assets.labonroof.top/wechat-video/example/poster-1920x1080.jpg"
+  controls
+></video>
+`);
+assert.doesNotMatch(unsafeQualitySet, /<video\b/u, "a quality set may not smuggle an external media host past the sanitizer");
+
+const externalVideo = await renderMarkdown(`
+[视频] 不受信任的视频
+
+[播放视频](https://example.com/movie.mp4 "=600x338")
+`);
+assert.doesNotMatch(externalVideo, /<video\b/iu, "external MP4 links must never become embedded players");
+
+const dimensionlessVideo = await renderMarkdown(`
+[视频] 缺少源尺寸
+
+[播放视频](attachments/wechat-video/example/original.mp4)
+`);
+assert.doesNotMatch(dimensionlessVideo, /<video\b/iu, "a video without a declared source size must not enter the player path");
+assert.match(dimensionlessVideo, /\[视频\]/u, "invalid video markup must stay visible so the corpus typography gate can reject it");
+
 console.log("media material sanitizer verification passed");

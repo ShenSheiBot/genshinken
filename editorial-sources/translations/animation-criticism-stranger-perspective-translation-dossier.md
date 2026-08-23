@@ -16,7 +16,7 @@ sources:
   - id: roof-zh
     language: zh-Hans
     path: source/_posts/animation-criticism-stranger-perspective.md
-    revision: sha256:7fde80751e57ea0b0af33deaaa33f55d79d3fe20e7e618e8c25ed49e1d92dad9
+    revision: sha256:94713cf180004691aa040584a8def4c22c7c6ef9cf7ab9c9d713a6fcd160f920
     file_sha256: 9355a5679b4eeb89c2fbe637284ba783f99fb2dc97f2683b61e5fedcc0d0546b
     title: （动画）评论何以可能：一个“陌生人”视角的分享
     author: 钟子默

@@ -428,6 +428,42 @@ function unclassifiedItalicImageNeighbors(markdown) {
   return failures;
 }
 
+function unclassifiedExplicitImageCaptions(markdown) {
+  const lines = markdown.split(/\r?\n/u);
+  const failures = [];
+  const isImage = (line) => /^!\[[^\]]*\]\([^\n]+\)\s*$/u.test(line.trim());
+  const captionLike = /^(?:(?:左|右|上|下|中)图(?:为|是|中|上|下|左|右|[:：.．]|\s)|图(?:[一二三四五六七八九十\d.-]+)?(?:为|是|中|上|下|左|右|[:：.．]|\s)|(?:片段|截图)[一二三四五六七八九十\d]+(?:[:：.．]|$)|(?:原画|作画|画师|摄影|来源|出处)[:：])/u;
+  const previousSignificant = (index) => {
+    for (let cursor = index - 1; cursor >= 0; cursor -= 1) {
+      if (lines[cursor].trim()) return cursor;
+    }
+    return -1;
+  };
+  const nextSignificant = (index) => {
+    for (let cursor = index + 1; cursor < lines.length; cursor += 1) {
+      if (lines[cursor].trim()) return cursor;
+    }
+    return -1;
+  };
+  const imageAlreadyClassified = (imageIndex) => {
+    const markerIndex = previousSignificant(imageIndex);
+    return markerIndex >= 0 && /^\[(?:图题|人物|图组|幻灯)\]/u.test(lines[markerIndex].trim());
+  };
+
+  for (let index = 0; index < lines.length; index += 1) {
+    const line = lines[index].trim();
+    if (!captionLike.test(line) || [...line].length > 160) continue;
+    if (/^\[(?:图题|图注|人物|人物简介)\]/u.test(line)) continue;
+    const previous = previousSignificant(index);
+    if (previous >= 0 && lines[previous].trim() === "<!--source-centered-prose-->") continue;
+    const next = nextSignificant(index);
+    const previousImage = previous >= 0 && isImage(lines[previous]) && !imageAlreadyClassified(previous);
+    const nextImage = next >= 0 && isImage(lines[next]);
+    if (previousImage || nextImage) failures.push(index + 1);
+  }
+  return failures;
+}
+
 assert.deepEqual(
   semanticCoverImagesWithoutWidth('[图题] 书目\n\n![某书书封](attachments/book.jpg)'),
   [3],
@@ -448,6 +484,21 @@ assert.deepEqual(
   unclassifiedItalicImageNeighbors('![图](attachments/a.jpg)\n\n<!--standalone-emphasis-->\n*确为独立说明。*'),
   [],
   "a deliberate standalone italic beside an image needs an explicit source decision"
+);
+assert.deepEqual(
+  unclassifiedExplicitImageCaptions('![对照图](attachments/a.jpg)\n\n右图：《长骑美眉》'),
+  [3],
+  "an explicit directional legend must not remain a plain paragraph beside an unclassified image"
+);
+assert.deepEqual(
+  unclassifiedExplicitImageCaptions('[图题] 对照图\n\n![对照图](attachments/a.jpg)\n\n图1 展示的是后续正文分析。'),
+  [],
+  "prose following an already captioned figure must not be mistaken for another caption"
+);
+assert.deepEqual(
+  unclassifiedExplicitImageCaptions('![作品图](attachments/a.jpg)\n\n<!--source-centered-prose-->\n\n图为理解本文主题的一个入口。'),
+  [],
+  "an explicitly reviewed source-styled prose block may remain ordinary prose"
 );
 const standaloneEmphasisHtml = await renderMarkdown('![图](attachments/a.jpg)\n\n<!--standalone-emphasis-->\n*确为独立说明。*');
 assert.doesNotMatch(standaloneEmphasisHtml, /standalone-emphasis/u, "standalone-emphasis markers must not enter public HTML");
@@ -591,7 +642,7 @@ assert.doesNotMatch(
   const path = await import("node:path");
   const postsDirectory = path.join(process.cwd(), "source", "_posts");
   const corpusFailures = [];
-  const markerLeak = /\[(?:图题|图注|表题|表注|人物|人物简介|图组|图组结束|幻灯|幻灯结束|版式(?::(?:资料目录|时间轴|阅读路径|播客|联络卡|漫画)|结束))\]/u;
+  const markerLeak = /\[(?:图题|图注|表题|表注|人物|人物简介|图组|图组结束|幻灯|幻灯结束|视频|版式(?::(?:资料目录|时间轴|阅读路径|播客|联络卡|漫画)|结束))\]/u;
   const legacyItalicCaption = /^\*(?:图题[:：]|图[0-9]+[.．：:]).*\*$/mu;
   const invalidWidth = /title="=(?!(?:25|33|50|66|75|100)%")[^"]*"/u;
   const plainCompositionalityLabel = /(?<!\$)\((?:C(?:′)?|H|RR|P|F(?:all|any|cofinal)|[1-8](?:′|″)?)\)(?!\$)/u;
@@ -624,6 +675,9 @@ assert.doesNotMatch(
     }
     for (const line of unclassifiedItalicImageNeighbors(body)) {
       corpusFailures.push(`${name}:${line}: 图片相邻的独立斜体必须迁移为 [图题]/[图注]，确属独立文字时显式标记`);
+    }
+    for (const line of unclassifiedExplicitImageCaptions(body)) {
+      corpusFailures.push(`${name}:${line}: “左图/右图/图N/原画”等明确图题语言不能作为普通段落紧邻未分类图片`);
     }
     if (name === "sep-compositionality.md") {
       if (plainCompositionalityLabel.test(body) || italicCompositionalityVariable.test(body)) {
@@ -662,6 +716,9 @@ assert.doesNotMatch(
       : raw;
     for (const line of unclassifiedItalicImageNeighbors(body)) {
       corpusFailures.push(`${relative}:${line}: 译文中图片相邻的独立斜体必须迁移为 [图题]/[图注]`);
+    }
+    for (const line of unclassifiedExplicitImageCaptions(body)) {
+      corpusFailures.push(`${relative}:${line}: 译文中的明确图题语言不能作为普通段落紧邻未分类图片`);
     }
     for (const line of semanticCoverImagesWithoutWidth(body)) {
       corpusFailures.push(`${relative}:${line}: 译文语义书影必须显式指定图版宽度`);

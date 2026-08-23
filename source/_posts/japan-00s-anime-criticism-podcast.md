@@ -2,6 +2,7 @@
 title: "地底人电台X屋顶*播客：再谈日本00年代动漫批评，「二次元」如何与「后现代」产生交集 feat.夜深人静、天坑"
 title_breaks: ["地底人电台X屋顶*播客：", "再谈日本00年代", "动漫批评，", "「二次元」如何与", "「后现代」", "产生交集 feat.夜深人静、", "天坑"]
 date: 2025-06-08
+updated: 2026-08-22
 slug: japan-00s-anime-criticism-podcast
 categories: ["动画"]
 section: interview
@@ -32,7 +33,11 @@ citation:
 
 [版式:播客]
 
-*本期音频：地底人X屋顶播客〈再谈日本00年代动漫批评，「二次元」如何与「后现代」产生交集 feat.夜深人静、天坑〉（85分41秒）。[收听本期音频](https://mp.weixin.qq.com/s/c-0x2WMU4vnSWN8tjOMNyg)。*
+[音频] 再谈日本00年代动漫批评：「二次元」如何与「后现代」产生交集｜参与：钻石、夜深人静、天坑
+
+[收听原音](attachments/wechat-audio/Mzg5MjAwMDM0Nl8yMjQ3NDg5MDU3/original-64kbps.mp3 "85:41")
+
+![节目封面](attachments/wechat-audio/Mzg5MjAwMDM0Nl8yMjQ3NDg5MDU3/poster-1280x545.jpg "=1280x545")
 
 **钻石：** 经过本期节目的录制，我了解了后现代理论和后现代状况的区别和联系。后现代的后，既是一种时间上的继承顺序，也是一种理论上的响应。作为理论的后现代可能只是一些特定思想家对许多哲学问题的一种解释，但作为时代的后现代无疑已经将我们所有人包裹其中。
 

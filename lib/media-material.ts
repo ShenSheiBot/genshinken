@@ -1,9 +1,16 @@
 import sanitizeHtml from "sanitize-html";
+import {
+  isR2AudioUrl,
+  isR2VideoPosterUrl,
+  isR2VideoUrl,
+  parseArticleVideoSources,
+} from "./article-media-contract-runtime.mjs";
 
 const MEDIA_MATERIAL_TAGS = [
   "a",
   "abbr",
   "annotation",
+  "audio",
   "b",
   "blockquote",
   "br",
@@ -88,6 +95,7 @@ const MEDIA_MATERIAL_TAGS = [
   "tr",
   "u",
   "ul",
+  "video",
   "wbr",
 ];
 
@@ -96,6 +104,12 @@ const SAFE_RASTER_DATA_IMAGE = /^data:image\/(?:gif|jpeg|png|webp);base64,[a-z0-
 const SOURCE_PAGE_COMMENT = /<!--\s*p\.(\d{3})\s*-->/gu;
 const SOURCE_PAGE_SENTINEL =
   /<span data-source-page-comment="(\d{3})"><\/span>/gu;
+
+function validVideoSourceSet(raw: string | undefined, primary: string): boolean {
+  if (!raw) return true;
+  const sources = parseArticleVideoSources(raw);
+  return sources.length > 0 && sources[0].src === primary;
+}
 
 /**
  * Sanitize Markdown-derived HTML before it crosses a dangerouslySetInnerHTML
@@ -124,6 +138,7 @@ export function sanitizePublicContentHtml(html: string): string {
       ],
       a: ["href", "name", "target", "rel", "download"],
       annotation: ["encoding"],
+      audio: ["src", "controls", "preload"],
       blockquote: ["cite"],
       col: ["span", "width"],
       details: ["open"],
@@ -147,6 +162,7 @@ export function sanitizePublicContentHtml(html: string): string {
       td: ["colspan", "rowspan", "headers", "align"],
       th: ["colspan", "rowspan", "headers", "scope", "align"],
       time: ["datetime"],
+      video: ["src", "poster", "controls", "preload", "playsinline", "width", "height"],
     },
     allowedSchemes: ["http", "https", "mailto"],
     allowedSchemesByTag: { img: ["http", "https", "data"] },
@@ -170,12 +186,31 @@ export function sanitizePublicContentHtml(html: string): string {
       "textarea",
       "option",
       "iframe",
-      "video",
-      "audio",
       "object",
       "template",
       "noscript",
     ],
+    exclusiveFilter: (frame) => {
+      const classes = new Set((frame.attribs.class || "").split(/\s+/u).filter(Boolean));
+      if (frame.tag === "audio") {
+        return !(
+          classes.has("article-audio-native")
+          && frame.attribs["data-roof-audio"] === "r2"
+          && /^\d+$/u.test(frame.attribs["data-roof-audio-duration"] || "")
+          && isR2AudioUrl(frame.attribs.src || "")
+        );
+      }
+      if (frame.tag !== "video") return false;
+      const source = frame.attribs.src || "";
+      const poster = frame.attribs.poster || "";
+      return !(
+        classes.has("article-video-player") &&
+        frame.attribs["data-roof-video"] === "r2" &&
+        isR2VideoUrl(source) &&
+        isR2VideoPosterUrl(poster) &&
+        validVideoSourceSet(frame.attribs["data-roof-video-sources"], source)
+      );
+    },
     transformTags: {
       a: (tagName, attributes) => {
         if (attributes.target !== "_blank") return { tagName, attribs: attributes };

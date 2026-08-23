@@ -60,9 +60,9 @@ citation:
 
 ——L’arrestation d’Arsène Lupin
 
-![东京街头路人的社会议题对话画面](attachments/roof-archive/cv1550227/06-tokyo-npc-dialogue.png)
+[图题] 像这样的社会隐喻NPC话语，在P5中非常多，难道没有任何意义吗？
 
-像这样的社会隐喻NPC话语，在P5中非常多，难道没有任何意义吗？
+![东京街头路人的社会议题对话画面](attachments/roof-archive/cv1550227/06-tokyo-npc-dialogue.png)
 
 在进入东京城后，听到了路人这样的抱怨：“警察也真没用，根本是税金小偷”。
 
