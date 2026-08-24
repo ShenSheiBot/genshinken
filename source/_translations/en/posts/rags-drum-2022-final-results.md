@@ -63,7 +63,7 @@ We thank the jury members for volunteering their labor. They are: …
 
 We thank **初鹿野凪** for artistic promotional support, including the event posters, and thank the critics, groups, and platforms that offered friendly advice and sincere assistance. The Lab on Roof Rags Drum Committee will present the jury and other contributors with Dangdang book cards worth RMB 50 as a token of appreciation.
 
-While organizing this event, the Lab on Roof Rags Drum Committee accumulated further experience and lessons. We have concluded that the annual call for submissions, in its present form, no longer suits the needs of today’s readers and critics. This year’s annual call will be the **last for the foreseeable future**. As a substitute form of fulfillment, we will work toward regularly assembled issues of an **“online dōjin magazine.”** Details will be announced shortly, and we hope everyone will follow and support the project when the time comes.
+While organizing this event, the Lab on Roof Rags Drum Committee accumulated further experience and lessons. We have concluded that the annual call for submissions, in its present form, no longer suits the needs of today’s readers and critics. This year’s annual call will be the **last for the foreseeable future**. In its place, we will work toward a regularly published **“online dōjin magazine.”** Details will be announced shortly, and we hope everyone will follow and support the project when the time comes.
 
 Changing trains with fate—may we meet again in the future.
 

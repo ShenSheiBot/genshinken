@@ -7,7 +7,7 @@ language: en
 status: review
 title: "Lab on Roof Annual Call for Submissions: Rags Drum 2022"
 title_breaks: ["Lab on Roof Annual Call for Submissions:", " Rags Drum 2022"]
-excerpt: "Lab on Roof launches Rags Drum 2022, setting out the fields, schedule, judging principles, awards, and submission procedures for its Eve Festival and After Festival tracks."
+excerpt: "Lab on Roof launches Rags Drum 2022, setting out the fields, schedule, judging principles, honoraria, and submission procedures for its Eve Festival and After Festival tracks."
 credits:
   - role: translator
     contributor_id: shen-shui-bot
@@ -32,7 +32,7 @@ To **foster the reproduction of more and better criticism and research on ACG cu
 
 1. We invite original critical essays or comparative studies of **video games, animation, and comics—their works, creators, histories, industries, and related phenomena—from perspectives including philosophy and the social sciences, the humanities and arts, technology and media, and industry and production**. There are no geographical restrictions, and derivative works may also be discussed. Straight translations and strategy guides will not be accepted.
 
-2. We recommend, but do not require, an academic format with **notes and citations, an abstract, keywords, and a bibliography**. Submissions may take the form of **written essays, video essays, or audio works**. Chinese-, English-, and Japanese-language submissions are accepted, though **Simplified Chinese is recommended**. Authors must affirm that their submissions are original and have not been, and will not be, used commercially; all quoted materials and ideas must comply with accepted academic standards. If plagiarism or misappropriation is discovered before or after the fact, the organizers will make the circumstances public and withdraw the award.
+2. We recommend, but do not require, an academic format with **notes and citations, an abstract, keywords, and a bibliography**. Submissions may take the form of **written essays, video essays, or audio recordings**. Chinese-, English-, and Japanese-language submissions are accepted, though **Simplified Chinese is recommended**. Authors must affirm that their submissions are original and have not been, and will not be, used commercially; all quoted materials and ideas must comply with accepted academic standards. If plagiarism or misappropriation is discovered before or after the fact, the organizers will make the circumstances public and require repayment of any honorarium already paid.
 
 ## Schedule and Procedures
 
@@ -54,7 +54,7 @@ Judging:
 
 At the **Eve Festival** stage, the jury will decide whether a submission qualifies by **simple majority**, following a policy that **prioritizes originality, intellectual substance, and critical force**.
 
-Publication and awards:
+Publication and honoraria:
 
 Once the jury has reached a decision on works entered only in the Eve Festival, the organizers will contact the authors as soon as possible. **Qualifying works will be scheduled promptly for publication across Lab on Roof’s platforms.**
 
@@ -64,13 +64,13 @@ The organizers will award each qualifying work an honorarium of approximately **
 
 Eligibility: **Unpublished** original work by the author that has not been used commercially.
 
-Submission format: At the **Eve Festival stage**, entrants may submit a **200–500 Chinese-character proposal**, though a complete text or finished work is also welcome. At the After Festival stage, a complete text or finished work is required, and **its subject must remain consistent with the Eve Festival entry. Only authors and submissions that qualify at the Eve Festival stage may enter the After Festival.**
+Submission format: At the **Eve Festival stage**, entrants may submit a **200–500-character proposal**, though a complete text or finished work is also welcome. At the After Festival stage, a complete text or finished work is required, and **its subject must remain consistent with the Eve Festival entry. Only authors and submissions that qualify at the Eve Festival stage may enter the After Festival.**
 
 Schedule:
 
 - May 6: submissions to the Eve Festival + After Festival track open with the launch of the event.
 - August 1: submissions close for both tracks.
-- August 7: qualifying Eve Festival works are announced, including submissions entered only in the Eve Festival and those proceeding through both stages. The Eve Festival ends and the **After Festival begins**. Lab on Roof’s accounts will announce the works and authors participating in the After Festival **(entries accepted)**.
+- August 7: qualifying Eve Festival works are announced, including submissions entered only in the Eve Festival and those proceeding through both stages. The Eve Festival ends and the **After Festival begins**. As submissions are accepted, Lab on Roof’s accounts will announce the titles and authors of works participating in the After Festival.
 - October 7: entries close for the After Festival, the second half of the combined track.
 - Second half of October: qualifying After Festival works are announced together. The After Festival ends, concluding the event.
 
@@ -78,7 +78,7 @@ Judging:
 
 At the **After Festival** stage, the jury will decide whether a submission qualifies by **absolute majority**, following a policy that **prioritizes originality, intellectual substance, and critical force**.
 
-Publication and awards:
+Publication and honoraria:
 
 Qualifying works entered in the combined Eve Festival + After Festival track will be announced together on **August 7 and October 7**, for the Eve Festival and After Festival respectively, and will subsequently be published across Lab on Roof’s platforms.
 
@@ -98,7 +98,7 @@ If exceptional circumstances make both methods impossible, contact Lab on Roof p
 
 ## Other Provisions
 
-1. For qualifying submissions entered only in the Eve Festival, Lab on Roof requires only a **non-exclusive, non-first-publication license** to publish the work across its platforms. For qualifying submissions entered in the combined Eve Festival + After Festival track, Lab on Roof requires only a **non-exclusive, first-publication license** to publish the work across its platforms. **All copyright-related rights not specified here remain with the author.**
+1. For qualifying submissions entered only in the Eve Festival, Lab on Roof requires only **a nonexclusive license that does not require first publication** to publish the work across its platforms. For qualifying submissions entered in the combined Eve Festival + After Festival track, Lab on Roof requires only **a nonexclusive license for first publication** to publish the work across its platforms. **All copyright-related rights not specified here remain with the author.**
 
 2. To foster the reproduction of more and better criticism and research on ACG culture and exchange among its practitioners, **Lab on Roof may adapt qualifying submissions into video essays or other formats**. The author will be informed and their consent obtained in advance, and the author’s relevant rights will be protected in any video essay.
 
