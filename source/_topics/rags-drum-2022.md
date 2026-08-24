@@ -4,7 +4,7 @@ subtitle: 年度征文流程与已收录参赛稿
 summary: 依次收录拾荒战略Rags Drum 2022年度征文的活动公告、前夜祭评选结果与年度评选结果，并汇集可在本站阅读全文的参赛作品。
 status: complete
 published: 2026-08-14
-updated: 2026-08-14
+updated: 2026-08-23
 groups:
   - id: event-process
     number: "01"
@@ -28,6 +28,15 @@ groups:
       - type: post
         ref: animation-eyebrow-hair-perception-video
         editorialNote: 河豚的前夜祭入选视频稿；前夜祭与最终结果页均以同一题名和 BV 号直接收录。
+      - type: post
+        ref: modernity-not-overcome-writing-mysticism-science
+        editorialNote: 署名「　」的前夜祭受赏稿；预评与最终结果的题名标点略有差异，正文页保留成稿题名。
+      - type: post
+        ref: performativity-of-animation-anno-takahashi
+        editorialNote: 一条的前夜祭与后夜祭受赏稿，讨论安浓高志与高桥直人的动画演出。
+      - type: post
+        ref: anime-hair-color-personality-quantitative-analysis
+        editorialNote: Sairai 的前夜祭与后夜祭受赏稿；成稿删去初审题名中的“瞳色”，与正文研究范围一致。
 ---
 
 本专题呈现拾荒战略Rags Drum 2022年度征文的完整流程：活动公告规定投稿、评选与奖励办法，前夜祭结果公布阶段入选稿，年度结果公布最终受赏名单与活动结论。“已收录参赛稿”汇集活动名单所列、目前可在本站阅读全文的作品。其他年份的拾荒战略活动另见相应年度页面。
