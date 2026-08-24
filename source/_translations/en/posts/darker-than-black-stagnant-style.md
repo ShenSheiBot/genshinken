@@ -98,9 +98,7 @@ This extraordinary life without end recalls the exchange between the two Contrac
 
 “Does that make this moonless present an eternity of atonement?”
 
-The prophecy in *DTB*’s final episode answers that extraordinary condition without end: “So take me away, fallen star, falling star, toward the future no one has ever seen, far, far, far, far, far beyond.”
-
-*Translation note: This rendering follows the Chinese source; an official transcript of the Japanese line could not be verified.*
+The prophecy in *DTB*’s final episode answers that extraordinary condition without end: “That’s right. Take them with you—the fallen stars, the stars streaming on, every last one of them. Yes, far, far beyond, to a future no one has ever seen.”
 
 Hope thus remains in the very distant future, while reality is summed up in one line: “After that, incidents involving Contractors continued to increase.”
 

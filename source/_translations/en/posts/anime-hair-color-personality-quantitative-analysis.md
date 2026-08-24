@@ -128,13 +128,13 @@ Taking hair color as the condition, I calculated TF-IDF values for co-occurring 
 
 [图题] Figure 2, part 3. Top-10 TF-IDF values for personalities associated with each hair color.
 
-![Bar charts ranking the ten personality traits with the highest TF-IDF values for blue, green, and silver hair; green hair is led by energetic, while silver hair includes the sanmu and ice-beauty archetypes](/attachments/roof-archive/cv21792051/62.jpg "=100%")
+![Bar charts ranking the ten personality traits with the highest TF-IDF values for blue, green, and silver hair; green hair is led by energetic, while silver hair includes the Chinese-fandom sanwu category and the ice-beauty archetype](/attachments/roof-archive/cv21792051/62.jpg "=100%")
 
 [图题] Figure 2, part 4. Top-10 TF-IDF values for personalities associated with each hair color.
 
 ![Bar charts ranking the ten personality traits with the highest TF-IDF values for purple and brown hair; purple hair is led by tsundere and two-faced traits, while brown hair is led by energetic and gentle traits](/attachments/roof-archive/cv21792051/64.jpg "=100%")
 
-Conditioning on hair color simulates the process by which an audience sees a character’s hair and ranks the personalities that character is likely to possess. TF-IDF makes some traits especially salient. Among white-haired characters, for example, the importance of the “madness” trait exceeds 0.1, even though both white hair and madness have low raw frequencies. The results also reveal familiar stereotypes: silver-haired characters tend toward the cool, emotionless *sanmu* archetype, while red-haired characters tend to be energetic.
+Conditioning on hair color simulates the process by which an audience sees a character’s hair and ranks the personalities that character is likely to possess. TF-IDF makes some traits especially salient. Among white-haired characters, for example, the importance of the “madness” trait exceeds 0.1, even though both white hair and madness have low raw frequencies. The results also reveal familiar stereotypes: silver-haired characters tend toward what Chinese anime fandom calls the *sanwu* archetype—taciturn, expressionless, and emotionally unreadable—while red-haired characters tend to be energetic.
 
 At the same time, traits such as tsundere and energetic rank relatively high for most hair colors because they are themselves common, even though their TF-IDF values vary across colors. Selecting personality solely on the condition of hair color therefore retains limited explanatory power.
 
@@ -158,7 +158,7 @@ To establish the pairings more securely, I intersected the rankings from Section
 
 ![Table intersecting bidirectional TF-IDF rankings for hair color and personality](/attachments/roof-archive/cv21792051/81.png "=100%")
 
-The bidirectional intersections are: black hair with Yamato nadeshiko, gentleness, ice beauty, tsundere, and gap moe; brown hair with gentleness, healing, airheadedness, and timidity; blond hair with airheadedness and tsundere; silver hair with *sanmu* and natural cuteness; blue hair with ice beauty, kindheartedness, and gap moe; purple hair with masochism and seriousness; and white hair with madness.
+The bidirectional intersections are: black hair with Yamato nadeshiko, gentleness, ice beauty, tsundere, and gap moe; brown hair with gentleness, healing, airheadedness, and timidity; blond hair with airheadedness and tsundere; silver hair with the Chinese-fandom *sanwu* category and natural cuteness; blue hair with ice beauty, kindheartedness, and gap moe; purple hair with masochism and seriousness; and white hair with madness.
 
 The intersecting pairs overlap strongly with stereotypes commonly circulated in anime fandom. The “blond tsundere” mentioned at the beginning appears in both sets, demonstrating that the combination is indeed strongly bound. “Pink-haired yandere,” however, does not appear in the union of the two sets.
 
@@ -188,7 +188,7 @@ Sometimes, however, collective impressions among audiences are biased. Consider 
 
 ![Illustration of Yuno Gasai](/attachments/roof-archive/cv21792051/100.jpg "=50%")
 
-The associations above also bear traces of color psychology. Silver, for instance, gives a cold impression, matching the aloofness of the emotionless *sanmu* archetype; red evokes fiery passion, and red-haired personalities are often energetic. Pink likewise tends to appear cute, and the traits most important to pink-haired characters are indeed mostly cute ones. Yet pink hair also correlates with scheming or two-faced personalities—the fandom saying “pink turns black”—and with the “pink-haired yandere” discussed here. Such designs likely seek the appeal of contrast: pink’s cuteness sets off the darkness behind it. The change can surprise viewers while giving the character greater depth. This distinctive, almost deceptive contrast helped the pairing circulate.
+The associations above also bear traces of color psychology. Silver, for instance, gives a cold impression, matching the aloofness associated with the *sanwu* category; red evokes fiery passion, and red-haired personalities are often energetic. Pink likewise tends to appear cute, and the traits most important to pink-haired characters are indeed mostly cute ones. Yet pink hair also correlates with scheming or two-faced personalities—the fandom saying “pink turns black”—and with the “pink-haired yandere” discussed here. Such designs likely seek the appeal of contrast: pink’s cuteness sets off the darkness behind it. The change can surprise viewers while giving the character greater depth. This distinctive, almost deceptive contrast helped the pairing circulate.
 
 Producing this contrast, however, places great demands on plot and character design; mishandled, it can easily make viewers dislike the character. Yandere is therefore not a commonly used *moe* trait in character creation. If a creator can write an excellent story for a yandere, pink hair is no longer necessary: ordinary black or brown hair can serve the character just as well.
 

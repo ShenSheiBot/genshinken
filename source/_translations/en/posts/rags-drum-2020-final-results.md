@@ -32,11 +32,11 @@ To encourage the reproduction of more—and better—criticism and research on a
 
 ## The Results
 
-Now, after a three-month submission window followed by the two-month After Festival, and more than a month of judging, Lab on Roof is ready to announce the entries that qualified in both the **Eve Festival and After Festival**, together with their authors. We will first publish their titles and authors here, then release the essays themselves as soon as possible in the days ahead.
+Now, after a three-plus-two-month submission period and more than a month of judging, Lab on Roof is ready to announce the entries that qualified in both the **Eve Festival and After Festival**, together with their authors. We will first publish their titles and authors here, then release the essays themselves as soon as possible in the days ahead.
 
 Eight entries qualified in both the Eve Festival and After Festival (listed in no particular order):
 
-- **[“What Is ‘Cloud Behavior’? Ontology and Internal Heterogeneity”](/en/posts/what-is-cloud-behavior-ontology-internal-heterogeneity), Austoria**
+- **[“What Is ‘Yun Behavior’? Ontology and Internal Heterogeneity”](/en/posts/what-is-cloud-behavior-ontology-internal-heterogeneity), Austoria**
 - **[“The Messiah Who Is Always Late: One Reading of *The Big O*”](/en/posts/the-big-o-messiah-always-late), 斑鸠**
 - **[“Are You Playing the Game, or Is the Game Playing You?”](/en/posts/stanley-parable-video-games), 辛巴不吃素**
 - **[“Constructing Morgan Yu’s Posthuman Body in *Prey*”](/en/posts/prey-morgan-yu-posthuman-body-construction), ilan**

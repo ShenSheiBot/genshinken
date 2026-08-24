@@ -5,9 +5,9 @@ source_slug: performativity-of-animation-anno-takahashi
 slug: performativity-of-animation-anno-takahashi
 language: en
 status: review
-title: "The Performativity of Animation: Rediscovering Takashi Anno and Naohito Takahashi"
-title_breaks: ["The Performativity of Animation:", "Rediscovering Takashi Anno", "and Naohito Takahashi"]
-excerpt: "Moving through questions of time, photography, the gaze, surface, and touch in the works of Takashi Anno and Naohito Takahashi, 一条 considers how Japanese animation produces its distinctive performativity through stillness, repetition, and the constraints of its medium."
+title: "The Art of Animation Direction: Rediscovering Takashi Anno and Naohito Takahashi"
+title_breaks: ["The Art of Animation Direction:", "Rediscovering Takashi Anno", "and Naohito Takahashi"]
+excerpt: "Moving through questions of time, photography, the gaze, surface, and touch in the works of Takashi Anno and Naohito Takahashi, 一条 considers how Japanese animation produces its distinctive modes of direction through stillness, repetition, and the constraints of its medium."
 credits:
   - role: translator
     contributor_id: shen-shui-bot

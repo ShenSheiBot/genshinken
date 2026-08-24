@@ -5,9 +5,9 @@ source_slug: modernity-not-overcome-writing-mysticism-science
 slug: modernity-not-overcome-writing-mysticism-science
 language: en
 status: review
-title: "Modernity Not Overcome: The Absent Origin and Subjectivity—Graphomysticism and Science"
-title_breaks: ["Modernity Not Overcome:", "The Absent Origin and Subjectivity—Graphomysticism and Science"]
-excerpt: "Reading East Asian graphomysticism through Western esotericism, the author asks how an absent origin, an absent subjectivity, and science leave modernity not overcome."
+title: "Modernity Not Overcome: The Absent Origin and Subjectivity—Letter Mysticism and Science"
+title_breaks: ["Modernity Not Overcome:", "The Absent Origin and Subjectivity—Letter Mysticism and Science"]
+excerpt: "Reading East Asian letter mysticism through Western esotericism, the author asks how an absent origin, an absent subjectivity, and science leave modernity not overcome."
 credits:
   - role: translator
     contributor_id: shen-shui-bot
@@ -31,11 +31,11 @@ format: article
   - Section 2: Previous Research and Background
   - Section 3: Theoretical Framework and Method
 - Main Argument
-  - Part I: East Asian Graphomysticism
+  - Part I: East Asian Letter Mysticism
     - Section 1: Western Esotericism
       - 1. Esotericism
       - 2. Western Esotericism
-      - 3. Graphomysticism
+      - 3. Letter Mysticism
     - Section 2: Does It Exist in East Asia?
       - 1. Candidate Cases
         - A. Phenomena in the Domain of Writing
@@ -83,9 +83,9 @@ The discussion draws on Masachi Osawa’s sociology, social history, and philoso
 
 ### Section 3: Theoretical Framework and Method
 
-I refer to the academic study of esotericism developed in the West in recent years and use its models of esoteric characteristics to identify and analyze phenomena that belong to East Asian graphomysticism. I then set the substance of East Asian graphomysticism against the characteristics of science as a defining feature of modernity. This allows me to ask why the paradigm shift from esotericism to religion to science did not appear in East Asia, and, finally, how the factors behind that absence continue to hold the region in a condition of modernity not overcome.
+I refer to the academic study of esotericism developed in the West in recent years and use its models of esoteric characteristics to identify and analyze phenomena that belong to East Asian letter mysticism. I then set the substance of East Asian letter mysticism against the characteristics of science as a defining feature of modernity. This allows me to ask why the paradigm shift from esotericism to religion to science did not appear in East Asia, and, finally, how the factors behind that absence continue to hold the region in a condition of modernity not overcome.
 
-## Main Argument, Part I: East Asian Graphomysticism
+## Main Argument, Part I: East Asian Letter Mysticism
 
 ### Section 1: Western Esotericism
 
@@ -103,13 +103,13 @@ Are there principles by which we can identify this content called esotericism? W
 
 These are the principal features of Western esotericism. My argument takes the first three models, rather than esotericism within religion, as its criteria.
 
-#### 3. Graphomysticism
+#### 3. Letter Mysticism
 
-Graphomysticism is a concept that will recur throughout this essay. Before applying Hanegraaff’s three models to East Asian graphomysticism, it will help to say a little about its Western counterpart.
+Letter mysticism is a concept that will recur throughout this essay. Before applying Hanegraaff’s three models to East Asian letter mysticism, it will help to say a little about its Western counterpart.
 
-In a broad sense, esotericism is the idea that human beings can connect with God, or with a higher will, by some means;[^1] graphomysticism is the idea that writing can serve as that means.
+In a broad sense, esotericism is the idea that human beings can connect with God, or with a higher will, by some means;[^1] letter mysticism is the idea that writing can serve as that means.
 
-One prominent Western example is Islamic letter mysticism, on which Toshihiko Izutsu was a major authority. Since his research is only loosely connected with this essay, I will not pursue it here. A nonreligious example of graphomysticism is magic. Unlike an incantation, certain forms of magic require particular signs to be written in a particular place before the magic can be activated. Phenomena resembling these magic-activating inscriptions will become a focal point later in this essay, so I note them here in advance.
+One prominent Western example is Islamic letter mysticism, on which Toshihiko Izutsu was a major authority. Since his research is only loosely connected with this essay, I will not pursue it here. A nonreligious example of letter mysticism is magic. Unlike an incantation, certain forms of magic require particular signs to be written in a particular place before the magic can be activated. Phenomena resembling these magic-activating inscriptions will become a focal point later in this essay, so I note them here in advance.
 
 ### Section 2: Does It Exist in East Asia?
 
@@ -197,7 +197,7 @@ The arbitrariness of this transmission stands opposed to modern science’s “f
 
 Let us review the subject and conclusions of Part I.
 
-First, esoteric thought or esotericism is the idea of connecting with God, or with a higher will, through some means. Graphomysticism treats writing as that means.
+First, esoteric thought or esotericism is the idea of connecting with God, or with a higher will, through some means. Letter mysticism treats writing as that means.
 
 Using Hanegraaff’s three models, we have located esoteric phenomena of writing in contemporary East Asia. Whether in spiritually charged *kotodama* and exorcistic texts, in core elements of anime and games, or in the *kun’yomi* of language education, these phenomena meet our esoteric criteria. This esotericism exceeds the scientific paradigm of the contemporary world we inhabit and exists in a posture of transcendence.
 
@@ -271,7 +271,7 @@ For Chinese characters, their own origin has been obscure and absent. With their
 
 ## Conclusion, Section 1: All Too Unmodern
 
-This essay has examined phenomena in the domain of East Asian writing. Using Wouter J. Hanegraaff’s three models for distinguishing esotericism, it analyzed phenomena that can be called East Asian graphomysticism. It also established that this form of esoteric thought fills our lives in a posture of transcendence.
+This essay has examined phenomena in the domain of East Asian writing. Using Wouter J. Hanegraaff’s three models for distinguishing esotericism, it analyzed phenomena that can be called East Asian letter mysticism. It also established that this form of esoteric thought fills our lives in a posture of transcendence.
 
 From the perspectives of mythology and of the study of writing and literature, the essay then identified what sustains this transcendent posture: the absence of origin and subjectivity. Finally, taking the “esotericism—religion—science” model as its criterion, it concluded that East Asia remains in a condition of modernity not overcome.
 
