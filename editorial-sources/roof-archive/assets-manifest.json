@@ -16364,6 +16364,138 @@
       "bytes": 18245,
       "sha256": "3d0554e3ea75fda703fc00eb6c9a790fcda92541a4d2186a3dc17de21dc0d0fc",
       "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv11825483/haruhi-series-timeline.png",
+      "bytes": 450585,
+      "sha256": "b08986b605274114faf50dc06b676462c634081c0b8c7c3b54741c1b19573fd0",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8622821/01-rabbit-girl-doujin.png",
+      "bytes": 122071,
+      "sha256": "bc59d175c329f5b4b11161b5b104afefdf728d5cedbdac5fbb513caf74038fcf",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8622821/02-reunion-movement-logo.png",
+      "bytes": 3872,
+      "sha256": "02056746d12d9a4f1ed3a7b19ecd43476768e88dabb9a7d938f264ab6057500e",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8622821/03-nausicaa-manga-ohmu.png",
+      "bytes": 326649,
+      "sha256": "f7170442f4ee0285a1ff51c7b1bb6e3e2d23f636523ded0effee30cf80bee5b1",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8622821/04-nausicaa-manga-shuwa.png",
+      "bytes": 921565,
+      "sha256": "b8380c12a878f02d9f9e7d90d8a2d9c2f4c9b9c7cd915b2ac0497a9df805fa24",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8622821/05-nausicaa-life-in-darkness.jpg",
+      "bytes": 222831,
+      "sha256": "158642c65d1a893023e7781c75c03f058227bacdfd0e068a1311a649b7bb839e",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv8622821/06-companion-species-manifesto.png",
+      "bytes": 325474,
+      "sha256": "eaf04c2c8f703ff8a78ceee78edd8729475def831bca6f724f82ed0aaeda242b",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8622821/07-weathering-with-you-poster.jpg",
+      "bytes": 788739,
+      "sha256": "b6ea55726e56337754b88629fb7430723268a7c00b3f5b0f5e60d124fd6f0fa2",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv8622821/08-yurikuma-arashi-cover.jpg",
+      "bytes": 524833,
+      "sha256": "4a0fe7f081ebc98c69da4f965941387716ca60eb35cbaacb4b540d49f5aa0f1e",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv8622821/09-politics-of-friendship-cover.jpg",
+      "bytes": 118152,
+      "sha256": "7ea0a692ada7c4bd59e9d2cf54d8fd772ff820cd71375b88f89aa97c130c49dc",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv8622821/10-yurikuma-arashi-scene.png",
+      "bytes": 971436,
+      "sha256": "dff898e6e22fe991f61e9274c8656fcb35d678e754dd9a1a695a53e389209204",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8622821/11-yurikuma-arashi-transformation.png",
+      "bytes": 1455571,
+      "sha256": "30a60a3cf806d25082ad33ca4a0fecbad829cb981d0f6370bec71473322f2b4b",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8622821/12-posthuman-animal-friends-comparison.jpg",
+      "bytes": 760686,
+      "sha256": "3de8ea0250ad692f2370b460c1861fb40ef3fa8d18fe10a35beee8a478f5f535",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv8622821/13-kizuna-ai-eating.png",
+      "bytes": 1500547,
+      "sha256": "b5c9b3d39f01e17a1a4cf975950eb7233efd5cd451c9dcee3631f62a728478c2",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8622821/14-kemono-friends-volcano.png",
+      "bytes": 592734,
+      "sha256": "c98f70b22cc231e97e91a461f083d57885f8cf8899b28677e4c0f9bfa11a1f89",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8622821/15-wily-beast-and-weakest-creature-cover.jpg",
+      "bytes": 152597,
+      "sha256": "6185f17fd43d9bfe441fdb7df9f346f11014baf96ef4eabcbacba547dc6cc421",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv8622821/16-wily-beast-and-weakest-creature-art.jpg",
+      "bytes": 2444456,
+      "sha256": "6b36cd3c074f2f398401aa8f39a309d4d252422665b84cddec3ef301bf2b0985",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv8622821/17-wily-beast-gameplay.jpg",
+      "bytes": 126260,
+      "sha256": "2064f71b0dc0dabbb82558233db8239f0e9460bc882d1b8179ecd24a12e623f1",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv8622821/18-kizuna-ai-multiple-thumbnail.jpg",
+      "bytes": 157991,
+      "sha256": "e08653faf4ad139cfd5ee21b44fd6b44fa5bc4d5a2b235c16e0831590b9d30fd",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv8622821/19-dragon-descendants-illustration.png",
+      "bytes": 321929,
+      "sha256": "755cd84c9a2669fb59df0c3793f3c5bd91374788e474d3f06158cceb6aa6f091",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8622821/20-touhou-magazine-spread.jpg",
+      "bytes": 763617,
+      "sha256": "8133b6dcbb9f9c317cb903c57895bea69409fa980d8817bdca9df690e0f56926",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv8622821/21-touhou-culture-journal-contents.jpg",
+      "bytes": 47136,
+      "sha256": "9ad8db8be38b2576dbe570faec854219dbe1f1e9793c974d630d238406ced396",
+      "contentType": "image/jpeg"
     }
   ]
 }

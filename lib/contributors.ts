@@ -242,6 +242,7 @@ export const CONTRIBUTORS = [
   { id: "wen-tian", displayName: "问天", aliases: [], teamMember: false },
   { id: "ye-cai-yi-ri-fen", displayName: "野菜一日分", aliases: [], teamMember: false },
   { id: "gong-jiu-ji", displayName: "宫酒姬", aliases: [], teamMember: false },
+  { id: "shinku-sama", displayName: "真紅様", aliases: [], teamMember: false },
   { id: "adam-lowenstein", displayName: "Adam Lowenstein", aliases: [], teamMember: false },
   { id: "will", displayName: "will", aliases: [], teamMember: false },
   { id: "pause-and-select", displayName: "pause and select", aliases: ["Pause and Select"], teamMember: false },
