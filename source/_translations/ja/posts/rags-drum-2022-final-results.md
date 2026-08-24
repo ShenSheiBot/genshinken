@@ -42,14 +42,14 @@ format: article
 
 - 河豚「[【作画考察】遍在する知覚――二次元アニメーションにおける「眉・目―髪」の処理をめぐる体験と考証](/ja/posts/animation-eyebrow-hair-perception-video)」（BV16a411D7PA）
 - Colisa「変身し、外伝の魔法少女になる」
-- 「　」「近代の非超克　欠席した起源と主体性—文字神秘主義と科学」
+- 「　」「[近代の非超克　欠席した起源と主体性—文字神秘主義と科学](/ja/posts/modernity-not-overcome-writing-mysticism-science)」
 
 ### 前夜祭と後夜祭の双方を通過した作品
 
 「前夜祭」と「後夜祭」の双方を通過した作品は、以下のとおり。
 
-- 一条「アニメーションの演出性――安濃高志と高橋ナオヒトの再発見」
-- Sairai「日本アニメの髪色と性格の相関に関する定量分析」
+- 一条「[アニメーションの演出性――安濃高志と高橋ナオヒトの再発見](/ja/posts/anime-enshutsusei-anno-takahashi)」
+- Sairai「[日本アニメの髪色と性格の相関に関する定量分析](/ja/posts/anime-kamiiro-seikaku-teiryo-bunseki)」
 
 以上の作者の皆さま、おめでとうございます！　先に公表した規定に基づき、「前夜祭」の受賞作には300元、「後夜祭」の受賞作には2,000元の原稿料が支払われる。
 

@@ -35,19 +35,19 @@ citation:
 
 通过前夜祭＋后夜祭的稿件及其作者有8位（以下顺序皆不分先后）：
 
-- **《云行为是什么？本体论与内在异质性》，Austoria**
-- **《必定迟到的弥赛亚——对动画〈The Big-O〉的一种解读》，斑鸠**
-- **《你玩游戏还是游戏玩你》，辛巴不吃素**
-- **《〈掠食〉中摩根·余的后人类身体构建》，ilan**
-- **《FGO 2.4：Soyons tout！》，両儀式所失去的**
-- **《罗梅罗的怪物：僵尸形象与堕落他者》，哲哥**
-- **《动画与现实，或高畑勋的现实主义坐标》，学级委员一条同学**
-- **《VR的激进性、美少女游戏的临界点——ProjectLUX论》，红茶泡海苔**
+- **[《云行为是什么？本体论与内在异质性》](/posts/what-is-cloud-behavior-ontology-internal-heterogeneity)，Austoria**
+- **[《必定迟到的弥赛亚——对动画〈The Big-O〉的一种解读》](/posts/the-big-o-messiah-always-late)，斑鸠**
+- **[《你玩游戏还是游戏玩你》](/posts/stanley-parable-video-games)，辛巴不吃素**
+- **[《〈掠食〉中摩根·余的后人类身体构建》](/posts/prey-morgan-yu-posthuman-body-construction)，ilan**
+- **[《FGO 2.4：Soyons tout！》](/posts/fgo-lostbelt-4-black-final-human)，両儀式所失去的**
+- **[《罗梅罗的怪物：僵尸形象与堕落他者》](/posts/romero-monsters-zombie-image-fallen-other)，哲哥**
+- **[《动画与现实，或高畑勋的现实主义坐标》](/posts/animation-and-reality-takahata-realism)，学级委员一条同学**
+- **[《VR的激进性、美少女游戏的临界点——ProjectLUX论》](/posts/project-lux-vr-radicality)，红茶泡海苔**
 
 通过前夜祭，但很遗憾没有得到评委团一致通过后夜祭的稿件及其作者有：
 
 - **《森见登美彦作品的幽默溯源》，十文字**
-- **《DTB——停滞的风格》，实在狗子**
+- **[《DTB——停滞的风格》](/posts/darker-than-black-stagnant-style)，实在狗子**
 
 根据先前公布的活动规则，各篇通过前夜祭＋后夜祭的稿件将获得**1250元**的稿酬，各篇通过前夜祭的稿件将获得**200元**的稿酬。让我们庆贺吧。
 

@@ -8,6 +8,7 @@ import {
   translationSourcePayload,
 } from "../lib/translation-source.mjs";
 import {
+  canonicalizeLocalizedTranslationRoutes,
   translationEditionIsVisible,
   translationLifecycleValues,
 } from "../lib/translation-contract.mjs";
@@ -157,6 +158,19 @@ test("review editions cannot leak target routes into production language links",
   assert.equal(translationEditionIsVisible("review", false), false);
   assert.equal(translationEditionIsVisible("review", true), true);
   assert.equal(translationEditionIsVisible("published", false), true);
+});
+
+test("structure audits compare localized slugs through their canonical source routes", () => {
+  const routes = new Map([
+    ["/ja/posts/anime-enshutsusei-anno-takahashi", "/posts/performativity-of-animation-anno-takahashi"],
+  ]);
+  assert.equal(
+    canonicalizeLocalizedTranslationRoutes(
+      "[演出性](/ja/posts/anime-enshutsusei-anno-takahashi#section)",
+      routes,
+    ),
+    "[演出性](/posts/performativity-of-animation-anno-takahashi#section)",
+  );
 });
 
 test("translation source payload tracks reader-facing source changes, not publication timestamps", () => {

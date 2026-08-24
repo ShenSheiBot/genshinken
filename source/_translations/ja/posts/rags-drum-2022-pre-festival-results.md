@@ -42,9 +42,9 @@ format: article
 
 - Isolde「二つの世界のあいだで歌う」
 - Colisa「外伝の魔法少女になる」
-- 一条「アニメーションの演出性――安濃高志と高橋ナオヒトの再発見」
-- 「　」「近代の非超克・欠席した起源と主体性―文字神秘主義と科学」
-- Sairai「金髪ツンデレ？　ピンク髪ヤンデレ？　日本アニメの髪色・瞳色と性格の相関に関する定量分析」
+- 一条「[アニメーションの演出性――安濃高志と高橋ナオヒトの再発見](/ja/posts/anime-enshutsusei-anno-takahashi)」
+- 「　」「[近代の非超克・欠席した起源と主体性―文字神秘主義と科学](/ja/posts/modernity-not-overcome-writing-mysticism-science)」
+- Sairai「[金髪ツンデレ？　ピンク髪ヤンデレ？　日本アニメの髪色・瞳色と性格の相関に関する定量分析](/ja/posts/anime-kamiiro-seikaku-teiryo-bunseki)」
 
 ### 前夜祭のみに参加
 

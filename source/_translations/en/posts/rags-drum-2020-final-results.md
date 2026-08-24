@@ -36,19 +36,19 @@ Now, after a three-month submission window followed by the two-month After Festi
 
 Eight entries qualified in both the Eve Festival and After Festival (listed in no particular order):
 
-- **“What Is ‘Cloud Behavior’? Ontology and Internal Heterogeneity,” Austoria**
-- **“The Messiah Who Is Always Late: One Reading of *The Big O*,” 斑鸠**
-- **“Are You Playing the Game, or Is the Game Playing You?,” 辛巴不吃素**
-- **“Constructing Morgan Yu’s Posthuman Body in *Prey*,” ilan**
-- **“FGO 2.4: Soyons tout!,” 両儀式所失去的**
-- **“Romero’s Monsters: The Zombie Image and the Fallen Other,” 哲哥**
-- **“Animation and Reality, or the Coordinates of Isao Takahata’s Realism,” 学级委员一条同学**
-- **“The Radicality of VR and the Limit of Bishōjo Games: On *Project LUX*,” 红茶泡海苔**
+- **[“What Is ‘Cloud Behavior’? Ontology and Internal Heterogeneity”](/en/posts/what-is-cloud-behavior-ontology-internal-heterogeneity), Austoria**
+- **[“The Messiah Who Is Always Late: One Reading of *The Big O*”](/en/posts/the-big-o-messiah-always-late), 斑鸠**
+- **[“Are You Playing the Game, or Is the Game Playing You?”](/en/posts/stanley-parable-video-games), 辛巴不吃素**
+- **[“Constructing Morgan Yu’s Posthuman Body in *Prey*”](/en/posts/prey-morgan-yu-posthuman-body-construction), ilan**
+- **[“FGO 2.4: Soyons tout!”](/en/posts/fgo-lostbelt-4-black-final-human), 両儀式所失去的**
+- **[“Romero’s Monsters: The Zombie Image and the Fallen Other”](/en/posts/romero-monsters-zombie-image-fallen-other), 哲哥**
+- **[“Animation and Reality, or the Coordinates of Isao Takahata’s Realism”](/en/posts/animation-and-reality-takahata-realism), 学级委员一条同学**
+- **[“The Radicality of VR and the Limit of Bishōjo Games: On *Project LUX*”](/en/posts/project-lux-vr-radicality), 红茶泡海苔**
 
 The following entries qualified in the Eve Festival but, regrettably, did not receive the judging panel’s unanimous approval in the After Festival:
 
 - **“Tracing the Genealogy of Humor in Tomihiko Morimi’s Works,” 十文字**
-- **“DTB: A Style of Stagnation,” 实在狗子**
+- **[“DTB: A Style of Stagnation”](/en/posts/darker-than-black-stagnant-style), 实在狗子**
 
 Under the event rules announced earlier, each entry that qualified in both the Eve Festival and After Festival will receive an honorarium of **RMB 1,250**, while each Eve-Festival-only qualifying entry will receive **RMB 200**. Let us celebrate.
 

@@ -42,9 +42,9 @@ Five authors and their works passed the preliminary Eve Festival review:
 
 - Isolde, *Singing Between Two Worlds* (《在两个世界之间吟唱》)
 - Colisa, *Becoming a Magical Girl in a Side Story* (《成为外传的魔法少女》)
-- 一条, *The Performativity of Animation: Rediscovering Takashi Anno and Naohito Takahashi* (《动画的演出性：安浓高志与高桥直人的再发现》)
-- 「　」, *Modernity Not Overcome: The Absent Origin and Subjectivity—Graphomysticism and Science* (「近代の非超克・欠席した起源と主体性―文字神秘主義と科学」)
-- Sairai, *Blond Tsundere? Pink-Haired Yandere? A Quantitative Analysis of the Relationship Between Hair and Eye Color and Personality in Japanese Animation* (《金发傲娇？粉发病娇？日本动画发色瞳色与性格关联之量化分析》)
+- 一条, [*The Performativity of Animation: Rediscovering Takashi Anno and Naohito Takahashi*](/en/posts/performativity-of-animation-anno-takahashi) (《动画的演出性：安浓高志与高桥直人的再发现》)
+- 「　」, [*Modernity Not Overcome: The Absent Origin and Subjectivity—Graphomysticism and Science*](/en/posts/modernity-not-overcome-writing-mysticism-science) (「近代の非超克・欠席した起源と主体性―文字神秘主義と科学」)
+- Sairai, [*Blond Tsundere? Pink-Haired Yandere? A Quantitative Analysis of the Relationship Between Hair and Eye Color and Personality in Japanese Animation*](/en/posts/anime-hair-color-personality-quantitative-analysis) (《金发傲娇？粉发病娇？日本动画发色瞳色与性格关联之量化分析》)
 
 ### Entered in the Eve Festival Only
 

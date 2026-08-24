@@ -36,19 +36,19 @@ format: article
 
 前夜祭＋後夜祭の両方で合格した原稿と作者は、以下の8作である（順不同）。
 
-- **「『エア行為』とは何か――存在論と内在的異質性」、Austoria**
-- **「必ず遅れてくるメシア――アニメ『THE ビッグオー』の一解釈」、斑鸠**
-- **「あなたがゲームを遊ぶのか、ゲームがあなたを遊ぶのか」、辛巴不吃素**
-- **「『Prey』におけるモーガン・ユウのポストヒューマンな身体構築」、ilan**
-- **「FGO 2.4：Soyons tout!」、両儀式所失去的**
-- **「ロメロの怪物――ゾンビ・イメージと堕落した他者」、哲哥**
-- **「アニメーションと現実、あるいは高畑勲のリアリズムの座標」、学级委员一条同学**
-- **「VRのラディカリティ、美少女ゲームの臨界点――『Project LUX』論」、红茶泡海苔**
+- **[「『エア行為』とは何か――存在論と内在的異質性」](/ja/posts/what-is-cloud-behavior-ontology-internal-heterogeneity)、Austoria**
+- **[「必ず遅れてくるメシア――アニメ『THE ビッグオー』の一解釈」](/ja/posts/the-big-o-messiah-always-late)、斑鸠**
+- **[「あなたがゲームを遊ぶのか、ゲームがあなたを遊ぶのか」](/ja/posts/stanley-parable-video-games)、辛巴不吃素**
+- **[「『Prey』におけるモーガン・ユウのポストヒューマンな身体構築」](/ja/posts/prey-morgan-yu-posthuman-body-construction)、ilan**
+- **[「FGO 2.4：Soyons tout!」](/ja/posts/fgo-lostbelt-4-black-final-human)、両儀式所失去的**
+- **[「ロメロの怪物――ゾンビ・イメージと堕落した他者」](/ja/posts/romero-monsters-zombie-image-fallen-other)、哲哥**
+- **[「アニメーションと現実、あるいは高畑勲のリアリズムの座標」](/ja/posts/animation-and-reality-takahata-realism)、学级委员一条同学**
+- **[「VRのラディカリティ、美少女ゲームの臨界点――『Project LUX』論」](/ja/posts/project-lux-vr-radicality)、红茶泡海苔**
 
 前夜祭では合格したものの、残念ながら後夜祭で審査員団の全会一致を得られなかった原稿と作者は、以下の通りである。
 
 - **「森見登美彦作品におけるユーモアの系譜」、十文字**
-- **「DTB――停滞するスタイル」、实在狗子**
+- **[「DTB――停滞するスタイル」](/ja/posts/darker-than-black-stagnant-style)、实在狗子**
 
 先に発表した企画規定に基づき、前夜祭＋後夜祭の両方で合格した各作には**1,250元**、前夜祭のみで合格した各作には**200元**の原稿料を支払う。皆で祝おう。
 

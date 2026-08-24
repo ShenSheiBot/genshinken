@@ -40,14 +40,14 @@ citation:
 
 - 河豚，[《【作画讨论】无处不在的知觉：关于二维动画“眉目－头发”处理的体验与考据》](/posts/animation-eyebrow-hair-perception-video)（BV16a411D7PA）
 - Colisa，《变身，成为外传的魔法少女》
-- 「　」，《近代の非超克　欠席した起源と主体性—文字神秘主義と科学》
+- 「　」，[《近代の非超克　欠席した起源と主体性—文字神秘主義と科学》](/posts/modernity-not-overcome-writing-mysticism-science)
 
 ### 通过前夜祭与后夜祭
 
 其中，通过了“前夜祭”与“后夜祭”的稿件有：
 
-- 一条，《动画的演出性：安浓高志与高桥直人的再发现》
-- Sairai，《日本动画发色与性格关联之量化分析》
+- 一条，[《动画的演出性：安浓高志与高桥直人的再发现》](/posts/performativity-of-animation-anno-takahashi)
+- Sairai，[《日本动画发色与性格关联之量化分析》](/posts/anime-hair-color-personality-quantitative-analysis)
 
 恭喜以上作者！根据先前公布的活动规则，“前夜祭”稿件将获得 300 元的稿酬，“后夜祭”稿件将获得 2000 元的稿酬。
 

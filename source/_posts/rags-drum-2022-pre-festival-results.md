@@ -40,9 +40,9 @@ citation:
 
 - Isolde《在两个世界之间吟唱》
 - Colisa《成为外传的魔法少女》
-- 一条《动画的演出性：安浓高志与高桥直人的再发现》
-- 「　」《近代の非超克・欠席した起源と主体性―文字神秘主義と科学》
-- Sairai《金发傲娇？粉发病娇？日本动画发色瞳色与性格关联之量化分析》
+- 一条[《动画的演出性：安浓高志与高桥直人的再发现》](/posts/performativity-of-animation-anno-takahashi)
+- 「　」[《近代の非超克・欠席した起源と主体性―文字神秘主義と科学》](/posts/modernity-not-overcome-writing-mysticism-science)
+- Sairai[《金发傲娇？粉发病娇？日本动画发色瞳色与性格关联之量化分析》](/posts/anime-hair-color-personality-quantitative-analysis)
 
 ### 仅参加前夜祭
 

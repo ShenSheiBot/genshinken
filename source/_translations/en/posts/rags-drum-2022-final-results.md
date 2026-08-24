@@ -42,14 +42,14 @@ The works that passed the Eve Festival but not the After Festival—including wo
 
 - 河豚, [*Perception Everywhere: Experiences and Research on How 2D Animation Handles Eyebrows, Eyes, and Hair*](/en/posts/animation-eyebrow-hair-perception-video) (BV16a411D7PA)
 - Colisa, *Transforming into a Magical Girl in a Side Story* (《变身，成为外传的魔法少女》)
-- 「　」, 「近代の非超克　欠席した起源と主体性—文字神秘主義と科学」
+- 「　」, [*Modernity Not Overcome: The Absent Origin and Subjectivity—Graphomysticism and Science*](/en/posts/modernity-not-overcome-writing-mysticism-science) (「近代の非超克　欠席した起源と主体性—文字神秘主義と科学」)
 
 ### Passed Both the Eve Festival and After Festival
 
 The works that passed both the Eve Festival and After Festival are:
 
-- 一条, *The Performativity of Animation: Rediscovering Takashi Anno and Naohito Takahashi* (《动画的演出性：安浓高志与高桥直人的再发现》)
-- Sairai, *A Quantitative Analysis of the Relationship Between Hair Color and Personality in Japanese Animation* (《日本动画发色与性格关联之量化分析》)
+- 一条, [*The Performativity of Animation: Rediscovering Takashi Anno and Naohito Takahashi*](/en/posts/performativity-of-animation-anno-takahashi) (《动画的演出性：安浓高志与高桥直人的再发现》)
+- Sairai, [*A Quantitative Analysis of the Relationship Between Hair Color and Personality in Japanese Animation*](/en/posts/anime-hair-color-personality-quantitative-analysis) (《日本动画发色与性格关联之量化分析》)
 
 Congratulations to these authors! Under the previously announced rules, Eve Festival works will receive an honorarium of RMB 300 and After Festival works an honorarium of RMB 2,000.
 

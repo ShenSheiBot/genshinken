@@ -3,7 +3,10 @@ import os from "node:os";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
 import { parseYamlFrontMatter } from "../lib/safe-front-matter.mjs";
-import { translationLifecycleValues } from "../lib/translation-contract.mjs";
+import {
+  canonicalizeLocalizedTranslationRoutes,
+  translationLifecycleValues,
+} from "../lib/translation-contract.mjs";
 import { CONTRIBUTORS } from "../lib/contributors.ts";
 import {
   bookChapterTranslationSourceFromText,
@@ -308,15 +311,26 @@ for (const disposition of languageDispositions) {
 verifyPublishedTranslationsTrackSourceChanges(editions);
 
 const temporary = fs.mkdtempSync(path.join(os.tmpdir(), "roof-translation-structure-"));
+const localizedRouteMap = new Map(editions.map((edition) => [
+  edition.route,
+  edition.source.type === "post"
+    ? `/posts/${edition.source.slug}`
+    : `/books/${edition.source.bookSlug}/chapters/${edition.source.chapterId}`,
+]));
 const warnings = [];
 const failures = [];
 try {
   for (const edition of editions) {
     const sourcePath = path.join(temporary, `${edition.workId}-${edition.locale}-source.md`);
+    const targetPath = path.join(temporary, `${edition.workId}-${edition.locale}-target.md`);
     fs.writeFileSync(sourcePath, `${sourceMarkdownForStructure(edition)}\n`);
+    fs.writeFileSync(
+      targetPath,
+      canonicalizeLocalizedTranslationRoutes(fs.readFileSync(edition.file, "utf8"), localizedRouteMap),
+    );
     const result = spawnSync(
       "python3",
-      [auditScript, sourcePath, edition.file, "--target-language", edition.locale, "--json"],
+      [auditScript, sourcePath, targetPath, "--target-language", edition.locale, "--json"],
       {
         cwd: root,
         encoding: "utf8",
