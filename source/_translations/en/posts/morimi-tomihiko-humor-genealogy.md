@@ -9,7 +9,7 @@ title: "Tracing the Genealogy of Humor in Tomihiko Morimi’s Works"
 title_breaks:
   - "Tracing the Genealogy of Humor"
   - "in Tomihiko Morimi’s Works"
-excerpt: "Drawing on relevance theory, Hegel’s theory of comedy, and the coined terms that recur throughout Tomihiko Morimi’s fiction, 十文字 examines how Morimi’s humor works at the levels of the sentence, narrative structure, and theme."
+excerpt: "Drawing on relevance theory, Hegel’s theory of comedy, and the coined terms that recur throughout Tomihiko Morimi’s fiction, this essay examines how Morimi’s humor works at the levels of the sentence, narrative structure, and theme."
 credits:
   - role: translator
     contributor_id: shen-shui-bot
