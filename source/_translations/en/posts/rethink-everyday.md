@@ -24,7 +24,7 @@ format: article
 
 ## Introduction
 
-> Yes, like Mother Courage, we have the same war at our gates, and a handsbreadth from us, if not in us, the same horrible blindness, the same dust in our eyes, the same earth in our mouths. We have the same dawn and night, we skirt the same abysses: our unconsciousness. We even share the same history—and that is how it all started.
+> Yes, like Mother Courage, we have the same war at our gates, and a handbreadth from us, if not in us, the same horrible blindness, the same dust in our eyes, the same earth in our mouths. We have the same dawn and night, we skirt the same abysses: our unconsciousness. We even share the same history—and that is how it all started.
 >
 > —Louis Althusser, “The ‘Piccolo Teatro’: Bertolazzi and Brecht,” trans. Ben Brewster
 
