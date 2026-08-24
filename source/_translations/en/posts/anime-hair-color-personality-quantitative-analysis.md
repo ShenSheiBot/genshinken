@@ -98,8 +98,6 @@ Zipf’s law states that a word’s frequency is inversely proportional to its r
 
 [图题] TF-IDF formula.
 
-![TF-IDF formula and definitions of its symbols](/attachments/roof-archive/cv21792051/51.jpg "=100%")
-
 $$
 \begin{aligned}
 \mathrm{TF} &= \frac{n}{\mathrm{total}}, \\
@@ -142,7 +140,7 @@ At the same time, traits such as tsundere and energetic rank relatively high for
 
 I next analyze the creator’s perspective: assigning a hair color to a character on the basis of a personality already defined in the design. Taking personality traits as the condition, I calculated TF-IDF values for co-occurring hair colors. Because there are many personality traits, I retained only those for which the difference between the first- and second-ranked hair colors exceeded 0.05—that is, traits with one distinctly dominant hair color. Figure 3 presents the top five; each bar’s color represents the hair color most important to that personality.
 
-[图题] Figure 3. Top-five TF-IDF values for hair colors associated with each personality (TF-IDF(T1) − TF-IDF(T2) > 0.05).
+[图题] Figure 3. Top-five TF-IDF values for hair colors associated with each personality ($\mathrm{TF\text{-}IDF}(T_1)-\mathrm{TF\text{-}IDF}(T_2)>0.05$).
 
 ![Small-multiple charts showing the five hair colors with the highest TF-IDF values for each personality; several traits have one distinctly dominant hair color, such as purple for masochistic, black for ice beauty, and blond for hapless](/attachments/roof-archive/cv21792051/73.jpg "=100%")
 

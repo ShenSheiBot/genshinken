@@ -92,7 +92,15 @@ citation:
 
 [图题] TF-IDF 计算公式。
 
-![TF-IDF 计算公式及符号说明](/attachments/roof-archive/cv21792051/51.jpg "=100%")
+$$
+\begin{aligned}
+\mathrm{TF} &= \frac{n}{\mathrm{total}}, \\
+\mathrm{IDF} &= \ln\!\left(\frac{N}{n_t}\right), \\
+\mathrm{TF\!\text{-}\!IDF} &= \mathrm{TF}\times\mathrm{IDF}.
+\end{aligned}
+$$
+
+其中，$n$ 是词语的词频，$\mathrm{total}$ 是满足条件的文本总词数，$N$ 是字符总数，$n_t$ 是包含该词语的字符数。TF-IDF 值越大，表示该条件下的词语越重要。
 
 ### 4.2 数据筛选
 
@@ -126,7 +134,7 @@ citation:
 
 接下来从创作者视角进行分析，即根据角色的设定性格，为其赋予发色的过程。以性格萌点作为条件，对于共词的发色的 TF-IDF 值进行运算。由于性格萌点较多，仅筛选第一发色与第二发色的 TF-IDF 差值在 0.05 以上，即第一发色显著突出的性格萌点进行分析。TOP5 排名见图 3，图 3 的颜色代表该性格下最关键的发色。
 
-[图题] 图 3：性格对应发色 TF-IDF 值 TOP5（TF-IDF（T1）－TF-IDF（T2）＞0.05）。
+[图题] 图 3：性格对应发色 TF-IDF 值 TOP5（$\mathrm{TF\text{-}IDF}(T_1)-\mathrm{TF\text{-}IDF}(T_2)>0.05$）。
 
 ![性格对应发色 TF-IDF 值 TOP5 图表](/attachments/roof-archive/cv21792051/73.jpg "=100%")
 

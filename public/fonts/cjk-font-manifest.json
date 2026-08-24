@@ -3,39 +3,39 @@
   "corpusFileCount": 494,
   "fonts": {
     "UN Canon STFangsong": {
-      "bytes": 1663212,
-      "codePointCount": 6526,
+      "bytes": 1662952,
+      "codePointCount": 6525,
       "file": "un-canon-st-fangsong.woff2",
-      "sha256": "bb72fd725ad27c5ca4bfa484ba0c73197f34e0a3ebfa9e23e882513562815a27",
+      "sha256": "88940c8069111da078c7a97b013d76ceeefc8a4a557a4bcc01358ac07ca63748",
       "source": "STFangsong.ttf",
       "sourceSha256": "e6326459e8e60e436c7d60e34d273bda3ba4eea2d2a5b309ff8f1b73200f2e38",
       "sourceUrl": "https://raw.githubusercontent.com/Haixing-Hu/latex-chinese-fonts/287399335ec1beb72062ce67c36eaa8bec35f386/chinese/%E4%BB%BF%E5%AE%8B%E4%BD%93/STFangsong.ttf"
     },
     "UN Canon STKaiti": {
-      "bytes": 2027716,
-      "codePointCount": 6526,
+      "bytes": 2027708,
+      "codePointCount": 6525,
       "file": "un-canon-st-kaiti.woff2",
-      "sha256": "cedb051b812c9b282ea5f9f777c78164de925e141a8ad3b2212c0b4e35698aaf",
+      "sha256": "73340502d1f3f91d82464c3e9bed52b79342e22079475190101261b3b21cd0eb",
       "source": "STKaiti.ttf",
       "sourceSha256": "a29c99c161fc43ce6aba2d7c152065359c2cb3019be4ae6248171178cb7d04d5",
       "sourceUrl": "https://raw.githubusercontent.com/Haixing-Hu/latex-chinese-fonts/287399335ec1beb72062ce67c36eaa8bec35f386/chinese/%E6%A5%B7%E4%BD%93/STKaiti.ttf"
     },
     "UN Canon STSong": {
-      "bytes": 1633400,
-      "codePointCount": 6526,
+      "bytes": 1633668,
+      "codePointCount": 6525,
       "file": "un-canon-st-song.woff2",
-      "sha256": "fce666ca8e425c8d6a9f3af3726d665d70d43c6014db0af40db20271eb5a4892",
+      "sha256": "4fcffd45d082a5a5385ddd649071b80b500836bf8e4c0baca986fa6fdb9155cf",
       "source": "STSong.ttf",
       "sourceSha256": "c5cc2ed5e2c0e6385013fe82d950eee6960d805bd602b86c53ff454783f382c4",
       "sourceUrl": "https://raw.githubusercontent.com/Haixing-Hu/latex-chinese-fonts/287399335ec1beb72062ce67c36eaa8bec35f386/chinese/%E5%AE%8B%E4%BD%93/STSong.ttf"
     }
   },
-  "siteCodePointCount": 6617,
-  "siteCodePointSha256": "df145c4b3b31d6cfabf9492d2678a915f18adf511b1995a4985455a41af0b1d5",
-  "sourceCodePointCount": 5703,
-  "sourceCodePointSha256": "57889f9485449424077799cd0f654542c87ba1df4836a5b1321f7bbae4756757",
+  "siteCodePointCount": 6616,
+  "siteCodePointSha256": "c514eb54ce7d33e9e0c104bf53e5d84c7b8de4b9d26a109cf00617a820559159",
+  "sourceCodePointCount": 5702,
+  "sourceCodePointSha256": "53aaa5a79d4a4276e5a813b147b259d577442ce54e1f4dbc3fb7999f9ef5daa6",
   "strategy": "site-corpus-opencc-closure",
-  "subsetCodePointCount": 6526,
+  "subsetCodePointCount": 6525,
   "toolchainSha256": "b192f1da4344abea6d8568a33b15e3ecfb6d9f8242b22257639c7cf28d4424c3",
   "unsupportedSiteCodePointRanges": [
     "U+2027",

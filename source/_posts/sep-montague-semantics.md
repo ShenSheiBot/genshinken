@@ -125,7 +125,7 @@ citation:
 
 这两个句子的例子是一个被叫作内涵语境中的量化(quantification into intensional contexts)的经典疑难。传统上，第二个句子被整个地看作一个内涵语境。而蒙太古处理的新颖的地方在于他将seek的对象[即unicorn]看作这个问题的根本。他将seek形式化为一个个体和一个更为抽象的实体间的关系，而不是两个个体间的关系，见2.2节。在这种分析下，我们并不需要说独角兽存在，而如何得到从物解读的意义，则是通过另外一种不同的方式，见2.5节。
 
-蒙太古的策略是将所有表达的范畴诉诸到最普遍的那一个[一中范畴－类型提升的手段，例如他在PTQ中将及物动词词组TV，e.g. seek，处理为类型为&lt;&lt;s,&lt;&lt;s,&lt;&lt;s,e&gt;,t&gt;&gt;,t&gt;&gt;,&lt;&lt;s,e&gt;,t&gt;&gt;的东西]，而在必要时通过意义公设(meaning postulate)缩小它。所以，最开始时find仍然是被视为一个在个体和抽象实体的关系，但一些意义公设将，在我们解释下的语片的这类模型限制为，find表示的仅仅是一个(经典的)个体间的关系。
+蒙太古的策略是将所有表达的范畴诉诸到最普遍的那一个[一中范畴－类型提升的手段，例如他在PTQ中将及物动词词组TV，e.g. seek，处理为类型为$\langle\langle s,\langle\langle s,\langle\langle s,e\rangle,t\rangle\rangle,t\rangle\rangle,\langle\langle s,e\rangle,t\rangle\rangle$的东西]，而在必要时通过意义公设(meaning postulate)缩小它。所以，最开始时find仍然是被视为一个在个体和抽象实体的关系，但一些意义公设将，在我们解释下的语片的这类模型限制为，find表示的仅仅是一个(经典的)个体间的关系。
 
 这种策略的后果是，蒙太古的论文中有着太多的意义公设。而现在的语义学家们则更偏向于去直接表明，单个词汇的词汇意义中的语义属性，所以，find，被直接解释作两个个体间的关系。现今的意义公设主要被运用于去表达模型的结构属性(一个例子是时间轴的结构)，以及去表达一些语词的意义间的关系[比如，单身汉就是未婚的男人]。对意义公设的角色的讨论，可见Zimmermann 1999。
 
@@ -151,7 +151,7 @@ citation:
 
 ![内涵逻辑重写公式](attachments/roof-archive/cv6584358/02-intensional-logic-rewrite.png)
 
-这些描述并不好懂而且用起来也不方便。蒙太古(1973)指出，或许间接地处理它们会更加清晰明了。因此他引进了一种叫“内涵逻辑(intensional logic)”的语言，上述引文中的操作被重新表达为上图所示的形式。λt意味着一个t为自变量的函数，同样对于λu也是。λtλu[t = u]是一个有两个自变量的函数，当两个自变量相等时它输出为真，反之为假。前面的∧[必须注意的是，这里这个符号是一个上标，它被称作内涵算子(intensor)而不是合取符]意味着，我们将其考虑作一个从可能世界以及时刻[都为复数，possible words, moments of time]，到一个如此被定义[参照了具体的某个可能世界及时刻]的函数的函数[The preceding ∧ says that we consider a function from possible worlds and moments of time to the thus defined function]。
+这些描述并不好懂而且用起来也不方便。蒙太古(1973)指出，或许间接地处理它们会更加清晰明了。因此他引进了一种叫“内涵逻辑(intensional logic)”的语言，上述引文中的操作被重新表达为上图所示的形式。$\lambda t$意味着一个$t$为自变量的函数，同样对于$\lambda u$也是。$\lambda t\lambda u[t = u]$是一个有两个自变量的函数，当两个自变量相等时它输出为真，反之为假。前面的${}^{\wedge}$[必须注意的是，这里这个符号是一个上标，它被称作内涵算子(intensor)而不是合取符]意味着，我们将其考虑作一个从可能世界以及时刻[都为复数，possible words, moments of time]，到一个如此被定义[参照了具体的某个可能世界及时刻]的函数的函数[The preceding ∧ says that we consider a function from possible worlds and moments of time to the thus defined function]。
 
 有两个关于蒙太古的内涵逻辑的特征需要注意。
 
@@ -221,11 +221,11 @@ Frege(1892)引进了涵义(sense[英], sinn[德])与意谓(reference[英], bedeu
 
 ![塔斯基式谓词逻辑解释公式](attachments/roof-archive/cv6584358/03-tarskian-interpretation.png)
 
-第一个式子声称ϕ ∧ ψ在指派(assignment)g下是真的，当且仅当在指派g下ϕ与ψ都是真的。而第二个式子引入了指派h，它和指派g是相等的，除了它们可能都指派了变项x的值这种情况。蒙太古运用了相同的格式，但有个不同是，在上标中，包括g，他还有i，这与时间相关，以及j，与可能世界相关。
+第一个式子声称$\varphi \land \psi$在指派(assignment)$g$下是真的，当且仅当在指派$g$下$\varphi$与$\psi$都是真的。而第二个式子引入了指派$h$，它和指派$g$是相等的，除了它们可能都指派了变项$x$的值这种情况。蒙太古运用了相同的格式，但有个不同是，在上标中，包括$g$，他还有$i$，这与时间相关，以及$j$，与可能世界相关。
 
 在这些式子的公式化中没有一个我们可以称之为“意义“的东西，实际上，它是一个参照作为参数的g与h而对真(truth)进行的定义，所以，它(以及蒙太古的工作)如何可能是组合性的呢？
 
-这个答案需要一个观念上的转变，公式ϕ的意义，缩写为M(ϕ)，是一个关于使得这个公式为真的指派的集合。然后，第一个式子就说的是M(ϕ ∧ ψ) = M(ϕ) ∩ M(ψ)，这样它就被表示为一个，在两个意义上的简单的集合论式的结合。M(∀xϕ) = {h ∼xg∣g ∈ M(ϕ)}，则可描述为，将M(ϕ)扩展到所有变项x上。像这样，在蒙太古语义学中，意义的表达就是一个函数，它的域(domain)是一个三元组&lt;时刻，可能世界，对变项的指派&gt;(&lt;moment of time, possible world, assignment to variables&gt;)。
+这个答案需要一个观念上的转变，公式$\varphi$的意义，缩写为$M(\varphi)$，是一个关于使得这个公式为真的指派的集合。然后，第一个式子就说的是$M(\varphi \land \psi) = M(\varphi) \cap M(\psi)$，这样它就被表示为一个，在两个意义上的简单的集合论式的结合。$M(\forall x\varphi) = \{h \sim_x g \mid g \in M(\varphi)\}$，则可描述为，将$M(\varphi)$扩展到所有变项$x$上。像这样，在蒙太古语义学中，意义的表达就是一个函数，它的域(domain)是一个三元组&lt;时刻，可能世界，对变项的指派&gt;(&lt;moment of time, possible world, assignment to variables&gt;)。
 
 将组合性原则运用到自然语言上是可能的吗？明显的一个可能的反例是习语(idioms)，因为它们的意义看上去并不是建立于它们各个词的组成上。然而Westerståhl (2002)提供了一系列方法，涵盖了从复合的基本表达，到一些含有偏离意义的组成部分。Janssen (1997)拒斥了一些在文献中被提及的其他反例。
 
@@ -253,7 +253,7 @@ Frege(1892)引进了涵义(sense[英], sinn[德])与意谓(reference[英], bedeu
 
 对于这两个方面，一些建议已经被提出去改变这种情况。一个方向是尽可能近地保持范畴语法的理想，只使用类型驱动规则(type driven rules)，并在一些情况下允许有限的扩展串联规则的能力。一个例子可见Morrill 1994与Carpenter 1998。另一种进路是尽可能多地将句法理论的见解纳入到蒙太古语法中，特别是那些来自于乔姆斯基传统的。Partee1973)走出了第一步，使用语法去产生结构(括号标记法(labelled bracketing)[就简单地是像乔姆斯基他们做语法分析一样用中括号去标短语])，一个在句法上更精细的语法(包含乔姆斯基式的移位规则(movement rules))被用在Rosetta translation project上(Rosetta 1994)。
 
-蒙太古在“John walks and Mary sings“这个句子中引入”and“，并不是将其处理为词汇的输入，而是规则的结果。这就是所谓的将and当成虚词性的处理(syncategorematically)。他对所有的限定词与否定也是如此处理的。对于”John walks and sings.“需要一个与”John walks and Mary sings.“不同的规则，因为从句法上，第一个句子中的and联结的是动词短语，而后者则是联结的句子。然而两者的意义是相近的以及这样处理将缺乏概括性。一个总的解决方法(或者一个总得替代性原则)是将一个表达式的范畴改为另一个范畴，这个改变对应于语义上的意义的提升规则(lifting rule)。举个例子，and作为联结两个动词短语的意义，是通过提升联结两个句子的∧，到λPλQλx[P(x)∧Q(x)]上得到的。经典的关于提升规则的进路的论文是Partee and Rooth 1983，Partee 1987，以及Hendriks 2001。在Winter 2001的专著中，整个都是关于连词的(conjoined phrases)复杂性的研究。
+蒙太古在“John walks and Mary sings“这个句子中引入”and“，并不是将其处理为词汇的输入，而是规则的结果。这就是所谓的将and当成虚词性的处理(syncategorematically)。他对所有的限定词与否定也是如此处理的。对于”John walks and sings.“需要一个与”John walks and Mary sings.“不同的规则，因为从句法上，第一个句子中的and联结的是动词短语，而后者则是联结的句子。然而两者的意义是相近的以及这样处理将缺乏概括性。一个总的解决方法(或者一个总得替代性原则)是将一个表达式的范畴改为另一个范畴，这个改变对应于语义上的意义的提升规则(lifting rule)。举个例子，and作为联结两个动词短语的意义，是通过提升联结两个句子的$\land$，到$\lambda P\lambda Q\lambda x[P(x)\land Q(x)]$上得到的。经典的关于提升规则的进路的论文是Partee and Rooth 1983，Partee 1987，以及Hendriks 2001。在Winter 2001的专著中，整个都是关于连词的(conjoined phrases)复杂性的研究。
 
 在现在，句法方面通常并不在蒙太古语义学的研究中扮演重要角色。蒙太古对一个语片提供的完整而清晰的句法的那种方式也被抛弃掉了。大家都关注于语义上有趣的现象，提出只涉及这方面的规则。而对这些现象的处理和对其他现象的其他处理是否一致却没有得到考虑。但Partee在Janssen 1997中，与Jacobson 2014，强烈反对了这一倾向，而Jacobson 2014确实也提供了一个语片。
 

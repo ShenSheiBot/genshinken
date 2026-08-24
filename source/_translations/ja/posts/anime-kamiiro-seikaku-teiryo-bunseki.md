@@ -98,8 +98,6 @@ format: article
 
 [图题] TF-IDFの計算式。
 
-![TF-IDFの計算式と記号の説明](/attachments/roof-archive/cv21792051/51.jpg "=100%")
-
 $$
 \begin{aligned}
 \mathrm{TF} &= \frac{n}{\mathrm{total}}, \\
