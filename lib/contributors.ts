@@ -38,7 +38,7 @@ export const CONTRIBUTORS = [
   { id: "saito-tamaki", displayName: "斋藤环", aliases: [], teamMember: false, entityType: "person" },
   { id: "nagasaki-hiroshi", displayName: "长崎浩", aliases: [], teamMember: false, entityType: "person" },
   { id: "xiaoqi-xiaowei", displayName: "骁骑校尉", aliases: [], teamMember: false, entityType: "person" },
-  { id: "shizu-fumihiko", displayName: "志津史比古", aliases: [], teamMember: false, entityType: "person" },
+  { id: "shizu-fumihiko", displayName: "志津史比古", aliases: ["Ayahiko Shizu"], teamMember: false, entityType: "person" },
   { id: "wei-guang", displayName: "微光", aliases: [], teamMember: false, entityType: "person" },
   {
     id: "roof-genshiken",

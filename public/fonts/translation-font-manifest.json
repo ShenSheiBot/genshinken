@@ -1,5 +1,5 @@
 {
-  "corpusFileCount": 32,
+  "corpusFileCount": 33,
   "corpusFiles": [
     "app/[locale]/books/[book]/chapters/[chapter]/cite.bib/route.ts",
     "app/[locale]/books/[book]/chapters/[chapter]/page.tsx",
@@ -28,14 +28,15 @@
     "source/_translations/ja/posts/kara-no-kyoukai-garden-of-sinners.md",
     "source/_translations/ja/posts/kojimas-sekaikei.md",
     "source/_translations/ja/posts/persona-5-picaresque-bunka-haikei.md",
+    "source/_translations/ja/posts/rethink-everyday.md",
     "source/_translations/ja/posts/revue-starlight-reproduction-through-revue.md",
     "source/_translations/ja/posts/understanding-disaster-video-series.md",
     "source/_translations/ja/posts/what-we-watch-in-monster-movies.md",
     "source/_translations/ja/posts/witcher-wilderness-detective.md",
     "source/_translations/language-dispositions.json"
   ],
-  "corpusSha256": "e3ea4fce26b770d116c0f4deb898a31f745e82a7bbafd46db6a497b9c589d55c",
-  "fallbackCodePointCount": 51,
+  "corpusSha256": "08c70e32d5a87c9611d0160aca3242e26e59dc7c237458a385f0293c3eff5ba7",
+  "fallbackCodePointCount": 52,
   "fonts": {
     "Roof EB Garamond Fallback": {
       "bytes": 3888,
@@ -66,12 +67,12 @@
       "weight": "400"
     },
     "Roof Noto Sans JP": {
-      "bytes": 695744,
-      "codePointCount": 2238,
+      "bytes": 703676,
+      "codePointCount": 2260,
       "family": "Roof Noto Sans JP",
       "file": "roof-noto-sans-jp.woff2",
       "kind": "primary-sans",
-      "sha256": "fcbba6f978a6181245ed8ab934c60479cca1afa4fac18ffaaaa16f83f17536d6",
+      "sha256": "67d6941a95a4f2f88550001796d7aa266a9793e260a0c8d44abb622b45c71775",
       "source": "NotoSansJP.ttf",
       "sourceSha256": "c2f3b4d463500a2ddcd3849cded1fceeb9fd6d1c32e6cbecd568453ba50fc68f",
       "sourceUrl": "https://raw.githubusercontent.com/google/fonts/e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7/ofl/notosansjp/NotoSansJP%5Bwght%5D.ttf",
@@ -79,26 +80,26 @@
       "weight": "100 900"
     },
     "Roof Noto Sans SC Fallback": {
-      "bytes": 18672,
-      "codePointCount": 48,
+      "bytes": 18820,
+      "codePointCount": 49,
       "family": "Roof Noto Sans SC Fallback",
       "file": "roof-noto-sans-sc-fallback.woff2",
       "kind": "fallback-sans",
-      "sha256": "2e2238b0d511efc85b1e50c0da18c6e65d22cae23f4a098558235cd78f31e24a",
+      "sha256": "d8f8d905d5fc4850a4c535565e90e92eaf5d6a3e95e31de79a3a0cbcad9ae854",
       "source": "NotoSansSC.ttf",
       "sourceSha256": "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da",
       "sourceUrl": "https://raw.githubusercontent.com/google/fonts/e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7/ofl/notosanssc/NotoSansSC%5Bwght%5D.ttf",
-      "unicodeRange": "U+4E1D U+4E3A U+4E49 U+4E66 U+5219 U+52A1 U+52A8 U+534E U+55B5 U+56FE U+575B U+5987 U+5B9E U+5E05 U+6001 U+61D2 U+6218 U+62E5 U+62E8-62E9 U+6682 U+672F U+6742 U+67AB U+6811 U+6C49 U+73AF U+7535 U+7EA7 U+7EB9 U+7EF4 U+7F16 U+89C8 U+8BBA U+8BC6 U+8BD1 U+8BDA U+8BDD U+8BED U+8C14 U+8DB4 U+9009 U+94B1 U+9884 U+9898 U+9986 U+9C81 U+9E2D",
+      "unicodeRange": "U+4E1D U+4E3A U+4E49 U+4E66 U+5219 U+52A1 U+52A8 U+534E U+55B5 U+56E2 U+56FE U+575B U+5987 U+5B9E U+5E05 U+6001 U+61D2 U+6218 U+62E5 U+62E8-62E9 U+6682 U+672F U+6742 U+67AB U+6811 U+6C49 U+73AF U+7535 U+7EA7 U+7EB9 U+7EF4 U+7F16 U+89C8 U+8BBA U+8BC6 U+8BD1 U+8BDA U+8BDD U+8BED U+8C14 U+8DB4 U+9009 U+94B1 U+9884 U+9898 U+9986 U+9C81 U+9E2D",
       "variable": "--font-roof-noto-sans-sc-fallback",
       "weight": "100 900"
     },
     "Roof Noto Serif JP": {
-      "bytes": 965964,
-      "codePointCount": 2238,
+      "bytes": 976280,
+      "codePointCount": 2260,
       "family": "Roof Noto Serif JP",
       "file": "roof-noto-serif-jp.woff2",
       "kind": "primary-serif",
-      "sha256": "da6e9577ed4c3bbe17c3713b6469f12c9a8d6b568696683f03c0c52cc06784ea",
+      "sha256": "e39b6bf7135e72341e6e1c584ad0cda1b3b820d40ceaa731171199c324f184f6",
       "source": "NotoSerifJP.ttf",
       "sourceSha256": "2fd527ba12b6a44ec30d796d633360da0aeba6c5d4af1304ce12bb4dc15a7dfc",
       "sourceUrl": "https://raw.githubusercontent.com/google/fonts/e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7/ofl/notoserifjp/NotoSerifJP%5Bwght%5D.ttf",
@@ -106,16 +107,16 @@
       "weight": "200 900"
     },
     "Roof Noto Serif SC Fallback": {
-      "bytes": 23012,
-      "codePointCount": 48,
+      "bytes": 23224,
+      "codePointCount": 49,
       "family": "Roof Noto Serif SC Fallback",
       "file": "roof-noto-serif-sc-fallback.woff2",
       "kind": "fallback-serif",
-      "sha256": "1922b9ca80452eb0b91370ab4f994898268b5c90cc4ab16ae51e1e6c91d348c7",
+      "sha256": "dc9df07b7d00603ea31d228e962a9097049dd040125284c9f76cf2304be1db8c",
       "source": "NotoSerifSC.ttf",
       "sourceSha256": "050080d9255a86808f2945bffac582b31ef32bc36411ce29563b4961670c66f9",
       "sourceUrl": "https://raw.githubusercontent.com/google/fonts/e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7/ofl/notoserifsc/NotoSerifSC%5Bwght%5D.ttf",
-      "unicodeRange": "U+4E1D U+4E3A U+4E49 U+4E66 U+5219 U+52A1 U+52A8 U+534E U+55B5 U+56FE U+575B U+5987 U+5B9E U+5E05 U+6001 U+61D2 U+6218 U+62E5 U+62E8-62E9 U+6682 U+672F U+6742 U+67AB U+6811 U+6C49 U+73AF U+7535 U+7EA7 U+7EB9 U+7EF4 U+7F16 U+89C8 U+8BBA U+8BC6 U+8BD1 U+8BDA U+8BDD U+8BED U+8C14 U+8DB4 U+9009 U+94B1 U+9884 U+9898 U+9986 U+9C81 U+9E2D",
+      "unicodeRange": "U+4E1D U+4E3A U+4E49 U+4E66 U+5219 U+52A1 U+52A8 U+534E U+55B5 U+56E2 U+56FE U+575B U+5987 U+5B9E U+5E05 U+6001 U+61D2 U+6218 U+62E5 U+62E8-62E9 U+6682 U+672F U+6742 U+67AB U+6811 U+6C49 U+73AF U+7535 U+7EA7 U+7EB9 U+7EF4 U+7F16 U+89C8 U+8BBA U+8BC6 U+8BD1 U+8BDA U+8BDD U+8BED U+8C14 U+8DB4 U+9009 U+94B1 U+9884 U+9898 U+9986 U+9C81 U+9E2D",
       "variable": "--font-roof-noto-serif-sc-fallback",
       "weight": "200 900"
     }
@@ -153,9 +154,9 @@
     }
   },
   "strategy": "japanese-translation-corpus-variable-fonts-with-generated-fallbacks",
-  "subsetCodePointCount": 2238,
-  "targetCodePointCount": 2044,
-  "targetCodePointSha256": "b1048b293d5d9aeb68c5baae2dc273da923ad6130991835547516854951222a5",
+  "subsetCodePointCount": 2260,
+  "targetCodePointCount": 2067,
+  "targetCodePointSha256": "4cef5fef0e401f5605cd2243dc3e64478f7483f1e11ced33c17e945865eac5f8",
   "toolchainSha256": "b192f1da4344abea6d8568a33b15e3ecfb6d9f8242b22257639c7cf28d4424c3",
   "uncoveredCodePointRanges": [],
   "upstreamCommit": "e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7",
