@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import "katex/dist/katex.min.css";
 import "../globals.css";
 import "../cjk-fonts.generated.css";
 import "../translation-fonts.generated.css";

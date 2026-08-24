@@ -1,5 +1,13 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import { renderMarkdown } from "../lib/markdown.ts";
+
+const localeLayoutSource = await readFile(new URL("../app/[locale]/layout.tsx", import.meta.url), "utf8");
+assert.match(
+  localeLayoutSource,
+  /import\s+["']katex\/dist\/katex\.min\.css["'];/u,
+  "localized article and book routes must load KaTeX CSS so MathML stays visually hidden"
+);
 
 const bibliography = "Gaido, Daniel 2003, ‘“The American Worker” and the Theory of Permanent Revolution: Karl Kautsky on Werner Sombart’s *Why Is There No Socialism in the United States?*’, *Historical Materialism*, 11, 4: 79-123.";
 const bibliographyHtml = await renderMarkdown(bibliography);
