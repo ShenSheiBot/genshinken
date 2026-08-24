@@ -61,6 +61,20 @@ export function translationJsonLd(source: TranslationSource, edition: Translatio
     : source.format === "interview" ? "Interview" : "Article";
   const authors = sourceAuthors(source);
   const publisherName = edition.locale === "en" ? "Lab on Roof" : "屋頂現視研";
+  const sourceRelation = edition.translationMethod === "original"
+    ? { sameAs: sourceUrl }
+    : {
+      translationOfWork: {
+        "@type": type,
+        "@id": `${sourceUrl}#work`,
+        url: sourceUrl,
+        name: source.title,
+        inLanguage: source.language,
+        ...(sourceTranslators.length ? { translator: sourceTranslators } : {}),
+        ...(sourceEditors.length ? { editor: sourceEditors } : {}),
+        ...(sourceProofreaders.length ? { contributor: sourceProofreaders } : {}),
+      },
+    };
   const work = {
     "@type": type,
     "@id": `${url}#work`,
@@ -71,18 +85,9 @@ export function translationJsonLd(source: TranslationSource, edition: Translatio
     ...(edition.publishedISO ? { datePublished: edition.publishedISO } : {}),
     ...(edition.updatedISO ? { dateModified: edition.updatedISO } : {}),
     mainEntityOfPage: { "@id": `${url}#webpage` },
-    translationOfWork: {
-      "@type": type,
-      "@id": `${sourceUrl}#work`,
-      url: sourceUrl,
-      name: source.title,
-      inLanguage: source.language,
-      ...(sourceTranslators.length ? { translator: sourceTranslators } : {}),
-      ...(sourceEditors.length ? { editor: sourceEditors } : {}),
-      ...(sourceProofreaders.length ? { contributor: sourceProofreaders } : {}),
-    },
+    ...sourceRelation,
     ...(authors.length ? { author: authors } : {}),
-    translator: translators,
+    ...(translators.length ? { translator: translators } : {}),
     publisher: { "@type": "Organization", name: publisherName, url: site.url },
     additionalProperty: [
       { "@type": "PropertyValue", name: "translationMethod", value: edition.translationMethod },

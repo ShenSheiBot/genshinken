@@ -39,6 +39,8 @@ export const TRANSLATION_LOCALES = ["en", "ja"] as const;
 export type TranslationLocale = (typeof TRANSLATION_LOCALES)[number];
 export const TRANSLATION_STATUSES = ["draft", "review", "published"] as const;
 export type TranslationStatus = (typeof TRANSLATION_STATUSES)[number];
+export const TRANSLATION_METHODS = ["agent", "human", "original"] as const;
+export type TranslationMethod = (typeof TRANSLATION_METHODS)[number];
 export const TRANSLATION_CREDIT_ROLES = ["translator", "reviewer", "proofreader", "editor"] as const;
 export type TranslationCreditRole = (typeof TRANSLATION_CREDIT_ROLES)[number];
 
@@ -94,7 +96,7 @@ export type TranslationEdition = {
   titleBreaks: string[];
   excerpt: string;
   credits: TranslationCredit[];
-  translationMethod: "agent" | "human";
+  translationMethod: TranslationMethod;
   sourceRelationship: "direct" | "relay" | "mixed";
   baseLanguage: string;
   publishedISO: string;
@@ -308,7 +310,13 @@ function localizedContributorName(
   return fallback;
 }
 
-function parseCredits(value: unknown, source: string, locale: TranslationLocale): TranslationCredit[] {
+function parseCredits(
+  value: unknown,
+  source: string,
+  locale: TranslationLocale,
+  method: TranslationMethod
+): TranslationCredit[] {
+  if (method === "original" && (value == null || (Array.isArray(value) && value.length === 0))) return [];
   if (!Array.isArray(value) || value.length === 0) throw new Error(`${source}: credits must be a non-empty YAML array`);
   const credits = value.map((entry, index): TranslationCredit => {
     if (!entry || typeof entry !== "object" || Array.isArray(entry)) {
@@ -332,7 +340,7 @@ function parseCredits(value: unknown, source: string, locale: TranslationLocale)
       note: optionalText(record, "note"),
     };
   });
-  if (!credits.some((credit) => credit.role === "translator")) {
+  if (method !== "original" && !credits.some((credit) => credit.role === "translator")) {
     throw new Error(`${source}: credits must include at least one translator`);
   }
   return credits;
@@ -406,8 +414,10 @@ export function translationCitation(source: TranslationSource, edition: Translat
     creators: [...source.citation.creators, ...targetCreators],
     extra: [
       source.citation.extra,
-      `Translation of ${site.url}${source.href}`,
-      `Translation method: ${edition.translationMethod}; source relationship: ${edition.sourceRelationship}; base language: ${edition.baseLanguage}`,
+      edition.translationMethod === "original"
+        ? `Local original-language edition of ${site.url}${source.href}`
+        : `Translation of ${site.url}${source.href}`,
+      `Edition method: ${edition.translationMethod}; source relationship: ${edition.sourceRelationship}; base language: ${edition.baseLanguage}`,
       `Edition credits: ${edition.credits.map((credit) => (
         `${credit.role}: ${credit.name}${credit.scope ? ` (${credit.scope})` : ""}`
       )).join("; ")}`,
@@ -453,8 +463,8 @@ async function loadLocale(locale: TranslationLocale): Promise<TranslationEdition
       throw new Error(`${sourcePath}: status must be ${TRANSLATION_STATUSES.join(" / ")}`);
     }
     const method = requiredText(data, "translation_method", sourcePath);
-    if (method !== "agent" && method !== "human") {
-      throw new Error(`${sourcePath}: translation_method must be agent / human`);
+    if (!TRANSLATION_METHODS.includes(method as TranslationMethod)) {
+      throw new Error(`${sourcePath}: translation_method must be ${TRANSLATION_METHODS.join(" / ")}`);
     }
     const sourceRelationship = requiredText(data, "source_relationship", sourcePath);
     if (sourceRelationship !== "direct" && sourceRelationship !== "relay" && sourceRelationship !== "mixed") {
@@ -482,7 +492,7 @@ async function loadLocale(locale: TranslationLocale): Promise<TranslationEdition
     if (resolvedSource.subtitle && !subtitle) {
       throw new Error(`${sourcePath}: subtitle is required because the source edition has a subtitle`);
     }
-    const credits = parseCredits(data.credits, sourcePath, locale);
+    const credits = parseCredits(data.credits, sourcePath, locale, method as TranslationMethod);
     if (status === "published" && !credits.some((credit) => credit.role === "reviewer")) {
       throw new Error(`${sourcePath}: published editions require a reviewer credit`);
     }
@@ -511,7 +521,7 @@ async function loadLocale(locale: TranslationLocale): Promise<TranslationEdition
       titleBreaks: titleBreaks(data.title_breaks, title, sourcePath, locale),
       excerpt: requiredText(data, "excerpt", sourcePath),
       credits,
-      translationMethod: method,
+      translationMethod: method as TranslationMethod,
       sourceRelationship,
       baseLanguage: requiredText(data, "base_language", sourcePath),
       publishedISO: lifecycle.publishedISO,

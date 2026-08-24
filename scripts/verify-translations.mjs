@@ -26,7 +26,7 @@ const translationsRoot = path.join(root, "source", "_translations");
 const auditScript = path.join(root, "scripts", "audit-translation-structure.py");
 const locales = new Set(["en", "ja"]);
 const statuses = new Set(["draft", "review", "published"]);
-const methods = new Set(["agent", "human"]);
+const methods = new Set(["agent", "human", "original"]);
 const sourceRelationships = new Set(["direct", "relay", "mixed"]);
 const roles = new Set(["translator", "reviewer", "proofreader", "editor"]);
 const stableId = /^[a-z0-9]+(?:-[a-z0-9]+)*$/u;
@@ -85,7 +85,8 @@ function editionRoute(data, locale, source, file, bookManifest) {
   return `/${locale}/books/${bookManifest.slug}/chapters/${slug}`;
 }
 
-function verifyCredits(value, file) {
+function verifyCredits(value, file, method) {
+  if (method === "original" && (value == null || (Array.isArray(value) && value.length === 0))) return;
   if (!Array.isArray(value) || value.length === 0) throw new Error(`${file}: credits must be a non-empty array`);
   let translator = false;
   value.forEach((entry, index) => {
@@ -100,7 +101,7 @@ function verifyCredits(value, file) {
     }
     if (role === "translator") translator = true;
   });
-  if (!translator) throw new Error(`${file}: credits must include a translator`);
+  if (method !== "original" && !translator) throw new Error(`${file}: credits must include a translator`);
 }
 
 function verifyNoReaderFacingRelayNotices(content, file) {
@@ -221,7 +222,7 @@ for (const file of [...locales].flatMap((locale) => walk(path.join(translationsR
   if (source.type === "post" && source.metadata?.subtitle) requiredText(data, "subtitle", file);
   requiredText(data, "excerpt", file);
   requiredText(data, "base_language", file);
-  verifyCredits(data.credits, file);
+  verifyCredits(data.credits, file, method);
   if (status === "published" && !data.credits.some((credit) => credit?.role === "reviewer")) {
     throw new Error(`${file}: published editions require a reviewer credit`);
   }

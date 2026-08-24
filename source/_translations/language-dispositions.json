@@ -167,23 +167,6 @@
       "state": "not-available",
       "reason": "cross-language-translation",
       "original_language": "en"
-    },
-    {
-      "source_type": "post",
-      "source_slug": "modernity-not-overcome-writing-mysticism-science",
-      "locale": "ja",
-      "state": "external-original",
-      "format": "web",
-      "title": "近代の非超克‥欠席した起源と主体性—文字神秘主義と科学",
-      "creator": "「　」",
-      "publication": "屋頂現視研（Bilibili）",
-      "published": "2022-11-09",
-      "links": [
-        {
-          "kind": "read",
-          "url": "https://www.bilibili.com/read/cv19651001/"
-        }
-      ]
     }
   ]
 }

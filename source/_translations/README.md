@@ -53,6 +53,12 @@ Each real edition uses YAML front matter with these fields:
 - `rights`
 - `format`: `article`, `interview`, or `qa`
 
+`translation_method: original` is reserved for a source-language edition that
+Roof already published and is republishing on its own localized route. Such an
+edition preserves the archived text verbatim and may use an empty `credits`
+array; it must not invent a translator. `agent` and `human` editions still
+require a translator credit.
+
 Every translated-book directory contains one `book.json` with `version: 1`,
 `source_book_slug`, target-language `slug`, `language`, `title`, optional
 source-preserving `subtitle`, and `excerpt`. These book-level values must not be

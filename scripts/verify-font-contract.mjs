@@ -311,10 +311,10 @@ assert.match(
   /html\[data-reader-font="sans"\][\s\S]*?\.rare-han[\s\S]*?font-family\s*:\s*["']UN Canon Rare Han Sans["']\s*;/
 );
 
-assert.equal(translationFontManifest.version, 2, "unsupported Japanese translation font manifest version");
+assert.equal(translationFontManifest.version, 3, "unsupported Japanese translation font manifest version");
 assert.equal(
   translationFontManifest.strategy,
-  "japanese-translation-corpus-variable-fonts-with-generated-fallbacks",
+  "japanese-translation-corpus-variable-fonts-with-generated-script-and-symbol-fallbacks",
   "Japanese fonts must be generated from the localized corpus and generated fallback set"
 );
 assert.equal(

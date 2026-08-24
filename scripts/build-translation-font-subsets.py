@@ -30,8 +30,8 @@ MANIFEST_PATH = OUTPUT_DIR / "translation-font-manifest.json"
 CSS_PATH = ROOT / "app" / "translation-fonts.generated.css"
 CACHE_DIR = ROOT / ".local-archive" / "font-sources" / "google-fonts-e1118da9"
 UPSTREAM_COMMIT = "e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7"
-GENERATOR_VERSION = 2
-GENERATOR_STRATEGY = "japanese-translation-corpus-variable-fonts-with-generated-fallbacks"
+GENERATOR_VERSION = 3
+GENERATOR_STRATEGY = "japanese-translation-corpus-variable-fonts-with-generated-script-and-symbol-fallbacks"
 TEXT_EXTENSIONS = {".css", ".json", ".md", ".ts", ".tsx"}
 CORPUS_ROOTS = (
     ROOT / "source" / "_translations" / "ja",
@@ -115,6 +115,16 @@ FALLBACK_FONTS = (
         "weight": "400",
         "variable": "--font-roof-noto-music-fallback",
         "kind": "fallback-music",
+    },
+    {
+        "family": "Roof Noto Sans Math Fallback",
+        "source": "NotoSansMath-Regular.ttf",
+        "source_sha256": "3f495fe933c06786e4d5f6d86b8ee70b6753a68ee3b9d87528726de0f6e2c47d",
+        "url": f"https://raw.githubusercontent.com/google/fonts/{UPSTREAM_COMMIT}/ofl/notosansmath/NotoSansMath-Regular.ttf",
+        "output": "roof-noto-sans-math-fallback.woff2",
+        "weight": "400",
+        "variable": "--font-roof-noto-sans-math-fallback",
+        "kind": "fallback-math",
     },
 )
 
@@ -253,10 +263,10 @@ def code_point_digest(points: set[int]) -> str:
 
 STACK_SPECS = {
     "--font-roof-translation-serif-stack": (
-        "primary-serif", "fallback-serif", "fallback-latin", "fallback-music"
+        "primary-serif", "fallback-serif", "fallback-latin", "fallback-math", "fallback-music"
     ),
     "--font-roof-translation-sans-stack": (
-        "primary-sans", "fallback-sans", "fallback-latin", "fallback-music"
+        "primary-sans", "fallback-sans", "fallback-latin", "fallback-math", "fallback-music"
     ),
 }
 
@@ -408,14 +418,15 @@ def main() -> None:
     fallback_supported = set.intersection(*(font_code_points(path) for _, path in fallback_sources[:2]))
     latin_supported = font_code_points(fallback_sources[2][1])
     music_supported = font_code_points(fallback_sources[3][1])
+    math_supported = font_code_points(fallback_sources[4][1])
     requested = corpus_code_points(files)
     target_points = rendered_corpus_code_points(files)
-    covered = primary_supported | fallback_supported | latin_supported | music_supported
+    covered = primary_supported | fallback_supported | latin_supported | music_supported | math_supported
     unsupported = target_points - covered
     unsupported_noncontrol = {point for point in unsupported if point >= 0x20 and not 0x7F <= point < 0xA0}
     if unsupported_noncontrol:
         raise SystemExit(
-            "Japanese corpus contains visible glyphs unavailable in the hosted JP/SC/Latin/music sources. "
+            "Japanese corpus contains visible glyphs unavailable in the hosted JP/SC/Latin/math/music sources. "
             "Add a pinned source face or remove the unsupported visible character; do not add a one-off whitelist: "
             + ", ".join(compact_ranges(unsupported_noncontrol))
         )
@@ -446,7 +457,8 @@ def main() -> None:
         supported = (
             fallback_supported if record["kind"] in {"fallback-serif", "fallback-sans"}
             else latin_supported if record["kind"] == "fallback-latin"
-            else music_supported
+            else music_supported if record["kind"] == "fallback-music"
+            else math_supported
         )
         points = fallback_points & supported
         output = OUTPUT_DIR / record["output"]
