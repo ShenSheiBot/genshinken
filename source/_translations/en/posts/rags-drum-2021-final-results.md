@@ -43,7 +43,7 @@ Six entries by five authors had either a complete manuscript or an abstract pass
 
 - “Chips, Amputation, and the Death Drive: Itō Kaiji’s Suicide Game,” 米岡
 - [“From Replicas to Simulacra: The Modern Turn in Cultural Consumption”](/en/posts/from-reproduction-to-simulacra-modern-turn-in-cultural-consumption/), 米岡
-- “Spatialized Bodies versus Embodied Spaces: Imaginaries of Space and Body in Japanese Anime and Manga,” 斑鸠
+- “Spatialized Bodies vs. Embodied Spaces: Imagining Space and the Body in Japanese Anime,” 斑鸠
 - “Decoding ‘The Drowned Giant’: An Interpretation of the ‘Giant’ Metaphor,” 心田安详
 - “Monster-Fear: Why America Became the Homeland of the Titans,” 哲哥
 - “How Does Death Become ‘New Life’? Death in Isekai-Reincarnation Stories,” 甚谁

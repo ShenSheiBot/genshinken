@@ -42,7 +42,7 @@ Thirteen entries qualified in the Eve Festival track:
 - Vall, “Nose-Psychometry, Film Noir, and a 24-Sided Die—The Narrative Texture of *Disco Elysium*”
 - 哲哥, “Monster-Fear: Why America Became the Homeland of the Titans”
 - 宫酒姬, “Post-Bishōjo and After Bishōjo: A ‘Post’-ological Study of Bishōjo Games”
-- 斑鸠, “Spatialized Bodies versus Embodied Spaces: Imaginaries of Space and Body in Japanese Anime and Manga”
+- 斑鸠, “Spatialized Bodies vs. Embodied Spaces: Imagining Space and the Body in Japanese Anime”
 - 甚谁, “How Does Death Become ‘New Life’? Death in Isekai-Reincarnation Stories”
 - 真紅様, “Through the Philosophical Jungle of *Sakura no Uta*”
 - 红茶泡海苔, “How Did Fan Pilgrimage Become Possible? On the Contingency of the Suicide Journey in *Narcissu*”
