@@ -48,7 +48,7 @@ Thirteen entries qualified in the Eve Festival track:
 - 红茶泡海苔, “How Did Fan Pilgrimage Become Possible? On the Contingency of the Suicide Journey in *Narcissu*”
 - 怀剣, “How Far Does the Political Transformative Power of Internet Technology Extend?”
 - 心田安详, “Decoding ‘The Drowned Giant’: An Interpretation of the ‘Giant’ Metaphor”
-- 米岡, “Chips, Amputation, and the Death Drive: Itō Kaiji’s Suicide Game”
+- 米岡, “Chips, Amputation, and the Death Drive: Kaiji Itou’s Suicide Game”
 
 ### Eve Festival Only
 

@@ -41,7 +41,7 @@ Two entries participated only in the Eve Festival and passed its review. They ar
 
 Six entries by five authors had either a complete manuscript or an abstract pass Eve Festival review, but unfortunately did not receive unanimous approval from the jury in the After Festival:
 
-- “Chips, Amputation, and the Death Drive: Itō Kaiji’s Suicide Game,” 米岡
+- “Chips, Amputation, and the Death Drive: Kaiji Itou’s Suicide Game,” 米岡
 - [“From Replicas to Simulacra: The Modern Turn in Cultural Consumption”](/en/posts/from-reproduction-to-simulacra-modern-turn-in-cultural-consumption/), 米岡
 - “Spatialized Bodies vs. Embodied Spaces: Imagining Space and the Body in Japanese Anime,” 斑鸠
 - “Decoding ‘The Drowned Giant’: An Interpretation of the ‘Giant’ Metaphor,” 心田安详
