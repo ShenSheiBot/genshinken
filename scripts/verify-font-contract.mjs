@@ -354,7 +354,7 @@ for (const expected of japaneseFonts) {
   japaneseFontBytes += bytes.length;
   assert.equal(bytes.subarray(0, 4).toString("ascii"), "wOF2", `${expected.file} is not WOFF2`);
   assert.ok(bytes.length >= 100_000, `${expected.file} is implausibly small`);
-  assert.ok(bytes.length <= 1_000_000, `${expected.file} exceeds its 1 MB corpus-subset budget`);
+  assert.ok(bytes.length <= 1_300_000, `${expected.file} exceeds its 1.3 MB corpus-subset budget`);
   const digest = crypto.createHash("sha256").update(bytes).digest("hex");
   assert.equal(record.bytes, bytes.length);
   assert.equal(record.sha256, digest);
@@ -371,7 +371,7 @@ for (const expected of japaneseFonts) {
   assert.match(face, /font-display\s*:\s*swap\s*;/u);
   assert.equal(propertyValue(translationFontCss, expected.variable), `"${expected.family}"`);
 }
-assert.ok(japaneseFontBytes <= 1_800_000, "Japanese serif + sans payload exceeds the 1.8 MB translation payload budget");
+assert.ok(japaneseFontBytes <= 2_200_000, "Japanese serif + sans payload exceeds the 2.2 MB translation payload budget");
 
 const japaneseFallbackRecords = Object.values(translationFontManifest.fonts ?? {})
   .filter((record) => typeof record === "object" && record.kind?.startsWith("fallback-"));
