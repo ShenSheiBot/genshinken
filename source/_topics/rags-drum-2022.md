@@ -29,6 +29,9 @@ groups:
         ref: animation-eyebrow-hair-perception-video
         editorialNote: 河豚的前夜祭入选视频稿；前夜祭与最终结果页均以同一题名和 BV 号直接收录。
       - type: post
+        ref: song-of-saya-pure-love-matrix
+        editorialNote: 非木的前夜祭入选稿；结果页直接列出作者、题名与公开知乎原稿链接。
+      - type: post
         ref: modernity-not-overcome-writing-mysticism-science
         editorialNote: 署名「　」的前夜祭受赏稿；预评与最终结果的题名标点略有差异，正文页保留成稿题名。
       - type: post

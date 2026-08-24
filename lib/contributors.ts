@@ -397,6 +397,7 @@ export const CONTRIBUTORS = [
   { id: "ikuhara-kunihiko", displayName: "几原邦彦", aliases: ["Kunihiko Ikuhara"], teamMember: false },
   { id: "norizuki-rintaro", displayName: "法月纶太郎", aliases: ["法月綸太郎", "Rintaro Norizuki"], teamMember: false },
   { id: "pa-di-ya-de-pai-pai", displayName: "帕底亚的拍拍", aliases: [], teamMember: false },
+  { id: "fei-mu", displayName: "非木", aliases: [], teamMember: false },
   { id: "blank-brackets", displayName: "「　」", aliases: [], teamMember: false },
   { id: "stephane-mallarme", displayName: "斯蒂芬·马拉美", aliases: ["Stéphane Mallarmé"], teamMember: false },
   { id: "yang-sang-xi-huan-chi-shi-zi", displayName: "羊桑喜欢吃柿子", aliases: [], teamMember: false },

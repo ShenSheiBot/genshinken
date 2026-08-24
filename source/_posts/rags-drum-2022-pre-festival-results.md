@@ -52,7 +52,7 @@ citation:
 
 [![《无处不在的知觉》视频封面：二维眉目处理的体验与考据](/attachments/roof-archive/cv18100135/807184dc48e985f18978e101364120ee2e192a82.jpg)](/posts/animation-eyebrow-hair-perception-video)
 
-- 非木，[《沙耶之歌》的纯爱矩阵](https://zhuanlan.zhihu.com/p/385829684)
+- 非木，[《沙耶之歌》的纯爱矩阵](/posts/song-of-saya-pure-love-matrix)
 
 根据先前公布的活动规则，通过前夜祭的稿件将获得 200～300 元的稿酬。
 

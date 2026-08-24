@@ -16496,6 +16496,12 @@
       "bytes": 47136,
       "sha256": "9ad8db8be38b2576dbe570faec854219dbe1f1e9793c974d630d238406ced396",
       "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/rags-drum-2022/saya-pure-love-matrix/relations.jpg",
+      "bytes": 16983,
+      "sha256": "19fe95ea29941cb274460b9f4d1cb56eeeecf65937037f385f6704cd84fade2b",
+      "contentType": "image/jpeg"
     }
   ]
 }
