@@ -36,7 +36,7 @@ format: article
 
 「前夜祭」のみに参加し、審査に合格した作品と作者は次の2組です。原稿の到着順に掲載します。
 
-- [「『風の谷のナウシカ』から『東方鬼形獣』へ――さまざまな窮境における〈世界を偶像に託す〉こと」](/ja/posts/nausicaa-wily-beast-entrusting-world-to-idol/)、宫酒姬
+- [「『風の谷のナウシカ』から『東方鬼形獣』へ――さまざまな苦境のなかの「偶像に世界を委ねて」」](/ja/posts/nausicaa-wily-beast-entrusting-world-to-idol/)、宫酒姬
 - [「『涼宮ハルヒ』シリーズと〈セカイ系〉から始める――ポストモダンとACGN研究をめぐるいくつかのうわごと」](/ja/posts/haruhi-sekaikei-postmodern-acgn-research/)、真紅様
 
 「前夜祭」で投稿本文または要旨が合格したものの、残念ながら「後夜祭」で審査員の全会一致を得られなかった作品は、5人の作者による次の6本です。

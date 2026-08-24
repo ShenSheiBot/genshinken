@@ -54,7 +54,7 @@ Thirteen entries qualified in the Eve Festival track:
 
 Two works already published on Bilibili entered the Eve Festival alone and qualified:
 
-- 宫酒姬, [“From *Nausicaä of the Valley of the Wind* to *Wily Beast and Weakest Creature*: ‘Entrusting the World to an Idol’ amid Many Predicaments”](/en/posts/nausicaa-wily-beast-entrusting-world-to-idol/)
+- 宫酒姬, [“From *Nausicaä of the Valley of the Wind* to *Touhou Kikeijuu ~ Wily Beast and Weakest Creature*: ‘Entrusting the World to an Idol’ amid Many Predicaments”](/en/posts/nausicaa-wily-beast-entrusting-world-to-idol/)
 - 真紅様, [“Beginning with the *Haruhi Suzumiya* Series and ‘Sekaikei’: Some Ramblings on Postmodernism and ACGN Studies”](/en/posts/haruhi-sekaikei-postmodern-acgn-research/)
 
 Under the previously announced rules, each work that qualified in the Eve Festival will receive an honorarium of RMB 200–300.

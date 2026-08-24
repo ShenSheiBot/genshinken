@@ -36,7 +36,7 @@ After three plus two months of submissions and more than a month of judging, the
 
 Two entries participated only in the Eve Festival and passed its review. They are listed in the order received:
 
-- [“From *Nausicaä of the Valley of the Wind* to *Wily Beast and Weakest Creature*: ‘Entrusting the World to an Idol’ amid Many Predicaments”](/en/posts/nausicaa-wily-beast-entrusting-world-to-idol/), 宫酒姬
+- [“From *Nausicaä of the Valley of the Wind* to *Touhou Kikeijuu ~ Wily Beast and Weakest Creature*: ‘Entrusting the World to an Idol’ amid Many Predicaments”](/en/posts/nausicaa-wily-beast-entrusting-world-to-idol/), 宫酒姬
 - [“Beginning with the *Haruhi Suzumiya* Series and ‘Sekaikei’: Some Ramblings on Postmodernism and ACGN Studies”](/en/posts/haruhi-sekaikei-postmodern-acgn-research/), 真紅様
 
 Six entries by five authors had either a complete manuscript or an abstract pass Eve Festival review, but unfortunately did not receive unanimous approval from the jury in the After Festival:

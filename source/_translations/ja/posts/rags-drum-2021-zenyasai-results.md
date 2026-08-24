@@ -54,7 +54,7 @@ format: article
 
 前夜祭のみに参加して合格した作品は、次の2本です。いずれもすでにBilibiliで公開されていました。
 
-- 宫酒姬[「『風の谷のナウシカ』から『東方鬼形獣』へ――さまざまな窮境における〈世界を偶像に託す〉こと」](/ja/posts/nausicaa-wily-beast-entrusting-world-to-idol/)
+- 宫酒姬[「『風の谷のナウシカ』から『東方鬼形獣』へ――さまざまな苦境のなかの「偶像に世界を委ねて」」](/ja/posts/nausicaa-wily-beast-entrusting-world-to-idol/)
 - 真紅様[「『涼宮ハルヒ』シリーズと〈セカイ系〉から始める――ポストモダンとACGN研究をめぐるいくつかのうわごと」](/ja/posts/haruhi-sekaikei-postmodern-acgn-research/)
 
 先に告知した企画規定に基づき、前夜祭の合格作には1本につき200～300元の原稿料が支払われます。
