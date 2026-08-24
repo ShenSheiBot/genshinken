@@ -146,7 +146,7 @@ Why is this form of comedy seldom prominent in Morimi’s fiction? One important
 
 (3) An external accident entangles the situation, allows the end to be attained, and turns both inner character and outward circumstance into comic contradictions that receive a comic resolution.
 
-Every cycle in *The Tatami Galaxy* ends in this fashion. The final opportunity always depends on two elements: Akashi’s fear of moths and the mochiguma keychain she has lost, which happens to be in the protagonist’s possession. Both arise by chance.
+Every cycle in *The Tatami Galaxy* ends in this fashion. The final opportunity always depends on two elements: Akashi’s fear of moths and the mochiguman keychain she has lost, which happens to be in the protagonist’s possession. Both arise by chance.
 
 Morimi also delights in combining coincidence with conspicuously complicated relations among his characters to create comic scenes. Near the end of *The Eccentric Family*, for example, the tanuki elders meet to elect the next Nise-emon while, in the room next door, the Friday Fellows are preparing a tanuki hot-pot banquet after earlier disorder forced them to move the gathering there. Yaichirō turns into a great tiger in his fury and destroys the partition. This coincidence gives Yasaburō a chance to save his mother and turns the surrounding atmosphere comic:
 
