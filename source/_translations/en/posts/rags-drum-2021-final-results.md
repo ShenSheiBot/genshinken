@@ -36,17 +36,17 @@ After three plus two months of submissions and more than a month of judging, the
 
 Two entries participated only in the Eve Festival and passed its review. They are listed in the order received:
 
-- “From *Nausicaä of the Valley of the Wind* to *Wily Beast and Weakest Creature*: ‘Entrusting the World to an Idol’ amid Many Predicaments,” 宫酒姬
-- “Beginning with the *Haruhi Suzumiya* Series and ‘Sekaikei’: Some Ramblings on Postmodernism and ACGN Studies,” 真紅様
+- [“From *Nausicaä of the Valley of the Wind* to *Wily Beast and Weakest Creature*: ‘Entrusting the World to an Idol’ amid Many Predicaments”](/en/posts/nausicaa-wily-beast-entrusting-world-to-idol/), 宫酒姬
+- [“Beginning with the *Haruhi Suzumiya* Series and ‘Sekaikei’: Some Ramblings on Postmodernism and ACGN Studies”](/en/posts/haruhi-sekaikei-postmodern-acgn-research/), 真紅様
 
 Six entries by five authors had either a complete manuscript or an abstract pass Eve Festival review, but unfortunately did not receive unanimous approval from the jury in the After Festival:
 
-- “Chips, Amputation, and the Death Drive: Kaiji Itou’s Suicide Game,” 米岡
+- [“Chips, Amputation, and the Death Drive: Kaiji Itou’s Suicide Game”](/en/posts/kaiji-chips-amputation-death-drive/), 米岡
 - [“From Replicas to Simulacra: The Modern Turn in Cultural Consumption”](/en/posts/from-reproduction-to-simulacra-modern-turn-in-cultural-consumption/), 米岡
-- “Spatialized Bodies vs. Embodied Spaces: Imagining Space and the Body in Japanese Anime,” 斑鸠
-- “Decoding ‘The Drowned Giant’: An Interpretation of the ‘Giant’ Metaphor,” 心田安详
-- “Monster-Fear: Why America Became the Homeland of the Titans,” 哲哥
-- “How Does Death Become ‘New Life’? Death in Isekai-Reincarnation Stories,” 甚谁
+- [“Spatialized Bodies vs. Embodied Spaces: Imagining Space and the Body in Japanese Anime”](/en/posts/spatialized-body-embodied-space-anime/), 斑鸠
+- [“Decoding ‘The Drowned Giant’: An Interpretation of the ‘Giant’ Metaphor”](/en/posts/decoding-the-drowned-giant/), 心田安详
+- [“Monster-Fear: Why America Became the Homeland of the Titans”](/en/posts/fear-of-monsters-america-home-of-titans/), 哲哥
+- [“How Does Death Become ‘New Life’? Death in Isekai-Reincarnation Stories”](/en/posts/death-and-rebirth-in-isekai-reincarnation/), 甚谁
 
 Congratulations to all these authors! Under the previously announced rules, each entry that passed the Eve Festival will receive an honorarium of RMB 300.
 

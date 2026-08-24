@@ -35,23 +35,23 @@ citation:
 
 仅参加「前夜祭」并通过评审的稿件及其作者有2篇（以收稿顺序排列）：
 
-- 《从〈风之谷〉到〈东方鬼形兽〉：各种困境中的“将世界託付给偶像”》，宫酒姬
+- [《从〈风之谷〉到〈东方鬼形兽〉：各种困境中的“将世界託付给偶像”》](/posts/nausicaa-wily-beast-entrusting-world-to-idol/)，宫酒姬
 
-- 《从凉宫系列与“世界系”谈起——有关后现代和ACGN研究的一些呓语》，真紅様
+- [《从凉宫系列与“世界系”谈起——有关后现代和ACGN研究的一些呓语》](/posts/haruhi-sekaikei-postmodern-acgn-research/)，真紅様
 
 投稿正文或摘要通过「前夜祭」评审，但很遗憾没有得到评委团一致通过「后夜祭」评审的稿件及其作者有６篇合５位：
 
-- 《筹码、截肢与死亡冲动——伊藤开司的自杀游戏》，米岡
+- [《筹码、截肢与死亡冲动——伊藤开司的自杀游戏》](/posts/kaiji-chips-amputation-death-drive/)，米岡
 
 - [《从复制品到拟像：文艺消费的现代转向》](/posts/from-reproduction-to-simulacra-modern-turn-in-cultural-consumption/)，米岡
 
-- 《空间化的身体VS身体化的空间：日本动漫的空间与身体想象》，斑鸠
+- [《空间化的身体VS身体化的空间：日本动漫的空间与身体想象》](/posts/spatialized-body-embodied-space-anime/)，斑鸠
 
-- 《破译〈溺水的巨人〉——一种关于“巨人”隐喻的解读》，心田安详
+- [《破译〈溺水的巨人〉——一种关于“巨人”隐喻的解读》](/posts/decoding-the-drowned-giant/)，心田安详
 
-- 《惧兽：美国何以成为泰坦的故乡》，哲哥
+- [《惧兽：美国何以成为泰坦的故乡》](/posts/fear-of-monsters-america-home-of-titans/)，哲哥
 
-- 《死亡何以“新生”：异世界转生作品中的死亡研究》，甚谁
+- [《死亡何以“新生”：异世界转生作品中的死亡研究》](/posts/death-and-rebirth-in-isekai-reincarnation/)，甚谁
 
 恭喜以上作者！根据先前公布的活动规则，各篇通过前夜祭的稿件将获得300元的稿酬。
 

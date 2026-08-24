@@ -34,26 +34,26 @@ citation:
 
 通过前夜祭赛道的稿件及其作者有 13 位：
 
-- 米岡《从复制品到拟像：文艺消费的现代转向》
+- 米岡[《从复制品到拟像：文艺消费的现代转向》](/posts/from-reproduction-to-simulacra-modern-turn-in-cultural-consumption/)
 - CM《〈阿松〉第三季：松原秀的短剧之旅》
 - Suro Afmofo《借Psycho-Pass来思考控制社会和反抗*》
 - Vall《鼻通灵，黑色电影与24面骰子=——《极乐迪斯科》的叙事肌理》
-- 哲哥《惧兽：美国何以成为泰坦的故乡》
+- 哲哥[《惧兽：美国何以成为泰坦的故乡》](/posts/fear-of-monsters-america-home-of-titans/)
 - 宫酒姬《后美少女和美少女之后——美少女游戏的“后”学考察》
-- 斑鸠《空间化的身体VS身体化的空间：日本动漫的空间与身体想象》
-- 甚谁《死亡何以“新生”：异世界转生作品中的死亡研究》
+- 斑鸠[《空间化的身体VS身体化的空间：日本动漫的空间与身体想象》](/posts/spatialized-body-embodied-space-anime/)
+- 甚谁[《死亡何以“新生”：异世界转生作品中的死亡研究》](/posts/death-and-rebirth-in-isekai-reincarnation/)
 - 真紅様《穿越《樱之诗》的哲学丛林》
 - 红茶泡海苔《圣地巡礼是何以成为可能的——论《水仙》中自杀之旅的偶然性问题》
 - 怀剣《网络技术的政治变革力延伸至何处？》
-- 心田安详《破译《溺水的巨人》——一种关于“巨人”隐喻的解读》
-- 米岡《筹码、截肢与死亡冲动——伊藤开司的自杀游戏》
+- 心田安详[《破译《溺水的巨人》——一种关于“巨人”隐喻的解读》](/posts/decoding-the-drowned-giant/)
+- 米岡[《筹码、截肢与死亡冲动——伊藤开司的自杀游戏》](/posts/kaiji-chips-amputation-death-drive/)
 
 ### 仅参加前夜祭
 
 仅参加前夜祭并通过的稿件及其作者有 2 位（均为已在 bilibili 发布的文章）：
 
-- 宫酒姬《从《风之谷》到《鬼形兽》：各种困境中的「将世界託付给偶像」》
-- 真紅様《从凉宫系列与“世界系”谈起——有关后现代和ACGN研究的一些呓语》
+- 宫酒姬[《从《风之谷》到《鬼形兽》：各种困境中的「将世界託付给偶像」》](/posts/nausicaa-wily-beast-entrusting-world-to-idol/)
+- 真紅様[《从凉宫系列与“世界系”谈起——有关后现代和ACGN研究的一些呓语》](/posts/haruhi-sekaikei-postmodern-acgn-research/)
 
 根据先前公布的活动规则，各篇通过前夜祭的稿件将获得 200～300 元的稿酬。
 

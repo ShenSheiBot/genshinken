@@ -36,26 +36,26 @@ After three months of submissions and judging, Lab on Roof hereby announces the 
 
 Thirteen entries qualified in the Eve Festival track:
 
-- 米岡, “From Replicas to Simulacra: The Modern Turn in Cultural Consumption”
+- 米岡, [“From Replicas to Simulacra: The Modern Turn in Cultural Consumption”](/en/posts/from-reproduction-to-simulacra-modern-turn-in-cultural-consumption/)
 - CM, “*Mr. Osomatsu* Season 3: Matsubara Shū’s Journey Through Sketch Comedy”
 - Suro Afmofo, “Using *Psycho-Pass* to Think About Control Societies and Resistance”
 - Vall, “Nose-Psychometry, Film Noir, and a 24-Sided Die—The Narrative Texture of *Disco Elysium*”
-- 哲哥, “Monster-Fear: Why America Became the Homeland of the Titans”
+- 哲哥, [“Monster-Fear: Why America Became the Homeland of the Titans”](/en/posts/fear-of-monsters-america-home-of-titans/)
 - 宫酒姬, “Post-Bishōjo and After Bishōjo: A ‘Post’-ological Study of Bishōjo Games”
-- 斑鸠, “Spatialized Bodies vs. Embodied Spaces: Imagining Space and the Body in Japanese Anime”
-- 甚谁, “How Does Death Become ‘New Life’? Death in Isekai-Reincarnation Stories”
+- 斑鸠, [“Spatialized Bodies vs. Embodied Spaces: Imagining Space and the Body in Japanese Anime”](/en/posts/spatialized-body-embodied-space-anime/)
+- 甚谁, [“How Does Death Become ‘New Life’? Death in Isekai-Reincarnation Stories”](/en/posts/death-and-rebirth-in-isekai-reincarnation/)
 - 真紅様, “Through the Philosophical Jungle of *Sakura no Uta*”
 - 红茶泡海苔, “How Did Fan Pilgrimage Become Possible? On the Contingency of the Suicide Journey in *Narcissu*”
 - 怀剣, “How Far Does the Political Transformative Power of Internet Technology Extend?”
-- 心田安详, “Decoding ‘The Drowned Giant’: An Interpretation of the ‘Giant’ Metaphor”
-- 米岡, “Chips, Amputation, and the Death Drive: Kaiji Itou’s Suicide Game”
+- 心田安详, [“Decoding ‘The Drowned Giant’: An Interpretation of the ‘Giant’ Metaphor”](/en/posts/decoding-the-drowned-giant/)
+- 米岡, [“Chips, Amputation, and the Death Drive: Kaiji Itou’s Suicide Game”](/en/posts/kaiji-chips-amputation-death-drive/)
 
 ### Eve Festival Only
 
 Two works already published on Bilibili entered the Eve Festival alone and qualified:
 
-- 宫酒姬, “From *Nausicaä of the Valley of the Wind* to *Wily Beast and Weakest Creature*: ‘Entrusting the World to an Idol’ amid Many Predicaments”
-- 真紅様, “Beginning with the *Haruhi Suzumiya* Series and ‘Sekaikei’: Some Ramblings on Postmodernism and ACGN Studies”
+- 宫酒姬, [“From *Nausicaä of the Valley of the Wind* to *Wily Beast and Weakest Creature*: ‘Entrusting the World to an Idol’ amid Many Predicaments”](/en/posts/nausicaa-wily-beast-entrusting-world-to-idol/)
+- 真紅様, [“Beginning with the *Haruhi Suzumiya* Series and ‘Sekaikei’: Some Ramblings on Postmodernism and ACGN Studies”](/en/posts/haruhi-sekaikei-postmodern-acgn-research/)
 
 Under the previously announced rules, each work that qualified in the Eve Festival will receive an honorarium of RMB 200–300.
 
