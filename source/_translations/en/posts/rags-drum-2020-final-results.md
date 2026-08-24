@@ -47,7 +47,7 @@ Eight entries qualified in both the Eve Festival and After Festival (listed in n
 
 The following entries qualified in the Eve Festival but, regrettably, did not receive the judging panel’s unanimous approval in the After Festival:
 
-- **“Tracing the Genealogy of Humor in Tomihiko Morimi’s Works,” 十文字**
+- **[“Tracing the Genealogy of Humor in Tomihiko Morimi’s Works”](/en/posts/morimi-tomihiko-humor-genealogy), 十文字**
 - **[“DTB: A Style of Stagnation”](/en/posts/darker-than-black-stagnant-style), 实在狗子**
 
 Under the event rules announced earlier, each entry that qualified in both the Eve Festival and After Festival will receive an honorarium of **RMB 1,250**, while each Eve-Festival-only qualifying entry will receive **RMB 200**. Let us celebrate.
