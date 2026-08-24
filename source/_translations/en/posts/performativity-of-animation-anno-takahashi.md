@@ -34,7 +34,7 @@ Set during several summer days before the finale of the *Magical Emi* television
 
 [图题] Figure 1.
 
-![A sequence of Mai crossing the town in the *Magical Emi* OVA *Semishigure*](/attachments/roof-archive/cv19442841/02-figure-1.jpg)
+![A sequence of Mai crossing the town in the *Magical Emi* OVA *Semishigure*](attachments/roof-archive/cv19442841/02-figure-1.jpg?v=4785045a)
 
 Mai’s passage thus becomes a functionless wandering. She has taken a wrong turn outside the routes of everyday life, into an unpeopled realm where the endless summer resounds with incessant cicadas. Tangling an impossible cat’s cradle, she passes a broken warning sign (Figure 1f). Soon afterward she confronts a wall and the words *dead end*. The detour ends; the melody stops (Figure 1g). At this symbolically decisive moment, when the road has reached its end, why does Koganei once again begin to recite his peculiar mnemonic, the incantation with which he summons his own memory? We are captured by an ambiguous sense of displacement created through the proximity of images, by this obscure openness to interpretation. If, as Anno seems to suggest, we take the succession of images as a form of simultaneity, then as Mai simply leaves, laughing, humming, and keeping time—and as her back, reflected in the sign’s convex mirror, recedes into the distance—Koganei, chanting his mnemonic while tidying the documents, knocks over the cup he has just set down. It falls. It shatters. The fragments slowly blossom open.
 
@@ -132,7 +132,7 @@ Mutual gazes shown through repeated shot and reverse shot are hardly rare in liv
 
 [图题] Figure 2.
 
-![Shot/reverse-shot sequences of mutual gazes in *To Heart* and two live-action films](/attachments/roof-archive/cv19442841/03-figure-2.jpg)
+![Shot/reverse-shot sequences of mutual gazes in *To Heart* and two live-action films](attachments/roof-archive/cv19442841/03-figure-2.jpg?v=bf4fb219)
 
 At critical points in an image, Naohito Takahashi will unexpectedly sever the relations of motion within a drawing and suspend it in the air, outside time. Episode 28 of the wordless miniature masterpiece *The Adventures of Mini-Goddess* (1998) opens with a girl sitting alone on a veranda, staring blankly at the rain. Her eyes meet those of a crow perched above. Twice, the sequence repeats the motionless girl’s composed gaze. The crow’s abrupt, ominous stare—its head turning with the unnaturalness of a mechanism—is startling. More startling still is the girl, who shows no surprise, as though she had expected it all along. When the crow flies away, she even seems to want it to remain.
 
@@ -168,7 +168,7 @@ We had already sensed this. Kaname immediately recognizes the cross-dressing Kag
 
 [图题] Figure 3.
 
-![Kagami and Kaname exchange gazes in the OVA *Kagami*](/attachments/roof-archive/cv19442841/04-figure-3.jpg)
+![Kagami and Kaname exchange gazes in the OVA *Kagami*](attachments/roof-archive/cv19442841/04-figure-3.jpg?v=b16c9e64)
 
 There is a photograph of Kagami’s sister on the desk in his bedroom, while a drawing lies on Kaname’s desk. In the drawing, two angels mirroring one another—or an angel and its mirror image—seem about to kiss. The motif is no longer the siblings’ superficial resemblance, but an identity of inner essence. The eye has broken through the surface and violated the interior realm; it no longer distinguishes itself from its object. What remains here of sexual organs invading and being invaded? It is difficult to discern any trace of the phallus. Kagami never removes his feminine clothing; the skirt covers his penis from beginning to end. We can only call this a complete nullification of the phallus. What looks like an embrace between two women is no longer intercourse in the ordinary sense, but nonsexual intercourse.
 
