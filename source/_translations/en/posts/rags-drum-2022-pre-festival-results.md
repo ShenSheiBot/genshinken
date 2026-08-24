@@ -54,7 +54,7 @@ Two authors and their works entered only the Eve Festival and passed its review:
 
 [![Video cover for *Perception Everywhere*, a discussion of how two-dimensional animation handles eyebrows, eyes, and hair](/attachments/roof-archive/cv18100135/807184dc48e985f18978e101364120ee2e192a82.jpg)](/en/posts/animation-eyebrow-hair-perception-video)
 
-- 非木, [*The Pure-Love Matrix of The Song of Saya* (《沙耶之歌》的纯爱矩阵)](https://zhuanlan.zhihu.com/p/385829684)
+- 非木, [*The Pure-Love Matrix of Saya no Uta* (《沙耶之歌》的纯爱矩阵)](/en/posts/song-of-saya-pure-love-matrix)
 
 Under the previously announced rules, each work that passed the Eve Festival will receive an honorarium of RMB 200–300.
 

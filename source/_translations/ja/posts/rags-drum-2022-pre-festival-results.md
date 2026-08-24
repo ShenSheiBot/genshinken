@@ -54,7 +54,7 @@ format: article
 
 [![二次元アニメーションにおける眉・目と髪の処理を論じる「遍在する知覚」の動画カバー](/attachments/roof-archive/cv18100135/807184dc48e985f18978e101364120ee2e192a82.jpg)](/ja/posts/animation-eyebrow-hair-perception-video)
 
-- 非木「[『沙耶の唄』の純愛マトリックス（《沙耶之歌》的纯爱矩阵）](https://zhuanlan.zhihu.com/p/385829684)」
+- 非木「[『沙耶の唄』の純愛マトリクス（《沙耶之歌》的纯爱矩阵）](/ja/posts/song-of-saya-pure-love-matrix)」
 
 先に公表した規定に基づき、前夜祭の合格作には200～300元の原稿料が支払われる。
 
