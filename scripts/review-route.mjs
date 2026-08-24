@@ -89,7 +89,10 @@ async function reviewPage(page, url, profile, outputDirectory) {
     const filename = `${profile.name}-${String(index).padStart(2, "0")}.png`;
     await page.screenshot({ path: path.join(outputDirectory, filename) });
     screenshots.push(filename);
-    if (position.bottom || position.next === previousY || index >= 80) break;
+    if (position.bottom || position.next === previousY) break;
+    if (index >= 200) {
+      throw new Error(`${profile.name} review did not reach the page bottom after ${index} screenshots`);
+    }
     previousY = position.y;
     await page.evaluate((next) => window.scrollTo(0, next), position.next);
     await page.waitForTimeout(180);
