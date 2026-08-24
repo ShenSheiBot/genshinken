@@ -123,7 +123,7 @@ We often encounter remarks such as: “Reading this sentence healed me,” “I 
 
 When people visit a shrine or temple, they write their prayers and their names in the blank space on an *ema* votive plaque, or on its reverse, in the hope that doing so will make their wishes come true.
 
-Having offered examples from the real world, let us turn to fictional ones by comparing two games that have recently become enormously popular: *Sekiro: Shadows Die Twice* and *Elden Ring*. When a character in *Elden Ring* drinks from a Flask or consumes a bolus, auras of different colors appear around them. In *Sekiro*, however, what appears is not merely an aura but a Chinese character. The character 危 (“danger”) appears above the protagonist when he faces a perilous attack; 死 (“death”) when he dies; and 回生 (“resurrection”) when the Dragon’s Heritage revives him. Other examples include 治 (“heal”), 鬼仏見出 (“Sculptor’s Idol found”), and 防 (“deflect”).
+Having offered examples from the real world, let us turn to fictional ones by comparing two games that have recently become enormously popular: *Sekiro: Shadows Die Twice* and *Elden Ring*. When a character in *Elden Ring* drinks from a Flask, imbibes the Wondrous Physick, or consumes a bolus, auras of different colors appear around them. In *Sekiro*, however, what appears is not merely an aura but a Chinese character. The character 危 (“danger”) appears above the protagonist when he faces a perilous attack; 死 (“death”) when he dies; and 回生 (“resurrection”) when the Dragon’s Heritage revives him. Other examples include 治 (“heal”), 鬼仏見出 (“Sculptor’s Idol found”), and 防 (“deflect”).
 
 ##### B. Are They Esoteric?
 
@@ -165,7 +165,7 @@ The keyword in Early Modern Enchantment[^3] is *enchantment*: the conferral of m
 
 The world today is contemporary[^4]—that is, modernized. Let us analyze phenomena that occur around those of us who live our days within it.
 
-In the anime *Noragami*, writing is the key to the protagonists’ bond with their divine instruments. When Yato summons Yukine in the form of a sword, he uses a character for “snow” that resembles seal script. Yukine is the spirit of a person already dead; Yato is a god; and the sword, as a divine instrument, wields a power absent from the scientific world. We may therefore call this esoteric thought that takes the Chinese character as its medium.
+In the anime *Noragami*, writing is the key to the protagonists’ bond with their Regalia. When Yato summons Yukine in the form of a sword, he uses a character for “snow” that resembles seal script. Yukine is the spirit of a person already dead; Yato is a god; and the sword, as a Regalia, wields a power absent from the scientific world. We may therefore call this esoteric thought that takes the Chinese character as its medium.
 
 Another useful comparison to Hanegraaff’s account is a shot in the opening sequence of *Jujutsu Kaisen* in which characters burst outward. Like *Noragami*, the work is set in a modernized, scientific world. What issues from the wound is not simply bodily fluid that sustains physical functions but a purified aggregate of resentments invisible to ordinary people. This aggregate resembles what Hanegraaff calls Living Nature.[^5] What it contains is not like the parts of a giant clock: it is a formless life force.
 
