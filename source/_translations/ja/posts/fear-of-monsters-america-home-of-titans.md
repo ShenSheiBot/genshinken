@@ -12,9 +12,6 @@ credits:
   - role: translator
     contributor_id: shen-shui-bot
     scope: 全文
-  - role: reviewer
-    contributor_id: shen-shui-bot
-    scope: 全文
 translation_method: agent
 source_relationship: mixed
 base_language: zh-Hans
