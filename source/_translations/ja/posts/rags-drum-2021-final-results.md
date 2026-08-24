@@ -12,9 +12,6 @@ credits:
   - role: translator
     contributor_id: shen-shui-bot
     scope: complete work
-  - role: reviewer
-    contributor_id: shen-shui-bot
-    scope: complete work
 translation_method: agent
 source_relationship: direct
 base_language: zh-Hans
@@ -45,7 +42,7 @@ format: article
 「前夜祭」で投稿本文または要旨が合格したものの、残念ながら「後夜祭」で審査員の全会一致を得られなかった作品は、5人の作者による次の6本です。
 
 - 「チップ、切断、死の欲動――伊藤開司の自殺ゲーム」、米岡
-- [「複製品からシミュラークルへ――文芸消費の現代的転回」](/posts/from-reproduction-to-simulacra-modern-turn-in-cultural-consumption/)、米岡
+- [「複製品からシミュラークルへ――文芸消費の現代的転回」](/ja/posts/from-reproduction-to-simulacra-modern-turn-in-cultural-consumption/)、米岡
 - 「空間化された身体VS身体化された空間――日本アニメ・漫画における空間と身体の想像力」、斑鸠
 - 「『溺れた巨人』を読み解く――「巨人」という隠喩の一解釈」、心田安详
 - 「恐獣――アメリカはいかにしてタイタンの故郷となったか」、哲哥
@@ -67,15 +64,15 @@ format: article
 
 ボランティアで審査に携わってくださった審査員の皆さまに感謝します。
 
-will（ACG愛好者）。
+will（ACG愛好家）。
 
-马小褂（ACG愛好者）。
+马小褂（ACG愛好家）。
 
-有电拍拍（ACG愛好者）。
+有电拍拍（ACG愛好家）。
 
-rocefactor（ACG愛好者）。
+rocefactor（ACG愛好家）。
 
-屋顶第十一任所长（ACG愛好者）。
+屋顶第十一任所长（ACG愛好家）。
 
 ポスター制作をはじめとする芸術・広報面で本企画を支えてくださった唯一指定真实August_Rush、そして親身な助言と真摯な協力を寄せてくださった論者、サークル、プラットフォームの皆さまに感謝します。屋頂・拾荒組織委員会は、謝意のしるしとして以上の6名それぞれに50元相当の当当網図書引換カードをお贈りします。
 

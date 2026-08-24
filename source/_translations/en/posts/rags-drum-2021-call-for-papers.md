@@ -7,12 +7,9 @@ language: en
 status: review
 title: "Annual Call for Submissions | Rags Drum 2021"
 title_breaks: ["Annual Call for Submissions |", "Rags Drum 2021"]
-excerpt: Lab on Roof launches the second Rags Drum annual call for ACG criticism, setting out the fields, two-stage schedule, judging, awards, submission process, and publication terms for 2021.
+excerpt: Lab on Roof launches the second Rags Drum annual call for ACG criticism, setting out the fields, two-stage schedule, judging, honoraria, submission process, and publication terms for 2021.
 credits:
   - role: translator
-    contributor_id: shen-shui-bot
-    scope: complete work
-  - role: reviewer
     contributor_id: shen-shui-bot
     scope: complete work
 translation_method: agent
@@ -35,7 +32,7 @@ To **foster the reproduction of more—and better—criticism and research on an
 
 1. We invite original critical essays or comparative research on **video games, animation, and comics—their works, creators, histories, industries, and related phenomena**—from such perspectives as **philosophy and the social sciences, the humanities and arts, technology and media, and industry and production**. There is no geographical restriction, and derivative works are included. Straight translations and strategy guides will not be accepted.
 
-2. We recommend, but do not require, that submissions **follow an academic format by providing citations and notes, an abstract, keywords, a bibliography, and so forth**. Submissions may take the form of **a written essay, video essay, or audio work**. They may be submitted in Chinese, English, or Japanese, although Simplified Chinese is recommended. Authors must affirm that their submissions are **original, have not been and will not be used commercially, and employ quoted materials and ideas in accordance with reasonable academic standards**. If plagiarism or misappropriation is discovered either before or after judging, the organizers will announce the matter and revoke the award.
+2. We recommend, but do not require, that submissions **follow an academic format by providing citations and notes, an abstract, keywords, a bibliography, and so forth**. Submissions may take the form of **a written essay, video essay, or audio recording**. They may be submitted in Chinese, English, or Japanese, although Simplified Chinese is recommended. Authors must affirm that their submissions are **original, have not been and will not be used commercially, and employ quoted materials and ideas in accordance with reasonable academic standards**. If plagiarism or misappropriation is discovered either before or after judging, the organizers will announce the matter and require repayment of any honorarium already paid.
 
 ## Schedule and Procedures
 
@@ -59,7 +56,7 @@ August 7: qualifying Eve Festival submissions are announced, including both Eve 
 
 During the Eve Festival stage, the jury will decide whether a submission qualifies by **majority vote**, guided by an emphasis on **originality, intellectual substance, and critical force**.
 
-**Publication and awards:**
+**Publication and honoraria:**
 
 Once an Eve Festival–only entry has been judged, the organizers will contact its author as soon as possible with the result. **Qualifying entries will then be scheduled promptly for publication across Lab on Roof’s accounts on different platforms.**
 
@@ -69,7 +66,7 @@ Each qualifying entry will receive an honorarium of approximately **RMB 200–30
 
 **Eligibility:** Original work by the author that **has not yet been published** and has not been used commercially.
 
-**Submission:** For the **Eve Festival**, entrants may submit a synopsis of **200–500 Chinese characters**, although a complete, finished piece is also welcome. For the **After Festival**, a complete, finished piece is required, and **its subject must remain consistent with the Eve Festival submission. Only authors whose Eve Festival entries qualified may enter the After Festival.**
+**Submission:** For the **Eve Festival**, entrants may submit a synopsis of **200–500 characters**, although a complete, finished piece is also welcome. For the **After Festival**, a complete, finished piece is required, and **its subject must remain consistent with the Eve Festival submission. Only authors whose Eve Festival entries qualified may enter the After Festival.**
 
 **Schedule:**
 
@@ -87,7 +84,7 @@ Second half of October: qualifying After Festival entries are announced together
 
 During the After Festival stage, the jury will decide whether a submission qualifies by **unanimous vote**, guided by an emphasis on **originality, intellectual substance, and critical force**.
 
-**Publication and awards:**
+**Publication and honoraria:**
 
 Qualifying entries in the Eve Festival ＋ After Festival track will be announced together on **August 7** and **October 7**, respectively, and will subsequently be published across Lab on Roof’s accounts on different platforms.
 
@@ -114,7 +111,7 @@ If exceptional circumstances make both methods impossible, please contact Lab on
 
 ## Other Provisions
 
-1. For a qualifying Eve Festival–only entry, Lab on Roof asks only for **non-exclusive, non-first-publication authorization** to publish the work across its accounts on different platforms. For a qualifying entry in the Eve Festival ＋ After Festival track, Lab on Roof asks only for **non-exclusive, first-publication authorization** across those accounts. All rights not specified here remain with the original author.
+1. For a qualifying Eve Festival–only entry, Lab on Roof asks only for **a nonexclusive license that does not require first publication** across its accounts on different platforms. For a qualifying entry in the Eve Festival ＋ After Festival track, Lab on Roof asks only for **a nonexclusive license for first publication** across those accounts. All rights not specified here remain with the original author.
 
 2. To foster the reproduction of more—and better—criticism and research on anime, comics, and games, **Lab on Roof may adapt qualifying entries into video essays or other forms**. The author will be informed and their consent obtained before any such adaptation begins, and their relevant rights in the video essay will be protected.
 
@@ -128,4 +125,4 @@ If exceptional circumstances make both methods impossible, please contact Lab on
 
 ## Appendix
 
-[Rags Drum 2020 Annual Writing Awards: Strategy Accomplished](/posts/rags-drum-2020-final-results)
+[Mission Accomplished: Rags Drum 2020 Annual Call — Final Results](/en/posts/rags-drum-2020-final-results)

@@ -12,9 +12,6 @@ credits:
   - role: translator
     contributor_id: shen-shui-bot
     scope: complete work
-  - role: reviewer
-    contributor_id: shen-shui-bot
-    scope: complete work
 translation_method: agent
 source_relationship: direct
 base_language: zh-Hans
@@ -41,8 +38,8 @@ format: article
 
 - 米岡「複製品からシミュラークルへ――文芸消費の現代的転回」
 - CM「『おそ松さん』第3期――松原秀のコントをめぐる旅」
-- Suro Afmofo「『PSYCHO-PASS』から管理社会と抵抗を考える\*」
-- Vall「鼻通霊、フィルム・ノワールと24面ダイス=――『ディスコ エリジウム』の物語の肌理」
+- Suro Afmofo「『PSYCHO-PASS』から管理社会と抵抗を考える」
+- Vall「鼻通霊、フィルム・ノワールと24面ダイス――『ディスコ エリジウム』の物語の肌理」
 - 哲哥「恐獣――アメリカはいかにしてタイタンの故郷となったか」
 - 宫酒姬「ポスト美少女と美少女以後――美少女ゲームの〈ポスト〉学的考察」
 - 斑鸠「空間化された身体VS身体化された空間――日本アニメ・漫画における空間と身体の想像力」
@@ -55,7 +52,7 @@ format: article
 
 ### 前夜祭のみ参加
 
-前夜祭のみに参加して合格した作品は、次の2本です。いずれもすでにbilibiliで公開されていました。
+前夜祭のみに参加して合格した作品は、次の2本です。いずれもすでにBilibiliで公開されていました。
 
 - 宫酒姬「『風の谷のナウシカ』から『東方鬼形獣』へ――さまざまな窮境における〈世界を偶像に託す〉こと」
 - 真紅様「『涼宮ハルヒ』シリーズと〈セカイ系〉から始める――ポストモダンとACGN研究をめぐるいくつかのうわごと」
@@ -68,11 +65,11 @@ format: article
 
 審査員の皆さまには、ボランティアで審査に携わっていただきました。メンバーは次のとおりです。
 
-- will（ACG愛好者）
-- 马小褂（ACG愛好者）
-- 有电拍拍（ACG愛好者）
-- rocefactor（ACG愛好者）
-- 屋顶第十一任所长（ACG愛好者）
+- will（ACG愛好家）
+- 马小褂（ACG愛好家）
+- 有电拍拍（ACG愛好家）
+- rocefactor（ACG愛好家）
+- 屋顶第十一任所长（ACG愛好家）
 
 本企画のポスターとCM動画を制作してくださった唯一指定真实August_Rush、そして親身な助言と真摯な協力を寄せてくださった論者、サークル、プラットフォームの皆さまに感謝します。
 

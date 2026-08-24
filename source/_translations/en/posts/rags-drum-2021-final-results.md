@@ -5,14 +5,11 @@ source_slug: rags-drum-2021-final-results
 slug: rags-drum-2021-final-results
 language: en
 status: review
-title: "Rags Drum 2021 Annual Writing Awards: Strategy Unfinished"
-title_breaks: ["Rags Drum 2021 Annual Writing Awards:", " Strategy Unfinished"]
+title: "Strategy Unfinished: Rags Drum 2021 Annual Call — Final Results"
+title_breaks: ["Strategy Unfinished:", "Rags Drum 2021 Annual Call", "— Final Results"]
 excerpt: Lab on Roof announces the final Rags Drum 2021 results, identifying the eight Eve Festival prizewinning entries, the works that did not receive unanimous approval in the After Festival, and acknowledgements for judging and publicity.
 credits:
   - role: translator
-    contributor_id: shen-shui-bot
-    scope: complete work
-  - role: reviewer
     contributor_id: shen-shui-bot
     scope: complete work
 translation_method: agent
@@ -45,7 +42,7 @@ Two entries participated only in the Eve Festival and passed its review. They ar
 Six entries by five authors had either a complete manuscript or an abstract pass Eve Festival review, but unfortunately did not receive unanimous approval from the jury in the After Festival:
 
 - “Chips, Amputation, and the Death Drive: Itō Kaiji’s Suicide Game,” 米岡
-- [“From Replicas to Simulacra: The Modern Turn in Cultural Consumption”](/posts/from-reproduction-to-simulacra-modern-turn-in-cultural-consumption/), 米岡
+- [“From Replicas to Simulacra: The Modern Turn in Cultural Consumption”](/en/posts/from-reproduction-to-simulacra-modern-turn-in-cultural-consumption/), 米岡
 - “Spatialized Bodies versus Embodied Spaces: Imaginaries of Space and Body in Japanese Anime and Manga,” 斑鸠
 - “Decoding ‘The Drowned Giant’: An Interpretation of the ‘Giant’ Metaphor,” 心田安详
 - “Monster-Fear: Why America Became the Homeland of the Titans,” 哲哥
@@ -57,7 +54,7 @@ Three entries had their abstracts pass Eve Festival review, but their completed 
 
 - “*Mr. Osomatsu* Season 3: Matsubara Shū’s Journey Through Sketch Comedy,” CM
 - “Post-Bishōjo and After Bishōjo: A ‘Post’-ological Study of Bishōjo Games,” 宫酒姬
-- “How Did Anime Pilgrimage Become Possible? On the Contingency of the Suicide Journey in *Narcissu*” (later retitled “Contingent *Narcissu*: Notes on an Impossible Anime Pilgrimage”),[^1] 红茶泡海苔
+- “How Did Fan Pilgrimage Become Possible? On the Contingency of the Suicide Journey in *Narcissu*” (later retitled “Contingent *Narcissu*: Notes on an Impossible Fan Pilgrimage”),[^1] 红茶泡海苔
 
 For the prizewinning entries, the organizing committee will notify the authors of the results and, with their consent, publish the works as soon as possible. Authors of entries that did not receive a prize regain full discretion over what to do with them (standalone submissions are still welcome, lol). Whatever the result, we sincerely thank every author above for submitting their work.
 

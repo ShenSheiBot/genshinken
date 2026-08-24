@@ -12,9 +12,6 @@ credits:
   - role: translator
     contributor_id: shen-shui-bot
     scope: complete work
-  - role: reviewer
-    contributor_id: shen-shui-bot
-    scope: complete work
 translation_method: agent
 source_relationship: direct
 base_language: zh-Hans
@@ -41,21 +38,21 @@ Thirteen entries qualified in the Eve Festival track:
 
 - 米岡, “From Replicas to Simulacra: The Modern Turn in Cultural Consumption”
 - CM, “*Mr. Osomatsu* Season 3: Matsubara Shū’s Journey Through Sketch Comedy”
-- Suro Afmofo, “Using *Psycho-Pass* to Think About Control Societies and Resistance\*”
-- Vall, “Nose-Psychometry, Film Noir, and a 24-Sided Die=—The Narrative Texture of *Disco Elysium*”
+- Suro Afmofo, “Using *Psycho-Pass* to Think About Control Societies and Resistance”
+- Vall, “Nose-Psychometry, Film Noir, and a 24-Sided Die—The Narrative Texture of *Disco Elysium*”
 - 哲哥, “Monster-Fear: Why America Became the Homeland of the Titans”
 - 宫酒姬, “Post-Bishōjo and After Bishōjo: A ‘Post’-ological Study of Bishōjo Games”
 - 斑鸠, “Spatialized Bodies versus Embodied Spaces: Imaginaries of Space and Body in Japanese Anime and Manga”
 - 甚谁, “How Does Death Become ‘New Life’? Death in Isekai-Reincarnation Stories”
 - 真紅様, “Through the Philosophical Jungle of *Sakura no Uta*”
-- 红茶泡海苔, “How Did Anime Pilgrimage Become Possible? On the Contingency of the Suicide Journey in *Narcissu*”
+- 红茶泡海苔, “How Did Fan Pilgrimage Become Possible? On the Contingency of the Suicide Journey in *Narcissu*”
 - 怀剣, “How Far Does the Political Transformative Power of Internet Technology Extend?”
 - 心田安详, “Decoding ‘The Drowned Giant’: An Interpretation of the ‘Giant’ Metaphor”
 - 米岡, “Chips, Amputation, and the Death Drive: Itō Kaiji’s Suicide Game”
 
 ### Eve Festival Only
 
-Two works already published on bilibili entered the Eve Festival alone and qualified:
+Two works already published on Bilibili entered the Eve Festival alone and qualified:
 
 - 宫酒姬, “From *Nausicaä of the Valley of the Wind* to *Wily Beast and Weakest Creature*: ‘Entrusting the World to an Idol’ amid Many Predicaments”
 - 真紅様, “Beginning with the *Haruhi Suzumiya* Series and ‘Sekaikei’: Some Ramblings on Postmodernism and ACGN Studies”
