@@ -26,7 +26,7 @@ format: article
 >
 > —Wittgenstein, *Zettel*[^1]
 
-> For phenomenology how things seem to an agent, “letting something show itself,” is crucially important; but for logical analysis it is only the first step. … I am talking about the logical structure of intentional phenomena, and the logical structure does not typically lie on the surface, it is not typically discoverable by mere phenomenology. … But you will not uncover the logical structure of these phenomena if you do not go beyond phenomenology.
+> One of the great lessons of twentieth-century philosophy is that logical structure does not usually surface in “how things seem.” The theory of descriptions, the theory of speech acts, and the theory of intentionality are all cases in which you take “how things seem” as your point of departure, but must then dig deeper to bring out the real underlying structure.
 >
 > —John Searle, “The Limits of Phenomenology”
 
