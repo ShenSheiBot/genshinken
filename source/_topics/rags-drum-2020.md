@@ -4,7 +4,7 @@ subtitle: 年度征文公告、入选评论与评选结果
 summary: 收录拾荒战略Rags Drum 2020的活动公告、十篇年度入选评论、另一篇前夜祭合格稿及最终评选结果。
 status: complete
 published: 2026-08-15
-updated: 2026-08-15
+updated: 2026-08-23
 groups:
   - id: event-opening
     number: "01"
@@ -20,14 +20,8 @@ groups:
     summary: 最终结果页列出的十篇入选稿，按结果页顺序呈现。
     items:
       - type: post
-        ref: animation-and-reality-takahata-realism
-        editorialNote: 从高畑勋作品讨论动画写实、现实经验与表现形式。
-      - type: post
-        ref: romero-monsters-zombie-image-fallen-other
-        editorialNote: 追踪罗梅罗电影中的丧尸形象及其社会隐喻。
-      - type: post
-        ref: project-lux-vr-radicality
-        editorialNote: 从《Project LUX》讨论VR叙事、身体经验与媒介的激进性。
+        ref: what-is-cloud-behavior-ontology-internal-heterogeneity
+        editorialNote: 以行为本体论与内部异质性追问“云”如何成为可讨论的对象。
       - type: post
         ref: the-big-o-messiah-always-late
         editorialNote: 讨论《The Big O》的城市记忆、弥赛亚结构与末世想象。
@@ -35,20 +29,26 @@ groups:
         ref: stanley-parable-video-games
         editorialNote: 从《史丹利的寓言》讨论电子游戏中的选择、叙事与玩家位置。
       - type: post
-        ref: what-is-cloud-behavior-ontology-internal-heterogeneity
-        editorialNote: 以行为本体论与内部异质性追问“云”如何成为可讨论的对象。
-      - type: post
         ref: prey-morgan-yu-posthuman-body-construction
         editorialNote: 从《掠食》的摩根·余讨论后人类身体与主体建构。
       - type: post
         ref: fgo-lostbelt-4-black-final-human
         editorialNote: 讨论《FGO》异闻带第四章中的末人、世界更新与黑色结局。
       - type: post
-        ref: darker-than-black-stagnant-style
-        editorialNote: 分析《Darker than BLACK》的停滞感、风格与人物关系。
+        ref: romero-monsters-zombie-image-fallen-other
+        editorialNote: 追踪罗梅罗电影中的丧尸形象及其社会隐喻。
+      - type: post
+        ref: animation-and-reality-takahata-realism
+        editorialNote: 从高畑勋作品讨论动画写实、现实经验与表现形式。
+      - type: post
+        ref: project-lux-vr-radicality
+        editorialNote: 从《Project LUX》讨论VR叙事、身体经验与媒介的激进性。
       - type: post
         ref: morimi-tomihiko-humor-genealogy
         editorialNote: 梳理森见登美彦小说的幽默谱系与叙事传统。
+      - type: post
+        ref: darker-than-black-stagnant-style
+        editorialNote: 分析《Darker than BLACK》的停滞感、风格与人物关系。
   - id: event-closing
     number: "03"
     title: 前夜祭补录与年度结果
