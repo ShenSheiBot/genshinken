@@ -1414,6 +1414,15 @@ body:has(main[data-archive-page="true"]) {
   min-width: 100%;
   margin: 0;
 }
+@media (max-width: 720px) {
+  .art-body .article-table-grid:has(> thead > tr > :nth-child(4)) {
+    min-width: 620px;
+  }
+  .art-body .article-table-grid:has(> thead > tr > :nth-child(4)) th,
+  .art-body .article-table-grid:has(> thead > tr > :nth-child(4)) td {
+    overflow-wrap: normal;
+  }
+}
 .art-body .article-table-notes {
   margin-top: 14px;
   padding-top: 12px;

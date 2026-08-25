@@ -62,15 +62,40 @@ I next counted the frequencies of individual pairings. Table 2 presents the resu
 
 The hair-color and *moe*-trait co-occurrence frequencies can be used to construct the network in Figure 1. Since the relationships are complex and this study focuses only on the most deeply bound nodes, I processed the co-occurrence network using only the TOP1 algorithm.
 
-[图题] Table 1. Frequencies of hair colors and selected *moe* traits (top 13).
+[表题] Frequencies of hair colors and selected *moe* traits (top 13)
 
-![Frequency table for hair colors and selected moe traits](/attachments/roof-archive/cv21792051/28.png "=100%")
+| Rank | Hair color | Frequency | Selected *moe* trait | Frequency |
+| ---: | --- | ---: | --- | ---: |
+| 1 | Black | 22,049 | Large breasts | 1,747 |
+| 2 | Brown | 15,956 | Short hair | 1,501 |
+| 3 | Blond | 15,840 | Tsundere | 1,461 |
+| 4 | Silver | 9,643 | Energetic | 1,380 |
+| 5 | Blue | 7,655 | Airheaded | 1,072 |
+| 6 | Purple | 6,391 | Glasses | 1,049 |
+| 7 | Pink | 5,656 | Gap moe | 1,013 |
+| 8 | Red | 5,197 | Two-faced | 996 |
+| 9 | Green | 3,271 | Younger sister | 992 |
+| 10 | Orange | 3,203 | Loli | 991 |
+| 11 | White | 1,106 | Flat-chested | 988 |
+| 12 | Rainbow | 48 | Gentle | 987 |
+| 13 | Transparent | 6 | Older sister | 982 |
 
 In descending order, the hair-color counts are black 22,049; brown 15,956; blond 15,840; silver 9,643; blue 7,655; purple 6,391; pink 5,656; red 5,197; green 3,271; orange 3,203; white 1,106; rainbow 48; and transparent 6. The selected *moe*-trait counts are large breasts 1,747; short hair 1,501; tsundere 1,461; energetic 1,380; airheaded 1,072; glasses 1,049; gap moe 1,013; two-faced 996; younger sister 992; loli 991; flat-chested 988; gentle 987; and older sister 982.
 
-[图题] Table 2. Hair-color and *moe*-trait co-occurrence frequencies (top 10).
+[表题] Hair-color and *moe*-trait co-occurrence frequencies (top 10)
 
-![Hair-color and moe-trait co-occurrence frequency table](/attachments/roof-archive/cv21792051/32.jpg "=100%")
+| Rank | Hair color | *Moe* trait | Co-occurrences |
+| ---: | --- | --- | ---: |
+| 1 | Black | Long, straight black hair | 459 |
+| 2 | Brown | Short hair | 375 |
+| 3 | Black | Short hair | 360 |
+| 4 | Black | Tsundere | 333 |
+| 5 | Black | Large breasts | 331 |
+| 6 | Blond | Blond hair and blue eyes | 324 |
+| 7 | Brown | Large breasts | 317 |
+| 8 | Blond | Large breasts | 303 |
+| 9 | Brown | Energetic | 299 |
+| 9 | Black | Glasses | 299 |
 
 The top co-occurrences are black hair–long, straight black hair 459; brown hair–short hair 375; black hair–short hair 360; black hair–tsundere 333; black hair–large breasts 331; blond hair–blond hair and blue eyes 324; brown hair–large breasts 317; blond hair–large breasts 303; brown hair–energetic 299; and black hair–glasses 299.
 
@@ -152,9 +177,13 @@ Yet selecting hair-color nodes on personality alone still offers limited explana
 
 To establish the pairings more securely, I intersected the rankings from Sections 4.3 and 4.4. Table 3 presents the result. To simplify it, the personality-to-hair-color side retains only its top two features.
 
-[图题] Table 3. Intersection of hair color to personality (top 10) and personality to hair color (top 2).
+[表题] Intersection of hair color to personality (top 10) and personality to hair color (top 2)
 
-![Table intersecting bidirectional TF-IDF rankings for hair color and personality](/attachments/roof-archive/cv21792051/81.png "=100%")
+| Result | Co-occurring groups |
+| --- | --- |
+| Intersection | Black: Yamato nadeshiko, gentle, ice beauty, tsundere, gap moe<br>Brown: gentle, healing type, airheaded, timid<br>Blond: airheaded, tsundere<br>Silver: *sanwu*, naturally cute<br>Blue: ice beauty, kindhearted, gap moe<br>Purple: masochistic, earnest<br>White: madness |
+| Hair color → personality only | Black: two-faced, airheaded, wisecracker, energetic, taciturn<br>Brown: energetic, tsundere, gap moe, two-faced, wisecracker, fool<br>Blond: energetic, two-faced, gentle, gap moe, sharp-tongued, gentlemanly, fool, strong-willed<br>Silver: tsundere, gap moe, two-faced, taciturn, airheaded, gentle, sharp-tongued, ice beauty<br>Blue: tsundere, two-faced, energetic, gentle, airheaded, wisecracker, queenly<br>Purple: tsundere, two-faced, gap moe, airheaded, energetic, sadistic, gentle, chūnibyō<br>Pink: energetic, airheaded, two-faced, tsundere, gentle, little-devil type, healing type, fool, sharp-tongued, gap moe<br>Red: tsundere, energetic, strong-willed, airheaded, gentle, gap moe, fool, sharp-tongued, wisecracker, gentlemanly<br>Green: energetic, airheaded, gap moe, tsundere, two-faced, clumsy, wisecracker, healing type, sharp-tongued, shy<br>Orange: energetic, airheaded, fool, gentle, tsundere, gap moe, wisecracker, healing type, sharp-tongued, “little angel”<br>White: “little angel,” two-faced, gap moe, airheaded, tsundere, gentle, chūnibyō, Yamato nadeshiko, difficulty |
+| Personality → hair color only | Black: *sanwu*, shy, kuudere, earnest, kindhearted, timid<br>Brown: losing heroine, naturally devious, shy, slow on the uptake, naturally cute, “little angel”<br>Blond: losing heroine, hapless, healing type, slow on the uptake, “little angel”<br>Blue: split personality, naturally devious<br>Purple: Yamato nadeshiko<br>Red: madness<br>Orange: hapless |
 
 The bidirectional intersections are: black hair with Yamato nadeshiko, gentleness, ice beauty, tsundere, and gap moe; brown hair with gentleness, healing, airheadedness, and timidity; blond hair with airheadedness and tsundere; silver hair with the Chinese-fandom *sanwu* category and natural cuteness; blue hair with ice beauty, kindheartedness, and gap moe; purple hair with masochism and seriousness; and white hair with madness.
 

@@ -1151,6 +1151,15 @@ function soleImage(node: TableFigureNode | undefined): TableFigureNode | undefin
   return only.type === "element" && only.tagName === "img" ? only : undefined;
 }
 
+/** A display-math block before rehype-katex turns it into rendered KaTeX. */
+function soleDisplayMath(node: TableFigureNode | undefined): TableFigureNode | undefined {
+  if (node?.type !== "element" || node.tagName !== "pre") return undefined;
+  const children = (node.children ?? []).filter(
+    (child) => child.type !== "text" || /\S/u.test(child.value ?? "")
+  );
+  return children.length === 1 && hasNodeClass(children[0], "math-display") ? node : undefined;
+}
+
 /** The lone anchor of a link-only paragraph, or undefined for mixed prose. */
 function soleLink(node: TableFigureNode | undefined): TableFigureNode | undefined {
   if (node?.type !== "element" || node.tagName !== "p") return undefined;
@@ -1448,10 +1457,10 @@ function rehypeArticleVideos() {
 }
 
 /**
- * Turn a `[图题]` paragraph plus the image that follows it into a captioned
- * `<figure>`, with the caption printed below the plate as in the source editions.
- * Images without the marker are left alone, so alt text that is a placeholder
- * rather than a legend never leaks into the page.
+ * Turn a `[图题]` paragraph plus the image or display formula that follows it
+ * into a captioned `<figure>`, with the caption printed below the plate as in
+ * the source editions. Images without the marker are left alone, so alt text
+ * that is a placeholder rather than a legend never leaks into the page.
  */
 function rehypeImageFigures() {
   const walk = (parent: TableFigureNode) => {
@@ -1462,25 +1471,28 @@ function rehypeImageFigures() {
       const caption = children[index];
       if (!markerParagraph(caption, FIGURE_CAPTION_MARKER)) continue;
 
-      const imageIndex = significantSibling(children, index + 1, 1);
-      const paragraph = imageIndex >= 0 ? children[imageIndex] : undefined;
+      const mediaIndex = significantSibling(children, index + 1, 1);
+      const paragraph = mediaIndex >= 0 ? children[mediaIndex] : undefined;
       const image = soleImage(paragraph);
-      if (!image) continue;
+      const media = image ?? soleDisplayMath(paragraph);
+      if (!media) continue;
       stripParagraphMarker(caption, FIGURE_CAPTION_MARKER);
 
       let width: string | undefined;
-      const title = image.properties?.title;
-      if (typeof title === "string") {
-        const match = FIGURE_WIDTH_TITLE.exec(title);
-        if (match && FIGURE_WIDTHS.has(match[1])) {
-          width = match[1];
-          delete image.properties?.title;
+      if (image) {
+        const title = image.properties?.title;
+        if (typeof title === "string") {
+          const match = FIGURE_WIDTH_TITLE.exec(title);
+          if (match && FIGURE_WIDTHS.has(match[1])) {
+            width = match[1];
+            delete image.properties?.title;
+          }
         }
       }
 
       const notes: TableFigureNode[] = [];
-      let endIndex = imageIndex;
-      let nextIndex = significantSibling(children, imageIndex + 1, 1);
+      let endIndex = mediaIndex;
+      let nextIndex = significantSibling(children, mediaIndex + 1, 1);
       while (nextIndex >= 0 && markerParagraph(children[nextIndex], FIGURE_NOTE_MARKER)) {
         const note = children[nextIndex];
         stripParagraphMarker(note, FIGURE_NOTE_MARKER);
@@ -1498,7 +1510,7 @@ function rehypeImageFigures() {
           ...(width ? { "data-width": width } : {}),
         },
         children: [
-          image,
+          media,
           {
             type: "element",
             tagName: "figcaption",

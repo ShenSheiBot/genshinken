@@ -286,6 +286,22 @@ assert.match(
 assert.doesNotMatch(semanticFigureHtml, /\[图(?:题|注)\]/u, "figure markers must never render");
 assert.doesNotMatch(semanticFigureHtml, /title="/u, "a consumed width hint must not survive as a title");
 
+const semanticFormulaFigureHtml = await renderMarkdown(`[图题] TF-IDF 计算公式。
+
+$$
+\\mathrm{TF}=\\frac{n}{\\mathrm{total}}
+$$`);
+assert.match(
+  semanticFormulaFigureHtml,
+  /<figure class="article-figure"><span class="katex-display">[\s\S]*?<figcaption class="article-figure-caption">/u,
+  "a captioned formula must remain a semantic figure after replacing its source screenshot"
+);
+assert.doesNotMatch(
+  semanticFormulaFigureHtml.replace(/<[^>]+>/gu, ""),
+  /\[图题\]/u,
+  "formula figure markers must never render as visible text"
+);
+
 const semanticProfileHtml = await renderMarkdown(`
 [人物] 理查德·卡里奇曼
 
@@ -702,7 +718,7 @@ assert.doesNotMatch(
       corpusFailures.push(`${name}:${line}: 语义书影必须显式指定图版宽度（单本通常 25/33%，复合书影按构图选择）`);
     }
     const html = await renderMarkdown(body);
-    if (markerLeak.test(html)) {
+    if (markerLeak.test(html.replace(/<[^>]+>/gu, ""))) {
       corpusFailures.push(`${name}: 图版/表格标记字面渲染进了页面（[图题]/[图注]/[表题]/[表注] 位置或格式有误）`);
     }
     const width = invalidWidth.exec(html);
@@ -733,7 +749,7 @@ assert.doesNotMatch(
     }
     const language = relative.includes(`${path.sep}ja${path.sep}`) ? "ja" : "en";
     const html = await renderMarkdown(body, { language });
-    if (markerLeak.test(html)) corpusFailures.push(`${relative}: 译文图版／特殊版式标记字面渲染进页面`);
+    if (markerLeak.test(html.replace(/<[^>]+>/gu, ""))) corpusFailures.push(`${relative}: 译文图版／特殊版式标记字面渲染进页面`);
     const width = invalidWidth.exec(html);
     if (width) corpusFailures.push(`${relative}: 非法图版宽度 ${width[0]}`);
     if (malformedCjkHref.test(html)) corpusFailures.push(`${relative}: 译文裸 URL 吞入了中文标点或后续正文`);
