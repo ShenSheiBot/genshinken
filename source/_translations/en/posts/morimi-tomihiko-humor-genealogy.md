@@ -188,7 +188,7 @@ From these examples we can derive a general pattern for the “coined term.”
 
 The Chinese labels mark a sequence: “term coined” → “first explanation” → “second explanation” → “third explanation” → “term enters narrative setting 1” → “term enters narrative setting 2” → …
 
-![Diagram of the way a “coined term” is explained and enters the narrative](attachments/roof-archive/cv8416238/custom-noun-narrative-diagram.png)
+![Diagram of the way a “coined term” is explained and enters the narrative](attachments/roof-archive/cv8416238/translations/en/custom-noun-narrative-diagram.webp)
 
 When a term is created, it first carries the literal meaning of its form. The Speedy Kotatsu, for instance, suggests a kotatsu that can run. The School Festival Director supplies its first explanation: it is a persistent nuisance to the office. When he discovers that Chief-in-Chief Underpants is using it to write the script of *The Crackpot of Monte Cristo*, it receives a second explanation. At the same time, the object enters the narrative repeatedly: the heroine’s chance encounter with its riders and the incidents that follow; the pot of soy milk on its tabletop; Master Higuchi’s use of it as a base from which to resell books at a profit; and the romantic spectacle of Chief-in-Chief Underpants writing his script there.
 

@@ -48,7 +48,7 @@ citation:
 
 上述的分析显示，将讨论仅仅悬置于技术本身层面，并不能为其提供肯定的解答，还提出了更多的问题，因而对于后人类身体的构建表达问题的研究需要更进一步，寻求更多理论上的帮助。
 
-![摩根在测试室中的游戏画面](attachments/roof-archive/cv8372438/03-morgan-testing-room.png)
+![心理电子所收容室中的亚伦·英格拉姆](attachments/roof-archive/cv8372438/03-morgan-testing-room.png)
 
 ## 三、身体的切分和构建
 

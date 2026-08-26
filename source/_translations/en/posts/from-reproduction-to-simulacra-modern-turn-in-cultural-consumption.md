@@ -192,7 +192,7 @@ This closed character does not arise from the subjectivity of aesthetic sensibil
 
 ![Figure 3 in the essay’s argument on cultural consumption](attachments/roof-archive/cv11752140/figure-3.jpg)
 
-![Figure 4 in the essay’s argument on cultural consumption](attachments/roof-archive/cv11752140/figure-4.jpg)
+![Figure 4 in the essay’s argument on cultural consumption](attachments/roof-archive/cv11752140/translations/en/figure-4.png)
 
 The Chinese labels decompose Neptune’s design into “moe elements”: a childlike apparent age, purple hair and matching eyes, exaggerated body proportions, gamepad-button hair ornaments that personify a game console, and her name printed prominently on her clothing.
 

@@ -65,6 +65,28 @@ class ProtectedStructureTests(unittest.TestCase):
         target = f"![Translated caption]({target_url})\n"
         self.assertEqual(self.failures(source, target, mapping), [])
 
+    def test_localized_media_variant_passes_without_weakening_image_order(self) -> None:
+        source = "![Figure](attachments/roof-archive/cv1/figure-3.jpg)\n"
+        target = "![Translated figure](attachments/roof-archive/cv1/translations/ja/figure-3.png)\n"
+        self.assertEqual(self.failures(source, target), [])
+
+    def test_unrelated_localized_media_variant_fails(self) -> None:
+        source = "![Figure](attachments/roof-archive/cv1/figure-3.jpg)\n"
+        target = "![Translated figure](attachments/roof-archive/cv1/translations/ja/figure-4.jpg)\n"
+        self.assertTrue(self.failures(source, target))
+
+    def test_localized_media_variant_cannot_use_another_locale(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            source = Path(directory) / "source.md"
+            target = Path(directory) / "target.md"
+            source.write_text("![Figure](/attachments/work/figure-3.jpg)\n", encoding="utf-8")
+            target.write_text(
+                "![Figure](/attachments/work/translations/en/figure-3.jpg)\n",
+                encoding="utf-8",
+            )
+            report = audit.audit_direct(source, target, "ja")
+        self.assertTrue(any(item["field"] == "localized_media_locale" for item in report["failures"]))
+
     def test_localized_internal_route_is_same_protected_destination(self) -> None:
         source = "See [Part 2](/posts/part-2).\n"
         target = "See [第2回](/ja/posts/part-2).\n"

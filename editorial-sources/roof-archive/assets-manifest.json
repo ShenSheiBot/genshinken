@@ -16502,6 +16502,402 @@
       "bytes": 16983,
       "sha256": "19fe95ea29941cb274460b9f4d1cb56eeeecf65937037f385f6704cd84fade2b",
       "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv11752140/translations/en/figure-4.png",
+      "bytes": 1481087,
+      "sha256": "d1b08a5743b01b3f5f649e5b6898847789733c76cac53d534e144d82ad2f6e88",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv11752140/translations/ja/figure-4.png",
+      "bytes": 1496709,
+      "sha256": "0bd9d485da94407fe90e8475cdead174a46b716242f7abddcd2d8cb172a28899",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv14084596/translations/en/figure-1.png",
+      "bytes": 1352503,
+      "sha256": "9103d61e1534121f83a5d6d335257c61a3def8643497977e9ec72cc0409c2b77",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv14084596/translations/en/figure-3.jpg",
+      "bytes": 53391,
+      "sha256": "fe937c81acb2153f8ae21ad20ab0c19626c95dbbe18014807793c1f28f7949f2",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14084596/translations/en/figure-4.jpg",
+      "bytes": 128806,
+      "sha256": "2c50484e1bee092700c4c2f7b1504c53ab339cec53afd61d759890d456b61e67",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14084596/translations/en/figure-5.jpg",
+      "bytes": 140860,
+      "sha256": "4b0d4853d2c233a459bd5160728bd022b7f0d94704d8fc6cee260754d6533a3d",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14084596/translations/en/figure-6.jpg",
+      "bytes": 149820,
+      "sha256": "651de91bf39022c82523897b74d4f5ea72a296b926d46fa4b8e8bef1c0d3f21d",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14084596/translations/ja/figure-1.png",
+      "bytes": 1324058,
+      "sha256": "eb9c2a7b1aad612e9e5c1dcc11e207f584444a918045069bd06e6c6ef0847c04",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv14084596/translations/ja/figure-3.jpg",
+      "bytes": 53560,
+      "sha256": "9cabbd02eebe6f33c66ed95e16e2895cdbabbebcbbad622a602980946d2a2047",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14084596/translations/ja/figure-4.jpg",
+      "bytes": 111984,
+      "sha256": "b0ab345e0374f85e2eabb33a47a4d51cedb6a415784fc304d731ddb1c674b891",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14084596/translations/ja/figure-5.jpg",
+      "bytes": 144059,
+      "sha256": "b33eabe0be6b0bebcf8eef906008fe012b284abd0c522042910a5cfa33f71059",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14084596/translations/ja/figure-6.jpg",
+      "bytes": 129239,
+      "sha256": "54c88bb59e1e448bfc69d72da5c4c3479bd26e545a238fc2ca8f45f179f38d38",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv1559883/05-shiki-knife-cropped.png",
+      "bytes": 504962,
+      "sha256": "a46b29e97cf6aa563ae6ba87f23baff108dcb370f55e63eb66043db4ba290287",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1559883/06-taiji-cropped.png",
+      "bytes": 233264,
+      "sha256": "a5aa7a166c831b45836af44bc1efc2521e886a14002e5175df728c46b10e00b8",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1559883/translations/en/02-buddhist-dictionary-empty.webp",
+      "bytes": 15032,
+      "sha256": "f25a21d01a6e803784357af64c20b8da913528af20d25c061ed778e8de8f8b41",
+      "contentType": "image/webp"
+    },
+    {
+      "key": "roof-archive/cv1559883/translations/en/04-dictionary-boundary.webp",
+      "bytes": 10906,
+      "sha256": "2dfb7b774cdf984953d4da6e23c2bb76552e53290599ecd45b2bf224e9429d06",
+      "contentType": "image/webp"
+    },
+    {
+      "key": "roof-archive/cv1559883/translations/ja/02-buddhist-dictionary-empty.webp",
+      "bytes": 23806,
+      "sha256": "8359d0a83f61e2c5039658bad48fe4642ef79ae3b586cf971e69ebb44044c15f",
+      "contentType": "image/webp"
+    },
+    {
+      "key": "roof-archive/cv1559883/translations/ja/04-dictionary-boundary.webp",
+      "bytes": 13654,
+      "sha256": "fa1cfe12e8ea1b91bcabdb0a693cc58c5fdd7d1e220a4e36836ea4b62a10b6f1",
+      "contentType": "image/webp"
+    },
+    {
+      "key": "roof-archive/cv8255716/translations/en/05-3000-leagues-layout-notes.png",
+      "bytes": 3170327,
+      "sha256": "ab52ea4f5af02c0b9e71868fc240a40d610e33937eefd5088007b18c66885d9e",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8255716/translations/en/06-3000-leagues-perspective-analysis.png",
+      "bytes": 1097048,
+      "sha256": "7414f4abc332350e27215ffc5846e2c1ec0a1eab1f078d6c07fd8a29212889f4",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8255716/translations/ja/05-3000-leagues-layout-notes.png",
+      "bytes": 4747572,
+      "sha256": "702889b0561037b0c678e6e0a7d8d61f467fdcbe72eaf9ba0749844ae366cb57",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8255716/translations/ja/06-3000-leagues-perspective-analysis.png",
+      "bytes": 1099218,
+      "sha256": "f0412970c961f22f330175ed975171bc3466b8b73ef22573ecb968ba55a28995",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8347885/translations/en/01-cloud-gamer-triple-meme.png",
+      "bytes": 265452,
+      "sha256": "630e08db433de51724df85a6299249e2caa977d606c498f197e48efee676403f",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8347885/translations/ja/01-cloud-gamer-triple-meme.png",
+      "bytes": 268173,
+      "sha256": "ae6514b37f1c0a60873a4f60e050addfecad382bcd9f791cea3c628240ec8b9e",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8372438/translations/en/02-january-operator.png",
+      "bytes": 6138589,
+      "sha256": "cf30e4675de18d50a94ed5dff7d75c827461926c080d5a8fc4ceee03ad77e40d",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8372438/translations/en/03-morgan-testing-room.png",
+      "bytes": 5176954,
+      "sha256": "db5d25272a380988d85fc818781f58c12b1d7bf26b4c9afb41c87b7a98837946",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8372438/translations/ja/02-january-operator.png",
+      "bytes": 6031443,
+      "sha256": "1db0dea63aba19c851d696cff8c4ee2bb87da91abcba2909410540d9b4650735",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8372438/translations/ja/03-morgan-testing-room.png",
+      "bytes": 5193616,
+      "sha256": "ecb0e1fb263d4f30946cb1f2ff1fab86930b42296a28973bfbea6706ae762226",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8380081/translations/en/01-lostbelt-no4-title.png",
+      "bytes": 1919567,
+      "sha256": "2ccb2da8e6b66dffd37b44ef2906574e35e0d5d6809574838319720af62c2ef2",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8380081/translations/en/02-yuga-kshetra-title.png",
+      "bytes": 1919567,
+      "sha256": "2ccb2da8e6b66dffd37b44ef2906574e35e0d5d6809574838319720af62c2ef2",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8380081/translations/en/03-family-portrait.png",
+      "bytes": 745161,
+      "sha256": "f5d18d7ff46844a5446dff414b1466aebf231d50535ce89eea3752c8a1915ad0",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8380081/translations/ja/01-lostbelt-no4-title.png",
+      "bytes": 1361656,
+      "sha256": "5a20f681064db558c474b6f70ced47f03d019ac0f1869d2b05bd36f41399fbc8",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8380081/translations/ja/02-yuga-kshetra-title.png",
+      "bytes": 1361656,
+      "sha256": "5a20f681064db558c474b6f70ced47f03d019ac0f1869d2b05bd36f41399fbc8",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8380081/translations/ja/03-family-portrait.png",
+      "bytes": 825576,
+      "sha256": "b77757a34c502dea1d1d1f4ce647cc5199cb02df4248fa4b7b82766e1afdb236",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8622821/translations/en/03-nausicaa-manga-ohmu.png",
+      "bytes": 1468586,
+      "sha256": "6342e5051753ba4459761e43d4ecd978ef766337d2f04e72ca1165a184075883",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8622821/translations/en/04-nausicaa-manga-shuwa.png",
+      "bytes": 1373167,
+      "sha256": "5b3f6e65d8ae9a0f63dc4c088b96f184bc0f13010619e4b3f1fcd6b215b3940c",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8622821/translations/en/05-nausicaa-life-in-darkness.png",
+      "bytes": 852895,
+      "sha256": "dedaf03bdff1b20ec91c0fe5ccf823b42f9af1aa4fddb70598d6baaa236aa1b1",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8622821/translations/ja/03-nausicaa-manga-ohmu.png",
+      "bytes": 1779694,
+      "sha256": "5fdbabb07f183ddf5295f51572644f92e2d9082584e6884c60574ddf8264917c",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8622821/translations/ja/04-nausicaa-manga-shuwa.png",
+      "bytes": 1461958,
+      "sha256": "93c86baa185e313069afb821118291bb7f0f51003ad392e8f088a9e952340a8f",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8622821/translations/ja/05-nausicaa-life-in-darkness.png",
+      "bytes": 1006454,
+      "sha256": "d737bd7466ddbdbaf71137c776b7ee746edb9ea1b06715681ef78b6c789eb57b",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1550227/translations/en/02-hashino-interview-city.png",
+      "bytes": 1210648,
+      "sha256": "a405fae3918f203234722d8ef26b34fea8aebd820a44ca03f48a2a324bd6c71a",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1550227/translations/en/04-sakura-dialogue.webp",
+      "bytes": 3726312,
+      "sha256": "ce6f566e4e68a4d779cd358d8c101e14ab45abe85215a6fadbab16d71b0a028a",
+      "contentType": "image/webp"
+    },
+    {
+      "key": "roof-archive/cv1550227/translations/en/06-tokyo-npc-dialogue.png",
+      "bytes": 5104343,
+      "sha256": "950b413e207af69269ec1d7bb296691365b35b20e0a4c7216aa171fb22a3c1b3",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1550227/translations/en/07-mementos-upper-class.png",
+      "bytes": 5309044,
+      "sha256": "eeaec8bff8caaf38d4e2f63be969867cc898941db225b3672dce89015e0f3a3c",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1550227/translations/en/08-mementos-young-woman.png",
+      "bytes": 5352151,
+      "sha256": "9ea24deebac7b93939db14e0a6fa29c53f2856d9aa96aea092edba998b83ec5b",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1550227/translations/en/10-chihaya-dialogue.png",
+      "bytes": 5460494,
+      "sha256": "9586ab44ab511dd239b6aaaa3ed4ce483f29524354987014aa23ce06a099d0e6",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1550227/translations/ja/02-hashino-interview-city.png",
+      "bytes": 1227732,
+      "sha256": "c8adbf609c1064c23f26fdb172f92aabc702e0e11460ae21ebf54f6b644b14a2",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1550227/translations/ja/04-sakura-dialogue.png",
+      "bytes": 4930829,
+      "sha256": "55544aebbfc3936f2644ff36c046f67fe54acfc894348eae8cc211dcdc5dd713",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1550227/translations/ja/06-tokyo-npc-dialogue.png",
+      "bytes": 5183998,
+      "sha256": "94d042bf1f73b60e113a0b2d403ee921e2ad67d1526b97a7dfe6b243201be44c",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1550227/translations/ja/07-mementos-upper-class.png",
+      "bytes": 5203332,
+      "sha256": "ecfc4f3e166d1ab797e70f4b23b7ed53d4ff871356286420303b52375b180ba3",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1550227/translations/ja/08-mementos-young-woman.png",
+      "bytes": 5321041,
+      "sha256": "83dd80c58852b992482c3563e19542eb83b48b7f2a28617dd07f9a588a959208",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1550227/translations/ja/10-chihaya-dialogue.png",
+      "bytes": 5450268,
+      "sha256": "d1eba2a528625af225dd6150696cc3695a92676fbfdd2ada83da1d5c51fbc826",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1641117/translations/en/darth-vader-i-am-your-father.png",
+      "bytes": 403270,
+      "sha256": "256792489b603f63b7f8697034f3c55628d100e0b3fb84431b84c402635ab745",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1641117/translations/ja/darth-vader-i-am-your-father.webp",
+      "bytes": 286164,
+      "sha256": "516b22f4c2d273948d6782c69bcd48af16cb56a60e0fb3d4652f39c9f6e010ef",
+      "contentType": "image/webp"
+    },
+    {
+      "key": "roof-archive/cv1652116/translations/en/08-breadth-analysis-diagram.webp",
+      "bytes": 237894,
+      "sha256": "c7fa7ec73a0cfc3d93804b64c2948d7f073da82fc1110ff68273121a57879ee3",
+      "contentType": "image/webp"
+    },
+    {
+      "key": "roof-archive/cv1652116/translations/en/09-criticism-dimensions-diagram.png",
+      "bytes": 502110,
+      "sha256": "df8746afae3532e9356653a52d70ad468e191e79254f8f8c6fbf229a47035e6c",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1652116/translations/ja/08-breadth-analysis-diagram.webp",
+      "bytes": 212812,
+      "sha256": "9fed1a9c8b3cda645185936447d82a16026b80831b25031a690bc86992e49006",
+      "contentType": "image/webp"
+    },
+    {
+      "key": "roof-archive/cv1652116/translations/ja/09-criticism-dimensions-diagram.png",
+      "bytes": 482368,
+      "sha256": "8708ef818b4dd2e49770cf70807a7706831a32c4612841024b5fbb1c7824eff5",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8372438/translations/en/04-alex-yu-lab.png",
+      "bytes": 5802817,
+      "sha256": "be4f3957414d3a2509aa725a38cb19e9d1b4f5da212d2d67c4028417bf118efa",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8372438/translations/en/05-transcribe-device.png",
+      "bytes": 4747345,
+      "sha256": "fe2514c3858623eb2010a7bc011e3f74b5a0fdaba5337c770def1836761e4fbc",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8372438/translations/ja/04-alex-yu-lab.png",
+      "bytes": 5942110,
+      "sha256": "7e9b478edf3cf6d00c66f19d27ef1c3802e51dc8da8bfb5cd1e33f521bd3170c",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8372438/translations/ja/05-transcribe-device.png",
+      "bytes": 4670623,
+      "sha256": "784ee83e1b74e6fd404595411f9d28bceb0bf8a87119fcc390ed7a466f7319a1",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8416238/translations/en/custom-noun-narrative-diagram.webp",
+      "bytes": 25330,
+      "sha256": "4402ef067c1f12250273e047feffa64ce266dabe502bf48bd105b6939f1c44f6",
+      "contentType": "image/webp"
+    },
+    {
+      "key": "roof-archive/cv8416238/translations/ja/custom-noun-narrative-diagram.webp",
+      "bytes": 40792,
+      "sha256": "d7a1b3667497f846bd25cd4a39339ed511cdcd68330b370a32e690e0c1bf06c5",
+      "contentType": "image/webp"
+    },
+    {
+      "key": "roof-archive/rags-drum-2022/saya-pure-love-matrix/translations/en/relations.png",
+      "bytes": 121840,
+      "sha256": "9ddad4356f7c68dd9f6ac79f602243dae114ec01fb3583a1dd99973200c04432",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/rags-drum-2022/saya-pure-love-matrix/translations/ja/relations.png",
+      "bytes": 100567,
+      "sha256": "d109db941cab7f4d06a0e38bcb6732a21262f9432aa59686ce912a183edd2e2c",
+      "contentType": "image/png"
     }
   ]
 }

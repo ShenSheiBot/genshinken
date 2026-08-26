@@ -34,7 +34,7 @@ To spell out this claim, let us return to the opening. Three expository scenes a
 
 [图题] The principal actors in *Saya no Uta* and the relations among them.
 
-![Diagram of the principal actors in *Saya no Uta* and their relations](/attachments/roof-archive/rags-drum-2022/saya-pure-love-matrix/relations.jpg)
+![Diagram of the principal actors in *Saya no Uta* and their relations](/attachments/roof-archive/rags-drum-2022/saya-pure-love-matrix/translations/en/relations.png)
 
 In the diagram, A denotes Fuminori; B, his classmates; C, Ryoko; and D, Saya. The red arrow marks romantic love; the black solid arrows mark disgust, concern and estrangement, and wariness; the dashed arrows mark relations not yet established. The principal characters fall naturally, according to identity, into four distinct actors: individuals or groups whose motives, functions or capacities, aims, and modes of action resemble one another while differing from those of the other units.[^3] Every character besides Saya is wary of Fuminori. His former friends may be motivated mainly by concern for his health, but every player knows that, from Fuminori’s point of view, he needs neither extra curiosity nor extra attention. On the contrary, anything that might expose Saya to the world constitutes a threat. At this stage, then, Saya is the only character who retains a “positive relation” with Fuminori—the red edge $AD$. Every other relation is a potential source of conflict.
 

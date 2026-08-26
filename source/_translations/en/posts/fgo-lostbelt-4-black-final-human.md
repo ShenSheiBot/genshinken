@@ -20,7 +20,7 @@ rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-![Title screen for the Indian Lostbelt, “The Final Dark God”](attachments/roof-archive/cv8380081/01-lostbelt-no4-title.jpg)
+![Title screen for the Indian Lostbelt, “The Final Dark God”](attachments/roof-archive/cv8380081/translations/en/01-lostbelt-no4-title.png)
 
 ## 0. How Should We Interpret Part 2 of FGO? Or, What Kind of Reading Does Dystopian Fiction Demand?
 
@@ -30,7 +30,7 @@ Slavoj Žižek—the celebrated philosopher whom Graham Harman, a leading figure
 
 But must these texts do nothing except reproduce ideology? If *The Handmaid’s Tale* were merely “nostalgic fetishism for the present,” why would Žižek try to take the discussion further? After arguing that its plot caters to the obscene, patriarchal enjoyment of its readers and viewers, and that the work in fact celebrates the present, Žižek asks a more valuable question: why does the contemporary United States—supposedly “free, progressive, and respectful of women,” and fetishized with such nostalgia—turn into the Republic of Gilead, a religious totalitarian state that brutally oppresses women? Likewise, whenever we pine for “the good old days,” we must ask why those days developed into a present that can be endured only through nostalgia. The ideological elements that dominate dystopian fantasy are structures already inherent in our reality; indeed, they are aspects of reality itself. They are not other worlds opposed to reality and useful only for making it look good. On the contrary, they are always isomorphic with it. What interpretation of dystopian fiction must guard against is not the possibility that our quiet and harmonious reality might someday slide into horror. We already inhabit the field of that possibility. Precisely those dystopian works that lack textual radicalism must be read radically, so that their critical force can be reactivated.
 
-![Title screen for Lostbelt No.4, “Saṃsāra of Genesis and Terminus”](attachments/roof-archive/cv8380081/02-yuga-kshetra-title.jpg)
+![Title screen for Lostbelt No.4, “Saṃsāra of Genesis and Terminus”](attachments/roof-archive/cv8380081/translations/en/02-yuga-kshetra-title.png)
 
 ## 1. The Final Dark God—or the Final Dark Human?
 
@@ -56,7 +56,7 @@ When Žižek discusses ideology, he often argues that the inherent transgression
 
 This is why Arjuna cannot identify and destroy every evil in a single cycle. Each time he deploys his Noble Phantasm, he has indeed eliminated everything identifiable as “defective and unnecessary” by the standards of that world. New evil, however, is then endlessly identified among what had previously qualified as good. This is also why Agamben says that the point of discussing the anthropological machine is to think about how it might be stopped. As Wu Guanjun writes in an essay on the concept, “This machine’s meat grinder is about to turn on humanity itself.” Is this not exactly how Karna and Arjuna’s final battle uses the machine’s eventual turn against Arjuna to force the sole god into self-negation? Moreover, endlessly producing divisions and eliminating the nonhuman can only exhaust humanity and the world. The fate of the first little girl the party encounters after entering the Lostbelt offers a miniature of that process. The commemorative Craft Essence awarded for clearing the Lostbelt resembles, in a sense, the wedding photograph at the end of *May 18*: everyone smiling in that photograph except the unsmiling bride was killed by the martial-law troops of Chun Doo-hwan’s regime. Here, likewise, everything that made the girl smile has been obliterated by the cycle; only the girl herself still smiles in an unknowable dream.
 
-![“Family Portrait,” the commemorative Craft Essence for clearing the Indian Lostbelt](attachments/roof-archive/cv8380081/03-family-portrait.png)
+![“Family Portrait,” the commemorative Craft Essence for clearing the Indian Lostbelt](attachments/roof-archive/cv8380081/translations/en/03-family-portrait.png)
 
 Even apart from the fact that a society will ultimately destroy itself if it continually makes divisions in order to eliminate one part of itself, neither those identified by the activated anthropological machine as beings to be erased nor those who sympathize with them can possibly accept such a system. William Tell, a Servant summoned by Arjuna, realizes that his memory of being forced by a governor to shoot an apple from his son’s head has been erased from the cycle because it interfered with his execution of Arjuna’s rules and was therefore judged “defective and unnecessary.” When the party encounters the world’s destruction for the second time, he rebels against Arjuna and attacks him. A woman in the rebel army led by Lakshmibai, the Rani of Jhansi, discovers a letter from her vanished lover through the manipulative cruelty of Koyanskaya—the Alien God’s Apostle who has opposed Chaldea since the bleaching of human history—and resolves to resist god. Faced with one of Arjuna’s divinity-bearing composite Servants, she cries out hysterically: “How dare you call my lover defective!”
 

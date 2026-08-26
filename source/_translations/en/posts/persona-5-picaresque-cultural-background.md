@@ -32,7 +32,7 @@ Katsura Hashino, producer of the series since *Persona 3*, said in a Famitsu int
 
 [图题] The Toco Toco interview with Katsura Hashino.
 
-![Katsura Hashino looking down over the city during an interview](attachments/roof-archive/cv1550227/02-hashino-interview-city.jpg)
+![Katsura Hashino looking down over the city during an interview](attachments/roof-archive/cv1550227/translations/en/02-hashino-interview-city.png)
 
 A little investigation into the word and the works associated with it turns up the usual account: *picaresque* is generally said to derive from the Spanish *picarón*, roughly meaning a rogue, hoodlum, or scoundrel, with a still earlier ancestry sometimes traced to the Vulgar Latin adjective *piccare*. In a broad sense, stories of wanderers that rebel against the conventions of chivalric romance, such as *Don Quixote*, can be placed near this tradition; *Lazarillo de Tormes* is usually treated as the genre's beginning in the stricter sense. It was followed by works such as *Guzmán de Alfarache*, even less constrained by prevailing ethics, while the device in Guevara's and Lesage's versions of *The Limping Devil*—climbing to the top of a church spire and looking down upon the ugliness of the whole city—will feel at least somewhat familiar to anyone who has gone through this game's adventure. **Hashino has also described in interviews the importance he places on the act of “looking down over” a city: thinking in a restaurant on the top floor of a high-rise let him see both Tokyo and his own self hurrying through it.** In the game, the end of one day and the arrival of another repeatedly appear against bird's-eye views of Tokyo. As players move deeper into the incident, they see that “man is a wolf to man” and come to understand that “when people crowd together and become a mass, the beasts and demons that have always lain hidden and asleep within each person are released.”
 
@@ -52,7 +52,7 @@ In an interview at the end of 2013, Hashino revealed this about the game: its ch
 
 > In our age, many people carry troubles large and small without knowing how to move forward. Simply inheriting existing rules or values may not bring happiness, yet deciding to break through the status quo is difficult.
 
-![Sojiro Sakura speaking about rebels in *Persona 5*](attachments/roof-archive/cv1550227/04-sakura-dialogue.jpg)
+![Sojiro Sakura speaking about rebels in *Persona 5*](attachments/roof-archive/cv1550227/translations/en/04-sakura-dialogue.webp)
 
 As a work once characterized by what Hashino called a “picaresque romance,” with a focus on stories told from the side of “criminals,” the form it ultimately took is deeply connected to one of his questions: “If Arsène Lupin appeared in the modern day, how would he affect society?” Unlike the protagonists of the previous games, who were swept into events, the protagonist here acts on an “impulse to break the status quo,” works to “keep things from heading toward ruin,” tries to draw society's attention, and searches for a sense of recognition that he himself does not fully understand.
 
@@ -64,7 +64,7 @@ As a work once characterized by what Hashino called a “picaresque romance,” 
 
 [图题] There are many NPC lines like these in *P5*, functioning as social metaphors. Are they really meaningless?
 
-![Tokyo pedestrians discussing social issues in *Persona 5*](attachments/roof-archive/cv1550227/06-tokyo-npc-dialogue.png)
+![Tokyo pedestrians discussing social issues in *Persona 5*](attachments/roof-archive/cv1550227/translations/en/06-tokyo-npc-dialogue.png)
 
 After entering Tokyo, we hear a pedestrian complain: “The police are useless too. They're nothing but tax thieves.”
 
@@ -84,9 +84,9 @@ A gifted teacher humiliates his students; a celebrated painter steals other peop
 
 [图题] So this is the ordinary company employee an otaku wants to become?
 
-![Dialogue in Mementos about being unable to change the world](attachments/roof-archive/cv1550227/07-mementos-upper-class.png)
+![Dialogue in Mementos about being unable to change the world](attachments/roof-archive/cv1550227/translations/en/07-mementos-upper-class.png)
 
-![Dialogue in Mementos about obeying other people's expectations](attachments/roof-archive/cv1550227/08-mementos-young-woman.png)
+![Dialogue in Mementos about obeying other people's expectations](attachments/roof-archive/cv1550227/translations/en/08-mementos-young-woman.png)
 
 > “The first stage of the mythological journey, which we call the call to adventure, signifies that destiny has summoned the hero and transferred the center of gravity of his spirit from within the bounds of society to an unknown region… It is often a place of strange, shifting figures, unimaginable ordeals, superhuman deeds, and limitless delight.”
 
@@ -114,7 +114,7 @@ Perhaps the Phantom Thieves are the sort of tragic figures Aristotle describes a
 >
 > “Whatever clothes I wear, I feel the pain of a constricted life. I am too old merely to play, yet too young to renounce desire. What can this world still give me?”
 
-![Chihaya Mifune discussing fate and what matters in a game conversation](attachments/roof-archive/cv1550227/10-chihaya-dialogue.png)
+![Chihaya Mifune discussing fate and what matters in a game conversation](attachments/roof-archive/cv1550227/translations/en/10-chihaya-dialogue.png)
 
 If one really must draw some “lesson” from this game, I think it should be to spit without hesitation upon the attitude toward life shown by Faust when Goethe first brings him onstage. The game is like an attendant of Mephistopheles: those marvelous phantoms and spirits stir the vitality of youth and give people the courage to open new paths and shoulder consequences without fear. As Chihaya tells Akira: “I am only a fortune-teller. My work is to offer guidance to people whose hearts are weak, so that they will not be manipulated by fate, but will hold fast to their convictions and open up a new future.” We who are weak and confused may be thoroughly tired of endless exhortation, but do we not still need to search for that kind of vigor? “I once met a young man. In a way different from mine, he is trying to set this world right. But that is an unimaginably huge mountain. I cannot travel with him, yet I will not say goodbye. We will surely meet again at the summit. He is fighting desperately to do what he wants to do. Everyone, go and find what it is that you want to do.” So says Yoshida.
 

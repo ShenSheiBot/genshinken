@@ -81,9 +81,9 @@ Therefore, when we fall into the myth of “trash audiences and trash production
 
 Finally, based on my shallow knowledge and understanding, I have presumptuously constructed two little contraptions: a “category schematic” and an “axis of dimensions in anime criticism.” Their purpose is to express the plurality and relativity of criticism. The dimensional axis summarizes only four “ideal types.” A formidable critic might well cover all four, or even address all four dimensions in a single essay, and there may of course be criticism that exceeds these dimensions entirely.
 
-![Diagram analyzing the breadth of anime criticism](attachments/roof-archive/cv1652116/08-breadth-analysis-diagram.jpg)
+![Diagram analyzing the breadth of anime criticism](attachments/roof-archive/cv1652116/translations/en/08-breadth-analysis-diagram.webp)
 
-![Axis of breadth and depth in anime criticism](attachments/roof-archive/cv1652116/09-criticism-dimensions-diagram.jpg)
+![Axis of breadth and depth in anime criticism](attachments/roof-archive/cv1652116/translations/en/09-criticism-dimensions-diagram.png)
 
 Our attitude toward “anime criticism” should contain more tolerance than denunciation. I hope even more that we can summarize theory while taking experience into account, and attend to the culture behind a work while still attending to the work itself—as well as cultivating some degree of awareness of this identity of ours.
 

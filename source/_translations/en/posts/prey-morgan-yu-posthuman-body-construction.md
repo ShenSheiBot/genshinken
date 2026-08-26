@@ -32,7 +32,7 @@ format: article
 
 The protagonist, Morgan Yu, is a child of TranStar founders Catherine and William Yu. Morgan naturally joins the company in 2027 and begins research on an experimental device called the Neuromod. Transferred to Talos I in 2032, Morgan volunteers over the next three years to serve as the Neuromod’s principal clinical-test subject. This technology plays a crucial part in the construction of *Prey*’s world. How does *Prey* use the representation of an imaginary technology to construct and articulate a posthuman subject? That is where this essay begins.
 
-![Morgan and the Operator January in the game](attachments/roof-archive/cv8372438/02-january-operator.png)
+![Morgan and the Operator January in the game](attachments/roof-archive/cv8372438/translations/en/02-january-operator.png)
 
 ## II. The Neuromod’s Posthuman Technological Prototypes
 
@@ -46,7 +46,7 @@ In its depiction of side effects, the Neuromod also suggests another technology:
 
 This analysis shows that suspending the discussion at the level of technology itself yields no affirmative answer; it only raises further questions. An account of how the posthuman body is constructed and represented must therefore go further and seek more theoretical assistance.
 
-![Morgan in the testing room](attachments/roof-archive/cv8372438/03-morgan-testing-room.png)
+![Aaron Ingram inside a Psychotronics containment chamber](attachments/roof-archive/cv8372438/translations/en/03-morgan-testing-room.png)
 
 ## III. Dividing and Constructing the Body
 
@@ -60,7 +60,7 @@ Body two first appears soon after the opening and generally persists throughout 
 
 The game never clearly depicts how January and December were constructed. Judging by the result, however, these Operators inherited not only the memories Morgan had when each was made but, to some degree, a similar personality. One possible explanation is that their decision trees were built from the memory-scanning component of Neuromod technology, so that their behavior can be read as the response that Morgan at that moment would have made to the present situation. Each such Operator is necessarily bound to the moment in which it was made. Faced with the same circumstances, January and December assume radically different moral positions and methods; at one point January even kills December to ensure the completion of January’s own plan. Morgan, appearing in the form of these Operators, is sliced out of a complete timeline and marked by conspicuous discontinuity. These figures constitute a body shaped by the peculiar field surrounding Morgan. Combining a second-person character with passivity, they perfectly embody body two. Other forms of body two are likewise scattered across Talos I: Morgan’s old voice recordings, emails and documents, and exchanges with survivors. Objectified by a delayed and disembodied observer, this is Ihde’s “virtual body.” Within it, fractured “experience” becomes the principal site for the construction of a new subjectivity.
 
-![Morgan and Alex Yu in the laboratory](attachments/roof-archive/cv8372438/04-alex-yu-lab.png)
+![Morgan and Alex Yu in the laboratory](attachments/roof-archive/cv8372438/translations/en/04-alex-yu-lab.png)
 
 ## IV. Disembodiment, Embodiment, and “Body Three”
 
@@ -72,7 +72,7 @@ Body three truly breaks with a one-dimensional interpretation of the body. Andre
 
 In *Prey*, body three is presented precisely through the agency of body one and body two. To see this, Morgan must return to the testing environment discussed under body one. An email explains that Morgan once used powers acquired through Neuromods to pass the entire sequence perfectly. After acquiring the corresponding Neuromod upgrades, Morgan can return to that space, repeat the tests, and try to reproduce the feats described in the email. This arrangement guides the technologically informed Morgan to reverse-engineer the tests. For the same desired action, a body-one solution is rejected, while a solution using Neuromod abilities passes. The whole test finally comes together: it marks a division between the eras before and after body three. This body three, constituted through technology’s internalization and embodiment, appears elsewhere in the game as well. After Morgan learns too many Typhon abilities through Neuromods, Talos I’s automated security system identifies Morgan as a hostile target and attacks. Its criterion of judgment shifts from the human–nonhuman relation to a relation between low and high levels of Typhon technology. This change likewise symbolizes a shift from body-one to body-three orientation.
 
-![Morgan examines a TranScribe recording device](attachments/roof-archive/cv8372438/05-transcribe-device.png)
+![Morgan examines a TranScribe recording device](attachments/roof-archive/cv8372438/translations/en/05-transcribe-device.png)
 
 ## V. Constructing Morgan Yu
 

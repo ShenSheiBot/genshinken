@@ -36,7 +36,7 @@ What, then, counts as *yun* behavior? My answer has two parts. First, most curre
 
 When examining an expression popular in online communities, nothing presents it better than a visual example. In our age, memes are often the clearest markers of pragmatic value. The “*yun*-player triple combo” below shows how the concept is ordinarily used. Examples give us an initial grasp of a concept, but they cannot by themselves reveal the corresponding reality it represents, still less why that reality is what it is. Beginning from a range of cases, this section therefore develops a general framework: the necessary and sufficient conditions for any behavior to count as *yun* behavior.
 
-![The “*yun*-player triple combo” meme](attachments/roof-archive/cv8347885/01-cloud-gamer-triple-meme.png "=100%")
+![The “*yun*-player triple combo” meme](attachments/roof-archive/cv8347885/translations/en/01-cloud-gamer-triple-meme.png "=100%")
 
 ### 1.1 A State of Absent Participation
 

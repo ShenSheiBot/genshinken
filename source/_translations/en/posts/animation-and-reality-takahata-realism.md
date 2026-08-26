@@ -82,7 +82,7 @@ Takahata used telephoto shots extensively in *Heidi* and *3000 Leagues*. Compare
 
 [图题] Hayao Miyazaki’s model notes for *3000 Leagues* (my own translation). One can see the weight Miyazaki gives to compression along the depth axis (the changes in the side of the carriage), avoiding as far as possible drawings whose compression is insufficient or which merely scale up and down. The farther away an object, the thinner its side face should be—in the extreme case only the front can be seen; the farther away an object, the more its shadow on the ground stretches into a long strip—in the extreme case, a single line. Size compression and depth compression stand in inverse relation: a telephoto lens compresses depth strongly and size weakly; a wide-angle lens compresses depth weakly and size strongly. For details, see Susumu Nishizawa’s explanations [a].
 
-![Hayao Miyazaki’s model notes on the depth compression of a carriage for 3000 Leagues in Search of Mother](attachments/roof-archive/cv8255716/05-3000-leagues-layout-notes.png)
+![Hayao Miyazaki’s model notes on the depth compression of a carriage for 3000 Leagues in Search of Mother](attachments/roof-archive/cv8255716/translations/en/05-3000-leagues-layout-notes.png)
 
 Moreover, unlike real space, the space in animation can be a blend of several different spaces; “**‘how it looks’ takes priority over ‘logic’**” is often the guiding rule of animated space design. For example, using different lenses within the same frame—composing the near and far ends of the image differently (wide-angle for the near end, telephoto for the far end)—allows an appropriate exaggeration that increases the force of the picture. Again, in a one-point perspective drawing one need not be bound to the position of the vanishing point, letting one’s own feeling take priority over the correct vanishing point; or again, multiple viewpoints can exist within one picture, guiding the viewer’s gaze.
 
@@ -108,7 +108,7 @@ Kanada layout (especially his work on *Invincible Superman Zambot 3* (*Muteki Ch
 
 [图题] From “A Brief Analysis of Layout in *3000 Leagues in Search of Mother* (Part 1)”: the perspective of the railing differs from the perspective of the floor tiles so as to realize the functionality of the image.
 
-![Analysis of the differing perspectives of the railing and the floor tiles in a shot from 3000 Leagues in Search of Mother](attachments/roof-archive/cv8255716/06-3000-leagues-perspective-analysis.png)
+![Analysis of the differing perspectives of the railing and the floor tiles in a shot from 3000 Leagues in Search of Mother](attachments/roof-archive/cv8255716/translations/en/06-3000-leagues-perspective-analysis.png)
 
 [图题] Poster for *Kiki’s Delivery Service* (from ghibliwiki): a bird’s-eye view and a distant level gaze coexist within the same image.
 

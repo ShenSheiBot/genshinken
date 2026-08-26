@@ -192,7 +192,7 @@ format: article
 
 ![文芸消費論の図版 3](attachments/roof-archive/cv11752140/figure-3.jpg)
 
-![文芸消費論の図版 4](attachments/roof-archive/cv11752140/figure-4.jpg)
+![文芸消費論の図版 4](attachments/roof-archive/cv11752140/translations/ja/figure-4.png)
 
 中国語のラベルは、ネプテューヌのデザインを「萌え要素」へ分解している。幼く見える年齢設定、紫の髪と同系色の瞳、誇張された身体比率、ゲーム機を擬人化するコントローラーのボタン型髪飾り、衣服に大きく記された名前が挙げられている。
 

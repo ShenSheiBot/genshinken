@@ -81,9 +81,9 @@ format: article
 
 最後に、自分の浅い知識と理解をもとに、勝手ながら「カテゴリー模式図」と「アニメ批評の次元軸」という二つの妙な仕掛けを作ってみた。アニメ批評の多元性と相対性を表すためである。次元軸では四つの「理想型」をまとめただけで、優れた批評家が四つすべてに満遍なく触れることも、一篇の文章で四つの次元を横断することもありうるし、もちろんこの次元カテゴリーを超える批評もありうる。
 
-![アニメ批評の広さを分析する模式図](attachments/roof-archive/cv1652116/08-breadth-analysis-diagram.jpg)
+![アニメ批評の広さを分析する模式図](attachments/roof-archive/cv1652116/translations/ja/08-breadth-analysis-diagram.webp)
 
-![アニメ批評の広さと深さの次元軸](attachments/roof-archive/cv1652116/09-criticism-dimensions-diagram.jpg)
+![アニメ批評の広さと深さの次元軸](attachments/roof-archive/cv1652116/translations/ja/09-criticism-dimensions-diagram.png)
 
 「アニメ批評」には批判より寛容を多く向けるべきだ。経験を大切にしながら理論をまとめ、作品論を大切にしながら背後の文化にも目を向けたい。そして、このアイデンティティについての何らかの自覚も。
 

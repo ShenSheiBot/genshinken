@@ -64,7 +64,7 @@
     "source/_translations/ja/posts/witcher-wilderness-detective.md",
     "source/_translations/language-dispositions.json"
   ],
-  "corpusSha256": "914f034327a7de74ef88be6e7fc9fa205390b13273cb2a24be0d90ccbf29452d",
+  "corpusSha256": "7c5b0f6e69055d09f2c38900c0b4791337dbd27ba8a4f16159c2f5ee21545cc0",
   "fallbackCodePointCount": 134,
   "fonts": {
     "Roof EB Garamond Fallback": {
@@ -96,12 +96,12 @@
       "weight": "400"
     },
     "Roof Noto Sans JP": {
-      "bytes": 911192,
-      "codePointCount": 2973,
+      "bytes": 908988,
+      "codePointCount": 2970,
       "family": "Roof Noto Sans JP",
       "file": "roof-noto-sans-jp.woff2",
       "kind": "primary-sans",
-      "sha256": "ab0f6d3df78b37199c232180906fe282fe2bea2b283ff04c7f2cb1b3dc0f17d4",
+      "sha256": "c7fbdd684b5c378f581c71ca47f1168544d925105698837194ec6029f8fafd5e",
       "source": "NotoSansJP.ttf",
       "sourceSha256": "c2f3b4d463500a2ddcd3849cded1fceeb9fd6d1c32e6cbecd568453ba50fc68f",
       "sourceUrl": "https://raw.githubusercontent.com/google/fonts/e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7/ofl/notosansjp/NotoSansJP%5Bwght%5D.ttf",
@@ -137,12 +137,12 @@
       "weight": "100 900"
     },
     "Roof Noto Serif JP": {
-      "bytes": 1262348,
-      "codePointCount": 2973,
+      "bytes": 1259792,
+      "codePointCount": 2970,
       "family": "Roof Noto Serif JP",
       "file": "roof-noto-serif-jp.woff2",
       "kind": "primary-serif",
-      "sha256": "4421456a125a38ae2e47daf774a5ecc6ad651ac542bfc639787fb4ebfbb5877b",
+      "sha256": "031217c9d44cc49f61e66ae7f6090cabea1bc14be12690307ab422f036defac4",
       "source": "NotoSerifJP.ttf",
       "sourceSha256": "2fd527ba12b6a44ec30d796d633360da0aeba6c5d4af1304ce12bb4dc15a7dfc",
       "sourceUrl": "https://raw.githubusercontent.com/google/fonts/e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7/ofl/notoserifjp/NotoSerifJP%5Bwght%5D.ttf",
@@ -201,9 +201,9 @@
     }
   },
   "strategy": "japanese-translation-corpus-variable-fonts-with-generated-script-and-symbol-fallbacks",
-  "subsetCodePointCount": 2973,
-  "targetCodePointCount": 2871,
-  "targetCodePointSha256": "d738469ffa4058f2c5b538afc0d4e34338e437fd175139cfb49966d9242f2eb1",
+  "subsetCodePointCount": 2970,
+  "targetCodePointCount": 2868,
+  "targetCodePointSha256": "2df5257e73f2d41d14b42ce4ef222cb4c2df186bc998c05c104dc44b8c211b29",
   "toolchainSha256": "b192f1da4344abea6d8568a33b15e3ecfb6d9f8242b22257639c7cf28d4424c3",
   "uncoveredCodePointRanges": [],
   "upstreamCommit": "e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7",

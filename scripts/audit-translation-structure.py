@@ -367,7 +367,7 @@ def parse_structure(text: str, media_map: dict[str, str] | None = None, link_map
 
 def first_event_difference(source: list[tuple[object, ...]], target: list[tuple[object, ...]]) -> dict[str, object]:
     for index, (left, right) in enumerate(zip(source, target)):
-        if left != right:
+        if not protected_events_equivalent(left, right):
             return {"index": index, "source": left, "target": right}
     index = min(len(source), len(target))
     return {
@@ -375,6 +375,45 @@ def first_event_difference(source: list[tuple[object, ...]], target: list[tuple[
         "source": source[index] if index < len(source) else None,
         "target": target[index] if index < len(target) else None,
     }
+
+
+def localized_media_identity(value: object) -> str | None:
+    if not isinstance(value, str):
+        return None
+    match = re.fullmatch(
+        r"(.+?)/translations/(?:en|ja)/([^/]+?)(?:\.[A-Za-z0-9]+)?",
+        value,
+    )
+    if not match:
+        return None
+    return f"{match.group(1)}/{match.group(2)}"
+
+
+def source_media_identity(value: object) -> str | None:
+    if not isinstance(value, str):
+        return None
+    match = re.fullmatch(r"(.+?)/([^/]+?)(?:\.[A-Za-z0-9]+)?", value)
+    if not match:
+        return None
+    return f"{match.group(1)}/{match.group(2)}"
+
+
+def protected_events_equivalent(source: tuple[object, ...], target: tuple[object, ...]) -> bool:
+    if source == target:
+        return True
+    if len(source) != 3 or len(target) != 3 or source[0] != "image" or target[0] != "image":
+        return False
+    if source[2] != target[2]:
+        return False
+    return source_media_identity(source[1]) == localized_media_identity(target[1])
+
+
+def protected_event_sequences_equivalent(
+    source: list[tuple[object, ...]], target: list[tuple[object, ...]]
+) -> bool:
+    return len(source) == len(target) and all(
+        protected_events_equivalent(left, right) for left, right in zip(source, target)
+    )
 
 
 def serializable(value: object) -> object:
@@ -390,7 +429,7 @@ def compare_structures(source: dict[str, object], target: dict[str, object], seg
         failures.append({"segment": segment, "field": "markdown", "message": "unclosed protected Markdown structure", "source": source["errors"], "target": target["errors"]})
     source_events = source["events"]
     target_events = target["events"]
-    if source_events != target_events:
+    if not protected_event_sequences_equivalent(source_events, target_events):
         failures.append(
             {
                 "segment": segment,
@@ -417,8 +456,19 @@ def compare_structures(source: dict[str, object], target: dict[str, object], seg
 
 def audit_direct(source_path: Path, target_path: Path, target_language: str) -> dict[str, object]:
     source = parse_structure(source_path.read_text(encoding="utf-8"))
-    target = parse_structure(target_path.read_text(encoding="utf-8"))
+    target_text = target_path.read_text(encoding="utf-8")
+    target = parse_structure(target_text)
     failures, warnings = compare_structures(source, target)
+    localized_media_locales = set(re.findall(r"/translations/(en|ja)/", target_text))
+    wrong_media_locales = sorted(localized_media_locales - {target_language})
+    if wrong_media_locales:
+        failures.append(
+            {
+                "field": "localized_media_locale",
+                "message": "localized media path uses another edition locale",
+                "target": wrong_media_locales,
+            }
+        )
     if target["process_markers"]:
         failures.append({"field": "process_markers", "message": "translation-process language remains in target", "target": target["process_markers"]})
     return {"mode": "direct", "source": str(source_path), "target": str(target_path), "target_language": target_language, "failures": failures, "warnings": warnings}

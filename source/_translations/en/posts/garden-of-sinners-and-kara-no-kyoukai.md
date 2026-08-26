@@ -44,7 +44,7 @@ The sense of sin Kierkegaard experienced as a solitary individual before God sho
 
 ## II. The Concept of “Emptiness”
 
-![The entry for “emptiness” in a Buddhist dictionary](attachments/roof-archive/cv1559883/02-buddhist-dictionary-empty.jpg)
+![The entry for “emptiness” in a Buddhist dictionary](attachments/roof-archive/cv1559883/translations/en/02-buddhist-dictionary-empty.webp)
 
 The *kara* Nasu chose roughly means hollow or empty, with nothing inside. After encountering the work, it is not hard to see that this “emptiness” also conceals the sense of *garan* (伽藍). Beyond the similarity in sound, the two correspond in other ways as well. Shiki describes herself like this: “Inside my body is empty like a cave. Not only air—sometimes it feels as though even the wind could pass through it… It is an overwhelmingly strong unease… an overwhelmingly strong loneliness… I am so empty that I cannot even find a reason to live.” (*Garan no Dou*) Seen this way, the so-called “hollow shrine” is **a metaphor for a place where the feeling of emptiness gathers**. Nasu names both Shiki Ryougi's sense of void and Touko Aozaki's workshop with the word *garan*. Beyond his enduring taste for inventing abstrusely suggestive vocabulary, this may consciously or unconsciously imply that the work's concept of “emptiness” cannot be entirely severed from its Buddhist matrix. And if one considers the image of a monk's dwelling, it also finds correspondences in the various forms taken by Souren Araya.
 
@@ -60,7 +60,7 @@ And the so-called “boundary”—the “garden”—is at once a stage and a w
 
 ## III. “Boundary” and “garden”
 
-![A Japanese dictionary entry for “boundary”](attachments/roof-archive/cv1559883/04-dictionary-boundary.jpg)
+![A dictionary entry for “boundary”](attachments/roof-archive/cv1559883/translations/en/04-dictionary-boundary.webp)
 
 > “I once heard that in Shugendō, or on mountains treated as sacred ground, there are barriers stretched out to forbid women from entering, and that if a woman enters she will turn to stone. But a barrier is only a kind of boundary. What lies inside a circle is not, in itself, the barrier; the barrier is merely a wall of magical power that keeps others out. So—if I erase that line, the force will disappear as well.” (*Paradox Spiral*)<br />
 > “A barrier is something that separates inside from outside. If you want to create a world completed within itself, you must first complete yourself. Araya, who possessed no special talent, completed himself through accumulated years and conviction.”
@@ -71,7 +71,9 @@ When Shiki and Satsuki Kurogiri first confront one another, Shiki forces herself
 
 > “Every human being is a creature with a completely different meaning. We gather only because we belong to the same species, and live only in order to turn the differences we cannot understand into the **boundary of emptiness**.”
 
-![Shiki Ryougi holding a knife with the Mystic Eyes of Death Perception visible](attachments/roof-archive/cv1559883/05-shiki-knife.jpg)
+[图题] Shiki Ryougi and the “Mystic Eyes of Death Perception”
+
+![Shiki Ryougi holding a knife with the Mystic Eyes of Death Perception visible](attachments/roof-archive/cv1559883/05-shiki-knife-cropped.png)
 
 As a “barrier,” a “boundary” separates inside from outside. For the abnormal person, that boundary appears **externally** as **the strange discomfort of coexisting with the community of common sense**; **within the self**, it appears as **an unbridgeable gap in individual consciousness**. And because this double barrier exists both within and without, abnormal people in the world of *Kara no Kyōkai* naturally incline toward their Origins. This is the process described in the quotation above as “completing oneself through accumulated years and conviction.” Whether twisted, evil, or contradictory, we should admit that Souren Araya's inner being is fuller and purer than that of most characters in the work. On the two sides of the “boundary” formed by the opposition between Araya and Shiki, **we find Shiki Ryougi, returned from `「 」`, descending in her attempt to become human, and Souren Araya, driven by his longing to see his ideal human being, climbing in an attempt to reach `「 」`.**
 
@@ -87,7 +89,9 @@ Nasu says in an interview:
 
 > “Taiji: a concept born in ancient China and represented in the diagram of yin and yang. It conceptually grasps the state of all things: active, moving things are classified as yang (white), and their opposites as yin (black). While symbolizing opposing things such as day and night, light and darkness, male and female, it can also be called a miniature of a world in which the two affect one another and flow into one another.” (*Kara no Kyōkai* terminology dictionary)
 
-![A diagram explaining the relation among Taiji, the Ryougi, and Shiki](attachments/roof-archive/cv1559883/06-taiji.jpg)
+[图题] The perfect “Ryougi Shiki” and the perfect “Taiji” are necessarily connected.
+
+![A diagram explaining the relation among Taiji, the Ryougi, and Shiki](attachments/roof-archive/cv1559883/06-taiji-cropped.png)
 
 > “The black side is yin—that is, female. This figure coils around itself while also overcoming itself: a spiral of black and white.” (*Paradox Spiral*)
 
