@@ -24,9 +24,11 @@ rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-[图题] Author card: Hongcha Pao Haitai holds a master’s degree in literature and writes about otaku culture, literature, and the arts.
+[作者] Red Tea Seaweed
 
-![Author card for Red Tea Seaweed, who holds a master’s degree in literature and writes about otaku culture, literature, and the arts](attachments/roof-archive/cv3126542/translations/en/01-author-card.png)
+![Portrait of Red Tea Seaweed](attachments/roof-archive/cv3126542/01-author-portrait-v4.png "=25%")
+
+[作者简介] MA in literature; critic of otaku culture, literature, and the arts.
 
 > Editor’s note: Spoilers follow.
 

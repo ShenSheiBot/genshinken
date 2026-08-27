@@ -8,7 +8,7 @@ status: published
 published: 2026-08-27
 title: "Against Easy Answers: Why ACGN Criticism Still Matters"
 title_breaks: ["Against Easy Answers:", "Why ACGN Criticism", "Still Matters"]
-excerpt: "In its final essay of 2019, Roof Institute asks what criticism can still do for animation, comics, games, and novels (ACGN): stay with pleasure while questioning the fantasies, institutions, and habits of thought that make pleasure feel self-explanatory."
+excerpt: "In its final essay of 2019, Lab on Roof asks what criticism can still do for animation, comics, games, and novels (ACGN): stay with pleasure while questioning the fantasies, institutions, and habits of thought that make pleasure feel self-explanatory."
 credits:
   - role: translator
     contributor_id: shen-shui-bot
@@ -24,9 +24,11 @@ rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-[图题] Roof Institute title card. The Chinese motto reads, “I am Truth, and I will speak.”
+[名片] Lab on Roof
 
-![A Roof Institute title card reading “I, Truth, shall speak,” with a portrait of a white-haired anime character](attachments/roof-archive/cv4267686/translations/en/01-roof-truth-motto-card.png "=50%")
+![Lab on Roof title-card portrait](attachments/roof-archive/cv4267686/01-roof-portrait-v4.png "=25%")
+
+[名片简介] I, Truth, shall speak.
 
 > First seek food and clothing;
 >
@@ -38,7 +40,7 @@ format: article
 
 The epigraph turns Christ’s injunction in the Gospel of Matthew inside out: secure the necessities of life first; salvation can wait. It is a bracing way to begin a New Year’s greeting, a form that tends to promise transcendence on schedule.
 
-This is Roof Institute’s final article of 2019—and of the decade. We write about animation, comics, games, and novels, a field often abbreviated in East Asian fan cultures as ACGN. A conventional year-end address would review what we have done, reach back into the years before Roof Institute had a name, and unveil a grand plan for the year ahead. Between the retrospective and the forecast, however, sits a peculiar little form: the greeting itself.
+This is Lab on Roof’s final article of 2019—and of the decade. We write about animation, comics, games, and novels, a field often abbreviated in East Asian fan cultures as ACGN. A conventional year-end address would review what we have done, reach back into the years before Lab on Roof had a name, and unveil a grand plan for the year ahead. Between the retrospective and the forecast, however, sits a peculiar little form: the greeting itself.
 
 Why should a few ceremonial words be enough to carry us from 2019 into 2020? Nothing in time actually breaks at midnight on December 31. Yet the calendar lets us behave for a moment as if it did. Turn the page and the future looks empty, released from everything written before it. In 1958, Mao Zedong made the blank page an image of revolutionary possibility:
 
@@ -78,7 +80,7 @@ These are not the only two kinds of criticism. They are two pressures: at one en
 
 One term needs a boundary before we go further. In Japan, *otaku* became a contested social label for intensely committed fans, shadowed by a history of public stigma. English-speaking fans often use the word more loosely. In this essay, *otaku* refers to the Japanese social category at issue in Tamaki Saitō’s work and the panic discussed below; “ACGN fans” names the broader, transnational audience.
 
-Roof Institute’s question, then, is not simply whether fans should read “more deeply.” It is whether viewers, readers, and players still need ACGN criticism willing to use theory without pretending to be an academic discipline. What could such criticism do—and why should Roof Institute be the place to do it?
+Lab on Roof’s question, then, is not simply whether fans should read “more deeply.” It is whether viewers, readers, and players still need ACGN criticism willing to use theory without pretending to be an academic discipline. What could such criticism do—and why should Lab on Roof be the place to do it?
 
 ## What the Past Asks of Us
 
@@ -88,11 +90,11 @@ The answer begins with the break imagined by our New Year’s greeting. At that 
 
 Benjamin’s “weak messianic power” does not promise that a literal Messiah will arrive to finish our work. It names a modest obligation in the present. People before us imagined futures that never came. We can recover their demands, learn from their defeats, and carry unfinished work somewhere they could not. Redemption does not mean vindicating every failed project. It means refusing the comforting assumption that defeat proved a project had nothing left to teach us.
 
-That return must include the critic. We have to ask not only what older works meant, but what earlier readings—including our own—failed to see. This greeting can make one limited, concrete promise: Roof Institute will revisit kinds of criticism we have attempted and mishandled, and say more clearly what we want our writing to do even though we will get it wrong again.
+That return must include the critic. We have to ask not only what older works meant, but what earlier readings—including our own—failed to see. This greeting can make one limited, concrete promise: Lab on Roof will revisit kinds of criticism we have attempted and mishandled, and say more clearly what we want our writing to do even though we will get it wrong again.
 
 ## Psychoanalysis After the Otaku Panic
 
-At its first-anniversary gathering, Roof Institute proposed psychoanalysis in the Lacan–Žižek tradition as one model for ACGN criticism. That argument overlooked an important predecessor: Tamaki Saitō’s *Beautiful Fighting Girl*, published in 2000, which used Lacanian theory to defend otaku desire.
+At its first-anniversary gathering, Lab on Roof proposed psychoanalysis in the Lacan–Žižek tradition as one model for ACGN criticism. That argument overlooked an important predecessor: Tamaki Saitō’s *Beautiful Fighting Girl*, published in 2000, which used Lacanian theory to defend otaku desire.
 
 That defense had an urgent context. The moral panic surrounding Tsutomu Miyazaki—a serial murderer whom the Japanese press turned into an emblem of supposedly dangerous otaku—had not yet faded. Saitō’s first task was to show that desire for fictional girls did not make otaku criminals or perverts.
 
@@ -112,7 +114,7 @@ Saitō’s defense against collective blame was necessary. But if the analysis e
 
 Nor can the distinction between fiction and reality become a universal alibi. Miyazaki’s crimes do not condemn otaku culture, and Shinji Aoba’s 2019 arson attack on Kyoto Animation does not make fandom collectively guilty. Neither crime proves that fiction causes violence. But “fantasy is not fact” cannot mean that fantasy, desire, and conduct occupy sealed compartments. A fantasy can give a grievance its object, offer someone a role to inhabit, or supply a story that makes an action feel justified; it can also remain entirely within play. Those are possible interactions, not a claim of mechanical causation, and only evidence can establish them in a particular case. The necessary refusal of collective blame should keep inquiry open, not close it in advance.
 
-Roof Institute’s insistence on psychoanalysis begins here. The work is not criticism’s only object. We must also examine the fantasies through which an audience encounters it, the social panic that frames it, and the critic’s own wish to reassure or condemn. Theory itself has to be put at risk. Rather than apply a ready-made interpretation, we want the encounter with ACGN to test the concepts we bring to it.
+Lab on Roof’s insistence on psychoanalysis begins here. The work is not criticism’s only object. We must also examine the fantasies through which an audience encounters it, the social panic that frames it, and the critic’s own wish to reassure or condemn. Theory itself has to be put at risk. Rather than apply a ready-made interpretation, we want the encounter with ACGN to test the concepts we bring to it.
 
 ## Traversing the Fantasy
 
@@ -128,7 +130,7 @@ This is why ACGN works deserve exacting attention. They do not carry ideas as ca
 
 ## Against Easy Answers
 
-Roof Institute has never claimed neutrality. We begin from suspicion: ACGN works circulate through families, schools, markets, platforms, and media industries. Althusser called institutions that reproduce a society’s ruling habits and beliefs “ideological state apparatuses.” A work is not itself such an apparatus, but it can make an institution’s values and routines feel natural. Suspicion is not a verdict. It is where the questions start.
+Lab on Roof has never claimed neutrality. We begin from suspicion: ACGN works circulate through families, schools, markets, platforms, and media industries. Althusser called institutions that reproduce a society’s ruling habits and beliefs “ideological state apparatuses.” A work is not itself such an apparatus, but it can make an institution’s values and routines feel natural. Suspicion is not a verdict. It is where the questions start.
 
 The simplicity we oppose is not aesthetic minimalism, popular pleasure, direct emotion, or an easy-to-follow story. It is the demand that a cultural attachment be granted an easy innocence: because pleasure feels immediate, nothing that mediates it needs examination; because a work declares family, friendship, or love to be good, its politics must be good; because fantasy is not fact, it can have no consequences. This kind of simplicity closes the question precisely where criticism should begin.
 
@@ -136,7 +138,7 @@ The simplicity we oppose is not aesthetic minimalism, popular pleasure, direct e
 
 **We reject automatic identification with the values a work declares.** Family, friendship, and romantic love can be genuinely moving. Their emotional force may come precisely from how scarce or fragile they feel in everyday life. But longing is not proof that an ideal—or the narrative built around it—is innocent. Criticism holds the gap open: What does the work offer? What conditions make that offer feel necessary? What or whom does its version of happiness leave out?
 
-So who needs Roof Institute? No spirit of history is waiting for us to do our part. We write first for ourselves, and then for viewers, readers, and players who share our pleasures but do not want pleasure to end the conversation. No one is obliged to need this institution, and theory grants us no special authority. Roof Institute is useful only while it makes room for questions that publicity, fan identification, and academic routine close too quickly.
+So who needs Lab on Roof? No spirit of history is waiting for us to do our part. We write first for ourselves, and then for viewers, readers, and players who share our pleasures but do not want pleasure to end the conversation. No one is obliged to need this institution, and theory grants us no special authority. Lab on Roof is useful only while it makes room for questions that publicity, fan identification, and academic routine close too quickly.
 
 Benjamin’s angel of history warns us against assuming that time itself will settle those questions:
 
@@ -144,17 +146,17 @@ Benjamin’s angel of history warns us against assuming that time itself will se
 
 In Benjamin’s reading of Klee, the angel moves into the future while facing the wreckage of the past. Criticism adopts something of that posture. It lets ruined possibilities and failed readings disturb the confidence of the present.
 
-Questions are not substitutes for answers, and Roof Institute does not refuse judgment. Every critical answer, however, remains partial and revisable. The more basic task is to expose the premise that makes an answer look inevitable. Hegel called this work negation: not automatic dissent, but testing an idea against what it leaves out. One question may change a reader’s habit of thought. When enough readers bring such questions to how they discuss, recommend, buy, and make works, the habits of thought shared across those practices can change as well.
+Questions are not substitutes for answers, and Lab on Roof does not refuse judgment. Every critical answer, however, remains partial and revisable. The more basic task is to expose the premise that makes an answer look inevitable. Hegel called this work negation: not automatic dissent, but testing an idea against what it leaves out. One question may change a reader’s habit of thought. When enough readers bring such questions to how they discuss, recommend, buy, and make works, the habits of thought shared across those practices can change as well.
 
-That is why Roof Institute continues. We want to distrust easy innocence in works, fandom, theory, and ourselves. Hegel called the slow formation of judgment through experience *Bildung*.[^11] No theory can complete that education for us, and no turn of the calendar can make it new. We can only keep returning to the work, the pleasure, and the questions they leave unfinished.
+That is why Lab on Roof continues. We want to distrust easy innocence in works, fandom, theory, and ourselves. Hegel called the slow formation of judgment through experience *Bildung*.[^11] No theory can complete that education for us, and no turn of the calendar can make it new. We can only keep returning to the work, the pleasure, and the questions they leave unfinished.
 
-—Roof Institute, New Year’s Eve, 2019
+—Lab on Roof, New Year’s Eve, 2019
 
 [^1]: Walter Benjamin places these lines at the head of thesis IV of “On the Concept of History,” where he attributes them to G. W. F. Hegel in 1807. They reverse the order of Matthew 6:33.
 
-[^2]: Mao Zedong, “Introducing a Cooperative,” first published in *Red Flag*, no. 1 (1958). The passage is given in Roof Institute’s own English wording.
+[^2]: Mao Zedong, “Introducing a Cooperative,” first published in *Red Flag*, no. 1 (1958). The passage is given in Lab on Roof’s own English wording.
 
-[^3]: Walter Benjamin, “On the Concept of History,” thesis XV. Benjamin’s works appear in several English editions; the passages quoted in this essay use Roof Institute’s own wording, while thesis and section titles are supplied where available so readers can locate them across editions.
+[^3]: Walter Benjamin, “On the Concept of History,” thesis XV. Benjamin’s works appear in several English editions; the passages quoted in this essay use Lab on Roof’s own wording, while thesis and section titles are supplied where available so readers can locate them across editions.
 
 [^4]: Walter Benjamin, “Goethe’s Elective Affinities.” The funeral-pyre image is paraphrased in the text rather than quoted from a particular English edition.
 

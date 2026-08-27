@@ -23,9 +23,11 @@ updated: 2026-08-27
 format: article
 ---
 
-[图题] 図：著者・紅茶泡海苔（文学修士／オタク文化批評／文芸批評）。
+[作者] 紅茶泡海苔
 
-![著者・紅茶泡海苔の紹介カード。「文学修士、オタク文化批評、文芸批評」と記されている](attachments/roof-archive/cv3126542/translations/ja/01-author-card.png)
+![紅茶泡海苔の肖像](attachments/roof-archive/cv3126542/01-author-portrait-v4.png "=25%")
+
+[作者简介] 文学修士。オタク文化批評、文芸批評。
 
 > 編集部注：本稿には物語の核心に触れる記述があります。
 

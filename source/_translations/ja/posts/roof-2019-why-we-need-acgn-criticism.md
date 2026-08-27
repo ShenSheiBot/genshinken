@@ -24,9 +24,11 @@ rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-[图题] 屋頂現視研の題字。「真理である私が、これから語る」という宣言を掲げる。
+[名片] 屋頂現視研
 
-![左に「屋頂現視研」「私、真理が語ろう」の文字、右に白髪の人物を描いた屋頂現視研の題字](attachments/roof-archive/cv4267686/translations/ja/01-roof-truth-motto-card.png "=50%")
+![屋頂現視研の題字に使われた人物](attachments/roof-archive/cv4267686/01-roof-portrait-v4.png "=25%")
+
+[名片简介] 「真理である私が、これから語る」
 
 > まず食べ物と衣服を求めよ
 >

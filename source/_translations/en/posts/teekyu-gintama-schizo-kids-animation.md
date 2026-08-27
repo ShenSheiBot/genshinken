@@ -24,9 +24,13 @@ rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-[图题] The original author, Shi Zai Gou Zi, opens with a motto: “In an age without a world, spread meaningless love.” Its strangeness is part of the invitation: what might affection look like when there is no stable world to contain it or give it a purpose?
+[作者] Shi Zai Gou Zi
 
-![Author card for Shi Zai Gou Zi, illustrated with a dog in a pharaoh’s headdress](attachments/roof-archive/cv4808363/translations/en/01-shi-zai-gou-zi-author-card.png)
+![Portrait of Shi Zai Gou Zi](attachments/roof-archive/cv4808363/01-author-portrait-v4.png "=25%")
+
+[作者简介] “In an age without a world, spread meaningless love.”
+
+Its strangeness is part of the invitation: what might affection look like when there is no stable world to contain it or give it a purpose?
 
 In 1984, the coinages “schizo” and “parano” won the bronze prize in the new-words category of Japan’s annual buzzword awards. They had been popularized by Akira Asada, a philosopher so fashionable among young readers that his admirers called him a “god of youth.” Both terms belong to that particular intellectual moment. Today, “schizo” is a derogatory English abbreviation for schizophrenia; I use it here only for Asada’s historical concept. “Parano” is likewise Asada’s shorthand for the opposing, paranoid pole, not a word in ordinary English.
 

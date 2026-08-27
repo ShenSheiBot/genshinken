@@ -19,7 +19,11 @@ citation:
   extra: "作者：鲜奶饼干。本文改自论文《日本动画中的偏移取景》及其讲稿；原论文发表于2019年中国青年动画学者论坛。"
 ---
 
-![鲜奶饼干作者卡及题句“哲学票友，冻鳗高手”](attachments/roof-archive/cv5664193/01-xian-nai-bing-gan-author-card.png)
+[作者] 鲜奶饼干
+
+![鲜奶饼干头像](attachments/roof-archive/cv5664193/01-author-portrait-v4.png "=25%")
+
+[作者简介] 哲学票友，冻鳗高手。
 
 ![人物被置于画面一侧、视线指向画外的偏移取景](attachments/roof-archive/cv5664193/02-opening-offset-framing-example.jpg)
 

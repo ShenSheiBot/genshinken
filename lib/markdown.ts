@@ -963,6 +963,10 @@ const MUSIC_CAPTION_MARKER = "[音乐]";
 const VIDEO_CAPTION_MARKER = "[视频]";
 const PROFILE_NAME_MARKER = "[人物]";
 const PROFILE_BIO_MARKER = "[人物简介]";
+const PROFILE_AUTHOR_NAME_MARKER = "[作者]";
+const PROFILE_AUTHOR_BIO_MARKER = "[作者简介]";
+const PROFILE_CARD_NAME_MARKER = "[名片]";
+const PROFILE_CARD_BIO_MARKER = "[名片简介]";
 const GALLERY_TITLE_MARKER = "[图组]";
 const GALLERY_END_MARKER = "[图组结束]";
 const SLIDES_TITLE_MARKER = "[幻灯]";
@@ -986,6 +990,10 @@ const BLOCK_MEDIA_MARKERS = [
   FIGURE_NOTE_MARKER,
   PROFILE_NAME_MARKER,
   PROFILE_BIO_MARKER,
+  PROFILE_AUTHOR_NAME_MARKER,
+  PROFILE_AUTHOR_BIO_MARKER,
+  PROFILE_CARD_NAME_MARKER,
+  PROFILE_CARD_BIO_MARKER,
 ] as const;
 
 function hasNodeClass(node: TableFigureNode, name: string) {
@@ -1552,13 +1560,21 @@ function rehypeProfileFigures() {
 
     for (let index = 0; index < children.length; index += 1) {
       const name = children[index];
-      if (!markerParagraph(name, PROFILE_NAME_MARKER)) continue;
+      const nameMarker = [PROFILE_NAME_MARKER, PROFILE_AUTHOR_NAME_MARKER, PROFILE_CARD_NAME_MARKER]
+        .find((marker) => markerParagraph(name, marker));
+      if (!nameMarker) continue;
 
       const imageIndex = significantSibling(children, index + 1, 1);
       const paragraph = imageIndex >= 0 ? children[imageIndex] : undefined;
       const image = soleImage(paragraph);
       if (!image) continue;
-      stripParagraphMarker(name, PROFILE_NAME_MARKER);
+      stripParagraphMarker(name, nameMarker);
+      const bioMarker = nameMarker === PROFILE_NAME_MARKER
+        ? PROFILE_BIO_MARKER
+        : nameMarker === PROFILE_AUTHOR_NAME_MARKER
+          ? PROFILE_AUTHOR_BIO_MARKER
+          : PROFILE_CARD_BIO_MARKER;
+      const compact = nameMarker !== PROFILE_NAME_MARKER;
 
       let width = "25";
       const title = image.properties?.title;
@@ -1573,9 +1589,9 @@ function rehypeProfileFigures() {
       const bios: TableFigureNode[] = [];
       let endIndex = imageIndex;
       let nextIndex = significantSibling(children, imageIndex + 1, 1);
-      while (nextIndex >= 0 && markerParagraph(children[nextIndex], PROFILE_BIO_MARKER)) {
+      while (nextIndex >= 0 && markerParagraph(children[nextIndex], bioMarker)) {
         const bio = children[nextIndex];
-        stripParagraphMarker(bio, PROFILE_BIO_MARKER);
+        stripParagraphMarker(bio, bioMarker);
         bio.properties = { ...(bio.properties ?? {}), className: ["article-profile-bio"] };
         bios.push(bio);
         endIndex = nextIndex;
@@ -1586,7 +1602,7 @@ function rehypeProfileFigures() {
         type: "element",
         tagName: "figure",
         properties: {
-          className: ["article-profile"],
+          className: compact ? ["article-profile", "article-profile-compact"] : ["article-profile"],
           "data-width": width,
         },
         children: [

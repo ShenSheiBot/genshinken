@@ -8002,6 +8002,12 @@
       "contentType": "image/png"
     },
     {
+      "key": "roof-archive/cv2919959/01-author-portrait-v4.png",
+      "bytes": 21576,
+      "sha256": "94b5a7652df2a7e7d0baa11e8904306bef2d5557f99143585ad3041eaa0eecec",
+      "contentType": "image/png"
+    },
+    {
       "key": "roof-archive/cv2919959/02-porco-rosso-gina.jpg",
       "bytes": 64462,
       "sha256": "e7896a701f7ff5337012541aab5e8b7bed81c41dc47928df7f4a7de1200510cf",
@@ -8863,6 +8869,12 @@
       "key": "roof-archive/cv3126542/01-author-card.png",
       "bytes": 195695,
       "sha256": "1a07a7507475d5652a958266d76b21c102cba9a74c656129863ecf9a496f77a3",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv3126542/01-author-portrait-v4.png",
+      "bytes": 114706,
+      "sha256": "e151f1b108cc70d66fcd55be37ace8de533abb479e55b714ec4ec7042a9d6993",
       "contentType": "image/png"
     },
     {
@@ -10966,6 +10978,12 @@
       "contentType": "image/png"
     },
     {
+      "key": "roof-archive/cv4267686/01-roof-portrait-v4.png",
+      "bytes": 25900,
+      "sha256": "e8a3414c22427e3b17e1275509a378b0bedb9a409748e7bbfea65fd2fb827e77",
+      "contentType": "image/png"
+    },
+    {
       "key": "roof-archive/cv4267686/02-revue-starlight-episode-09.png",
       "bytes": 371859,
       "sha256": "2a627676a6510ad96eb148e9ba976defbc0c091c93214ea16cfab666dab411c7",
@@ -11098,6 +11116,12 @@
       "contentType": "image/png"
     },
     {
+      "key": "roof-archive/cv4364107/01-author-portrait-v4.png",
+      "bytes": 55967,
+      "sha256": "e8e4679ed700ae577a13e825da7aef15ae5117cf1458027aa074ff433ade9d0b",
+      "contentType": "image/png"
+    },
+    {
       "key": "roof-archive/cv4364107/02-eve-no-jikan-cafe.png",
       "bytes": 1646082,
       "sha256": "0a7f6dd1dd0fb85c6fbb163ee5f2364643ab15b16b993489c97f69eba66a4a0f",
@@ -11149,6 +11173,12 @@
       "key": "roof-archive/cv4808363/01-shi-zai-gou-zi-author-card.png",
       "bytes": 168493,
       "sha256": "e11161be6037a58044abf98dffa1548cfc1645b1f4fee466a2bc3ea55f4524d5",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv4808363/01-author-portrait-v4.png",
+      "bytes": 66188,
+      "sha256": "54177c74e133e772968d1fd9d0de306ecb60c881e893f869dd719c500cb34bbc",
       "contentType": "image/png"
     },
     {
@@ -11875,6 +11905,12 @@
       "key": "roof-archive/cv5664193/01-xian-nai-bing-gan-author-card.png",
       "bytes": 99198,
       "sha256": "1cd1bcdd3409471e3a2c0949e5c0740c49a5a6d94b281cb879fb1e28cacbb2f3",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv5664193/01-author-portrait-v4.png",
+      "bytes": 61186,
+      "sha256": "4b9555180a8c1c77e22aa65573c7dcadb634ff56a162c34fb198dd26f0e20d5e",
       "contentType": "image/png"
     },
     {

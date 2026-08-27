@@ -24,9 +24,11 @@ rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-[图题] 著者・実在狗子のカード。中国語のキャッチコピーは「世界のない時代に、無意味な愛を伝える」。
+[作者] 実在狗子
 
-![著者名「実在狗子」と「世界なき時代に、無意味な愛を伝える」の言葉を掲げた著者カード](attachments/roof-archive/cv4808363/translations/ja/01-shi-zai-gou-zi-author-card.png)
+![実在狗子の肖像](attachments/roof-archive/cv4808363/01-author-portrait-v4.png "=25%")
+
+[作者简介] 「世界のない時代に、無意味な愛を伝える」
 
 ## 逃げる子ども、追いつこうとする大人
 

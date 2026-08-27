@@ -24,9 +24,11 @@ rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-[图题] Fishboard’s author card, with the motto “ENOUGH IS ENOUGH!”
+[作者] Fishboard
 
-![Author card for Fishboard, reading “ENOUGH IS ENOUGH!”](attachments/roof-archive/cv2919959/01-author-card.png)
+![Portrait of Fishboard](attachments/roof-archive/cv2919959/01-author-portrait-v4.png "=25%")
+
+[作者简介] ENOUGH IS ENOUGH!
 
 Hayao Miyazaki is often cast as animation’s kindly patron saint of childhood wonder. The image fits a good deal of his work, but not all of it. *Spirited Away*, perhaps his best-known film outside Japan, won both the Golden Bear—the Berlin International Film Festival’s top prize—and the Academy Award for Best Animated Feature. Yet no single film can contain his range: the science fiction of *Nausicaä of the Valley of the Wind* and *Castle in the Sky*; the fantasy of *Princess Mononoke* and *Kiki’s Delivery Service*; the domestic fairy tale of *My Neighbor Totoro*; the history and dream visions of *The Wind Rises*. Then the pig walks in.
 

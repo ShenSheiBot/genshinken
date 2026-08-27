@@ -24,9 +24,11 @@ rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-[图题] Xian Nai Bing Gan: “A philosophical dilettante and an anime connoisseur.”
+[作者] Xian Nai Bing Gan
 
-![Author card for Xian Nai Bing Gan, with a portrait of Hakase from Nichijou](attachments/roof-archive/cv5664193/translations/en/01-xian-nai-bing-gan-author-card.png)
+![Portrait of Xian Nai Bing Gan](attachments/roof-archive/cv5664193/01-author-portrait-v4.png "=25%")
+
+[作者简介] A philosophical dilettante and an anime connoisseur.
 
 [图题] A face at the edge and a charged expanse of open space: a familiar composition in anime.
 

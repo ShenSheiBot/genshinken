@@ -326,6 +326,47 @@ assert.match(
 );
 assert.doesNotMatch(semanticProfileHtml, /\[人物(?:简介)?\]/u, "profile markers must never render");
 
+const semanticAuthorCardHtml = await renderMarkdown(`
+[作者] 鲜奶饼干
+
+![鲜奶饼干头像](attachments/author-card.png "=25%")
+
+[作者简介] 哲学票友，冻鳗高手。
+`);
+assert.match(
+  semanticAuthorCardHtml,
+  /<figure class="article-profile article-profile-compact" data-width="25"><img src="\/attachments\/author-card\.png"/u,
+  "author cards must use the compact profile treatment",
+);
+assert.doesNotMatch(
+  semanticAuthorCardHtml,
+  /\[作者(?:简介)?\]/u,
+  "author card markers must never render",
+);
+
+const semanticIdentityCardHtml = await renderMarkdown(`
+[名片] Lab on Roof
+
+![Lab on Roof 标志人物](attachments/roof-card.png "=25%")
+
+[名片简介] I, Truth, shall speak.
+`);
+assert.match(
+  semanticIdentityCardHtml,
+  /<figure class="article-profile article-profile-compact" data-width="25"><img src="\/attachments\/roof-card\.png"/u,
+  "identity cards must reuse the compact semantic profile plate",
+);
+assert.match(
+  semanticIdentityCardHtml,
+  /<figcaption class="article-profile-name"><span class="latin-run">Lab on Roof<\/span><\/figcaption>/u,
+  "identity card names must remain concise figure captions",
+);
+assert.doesNotMatch(
+  semanticIdentityCardHtml,
+  /\[名片(?:简介)?\]/u,
+  "identity card markers must never render",
+);
+
 const semanticGalleryHtml = await renderMarkdown(`
 [图组] 前后对照
 

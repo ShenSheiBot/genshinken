@@ -24,9 +24,11 @@ rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-[图题] The author card names “Mi Ze Wei Hua” and carries a motto about a world overturned: “High ground becomes a valley; deep valleys rise into hills.”
+[作者] Mi Ze Wei Hua
 
-![Author card for Mi Ze Wei Hua, with an anime-style portrait and the motto “High banks become valleys; deep valleys become hills”](attachments/roof-archive/cv4364107/translations/en/01-author-card.png)
+![Portrait of Mi Ze Wei Hua](attachments/roof-archive/cv4364107/01-author-portrait-v4.png "=25%")
+
+[作者简介] “High ground becomes a valley; deep valleys rise into hills.”
 
 > Editorial note: This essay has been abridged.
 
