@@ -16898,6 +16898,240 @@
       "bytes": 100567,
       "sha256": "d109db941cab7f4d06a0e38bcb6732a21262f9432aa59686ce912a183edd2e2c",
       "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv3126542/translations/en/01-author-card.png",
+      "bytes": 153188,
+      "sha256": "50f3cc358580dd0863ceec77a3f739f0a337523a3ae7b0bcd634dc3e3ed3e28b",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv3126542/translations/ja/01-author-card.png",
+      "bytes": 157521,
+      "sha256": "fd93dd9fef88b8518859926158c2f04ba7fd294f8122f221ad4c51a9daffed01",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv4267686/translations/en/01-roof-truth-motto-card.png",
+      "bytes": 32601,
+      "sha256": "89d2c6730b19f4d9c427f2ca8989b0725488e3432dd71d4117909d9113901a3a",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv4267686/translations/en/02-revue-starlight-episode-09.png",
+      "bytes": 356234,
+      "sha256": "86f034323b0084cc8ea4660ff30f329e8f7f5b9c6b616b461b1370340ea6a0bf",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv4267686/translations/ja/01-roof-truth-motto-card.png",
+      "bytes": 35033,
+      "sha256": "cb791f0e8730bfae43af29b010e82a29553b6a080f3f384952fa251447544e2f",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv4267686/translations/ja/02-revue-starlight-episode-09.png",
+      "bytes": 364324,
+      "sha256": "14f37ec7dd55c5d5605f76bc24ef0bc888d6ce851a7dda287f6d9a088c650073",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv4364107/translations/en/01-author-card.png",
+      "bytes": 79859,
+      "sha256": "49480cc9a55354d4a4d9c084e223fb7d247299bfac50615cd21c9b99b2c5619c",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv4364107/translations/ja/01-author-card.png",
+      "bytes": 83421,
+      "sha256": "87398563d456ee30f016b550c7901584ec611482289ddc479543e9ad2f7d4b62",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv4808363/translations/en/01-shi-zai-gou-zi-author-card.png",
+      "bytes": 100012,
+      "sha256": "99591e06bff0156770335b3a8f128e279c1c2e758289d5a8bf7d29bdb42722b9",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv4808363/translations/en/05-gintama-marriage-title-card.png",
+      "bytes": 19354,
+      "sha256": "270715225d4d5ee90a722329a2dc309907e4089073281e4debff60f16bf61b0f",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv4808363/translations/en/09-teekyu-cooking-scene.png",
+      "bytes": 475211,
+      "sha256": "8dc4d6555c8749d7a3b9eba43871a8ed55562e1278b80dc75ae7f9d49138a3cd",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv4808363/translations/ja/01-shi-zai-gou-zi-author-card.png",
+      "bytes": 106015,
+      "sha256": "3d968a03e1860b6affd74dc44b484e64fe303522a09812a81f3b6de6aef3df29",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv4808363/translations/ja/05-gintama-marriage-title-card.png",
+      "bytes": 83664,
+      "sha256": "3061c0982287b3d9591863ca44c3761e87dafdc992cab933fb3e4d7c902b1666",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv4808363/translations/ja/09-teekyu-cooking-scene.png",
+      "bytes": 485082,
+      "sha256": "c1d8dca78dfdbfcbaaf765b7c2982adddf3298bd9ed7a00624beabda48283838",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv5664193/translations/en/01-xian-nai-bing-gan-author-card.png",
+      "bytes": 68411,
+      "sha256": "333847ffc196244f2d9724456fbd8f502ed2bc6227407b833f0e3a2ad98e6361",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv5664193/translations/en/03-fgo-romani-offset-framing.jpg",
+      "bytes": 23712,
+      "sha256": "f9be52350ebf7dbfac444917973026a8b46046e2a57497306db89fac8753c9fc",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv5664193/translations/en/04-anime-offset-framing-examples-01.jpg",
+      "bytes": 36925,
+      "sha256": "13f4a26eb2b53e68bf33a7e4b9718ce74df677cbbc85bccec62e6e5dfff46c93",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv5664193/translations/en/05-anime-offset-framing-examples-02.jpg",
+      "bytes": 51182,
+      "sha256": "739b8665b02581f2227f9ead743c7cbc6caf644fd1c08228bb77b5da3dcd6943",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv5664193/translations/en/06-anime-offset-framing-examples-03.jpg",
+      "bytes": 51735,
+      "sha256": "f194ef3a0ecbe7008a0b781401f5f6795ffd10d5a72724926d7eb9c9a9de972b",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv5664193/translations/en/07-anime-offset-framing-examples-04.jpg",
+      "bytes": 30109,
+      "sha256": "1580bf8899bc53a34c25091615d773d0d037a3df9cde33fb253028ccf7f7a585",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv5664193/translations/en/08-anime-offset-framing-examples-05.jpg",
+      "bytes": 42834,
+      "sha256": "c766c4b3997205a1d080aa50a5338adb2f041eb0a48d9a3f16e9c522b3bb3d26",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv5664193/translations/en/09-kyoani-yamada-offset-framing-01.jpg",
+      "bytes": 40638,
+      "sha256": "ba760637a9360fdb54f29269bbe4735d58ec48c4d4079e0309bb16ef69a1b498",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv5664193/translations/en/23-utena-offset-reverse-shots.jpg",
+      "bytes": 51316,
+      "sha256": "1ecc15b6e454a9fc9f91dc4f543cc0e54195091df5503e62eedb1fd67d9c9ce2",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv5664193/translations/en/26-fgo-offset-framing-sequence.jpg",
+      "bytes": 28504,
+      "sha256": "ed856e8b5a5ffcc91f20f12f15b9f870353709bb826a36c871530441cbfa74ba",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv5664193/translations/en/27-denpa-teki-na-kanojo-sequence.jpg",
+      "bytes": 57747,
+      "sha256": "2b3ca37229e1a2b20eca2d29b9016a5bc046cfe8441aaa954f3f85af76a671ac",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv5664193/translations/en/28-is-pure-offset-framing-sequence.jpg",
+      "bytes": 48392,
+      "sha256": "6ff9355fcd039395fdf40074912c40ec478b8766fbb1e3884db9965e2d1195f8",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv5664193/translations/en/30-gridman-staging-note.jpg",
+      "bytes": 15716,
+      "sha256": "1258bd7e5d1c7491ca40ea2b751c94cd0045fb782bd207e6b15ed3cc03df4f96",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv5664193/translations/ja/01-xian-nai-bing-gan-author-card.png",
+      "bytes": 80102,
+      "sha256": "a73dd0d5cd4596195af488b888853d4c7858c79863ea4dbf5da7019e98feae6a",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv5664193/translations/ja/03-fgo-romani-offset-framing.jpg",
+      "bytes": 33579,
+      "sha256": "674c28bc9319d4805d5910e8a0477fd4646003c16e36b40eecf18b56ed9fa69b",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv5664193/translations/ja/04-anime-offset-framing-examples-01.jpg",
+      "bytes": 40392,
+      "sha256": "c5dadc6cc46b03d7325e077f6de0e352dd84016c8aee15e016fc30cd68db85b5",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv5664193/translations/ja/05-anime-offset-framing-examples-02.jpg",
+      "bytes": 55617,
+      "sha256": "cf12e01ec15a97049f390e324a2d2bd25722fb9ec821759c79e1cd8b5f55d506",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv5664193/translations/ja/06-anime-offset-framing-examples-03.jpg",
+      "bytes": 56429,
+      "sha256": "f9390ed1ea2445b693b4b07263f58f23d2eb69f16b215d3c4bb1aab5d64f3061",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv5664193/translations/ja/07-anime-offset-framing-examples-04.jpg",
+      "bytes": 34659,
+      "sha256": "27f61fa17166a5d1cb34e94aa1c2b08dde7edbdec3a5884d6c5720a25df22646",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv5664193/translations/ja/08-anime-offset-framing-examples-05.jpg",
+      "bytes": 45438,
+      "sha256": "eaf68cafd780cbc13887c0db12664753237b37e529a7e75a2ecfba0aecb9a668",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv5664193/translations/ja/09-kyoani-yamada-offset-framing-01.jpg",
+      "bytes": 43812,
+      "sha256": "37b3bf57df4b8fbcdb6cb3ddd9cd92d73ee7c60dd9cbd5a4c0eb0e8d4c5d48c2",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv5664193/translations/ja/23-utena-offset-reverse-shots.jpg",
+      "bytes": 69881,
+      "sha256": "033145afd12c02bea01895c15a91160e7f4a5410d0e6937efe2d6d9e3131e3a7",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv5664193/translations/ja/26-fgo-offset-framing-sequence.jpg",
+      "bytes": 43066,
+      "sha256": "80a60d40ea934364f94120e18d0aec76f27969093f8e639fa36be12d59c30c20",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv5664193/translations/ja/27-denpa-teki-na-kanojo-sequence.jpg",
+      "bytes": 84293,
+      "sha256": "5b17b0a294c5113d1986221093749ae80ee7f792c83afab18a94d369ff0566e8",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv5664193/translations/ja/28-is-pure-offset-framing-sequence.jpg",
+      "bytes": 66593,
+      "sha256": "59ba6fb83c1b4269bfcbe3b50a63f89839a4f898e0e738ae4b0f707e0a42ec3d",
+      "contentType": "image/jpeg"
     }
   ]
 }

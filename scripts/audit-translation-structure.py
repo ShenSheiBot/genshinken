@@ -21,7 +21,9 @@ HEADING_RE = re.compile(r"^(#{1,6})\s+\S")
 FOOTNOTE_DEF_RE = re.compile(r"^\[\^([^\]]+)\]:")
 FOOTNOTE_CALL_RE = re.compile(r"\[\^([^\]]+)\]")
 HTML_IMAGE_RE = re.compile(r"<img\b[^>]*\bsrc\s*=\s*(['\"])(.*?)\1", re.IGNORECASE)
-HTML_TAG_RE = re.compile(r"<(/?)([a-z][\w:-]*)\b[^>]*>", re.IGNORECASE)
+# Require a real tag-name boundary.  Markdown autolinks such as
+# `<https://example.test>` are links, not an invented `<https>` HTML element.
+HTML_TAG_RE = re.compile(r"<(/?)([a-z][a-z0-9-]*)(?=[\s/>])[^>]*>", re.IGNORECASE)
 HTML_LINK_RE = re.compile(r"<a\b[^>]*\bhref\s*=\s*(['\"])(.*?)\1", re.IGNORECASE)
 HTML_ALT_RE = re.compile(r"\balt\s*=\s*(['\"])(.*?)\1", re.IGNORECASE)
 HTML_CAPTION_RE = re.compile(r"<figcaption\b[^>]*>(.*?)</figcaption>", re.IGNORECASE)
@@ -380,6 +382,7 @@ def first_event_difference(source: list[tuple[object, ...]], target: list[tuple[
 def localized_media_identity(value: object) -> str | None:
     if not isinstance(value, str):
         return None
+    value = re.split(r"[?#]", value, maxsplit=1)[0]
     match = re.fullmatch(
         r"(.+?)/translations/(?:en|ja)/([^/]+?)(?:\.[A-Za-z0-9]+)?",
         value,
@@ -392,6 +395,7 @@ def localized_media_identity(value: object) -> str | None:
 def source_media_identity(value: object) -> str | None:
     if not isinstance(value, str):
         return None
+    value = re.split(r"[?#]", value, maxsplit=1)[0]
     match = re.fullmatch(r"(.+?)/([^/]+?)(?:\.[A-Za-z0-9]+)?", value)
     if not match:
         return None
@@ -405,7 +409,9 @@ def protected_events_equivalent(source: tuple[object, ...], target: tuple[object
         return False
     if source[2] != target[2]:
         return False
-    return source_media_identity(source[1]) == localized_media_identity(target[1])
+    source_identity = source_media_identity(source[1])
+    target_identity = localized_media_identity(target[1])
+    return source_identity is not None and target_identity is not None and source_identity == target_identity
 
 
 def protected_event_sequences_equivalent(
@@ -414,6 +420,43 @@ def protected_event_sequences_equivalent(
     return len(source) == len(target) and all(
         protected_events_equivalent(left, right) for left, right in zip(source, target)
     )
+
+
+def events_of_kind(events: list[tuple[object, ...]], *kinds: str) -> list[tuple[object, ...]]:
+    allowed = set(kinds)
+    return [event for event in events if event and event[0] in allowed]
+
+
+def image_event_identity(event: tuple[object, ...]) -> tuple[object, ...]:
+    value = event[1]
+    identity = localized_media_identity(value) or source_media_identity(value) or value
+    return ("image", identity, event[2])
+
+
+def event_sequence_is_subsequence(
+    source: list[tuple[object, ...]], target: list[tuple[object, ...]]
+) -> bool:
+    cursor = 0
+    for event in target:
+        if cursor < len(source) and source[cursor] == event:
+            cursor += 1
+    return cursor == len(source)
+
+
+def footnote_integrity(events: list[tuple[object, ...]]) -> list[str]:
+    definitions = {
+        str(event[1]): bool(event[2])
+        for event in events
+        if event and event[0] == "footnote-definition"
+    }
+    failures = [identifier for identifier, has_content in definitions.items() if not has_content]
+    calls = {
+        str(event[1])
+        for event in events
+        if event and event[0] == "footnote-call"
+    }
+    failures.extend(sorted(calls - definitions.keys()))
+    return sorted(set(failures))
 
 
 def serializable(value: object) -> object:
@@ -429,12 +472,102 @@ def compare_structures(source: dict[str, object], target: dict[str, object], seg
         failures.append({"segment": segment, "field": "markdown", "message": "unclosed protected Markdown structure", "source": source["errors"], "target": target["errors"]})
     source_events = source["events"]
     target_events = target["events"]
-    if not protected_event_sequences_equivalent(source_events, target_events):
+
+    # A translation is an edited target-language publication, not a structural
+    # clone of the Chinese Markdown.  Reader-facing headings, captions,
+    # quotations and explanatory notes may be added or rearranged.  Compare the
+    # machine facts that must survive independently instead of requiring one
+    # global event stream to remain byte-for-byte aligned.
+    source_images = events_of_kind(source_events, "image")
+    target_images = events_of_kind(target_events, "image")
+    source_image_inventory = Counter(image_event_identity(event) for event in source_images)
+    target_image_inventory = Counter(image_event_identity(event) for event in target_images)
+    if source_image_inventory != target_image_inventory:
         failures.append(
             {
                 "segment": segment,
-                "field": "protected_events",
-                "message": "ordered protected Markdown events differ",
+                "field": "images",
+                "message": "image resource inventory differs",
+                "source_count": len(source_images),
+                "target_count": len(target_images),
+                "first_difference": first_event_difference(source_images, target_images),
+            }
+        )
+    elif not protected_event_sequences_equivalent(source_images, target_images):
+        warnings.append(
+            {
+                "segment": segment,
+                "field": "image_order",
+                "message": "image resources are complete but target-language order differs",
+                "source_count": len(source_images),
+                "target_count": len(target_images),
+                "first_difference": first_event_difference(source_images, target_images),
+            }
+        )
+
+    for kinds, field, message in [
+        (("code",), "code", "code blocks differ"),
+        (("table-separator", "table-row"), "tables", "table shape differs"),
+        (("html-tag", "figure-caption"), "structural_html", "structural HTML differs"),
+    ]:
+        left = events_of_kind(source_events, *kinds)
+        right = events_of_kind(target_events, *kinds)
+        if not event_sequence_is_subsequence(left, right):
+            failures.append(
+                {
+                    "segment": segment,
+                    "field": field,
+                    "message": message,
+                    "source_count": len(left),
+                    "target_count": len(right),
+                    "first_difference": first_event_difference(left, right),
+                }
+            )
+
+    source_captions = events_of_kind(source_events, "semantic-caption")
+    target_captions = events_of_kind(target_events, "semantic-caption")
+    if len(target_captions) < len(source_captions):
+        failures.append(
+            {
+                "segment": segment,
+                "field": "semantic_captions",
+                "message": "target dropped semantic captions",
+                "source_count": len(source_captions),
+                "target_count": len(target_captions),
+            }
+        )
+
+    for kind, field in [("footnote-call", "footnote_calls"), ("footnote-definition", "footnote_definitions"), ("link", "links")]:
+        left = events_of_kind(source_events, kind)
+        right = events_of_kind(target_events, kind)
+        if len(right) < len(left):
+            failures.append(
+                {
+                    "segment": segment,
+                    "field": field,
+                    "message": f"target has fewer {kind} events than source",
+                    "source_count": len(left),
+                    "target_count": len(right),
+                }
+            )
+
+    invalid_footnotes = footnote_integrity(target_events)
+    if invalid_footnotes:
+        failures.append(
+            {
+                "segment": segment,
+                "field": "footnote_integrity",
+                "message": "target has empty definitions or calls without definitions",
+                "target": invalid_footnotes,
+            }
+        )
+
+    if not protected_event_sequences_equivalent(source_events, target_events):
+        warnings.append(
+            {
+                "segment": segment,
+                "field": "editorial_structure",
+                "message": "inspect target-language headings, lists, quotations, captions, and explanatory additions",
                 "source_count": len(source_events),
                 "target_count": len(target_events),
                 "first_difference": first_event_difference(source_events, target_events),
