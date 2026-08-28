@@ -18,7 +18,7 @@ citation:
   url: "https://www.bilibili.com/read/cv1822938/"
 ---
 
-[图题] 抛砖引玉，战战兢兢
+[作者] 静希草十郎
 
 ![静希草十郎头像](attachments/roof-archive/cv1822938/01-author-portrait-v5.png "=25%")
 

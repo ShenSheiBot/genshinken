@@ -21,7 +21,7 @@ citation:
   extra: 本文为问题回答，作者实在狗子（亦用名潜在狗子）；更早问答页与发布渠道未详。
 ---
 
-[图题] “我想对世界施虐。”——潜在狗子。
+[作者] 实在狗子
 
 ![实在狗子头像](attachments/roof-archive/cv7971122/01-author-portrait-v5.png "=25%")
 

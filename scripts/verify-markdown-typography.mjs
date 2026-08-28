@@ -463,6 +463,20 @@ function semanticCoverImagesWithoutWidth(markdown) {
   return failures;
 }
 
+function authorPortraitsWithFigureCaptions(markdown) {
+  const lines = markdown.split(/\r?\n/u);
+  const failures = [];
+  const authorPortrait = /author-portrait(?:-v\d+)?\.[a-z0-9]+(?:\s+"=[^"]+")?\)\s*$/iu;
+
+  for (let index = 0; index < lines.length; index += 1) {
+    if (!authorPortrait.test(lines[index].trim())) continue;
+    let previous = index - 1;
+    while (previous >= 0 && lines[previous].trim() === "") previous -= 1;
+    if (previous >= 0 && lines[previous].trim().startsWith("[图题]")) failures.push(index + 1);
+  }
+  return failures;
+}
+
 function unclassifiedItalicImageNeighbors(markdown) {
   const lines = markdown.split(/\r?\n/u);
   const failures = [];
@@ -538,6 +552,16 @@ assert.deepEqual(
   semanticCoverImagesWithoutWidth('[图题] 书目\n\n![某书书封](attachments/book.jpg "=25%")'),
   [],
   "a semantic book cover with an explicit print width must pass"
+);
+assert.deepEqual(
+  authorPortraitsWithFigureCaptions('[图题] The author above.\n\n![Author](attachments/article/01-author-portrait-v5.png "=25%")'),
+  [3],
+  "an author portrait must not be published as an ordinary captioned figure"
+);
+assert.deepEqual(
+  authorPortraitsWithFigureCaptions('[名片] Author Name\n\n![Author](attachments/article/01-author-portrait-v5.png "=25%")'),
+  [],
+  "a semantic author card must pass"
 );
 
 assert.deepEqual(
@@ -758,6 +782,9 @@ assert.doesNotMatch(
     for (const line of semanticCoverImagesWithoutWidth(body)) {
       corpusFailures.push(`${name}:${line}: 语义书影必须显式指定图版宽度（单本通常 25/33%，复合书影按构图选择）`);
     }
+    for (const line of authorPortraitsWithFigureCaptions(body)) {
+      corpusFailures.push(`${name}:${line}: 作者头像不能使用普通 [图题]；请改用 [作者]/[名片]/[人物]，说明文字另入作者简介或编者按`);
+    }
     const html = await renderMarkdown(body);
     if (markerLeak.test(html.replace(/<[^>]+>/gu, ""))) {
       corpusFailures.push(`${name}: 图版/表格标记字面渲染进了页面（[图题]/[图注]/[表题]/[表注] 位置或格式有误）`);
@@ -787,6 +814,9 @@ assert.doesNotMatch(
     }
     for (const line of semanticCoverImagesWithoutWidth(body)) {
       corpusFailures.push(`${relative}:${line}: 译文语义书影必须显式指定图版宽度`);
+    }
+    for (const line of authorPortraitsWithFigureCaptions(body)) {
+      corpusFailures.push(`${relative}:${line}: 译文作者头像不能使用普通 [图题]；请改用 [作者]/[名片]/[人物]`);
     }
     const language = relative.includes(`${path.sep}ja${path.sep}`) ? "ja" : "en";
     const html = await renderMarkdown(body, { language });

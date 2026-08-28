@@ -20,7 +20,7 @@ rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-[图题] 鍾先生は好感が持てる。
+[作者] 鍾子默
 
 ![鍾子默の肖像](attachments/roof-archive/cv1652116/01-author-portrait-v5.png "=25%")
 

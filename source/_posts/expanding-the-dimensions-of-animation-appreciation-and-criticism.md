@@ -19,7 +19,7 @@ citation:
   url: "https://www.bilibili.com/read/cv1842794/"
 ---
 
-[图题] 抛砖引玉，一家之言。
+[作者] 屋顶第二任所长
 
 ![屋顶第二任所长头像](attachments/roof-archive/cv1842794/01-author-portrait-v5.png "=25%")
 

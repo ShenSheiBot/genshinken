@@ -29,7 +29,7 @@ format: article
 
 > By **Author-kun**, an editorial pseudonym for the poster known as “An O That Isn’t Zero.”
 
-[图题] The poster’s profile banner pairs the handle “An O That Isn’t Zero” with Rei Ayanami.
+[名片] An O That Isn’t Zero
 
 ![Portrait of An O That Isn’t Zero](attachments/roof-archive/cv11249482/01-author-portrait-v5.png "=25%")
 

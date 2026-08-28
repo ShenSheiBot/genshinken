@@ -18,7 +18,7 @@ citation:
   url: "https://www.bilibili.com/read/cv4145943/"
 ---
 
-[图题] austoria做到了。
+[作者] Austoria
 
 ![Austoria头像](attachments/roof-archive/cv4145943/01-author-portrait-v5.png "=25%")
 

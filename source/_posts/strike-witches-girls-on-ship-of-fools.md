@@ -20,7 +20,7 @@ citation:
   url: "https://www.bilibili.com/read/cv2509776/"
 ---
 
-[图题] ↑尊敬的、可爱的、博识的作者君。
+[作者] Ophelia
 
 ![Ophelia头像](attachments/roof-archive/cv2509776/01-author-portrait-v5.png "=25%")
 

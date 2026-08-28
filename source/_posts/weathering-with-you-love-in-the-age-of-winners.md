@@ -20,7 +20,7 @@ citation:
   extra: "作者、校对：伦勃朗。"
 ---
 
-[图题] 作者君↑一般出现在校对职务上。
+[作者] 伦勃朗
 
 ![伦勃朗头像](attachments/roof-archive/cv4081445/01-author-portrait-v5.png "=25%")
 

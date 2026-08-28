@@ -26,7 +26,7 @@ citation:
   language: zh-Hans
 ---
 
-[图题] 作者君↑，在知乎活动。
+[作者] 实在狗子
 
 ![实在狗子头像](attachments/roof-archive/cv3390791/01-author-portrait-v5.png "=25%")
 

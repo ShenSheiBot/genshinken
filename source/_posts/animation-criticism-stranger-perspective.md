@@ -19,7 +19,7 @@ citation:
   extra: "作者钟子默；经授权转载。"
 ---
 
-[图题] 钟老师令人喜欢
+[作者] 钟子默
 
 ![钟子默头像](attachments/roof-archive/cv1652116/01-author-portrait-v5.png "=25%")
 

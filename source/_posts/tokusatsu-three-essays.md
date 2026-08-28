@@ -18,7 +18,7 @@ citation:
   url: "https://www.bilibili.com/read/cv3154640/"
 ---
 
-[图题] 作者君↑
+[作者] 両仪织
 
 ![両仪织头像](attachments/roof-archive/cv3154640/01-author-portrait-v5.png "=25%")
 

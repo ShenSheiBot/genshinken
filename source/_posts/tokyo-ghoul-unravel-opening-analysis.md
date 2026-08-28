@@ -19,7 +19,7 @@ citation:
   extra: "作者：实在狗子（B站ID：潜在狗子）。"
 ---
 
-[图题] 作者君，B站ID：潜在狗子。我想对世界施虐。
+[作者] 实在狗子
 
 ![实在狗子头像](attachments/roof-archive/cv7634594/01-author-portrait-v5.png "=25%")
 

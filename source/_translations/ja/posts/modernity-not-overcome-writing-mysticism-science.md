@@ -17,7 +17,7 @@ rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-[图题] 上図は筆者。本稿は屋頂現視研の年度公募企画「拾荒戦略」前夜祭の受賞作である。
+[作者] 「　」
 
 ![筆名「　」の筆者の肖像](attachments/roof-archive/cv19651001/01-author-portrait-v5.png "=25%")
 

@@ -20,7 +20,7 @@ rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-[图题] The author, above. This essay received an award in the Eve Festival of Lab on Roof’s annual Rags Drum call for submissions.
+[作者] 「　」
 
 ![Portrait of the author known as 「　」](attachments/roof-archive/cv19651001/01-author-portrait-v5.png "=25%")
 

@@ -17,7 +17,7 @@ citation:
   url: "https://www.bilibili.com/read/cv3555857/"
 ---
 
-[图题] 作者君，我的超人。
+[作者] Ludwigsama
 
 ![Ludwigsama头像](attachments/roof-archive/cv3555857/01-author-portrait-v5.png "=25%")
 

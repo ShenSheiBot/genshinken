@@ -24,7 +24,7 @@ citation:
 
 <h2 id="space-realism">第一章：前言与空间－写实</h2>
 
-[图题] 鲜奶饼干[^1]。
+[作者] 鲜奶饼干[^1]
 
 ![鲜奶饼干头像](attachments/roof-archive/cv2954757/01-author-portrait-v5.png "=25%")
 

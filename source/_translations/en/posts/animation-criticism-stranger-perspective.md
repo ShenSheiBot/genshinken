@@ -20,7 +20,7 @@ rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-[图题] Teacher Zhong is very likable.
+[作者] Zhong Zimo
 
 ![Portrait of Zhong Zimo](attachments/roof-archive/cv1652116/01-author-portrait-v5.png "=25%")
 

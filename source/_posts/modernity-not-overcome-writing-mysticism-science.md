@@ -18,7 +18,7 @@ citation:
   url: "https://www.bilibili.com/read/cv19651001/"
 ---
 
-[图题] 作者君↑。本文系屋顶年度征稿活动·拾荒战略前夜祭获奖稿件。
+[作者] 「　」
 
 ![「　」头像](attachments/roof-archive/cv19651001/01-author-portrait-v5.png "=25%")
 
