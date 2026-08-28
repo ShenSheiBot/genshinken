@@ -4,7 +4,8 @@ source_type: post
 source_slug: nausicaa-wily-beast-entrusting-world-to-idol
 slug: nausicaa-wily-beast-entrusting-world-to-idol
 language: ja
-status: review
+status: published
+published: 2026-08-28
 title: "『風の谷のナウシカ』から『東方鬼形獣』へ――苦境のなかで「偶像に世界を託す」"
 title_breaks: ["『風の谷のナウシカ』から『東方鬼形獣』へ――", "苦境のなかで", "「偶像に世界を託す」"]
 excerpt: 宮酒姫が『風の谷のナウシカ』『ユリ熊嵐』『けものフレンズ』『東方鬼形獣』をたどりながら、動物という他者、人間中心主義、人工知能と偶像をめぐる平成文化の変奏を読み解く。
@@ -12,10 +13,13 @@ credits:
   - role: translator
     contributor_id: shen-shui-bot
     scope: complete work
+  - role: reviewer
+    contributor_id: shen-shui-bot
+    scope: 全文
 translation_method: agent
 source_relationship: mixed
 base_language: zh-Hans
-updated: 2026-08-26
+updated: 2026-08-28
 rights: CC BY-NC-SA 4.0
 format: article
 ---

@@ -4,7 +4,8 @@ source_type: post
 source_slug: what-is-cloud-behavior-ontology-internal-heterogeneity
 slug: what-is-cloud-behavior-ontology-internal-heterogeneity
 language: ja
-status: review
+status: published
+published: 2026-08-28
 title: 「エアプ行為」とは何か――存在論と内的な異質性
 title_breaks:
   - 「エアプ行為」とは何か
@@ -14,10 +15,13 @@ credits:
   - role: translator
     contributor_id: shen-shui-bot
     scope: 全文
+  - role: reviewer
+    contributor_id: shen-shui-bot
+    scope: 全文
 translation_method: agent
 source_relationship: mixed
 base_language: zh-Hans
-updated: 2026-08-23
+updated: 2026-08-28
 rights: CC BY-NC-SA 4.0
 format: article
 ---

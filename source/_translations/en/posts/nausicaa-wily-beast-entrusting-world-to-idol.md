@@ -4,7 +4,8 @@ source_type: post
 source_slug: nausicaa-wily-beast-entrusting-world-to-idol
 slug: nausicaa-wily-beast-entrusting-world-to-idol
 language: en
-status: review
+status: published
+published: 2026-08-28
 title: "From Nausicaä to Wily Beast and Weakest Creature: The Predicaments of Entrusting the World to Idols"
 title_breaks: ["From Nausicaä to", "Wily Beast and Weakest Creature:", "The Predicaments of", "Entrusting the World to Idols"]
 excerpt: Across Nausicaä of the Valley of the Wind, Yurikuma Arashi, Kemono Friends, and Touhou Kikeijuu ~ Wily Beast and Weakest Creature, this essay traces the animal other, anthropocentrism, and artificial-intelligence idols through Heisei popular culture.
@@ -12,10 +13,13 @@ credits:
   - role: translator
     contributor_id: shen-shui-bot
     scope: complete work
+  - role: reviewer
+    contributor_id: shen-shui-bot
+    scope: complete work
 translation_method: agent
 source_relationship: direct
 base_language: zh-Hans
-updated: 2026-08-26
+updated: 2026-08-28
 rights: CC BY-NC-SA 4.0
 format: article
 ---
