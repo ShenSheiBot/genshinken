@@ -18,7 +18,11 @@ citation:
   url: "https://www.bilibili.com/read/cv1783637/"
 ---
 
-![玉小兴作者卡，题有“定而后能静”](attachments/roof-archive/cv1783637/01-yu-xiao-xing-author-card.jpg)
+[作者] 玉小兴
+
+![玉小兴头像](attachments/roof-archive/cv1783637/01-author-portrait-v5.png "=25%")
+
+[作者简介] 定而后能静。
 
 《恋爱随意链接》讲述的是，在私立山星高校文化研究部内，文研部五人面临着因风船葛策划而连续发生各种不可能发生的不思议现象，如人格交换，欲望解放，时间逆行和感情传递……在这些不可思议的现象的解决中，五人的友情慢慢成长的故事。
 

@@ -18,7 +18,11 @@ citation:
   url: "https://www.bilibili.com/read/cv2231163/"
 ---
 
-![hephaestus 作者卡及个人题句](attachments/roof-archive/cv2231163/01-hephaestus-author-card.png)
+[作者] hephaestus
+
+![hephaestus头像](attachments/roof-archive/cv2231163/01-author-portrait-v5.png "=25%")
+
+[作者简介] 在大谈诗与思之前，记得惊奇和敬畏才是某些东西的开端。
 
 ## 姑且叫一份《空之境界》问卷？
 

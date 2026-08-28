@@ -20,7 +20,11 @@ rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-![Sairaiの作者カード](/attachments/roof-archive/cv21792051/1.jpg "=100%")
+[作者] Sairai
+
+![Sairaiの肖像](attachments/roof-archive/cv21792051/01-author-portrait-v5.png "=25%")
+
+[作者简介] 「私たちは素晴らしいものを守ることに多くの時間を費やす。一つひとつのアイデアに触れ、そのアイデアが触れた人生を変えるまで」
 
 本稿は、屋頂現視研の年度論考募集「拾荒戦略 Rags Drum 2022」の後夜祭受賞作である。
 

@@ -18,7 +18,11 @@ citation:
   url: "https://www.bilibili.com/read/cv2284996/"
 ---
 
-![元达南作者卡及关于决断的题句](attachments/roof-archive/cv2284996/01-author-card.jpg)
+[作者] 元达南
+
+![元达南头像](attachments/roof-archive/cv2284996/01-author-portrait-v5.png "=25%")
+
+[作者简介] 但任何决断都是以某个没有掌握、遮蔽的、迷乱的东西为基础的；否则它就决不是决断。
 
 导语：我最怕写的东西，不是学术文章，而是这样的随评。在随评的对象里，令我为难的又莫过于Persona5这样的作品。其难写之处首要在于，一个不注意，随评就容易成学术。就我来说，学术的文章写多了，写什么都会带三分学究气。虽然，我还是想尽力写写关于P5的感想。
 

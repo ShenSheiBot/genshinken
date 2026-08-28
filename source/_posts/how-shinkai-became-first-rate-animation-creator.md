@@ -19,7 +19,11 @@ citation:
   url: "https://www.bilibili.com/read/cv2400487/"
 ---
 
-![红茶泡海苔作者卡及简介](attachments/roof-archive/cv2400487/01-red-tea-seaweed-author-card.png)
+[作者] 红茶泡海苔
+
+![红茶泡海苔头像](attachments/roof-archive/cv2400487/01-author-portrait-v5.png "=25%")
+
+[作者简介] 文学硕士，宅文化批评，文艺批评。
 
 > 欢迎关注作者红茶泡海苔的知乎同名账号。
 

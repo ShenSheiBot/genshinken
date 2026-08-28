@@ -18,7 +18,11 @@ citation:
   url: "https://www.bilibili.com/read/cv1696193/"
 ---
 
-![Austoria 作者卡，附个人简介](attachments/roof-archive/cv1696193/01-austoria-author-card.jpg)
+[作者] Austoria
+
+![Austoria头像](attachments/roof-archive/cv1696193/01-author-portrait-v5.png "=25%")
+
+[作者简介] 立志成为能让别人冲的人。
 
 在现实的情感生活中，前任似乎经常是一个敏感的话题。在笔者的周围，对前任问题态度豁达的居多，但对前任问题敏感的也大有人在。不少表面说着“我也不怎么在意”的人们，心底里多少还是会有些在意甚至十分在意。
 

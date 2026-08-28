@@ -18,7 +18,11 @@ citation:
   url: "https://www.bilibili.com/read/cv2071126/"
 ---
 
-![ivauke 作者卡及个人题句](attachments/roof-archive/cv2071126/01-author-ivauke.jpg)
+[作者] ivauke
+
+![ivauke头像](attachments/roof-archive/cv2071126/01-author-portrait-v5.png "=25%")
+
+[作者简介] 让比这更牢固三倍的锁链把我们缚住，让你们众神和所有女神来将我们观看，但我还是想和金色的阿佛洛狄忒同眠。
 > The rain set early in to-night,
 > 今夜雨来早，
 > The sullen wind was soon awake,

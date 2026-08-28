@@ -19,7 +19,11 @@ citation:
   url: "https://www.bilibili.com/read/cv3411592/"
 ---
 
-![Jack Cade 作者卡及题句](attachments/roof-archive/cv3411592/01-jack-cade-author-card.jpg)
+[作者] Jack Cade
+
+![Jack Cade头像](attachments/roof-archive/cv3411592/01-author-portrait-v5.png "=25%")
+
+[作者简介] Away!Burn all the records of the realm.
 
 对于今敏的《东京教父》通常有两种不同的看法：一种认为其是“非典型”的今敏作品，它没有平泽进，没有在现实和虚幻之间的交错，没有绚丽的镜头画面和剪辑技巧——相比其他三部今敏电影，《东京教父》简直就是一部偏写实的合家欢公路片；另一种看法则认为其有着浓厚的宗教情节，认为这个被大量的圣经隐喻要素所充斥的救赎故事，其实就是在现代背景下对弥赛亚降生并带领迷途羔羊们回归迦南这一古老神话的隐秘重写。
 

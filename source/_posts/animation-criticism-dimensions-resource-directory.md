@@ -19,7 +19,11 @@ citation:
   url: "https://www.bilibili.com/read/cv2318316/"
 ---
 
-![伦勃朗作者卡及题句“在沙漠之处开辟江河”](attachments/roof-archive/cv2318316/01-author-card.jpg)
+[作者] 伦勃朗
+
+![伦勃朗头像](attachments/roof-archive/cv2318316/01-author-portrait-v5.png "=25%")
+
+[作者简介] 在沙漠之处开辟江河。
 
 以整理的方式，谈谈笔者在拓展动画鉴赏和评论的维度时走过的学习历程与相应的资料目录。由于见识短浅、能力不足，以下谈论对象基本以日本（式）动画为对象，仅供参考。
 

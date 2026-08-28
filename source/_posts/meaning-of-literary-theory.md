@@ -23,7 +23,11 @@ citation:
 
 [图题] “我想对世界施虐。”——潜在狗子。
 
-![实在狗子作者卡及题句“在没有世界的时代，传播无意义之爱”](attachments/roof-archive/cv7971122/01-shi-zai-gou-zi-author-card.png "=100%")
+![实在狗子头像](attachments/roof-archive/cv7971122/01-author-portrait-v5.png "=25%")
+
+[作者简介] 在没有世界的时代，传播无意义之爱。
+
+> **编者按：** “我想对世界施虐。”——潜在狗子。
 
 > 原题目：
 >

@@ -18,7 +18,11 @@ citation:
   url: "https://www.bilibili.com/read/cv1737997/"
 ---
 
-![篱落呼灯作者卡与题词](attachments/roof-archive/cv1737997/01-li-luo-hu-deng-author-card.jpg)
+[作者] 篱落呼灯
+
+![篱落呼灯头像](attachments/roof-archive/cv1737997/01-author-portrait-v5.png "=25%")
+
+[作者简介] 她还有半条命，足够爱与哭泣。
 
 12月18日，b站国创作品发布会上，绘梦带来了九部新作，包括四部原创动画《垂直世界》、《不灭的我》、《准星》与《Devil Game 净化法则》，三部小说改编作《仙王的日常生活》、《异常生物见闻录》及两部漫改作《嗜谎之神》、《大王不高兴》，涵盖了季播剧、年番等多种形式。在此之前，绘梦就以其高产及《狐妖小红娘》、《一人之下》、《灵契》等作品的制作广为人知。
 

@@ -25,7 +25,11 @@ citation:
   url: "https://www.bilibili.com/read/cv17209595/"
 ---
 
-![作者加速器的署名卡片](/attachments/roof-archive/cv17209595/4fb7bf5e9f9c8a604709bf94b44ec4cb8d6a2c5f.png)
+[作者] 加速器
+
+![加速器头像](attachments/roof-archive/cv17209595/01-author-portrait-v5.png "=25%")
+
+[作者简介] 无意识还是无仪式?
 
 ## 前言——Nova
 

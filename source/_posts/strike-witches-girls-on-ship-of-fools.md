@@ -22,7 +22,11 @@ citation:
 
 [图题] ↑尊敬的、可爱的、博识的作者君。
 
-![Ophelia作者卡，题句“懒怠而卑微”](attachments/roof-archive/cv2509776/01-ophelia-author-card.jpg)
+![Ophelia头像](attachments/roof-archive/cv2509776/01-author-portrait-v5.png "=25%")
+
+[作者简介] 懒怠而卑微。
+
+> **编者按：** 尊敬的、可爱的、博识的作者君。
 
 > **我们到处寻找港口和海岸，**<br />
 > **旅行途中却是受尽了伤害，**<br />

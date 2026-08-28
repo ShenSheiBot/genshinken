@@ -20,7 +20,11 @@ citation:
 
 [图题] austoria做到了。
 
-![Austoria 作者卡](attachments/roof-archive/cv4145943/01-austoria-author-card.png "=66%")
+![Austoria头像](attachments/roof-archive/cv4145943/01-author-portrait-v5.png "=25%")
+
+[作者简介] 立志成为能让别人冲的人。
+
+> **编者按：** Austoria 做到了。
 
 ## 摘要
 

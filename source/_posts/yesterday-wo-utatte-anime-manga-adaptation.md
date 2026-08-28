@@ -19,7 +19,11 @@ citation:
   extra: "作者：鲜奶饼干。本文作于动画第一话播出时；文末称为作者第一次撰写的知乎回答，原回答链接未随页提供。"
 ---
 
-![鲜奶饼干作者卡及题句“哲学票友，冻鳗高手”](attachments/roof-archive/cv5581685/01-xian-nai-bing-gan-author-card.png)
+[作者] 鲜奶饼干
+
+![鲜奶饼干头像](attachments/roof-archive/cv5581685/01-author-portrait-v5.png "=25%")
+
+[作者简介] 哲学票友，冻鳗高手。
 
 <!--standalone-emphasis-->
 *本文作于第一话播出时。*

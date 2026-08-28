@@ -19,7 +19,11 @@ citation:
   extra: "作者鱼板；原文首发于知乎专栏‘后拟像时代的ACGN’，文中自述写于2018年4月；2019-01-01发布于屋顶现视研。"
 ---
 
-![鱼板作者卡与题词](attachments/roof-archive/cv1801559/01-yu-ban-author-card.jpg)
+[作者] 鱼板
+
+![鱼板头像](attachments/roof-archive/cv1801559/01-author-portrait-v5.png "=25%")
+
+[作者简介] ENOUGH IS ENOUGH!
 
 《动物化的后现代》这本书提出了两个被后来的御宅津津乐道的概念，“数据库”和“动物化”。但其中挪用科耶夫的欲望理论而提出的“动物化”概念对ACG文化的现实缺乏阐释能力，远不如“数据库”概念出彩。东浩纪是如何理解动物化的：
 

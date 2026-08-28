@@ -21,7 +21,11 @@ citation:
 
 ## 关于污名理论以及明日方舟
 
-![HMS Hood作者卡及个人题句](attachments/roof-archive/cv2935294/01-hood-author-card.png)
+[作者] HMS Hood
+
+![HMS Hood头像](attachments/roof-archive/cv2935294/01-author-portrait-v5.png "=25%")
+
+[作者简介] 我本可摘取繁星，却惊觉只是幻梦<br>而后从空而落，为星光焚烧殆尽的<br>是那颗名唤太阳的星星
 
 **写给所有的矿石病人、被遗忘者、超人、赛博格、新人类、变种人、调整者、亚人、自然人，以及你和我。*。*
 

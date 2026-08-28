@@ -25,7 +25,11 @@ citation:
 >
 [《東方文化學刊》2020年春季號徵稿啟事：盤點平成三十年](https://zhuanlan.zhihu.com/p/86316032)
 
-![宫酒姬作者卡及社团身份](attachments/roof-archive/cv3991963/01-gong-jiu-ji-author-card.png)
+[作者] 宫酒姬
+
+![宫酒姬头像](attachments/roof-archive/cv3991963/01-author-portrait-v5.png "=25%")
+
+[作者简介] 云马克思主义绅士，爱丽丝观察协会会员，爱丽丝俱乐部成员，爱丽丝绅士团成员，AI教（ALICE教）信徒。
 
 > [作者简介][^1]
 

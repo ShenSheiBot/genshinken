@@ -20,7 +20,11 @@ rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-![Author card for Sairai](/attachments/roof-archive/cv21792051/1.jpg "=100%")
+[作者] Sairai
+
+![Portrait of Sairai](attachments/roof-archive/cv21792051/01-author-portrait-v5.png "=25%")
+
+[作者简介] “We devote so much of our time to protecting what is great, until we touch every idea and change every life it touches.”
 
 This essay received an award at the After Festival of Lab on Roof’s annual Rags Drum 2022 call for submissions.
 

@@ -18,7 +18,11 @@ citation:
   url: "https://www.bilibili.com/read/cv3875524/"
 ---
 
-![Ako的红作者卡及题句“新月魔法学校 见习魔法师”](attachments/roof-archive/cv3875524/01-ako-de-hong-author-card.jpg)
+[作者] Ako的红
+
+![Ako的红头像](attachments/roof-archive/cv3875524/01-author-portrait-v5.png "=25%")
+
+[作者简介] 新月魔法学校见习魔法师。
 
 > **前言：多月以后，小A再一次听见那句带着戏谑的“阿诺撒”时，准会想起女高PV公布时他用遍搜索引擎发现在中文互联网里居然没有一个汉化版本的那个遥远的夜晚。当时，女高pv是一个用声优表吸引注意的视频，早稻田的问题发言回响在耳边，羞耻异常，顺着进度是杂乱的片花，每一张截图都只是将将好，让人回想起许多许多符合七月的喜剧。**
 

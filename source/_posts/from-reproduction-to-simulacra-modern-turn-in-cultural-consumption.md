@@ -19,6 +19,12 @@ citation:
   extra: 屋顶现视研拾荒战略 Rags Drum 2021 前夜祭获奖稿件
 ---
 
+[作者] 米岡
+
+![米岡头像](attachments/roof-archive/cv11752140/01-author-portrait-v5.png "=25%")
+
+[作者简介] 中世纪福音战士。
+
 ## 从复制品到拟像：文艺消费的现代转向
 
 [视频] 同名视频论文｜文案：米岡；视频：Loliiiico；旁白：盖井；制作：屋顶现视研视频小组
@@ -187,7 +193,6 @@ citation:
 
 ![文艺消费论证图 2](attachments/roof-archive/cv11752140/figure-2.png)
 
-![文艺消费论证图 3](attachments/roof-archive/cv11752140/figure-3.jpg)
 
 ![文艺消费论证图 4](attachments/roof-archive/cv11752140/figure-4.jpg)
 

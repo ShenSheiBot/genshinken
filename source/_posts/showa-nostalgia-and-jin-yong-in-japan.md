@@ -19,7 +19,11 @@ citation:
   url: "https://www.bilibili.com/read/cv2478826/"
 ---
 
-![实在狗子作者卡及题句](attachments/roof-archive/cv2478826/01-shi-zai-gou-zi-author-card.jpg)
+[作者] 实在狗子
+
+![实在狗子头像](attachments/roof-archive/cv2478826/01-author-portrait-v5.png "=25%")
+
+[作者简介] 在没有世界的时代，传播无意义之爱。
 
 > 欢迎关注作者的知乎同名账号。
 

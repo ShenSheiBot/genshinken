@@ -22,7 +22,11 @@ updated: 2018-12-26
 
 <h2 id="love-triangle-biyakuya">二次元的三角恋与“白夜行”</h2>
 
-![钟子默作者卡，列有其研究兴趣与自我介绍](attachments/roof-archive/cv1765321/01-zhong-zimo-author-card.jpg)
+[作者] 钟子默
+
+![钟子默头像](attachments/roof-archive/cv1765321/01-author-portrait-v5.png "=25%")
+
+[作者简介] 兴趣：ACG文化研究／性别／空间／思想史。共情泛滥的边缘观察者。
 
 ## 引言
 

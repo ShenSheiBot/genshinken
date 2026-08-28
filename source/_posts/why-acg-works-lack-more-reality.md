@@ -19,7 +19,11 @@ citation:
   extra: 原文为神的意识形态在知乎发布的问题回答；刊发时由编辑补图并删去两句前缀。
 ---
 
-![神的意识形态作者卡与个人题句](attachments/roof-archive/cv1828906/01-author-card.jpg)
+[作者] 神的意识形态
+
+![神的意识形态头像](attachments/roof-archive/cv1828906/01-author-portrait-v5.png "=25%")
+
+[作者简介] 它，真理，不说话。我，是传播爱的，不明飞行物体。
 
 ## ACG作品为什么不能更多的拥有现实感？
 

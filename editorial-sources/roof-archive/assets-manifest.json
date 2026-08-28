@@ -17168,6 +17168,678 @@
       "bytes": 66593,
       "sha256": "59ba6fb83c1b4269bfcbe3b50a63f89839a4f898e0e738ae4b0f707e0a42ec3d",
       "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv2295534/01-author-portrait-v5.png",
+      "bytes": 154193,
+      "sha256": "59452eb88f368f155aafe4c1fc81aa6a5fcc9c4046434a2aa26627c5ce7790a7",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv3991963/01-author-portrait-v5.png",
+      "bytes": 29455,
+      "sha256": "1651f9c6631eb7a21fe3f283b3b1b93a660b1c4d2ce9550537bf871b06b5bfc5",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8255716/01-author-portrait-v5.png",
+      "bytes": 127885,
+      "sha256": "6e13065749f5e4c3fe5a03bdf07d8b0273515b077f6266f1d5f303e4df39f16a",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv2318316/01-author-portrait-v5.png",
+      "bytes": 232670,
+      "sha256": "f1734e51d12069fbe79631db5bcd47377242a30b89f379e8755947b6560ab367",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1652116/01-author-portrait-v5.png",
+      "bytes": 229035,
+      "sha256": "aff34bb4fe1fe0dec41f792d559c6012b1daf9dbe91320aaf415444c1177adcc",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv2811801/01-author-portrait-v5.png",
+      "bytes": 78314,
+      "sha256": "51bb2b2230d15f9288d5ade238b08b76bc7e4c5e676411f735efb867d5c9de06",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv21792051/01-author-portrait-v5.png",
+      "bytes": 108405,
+      "sha256": "3fa27583c450a30f4a411d68c7dcf42d4b56d7646d3b8ef534f1800c1c2d34ca",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv2882244/01-author-portrait-v5.png",
+      "bytes": 69517,
+      "sha256": "de2f46410fe639343906db825eb8198400c0d6ab8116ddf8dce23b45bc429e0b",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv4300615/01-author-portrait-v5.png",
+      "bytes": 141404,
+      "sha256": "5d29eeba067eb1c00a232659dea20ee4c3afe89ad2cf941517079551397fc336",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv2944298/01-author-portrait-v5.png",
+      "bytes": 277183,
+      "sha256": "21d826a4bc21670d0b1d1d3afb60d4e6a63ee1378eb70ae3a30affaf1ac2db41",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv6229226/01-author-portrait-v5.png",
+      "bytes": 64400,
+      "sha256": "3f99379437b00b3c74580d78d5e33ac686a23e062729d351660bfe00c5082285",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1984621/01-author-portrait-v5.png",
+      "bytes": 223745,
+      "sha256": "2a3670a19285ebf7113d1e8b127f0564a83573c5018c2d2f82939dde01a586b0",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1744019/01-author-portrait-v5.png",
+      "bytes": 223745,
+      "sha256": "2a3670a19285ebf7113d1e8b127f0564a83573c5018c2d2f82939dde01a586b0",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv6113407/01-author-portrait-v5.png",
+      "bytes": 86863,
+      "sha256": "c6416bf57c91dd7c050b9d7fc1437f1426db7bb969717b1a98d9fcca8dfa6846",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv5507443/01-author-portrait-v5.png",
+      "bytes": 92364,
+      "sha256": "a6526dc3f98814023f14effe0656f581dea1b372e60bfae488cf257d461b105e",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv5803459/01-author-portrait-v5.png",
+      "bytes": 92013,
+      "sha256": "4a30a14918827af18e1d7dbb6dddb97ad739d287f72d17e63e6510da35588714",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv4224834/01-author-portrait-v5.png",
+      "bytes": 86327,
+      "sha256": "12211d7b7877c12e080f2bb096af3849a5390c448eb17384668cc25b9faba140",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv4379419/01-author-portrait-v5.png",
+      "bytes": 85772,
+      "sha256": "9fb2b587ceef8bd97f6567a1c63843f7c2b9d5a8537c923d80637b2110b121b9",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv3494993/01-author-portrait-v5.png",
+      "bytes": 33671,
+      "sha256": "67750847c7d60e2b118a6fcc5b3dba2883b373f940f28e02a74e808ba3cfb484",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1696193/01-author-portrait-v5.png",
+      "bytes": 223745,
+      "sha256": "2a3670a19285ebf7113d1e8b127f0564a83573c5018c2d2f82939dde01a586b0",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv2031971/01-author-portrait-v5.png",
+      "bytes": 208394,
+      "sha256": "a4121e3a3b79fb5d95d5f3a9159c1184b24fd36d7eedf186dfce2bd2e6090927",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv5383272/01-author-portrait-v5.png",
+      "bytes": 77646,
+      "sha256": "762896abd3648c7d225497c6ff2ea25a889aa44a543ea042d9004cdd104fa8fb",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1775632/01-author-portrait-v5.png",
+      "bytes": 113625,
+      "sha256": "fa4b9df9bcd9a61125151546e389b551072f36fdb06187fc65730d172020039f",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv3582982/01-author-portrait-v5.png",
+      "bytes": 13855,
+      "sha256": "830bcde6b990397894838a8e625506e754f30af86bb42842ac03f0dbca11ac57",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv6518878/01-author-portrait-v5.png",
+      "bytes": 76916,
+      "sha256": "41ce29fd16e4164178a051825717e55a07a9477de1e3bd47f6c2c3d2efa08114",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv3064956/01-author-portrait-v5.png",
+      "bytes": 312418,
+      "sha256": "ee1b288a3354bd1bb09c6f73c1df258032986c1160ba3a6e77d9c116fa30d6ea",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1855930/01-author-portrait-v5.png",
+      "bytes": 287321,
+      "sha256": "914cbfafbca905271590f30652c26b64238065113750dbfcb0b6221b13abbe69",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv3450862/01-author-portrait-v5.png",
+      "bytes": 100908,
+      "sha256": "67611b30ab32ce6b499ae4f30faed133dcaf3d322caa88cb91c299abe37708a0",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1737997/01-author-portrait-v5.png",
+      "bytes": 216969,
+      "sha256": "29f6a83078ee5144692b3aa060e14947d925ec478cc62049af00ac14993e1204",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv3828862/01-author-portrait-v5.png",
+      "bytes": 303847,
+      "sha256": "fe9e04358a31b059a96006730d53687c394c300c87fa500afee0360e544de358",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv3695977/01-author-portrait-v5.png",
+      "bytes": 248001,
+      "sha256": "a4c8d068b4c88f94ca08f7850c1745637d2675e27fb8c1115a98566512e4d43d",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv6222686/01-author-portrait-v5.png",
+      "bytes": 181299,
+      "sha256": "33f06fdb23ff1b4b55768ef58dd5e6843fe9102cfbe398f76938d354f3d4e5b4",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv2400487/01-author-portrait-v5.png",
+      "bytes": 154193,
+      "sha256": "59452eb88f368f155aafe4c1fc81aa6a5fcc9c4046434a2aa26627c5ce7790a7",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv7056740/01-author-portrait-v5.png",
+      "bytes": 73563,
+      "sha256": "7d350e65a852ca1579cb67f664a518dfefc6dbe432fb65d74fa60c3903f22d85",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv7550887/01-author-portrait-v5.png",
+      "bytes": 63100,
+      "sha256": "8cc482fa3c67a31af34539658d18588c29c80ffbf5166cab4ab88a5cbe2378e9",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1801559/01-author-portrait-v5.png",
+      "bytes": 131274,
+      "sha256": "2f8f4337a4af9e3683bedde342d55818d643569620e6a5d9abcc460ff550db06",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv3390791/01-author-portrait-v5.png",
+      "bytes": 100908,
+      "sha256": "67611b30ab32ce6b499ae4f30faed133dcaf3d322caa88cb91c299abe37708a0",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv2200172/01-author-portrait-v5.png",
+      "bytes": 305889,
+      "sha256": "584456022d1854ea605e8ff5ea63745dae0be1c25abdbdef5b5ff539e2c4f151",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1783637/01-author-portrait-v5.png",
+      "bytes": 199221,
+      "sha256": "6cd769d1f40f8c6f2a3de8148eeac45ac659ca4d28620a51d8bedbeff551f459",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv3877673/01-author-portrait-v5.png",
+      "bytes": 83251,
+      "sha256": "3a1d24745584e1b90c6c4c3d0c2831c05afa1809526819ade983e6f1d160f424",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv3929369/01-author-portrait-v5.png",
+      "bytes": 169316,
+      "sha256": "47a4fae137c5a9fa91f9e43c410fdb65751b2131cbcaa6b268a395d027c068d5",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv4975791/01-author-portrait-v5.png",
+      "bytes": 86122,
+      "sha256": "a8421f09502be1bcab2a6aed8068e4423f848ea4d15c526b1404bbbbf874a14d",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv2148303/01-author-portrait-v5.png",
+      "bytes": 100908,
+      "sha256": "67611b30ab32ce6b499ae4f30faed133dcaf3d322caa88cb91c299abe37708a0",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv5421426/01-author-portrait-v5.png",
+      "bytes": 92364,
+      "sha256": "a6526dc3f98814023f14effe0656f581dea1b372e60bfae488cf257d461b105e",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv2606877/01-author-portrait-v5.png",
+      "bytes": 398001,
+      "sha256": "5cdbc9bdb02039ee7bade689e034530d7cc766adae5961d058b4b2b0fcef451a",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv4275616/01-author-portrait-v5.png",
+      "bytes": 83178,
+      "sha256": "d03f8dc6baf97ead5d753cb48ab02584dc39de1f5fe4d31038828487e2a7fcb0",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv3239912/01-author-portrait-v5.png",
+      "bytes": 86234,
+      "sha256": "c74bece6e318a72a3a3c1663a7757385d3004625352622a04f0583581c9a154f",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv2620345/01-author-portrait-v5.png",
+      "bytes": 76754,
+      "sha256": "48ba211b95990d87a3c7daf7042feb4c081001597a1426503ffc743ebde14bd3",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1715509/01-author-portrait-v5.png",
+      "bytes": 31900,
+      "sha256": "e4b0931fedce004baa275902f6c0b56dfdd47a73ccd4a7b5e0960ef71631ba84",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv2196540/01-author-portrait-v5.png",
+      "bytes": 248001,
+      "sha256": "a4c8d068b4c88f94ca08f7850c1745637d2675e27fb8c1115a98566512e4d43d",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv5132546/01-author-portrait-v5.png",
+      "bytes": 56863,
+      "sha256": "211d4c1f76320081b86cc4b044d105823358d5a01ee57d87514f10b8b4c50518",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv2156702/01-author-portrait-v5.png",
+      "bytes": 229035,
+      "sha256": "aff34bb4fe1fe0dec41f792d559c6012b1daf9dbe91320aaf415444c1177adcc",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv7971122/01-author-portrait-v5.png",
+      "bytes": 53658,
+      "sha256": "b9e96ac1bf23098b5c66b5e725dbc51f44a5fa05528c7e46660a432ce7b5f8af",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1729613/01-author-portrait-v5.png",
+      "bytes": 223745,
+      "sha256": "2a3670a19285ebf7113d1e8b127f0564a83573c5018c2d2f82939dde01a586b0",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv2187227/01-author-portrait-v5.png",
+      "bytes": 142090,
+      "sha256": "622bcb6ae0830d6a683ab9f4299911b3a9e8884ec257745d7093796b0579817e",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1990184/01-author-portrait-v5.png",
+      "bytes": 229035,
+      "sha256": "aff34bb4fe1fe0dec41f792d559c6012b1daf9dbe91320aaf415444c1177adcc",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv3165978/01-author-portrait-v5.png",
+      "bytes": 230243,
+      "sha256": "c34f0dba1830e9255b13fcf845a7012bc43623712241d02e2a49b337a9c92c9a",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv19651001/01-author-portrait-v5.png",
+      "bytes": 130988,
+      "sha256": "45b87fb036ad129b0d4b0be4c236be6ce2ecce3b22f0b2baf6edebc4d0a47d0d",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv2340096/01-author-portrait-v5.png",
+      "bytes": 13523,
+      "sha256": "959ebbbf2a43b869259b69a4b09ee081b3d1c42f38c6ae2e1467041ae7af464f",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv7152802/01-author-portrait-v5.png",
+      "bytes": 73563,
+      "sha256": "7d350e65a852ca1579cb67f664a518dfefc6dbe432fb65d74fa60c3903f22d85",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv5831135/01-author-portrait-v5.png",
+      "bytes": 92588,
+      "sha256": "06be4befdb252ab0d7f24235ef579004a8a35f5cca78d5b4766fe4c453671aa7",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv3810399/01-author-portrait-v5.png",
+      "bytes": 230243,
+      "sha256": "c34f0dba1830e9255b13fcf845a7012bc43623712241d02e2a49b337a9c92c9a",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv2422780/01-author-portrait-v5.png",
+      "bytes": 139738,
+      "sha256": "cd1c992c305bdad49eb72faa32add781277d2e964341e419480764a081f20c82",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1833922/01-author-portrait-v5.png",
+      "bytes": 101662,
+      "sha256": "48c16420448d7f44225b25647e63c5db1af24579437f2d7ed37e3fdc9b721999",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv2728146/01-author-portrait-v5.png",
+      "bytes": 27933,
+      "sha256": "728b95d577aebd1936f0c309f8263ec8115f95f50541d99d4bd751971b628acc",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv3120530/01-author-portrait-v5.png",
+      "bytes": 277183,
+      "sha256": "21d826a4bc21670d0b1d1d3afb60d4e6a63ee1378eb70ae3a30affaf1ac2db41",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv2284996/01-author-portrait-v5.png",
+      "bytes": 303847,
+      "sha256": "fe9e04358a31b059a96006730d53687c394c300c87fa500afee0360e544de358",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv2071126/01-author-portrait-v5.png",
+      "bytes": 133762,
+      "sha256": "4e56ab547f949975bd07dcb74ee368ed2b23ae620a3dfa7c9f1bafb9038644a5",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv2379949/01-author-portrait-v5.png",
+      "bytes": 69722,
+      "sha256": "1caa9c4ea0a9694da676d324c2f9c8a5d1ead8ae57ca2a9ea385b7adba536bb6",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1765321/01-author-portrait-v5.png",
+      "bytes": 229035,
+      "sha256": "aff34bb4fe1fe0dec41f792d559c6012b1daf9dbe91320aaf415444c1177adcc",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1679758/01-author-portrait-v5.png",
+      "bytes": 229035,
+      "sha256": "aff34bb4fe1fe0dec41f792d559c6012b1daf9dbe91320aaf415444c1177adcc",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv2386835/01-author-portrait-v5.png",
+      "bytes": 35763,
+      "sha256": "c0ba6543392447f51038492f10faa94bd816c49e46f822eccee4898bf8f3ae46",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv3555857/01-author-portrait-v5.png",
+      "bytes": 38790,
+      "sha256": "1a3bba1e1981b8fecdf0f8702274fde25f000593037070276105237eb8f02a63",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1689357/01-author-portrait-v5.png",
+      "bytes": 139529,
+      "sha256": "960b3267ba49c4cad9f4bd8284054502aa91a15bf12828932d989d24b4da628c",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1752073/01-author-portrait-v5.png",
+      "bytes": 223745,
+      "sha256": "2a3670a19285ebf7113d1e8b127f0564a83573c5018c2d2f82939dde01a586b0",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1924970/01-author-portrait-v5.png",
+      "bytes": 158672,
+      "sha256": "25bc06176cefd03bda504c088144ca5547d292ae79bda002d7cb91de1773077e",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv2478826/01-author-portrait-v5.png",
+      "bytes": 100908,
+      "sha256": "67611b30ab32ce6b499ae4f30faed133dcaf3d322caa88cb91c299abe37708a0",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1668131/01-author-portrait-v5.png",
+      "bytes": 46508,
+      "sha256": "780e6dd804c9b635ad67e3b4a7baaf401a2b9ba8da33d006128688a2a9b0d88e",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv2954757/01-author-portrait-v5.png",
+      "bytes": 73525,
+      "sha256": "b8e4b5d1d729c6a773abc994264c5670fdda08f1089b972e74a29595033a0013",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv2231163/01-author-portrait-v5.png",
+      "bytes": 31601,
+      "sha256": "d350094e580f9976739ee20f39656a4a266b45e61748a1f4e35c6e90d78755ec",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8322667/01-author-portrait-v5.png",
+      "bytes": 34956,
+      "sha256": "158813195c4d61017d30666c4bb96709314430922c4c98dd1165d0b0926685e6",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv2509776/01-author-portrait-v5.png",
+      "bytes": 279071,
+      "sha256": "89bd2f7ca12365a8f4a7fa2a033efea5e9da493744292cab669abb9bfcf5b3e1",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv3746787/01-author-portrait-v5.png",
+      "bytes": 86234,
+      "sha256": "c74bece6e318a72a3a3c1663a7757385d3004625352622a04f0583581c9a154f",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv7634594/01-author-portrait-v5.png",
+      "bytes": 53773,
+      "sha256": "da212f0f1d9a7a1345afb4d9fe2c3e6b64278b95efa2ca0e4b1f32f7c57f769e",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv3411592/01-author-portrait-v5.png",
+      "bytes": 312418,
+      "sha256": "ee1b288a3354bd1bb09c6f73c1df258032986c1160ba3a6e77d9c116fa30d6ea",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1723561/01-author-portrait-v5.png",
+      "bytes": 61438,
+      "sha256": "6009993feac45de834ce64151b0f15720e4a6170692bc234564ec2eecb8e34a4",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv2696619/01-author-portrait-v5.png",
+      "bytes": 72552,
+      "sha256": "1f3b7d9c846472117897d09256891f0bc5e8f716492b18f01b90ad0906f0eb5d",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv2214419/01-author-portrait-v5.png",
+      "bytes": 69722,
+      "sha256": "1caa9c4ea0a9694da676d324c2f9c8a5d1ead8ae57ca2a9ea385b7adba536bb6",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv3875524/01-author-portrait-v5.png",
+      "bytes": 205745,
+      "sha256": "116ca6b202f541aa9d7ed8737340433efb79c016de1741f39ae812fe26cbb81a",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv2503381/01-author-portrait-v5.png",
+      "bytes": 237753,
+      "sha256": "ab7dea3b1a89c1550657ee9c7bd220c024c6ab3b96ff7bef9a71395442640457",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv4081445/01-author-portrait-v5.png",
+      "bytes": 174415,
+      "sha256": "eb828fbc4de4c563a507021052a666998330beb0fd8b19d6b48d2f073e65d209",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv3930134/01-author-portrait-v5.png",
+      "bytes": 242735,
+      "sha256": "8a72c56cdf080e133a572edad9bf6f4eaf067d9f91d28551e30a3d47947aa702",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv4050756/01-author-portrait-v5.png",
+      "bytes": 213885,
+      "sha256": "e9463a676e46652823210f7006355447c979f49b3ef0aad889c5397ec07446a5",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv3929743/01-author-portrait-v5.png",
+      "bytes": 94544,
+      "sha256": "ec487b4ca91a50a665fe3204567673ae16a711b0992aa078167fe3d17c339aba",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1980660/01-author-portrait-v5.png",
+      "bytes": 101662,
+      "sha256": "48c16420448d7f44225b25647e63c5db1af24579437f2d7ed37e3fdc9b721999",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv2935294/01-author-portrait-v5.png",
+      "bytes": 38610,
+      "sha256": "d33976822408a8e2a7df90b3ebdfc057ff71224f379cbcde2449c3bcff8a39af",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1822938/01-author-portrait-v5.png",
+      "bytes": 152392,
+      "sha256": "1df243439fa2dddfae5788008b0cba8891772a5e4e0454df18fe3bbbc6095d82",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1828906/01-author-portrait-v5.png",
+      "bytes": 101662,
+      "sha256": "48c16420448d7f44225b25647e63c5db1af24579437f2d7ed37e3fdc9b721999",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv4145943/01-author-portrait-v5.png",
+      "bytes": 174074,
+      "sha256": "be429ac03146b685bfd3574e48fd0b5a2f7da7940755c787951d90248641ab94",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv5581685/01-author-portrait-v5.png",
+      "bytes": 77646,
+      "sha256": "762896abd3648c7d225497c6ff2ea25a889aa44a543ea042d9004cdd104fa8fb",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1705216/01-author-portrait-v5.png",
+      "bytes": 30114,
+      "sha256": "4ba2393c9b99f34b9cd1f278e95eb73667ddb2ee478c1249a8cd8225a5473988",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv11249482/01-author-portrait-v5.png",
+      "bytes": 34370,
+      "sha256": "7c970f53f03599b35cd9db2c97645dd33046fe00aa68e18bb145bb3d7e2259a8",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv11752140/01-author-portrait-v5.png",
+      "bytes": 26110,
+      "sha256": "4a1eb07c6ffcef645103a61808c02c9799f473283e776743aff94a5bfcaf14fc",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv12555845/01-author-portrait-v5.png",
+      "bytes": 100277,
+      "sha256": "9a021817ea5fb5df69fb9800302035cb63e87a93c5af28fd8c3e3b921b163d1f",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv17209595/01-author-portrait-v5.png",
+      "bytes": 33789,
+      "sha256": "1b7d3990620af5cbfc057d0822026810a7055f5fa20b9c304018a958349cf982",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1789889/01-author-portrait-v5.png",
+      "bytes": 152392,
+      "sha256": "1df243439fa2dddfae5788008b0cba8891772a5e4e0454df18fe3bbbc6095d82",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1789889/07-author-portrait-v5.png",
+      "bytes": 31601,
+      "sha256": "d350094e580f9976739ee20f39656a4a266b45e61748a1f4e35c6e90d78755ec",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1842794/01-author-portrait-v5.png",
+      "bytes": 152392,
+      "sha256": "1df243439fa2dddfae5788008b0cba8891772a5e4e0454df18fe3bbbc6095d82",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1915601/01-author-portrait-v5.png",
+      "bytes": 242374,
+      "sha256": "7e3a990fc6d61439f8b13c051dbfe9f7da940ff7ed192f37f8ee6ab982ba8a62",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv3154640/01-author-portrait-v5.png",
+      "bytes": 331188,
+      "sha256": "479826b30452979e404e3d3d7c0d5d3be91b36cae74fcd7d35a0dc865e3dc249",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv3334791/01-author-portrait-v5.png",
+      "bytes": 48781,
+      "sha256": "42a93b02a8d2971ed5b7083cd3fef25800d7099beafe6993eb2e5a7290f9dbcc",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv3381852/01-author-portrait-v5.png",
+      "bytes": 72452,
+      "sha256": "ae48350e2d3c95a44cae188f89ea0fc4f51b51534ef6d4de948fb4d8d7109604",
+      "contentType": "image/png"
     }
   ]
 }

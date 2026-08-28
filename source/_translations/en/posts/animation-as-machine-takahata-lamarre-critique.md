@@ -31,7 +31,7 @@ format: article
 
 [图题] The poster’s profile banner pairs the handle “An O That Isn’t Zero” with Rei Ayanami.
 
-![Profile banner for An O That Isn’t Zero, with Rei Ayanami at right](/attachments/roof-archive/cv11249482/23a57faf477d77b8c0fc96bb7edbabd0cbc9efd1.jpg)
+![Portrait of An O That Isn’t Zero](attachments/roof-archive/cv11249482/01-author-portrait-v5.png "=25%")
 
 > A damsel with a dulcimer,<br>
 > In a vision once I saw:<br>

@@ -20,7 +20,11 @@ citation:
 
 [图题] 抛砖引玉，战战兢兢
 
-![静希草十郎作者卡，题句“那么答案就只有一个了——行动！”](attachments/roof-archive/cv1822938/01-author-card.jpg)
+![静希草十郎头像](attachments/roof-archive/cv1822938/01-author-portrait-v5.png "=25%")
+
+[作者简介] 那么答案就只有一个了——行动！
+
+> **编者按：** 抛砖引玉，战战兢兢。
 
 说起来，又到了白色相簿的季节呢，那么答案就只有一……
 

@@ -19,7 +19,11 @@ citation:
   blogTitle: 屋顶现视研
   url: "https://www.bilibili.com/read/cv2944298/"
 ---
-![窗子作者卡及个人题句](attachments/roof-archive/cv2944298/01-author-card.jpg)
+[作者] 窗子
+
+![窗子头像](attachments/roof-archive/cv2944298/01-author-portrait-v5.png "=25%")
+
+[作者简介] 死生去留，棚头傀儡，一线断时，落落磊磊。
 
 ![《千与千寻》中国内地上映纪念图](attachments/roof-archive/cv2944298/02-release-card.png)
 

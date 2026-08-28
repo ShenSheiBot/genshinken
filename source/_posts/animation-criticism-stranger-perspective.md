@@ -21,7 +21,11 @@ citation:
 
 [图题] 钟老师令人喜欢
 
-![钟子默作者卡，列有其研究兴趣与自我介绍](attachments/roof-archive/cv1652116/01-zhong-zimo-author-card.jpg)
+![钟子默头像](attachments/roof-archive/cv1652116/01-author-portrait-v5.png "=25%")
+
+[作者简介] 兴趣：ACG文化研究／性别／空间／思想史。共情泛滥的边缘观察者。
+
+> **编者按：** 钟老师令人喜欢。
 
 （本文是水群时的一时兴起，斗胆从个人经验谈谈漫评话题。分享想法和态度。）
 

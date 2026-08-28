@@ -18,7 +18,11 @@ citation:
   url: "https://www.bilibili.com/read/cv2295534/"
 ---
 
-![红茶泡海苔作者卡及简介](attachments/roof-archive/cv2295534/01-red-tea-seaweed-author-card.png)
+[作者] 红茶泡海苔
+
+![红茶泡海苔头像](attachments/roof-archive/cv2295534/01-author-portrait-v5.png "=25%")
+
+[作者简介] 文学硕士，宅文化批评，文艺批评。
 
 最近看到一篇这样的文章：
 

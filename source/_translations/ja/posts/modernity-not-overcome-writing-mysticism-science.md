@@ -19,7 +19,9 @@ format: article
 
 [图题] 上図は筆者。本稿は屋頂現視研の年度公募企画「拾荒戦略」前夜祭の受賞作である。
 
-![筆名「　」の署名が入った筆者カード](/attachments/roof-archive/cv19651001/91c904e3acc2dfd458656d2c6148f161c16c64f9.png)
+![筆名「　」の筆者の肖像](attachments/roof-archive/cv19651001/01-author-portrait-v5.png "=25%")
+
+> **編集部注：** 本稿は屋頂現視研の年度公募企画「拾荒戦略」前夜祭の受賞作である。
 
 ## 目次
 

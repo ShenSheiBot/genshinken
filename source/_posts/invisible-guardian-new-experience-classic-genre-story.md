@@ -18,7 +18,11 @@ citation:
   url: "https://www.bilibili.com/read/cv2200172/"
 ---
 
-![空的作者卡及题句“别猜了，椅子后面空如也”](attachments/roof-archive/cv2200172/01-author-card.jpg)
+[作者] 空
+
+![空头像](attachments/roof-archive/cv2200172/01-author-portrait-v5.png "=25%")
+
+[作者简介] 别猜了，椅子后面空空如也。
 
 **前言：**请允许笔者暂时搁置游戏外部的因素，仅就游戏而作一算不上严肃评论的、不带影响游戏体验之剧透的杂谈，目的是既向还未了解本作的读者安利，也为已经游玩本作的读者提供一些豆知识或私人视角的阐释。
 

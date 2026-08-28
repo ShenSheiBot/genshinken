@@ -20,7 +20,11 @@ citation:
   url: "https://www.bilibili.com/read/cv2728146/"
 ---
 
-![pendulum man作者卡及题句“这个人懒死了什么都没写”](attachments/roof-archive/cv2728146/01-pendulum-man-author-card.png)
+[作者] pendulum man
+
+![pendulum man头像](attachments/roof-archive/cv2728146/01-author-portrait-v5.png "=25%")
+
+[作者简介] 这个人懒死了什么都没写。
 
 《企鹅公路》的主人公是热爱科学和探索的青山同学，他有个要好的牙医大姐姐，因为迷恋其胸部而发誓要娶她。一日，小镇上突然出现了很多企鹅，在探索的过程中，他发现制造出企鹅的正是姐姐。直到这里，笔者都认为这只是一个十分有森见登美彦风格的夏日狂欢式的作品，然而之后出现的大水球“海”、吞食企鹅的怪兽、小镇面临的危机，都把这部作品导向了与预期不同的方向；如果不注意到其中的象征和隐喻，就会被各种幻想搞得摸不着头脑。本文是对此作出拉康式解读的一种尝试。
 

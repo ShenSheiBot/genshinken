@@ -17,7 +17,11 @@ citation:
   url: "https://www.bilibili.com/read/cv3381852/"
 ---
 
-![文章插图 1](attachments/roof-archive/cv3381852/01.png)
+[作者] hephaestus
+
+![hephaestus头像](attachments/roof-archive/cv3381852/01-author-portrait-v5.png "=25%")
+
+[作者简介] 在大谈诗与思之前，记得惊奇和敬畏才是某些东西的开端。
 
 看到“都市·空间”这个主题的时候，我正在读内田忠贤的一篇报告，《江戸の妖怪と都市空間》，而传统的怪谈文学本身在都市生活中似乎没有发生太大的演变，而比起更为具体的妖怪考察，都市传说可能更接近都市人的现代生活。
 

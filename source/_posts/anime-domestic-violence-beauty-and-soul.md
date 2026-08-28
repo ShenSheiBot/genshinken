@@ -21,7 +21,11 @@ citation:
   extra: 正文标明经实在狗子授权刊发；编者注说明标题因审核而与原题目略有不同
 ---
 
-![实在狗子作者卡及题句](attachments/roof-archive/cv2811801/01-shi-zai-gou-zi-author-card.png)
+[作者] 实在狗子
+
+![实在狗子头像](attachments/roof-archive/cv2811801/01-author-portrait-v5.png "=25%")
+
+[作者简介] 在没有世界的时代，传播无意义之爱。
 
 > 本文经实在狗子授权刊发，欢迎关注作者的知乎同名账号。
 

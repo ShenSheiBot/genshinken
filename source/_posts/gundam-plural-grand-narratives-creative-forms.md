@@ -18,7 +18,11 @@ citation:
   url: "https://www.bilibili.com/read/cv1855930/"
 ---
 
-![李抛抛作者卡及关于施特劳斯、波普尔与施密特的题词](attachments/roof-archive/cv1855930/00-00.jpg)
+[作者] 李抛抛
+
+![李抛抛头像](attachments/roof-archive/cv1855930/01-author-portrait-v5.png "=25%")
+
+[作者简介] 施特劳斯是列奥也是列维；卡尔是波普尔也是施密特。
 
 对于刚刚接触高达系列的观看者而言，一个疑问可能是常有的：除了 TV 动画之外，为什么高达要有种类如此繁多的外传、OVA、区别于 TV 动画剧情的漫画和小说（可能还要算上各种名目的游戏、公式度不等的同人与再创作形式）？
 

@@ -18,7 +18,11 @@ citation:
   url: "https://www.bilibili.com/read/cv2606877/"
 ---
 
-![五代雄介作者卡及题句“奏响洋溢的旋律，为了不会结束的我们”](attachments/roof-archive/cv2606877/01-go-dai-yusuke-author-card.jpg)
+[作者] 五代雄介
+
+![五代雄介头像](attachments/roof-archive/cv2606877/01-author-portrait-v5.png "=25%")
+
+[作者简介] 奏响洋溢的旋律，为了不会结束的我们。
 
 他是千年一遇的小提琴天才，不是纯粹的战士。
 

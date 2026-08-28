@@ -22,7 +22,11 @@ citation:
 
 [图题] 作者君↑一般出现在校对职务上。
 
-![伦勃朗作者卡及题句“在沙漠之处开辟江河”](attachments/roof-archive/cv4081445/01-lun-bo-lang-author-card.png)
+![伦勃朗头像](attachments/roof-archive/cv4081445/01-author-portrait-v5.png "=25%")
+
+[作者简介] 在沙漠之处开辟江河。
+
+> **编者按：** 作者君一般出现在校对职务上。
 
 ## 两重危机与宁愿都不
 

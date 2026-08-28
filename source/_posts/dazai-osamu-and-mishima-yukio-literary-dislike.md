@@ -19,7 +19,11 @@ citation:
   extra: "作者：实在狗子。"
 ---
 
-![实在狗子作者卡及题句“在没有世界的时代，传播无意义之爱”](attachments/roof-archive/cv5507443/01-shi-zai-gou-zi-author-card.png)
+[作者] 实在狗子
+
+![实在狗子头像](attachments/roof-archive/cv5507443/01-author-portrait-v5.png "=25%")
+
+[作者简介] 在没有世界的时代，传播无意义之爱。
 
 ## 如何评价太宰治这个人？
 

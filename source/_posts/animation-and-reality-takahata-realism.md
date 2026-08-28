@@ -21,7 +21,11 @@ citation:
 
 > 前言：本文系屋顶现视研[拾荒战略 Rags Drum 2020](/posts/rags-drum-2020-final-results)前夜祭＋后夜祭获奖稿件
 
-![一条作者卡及题句“Words are flowing out like endless rain into a paper cup.”](attachments/roof-archive/cv8255716/01-yi-tiao-author-card.png)
+[作者] 一条
+
+![一条头像](attachments/roof-archive/cv8255716/01-author-portrait-v5.png "=25%")
+
+[作者简介] Words are flowing out like endless rain into a paper cup.
 
 > 问题不是自然实际看起来是否像这些绘画作品，
 > 而是具有这样一些特征的绘画能否被人读解为自然的物体。

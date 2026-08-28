@@ -18,7 +18,11 @@ citation:
   extra: Sairai 投稿；屋顶年度征稿活动“拾荒战略 2022”前夜祭、后夜祭获奖稿件
 ---
 
-![Sairai 作者卡片](/attachments/roof-archive/cv21792051/1.jpg "=100%")
+[作者] Sairai
+
+![Sairai头像](attachments/roof-archive/cv21792051/01-author-portrait-v5.png "=25%")
+
+[作者简介] 我们把大量的时间用在守住伟大的东西上，直到我们触及每个想法，改变了他所触及到的生活
 
 本文系屋顶年度征稿活动·拾荒战略 2022 后夜祭获奖稿件。
 

@@ -23,7 +23,11 @@ rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-![crossroadの作者カードと題句「上下に求索し、朝夕を争う」](attachments/roof-archive/cv6229226/01-crossroad-author-card.jpg)
+[作者] crossroad
+
+![crossroadの肖像](attachments/roof-archive/cv6229226/01-author-portrait-v5.png "=25%")
+
+[作者简介] 「上下に求索し、朝夕を争う」
 
 > 本稿は原火に初出した。
 

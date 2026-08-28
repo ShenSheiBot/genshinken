@@ -18,7 +18,11 @@ citation:
   url: "https://www.bilibili.com/read/cv1990184/"
 ---
 
-![钟子默作者卡及个人简介](attachments/roof-archive/cv1990184/01-author-zhong-zimo.jpg)
+[作者] 钟子默
+
+![钟子默头像](attachments/roof-archive/cv1990184/01-author-portrait-v5.png "=25%")
+
+[作者简介] 兴趣：ACG文化研究／性别／空间／思想史。共情泛滥的边缘观察者。
 
 全文8000字。
 

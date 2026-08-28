@@ -22,7 +22,11 @@ updated: 2019-07-12
 
 <h2 id="i-expression">I：作为问题的评论表述——白色，冰菓，团长</h2>
 
-![Austoria 作者卡](attachments/roof-archive/cv1729613/01-austoria-author-card.jpg)
+[作者] Austoria
+
+![Austoria头像](attachments/roof-archive/cv1729613/01-author-portrait-v5.png "=25%")
+
+[作者简介] 立志成为能让别人冲的人。
 
 > 提醒：本文8300字，需要一定时间阅读。
 
@@ -291,9 +295,13 @@ Vtuber这一形式在原则上消除了一切外貌方面的门槛，毕竟Vtube
 
 <h2 id="ii-profundity">II：深刻性的多重面貌</h2>
 
-[图题] 他做到了。
+[作者] Austoria
 
-![Austoria 作者卡及个人简介](attachments/roof-archive/cv2187227/01-austoria-author-card.png)
+![Austoria头像](attachments/roof-archive/cv2187227/01-author-portrait-v5.png "=25%")
+
+[作者简介] 立志成为能让别人冲的人。
+
+> **编者按：** 他做到了。
 
 ## 0.引言
 

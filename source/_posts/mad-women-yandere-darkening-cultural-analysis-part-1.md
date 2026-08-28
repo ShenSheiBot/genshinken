@@ -22,7 +22,11 @@ citation:
 
 <h2 id="part-one">第一部分：疯女人，一种批评的缘起</h2>
 
-![钟子默作者卡及研究方向简介](attachments/roof-archive/cv5132546/01-zhong-zi-mo-author-card.png)
+[作者] 钟子默
+
+![钟子默头像](attachments/roof-archive/cv5132546/01-author-portrait-v5.png "=25%")
+
+[作者简介] 兴趣：ACG文化研究／性别／空间／思想史。共情泛滥的边缘观察者。
 
 本文获2019第八届御宅文化国际学术研讨会暨半次元推荐奖。
 

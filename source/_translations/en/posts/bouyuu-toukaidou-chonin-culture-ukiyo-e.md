@@ -23,7 +23,11 @@ rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-![Author card for crossroad with the motto “Search high and low; seize every hour”](attachments/roof-archive/cv6229226/01-crossroad-author-card.jpg)
+[作者] crossroad
+
+![Portrait of crossroad](attachments/roof-archive/cv6229226/01-author-portrait-v5.png "=25%")
+
+[作者简介] “Search high and low; seize every hour.”
 
 > This essay was first published by Yuanhuo.
 

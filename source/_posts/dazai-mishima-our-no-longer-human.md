@@ -18,7 +18,11 @@ citation:
   url: "https://www.bilibili.com/read/cv6113407/"
 ---
 
-![实在狗子作者卡及题句“在没有世界的时代，传播无意义之爱”](attachments/roof-archive/cv6113407/01-shi-zai-gou-zi-author-card.jpg)
+[作者] 实在狗子
+
+![实在狗子头像](attachments/roof-archive/cv6113407/01-author-portrait-v5.png "=25%")
+
+[作者简介] 在没有世界的时代，传播无意义之爱。
 
 《人间失格》是太宰治写给自己的镇魂曲，是卡夫卡说的那种“满意的死亡”，太宰治可能会在心里想：写完这本书，我终于可以安心地去了。
 

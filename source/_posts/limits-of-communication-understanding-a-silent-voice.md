@@ -19,7 +19,11 @@ citation:
   url: "https://www.bilibili.com/read/cv2620345/"
 ---
 
-![Suetonius作者卡，题有“年与时驰，意与日去”](attachments/roof-archive/cv2620345/01-suetonius-author-card.png)
+[作者] Suetonius
+
+![Suetonius头像](attachments/roof-archive/cv2620345/01-author-portrait-v5.png "=25%")
+
+[作者简介] 年与时驰，意与日去。
 
 **润色&校对**：HMS Hood；袁青日月郎；芳草进大门。
 

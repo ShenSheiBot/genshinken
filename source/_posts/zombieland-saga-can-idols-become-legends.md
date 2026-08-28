@@ -18,7 +18,11 @@ citation:
   url: "https://www.bilibili.com/read/cv1705216/"
 ---
 
-![hephaestus 作者卡及个人题句](attachments/roof-archive/cv1705216/00-author-hephaestus.jpg)
+[作者] hephaestus
+
+![hephaestus头像](attachments/roof-archive/cv1705216/01-author-portrait-v5.png "=25%")
+
+[作者简介] 在大谈诗与思之前，记得惊奇和敬畏才是某些东西的开端。
 
 > “他是活的光源，使接近者受益与愉悦。其闪烁光芒照亮世界的黑暗。他不单像盏明灯，更像天成的三光，流转的光源。”
 >

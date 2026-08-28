@@ -20,7 +20,11 @@ rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-![Author card for 实在狗子 with the line “In an age without a world, spread meaningless love”](attachments/roof-archive/cv4224834/01-shi-zai-gou-zi-author-card.jpg)
+[作者] Shi Zai Gou Zi
+
+![Portrait of Shi Zai Gou Zi](attachments/roof-archive/cv4224834/01-author-portrait-v5.png "=25%")
+
+[作者简介] “In an age without a world, spread meaningless love.”
 
 The word *diaosi* is basically outdated today, but the attitude implied by it is definitely not. From many angles, it is not an especially new attitude either. You could even call it a variant of Ah Q. No one should be surprised to hear that Ah Q and the diaosi have a lot in common. Ah Q has his method of spiritual victory; he cannot stand the “tall-rich-handsome”; he covets the “fair-rich-beautiful.”
 

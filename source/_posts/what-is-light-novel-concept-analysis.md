@@ -18,7 +18,11 @@ citation:
   url: "https://www.bilibili.com/read/cv1980660/"
 ---
 
-![神的意识形态作者卡及个人题句](attachments/roof-archive/cv1980660/00-author-shen-de-yi-shi-xing-tai.jpg)
+[作者] 神的意识形态
+
+![神的意识形态头像](attachments/roof-archive/cv1980660/01-author-portrait-v5.png "=25%")
+
+[作者简介] 它，真理，不说话。我，是传播爱的，不明飞行物体。
 
 下面说一下轻小说的定义，关于这个问题，日本的亚文化研究圈早就有了很多讨论，就目前的情况来看，已经诞生了很多有说服力的定义／讨论。
 

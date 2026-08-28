@@ -18,7 +18,11 @@ citation:
   url: "https://www.bilibili.com/read/cv1924970/"
 ---
 
-![远月作者卡及个人题句](attachments/roof-archive/cv1924970/00-author-yuan-yue.jpg)
+[作者] 远月
+
+![远月头像](attachments/roof-archive/cv1924970/01-author-portrait-v5.png "=25%")
+
+[作者简介] 祇园精舍の钟の声、诸行无常の响きあり
 
 在日本动画和影视剧中，经常会出现一些让国人观众很难理解的情节。
 

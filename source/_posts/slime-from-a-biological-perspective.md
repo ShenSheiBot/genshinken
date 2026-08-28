@@ -18,7 +18,13 @@ citation:
   url: "https://www.bilibili.com/read/cv1668131/"
 ---
 
-![言几时作者卡及编者对本文内容的介绍](attachments/roof-archive/cv1668131/01-yan-jishi-author-introduction.jpg)
+[作者] 言几时
+
+![言几时头像](attachments/roof-archive/cv1668131/01-author-portrait-v5.png "=25%")
+
+[作者简介] 技能树点歪的医学生。
+
+> **编者按：** 十月新番《关于我转生变成史莱姆这档事》改编自伏濑原作、みっつばー负责插画的同名轻小说，讲述平凡上班族三上悟被歹徒刺杀身亡，在异世界转生为史莱姆，努力建立“任何种族都能愉快地一起生活的国家”的故事。相较于剧情，笔者却更多注意到了“史莱姆”这一虚构生物——曾经的它也是克苏鲁神话中的骇人存在，而非衍生于一代又一代勇者剑下的经验包。本文将简要介绍史莱姆的起源，并试图为史莱姆的生物学本质寻求（瞎扯）解释。
 
 ![利姆露人形与史莱姆形态角色设计](attachments/roof-archive/cv1668131/02-rimuru-character-design.png)
 

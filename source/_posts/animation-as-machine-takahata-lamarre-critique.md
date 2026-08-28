@@ -20,6 +20,10 @@ citation:
 
 > 原作者署名：作者君。本文讨论高畑勋、《辉夜姬物语》与拉马尔的动画机器理论。
 
+[名片] 一只非0的O
+
+![一只非0的O头像](attachments/roof-archive/cv11249482/01-author-portrait-v5.png "=25%")
+
 有一回我在幻象中见到。
 
 一个手拿德西马琴的姑娘：
@@ -132,6 +136,5 @@ citation:
 
 [^animation-machine-20]: 鈴木敏夫.「四十五歳の新人監督」近藤喜文が泣いた夜. ジブリの教科書 (G-1-9). 文春ジブリ文庫. 2015.
 
-![文章配图](/attachments/roof-archive/cv11249482/23a57faf477d77b8c0fc96bb7edbabd0cbc9efd1.jpg)
 
 ![文章配图](/attachments/roof-archive/cv11249482/7170235113b6afec7d1d3b896403d56d52a5abb0.jpg)

@@ -22,7 +22,11 @@ format: article
 
 [图题] Teacher Zhong is very likable.
 
-![Author card for Zhong Zimo listing his research interests and self-introduction](attachments/roof-archive/cv1652116/01-zhong-zimo-author-card.jpg)
+![Portrait of Zhong Zimo](attachments/roof-archive/cv1652116/01-author-portrait-v5.png "=25%")
+
+[作者简介] Interests: ACG culture studies, gender, space, and intellectual history. An empathic observer at the margins.
+
+> **Editor’s note:** Teacher Zhong is very likable.
 
 (This article came from a spur-of-the-moment impulse while chatting in a group. I will venture to talk about anime criticism from personal experience and share some thoughts and attitudes.)
 

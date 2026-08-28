@@ -24,7 +24,11 @@ format: article
 
 ![『The Stanley Parable』の427号オフィスのオープニング画面](attachments/roof-archive/cv8322667/00-opening-office.jpg?v=3d0554e3)
 
-![辛巴不吃素の作者カードと題句「素直に過ちを認め、深く反省し、死んでも悔い改めない」](attachments/roof-archive/cv8322667/01-author-card.png)
+[作者] 辛巴不吃素
+
+![辛巴不吃素の肖像](attachments/roof-archive/cv8322667/01-author-portrait-v5.png "=25%")
+
+[作者简介] 「素直に過ちを認め、深く反省し、死んでも悔い改めない」
 
 > 『The Stanley Parable』は一人称視点の探索ゲームである。あなたはスタンリーを演じ、あなたはスタンリーを演じない。あなたは物語をたどり、あなたは物語をたどらない。あなたには選択があり、あなたには選択がない。ゲームは終わり、ゲームは決して終わらない。矛盾が次々に続き、ゲームの決まりごとは破られ、そしてまた破られる。この世界は、あなたに理解されるために作られたのではない。――『The Stanley Parable』公式紹介文
 

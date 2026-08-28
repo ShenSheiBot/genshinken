@@ -18,7 +18,11 @@ citation:
   url: "https://www.bilibili.com/read/cv1689357/"
 ---
 
-![Suetonius作者卡，题有“年与时貌，意与日去”](attachments/roof-archive/cv1689357/01-suetonius-author-card.jpg)
+[作者] Suetonius
+
+![Suetonius头像](attachments/roof-archive/cv1689357/01-author-portrait-v5.png "=25%")
+
+[作者简介] 年与时驰，意与日去。
 
 本文将尝试从动画《重启咲良田》文本中重构咲良田政治框架的嬗变。咲良田在动画中是位于日本的一座小城市，然而整部动画中日本官方并不（不仅仅是所指，并且是能指意义上的）在场，因此本文将咲良田作为一个虚构中的自治国度而加以处理。
 

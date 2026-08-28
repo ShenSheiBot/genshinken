@@ -18,7 +18,11 @@ citation:
   url: "https://www.bilibili.com/read/cv2031971/"
 ---
 
-![乌有之人作者卡及题句](attachments/roof-archive/cv2031971/01-wu-you-zhi-ren-author-card.jpg)
+[作者] 乌有之人
+
+![乌有之人头像](attachments/roof-archive/cv2031971/01-author-portrait-v5.png "=25%")
+
+[作者简介] 我若能说万人的方言，并天使的话语。
 
 [图题] 7图：在虚构的故事里寻求真实感的人脑子一定有问题——虚。
 

@@ -20,7 +20,11 @@ rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-![秘则为花の著者カードと「高い岸は谷となり、深い谷は丘となる」という題句](attachments/roof-archive/cv4275616/01-mi-ze-wei-hua-author-card.jpg)
+[作者] 秘則為花
+
+![秘則為花の肖像](attachments/roof-archive/cv4275616/01-author-portrait-v5.png "=25%")
+
+[作者简介] 「高き岸は谷となり、深き谷は丘となる」
 
 少年は少女を介して間接的に世界の運命とつながる。これこそ小島のセカイ系だ！（違）
 

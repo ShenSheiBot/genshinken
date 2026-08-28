@@ -19,7 +19,11 @@ citation:
   extra: 本文为问题回答；作者实在狗子；更早问答页、公开日期及跨平台关系未详
 ---
 
-![实在狗子作者卡及题句“在没有世界的时代，传播无意义之爱”](attachments/roof-archive/cv5831135/00-shi-zai-gou-zi-author-card.png "=100%")
+[作者] 实在狗子
+
+![实在狗子头像](attachments/roof-archive/cv5831135/01-author-portrait-v5.png "=25%")
+
+[作者简介] 在没有世界的时代，传播无意义之爱。
 
 我对这个问题非常感兴趣，回答得比较长一点。
 

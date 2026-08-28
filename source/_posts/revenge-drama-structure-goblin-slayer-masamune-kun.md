@@ -19,7 +19,11 @@ citation:
   extra: "作者钟子默；经授权转载；原文首发于甚哥哥的知乎专栏“后拟像时代的ACGN”。"
 ---
 
-![钟子默作者卡，列有其研究兴趣与自我介绍](attachments/roof-archive/cv1679758/01-zhong-zimo-author-card.jpg)
+[作者] 钟子默
+
+![钟子默头像](attachments/roof-archive/cv1679758/01-author-portrait-v5.png "=25%")
+
+[作者简介] 兴趣：ACG文化研究／性别／空间／思想史。共情泛滥的边缘观察者。
 
 赞美钟老师。
 

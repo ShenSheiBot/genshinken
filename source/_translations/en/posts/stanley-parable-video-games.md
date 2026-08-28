@@ -24,7 +24,11 @@ format: article
 
 ![The opening view of Office 427 in *The Stanley Parable*](attachments/roof-archive/cv8322667/00-opening-office.jpg?v=3d0554e3)
 
-![Author card for 辛巴不吃素 with the motto “Humbly admit your mistakes, reflect on them deeply, and never change your ways”](attachments/roof-archive/cv8322667/01-author-card.png)
+[作者] Xin Ba Bu Chi Su
+
+![Portrait of Xin Ba Bu Chi Su](attachments/roof-archive/cv8322667/01-author-portrait-v5.png "=25%")
+
+[作者简介] “Humbly admit your mistakes, reflect on them deeply, and never change your ways.”
 
 > The Stanley Parable is a first person exploration game. You will play as Stanley, and you will not play as Stanley. You will follow a story, you will not follow a story. You will have a choice, you will have no choice. The game will end, the game will never end. Contradiction follows contradiction, the rules of how games should work are broken, then broken again. This world was not made for you to understand. —*The Stanley Parable*, official game description
 

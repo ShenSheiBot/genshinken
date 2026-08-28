@@ -18,7 +18,11 @@ citation:
   url: "https://www.bilibili.com/read/cv1723561/"
 ---
 
-![窗子作者卡及个人题句](attachments/roof-archive/cv1723561/00-author-chuangzi.jpg)
+[作者] 窗子
+
+![窗子头像](attachments/roof-archive/cv1723561/01-author-portrait-v5.png "=25%")
+
+[作者简介] 死生去留，棚头傀儡，一线断时，落落磊磊。
 
 ## 多多洛/龙猫的熊猫爸爸与神明妈妈
 

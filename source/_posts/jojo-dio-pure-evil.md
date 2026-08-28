@@ -18,7 +18,11 @@ citation:
   url: "https://www.bilibili.com/read/cv5421426/"
 ---
 
-![实在狗子作者卡及题句“在没有世界的时代，传播无意义之爱”](attachments/roof-archive/cv5421426/01-shi-zai-gou-zi-author-card.png)
+[作者] 实在狗子
+
+![实在狗子头像](attachments/roof-archive/cv5421426/01-author-portrait-v5.png "=25%")
+
+[作者简介] 在没有世界的时代，传播无意义之爱。
 
 > 本回答当然是作为一种思考，不是说Dio就不是恶人了。
 

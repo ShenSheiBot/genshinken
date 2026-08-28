@@ -26,7 +26,9 @@ citation:
 
 [图题] 鲜奶饼干[^1]。
 
-![鲜奶饼干作者卡及个人题句](attachments/roof-archive/cv2954757/01-xian-nai-bing-gan-author-card.jpg)
+![鲜奶饼干头像](attachments/roof-archive/cv2954757/01-author-portrait-v5.png "=25%")
+
+[作者简介] 哲学票友，冻鳗高手。
 
 ## 前言
 

@@ -18,7 +18,11 @@ citation:
   language: zh-CN
 ---
 
-![实在狗子作者卡：“在没有世界的时代，传播无意义之爱”](attachments/roof-archive/cv7550887/01-author-card-shizai-gouzi.png)
+[作者] 实在狗子
+
+![实在狗子头像](attachments/roof-archive/cv7550887/01-author-portrait-v5.png "=25%")
+
+[作者简介] 在没有世界的时代，传播无意义之爱。
 
 ## 灾难的表象
 

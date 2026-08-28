@@ -28,7 +28,11 @@ citation:
 
 [图题] 作者君↑，在知乎活动。
 
-![实在狗子作者卡及题句“在没有世界的时代，传播无意义之爱”](attachments/roof-archive/cv3390791/01-shi-zai-gou-zi-author-card.jpg)
+![实在狗子头像](attachments/roof-archive/cv3390791/01-author-portrait-v5.png "=25%")
+
+[作者简介] 在没有世界的时代，传播无意义之爱。
+
+> **编者按：** 作者君在知乎活动。
 
 今天我们请到了实在狗子（以下简称实）和它的好朋友非实在狗子（以下简称非），来讨论有关批评的话题。
 

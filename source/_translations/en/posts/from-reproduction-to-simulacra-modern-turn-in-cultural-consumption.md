@@ -22,6 +22,12 @@ format: article
 
 This essay was a prizewinner at the Rags Drum 2021 Eve Festival.
 
+[作者] 米岡
+
+![Portrait of 米岡](attachments/roof-archive/cv11752140/01-author-portrait-v5.png "=25%")
+
+[作者简介] A medieval evangelist.
+
 ## From Replicas to Simulacra: The Modern Turn in Cultural Consumption
 
 [视频] A video essay of the same title — Script: 米岡; Video: Loliiiico; Narration: 盖井; Production: the Lab on Roof video team
@@ -189,8 +195,6 @@ This closed character does not arise from the subjectivity of aesthetic sensibil
 ![Figure 1 in the essay’s argument on cultural consumption](attachments/roof-archive/cv11752140/figure-1.jpg)
 
 ![Figure 2 in the essay’s argument on cultural consumption](attachments/roof-archive/cv11752140/figure-2.png)
-
-![Figure 3 in the essay’s argument on cultural consumption](attachments/roof-archive/cv11752140/figure-3.jpg)
 
 ![Figure 4 in the essay’s argument on cultural consumption](attachments/roof-archive/cv11752140/translations/en/figure-4.png)
 

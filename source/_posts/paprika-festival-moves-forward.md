@@ -18,7 +18,11 @@ citation:
   url: "https://www.bilibili.com/read/cv3810399/"
 ---
 
-![Jack Cade 作者卡及题句](attachments/roof-archive/cv3810399/01-jack-cade-author-card.png)
+[作者] Jack Cade
+
+![Jack Cade头像](attachments/roof-archive/cv3810399/01-author-portrait-v5.png "=25%")
+
+[作者简介] Away!Burn all the records of the realm.
 
 如果简要的梗概《红辣椒》的故事的话，那么一般会认为影片是由千叶敦子医生在梦中的形象，即红辣椒展开的：千叶化身为红辣椒进入别人的梦中，一开始她入梦是为了治疗粉川警官，后来是为了阻止梦境和现实世界在理事长的阴谋下合二为一，这最终以主角方的胜利而告终，梦境和现实各安其位，复归平静。
 

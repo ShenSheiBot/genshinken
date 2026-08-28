@@ -22,7 +22,11 @@ format: article
 
 > まえがき：本稿は屋頂現視研「[拾荒戦略 Rags Drum 2020](/ja/posts/rags-drum-2020-final-results)」前夜祭・後夜祭双方の受賞作である。
 
-![一条の著者カードと題句 "Words are flowing out like endless rain into a paper cup."](attachments/roof-archive/cv8255716/01-yi-tiao-author-card.png)
+[作者] 一条
+
+![一条の肖像](attachments/roof-archive/cv8255716/01-author-portrait-v5.png "=25%")
+
+[作者简介] “Words are flowing out like endless rain into a paper cup.”
 
 > 問題は、自然が実際にこれらの絵画作品のように見えるかどうかではなく、
 > このような特徴を備えた絵画が、自然の事物として読み解かれうるかどうかである。

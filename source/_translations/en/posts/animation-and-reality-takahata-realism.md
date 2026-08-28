@@ -24,7 +24,11 @@ format: article
 
 > Foreword: This essay won prizes in both the Eve Festival and After Festival of [Rags Drum 2020](/en/posts/rags-drum-2020-final-results), organized by Lab on Roof.
 
-![Author card for Yi Tiao with the epigraph “Words are flowing out like endless rain into a paper cup.”](attachments/roof-archive/cv8255716/01-yi-tiao-author-card.png)
+[作者] Yi Tiao
+
+![Portrait of Yi Tiao](attachments/roof-archive/cv8255716/01-author-portrait-v5.png "=25%")
+
+[作者简介] “Words are flowing out like endless rain into a paper cup.”
 
 > The question is not whether nature “really looks” like these pictorial devices
 > but whether pictures with such features suggest a reading in terms of natural objects.

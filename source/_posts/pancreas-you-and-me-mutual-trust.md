@@ -18,7 +18,11 @@ citation:
   url: "https://www.bilibili.com/read/cv1915601/"
 ---
 
-![三好文雄题词“我站在知识的荒野上，一望无际”](attachments/roof-archive/cv1915601/01-author-epigraph.jpg)
+[作者] 三好文雄
+
+![三好文雄头像](attachments/roof-archive/cv1915601/01-author-portrait-v5.png "=25%")
+
+[作者简介] “我站在知识的荒野上，一望无际”
 
 ## 无剧透短安利
 

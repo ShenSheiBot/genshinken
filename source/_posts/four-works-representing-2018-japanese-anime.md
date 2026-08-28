@@ -18,7 +18,11 @@ citation:
   url: "https://www.bilibili.com/read/cv1775632/"
 ---
 
-![塔塔君 Minkun 作者卡与个人说明](attachments/roof-archive/cv1775632/01-ta-ta-jun-minkun-author-card.jpg)
+[作者] 塔塔君 Minkun
+
+![塔塔君 Minkun头像](attachments/roof-archive/cv1775632/01-author-portrait-v5.png "=25%")
+
+[作者简介] 一个日本动画观众和电影观众，涉世不深。
 
 如果挑选四部作品代表2018年日本动画，我以当年日本动画相比以往没有的新动向为标准，决定把四个名额分成四个主题。
 

@@ -18,7 +18,11 @@ citation:
   extra: "原文首发于原火。"
 ---
 
-![crossroad作者卡及题句“上下求索，只争朝夕”](attachments/roof-archive/cv6229226/01-crossroad-author-card.jpg)
+[作者] crossroad
+
+![crossroad头像](attachments/roof-archive/cv6229226/01-author-portrait-v5.png "=25%")
+
+[作者简介] 上下求索，只争朝夕。
 
 > 本文首发于原火。
 

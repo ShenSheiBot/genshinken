@@ -17,7 +17,11 @@ citation:
   url: "https://www.bilibili.com/read/cv3828862/"
 ---
 
-![元达南作者卡及关于决断的题句](attachments/roof-archive/cv3828862/01-author-card.jpg)
+[作者] 元达南
+
+![元达南头像](attachments/roof-archive/cv3828862/01-author-portrait-v5.png "=25%")
+
+[作者简介] 但任何决断都是以某个没有掌握、遮蔽的、迷乱的东西为基础的；否则它就决不是决断。
 
 ![《苍之彼方的四重奏》中“铁和风”台词画面](attachments/roof-archive/cv3828862/02-iron-wind-dialogue.jpg)
 

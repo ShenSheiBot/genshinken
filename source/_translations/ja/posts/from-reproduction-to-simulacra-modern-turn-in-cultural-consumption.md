@@ -22,6 +22,12 @@ format: article
 
 本稿は拾荒戦略 Rags Drum 2021前夜祭の受賞作である。
 
+[作者] 米岡
+
+![米岡の肖像](attachments/roof-archive/cv11752140/01-author-portrait-v5.png "=25%")
+
+[作者简介] 中世の福音戦士。
+
 ## 複製品からシミュラークルへ――文芸消費の現代的転回
 
 [视频] 同名ビデオエッセイ｜脚本：米岡／映像：Loliiiico／ナレーション：盖井／制作：屋頂現視研映像チーム
@@ -189,8 +195,6 @@ format: article
 ![文芸消費論の図版 1](attachments/roof-archive/cv11752140/figure-1.jpg)
 
 ![文芸消費論の図版 2](attachments/roof-archive/cv11752140/figure-2.png)
-
-![文芸消費論の図版 3](attachments/roof-archive/cv11752140/figure-3.jpg)
 
 ![文芸消費論の図版 4](attachments/roof-archive/cv11752140/translations/ja/figure-4.png)
 

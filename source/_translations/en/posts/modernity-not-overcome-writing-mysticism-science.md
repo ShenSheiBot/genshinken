@@ -22,7 +22,9 @@ format: article
 
 [图题] The author, above. This essay received an award in the Eve Festival of Lab on Roof’s annual Rags Drum call for submissions.
 
-![Author card signed with the pen name “「　」”](/attachments/roof-archive/cv19651001/91c904e3acc2dfd458656d2c6148f161c16c64f9.png)
+![Portrait of the author known as 「　」](attachments/roof-archive/cv19651001/01-author-portrait-v5.png "=25%")
+
+> **Editor’s note:** This essay received an award in the Eve Festival of Lab on Roof’s annual Rags Drum call for submissions.
 
 ## Contents
 

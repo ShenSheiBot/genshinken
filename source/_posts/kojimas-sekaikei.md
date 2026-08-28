@@ -19,7 +19,11 @@ citation:
   extra: "作者：秘则为花。"
 ---
 
-![秘则为花作者卡及题句“高岸为谷，深谷为陵”](attachments/roof-archive/cv4275616/01-mi-ze-wei-hua-author-card.jpg)
+[作者] 秘则为花
+
+![秘则为花头像](attachments/roof-archive/cv4275616/01-author-portrait-v5.png "=25%")
+
+[作者简介] 高岸为谷，深谷为陵。
 
 少年通过少女间接地与世界命运相连，这就是小岛的世界系！（误）
 
