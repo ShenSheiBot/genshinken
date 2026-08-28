@@ -10546,6 +10546,30 @@
       "contentType": "image/png"
     },
     {
+      "key": "roof-archive/cv3929743/translations/en/03-hodaka-rooftop-torii.png",
+      "bytes": 445780,
+      "sha256": "3e7502eefe7ecfa69e96e4dbf28b51284beb09a8b3a5fccbbd33315da465f386",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv3929743/translations/en/04-ring-in-box.png",
+      "bytes": 210183,
+      "sha256": "4f67c3006dd2cc669a6086cdad21c584e4243c443441c36979ce184b358481c4",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv3929743/translations/ja/03-hodaka-rooftop-torii.png",
+      "bytes": 445780,
+      "sha256": "3e7502eefe7ecfa69e96e4dbf28b51284beb09a8b3a5fccbbd33315da465f386",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv3929743/translations/ja/04-ring-in-box.png",
+      "bytes": 210183,
+      "sha256": "4f67c3006dd2cc669a6086cdad21c584e4243c443441c36979ce184b358481c4",
+      "contentType": "image/png"
+    },
+    {
       "key": "roof-archive/cv3930134/01-mi-ze-wei-hua-author-card.png",
       "bytes": 414206,
       "sha256": "7b37849f1c69184fb639229860a6eec64a968a32d712e2ba3fd6fc76adb5adc4",

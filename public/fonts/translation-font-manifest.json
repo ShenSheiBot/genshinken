@@ -1,5 +1,5 @@
 {
-  "corpusFileCount": 71,
+  "corpusFileCount": 73,
   "corpusFiles": [
     "app/[locale]/books/[book]/chapters/[chapter]/cite.bib/route.ts",
     "app/[locale]/books/[book]/chapters/[chapter]/page.tsx",
@@ -38,6 +38,7 @@
     "source/_translations/ja/posts/from-reproduction-to-simulacra-modern-turn-in-cultural-consumption.md",
     "source/_translations/ja/posts/haruhi-sekaikei-postmodern-acgn-research.md",
     "source/_translations/ja/posts/hayao-miyazaki-danger-and-innocence.md",
+    "source/_translations/ja/posts/how-we-met-your-name-indelible-feeling.md",
     "source/_translations/ja/posts/kaiji-chips-amputation-death-drive.md",
     "source/_translations/ja/posts/kara-no-kyoukai-garden-of-sinners.md",
     "source/_translations/ja/posts/kojimas-sekaikei.md",
@@ -67,13 +68,14 @@
     "source/_translations/ja/posts/the-big-o-messiah-always-late.md",
     "source/_translations/ja/posts/understanding-disaster-video-series.md",
     "source/_translations/ja/posts/weathering-with-you-review.md",
+    "source/_translations/ja/posts/weathering-with-you-tragic-hero-knight-of-faith.md",
     "source/_translations/ja/posts/what-is-cloud-behavior-ontology-internal-heterogeneity.md",
     "source/_translations/ja/posts/what-we-watch-in-monster-movies.md",
     "source/_translations/ja/posts/witcher-wilderness-detective.md",
     "source/_translations/ja/posts/work-emotion-robots.md",
     "source/_translations/language-dispositions.json"
   ],
-  "corpusSha256": "219c254382fc8c15e02704cff26bf4211b478aa3fcf9a9cde8b7eec22aaf44b6",
+  "corpusSha256": "46e666bcf905aa49787aa7351f32efc0599ff1cf76b0b6658b69a3a147f60d8a",
   "fallbackCodePointCount": 134,
   "fonts": {
     "Roof EB Garamond Fallback": {
@@ -105,12 +107,12 @@
       "weight": "400"
     },
     "Roof Noto Sans JP": {
-      "bytes": 900912,
-      "codePointCount": 2961,
+      "bytes": 903624,
+      "codePointCount": 2973,
       "family": "Roof Noto Sans JP",
       "file": "roof-noto-sans-jp.woff2",
       "kind": "primary-sans",
-      "sha256": "8fef71a3c05ca9cc70e2be04786c45b64d7d18f874a058f3a5c63560c50f4f1f",
+      "sha256": "c13cdab1a5ba31fb58e2f020eca2081d4e756d3b3912f008a6c480d5cc4ca4f2",
       "source": "NotoSansJP.ttf",
       "sourceSha256": "c2f3b4d463500a2ddcd3849cded1fceeb9fd6d1c32e6cbecd568453ba50fc68f",
       "sourceUrl": "https://raw.githubusercontent.com/google/fonts/e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7/ofl/notosansjp/NotoSansJP%5Bwght%5D.ttf",
@@ -146,12 +148,12 @@
       "weight": "100 900"
     },
     "Roof Noto Serif JP": {
-      "bytes": 1248664,
-      "codePointCount": 2961,
+      "bytes": 1253408,
+      "codePointCount": 2973,
       "family": "Roof Noto Serif JP",
       "file": "roof-noto-serif-jp.woff2",
       "kind": "primary-serif",
-      "sha256": "052dde7685e243925ade899496034a890e7bbb8877ddaf3c964edb00c0f1291f",
+      "sha256": "ea6ad7a18706466e7fb44bc28fa43fd9071329bc8d587c81ea21387ec62ecd96",
       "source": "NotoSerifJP.ttf",
       "sourceSha256": "2fd527ba12b6a44ec30d796d633360da0aeba6c5d4af1304ce12bb4dc15a7dfc",
       "sourceUrl": "https://raw.githubusercontent.com/google/fonts/e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7/ofl/notoserifjp/NotoSerifJP%5Bwght%5D.ttf",
@@ -210,9 +212,9 @@
     }
   },
   "strategy": "japanese-translation-corpus-variable-fonts-with-generated-script-and-symbol-fallbacks",
-  "subsetCodePointCount": 2961,
-  "targetCodePointCount": 2863,
-  "targetCodePointSha256": "22d9567aaf88e07b6299ef206c5a7a2a525904c340bde2e26b3374600e879931",
+  "subsetCodePointCount": 2973,
+  "targetCodePointCount": 2876,
+  "targetCodePointSha256": "b060c1387a2eea27addb6828728ba62e635e599bb121b812fb3d33b2c290b911",
   "toolchainSha256": "b192f1da4344abea6d8568a33b15e3ecfb6d9f8242b22257639c7cf28d4424c3",
   "uncoveredCodePointRanges": [],
   "upstreamCommit": "e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7",

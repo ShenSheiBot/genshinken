@@ -37,7 +37,7 @@ import {
 
 export const TRANSLATION_LOCALES = ["en", "ja"] as const;
 export type TranslationLocale = (typeof TRANSLATION_LOCALES)[number];
-export const TRANSLATION_STATUSES = ["draft", "review", "published"] as const;
+export const TRANSLATION_STATUSES = ["draft", "review", "reviewed", "published"] as const;
 export type TranslationStatus = (typeof TRANSLATION_STATUSES)[number];
 export const TRANSLATION_METHODS = ["agent", "human", "original"] as const;
 export type TranslationMethod = (typeof TRANSLATION_METHODS)[number];

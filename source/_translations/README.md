@@ -31,7 +31,7 @@ pair that has no on-site edition:
   editorial decision and keeps the Chinese edition reachable.
 
 Do not register a disposition merely because a draft is unfinished. Missing,
-draft, review, and published remain edition-lifecycle facts; dispositions are
+draft, review, reviewed, and published remain edition-lifecycle facts; dispositions are
 publication decisions. A source/language pair cannot have both an edition file
 and a disposition.
 
@@ -42,7 +42,7 @@ Each real edition uses YAML front matter with these fields:
 - `source_slug`, or `source_book_slug` plus `source_chapter_id`
 - language-specific chapter `slug`; the parent directory's `book.json` owns the target book route and metadata
 - `language`: `en` or `ja`
-- `status`: `draft`, `review`, or `published`
+- `status`: `draft`, `review`, `reviewed`, or `published`
 - `title`, optional source-preserving `subtitle`, and `title_breaks`
 - `excerpt`
 - structured `credits` with registry-backed `role`, `contributor_id`, and optional `scope` / `note`
@@ -65,7 +65,7 @@ source-preserving `subtitle`, and `excerpt`. These book-level values must not be
 repeated in chapter front matter.
 
 Only `published` editions enter the sitemap and reciprocal `hreflang` links.
-Draft and review files remain invisible in ordinary production builds: their
+Draft, review, and reviewed files remain invisible in ordinary production builds: their
 localized routes render the same availability page as a missing edition. For a
 local editorial preview, build and serve with `ROOF_TRANSLATION_PREVIEW=1`.
 Run `npm run verify:translations` before publication.

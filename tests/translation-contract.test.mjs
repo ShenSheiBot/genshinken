@@ -128,6 +128,8 @@ test("translation availability keeps edition lifecycle separate from absence pol
   assert.equal(translationAvailabilityState("published", false), "available");
   assert.equal(translationAvailabilityState("review", true), "preview");
   assert.equal(translationAvailabilityState("review", false), "missing");
+  assert.equal(translationAvailabilityState("reviewed", true), "preview");
+  assert.equal(translationAvailabilityState("reviewed", false), "missing");
   assert.equal(translationAvailabilityState("", false, "external-original"), "external-original");
   assert.equal(translationAvailabilityState("", false, "not-available"), "not-available");
   assert.equal(translationAvailabilityState("", false), "missing");
@@ -157,6 +159,8 @@ test("unquoted YAML dates survive the review-to-published lifecycle", () => {
 test("review editions cannot leak target routes into production language links", () => {
   assert.equal(translationEditionIsVisible("review", false), false);
   assert.equal(translationEditionIsVisible("review", true), true);
+  assert.equal(translationEditionIsVisible("reviewed", false), false);
+  assert.equal(translationEditionIsVisible("reviewed", true), true);
   assert.equal(translationEditionIsVisible("published", false), true);
 });
 
