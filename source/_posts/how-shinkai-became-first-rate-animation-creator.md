@@ -19,11 +19,11 @@ citation:
   url: "https://www.bilibili.com/read/cv2400487/"
 ---
 
-[作者] 红茶泡海苔
+[author] 红茶泡海苔
 
 ![红茶泡海苔头像](attachments/roof-archive/cv2400487/01-author-portrait-v5.png "=25%")
 
-[作者简介] 文学硕士，宅文化批评，文艺批评。
+[author-bio] 文学硕士，宅文化批评，文艺批评。
 
 > 欢迎关注作者红茶泡海苔的知乎同名账号。
 

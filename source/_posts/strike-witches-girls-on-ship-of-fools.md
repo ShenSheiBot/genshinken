@@ -20,11 +20,11 @@ citation:
   url: "https://www.bilibili.com/read/cv2509776/"
 ---
 
-[作者] Ophelia
+[author] Ophelia
 
 ![Ophelia头像](attachments/roof-archive/cv2509776/01-author-portrait-v5.png "=25%")
 
-[作者简介] 懒怠而卑微。
+[author-bio] 懒怠而卑微。
 
 > **编者按：** 尊敬的、可爱的、博识的作者君。
 
@@ -45,7 +45,7 @@ citation:
 
 今年四月份《强袭魔女》四格改动画上映，十周年之际的诸多企划或许会将这个老牌IP推进一步，“强袭魔女”到“世界魔女”，或许501统合战斗航空团作为主角的故事也会在荧幕上告一段落。
 
-[图题] 强袭魔女501部队。
+[fig] 强袭魔女501部队。
 
 ![强袭魔女501部队](attachments/roof-archive/cv2509776/02-strike-witches-501-unit.png)
 

@@ -24,13 +24,13 @@ rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-[作者] Xian Nai Bing Gan
+[author] Xian Nai Bing Gan
 
 ![Portrait of Xian Nai Bing Gan](attachments/roof-archive/cv5664193/01-author-portrait-v4.png "=25%")
 
-[作者简介] A philosophical dilettante and an anime connoisseur.
+[author-bio] A philosophical dilettante and an anime connoisseur.
 
-[图题] A face at the edge and a charged expanse of open space: a familiar composition in anime.
+[fig] A face at the edge and a charged expanse of open space: a familiar composition in anime.
 
 ![An anime girl pressed against the left edge of the frame, with a broad empty field behind her](attachments/roof-archive/cv5664193/02-opening-offset-framing-example.jpg)
 
@@ -38,7 +38,7 @@ How should we talk about animation? What, if anything, distinguishes Japanese an
 
 I want to enter those questions through the smallest possible door: not a grand theory of anime, but one recurring way of arranging a shot.
 
-[图题] Dr. Roman has almost no room to look into; most of the frame opens behind him.
+[fig] Dr. Roman has almost no room to look into; most of the frame opens behind him.
 
 ![Dr. Roman placed low and to the right in a decentered shot from Fate/Grand Order Absolute Demonic Front: Babylonia](attachments/roof-archive/cv5664193/translations/en/03-fgo-romani-offset-framing.jpg)
 
@@ -46,41 +46,41 @@ Why does this image feel so charged? Dr. Roman has been pushed into the lower-ri
 
 Once you know what to look for, you begin to see the same arrangement doing all sorts of work in Japanese animation:
 
-[图题] A presentation slide on Fate/Grand Order Absolute Demonic Front: Babylonia: bodies, feet, and faces repeatedly occupy a narrow strip at one edge.
+[fig] A presentation slide on Fate/Grand Order Absolute Demonic Front: Babylonia: bodies, feet, and faces repeatedly occupy a narrow strip at one edge.
 
 ![A slide collecting decentered framings from Fate/Grand Order Absolute Demonic Front: Babylonia](attachments/roof-archive/cv5664193/translations/en/04-anime-offset-framing-examples-01.jpg)
 
-[图题] A presentation slide on Denpa Teki na Kanojo: edge-bound faces alternate with sky, streets, railings, and other seemingly vacant spaces.
+[fig] A presentation slide on Denpa Teki na Kanojo: edge-bound faces alternate with sky, streets, railings, and other seemingly vacant spaces.
 
 ![A slide collecting decentered framings from Denpa Teki na Kanojo](attachments/roof-archive/cv5664193/translations/en/05-anime-offset-framing-examples-02.jpg)
 
-[图题] A presentation slide on I"s Pure: the same imbalance appears in an intimate conversation.
+[fig] A presentation slide on I"s Pure: the same imbalance appears in an intimate conversation.
 
 ![A slide collecting decentered framings from I"s Pure](attachments/roof-archive/cv5664193/translations/en/06-anime-offset-framing-examples-03.jpg)
 
-[图题] This illustrative magical-girl exchange keeps each speaker low and near a corner while the window and floor dominate the image.
+[fig] This illustrative magical-girl exchange keeps each speaker low and near a corner while the window and floor dominate the image.
 
 ![A lecture plate showing edge-weighted framings in a magical-girl scene](attachments/roof-archive/cv5664193/translations/en/07-anime-offset-framing-examples-04.jpg)
 
-[图题] This illustrative scene from a children’s series builds a conversation from edge-bound faces and views of an open landscape.
+[fig] This illustrative scene from a children’s series builds a conversation from edge-bound faces and views of an open landscape.
 
 ![A lecture plate showing edge-weighted framings in a children’s series](attachments/roof-archive/cv5664193/translations/en/08-anime-offset-framing-examples-05.jpg)
 
 Kyoto Animation fans may spot the habit especially quickly. It recurs across the studio’s work, and **Naoko Yamada** is one of its most conspicuous practitioners:
 
-[图题] A Kyoto Animation presentation slide distributes two seated girls, their hands, and the surrounding space across separate shots.
+[fig] A Kyoto Animation presentation slide distributes two seated girls, their hands, and the surrounding space across separate shots.
 
 ![A slide collecting decentered framings from Kyoto Animation productions directed by Naoko Yamada](attachments/roof-archive/cv5664193/translations/en/09-kyoani-yamada-offset-framing-01.jpg)
 
-[图题] A Silent Voice presses two profiles toward opposite edges.
+[fig] A Silent Voice presses two profiles toward opposite edges.
 
 ![Two decentered profile shots from A Silent Voice](attachments/roof-archive/cv5664193/10-kyoani-yamada-offset-framing-02.jpg)
 
-[图题] In A Silent Voice, feet, faces, and partial bodies are isolated against broad areas of the setting.
+[fig] In A Silent Voice, feet, faces, and partial bodies are isolated against broad areas of the setting.
 
 ![Four decentered shots from A Silent Voice](attachments/roof-archive/cv5664193/11-kyoani-yamada-offset-framing-03.jpg)
 
-[图题] A Kyoto Animation presentation slide groups three exchanges that use the frame edge to hold paired characters visually apart.
+[fig] A Kyoto Animation presentation slide groups three exchanges that use the frame edge to hold paired characters visually apart.
 
 ![Three paired exchanges from Kyoto Animation productions, each pushing the speakers toward opposite edges](attachments/roof-archive/cv5664193/12-kyoani-yamada-offset-framing-04.jpg)
 
@@ -98,7 +98,7 @@ Nothing here is difficult to photograph. A live-action director can shift the ca
 
 In *Dictionnaire théorique et critique du cinéma*, the film theorists Jacques Aumont and Michel Marie use *décadrage* for a frame that seems to have slipped away from its expected center, leaving an important narrative element near the border. That comes close to what I mean, though the French word is not always used so narrowly. Rudolf Arnheim’s discussion of visual balance in *Art and Visual Perception* gives us a simpler way to see the pressure at work:
 
-[图题] The disk sits noticeably closer to the square’s right edge than its left.
+[fig] The disk sits noticeably closer to the square’s right edge than its left.
 
 ![Arnheim’s diagram of a dark disk placed off center within a square](attachments/roof-archive/cv5664193/13-arnheim-visual-balance-diagram.png)
 
@@ -110,31 +110,31 @@ The second half matters. Geometry is not enough. A figure can stand off center i
 
 To see what decentered framing departs from, we need a baseline, not a stand-in for all live action. Classical Hollywood continuity is useful precisely because its compositional habits are so stable. Consider *Gone with the Wind*:
 
-[图题] In this confrontation, one eye of each speaker falls near the frame’s central vertical axis.
+[fig] In this confrontation, one eye of each speaker falls near the frame’s central vertical axis.
 
 ![Centered shot/reverse shots in a confrontation scene from Gone with the Wind](attachments/roof-archive/cv5664193/14-gone-with-wind-confrontation-reverse-shots.jpg)
 
-[图题] In the more intimate exchange, the faces move still closer to the center.
+[fig] In the more intimate exchange, the faces move still closer to the center.
 
 ![Centered shot/reverse shots in an intimate scene from Gone with the Wind](attachments/roof-archive/cv5664193/15-gone-with-wind-intimate-reverse-shots.jpg)
 
 Again and again, the film returns us to **centered composition**. In the confrontation, one eye of each character sits near the vertical axis. In the intimate exchange, the heads crowd that axis more closely, making the distance between the speakers seem to shrink. The scene alternates viewpoints, but every shot gives the speaker near its center an unmistakable claim on our attention.
 
-[图题] As people enter, cross, and leave, the camera shifts to keep the active figures near the center.
+[fig] As people enter, cross, and leave, the camera shifts to keep the active figures near the center.
 
 ![Three moments from a Gone with the Wind shot as the camera follows moving characters and reframes](attachments/roof-archive/cv5664193/16-gone-with-wind-moving-reframing.jpg)
 
-[图题] The moving image makes the continuous recentering easier to see.
+[fig] The moving image makes the continuous recentering easier to see.
 
 ![An animated excerpt from Gone with the Wind in which the camera follows the characters and reframes](attachments/roof-archive/cv5664193/17-gone-with-wind-camera-reframing.gif)
 
 Classical Hollywood handles movement partly by letting the camera move with it. Here, the woman in gray speaks to someone on the left, then walks toward the heroine as the camera travels right beside her. A man and woman leave on the right while another person enters from the left; the camera then moves forward and left. The shot runs for some time, but its governing principle never changes. Whenever the group rearranges itself, the camera recenters the people who matter.
 
-[图题] A cut catches the rider’s departure and redirects his movement into the depth of a new shot.
+[fig] A cut catches the rider’s departure and redirects his movement into the depth of a new shot.
 
 ![Two shots from a horseback sequence in Gone with the Wind joined by a match on action](attachments/roof-archive/cv5664193/18-gone-with-wind-horse-action-edit.jpg)
 
-[图题] Before a wall can hide the heroine, a cut places her entering a new, centered view.
+[fig] Before a wall can hide the heroine, a cut places her entering a new, centered view.
 
 ![Three shots from an interior sequence in Gone with the Wind joined around the heroine’s movement](attachments/roof-archive/cv5664193/19-gone-with-wind-interior-action-edit.jpg)
 
@@ -146,7 +146,7 @@ That preference also governs the border. Classical Hollywood continuity seldom s
 
 Filmmakers outside the classical Hollywood tradition have challenged those habits again and again, though “art cinema” is much too varied to offer a single alternative grammar. Decentered framing appears there too, often as a conspicuous feature of one film or filmmaker.
 
-[图题] One and Eight crowds faces against stone walls and squeezes people between bare earth and the frame.
+[fig] One and Eight crowds faces against stone walls and squeezes people between bare earth and the frame.
 
 ![Four decentered and incomplete compositions from One and Eight](attachments/roof-archive/cv5664193/20-one-and-eight-offset-framing.jpg)
 
@@ -154,13 +154,13 @@ Zhang Junzhao’s *One and Eight*, photographed by Zhang Yimou, is widely regard
 
 Here the framing traps people inside a punishing landscape and the conditions in which they live. It also announces a break with familiar style. Part of its force comes from refusing to look ordinary.
 
-[图题] Ida repeatedly reduces its figures to a narrow band along the bottom of the image.
+[fig] Ida repeatedly reduces its figures to a narrow band along the bottom of the image.
 
 ![Five Ida shots that press characters toward the bottom edge and leave negative space above](attachments/roof-archive/cv5664193/21-ida-offset-framing.jpg)
 
 Paweł Pawlikowski uses the device even more consistently in *Ida*. He pushes characters toward the lower edge and leaves enormous fields of negative space above them, sometimes cutting through a head. The effect is immediate and often symbolic. In the convent scenes, the space overhead makes the women seem small, pressed down by the institution around them and by their awareness of God. Figures in secular settings are often framed more conventionally, which sharpens the contrast.
 
-[图题] Cold War carries Pawlikowski’s low figures and heavy overhead space into secular settings.
+[fig] Cold War carries Pawlikowski’s low figures and heavy overhead space into secular settings.
 
 ![Three Cold War shots that leave large fields of negative space above the characters](attachments/roof-archive/cv5664193/22-cold-war-offset-framing.png)
 
@@ -172,7 +172,7 @@ These films show how forcefully live action can use decentered framing. They do 
 
 In Japanese animation, decentered framing need not announce a revolt against established style or carry one fixed symbolic meaning. It can organize a conversation, mark a hesitation, sharpen a threat, or draw two people into a moment of intimacy. What interests me is not its exclusivity but its versatility.
 
-[图题] In Revolutionary Girl Utena episode 14, the upper pair preserves look room; the lower pair closes it off.
+[fig] In Revolutionary Girl Utena episode 14, the upper pair preserves look room; the lower pair closes it off.
 
 ![Conventional and decentered shot/reverse shot patterns from Revolutionary Girl Utena episode 14](attachments/roof-archive/cv5664193/translations/en/23-utena-offset-reverse-shots.jpg)
 
@@ -180,7 +180,7 @@ The asymmetrical pages of shōjo manga offer one possible antecedent. Figures ca
 
 Episode 14 was storyboarded by Mamoru Hosoda under the name Katsuyo Hashimoto. An antagonist lures Kanae to the burial place of a hundred duelists and manipulates her into challenging the protagonist. In a single passage, Hosoda uses two forms of shot/reverse shot. The upper pair shows the characters in medium-long shot with open space before each face. The lower pair moves closer: now both characters look straight into the nearest border, while roughly two-thirds of each image lies behind them. I will call this reversal of ordinary look room a **decentered shot/reverse shot**. The phrase is descriptive, not an established industry term.
 
-[图题] Read from top to bottom: a centered frontal portrait; a three-quarter view with room ahead of the gaze; and a profile pressed against the edge it faces.
+[fig] Read from top to bottom: a centered frontal portrait; a three-quarter view with room ahead of the gaze; and a profile pressed against the edge it faces.
 
 ![Three photographs illustrating, from top to bottom, centered framing, look room, and blocked look room](attachments/roof-archive/cv5664193/24-look-room-framing-diagram.png)
 
@@ -188,7 +188,7 @@ Teaching manuals usually explain shot/reverse shot through conventions such as t
 
 The bottom photograph withholds that room. The face presses against the edge it faces, while nearly all the open space falls behind it. The result feels unstable: the gaze hits a wall, and the empty field seems to tug the subject backward.
 
-[图题] Across the lower pair, both characters look into a border rather than into the shared space implied by the upper pair.
+[fig] Across the lower pair, both characters look into a border rather than into the shared space implied by the upper pair.
 
 ![Conventional and decentered shot/reverse shot patterns from Revolutionary Girl Utena episode 14](attachments/roof-archive/cv5664193/translations/en/23-utena-offset-reverse-shots.jpg)
 
@@ -198,25 +198,25 @@ That is exactly what the lower pair does in *Utena*. Kanae realizes that the con
 
 To call a device conventional is not to call it bland or automatic. It means a director can use it deliberately without making every appearance feel like a manifesto.
 
-[图题] Read across the upper row and then the lower: a student draws lots, pauses at the edge of the classroom, reacts, and reveals the result.
+[fig] Read across the upper row and then the lower: a student draws lots, pauses at the edge of the classroom, reacts, and reveals the result.
 
 ![A five-shot Wandering Son sequence in which decentered framing interrupts a stable pattern at a moment of suspense](attachments/roof-archive/cv5664193/25-wandering-son-offset-framing.jpg)
 
 An established device can still upset the pattern of a particular sequence. In *The Sense of Order*, Ernst Gombrich argues that attention adapts to regularity; once a pattern settles in, a disturbance becomes newly conspicuous. *Wandering Son* uses decentered framing in just this way. A student draws lots for a role in a play and hopes to get Romeo. The first two images establish the action. The third abruptly strands the small figure at the edge of a nearly empty classroom, drawing out the suspense. An extreme close-up catches the reaction; the final image reveals the coveted role. The composition may be familiar in anime, but here it is the one shot that breaks rank.
 
-[图题] After the others leave, Mash hangs back. Her turned back alternates with Dr. Roman pressed against the far edge.
+[fig] After the others leave, Mash hangs back. Her turned back alternates with Dr. Roman pressed against the far edge.
 
 ![A five-shot Fate/Grand Order Absolute Demonic Front: Babylonia sequence using decentered framing as Mash stops to address Dr. Roman](attachments/roof-archive/cv5664193/translations/en/26-fgo-offset-framing-sequence.jpg)
 
 The opening example from *Fate/Grand Order Absolute Demonic Front: Babylonia* is quieter. After the others leave, Mash hangs back with Dr. Roman. Without turning around, she asks whether she can ask him something. We do not yet know the question, but we can already feel its weight. The view of Mash’s back postpones face-to-face contact, while the tight, decentered shots deny both characters the comfortable look room of an ordinary exchange. Before she says what she wants, the direction tells us that it is private and difficult.
 
-[图题] Faces alternate with power lines, an empty street, and a roadside railing; only the final wide shot restores a shared location.
+[fig] Faces alternate with power lines, an empty street, and a roadside railing; only the final wide shot restores a shared location.
 
 ![A nine-shot Denpa Teki na Kanojo sequence alternating empty locations with decentered close-ups during a murder investigation](attachments/roof-archive/cv5664193/translations/en/27-denpa-teki-na-kanojo-sequence.jpg)
 
 The suspense anime *Denpa Teki na Kanojo* pushes the discontinuity further. Two characters discuss the likely traits of a murderer. The male lead seems to be analyzing the crime, but he is also testing the heroine: could she be the killer? She refuses to give him a definite answer. Between their decentered close-ups, the sequence cuts to power lines, an empty street, and a roadside railing. These inserts do not map the space around the speakers. They break it apart, keeping us off balance as his suspicion deepens. Only when the conversation ends does a wide shot put both bodies back in the same place.
 
-[图题] In I"s Pure, an ordinary over-the-shoulder exchange gives way to isolated, edge-bound close-ups during a confession.
+[fig] In I"s Pure, an ordinary over-the-shoulder exchange gives way to isolated, edge-bound close-ups during a confession.
 
 ![A six-shot I"s Pure karaoke sequence in which decentered framing marks a confession](attachments/roof-archive/cv5664193/translations/en/28-is-pure-offset-framing-sequence.jpg)
 
@@ -224,7 +224,7 @@ Decentered framing is not confined to danger. In *I"s Pure*, four friends go to 
 
 Then he notices that their friends have left, and he sobers up at once. She asks why he wanted to know whether she likes someone, handing him a clear opening to confess. The next shot lasts forty seconds, an eternity in most television animation, as he struggles to answer. A run of decentered compositions finally carries him through the confession. Here the open margins do not threaten the pair. They shut out the social world and make a pocket of intimacy.
 
-[图题] The sequence tightens from a two-shot to Shinako’s eye, flashes into memory, and returns with her isolated from the man beside her.
+[fig] The sequence tightens from a two-shot to Shinako’s eye, flashes into memory, and returns with her isolated from the man beside her.
 
 ![A six-shot sequence from Sing “Yesterday” for Me episode 2 in which decentered framing marks Shinako’s retreat into memory](attachments/roof-archive/cv5664193/29-yesterday-wo-utatte-episode-2.jpg)
 
@@ -260,7 +260,7 @@ Cel production once made those layers literal: transparent character cels were s
 
 What the production method does supply is a plausible **affordance**. Storyboards isolate the cut; layouts make placement explicit; layers keep figure and ground adjustable; held drawings give a composition time to press on us. Together, those habits make decentered framing economical to design and easy to vary. They do not tell us who first used it, how one director learned it from another, or why comparable animation industries developed different conventions. Those historical questions would require a comparative genealogy beyond the evidence gathered here.
 
-[图题] The circle approves the straight front-and-back arrangement; the red X rejects the more diagonal version.
+[fig] The circle approves the straight front-and-back arrangement; the red X rejects the more diagonal version.
 
 ![A cropped SSSS.GRIDMAN production sketch marking a straight front-and-back staging with a circle and a diagonal staging with an X](attachments/roof-archive/cv5664193/translations/en/30-gridman-staging-note.jpg)
 
@@ -280,19 +280,19 @@ Decentered framing overlaps with those ideas but asks a narrower question. It do
 
 The negative cases matter. If every asymmetrical shot counted, the term would tell us nothing.
 
-[图题] The figures sit on the right, but the long parapet, skyline, and open field hold the establishing shot together.
+[fig] The figures sit on the right, but the long parapet, skyline, and open field hold the establishing shot together.
 
 ![A balanced establishing composition from Princess Connect! Re:Dive episode 1, with two characters grouped at the right](attachments/roof-archive/cv5664193/31-princess-connect-framing-example.jpg)
 
 Take this image from episode 1 of *Princess Connect! Re:Dive*. The two characters stand near the right edge, yet the frame feels neither pinched nor torn open. Long horizontal bands of pavement and wall lead across the image, while the sunset and skyline establish a coherent setting. The pair forms one compact group inside a balanced establishing shot. Off-center is not automatically decentered.
 
-[图题] A backward glance is answered by the man’s close-up and then by a wider view confirming that he walks behind her.
+[fig] A backward glance is answered by the man’s close-up and then by a wider view confirming that he walks behind her.
 
 ![Three shots from Snow White with the Red Hair episode 1 establishing a heroine and the man walking behind her](attachments/roof-archive/cv5664193/32-snow-white-red-hair-shot-sequence.jpg)
 
 Nor does this passage from episode 1 of *Snow White with the Red Hair* make a decentered shot/reverse shot. The heroine has little look room in the first image, but the next two shots tell us why: she is glancing back at the man who follows her. The space behind her marks his known position just outside the frame. His close-up answers her glance, and the wider view confirms the distance between them on the path. Editing turns the edge into a clear spatial cue rather than a source of pressure.
 
-[图题] The crop withholds most of Shinako’s expression while drawing attention to her nearly centered smile.
+[fig] The crop withholds most of Shinako’s expression while drawing attention to her nearly centered smile.
 
 ![A close-up from Sing “Yesterday” for Me that crops most of Shinako’s face while keeping her faint smile near the center](attachments/roof-archive/cv5664193/33-yesterday-wo-utatte-shinako-close-up.jpg)
 
@@ -300,7 +300,7 @@ This close-up from *Sing “Yesterday” for Me*, by contrast, does count. The c
 
 Geometry alone cannot make these distinctions. We need to know what the surrounding shots establish, where the story places another character, and what the cut asks us to infer. A still supplies the graphic relationship; narrative and editing decide what it does.
 
-[图题] The Matrix repeatedly blocks look room and leaves charged space behind speakers in ordinary dialogue scenes.
+[fig] The Matrix repeatedly blocks look room and leaves charged space behind speakers in ordinary dialogue scenes.
 
 ![Four examples of decentered framing in The Matrix](attachments/roof-archive/cv5664193/34-matrix-offset-framing.jpg)
 

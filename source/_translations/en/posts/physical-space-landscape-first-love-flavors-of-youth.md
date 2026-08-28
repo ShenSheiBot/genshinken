@@ -36,7 +36,7 @@ The modern idea of “romance” is a social conception of romantic love. “Rom
 
 Of course, we have no way of knowing whether “love” existed between a poor scholar traveling to the capital for the imperial examination and a young woman who spent one passionate night with him. Psychology might let us discuss some form of “affection” shared across ancient and modern times. Yet even if such feelings existed, from the standpoint of social relations and social action, the **“romance” and “romantic relationship” familiar to us today are thoroughly modern things**. It is difficult to imagine an ancient person introducing the woman beside him by saying, “This is my girlfriend.” The existence and active promotion of the “romantic relationship” first owed much to Shanghai’s “progressive women” around the turn of the last century. Many factors produced this phenomenon. It is not wrong, at the level of ideas, to see it as another effect of Western influence. But we should not overlook the enormous role played by quietly changing **physical space—understood in contrast with the world of ideas, and therefore also encompassing institutional factors.**
 
-[图题] Aurora College, a predecessor of Fudan University, was among the earlier institutions to admit women students. One member of its first cohort of women students was Yan Youyun, later the wife of Wellington Koo.
+[fig] Aurora College, a predecessor of Fudan University, was among the earlier institutions to admit women students. One member of its first cohort of women students was Yan Youyun, later the wife of Wellington Koo.
 
 ![Commemorative medal of Université l’Aurore](attachments/roof-archive/cv1530117/03-universite-laurore-medal.jpg "=33%")
 
@@ -58,7 +58,7 @@ To “tell Chinese stories well” might, in this film, mean artistically reprod
 
 But the question itself contains a major problem: what is our “everyday”? In *Origins of Modern Japanese Literature*, Kojin Karatani discusses the “discovery of landscape”: **“landscape” in the conceptual world does not exist innately. It is discovered by writers—or, put differently, it passes through a process of signification.** Landscape is not simply “there” by nature; a subject must excavate it. When we think of Japanese youth, describing its “everyday” is easy. “Trains,” “(better-looking) school uniforms,” “school festivals,” and so on compose a rich but definite “everyday landscape.” For outsiders like us, perhaps we owe all this to the workers of Japanese ACGN culture—the “discoverers of landscape.”
 
-[图题] Gray high-school life?
+[fig] Gray high-school life?
 
 ![High-school students in animation](attachments/roof-archive/cv1530117/06-gray-high-school-life.jpg)
 
@@ -76,7 +76,7 @@ Under such conditions, asking a single animated film to represent “the everyda
 
 Enough of language that sounds accusatory. This is not an accusation, but an attempt to point out the enormous differences in lived experience across generations and geography, differences that place cultural production aimed at everyone—or at young people as a whole—in a certain predicament. Even now, we do not know what the “everyday” we possess and wish to reproduce actually is. When it comes to animation depicting everyday life, we are accustomed to standing outside the shop window and “appreciating” imported “Japanese taste.” But within this “fragmented,” or simply diverse and differentiated, world of life, are we capable of discovering a “landscape” that is uniquely ours—an “everyday life of Chinese high-school students”? We shall see.
 
-[图题] Cover image by @YdPro_.
+[fig] Cover image by @YdPro_.
 
 ![Article cover: physical space, landscape, and first love](attachments/roof-archive/cv1530117/09-article-cover.png)
 

@@ -18,7 +18,7 @@ citation:
   url: "https://www.bilibili.com/read/cv19651001/"
 ---
 
-[作者] 「　」
+[author] 「　」
 
 ![「　」头像](attachments/roof-archive/cv19651001/01-author-portrait-v5.png "=25%")
 

@@ -32,11 +32,11 @@ citation:
 
 > 编者说明：本文是《Feminist Film Theory and Pretty Woman》第一章女性主义电影理论导论的上篇，下篇继续导论；原书后半的《风月俏佳人》批评实践不在本篇范围内。
 
-[图题] Feminist Film Theory and Pretty Woman
+[fig] Feminist Film Theory and Pretty Woman
 
 ![《Feminist Film Theory and Pretty Woman》书影](/attachments/roof-archive/cv16711697/figure-1.jpg "=25%")
 
-[图注] Mari Ruti著。
+[fig-note] Mari Ruti著。
 
 ### 弗洛伊德是女性主义者么？（Freud the feminist?）
 
@@ -385,11 +385,11 @@ citation:
 
 > 编者说明：本文续接《女性主义电影理论导论（上）》，完成原书第一章导论部分。原书后半的《风月俏佳人》批评实践未译，因此本篇不代表全书完译。
 
-[图题] Feminist Film Theory and Pretty Woman
+[fig] Feminist Film Theory and Pretty Woman
 
 ![《Feminist Film Theory and Pretty Woman》书影](/attachments/roof-archive/cv17018352/figure-1.jpg "=25%")
 
-[图注] Mari Ruti著。
+[fig-note] Mari Ruti著。
 
 ### 第三波女性主义的兴起
 
@@ -489,11 +489,11 @@ citation:
 
 另一方面，那些致力于性别刻板印象的人试图安慰女性，让她们放心，她们擅长所有我们社会传统上贬低的东西：情感、同理心、同情心、利他主义、直觉和慈爱。我并不是说擅长这些事情是坏事——完全不是。但是，这些品质数个世纪以来都被用来证明女性应该留在家里，照顾孩子，抚平雏鸟们褶皱的羽毛，支持男性的自我，以及一般来说，确保关系的维系。因此，在后女性主义时代，这些品质再次被认为是 “女性特有的”美德，这有点令人怀疑。让我这样说吧：告诉女性她们在情商方面比男性强，似乎是一种赞美，但这也是一种引诱，让她们在解决情感冲突方面比男性付出更多努力。
 
-[图题] 《男人来自火星，女人来自金星》
+[fig] 《男人来自火星，女人来自金星》
 
 ![约翰·格雷《男人来自火星，女人来自金星》中文版书影](/attachments/roof-archive/cv17018352/figure-2.jpg "=25%")
 
-[图注] 约翰·格雷著。
+[fig-note] 约翰·格雷著。
 
 ### 新少女风（girliness）
 

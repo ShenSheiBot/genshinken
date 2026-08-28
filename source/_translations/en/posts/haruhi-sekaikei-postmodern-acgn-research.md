@@ -62,7 +62,7 @@ For ease of analysis, I have rewritten the definition of “sekaikei” as the c
 
 Among the stories large and small across the twelve volumes of the Haruhi novels, a few seem to satisfy all three conditions in textbook fashion: “The Boredom of Haruhi Suzumiya” (I use *The Boredom* to refer to the third volume of the novels and “The Boredom of Haruhi Suzumiya” to refer to that volume’s first story, and likewise below), the ending of *The Melancholy*, the whole of *The Disappearance*, and “Endless Eight.” Of these, the story “The Boredom of Haruhi Suzumiya” is the most typical of all: Haruhi (the heroine) is disappointed by Kyon’s (the protagonist’s) performance in a baseball game (“a small relational problem”), which directly triggers the expansion of closed space (an abstract world crisis—unlike *The Melancholy*, “The Boredom of Haruhi Suzumiya” contains no concrete description of closed space whatsoever), and in the end the problem is resolved by Nagato’s superhuman powers (and not by “society”). For the other three stories, a similar “plot-summary” operation seems able to verify that they, too, satisfy all three conditions at once.
 
-[图题] The publication order of the stories in the Haruhi series, the volumes that collect them, and their media adaptations.
+[fig] The publication order of the stories in the Haruhi series, the volumes that collect them, and their media adaptations.
 
 ![A table of the publication order of the Haruhi series stories](attachments/roof-archive/cv11825483/haruhi-series-timeline.png)
 

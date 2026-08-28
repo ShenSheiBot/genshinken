@@ -20,11 +20,11 @@ rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-[作者] 秘則為花
+[author] 秘則為花
 
 ![秘則為花の肖像](attachments/roof-archive/cv4275616/01-author-portrait-v5.png "=25%")
 
-[作者简介] 「高き岸は谷となり、深き谷は丘となる」
+[author-bio] 「高き岸は谷となり、深き谷は丘となる」
 
 少年は少女を介して間接的に世界の運命とつながる。これこそ小島のセカイ系だ！（違）
 

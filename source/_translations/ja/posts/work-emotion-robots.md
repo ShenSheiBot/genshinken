@@ -23,11 +23,11 @@ updated: 2026-08-27
 format: article
 ---
 
-[作者] 秘則為花
+[author] 秘則為花
 
 ![秘則為花の肖像](attachments/roof-archive/cv4364107/01-author-portrait-v4.png "=25%")
 
-[作者简介] 「高き岸は谷となり、深き谷は丘となる」
+[author-bio] 「高き岸は谷となり、深き谷は丘となる」
 
 > 本稿は編集部で一部を短縮した。
 

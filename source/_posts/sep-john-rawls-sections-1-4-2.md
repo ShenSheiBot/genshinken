@@ -259,11 +259,11 @@ citation:
 
 其指导思想是，既然公民在根本上是平等的，那么关于正义的推理就应该从合作生产的物品应该平均分配的假定出发。那么，正义就要求任何不平等都必须使全体公民受益any inequalities must benefit all citizens，特别是必须使那些将获得最少利益的人受益must benefit those who will have the least。平等确定了基线；从那里开始，任何不平等都必须改善每个人的状况，特别是最贫困者的状况any inequalities must improve everyone’s situation, and especially the situation of the worst-off。 这些对平等和互惠优势的强烈要求strong requirements of equality and reciprocal advantage 是罗尔斯正义理论的标志。
 
-[图题] 《正义论》
+[fig] 《正义论》
 
 ![约翰·罗尔斯与《正义论》书影](attachments/roof-archive/cv8043520/01-john-rawls-and-theory-of-justice.jpg "=50%")
 
-[图注] 约翰·罗尔斯著。
+[fig-note] 约翰·罗尔斯著。
 
 ---
 

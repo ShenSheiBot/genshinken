@@ -18,11 +18,11 @@ citation:
   url: "https://www.bilibili.com/read/cv2386835/"
 ---
 
-[作者] HMS Hood
+[author] HMS Hood
 
 ![HMS Hood头像](attachments/roof-archive/cv2386835/01-author-portrait-v5.png "=25%")
 
-[作者简介] 我本可摘取繁星，却惊觉只是幻梦<br>而后从空而落，为星光焚烧殆尽的<br>是那颗名唤太阳的星星
+[author-bio] 我本可摘取繁星，却惊觉只是幻梦<br>而后从空而落，为星光焚烧殆尽的<br>是那颗名唤太阳的星星
 
 **前言：**在对其进行视觉化的过程中，进行了台词化修改。其中，吸纳了一些路人的意见，发现了自己在写作过程中出现的会造成严重后果的表述错误。我不喜欢文章编辑功能，曾发表过“错字也不改”的狂言。故发表一个新的V2。
 

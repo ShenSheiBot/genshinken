@@ -20,11 +20,11 @@ rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-[作者] Zhong Zimo
+[author] Zhong Zimo
 
 ![Portrait of Zhong Zimo](attachments/roof-archive/cv1652116/01-author-portrait-v5.png "=25%")
 
-[作者简介] Interests: ACG culture studies, gender, space, and intellectual history. An empathic observer at the margins.
+[author-bio] Interests: ACG culture studies, gender, space, and intellectual history. An empathic observer at the margins.
 
 > **Editor’s note:** Teacher Zhong is very likable.
 

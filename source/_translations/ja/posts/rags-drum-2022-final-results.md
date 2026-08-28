@@ -20,7 +20,7 @@ rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-[图题] イラスト：初鹿野凪。
+[fig] イラスト：初鹿野凪。
 
 ![拾荒戦略 Rags Drum 2022年度論考募集の結果発表ポスター](/attachments/roof-archive/cv19384728/24911bebfb2840a3a46ccc940b43008238b56a8b.jpg)
 

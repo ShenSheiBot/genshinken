@@ -20,7 +20,7 @@ citation:
   extra: "Pause and Select 原作；原视频：https://www.youtube.com/watch?v=msxD-_RZ8lk；群青七号楼志愿翻译。"
 ---
 
-[视频] 《天真与闪电》：对霸权男性气质的一种反调
+[video] 《天真与闪电》：对霸权男性气质的一种反调
 
 [播放视频：720P](attachments/wechat-video/wxv_1526612408125931525/original-1280x720.mp4 "=1280x720 11:30")
 

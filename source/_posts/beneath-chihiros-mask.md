@@ -19,11 +19,11 @@ citation:
   blogTitle: 屋顶现视研
   url: "https://www.bilibili.com/read/cv2944298/"
 ---
-[作者] 窗子
+[author] 窗子
 
 ![窗子头像](attachments/roof-archive/cv2944298/01-author-portrait-v5.png "=25%")
 
-[作者简介] 死生去留，棚头傀儡，一线断时，落落磊磊。
+[author-bio] 死生去留，棚头傀儡，一线断时，落落磊磊。
 
 ![《千与千寻》中国内地上映纪念图](attachments/roof-archive/cv2944298/02-release-card.png)
 
@@ -149,7 +149,7 @@ citation:
 
 **所以，正是千寻的到来打破了汤屋中死气沉沉的平衡。而一旦我们意识到，整个社会的秩序竟然可以如此轻易地维系在一个小女孩的真诚之上，那么我们，身为大人，又何须畏惧前路呢？**
 
-[图题] 官方海报。
+[fig] 官方海报。
 
 ![《千与千寻》官方海报](attachments/roof-archive/cv2944298/11-spirited-away-poster.jpg)
 

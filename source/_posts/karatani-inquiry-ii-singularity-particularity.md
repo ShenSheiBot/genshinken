@@ -616,7 +616,7 @@ citation:
 
 <h2 id="part-2-chapter-2-proof-of-god">第二部：关于超越论的动机｜第二章：神的证明</h2>
 
-[图题] 又是柄谷行人。
+[fig] 又是柄谷行人。
 
 ![柄谷行人](attachments/roof-archive/cv7689449/01-karatani-kojin-portrait.png "=33%")
 
@@ -799,7 +799,7 @@ subject的这一两义性是从笛卡尔“我思故我在”中产生出来的�
 
 <h2 id="part-2-chapter-3-ideas-representations">第二部：关于超越论的动机｜第三章：观念和表象</h2>
 
-[图题] 还是柄谷行人。
+[fig] 还是柄谷行人。
 
 ![柄谷行人](attachments/roof-archive/cv8456476/01-karatani-kojin-portrait.jpg "柄谷行人")
 
@@ -887,7 +887,7 @@ subject的这一两义性是从笛卡尔“我思故我在”中产生出来的�
 
 举例来说，德勒兹曾这样谈论过克尔凯郭尔的重复：“重复是单独事物的普遍性，它与作为特殊事物之一般性的一般性相对立。”（《差异与重复》）也就是说，德勒兹将“特殊性（个体）－一般性（类）”这一对概念和“单独性—普遍性”这一对观念对立起来（如图所示）。但是，正如已经明确过的那样，这几乎与斯宾诺莎区别概念和观念的做法如出一辙（然而，德勒兹在《斯宾诺莎的实践哲学》中并未关注斯宾诺莎的这一区分，反而重视了他的“共通概念”）。
 
-[图题] 特殊性－一般性与单独性－普遍性。
+[fig] 特殊性－一般性与单独性－普遍性。
 
 ![特殊性－一般性与单独性－普遍性](attachments/roof-archive/cv8456476/02-particular-general-singular-universal.png "特殊性－一般性与单独性－普遍性")
 
@@ -918,7 +918,7 @@ subject的这一两义性是从笛卡尔“我思故我在”中产生出来的�
 
 <h2 id="part-2-chapter-4-spinozas-geometry">第二部：关于超越论的动机｜第四章：斯宾诺莎的几何学</h2>
 
-[图题] 总是柄谷行人。
+[fig] 总是柄谷行人。
 
 ![柄谷行人](attachments/roof-archive/cv9422399/01-karatani-kojin-portrait.jpg "柄谷行人")
 
@@ -1154,7 +1154,7 @@ subject的这一两义性是从笛卡尔“我思故我在”中产生出来的�
 
 > 群青七号楼志愿翻译，仅供讨论学习；若有翻译问题，欢迎友善讨论与指正。
 
-[图题] 老是柄谷行人。
+[fig] 老是柄谷行人。
 
 ![柄谷行人肖像](/attachments/roof-archive/cv10030952/01-karatani-portrait.jpg)
 

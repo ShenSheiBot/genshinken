@@ -170,7 +170,7 @@ assert.match(
   "source-page handling language must be rewritten as natural reader-facing copy",
 );
 assert.doesNotMatch(
-  "[图题] 法月纶太郎",
+  "[fig] 法月纶太郎",
   publicArchiveProcessLanguage,
   "semantic media markers are consumed by the Markdown renderer, not archive process language"
 );
@@ -493,7 +493,7 @@ const STAGE_DIRECTION = /】$/u; // 演讲记录的舞台指示：【掌声】�
 // 引文出处括号：。”（《列宁全集》…）；引文以省略号收尾、后带补语括号或书名号
 // 闭合符时同属一类（〔……〕”（…）），故句读与（ 之间允许任意闭合符。
 const CITATION_PAREN = /[。！？…][”’》〉」』）】〕]*（[^（）]+）$/u;
-const MARKER_LINE = /^[[〔［]/u; // [图题]/[表注]/〔章题注〕等标记行
+const MARKER_LINE = /^[[〔［]/u; // [fig]/[table-note]/〔章题注〕等标记行
 const ATTRIBUTION_LINE = /^[—―─]/u; // 题词署名行：——某某
 const CJK_HALFWIDTH_HYPHEN = /\p{Script=Han}-[\p{Script=Han}0-9]|[0-9]-\p{Script=Han}/gu;
 const CJK_YEAR_SPAN = /\p{Script=Han}.{0,2}\d{4}\s*-\s*\d{1,4}(?!\d)|\d{4}\s*-\s*\d{1,4}(?!\d)(?=.{0,2}\p{Script=Han})/gu;

@@ -18,11 +18,11 @@ citation:
   url: "https://www.bilibili.com/read/cv4267686/"
 ---
 
-[名片] 屋顶现视研
+[card] 屋顶现视研
 
 ![屋顶现视研题签人物](attachments/roof-archive/cv4267686/01-roof-portrait-v4.png "=25%")
 
-[名片简介] 我，真理，将说话。
+[card-bio] 我，真理，将说话。
 
 > 衣食足
 >

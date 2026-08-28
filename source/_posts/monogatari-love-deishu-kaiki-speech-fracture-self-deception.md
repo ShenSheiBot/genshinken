@@ -125,11 +125,11 @@ citation:
 
 <h2 id="nisemonogatari-human-nature-authenticity">伪物语/性恶说/真伪命题</h2>
 
-[作者] 十文字
+[author] 十文字
 
 ![十文字头像](attachments/roof-archive/cv2340096/01-author-portrait-v5.png "=25%")
 
-[作者简介] 人如果想干啥就干啥多好。
+[author-bio] 人如果想干啥就干啥多好。
 
 首先，不得不坦白，这是我第一次写此类专栏，不懂得相关的技巧，也没有出彩的文笔。其中的疏漏不可避免，还请各位能够多多指正。
 

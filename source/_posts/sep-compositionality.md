@@ -31,7 +31,7 @@ citation:
 > - 逗瓣不能打公式，连居中都没有，它就是个文傻网站，我也懒得专门为它再重新编辑一遍（虽然其实也不是很多），直接放图片将就看吧。
 > - 参考文献部分请参原文：<https://plato.stanford.edu/entries/compositionality/#Bib>
 
-[图题] 本文翻译计划的交流群（原文附图）
+[fig] 本文翻译计划的交流群（原文附图）
 
 ![江之岛语义淆与煎饼果子俱乐部交流群二维码](attachments/roof-archive/cv6691318/translation-group-qr.png "=25%")
 

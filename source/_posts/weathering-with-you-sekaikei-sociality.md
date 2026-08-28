@@ -21,11 +21,11 @@ citation:
   language: zh-CN
 ---
 
-[作者] 秘则为花
+[author] 秘则为花
 
 ![秘则为花头像](attachments/roof-archive/cv3930134/01-author-portrait-v5.png "=25%")
 
-[作者简介] 高岸为谷，深谷为陵。
+[author-bio] 高岸为谷，深谷为陵。
 
 ## 1. 不完全的“世界系”
 

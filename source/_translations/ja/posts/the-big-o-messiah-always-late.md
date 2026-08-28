@@ -24,7 +24,7 @@ rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-[图题] 図版の銘は「YE GUILTY」。作中でビッグオーのモニターに現れる「YE NOT GUILTY」から NOT が抜け、「汝らに罪あり」へと意味が反転している。本稿では、この罪／無罪の揺れを手がかりに作品を読む。
+[fig] 図版の銘は「YE GUILTY」。作中でビッグオーのモニターに現れる「YE NOT GUILTY」から NOT が抜け、「汝らに罪あり」へと意味が反転している。本稿では、この罪／無罪の揺れを手がかりに作品を読む。
 
 ![赤い空の下に多数の巨大ロボットが並び、下部に「YE GUILTY」と記されたタイトル画像](attachments/roof-archive/cv8305147/01-ye-guilty-title-art.png "=100%")
 

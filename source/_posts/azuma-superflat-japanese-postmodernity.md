@@ -31,7 +31,7 @@ citation:
 
 **此文本为东浩纪于2001年四月五号在美国太平洋设计中心（Pacific design center）MOCA美术馆超扁平展上的讲座内容。基于内容和编排的考量，省略部分图例内容的翻译。本文由屋顶现视研－群青七号楼成员志愿翻译，仅供学习讨论用。**
 
-[图题] 村上隆。
+[fig] 村上隆。
 
 ![村上隆肖像](attachments/roof-archive/cv4994654/01-takashi-murakami-portrait.png "=50%")
 

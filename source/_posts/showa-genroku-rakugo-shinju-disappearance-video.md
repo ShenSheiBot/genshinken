@@ -21,7 +21,7 @@ citation:
   extra: "Pause and Select 原作；原视频：https://youtu.be/qjNHi8ECsQY；群青七号楼志愿翻译。"
 ---
 
-[视频] 《昭和元禄落语心中》与消亡
+[video] 《昭和元禄落语心中》与消亡
 
 [播放视频：720P](attachments/wechat-video/wxv_1525466737377329154/original-1280x720.mp4 "=1280x720 11:25")
 

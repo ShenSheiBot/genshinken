@@ -42,7 +42,7 @@ The scene is drab and easy to miss, which makes it perfectly at home in *Magical
 
 That may sound grand for an errand, so begin with the route itself. Mai puts on a hat and a little dress and sets out. On the way home, Anno reuses the background paintings from her outward journey (Figure 1a–d). A round trip ought to restore her to familiar ground. Instead, after a long stretch without music, a melody starts and Mai loses her way on streets she has walked countless times (Figure 1e).
 
-[图题] Figure 1. The upper row pairs Mai’s outward and return journeys through the same street and convex-mirror views (a–d). Her detour passes a broken warning sign and ends at a wall (e–g). The lower row follows the rain back through those places in reverse, from the dead end toward the park (h–k).
+[fig] Figure 1. The upper row pairs Mai’s outward and return journeys through the same street and convex-mirror views (a–d). Her detour passes a broken warning sign and ends at a wall (e–g). The lower row follows the rain back through those places in reverse, from the dead end toward the park (h–k).
 
 ![Eleven frames from *Semishigure*: Mai crosses repeated town backgrounds, wanders past a broken sign to a dead end, and rain then retraces the detour in reverse](attachments/roof-archive/cv19442841/02-figure-1.jpg?v=4785045a)
 
@@ -186,7 +186,7 @@ The change carries sadness and relief. Lyrical music begins as the kettle fades 
 
 Then Akari asks outright whether Shiho likes Hiroyuki. A silent shot/reverse-shot passage makes their mutual gaze dangerous (Figure 2a–d). Akari’s eyes do not open a window onto her thoughts. They remain visible, opaque marks that Shiho can neither meet for long nor wholly escape. The gaze gains force because the editing sustains its pressure, not because one pupil somehow penetrates another person or reveals a hidden soul.
 
-[图题] Figure 2. Top row, *To Heart* (a–d): exactly the same drawings of Akari and Shiho return at the same angles. In the middle row, from Tai Katō’s *Blood of Revenge* (1965; a′–d′), and the bottom row, from Norifumi Suzuki’s *Girl Boss Blues: Queen Bee’s Challenge* (1972; a″–d″), comparable live-action exchanges vary the faces, angles, and framing from shot to shot.
+[fig] Figure 2. Top row, *To Heart* (a–d): exactly the same drawings of Akari and Shiho return at the same angles. In the middle row, from Tai Katō’s *Blood of Revenge* (1965; a′–d′), and the bottom row, from Norifumi Suzuki’s *Girl Boss Blues: Queen Bee’s Challenge* (1972; a″–d″), comparable live-action exchanges vary the faces, angles, and framing from shot to shot.
 
 ![Three four-panel shot-reverse-shot sequences: *To Heart* exactly repeats drawings of Akari and Shiho, while the two live-action rows vary faces, angles, and framing from shot to shot](attachments/roof-archive/cv19442841/03-figure-2.jpg?v=bf4fb219)
 
@@ -242,7 +242,7 @@ The sight line exposes a precise blind spot. Kagami can face the saint before hi
 
 In the interval between images, Takahashi creates what I will call a “third eye.” It is neither an extra organ nor a grand synonym for consciousness, and it does not belong literally to Kagami or Kaname. It names an experience that editing produces for the viewer: we register another person’s presence and response even though no single shot can contain the reciprocal encounter. Repeated shot/reverse-shot passages at decisive moments in episodes 1 and 3 make that relation palpable (Figure 3).
 
-[图题] Figure 3. Upper row, episode 1 (a–c): the same frontal view of Kagami in a shirt and tie brackets a reverse shot of Kaname. Lower row, episode 3 (α–γ): the frontal composition holds while hands rise into the frame, letting touch and response register without placing both sides of the encounter in one image.
+[fig] Figure 3. Upper row, episode 1 (a–c): the same frontal view of Kagami in a shirt and tie brackets a reverse shot of Kaname. Lower row, episode 3 (α–γ): the frontal composition holds while hands rise into the frame, letting touch and response register without placing both sides of the encounter in one image.
 
 ![Two three-panel sequences from *Kagami*: episode 1 repeats Kagami’s frontal face around a reverse shot of Kaname; episode 3 holds a frontal composition while touch and a small response make an unseen encounter felt](attachments/roof-archive/cv19442841/04-figure-3.jpg?v=b16c9e64)
 

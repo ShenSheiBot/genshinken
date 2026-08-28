@@ -71,7 +71,7 @@ When Shiki and Satsuki Kurogiri first confront one another, Shiki forces herself
 
 > “Every human being is a creature with a completely different meaning. We gather only because we belong to the same species, and live only in order to turn the differences we cannot understand into the **boundary of emptiness**.”
 
-[图题] Shiki Ryougi and the “Mystic Eyes of Death Perception”
+[fig] Shiki Ryougi and the “Mystic Eyes of Death Perception”
 
 ![Shiki Ryougi holding a knife with the Mystic Eyes of Death Perception visible](attachments/roof-archive/cv1559883/05-shiki-knife-cropped.png)
 
@@ -89,7 +89,7 @@ Nasu says in an interview:
 
 > “Taiji: a concept born in ancient China and represented in the diagram of yin and yang. It conceptually grasps the state of all things: active, moving things are classified as yang (white), and their opposites as yin (black). While symbolizing opposing things such as day and night, light and darkness, male and female, it can also be called a miniature of a world in which the two affect one another and flow into one another.” (*Kara no Kyōkai* terminology dictionary)
 
-[图题] The perfect “Ryougi Shiki” and the perfect “Taiji” are necessarily connected.
+[fig] The perfect “Ryougi Shiki” and the perfect “Taiji” are necessarily connected.
 
 ![A diagram explaining the relation among Taiji, the Ryougi, and Shiki](attachments/roof-archive/cv1559883/06-taiji-cropped.png)
 

@@ -24,11 +24,11 @@ rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-[名片] Lab on Roof
+[card] Lab on Roof
 
 ![Lab on Roof title-card portrait](attachments/roof-archive/cv4267686/01-roof-portrait-v4.png "=25%")
 
-[名片简介] I, Truth, shall speak.
+[card-bio] I, Truth, shall speak.
 
 > First seek food and clothing;
 >
@@ -56,7 +56,7 @@ The medieval Lord of Misrule offers another, more limited version of the same ri
 
 Our New Year’s greeting asks us to linger at this imagined break instead of hurrying into another year. What is at stake, modestly, is whether the future arrives already written by the present. Benjamin’s Parisians fired at clock faces. We have only sentences, and whatever charge they carry comes from the past.
 
-[图题] An end-credit frame from episode 9 of *Revue Starlight*. Over the Japanese credits, a Chinese subtitle from an unidentified source reads, “I will stop the hands of the clock,” echoing Benjamin’s revolutionary image.
+[fig] An end-credit frame from episode 9 of *Revue Starlight*. Over the Japanese credits, a Chinese subtitle from an unidentified source reads, “I will stop the hands of the clock,” echoing Benjamin’s revolutionary image.
 
 ![An end-credit frame from Revue Starlight episode 9 showing several characters beneath the lyric “I’ll stop the hands of the clock”](attachments/roof-archive/cv4267686/translations/en/02-revue-starlight-episode-09.png)
 

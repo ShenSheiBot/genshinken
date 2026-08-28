@@ -23,11 +23,11 @@ updated: 2026-08-27
 format: article
 ---
 
-[作者] シエンナイ・ビンガン
+[author] シエンナイ・ビンガン
 
 ![シエンナイ・ビンガンの肖像](attachments/roof-archive/cv5664193/01-author-portrait-v4.png "=25%")
 
-[作者简介] 哲学とアニメを愛好する。
+[author-bio] 哲学とアニメを愛好する。
 
 ![人物を画面左下へ寄せ、右側に大きな余白を残したアニメの一場面](attachments/roof-archive/cv5664193/02-opening-offset-framing-example.jpg)
 

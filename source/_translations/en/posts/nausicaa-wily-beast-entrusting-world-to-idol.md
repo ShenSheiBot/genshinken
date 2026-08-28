@@ -30,7 +30,7 @@ Animals may be the richest source material for human culture. They crowd the bro
 
 Ever since the first cave paintings, we have imagined animals in two broad ways: by finding the animal in the human, or by making the animal more human. *Journey to the West* offers a classic example of the first. The pilgrimage leads the master and his disciples away from unruly appetite as they submit their animal impulses to Buddhist discipline. Yet animality need not imply degradation. In the Suwa-region legend of Kōga Saburō, a warrior becomes a serpent and takes on its divine power.[^1]
 
-[图题] An adult doujinshi based on *Is the Order a Rabbit?* (*Gochūmon wa Usagi Desu ka?*). Rabbits’ prodigious fertility made them spirits of prosperity and abundant harvests in European folklore. At Easter, springtime rebirth and Christian belief merge, yet the central figure is not Christ but the rabbit that “creates new life.” Rabbit lore plainly has an erotic side, and the modern bunny girl developed from it; the fantasy casts the wearer as “a woman ready for sex at any time.” *GochiUsa* plays the connection between rabbits and girls in an entirely wholesome register, but the series’ explosive popularity may still owe something to the rather different meanings modern fans have found in it.
+[fig] An adult doujinshi based on *Is the Order a Rabbit?* (*Gochūmon wa Usagi Desu ka?*). Rabbits’ prodigious fertility made them spirits of prosperity and abundant harvests in European folklore. At Easter, springtime rebirth and Christian belief merge, yet the central figure is not Christ but the rabbit that “creates new life.” Rabbit lore plainly has an erotic side, and the modern bunny girl developed from it; the fantasy casts the wearer as “a woman ready for sex at any time.” *GochiUsa* plays the connection between rabbits and girls in an entirely wholesome register, but the series’ explosive popularity may still owe something to the rather different meanings modern fans have found in it.
 
 ![Cover of an adult doujinshi featuring a bunny-girl version of a GochiUsa character](attachments/roof-archive/cv8622821/01-rabbit-girl-doujin.png "=33%")
 
@@ -42,7 +42,7 @@ Modern philosophy’s great rediscovery of the animal is that the line between a
 
 Seen this way, modern fantasies of superior and inferior peoples belong to the same family as the dream of conquering nature. Some scholars locate their social roots in the old opposition between the human soul and the animal body. Eurocentrism and the Hua–Yi division between a civilized Chinese center and a barbarian fringe are simply variations on the claim that humanity stands at the summit of creation. Nazi Germany was one such anthropological machine, built on superiority and domination. Even after its destruction, Iron Curtain politics, patriarchal authority, racial discrimination, environmental crisis, and religious conflict kept mocking the ideal of equality. Idealists and artists could do little more than summon avenging giants such as Godzilla into the heart of the city, let them fire their destructive beams and sweep evil away, and entrust their hopes once more to the friendship human beings ought to be capable of.
 
-[图题] The Reunion Movement logo in *Arknights*, drawn like a broken gene sequence. Biopolitics—the power to classify, manage, and expend forms of life—is the keynote of the game’s story.
+[fig] The Reunion Movement logo in *Arknights*, drawn like a broken gene sequence. Biopolitics—the power to classify, manage, and expend forms of life—is the keynote of the game’s story.
 
 ![The angular black-and-white logo of the Reunion Movement in Arknights](attachments/roof-archive/cv8622821/02-reunion-movement-logo.png "=25%")
 
@@ -56,7 +56,7 @@ The artists who confronted this question most fiercely belonged to the Shōwa ge
 
 The nonhuman protagonists of *Nausicaä* are insects and fungi. After the Seven Days of Fire destroys industrial civilization, the ecosystem they form—the Sea of Corruption—spreads across the earth. Its spores poison human lungs, and its forests consume the dwindling habitable land. Humanity clings to the edge of this insect kingdom and goes on slaughtering itself over what remains.
 
-[图题] Nausicaä confronts the intelligence inside the Crypt of Shuwa: “We are birds who, though we may spit up blood, will go on flying beyond that morning, on and on!”[^4] The “winged savior” answers a program for human perfection with an animal metaphor.
+[fig] Nausicaä confronts the intelligence inside the Crypt of Shuwa: “We are birds who, though we may spit up blood, will go on flying beyond that morning, on and on!”[^4] The “winged savior” answers a program for human perfection with an animal metaphor.
 
 ![Manga panels of Nausicaä confronting the Master of the Crypt of Shuwa](attachments/roof-archive/cv8622821/translations/en/03-nausicaa-manga-ohmu.png "=75%")
 
@@ -70,7 +70,7 @@ At the manga’s climax, Nausicaä accuses the intelligence at the center of the
 
 The Crypt is also a womb. It preserves embryos of the “new humanity” designed by the old civilization: bodies suited to the purified planet and minds supposedly more intelligent and docile than those of their ignorant, violent, acquisitive predecessors. Once the Sea has completed its work, the old humans—unable to breathe in a clean environment—will cough blood and die on the “pure blue land.” The Sea and its inhabitants will perish with them, their assignment complete. Taken literally, this ecosystem is an organic anthropological machine built to cleanse the earth by removing everyone now alive.
 
-[图题] An armed Heedra in the *Nausicaä* manga, one of the biological weapons the Doroks obtain from the Master of the Crypt, repository of the old world’s science.
+[fig] An armed Heedra in the *Nausicaä* manga, one of the biological weapons the Doroks obtain from the Master of the Crypt, repository of the old world’s science.
 
 ![Armed Heedra looming over Dorok soldiers in the Nausicaä manga](attachments/roof-archive/cv8622821/translations/en/04-nausicaa-manga-shuwa.png "=75%")
 
@@ -78,7 +78,7 @@ Seen through humanist eyes, the plan has the grandeur of something like the Huma
 
 She refuses. Beneath the language of penance, she recognizes the same old arrogance, still intact. Whether it speaks for the old humans or the new, the Crypt assumes that humanity is the sovereign subject of the world. Everything else is raw material to be redesigned or destroyed. Its artificial organisms do not end war; they accelerate it. Heedra supersoldiers, infant Ohmu used as decoys, and a gigantic, all-devouring slime mold fall into human hands and feed the cycle of revenge. Even the wasteland’s endless wars serve the program, because they hasten both the spread of the Sea and the extinction of the old race.
 
-[图题] “The sympathy and love of the Ohmu were born from the depths of nothingness.… Life is the light that shines in the darkness.”[^7]
+[fig] “The sympathy and love of the Ohmu were born from the depths of nothingness.… Life is the light that shines in the darkness.”[^7]
 
 ![Nausicaä and the Master of the Crypt arguing over life, nihilism, and the Ohmu](attachments/roof-archive/cv8622821/translations/en/05-nausicaa-life-in-darkness.png "=75%")
 
@@ -98,7 +98,7 @@ The final confrontation at Shuwa is thus a clash between two kinds of hope. The 
 
 The swarm that overwhelms civilization is only one of Miyazaki’s images of nature overwhelming human mastery. The radiant Forest Spirit of *Princess Mononoke* and the flood in *Ponyo* likewise bring human authority to its knees. Miyazaki reveres the animal other while landing glancing, sometimes gleeful, blows on human self-importance. *Nausicaä* also bears the imprint of the Cold War. The Seven Days of Fire is thermonuclear war carried to its endpoint; the wasteland is divided between Torumekia in the west and Dorok in the east; the small Valley of the Wind, a vassal on the edge of the Sea, recalls Japan under American occupation. Against the two blocs’ endless killing, the friendship of the insects becomes a rebuke. War is the anthropological machine in its highest gear: everyone inside it becomes either a tool or an animal marked for slaughter.
 
-[图题] In *Weathering with You*, a story steeped in sacrifice and distrustful of human mastery, Makoto Shinkai finally grants Miyazaki’s old wish to let a great flood swallow Tokyo.
+[fig] In *Weathering with You*, a story steeped in sacrifice and distrustful of human mastery, Makoto Shinkai finally grants Miyazaki’s old wish to let a great flood swallow Tokyo.
 
 ![Japanese theatrical poster for Weathering with You, showing its protagonists beneath a rain-filled sky](attachments/roof-archive/cv8622821/07-weathering-with-you-poster.jpg "=33%")
 
@@ -110,7 +110,7 @@ The Cold War’s constant nuclear threat has receded from more recent animal sto
 
 Kunihiko Ikuhara studied stage arts before moving, like Miyazaki, into animation, where he brought a theatrical sensibility to the medium. He has not directed many works, but that intensely personal body of work is central to the visual language of Heisei anime. Together with his close friend Hideaki Anno’s *Neon Genesis Evangelion*, Ikuhara’s *Revolutionary Girl Utena* helped define the medium’s fin-de-siècle imagination. In *Yurikuma Arashi* (2015), four years after *Mawaru Penguindrum*, he returned to animal themes.
 
-[图题] The three principal characters of *Yurikuma Arashi*: Lulu (left), Kureha (center), and Ginko (right). As in *GochiUsa*, once young women are given animal motifs, even the most wholesome story seems to acquire an erotic charge forever on the verge of breaking the surface.
+[fig] The three principal characters of *Yurikuma Arashi*: Lulu (left), Kureha (center), and Ginko (right). As in *GochiUsa*, once young women are given animal motifs, even the most wholesome story seems to acquire an erotic charge forever on the verge of breaking the surface.
 
 ![The three principal girls on the sixth Yurikuma Arashi home-video cover](attachments/roof-archive/cv8622821/08-yurikuma-arashi-cover.jpg "=33%")
 
@@ -130,7 +130,7 @@ After Kureha is separated from Ginko in childhood, Sumika becomes her closest fr
 
 Her answer appears through Reia, her messenger, in “The Moon Girl and the Forest Girl,” a fairy tale Kureha’s mother wrote for her. The moon is the human world, the forest the world of bears. To meet, the two girls must pass a divine test: they must shatter the “I” in the mirror. The image belongs as much to fairy tale as to Lacan. When the ego recognizes itself in a reflection, it forms a self for whom the world is organized as “for me,” then takes that self as the measure of everything else. Other beings are admitted only if they can be made into versions of the self—alter egos that the self can absorb and possess.
 
-[图题] The Invisible Storm made visible: the Exclusion Ceremony turns ostracism into an app, surrounding each voter with the names of those eligible to be cast out.
+[fig] The Invisible Storm made visible: the Exclusion Ceremony turns ostracism into an app, surrounding each voter with the names of those eligible to be cast out.
 
 ![A student using the phone-based Exclusion Ceremony in Yurikuma Arashi](attachments/roof-archive/cv8622821/10-yurikuma-arashi-scene.png "=75%")
 
@@ -140,7 +140,7 @@ Ginko takes the opposite route. She masters her own desire to devour humans, sur
 
 Kureha then makes another wish. This time the Moon Girl breaks the mirror. During the Exclusion Ceremony that the human students convene against Ginko, Kureha becomes a bear and kisses Ginko in her human form. She does not pull the other into her own category; she gives up the safety of that category and crosses into the other’s place. In Levinas’s severe language, she becomes the other’s hostage. She steps in front of the rifle aimed at Ginko and answers love with unlimited responsibility.
 
-[图题] The famous final scene and the conclusion of *Yurikuma Arashi*: the Moon Girl shatters the “self” in the mirror, breaks free of the solipsism of friendship among one’s own kind, and turns to face the other.
+[fig] The famous final scene and the conclusion of *Yurikuma Arashi*: the Moon Girl shatters the “self” in the mirror, breaks free of the solipsism of friendship among one’s own kind, and turns to face the other.
 
 ![A riflewoman framed by flying mirror shards in the Yurikuma Arashi finale](attachments/roof-archive/cv8622821/11-yurikuma-arashi-transformation.png "=75%")
 
@@ -152,7 +152,7 @@ TATSUKI, whose birth year has not been made public, belongs to the millennial ge
 
 Miyazaki’s politics shifted between the eras, and he became increasingly explicit about distancing himself from the left. A Heisei office worker—or a student headed for office life—might see society as miserable and resistance as futile, but the screen could still offer a passage into an isekai harem full of animal-girl wives and free of ordinary demands. Fantasy makes that domesticated, petlike version of “animal life” just bearable enough. It is a caustic generational portrait: the hard-bitten “men of Shōwa” give way to Heisei’s exhausted, escapist otaku. By the end of the era, the immense and noble alien beings of Miyazaki’s early-Heisei apocalypse have shrunk into lovably dim animal girls for an exhausted office worker to collect on a phone. *Kemono Friends* emerged from this change in scale and mood.
 
-[图题] The transformation of Heisei’s animal characters: from the fearsome, noble giants of early Heisei to the adorably dim animal girls displayed for office workers at the era’s end.
+[fig] The transformation of Heisei’s animal characters: from the fearsome, noble giants of early Heisei to the adorably dim animal girls displayed for office workers at the era’s end.
 
 ![Nausicaä beside an Ohmu contrasted with Serval and Kaban from Kemono Friends](attachments/roof-archive/cv8622821/12-posthuman-animal-friends-comparison.jpg "=75%")
 
@@ -164,7 +164,7 @@ Levinas attacked the sovereignty of the Cartesian subject—the world revolving 
 
 Derrida begins elsewhere: naked in a bathroom under the gaze of his cat. His embarrassment matters. An object cannot look back, but this animal does. The philosopher discovers himself becoming an object inside another creature’s world. In *The Animal That Therefore I Am*, he uses the encounter to approach the animal as an other whose difference cannot be absorbed into a general category.[^15]
 
-[图题] Derrida’s cat, recast as a cat-eared girl facing cat-shaped morsels: “We look at them, and they look back at us.”
+[fig] Derrida’s cat, recast as a cat-eared girl facing cat-shaped morsels: “We look at them, and they look back at us.”
 
 ![A blue-haired cat-eared girl peering at small cat-shaped morsels on a plate](attachments/roof-archive/cv8622821/13-kizuna-ai-eating.png "=75%")
 
@@ -176,7 +176,7 @@ On the other, every Friend is different. Each derives from a distinct species, a
 
 For Levinas, the other takes ethical priority over me; I become a responsible subject by answering that claim. Kaban learns what kind of animal she is only through the animals she meets.[^17] Japari Park is a society that welcomes the stranger. Swimming, flying, digging, and hunting distinguish one Friend from the next, but those differences become grounds for cooperation and admiration rather than rank. Kaban seems to possess no special ability, yet no one excludes her. Only among these animal others does she discover the specifically human ability to combine their knowledge and make a world.
 
-[图题] The volcanic setting of *Kemono Friends* echoes Disney’s *Brother Bear*: in both, transformation opens the way to love across species.
+[fig] The volcanic setting of *Kemono Friends* echoes Disney’s *Brother Bear*: in both, transformation opens the way to love across species.
 
 ![The fiery mountain above the clouds in Kemono Friends](attachments/roof-archive/cv8622821/14-kemono-friends-volcano.png "=75%")
 
@@ -198,7 +198,7 @@ Keiki Haniyasushin’s profile gives her “the ability to create idols.” This
 
 Artificial intelligence is itself a human-made system with some capacity for self-organization and creativity. The idea of Kizuna AI, the cheerfully fallible “Ai-chan,” replacing humanity was comic in 2019. The possibility of strong AI overturning human supremacy was not; science fiction had rehearsed that thought experiment for decades. If humans lost their throne, would they willingly kneel before a superior intelligence and become its servants? Of course not. Anthropocentrism therefore contains a trap. If greater power gives humans the right to conquer animals, then a still greater intelligence may conquer humans by the same rule. If we may trample animal dignity, on what grounds can we object when a machine tramples ours?
 
-[图题] Pixiv ID 84264964.
+[fig] Pixiv ID 84264964.
 
 ![Fan illustration of Keiki Haniyasushin amid her army of haniwa idols](attachments/roof-archive/cv8622821/16-wily-beast-and-weakest-creature-art.jpg "=75%")
 
@@ -208,7 +208,7 @@ The triangle—animal, human, artificial intelligence—is now in plain view. Th
 
 The idols are haniwa, terracotta figures placed around burial mounds in ancient Japan. Made to accompany human beings into death, these artificial figures acquire new life as Keiki’s soldiers. ZUN’s inspired joke is material as well as mythological: clay figurines and computer chips both depend on compounds of silicon. A single element runs from the ritual technologies of antiquity to the machine intelligence of the present.
 
-[图题] The Beast Metropolis appears as a corridor of screens and circuitry. ZUN, too, could not resist the games industry’s well-worn cyberpunk formula.
+[fig] The Beast Metropolis appears as a corridor of screens and circuitry. ZUN, too, could not resist the games industry’s well-worn cyberpunk formula.
 
 ![Gameplay from Wily Beast and Weakest Creature set in the neon corridors of the Beast Metropolis](attachments/roof-archive/cv8622821/17-wily-beast-gameplay.jpg "=75%")
 
@@ -222,7 +222,7 @@ The law of predation is a cage that anthropocentrism closes around humanity itse
 
 That circuit is the hell *Wily Beast* depicts. The animal spirits cage the humans in the Primate Spirit Garden, then find themselves expelled by the runaway machine army that the Garden has produced. They suffer the consequence of their own law. In the mirror, their faces are ours.
 
-[图题] Artificial intelligence, manufactured idols, and a metropolis ruled by predation: the combination sent conspiracy-minded *Touhou* fans back to the “Kizuna AI clone” controversy, when several new performers appeared under a single virtual identity.
+[fig] Artificial intelligence, manufactured idols, and a metropolis ruled by predation: the combination sent conspiracy-minded *Touhou* fans back to the “Kizuna AI clone” controversy, when several new performers appeared under a single virtual identity.
 
 ![Thumbnail showing several versions of Kizuna AI under the title Multiple](attachments/roof-archive/cv8622821/18-kizuna-ai-multiple-thumbnail.jpg "=75%")
 
@@ -236,7 +236,7 @@ In philosophy, the animal is humanity’s absolute other: another living being r
 
 It would be too easy, however, to accuse these creators of cowardice for “entrusting the world to idols”: asking a god to answer, a hero to lead, or an artificial mind to relieve us of judgment. The animal question really is difficult. God does not know the answer, and neither does AI. Perhaps we can learn it only slowly, through the gaze we exchange with animals—and through the changes that gaze demands of us.
 
-[图题] A meeting of gazes between “children of the dragon.” The dragon is no ordinary “animal” but an imaginary creature conceived by ritual specialists in ancient agrarian society as they observed astronomical and meteorological phenomena. In ZUN’s customary mythological stew, the animal faction’s two great leaders are both “children of the dragon” from Chinese mythology: the jidiao (Japanese: Kicchō) and the taotie. In the West, dragons are often associated with wealth through their hoards; in China, the dragon became the supreme animal emblem of power in feudal society. The Animal Realm is a funhouse mirror for human political intrigue, so placing the Chinese dragon and its kin in *Wily Beast*’s political struggle feels only natural. Drawn by the author’s friend 竹艸, Pixiv ID 2599407.
+[fig] A meeting of gazes between “children of the dragon.” The dragon is no ordinary “animal” but an imaginary creature conceived by ritual specialists in ancient agrarian society as they observed astronomical and meteorological phenomena. In ZUN’s customary mythological stew, the animal faction’s two great leaders are both “children of the dragon” from Chinese mythology: the jidiao (Japanese: Kicchō) and the taotie. In the West, dragons are often associated with wealth through their hoards; in China, the dragon became the supreme animal emblem of power in feudal society. The Animal Realm is a funhouse mirror for human political intrigue, so placing the Chinese dragon and its kin in *Wily Beast*’s political struggle feels only natural. Drawn by the author’s friend 竹艸, Pixiv ID 2599407.
 
 ![Two figures facing a mass of dragons in a monochrome illustration](attachments/roof-archive/cv8622821/19-dragon-descendants-illustration.png "=50%")
 

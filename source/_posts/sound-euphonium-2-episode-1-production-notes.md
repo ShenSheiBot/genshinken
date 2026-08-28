@@ -59,7 +59,7 @@ citation:
 
 还有不少地方的好众所周知。在音响监督的指导下，黑泽朋世越发熟练与自然的表演，让久美子和丽奈的化学反应依旧得到了保留，让我很是期待后续。目前看来，九美子与丽奈的感情线的延续很可能会让第二季的质量超过第一季——当两人在一起时会有意外的亲密感，时不时的随便小打小闹更能体现舒适感这一点。对上季的小回忆也能让我爽到，这么想又能看到久丽二人发一整季的糖给我兴奋，真是等不及了！
 
-[图题] “迟到十分钟”。
+[fig] “迟到十分钟”。
 
 ![花火大会场景中字幕为“迟到十分钟”的画面](attachments/roof-archive/cv7127720/07-ten-minutes-late.png)
 
@@ -81,7 +81,7 @@ citation:
 
 ![观众以《无彩限的怪灵世界》画面对比藤田春香演出风格的推文](attachments/roof-archive/cv7127720/10-phantom-world-fujita-direction-tweet.png)
 
-[图题] 藤田视角下的丽奈。
+[fig] 藤田视角下的丽奈。
 
 ![藤田春香演出视角下的丽奈画面组合](attachments/roof-archive/cv7127720/11-reina-through-fujita-direction.png)
 

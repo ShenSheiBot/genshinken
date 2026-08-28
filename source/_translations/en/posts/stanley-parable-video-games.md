@@ -24,11 +24,11 @@ format: article
 
 ![The opening view of Office 427 in *The Stanley Parable*](attachments/roof-archive/cv8322667/00-opening-office.jpg?v=3d0554e3)
 
-[作者] Xin Ba Bu Chi Su
+[author] Xin Ba Bu Chi Su
 
 ![Portrait of Xin Ba Bu Chi Su](attachments/roof-archive/cv8322667/01-author-portrait-v5.png "=25%")
 
-[作者简介] “Humbly admit your mistakes, reflect on them deeply, and never change your ways.”
+[author-bio] “Humbly admit your mistakes, reflect on them deeply, and never change your ways.”
 
 > The Stanley Parable is a first person exploration game. You will play as Stanley, and you will not play as Stanley. You will follow a story, you will not follow a story. You will have a choice, you will have no choice. The game will end, the game will never end. Contradiction follows contradiction, the rules of how games should work are broken, then broken again. This world was not made for you to understand. —*The Stanley Parable*, official game description
 
@@ -44,13 +44,13 @@ Unlike ordinary games, which emphasize **imitating reality**, metagames put more
 
 Open the game and we are met with the menu screen, and this menu screen is already full of metagame elements. Above the title *The Stanley Parable* runs a small line, “You are playing,” and the computer screen beside it is in fact the player’s own screen, with screen nested inside screen all the way down. This little trick already hints that this will be a **game about games**[^ref-10]. Better still, **we can even count the player’s real-world computer screen as one more layer of the nesting: the boundary between the real world and the game world begins to blur here.**
 
-[图题] The game’s menu screen.
+[fig] The game’s menu screen.
 
 ![The main menu of *The Stanley Parable* with its recursively nested computer screens](attachments/roof-archive/cv8322667/03-main-menu.png)
 
 After most endings are completed, the game restarts automatically, and the loading screen reads “The end is never the end,” hinting at **the falseness of the game’s endings**.[^ref-9]
 
-[图题] The loading screen after an ending is completed.
+[fig] The loading screen after an ending is completed.
 
 ![A loading screen bearing the words “The end is never the end”](attachments/roof-archive/cv8322667/04-loading-screen.png)
 
@@ -74,7 +74,7 @@ When we leave the room, we find that the narration is still following us, delive
 
 This tension reaches its first peak when we arrive at the first **explicit** choice, a hall with two doors. The Narrator directs us to enter the left door, and if we follow his instructions all the way, we will reach what this essay calls the “Deception” Ending (the Freedom Ending). Along this route the Narrator always keeps a distance from our story that matches his omniscient perspective, while still maintaining the necessary tension. In the boss’s office, the Narrator announces the boss’s secret code as if no one else were there, and once the player has entered the correct code, his patch-up explanation is: “Yet incredibly, by simply pushing random buttons on the keypad, Stanley happened to input the correct code by sheer luck. Amazing.”
 
-[图题] A screenshot of the game’s story.
+[fig] A screenshot of the game’s story.
 
 ![A story moment with Stanley in an office corridor](attachments/roof-archive/cv8322667/08-story-screenshot.png)
 

@@ -18,11 +18,11 @@ citation:
   url: "https://www.bilibili.com/read/cv4145943/"
 ---
 
-[作者] Austoria
+[author] Austoria
 
 ![Austoria头像](attachments/roof-archive/cv4145943/01-author-portrait-v5.png "=25%")
 
-[作者简介] 立志成为能让别人冲的人。
+[author-bio] 立志成为能让别人冲的人。
 
 > **编者按：** Austoria 做到了。
 

@@ -18,11 +18,11 @@ citation:
   url: "https://www.bilibili.com/read/cv2503381/"
 ---
 
-[作者] 芳草
+[author] 芳草
 
 ![芳草头像](attachments/roof-archive/cv2503381/01-author-portrait-v5.png "=25%")
 
-[作者简介] 在思的林中路之中，我始终茫茫无措……
+[author-bio] 在思的林中路之中，我始终茫茫无措……
 
 ## 正文
 

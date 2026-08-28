@@ -18,7 +18,7 @@ citation:
   url: "https://www.bilibili.com/read/cv19384728/"
 ---
 
-[图题] 插画：初鹿野凪。
+[fig] 插画：初鹿野凪。
 
 ![拾荒战略Rags Drum 2022年度征文结果海报](/attachments/roof-archive/cv19384728/24911bebfb2840a3a46ccc940b43008238b56a8b.jpg)
 

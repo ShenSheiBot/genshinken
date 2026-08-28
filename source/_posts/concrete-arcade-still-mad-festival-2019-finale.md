@@ -17,7 +17,7 @@ citation:
   url: "https://www.bilibili.com/read/cv5674115/"
 ---
 
-[图题] 竖海报BY一般有趣。
+[fig] 竖海报BY一般有趣。
 
 ![“混凝土拱廊街”静止系MAD祭典2019竖海报](attachments/roof-archive/cv5674115/01-vertical-poster.png)
 
@@ -549,7 +549,7 @@ citation:
 
 ## 五、关于混凝土拱廊街、屋顶现视研、ZERO MAD TEAM
 
-[图题] 横海报，BY一般有趣。
+[fig] 横海报，BY一般有趣。
 
 ![“混凝土拱廊街”静止系MAD祭典2019横海报](attachments/roof-archive/cv5674115/02-horizontal-poster.png)
 

@@ -15,4 +15,4 @@
 - B站复核：未发现同时满足标题、正文锚点、责任链与 canonical URL 的精确重复；本条不建立 B站重复关系。
 - 删除/保留：去除微信平台投稿号召等分发噪声；保留正文、来源说明、许可信息、图片 placement 与脚注。
 - 2026-08-16 结构复核：旧清洗稿把多组相邻 raw 段落压成巨型段落，并将拆开的版权题署误判为三级标题；现按 raw DOM 边界恢复段落、章题、图片版权题署与结论标题，正文文字和图片次序不变。
-- 2026-08-16 二次逐篇验收：补回原刊《动画卢卡 vol.2》及编辑夜深人静，纠正把正文参考书《思想地图 vol.4》误当原刊的 citation；11 组版权说明改为语义 figure，逐图复核并纠正错误 alt；恢复 3 组段落边界与注释前 `<hr>`；15 条脚注按 raw 可见文本消除旧转换器引入的空格和拆字。`[图题]` 必须在 Markdown 源中先于图片，渲染器据此生成图片后的 `figcaption`，并非颠倒公开版图题关系。脚注中的年份空格、页码连接号等仅作本站既定机械排印规范化；正文结论标题保留 raw 的「──」。旧 GUI ledger 和早期本地快照属于历史检查点，当前 raw/body、专篇说明及 preservation contract 才是本轮验收绑定；primary canonical 本身无需进入只登记 duplicate/superseded/merged 来源的 `source-dispositions.json`。
+- 2026-08-16 二次逐篇验收：补回原刊《动画卢卡 vol.2》及编辑夜深人静，纠正把正文参考书《思想地图 vol.4》误当原刊的 citation；11 组版权说明改为语义 figure，逐图复核并纠正错误 alt；恢复 3 组段落边界与注释前 `<hr>`；15 条脚注按 raw 可见文本消除旧转换器引入的空格和拆字。`[fig]` 必须在 Markdown 源中先于图片，渲染器据此生成图片后的 `figcaption`，并非颠倒公开版图题关系。脚注中的年份空格、页码连接号等仅作本站既定机械排印规范化；正文结论标题保留 raw 的「──」。旧 GUI ledger 和早期本地快照属于历史检查点，当前 raw/body、专篇说明及 preservation contract 才是本轮验收绑定；primary canonical 本身无需进入只登记 duplicate/superseded/merged 来源的 `source-dispositions.json`。

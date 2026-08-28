@@ -24,11 +24,11 @@ rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-[作者] Shi Zai Gou Zi
+[author] Shi Zai Gou Zi
 
 ![Portrait of Shi Zai Gou Zi](attachments/roof-archive/cv4808363/01-author-portrait-v4.png "=25%")
 
-[作者简介] “In an age without a world, spread meaningless love.”
+[author-bio] “In an age without a world, spread meaningless love.”
 
 Its strangeness is part of the invitation: what might affection look like when there is no stable world to contain it or give it a purpose?
 
@@ -38,7 +38,7 @@ Asada’s distinction is deliberately stark. The paranoid type belongs to modern
 
 Hence Asada’s “schizo-kids.” The child in this model pours energy into whatever adults dismiss as pointless, drops one obsession and rushes toward the next, and has not yet accepted a permanent social identity. Asada’s ideal was a Deleuzian “becoming-child,” not an adult pretending to be young. In a becoming, neither side remains intact: the adult changes, and so does the idea of what a child can be.
 
-[图题] Kojin Karatani and Akira Asada, Complete Dialogues.
+[fig] Kojin Karatani and Akira Asada, Complete Dialogues.
 
 ![Japanese cover of Complete Dialogues by Kojin Karatani and Akira Asada](attachments/roof-archive/cv4808363/02-karatani-asada-dialogue-cover.png "=25%")
 
@@ -48,7 +48,7 @@ In one of the collected dialogues between Kojin Karatani and Asada, a “player�
 
 That wandering dwelling might have been designed for *Teekyu*. The series follows Yuri, Kanae, Marimo, and Nasuno, four members of a high-school tennis club. Kanae’s grandmother lives in the Egyptian desert. In episode two, a waterslide deposits Kanae and Marimo in a stranger’s house, which they promptly make themselves at home in. Nasuno is so rich that almost anywhere is either her home or her property. A cute alien girl occupies Marimo’s house and turns it into an uncanny realm. By season four, all four girls have drifted out to sea and stayed there for a surprisingly long time.
 
-[图题] The four members of Teekyu’s tennis club, briefly headed in the same direction.
+[fig] The four members of Teekyu’s tennis club, briefly headed in the same direction.
 
 ![Yuri, Kanae, Marimo, and Nasuno running toward their school](attachments/roof-archive/cv4808363/03-teekyu-school-scene.png)
 
@@ -58,7 +58,7 @@ Subject matter alone does not determine a story’s structure. Tennis matters he
 
 Atsushi Sasaki detects a hesitation in Asada’s *Structure and Power* that has nearly disappeared by *A Theory of Escape*. That hesitation leaves room for questions that Asada later hurries past when he embraces the schizo-kid as a political model. How does anyone actually escape a fixed order? Once they do, what stops the new position from hardening into an order of its own? A schizo-kid can always become paranoid again.
 
-[图题] Akira Asada, Structure and Power: Beyond Semiotics.
+[fig] Akira Asada, Structure and Power: Beyond Semiotics.
 
 ![Japanese cover of Akira Asada’s Structure and Power: Beyond Semiotics](attachments/roof-archive/cv4808363/04-structure-and-power-cover.png "=33%")
 
@@ -72,7 +72,7 @@ I say that as a devoted fan, not as someone itching to tear the series down. Wha
 
 Even the episode titles reveal the impulse to preach. The following examples are English streaming titles, so they do not prove the exact tone of the Japanese: episode 17, “Sons Only Take After Their Father’s Negative Attributes”; episode 22, “Marriage Is Prolonging an Illusion for Your Whole Life”; episode 25, “A Shared Soup Pot Is a Microcosm of Life”; and episode 28, “Good Things Never Come in Twos (but bad things do).” This is how many Anglophone viewers encounter the series: life advice delivered with a shrug. The lesson comes not from an elder behind a lectern but from a disreputable friend sprawled on the sofa. The joke does not undermine the moral. It slips the moral past our defenses.
 
-[图题] Episode 22’s Japanese title card, shown here with a Chinese subtitle. Its English streaming title is “Marriage Is Prolonging an Illusion for Your Whole Life.”
+[fig] Episode 22’s Japanese title card, shown here with a Chinese subtitle. Its English streaming title is “Marriage Is Prolonging an Illusion for Your Whole Life.”
 
 ![Gintama episode 22 title card reading “Marriage Is Prolonging an Illusion for Your Whole Life”](attachments/roof-archive/cv4808363/translations/en/05-gintama-marriage-title-card.png)
 
@@ -86,7 +86,7 @@ Deleuze and Guattari call this kind of linkage “connective synthesis,” the g
 
 At first, that rhythm is *Gintama*’s great strength. It begins to fail—at least for me—when the serious arcs have accumulated so much grief, sacrifice, and political consequence that the comedy’s effortless resets strain belief. This is not a ledger in which one joke cancels one tragedy. The problem is cumulative. The higher the historical plot pushes the emotional stakes, the more trivial the next return to daily life can feel. Yet every clean reset also makes the previous declaration of irreversible consequence ring a little hollower.
 
-[图题] A coordinated portrait draws some of Gintama’s enormous cast into a single ensemble.
+[fig] A coordinated portrait draws some of Gintama’s enormous cast into a single ensemble.
 
 ![An ensemble of Gintama characters posed together](attachments/roof-archive/cv4808363/06-gintama-ensemble.png)
 
@@ -106,7 +106,7 @@ The paradox makes *Gintama* more fragile as its grand narrative grows stronger. 
 
 Imagine an actor performing a boardroom drama and a bedroom farce on the same stage while the crew changes the set around him. Eventually he wanders into the farce without stopping his climactic boardroom speech. Arataka Reigen, the *Mob Psycho 100* con man, turns such frantic role-switching into comedy: he survives by changing personas before anyone can inspect the join. For Reigen the visible seam is the joke. In *Gintama*’s gravest arcs, it is the strain the story cannot always conceal.
 
-[图题] A character sheet for Arataka Reigen, whose quick changes of pose and persona are part of the joke.
+[fig] A character sheet for Arataka Reigen, whose quick changes of pose and persona are part of the joke.
 
 ![Japanese character sheet showing Arataka Reigen in several poses and expressions](attachments/roof-archive/cv4808363/07-reigen-character-sheet.png)
 
@@ -114,7 +114,7 @@ One of *Gintama*’s ending themes recasts the same problem as a question about 
 
 The still below belongs to the other register. Kagura and Shinpachi grin while Gintoki looks exhausted beneath Sadaharu’s paw. Daily life wins this frame, even if it cannot escape the larger story.
 
-[图题] Everyday life wins the frame, if not the larger story.
+[fig] Everyday life wins the frame, if not the larger story.
 
 ![Kagura and Shinpachi smiling while an exasperated Gintoki is pinned beneath Sadaharu’s paw](attachments/roof-archive/cv4808363/08-gintama-serious-faces.png)
 
@@ -124,7 +124,7 @@ None of this makes *Gintama* less than an excellent work. Its formal failure is 
 
 Tennis gives *Teekyu* a modest organizing premise, not a destiny. Its story is small not because tennis is inherently trivial, but because no national or historical future rests on these matches. Then, within that local frame, each gag breaks loose from the rule, role, or cause the previous gag established. The series escapes the tree and refuses to plant another.
 
-[图题] A cooking duel veers into a ritual-suicide gag: Yuri serves as the chef’s “second,” the assistant poised to deliver the final stroke.
+[fig] A cooking duel veers into a ritual-suicide gag: Yuri serves as the chef’s “second,” the assistant poised to deliver the final stroke.
 
 ![A Teekyu cooking duel in which Yuri raises a sword behind a kneeling chef and says, “I’ll act as your second”](attachments/roof-archive/cv4808363/translations/en/09-teekyu-cooking-scene.png)
 
@@ -140,7 +140,7 @@ There is no steady development here, only becoming. In volume 15, one of the gir
 
 None of this abolishes narrative. In the haunted-art-museum episode, the four girls enter the world inside a painting and become trapped in a mysterious man’s labyrinthine gallery. The episode gives them a setting, a danger, and a goal. Then one of them shrugs: “Come to think of it, this is only an anime—and one that barely moves. Whatever. Let’s go.” The line does not rescue them from the gallery. It makes the episode stop caring about the trap, and the girls simply move on.
 
-[图题] The opening credits return the girls to the tennis court, their nominal point of origin.
+[fig] The opening credits return the girls to the tennis court, their nominal point of origin.
 
 ![The four Teekyu girls on a tennis court beneath Japanese opening credits](attachments/roof-archive/cv4808363/10-teekyu-tennis-opening.png)
 

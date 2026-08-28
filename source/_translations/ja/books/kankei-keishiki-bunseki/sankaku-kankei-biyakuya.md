@@ -20,11 +20,11 @@ updated: 2026-08-21
 format: article
 ---
 
-[作者] 鍾子默
+[author] 鍾子默
 
 ![鍾子默の肖像](attachments/roof-archive/cv1765321/01-author-portrait-v5.png "=25%")
 
-[作者简介] 関心領域：ACG文化研究、ジェンダー、空間、思想史。共感があふれがちな周縁の観察者。
+[author-bio] 関心領域：ACG文化研究、ジェンダー、空間、思想史。共感があふれがちな周縁の観察者。
 
 ## はじめに
 

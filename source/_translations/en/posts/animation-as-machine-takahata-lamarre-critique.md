@@ -29,7 +29,7 @@ format: article
 
 > By **Author-kun**, an editorial pseudonym for the poster known as “An O That Isn’t Zero.”
 
-[名片] An O That Isn’t Zero
+[card] An O That Isn’t Zero
 
 ![Portrait of An O That Isn’t Zero](attachments/roof-archive/cv11249482/01-author-portrait-v5.png "=25%")
 
@@ -63,7 +63,7 @@ Andrei Platonov’s *Chevengur* imagines poor life through objects as well as pe
 
 Near the end of the film, Kaguya looks back at Earth. Her pale profile fills the left half of the frame. A small blue planet hangs in the black distance, while the white curve of the Moon enters at lower right.
 
-[图题] Kaguya faces a stylized full Earth whose scale and coloring recall the planetary photographs of the space age.
+[fig] Kaguya faces a stylized full Earth whose scale and coloring recall the planetary photographs of the space age.
 
 ![Princess Kaguya looking back at the blue Earth from space](/attachments/roof-archive/cv11249482/7170235113b6afec7d1d3b896403d56d52a5abb0.jpg)
 

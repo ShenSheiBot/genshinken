@@ -18,11 +18,11 @@ citation:
   url: "https://www.bilibili.com/read/cv1980660/"
 ---
 
-[作者] 神的意识形态
+[author] 神的意识形态
 
 ![神的意识形态头像](attachments/roof-archive/cv1980660/01-author-portrait-v5.png "=25%")
 
-[作者简介] 它，真理，不说话。我，是传播爱的，不明飞行物体。
+[author-bio] 它，真理，不说话。我，是传播爱的，不明飞行物体。
 
 下面说一下轻小说的定义，关于这个问题，日本的亚文化研究圈早就有了很多讨论，就目前的情况来看，已经诞生了很多有说服力的定义／讨论。
 
@@ -74,7 +74,7 @@ citation:
 
 7. 主题：社会性话题的缺乏
 
-[图题] 屋顶娘强烈推荐本作《明日，我将死去，你将重生》。
+[fig] 屋顶娘强烈推荐本作《明日，我将死去，你将重生》。
 
 ![《明日，我将死去，你将重生》作品图](attachments/roof-archive/cv1980660/03-tomorrow-i-will-die-series.png)
 

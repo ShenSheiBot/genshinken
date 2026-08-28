@@ -24,11 +24,11 @@ rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-[作者] Mi Ze Wei Hua
+[author] Mi Ze Wei Hua
 
 ![Portrait of Mi Ze Wei Hua](attachments/roof-archive/cv4364107/01-author-portrait-v4.png "=25%")
 
-[作者简介] “High ground becomes a valley; deep valleys rise into hills.”
+[author-bio] “High ground becomes a valley; deep valleys rise into hills.”
 
 > Editorial note: This essay has been abridged.
 
@@ -52,7 +52,7 @@ That is what I mean here by the **Other**. Another person may disagree with me w
 
 The bond between human and robot in *Time of Eve* is a domestic echo of Hegel’s struggle between master and servant. The owner commands but also depends on the being that serves. The servant seeks recognition from someone whose comfort rests on withholding it. The café pauses this hierarchy without abolishing it, so every encounter inside carries the pressure of the world outside.
 
-[图题] Humans and robots share the same unhurried social space around the café’s tables.
+[fig] Humans and robots share the same unhurried social space around the café’s tables.
 
 ![Humans and robots gathering inside the Time of Eve café](attachments/roof-archive/cv4364107/02-eve-no-jikan-cafe.png)
 
@@ -70,7 +70,7 @@ Other anime forms make the unfamiliar manageable by placing it farther away. *Se
 
 *Isekai*, meanwhile, is the broad genre of travel or reincarnation into another world. At its most formula-driven, that world arrives already divided into roles and conventions familiar from anime, manga, and games. The setting announces strangeness, then recognition neutralizes it: viewers know what sort of world this is and what sort of people inhabit it before those people have had time to become particular.
 
-[图题] A humanoid robot hangs upside down above the city at night, its red and green indicators cutting through the dark.
+[fig] A humanoid robot hangs upside down above the city at night, its red and green indicators cutting through the dark.
 
 ![A humanoid robot hanging upside down over a city at night, with red and green indicator lights glowing](attachments/roof-archive/cv4364107/03-robot-at-night.png)
 
@@ -119,7 +119,7 @@ Hardt’s affective labor is broader: work that produces moods, attachments, and
 
 From a neo-Marxist perspective, ownership ties feeling to work. No manager needs to invade the café or issue an order. The robot returns to a household where its time, conduct, and capacities already belong to somebody else. Under those conditions, kindness toward the servant does not end mastery. A richer personality can become one more resource for the household to draw on.
 
-[图题] A café employee leans into a conversation between two schoolboys. Inside, equality looks less like a declaration than an ordinary social habit.
+[fig] A café employee leans into a conversation between two schoolboys. Inside, equality looks less like a declaration than an ordinary social habit.
 
 ![Two schoolboys talking with a café worker inside the Time of Eve café](attachments/roof-archive/cv4364107/05-eve-no-jikan-cafe-conversation.png)
 

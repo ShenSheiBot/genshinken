@@ -31,7 +31,7 @@ citation:
 >
 > 网哲邻人部是一个自由、自愿、自主的联合协作哲学词条翻译社群；译文由网哲邻人部授权转载。
 
-[图题] 谢林、康德与黑格尔。
+[fig] 谢林、康德与黑格尔。
 
 ![谢林、康德与黑格尔](attachments/roof-archive/cv7047703/01-schelling-kant-hegel.png)
 

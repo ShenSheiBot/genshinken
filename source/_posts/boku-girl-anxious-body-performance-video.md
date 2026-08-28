@@ -21,7 +21,7 @@ citation:
   extra: "Pause and Select 原作；原视频：https://www.youtube.com/watch?v=JpGmIS-Mru4；群青七号楼志愿翻译。"
 ---
 
-[视频] 操演：《仆少女》与焦虑的身体
+[video] 操演：《仆少女》与焦虑的身体
 
 [播放视频：720P](attachments/wechat-video/wxv_1519180683171119107/original-1280x720.mp4 "=1280x720 13:24")
 

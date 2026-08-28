@@ -20,7 +20,7 @@ citation:
 
 > 原作者署名：作者君。本文讨论高畑勋、《辉夜姬物语》与拉马尔的动画机器理论。
 
-[名片] 一只非0的O
+[card] 一只非0的O
 
 ![一只非0的O头像](attachments/roof-archive/cv11249482/01-author-portrait-v5.png "=25%")
 

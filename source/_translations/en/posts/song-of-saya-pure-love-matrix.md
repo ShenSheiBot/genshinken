@@ -32,7 +32,7 @@ This comparison reveals a rather interesting distinction. At the risk of coining
 
 To spell out this claim, let us return to the opening. Three expository scenes appear in succession. Fuminori first speaks with his former friends at the university, then is examined at a clinic by a female physician, and finally returns home to Saya. Along the way, through his eyes, we encounter every important character who will later appear; through the eyes of everyone except Saya, we also learn how Fuminori appears to them. The information can readily be organized in the following diagram:
 
-[图题] The principal actors in *Saya no Uta* and the relations among them.
+[fig] The principal actors in *Saya no Uta* and the relations among them.
 
 ![Diagram of the principal actors in *Saya no Uta* and their relations](/attachments/roof-archive/rags-drum-2022/saya-pure-love-matrix/translations/en/relations.png)
 

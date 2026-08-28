@@ -54,7 +54,7 @@ People grasped this point as early as the 1930s and 1940s, when the zombie film 
 
 To examine those origins closely, however, we must look beyond the images found in contemporary film and games and attempt something like an ethnographic survey. The figure has a point of departure. It was profoundly shaped by the folk cultures of particular regions, which not only laid its foundations but continued to build upon them. None of this arose by accident. It was produced through social operations: beneath those operations, history found its place in memory, while images began to take their assigned places in the marks history left behind.
 
-[图题] *Revenge of the Zombies*, which might be called one origin of the Nazi zombie.
+[fig] *Revenge of the Zombies*, which might be called one origin of the Nazi zombie.
 
 ![Poster for *Revenge of the Zombies*](attachments/roof-archive/cv8275144/01-revenge-of-zombies-poster.png)
 
@@ -68,7 +68,7 @@ The same germ appears in Haitian zombie lore. Yet through a mixture of prejudice
 
 And yet it was the corpse that entered mass culture under the zombie’s name. The separation of body and soul likewise follows from a property of the body: its capacity for labor. Why labor? Because labor itself is the punishment. What Haiti truly fears is not the appearance of a zombie but becoming one. To be made a zombie is punishment inflicted upon a violator of social order by the sorcerer who acts as that order’s reach. It is not a matter of walking the border between life and death, nor of becoming a cannibal monster, but of completing one’s work on the plantation. Mercy, or discipline? In the West Indies it is unmistakably the latter, for it awakens the deepest fear of all: the fear of enslavement. Within the context of “working under enslavement,” colonialism’s scars produced the zombie’s earliest terror—and that terror continues to extend itself.
 
-[图题] *White Zombie*: its center of gravity lies in Vodou and the enslavement of zombies on a plantation.
+[fig] *White Zombie*: its center of gravity lies in Vodou and the enslavement of zombies on a plantation.
 
 ![Poster for *White Zombie*](attachments/roof-archive/cv8275144/02-white-zombie-poster.png)
 
@@ -94,7 +94,7 @@ This freedom is a specter. Romero found it within the enslaved corpse and releas
 
 Life in this “frontline state” produced still deeper cultural anxiety, and *Dawn of the Dead* reached Italian screens in its midst. The apocalyptic life depicted in the film, and a terror exceeding the zombie’s own image, perfectly met the unease of people living through radical times. The innovation of zombies controlled by no one yet still trapped in servitude supplied inspiration and vocabulary for the resistance of the period’s left-wing movements. Italy almost instantly embraced a subject at odds with its religious background. Italian productions such as *Zombi 2* carried the terror of the zombie-as-zombie still further within that framework. But as the radical tide ebbed under repression in the early 1980s, the Italian zombie film likewise stagnated. Given such antecedents, could this really be coincidence?
 
-[图题] *Dawn of the Dead*: to put it satirically, zombies wandering through a shopping mall already amount to a discourse on consumerism.
+[fig] *Dawn of the Dead*: to put it satirically, zombies wandering through a shopping mall already amount to a discourse on consumerism.
 
 ![Poster for *Dawn of the Dead*](attachments/roof-archive/cv8275144/03-dawn-of-the-dead-poster.png)
 
@@ -106,7 +106,7 @@ A familiar technique of horror cinema is to introduce into a scene—or mark upo
 
 Whatever Frantz Fanon’s answer might be, the zombie likely has only one: itself. The film industry has, in one sense, treated the zombie’s existence as an overturning. It is a posthuman image. Human subjectivity has been subverted; the human subject should now perhaps be called the Human Abject. The formerly well-ordered urban organism expels humans from its tunnels as an organism expels waste. The human element, once dominant in the city, becomes a variable to be regulated, a synonym for what was once abject. This is a premeditated overturning, as well as the result of the zombie image’s approach toward the human. Overturning itself shaped the zombie, and perhaps this explains why so many post-apocalyptic works choose it as their material.
 
-[图题] *28 Days Later*: the overturning, and the uncanny, of being expelled from habitation.
+[fig] *28 Days Later*: the overturning, and the uncanny, of being expelled from habitation.
 
 ![Poster for *28 Days Later*](attachments/roof-archive/cv8275144/04-28-days-later-poster.png)
 
@@ -130,7 +130,7 @@ Like Frankenstein, zombies are born from an imagination of horror. Even in their
 
 Yet as noted above, the zombie’s interior is likewise homologous with Frankenstein’s monster. The monster resembles its maker, Victor Frankenstein, but also surpasses him, for it is forced to accept the world’s definition of it: an unnameably evil and filthy thing. As a moral monstrosity that restores the dead to life in an absurd, uncanny, anonymous body, its guilt is settled in advance. It is sin, it is Satan, it is death. Possessed of consciousness atop this filthy trinity, it inevitably brings more death into the world. The monster’s rage scorches its creator and drives him to write still more tragedy. Frankenstein’s monster is a conjunction of innate filth, yet cannot seek an overturning within its story. When the zombie—the abject and filthy thing—finds such an overturning, Frankenstein’s monster returns with it...
 
-[图题] *Frankenstein*: revival, and the reconstruction of identity...
+[fig] *Frankenstein*: revival, and the reconstruction of identity...
 
 ![Cover of *Frankenstein*](attachments/roof-archive/cv8275144/05-frankenstein-cover.png)
 

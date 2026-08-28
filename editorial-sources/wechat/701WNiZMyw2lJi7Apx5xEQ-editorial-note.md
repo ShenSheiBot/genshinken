@@ -21,4 +21,4 @@
 - 恢复 raw 可见的作者、翻译、校对、编辑责任行与原文链接；通用投稿、QQ群、删文声明仍作为平台分发噪声移除。标题中的平台栏目提示“【译文】”由 `section: translation` 表达，不并入作品题名。
 - 原 citation 曾把中文发布日期写成原论文年份，并把数据库 Project MUSE 写成期刊名。现据原始来源、JSTOR 卷期目录与明尼苏达大学出版社卷册信息校正为 Gavin Walker, “The Filmic Time of Coloniality: On Shinkai Makoto’s The Place Promised in Our Early Days,” *Mechademia* 4(1), 2009, pp. 3–18, DOI 10.1353/mec.0.0082；中文发布日期继续由 front matter `date` 记录。
 - 恢复 raw 中酒井直树康奈尔大学简介链接、整段粗体与译注 7 的 `can` 粗体。两套原注释标题经 GFM 合并渲染为统一“注释”区，因此在每条定义前明确保留“译注 1–7”与“附录 1–10”的源分组，而不制造两套不可回链的正文尾注。
-- 5 个 canonical 图片目标位于 `public/attachments/wechat/701WNiZMyw2lJi7Apx5xEQ/001.png` 至 `005.png`；逐个 SHA-256 与 raw `body-001.png` 至 `body-005.png` 完全一致。人工报告以 `source/attachments` 为根检查而误报缺图，此项已驳回。5 条原图题均改为站内 `[图题]` figure 语法并置于图片之前。
+- 5 个 canonical 图片目标位于 `public/attachments/wechat/701WNiZMyw2lJi7Apx5xEQ/001.png` 至 `005.png`；逐个 SHA-256 与 raw `body-001.png` 至 `body-005.png` 完全一致。人工报告以 `source/attachments` 为根检查而误报缺图，此项已驳回。5 条原图题均改为站内 `[fig]` figure 语法并置于图片之前。

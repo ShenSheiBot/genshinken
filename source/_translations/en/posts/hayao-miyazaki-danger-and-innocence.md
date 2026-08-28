@@ -24,11 +24,11 @@ rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-[作者] Fishboard
+[author] Fishboard
 
 ![Portrait of Fishboard](attachments/roof-archive/cv2919959/01-author-portrait-v4.png "=25%")
 
-[作者简介] ENOUGH IS ENOUGH!
+[author-bio] ENOUGH IS ENOUGH!
 
 Hayao Miyazaki is often cast as animation’s kindly patron saint of childhood wonder. The image fits a good deal of his work, but not all of it. *Spirited Away*, perhaps his best-known film outside Japan, won both the Golden Bear—the Berlin International Film Festival’s top prize—and the Academy Award for Best Animated Feature. Yet no single film can contain his range: the science fiction of *Nausicaä of the Valley of the Wind* and *Castle in the Sky*; the fantasy of *Princess Mononoke* and *Kiki’s Delivery Service*; the domestic fairy tale of *My Neighbor Totoro*; the history and dream visions of *The Wind Rises*. Then the pig walks in.
 
@@ -160,7 +160,7 @@ Miyazaki’s gift is his ability to make the everyday visible again. His danger 
 
 No single obstacle gives Porco his freedom. What matters is the persistent mismatch between him and every role that promises to make him whole. That small, painful distance lets him say no. Freedom begins there—not in innocence without a shadow, but in the refusal to let beauty erase contradiction.
 
-[图题] Hayao Miyazaki, surrounded by characters from his films.
+[fig] Hayao Miyazaki, surrounded by characters from his films.
 
 ![Hayao Miyazaki smiling before a collage of characters from his animated films](attachments/roof-archive/cv2919959/08-hayao-miyazaki-portrait.jpg)
 

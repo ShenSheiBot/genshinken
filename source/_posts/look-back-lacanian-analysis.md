@@ -22,7 +22,7 @@ citation:
 
 本文另有经原回答作者鱼板同意制作的视频版；剪辑为柴来人，协作为“别对屋顶现视研出手！”。
 
-[视频] 《Look Back》拉康派分析视频版
+[video] 《Look Back》拉康派分析视频版
 
 [播放视频：1080P](attachments/wechat-video/wxv_1999120348507586562/original-1920x1080.mp4 "=1920x1080 20:11")
 

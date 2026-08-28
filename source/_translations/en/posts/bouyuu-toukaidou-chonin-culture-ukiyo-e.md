@@ -23,11 +23,11 @@ rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-[作者] crossroad
+[author] crossroad
 
 ![Portrait of crossroad](attachments/roof-archive/cv6229226/01-author-portrait-v5.png "=25%")
 
-[作者简介] “Search high and low; seize every hour.”
+[author-bio] “Search high and low; seize every hour.”
 
 > This essay was first published by Yuanhuo.
 
@@ -55,13 +55,13 @@ ZUN offers no explicit answer to a question as vast as what should remain and wh
 
 In Renko’s account to Merry, Tokyo teems with young people in strange clothes. The city may count as “the countryside” beside elegant, severe Kyoto, but it seems as rough and alluring as the American West, the setting of countless adventures. Gensokyo still retains the appearance of Japan before the Meiji Restoration. It is hard not to think of the bizarre yet hopeful Edo period led by the chōnin.
 
-[图题] KS, *Touhou Hyakki Yagyō*, Pixiv ID 15322975.
+[fig] KS, *Touhou Hyakki Yagyō*, Pixiv ID 15322975.
 
 ![KS’s *Touhou Hyakki Yagyō*](attachments/roof-archive/cv6229226/02-touhou-hyakki-yagyo.png)
 
 In Japan, *chōnin* is a specific historical designation, usually referring to the social group formed by wealthy merchants under the Edo shogunate. The word itself appeared as early as the Heian period. At that time *chō* did not denote an administrative unit so much as a fixed area resembling a shop or marketplace.[^2] *Chōnin* then had no special meaning beyond “people of the chō,” but because *chō* was often associated with shops, the word acquired a subtle connection with merchants.
 
-[图题] “Shop: commonly called chō.”
+[fig] “Shop: commonly called chō.”
 
 ![The entry for “chō” in *Ruiju Myōgishō*](attachments/roof-archive/cv6229226/03-ruiju-myougishou.png)
 
@@ -93,49 +93,49 @@ Another object discussed by Merry and Renko in *Retrospective 53 Minutes* is the
 
 As the visual expression of chōnin culture, ukiyo-e makes that colorful era more immediately palpable than words can. Its very name, “pictures of the floating world,” names the contemporary world and the style of the day. Street life and the emotions and desires displayed in everyday existence remain its abiding center.
 
-[图题] Katsushika Hokusai, *A Sketch of the Mitsui Shop in Suruga Street in Edo*, 1832.
+[fig] Katsushika Hokusai, *A Sketch of the Mitsui Shop in Suruga Street in Edo*, 1832.
 
 ![Katsushika Hokusai’s *A Sketch of the Mitsui Shop in Suruga Street in Edo*](attachments/roof-archive/cv6229226/04-hokusai-mitsui-surugacho.png)
 
 Early ukiyo-e grew out of the traditional *yamato-e*. As coloring improved and woodblock printing escaped its narrowly Buddhist uses, ukiyo-e finally became an independent art form. The outstanding artist in this development was Hishikawa Moronobu, later honored as the “father of ukiyo-e.”[^8] An accomplished illustrator, he gradually gave images precedence over text and even produced independent genre scenes as single-sheet prints, *ichimai-e*. These works, chiefly woodblock prints, formally announced the birth of ukiyo-e. His many images of courtesans also established *bijinga*, pictures of beautiful women, as a major subject for later artists.
 
-[图题] Hishikawa Moronobu, *Beauty Looking Back*, seventeenth century.
+[fig] Hishikawa Moronobu, *Beauty Looking Back*, seventeenth century.
 
 ![Hishikawa Moronobu’s *Beauty Looking Back*](attachments/roof-archive/cv6229226/05-morunobu-beauty-looking-back.png)
 
 In ukiyo-e’s middle period, coloring, paper, and production methods advanced greatly. Okumura Masanobu and Utagawa Toyoharu absorbed Western perspective into ukiyo-e, giving scenes greater presence and texture. Suzuki Harunobu and others pioneered *nishiki-e*, whose vivid, abundant colors earned them comparison to “brocade photographs.” Haiku poets’ enthusiasm for exchanging picture calendars and the flourishing of kabuki supplied a broad market. Economic growth and a professional division of labor among the designer (*hanshita-e-shi*), block carver (*horishi*), and printer (*surishi*) made lower costs and higher output possible. Together these new techniques set ukiyo-e upon a path of rapid development.
 
-[图题] Utagawa Toyoharu, *Perspective Picture: Year-end Dance Party in the New Yoshiwara Pleasure Quarter*, eighteenth century.
+[fig] Utagawa Toyoharu, *Perspective Picture: Year-end Dance Party in the New Yoshiwara Pleasure Quarter*, eighteenth century.
 
 ![Utagawa Toyoharu’s *Perspective Picture: Year-end Dance Party in the New Yoshiwara Pleasure Quarter*](attachments/roof-archive/cv6229226/06-toyoharu-shin-yoshiwara.png)
 
 Traditional *bijinga* changed substantially in this period. As artists became better at depicting settings, their “beauties” acquired greater realism. Many women painted by Torii Kiyonaga, Kitao Shigemasa, and others were married, yet their graceful bearing and unadorned feeling conveyed a healthy, natural beauty. The portraits of courtesans and kabuki actors made by Kitagawa Utamaro and Tōshūsai Sharaku exerted an especially deep influence on later ukiyo-e artists.
 
-[图题] Torii Kiyonaga’s *Cooling on the Riverbank* and Kitagawa Utamaro’s *Three Beauties of the Kansei Era*.
+[fig] Torii Kiyonaga’s *Cooling on the Riverbank* and Kitagawa Utamaro’s *Three Beauties of the Kansei Era*.
 
 ![Torii Kiyonaga’s *Cooling on the Riverbank* and Kitagawa Utamaro’s *Three Beauties of the Kansei Era*](attachments/roof-archive/cv6229226/07-kiyonaga-utamaro.png "=100%")
 
-[图注] Left: Torii Kiyonaga, published by Hamaya, *Cooling on the Riverbank*, eighteenth century. Right: Kitagawa Utamaro, *Three Beauties of the Kansei Era*, eighteenth century.
+[fig-note] Left: Torii Kiyonaga, published by Hamaya, *Cooling on the Riverbank*, eighteenth century. Right: Kitagawa Utamaro, *Three Beauties of the Kansei Era*, eighteenth century.
 
 Later, figure-centered ukiyo-e gradually ceased to lead the art’s stylistic development. *Meisho-e*, pictures of famous places devoted to landscape and urban life, came to prominence. Hokusai’s *Thirty-six Views of Mount Fuji* and Hiroshige’s *Fifty-three Stations of the Tōkaidō* became cultural emblems of Japan. These works are not confined to realism, nor do their makers simply present beautiful scenery. They lodge feeling within the landscape and use scenery to express emotion: an “impressionistic” mode of creation. In composition and color, both artists pursue richness of expression rather than merely foregrounding the pleasures of everyday custom. That is how the works attained such artistic achievement. Their method would later become an important inspiration for Western Impressionism.
 
-[图题] Claude Monet’s *Water Lily Pond* and Utagawa Hiroshige’s *Inside Kameido Tenjin Shrine*.
+[fig] Claude Monet’s *Water Lily Pond* and Utagawa Hiroshige’s *Inside Kameido Tenjin Shrine*.
 
 ![Claude Monet’s *Water Lily Pond* and Utagawa Hiroshige’s *Inside Kameido Tenjin Shrine*](attachments/roof-archive/cv6229226/08-monet-hiroshige.png "=100%")
 
-[图注] Left: Claude Monet, *Le Bassin aux nymphéas* (*Water Lily Pond*), 1899. Right: Utagawa Hiroshige, *Inside Kameido Tenjin Shrine*, 1856.
+[fig-note] Left: Claude Monet, *Le Bassin aux nymphéas* (*Water Lily Pond*), 1899. Right: Utagawa Hiroshige, *Inside Kameido Tenjin Shrine*, 1856.
 
-[图题] Claude Monet’s *La Japonaise* and Hishikawa Moronobu’s *Beauty Looking Back*.
+[fig] Claude Monet’s *La Japonaise* and Hishikawa Moronobu’s *Beauty Looking Back*.
 
 ![Claude Monet’s *La Japonaise* and Hishikawa Moronobu’s *Beauty Looking Back*](attachments/roof-archive/cv6229226/09-monet-morunobu.png "=100%")
 
-[图注] Left: Claude Monet, *La Japonaise* (*Camille Monet in Japanese Costume*), nineteenth century. Right: Hishikawa Moronobu, *Beauty Looking Back*, seventeenth century.
+[fig-note] Left: Claude Monet, *La Japonaise* (*Camille Monet in Japanese Costume*), nineteenth century. Right: Hishikawa Moronobu, *Beauty Looking Back*, seventeenth century.
 
 Monet’s imitation of ukiyo-e.
 
 With the arrival of the “Black Ships” and the Meiji Restoration, the program of civilization and enlightenment and the popularity of Western photography gradually drove ukiyo-e out of the mass market. Its subjects also shifted toward current affairs in “news pictures” and “enlightenment pictures.” Both output and artistic quality declined, and the work no longer matched what had come before. Ukiyo-e subsequently left the historical stage as a specialized mode of artistic production, but its creative elements and its record of the “Japanese spirit” continued to circulate.
 
-[图题] Utagawa Yoshitora, *Complete View of Vehicles Coming and Going in Tokyo*, 1870.
+[fig] Utagawa Yoshitora, *Complete View of Vehicles Coming and Going in Tokyo*, 1870.
 
 ![Utagawa Yoshitora’s *Complete View of Vehicles Coming and Going in Tokyo*](attachments/roof-archive/cv6229226/10-yoshitora-tokyo-vehicles.png)
 
@@ -151,13 +151,13 @@ Born into a commoner’s family, Hokusai led a life as turbulent as his pictures
 
 Despite a life filled with hardship and regret, Hokusai’s pictures remain full of energy and force. In *Thirty-six Views of Mount Fuji*, he grants ample character and living presence both to Fuji and to the people who live around it. The images move. Their greatness lies not only in the marvel of natural power but in Hokusai’s spiritual transcendence of life’s suffering. The works for which he is best known were made precisely at the lowest point of his life. Hope meant that even at life’s end he wished for a little more time to become a “true painter.” His tenacious hope and optimism in mastering pain raised his art still further.
 
-[图题] Katsushika Hokusai, *Under the Wave off Kanagawa*, 1832.
+[fig] Katsushika Hokusai, *Under the Wave off Kanagawa*, 1832.
 
 ![Katsushika Hokusai’s *Under the Wave off Kanagawa*](attachments/roof-archive/cv6229226/11-hokusai-great-wave.png)
 
 Hiroshige’s life, by contrast, unfolded amid contradiction and constraint. Born into a low-ranking samurai family, he occupied an awkward position. In name he belonged to the ruling estate and the upper ranks of society. In practice, the shogunate’s financial difficulties and his weakness within the warrior class denied him wealth, and he had to supplement the household income by designing ukiyo-e. He approved of the chōnin’s free and open way of living, yet as a member of the ruling estate he faced many limits on expressing that conviction. His work is consequently restrained and oblique. He often painted scenery encountered on journeys, as in *Fifty-three Stations of the Tōkaidō*, and aroused homesickness in viewers, earning him the epithet “Hiroshige of nostalgia.” A lingering attachment to nature, moonlight, and wind appears throughout his pictures. Unlike the force felt in Hokusai, Hiroshige’s work is quiet. Yet the people and things within it seem spiritually connected, an affinity with Japanese animism. The many boldly foregrounded motifs in *One Hundred Famous Views of Edo* place the spectator inside the view and heighten its emotional transmission.
 
-[图题] Utagawa Hiroshige, *Yoroi Ferry, Koami-chō*, 1856.
+[fig] Utagawa Hiroshige, *Yoroi Ferry, Koami-chō*, 1856.
 
 ![Utagawa Hiroshige’s *Yoroi Ferry, Koami-chō*](attachments/roof-archive/cv6229226/12-hiroshige-yoro-no-watashi.png)
 

@@ -7,7 +7,7 @@
 - 保留正文 DOM block：`74`；移出 block：`1(platform-credit/navigation), 4(platform-credit/navigation), 5(platform-credit/navigation), 6(platform-credit/navigation), 8(platform-credit/navigation)`。通用投稿、联系方式与公众号导航按公开站编辑规则省略；CC BY 许可事实已结构化保留在 front matter `license`/rights。文章特定署名已结构化恢复：校对幽灵在都灵、编辑夜深人静。
 - 正文图片按 raw DOM placement 顺序保留 `4` 个：`1:body-001.jpg, 2:body-002.jpg, 3:body-003.jpg, 4:body-004.jpg`；重复 placement 按 raw DOM 保留；cover 未冒充正文图；资产路径为 `attachments/wechat/-Py4knFpYKU_h1GWS62WzA/`。
 - 公开稿从 raw `#js_content` 恢复；正文论述、标题、引文与 source-backed notes 保留。
-- 2026-08-16 逐节点复核确认正文 67 个非图片节点、4 个图片 placement 均完整且顺序正确；唯一可见图片说明由斜体段落规范为 `[图题]`，保留原图题位置与内容，不制造章节。
+- 2026-08-16 逐节点复核确认正文 67 个非图片节点、4 个图片 placement 均完整且顺序正确；唯一可见图片说明由斜体段落规范为 `[fig]`，保留原图题位置与内容，不制造章节。
 - 脚注调用：`无`；定义：`无`；未被调用但保留的定义：`无`；闭合：`是（每个调用均有定义）`。
 - 内联注号审计：`无未闭合的原始内联注号。`
 - 访谈/说话人审计：`非访谈稿；无说话人轮次转换。`

@@ -17,11 +17,11 @@ citation:
   url: "https://www.bilibili.com/read/cv7152802/"
 ---
 
-[作者] 实在狗子
+[author] 实在狗子
 
 ![实在狗子头像](attachments/roof-archive/cv7152802/01-author-portrait-v5.png "=25%")
 
-[作者简介] 在没有世界的时代，传播无意义之爱。
+[author-bio] 在没有世界的时代，传播无意义之爱。
 
 ## 1
 

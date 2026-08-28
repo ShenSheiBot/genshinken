@@ -72,11 +72,11 @@ Cyberspace has long been a household word, yet compared with "the net," which we
 
 Needless to say, the optimistic fantasy that expected the space of the net to become the new base for a great left-wing counteroffensive was deeply naive. When Azuma serialized that essay in 1997, the internet had not yet spread as it has today, and the critique of this naivety still had to proceed through a certain amount of philosophical reflection. But for us, living now and having watched internet space become an instrument for whipping up nationalist sentiment and for the digital exploitation of individuals, that naivety can be felt firsthand without any reflective analysis at all.
 
-[图题] *Why Is Cyberspace Called Such?+*
+[fig] *Why Is Cyberspace Called Such?+*
 
 ![Cover of Hiroki Azuma's Why Is Cyberspace Called Such?+](attachments/roof-archive/cv8287922/04-cyberspace-book.png "=25%")
 
-[图注] By Hiroki Azuma.
+[fig-note] By Hiroki Azuma.
 
 ## The Short-Circuited Symbolic and Radicality
 

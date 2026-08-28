@@ -17,11 +17,11 @@ citation:
   url: "https://www.bilibili.com/read/cv3555857/"
 ---
 
-[作者] Ludwigsama
+[author] Ludwigsama
 
 ![Ludwigsama头像](attachments/roof-archive/cv3555857/01-author-portrait-v5.png "=25%")
 
-[作者简介] 才能？ないよ！
+[author-bio] 才能？ないよ！
 
 > **编者按：** 作者君，我的超人。
 

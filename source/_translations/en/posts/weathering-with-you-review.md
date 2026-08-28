@@ -24,11 +24,11 @@ rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-[作者] Red Tea Seaweed
+[author] Red Tea Seaweed
 
 ![Portrait of Red Tea Seaweed](attachments/roof-archive/cv3126542/01-author-portrait-v4.png "=25%")
 
-[作者简介] MA in literature; critic of otaku culture, literature, and the arts.
+[author-bio] MA in literature; critic of otaku culture, literature, and the arts.
 
 > Editor’s note: Spoilers follow.
 
@@ -52,7 +52,7 @@ What I wanted from *Weathering with You* was a new variation on those impersonal
 
 Beginning with *Children Who Chase Lost Voices*, Shinkai gradually traded the science-fiction premises of his early work for folklore. *Weathering with You* continues that turn. Hina is the latest in a long succession of “weather maidens,” women whose prayers restore the balance between human life and the weather. Their power exacts a terrible price. The more Hina uses it, the more her body turns translucent and dissolves into rain, until she disappears into the world above the clouds. A girl made responsible for humanity’s fate, and a choice between that girl and everyone else: on the surface, this is classic *sekaikei*. For me, however, the resemblance breaks down in three ways.
 
-[图题] The promotional text introduces Hodaka as “a runaway who came to Tokyo” and credits voice actor Kotaro Daigo.
+[fig] The promotional text introduces Hodaka as “a runaway who came to Tokyo” and credits voice actor Kotaro Daigo.
 
 ![Promotional image of Hodaka on a ferry at sunset, captioned “Hodaka, a runaway who came to Tokyo,” with voice actor Kotaro Daigo’s name](attachments/roof-archive/cv3126542/03-weather-maiden.png)
 
@@ -94,7 +94,7 @@ The Shinkai I sense here is closer to the filmmaker of *She and Her Cat*, his ea
 
 ## What “We’ll Be All Right” Promises
 
-[图题] The visible wishes ask for clear skies, an end to the rain, and good weather when a mother leaves the hospital.
+[fig] The visible wishes ask for clear skies, an end to the rain, and good weather when a mother leaves the hospital.
 
 ![Rain-beaded prayer plaques at the Meteorological Shrine; among the visible wishes are clear skies, an end to the rain, and good weather when a mother leaves the hospital](attachments/roof-archive/cv3126542/07-ending.png)
 

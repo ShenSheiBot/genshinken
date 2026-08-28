@@ -20,7 +20,7 @@ citation:
   extra: "Pause and Select 原作；原视频：https://www.youtube.com/watch?v=q2KK0U3gcaE；群青七号楼志愿翻译。"
 ---
 
-[视频] 另一个宫崎｜Pause and Select 与 Patrick W. Galbraith 对谈系列第二部分
+[video] 另一个宫崎｜Pause and Select 与 Patrick W. Galbraith 对谈系列第二部分
 
 [播放视频：1080P](attachments/wechat-video/wxv_1522071850976067586/original-1920x1080.mp4 "=1920x1080 10:20")
 

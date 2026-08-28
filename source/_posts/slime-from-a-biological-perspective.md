@@ -18,11 +18,11 @@ citation:
   url: "https://www.bilibili.com/read/cv1668131/"
 ---
 
-[作者] 言几时
+[author] 言几时
 
 ![言几时头像](attachments/roof-archive/cv1668131/01-author-portrait-v5.png "=25%")
 
-[作者简介] 技能树点歪的医学生。
+[author-bio] 技能树点歪的医学生。
 
 > **编者按：** 十月新番《关于我转生变成史莱姆这档事》改编自伏濑原作、みっつばー负责插画的同名轻小说，讲述平凡上班族三上悟被歹徒刺杀身亡，在异世界转生为史莱姆，努力建立“任何种族都能愉快地一起生活的国家”的故事。相较于剧情，笔者却更多注意到了“史莱姆”这一虚构生物——曾经的它也是克苏鲁神话中的骇人存在，而非衍生于一代又一代勇者剑下的经验包。本文将简要介绍史莱姆的起源，并试图为史莱姆的生物学本质寻求（瞎扯）解释。
 
@@ -41,11 +41,11 @@ citation:
 
 虽然《疯狂山脉》中的修格斯已经初具雏形，但“史莱姆”这一名称第一次出现是在美国作家Joseph Payne Brennan于1953年发表的中篇小说《Slime》中。小说里的史莱姆由于火山喷发，来到陆地袭击人类。
 
-[图题] 《Slime》
+[fig] 《Slime》
 
 ![1953年《Weird Tales》杂志所刊《Slime》封面](attachments/roof-archive/cv1668131/03-slime-weird-tales-cover.jpg "=25%")
 
-[图注] Joseph Payne Brennan著；1953年。
+[fig-note] Joseph Payne Brennan著；1953年。
 
 《龙与地下城》中的史莱姆，视种类而定，具备多种不同抗性，亦是与玩家作对的难缠角色。无底深渊第222层即被命名为“Slime Pits”。
 

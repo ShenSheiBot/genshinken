@@ -18,11 +18,11 @@ citation:
   url: "https://www.bilibili.com/read/cv1924970/"
 ---
 
-[作者] 远月
+[author] 远月
 
 ![远月头像](attachments/roof-archive/cv1924970/01-author-portrait-v5.png "=25%")
 
-[作者简介] 祇园精舍の钟の声、诸行无常の响きあり
+[author-bio] 祇园精舍の钟の声、诸行无常の响きあり
 
 在日本动画和影视剧中，经常会出现一些让国人观众很难理解的情节。
 
@@ -66,7 +66,7 @@ citation:
 
 中根千枝研究认为，日本是一个典型的根据场所在建立社会集团的国家。与日本人截然相反的是印度人，他们的种姓制度是建立在职业与个人身份的划分上。而中国则是介于这两个极端之间。
 
-[图题] 小津安二郎《东京物语》。
+[fig] 小津安二郎《东京物语》。
 
 ![《东京物语》画面](attachments/roof-archive/cv1924970/05-tokyo-story.png)
 

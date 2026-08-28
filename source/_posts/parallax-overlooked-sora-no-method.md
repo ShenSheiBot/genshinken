@@ -20,11 +20,11 @@ citation:
   url: "https://www.bilibili.com/read/cv2422780/"
 ---
 
-[作者] Ludwigsama
+[author] Ludwigsama
 
 ![Ludwigsama头像](attachments/roof-archive/cv2422780/01-author-portrait-v5.png "=25%")
 
-[作者简介] 才能？ないよ！
+[author-bio] 才能？ないよ！
 
 **编者前言：本文阅读难度颇高，请读者朋友们提前注意并宽谅。*。*
 

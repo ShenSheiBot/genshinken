@@ -24,11 +24,11 @@ format: article
 
 > Foreword: This essay won prizes in both the Eve Festival and After Festival of [Rags Drum 2020](/en/posts/rags-drum-2020-final-results), organized by Lab on Roof.
 
-[作者] Yi Tiao
+[author] Yi Tiao
 
 ![Portrait of Yi Tiao](attachments/roof-archive/cv8255716/01-author-portrait-v5.png "=25%")
 
-[作者简介] “Words are flowing out like endless rain into a paper cup.”
+[author-bio] “Words are flowing out like endless rain into a paper cup.”
 
 > The question is not whether nature “really looks” like these pictorial devices
 > but whether pictures with such features suggest a reading in terms of natural objects.
@@ -58,15 +58,15 @@ Another director on this lineage is Naohito Takahashi (*To Heart* (1999)), whose
 
 Directors not on this lineage, such as Mamoru Oshii and Yoshiyuki Tomino, have also declared themselves greatly influenced by Takahata. Both attach real importance to location research and to expressing the texture of lived life, and Oshii, for his part, often uses fixed long takes in a stylized way.
 
-[图题] *Maison Ikkoku*, episode 27.
+[fig] *Maison Ikkoku*, episode 27.
 
 ![A shot from episode 27 of Maison Ikkoku](attachments/roof-archive/cv8255716/02-maison-ikkoku-episode-27.png)
 
-[图题] *Yokohama Kaidashi Kikou*.
+[fig] *Yokohama Kaidashi Kikou*.
 
 ![A shot from Yokohama Kaidashi Kikou](attachments/roof-archive/cv8255716/03-yokohama-shopping-log.png)
 
-[图题] *Kimagure Orange Road: I Want to Return to That Day*.
+[fig] *Kimagure Orange Road: I Want to Return to That Day*.
 
 ![A shot from Kimagure Orange Road: I Want to Return to That Day](attachments/roof-archive/cv8255716/04-kimagure-orange-road-return-past.png)
 
@@ -84,7 +84,7 @@ In live action, where there is a point of focus, the longer the focal length, th
 
 Takahata used telephoto shots extensively in *Heidi* and *3000 Leagues*. Compared with the wide-angle lens, the telephoto lens ① comes closer to what a person sees—the image generated after processing by the human brain—and so looks more comfortable; ② through its strong compression along the depth axis, better expresses the sense of space and of air; ③ compared with the wide-angle lens’s immediacy and unease, is more objective and stable.
 
-[图题] Hayao Miyazaki’s model notes for *3000 Leagues* (my own translation). One can see the weight Miyazaki gives to compression along the depth axis (the changes in the side of the carriage), avoiding as far as possible drawings whose compression is insufficient or which merely scale up and down. The farther away an object, the thinner its side face should be—in the extreme case only the front can be seen; the farther away an object, the more its shadow on the ground stretches into a long strip—in the extreme case, a single line. Size compression and depth compression stand in inverse relation: a telephoto lens compresses depth strongly and size weakly; a wide-angle lens compresses depth weakly and size strongly. For details, see Susumu Nishizawa’s explanations [a].
+[fig] Hayao Miyazaki’s model notes for *3000 Leagues* (my own translation). One can see the weight Miyazaki gives to compression along the depth axis (the changes in the side of the carriage), avoiding as far as possible drawings whose compression is insufficient or which merely scale up and down. The farther away an object, the thinner its side face should be—in the extreme case only the front can be seen; the farther away an object, the more its shadow on the ground stretches into a long strip—in the extreme case, a single line. Size compression and depth compression stand in inverse relation: a telephoto lens compresses depth strongly and size weakly; a wide-angle lens compresses depth weakly and size strongly. For details, see Susumu Nishizawa’s explanations [a].
 
 ![Hayao Miyazaki’s model notes on the depth compression of a carriage for 3000 Leagues in Search of Mother](attachments/roof-archive/cv8255716/translations/en/05-3000-leagues-layout-notes.png)
 
@@ -110,11 +110,11 @@ As a representative case of “multi-viewpoint” pictures in motion, one shot i
 
 Kanada layout (especially his work on *Invincible Superman Zambot 3* (*Muteki Chōjin Zanbotto 3*, 1977)), like Miyazaki layout, has exerted a deep influence on animation history.
 
-[图题] From “A Brief Analysis of Layout in *3000 Leagues in Search of Mother* (Part 1)”: the perspective of the railing differs from the perspective of the floor tiles so as to realize the functionality of the image.
+[fig] From “A Brief Analysis of Layout in *3000 Leagues in Search of Mother* (Part 1)”: the perspective of the railing differs from the perspective of the floor tiles so as to realize the functionality of the image.
 
 ![Analysis of the differing perspectives of the railing and the floor tiles in a shot from 3000 Leagues in Search of Mother](attachments/roof-archive/cv8255716/translations/en/06-3000-leagues-perspective-analysis.png)
 
-[图题] Poster for *Kiki’s Delivery Service* (from ghibliwiki): a bird’s-eye view and a distant level gaze coexist within the same image.
+[fig] Poster for *Kiki’s Delivery Service* (from ghibliwiki): a bird’s-eye view and a distant level gaze coexist within the same image.
 
 ![Bird’s-eye and distant views coexisting in the Kiki’s Delivery Service poster](attachments/roof-archive/cv8255716/07-kikis-delivery-service-poster.png)
 
@@ -134,7 +134,7 @@ Collaboration with top-class animators such as Hayao Miyazaki and Yōichi Kotabe
 
 Let us take one concrete scene as an example. In the parting of Marco and his mother at the end of episode 1 of *3000 Leagues*, there is a shot lasting more than a minute. In its first half, the mother takes her leave of Marco, but Marco says not a word, and after she departs he remains silent, head lowered, for nearly half a minute. After the crowd walks away and leaves Marco alone, Takahata performs a slow push-in (T.U.) of great craftsmanship, entering deep into the character’s heart; alone, Marco hears the voices of everyone’s farewells in his ears—the duration, and the push-in’s accumulation of the character’s feeling, make the tears in Marco’s eyes in the short close-up (UP) that follows land with exceptional impact. Bursting with emotion, Marco runs, falls and gets up, falls and gets up again; even though the character’s lines are simple and essentially without shading, even though the movement is not showy—one might even call it downright plain—every viewer can feel the sorrow brimming in Marco’s body. Toshiyuki Inoue surmises that Miyazaki single-handedly did everything here from layout to key animation, and considers this passage a piece of direction that strikes the heart in a way live action could not achieve; from Marco’s falls Inoue even felt pain (14). In this scene we see Takahata’s respect for real time and his demand for complete movement, and also the need for powerful animators to support the layouts and the scenes of action.
 
-[图题] *3000 Leagues*, episode 1.
+[fig] *3000 Leagues*, episode 1.
 
 ![The parting of Marco and his mother in episode 1 of 3000 Leagues in Search of Mother](attachments/roof-archive/cv8255716/08-3000-leagues-episode-1.png)
 
@@ -150,15 +150,15 @@ Before *EVA*, episode 4 of *Anne* and *Angel’s Egg* (*Tenshi no Tamago*, 1985)
 
 But unlike *EVA*, *Anne* uses the swaying of the grass in the near foreground and the passing of dark clouds, and *Angel’s Egg* uses the flickering and extinguishing of a flame with the changes of light and dark it brings, to give the flow of time concrete form.
 
-[图题] *EVA*, episode 24.
+[fig] *EVA*, episode 24.
 
 ![A still from episode 24 of Neon Genesis Evangelion](attachments/roof-archive/cv8255716/09-evangelion-episode-24.png)
 
-[图题] *Anne*, episode 4.
+[fig] *Anne*, episode 4.
 
 ![A shot from episode 4 of Anne of Green Gables](attachments/roof-archive/cv8255716/10-anne-episode-4.png)
 
-[图题] *Angel’s Egg*.
+[fig] *Angel’s Egg*.
 
 ![A shot from Angel’s Egg](attachments/roof-archive/cv8255716/11-angels-egg.png)
 
@@ -200,7 +200,7 @@ Animation, compared with static painting, adds the dimension of time: the *obake
 
 Concerning these sign-characteristics of animation, Tatsuyuki Tanaka writes: “Isn’t the attachment to, the taste for, ‘sign’ expression in itself—the **fetishism** for ‘the expression of a pattern’ in itself—the very essence of drawing in manga and animation?” (21) The wonder of animation does not lie in imitating reality; it lies in the representational capacity that the **sign itself** carries within it, and in its capacity for free transformation as protoplasm—creating another world of illusion through the body’s cognition, articulation, and imagination of the real world (whereby the sign naturally acquires a **latent “corporeality”**). It is worth analyzing plainly, at this point, how viewers “see” signs. We might say that the viewer within the illusion undergoes what Bergson describes as the two-way process of memory and perception; below is his famous diagram of the “memory cone”:
 
-[图题] *Matter and Memory*, Figure 5. The cone $SAB$ represents the totality of the recollections accumulated in our memory; the base $AB$ represents pure memory—memory not complicated by perception—and remains motionless; the apex $S$ represents our present perception and action, moves ceaselessly forward, and ceaselessly touches the moving plane $P$ (my actual representation of the universe). The image of the body is concentrated at $S$; and since $S$ belongs to $P$, it receives and returns the actions emanating from all the images that compose the plane. Thought as a whole oscillates continually between the apex $S$ and the base $AB$. (22)
+[fig] *Matter and Memory*, Figure 5. The cone $SAB$ represents the totality of the recollections accumulated in our memory; the base $AB$ represents pure memory—memory not complicated by perception—and remains motionless; the apex $S$ represents our present perception and action, moves ceaselessly forward, and ceaselessly touches the moving plane $P$ (my actual representation of the universe). The image of the body is concentrated at $S$; and since $S$ belongs to $P$, it receives and returns the actions emanating from all the images that compose the plane. Thought as a whole oscillates continually between the apex $S$ and the base $AB$. (22)
 
 ![The memory cone, Figure 5 of Matter and Memory](attachments/roof-archive/cv8255716/12-matter-memory-cone.png)
 
@@ -210,7 +210,7 @@ For the convenience of concrete analysis, let us take as our example one element
 
 At the same time, the contour line naturally possesses **polysemy**—painting exists as a sign released from the constraints of reality, and in itself it can freely arouse the viewer’s imagination and thought, or set the “metaphor” in motion. Herein lies the latent plasmaticness of the sign. Let us take the famous duck–rabbit figure as an example:
 
-[图题] From *Ludwig Wittgenstein: The Duty of Genius*.
+[fig] From *Ludwig Wittgenstein: The Duty of Genius*.
 
 ![The duck–rabbit illusion figure](attachments/roof-archive/cv8255716/13-duck-rabbit-figure.png)
 
@@ -218,7 +218,7 @@ At the same time, the contour line naturally possesses **polysemy**—painting e
 
 It should be pointed out that the representational power of the contour does not mean accuracy. As noted in the section “Shot and Space,” linear perspective can be discarded for the sake of visual verisimilitude, and scattered perspective adopted according to the feeling of the human eye—which will alter the contours of objects, stretching or distorting them. A convincing contour need not be “accurate,” nor should any standard exist for it. Ernst Gombrich comments thus on the painting of Paul Cézanne: “In his ardent search for a sense of depth without sacrifice of the brightness of colours, for an orderly arrangement without sacrifice of the sense of depth—in all his struggles and gropings there was one thing he was prepared to sacrifice if need be: the conventional ‘correctness’ of outline.” (24)
 
-[图题] Cézanne, *Compotier, Glass and Apples* (1880).
+[fig] Cézanne, *Compotier, Glass and Apples* (1880).
 
 ![Cézanne’s Compotier, Glass and Apples](attachments/roof-archive/cv8255716/14-cezanne-compotier-glass-apples.png)
 
@@ -238,13 +238,13 @@ The essentials of re-signification, I think, are two. ① In the process of re-s
 
 ② Simplified treatment can often be more effective than complex treatment; re-signification may also be described as the omission of redundant and roundabout sign-expression—the proposal of a simplification in which “one effect can serve as many.” For instance, in *Gosenzo-sama Banbanzai!*, Utsunomiya did not, like most animation before him, render the head’s shadow as a layered attached shadow at the boundary of head and neck; instead, treating the head as an obstacle in the path of light, he let the head’s near-circular shadow fall directly upon the body. Compared with the older practice of using shadow merely to accent a character’s details, this approach looks rough, yet it ① sets off the solidity of the head and ② directly implies the position of the light source, and so increases the effect instead. It is an extreme simplification of reality’s complex play of light and shadow, and yet it feels remarkably real—and whether or not the shadow conforms to reality does not matter in the least.
 
-[图题] *Gosenzo-sama Banbanzai!*, episode 4.
+[fig] *Gosenzo-sama Banbanzai!*, episode 4.
 
 ![A shot from episode 4 of Gosenzo-sama Banbanzai!](attachments/roof-archive/cv8255716/15-gosenzosama-banbanzai-episode-4.png)
 
 The reality-oriented work done by Takahata, Miyazaki, and their colleagues in *Heidi* and *3000 Leagues* was likewise this: using reality as a springboard, they re-constructed animation-signs of a great skill that looks artless, giving viewers a sense of reality. Take the scene in episode 2 of *Heidi* in which the grandfather toasts melting cheese: the construction of the cheese as sign was unprecedented. In the illusion of the melting cheese, viewers see its smooth, viscous, soft, glistening qualities, and in their “recollection” of the real world imagine its silky, mellow taste, obtaining an experience with many layers. Toshiyuki Inoue remarks: “You cannot find a single superfluous line in the image. There are only simple contour lines, highlights, and shadows, and yet somehow that cheese looks more delicious than real cheese. Even in an image whose information has been pared down to the limit, viewers can still extract from the animation the impression of the real thing we have seen—precisely there lies animation’s advantage.” (14) We discover that our response to a single white dot on a golden-yellow mass is astonishingly complex: we seem to read the nature of the whole out of it.
 
-[图题] *Heidi, Girl of the Alps*, episode 2.
+[fig] *Heidi, Girl of the Alps*, episode 2.
 
 ![The melting-cheese scene in episode 2 of Heidi, Girl of the Alps](attachments/roof-archive/cv8255716/16-heidi-episode-2-cheese.png)
 
@@ -270,7 +270,7 @@ Take Kaguya’s moonlit run. How is it that, from the weaving and knotting of li
 
 The meaning of the single image lies in the relation of mutual “**interpenetration**” between images. This “penetration” is by no means a precise, strict causal relation (in a certain sense, this polysemy and interpenetration may even be said to exceed “articulation”), and yet it truly conveys force and rhythm, letting one feel, in the trembling of the lines, complex and turbulent emotions—rage, sorrow, madness—and making the passage an organic whole. This closely resembles what Bergson calls “**durée**”: “a violent love or a deep melancholy takes possession of our soul: here we feel a thousand different elements dissolving into and permeating one another, without precise outlines, without the least tendency to externalize themselves in relation to one another” (34). Watching the animation-sign (the movement of lines), the viewer undergoes an experience of continuous, free change (that is, plasmaticness). May we not say that the animator’s experience of temporal flux has been conveyed to the viewer—or that the body’s intuition and recognition of durée and of the flow of life has been returned to the body?
 
-[图题] *The Tale of the Princess Kaguya*.
+[fig] *The Tale of the Princess Kaguya*.
 
 ![The moonlit run in The Tale of the Princess Kaguya](attachments/roof-archive/cv8255716/17-princess-kaguya.png)
 
@@ -286,13 +286,13 @@ In the present day there exists a current in the animation world of painting bac
 
 Shichirō Kobayashi points out that the present age is “**an age of the loss of tactility**”: this is why, even in a medium like animation, images that look as though a camera had shot them can be so widely accepted (38). This too is a sharp criticism. “The verisimilitude of live-action film” is by no means without value as an important route and methodology; but what must be considered is this: while animation strains with all its might to approach the effects of live action, are we not gradually losing our bodies?
 
-[图题] Kobayashi’s art in *Urusei Yatsura 2: Beautiful Dreamer* (1984), which uses the quantity in near and far to express strength and weakness. The distant view is not painted with *bokashi* (making the colors gradate and the contours blur) but is painted entirely clear. In the far depths, however, the quantity is reduced: the farther away, the more broken the lines become and the more the details are omitted. Though the quantity decreases, because the distance remains as clear as the near end it leaves a strong impression, and things do not weaken with distance as they do in camera photography. (38) Here, likewise, we feel “the solid and durable shapes of nature.”
+[fig] Kobayashi’s art in *Urusei Yatsura 2: Beautiful Dreamer* (1984), which uses the quantity in near and far to express strength and weakness. The distant view is not painted with *bokashi* (making the colors gradate and the contours blur) but is painted entirely clear. In the far depths, however, the quantity is reduced: the farther away, the more broken the lines become and the more the details are omitted. Though the quantity decreases, because the distance remains as clear as the near end it leaves a strong impression, and things do not weaken with distance as they do in camera photography. (38) Here, likewise, we feel “the solid and durable shapes of nature.”
 
 ![Shichirō Kobayashi’s art in Urusei Yatsura 2: Beautiful Dreamer](attachments/roof-archive/cv8255716/18-urusei-yatsura-2-kobayashi-art.png)
 
 In an essay appraising Kobayashi’s art, Osamu Dezaki says outright: “In any case, I have from beginning to end rejected the attitude that merely copies the object down correctly. The sense of reality lies not in realistic depiction but in the essence of things”; “Cel drawing and background painting cannot be considered entirely apart from each other… only when the two become one body does something begin to exist as a mode of expression” (39). These blunt statements are all the more profound for their directness, and they echo our earlier discussion. Of course, the “essence of things” Dezaki speaks of here refers, more precisely, “not to the essence of the physical world, but to the essence of our reactions to it” (27); what matters is not the cause in reality but “the mechanism that produces a certain effect.” Just as the making of *The Adventures of Gamba* (*Ganba no Bōken*, 1975) set out from the question “how do the mice see the world,” Dezaki writes: “For the mice, more essential than the overall shape of a rock or the like is the pitted, uneven texture of the rock surface pressed close against them; which means that, to give an example, even if they came to ‘Gunkanjima,’ what would first leap before their eyes would be the rusted surface of the steel.” The “essence” here is the mice’s bodily sensation. At “the unity of the sensing and the sensed,” we come to identify with the painter—and with the mice.
 
-[图题] *The Adventures of Gamba*, episode 5.
+[fig] *The Adventures of Gamba*, episode 5.
 
 ![A shot from episode 5 of The Adventures of Gamba](attachments/roof-archive/cv8255716/19-gamba-episode-5.png)
 

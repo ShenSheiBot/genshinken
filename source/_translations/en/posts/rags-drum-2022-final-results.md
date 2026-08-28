@@ -20,7 +20,7 @@ rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-[图题] Illustration: 初鹿野凪.
+[fig] Illustration: 初鹿野凪.
 
 ![Results poster for the Rags Drum 2022 annual call for submissions](/attachments/roof-archive/cv19384728/24911bebfb2840a3a46ccc940b43008238b56a8b.jpg)
 

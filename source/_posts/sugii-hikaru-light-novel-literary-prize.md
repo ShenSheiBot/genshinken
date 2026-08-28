@@ -83,7 +83,7 @@ https://kakuyomu.jp/works/16817330669771510815/episodes/822139845419609812
 
 有评论家的地方，才是特殊的。
 
-[图题] 图为《乐园noise》男主，女装版村濑真琴。
+[fig] 图为《乐园noise》男主，女装版村濑真琴。
 
 ![《乐园Noise》女装版村濑真琴的立绘](attachments/wechat/-Py4knFpYKU_h1GWS62WzA/body-002.jpg)
 

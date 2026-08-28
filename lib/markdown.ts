@@ -835,8 +835,8 @@ function rehypeLatinRuns() {
   return (tree: Root) => walk(tree as unknown as { children: unknown[] });
 }
 
-const TABLE_CAPTION_MARKER = "[表题]";
-const TABLE_NOTE_MARKER = "[表注]";
+const TABLE_CAPTION_MARKER = "[table]";
+const TABLE_NOTE_MARKER = "[table-note]";
 
 type TableFigureNode = {
   type?: string;
@@ -956,30 +956,30 @@ function rehypeTableFigures() {
   return (tree: Root) => walk(tree as unknown as TableFigureNode);
 }
 
-const FIGURE_CAPTION_MARKER = "[图题]";
-const FIGURE_NOTE_MARKER = "[图注]";
-const AUDIO_CAPTION_MARKER = "[音频]";
-const MUSIC_CAPTION_MARKER = "[音乐]";
-const VIDEO_CAPTION_MARKER = "[视频]";
-const PROFILE_NAME_MARKER = "[人物]";
-const PROFILE_BIO_MARKER = "[人物简介]";
-const PROFILE_AUTHOR_NAME_MARKER = "[作者]";
-const PROFILE_AUTHOR_BIO_MARKER = "[作者简介]";
-const PROFILE_CARD_NAME_MARKER = "[名片]";
-const PROFILE_CARD_BIO_MARKER = "[名片简介]";
-const GALLERY_TITLE_MARKER = "[图组]";
-const GALLERY_END_MARKER = "[图组结束]";
-const SLIDES_TITLE_MARKER = "[幻灯]";
-const SLIDES_END_MARKER = "[幻灯结束]";
-const ARTICLE_LAYOUT_END_MARKER = "[版式结束]";
+const FIGURE_CAPTION_MARKER = "[fig]";
+const FIGURE_NOTE_MARKER = "[fig-note]";
+const AUDIO_CAPTION_MARKER = "[audio]";
+const MUSIC_CAPTION_MARKER = "[music]";
+const VIDEO_CAPTION_MARKER = "[video]";
+const PROFILE_NAME_MARKER = "[person]";
+const PROFILE_BIO_MARKER = "[person-bio]";
+const PROFILE_AUTHOR_NAME_MARKER = "[author]";
+const PROFILE_AUTHOR_BIO_MARKER = "[author-bio]";
+const PROFILE_CARD_NAME_MARKER = "[card]";
+const PROFILE_CARD_BIO_MARKER = "[card-bio]";
+const GALLERY_TITLE_MARKER = "[gallery]";
+const GALLERY_END_MARKER = "[/gallery]";
+const SLIDES_TITLE_MARKER = "[slides]";
+const SLIDES_END_MARKER = "[/slides]";
+const ARTICLE_LAYOUT_END_MARKER = "[/layout]";
 const ARTICLE_LAYOUT_MARKERS = new Map([
-  ["[版式:资料目录]", "resources"],
-  ["[版式:时间轴]", "timeline"],
-  ["[版式:阅读路径]", "reading-path"],
-  ["[版式:书单]", "book-list"],
-  ["[版式:播客]", "podcast"],
-  ["[版式:联络卡]", "contact"],
-  ["[版式:漫画]", "comic"],
+  ["[layout:resources]", "resources"],
+  ["[layout:timeline]", "timeline"],
+  ["[layout:reading-path]", "reading-path"],
+  ["[layout:book-list]", "book-list"],
+  ["[layout:podcast]", "podcast"],
+  ["[layout:contact]", "contact"],
+  ["[layout:comic]", "comic"],
 ] as const);
 /** Discrete display widths; each needs a matching rule in globals.css. */
 const FIGURE_WIDTHS = new Set(["25", "33", "50", "66", "75", "100"]);
@@ -1369,7 +1369,7 @@ function rehypeArticleMusic() {
 }
 
 /**
- * Convert an explicit `[视频]` caption and one or more R2-managed MP4 links
+ * Convert an explicit `[video]` caption and one or more R2-managed MP4 links
  * into a native player. Multiple declared sizes become an explicit quality
  * set; arbitrary links and raw HTML never enter this path.
  */
@@ -1465,7 +1465,7 @@ function rehypeArticleVideos() {
 }
 
 /**
- * Turn a `[图题]` paragraph plus the image or display formula that follows it
+ * Turn a `[fig]` paragraph plus the image or display formula that follows it
  * into a captioned `<figure>`, with the caption printed below the plate as in
  * the source editions. Images without the marker are left alone, so alt text
  * that is a placeholder rather than a legend never leaks into the page.

@@ -20,11 +20,11 @@ updated: 2026-08-21
 format: article
 ---
 
-[作者] Zhong Zimo
+[author] Zhong Zimo
 
 ![Portrait of Zhong Zimo](attachments/roof-archive/cv1765321/01-author-portrait-v5.png "=25%")
 
-[作者简介] Interests: ACG culture studies, gender, space, and intellectual history. An empathic observer at the margins.
+[author-bio] Interests: ACG culture studies, gender, space, and intellectual history. An empathic observer at the margins.
 
 ## Introduction
 

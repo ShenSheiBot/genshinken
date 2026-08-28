@@ -45,11 +45,11 @@ citation:
 
 <h2 id="introduction">导论：研究京都學派：哲学、思想史与马克思对现代性的批判</h2>
 
-[音乐] ずっと真夜中でいいのに。〈彷徨い酔い温度〉｜4分51秒
+[music] ずっと真夜中でいいのに。〈彷徨い酔い温度〉｜4分51秒
 
 [在网易云音乐收听](https://music.163.com/#/song?id=1371306566 "netease:1371306566")
 
-[图题] 封面插画：@DarkAccel（pixiv ID 146943708）。
+[fig] 封面插画：@DarkAccel（pixiv ID 146943708）。
 
 ![海边蓝色海水前、穿格纹泳装的浅绿色长发女性插画](attachments/wechat/gP04aas1lCQJFJZzsSQ9MA/001.jpg)
 
@@ -214,13 +214,13 @@ citation:
 
 <h2 id="chapter-01-philosophy-answerability">第一章：哲学与应答性：京都学派与世界史的顿悟时刻</h2>
 
-[音乐] Blume popo〈幸福のすべて〉｜4分25秒
+[music] Blume popo〈幸福のすべて〉｜4分25秒
 
 [在网易云音乐收听](https://music.163.com/#/song?id=1893609787 "netease:1893609787")
 
 *试译：单字一兔。原文为哈若图宁（Harry Harootunian）〈Philosophy and Answerability: The Kyoto School and the Epiphanic Moment of World History〉，载《Confronting Capital and Empire》（2017）。原发布说明：“注释从省，仅供学习交流、留存参考。”*
 
-[图题] 封面插画：@DarkAccel（pixiv ID 132885765）。
+[fig] 封面插画：@DarkAccel（pixiv ID 132885765）。
 
 ![酒吧柜台前的浅绿色长发人物插画](attachments/wechat/Osm1T34vW_XD3YKYDzgpOw/001.png)
 
@@ -548,7 +548,7 @@ citation:
 
 <h2 id="chapter-02-labor-process-historical-time">第二章：劳动过程与历史时间的发生：与马克思一道，与西田一道</h2>
 
-[音乐] ハイスイノナサ〈均質化する風景〉｜5分29秒
+[music] ハイスイノナサ〈均質化する風景〉｜5分29秒
 
 [在网易云音乐收听](https://music.163.com/#/song?id=22716502 "netease:22716502")
 
@@ -680,13 +680,13 @@ citation:
 
 <h2 id="chapter-03-commodity-fetishism">第三章：商品的拜物教性质与无的拜物教：论马克思与西田的颠倒问题</h2>
 
-[音乐] 藍空と月〈昨日の夢〉｜5分03秒
+[music] 藍空と月〈昨日の夢〉｜5分03秒
 
 [在网易云音乐收听](https://music.163.com/#/song?id=2611341333 "netease:2611341333")
 
 *试译：Modus（@实体substance）；译校：单字一兔。原文为埃莱娜·朗格（Elena Louisa Lange）〈Commodity Fetishism and the Fetishism of Nothingness: On the Problem of Inversion in Marx and Nishida〉，载《Confronting Capital and Empire》（2017）。原发布说明：“注释从省，仅供学习交流、留存参考。”*
 
-[图题] 封面：@虫圭。
+[fig] 封面：@虫圭。
 
 ![多名彩色头发人物围绕礼盒的插画](attachments/wechat/TFE3O7DzFCa_wRkK0TmSfA/001.jpg)
 
@@ -972,7 +972,7 @@ citation:
 
 <h2 id="chapter-04-nishida-antinomy">第四章：西田几多郎与资产阶级哲学的二律背反</h2>
 
-[音乐] livetune feat. 初音ミク〈Last Night, Good Night〉｜6分24秒
+[music] livetune feat. 初音ミク〈Last Night, Good Night〉｜6分24秒
 
 [在网易云音乐收听](https://music.163.com/#/song?id=22760391 "netease:22760391")
 
@@ -1483,7 +1483,7 @@ A是A，当且仅当（≡）非A是非A（反之亦然）：西田相信，这�
 
 <h2 id="chapter-05-ethnicity-species">第五章：族群性与种：论多族群国家哲学与日本帝国主义</h2>
 
-[音乐] 五月天〈晚安 地球人（Live）〉｜4分40秒
+[music] 五月天〈晚安 地球人（Live）〉｜4分40秒
 
 [在网易云音乐收听](https://music.163.com/#/song?id=386114 "netease:386114")
 
@@ -1785,7 +1785,7 @@ Hegel, Phenomenology of Spirit，页 213。关于黑格尔论作品与个体性�
 
 <h2 id="chapter-06-aleatory-dialectic">第六章：偶然辩证法：田边元同马克思的对话</h2>
 
-[音乐] 前田愛〈Days－愛情と日常〉｜4分58秒
+[music] 前田愛〈Days－愛情と日常〉｜4分58秒
 
 [在网易云音乐收听](https://music.163.com/#/song?id=30070592 "netease:30070592")
 
@@ -2179,7 +2179,7 @@ Hegel, Phenomenology of Spirit，页 213。关于黑格尔论作品与个体性�
 
 <h2 id="chapter-07-tanabe-storyteller">第七章：作为故事讲述者的田辺元：或，将《作为忏悔道的哲学》作为叙事来阅读</h2>
 
-[音乐] 五月天〈时光机〉｜3分39秒
+[music] 五月天〈时光机〉｜3分39秒
 
 [在网易云音乐收听](https://music.163.com/#/song?id=386469 "netease:386469")
 
@@ -2393,13 +2393,13 @@ Hegel, Phenomenology of Spirit，页 213。关于黑格尔论作品与个体性�
 
 <h2 id="chapter-08-subjective-drive">第八章：资本的主体性驱力：梯明秀的物质现象学</h2>
 
-[音乐] toe〈むこう岸が視る夢〉｜4分42秒
+[music] toe〈むこう岸が視る夢〉｜4分42秒
 
 [在网易云音乐收听](https://music.163.com/#/song?id=22664758 "netease:22664758")
 
 *试译：九畹采萧；译校：单字一兔。原文为 Gavin Walker〈The Subjective Drive of Capital, Kakehashi Akihide’s Phenomenology of Matter〉，载《Confronting Capital and Empire》（2017）。原发布说明：“注释从省，仅供学习交流、留存参考。”*
 
-[图题] 封面插画：@たけらか（pixiv ID 145664320）。
+[fig] 封面插画：@たけらか（pixiv ID 145664320）。
 
 ![两名动漫人物相吻的彩色插画](attachments/wechat/Q1aksRvxSgHOrMJPe5uOrQ/body-001.png)
 
@@ -2737,11 +2737,11 @@ Furihata Setsuo, Furihata Setsuo chosakushū [Collected works of Furihata Setsuo
 
 <h2 id="chapter-09-umemoto-nothingness">第九章：梅本克己、主体的虚无与对市民社会的批判</h2>
 
-[音乐] Foreground Eclipse〈(I Don’t Need Any Titles To This Song!)〉｜4分32秒
+[music] Foreground Eclipse〈(I Don’t Need Any Titles To This Song!)〉｜4分32秒
 
 [在网易云音乐收听](https://music.163.com/#/song?id=2038399484 "netease:2038399484")
 
-[图题] 封面插画：@東山小川（pixiv ID 124084930）。
+[fig] 封面插画：@東山小川（pixiv ID 124084930）。
 
 ![两名动漫人物在户外相拥起舞的彩色插画](attachments/wechat/iYoVj0TRlBDCjy4LGHvdtA/body-001.png)
 
@@ -2977,7 +2977,7 @@ Furihata Setsuo, Furihata Setsuo chosakushū [Collected works of Furihata Setsuo
 
 <h2 id="chapter-10-afternoon-rest">第十章：在那休憩与反省的午后</h2>
 
-[音乐] TOMOO〈ソナーレ〉｜4分24秒
+[music] TOMOO〈ソナーレ〉｜4分24秒
 
 [在网易云音乐收听](https://music.163.com/#/song?id=3328819101 "netease:3328819101")
 
@@ -3025,7 +3025,7 @@ Furihata Setsuo, Furihata Setsuo chosakushū [Collected works of Furihata Setsuo
 
 首先，让我们考察中井为「委员会的逻辑」绘制的总图。「委员会的逻辑」由四个连续的环节构成——「思惟」「讨论」「技术」「生产」——每一环节都代表理性史上的一次发展（详见后文）。「思惟」与「讨论」构成委员会的「审议」（shingi）环节，「技术」与「生产」构成其「代表」（daihyō）环节。「审议」是委员会阐发「大众潜在能量」的时刻，「代表」则是这些「潜在能量」或民众利益被委员会转译为某种行动（「语言中的现实能量」）的时刻。[^ch10-19]「审议」与「代表」在委员会的具体活动中，又更细分地表现为「提案」「决议」「委任」「实行」。「提案」与「决议」归于「审议」，「委任」与「实行」归于「代表」。
 
-[图题] 委员会的逻辑
+[fig] 委员会的逻辑
 
 ![“委员会的逻辑”流程图，展示思惟、讨论、技术、生产、实践、主体性与批判之间的关系](attachments/wechat/EmcatbI58HW7XMIVqyROgg/002.png)
 
@@ -3087,7 +3087,7 @@ Furihata Setsuo, Furihata Setsuo chosakushū [Collected works of Furihata Setsuo
 
 中井用另一幅图示阐明了他这种历史性的逻辑观念。让我们简述该图：历史上曾有三种不同的文化——「古典文化」「中世文化」「近代文化」，各自的特征逻辑分别为「被言说的逻辑（口传逻辑）」「被书写的逻辑」「被印刷的逻辑」。此外，与每种文化的社会制度相联系，又产生了更加具体的逻辑。在古典文化内由「氏族制度」向「奴隶制度」的转变中，出现了「辩证法的逻辑」；在中世文化由「奴隶制度」向「封建制度」的转移中，出现了「冥想的逻辑」；在近代文化早期由「封建制度」向「商业制度」的过渡中，出现了「经验的逻辑」；而与「资本主义制度」（商业制度、产业制度、金融制度）的各自发展相对应，「行动的逻辑」「机能的逻辑」「生产的逻辑」分别在近代文化中出现。据中井所言，「讨论」「思惟」「技术」「生产」正是上述这些历史性逻辑各自的本质特征，而「实践」通过辩证地统一这四个历史环节，催生出了「委员会的逻辑」。
 
-[图题] 历史与逻辑的辩证
+[fig] 历史与逻辑的辩证
 
 ![历史与逻辑的竖向关系图，将古典、中世、近代文化及其制度、逻辑连接至委员会的逻辑](attachments/wechat/EmcatbI58HW7XMIVqyROgg/003.png)
 
@@ -3123,7 +3123,7 @@ Furihata Setsuo, Furihata Setsuo chosakushū [Collected works of Furihata Setsuo
 
 中井用又一幅图示描述这一交流结构。[^ch10-43]我并不打算细致分析这幅复杂的图，而只是勾勒其若干基本特征。中井首先区分了「思惟」与「讨论」。「思惟」是「质性地」构成意义的行为，「讨论」是「量性地」扩展意义的行为。[^ch10-44]在思惟中，陈述或现象被付诸质询与检审，从而成为批判的对象。一种批判性的「确信」往往从这种意义的质性构成中浮现出来。批判由自身内部的一个「否定判断」促成或「中介」。一个否定判断包含两个环节：朝向某个肯定判断（玫瑰是红的）的一个疑问（玫瑰是红的吗？），以及一个评价性的回答（玫瑰不是红的）。[^ch10-45]一切确信都必须经受否定判断的检验；倘若未能通过该检验，它们便由此成为批判性确信。然而，对中井而言，批判性确信并非仅仅在抽象的个体内部形成，而是在与某种社会空间或语境的关系中形成——工厂、办公室、剧院或合作社等等（高度资本主义或技术现代性的诸种制度）。只有在某种社会的、互动的空间内被表达出来的问与答，才构成批判性确信。因此，个体内部对于意义的「质性」建构，唯有在确定社会空间中人与人之间对意义的「量性」交换之内，才会发生。[^ch10-46]
 
-[图题] 交流与判断的结构
+[fig] 交流与判断的结构
 
 ![讨论与思惟之间的否定关系图，标出主体张力、确信与内外评价](attachments/wechat/EmcatbI58HW7XMIVqyROgg/004.png)
 
@@ -3463,13 +3463,13 @@ Furihata Setsuo, Furihata Setsuo chosakushū [Collected works of Furihata Setsuo
 
 <h2 id="chapter-11-yanagida-negation">第十一章：否定到底：柳田謙十郎、西田哲学与宗教式马克思主义</h2>
 
-[音乐] 黒木渚〈あたしの心臓あげる〉｜5分46秒
+[music] 黒木渚〈あたしの心臓あげる〉｜5分46秒
 
 [在网易云音乐收听](https://music.163.com/#/song?id=26325748 "netease:26325748")
 
 *川村覚文（Satofumi Kawamura）著，单字一兔试译。原作〈Yanagida Kenjūrō: A Religious Seeker of Marxism〉载《Confronting Capital and Empire》（2017）；注释从省。*
 
-[图题] 封面：@兔猫锚（pid=144632656）。
+[fig] 封面：@兔猫锚（pid=144632656）。
 
 ![一名手持白色信封、身穿深色服装的长发女性插画](attachments/wechat/XcHajx3IGwuAwij1C9Movg/001.jpg)
 
@@ -3668,7 +3668,7 @@ Furihata Setsuo, Furihata Setsuo chosakushū [Collected works of Furihata Setsuo
 
 <h2 id="chapter-12-tosaka-secret-history">第十二章：一段隐秘的历史：户坂润与诸京都学派</h2>
 
-[音乐] ONE OK ROCK〈内秘心書〉｜3分37秒
+[music] ONE OK ROCK〈内秘心書〉｜3分37秒
 
 [在网易云音乐收听](https://music.163.com/#/song?id=794303 "netease:794303")
 

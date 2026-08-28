@@ -20,11 +20,11 @@ citation:
 
 **——对《朋友，请停下你们手中的过度合理化评论》的评论*。*
 
-[作者] Austoria
+[author] Austoria
 
 ![Austoria头像](attachments/roof-archive/cv1984621/01-author-portrait-v5.png "=25%")
 
-[作者简介] 立志成为能让别人冲的人。
+[author-bio] 立志成为能让别人冲的人。
 
 [朋友，请停下你们手中的过度合理化评论](https://www.bilibili.com/read/cv1953237/)
 

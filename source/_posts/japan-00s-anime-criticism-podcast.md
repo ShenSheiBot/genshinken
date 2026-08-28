@@ -31,9 +31,9 @@ citation:
   language: zh-CN
 ---
 
-[版式:播客]
+[layout:podcast]
 
-[音频] 再谈日本00年代动漫批评：「二次元」如何与「后现代」产生交集｜参与：钻石、夜深人静、天坑
+[audio] 再谈日本00年代动漫批评：「二次元」如何与「后现代」产生交集｜参与：钻石、夜深人静、天坑
 
 [收听原音](attachments/wechat-audio/Mzg5MjAwMDM0Nl8yMjQ3NDg5MDU3/original-64kbps.mp3 "85:41")
 
@@ -62,4 +62,4 @@ citation:
 - 布尔迪厄《区分》
 - 拉马尔《动画机器》
 
-[版式结束]
+[/layout]

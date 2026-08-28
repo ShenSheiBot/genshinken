@@ -7,4 +7,4 @@
 - 原文 Thomas Lamarre，*boundary 2* 42(3), 2015, pp. 157–170；译者 Recursion；校对村上侑、单字一兔；编辑夜深人静。正文有 5 个图片 placement，19 个脚注调用与 19 个定义。
 - 本页与 2026-05-27 的 `QjEP0giIfNNvhT-eDFP_CQ` 是同一中文译文的两个公开版本。两版主体规模相当，并非“删节版／完整版”：本页约 13,811 个规范化可见字符，前页约 13,777 个；本页调整了大量译句、拆分若干段落，并增加校对署名“单字一兔”。因此以 5 月 27 日为中文初发日、5 月 28 日为实质修订日，公开 canonical 采用本页正文。
 - 公开稿恢复三个 20px 粗体标题为二级标题；五组图片与说明重排为 figure；19 条附录说明转为闭合脚注，并把源中另起一段的四个 URL 归回相应脚注。删除回复表情、通用许可／投稿／QQ群说明，保留实际编辑署名。许可：CC BY-NC-SA 4.0。
-- 五组 `[图题]` 在渲染时生成原生 figure/figcaption，虽然 Markdown 为图题先于图片的语义标记，页面仍以 caption 与对应图片组成同一 figure；两处英文书名中的误断词 `Porta-ble`、`Transpor-tation` 已据初发 raw 的完整拼写恢复。第三图书名纠正为 *An Anthropology of the Machine*；第五图 alt 按原图改为东京木星城市景象。
+- 五组 `[fig]` 在渲染时生成原生 figure/figcaption，虽然 Markdown 为图题先于图片的语义标记，页面仍以 caption 与对应图片组成同一 figure；两处英文书名中的误断词 `Porta-ble`、`Transpor-tation` 已据初发 raw 的完整拼写恢复。第三图书名纠正为 *An Anthropology of the Machine*；第五图 alt 按原图改为东京木星城市景象。

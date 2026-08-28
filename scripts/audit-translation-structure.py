@@ -33,7 +33,7 @@ LIST_ITEM_RE = re.compile(r"^(\s*)([-+*]|\d+[.)])\s+\S")
 HORIZONTAL_RULE_RE = re.compile(r"^\s{0,3}(?:(?:\*\s*){3,}|(?:-\s*){3,}|(?:_\s*){3,})$")
 TABLE_SEPARATOR_RE = re.compile(r"^\s*\|?\s*:?-{3,}:?\s*(?:\|\s*:?-{3,}:?\s*)+\|?\s*$")
 TABLE_ROW_RE = re.compile(r"^\s*\|?.*\|.*\|?\s*$")
-SEMANTIC_CAPTION_RE = re.compile(r"^\s*\[(图题|图注|表题|表注)\]\s*(.*)$")
+SEMANTIC_CAPTION_RE = re.compile(r"^\s*\[(fig|fig-note|table|table-note)\]\s*(.*)$")
 NUMBER_RE = re.compile(r"(?<![\w])\d+(?:[.,:/–—-]\d+)*(?![\w])")
 PROCESS_MARKER_RE = re.compile(
     r"(?:待确认译名|待人工(?:翻译|复核)|此处未译|翻译过程|机器翻译|"

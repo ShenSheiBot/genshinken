@@ -18,11 +18,11 @@ citation:
   url: "https://www.bilibili.com/read/cv3582982/"
 ---
 
-[作者] Hisui
+[author] Hisui
 
 ![Hisui头像](attachments/roof-archive/cv3582982/01-author-portrait-v5.png "=25%")
 
-[作者简介] Abracadabra
+[author-bio] Abracadabra
 
 在《攻壳机动队》(1995)中将押井守的天才展示得淋漓尽致的无疑是他长达整整三分钟的空镜头：在这段时间里，观众能够做到的只是追随着无尽的客观镜头徒劳地寻找那个“观看者”，也即素子与巴特的幻听的来源。
 

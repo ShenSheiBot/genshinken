@@ -36,7 +36,7 @@ citation:
 
 本文为《导读女性主义理论：从现代性到后现代》选文 126。
 
-[图题] 郑明河，重装（Reassemblage），拍摄於塞内加尔，1982年。
+[fig] 郑明河，重装（Reassemblage），拍摄於塞内加尔，1982年。
 
 ![黑白三联肖像中的三位塞内加尔女性，中央人物直视镜头并露出微笑](attachments/wechat/7nE0SvdejgnZGGtx_sx4Lg/002.jpg "=75%")
 

@@ -42,7 +42,7 @@ citation:
 
 ---
 
-[版式:漫画]
+[layout:comic]
 
 ![《Lain》同人漫画页：少女面孔、眼睛与缠绕的线路](attachments/wechat/OmAv8Kzzo0rcMUYAmhZouQ/body-001.jpg)
 
@@ -76,4 +76,4 @@ citation:
 
 ![《Lain》同人漫画页：人物独立站在夜色与城市背景中](attachments/wechat/OmAv8Kzzo0rcMUYAmhZouQ/body-016.jpg)
 
-[版式结束]
+[/layout]

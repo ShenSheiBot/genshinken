@@ -20,7 +20,7 @@ rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-[作者] 「　」
+[author] 「　」
 
 ![Portrait of the author known as 「　」](attachments/roof-archive/cv19651001/01-author-portrait-v5.png "=25%")
 

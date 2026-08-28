@@ -14,4 +14,4 @@
 - 脚注与链接：正文 `[^1]`–`[^36]` 与附录定义逐一闭合；`[^translation-1]`–`[^translation-3]` 对应 raw 的三条译注调用。raw 末尾的“译注”“附录”是这两组定义的分组标题；GFM 定义会由阅读器统一抽入“注释”面板，故公开 Markdown 不保留会在正文中变成空标题的两个标题。第1注中译本说明的 raw `<ins>` 强调以本站支持的 `<u>` 保留。原文链接为 https://muse.jhu.edu/article/368551；Crossref 收录的 DOI `10.1353/mec.0.0069` 与作者书目页共同支持《Mechademia》第3卷第1期（2008）、第75—95页。
 - 系列/去重：未发现标题、正文锚点与责任链同时吻合的既有 B canonical。raw 明确说明后续论文计划；原作后来实际发表 Part II 与 Part III，但当前中文公开稿只有 Part I。本站据此建立暂停文库《物种主义》，当前只列已发布的第一章，不伪造尚无中文公开稿的章节。
 - 公开映射：canonical 页面为 `/books/lamarre-speciesism/chapters/part-1-wartime-animation`；宿主 `lamarre-speciesism-wartime-animation.md` 标记为 `book_document`，不再额外生成同文独立文章。
-- 删除/保留：移除微信投稿/QQ 等平台噪声；保留正文、5 个图片 placement、图题、译注与 36 条原文注释。五条原图题改用本站 `[图题]` 语法并置于对应图片前，使渲染器生成 figure/figcaption，而不是把说明降为普通斜体段落。
+- 删除/保留：移除微信投稿/QQ 等平台噪声；保留正文、5 个图片 placement、图题、译注与 36 条原文注释。五条原图题改用本站 `[fig]` 语法并置于对应图片前，使渲染器生成 figure/figcaption，而不是把说明降为普通斜体段落。

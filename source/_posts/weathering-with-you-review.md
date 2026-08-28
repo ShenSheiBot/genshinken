@@ -18,11 +18,11 @@ citation:
   url: "https://www.bilibili.com/read/cv3126542/"
 ---
 
-[作者] 红茶泡海苔
+[author] 红茶泡海苔
 
 ![红茶泡海苔头像](attachments/roof-archive/cv3126542/01-author-portrait-v4.png "=25%")
 
-[作者简介] 文学硕士，御宅文化批评，文艺批评。
+[author-bio] 文学硕士，御宅文化批评，文艺批评。
 
 > 编者按：剧透警告。
 

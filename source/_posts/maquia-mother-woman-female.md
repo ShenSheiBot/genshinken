@@ -18,11 +18,11 @@ citation:
   url: "https://www.bilibili.com/read/cv2156702/"
 ---
 
-[作者] 钟子默
+[author] 钟子默
 
 ![钟子默头像](attachments/roof-archive/cv2156702/01-author-portrait-v5.png "=25%")
 
-[作者简介] 兴趣：ACG文化研究／性别／空间／思想史。共情泛滥的边缘观察者。
+[author-bio] 兴趣：ACG文化研究／性别／空间／思想史。共情泛滥的边缘观察者。
 
 1. 本文严重剧透，请酌情阅读。
 

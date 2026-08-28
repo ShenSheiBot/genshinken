@@ -18,11 +18,11 @@ citation:
   extra: "原文于2019-08-09首发于Bangumi（https://bgm.tv/blog/291672）；2020-01-16经编者裁切并吸收作者评论区补充后发表于屋顶现视研。"
 ---
 
-[作者] 秘则为花
+[author] 秘则为花
 
 ![秘则为花头像](attachments/roof-archive/cv4364107/01-author-portrait-v4.png "=25%")
 
-[作者简介] 高岸为谷，深谷为陵。
+[author-bio] 高岸为谷，深谷为陵。
 
 > 作者君↑，本文经过编者裁切。
 

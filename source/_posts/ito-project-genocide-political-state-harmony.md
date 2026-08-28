@@ -18,13 +18,13 @@ citation:
   url: "https://www.bilibili.com/read/cv4975791/"
 ---
 
-[作者] 秘则为花
+[author] 秘则为花
 
 ![秘则为花头像](attachments/roof-archive/cv4975791/01-author-portrait-v5.png "=25%")
 
-[作者简介] 高岸为谷，深谷为陵。
+[author-bio] 高岸为谷，深谷为陵。
 
-[视频] 本文视频版｜制作：天下丶通宵；配音：杏仁；封面：啊呀
+[video] 本文视频版｜制作：天下丶通宵；配音：杏仁；封面：啊呀
 
 [播放视频：1080P](attachments/wechat-video/wxv_1520578916082565121/original-1920x1080.mp4 "=1920x1080 06:24")
 

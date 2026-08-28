@@ -18,11 +18,11 @@ citation:
   url: "https://www.bilibili.com/read/cv1775632/"
 ---
 
-[作者] 塔塔君 Minkun
+[author] 塔塔君 Minkun
 
 ![塔塔君 Minkun头像](attachments/roof-archive/cv1775632/01-author-portrait-v5.png "=25%")
 
-[作者简介] 一个日本动画观众和电影观众，涉世不深。
+[author-bio] 一个日本动画观众和电影观众，涉世不深。
 
 如果挑选四部作品代表2018年日本动画，我以当年日本动画相比以往没有的新动向为标准，决定把四个名额分成四个主题。
 
@@ -188,7 +188,7 @@ citation:
 
 该作的监督樱木优平，在《日本动画人博览会》这个短片动画企划崭露头角的CG动画监督，曾经和宫崎骏合作在吉卜力美术馆上映的短片《毛虫のボロ》被宫崎骏折磨的死去活来，这位也是值得期待的新晋监督，明年1月他的新作剧场版动画《即便明天世界终结》上映。
 
-[图题] 《Ingress》。
+[fig] 《Ingress》。
 
 ![《Ingress》动画宣传图](attachments/roof-archive/cv1775632/17-ingress.jpg)
 

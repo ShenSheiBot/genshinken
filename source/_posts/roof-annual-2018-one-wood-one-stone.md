@@ -20,11 +20,11 @@ citation:
 
 > 吾未绝大冀于方来，则思聆知者之心声而相观其内曜。内曜者，破瘰暗者也；心声者，离伪诈者也。……世之言何言，人之事何事乎。心声也，内曜也，不可见也。 ——鲁迅，这真是他说的。
 
-[作者] 静希草十郎
+[author] 静希草十郎
 
 ![静希草十郎头像](attachments/roof-archive/cv1789889/01-author-portrait-v5.png "=25%")
 
-[作者简介] 屋顶第二任所长。那么答案就只有一个了——行动！
+[author-bio] 屋顶第二任所长。那么答案就只有一个了——行动！
 
 静希：
 
@@ -60,15 +60,15 @@ citation:
 
 ![《哲学的历程》书单截图](/attachments/roof-archive/cv1789889/02.png)
 
-[图题] 《大问题》也可以
+[fig] 《大问题》也可以
 
 ![《福柯》书单截图](/attachments/roof-archive/cv1789889/03.png)
 
-[图题] 带出牛津通识系列
+[fig] 带出牛津通识系列
 
 ![《发现社会》书单截图](/attachments/roof-archive/cv1789889/04.png)
 
-[图题] 带出拜德雅系列
+[fig] 带出拜德雅系列
 
 ![《导读拉康》书单截图](/attachments/roof-archive/cv1789889/05.png)
 
@@ -76,7 +76,7 @@ citation:
 
 “先投入战斗，再见分晓。”
 
-[图题] 这就是你所说的道路吗！奥尔加！
+[fig] 这就是你所说的道路吗！奥尔加！
 
 ![年刊插图](/attachments/roof-archive/cv1789889/06.png)
 
@@ -86,11 +86,11 @@ citation:
 
 当然，人生也有涯，知也无涯，作者和我如果有什么基本共识说错了，说偏了，也请友善指出，我们会继续保持谦虚包容的态度。
 
-[作者] hephaestus
+[author] hephaestus
 
 ![hephaestus头像](attachments/roof-archive/cv1789889/07-author-portrait-v5.png "=25%")
 
-[作者简介] 在大谈诗与思之前，记得惊奇和敬畏才是某些东西的开端。
+[author-bio] 在大谈诗与思之前，记得惊奇和敬畏才是某些东西的开端。
 
 > **编者按：** 除了所长之外，只有 hep 写了年度总结，可见本号松散程度。
 

@@ -47,7 +47,7 @@ citation:
 
 **TK：**是的。首尔会议确实显示出，马克所说的动画研究与动画文化中存在的各种「小宇宙」，其构成的生态系统是多么多样。与此同时，它也把阻碍这些小宇宙之间交流的壁垒可视化了。举一个很小的例子，首尔会议是在日本上映《新世纪福音战士新剧场版：Q》约两周后举行的。由于这部电影在日本已经成为近乎社会现象的话题，所以我本以为，在Mechademia会议上，大家大概会热烈地谈论本片，但这样的事并未发生。当然，来自世界各地的许多参会者在当时还没有看过这部作品，但我本认为他们至少应该会对它抱有很大兴趣。即便是这样一个小例子，也显示出了人们面向具体作品时，其关注方式上的差异。也就是说，在日本，当人们谈到动画的当下动向时，「当下」所意味的，往往可能只是最近一个月，甚至最近一周左右的事情。但在北美，情况并不相似。我们通过邮件商量这次座谈会要讨论的主题时，我曾向二位提议，是否可以讨论一下在海外研究日本动画时所经历的「壁垒」。不过，这个提议在当时立刻被二位否定了，说现在几乎已经没有什么壁垒了（笑）。但是我那时所想的，正是如刚才那般表现出来的日本状况与海外状况之间的差异。也就是说，人们凝视文化现象时所采用的时间尺度是不同的。
 
-[图题] 2012年上映的《福音战士 新剧场版：Q》。
+[fig] 2012年上映的《福音战士 新剧场版：Q》。
 
 ![《福音战士新剧场版：Q》海报，两名少年背靠背坐在星空背景前](attachments/wechat/cHxrfguVQh3i5s9Sanb-nA/001.jpg)
 
@@ -65,7 +65,7 @@ citation:
 
 关于大塚和东——当然，并不是说日本动画论述者只有这两位——大塚先生参加了Mechademia会议，当他看到许多研究者在同一个句子里把自己和东先生放在一起谈论时，大概会感到惊讶。因为在大塚先生自己看来，两人并不像海外研究者接受他们时所认为的那样在谈论同一件事，两人的构想也未必具有互换性。这既是论述系统差异的问题，也是速度差异的问题。但另一方面，我想，对于海外研究者而言，他们的论述与其说是对现实状况的介入，不如说被当作某种「文化产物（artifact）」来接受。也就是说，东或大塚的论述被当作应当被研究的对象来接受，而不太被看作可以直接展开争论的对手。比如虽然马克曾邀请大塚先生到蒙特利尔，但其实这种事相当少见；以及在学术期刊上发表回应他们构想的论文，这类事情也不太在海外研究者的考虑之中。也就是说，从某种意义上讲，海外研究者是在把日本论述本身作为日本状况的「症候」来阅读。
 
-[图题] Alexander Zahlten：*The End of Japanese Cinema: Industrial Genres, National Times, and Media Ecologies*。
+[fig] Alexander Zahlten：*The End of Japanese Cinema: Industrial Genres, National Times, and Media Ecologies*。
 
 ![黄色书封上以线条连接“The End of Japanese Cinema”等英文标题文字](attachments/wechat/cHxrfguVQh3i5s9Sanb-nA/002.jpg "=25%")
 
@@ -101,7 +101,7 @@ citation:
 
 **MS：**在那里，日本的去中心化会成为问题吗？在粉丝研究中，经常会涉及对母国的参照。这一场合下的母国就是日本，但其结果往往是，与其说讨论接受场域的去中心化，或者讨论它在各个文化中的再语境化，不如说日本动画反而常常被以日本动画的「正确」消费方式这样的形式加以「物化」（reification）。欧洲研究的动向是否对这样的框架持批判态度呢？
 
-[图题] Marc Steinberg：*Anime’s Media Mix: Franchising Toys and Characters in Japan*。
+[fig] Marc Steinberg：*Anime’s Media Mix: Franchising Toys and Characters in Japan*。
 
 ![《Anime’s Media Mix》书封，漫画风人物与红黑英文标题铺在米色背景上](attachments/wechat/cHxrfguVQh3i5s9Sanb-nA/003.jpg "=25%")
 
@@ -123,7 +123,7 @@ citation:
 
 **AZ：**是的，我和马克现在正在准备一本文本选集，内容是从1920年代到现在日本围绕媒介展开的论述史。希望明年能够出版……这样是不是太乐观了（笑）。（译注：即2017年出版的《Media Theory in Japan》，Steinberg, Marc, and Alexander Zahlten, editors. Media Theory in Japan. Duke University Press, 2017.）在日本，几十年来围绕媒介展开了极其丰富的论述，但这些论述在海外几乎不为人知，在日本也没有作为历史被结构化。这本选集的目的，就是把这些论述作为历史介绍出来。与此同时，通过让北美、日本、欧洲的研究者参与这一企划，我们也意在激活国际性的讨论。在出版之前，我们预定今年11月在剑桥举办工作坊，门林先生也会参加……
 
-[图题] *Media Theory in Japan*。
+[fig] *Media Theory in Japan*。
 
 ![橙黄色《Media Theory in Japan》书封，背景是电线杆与交错电线](attachments/wechat/cHxrfguVQh3i5s9Sanb-nA/004.jpg "=25%")
 

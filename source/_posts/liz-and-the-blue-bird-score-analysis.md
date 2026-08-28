@@ -18,11 +18,11 @@ citation:
   url: "https://www.bilibili.com/read/cv1715509/"
 ---
 
-[作者] Dusty Sky
+[author] Dusty Sky
 
 ![Dusty Sky头像](attachments/roof-archive/cv1715509/01-author-portrait-v5.png "=25%")
 
-[作者简介] 信じる心があなたの魔法
+[author-bio] 信じる心があなたの魔法
 
 ![牛尾宪辅访谈与作品时间线](attachments/roof-archive/cv1715509/02-kensuke-ushio-interview.jpg)
 

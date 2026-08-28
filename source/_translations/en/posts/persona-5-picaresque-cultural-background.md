@@ -30,13 +30,13 @@ Work that explores the relationship between *Persona*—and even *Shin Megami Te
 
 Katsura Hashino, producer of the series since *Persona 3*, said in a Famitsu interview (see the September 2015 issue) that the inner otherworld called the “Palace” this time contains the power of the “picaresque hero,” a kind of hero people long for but cannot find in the real world. In the same vein, he stated again on Toco Toco TV: “I wanted to give the game the feeling of a picaresque novel.”
 
-[图题] The Toco Toco interview with Katsura Hashino.
+[fig] The Toco Toco interview with Katsura Hashino.
 
 ![Katsura Hashino looking down over the city during an interview](attachments/roof-archive/cv1550227/translations/en/02-hashino-interview-city.png)
 
 A little investigation into the word and the works associated with it turns up the usual account: *picaresque* is generally said to derive from the Spanish *picarón*, roughly meaning a rogue, hoodlum, or scoundrel, with a still earlier ancestry sometimes traced to the Vulgar Latin adjective *piccare*. In a broad sense, stories of wanderers that rebel against the conventions of chivalric romance, such as *Don Quixote*, can be placed near this tradition; *Lazarillo de Tormes* is usually treated as the genre's beginning in the stricter sense. It was followed by works such as *Guzmán de Alfarache*, even less constrained by prevailing ethics, while the device in Guevara's and Lesage's versions of *The Limping Devil*—climbing to the top of a church spire and looking down upon the ugliness of the whole city—will feel at least somewhat familiar to anyone who has gone through this game's adventure. **Hashino has also described in interviews the importance he places on the act of “looking down over” a city: thinking in a restaurant on the top floor of a high-rise let him see both Tokyo and his own self hurrying through it.** In the game, the end of one day and the arrival of another repeatedly appear against bird's-eye views of Tokyo. As players move deeper into the incident, they see that “man is a wolf to man” and come to understand that “when people crowd together and become a mass, the beasts and demons that have always lain hidden and asleep within each person are released.”
 
-[图题] Looking down over the city at night and listening to people's inner voices.
+[fig] Looking down over the city at night and listening to people's inner voices.
 
 ![A *Persona 5* transition screen overlaying the date on a view of Tokyo](attachments/roof-archive/cv1550227/03-tokyo-overview.jpg)
 
@@ -62,7 +62,7 @@ As a work once characterized by what Hashino called a “picaresque romance,” 
 
 —*L’arrestation d’Arsène Lupin*
 
-[图题] There are many NPC lines like these in *P5*, functioning as social metaphors. Are they really meaningless?
+[fig] There are many NPC lines like these in *P5*, functioning as social metaphors. Are they really meaningless?
 
 ![Tokyo pedestrians discussing social issues in *Persona 5*](attachments/roof-archive/cv1550227/translations/en/06-tokyo-npc-dialogue.png)
 
@@ -82,7 +82,7 @@ A gifted teacher humiliates his students; a celebrated painter steals other peop
 
 > “A god is born / the others die / the thing itself has never arrived and never departed / only one mistaken conversion. Now we have another eternity / but the one that left was better.”
 
-[图题] So this is the ordinary company employee an otaku wants to become?
+[fig] So this is the ordinary company employee an otaku wants to become?
 
 ![Dialogue in Mementos about being unable to change the world](attachments/roof-archive/cv1550227/translations/en/07-mementos-upper-class.png)
 
@@ -94,7 +94,7 @@ Whether it constructs its world with ideas from analytical psychology or uses an
 
 “The wind blows south, then turns north; round and round it goes, returning again to its course. Rivers run into the sea, yet the sea is never full, and the rivers return to their source.” Perhaps this is the greatest difference between *Persona 5* and the traditional hero story. Whether the traditional hero finally chooses to return home or depart, struggle and sacrifice always secure an appropriate reward: peace and harmony, or rebirth. Yet the final scene of the car driving farther and farther away instead makes me think of Ishmael peeking in on the sailors at dinner: men who have survived raging storms by a hair's breadth, who hunt whales without fear, sit around the table and nevertheless show a hint of shy unease. I did not feel, in this subdued ending, that the world had undergone any “renewal.” Pedestrians still stream past one another; society keeps running as usual. The false god is gone, and the Phantom Thieves too are destined to become a tale. Behind the lively laughter lies ordinariness. Society can worsen without collapsing; the world can move toward goodness without ever becoming a Pure Land.
 
-[图题] Society keeps running as usual.
+[fig] Society keeps running as usual.
 
 ![The protagonist of *Persona 5* driving away at the end of the game](attachments/roof-archive/cv1550227/09-ending-road.png)
 
@@ -143,6 +143,6 @@ Important starting points for this article also included: Hashino's message tran
 
 The limits of my own position and ability may prevent me from becoming that kind of contributor, but we are willing to do everything we can to deliver strong original work and communicate our thoughts and feelings. Personally, I look forward to being made obsolete by purer and more profound essays, and refuted by judgments wiser and sharper than my own. May I travel with you and witness the growth of our peers.
 
-[图题] Cover image by our account's all-rounder @拥抱月亮的太阳.
+[fig] Cover image by our account's all-rounder @拥抱月亮的太阳.
 
 ![Article banner for “The Song of a Proud Wanderer”](attachments/roof-archive/cv1550227/11-article-title-banner.jpg)

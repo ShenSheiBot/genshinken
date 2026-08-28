@@ -17,11 +17,11 @@ citation:
   url: "https://www.bilibili.com/read/cv6222686/"
 ---
 
-[作者] Jack Cade
+[author] Jack Cade
 
 ![Jack Cade头像](attachments/roof-archive/cv6222686/01-author-portrait-v5.png "=25%")
 
-[作者简介] Away!Burn all the records of the realm.
+[author-bio] Away!Burn all the records of the realm.
 
 > 编者按：这并不是一篇旨在面向大众传播、讲解什么的评论，更多是一种自由联想。
 

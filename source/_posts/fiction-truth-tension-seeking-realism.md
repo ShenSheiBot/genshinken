@@ -18,13 +18,13 @@ citation:
   url: "https://www.bilibili.com/read/cv2031971/"
 ---
 
-[作者] 乌有之人
+[author] 乌有之人
 
 ![乌有之人头像](attachments/roof-archive/cv2031971/01-author-portrait-v5.png "=25%")
 
-[作者简介] 我若能说万人的方言，并天使的话语。
+[author-bio] 我若能说万人的方言，并天使的话语。
 
-[图题] 7图：在虚构的故事里寻求真实感的人脑子一定有问题——虚。
+[fig] 7图：在虚构的故事里寻求真实感的人脑子一定有问题——虚。
 
 ![《凉宫春日的忧郁》中阿虚谈虚构与真实感](attachments/roof-archive/cv2031971/02-haruhi-fiction-realism.png)
 
@@ -210,6 +210,6 @@ $A$在$S_M$中既不真也不假，当且仅当，$A$对于$M$的一部分经典
 
 ## 编者按
 
-[图题] 完全败北
+[fig] 完全败北
 
 ![编者按配图：完全败北](attachments/roof-archive/cv2031971/13-editor-defeated.jpg)

@@ -18,11 +18,11 @@ citation:
   url: "https://www.bilibili.com/read/cv2696619/"
 ---
 
-[作者] Ludwigsama
+[author] Ludwigsama
 
 ![Ludwigsama头像](attachments/roof-archive/cv2696619/01-author-portrait-v5.png "=25%")
 
-[作者简介] 才能？ないよ！
+[author-bio] 才能？ないよ！
 
 编者按：阅读本文可能需要一定的精神分析等学科的理论知识。
 

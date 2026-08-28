@@ -72,7 +72,7 @@ assert.match(
 );
 
 const wechatAudio = await renderMarkdown(`
-[音频] 地底人×屋顶播客｜参与：钻石、夜深人静、天坑
+[audio] 地底人×屋顶播客｜参与：钻石、夜深人静、天坑
 
 [收听原音](attachments/wechat-audio/Mzg5MjAwMDM0Nl8yMjQ3NDg5MDU3/original.mp3 "85:41")
 
@@ -85,10 +85,10 @@ assert.match(
   "an explicit WeChat audio marker must become a native fallback backed only by the R2 audio collection"
 );
 assert.match(wechatAudio, /class="article-audio-cover"/u);
-assert.doesNotMatch(wechatAudio, /\[音频\]|>收听原音</u);
+assert.doesNotMatch(wechatAudio, /\[audio\]|>收听原音</u);
 
 const coverlessWechatAudio = await renderMarkdown(`
-[音频] 高橋洋子《残酷天使的行动纲领》｜4分05秒
+[audio] 高橋洋子《残酷天使的行动纲领》｜4分05秒
 
 [收听原音](attachments/wechat-audio/Mzg5MjAwMDM0Nl8yMjQ3NDg5MjY2/original-64kbps.mp3 "04:05")
 `);
@@ -102,7 +102,7 @@ assert.doesNotMatch(coverlessWechatAudio, /article-audio-artwork/u);
 assert.doesNotMatch(coverlessWechatAudio, /ROOF PODCAST/u);
 
 const externalAudio = await renderMarkdown(`
-[音频] 不受信任的音频
+[audio] 不受信任的音频
 
 [收听原音](https://example.com/episode.mp3 "85:41")
 
@@ -111,7 +111,7 @@ const externalAudio = await renderMarkdown(`
 assert.doesNotMatch(externalAudio, /<audio\b/iu, "external MP3 links must never become embedded players");
 
 const neteaseMusic = await renderMarkdown(`
-[音乐] 高橋洋子《魂のルフラン（Tabris Mix）》｜5分29秒
+[music] 高橋洋子《魂のルフラン（Tabris Mix）》｜5分29秒
 
 [在网易云音乐收听](https://music.163.com/#/song?id=22806607 "netease:22806607")
 `);
@@ -120,22 +120,22 @@ assert.match(neteaseMusic, /class="article-music-fallback"/u);
 assert.doesNotMatch(neteaseMusic, /<iframe\b/iu, "the external player must be added by the strict client adapter, never cross the HTML sanitizer");
 
 const mismatchedMusic = await renderMarkdown(`
-[音乐] 编号不一致的外链
+[music] 编号不一致的外链
 
 [在网易云音乐收听](https://music.163.com/#/song?id=22806607 "netease:29802889")
 `);
 assert.doesNotMatch(mismatchedMusic, /<figure class="article-music"/u, "a provider marker may not substitute a different song id");
-assert.match(mismatchedMusic, /\[音乐\]/u, "invalid external music markup must remain visible for editorial review");
+assert.match(mismatchedMusic, /\[music\]/u, "invalid external music markup must remain visible for editorial review");
 
 const untrustedMusic = await renderMarkdown(`
-[音乐] 不受信任的播放器
+[music] 不受信任的播放器
 
 [收听](https://example.com/song?id=22806607 "netease:22806607")
 `);
 assert.doesNotMatch(untrustedMusic, /<figure class="article-music"/u, "only the exact official NetEase song URL may enter the music adapter");
 
 const wechatVideo = await renderMarkdown(`
-[视频] 枫叶落在水面上的片段
+[video] 枫叶落在水面上的片段
 
 [播放视频](attachments/wechat-video/wxv_1831489258654580737/original-600x338.mp4 "=600x338 00:18")
 `);
@@ -146,10 +146,10 @@ assert.match(
   "an explicit WeChat video marker must become a native player backed only by the R2 video collection"
 );
 assert.match(wechatVideo, /<figcaption class="article-video-caption">枫叶落在水面上的片段<\/figcaption>/u);
-assert.doesNotMatch(wechatVideo, /\[(?:视频)\]|>播放视频</u);
+assert.doesNotMatch(wechatVideo, /\[video\]|>播放视频</u);
 
 const multiQualityVideo = await renderMarkdown(`
-[视频] 同名视频论文
+[video] 同名视频论文
 
 [播放视频：1080P](attachments/wechat-video/wxv_example/original-1920x1080.mp4 "=1920x1080 01:30")
 
@@ -166,14 +166,14 @@ assert.equal(readMinutes(multiQualityVideo), 2, "video duration must contribute 
 assert.equal(readMinutes(wechatAudio), 86, "audio duration must contribute to the public reading estimate");
 
 const inconsistentVideoDuration = await renderMarkdown(`
-[视频] 时长声明冲突
+[video] 时长声明冲突
 
 [播放视频：1080P](attachments/wechat-video/wxv_example/original-1920x1080.mp4 "=1920x1080 01:30")
 
 [播放视频：480P](attachments/wechat-video/wxv_example/quality-480-854x480.mp4 "=854x480 01:31")
 `);
 assert.doesNotMatch(inconsistentVideoDuration, /<video\b/iu, "quality alternatives must declare one shared duration");
-assert.match(inconsistentVideoDuration, /\[视频\]/u, "invalid duration metadata must remain visible for the corpus gate");
+assert.match(inconsistentVideoDuration, /\[video\]/u, "invalid duration metadata must remain visible for the corpus gate");
 
 const unsafeQualitySet = sanitizePublicContentHtml(`
 <video
@@ -189,18 +189,18 @@ const unsafeQualitySet = sanitizePublicContentHtml(`
 assert.doesNotMatch(unsafeQualitySet, /<video\b/u, "a quality set may not smuggle an external media host past the sanitizer");
 
 const externalVideo = await renderMarkdown(`
-[视频] 不受信任的视频
+[video] 不受信任的视频
 
 [播放视频](https://example.com/movie.mp4 "=600x338 00:18")
 `);
 assert.doesNotMatch(externalVideo, /<video\b/iu, "external MP4 links must never become embedded players");
 
 const dimensionlessVideo = await renderMarkdown(`
-[视频] 缺少源尺寸
+[video] 缺少源尺寸
 
 [播放视频](attachments/wechat-video/example/original.mp4)
 `);
 assert.doesNotMatch(dimensionlessVideo, /<video\b/iu, "a video without a declared source size must not enter the player path");
-assert.match(dimensionlessVideo, /\[视频\]/u, "invalid video markup must stay visible so the corpus typography gate can reject it");
+assert.match(dimensionlessVideo, /\[video\]/u, "invalid video markup must stay visible so the corpus typography gate can reject it");
 
 console.log("media material sanitizer verification passed");

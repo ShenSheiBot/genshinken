@@ -20,11 +20,11 @@ rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-[作者] Shi Zai Gou Zi
+[author] Shi Zai Gou Zi
 
 ![Portrait of Shi Zai Gou Zi](attachments/roof-archive/cv4224834/01-author-portrait-v5.png "=25%")
 
-[作者简介] “In an age without a world, spread meaningless love.”
+[author-bio] “In an age without a world, spread meaningless love.”
 
 The word *diaosi* is basically outdated today, but the attitude implied by it is definitely not. From many angles, it is not an especially new attitude either. You could even call it a variant of Ah Q. No one should be surprised to hear that Ah Q and the diaosi have a lot in common. Ah Q has his method of spiritual victory; he cannot stand the “tall-rich-handsome”; he covets the “fair-rich-beautiful.”
 
@@ -32,7 +32,7 @@ Of course, what matters more seems to be the difference between Ah Q and the dia
 
 Here I want to stress that the diaosi discussed in this essay is mainly the kind with a cynical attitude. To put it more plainly: a diaosi with a “sense of humor.” They like to mock all kinds of things and often believe—at least judging from the attitude conveyed by their words and actions—that they understand society very “thoroughly.” This is precisely one reason they call themselves diaosi: I know perfectly well that, socially speaking, I am “not doing so great” right now, and I also know perfectly well that I am powerless to change society, so I maintain an ironic distance from it.
 
-[图题] Internet image.
+[fig] Internet image.
 
 ![Male internet stock-photo figure wearing fur and sunglasses](attachments/roof-archive/cv4224834/02-high-rich-handsome-stock-photo.jpg)
 
@@ -42,7 +42,7 @@ Diaosi culture likes to objectify all kinds of things: “tall-rich-handsome,”
 
 Nor do they forget to “objectify” themselves. But they place themselves in a privileged position, which I will describe in detail below. This is a crucial theme that, in my view, absolutely cannot be ignored when discussing diaosi culture: being a diaosi itself represents a victory.
 
-[图题] Just putting some pictures here for the sake of it.
+[fig] Just putting some pictures here for the sake of it.
 
 ![Animated characters talking on a bed](attachments/roof-archive/cv4224834/03-anime-bedroom-still.jpg)
 
@@ -54,7 +54,7 @@ This brings us to an absolutely crucial point in diaosi culture: the tall-rich-h
 
 It is precisely this objective gaze that gives the diaosi the illusion that “I can see through society,” and precisely this illusion that leads the diaosi toward another fundamental fantasy: the diaosi counterattack.
 
-[图题] Just putting some pictures here for the sake of it.
+[fig] Just putting some pictures here for the sake of it.
 
 ![Key visual for 『恋×シンアイ彼女』](attachments/roof-archive/cv4224834/04-koikake-shojo-visual.jpg)
 
@@ -73,7 +73,7 @@ And in some respects the diaosi is worse than Ah Q. Ah Q’s past leaves him dis
 
 So we have to understand the sentence “a diaosi can never become tall-rich-handsome” literally. Because the diaosi gets too much pleasure from the very word diaosi (counterattack), even if he becomes tall-rich-handsome by his own standards, he will absolutely not let go of the word “counterattack.” He can keep counterattacking, because the possibility of counterattack is itself a kind of pleasure. The possibility of counterattack is doubled, until “being in a state where one can counterattack” itself becomes a counterattack.
 
-[图题] Just putting some pictures here for the sake of it.
+[fig] Just putting some pictures here for the sake of it.
 
 ![Animated girl on a springtime street](attachments/roof-archive/cv4224834/05-anime-girl-spring.jpg)
 

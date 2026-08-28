@@ -21,7 +21,7 @@ citation:
   extra: "Pause and Select 原作；原视频：https://www.youtube.com/watch?v=sxUcbR12uHc；群青七号楼志愿翻译。"
 ---
 
-[视频] 《日本沉没》系列中的日本启示录文本
+[video] 《日本沉没》系列中的日本启示录文本
 
 [播放视频：1080P](attachments/wechat-video/wxv_1517727488234274820/original-1920x1080.mp4 "=1920x1080 34:43")
 

@@ -20,11 +20,11 @@ rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-[作者] Sairai
+[author] Sairai
 
 ![Portrait of Sairai](attachments/roof-archive/cv21792051/01-author-portrait-v5.png "=25%")
 
-[作者简介] “We devote so much of our time to protecting what is great, until we touch every idea and change every life it touches.”
+[author-bio] “We devote so much of our time to protecting what is great, until we touch every idea and change every life it touches.”
 
 This essay received an award at the After Festival of Lab on Roof’s annual Rags Drum 2022 call for submissions.
 
@@ -66,7 +66,7 @@ I next counted the frequencies of individual pairings. Table 2 presents the resu
 
 The hair-color and *moe*-trait co-occurrence frequencies can be used to construct the network in Figure 1. Since the relationships are complex and this study focuses only on the most deeply bound nodes, I processed the co-occurrence network using only the TOP1 algorithm.
 
-[表题] Frequencies of hair colors and selected *moe* traits (top 13)
+[table] Frequencies of hair colors and selected *moe* traits (top 13)
 
 | Rank | Hair color | Frequency | Selected *moe* trait | Frequency |
 | ---: | --- | ---: | --- | ---: |
@@ -86,7 +86,7 @@ The hair-color and *moe*-trait co-occurrence frequencies can be used to construc
 
 In descending order, the hair-color counts are black 22,049; brown 15,956; blond 15,840; silver 9,643; blue 7,655; purple 6,391; pink 5,656; red 5,197; green 3,271; orange 3,203; white 1,106; rainbow 48; and transparent 6. The selected *moe*-trait counts are large breasts 1,747; short hair 1,501; tsundere 1,461; energetic 1,380; airheaded 1,072; glasses 1,049; gap moe 1,013; two-faced 996; younger sister 992; loli 991; flat-chested 988; gentle 987; and older sister 982.
 
-[表题] Hair-color and *moe*-trait co-occurrence frequencies (top 10)
+[table] Hair-color and *moe*-trait co-occurrence frequencies (top 10)
 
 | Rank | Hair color | *Moe* trait | Co-occurrences |
 | ---: | --- | --- | ---: |
@@ -103,7 +103,7 @@ In descending order, the hair-color counts are black 22,049; brown 15,956; blond
 
 The top co-occurrences are black hair–long, straight black hair 459; brown hair–short hair 375; black hair–short hair 360; black hair–tsundere 333; black hair–large breasts 331; blond hair–blond hair and blue eyes 324; brown hair–large breasts 317; blond hair–large breasts 303; brown hair–energetic 299; and black hair–glasses 299.
 
-[图题] Figure 1. Hair-color–*moe*-trait co-occurrence network (TOP1 algorithm).
+[fig] Figure 1. Hair-color–*moe*-trait co-occurrence network (TOP1 algorithm).
 
 ![Network graph of co-occurring hair colors and moe traits](/attachments/roof-archive/cv21792051/36.jpg "=100%")
 
@@ -125,7 +125,7 @@ Finally, the network shows some trait nodes linked to two hair-color nodes. For 
 
 Zipf’s law states that a word’s frequency is inversely proportional to its rank. As the limitations discussed in Section 3 show, a frequent word is not necessarily a keyword. To extract keywords more effectively, this study uses TF-IDF, a standard algorithm in text analysis. TF denotes term frequency, while IDF denotes inverse document frequency. The fewer documents contain a term, the better it distinguishes among categories and the higher its IDF value. The formula is shown below.
 
-[图题] TF-IDF formula.
+[fig] TF-IDF formula.
 
 $$
 \begin{aligned}
@@ -145,19 +145,19 @@ On the basis of the frequency statistics in Section 3, I removed less important 
 
 Taking hair color as the condition, I calculated TF-IDF values for co-occurring *moe* traits. After retaining personality-related traits, the top-10 rankings are shown in Figure 2.
 
-[图题] Figure 2, part 1. Top-10 TF-IDF values for personalities associated with each hair color.
+[fig] Figure 2, part 1. Top-10 TF-IDF values for personalities associated with each hair color.
 
 ![Bar charts ranking the ten personality traits with the highest TF-IDF values for white, orange, and pink hair; madness is especially prominent for white hair, while energetic and airheaded lead for orange and pink hair](/attachments/roof-archive/cv21792051/58.jpg "=100%")
 
-[图题] Figure 2, part 2. Top-10 TF-IDF values for personalities associated with each hair color.
+[fig] Figure 2, part 2. Top-10 TF-IDF values for personalities associated with each hair color.
 
 ![Bar charts ranking the ten personality traits with the highest TF-IDF values for black, red, and blond hair; tsundere ranks first for each, with energetic especially prominent for red and blond hair](/attachments/roof-archive/cv21792051/60.jpg "=100%")
 
-[图题] Figure 2, part 3. Top-10 TF-IDF values for personalities associated with each hair color.
+[fig] Figure 2, part 3. Top-10 TF-IDF values for personalities associated with each hair color.
 
 ![Bar charts ranking the ten personality traits with the highest TF-IDF values for blue, green, and silver hair; green hair is led by energetic, while silver hair includes the Chinese-fandom sanwu category and the ice-beauty archetype](/attachments/roof-archive/cv21792051/62.jpg "=100%")
 
-[图题] Figure 2, part 4. Top-10 TF-IDF values for personalities associated with each hair color.
+[fig] Figure 2, part 4. Top-10 TF-IDF values for personalities associated with each hair color.
 
 ![Bar charts ranking the ten personality traits with the highest TF-IDF values for purple and brown hair; purple hair is led by tsundere and two-faced traits, while brown hair is led by energetic and gentle traits](/attachments/roof-archive/cv21792051/64.jpg "=100%")
 
@@ -169,7 +169,7 @@ At the same time, traits such as tsundere and energetic rank relatively high for
 
 I next analyze the creator’s perspective: assigning a hair color to a character on the basis of a personality already defined in the design. Taking personality traits as the condition, I calculated TF-IDF values for co-occurring hair colors. Because there are many personality traits, I retained only those for which the difference between the first- and second-ranked hair colors exceeded 0.05—that is, traits with one distinctly dominant hair color. Figure 3 presents the top five; each bar’s color represents the hair color most important to that personality.
 
-[图题] Figure 3. Top-five TF-IDF values for hair colors associated with each personality ($\mathrm{TF\text{-}IDF}(T_1)-\mathrm{TF\text{-}IDF}(T_2)>0.05$).
+[fig] Figure 3. Top-five TF-IDF values for hair colors associated with each personality ($\mathrm{TF\text{-}IDF}(T_1)-\mathrm{TF\text{-}IDF}(T_2)>0.05$).
 
 ![Small-multiple charts showing the five hair colors with the highest TF-IDF values for each personality; several traits have one distinctly dominant hair color, such as purple for masochistic, black for ice beauty, and blond for hapless](/attachments/roof-archive/cv21792051/73.jpg "=100%")
 
@@ -181,7 +181,7 @@ Yet selecting hair-color nodes on personality alone still offers limited explana
 
 To establish the pairings more securely, I intersected the rankings from Sections 4.3 and 4.4. Table 3 presents the result. To simplify it, the personality-to-hair-color side retains only its top two features.
 
-[表题] Intersection of hair color to personality (top 10) and personality to hair color (top 2)
+[table] Intersection of hair color to personality (top 10) and personality to hair color (top 2)
 
 | Result | Co-occurring groups |
 | --- | --- |
@@ -205,7 +205,7 @@ This assemblage of elements has become increasingly common in anime character cr
 
 Once we accept this correlation, we can ask why fixed pairings such as “blond tsundere” proliferate. I argue that they begin with a character designed more or less by chance; the work in which that character appears then becomes enormously successful, leaving a deep impression on audiences and other creators. Since the origin is difficult to establish, I use Eri Sawachika from *School Rumble* as a provisional example. Later creators, thinking of a character with these traits, may recall Eri and unconsciously give their own tsundere similar attributes, such as blond hair and twin tails. The psychological phenomenon of the self-fulfilling prophecy may help explain this. One extraordinarily successful character can create an unconscious association between that character and her attributes in the minds of later creators. The mind automatically filters out information that does not fit the association. The empirical analysis, for example, shows that blond hair also correlates strongly with “hapless” and “losing heroine” traits, while many black- and brown-haired characters are tsunderes. By directing more attention toward characters that fit the association, creators produced later examples such as Nagi Sanzenin, Airi Akizuki, and Eriri Spencer Sawamura, reinforcing the blond-tsundere—and often twin-tailed—combination.
 
-[图题] “Blond, tsundere, twin tails.”
+[fig] “Blond, tsundere, twin tails.”
 
 ![Illustration of a blond anime character with twin tails](/attachments/roof-archive/cv21792051/93.jpg "=50%")
 
@@ -215,7 +215,7 @@ This process depends on consumer acceptance, and consumers have demonstrably emb
 
 Sometimes, however, collective impressions among audiences are biased. Consider the relation between pink hair and yandere. Over the past decade, viewers have often perceived these two attributes as bound together. The analysis above shows, however, that pink-haired characters have a low overall frequency and that traits such as energetic and airheaded are more important among them than yandere. As in the previous section, the impression may stem from a single exceptionally successful character: Yuno Gasai in *The Future Diary*. The success of Yuno’s characterization made the relatively niche yandere trait widely familiar, while reaction images and memes circulated extensively through fandom. Yuno became virtually synonymous with yandere, and pink hair became associated with it in turn. Later characters who fit the pattern, such as Satou Matsuzaka and Kisara, reinforced the impression, but the relation remains statistically insignificant.
 
-[图题] Yuno Gasai.
+[fig] Yuno Gasai.
 
 ![Illustration of Yuno Gasai](/attachments/roof-archive/cv21792051/100.jpg "=50%")
 

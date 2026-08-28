@@ -141,13 +141,13 @@ citation:
 
 一个表达式或许会被直接联系为模型中的元素。比如，“walk”和一些关于个体的集合。然后同样的，一些意义上的操作也需要被直接指定，这导致了这样的一些形式化，例如[直接语义解释]：
 
-[图题] 直接语义解释。
+[fig] 直接语义解释。
 
 ![蒙太古的直接语义解释公式](attachments/roof-archive/cv6584358/01-direct-semantic-interpretation.png)
 
 [重写后的间接语义解释]:
 
-[图题] 重写。
+[fig] 重写。
 
 ![内涵逻辑重写公式](attachments/roof-archive/cv6584358/02-intensional-logic-rewrite.png)
 
@@ -217,7 +217,7 @@ Frege(1892)引进了涵义(sense[英], sinn[德])与意谓(reference[英], bedeu
 
 有一些人称蒙太古自己没有用组合性原则去处理代词相关的问题，但是这没有关系，为了更好的理解对代词的组合性的处理，Janssen (1997) 与Dowty (2007)解释了变项怎么在逻辑中得到解释的，我们则遵循这种理解。考虑对于以下式子，来自于传统的塔斯基式对谓词逻辑的解释。
 
-[图题] 塔斯基对谓词逻辑的解释。
+[fig] 塔斯基对谓词逻辑的解释。
 
 ![塔斯基式谓词逻辑解释公式](attachments/roof-archive/cv6584358/03-tarskian-interpretation.png)
 

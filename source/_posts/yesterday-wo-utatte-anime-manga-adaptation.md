@@ -19,11 +19,11 @@ citation:
   extra: "作者：鲜奶饼干。本文作于动画第一话播出时；文末称为作者第一次撰写的知乎回答，原回答链接未随页提供。"
 ---
 
-[作者] 鲜奶饼干
+[author] 鲜奶饼干
 
 ![鲜奶饼干头像](attachments/roof-archive/cv5581685/01-author-portrait-v5.png "=25%")
 
-[作者简介] 哲学票友，冻鳗高手。
+[author-bio] 哲学票友，冻鳗高手。
 
 <!--standalone-emphasis-->
 *本文作于第一话播出时。*
@@ -38,17 +38,17 @@ citation:
 
 这是什么意思？举一个最简单的例子。
 
-[图题] 图1。
+[fig] 图1。
 
 ![动画第一集中榀子初次登场的近景](attachments/roof-archive/cv5581685/02-figure-01-shinako-anime-close-up.jpg)
 
-[图题] 图2。
+[fig] 图2。
 
 ![动画第一集中榀子微笑的镜头](attachments/roof-archive/cv5581685/03-figure-02-shinako-anime-smile.jpg)
 
 这是动画第一集，女主角之一森之目榀子初次登场的镜头，可以说给人的印象就是一个随和、漂亮又开朗的女性。而在漫画里，榀子的初次登场是这样的：
 
-[图题] 图3。
+[fig] 图3。
 
 ![漫画中榀子初次登场的页面](attachments/roof-archive/cv5581685/04-figure-03-shinako-manga-debut.jpg)
 
@@ -56,7 +56,7 @@ citation:
 
 我第一次读到漫画这一页时，以为榀子和小晴可能有什么重大的矛盾不为主角所知，甚至都怀疑是不是有深仇大恨。而在动画中，这种疑问是不存在的，因为相比漫画的神秘感，动画的表现深度呈现为一个平面。
 
-[图题] 图。
+[fig] 图。
 
 ![榀子动画与漫画人物设计对照](attachments/roof-archive/cv5581685/05-figure-04-shinako-design-comparison.jpg)
 
@@ -66,11 +66,11 @@ citation:
 
 先从明显的内容变更讲起。
 
-[图题] 图5。
+[fig] 图5。
 
 ![动画中小晴向主角要烟的连续画面](attachments/roof-archive/cv5581685/06-figure-05-smoking-anime.gif)
 
-[图题] 图6。
+[fig] 图6。
 
 ![漫画中小晴与主角谈论吸烟的页面](attachments/roof-archive/cv5581685/07-figure-06-smoking-manga.jpg)
 
@@ -80,19 +80,19 @@ citation:
 
 不过对于这种程度的改动很多人肯定会觉得，说不定只是动画播出的伦理规制问题。当然，动画所做的不仅止于此——
 
-[图题] 图7。
+[fig] 图7。
 
 ![漫画开篇中主角家煤气被停的页面](attachments/roof-archive/cv5581685/08-figure-07-manga-gas-shutoff.jpg)
 
-[图题] 图8。
+[fig] 图8。
 
 ![漫画中主角以凉水招待朋友的页面](attachments/roof-archive/cv5581685/09-figure-08-manga-cold-water.jpg)
 
-[图题] 图9。
+[fig] 图9。
 
 ![漫画中便利店捐款箱相关段落](attachments/roof-archive/cv5581685/10-figure-09-manga-donation-box.jpg)
 
-[图题] 图10。
+[fig] 图10。
 
 ![漫画中小晴拿取指甲油的段落](attachments/roof-archive/cv5581685/11-figure-10-manga-nail-polish.jpg)
 
@@ -102,7 +102,7 @@ citation:
 
 但漫画又为何是这样的？因为在冬目景老师创作《昨日之歌》的1998年，正是日本经济泡沫破裂之后的衰退阶段，无数企业破产，房价暴跌、裁员潮以及随后的暴力犯罪、自杀潮更是接连不断的灾难。而对于生活在那个年代的年轻人来说根本看不到出路何在，他们的视线不再投向广阔的外在世界，而是回到了自我的心理性。这样的时代背景不仅导致社会伦理规范的失效，更是成为了漫画这一颓废、迷茫、凝滞与缺乏能动性的气质的构成前提。
 
-[图题] 图11。
+[fig] 图11。
 
 ![动画中磁带随身听、显像管电视等时代道具](attachments/roof-archive/cv5581685/12-figure-11-period-props.png)
 
@@ -112,23 +112,23 @@ citation:
 
 再来说说主角的行动。
 
-[图题] 图12。
+[fig] 图12。
 
 ![动画中主角听到榀子名字时的反应](attachments/roof-archive/cv5581685/13-figure-12-hero-hears-shinako.png)
 
-[图题] 图13。
+[fig] 图13。
 
 ![动画中主角得知榀子回返后的震惊](attachments/roof-archive/cv5581685/14-figure-13-anime-shock.png)
 
-[图题] 图14。
+[fig] 图14。
 
 ![动画中主角趴倒在桌上的夸张反应](attachments/roof-archive/cv5581685/15-figure-14-anime-collapse.png)
 
-[图题] 图15。
+[fig] 图15。
 
 ![漫画中主角听闻榀子消息时的反应](attachments/roof-archive/cv5581685/16-figure-15-manga-reaction.png)
 
-[图题] 图16。
+[fig] 图16。
 
 ![漫画中主角回忆往事并趴在桌上的页面](attachments/roof-archive/cv5581685/17-figure-16-manga-at-table.png)
 
@@ -136,7 +136,7 @@ citation:
 
 而在漫画中我们会发现情况是完全不同的，主角虽然同样有惊讶，有掉烟，但是他的反应没有过于外显，漫画分格也只是进行客观的叙述，没有去做夸张、强调表现（图15）。而在下一页，漫画中主角虽然也趴在桌子上，但这并不是惊吓的结果，只是他回忆起过去的颓废、放松的体态的自然伸展。即使角色都做了相似的行动，通过剧本与演出的细微调整，也能极大地改变其意义，并由此塑造出了完全不同的氛围与角色品格。
 
-[图题] 图17。
+[fig] 图17。
 
 ![动画开场中出门与骑车的连续构图](attachments/roof-archive/cv5581685/18-figure-17-anime-opening.png)
 
@@ -144,19 +144,19 @@ citation:
 
 而当动画的这一改动策略来到高潮段落，其差异也就更被放大——
 
-[图题] 图18。
+[fig] 图18。
 
 ![动画中主角转身骑车去告白](attachments/roof-archive/cv5581685/19-figure-18-bike-turn.gif)
 
-[图题] 图19。
+[fig] 图19。
 
 ![动画中主角摔倒后喊出“再见吧，人生”](attachments/roof-archive/cv5581685/20-figure-19-goodbye-life.gif)
 
-[图题] 图20。
+[fig] 图20。
 
 ![漫画中主角下定决心后的省略叙述](attachments/roof-archive/cv5581685/21-figure-20-manga-decision.jpg)
 
-[图题] 图21。
+[fig] 图21。
 
 ![漫画中主角摔倒后望向天空的页面](attachments/roof-archive/cv5581685/22-figure-21-manga-after-fall.jpg)
 
@@ -176,31 +176,31 @@ citation:
 
 其次，从播出前的宣传与第一集实际成片来说，动画 staff 的能力是比较值得信任的。经验颇为丰富的藤原监督，这次第一集的表现也并不有失水准，而田中仁在剧本上的改动也让我确实可以相信他的“原作粉”身份不是虚言（不像某位装作罚抄原作党其实根本就是篝厨罚抄黑的天冲）。作为天下第一演出厨（自封），其实接下来这些才是我观看第一集感到最为高兴的部分，现在让我们来看看演出和剧本如何展现出他们的基本功与底力。
 
-[图题] 图22。
+[fig] 图22。
 
 ![动画中打工前辈向小晴提出邀请的连续表演](attachments/roof-archive/cv5581685/23-figure-22-ktv-invitation.gif)
 
 由于篇幅的缘故，动画第一集屡次将漫画的几场戏合并为一场，如何完成剧作功能的同时又不失自然就是要点所在。而第一集不仅做到了这些基本点，还为动画丰富了更多的细节。在图22的这场戏中，黄毛前辈听到小晴去了KTV，便向她发出了邀请，而在小晴立刻答应后，前辈却愣了一下，接着又做出了挠脖子的姿态。这是原作所没有、动画原创的一个细节，用以丰满前辈的角色塑造——随口对小晴提出的邀请并不是一个字面意义上的邀请行为，只是他在人际交往中用以活络气氛的开题手段。因此小晴立刻做出肯定答复，反而在黄毛前辈的意料之外，让他有点不知所措。同时镜头内部调度也以准确的方式完成对观众的自然引导，在前辈与小晴的对话即将结束时，主角便起身挡住了前辈，叙述的重点也随之转换，小晴回过头看向主角，表示自己的目的是来见见他。
 
-[图题] 图23。
+[fig] 图23。
 
 ![榀子进入便利店时的微笑与提袋动作](attachments/roof-archive/cv5581685/24-figure-23-shinako-smile.gif)
 
-[图题] 图24。
+[fig] 图24。
 
 ![榀子提着塑料袋的手部特写](attachments/roof-archive/cv5581685/25-figure-24-bag-closeup.jpg)
 
 随后另一位女主角榀子登场。图23中榀子的眼睛被景框切了一半，一方面是为了强调她看到主角时嘴角上的笑意，另一方面是利用偏移取景来做出暗示性的含义。接着下一个镜头她提着塑料袋的手微微握紧，也是以同样的演出思维向我们暗示她的内心状态。随后我们得知，这个塑料袋里是同学会上的剩菜，榀子顾虑到主角可能没有好好吃饭而特意带来的（并且我们知道主角的生活状态确实正如她的预料）。动画不仅原创了这一细节，为角色增加了一个立面和为行为给出更丰富的含义与动机，并且这场戏本身在合并后也出现了一个新的维度：黄毛前辈的羡慕嫉妒恨。在漫画原作中，这场戏的角色只有主角与榀子两人，而动画合并的结果使得其结构更为立体，出现了全新的含义，剧作张力也延伸到了作为旁观者的第三人。
 
-[图题] 图25。
+[fig] 图25。
 
 ![榀子离店与主角穿外套的匹配剪辑](attachments/roof-archive/cv5581685/26-figure-25-leaving-store.gif)
 
-[图题] 图26。
+[fig] 图26。
 
 ![动画从便利店转至家庭餐厅的镜头](attachments/roof-archive/cv5581685/27-figure-26-restaurant-cut.jpg)
 
-[图题] 图27。
+[fig] 图27。
 
 ![漫画中主角与榀子前往餐厅的页面](attachments/roof-archive/cv5581685/28-figure-27-manga-restaurant.jpg)
 
@@ -208,19 +208,19 @@ citation:
 
 再来说说另一点：演出的环境表现意识。
 
-[图题] 图28。
+[fig] 图28。
 
 ![动画中便利店内的空间与人物位置](attachments/roof-archive/cv5581685/29-figure-28-convenience-store.png)
 
-[图题] 图29。
+[fig] 图29。
 
 ![动画中便利店外观及餐厅转场](attachments/roof-archive/cv5581685/30-figure-29-convenience-exterior.png)
 
-[图题] 图30。
+[fig] 图30。
 
 ![动画中两次夜间漫步的街道环境](attachments/roof-archive/cv5581685/31-figure-30-night-walk.png)
 
-[图题] 图31。
+[fig] 图31。
 
 ![动画中榀子居所外路灯照明的镜头](attachments/roof-archive/cv5581685/32-figure-31-streetlight.png)
 
@@ -230,25 +230,25 @@ citation:
 
 而在之后，当两人到达了榀子的居所，演出也就更为细腻（图31）。场景中安排了漫画所没有的路灯作为照明（大家可以想一想这个路灯与人视线齐平的高度，与之前高高在上照下来的灯光的表现差异）。此时摄影给了一个比之前更暖的光照环境，映照在主角与榀子脸上的光线也以路灯作为打影基准去雕刻两人的面庞，烘托出有些深沉与浪漫的氛围。
 
-[图题] 图32。
+[fig] 图32。
 
 ![动画中铁路警示灯与角色相遇的镜头](attachments/roof-archive/cv5581685/33-figure-32-rail-crossing.png)
 
-[图题] 图33。
+[fig] 图33。
 
 ![动画中电车光源制造紧张感的连续镜头](attachments/roof-archive/cv5581685/34-figure-33-train-tension.png)
 
 不过并不是每一场戏都足够成熟老道。当榀子与小晴相遇时，演出为了瞬间提升紧张张力，从闪烁的红色警示灯，到以电车作为光源和视觉与声音上的压力，对我个人来说都是比较出戏的，看到这段时我直接就笑出声了。电车作为一个演出装置在动画中非常泛用，并且客观地说，这一段落整体的技术质量并不差，但是情节一紧张，就蹦出来一辆电车，这实在是过于暴露了创作者的演出意图，以至于连弹幕中都有很多人说这是“战术电车”。
 
-[图题] 图34。
+[fig] 图34。
 
 ![漫画中主角与榀子的夜间漫步](attachments/roof-archive/cv5581685/35-figure-34-night-walk-manga.jpg)
 
-[图题] 图35。
+[fig] 图35。
 
 ![漫画中以留白和方格表现回忆的页面](attachments/roof-archive/cv5581685/36-figure-35-memory-manga.jpg)
 
-[图题] 图36。
+[fig] 图36。
 
 ![动画中回忆段落的画面处理](attachments/roof-archive/cv5581685/37-figure-36-memory-anime.jpg)
 

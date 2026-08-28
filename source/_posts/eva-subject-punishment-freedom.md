@@ -28,7 +28,7 @@ citation:
 
 <h2 id="part-1">上篇</h2>
 
-[音频] 高橋洋子《残酷天使的行动纲领》｜Kritik备用号｜4分05秒
+[audio] 高橋洋子《残酷天使的行动纲领》｜Kritik备用号｜4分05秒
 
 [收听原音](attachments/wechat-audio/Mzg5MjAwMDM0Nl8yMjQ3NDg5MjY2/original-64kbps.mp3 "04:05")
 
@@ -186,7 +186,7 @@ TV版的《EVA》是以某种危机性的事件打破「日常生活」作为开
 
 <h2 id="part-2">下篇</h2>
 
-[音乐] 高橋洋子《魂のルフラン（Tabris Mix）》｜专辑《〜refrain〜》｜5分29秒
+[music] 高橋洋子《魂のルフラン（Tabris Mix）》｜专辑《〜refrain〜》｜5分29秒
 
 [在网易云音乐收听](https://music.163.com/#/song?id=22806607 "netease:22806607")
 
@@ -490,7 +490,7 @@ az)之前的解读全部失败了，笔者感到无比震撼。
 
 ## 四、甜蜜的死亡，以及补完
 
-[音乐] 《Komm, süsser Tod（Director’s Edit.Version）》｜《END OF EVANGELION》原声｜7分43秒
+[music] 《Komm, süsser Tod（Director’s Edit.Version）》｜《END OF EVANGELION》原声｜7分43秒
 
 [在网易云音乐收听](https://music.163.com/#/song?id=2740110229 "netease:2740110229")
 
@@ -532,7 +532,7 @@ az)之前的解读全部失败了，笔者感到无比震撼。
 
 ## 五、结语：一种反作者中心主义的解读
 
-[音乐] 野火大鸿《残酷天使的行动纲领》（粤语版）｜4分01秒
+[music] 野火大鸿《残酷天使的行动纲领》（粤语版）｜4分01秒
 
 [在网易云音乐收听](https://music.163.com/#/song?id=29802889 "netease:29802889")
 

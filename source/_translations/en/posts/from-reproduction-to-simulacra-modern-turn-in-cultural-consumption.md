@@ -22,15 +22,15 @@ format: article
 
 This essay was a prizewinner at the Rags Drum 2021 Eve Festival.
 
-[作者] 米岡
+[author] 米岡
 
 ![Portrait of 米岡](attachments/roof-archive/cv11752140/01-author-portrait-v5.png "=25%")
 
-[作者简介] A medieval evangelist.
+[author-bio] A medieval evangelist.
 
 ## From Replicas to Simulacra: The Modern Turn in Cultural Consumption
 
-[视频] A video essay of the same title — Script: 米岡; Video: Loliiiico; Narration: 盖井; Production: the Lab on Roof video team
+[video] A video essay of the same title — Script: 米岡; Video: Loliiiico; Narration: 盖井; Production: the Lab on Roof video team
 
 [Play video: 1080P](attachments/wechat-video/wxv_2015520402189369345/original-1920x1080.mp4 "=1920x1080 35:53")
 

@@ -21,7 +21,7 @@ citation:
 
 **知乎用户宇宙神牛整理，授权转载。**
 
-[版式:时间轴]
+[layout:timeline]
 
 神化14年10月 人吉孙竹博士在印度洋发现怪兽戈贡。
 
@@ -125,7 +125,7 @@ citation:
 
 FIN
 
-[版式结束]
+[/layout]
 
 ![里见谈“为了正义”](attachments/roof-archive/cv1907081/02-for-justice.png)
 

@@ -17,11 +17,11 @@ citation:
   url: "https://www.bilibili.com/read/cv3334791/"
 ---
 
-[作者] T君
+[author] T君
 
 ![T君头像](attachments/roof-archive/cv3334791/01-author-portrait-v5.png "=25%")
 
-[作者简介] 思与乡人立，其冠不正，望望然去之，若将浼也。
+[author-bio] 思与乡人立，其冠不正，望望然去之，若将浼也。
 
 ## （一）
 

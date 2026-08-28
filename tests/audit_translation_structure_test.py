@@ -107,13 +107,13 @@ class ProtectedStructureTests(unittest.TestCase):
         self.assertEqual(self.failures(source, target), [])
 
     def test_semantic_caption_removal_fails(self) -> None:
-        source = "[图题] Figure title.\n\n![Figure](/figure.png)\n"
+        source = "[fig] Figure title.\n\n![Figure](/figure.png)\n"
         target = "![Figure](/figure.png)\n"
         self.assertTrue(self.failures(source, target))
 
     def test_target_may_add_heading_caption_and_explanatory_note(self) -> None:
         source = "![Figure](/figure.png)\n\nParagraph.\n"
-        target = "## Context\n\n[图题] Figure title.\n\n![Figure](/figure.png)\n\nParagraph.[^context]\n\n[^context]: Target-reader context.\n"
+        target = "## Context\n\n[fig] Figure title.\n\n![Figure](/figure.png)\n\nParagraph.[^context]\n\n[^context]: Target-reader context.\n"
         self.assertEqual(self.failures(source, target), [])
 
     def test_footnote_identifiers_may_be_localized(self) -> None:

@@ -17,7 +17,7 @@ citation:
   url: "https://www.bilibili.com/read/cv3706352/"
 ---
 
-[图题] 竖海报，由一般有趣哥哥制作。
+[fig] 竖海报，由一般有趣哥哥制作。
 
 ![“混凝土拱廊街”静止系MAD祭典2019竖海报](attachments/roof-archive/cv3706352/01-vertical-poster.png)
 
@@ -109,7 +109,7 @@ citation:
 
 ## 四、关于混凝土拱廊街、屋顶现视研、ZERO MAD TEAM
 
-[图题] 横海报，由一般有趣哥哥制作。
+[fig] 横海报，由一般有趣哥哥制作。
 
 ![“混凝土拱廊街”静止系MAD祭典2019横海报](attachments/roof-archive/cv3706352/03-horizontal-poster.png)
 

@@ -20,7 +20,7 @@ rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-[视频] *Perception Everywhere: Experiences and Research on How 2D Animation Handles Eyebrows, Eyes, and Hair*
+[video] *Perception Everywhere: Experiences and Research on How 2D Animation Handles Eyebrows, Eyes, and Hair*
 
 [Play video: 1080p](attachments/wechat-video/wxv_2648249728371228674/original-1920x1080.mp4 "=1920x1080 19:01")
 

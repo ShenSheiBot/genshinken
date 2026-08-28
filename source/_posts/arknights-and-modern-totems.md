@@ -20,11 +20,11 @@ citation:
   url: "https://www.bilibili.com/read/cv2882244/"
 ---
 
-[作者] 窗子
+[author] 窗子
 
 ![窗子头像](attachments/roof-archive/cv2882244/01-author-portrait-v5.png "=25%")
 
-[作者简介] 死生去留，棚头傀儡，一线断时，落落磊磊。
+[author-bio] 死生去留，棚头傀儡，一线断时，落落磊磊。
 
 **不重要的引言：*。*
 

@@ -224,15 +224,15 @@ assert.match(
 );
 assert.match(richArticleHtml, /<table>[\s\S]*?<th align="left">/u, "GFM tables must survive sanitization");
 const semanticTableHtml = await renderMarkdown(`
-[表题] 朝鲜两个道农民的收支，1931年（日元）
+[table] 朝鲜两个道农民的收支，1931年（日元）
 
 | 类别 | 总收入 |
 | --- | ---: |
 | 自耕农 | 679 |
 
-[表注] <sup>a</sup> 估算值。
+[table-note] <sup>a</sup> 估算值。
 
-[表注] 资料来源：李勳求，《朝鲜的土地利用与农村经济》。
+[table-note] 资料来源：李勳求，《朝鲜的土地利用与农村经济》。
 `);
 assert.match(
   semanticTableHtml,
@@ -249,14 +249,14 @@ assert.match(
   /<div class="article-table-notes"><p class="article-table-note"><sup>(?:<span class="latin-run">)?a(?:<\/span>)?<\/sup>\s+估算值。<\/p><p class="article-table-note">资料来源：/u,
   "marked table notes and sources must be grouped beneath the table"
 );
-assert.doesNotMatch(semanticTableHtml, /\[表(?:题|注)\]/u, "table source markers must never render");
+assert.doesNotMatch(semanticTableHtml, /\[table(?:-note)?\]/u, "table source markers must never render");
 
 const semanticFigureHtml = await renderMarkdown(`
-[图题] 滨口雄幸
+[fig] 滨口雄幸
 
 ![滨口雄幸](attachments/plate.png "=25%")
 
-[图注] 出自印本第26页。
+[fig-note] 出自印本第26页。
 `);
 assert.match(
   semanticFigureHtml,
@@ -264,14 +264,14 @@ assert.match(
   "marked plates must become semantic figures carrying their print width"
 );
 
-const compactFigureHtml = await renderMarkdown(`[图题] 紧凑图题\n![图](attachments/compact.png "=25%")\n[图注] 紧凑图注。`);
+const compactFigureHtml = await renderMarkdown(`[fig] 紧凑图题\n![图](attachments/compact.png "=25%")\n[fig-note] 紧凑图注。`);
 assert.match(
   compactFigureHtml,
   /<figure class="article-figure" data-width="25"><img src="\/attachments\/compact\.png"/u,
   "compact marker syntax must become the same semantic figure"
 );
-assert.doesNotMatch(compactFigureHtml, /\[(?:图题|图注)\]/u);
-const attachedFigureHtml = await renderMarkdown(`前一段没有空行。\n[图题] 紧凑图题\n![图](attachments/compact.png "=25%")\n[图注] 紧凑图注。`);
+assert.doesNotMatch(compactFigureHtml, /\[fig(?:-note)?\]/u);
+const attachedFigureHtml = await renderMarkdown(`前一段没有空行。\n[fig] 紧凑图题\n![图](attachments/compact.png "=25%")\n[fig-note] 紧凑图注。`);
 assert.match(attachedFigureHtml, /<p>前一段没有空行。<\/p><figure class="article-figure"/u);
 assert.match(
   semanticFigureHtml,
@@ -283,10 +283,10 @@ assert.match(
   /<div class="article-figure-notes"><p class="article-figure-note">出自印本第(?:<span class="latin-run">)?26(?:<\/span>)?页。<\/p><\/div>/u,
   "marked figure notes must be grouped beneath the caption"
 );
-assert.doesNotMatch(semanticFigureHtml, /\[图(?:题|注)\]/u, "figure markers must never render");
+assert.doesNotMatch(semanticFigureHtml, /\[fig(?:-note)?\]/u, "figure markers must never render");
 assert.doesNotMatch(semanticFigureHtml, /title="/u, "a consumed width hint must not survive as a title");
 
-const semanticFormulaFigureHtml = await renderMarkdown(`[图题] TF-IDF 计算公式。
+const semanticFormulaFigureHtml = await renderMarkdown(`[fig] TF-IDF 计算公式。
 
 $$
 \\mathrm{TF}=\\frac{n}{\\mathrm{total}}
@@ -298,16 +298,16 @@ assert.match(
 );
 assert.doesNotMatch(
   semanticFormulaFigureHtml.replace(/<[^>]+>/gu, ""),
-  /\[图题\]/u,
+  /\[fig\]/u,
   "formula figure markers must never render as visible text"
 );
 
 const semanticProfileHtml = await renderMarkdown(`
-[人物] 理查德·卡里奇曼
+[person] 理查德·卡里奇曼
 
 ![理查德·卡里奇曼肖像](attachments/calichman.jpg "=25%")
 
-[人物简介] 纽约市立大学教授，研究日本近现代思想史与后殖民理论。
+[person-bio] 纽约市立大学教授，研究日本近现代思想史与后殖民理论。
 `);
 assert.match(
   semanticProfileHtml,
@@ -324,14 +324,14 @@ assert.match(
   /<div class="article-profile-copy"><p class="article-profile-bio">纽约市立大学教授/u,
   "profile biographies must remain associated with the portrait without entering its short caption"
 );
-assert.doesNotMatch(semanticProfileHtml, /\[人物(?:简介)?\]/u, "profile markers must never render");
+assert.doesNotMatch(semanticProfileHtml, /\[person(?:-bio)?\]/u, "profile markers must never render");
 
 const semanticAuthorCardHtml = await renderMarkdown(`
-[作者] 鲜奶饼干
+[author] 鲜奶饼干
 
 ![鲜奶饼干头像](attachments/author-card.png "=25%")
 
-[作者简介] 哲学票友，冻鳗高手。
+[author-bio] 哲学票友，冻鳗高手。
 `);
 assert.match(
   semanticAuthorCardHtml,
@@ -340,16 +340,16 @@ assert.match(
 );
 assert.doesNotMatch(
   semanticAuthorCardHtml,
-  /\[作者(?:简介)?\]/u,
+  /\[author(?:-bio)?\]/u,
   "author card markers must never render",
 );
 
 const semanticIdentityCardHtml = await renderMarkdown(`
-[名片] Lab on Roof
+[card] Lab on Roof
 
 ![Lab on Roof 标志人物](attachments/roof-card.png "=25%")
 
-[名片简介] I, Truth, shall speak.
+[card-bio] I, Truth, shall speak.
 `);
 assert.match(
   semanticIdentityCardHtml,
@@ -363,22 +363,22 @@ assert.match(
 );
 assert.doesNotMatch(
   semanticIdentityCardHtml,
-  /\[名片(?:简介)?\]/u,
+  /\[card(?:-bio)?\]/u,
   "identity card markers must never render",
 );
 
 const semanticGalleryHtml = await renderMarkdown(`
-[图组] 前后对照
+[gallery] 前后对照
 
-[图题] 修改前
+[fig] 修改前
 
 ![修改前](attachments/before.png)
 
-[图题] 修改后
+[fig] 修改后
 
 ![修改后](attachments/after.png)
 
-[图组结束]
+[/gallery]
 `);
 assert.match(
   semanticGalleryHtml,
@@ -386,20 +386,20 @@ assert.match(
   "explicitly delimited figures must become one semantic gallery"
 );
 assert.equal((semanticGalleryHtml.match(/class="article-figure"/gu) ?? []).length, 2);
-assert.doesNotMatch(semanticGalleryHtml, /\[图组(?:结束)?\]/u);
+assert.doesNotMatch(semanticGalleryHtml, /\[(?:gallery|\/gallery)\]/u);
 
 const semanticSlidesHtml = await renderMarkdown(`
-[幻灯] 连续扫描页
+[slides] 连续扫描页
 
-[图题] 第1页
+[fig] 第1页
 
 ![第1页](attachments/page-01.png)
 
-[图题] 第2页
+[fig] 第2页
 
 ![第2页](attachments/page-02.png)
 
-[幻灯结束]
+[/slides]
 `);
 assert.match(
   semanticSlidesHtml,
@@ -408,16 +408,16 @@ assert.match(
 );
 assert.match(semanticSlidesHtml, /data-slide="1" data-total="2"/u);
 assert.match(semanticSlidesHtml, /data-slide="2" data-total="2"/u);
-assert.doesNotMatch(semanticSlidesHtml, /\[幻灯(?:结束)?\]/u);
+assert.doesNotMatch(semanticSlidesHtml, /\[(?:slides|\/slides)\]/u);
 
 const semanticLayoutHtml = await renderMarkdown(`
-[版式:时间轴]
+[layout:timeline]
 
 神化41年6月 披头士来日本武道馆演出。
 
 这是同一日期下的补充说明。
 
-[版式结束]
+[/layout]
 `);
 assert.match(
   semanticLayoutHtml,
@@ -458,7 +458,7 @@ function semanticCoverImagesWithoutWidth(markdown) {
     if (!image || !coverAlt.test(image[1]) || explicitWidth.test(image[2])) continue;
     let previous = index - 1;
     while (previous >= 0 && lines[previous].trim() === "") previous -= 1;
-    if (previous >= 0 && lines[previous].startsWith("[图题]")) failures.push(index + 1);
+    if (previous >= 0 && lines[previous].startsWith("[fig]")) failures.push(index + 1);
   }
   return failures;
 }
@@ -472,7 +472,7 @@ function authorPortraitsWithFigureCaptions(markdown) {
     if (!authorPortrait.test(lines[index].trim())) continue;
     let previous = index - 1;
     while (previous >= 0 && lines[previous].trim() === "") previous -= 1;
-    if (previous >= 0 && lines[previous].trim().startsWith("[图题]")) failures.push(index + 1);
+    if (previous >= 0 && lines[previous].trim().startsWith("[fig]")) failures.push(index + 1);
   }
   return failures;
 }
@@ -526,13 +526,13 @@ function unclassifiedExplicitImageCaptions(markdown) {
   };
   const imageAlreadyClassified = (imageIndex) => {
     const markerIndex = previousSignificant(imageIndex);
-    return markerIndex >= 0 && /^\[(?:图题|人物|图组|幻灯)\]/u.test(lines[markerIndex].trim());
+    return markerIndex >= 0 && /^\[(?:fig|person|author|card|gallery|slides)\]/u.test(lines[markerIndex].trim());
   };
 
   for (let index = 0; index < lines.length; index += 1) {
     const line = lines[index].trim();
     if (!captionLike.test(line) || [...line].length > 160) continue;
-    if (/^\[(?:图题|图注|人物|人物简介)\]/u.test(line)) continue;
+    if (/^\[(?:fig|fig-note|person|person-bio|author|author-bio|card|card-bio)\]/u.test(line)) continue;
     const previous = previousSignificant(index);
     if (previous >= 0 && lines[previous].trim() === "<!--source-centered-prose-->") continue;
     const next = nextSignificant(index);
@@ -544,22 +544,22 @@ function unclassifiedExplicitImageCaptions(markdown) {
 }
 
 assert.deepEqual(
-  semanticCoverImagesWithoutWidth('[图题] 书目\n\n![某书书封](attachments/book.jpg)'),
+  semanticCoverImagesWithoutWidth('[fig] 书目\n\n![某书书封](attachments/book.jpg)'),
   [3],
   "a semantic book cover must explicitly choose its plate width"
 );
 assert.deepEqual(
-  semanticCoverImagesWithoutWidth('[图题] 书目\n\n![某书书封](attachments/book.jpg "=25%")'),
+  semanticCoverImagesWithoutWidth('[fig] 书目\n\n![某书书封](attachments/book.jpg "=25%")'),
   [],
   "a semantic book cover with an explicit print width must pass"
 );
 assert.deepEqual(
-  authorPortraitsWithFigureCaptions('[图题] The author above.\n\n![Author](attachments/article/01-author-portrait-v5.png "=25%")'),
+  authorPortraitsWithFigureCaptions('[fig] The author above.\n\n![Author](attachments/article/01-author-portrait-v5.png "=25%")'),
   [3],
   "an author portrait must not be published as an ordinary captioned figure"
 );
 assert.deepEqual(
-  authorPortraitsWithFigureCaptions('[名片] Author Name\n\n![Author](attachments/article/01-author-portrait-v5.png "=25%")'),
+  authorPortraitsWithFigureCaptions('[card] Author Name\n\n![Author](attachments/article/01-author-portrait-v5.png "=25%")'),
   [],
   "a semantic author card must pass"
 );
@@ -580,7 +580,7 @@ assert.deepEqual(
   "an explicit directional legend must not remain a plain paragraph beside an unclassified image"
 );
 assert.deepEqual(
-  unclassifiedExplicitImageCaptions('[图题] 对照图\n\n![对照图](attachments/a.jpg)\n\n图1 展示的是后续正文分析。'),
+  unclassifiedExplicitImageCaptions('[fig] 对照图\n\n![对照图](attachments/a.jpg)\n\n图1 展示的是后续正文分析。'),
   [],
   "prose following an already captioned figure must not be mistaken for another caption"
 );
@@ -722,7 +722,7 @@ assert.doesNotMatch(
 
 /* ---------------- 全语料渲染扫描（TYPO-G1/G3/G4） ----------------
    上面的 fixture 只验证 renderMarkdown 自身的行为，永远不会因真实内容
-   违规而失败——[图题] 打错位置、非法 =NN% 宽度都会把字面标记静默渲染
+   违规而失败——[fig] 打错位置、非法 =NN% 宽度都会把字面标记静默渲染
    进页面。这里对 source/_posts 全量渲染一遍：任何图版/表格标记存活到
    输出即失败。形态同 reader-line-justification.spec.ts：枚举语料 →
    测量 → 断言失败清单为空。 */
@@ -731,7 +731,7 @@ assert.doesNotMatch(
   const path = await import("node:path");
   const postsDirectory = path.join(process.cwd(), "source", "_posts");
   const corpusFailures = [];
-  const markerLeak = /\[(?:图题|图注|表题|表注|人物|人物简介|图组|图组结束|幻灯|幻灯结束|视频|版式(?::(?:资料目录|时间轴|阅读路径|播客|联络卡|漫画)|结束))\]/u;
+  const markerLeak = /\[(?:fig(?:-note)?|table(?:-note)?|audio|music|video|person(?:-bio)?|author(?:-bio)?|card(?:-bio)?|gallery|slides|\/(?:gallery|slides|layout)|layout:(?:resources|timeline|reading-path|book-list|podcast|contact|comic))\]/u;
   const legacyItalicCaption = /^\*(?:图题[:：]|图[0-9]+[.．：:]).*\*$/mu;
   const invalidWidth = /title="=(?!(?:25|33|50|66|75|100)%")[^"]*"/u;
   const plainCompositionalityLabel = /(?<!\$)\((?:C(?:′)?|H|RR|P|F(?:all|any|cofinal)|[1-8](?:′|″)?)\)(?!\$)/u;
@@ -760,10 +760,10 @@ assert.doesNotMatch(
       if (index !== -1) body = lines.slice(index + 1).join("\n");
     }
     if (legacyItalicCaption.test(body)) {
-      corpusFailures.push(`${name}: 遗留斜体图题必须迁移为图片前的 [图题] 语义标记`);
+      corpusFailures.push(`${name}: 遗留斜体图题必须迁移为图片前的 [fig] 语义标记`);
     }
     for (const line of unclassifiedItalicImageNeighbors(body)) {
-      corpusFailures.push(`${name}:${line}: 图片相邻的独立斜体必须迁移为 [图题]/[图注]，确属独立文字时显式标记`);
+      corpusFailures.push(`${name}:${line}: 图片相邻的独立斜体必须迁移为 [fig]/[fig-note]，确属独立文字时显式标记`);
     }
     for (const line of unclassifiedExplicitImageCaptions(body)) {
       corpusFailures.push(`${name}:${line}: “左图/右图/图N/原画”等明确图题语言不能作为普通段落紧邻未分类图片`);
@@ -783,11 +783,11 @@ assert.doesNotMatch(
       corpusFailures.push(`${name}:${line}: 语义书影必须显式指定图版宽度（单本通常 25/33%，复合书影按构图选择）`);
     }
     for (const line of authorPortraitsWithFigureCaptions(body)) {
-      corpusFailures.push(`${name}:${line}: 作者头像不能使用普通 [图题]；请改用 [作者]/[名片]/[人物]，说明文字另入作者简介或编者按`);
+      corpusFailures.push(`${name}:${line}: 作者头像不能使用普通 [fig]；请改用 [author]/[card]/[person]，说明文字另入作者简介或编者按`);
     }
     const html = await renderMarkdown(body);
     if (markerLeak.test(html.replace(/<[^>]+>/gu, ""))) {
-      corpusFailures.push(`${name}: 图版/表格标记字面渲染进了页面（[图题]/[图注]/[表题]/[表注] 位置或格式有误）`);
+      corpusFailures.push(`${name}: 图版/表格标记字面渲染进了页面（[fig]/[fig-note]/[table]/[table-note] 位置或格式有误）`);
     }
     const width = invalidWidth.exec(html);
     if (width) corpusFailures.push(`${name}: 非法图版宽度 ${width[0]}（仅允许 =25/33/50/66/75/100%）`);
@@ -807,7 +807,7 @@ assert.doesNotMatch(
       ? raw.slice(raw.indexOf("\n", end + 4) + 1)
       : raw;
     for (const line of unclassifiedItalicImageNeighbors(body)) {
-      corpusFailures.push(`${relative}:${line}: 译文中图片相邻的独立斜体必须迁移为 [图题]/[图注]`);
+      corpusFailures.push(`${relative}:${line}: 译文中图片相邻的独立斜体必须迁移为 [fig]/[fig-note]`);
     }
     for (const line of unclassifiedExplicitImageCaptions(body)) {
       corpusFailures.push(`${relative}:${line}: 译文中的明确图题语言不能作为普通段落紧邻未分类图片`);
@@ -816,7 +816,7 @@ assert.doesNotMatch(
       corpusFailures.push(`${relative}:${line}: 译文语义书影必须显式指定图版宽度`);
     }
     for (const line of authorPortraitsWithFigureCaptions(body)) {
-      corpusFailures.push(`${relative}:${line}: 译文作者头像不能使用普通 [图题]；请改用 [作者]/[名片]/[人物]`);
+      corpusFailures.push(`${relative}:${line}: 译文作者头像不能使用普通 [fig]；请改用 [author]/[card]/[person]`);
     }
     const language = relative.includes(`${path.sep}ja${path.sep}`) ? "ja" : "en";
     const html = await renderMarkdown(body, { language });

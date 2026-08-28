@@ -20,11 +20,11 @@ rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-[作者] Mi Ze Wei Hua
+[author] Mi Ze Wei Hua
 
 ![Portrait of Mi Ze Wei Hua](attachments/roof-archive/cv4275616/01-author-portrait-v5.png "=25%")
 
-[作者简介] “High banks become valleys; deep valleys become hills.”
+[author-bio] “High banks become valleys; deep valleys become hills.”
 
 A boy is indirectly connected to the fate of the world through a girl: that’s Kojima’s sekaikei! (Wrong.)
 
