@@ -6,9 +6,9 @@ The primary self-hosted CJK assets are generated from three source fonts:
 
 | Output | Required source filename | CSS family |
 | --- | --- | --- |
-| `un-canon-st-song.woff2` | `STSong.ttf` | `UN Canon STSong` |
-| `un-canon-st-fangsong.woff2` | `STFangsong.ttf` | `UN Canon STFangsong` |
-| `un-canon-st-kaiti.woff2` | `STKaiti.ttf` | `UN Canon STKaiti` |
+| `roof-st-song.woff2` | `STSong.ttf` | `Roof STSong` |
+| `roof-st-fangsong.woff2` | `STFangsong.ttf` | `Roof STFangsong` |
+| `roof-st-kaiti.woff2` | `STKaiti.ttf` | `Roof STKaiti` |
 
 The original TTF files are not committed. The generator downloads them from a
 pinned `latex-chinese-fonts` commit into the ignored
@@ -75,7 +75,7 @@ pinned-source, generator-strategy, or pinned-toolchain change rebuilds them.
 
 ## Rare Han fallbacks
 
-`un-canon-rare-han-serif.woff2` and `un-canon-rare-han-sans.woff2` are
+`roof-rare-han-serif.woff2` and `roof-rare-han-sans.woff2` are
 one-glyph Google Fonts text subsets for `U+4337`, generated from Noto Serif SC
 400 and Noto Sans SC 400 respectively.
 

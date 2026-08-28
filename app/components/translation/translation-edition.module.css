@@ -84,7 +84,7 @@
 
 .page :lang(zh-Hans),
 .page :lang(zh-Hant) {
-  font-family: "UN Canon STSong", var(--font-roof-noto-serif-sc-fallback), var(--font-roof-eb-garamond-fallback), serif;
+  font-family: "Roof STSong", var(--font-roof-noto-serif-sc-fallback), var(--font-roof-eb-garamond-fallback), serif;
 }
 
 .header {

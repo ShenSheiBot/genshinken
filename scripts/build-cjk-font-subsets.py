@@ -43,29 +43,29 @@ LOCALE_FONT_OWNED_ROOTS = (
     ROOT / "app" / "translation-fonts.generated.css",
     ROOT / "source" / "_translations",
 )
-ALWAYS_INCLUDE = "西方負典华文宋体仿宋楷体衬线无衬线，。；：？！“”‘’（）《》〈〉【】——……·"
+ALWAYS_INCLUDE = "华文宋体仿宋楷体衬线无衬线，。；：？！“”‘’（）《》〈〉【】——……·"
 
 FONTS = (
     {
-        "family": "UN Canon STSong",
+        "family": "Roof STSong",
         "source": "STSong.ttf",
         "source_path": "chinese/宋体/STSong.ttf",
         "source_sha256": "c5cc2ed5e2c0e6385013fe82d950eee6960d805bd602b86c53ff454783f382c4",
-        "output": "un-canon-st-song.woff2",
+        "output": "roof-st-song.woff2",
     },
     {
-        "family": "UN Canon STFangsong",
+        "family": "Roof STFangsong",
         "source": "STFangsong.ttf",
         "source_path": "chinese/仿宋体/STFangsong.ttf",
         "source_sha256": "e6326459e8e60e436c7d60e34d273bda3ba4eea2d2a5b309ff8f1b73200f2e38",
-        "output": "un-canon-st-fangsong.woff2",
+        "output": "roof-st-fangsong.woff2",
     },
     {
-        "family": "UN Canon STKaiti",
+        "family": "Roof STKaiti",
         "source": "STKaiti.ttf",
         "source_path": "chinese/楷体/STKaiti.ttf",
         "source_sha256": "a29c99c161fc43ce6aba2d7c152065359c2cb3019be4ae6248171178cb7d04d5",
-        "output": "un-canon-st-kaiti.woff2",
+        "output": "roof-st-kaiti.woff2",
     },
 )
 

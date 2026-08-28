@@ -1,7 +1,7 @@
 export type HanScript = "hans" | "hant";
 
 export const DEFAULT_HAN_SCRIPT: HanScript = "hans";
-export const HAN_SCRIPT_STORAGE_KEY = "ub_chinese_script";
+export const HAN_SCRIPT_STORAGE_KEY = "roof_chinese_script";
 
 export function isHanScript(value: unknown): value is HanScript {
   return value === "hans" || value === "hant";

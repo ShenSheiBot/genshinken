@@ -33,7 +33,7 @@
 以下仍为 `planned`：
 
 - 较新远端阅读记录淘汰本页较旧的 pending write，且旧页失焦／关闭后不能覆盖较新记录；
-- 主题 `ub_theme` 与繁简 `ub_chinese_script` 的真实跨标签传播；
+- 主题 `roof_theme` 与繁简 `roof_chinese_script` 的真实跨标签传播；
 - 清除本文、清除全部与无关 localStorage 键的隔离；
 - reload、back/forward、BFCache 与加载期用户输入优先于自动恢复；
 - 存储读写被浏览器拒绝时正文仍可阅读；

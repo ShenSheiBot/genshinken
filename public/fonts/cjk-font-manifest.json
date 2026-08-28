@@ -2,28 +2,28 @@
   "conversion": "opencc-js:cn2t+t2cn",
   "corpusFileCount": 494,
   "fonts": {
-    "UN Canon STFangsong": {
+    "Roof STFangsong": {
       "bytes": 1662144,
       "codePointCount": 6526,
-      "file": "un-canon-st-fangsong.woff2",
+      "file": "roof-st-fangsong.woff2",
       "sha256": "b7b7574a24e87abfd7b23258d7600dc6c772103c33bbb6c665ed0630be467c37",
       "source": "STFangsong.ttf",
       "sourceSha256": "e6326459e8e60e436c7d60e34d273bda3ba4eea2d2a5b309ff8f1b73200f2e38",
       "sourceUrl": "https://raw.githubusercontent.com/Haixing-Hu/latex-chinese-fonts/287399335ec1beb72062ce67c36eaa8bec35f386/chinese/%E4%BB%BF%E5%AE%8B%E4%BD%93/STFangsong.ttf"
     },
-    "UN Canon STKaiti": {
+    "Roof STKaiti": {
       "bytes": 2028136,
       "codePointCount": 6526,
-      "file": "un-canon-st-kaiti.woff2",
+      "file": "roof-st-kaiti.woff2",
       "sha256": "34170406f2a7594564f6d534ed9b9ef0d1ff0df793072c923ea6f525858e5248",
       "source": "STKaiti.ttf",
       "sourceSha256": "a29c99c161fc43ce6aba2d7c152065359c2cb3019be4ae6248171178cb7d04d5",
       "sourceUrl": "https://raw.githubusercontent.com/Haixing-Hu/latex-chinese-fonts/287399335ec1beb72062ce67c36eaa8bec35f386/chinese/%E6%A5%B7%E4%BD%93/STKaiti.ttf"
     },
-    "UN Canon STSong": {
+    "Roof STSong": {
       "bytes": 1633428,
       "codePointCount": 6526,
-      "file": "un-canon-st-song.woff2",
+      "file": "roof-st-song.woff2",
       "sha256": "5abd2f8c64c5956c576dd3931abab7447aebd1869d6411a4af07d87eef4116d4",
       "source": "STSong.ttf",
       "sourceSha256": "c5cc2ed5e2c0e6385013fe82d950eee6960d805bd602b86c53ff454783f382c4",

@@ -17,13 +17,13 @@
   --text-sm: 10px;
   --text-caption: 11px;
   --text-meta: 12px;
-  --f-brand: "UN Canon STSong", "STSong", "华文宋体", "Songti SC", "SimSun", serif;
+  --f-brand: "Roof STSong", "STSong", "华文宋体", "Songti SC", "SimSun", serif;
   --f-grotesk: "Helvetica Neue", Helvetica, "PingFang SC", "Microsoft YaHei", "微软雅黑", "Noto Sans SC", Arial, sans-serif;
-  --f-serif: var(--font-newsreader), "UN Canon STSong", "STSong", "华文宋体", "Songti SC", "SimSun", "Noto Serif SC", Georgia, serif;
+  --f-serif: var(--font-newsreader), "Roof STSong", "STSong", "华文宋体", "Songti SC", "SimSun", "Noto Serif SC", Georgia, serif;
   --f-mono: var(--font-space-mono), "PingFang SC", "Noto Sans SC", monospace;
-  --f-cjk-serif: "UN Canon STSong", "STSong", "华文宋体", "Songti SC", "SimSun", "Noto Serif SC", serif;
-  --f-cjk-fangsong: "UN Canon STFangsong", "STFangsong", "华文仿宋", "FangSong", "FangSong_GB2312", "Noto Serif SC", serif;
-  --f-cjk-kaiti: "UN Canon STKaiti", "STKaiti", "华文楷体", "KaiTi", "楷体", serif;
+  --f-cjk-serif: "Roof STSong", "STSong", "华文宋体", "Songti SC", "SimSun", "Noto Serif SC", serif;
+  --f-cjk-fangsong: "Roof STFangsong", "STFangsong", "华文仿宋", "FangSong", "FangSong_GB2312", "Noto Serif SC", serif;
+  --f-cjk-kaiti: "Roof STKaiti", "STKaiti", "华文楷体", "KaiTi", "楷体", serif;
   --f-cjk-dengxian: "DengXian", "等线", "Microsoft YaHei", "微软雅黑", "PingFang SC", "Noto Sans SC", Arial, sans-serif;
   --f-editorial-note-latin: Georgia, "Times New Roman", Times, serif;
   --f-note: "Times New Roman", Times, var(--f-cjk-serif);
@@ -57,8 +57,8 @@
    subsets prevent platform-dependent glyph and baseline fallback without
    shipping another full CJK font. */
 @font-face {
-  font-family: "UN Canon Rare Han Serif";
-  src: url("/fonts/un-canon-rare-han-serif.woff2?v=fcbebb5254a4") format("woff2");
+  font-family: "Roof Rare Han Serif";
+  src: url("/fonts/roof-rare-han-serif.woff2?v=fcbebb5254a4") format("woff2");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -66,8 +66,8 @@
 }
 
 @font-face {
-  font-family: "UN Canon Rare Han Sans";
-  src: url("/fonts/un-canon-rare-han-sans.woff2?v=bf88159b46a8") format("woff2");
+  font-family: "Roof Rare Han Sans";
+  src: url("/fonts/roof-rare-han-sans.woff2?v=bf88159b46a8") format("woff2");
   font-style: normal;
   font-weight: 400;
   font-display: swap;

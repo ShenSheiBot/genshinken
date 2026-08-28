@@ -35,20 +35,20 @@ const fontToolchainDigest = crypto
 
 const expectedFonts = [
   {
-    family: "UN Canon STSong",
-    file: "un-canon-st-song.woff2",
+    family: "Roof STSong",
+    file: "roof-st-song.woff2",
     source: "STSong.ttf",
     variable: "--f-cjk-serif",
   },
   {
-    family: "UN Canon STFangsong",
-    file: "un-canon-st-fangsong.woff2",
+    family: "Roof STFangsong",
+    file: "roof-st-fangsong.woff2",
     source: "STFangsong.ttf",
     variable: "--f-cjk-fangsong",
   },
   {
-    family: "UN Canon STKaiti",
-    file: "un-canon-st-kaiti.woff2",
+    family: "Roof STKaiti",
+    file: "roof-st-kaiti.woff2",
     source: "STKaiti.ttf",
     variable: "--f-cjk-kaiti",
   },
@@ -56,13 +56,13 @@ const expectedFonts = [
 
 const rareHanFonts = [
   {
-    family: "UN Canon Rare Han Serif",
-    file: "un-canon-rare-han-serif.woff2",
+    family: "Roof Rare Han Serif",
+    file: "roof-rare-han-serif.woff2",
     sha256: "fcbebb5254a4a8ae5edde4d1b7e548c1fb859e1843d00d4f3161b509153925ac",
   },
   {
-    family: "UN Canon Rare Han Sans",
-    file: "un-canon-rare-han-sans.woff2",
+    family: "Roof Rare Han Sans",
+    file: "roof-rare-han-sans.woff2",
     sha256: "bf88159b46a80c7d19c95d8d8f6c434518c9363fbd20a37db3acd9a0cb045bf3",
   },
 ];
@@ -94,7 +94,7 @@ const localeFontOwnedRoots = [
   "app/translation-fonts.generated.css",
   "source/_translations/",
 ];
-const alwaysInclude = "西方負典华文宋体仿宋楷体衬线无衬线，。；：？！“”‘’（）《》〈〉【】——……·";
+const alwaysInclude = "华文宋体仿宋楷体衬线无衬线，。；：？！“”‘’（）《》〈〉【】——……·";
 
 function escapeRegExp(value) {
   return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -229,7 +229,7 @@ assert.match(
 );
 assert.match(
   foundationSource,
-  /cjkFontManifest\.fonts\["UN Canon STSong"\]/u,
+  /cjkFontManifest\.fonts\["Roof STSong"\]/u,
   "the STSong preload must derive from cjk-font-manifest.json"
 );
 assert.match(
@@ -275,12 +275,12 @@ assert.ok(sansRule, "missing sans reader rule");
 assert.equal(propertyValue(serifRule, "--reader-body-family"), "var(--f-cjk-serif)");
 assert.equal(propertyValue(serifRule, "--reader-quote-family"), "var(--f-cjk-fangsong)");
 assert.notEqual(propertyValue(serifRule, "--reader-body-family"), propertyValue(sansRule, "--reader-body-family"));
-assert.doesNotMatch(sansRule, /UN Canon ST(?:Song|Fangsong|Kaiti)/);
+assert.doesNotMatch(sansRule, /Roof ST(?:Song|Fangsong|Kaiti)/);
 assert.match(readerCss, /\.body :global\(p\)\s*{[\s\S]*?font-family\s*:\s*var\(--reader-body-family\)\s*;/);
 assert.match(readerCss, /\.serifSample\s*{\s*font-family\s*:\s*var\(--f-cjk-serif\)\s*;/);
 assert.match(
   readerCss,
-  /\.root :global\(\.rare-han\)\s*{[\s\S]*?font-family\s*:\s*["']UN Canon Rare Han Serif["']\s*;/
+  /\.root :global\(\.rare-han\)\s*{[\s\S]*?font-family\s*:\s*["']Roof Rare Han Serif["']\s*;/
 );
 
 const japaneseEditionRule = /\.page:lang\(ja\)\s*\{([\s\S]*?)\}/u.exec(translationCss)?.[1];
@@ -308,7 +308,7 @@ assert.match(
 );
 assert.match(
   readerCss,
-  /html\[data-reader-font="sans"\][\s\S]*?\.rare-han[\s\S]*?font-family\s*:\s*["']UN Canon Rare Han Sans["']\s*;/
+  /html\[data-reader-font="sans"\][\s\S]*?\.rare-han[\s\S]*?font-family\s*:\s*["']Roof Rare Han Sans["']\s*;/
 );
 
 assert.equal(translationFontManifest.version, 3, "unsupported Japanese translation font manifest version");

@@ -46,7 +46,7 @@
 
 所有 specs 通过共享 [`tests/e2e/fixtures.ts`](../../../tests/e2e/fixtures.ts) 导入测试对象。WebKit 自动 fixture 只把 CSP 升级后的 `https://127.0.0.1:3100/**` 请求桥接回本地 HTTP `next start`，不修改 CSP、不启用 `bypassCSP`，也不影响正式域名。
 
-该机制只让本地 WebKit 在保留 `upgrade-insecure-requests` 时取得 CSS、字体和 Next.js chunks 并执行 hydration。它不证明 TLS、证书、HSTS、Vercel 边缘网络、线上混合内容、真实 Safari 或 CSP 的完整安全性。详细原因与限制见 [`testing.md` 第 5 节](../../testing.md#5-本地-webkit-csp-transport-bridge)。
+该机制只让本地 WebKit 在保留 `upgrade-insecure-requests` 时取得 CSS、字体和 Next.js chunks 并执行 hydration。它不证明 TLS、证书、HSTS、Cloudflare 边缘网络、线上混合内容、真实 Safari 或 CSP 的完整安全性。详细原因与限制见 [`testing.md` 第 5 节](../../testing.md#5-本地-webkit-csp-transport-bridge)。
 
 ## 体验式检查
 

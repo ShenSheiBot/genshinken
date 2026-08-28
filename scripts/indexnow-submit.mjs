@@ -13,8 +13,8 @@
 import fs from "node:fs";
 import path from "node:path";
 
-const SITE = "https://un-canon.blog";
-const HOST = "un-canon.blog";
+const SITE = "https://roof-genshinken-production.hiddengem.workers.dev";
+const HOST = "roof-genshinken-production.hiddengem.workers.dev";
 const POSTS_DIR = path.join(process.cwd(), "source", "_posts");
 const BOOKS_DIR = path.join(process.cwd(), "source", "_books");
 const TOPICS_DIR = path.join(process.cwd(), "source", "_topics");
@@ -127,7 +127,7 @@ const files = collectFiles(args);
 
 // 首页与栏目索引恒存在，直接提交；文章/书籍/专题详情页则在 --verify 下先轮询
 // 部署就绪（HTTP 2xx/3xx）再提交，替代此前工作流里固定 sleep 的盲等，避免抢在
-// Vercel 部署完成前把尚未上线的 URL 交给搜索引擎（会抓到 404）。
+// Cloudflare Worker 部署完成前把尚未上线的 URL 交给搜索引擎（会抓到 404）。
 const alwaysUrls = new Set([`${SITE}/`]);
 const detailUrls = new Set();
 for (const file of files) {

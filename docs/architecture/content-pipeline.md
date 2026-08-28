@@ -12,7 +12,7 @@ flowchart LR
   B --> C["Markdown / 媒体净化 / 引用"]
   C --> D["繁简与字体语料闭包"]
   D --> E["Next.js 静态路由和元数据"]
-  E --> F["Vercel 部署"]
+  E --> F["OpenNext 构建与 Cloudflare Worker 部署"]
   F --> G["SSR/HTTP 发布回归"]
   G --> H["IndexNow 与 sitemap 发现"]
 ```
@@ -107,7 +107,7 @@ Next.js App Router 从 `app/` 生成：
 | 确定性静态与逻辑 | `npm run check` | 内容、净化、排版、字体、阅读记录、繁简、引用、依赖、静态路由、TypeScript、ESLint。 | React hydration、真实浏览器交互和视觉终态。 |
 | 生产构建 | `npm run build` | Next.js 编译、SSG、路由和资源可生成。 | 部署环境和客户端体验。 |
 | SSR／HTTP 发布回归 | `npm run verify:release -- <base-url>` | 导航、筛选、HTML、metadata、canonical、重定向、JSON-LD、sitemap、RSS 和字体资源。 | 客户端 JS、焦点、localStorage、WebKit、动效和真实行盒。 |
-| 浏览器交互 | 博客自有 Playwright specs；状态与矩阵见 [`testing.md`](../testing.md) | 本地生产构建的真实 hydration、localStorage、焦点、剪贴板反馈和引擎差异。 | `implemented` 不表示最近一次远端结果；也不证明 Vercel 部署、真实设备、完整视觉或辅助技术体验。 |
+| 浏览器交互 | 博客自有 Playwright specs；状态与矩阵见 [`testing.md`](../testing.md) | 本地生产构建的真实 hydration、localStorage、焦点、剪贴板反馈和引擎差异。 | `implemented` 不表示最近一次远端结果；也不证明 Cloudflare Worker 部署、真实设备、完整视觉或辅助技术体验。 |
 
 `verify:editorial` 是历史兼容别名；新文档和新流程统一使用 `verify:release`。
 
@@ -136,12 +136,12 @@ npm run verify:release -- http://127.0.0.1:3100
 构建会把最新修改时间写入页面；需要比较两个候选构建时，应显式固定：
 
 ```bash
-UN_CANON_BUILD_TIMESTAMP=2026-07-25T21:44:45.000Z npm run build
+ROOF_BUILD_TIMESTAMP=2026-07-25T21:44:45.000Z npm run build
 ```
 
-PowerShell 使用 `$env:UN_CANON_BUILD_TIMESTAMP='...'` 后再运行构建。固定该值只用于可比较证据，不得替代真实部署时间记录。
+PowerShell 使用 `$env:ROOF_BUILD_TIMESTAMP='...'` 后再运行构建。固定该值只用于可比较证据，不得替代真实部署时间记录。
 
-## 8. CI 与 Vercel
+## 8. CI 与 Cloudflare Worker
 
 `.github/workflows/quality.yml` 在所有 pull request 和 `main` push 上执行：
 
@@ -151,9 +151,9 @@ PowerShell 使用 `$env:UN_CANON_BUILD_TIMESTAMP='...'` 后再运行构建。固
 4. 启动本地生产服务
 5. `npm run verify:release`
 
-`vercel.json` 同样强制 `npm ci` 和 `npm run check && next build`。GitHub Quality 与 IndexNow runner 固定为 `ubuntu-24.04` 和 Node `22.20.0`，官方 Actions 固定到已核验的完整提交 SHA。`.github/workflows/browser-smoke.yml` 调用公开的 `UCCTB/web-test-platform` reusable workflow，并固定其完整提交 SHA；workflow 不声明或继承调用方配置的 repository／organization secrets，GitHub 自动提供的 caller `GITHUB_TOKEN` 只授予 `contents: read`，artifact 属于博客 caller run。Playwright 版本、项目矩阵、产品断言和测试素材由博客自己的 lockfile、配置与 specs 持有，完整权责和 SHA 更新流程见 [`testing.md`](../testing.md)。
+GitHub Quality 与 IndexNow runner 固定为 `ubuntu-24.04` 和 Node `22.20.0`，官方 Actions 固定到已核验的完整提交 SHA。`.github/workflows/browser-smoke.yml` 调用公开的 `UCCTB/web-test-platform` reusable workflow，并固定其完整提交 SHA；workflow 不声明或继承调用方配置的 repository／organization secrets，GitHub 自动提供的 caller `GITHUB_TOKEN` 只授予 `contents: read`，artifact 属于博客 caller run。Playwright 版本、项目矩阵、产品断言和测试素材由博客自己的 lockfile、配置与 specs 持有，完整权责和 SHA 更新流程见 [`testing.md`](../testing.md)。
 
-Vercel 构建成功只说明部署候选通过静态门禁。运行时基线还必须记录生产提交 SHA、构建时间、Vercel Deployment ID、不可变 deployment URL，并在部署 `READY` 后分别对不可变 URL 与正式域名执行 `verify:release`，同时核验该提交的 caller browser run 与 artifact。当前没有对这两个部署 URL 执行 Playwright；不得把本地 browser suite 写成部署后浏览器冒烟。
+`scripts/deploy-cloudflare.mjs` 是现行部署入口：它以 `wrangler.jsonc` 的 preview／production 环境为目标，执行字体同步、干净提交检查、OpenNext 构建、R2 重复附件裁剪和 Wrangler 发布。部署成功只说明 Worker 接受了候选；运行时验收还必须记录提交 SHA、构建时间、Worker 版本 ID 和目标 URL，并在发布后对 Worker URL 与公开别名执行 `verify:release`。当前没有对线上 Worker 自动执行 Playwright；不得把本地 browser suite 写成部署后浏览器冒烟。
 
 ## 9. 发布发现
 
@@ -167,9 +167,9 @@ IndexNow 是发现流程，不是质量门禁；它看见 2xx／3xx 不代表页
 
 ## 10. 发布失败与回滚
 
-1. 保留失败的提交 SHA、构建日志、Deployment ID 和验证输出。
+1. 保留失败的提交 SHA、构建日志、Worker 版本 ID 和验证输出。
 2. 若只影响尚未提升的 preview，停止提升并前向修复。
-3. 若已经影响生产，优先在新提交中修复；需要回退时对引入问题的提交使用 `git revert`，由正常 CI/Vercel 重新部署。
+3. 若已经影响生产，优先在新提交中修复；需要回退时对引入问题的提交使用 `git revert`，再通过 Cloudflare production 部署入口发布。
 4. 回滚后重新执行正式域名 `verify:release` 和受影响浏览器场景。
 5. sitemap、RSS 或 IndexNow 错误应修正其源码生成器，不能手工维护根目录副本掩盖问题。
 

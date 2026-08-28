@@ -36,9 +36,6 @@ yarn-error.log*
 .env*.local
 .env
 
-# vercel
-.vercel
-
 # typescript
 *.tsbuildinfo
 next-env.d.ts
@@ -47,7 +44,6 @@ next-env.d.ts
 /_design_extract/
 /claude-design-package/
 /claude-design-package.zip
-/UN-CANON-BLOG.zip
 
 # Codex local task artifacts
 /.codex/

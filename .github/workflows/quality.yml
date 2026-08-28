@@ -50,7 +50,7 @@ jobs:
       - name: 回归生产构建
         shell: bash
         run: |
-          npm run start -- --hostname 127.0.0.1 > /tmp/un-canon-next.log 2>&1 &
+          npm run start -- --hostname 127.0.0.1 > /tmp/roof-next.log 2>&1 &
           server_pid=$!
           trap 'kill "$server_pid" 2>/dev/null || true' EXIT
 
@@ -64,7 +64,7 @@ jobs:
           done
 
           if [ "$ready" -ne 1 ]; then
-            cat /tmp/un-canon-next.log
+            cat /tmp/roof-next.log
             exit 1
           fi
 

@@ -5,8 +5,8 @@ import { useSyncExternalStore } from "react";
 export type Theme = "light" | "dark";
 
 const DEFAULT_THEME: Theme = "light";
-const THEME_STORAGE_KEY = "ub_theme";
-const THEME_CHANGE_EVENT = "un-canon:theme-change";
+const THEME_STORAGE_KEY = "roof_theme";
+const THEME_CHANGE_EVENT = "roof:theme-change";
 
 function isTheme(value: unknown): value is Theme {
   return value === "light" || value === "dark";

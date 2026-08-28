@@ -2,7 +2,7 @@
 
 状态：现行架构
 
-本文是正文阅读运行时的可执行维护说明。页面应呈现什么、交互应达到什么效果，以 [`frontend-product-spec.md`](../frontend-product-spec.md) 为产品权威；阅读记录与繁简转换的决策背景分别保留在 [ADR-BLOG-001](https://wiki.un-canon.com/doc/adr-blog-001-B6AJHj2wg5) 和 [ADR-BLOG-002](https://wiki.un-canon.com/doc/adr-blog-002-IXwWU8aJWR)。维护、测试和发布不得依赖登录 Outline 才能完成。
+本文是正文阅读运行时的可执行维护说明。页面应呈现什么、交互应达到什么效果，以 [`frontend-product-spec.md`](../frontend-product-spec.md) 为产品权威；维护、测试和发布所需的现行事实必须留在本仓库，不依赖外部旧站文档。
 
 ## 1. 公开入口与所有权
 
@@ -62,12 +62,12 @@ app/posts/[slug]/page.tsx
 
 | 键 | 所有者 | 值与作用 |
 | --- | --- | --- |
-| `ub_theme` | `useTheme` | `light` / `dark`；全站主题。 |
-| `ub_reader_font` | `ReadingEditionChrome` | `serif` / `sans`；正文与标题字族。 |
-| `ub_reader_size` | `ReadingEditionChrome` | `small` / `medium` / `large`；正文尺度。 |
-| `ub_chinese_script` | `useHanScriptConversion` | `hans` / `hant`；用户请求的文字系统。 |
-| `ub_reading:enabled` | reading progress | 是否保存本机阅读记录；默认开启。 |
-| `ub_reading:v1:post:<encoded-slug>` | reading progress | 每篇文章的版本化语义位置、完成状态和保存时间。 |
+| `roof_theme` | `useTheme` | `light` / `dark`；全站主题。 |
+| `roof_reader_font` | `ReadingEditionChrome` | `serif` / `sans`；正文与标题字族。 |
+| `roof_reader_size` | `ReadingEditionChrome` | `small` / `medium` / `large`；正文尺度。 |
+| `roof_chinese_script` | `useHanScriptConversion` | `hans` / `hant`；用户请求的文字系统。 |
+| `roof_reading:enabled` | reading progress | 是否保存本机阅读记录；默认开启。 |
+| `roof_reading:v1:post:<encoded-slug>` | reading progress | 每篇文章的版本化语义位置、完成状态和保存时间。 |
 
 主题、繁简和阅读记录监听 `storage` 事件。远端标签页写入较新阅读记录后，本页必须丢弃更旧的待写状态，不能在失焦或卸载时把旧记录写回去。
 

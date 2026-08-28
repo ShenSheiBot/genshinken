@@ -28,9 +28,9 @@
 | 层级 | 状态 | 入口 | 能证明什么 | 不能证明什么 |
 | --- | --- | --- | --- | --- |
 | 静态与纯逻辑 | `implemented` | `npm run check` | 内容、净化、字体、阅读记录纯函数、繁简、引用、路由、类型与 lint 契约。 | Hydration、真实浏览器状态、焦点、WebKit 和视觉终态。 |
-| 生产构建 | `implemented` | `npm run build` | Next.js 编译、SSG、路由和静态资源可生成。 | Vercel 环境、客户端交互和生产网络。 |
+| 生产构建 | `implemented` | `npm run build` | Next.js 编译、SSG、路由和静态资源可生成。 | Cloudflare Worker 环境、客户端交互和生产网络。 |
 | SSR／HTTP 发布回归 | `implemented` | `npm run verify:release -- <base-url>` | 生成 HTML、metadata、公开路由、重定向、sitemap、RSS 和字体资源。 | 客户端 JavaScript、localStorage、焦点、剪贴板和真实行盒。 |
-| Playwright 本地生产构建 | `implemented` | `npm run test:e2e` | 在浏览器引擎中加载本地 `next start`，执行仓库自有交互断言。 | Vercel 部署后的浏览器行为、真实设备、全部视觉和无障碍体验。 |
+| Playwright 本地生产构建 | `implemented` | `npm run test:e2e` | 在浏览器引擎中加载本地 `next start`，执行仓库自有交互断言。 | Cloudflare Worker 部署后的浏览器行为、真实设备、全部视觉和无障碍体验。 |
 | 体验式审查 | `manual` | 四份 [test charter](testing/charters/) | 真实设备、视觉观感和辅助技术等不能稳定编码的判断。 | 可重复的自动化门禁或持续执行状态。 |
 | 部署后浏览器自动化 | `not-covered` | 无 | — | 正式域名或不可变 deployment URL 的客户端回归。 |
 
@@ -82,7 +82,7 @@ Quality 与 Browser workflow 都会独立安装、检查和构建调用方代码
 
 bridge 只在 `browserName === "webkit"` 时拦截精确的 `https://127.0.0.1:3100/**`。它通过 Playwright `route.fetch()` 把传输 URL 改回对应的 HTTP loopback，再以 `route.fulfill({ response })` 回填原 WebKit 请求。它不删除或修改页面 CSP、不启用 `bypassCSP`，也不改变博客生产代码；主文档仍由 HTTP loopback 提供并继续携带原 CSP。所有 specs 从共享 fixture 导入，因此 bridge 自动生效；正式域名和不可变 deployment URL 不匹配这条精确路由。
 
-该机制只能说明：保留当前生产配置中的 CSP 指令时，Playwright WebKit 可以加载本地构建并执行 hydration 与 Reader 交互。它不能证明本地服务支持 HTTPS，也不验证 TLS 握手、证书链、HSTS、HTTP→HTTPS 重定向、Vercel/CDN 边缘传输、真实部署的混合内容行为或 CSP 的完整安全性。现有 `verify:release` 不断言 `Content-Security-Policy` header；若冻结范围需要证明线上 header，必须对不可变 deployment URL 与正式域名另行抓取并记录明确的 header 证据。
+该机制只能说明：保留当前生产配置中的 CSP 指令时，Playwright WebKit 可以加载本地构建并执行 hydration 与 Reader 交互。它不能证明本地服务支持 HTTPS，也不验证 TLS 握手、证书链、HSTS、HTTP→HTTPS 重定向、Cloudflare 边缘传输、真实部署的混合内容行为或 CSP 的完整安全性。现有 `verify:release` 不断言 `Content-Security-Policy` header；若冻结范围需要证明线上 header，必须对 Worker URL 与公开别名另行抓取并记录明确的 header 证据。
 
 bridge 也不等同真实 iOS Safari，不覆盖动态地址栏、非零 safe-area、系统剪贴板权限、缓存、网络性能或证书错误处理。剪贴板 specs 使用显式注入的 `writeText` spy，只验证 UI 与公开 BibTeX 数据契约。
 
@@ -163,11 +163,9 @@ artifact 有保留期限。冻结记录至少保存调用方仓库、博客提�
 
 ## 9. 冻结与回滚证据
 
-初始纵向切片由注释标签 `blog-test-platform-baseline-2026-07-26` 锚定。该标签只记录 Desktop Chromium Reader smoke、当时的博客提交、平台 SHA、Vercel deployment、双 URL 发布回归和 caller artifact；不得移动、重打或回填第二阶段能力。
+冻结一次发布时，记录目标提交、GitHub run／attempt、artifact、Cloudflare Worker 版本 ID、Worker URL、公开别名回归结果和已知未覆盖范围。时点记录一经停止维护即是历史快照，不得冒充当前部署说明。
 
-第二阶段只有在目标提交的实际执行、artifact、Vercel deployment、不可变 URL 与正式域名回归全部完成后，才新增 `docs/releases/<baseline>.md` 和新的注释标签。归档文件会触发新构建，不能在同一提交中自指其尚未产生的 Deployment ID；最终提交、平台 SHA、run、artifact、Deployment ID、不可变 URL、正式域名结果、retry／flake 和未覆盖范围应以标签说明作为不可漂移的最终载体。
-
-出现回归时保留失败提交、run、artifact 和 Deployment ID，优先前向修复；必须回退时使用 `git revert` 走正常 CI/Vercel，并重新执行受影响的浏览器场景及双 URL `verify:release`。不得改写共享历史或移动既有基线标签。
+出现回归时保留失败提交、run、artifact 和 Worker 版本 ID，优先前向修复；必须回退时使用 `git revert` 形成新提交，再通过 Cloudflare production 部署入口发布，并重新执行受影响的浏览器场景及 Worker URL／公开别名 `verify:release`。不得改写共享历史。
 
 ## 10. Charters 与已知边界
 

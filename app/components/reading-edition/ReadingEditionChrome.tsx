@@ -554,9 +554,9 @@ export default function ReadingEditionChrome({
   const readerStatus = hanScriptStatus || readingProgressStatus;
 
   useEffect(() => {
-    const savedSize = readLocalSetting("ub_reader_size");
+    const savedSize = readLocalSetting("roof_reader_size");
     const size: ReaderSize = savedSize === "small" || savedSize === "large" ? savedSize : "medium";
-    const savedFont = readLocalSetting("ub_reader_font");
+    const savedFont = readLocalSetting("roof_reader_font");
     const font: ReaderFont = savedFont === "sans" ? "sans" : "serif";
     setReaderSize(size);
     setReaderFont(font);
@@ -1801,12 +1801,12 @@ export default function ReadingEditionChrome({
   const updateSize = (size: ReaderSize) => {
     setReaderSize(size);
     document.documentElement.dataset.readerSize = size;
-    writeLocalSetting("ub_reader_size", size);
+    writeLocalSetting("roof_reader_size", size);
   };
   const updateFont = (font: ReaderFont) => {
     setReaderFont(font);
     document.documentElement.dataset.readerFont = font;
-    writeLocalSetting("ub_reader_font", font);
+    writeLocalSetting("roof_reader_font", font);
   };
   const settingsControl = (
     <button

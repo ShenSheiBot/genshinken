@@ -500,7 +500,7 @@
 .root :global(.cjk-interpunct) { font-family: inherit; }
 
 .root :global(.rare-han) {
-  font-family: "UN Canon Rare Han Serif";
+  font-family: "Roof Rare Han Serif";
   font-style: inherit;
   font-weight: inherit;
 }
@@ -2100,7 +2100,7 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
 }
 
 :global(html[data-reader-font="sans"]) .root :global(.rare-han) {
-  font-family: "UN Canon Rare Han Sans";
+  font-family: "Roof Rare Han Sans";
 }
 
 :global(html[data-reader-font="sans"]) .body :global(blockquote),

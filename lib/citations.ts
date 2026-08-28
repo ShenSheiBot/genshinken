@@ -374,7 +374,7 @@ export function validateCitationSemantics(citation: CitationRecord, source: stri
 
 export function citationKeyForSlug(slug: string, date: string): string {
   const year = /^\d{4}/u.exec(date)?.[0] ?? "undated";
-  return `un_canon_${slug.replaceAll("-", "_")}_${year}`;
+  return `roof_${slug.replaceAll("-", "_")}_${year}`;
 }
 
 export function fullCitationTitle(title: string, subtitle?: string): string {

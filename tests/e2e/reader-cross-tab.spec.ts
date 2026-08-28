@@ -1,8 +1,8 @@
 import { expect, test, type Page } from "./fixtures";
 
 const READER_PATH = "/posts/guxiang-de-bianzhengfa";
-const ENABLED_KEY = "ub_reading:enabled";
-const RECORD_KEY = "ub_reading:v1:post:guxiang-de-bianzhengfa";
+const ENABLED_KEY = "roof_reading:enabled";
+const RECORD_KEY = "roof_reading:v1:post:guxiang-de-bianzhengfa";
 
 test.skip(({ browserName, isMobile }) => (
   browserName !== "chromium" || Boolean(isMobile)

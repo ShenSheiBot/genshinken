@@ -55,7 +55,7 @@ test("facet filtering stays client-applied on the prerendered document", async (
   await expect(rows).toHaveCount(expected);
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
     "href",
-    "https://un-canon.blog/library"
+    "https://roof-genshinken-a8f3d7c2.hiddengem.workers.dev/library"
   );
 });
 

@@ -122,7 +122,7 @@ assert.equal(
 );
 assert.equal(writeReadingProgress(slug, validRecord), true);
 assert.deepEqual(readReadingProgress(slug), validRecord);
-assert.equal(readingProgressKey(slug), "ub_reading:v1:post:serial%2Fchapter-one");
+assert.equal(readingProgressKey(slug), "roof_reading:v1:post:serial%2Fchapter-one");
 
 storage.setItem(readingProgressKey(slug), "{not-json");
 assert.equal(readReadingProgress(slug), null, "corrupt JSON must be ignored");

@@ -91,7 +91,7 @@ for (const route of [
 // --- 全站静态渲染契约 -------------------------------------------------
 // /library 曾因 `await searchParams` 成为唯一的请求期 SSR 路由：每次冷
 // 启动把全部 markdown 语料跑一遍渲染管线，且 4,000+ 个 facet 查询变体
-// 均不可 CDN 缓存，是 Vercel Fluid CPU 与 GSC 已知页面暴涨的共同根源。
+// 均不可 CDN 缓存，是边缘运行时负载与 GSC 已知页面暴涨的共同根源。
 // 静态化后由此守卫防止任何 page 再回到请求期渲染。
 function walkPageFiles(directory) {
   return fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {

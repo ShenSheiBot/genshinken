@@ -18,7 +18,7 @@ test("BibTeX copy writes the published citation and announces success", async ({
       configurable: true,
       value: {
         writeText: async (text: string) => {
-          Reflect.set(window, "__unCanonClipboardText", text);
+          Reflect.set(window, "__roofClipboardText", text);
         },
       },
     });
@@ -34,7 +34,7 @@ test("BibTeX copy writes the published citation and announces success", async ({
   await expect(copy).toContainText("已复制");
   await expect(page.getByRole("status")).toHaveText("BibTeX 已复制到剪贴板");
   const copied = await page.evaluate(() => String(
-    Reflect.get(window, "__unCanonClipboardText") ?? ""
+    Reflect.get(window, "__roofClipboardText") ?? ""
   ));
   expect(copied.trimEnd()).toBe(expected.trimEnd());
 });
@@ -47,9 +47,9 @@ test("BibTeX copy rejection exposes live feedback and remains retryable", async 
       value: {
         writeText: async (text: string) => {
           attempts += 1;
-          Reflect.set(window, "__unCanonClipboardAttempts", attempts);
+          Reflect.set(window, "__roofClipboardAttempts", attempts);
           if (attempts === 1) throw new Error("clipboard rejected for test");
-          Reflect.set(window, "__unCanonClipboardText", text);
+          Reflect.set(window, "__roofClipboardText", text);
         },
       },
     });
@@ -69,8 +69,8 @@ test("BibTeX copy rejection exposes live feedback and remains retryable", async 
   await expect(copy).toContainText("已复制");
   await expect(page.getByRole("status")).toHaveText("BibTeX 已复制到剪贴板");
   const retry = await page.evaluate(() => ({
-    attempts: Number(Reflect.get(window, "__unCanonClipboardAttempts") ?? 0),
-    text: String(Reflect.get(window, "__unCanonClipboardText") ?? ""),
+    attempts: Number(Reflect.get(window, "__roofClipboardAttempts") ?? 0),
+    text: String(Reflect.get(window, "__roofClipboardText") ?? ""),
   }));
   expect(retry.attempts).toBe(2);
   expect(retry.text.trimEnd()).toBe(expected.trimEnd());

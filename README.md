@@ -2,7 +2,7 @@
 
 屋顶现视研的文章档案与发布站点。本站以动画、漫画、游戏及相关视听文化为对象，收录原创评论、研究译介与视频论文，并保留作者、译者、校对者、原注和最初发布信息。
 
-前端基于 [un-canon-blog](https://github.com/un-canon/un-canon-blog) 改造，采用 Next.js App Router、静态生成和 Markdown 内容管线。
+前端采用 Next.js App Router、OpenNext for Cloudflare、静态生成和 Markdown 内容管线。
 
 ## 本地预览
 

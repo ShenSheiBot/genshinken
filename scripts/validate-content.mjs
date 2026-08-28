@@ -207,7 +207,7 @@ assert.doesNotMatch(
 const errors = [];
 const warnings = [];
 
-function berlinDateISO(value = process.env.UN_CANON_BUILD_TIMESTAMP) {
+function berlinDateISO(value = process.env.ROOF_BUILD_TIMESTAMP) {
   const date = value ? new Date(value) : new Date();
   const safeDate = Number.isNaN(date.valueOf()) ? new Date() : date;
   const parts = new Intl.DateTimeFormat("en-GB", {
@@ -770,7 +770,7 @@ function validateBookDownloadUrl(file, field, value) {
 
   const href = value.trim();
   if (href.startsWith("/")) {
-    const base = new URL("https://un-canon.invalid");
+    const base = new URL("https://roof.invalid");
     let resolved;
     try {
       resolved = new URL(href, base);

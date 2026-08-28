@@ -1,5 +1,5 @@
-export const READING_PROGRESS_PREFIX = "ub_reading:v1:post:";
-export const READING_PROGRESS_ENABLED_KEY = "ub_reading:enabled";
+export const READING_PROGRESS_PREFIX = "roof_reading:v1:post:";
+export const READING_PROGRESS_ENABLED_KEY = "roof_reading:enabled";
 export const READING_VIEWPORT_ANCHOR_RATIO = 0.36;
 
 export function readingViewportAnchor(): number {

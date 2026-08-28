@@ -1,4 +1,4 @@
-# 西方負典 · 博客发布交付标准
+# 屋顶现视研 · 站点发布交付标准
 
 适用于 `source/_posts/` 文章、`source/_books/` 书籍清单、`source/_topics/` 专题清单及
 `lib/contributors.ts` 贡献者登记。**推送 `main` 之前，逐项核对本清单。**
@@ -345,12 +345,12 @@ P1/P2/P4/P5 由 `scripts/validate-content.mjs` 的 `validateProseTypography` 在
   ```
 
   只有 Author 与 Committer 的姓名、邮箱都完全一致时才可推送。
-- 推送 `main` 即触发 Vercel 自动构建上线。
-- ⚠️ **部署去重**：若某 commit 已作为分支 preview 构建过，再把**同一 SHA**推到 `main` 时，Vercel 可能
-  因 SHA 去重而**不重新生成生产部署**。确保进入生产的是一个新 commit（内容有实质变化），或在 Vercel
-  控制台手动 Promote 对应部署。
-- Vercel 项目 Framework Preset 应为 **Next.js**；仓库内 `vercel.json` 已声明 `"framework": "nextjs"`
-  并固定 `buildCommand: npm run check && next build`，构建以此为准。
+- 推送 `main` 只发布 Git 提交并触发 GitHub 质量与内容发现流程，不会自动部署站点。
+- 预览和生产分别由 `npm run cf:deploy:preview`、`npm run cf:deploy:production` 部署到
+  `wrangler.jsonc` 声明的 Cloudflare Worker。部署脚本会同步字体、拒绝带有已跟踪改动的工作区、从
+  当前提交建立干净构建根、执行 OpenNext 构建并移除由 R2 承载的重复附件后再调用 Wrangler。
+- 部署完成后必须以 Wrangler 返回的版本 ID 和目标 Worker URL 回读，并对公开域名执行发布回归；Git push、
+  GitHub Actions 绿色或 Worker 进程健康都不能单独代替线上页面验收。
 
 ---
 
@@ -409,7 +409,7 @@ P1/P2/P4/P5 由 `scripts/validate-content.mjs` 的 `validateProseTypography` 在
     },
     "translation": {
       "itemType": "book",
-      "citationKey": "un_canon_translation",
+      "citationKey": "roof_translation",
       "rights": "CC0 1.0 Universal"
     }
   },
@@ -461,7 +461,7 @@ P1/P2/P4/P5 由 `scripts/validate-content.mjs` 的 `validateProseTypography` 在
 - 普通文章与书籍章节页都默认保存完全本地的阅读位置。记录只属于当前浏览器配置文件和本站域名，不上传服务器、不使用 Cookie，也不跨浏览器或设备共享；阅读设置必须允许关闭保存、清除本文记录和清除全部阅读记录，关闭时不得清除或改变主题、字族与字号设置。阅读习惯面板打开和关闭时必须作为独立右侧抽屉水平平移进出，并可覆盖在页眉上方；面板标题行的上缘和高度必须与页眉对齐；页眉中的主题、繁简与阅读习惯三个按钮必须始终保持同一 DOM 节点和同一几何位置，不得迁入面板或因面板开合重排。面板标题行提供独立关闭按钮，关闭后焦点恢复到页眉中稳定存在的阅读习惯按钮。
 - 直接进入不带 hash 的正文 URL 时自动恢复到上次语义位置，不提供「继续阅读」入口或恢复弹窗。书籍页仍只提供「从第一章阅读」与「阅读最新章节」：二者都进入相应的独立章节页；章节页的本地阅读记录只在本章 URL 内恢复。浏览器前进后退、刷新与 BFCache 等原生滚动恢复同样优先，客户端不得二次跳转。
 - 连载更新必须保留稳定标题锚点；构建产物同时保存正文内容版本标识。已读完的正文追加内容后仍恢复旧版本的原完成位置，不自动进入新增内容，由读者自行向后阅读；原块被改动或删除时按相邻语义块、章节和全文比例依次降级，不依赖旧的绝对滚动坐标。
-- `citations` 直接使用 Zotero item JSON 字段名。`translation` 必填，且 `itemType` 必须是 `book`；未覆写的译本题名、作者／译者、日期、出版社和摘要从书籍清单派生，URL 永远是 `https://un-canon.blog/books/<slug>`。`original` 可选，只有原版资料已经核验时才填写；两者分别生成独立的 BibTeX 复制位，不得拿另一版本冒充。
+- `citations` 直接使用 Zotero item JSON 字段名。`translation` 必填，且 `itemType` 必须是 `book`；未覆写的译本题名、作者／译者、日期、出版社和摘要从书籍清单派生，URL 使用 `lib/site.ts` 的正式站点地址。`original` 可选，只有原版资料已经核验时才填写；两者分别生成独立的 BibTeX 复制位，不得拿另一版本冒充。
 - 文章页缺省为 Zotero `blogPost`。只有已核验来源类别时才在 Markdown front matter 添加 `citation` 覆写为 `bookSection / journalArticle / preprint / thesis / interview`；字段必须采用 Zotero 名称，例如 `bookTitle / publicationTitle / repository / thesisType / university / interviewMedium / creators`。构建门禁会拒绝未知字段和缺少类型必需字段的记录。
 - 经典 BibTeX 没有 Zotero `blogPost / preprint / interview` 的一一对应 entry type；本站遵循 Zotero 自带 BibTeX translator，以 `@misc` 输出这三类，并在页面嵌入 `z:itemType` 保存精确 Zotero 类型。不得虚构 `@preprint`、`@interview` 等非标准 entry type。
 - `pdfUrl` 与 `epubUrl` 都是可选字段，只接受根相对、HTTP 或 HTTPS URL。前端只在字段存在时显示对应下载链接；没有文件时不要填写空字符串、`#` 或占位地址。
@@ -504,7 +504,7 @@ groups:
 
 - `/library` 是内容筛选唯一 canonical；旧 `/search` 仅作 `308` 兼容跳转并保留查询参数。不要在新内容或界面中创建新的 `/search` 链接。
 - sitemap 收录首页、`/topics`、`/library`、`/books`、`/about`、专题详情、书籍详情、已发布章节及文章／多媒体 canonical。它不收录旧 `/search`、带查询参数的筛选页或书籍 Markdown 构建源。
-- 文章、多媒体、书籍和专题详情必须同时提供自洽的 canonical、OpenGraph 与实体 JSON-LD；`og:site_name` 统一为「西方負典的博客」，暂不输出 `og:image` 与 `og:locale`。平台兼容分享标签不单独维护内容，必须共享同页 OpenGraph 的标题与摘要且不带图片。结构化数据内的 URL 使用 `https://un-canon.blog/...` 绝对地址。
+- 文章、多媒体、书籍和专题详情必须同时提供自洽的 canonical、OpenGraph 与实体 JSON-LD；`og:site_name` 统一为「屋顶现视研」，暂不输出 `og:image` 与 `og:locale`。平台兼容分享标签不单独维护内容，必须共享同页 OpenGraph 的标题与摘要且不带图片。结构化数据内的绝对 URL 使用 `lib/site.ts` 的站点地址。
 - RSS 只发布文章和多媒体正文。书籍构建源、书籍落地页、章节正文和专题策展页不生成 feed 项。
 - 推送文章、书籍或专题源文件到 `main` 后，IndexNow 工作流会提交实体 URL 及相应聚合页。Google 依靠 sitemap `lastmod` 重抓。
 
@@ -534,7 +534,7 @@ groups:
 ### 12.2 构建与发布回归
 
 - `npm run build`：执行完整生产构建并生成 SSG、路由和静态资源。首页、索引、案卷正文与多媒体的产品验收以 [`frontend-product-spec.md`](frontend-product-spec.md) 为准。
-- `npm run verify:release -- <base-url>`：对已经启动的生产构建或公开环境执行 SSR／HTTP 发布回归；覆盖导航、文库筛选、贡献者、About、专题、书籍、正文、多媒体、重定向、canonical、OpenGraph、JSON-LD、sitemap、RSS 和字体资源。例如 `npm run verify:release -- https://un-canon.blog`。
+- `npm run verify:release -- <base-url>`：对已经启动的生产构建或公开环境执行 SSR／HTTP 发布回归；覆盖导航、文库筛选、贡献者、About、专题、书籍、正文、多媒体、重定向、canonical、OpenGraph、JSON-LD、sitemap、RSS 和字体资源。例如 `npm run verify:release -- https://preview.labonroof.top`。
 - `npm run verify:editorial -- <base-url>` 仅作为历史兼容别名保留；新流程统一使用 `verify:release`。
 
 `verify:release` 使用 Node `fetch` 和生成 HTML 断言，不是浏览器 E2E。仓库 Playwright 资产的状态、项目矩阵、UCCTB reusable workflow、caller artifact 与 test charters 统一见 [`testing.md`](testing.md)；`implemented` 只表示仓库中有可执行资产，不能替代远端 run、mobile／WebKit 实体设备、完整无障碍交互或部署后正式域名证据。
@@ -542,8 +542,8 @@ groups:
 ### 12.3 CI 与部署
 
 - GitHub Actions 在 `main` push 和所有 pull request 上执行 `npm ci → check → build → start → verify:release`；功能分支 push 由 pull request 覆盖，避免重复运行。
-- Vercel 使用 `npm ci`，并在 `next build` 前执行 `npm run check`。
+- Cloudflare 部署通过仓库的 `cf:deploy:*` 脚本执行 OpenNext 构建和 Wrangler 发布；脚本与 `wrangler.jsonc` 是现行部署入口。
 - IndexNow 只负责内容发现，不是发布质量门禁。
-- 正式冻结还需要精确提交、Deployment ID、不可变部署 URL、构建时间、生产域名回归、代表性浏览器证据和已知未覆盖范围。
+- 正式冻结还需要精确提交、Worker 版本 ID、目标 URL、构建时间、公开域名回归、代表性浏览器证据和已知未覆盖范围。
 
 完整的所有权、字体重建、可重复构建、发布与回滚流程见 [`architecture/content-pipeline.md`](architecture/content-pipeline.md)；正文状态与恢复契约见 [`architecture/reader-runtime.md`](architecture/reader-runtime.md)。
