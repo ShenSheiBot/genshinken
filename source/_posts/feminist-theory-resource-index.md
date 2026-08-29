@@ -23,7 +23,7 @@ citation:
 ---
 > **编者注：** 做一下年终总结索引，摸排还有什么未尽的工作，可关注后续更新生产。或有遗漏，可考究后指出；若有帮助，欢迎分享。
 
-可在本站阅读全文的条目链接至正文；其余条目保留原题，便于检索。
+可在本站阅读全文的条目链接至正文；尚未收录但能确认原发布地址的条目保留外链，其余条目保留原题，便于检索。
 
 [layout:resources]
 
@@ -33,49 +33,49 @@ citation:
 
 - 原作·编者：Susan Archer Mann（University of New Orleans）、Ashly Suzanne Patterson（Southeastern Louisiana University）
 
-- 导读女性主义理论：从现代性到后现代——全书导论&术语表
+- [导读女性主义理论：从现代性到后现代——全书导论&术语表](/books/reading-feminist-theory/chapters/introduction-glossary)
 
-- 导读女性主义理论：从现代性到后现代——第一章“做女性主义理论”导论
+- [导读女性主义理论：从现代性到后现代——第一章“做女性主义理论”导论](/books/reading-feminist-theory/chapters/chapter-01-doing-feminist-theory)
 
-- 导读女性主义理论：从现代性到后现代——第二章“自由主义女性主义”导论
+- [导读女性主义理论：从现代性到后现代——第二章“自由主义女性主义”导论](/books/reading-feminist-theory/chapters/chapter-02-liberal-feminism)
 
-- 导读女性主义理论：从现代性到后现代——第三章“激进女性主义”导论
+- [导读女性主义理论：从现代性到后现代——第三章“激进女性主义”导论](/books/reading-feminist-theory/chapters/chapter-03-radical-feminism)
 
-- 导读女性主义理论：从现代性到后现代——第四章“社会主义女性主义”
+- [导读女性主义理论：从现代性到后现代——第四章“社会主义女性主义”](/books/reading-feminist-theory/chapters/chapter-04-socialist-feminism)
 
-- 导读女性主义理论：从现代性到后现代——第五章“交叉性理论”
+- [导读女性主义理论：从现代性到后现代——第五章“交叉性理论”](/books/reading-feminist-theory/chapters/chapter-05-intersectionality)
 
-- 导读女性主义理论：从现代性到后现代——第六章“后现代主义、后结构主义、酷儿和跨性别理论”
+- [导读女性主义理论：从现代性到后现代——第六章“后现代主义、后结构主义、酷儿和跨性别理论”](https://mp.weixin.qq.com/s?__biz=MzkwMjE5MTg2Ng==&mid=2247484074&idx=1&sn=6d95a8be441b6c0bad1e3aa0e9c0a8a3&scene=21#wechat_redirect)
 
-- 导读女性主义理论：从现代性到后现代——第七章“第三次女性主义浪潮”
+- [导读女性主义理论：从现代性到后现代——第七章“第三次女性主义浪潮”](/books/reading-feminist-theory/chapters/chapter-07-third-wave)
 
-- 导读女性主义理论：从现代性到后现代——第八章“早期现代的女性主义和帝国主义”
+- [导读女性主义理论：从现代性到后现代——第八章“早期现代的女性主义和帝国主义”](/books/reading-feminist-theory/chapters/chapter-08-early-modernity-imperialism)
 
-- 导读女性主义理论：从现代性到后现代——第九章“晚期现代的女性主义与帝国主义”
+- [导读女性主义理论：从现代性到后现代——第九章“晚期现代的女性主义与帝国主义”](/books/reading-feminist-theory/chapters/chapter-09-late-modernity-imperialism)
 
-- 导读女性主义理论：从现代性到后现代——第十章“后现代的女性主义与帝国主义”
+- [导读女性主义理论：从现代性到后现代——第十章“后现代的女性主义与帝国主义”](/books/reading-feminist-theory/chapters/chapter-10-postmodernism-imperialism)
 
 ## 二、文集选文部分
 
 ### 第一章：做女性主义理论
 
-- 【译文】“女性”，“女性主义者”和“女性主义”
+- [【译文】“女性”，“女性主义者”和“女性主义”](/posts/kramarae-treichler-woman-feminists-feminism)
 
 - 【选译】并不是靠学位：女性主义理论和教育（1979）
 
-- 【选译】《作为解放实践的理论——从教学到越界》贝尔·胡克斯
+- [【选译】《作为解放实践的理论——从教学到越界》贝尔·胡克斯](/posts/bell-hooks-theory-as-liberatory-practice)
 
 ### 第二章：自由主义女性主义
 
-- 【完译】塞内卡瀑布城《感伤宣言》（1848）
+- [【完译】塞内卡瀑布城《感伤宣言》（1848）](/posts/seneca-falls-declaration-of-sentiments)
 
-- 【双语】阿比盖尔：万万不要让权力全盘落入丈夫手中
+- [【双语】阿比盖尔：万万不要让权力全盘落入丈夫手中](/posts/abigail-john-adams-selected-letters)
 
-- 而那真理许你自由——有关社会自由之准则的演讲（1871）
+- [而那真理许你自由——有关社会自由之准则的演讲（1871）](/posts/victoria-woodhull-truth-shall-make-you-free)
 
-- 【选译】市政家务论（1907）
+- [【选译】市政家务论（1907）](/posts/jane-addams-municipal-housekeeping-1907)
 
-- 【翻译】现在我们可以（1919）
+- [【翻译】现在我们可以（1919）](/posts/crystal-eastman-now-we-can-begin)
 
 - 【翻译】[关于妇女选举权（1888）](/posts/frederick-douglass-womens-suffrage-1888)
 
@@ -85,67 +85,67 @@ citation:
 
 - 【译文】反抗中的女同性恋者（1972）
 
-- 【译文】主人的狗永远不可能拆主人的台（1984）
+- [【译文】主人的狗永远不可能拆主人的台（1984）](/posts/audre-lorde-masters-tools-house)
 
-- 【翻译】红袜子宣言（1969）
+- [【翻译】红袜子宣言（1969）](/posts/redstockings-manifesto-1969)
 
-- 【翻译】“曼陀罗 II”【女同文学】
+- [【翻译】“曼陀罗 II”【女同文学】](/posts/anais-nin-mandra-ii)
 
-- 女性－认同之－女性（1970）【翻译】
+- [女性－认同之－女性（1970）【翻译】](/posts/radicalesbians-woman-identified-woman)
 
-- 她们那时相恋，旅行，驻留，成为同性恋——摘自《海伦·弗与乔治妮·斯基恩》
+- [她们那时相恋，旅行，驻留，成为同性恋——摘自《海伦·弗与乔治妮·斯基恩》](/posts/gertrude-stein-miss-furr-and-miss-skeene-excerpt)
 
-- 【选译】如果男人能够来月经
+- [【选译】如果男人能够来月经](/posts/gloria-steinem-if-men-could-menstruate)
 
-- 【选译】理论与实践：色情与强奸
+- [【选译】理论与实践：色情与强奸](/posts/robin-morgan-pornography-and-rape)
 
-- 为什么女性需要女神：现象学的、精神的和政治的思考
+- [为什么女性需要女神：现象学的、精神的和政治的思考](/posts/carol-christ-why-women-need-goddess)
 
 ### 第四章：社会主义女性主义
 
-- 【译诗】我想让你们北方的女人知道
+- [【译诗】我想让你们北方的女人知道](/posts/tillie-olsen-women-up-north-know)
 
-- 【双语】新巨像（1883）
+- [【双语】新巨像（1883）](/posts/emma-lazarus-new-colossus-bilingual)
 
-- 【翻译】关于性别平等和妇女（社会生存）状态——信件摘录（1838）
+- [【翻译】关于性别平等和妇女（社会生存）状态——信件摘录（1838）](/posts/sarah-grimke-letters-equality-of-sexes-excerpt)
 
-- 【译文】我们发现你们仍有未竟事业
+- [【译文】我们发现你们仍有未竟事业](/posts/rose-schneiderman-we-found-you-wanting)
 
-- 【双语】面包与玫瑰（1911）
+- [【双语】面包与玫瑰（1911）](https://mp.weixin.qq.com/s?__biz=MzkwMjE5MTg2Ng==&mid=2247484468&idx=1&sn=0e4f1cb209637d61c2233ca546ccab85&chksm=c0a80ba1f7df82b7140f9483ce429586642f103562ab74960f6c3adc6ffd21a9842ec557ea9b#wechat_redirect)
 
-- 【翻译】工人女性和母亲（1914）
+- [【翻译】工人女性和母亲（1914）](/posts/kollontai-women-workers-and-mothers-1914)
 
-- 【译文】女性解放的政治经济学（1969）
+- [【译文】女性解放的政治经济学（1969）](/posts/benston-political-economy-womens-liberation)
 
-- 【选译】福柯论权力：为女而生的理论？
+- [【选译】福柯论权力：为女而生的理论？](/posts/nancy-hartsock-foucault-power-theory-for-women)
 
-- 作为问题意识的日常生活世界：女性主义社会学（1987）
+- [作为问题意识的日常生活世界：女性主义社会学（1987）](https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247488476&idx=1&sn=86c70ecda8c3de23d7e9b26d14abc9d3&chksm=cfc592e9f8b21bff5e67d3323af7beac60a0923ec3eeb96224b958e0cc15b9d7ec114997f624#wechat_redirect)
 
-- 【翻译】马克思主义与女性主义的不快婚姻——走向更进步的联合体
+- [【翻译】马克思主义与女性主义的不快婚姻——走向更进步的联合体](/posts/hartmann-unhappy-marriage-marxism-feminism)
 
 - 【翻译】[女性主义和自然的反叛（1981）](/posts/feminism-rebellion-nature-1981)
 
 ### 第五章：交叉性理论
 
-- 【译文】姑娘主义者（1983）
+- [【译文】姑娘主义者（1983）](/posts/alice-walker-womanist-1983)
 
-- 【译文】巴哈马报告
+- [【译文】巴哈马报告](/posts/june-jordan-report-from-bahamas)
 
-- 【译文】美国的私刑法律（1900）
+- [【译文】美国的私刑法律（1900）](/posts/ida-b-wells-lynch-law-in-america)
 
-- 【译文】整合残障，变革女性主义
+- [【译文】整合残障，变革女性主义](/posts/garland-thomson-integrating-disability-transforming-feminist-theory)
 
-- 【译文】难道我不是女人吗？
+- [【译文】难道我不是女人吗？](/posts/sojourner-truth-aint-i-a-woman)
 
-- 【翻译】黑人女性主义宣言／康比河公社宣言
+- [【翻译】黑人女性主义宣言／康比河公社宣言](/posts/combahee-river-collective-black-feminist-statement)
 
-- 【短篇小说】汗水 *SWEAT*
+- [【短篇小说】汗水 *SWEAT*](/posts/zora-neale-hurston-sweat)
 
 - 【双语】我走在我族人民的历史中
 
-- 【翻译】被驱逐的母亲和代孕者：九十年代的种族主义和生殖政治（1993）
+- [【翻译】被驱逐的母亲和代孕者：九十年代的种族主义和生殖政治（1993）](/posts/angela-davis-outcast-mothers-surrogates)
 
-- 【选译】黑人女权主义思想：知识、意识和赋权政治（1990）
+- [【选译】黑人女权主义思想：知识、意识和赋权政治（1990）](/posts/patricia-hill-collins-black-feminist-thought-excerpt)
 
 ### 第六章：后现代·后结构主义、酷儿与跨性别理论
 
@@ -155,81 +155,81 @@ citation:
 
 - 【译文】酷儿时间性和后现代地理学（2005）
 
-- 【选译】离开男人的阳刚气质：女性的阳刚气质导论
+- [【选译】离开男人的阳刚气质：女性的阳刚气质导论](/posts/halberstam-female-masculinity-introduction)
 
 ### 第七章：第三次女性主义浪潮
 
-- 【译文】开拓这里！当今女性主义里的新生代有色族裔女性
+- [【译文】开拓这里！当今女性主义里的新生代有色族裔女性](/posts/rehman-hernandez-colonize-this-introduction)
 
-- 【译文】菲律宾女工的全球贸易（1997）
+- [【译文】菲律宾女工的全球贸易（1997）](/posts/grace-chang-global-trade-filipina-workers)
 
-- 【选译】没有阶级的女性？
+- [【选译】没有阶级的女性？](/posts/julie-bettie-women-without-class)
 
 - 【翻译】[“无限层／第三世界？”](/posts/trinh-minh-ha-infinite-layers-third-world)
 
-- 【翻译】第三次女性主义浪潮之声：为《真实》一书的导言
+- [【翻译】第三次女性主义浪潮之声：为《真实》一书的导言](/posts/rebecca-walker-being-real-introduction)
 
-- 姐妹情谊团结一心：第三次女性主义浪潮中个人主义与集体主义的邂逅
+- [姐妹情谊团结一心：第三次女性主义浪潮中个人主义与集体主义的邂逅](/posts/astrid-henry-solitary-sisterhood)
 
-- 解开母/女的包袱：重评第二次和第三次女性主义浪潮间的紧张关系
+- [解开母/女的包袱：重评第二次和第三次女性主义浪潮间的紧张关系](/posts/bailey-mother-daughter-baggage-feminism)
 
 ### 第八九十章：女性主义与（反）帝国主义、殖民主义
 
 - 【译文】妇女权利（1851）
 
-- 【译文】关于受到教育之人的选举权
+- [【译文】关于受到教育之人的选举权](/posts/stanton-on-educated-suffrage)
 
-- 【译诗】一位印第安妻子的哭诉
+- [【译诗】一位印第安妻子的哭诉](/posts/pauline-johnson-cry-from-indian-wife-bilingual)
 
-- 【双语】一个印第安女孩对吉尔伯特·威尔森的自述（1921）
+- [【双语】一个印第安女孩对吉尔伯特·威尔森的自述（1921）](/posts/waheenee-indian-girls-story-bilingual)
 
-- 【译文】为夏威夷妇女请愿（1899）
+- [【译文】为夏威夷妇女请愿（1899）](/posts/stanton-gompers-hawaiian-women-suffrage-1899)
 
-- 【译文】母亲节公告（1870）——反对战争、呼吁和平
+- [【译文】母亲节公告（1870）——反对战争、呼吁和平](/posts/howe-mothers-day-proclamation-1870)
 
-- 【译文】印第安公民身份（1878）——对原住民土地的巧取豪夺
+- [【译文】印第安公民身份（1878）——对原住民土地的巧取豪夺](/posts/gage-indian-citizenship-1878)
 
-- 【选译】占居者与唐
+- [【选译】占居者与唐](/posts/ruiz-de-burton-squatter-and-don-excerpt)
 
-- 【译文】美洲印第安故事（1921）
+- [【译文】美洲印第安故事（1921）](/posts/zitkala-sa-american-indian-stories-excerpts)
 
 - 【译文】火草（2009）
 
 - 【译文】1915年国际妇女大会决议
 
-- 【译诗】在国际妇女节上的越南报告（1985）
+- [【译诗】在国际妇女节上的越南报告（1985）](/posts/minerva-salado-vietnam-report-womens-day)
 
 - [情欲恐惧症与酷儿／自然的殖民化（1997）](/posts/erotophobia-colonization-queers-nature)
 
-- 【译文】发展、生态与女性（1989）
+- [【译文】发展、生态与女性（1989）](/posts/vandana-shiva-development-ecology-women-1989)
 
-- 【译文】唉，资本！——全球流水线上的人生（1981）
+- [【译文】唉，资本！——全球流水线上的人生（1981）](/posts/ehrenreich-fuentes-life-global-assembly-line)
 
 - 【翻译】从悲剧和不公正到权利及权力的赋予：经济领域的问责制
 
 - 【译文】[在西方眼中：女性主义学术研究和殖民话语（1984）](/posts/mohanty-western-eyes-feminist-scholarship)
 
-- 【译文】分散的霸权：后现代性和跨国女性主义实践（1994）
+- [【译文】分散的霸权：后现代性和跨国女性主义实践（1994）](/posts/grewal-kaplan-decentered-hegemonies)
 
 - 【译文】在解放的元叙事（解体）之后（1999）
 
-- 【翻译】穆斯林妇女真的需要拯救吗？（2002）
+- [【翻译】穆斯林妇女真的需要拯救吗？（2002）](/posts/lila-abu-lughod-do-muslim-women-need-saving)
 
-- 网哲邻人部：【选译】走向跨国的女性主义
+- [网哲邻人部：【选译】走向跨国的女性主义](/posts/gupta-towards-transnational-feminisms)
 
 ## 三、更多并且也很重要
 
 ### ①《女性主义思潮导论》新版第五版
 
-- 两万字讲清楚自由主义女性主义：《女性主义思潮导论》第五版第一章
+- [两万字讲清楚自由主义女性主义：《女性主义思潮导论》第五版第一章](/books/feminist-thought-fifth-edition/chapters/chapter-01-liberal-feminism)
 
 - 【摘译】[波伏娃与巴特勒的女性主义思想：存在主义与后结构主义女性主义](/books/feminist-thought-fifth-edition/chapters/chapter-09-excerpt)
 
 ### ②《女性主义关键概念与论争》
 
-- 导读女性主义关键概念与论争：宰制 Domination
+- [导读女性主义关键概念与论争：宰制 Domination](/books/feminism-brief-introduction-key-concepts/chapters/domination)
 
-- 导读女性主义关键概念与论争：权利 Rights
+- [导读女性主义关键概念与论争：权利 Rights](/books/feminism-brief-introduction-key-concepts/chapters/rights)
 
 - [导读女性主义关键概念与论争：工作 Work](/books/feminism-brief-introduction-key-concepts/chapters/work)
 
@@ -243,19 +243,19 @@ citation:
 
 - 【译文】[对母职的憎恶 Hating Motherhood](/posts/judith-levine-hating-motherhood)
 
-- SEP：女性主义政治哲学
+- [SEP：女性主义政治哲学](/posts/sep-feminist-political-philosophy)
 
-- 【选译】蝴蝶政治：性别扫盲（1994）
+- [【选译】蝴蝶政治：性别扫盲（1994）](/posts/mackinnon-gender-literacy)
 
-- 【译文】为什么唯物主义女权主义（仍然）是可能的，也是必要的？
+- [【译文】为什么唯物主义女权主义（仍然）是可能的，也是必要的？](/posts/jackson-why-materialist-feminism-still-possible-necessary)
 
 ### ⑤政治经济学生产
 
-- 经济学再入门：芝加哥学派创始人奈特如何拷打“市场机制”，再论古典派的“竞争”
+- [经济学再入门：芝加哥学派创始人奈特如何拷打“市场机制”，再论古典派的“竞争”](/posts/nei-masahiro-market-mechanism-competition)
 
-- 【翻译】资本的逻辑——从零开始的马克思主义政治经济学导论：导言
+- [【翻译】资本的逻辑——从零开始的马克思主义政治经济学导论：导言](/posts/basu-logic-of-capital-introduction)
 
-- 从零开始的经济学思想史：古典派·亚当斯密的世界【选译】
+- [从零开始的经济学思想史：古典派·亚当斯密的世界【选译】](/posts/economic-thought-history-adam-smith)
 
 ### ⑥亚文化批评与日本文艺批评
 
@@ -283,9 +283,9 @@ citation:
 
 ## 四、译者留言
 
-- 译者茶话会：是哪些人志愿翻译了数十万字女性主义文献？
+- [译者茶话会：是哪些人志愿翻译了数十万字女性主义文献？](/posts/translators-tea-party-volunteer-feminist-translation)
 
-- 关于改名【生命体征维持茶话会】这件事
+- [关于改名【生命体征维持茶话会】这件事](/posts/life-signs-tea-party-renaming)
 
 ### 另附：《导读女性主义理论：从现代性到后现代》已出版中译选文列
 

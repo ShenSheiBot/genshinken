@@ -55,7 +55,7 @@ citation:
 
 ![知乎“日本动画有什么常见而且有特色的演出手法”页面截图](attachments/roof-archive/cv1842794/03-animation-direction-zhihu.png)
 
-[《JOJO5 黄金之风》第03-07集演出分析](https://www.bilibili.com/read/cv1816281/)
+[《JOJO5 黄金之风》第03-07集演出分析](/books/jojo5-golden-wind-direction-analysis/chapters/episodes-03-07)
 
 前期的企划酝酿和后期的摄影合成等环节，我们这里就按下不表了。书籍方面，比如：
 
@@ -101,15 +101,15 @@ citation:
 
 什么？这也行吗？百闻不如一见（？），这个维度的动画评论的可行性可以看一下屋顶的几篇文章：
 
-[视差之见 | 永濑伊织－精神分析缘何是一场冒险](https://www.bilibili.com/read/cv1783637/)
+[视差之见 | 永濑伊织－精神分析缘何是一场冒险](/posts/iori-nagase-psychoanalysis-adventure)
 
 精神分析理论对《恋爱随意链接》中永濑伊织行动的考察，笔者认为阐释得很精彩。
 
-[迈向关系形式的分析：二次元的三角恋与“白夜行”](https://www.bilibili.com/read/cv1660015/)
+[迈向关系形式的分析：二次元的三角恋与“白夜行”](/books/relational-form-analysis/chapters/love-triangle-biyakuya)
 
 齐美尔社会学概念对三角恋关系的结构分析，令人信服。
 
-[视差之见 | 二次元本体美学试论——神圣的袭回](https://www.bilibili.com/read/cv1833922/)
+[视差之见 | 二次元本体美学试论——神圣的袭回](/posts/parallax-view-ontology-aesthetics-sacred-return)
 
 运用本雅明和拉康派的思想，还有鲍德里亚等，对二次元美学进行探讨。
 
@@ -207,7 +207,7 @@ citation:
 
 这里，笔者尤其点赞两篇文章：
 
-[元动画评论I：作为问题的评论表述——白色，冰菓，团长](https://www.bilibili.com/read/cv1729613/)
+[元动画评论I：作为问题的评论表述——白色，冰菓，团长](/books/meta-animation-criticism/chapters/i-expression)
 
 分析哲学风格的概念分析，让笔者对动画评论该描述什么有了更清醒的了解。
 
@@ -215,7 +215,7 @@ citation:
 >  然而，实际情况中似乎并没有这种困难，至少常识地来说是如此。如果我们不想抛弃我们对动画评论常识性的信赖，那么就必须回应如下这个问题：
 > （P）当一个动画评论者写下“某某作品/情节/镜头塑造了生动的人物形象”这句话时，评论读者如何能够理解评论者的意思？
 
-[（动画）评论何以可能：一个“陌生人”视角的分享](https://www.bilibili.com/read/cv1652116/)
+[（动画）评论何以可能：一个“陌生人”视角的分享](/posts/animation-criticism-stranger-perspective)
 
 钟老师的两张图真是让人眼前一亮啊：
 
@@ -229,7 +229,7 @@ citation:
 
 笔者自己也~~在繁重的现实事务、无止境的学习安排、自己为什么这么垃圾的自闭思考、摸鱼、屋顶职务执行之外~~练习写了一篇拙文：
 
-[杂谈 | 又到了白色相簿的季节……](https://www.bilibili.com/read/cv1822938/)
+[杂谈 | 又到了白色相簿的季节……](/posts/white-album-season-wa1-introduction)
 
 ## 6、三人行必有我师
 

@@ -53,24 +53,24 @@ citation:
 
 [layout:reading-path]
 
-[全书导论＆术语表](https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247486999&idx=2&sn=e6a9bfb635da6686cf4de20fea7ccdbb&chksm=cfc58f22f8b20634f172b7cc0ec69366ce862b629e576247279b5059fdc46763c1f7df86629c&scene=21&cur_album_id=2217188105374187520#wechat_redirect)
+[全书导论＆术语表](/books/reading-feminist-theory/chapters/introduction-glossary)
 
-[第二章 自由主义女性主义 导论](https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247487043&idx=1&sn=5f5b25a02b1618ad5cb24bdcbdad2a23&scene=21#wechat_redirect)
+[第二章 自由主义女性主义 导论](/books/reading-feminist-theory/chapters/chapter-02-liberal-feminism)
 
-[第三章 激进女性主义 导论](https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247487071&idx=1&sn=35a84a07b2edd6226800d05ba8dea5ef&scene=21#wechat_redirect)
+[第三章 激进女性主义 导论](/books/reading-feminist-theory/chapters/chapter-03-radical-feminism)
 
-[第四章 社会主义女性主义 导论](https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247487085&idx=1&sn=6b88f660343c4ecda107ab5ae3a96600&scene=21#wechat_redirect)
+[第四章 社会主义女性主义 导论](/books/reading-feminist-theory/chapters/chapter-04-socialist-feminism)
 
-[第五章 交叉性理论](https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247487166&idx=1&sn=25286bbc20e9660688b9871c62ddbe24&scene=21#wechat_redirect)
+[第五章 交叉性理论](/books/reading-feminist-theory/chapters/chapter-05-intersectionality)
 
 [第六章 后现代主义、后结构主义、酷儿和跨性别理论](https://mp.weixin.qq.com/s?__biz=MzkwMjE5MTg2Ng==&mid=2247484074&idx=1&sn=6d95a8be441b6c0bad1e3aa0e9c0a8a3&scene=21#wechat_redirect)
 
-[第七章 第三次女性主义浪潮](https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247487071&idx=1&sn=35a84a07b2edd6226800d05ba8dea5ef&scene=21#wechat_redirect)
+[第七章 第三次女性主义浪潮](/books/reading-feminist-theory/chapters/chapter-07-third-wave)
 
-[第八章 早期现代的女性主义和帝国主义](https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247487279&idx=1&sn=76a9b7ba645d68063fed32b5cd571118&scene=21#wechat_redirect)
+[第八章 早期现代的女性主义和帝国主义](/books/reading-feminist-theory/chapters/chapter-08-early-modernity-imperialism)
 
-[第九章 晚期现代的女性主义与帝国主义](https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247487284&idx=1&sn=893b2a9da956be75bab31c9f0f87d38a&scene=21#wechat_redirect)
+[第九章 晚期现代的女性主义与帝国主义](/books/reading-feminist-theory/chapters/chapter-09-late-modernity-imperialism)
 
-[第十章 后现代的女性主义与帝国主义](https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247487298&idx=1&sn=bd92b08461a2b40e88c65fe4341d6b02&scene=21#wechat_redirect)
+[第十章 后现代的女性主义与帝国主义](/books/reading-feminist-theory/chapters/chapter-10-postmodernism-imperialism)
 
 [/layout]

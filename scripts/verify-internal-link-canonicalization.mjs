@@ -5,7 +5,7 @@ import matter from "gray-matter";
 const root = process.cwd();
 const postsDir = path.join(root, "source", "_posts");
 const booksDir = path.join(root, "source", "_books");
-const identityKeys = ["__biz", "mid", "idx", "sn"];
+const wechatIdentityKeys = ["__biz", "mid", "idx", "sn"];
 
 // Imported book chapters do not always retain a chapter-level citation in their
 // merged Markdown document. These known aliases therefore live beside the
@@ -184,10 +184,13 @@ const chapterAliases = [
   }
 ];
 
-// Published articles retain a few legacy WeChat spellings that are not present
+// Published articles retain a few legacy source spellings that are not present
 // in their reader-facing citations. Keep those routing facts beside the
 // validator; do not require editors to maintain a crawl inventory.
 const archivedSourceAliases = `
+/posts/imagination-after-earthquake-otaku-culture-2010s	https://www.bilibili.com/read/cv2058668/
+/books/meta-animation-criticism/chapters/i-i-sublime-tide	https://www.bilibili.com/read/cv1895936/
+/books/jojo5-golden-wind-direction-analysis/chapters/episodes-03-07	https://www.bilibili.com/read/cv1816281/
 /posts/liz-blue-bird-sound-music-narrative	https://mp.weixin.qq.com/s/-j1TGu6g6ZeKmMBM6z8_nw
 /posts/liz-blue-bird-sound-music-narrative	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247488888&idx=1&sn=3a4b4a4d22052376804c18224b63acc9
 /posts/sugii-hikaru-light-novel-literary-prize	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247489389&idx=1&sn=2174a1049c546d4c8c9e29b759108b83
@@ -293,7 +296,7 @@ const archivedSourceAliases = `
   return { canonicalPath, legacyUrl };
 });
 
-function normalizeWechatUrl(rawUrl) {
+function normalizeArchivedUrl(rawUrl) {
   const decoded = rawUrl.replaceAll("&amp;", "&");
   let url;
   try {
@@ -301,14 +304,20 @@ function normalizeWechatUrl(rawUrl) {
   } catch {
     return null;
   }
-  if (url.hostname !== "mp.weixin.qq.com") return null;
-  if (/^\/s\/[A-Za-z0-9_-]+$/.test(url.pathname)) return `${url.origin}${url.pathname}`;
-  const identity = identityKeys
-    .map((key) => [key, url.searchParams.get(key)])
-    .filter(([, value]) => value)
-    .map(([key, value]) => `${key}=${value}`)
-    .join("&");
-  return identity ? `${url.origin}${url.pathname}?${identity}` : `${url.origin}${url.pathname}`;
+  if (url.hostname === "mp.weixin.qq.com") {
+    if (/^\/s\/[A-Za-z0-9_-]+$/.test(url.pathname)) return `${url.origin}${url.pathname}`;
+    const identity = wechatIdentityKeys
+      .map((key) => [key, url.searchParams.get(key)])
+      .filter(([, value]) => value)
+      .map(([key, value]) => `${key}=${value}`)
+      .join("&");
+    return identity ? `${url.origin}${url.pathname}?${identity}` : `${url.origin}${url.pathname}`;
+  }
+  if (url.hostname === "bilibili.com" || url.hostname === "www.bilibili.com") {
+    const match = url.pathname.match(/^\/read\/(cv\d+)\/?$/);
+    return match ? `https://www.bilibili.com/read/${match[1]}` : null;
+  }
+  return null;
 }
 
 function lineNumber(text, offset) {
@@ -320,13 +329,17 @@ const knownLegacy = new Map();
 const publishedRoutes = new Set();
 const postBodies = [];
 const bookPathByDocumentSlug = new Map();
+const legacyPostRoutes = new Map();
 
 for (const name of fs.readdirSync(booksDir).filter((entry) => entry.endsWith(".json"))) {
   const book = JSON.parse(fs.readFileSync(path.join(booksDir, name), "utf8"));
   const bookSlug = book.slug ?? name.slice(0, -5);
   const bookPath = `/books/${bookSlug}`;
   publishedRoutes.add(bookPath);
-  if (book.documentSlug) bookPathByDocumentSlug.set(book.documentSlug, bookPath);
+  if (book.documentSlug) {
+    bookPathByDocumentSlug.set(book.documentSlug, bookPath);
+    legacyPostRoutes.set(`/posts/${book.documentSlug}`, bookPath);
+  }
   const visit = (nodes = []) => {
     for (const node of nodes) {
       if (node.status === "published" && node.id) {
@@ -341,7 +354,7 @@ for (const name of fs.readdirSync(booksDir).filter((entry) => entry.endsWith(".j
 }
 
 function registerLegacy(rawUrl, canonicalPath, source) {
-  const identity = normalizeWechatUrl(rawUrl);
+  const identity = normalizeArchivedUrl(rawUrl);
   if (!identity) return;
   const previous = knownLegacy.get(identity);
   if (previous && previous !== canonicalPath) {
@@ -365,7 +378,7 @@ for (const name of fs.readdirSync(postsDir).filter((entry) => entry.endsWith(".m
       if (typeof url === "string") registerLegacy(url, canonicalPath, `source/_posts/${name}`);
     }
   }
-  postBodies.push({ name, body: parsed.content });
+  postBodies.push({ name, body: parsed.content, canonicalPath });
 }
 
 for (const entry of chapterAliases) {
@@ -387,19 +400,28 @@ for (const entry of archivedSourceAliases) {
   registerLegacy(entry.legacyUrl, entry.canonicalPath, "archivedSourceAliases");
 }
 
-const markdownLink = /\[[^\]]*\]\((https?:\/\/mp\.weixin\.qq\.com\/[^)\s]+)\)/g;
-const htmlLink = /href=["'](https?:\/\/mp\.weixin\.qq\.com\/[^"']+)["']/g;
-for (const { name, body } of postBodies) {
+const markdownLink = /\[[^\]]*\]\((https?:\/\/(?:mp\.weixin\.qq\.com|(?:www\.)?bilibili\.com)\/[^)\s]+)\)/g;
+const htmlLink = /href=["'](https?:\/\/(?:mp\.weixin\.qq\.com|(?:www\.)?bilibili\.com)\/[^"']+)["']/g;
+for (const { name, body, canonicalPath: currentPath } of postBodies) {
   for (const pattern of [markdownLink, htmlLink]) {
     pattern.lastIndex = 0;
     for (const match of body.matchAll(pattern)) {
-      const identity = normalizeWechatUrl(match[1]);
+      const identity = normalizeArchivedUrl(match[1]);
       const canonicalPath = identity ? knownLegacy.get(identity) : null;
-      if (canonicalPath) {
+      if (canonicalPath && canonicalPath !== currentPath) {
         failures.push(
-          `source/_posts/${name}:${lineNumber(body, match.index)} still links to WeChat; use ${canonicalPath}`,
+          `source/_posts/${name}:${lineNumber(body, match.index)} still links to an archived source; use ${canonicalPath}`,
         );
       }
+    }
+  }
+  const internalLink = /\[[^\]]*\]\((\/posts\/[^)#?\s]+)(?:[?#][^)]*)?\)/g;
+  for (const match of body.matchAll(internalLink)) {
+    const canonicalPath = legacyPostRoutes.get(match[1]);
+    if (canonicalPath && canonicalPath !== currentPath) {
+      failures.push(
+        `source/_posts/${name}:${lineNumber(body, match.index)} uses a pre-book post route; use ${canonicalPath} or its exact chapter route`,
+      );
     }
   }
 }

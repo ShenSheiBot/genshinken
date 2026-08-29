@@ -49,15 +49,21 @@ citation:
 
 ![知乎页面“日本动画有什么常见而且有特色的演出手法？”](attachments/roof-archive/cv2318316/03-animation-direction-zhihu.jpg)
 
+[知乎原问检索](https://www.zhihu.com/search?type=content&q=%E6%97%A5%E6%9C%AC%E5%8A%A8%E7%94%BB%E6%9C%89%E4%BB%80%E4%B9%88%E5%B8%B8%E8%A7%81%E8%80%8C%E4%B8%94%E6%9C%89%E7%89%B9%E8%89%B2%E7%9A%84%E6%BC%94%E5%87%BA%E6%89%8B%E6%B3%95)
+
 前期的企划酝酿和后期的摄影合成等环节，我们这里就按下不表了。书籍方面，比如：
 
 ![《制作进行》书影](attachments/roof-archive/cv2318316/04-production-progression-book.jpg)
+
+[《制作进行》书目检索](https://search.douban.com/book/subject_search?search_text=%E5%88%B6%E4%BD%9C%E8%BF%9B%E8%A1%8C%20%E8%88%9B%E6%9C%AC%E5%92%8C%E4%B9%9F)
 
 > [名词解释汇总搜索页面 - Anitama](https://www.anitama.cn/)
 
 笔者还凭借豆瓣和自身买书直觉尝试挑选购买了几本动画视听语言、分镜头脚本设计的中文教材（比较薄，文字少，蛮容易读的），但拿出来展示就有些令人犹疑是否会误人子弟了。不过年糕哥哥之前做的一些赏析，可以参考学习：
 
 ![年糕的动画赏析视频列表](attachments/roof-archive/cv2318316/05-nengao-video-list.jpg)
+
+[年糕的动画赏析视频（B站检索）](https://search.bilibili.com/all?keyword=%E5%B9%B4%E7%B3%95%20%E5%8A%A8%E7%94%BB%E8%B5%8F%E6%9E%90)
 
 - [哪有人这样看七月新番 | º言º)](https://www.bilibili.com/video/BV1Ws411S7Nf)
 
@@ -77,11 +83,17 @@ citation:
 
 ![学银在线“西方美术史十六讲”课程](attachments/roof-archive/cv2318316/07-western-art-history-course.jpg)
 
+[“西方美术史十六讲”（学堂在线检索）](https://www.xuetangx.com/search?query=%E8%A5%BF%E6%96%B9%E7%BE%8E%E6%9C%AF%E5%8F%B2%E5%8D%81%E5%85%AD%E8%AE%B2%20%E6%B9%96%E5%8C%97%E5%A4%A7%E5%AD%A6%20%E7%8E%8B%E5%BE%AE%E6%9B%A6)
+
 ![西方现代艺术赏析课程截图](attachments/roof-archive/cv2318316/08-modern-art-course.jpg)
+
+[“西方现代艺术赏析”（中国大学 MOOC 检索）](https://www.icourse163.org/search.htm?search=%E8%A5%BF%E6%96%B9%E7%8E%B0%E4%BB%A3%E8%89%BA%E6%9C%AF%E8%B5%8F%E6%9E%90%20%E5%90%89%E6%9E%97%E5%A4%A7%E5%AD%A6)
 
 傅雷的《世界美术名作二十讲》是口碑很好的美术史入门书籍。动画自身和美术创作会有一些共有范畴，比如透视、线条、色彩、构图，对美术史的学习有助于我们了解动画作为动起来的画的一些要点。除了美术史，还可以提一个艺术哲学，笔者绝无评论的本事，只能战战兢兢地举一本自己看的书籍：
 
 ![诺埃尔·卡罗尔《艺术哲学》书目信息](attachments/roof-archive/cv2318316/09-art-philosophy-book.jpg)
+
+[诺埃尔·卡罗尔《艺术哲学》书目检索](https://search.douban.com/book/subject_search?search_text=9787305159473)
 
 关于文学与文化理论的导论书籍，笔者把其放在下一环节里给出了。
 
@@ -91,8 +103,8 @@ citation:
 
 什么？这也行吗？百闻不如一见（？），这个维度的动画评论的可行性可以看一下几篇文章：
 
-- [迈向关系形式的分析：二次元的三角恋与“白夜行”](https://www.bilibili.com/read/cv1660015/)
-- [视差之见 | 二次元本体美学试论——神圣的袭回](https://www.bilibili.com/read/cv1833922/)
+- [迈向关系形式的分析：二次元的三角恋与“白夜行”](/books/relational-form-analysis/chapters/love-triangle-biyakuya)
+- [视差之见 | 二次元本体美学试论——神圣的袭回](/posts/parallax-view-ontology-aesthetics-sacred-return)
 
 等等，你说这个作者怎么可能想到呢……创作者自己的想法应该被尊重，作者不会退场，但文本一经诞生就有相对的独立性、多义性。并且如开头所言，创作者传达的信息也仍然是写评论的重要材料之一，但并非唯一。当然，解读得好不好，需要靠同行、读者、历史的检验了。
 
@@ -100,17 +112,27 @@ citation:
 
 ![《理论入门》《发现社会》《哲学的历程》三本导论书目](attachments/roof-archive/cv2318316/10-intro-books-collage.png)
 
+书目检索：[《理论入门》](https://search.douban.com/book/subject_search?search_text=%E7%90%86%E8%AE%BA%E5%85%A5%E9%97%A8%20%E6%96%87%E5%AD%A6%E4%B8%8E%E6%96%87%E5%8C%96%E7%90%86%E8%AE%BA%E5%AF%BC%E8%AE%BA)、[《发现社会》](https://search.douban.com/book/subject_search?search_text=%E5%8F%91%E7%8E%B0%E7%A4%BE%E4%BC%9A%20%E8%A5%BF%E6%96%B9%E7%A4%BE%E4%BC%9A%E5%AD%A6%E6%80%9D%E6%83%B3%E8%BF%B0%E8%AF%84)、[《哲学的历程》](https://search.douban.com/book/subject_search?search_text=%E5%93%B2%E5%AD%A6%E7%9A%84%E5%8E%86%E7%A8%8B%20%E8%A5%BF%E6%96%B9%E5%93%B2%E5%AD%A6%E5%8E%86%E5%8F%B2%E5%AF%BC%E8%AE%BA%20%E7%AC%AC%E5%9B%9B%E7%89%88)
+
 笔者需要克制住报菜单式地扔出书籍，实在是人生也有涯、摸鱼和学习无涯。在此需要提醒的是，非专业、没有科班教授指导的初学者在对哲学史／其他学科思想史有整体把握前，直接阅读一些思想家的一手原著会有比较大的误读风险（笔者就不举例了），最好通过豆瓣知乎等网站，寻找学术界可信的导论、导读，了解学界已经取得的一些成果。牛津通识系列读本是不错的选择。
 
 笔者也找到一些慕课，作为兴趣入门的脚手架，且为读者们了解：
 
 ![学堂在线“古典社会学理论”课程](attachments/roof-archive/cv2318316/11-classical-sociology-course.jpg)
 
+[“古典社会学理论”（学堂在线检索）](https://www.xuetangx.com/search?query=%E5%8F%A4%E5%85%B8%E7%A4%BE%E4%BC%9A%E5%AD%A6%E7%90%86%E8%AE%BA%20%E5%93%88%E5%B0%94%E6%BB%A8%E5%B7%A5%E7%A8%8B%E5%A4%A7%E5%AD%A6)
+
 ![中国大学MOOC“传播学概论”课程](attachments/roof-archive/cv2318316/12-communication-course.jpg)
+
+[“传播学概论”（中国大学 MOOC 检索）](https://www.icourse163.org/search.htm?search=%E4%BC%A0%E6%92%AD%E5%AD%A6%E6%A6%82%E8%AE%BA)
 
 ![中国大学MOOC“穿过经典 陪你读书”课程](attachments/roof-archive/cv2318316/13-literature-course.jpg)
 
+[“穿过经典，陪你读书”（中国大学 MOOC 检索）](https://www.icourse163.org/search.htm?search=%E7%A9%BF%E8%BF%87%E7%BB%8F%E5%85%B8%20%E9%99%AA%E4%BD%A0%E8%AF%BB%E4%B9%A6)
+
 ![中国哲学课程页面](attachments/roof-archive/cv2318316/14-chinese-philosophy-course.jpg)
+
+[“中国哲学”（中国大学 MOOC 检索）](https://www.icourse163.org/search.htm?search=%E4%B8%AD%E5%9B%BD%E5%93%B2%E5%AD%A6%20%E5%8C%97%E4%BA%AC%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6%20%E7%AB%A0%E4%BC%9F%E6%96%87)
 
 让我们进入下一个环节吧。
 
@@ -119,6 +141,8 @@ citation:
 电影作为最流行的大众文化品，是社会文化的重要一环，动画创作者在创作方法（比如分镜头／演出）上可能受到电影手法的影响（比如为了突出写实，模拟景深较浅的实拍镜头，焦外散景，把远景模糊，而动画本来不会自动地产生这个效果，当然反过来说，实拍镜头也未必无意）。
 
 ![熟肉杂谈视频以动画镜头讲解现实主义](attachments/roof-archive/cv2318316/15-realism-analysis.jpg)
+
+[“京吹·追寻最浪漫的现实主义”（B站检索）](https://search.bilibili.com/all?keyword=%E7%86%9F%E8%82%89%E6%9D%82%E8%B0%88%20%E4%BA%AC%E5%90%B9%20%E8%BF%BD%E5%AF%BB%E6%9C%80%E6%B5%AA%E6%BC%AB%E7%9A%84%E7%8E%B0%E5%AE%9E%E4%B8%BB%E4%B9%89)
 
 我们在这里必须谨慎！动画与实拍影片是两种不同的艺术，如果机械照搬电影理论去套用动画评论，大概会水土不服。但这样的注意也是要在我们熟悉两方面之后才能做出具体判断，到底在具体的情境中借用概念合适与否。除了创作手法，动画创作者作为社会里的一个群体，受到电影史名作名家作品内容和风格的影响，那就更不必说了，这是社会总体的相互影响的一环。
 
@@ -137,9 +161,13 @@ citation:
 
 ![电影美学、电影哲学、电影理论等视频列表](attachments/roof-archive/cv2318316/16-film-video-list.jpg)
 
+[电影桥红门主的相关视频（B站检索）](https://search.bilibili.com/all?keyword=%E7%94%B5%E5%BD%B1%E6%A1%A5%E7%BA%A2%E9%97%A8%E4%B8%BB%20%E7%94%B5%E5%BD%B1%E7%BE%8E%E5%AD%A6%20%E7%94%B5%E5%BD%B1%E5%93%B2%E5%AD%A6%20%E7%94%B5%E5%BD%B1%E7%90%86%E8%AE%BA)
+
 再介绍一本风评不错的电影理论解读实体书：
 
 ![《电影理论解读》书目信息](attachments/roof-archive/cv2318316/17-film-theory-book.png)
+
+[罗伯特·斯塔姆《电影理论解读》书目检索](https://search.douban.com/book/subject_search?search_text=9787301284636)
 
 ## 5、日本与日本动画史等
 
@@ -160,6 +188,8 @@ citation:
 
 ![《官僚们的夏天》书目信息](attachments/roof-archive/cv2318316/20-bureaucrats-summer.jpg)
 
+[《官僚们的夏天》TBS 作品页](https://www.tbs.co.jp/tbs-ch/item/d1711/)
+
 大河剧当然不是严肃的历史，但经过大河剧产生更多学习日本史的动机，不也挺好吗？笔者再介绍一个入门定位的NHK系列日本史讲座：
 
 - [【Diamond15字幕组】NHK高校講座 日本史](https://www.bilibili.com/video/BV1eW411g7Dv)
@@ -167,6 +197,8 @@ citation:
 日本文化思想史暂时按下不表，但不妨了解一点日本文学史，特别是日本近现代文学史：
 
 ![《日本文学史概说》《日本近现代文学流派史》书目信息](attachments/roof-archive/cv2318316/21-japanese-literature-books.png)
+
+书目检索：[《日本文学史概说》](https://search.douban.com/book/subject_search?search_text=9787560200224)、[《日本近现代文学流派史》](https://search.douban.com/book/subject_search?search_text=9787561054727)
 
 另起一笔，对日本御宅文化史的了解或许也是相当有帮助的：
 
@@ -184,10 +216,12 @@ citation:
 
 ![东浩纪《游戏性写实主义的诞生》书目信息](attachments/roof-archive/cv2318316/22-game-realism-book.jpg)
 
+[东浩纪《游戏性写实主义的诞生》书目检索](https://search.douban.com/book/subject_search?search_text=9789863070153)
+
 另外还有宫台真司、宇野常宽、大塚英志等对日本御宅文化有所研究的论者：
 
-- [震灾后的想象力：2010年代的日本御宅文化——宇野常宽](https://www.bilibili.com/read/cv2058668/)
-- [宫台真司：1992年以来日本亚文化史在语义学上的变迁](https://www.bilibili.com/read/cv2253728/)
+- [震灾后的想象力：2010年代的日本御宅文化——宇野常宽](/posts/imagination-after-earthquake-otaku-culture-2010s)
+- [宫台真司：1992年以来日本亚文化史在语义学上的变迁](/posts/miyadai-japanese-subculture-semantics-since-1992)
 
 欧美，比如在YouTube上，也有一些偏研究向的AniTuber，比如Pause and Select有不少精彩的论述视频，给我们提供不同的识见，这也让人们知道，欧美也有做ACG文艺评论的朋友：
 
@@ -219,7 +253,7 @@ citation:
 
 这里，笔者尤其点赞两篇文章：
 
-- [元动画评论I.i：以佐贺与Vtuber为例，谈崇高的退潮与私人体验](https://www.bilibili.com/read/cv1895936/)
+- [元动画评论I.i：以佐贺与Vtuber为例，谈崇高的退潮与私人体验](/books/meta-animation-criticism/chapters/i-i-sublime-tide)
 
 概念分析，让笔者对动画评论该描述什么有了更清醒的了解。
 
@@ -237,7 +271,7 @@ citation:
 
 ![动画评论范畴示意图](attachments/roof-archive/cv2318316/24-review-categories.png)
 
-- [（动画）评论何以可能：一个“陌生人”视角的分享](https://www.bilibili.com/read/cv1652116/)
+- [（动画）评论何以可能：一个“陌生人”视角的分享](/posts/animation-criticism-stranger-perspective)
 
 最后笔者根据自己浅薄的知识和理解，擅自地构建了“范畴示意图”和“漫评维度轴”两个“幺蛾子”。旨在表达漫评的多元化和相对性。维度轴中仅仅总结了四个“理想类型”，不排除厉害的评论人四大类型雨露均沾，甚至一篇文章就涉猎了四个维度，更不排除超过这个维度范畴的评论。
 

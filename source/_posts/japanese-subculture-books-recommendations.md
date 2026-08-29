@@ -25,9 +25,9 @@ citation:
 ---
 [layout:book-list]
 
-- 《零零年代的想象力》
-- 《动物化的后现代》
-- 《自伤自恋的精神分析》
+- [《零零年代的想象力》](/books/zero-years-imagination)
+- [《动物化的后现代》](https://book.douban.com/subject/36931107/)
+- [《自伤自恋的精神分析》](https://book.douban.com/subject/36998978/)
 
 对日本亚文化批评或者社会评论有兴趣的朋友可以读一读。
 

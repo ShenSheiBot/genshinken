@@ -289,9 +289,9 @@ Vtuber这一形式在原则上消除了一切外貌方面的门槛，毕竟Vtube
 
 ### 其他相关文章：
 
-[视差之见 | 二次元本体美学试论——神圣的袭回](https://www.bilibili.com/read/cv1833922/)
+[视差之见 | 二次元本体美学试论——神圣的袭回](/posts/parallax-view-ontology-aesthetics-sacred-return)
 
-[新番新语丨借《佐贺》而发的杂感：偶像能成为传奇吗？](https://www.bilibili.com/read/cv1705216/)
+[新番新语丨借《佐贺》而发的杂感：偶像能成为传奇吗？](/posts/zombieland-saga-can-idols-become-legends)
 
 <h2 id="ii-profundity">II：深刻性的多重面貌</h2>
 

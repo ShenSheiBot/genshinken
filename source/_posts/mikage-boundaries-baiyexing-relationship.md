@@ -155,4 +155,4 @@ citation:
 ### 钟老师相关文章
 
 - [复仇剧的结构：“哥杀”与“政宗君”](/posts/revenge-drama-structure-goblin-slayer-masamune-kun)
-- [迈向关系形式的分析：二次元的三角恋与“白夜行”](/posts/relational-form-analysis-love-triangle-biyakuya)
+- [迈向关系形式的分析：二次元的三角恋与“白夜行”](/books/relational-form-analysis/chapters/love-triangle-biyakuya)

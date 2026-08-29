@@ -101,6 +101,6 @@ citation:
 
 ### 相关文章
 
-- [“歇斯底里化的后现代”——对东浩纪的一种精神分析批评](https://www.bilibili.com/read/cv1801559/)
-- [视差之见｜ACG作品为什么不能更多的拥有现实感？](https://www.bilibili.com/read/cv1828906/)
-- [视差之见｜二次元本体美学试论——神圣的袭回](https://www.bilibili.com/read/cv1833922/)
+- [“歇斯底里化的后现代”——对东浩纪的一种精神分析批评](/posts/hystericized-postmodern-azuma-critique)
+- [视差之见｜ACG作品为什么不能更多的拥有现实感？](/posts/why-acg-works-lack-more-reality)
+- [视差之见｜二次元本体美学试论——神圣的袭回](/posts/parallax-view-ontology-aesthetics-sacred-return)
