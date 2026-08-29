@@ -23,7 +23,7 @@ citation:
 ---
 > **编者注：** 做一下年终总结索引，摸排还有什么未尽的工作，可关注后续更新生产。或有遗漏，可考究后指出；若有帮助，欢迎分享。
 
-以下目录已补入本站现有文章的站内链接；其余条目保留原题，便于检索。
+可在本站阅读全文的条目链接至正文；其余条目保留原题，便于检索。
 
 [layout:resources]
 
@@ -223,7 +223,7 @@ citation:
 
 - 两万字讲清楚自由主义女性主义：《女性主义思潮导论》第五版第一章
 
-- 【摘译】[波伏娃与巴特勒的女性主义思想：存在主义与后结构主义女性主义](/posts/beauvoir-butler-feminist-thought)
+- 【摘译】[波伏娃与巴特勒的女性主义思想：存在主义与后结构主义女性主义](/books/feminist-thought-fifth-edition/chapters/chapter-09-excerpt)
 
 ### ②《女性主义关键概念与论争》
 
@@ -231,7 +231,7 @@ citation:
 
 - 导读女性主义关键概念与论争：权利 Rights
 
-- [导读女性主义关键概念与论争：工作 Work](/posts/feminist-concepts-work)
+- [导读女性主义关键概念与论争：工作 Work](/books/feminism-brief-introduction-key-concepts/chapters/work)
 
 ### ③《女性主义电影导论》
 

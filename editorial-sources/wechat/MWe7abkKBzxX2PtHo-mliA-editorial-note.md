@@ -3,7 +3,8 @@
 - 2026-08-17 责任字段复核：原页编辑署名已进入结构化 `editor`／`editors` 元数据，读者正文不重复责任行；本条取代下方早期“正文保留编辑署名”或“schema 无编辑字段”的处理说明。
 
 - sourceId: MWe7abkKBzxX2PtHo-mliA
-- canonical URL: https://mp.weixin.qq.com/s/MWe7abkKBzxX2PtHo-mliA
+- canonical route: `/books/boys-love-manga-and-beyond/chapters/japanese-bl-studies-overview`
+- source URL: https://mp.weixin.qq.com/s/MWe7abkKBzxX2PtHo-mliA
 - archive date: 2025-06-16
 - raw.html SHA-256: 78516a34e2ea85d178452db151333663ab03cbfa7da4e3ec25ec75cc50d9e4dc
 - #js_content/body.html SHA-256: 7145d3017eb61e8cf191619be62727f1f50e6ae1652234df025644016aa17ee1
@@ -16,4 +17,5 @@
 - 书目：原刊为 *Boys Love Manga and Beyond: History, Culture, and Community in Japan*，University Press of Mississippi，2015年1月，pp. 119–140，精装本 ISBN 9781628461190；编辑姓名依出版社页面纠正为 James Welker。微信日期只作为中文译文发布日期。
 - Preservation reviewed omissions：4 个来源块均已逐项审阅——原刊行因将 raw 的 James Walker 依出版社权威书目纠正为 James Welker 而不作逐字匹配；英文标题与作者行已进入 citation/front matter；同人志段落的第二个来源块包含与前一块完全重复的开头及同句短语重复，公开稿保留其全部非重复论述，故该整块由 matcher 记为已审阅省略。
 - B站复核：标题索引候选仅作 fuzzy 线索，未发现同时满足标题、正文锚点、责任链与 canonical URL 的精确重复；本条不建立重复关系。
+- 关系判断：本篇与藤本由香里的《BL作为“性别扮演”的演变》同为 *Boys Love Manga and Beyond* 的章节中译，依原书页序并入同一 paused 文库；缺少的其他章节不以 forthcoming 伪造。
 - 删除/保留：去除微信平台投稿号召等分发噪声；保留正文、来源说明、许可信息、编辑署名与全部图片 placement。原始 HTML 的同人志段落开头整段重复一次，并分别有“共谋。。”与“通过这种方式，通过这种方式”的机械重复，公开稿各保留一次并修正句读；标题中的“？：”规范为“？——”。

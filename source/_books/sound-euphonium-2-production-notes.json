@@ -2,27 +2,23 @@
   "id": "sound-euphonium-2-production-notes",
   "slug": "sound-euphonium-2-production-notes",
   "title": "《吹响！上低音号2》制作笔记",
-  "description": "kViN 对《吹响！上低音号2》的逐话制作观察，收录第 1～3 话的演出、作画、分镜与制作人员分析。",
+  "description": "kViN 对《吹响！上低音号2》的逐话制作观察，收录第 1～3、10、12 与 13 话的演出、作画、分镜、摄影与制作人员分析。",
   "documentSlug": "sound-euphonium-2-episode-1-production-notes",
   "script": "hans",
   "status": "paused",
   "authors": [
     "kViN"
   ],
-  "translators": [
-    "Phaedrus"
-  ],
-  "proofreaders": [
-    "唯一指定真实August_Rush"
-  ],
+  "translators": ["Phaedrus", "唯一指定真实August_Rush"],
+  "proofreaders": ["唯一指定真实August_Rush", "我有越甲三千", "伦勃朗君"],
   "publishedAt": "2020-08-11",
-  "updatedAt": "2020-10-26",
-  "latestChapterId": "episode-3",
+  "updatedAt": "2020-10-30",
+  "latestChapterId": "episodes-12-13",
   "citations": {
     "translation": {
       "itemType": "book",
       "citationKey": "kViN2016SoundEuphonium2ProductionNotesRoofZH",
-      "extra": "中文译文收录第 1～3 话。"
+      "extra": "中文译文收录第 1～3、10、12 与 13 话。"
     }
   },
   "chapters": [
@@ -93,6 +89,30 @@
         "京都动画",
         "Animation Do"
       ]
+    },
+    {
+      "id": "episode-10",
+      "number": "04",
+      "title": "第十话制作笔记",
+      "status": "published",
+      "anchor": "episode-10",
+      "publishedAt": "2020-10-30",
+      "authors": ["kViN"],
+      "translators": ["唯一指定真实August_Rush"],
+      "proofreaders": ["我有越甲三千"],
+      "tags": ["吹响！上低音号", "京都动画", "山村卓也", "山田尚子"]
+    },
+    {
+      "id": "episodes-12-13",
+      "number": "05",
+      "title": "第十二、十三话制作笔记",
+      "status": "published",
+      "anchor": "episodes-12-13",
+      "publishedAt": "2020-10-30",
+      "authors": ["kViN"],
+      "translators": ["唯一指定真实August_Rush"],
+      "proofreaders": ["伦勃朗君"],
+      "tags": ["吹响！上低音号", "京都动画", "山田尚子", "动画演出"]
     }
   ]
 }

@@ -1,0 +1,52 @@
+{
+  "id": "lenin-rediscovered",
+  "slug": "lenin-rediscovered",
+  "title": "列宁再发现",
+  "subtitle": "《怎么办？》的历史语境",
+  "description": "Lars T. Lih将《怎么办？》放回国际社会民主主义与俄国马克思主义的历史语境，考察社会主义和工人运动的结合公式及列宁的爱尔福特派背景。",
+  "documentSlug": "lenin-rediscovered",
+  "script": "hans",
+  "status": "paused",
+  "authors": ["Lars T. Lih"],
+  "translators": ["Jack Cade"],
+  "proofreaders": ["秦明", "赫列斯塔科夫", "山神庙客卿Vall", "赤地-田蝉", "好得很", "五光十色的垃圾场", "鹰之都芳草", "Ludwigsama"],
+  "publishedAt": "2023-02-01",
+  "updatedAt": "2023-02-01",
+  "latestChapterId": "part-02",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "lih2006LeninRediscoveredRoofZH",
+      "title": "Lenin Rediscovered: What Is to Be Done? in Context",
+      "date": "2006",
+      "publisher": "Brill",
+      "language": "zh-CN"
+    }
+  },
+  "chapters": [
+    {
+      "id": "part-01",
+      "number": "01",
+      "title": "第一期 社会主义与工人运动的结合",
+      "status": "published",
+      "anchor": "part-01",
+      "publishedAt": "2023-02-01",
+      "authors": ["Lars T. Lih"],
+      "translators": ["Jack Cade"],
+      "proofreaders": ["秦明", "赫列斯塔科夫", "山神庙客卿Vall", "赤地-田蝉", "好得很", "五光十色的垃圾场", "鹰之都芳草", "Ludwigsama"],
+      "tags": ["列宁", "马克思主义", "社会民主主义"]
+    },
+    {
+      "id": "part-02",
+      "number": "02",
+      "title": "第二期 俄国社会民主主义与爱尔福特派",
+      "status": "published",
+      "anchor": "part-02",
+      "publishedAt": "2023-02-01",
+      "authors": ["Lars T. Lih"],
+      "translators": ["Jack Cade"],
+      "proofreaders": ["秦明", "赫列斯塔科夫", "山神庙客卿Vall", "赤地-田蝉", "好得很", "五光十色的垃圾场", "鹰之都芳草", "Ludwigsama"],
+      "tags": ["列宁", "马克思主义", "社会民主主义"]
+    }
+  ]
+}

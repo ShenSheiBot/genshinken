@@ -1,0 +1,9 @@
+# 微信来源证据：《科学与魔法的意象》合订稿
+
+- Source ID: `2wwSBN4oOSQnQG34bD7FLQ`; published 2018-11-20; page author `Austoria`; no open-license declaration.
+- Raw HTML SHA-256: `c9dd9671a9851cb9e353530c2ec7f145fe8945f856cc17b34dcf4946083051af`; body HTML SHA-256: `9733322edc63e326be036e534df9cbd8b832e6333cf5a42ed041fc6f07cd16ff`.
+- Canonical disposition: the complete, later consolidated WeChat edition of the work behind the existing route `science-magic-imagery-worldbuilding`. It is materially fuller than the current Bilibili-derived public post, so it must not be marked duplicate and should replace that route's shorter text when integrated.
+- The source contains four ordered parts: introduction; science imagery; magic imagery; and the blurring of imagery. All six authorial notes were converted from inline “注释” blocks to closed GFM footnotes at their adjacent argumentative call sites.
+- Twenty-one substantive images are retained in DOM order. `body-022.jpg` is a platform author/staff card and `body-023.jpg` is an account card; both are omitted. No audio, video or music node occurs in this source.
+- Compared with the four August installments, this November edition recomposes the image program: its introduction maps conceptually to source `9XVe...` body images 2–6; science to `yBZn...` body images 2–9; magic to `_QyL...` body images 2–5. The final part expands the two earlier content images into four separate illustrations (`魔法禁书目录`, `空之轨迹`, `高达`, `大西洋底来的人`). The later assets are not byte-identical reuses and should be delivered from this consolidated source.
+- The fragment was read against `raw.html/#js_content`; headings, captions, all notes and the full conclusion are preserved. Obvious duplicated words, broken spacing and grammatical slips were minimally corrected; platform traffic prompts and recent-link lists were removed.

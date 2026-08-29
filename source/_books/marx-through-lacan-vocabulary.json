@@ -1,0 +1,50 @@
+{
+  "id": "marx-through-lacan-vocabulary",
+  "slug": "marx-through-lacan-vocabulary",
+  "title": "斜拉康之目看马克思",
+  "subtitle": "The Marx through Lacan Vocabulary 中文词条",
+  "description": "从资产阶级与消费两个词条进入马克思主义政治经济学和拉康派精神分析之间的概念往返。",
+  "documentSlug": "marx-through-lacan-vocabulary",
+  "script": "hans",
+  "status": "paused",
+  "authors": ["Carlos Andrés Umaña González", "Agustina Saubidet"],
+  "translators": ["柴来人", "烦一句"],
+  "proofreaders": ["fʷat̚³⁵!", "球团"],
+  "publishedAt": "2022-10-20",
+  "updatedAt": "2022-10-21",
+  "latestChapterId": "consumption",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "marxThroughLacanVocabularyRoofZH",
+      "title": "The Marx through Lacan Vocabulary: A Compass for Libidinal and Political Economies",
+      "language": "zh-CN"
+    }
+  },
+  "chapters": [
+    {
+      "id": "bourgeoisie",
+      "number": "01",
+      "title": "资产阶级",
+      "status": "published",
+      "anchor": "bourgeoisie",
+      "publishedAt": "2022-10-20",
+      "authors": ["Carlos Andrés Umaña González"],
+      "translators": ["柴来人"],
+      "proofreaders": ["fʷat̚³⁵!", "球团"],
+      "tags": ["马克思主义", "精神分析", "拉康"]
+    },
+    {
+      "id": "consumption",
+      "number": "02",
+      "title": "消费",
+      "status": "published",
+      "anchor": "consumption",
+      "publishedAt": "2022-10-21",
+      "authors": ["Agustina Saubidet"],
+      "translators": ["烦一句"],
+      "proofreaders": ["球团", "fʷat̚³⁵!"],
+      "tags": ["马克思主义", "精神分析", "拉康"]
+    }
+  ]
+}

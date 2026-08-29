@@ -1,0 +1,70 @@
+{
+  "id": "boys-love-manga-and-beyond",
+  "slug": "boys-love-manga-and-beyond",
+  "title": "BL漫画及其他",
+  "subtitle": "日本BL的历史、文化与社群",
+  "description": "两篇节选分别追溯BL从少年爱、JUNE与yaoi发展而来的类型谱系，并回顾日本BL研究围绕性别越界、再现政治、酷儿阅读与同人社群展开的理论争论。",
+  "documentSlug": "boys-love-manga-and-beyond-selected-chapters",
+  "script": "hans",
+  "status": "paused",
+  "authors": [
+    "藤本由香里",
+    "Kazumi Nagaike",
+    "Tomoko Aoyama"
+  ],
+  "translators": [],
+  "proofreaders": [],
+  "editors": [],
+  "publishedAt": "2025-06-16",
+  "updatedAt": "2026-05-17",
+  "latestChapterId": "evolution-playing-with-gender",
+  "citations": {
+    "original": {
+      "itemType": "book",
+      "citationKey": "mclellandEtAl2015BoysLoveMangaBeyond",
+      "title": "Boys Love Manga and Beyond: History, Culture, and Community in Japan",
+      "date": "2015",
+      "publisher": "University Press of Mississippi",
+      "language": "en",
+      "ISBN": "9781628461190"
+    },
+    "translation": {
+      "itemType": "book",
+      "citationKey": "boysLoveMangaBeyondSelectedChaptersZH",
+      "title": "BL漫画及其他：日本BL的历史、文化与社群",
+      "date": "2025-06-16",
+      "publisher": "屋顶现视研",
+      "language": "zh-CN",
+      "rights": "CC BY-NC-SA 4.0",
+      "extra": "中文节选；各章作者、译校与页码见章节信息。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "evolution-playing-with-gender",
+      "number": "01",
+      "title": "BL作为“性别扮演”的演变：从当代视角看其起源与发展",
+      "status": "published",
+      "anchor": "evolution-playing-with-gender",
+      "publishedAt": "2026-05-17",
+      "authors": ["藤本由香里"],
+      "translators": ["Surveiller"],
+      "proofreaders": ["夜深人静", "肇"],
+      "editors": ["夜深人静"],
+      "tags": ["BL", "少女漫画", "性别表现"]
+    },
+    {
+      "id": "japanese-bl-studies-overview",
+      "number": "02",
+      "title": "何为日本“BL研究”？——一份历史与分析的概览",
+      "status": "published",
+      "anchor": "japanese-bl-studies-overview",
+      "publishedAt": "2025-06-16",
+      "authors": ["Kazumi Nagaike", "Tomoko Aoyama"],
+      "translators": ["Surveiller"],
+      "proofreaders": ["郁远集"],
+      "editors": ["夜深人静"],
+      "tags": ["BL", "性别研究", "酷儿理论"]
+    }
+  ]
+}

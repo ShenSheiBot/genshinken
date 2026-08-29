@@ -75,7 +75,7 @@ const chapterAliases = [
     "sourceIds": [
       "MWe7abkKBzxX2PtHo-mliA"
     ],
-    "canonicalPath": "/posts/what-is-japanese-bl-studies"
+    "canonicalPath": "/books/boys-love-manga-and-beyond/chapters/japanese-bl-studies-overview"
   },
   {
     "legacyUrl": "https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247487025&idx=1&sn=cf1051450e80414a6cc9eb9c86ed4ac9",
@@ -200,7 +200,7 @@ const archivedSourceAliases = `
 /posts/feminism-rebellion-nature-1981	https://mp.weixin.qq.com/s/6D_4L4BsFzs-zAHHUYi8VA
 /posts/feminism-rebellion-nature-1981	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247488032&idx=1&sn=59597453f24974c8f86107f500bc76f9
 /posts/sousa-weebwave-2010s-music-videos	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247489230&idx=1&sn=7701cf7bbb3c0e3e3f7ab6dd1a65d8d6
-/posts/beauvoir-butler-feminist-thought	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247488144&idx=1&sn=7965b153d0066c01ce297d71f45c2196
+/books/feminist-thought-fifth-edition/chapters/chapter-09-excerpt	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247488144&idx=1&sn=7965b153d0066c01ce297d71f45c2196
 /posts/colonial-film-time-shinkai	https://mp.weixin.qq.com/s/701WNiZMyw2lJi7Apx5xEQ
 /posts/colonial-film-time-shinkai	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247488907&idx=1&sn=22465cb9d5235fa3680e8edd8e5ca49c
 /posts/trinh-minh-ha-infinite-layers-third-world	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247487827&idx=1&sn=7119f97fe494d451d3b987eae5512d34
@@ -217,9 +217,9 @@ const archivedSourceAliases = `
 /posts/stevie-suan-globalization-world-system-anime	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247489494&idx=1&sn=d18fabe3a78a43fd7d516a06be014712
 /posts/japanese-animation-media-ecology	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247489578&idx=1&sn=77ca7d2d3aa02823f18c327963aab560
 /posts/silent-vampire-kizumonogatari	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247489052&idx=1&sn=8118ba23eadf74366fb930380b234c5a
-/posts/evolution-of-bl-playing-with-gender	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247489540&idx=3&sn=d4928add0db6087674b189b899c99633
+/books/boys-love-manga-and-beyond/chapters/evolution-playing-with-gender	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247489540&idx=3&sn=d4928add0db6087674b189b899c99633
 /posts/takeuchi-yoshimi-displacing-method-interview	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247489659&idx=1&sn=bd91f40f7e8e8740670a9cc28d7f6945
-/posts/feminist-concepts-work	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247489030&idx=2&sn=286e9a7adbf6f80c9ba098c995d3fb5d
+/books/feminism-brief-introduction-key-concepts/chapters/work	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247489030&idx=2&sn=286e9a7adbf6f80c9ba098c995d3fb5d
 /posts/anime-machine-roundtable	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247489450&idx=1&sn=cb735f0d712f71d5571bca8e80f98fd6
 /posts/comedy-of-birth-k-on-everyday-anime	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247488968&idx=1&sn=42ebbfcefb8cd4481ed2a0ef18e73d91
 /posts/lamarre-otaku-movement-2006-a	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247489264&idx=1&sn=886bc7231c9b949737c81e5e49576498
@@ -228,9 +228,9 @@ const archivedSourceAliases = `
 /posts/hiroshi-nagasaki-rebellion-theory	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247488976&idx=1&sn=a4ab64ec8b56aa0c483c69486bdfc54b
 /posts/girls-band-cry-middle-finger	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247488785&idx=1&sn=9f38c90374609056bbba6d37735db4d3
 /posts/matsuda-japanese-criticism-space	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247489212&idx=1&sn=66c0aa86e2793c91f51c25fcae4baff0
-/posts/otsuka-otaku-conversion-literature	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247489318&idx=1&sn=ba38e1eb32e3678e3b7b60e6402e42a3
+/books/debating-otaku-in-contemporary-japan/chapters/otaku-conversion-literature	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247489318&idx=1&sn=ba38e1eb32e3678e3b7b60e6402e42a3
 /posts/1984-tokyo-commuter-subculture-otaku	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247488898&idx=1&sn=4b6e25c50ca8d020d122bf699f725ac4
-/posts/feminist-concepts-sex	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247489064&idx=2&sn=7d1737e424212ec0468bb0129cba095f
+/books/feminism-brief-introduction-key-concepts/chapters/sex	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247489064&idx=2&sn=7d1737e424212ec0468bb0129cba095f
 /posts/frederick-douglass-womens-suffrage-1888	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247487943&idx=1&sn=950e9e81c89e9a9d8917d3cc00814f91
 /posts/steinberg-character-world-consumption	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247489343&idx=1&sn=78ef582ef26ee2a670acacc08e734776
 /posts/living-between-infrastructures-commuter-networks-revised	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247489568&idx=1&sn=65b03c5ae44c04bc69d094b5eba8e1a6

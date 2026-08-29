@@ -1,0 +1,63 @@
+{
+  "id": "tv-animation-chronology",
+  "slug": "tv-animation-chronology",
+  "title": "简单易懂的TV动画编年史",
+  "description": "从日本电视动画的发端出发，按年代梳理1958年至1974年的作品、公司、产业环境与表现形式。",
+  "documentSlug": "tv-animation-chronology",
+  "script": "hans",
+  "status": "paused",
+  "authors": ["冰封的羲和"],
+  "translators": [],
+  "publishedAt": "2018-10-06",
+  "updatedAt": "2018-11-18",
+  "latestChapterId": "part-04",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "bingfengdexihe2018TvAnimationChronologyZhBook",
+      "extra": "原作者分期发表的电视动画编年史。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "part-01",
+      "number": "01",
+      "title": "1958—1965",
+      "status": "published",
+      "anchor": "part-01",
+      "publishedAt": "2018-10-06",
+      "authors": ["冰封的羲和"],
+      "tags": ["日本动画史", "电视动画", "手冢治虫"]
+    },
+    {
+      "id": "part-02",
+      "number": "02",
+      "title": "1966—1969",
+      "status": "published",
+      "anchor": "part-02",
+      "publishedAt": "2018-10-08",
+      "authors": ["冰封的羲和"],
+      "tags": ["日本动画史", "电视动画", "动画制作"]
+    },
+    {
+      "id": "part-03",
+      "number": "03",
+      "title": "1970—1972",
+      "status": "published",
+      "anchor": "part-03",
+      "publishedAt": "2018-10-11",
+      "authors": ["冰封的羲和"],
+      "tags": ["日本动画史", "电视动画", "动画制作"]
+    },
+    {
+      "id": "part-04",
+      "number": "04",
+      "title": "1973—1974",
+      "status": "published",
+      "anchor": "part-04",
+      "publishedAt": "2018-11-18",
+      "authors": ["冰封的羲和"],
+      "tags": ["日本动画史", "电视动画", "动画制作"]
+    }
+  ]
+}

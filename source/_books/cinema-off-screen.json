@@ -1,0 +1,64 @@
+{
+  "id": "cinema-off-screen",
+  "slug": "cinema-off-screen",
+  "title": "幕外电影：社会主义中国的观影活动",
+  "subtitle": "Cinema Off Screen 中文节译",
+  "description": "Chenshu Zhou考察社会主义中国的电影观看如何在银幕之外展开，连接群众文化、工人俱乐部、放映空间与乡村放映员的劳动。",
+  "documentSlug": "cinema-off-screen",
+  "script": "hans",
+  "status": "paused",
+  "authors": ["Chenshu Zhou"],
+  "translators": ["10", "Yan", "张铭苏"],
+  "proofreaders": ["Syn", "kuma", "Pak Syn"],
+  "publishedAt": "2022-09-23",
+  "updatedAt": "2022-10-18",
+  "latestChapterId": "part-04-labor-55-59",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "zhou2021CinemaOffScreenRoofZH",
+      "title": "Cinema Off Screen: Moviegoing in Socialist China",
+      "date": "2021",
+      "publisher": "University of California Press",
+      "language": "zh-CN"
+    }
+  },
+  "chapters": [
+    {
+      "id": "part-02-space-32-43",
+      "number": "02",
+      "title": "第一章“空间”（第32—43页）",
+      "status": "published",
+      "anchor": "part-02-space-32-43",
+      "publishedAt": "2022-09-23",
+      "authors": ["Chenshu Zhou"],
+      "translators": ["10"],
+      "proofreaders": ["Syn"],
+      "tags": ["电影研究", "中国电影史", "社会主义文化"]
+    },
+    {
+      "id": "part-03-space-43-49",
+      "number": "03",
+      "title": "第一章“空间”（第43—49页）",
+      "status": "published",
+      "anchor": "part-03-space-43-49",
+      "publishedAt": "2022-10-12",
+      "authors": ["Chenshu Zhou"],
+      "translators": ["Yan"],
+      "proofreaders": ["kuma", "Syn"],
+      "tags": ["电影研究", "中国电影史", "工人文化"]
+    },
+    {
+      "id": "part-04-labor-55-59",
+      "number": "04",
+      "title": "第二章“劳动”（第55—59页）",
+      "status": "published",
+      "anchor": "part-04-labor-55-59",
+      "publishedAt": "2022-10-18",
+      "authors": ["Chenshu Zhou"],
+      "translators": ["张铭苏"],
+      "proofreaders": ["Pak Syn"],
+      "tags": ["电影研究", "中国电影史", "劳动"]
+    }
+  ]
+}

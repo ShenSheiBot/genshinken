@@ -1,0 +1,45 @@
+{
+  "id": "miyazaki-sin-and-nihility",
+  "slug": "miyazaki-sin-and-nihility",
+  "title": "温柔又残酷的风：宫崎骏动画中的罪恶与虚无",
+  "description": "以《风之谷》为引线，贯穿《幽灵公主》《红猪》《哈尔的移动城堡》与《起风了》，追索宫崎骏作品中罪恶、自然、爱情和虚无的纠缠。",
+  "documentSlug": "miyazaki-sin-and-nihility",
+  "script": "hans",
+  "status": "complete",
+  "authors": ["窗子"],
+  "translators": [],
+  "publishedAt": "2018-11-14",
+  "updatedAt": "2018-11-16",
+  "latestChapterId": "part-02",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "chuangzi2018MiyazakiSinNihilityBook",
+      "title": "温柔又残酷的风——以《风之谷》为引线看宫崎骏动画中的罪恶与虚无",
+      "date": "2018",
+      "language": "zh-CN"
+    }
+  },
+  "chapters": [
+    {
+      "id": "part-01",
+      "number": "01",
+      "title": "上篇：亲爱的娜乌西卡与废墟",
+      "status": "published",
+      "anchor": "part-01",
+      "publishedAt": "2018-11-14",
+      "authors": ["窗子"],
+      "tags": ["宫崎骏", "风之谷", "动画研究"]
+    },
+    {
+      "id": "part-02",
+      "number": "02",
+      "title": "下篇：失乐园、爱情与新生",
+      "status": "published",
+      "anchor": "part-02",
+      "publishedAt": "2018-11-16",
+      "authors": ["窗子"],
+      "tags": ["宫崎骏", "风之谷", "动画研究"]
+    }
+  ]
+}

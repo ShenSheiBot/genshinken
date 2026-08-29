@@ -2,7 +2,7 @@
 
 - 2026-08-17 责任字段复核：原页编辑署名已进入结构化 `editor`／`editors` 元数据，读者正文不重复责任行；本条取代下方早期“正文保留编辑署名”或“schema 无编辑字段”的处理说明。
 
-- sourceId：`dVSX5wd5-6AKOQ_XGRSn4w`；canonical：`https://mp.weixin.qq.com/s/dVSX5wd5-6AKOQ_XGRSn4w`；公开日：2026-05-17。
+- sourceId：`dVSX5wd5-6AKOQ_XGRSn4w`；canonical：`/books/boys-love-manga-and-beyond/chapters/evolution-playing-with-gender`；来源：`https://mp.weixin.qq.com/s/dVSX5wd5-6AKOQ_XGRSn4w`；公开日：2026-05-17。
 - raw.html SHA-256：`4299b3ed97f9e99d5e884c6cc87c146f497a86e8d5ba4ada78d5956e5e826808`；#js_content body.html SHA-256：`7745c327bb7a4badc3a530f98453a8e2db57df16bc0a70ce476c3d56d9946894`。
 - 原书章节 *The Evolution of BL as ‘Playing with Gender’*，收录 *Boys Love Manga and Beyond*（University Press of Mississippi, 2015），pp.76–89；作者藤本由香里，英译 JoAnne Quimby，中文译者 Surveiller，校对夜深人静、肇。正文 5 个 placement/5 个 unique body 资产。
 - raw 末尾 33 条 NOTES 未形成可识别正文调用；按契约不伪装为 GFM 脚注，已在“原文注释”标题下以普通项目列表逐条照录（GFM calls=0、defs=0），不使用 blockquote、GFM 或模板化“来源补充”标签；许可：CC BY-NC-SA 4.0。
@@ -11,6 +11,7 @@
 - 公开标题省略微信题名前缀“【译文】”：译作身份已由“译”栏目及责任元数据表达，正文题名不重复平台式分类前缀。五幅图在 raw 中均为“图片后接图说”；公开稿使用站内约定的“`[fig]` 后接图片”源码顺序，渲染结果仍为图片与其 `figcaption` 成对显示，并非交换图文关系。
 - 版本关系核验：2025-07-19 的 Vf5 版（`https://mp.weixin.qq.com/s/Vf5uyeAQECLU6JHwmOzGlA`）与本版共享标题、五幅正文图、责任链及正文锚点；规范化正文相似度约 99.06%，本版补齐校对/编辑责任链与规范 citation，故保留本版为单一 canonical，Vf5 仅作旧版本证据。
 - B站查重：按标题、正文锚点、责任链与 canonical URL 检查本地 B 站索引，未发现同时成立的精确重复；Vf5 是旧微信版本而非 B 站 canonical。
+- 关系判断：本篇与《何为日本“BL研究”？》同为 *Boys Love Manga and Beyond* 的章节中译，依原书页序并入同一 paused 文库；缺少的其他章节不以 forthcoming 伪造。
 
 ## Preservation omission audit (archiveSequence 0033)
 

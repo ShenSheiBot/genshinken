@@ -1,0 +1,154 @@
+{
+  "id": "reading-feminist-theory",
+  "slug": "reading-feminist-theory",
+  "title": "导读女性主义理论：从现代性到后现代",
+  "subtitle": "Reading Feminist Theory",
+  "description": "Susan Archer Mann与Ashly Suzanne Patterson从知识生产、自由主义、激进主义、社会主义、交叉性与第三波女性主义出发，追踪现代性、后现代性和帝国主义语境中的女性主义理论。",
+  "documentSlug": "reading-feminist-theory",
+  "script": "hans",
+  "status": "paused",
+  "authors": ["Susan Archer Mann", "Ashly Suzanne Patterson"],
+  "translators": ["柴来人", "エミヤたにゆき", "煮鱼", "buhrwana", "vall", "Chris", "TangerineKnight", "su0tiuibu", "snoper卓尔", "Va-11 Hall-A", "伞泽直美", "dieSigurd", "慧慧", "Labour", "dieGrox", "初鹿野凪", "another"],
+  "proofreaders": ["春埼美空", "Chris", "snoper卓尔", "蒸汽黎明"],
+  "publishedAt": "2022-01-10",
+  "updatedAt": "2022-05-17",
+  "latestChapterId": "chapter-10-postmodernism-imperialism",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "mannPatterson2016ReadingFeministTheoryZH",
+      "title": "Reading Feminist Theory: From Modernity to Postmodernity",
+      "date": "2016",
+      "publisher": "Oxford University Press",
+      "language": "zh-CN"
+    }
+  },
+  "chapters": [
+    {
+      "id": "introduction-glossary",
+      "number": "00",
+      "title": "全书导论与术语表",
+      "status": "published",
+      "anchor": "introduction-glossary",
+      "publishedAt": "2022-01-10",
+      "authors": ["Susan Archer Mann", "Ashly Suzanne Patterson"],
+      "translators": ["柴来人", "エミヤたにゆき", "煮鱼", "buhrwana", "vall", "Chris", "TangerineKnight", "su0tiuibu"],
+      "proofreaders": ["春埼美空", "Chris"],
+      "tags": ["女性主义", "女性主义理论", "现代性", "后现代主义"]
+    },
+    {
+      "id": "chapter-01-doing-feminist-theory",
+      "number": "01",
+      "title": "第一章 做女性主义理论",
+      "status": "published",
+      "anchor": "chapter-01-doing-feminist-theory",
+      "publishedAt": "2022-02-07",
+      "authors": ["Susan Archer Mann", "Ashly Suzanne Patterson"],
+      "translators": ["snoper卓尔", "柴来人", "エミヤたにゆき", "Chris"],
+      "proofreaders": ["snoper卓尔", "Chris", "春埼美空"],
+      "tags": ["女性主义", "女性主义认识论", "立场理论", "后现代主义"]
+    },
+    {
+      "id": "chapter-02-liberal-feminism",
+      "number": "02",
+      "title": "第二章 自由主义女性主义",
+      "status": "published",
+      "anchor": "chapter-02-liberal-feminism",
+      "publishedAt": "2022-02-20",
+      "authors": ["Susan Archer Mann", "Ashly Suzanne Patterson"],
+      "translators": ["煮鱼", "Va-11 Hall-A", "エミヤたにゆき", "伞泽直美"],
+      "proofreaders": ["春埼美空", "Chris"],
+      "tags": ["女性主义", "自由主义女性主义", "妇女选举权"]
+    },
+    {
+      "id": "chapter-03-radical-feminism",
+      "number": "03",
+      "title": "第三章 激进女性主义",
+      "status": "published",
+      "anchor": "chapter-03-radical-feminism",
+      "publishedAt": "2022-03-02",
+      "authors": ["Susan Archer Mann", "Ashly Suzanne Patterson"],
+      "translators": ["dieSigurd", "エミヤたにゆき"],
+      "proofreaders": ["蒸汽黎明", "春埼美空"],
+      "tags": ["女性主义", "激进女性主义", "性政治", "生态女性主义"]
+    },
+    {
+      "id": "chapter-04-socialist-feminism",
+      "number": "04",
+      "title": "第四章 社会主义女性主义",
+      "status": "published",
+      "anchor": "chapter-04-socialist-feminism",
+      "publishedAt": "2022-03-08",
+      "authors": ["Susan Archer Mann", "Ashly Suzanne Patterson"],
+      "translators": ["慧慧", "柴来人", "Chris", "伞泽直美", "Labour", "エミヤたにゆき", "buhrwana"],
+      "proofreaders": ["春埼美空"],
+      "tags": ["女性主义", "社会主义女性主义", "马克思主义女性主义"]
+    },
+    {
+      "id": "chapter-05-intersectionality",
+      "number": "05",
+      "title": "第五章 交叉性理论",
+      "status": "published",
+      "anchor": "chapter-05-intersectionality",
+      "publishedAt": "2022-03-24",
+      "authors": ["Susan Archer Mann", "Ashly Suzanne Patterson"],
+      "translators": ["柴来人", "dieGrox", "初鹿野凪", "伞泽直美", "buhrwana", "another"],
+      "proofreaders": ["春埼美空"],
+      "tags": ["女性主义", "交叉性", "身份政治"]
+    },
+    {
+      "id": "chapter-06-postmodern-poststructural-queer-transgender",
+      "number": "06",
+      "title": "第六章 后现代主义、后结构主义、酷儿和跨性别理论",
+      "status": "forthcoming"
+    },
+    {
+      "id": "chapter-07-third-wave",
+      "number": "07",
+      "title": "第七章 第三次女性主义浪潮",
+      "status": "published",
+      "anchor": "chapter-07-third-wave",
+      "publishedAt": "2022-05-08",
+      "authors": ["Susan Archer Mann", "Ashly Suzanne Patterson"],
+      "translators": ["煮鱼", "伞泽直美", "another", "柴来人", "エミヤたにゆき"],
+      "proofreaders": ["春埼美空"],
+      "tags": ["女性主义", "第三波女性主义", "交叉性", "后结构主义"]
+    },
+    {
+      "id": "chapter-08-early-modernity-imperialism",
+      "number": "08",
+      "title": "第八章 早期现代的女性主义与帝国主义",
+      "status": "published",
+      "anchor": "chapter-08-early-modernity-imperialism",
+      "publishedAt": "2022-05-08",
+      "authors": ["Susan Archer Mann", "Ashly Suzanne Patterson"],
+      "translators": ["煮鱼", "another", "柴来人", "エミヤたにゆき"],
+      "proofreaders": ["春埼美空"],
+      "tags": ["女性主义", "帝国主义", "反战运动", "罗莎·卢森堡"]
+    },
+    {
+      "id": "chapter-09-late-modernity-imperialism",
+      "number": "09",
+      "title": "第九章 晚期现代的女性主义与帝国主义",
+      "status": "published",
+      "anchor": "chapter-09-late-modernity-imperialism",
+      "publishedAt": "2022-05-15",
+      "authors": ["Susan Archer Mann", "Ashly Suzanne Patterson"],
+      "translators": ["another", "柴来人", "エミヤたにゆき"],
+      "proofreaders": ["春埼美空"],
+      "tags": ["女性主义", "帝国主义", "新自由主义", "反战运动"]
+    },
+    {
+      "id": "chapter-10-postmodernism-imperialism",
+      "number": "10",
+      "title": "第十章 后现代的女性主义与帝国主义",
+      "status": "published",
+      "anchor": "chapter-10-postmodernism-imperialism",
+      "publishedAt": "2022-05-17",
+      "authors": ["Susan Archer Mann", "Ashly Suzanne Patterson"],
+      "translators": ["柴来人", "エミヤたにゆき"],
+      "proofreaders": ["春埼美空"],
+      "tags": ["女性主义", "帝国主义", "后殖民主义", "跨国女性主义"]
+    }
+  ]
+}

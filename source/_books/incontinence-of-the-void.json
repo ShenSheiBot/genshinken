@@ -1,0 +1,67 @@
+{
+  "id": "incontinence-of-the-void",
+  "slug": "incontinence-of-the-void",
+  "title": "失禁的空无",
+  "subtitle": "经济哲学赘生物",
+  "description": "斯拉沃热·齐泽克从实在界、主体与否定性出发，讨论当代本体论、精神分析和政治哲学中的一系列僵局。",
+  "documentSlug": "incontinence-of-the-void-the-barred-one",
+  "script": "hans",
+  "status": "paused",
+  "authors": [
+    "Slavoj Žižek"
+  ],
+  "translators": [
+    "Jack Cade"
+  ],
+  "proofreaders": [],
+  "publishedAt": "2023-04-06",
+  "updatedAt": "2023-04-06",
+  "latestChapterId": "chapter-1-the-barred-one",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "zizekIncontinenceVoidRoofZH",
+      "title": "Incontinence of the Void: Economico-Philosophical Spandrels",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Slavoj",
+          "lastName": "Žižek"
+        },
+        {
+          "creatorType": "translator",
+          "name": "Jack Cade"
+        }
+      ],
+      "date": "2017",
+      "publisher": "MIT Press",
+      "ISBN": "9780262036818",
+      "language": "zh-CN",
+      "extra": "本中文译稿收录原书第一章第1.1—1.5节。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "chapter-1-the-barred-one",
+      "number": "01",
+      "title": "第一章 被打杠的一",
+      "status": "published",
+      "anchor": "chapter-1-the-barred-one",
+      "publishedAt": "2023-04-06",
+      "authors": [
+        "Slavoj Žižek"
+      ],
+      "translators": [
+        "Jack Cade"
+      ],
+      "proofreaders": [],
+      "tags": [
+        "齐泽克",
+        "拉康",
+        "实在界",
+        "黑格尔",
+        "三体"
+      ]
+    }
+  ]
+}

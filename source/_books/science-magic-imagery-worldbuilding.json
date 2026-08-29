@@ -1,0 +1,63 @@
+{
+  "id": "science-magic-imagery-worldbuilding",
+  "slug": "science-magic-imagery-worldbuilding",
+  "title": "科学与魔法的意象",
+  "description": "从似真的科幻性与作为他者的属性出发，讨论动画、漫画、游戏和轻小说中科学与魔法意象的形成，以及二者边界为何趋于模糊。",
+  "documentSlug": "science-magic-imagery-worldbuilding",
+  "script": "hans",
+  "status": "complete",
+  "authors": ["Austoria"],
+  "translators": [],
+  "publishedAt": "2018-08-19",
+  "updatedAt": "2018-12-23",
+  "latestChapterId": "blurred-boundaries",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "austoria2018ScienceMagicImageryBook",
+      "extra": "四期连载及其合订修订版。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "introduction",
+      "number": "01",
+      "title": "引言",
+      "status": "published",
+      "anchor": "introduction",
+      "publishedAt": "2018-08-19",
+      "authors": ["Austoria"],
+      "tags": ["科学意象", "魔法意象", "科学哲学"]
+    },
+    {
+      "id": "science-imagery",
+      "number": "02",
+      "title": "科学的意象：翻越现实的藩篱",
+      "status": "published",
+      "anchor": "science-imagery",
+      "publishedAt": "2018-08-23",
+      "authors": ["Austoria"],
+      "tags": ["科学意象", "科学哲学", "高达"]
+    },
+    {
+      "id": "magic-imagery",
+      "number": "03",
+      "title": "魔法的意象：他者的巨龙，他者的月球",
+      "status": "published",
+      "anchor": "magic-imagery",
+      "publishedAt": "2018-08-26",
+      "authors": ["Austoria"],
+      "tags": ["魔法意象", "世界观"]
+    },
+    {
+      "id": "blurred-boundaries",
+      "number": "04",
+      "title": "意象的模糊：历时性的投影",
+      "status": "published",
+      "anchor": "blurred-boundaries",
+      "publishedAt": "2018-08-30",
+      "authors": ["Austoria"],
+      "tags": ["科学意象", "魔法意象", "世界观"]
+    }
+  ]
+}

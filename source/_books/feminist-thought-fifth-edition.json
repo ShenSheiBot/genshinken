@@ -1,0 +1,52 @@
+{
+  "id": "feminist-thought-fifth-edition",
+  "slug": "feminist-thought-fifth-edition",
+  "title": "女性主义思潮导论（第五版）",
+  "subtitle": "Feminist Thought 中文译稿",
+  "description": "Rosemarie Tong与Tina Fernandes Botts系统梳理女性主义思想谱系；第一章讨论自由主义女性主义，第九章摘译聚焦波伏娃与巴特勒。",
+  "documentSlug": "feminist-thought-fifth-edition",
+  "script": "hans",
+  "status": "paused",
+  "authors": ["Rosemarie Tong", "Tina Fernandes Botts"],
+  "translators": ["柴来人", "Snoper卓尔"],
+  "proofreaders": ["柴来人"],
+  "publishedAt": "2023-03-09",
+  "updatedAt": "2023-04-28",
+  "latestChapterId": "chapter-09-excerpt",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "tongBotts2018FeministThoughtRoofZH",
+      "title": "Feminist Thought: A More Comprehensive Introduction",
+      "date": "2018",
+      "edition": "5",
+      "publisher": "Westview Press",
+      "language": "zh-CN"
+    }
+  },
+  "chapters": [
+    {
+      "id": "chapter-01-liberal-feminism",
+      "number": "01",
+      "title": "第一章 自由主义女性主义",
+      "status": "published",
+      "anchor": "chapter-01-liberal-feminism",
+      "publishedAt": "2023-03-09",
+      "authors": ["Rosemarie Tong", "Tina Fernandes Botts"],
+      "translators": ["柴来人"],
+      "tags": ["女性主义", "自由主义女性主义", "妇女选举权"]
+    },
+    {
+      "id": "chapter-09-excerpt",
+      "number": "09",
+      "title": "第九章摘译：存在主义、后结构主义与后现代女性主义",
+      "status": "published",
+      "anchor": "chapter-09-excerpt",
+      "publishedAt": "2023-04-28",
+      "authors": ["Rosemarie Tong", "Tina Fernandes Botts"],
+      "translators": ["Snoper卓尔"],
+      "proofreaders": ["柴来人"],
+      "tags": ["女性主义", "西蒙娜·德·波伏娃", "朱迪斯·巴特勒"]
+    }
+  ]
+}

@@ -2,8 +2,8 @@
   "id": "intensive-lectures-japanese-modern-thought",
   "slug": "intensive-lectures-japanese-modern-thought",
   "title": "集中讲义！日本的现代思想",
-  "subtitle": "第二讲与第七讲中文选译",
-  "description": "仲正昌樹回顾日本新左翼、大众社会与后现代思想的兴衰，从吉本隆明、广松涉一路谈到《批评空间》与东浩纪。",
+  "subtitle": "战后马克思主义、新左翼与后现代思想",
+  "description": "仲正昌樹从战后马克思主义、大众社会与新左翼一路讲到后现代思想的兴衰，串联丸山真男、吉本隆明、广松涉、《批评空间》与东浩纪。",
   "documentSlug": "intensive-lectures-japanese-modern-thought-lecture-2",
   "script": "hans",
   "status": "paused",
@@ -14,7 +14,7 @@
   "proofreaders": [],
   "publishedAt": "2021-12-31",
   "updatedAt": "2022-02-21",
-  "latestChapterId": "lecture-07",
+  "latestChapterId": "lecture-08",
   "citations": {
     "translation": {
       "itemType": "book",
@@ -23,13 +23,44 @@
       "date": "2011",
       "publisher": "NHK出版",
       "language": "zh-CN",
-      "extra": "第二讲与第七讲中文选译；各篇译者与校对见章节署名。"
+      "extra": "第一、二、七、八讲中文选译；各篇译者与校对见章节署名。"
     }
   },
   "chapters": [
     {
-      "id": "lecture-02",
+      "id": "lecture-01",
       "number": "01",
+      "title": "第一讲 与现实脱节的日本战后马克思主义",
+      "status": "published",
+      "anchor": "lecture-01",
+      "publishedAt": "2021-12-07",
+      "authors": [
+        "仲正昌樹"
+      ],
+      "translators": [
+        "川井ルナ",
+        "杉原 音",
+        "志賀四季",
+        "柴来人",
+        "Boki",
+        "静希草十郎",
+        "人吉尔朗"
+      ],
+      "proofreaders": [
+        "柴来人",
+        "静希草十郎",
+        "人吉尔朗"
+      ],
+      "tags": [
+        "日本思想史",
+        "马克思主义",
+        "战后思想",
+        "丸山真男"
+      ]
+    },
+    {
+      "id": "lecture-02",
+      "number": "02",
       "title": "第二讲 大众社会的左翼思想",
       "status": "published",
       "anchor": "lecture-02",
@@ -61,7 +92,7 @@
     },
     {
       "id": "lecture-07",
-      "number": "02",
+      "number": "03",
       "title": "第七讲 “现代思想”为何“终结”了呢？",
       "status": "published",
       "anchor": "lecture-07",
@@ -74,6 +105,34 @@
         "杉原 音",
         "川井ルナ",
         "柴来人"
+      ],
+      "proofreaders": [
+        "恐怖如斯",
+        "人吉尔朗"
+      ],
+      "tags": [
+        "日本思想史",
+        "现代思想",
+        "后现代",
+        "东浩纪",
+        "批评空间"
+      ]
+    },
+    {
+      "id": "lecture-08",
+      "number": "04",
+      "title": "第八讲 “简单”化的“现代思想”",
+      "status": "published",
+      "anchor": "lecture-08",
+      "publishedAt": "2022-02-12",
+      "authors": [
+        "仲正昌樹"
+      ],
+      "translators": [
+        "Va-11 Hall-A",
+        "柴来人",
+        "杉原 音",
+        "川井ルナ"
       ],
       "proofreaders": [
         "恐怖如斯",

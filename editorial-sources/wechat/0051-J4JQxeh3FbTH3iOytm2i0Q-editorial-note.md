@@ -12,4 +12,5 @@
 - 内联注号审计：`无未闭合的原始内联注号。`
 - 访谈/说话人审计：`非访谈稿；无说话人轮次转换。`
 - B站查重：按标题、正文锚点、责任链与 URL 逐项核对；未发现同时成立的同文 canonical，故不建立 B 站关系。
-- citation 已按 raw 原出处补齐 Bloomsbury 2015 序言页码 `1–21`，并恢复 Patrick W. Galbraith、Thiam Huat Kam、Björn-Ole Kamm、Christopher Gerteis 四位原书编辑；公开正文恢复微信编辑“夜深人静”及“英译者导言／导言”标题。原题脚注调用后依 TYPO-P1 机械补句号。逐图复核纠正 body-007 至 body-010 四个发生轮转错位的 alt；通用投稿邮箱、QQ群及发布模板仍不进入公开正文。未决：署名 contributor 登记、完整关系容器与资产 manifest 由主线统一处理。
+- citation 已按 raw 原出处补齐 Bloomsbury 2015 序言页码 `1–21`，并恢复 Patrick W. Galbraith、Thiam Huat Kam、Björn-Ole Kamm、Christopher Gerteis 四位原书编辑；公开正文恢复微信编辑“夜深人静”及“英译者导言／导言”标题。原题脚注调用后依 TYPO-P1 机械补句号。逐图复核纠正 body-007 至 body-010 四个发生轮转错位的 alt；通用投稿邮箱、QQ群及发布模板仍不进入公开正文。
+- 关系复核：本篇与 Björn-Ole Kamm《打开1989年御宅族论述的黑箱》均出自 *Debating Otaku in Contemporary Japan: Historical Perspectives and New Horizons*，分别为页 `1–21` 与 `51–70`；两章按原书页序合并为 paused selected-chapters 文库，本篇 canonical 路由为 `/books/debating-otaku-in-contemporary-japan/chapters/otaku-conversion-literature`，原 post 路由永久重定向。微信原文明确的 CC BY-NC-SA 4.0 许可只适用于本章，并在章节正文保留稳定许可说明。

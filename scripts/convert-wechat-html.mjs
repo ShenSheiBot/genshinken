@@ -252,6 +252,10 @@ function renderBlocks(node, ctx) {
     const content = trimInline(renderContainer(node, ctx));
     return content ? `${content}\n\n` : "";
   }
+  if (node.nodeName === "section") {
+    const content = renderContainer(node, ctx).trim();
+    return content ? `${content}\n\n` : "";
+  }
   if (["blockquote", "mp-common-blockquote"].includes(node.nodeName)) {
     const content = renderContainer(node, ctx).trim();
     return content ? `${content.split("\n").map((line) => `> ${line}`).join("\n")}\n\n` : "";

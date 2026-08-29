@@ -2,10 +2,10 @@
   "id": "phenomenology-the-basics",
   "slug": "phenomenology-the-basics",
   "title": "现象学：基础",
-  "description": "Dan Zahavi《Phenomenology: The Basics》中文译文，收录前言、导言及第 1～4 章，介绍现象学的方法、意向性、身体、主体间性与生活世界。",
+  "description": "Dan Zahavi《Phenomenology: The Basics》完整中文译文，介绍现象学的方法、意向性、身体、主体间性、生活世界，以及它在社会学与心理学中的应用。",
   "documentSlug": "phenomenology-the-basics-introduction-chapters-1-2",
   "script": "hans",
-  "status": "paused",
+  "status": "complete",
   "authors": [
     "Dan Zahavi"
   ],
@@ -16,7 +16,14 @@
     "Wasted.",
     "加速器",
     "S.C.",
-    "Raymond"
+    "Raymond",
+    "小小圣人",
+    "Avva Κομνηνή",
+    "三森老师",
+    "Phaedrus",
+    "why7682",
+    "EIMY",
+    "Kernel"
   ],
   "proofreaders": [
     "真红",
@@ -26,13 +33,13 @@
     "柴来人"
   ],
   "publishedAt": "2020-09-07",
-  "updatedAt": "2020-10-04",
-  "latestChapterId": "chapters-3-4",
+  "updatedAt": "2021-11-01",
+  "latestChapterId": "chapter-10-and-conclusion",
   "citations": {
     "translation": {
       "itemType": "book",
       "citationKey": "zahavi2018PhenomenologyBasicsRoofZH",
-      "extra": "中文译文收录前言、导言及第 1～4 章。"
+      "extra": "中文译文收录前言、导言、第 1～10 章及结语。"
     }
   },
   "chapters": [
@@ -96,6 +103,83 @@
         "海德格尔",
         "生活世界"
       ]
+    },
+    {
+      "id": "chapters-5-6",
+      "number": "03",
+      "title": "第 5～6 章",
+      "status": "published",
+      "anchor": "chapters-5-6",
+      "publishedAt": "2021-10-25",
+      "authors": [
+        "Dan Zahavi"
+      ],
+      "translators": [
+        "小小圣人",
+        "Avva Κομνηνή"
+      ],
+      "proofreaders": [
+        "真红",
+        "飞飞",
+        "Va-11 Hall-A",
+        "希文",
+        "柴来人"
+      ],
+      "tags": [
+        "现象学",
+        "丹·扎哈维",
+        "胡塞尔",
+        "海德格尔",
+        "梅洛·庞蒂"
+      ]
+    },
+    {
+      "id": "chapter-07-spatiality-embodiment",
+      "number": "04",
+      "title": "第 7 章：空间性及具身性",
+      "status": "published",
+      "anchor": "chapter-07-spatiality-embodiment",
+      "publishedAt": "2021-10-25",
+      "authors": ["Dan Zahavi"],
+      "translators": ["S.C.", "三森老师"],
+      "proofreaders": ["真红", "飞飞", "Va-11 Hall-A", "希文", "柴来人"],
+      "tags": ["现象学", "丹·扎哈维", "海德格尔", "梅洛·庞蒂", "身体"]
+    },
+    {
+      "id": "chapter-08-intersubjectivity-sociality",
+      "number": "05",
+      "title": "第 8 章：主体间性和社会性",
+      "status": "published",
+      "anchor": "chapter-08-intersubjectivity-sociality",
+      "publishedAt": "2021-11-01",
+      "authors": ["Dan Zahavi"],
+      "translators": ["Phaedrus"],
+      "proofreaders": ["真红", "飞飞", "Va-11 Hall-A", "希文", "柴来人"],
+      "tags": ["现象学", "丹·扎哈维", "主体间性", "社会性", "同感"]
+    },
+    {
+      "id": "chapter-09-phenomenological-sociology",
+      "number": "06",
+      "title": "第 9 章：现象学社会学",
+      "status": "published",
+      "anchor": "chapter-09-phenomenological-sociology",
+      "publishedAt": "2021-11-01",
+      "authors": ["Dan Zahavi"],
+      "translators": ["why7682"],
+      "proofreaders": ["真红", "飞飞", "Va-11 Hall-A", "希文", "柴来人"],
+      "tags": ["现象学", "丹·扎哈维", "现象学社会学", "阿尔弗雷德·舒茨", "生活世界"]
+    },
+    {
+      "id": "chapter-10-and-conclusion",
+      "number": "07",
+      "title": "第 10 章与结语",
+      "status": "published",
+      "anchor": "chapter-10-and-conclusion",
+      "publishedAt": "2021-11-01",
+      "authors": ["Dan Zahavi"],
+      "translators": ["EIMY", "Kernel", "飞飞"],
+      "proofreaders": ["真红", "飞飞", "Va-11 Hall-A", "希文", "柴来人"],
+      "tags": ["现象学", "丹·扎哈维", "现象学心理学", "认知科学", "定性研究"]
     }
   ]
 }

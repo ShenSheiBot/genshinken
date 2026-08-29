@@ -28,7 +28,7 @@
 ## 原文关系与连载核验
 
 - 原作书章与译文构成明确翻译关系；公开引用记录作者、书名、编辑者书目所属、页码、DOI与译者，不把B站页面当作原文来源。
-- 本文没有总题、篇次、前后篇、番外声明或对屋顶现视研其他文章的正文互链。B站文集“社科哲学翻译”是宽泛平台集合，不能据此建立连载。
+- 本文没有平台连载篇次；但书目信息可以确认，本篇与大塚英志《作为“转向文学”的御宅文化》同出自 *Debating Otaku in Contemporary Japan: Historical Perspectives and New Horizons*，分别位于页 `51–70` 与 `1–21`。两章按原书页序合并为 paused selected-chapters 文库，本篇 canonical 路由为 `/books/debating-otaku-in-contemporary-japan/chapters/opening-black-box-1989-otaku-discourse`，原 post 路由永久重定向；与两章完全同构的旧 topic 已删除。
 - `cv2156702` 出现本文完整题名的位置只是近期文章推荐卡，不是前后篇关系。题目涉及1989—1990年话语史，也不能据此与其他“御宅族”评论自动聚类；未发现“元动画评论”系列关系或明确篇次。
 - 本篇保存完整JSON和专篇证据，不修改共享manifest或books manifest，也不运行共享build/dev。
 - `npm run validate:content`、`npm run verify:typography`、`npm run verify:han-script`、`npm run verify:citations`、本篇 `git diff --check` 均通过，零非阻塞警告。单篇顺序检查覆盖46个正文／列表块和5个本地图像；正文无远程图片，源JSON与爬虫源逐字节一致。

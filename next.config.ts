@@ -90,6 +90,126 @@ const nextConfig: NextConfig = {
         destination: "/library",
         permanent: true,
       },
+      {
+        source: "/posts/evolution-of-bl-playing-with-gender",
+        destination: "/books/boys-love-manga-and-beyond/chapters/evolution-playing-with-gender",
+        permanent: true,
+      },
+      {
+        source: "/posts/what-is-japanese-bl-studies",
+        destination: "/books/boys-love-manga-and-beyond/chapters/japanese-bl-studies-overview",
+        permanent: true,
+      },
+      {
+        source: "/posts/karatani-asada-orientalism-asia",
+        destination: "/books/karatani-asada-complete-dialogues/chapters/orientalism-asia",
+        permanent: true,
+      },
+      {
+        source: "/posts/karatani-asada-and-me",
+        destination: "/books/karatani-asada-complete-dialogues/chapters/karatani-asada-and-me",
+        permanent: true,
+      },
+      {
+        source: "/posts/otsuka-otaku-conversion-literature",
+        destination: "/books/debating-otaku-in-contemporary-japan/chapters/otaku-conversion-literature",
+        permanent: true,
+      },
+      {
+        source: "/posts/opening-black-box-1989-otaku-discourse",
+        destination: "/books/debating-otaku-in-contemporary-japan/chapters/opening-black-box-1989-otaku-discourse",
+        permanent: true,
+      },
+      {
+        source: "/posts/feminist-theory-introduction-glossary",
+        destination: "/books/reading-feminist-theory/chapters/introduction-glossary",
+        permanent: true,
+      },
+      {
+        source: "/posts/feminist-theory-chapter-1-doing-feminist-theory",
+        destination: "/books/reading-feminist-theory/chapters/chapter-01-doing-feminist-theory",
+        permanent: true,
+      },
+      {
+        source: "/posts/feminist-theory-chapter-2-liberal-feminism",
+        destination: "/books/reading-feminist-theory/chapters/chapter-02-liberal-feminism",
+        permanent: true,
+      },
+      {
+        source: "/posts/feminist-theory-chapter-3-radical-feminism",
+        destination: "/books/reading-feminist-theory/chapters/chapter-03-radical-feminism",
+        permanent: true,
+      },
+      {
+        source: "/posts/feminist-theory-chapter-4-socialist-feminism",
+        destination: "/books/reading-feminist-theory/chapters/chapter-04-socialist-feminism",
+        permanent: true,
+      },
+      {
+        source: "/posts/feminist-theory-chapter-5-intersectionality",
+        destination: "/books/reading-feminist-theory/chapters/chapter-05-intersectionality",
+        permanent: true,
+      },
+      {
+        source: "/posts/feminist-theory-chapter-7-third-wave",
+        destination: "/books/reading-feminist-theory/chapters/chapter-07-third-wave",
+        permanent: true,
+      },
+      {
+        source: "/posts/feminist-theory-chapter-8-early-modernity-imperialism",
+        destination: "/books/reading-feminist-theory/chapters/chapter-08-early-modernity-imperialism",
+        permanent: true,
+      },
+      {
+        source: "/posts/feminist-theory-chapter-9-late-modernity-imperialism",
+        destination: "/books/reading-feminist-theory/chapters/chapter-09-late-modernity-imperialism",
+        permanent: true,
+      },
+      {
+        source: "/posts/feminist-theory-chapter-10-postmodernism-imperialism",
+        destination: "/books/reading-feminist-theory/chapters/chapter-10-postmodernism-imperialism",
+        permanent: true,
+      },
+      {
+        source: "/posts/feminist-concepts-sex",
+        destination: "/books/feminism-brief-introduction-key-concepts/chapters/sex",
+        permanent: true,
+      },
+      {
+        source: "/posts/feminist-concepts-work",
+        destination: "/books/feminism-brief-introduction-key-concepts/chapters/work",
+        permanent: true,
+      },
+      {
+        source: "/posts/cameron-domination-patriarchy",
+        destination: "/books/feminism-brief-introduction-key-concepts/chapters/domination",
+        permanent: true,
+      },
+      {
+        source: "/posts/cameron-rights-feminism-human-rights",
+        destination: "/books/feminism-brief-introduction-key-concepts/chapters/rights",
+        permanent: true,
+      },
+      {
+        source: "/posts/marx-through-lacan-bourgeoisie",
+        destination: "/books/marx-through-lacan-vocabulary/chapters/bourgeoisie",
+        permanent: true,
+      },
+      {
+        source: "/posts/marx-through-lacan-consumption",
+        destination: "/books/marx-through-lacan-vocabulary/chapters/consumption",
+        permanent: true,
+      },
+      {
+        source: "/posts/liberal-feminism-feminist-thought-fifth-edition-chapter-1",
+        destination: "/books/feminist-thought-fifth-edition/chapters/chapter-01-liberal-feminism",
+        permanent: true,
+      },
+      {
+        source: "/posts/beauvoir-butler-feminist-thought",
+        destination: "/books/feminist-thought-fifth-edition/chapters/chapter-09-excerpt",
+        permanent: true,
+      },
     ];
   },
 };

@@ -1,0 +1,71 @@
+{
+  "id": "debating-otaku-in-contemporary-japan",
+  "slug": "debating-otaku-in-contemporary-japan",
+  "title": "当代日本御宅族论争",
+  "subtitle": "历史视角与新地平",
+  "description": "大塚英志从“转向文学”追问御宅文化的历史化与政治性，Björn-Ole Kamm则从宫崎勤事件后的报刊、司法与批评话语中拆解御宅形象的共同建构。",
+  "documentSlug": "debating-otaku-contemporary-japan-selected-chapters",
+  "script": "hans",
+  "status": "paused",
+  "authors": ["大塚英志", "Björn-Ole Kamm"],
+  "translators": ["幽灵在都灵", "王晗"],
+  "proofreaders": [],
+  "editors": ["夜深人静"],
+  "publishedAt": "2019-01-31",
+  "updatedAt": "2025-11-23",
+  "latestChapterId": "otaku-conversion-literature",
+  "citations": {
+    "original": {
+      "itemType": "book",
+      "citationKey": "galbraithEtAl2015DebatingOtaku",
+      "title": "Debating Otaku in Contemporary Japan: Historical Perspectives and New Horizons",
+      "date": "2015",
+      "publisher": "Bloomsbury Academic",
+      "place": "London",
+      "language": "en",
+      "creators": [
+        { "creatorType": "editor", "name": "Patrick W. Galbraith" },
+        { "creatorType": "editor", "name": "Thiam Huat Kam" },
+        { "creatorType": "editor", "name": "Björn-Ole Kamm" },
+        { "creatorType": "editor", "name": "Christopher Gerteis" }
+      ]
+    },
+    "translation": {
+      "itemType": "book",
+      "citationKey": "debatingOtakuContemporaryJapanSelectedZH",
+      "title": "当代日本御宅族论争：历史视角与新地平",
+      "date": "2019-01-31",
+      "publisher": "屋顶现视研",
+      "language": "zh-CN",
+      "extra": "中文选译；各章责任信息与原书页码见章节页。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "otaku-conversion-literature",
+      "number": "01",
+      "title": "作为“转向文学”的御宅文化",
+      "status": "published",
+      "anchor": "otaku-conversion-literature",
+      "publishedAt": "2025-11-23",
+      "authors": ["大塚英志"],
+      "translators": ["幽灵在都灵"],
+      "proofreaders": [],
+      "editors": ["夜深人静"],
+      "tags": ["御宅研究", "文化批评", "日本思想史"]
+    },
+    {
+      "id": "opening-black-box-1989-otaku-discourse",
+      "number": "02",
+      "title": "打开1989年御宅族论述的黑箱",
+      "status": "published",
+      "anchor": "opening-black-box-1989-otaku-discourse",
+      "publishedAt": "2019-01-31",
+      "authors": ["Björn-Ole Kamm"],
+      "translators": ["王晗"],
+      "proofreaders": [],
+      "editors": [],
+      "tags": ["御宅研究", "宫崎勤事件", "媒体话语", "道德恐慌"]
+    }
+  ]
+}

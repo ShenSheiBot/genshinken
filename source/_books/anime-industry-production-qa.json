@@ -1,0 +1,67 @@
+{
+  "id": "anime-industry-production-qa",
+  "slug": "anime-industry-production-qa",
+  "title": "动画产业知识问答",
+  "description": "围绕动画师谱系、制作流程、工期与预算、工作室体制、作画术语和海外动画师等问题展开的四期问答。",
+  "documentSlug": "anime-industry-production-qa",
+  "script": "hans",
+  "status": "paused",
+  "authors": ["kViN", "Ryan", "Liborek", "Megax", "Rant", "Ray"],
+  "translators": ["石立太一"],
+  "publishedAt": "2018-11-11",
+  "updatedAt": "2018-11-15",
+  "latestChapterId": "part-04",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "kvinRyanEtAl2018AnimeIndustryProductionQaZhBook",
+      "extra": "Saku Q&A: Anime Industry and Production Questions 中文译文。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "part-01",
+      "number": "01",
+      "title": "动画产业知识问答（一）",
+      "status": "published",
+      "anchor": "part-01",
+      "publishedAt": "2018-11-11",
+      "authors": ["kViN", "Ryan", "Liborek"],
+      "translators": ["石立太一"],
+      "tags": ["动画制作", "京都动画"]
+    },
+    {
+      "id": "part-02",
+      "number": "02",
+      "title": "动画产业知识问答（二）",
+      "status": "published",
+      "anchor": "part-02",
+      "publishedAt": "2018-11-12",
+      "authors": ["kViN", "Ryan", "Megax", "Rant"],
+      "translators": ["石立太一"],
+      "tags": ["动画制作", "作画"]
+    },
+    {
+      "id": "part-03",
+      "number": "03",
+      "title": "动画产业知识问答（三）",
+      "status": "published",
+      "anchor": "part-03",
+      "publishedAt": "2018-11-13",
+      "authors": ["kViN", "Ryan", "Ray", "Liborek"],
+      "translators": ["石立太一"],
+      "tags": ["动画制作", "动画演出"]
+    },
+    {
+      "id": "part-04",
+      "number": "04",
+      "title": "动画产业知识问答（四）",
+      "status": "published",
+      "anchor": "part-04",
+      "publishedAt": "2018-11-15",
+      "authors": ["kViN", "Liborek", "Megax"],
+      "translators": ["石立太一"],
+      "tags": ["动画制作", "作画"]
+    }
+  ]
+}

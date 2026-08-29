@@ -446,6 +446,17 @@ function validateTypography(file, content, data) {
     }
 
     if (node.type === "image" && typeof node.url === "string") {
+      if (
+        typeof node.alt === "string" &&
+        /^(?:(?:微信)?正文)?(?:插图|配图|图片)\s*(?:\d+|[一二三四五六七八九十]+)$/u.test(node.alt.trim())
+      ) {
+        const line = node.position?.start?.line;
+        report(
+          errors,
+          file,
+          `${line ? `第 ${line} 行` : "正文"}图片仍使用转换器占位替代文字：${node.alt.trim()}；请描述图像内容或明确标为空替代文字`,
+        );
+      }
       if (/^https:\/\/assets\.labonroof\.top\/roof-archive\//iu.test(node.url)) {
         const line = node.position?.start?.line;
         report(errors, file, `${line ? `第 ${line} 行` : "正文"}屋顶图片不得硬编码 CDN URL；请使用 attachments/roof-archive/... 本地路径并由构建改写`);

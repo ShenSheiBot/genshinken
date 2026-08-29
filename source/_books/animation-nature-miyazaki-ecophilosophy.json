@@ -1,0 +1,51 @@
+{
+  "id": "animation-nature-miyazaki-ecophilosophy",
+  "slug": "animation-nature-miyazaki-ecophilosophy",
+  "title": "动画的自然：宫崎骏生态哲学中的审美、伦理与移情",
+  "description": "Pamela Gossin 从生态美学、自然伦理与移情出发，讨论宫崎骏如何在动画的世界构筑、象征性意象和生命观中形成独特的生态哲学。",
+  "documentSlug": "animation-nature-miyazaki-ecophilosophy",
+  "script": "hans",
+  "status": "complete",
+  "authors": ["Pamela Gossin"],
+  "translators": ["Hephaestus", "风林火山"],
+  "proofreaders": ["Hyperzoic"],
+  "publishedAt": "2018-12-31",
+  "updatedAt": "2019-01-03",
+  "latestChapterId": "part-2",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "gossin2015AnimatedNatureRoofZHBook",
+      "title": "Animated Nature: Aesthetics, Ethics, and Empathy in Miyazaki Hayao’s Ecophilosophy",
+      "date": "2015",
+      "language": "zh-CN",
+      "extra": "原载 Mechademia 第10卷；Hephaestus、风林火山译，Hyperzoic校对。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "part-1",
+      "number": "01",
+      "title": "上篇",
+      "status": "published",
+      "anchor": "part-1",
+      "publishedAt": "2018-12-31",
+      "authors": ["Pamela Gossin"],
+      "translators": ["Hephaestus", "风林火山"],
+      "proofreaders": ["Hyperzoic"],
+      "tags": ["宫崎骏", "动画研究", "生态哲学"]
+    },
+    {
+      "id": "part-2",
+      "number": "02",
+      "title": "下篇",
+      "status": "published",
+      "anchor": "part-2",
+      "publishedAt": "2019-01-03",
+      "authors": ["Pamela Gossin"],
+      "translators": ["Hephaestus", "风林火山"],
+      "proofreaders": ["Hyperzoic"],
+      "tags": ["宫崎骏", "动画研究", "生态哲学"]
+    }
+  ]
+}

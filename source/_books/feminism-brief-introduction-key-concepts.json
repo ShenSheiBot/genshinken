@@ -1,0 +1,71 @@
+{
+  "id": "feminism-brief-introduction-key-concepts",
+  "slug": "feminism-brief-introduction-key-concepts",
+  "title": "女性主义：思想、论争与运动政治简明导论",
+  "subtitle": "Deborah Cameron 女性主义关键概念",
+  "description": "Deborah Cameron以关键概念组织女性主义思想，讨论性、工作、宰制与权利如何塑造身体、劳动、亲密关系与公共制度。",
+  "documentSlug": "feminism-brief-introduction-key-concepts",
+  "script": "hans",
+  "status": "paused",
+  "authors": ["Deborah Cameron"],
+  "translators": ["春埼美空", "AI + 生命体征维持茶话会"],
+  "proofreaders": [],
+  "publishedAt": "2023-11-22",
+  "updatedAt": "2025-06-09",
+  "latestChapterId": "rights",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "cameron2019FeminismBriefIntroductionZH",
+      "title": "Feminism: A Brief Introduction to the Ideas, Debates, and Politics of the Movement",
+      "date": "2019",
+      "language": "zh-CN"
+    }
+  },
+  "chapters": [
+    {
+      "id": "sex",
+      "number": "01",
+      "title": "性",
+      "status": "published",
+      "anchor": "sex",
+      "publishedAt": "2025-06-09",
+      "authors": ["Deborah Cameron"],
+      "translators": ["AI + 生命体征维持茶话会"],
+      "tags": ["女性主义", "性政治", "性别研究"]
+    },
+    {
+      "id": "work",
+      "number": "02",
+      "title": "工作",
+      "status": "published",
+      "anchor": "work",
+      "publishedAt": "2025-05-12",
+      "authors": ["Deborah Cameron"],
+      "translators": ["春埼美空"],
+      "tags": ["女性主义", "性别劳动", "照护劳动"]
+    },
+    {
+      "id": "domination",
+      "number": "03",
+      "title": "宰制",
+      "status": "published",
+      "anchor": "domination",
+      "publishedAt": "2023-11-22",
+      "authors": ["Deborah Cameron"],
+      "translators": ["春埼美空"],
+      "tags": ["女性主义", "父权制", "性别"]
+    },
+    {
+      "id": "rights",
+      "number": "04",
+      "title": "权利",
+      "status": "published",
+      "anchor": "rights",
+      "publishedAt": "2023-11-25",
+      "authors": ["Deborah Cameron"],
+      "translators": ["春埼美空"],
+      "tags": ["女性主义", "人权", "性别"]
+    }
+  ]
+}

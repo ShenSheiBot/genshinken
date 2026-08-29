@@ -1,0 +1,60 @@
+{
+  "id": "what-is-knowledge",
+  "slug": "what-is-knowledge",
+  "title": "知识是什么？",
+  "description": "Duncan Pritchard 的知识论入门，从知识的条件与价值出发，讨论辩护、理性、德性、知觉、证言、记忆、先验知识和归纳问题。",
+  "documentSlug": "what-is-knowledge",
+  "script": "hans",
+  "status": "paused",
+  "authors": ["Duncan Pritchard"],
+  "translators": ["Doubting Thomas", "傲娇少女葛成巧", "阿派"],
+  "proofreaders": ["阿惜", "宙草", "春埼美空", "lian", "Teki"],
+  "publishedAt": "2022-04-19",
+  "updatedAt": "2022-06-17",
+  "latestChapterId": "part-2",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "pritchard2018WhatIsKnowledgeRoofZHBook",
+      "extra": "第四版，Routledge，2018；ISBN 9781138225800。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "part-1-upper",
+      "number": "01",
+      "title": "第一部分（上）：第 1～3 章",
+      "status": "published",
+      "anchor": "part-1-upper",
+      "publishedAt": "2022-04-19",
+      "authors": ["Duncan Pritchard"],
+      "translators": ["Doubting Thomas"],
+      "proofreaders": ["阿惜", "宙草", "春埼美空"],
+      "tags": ["认识论", "知识", "盖梯尔问题"]
+    },
+    {
+      "id": "part-1-lower",
+      "number": "02",
+      "title": "第一部分（下）：第 4～6 章",
+      "status": "published",
+      "anchor": "part-1-lower",
+      "publishedAt": "2022-05-19",
+      "authors": ["Duncan Pritchard"],
+      "translators": ["傲娇少女葛成巧"],
+      "proofreaders": ["lian", "Teki", "宙草"],
+      "tags": ["认识论", "辩护", "德性知识论"]
+    },
+    {
+      "id": "part-2",
+      "number": "03",
+      "title": "第二部分：知识来自于哪里",
+      "status": "published",
+      "anchor": "part-2",
+      "publishedAt": "2022-06-17",
+      "authors": ["Duncan Pritchard"],
+      "translators": ["阿派"],
+      "proofreaders": ["宙草"],
+      "tags": ["认识论", "知觉", "证言", "归纳问题"]
+    }
+  ]
+}

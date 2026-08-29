@@ -37,3 +37,13 @@ test("embedded media is never silently discarded", () => {
   assert.deepEqual(result.ir.media, [{ tag: "mp-common-qqmusic", attrs: { music_name: "Track" }, text: "" }]);
   assert.ok(result.ir.diagnostics.some((item) => item.kind === "media-requires-editor"));
 });
+
+test("adjacent top-level sections remain separate Markdown blocks", () => {
+  const result = convertWechatHtml({ bodyHtml: `
+    <section><span>第一段。</span></section>
+    <section><span>第二段。</span></section>
+    <section><p>第三段。</p><p>第四段。</p></section>
+  ` });
+
+  assert.equal(result.markdown, "第一段。\n\n第二段。\n\n第三段。\n\n第四段。\n");
+});

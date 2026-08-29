@@ -1,0 +1,51 @@
+{
+  "id": "to-be-heroine-international-animators-interview",
+  "slug": "to-be-heroine-international-animators-interview",
+  "title": "国际动画师涌入日本动画——《凸变英雄》制作人员访谈",
+  "description": "kViN 采访参与《凸变英雄 LEAF》的国际网络动画师，讨论他们进入 Studio LAN 的契机、日式动画流程、作画风格、远程协作与职业选择。",
+  "documentSlug": "to-be-heroine-international-animators-interview",
+  "script": "hans",
+  "status": "complete",
+  "authors": ["kViN"],
+  "translators": ["石立太一"],
+  "proofreaders": [],
+  "publishedAt": "2018-12-22",
+  "updatedAt": "2018-12-24",
+  "latestChapterId": "part-2",
+  "citations": {
+    "translation": {
+      "itemType": "book",
+      "citationKey": "kvin2018ToBeHeroineStaffInterviewRoofZHBook",
+      "title": "A New Wave of Worldwide Animators Reaches Anime – To Be Heroine Staff Interview",
+      "date": "2018",
+      "language": "zh-CN",
+      "extra": "kViN发表于 Sakuga Blog；石立太一译。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "part-1",
+      "number": "01",
+      "title": "上篇",
+      "status": "published",
+      "anchor": "part-1",
+      "publishedAt": "2018-12-22",
+      "authors": ["kViN"],
+      "translators": ["石立太一"],
+      "proofreaders": [],
+      "tags": ["凸变英雄", "动画制作", "原画"]
+    },
+    {
+      "id": "part-2",
+      "number": "02",
+      "title": "下篇",
+      "status": "published",
+      "anchor": "part-2",
+      "publishedAt": "2018-12-24",
+      "authors": ["kViN"],
+      "translators": ["石立太一"],
+      "proofreaders": [],
+      "tags": ["凸变英雄", "动画制作", "原画"]
+    }
+  ]
+}

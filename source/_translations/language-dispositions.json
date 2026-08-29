@@ -142,8 +142,9 @@
       "original_language": "ja"
     },
     {
-      "source_type": "post",
-      "source_slug": "opening-black-box-1989-otaku-discourse",
+      "source_type": "book-chapter",
+      "source_book_slug": "debating-otaku-in-contemporary-japan",
+      "source_chapter_id": "opening-black-box-1989-otaku-discourse",
       "locale": "en",
       "state": "external-original",
       "format": "book",
@@ -161,8 +162,9 @@
       ]
     },
     {
-      "source_type": "post",
-      "source_slug": "opening-black-box-1989-otaku-discourse",
+      "source_type": "book-chapter",
+      "source_book_slug": "debating-otaku-in-contemporary-japan",
+      "source_chapter_id": "opening-black-box-1989-otaku-discourse",
       "locale": "ja",
       "state": "not-available",
       "reason": "cross-language-translation",
