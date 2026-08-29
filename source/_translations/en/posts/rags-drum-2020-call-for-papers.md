@@ -5,9 +5,9 @@ source_slug: rags-drum-2020-call-for-papers
 slug: rags-drum-2020-call-for-papers
 language: en
 status: review
-title: "Rags Drum 2020: Lab on Roof’s Annual Call for Submissions"
-title_breaks: ["Rags Drum 2020:", " Lab on Roof’s Annual Call", " for Submissions"]
-excerpt: "Lab on Roof launches Rags Drum 2020, its annual call for criticism and research on anime, comics, and games, and sets out the event’s two-track format, judging, honoraria, and submission rules."
+title: "Rags Drum 2020: Lab on Roof’s Annual Call for Submissions (Closed)"
+title_breaks: ["Rags Drum 2020:", "Lab on Roof’s Annual Call for Submissions", "(Closed)"]
+excerpt: "This archived announcement for Lab on Roof’s closed Rags Drum 2020 call sets out its fields, two-track schedule, judging, honoraria, submission routes, and publication terms."
 credits:
   - role: translator
     contributor_id: shen-shui-bot
@@ -15,88 +15,94 @@ credits:
 translation_method: agent
 source_relationship: direct
 base_language: zh-Hans
-updated: 2026-08-23
-rights: CC BY-NC-SA 4.0
+updated: 2026-08-28
+rights: Original work. Reproduction without authorization is prohibited.
 format: article
 ---
 
-> “The kingdom of poetry has collapsed from within. . . . Salvation is not a premium on existence, but the last way out for a man whose path, as Kafka puts it, is ‘blocked . . . by his own frontal bone.’”
+> **Archive note:** This 2020 call is closed. Its deadlines and submission routes are retained below solely as part of the historical announcement. For the outcome, see the [Rags Drum 2020 final results](/en/posts/rags-drum-2020-final-results).
+
+> “The realm of poetry collapsed from within. . . . Salvation is not a premium on existence, but the last way out for a man whose path, as Kafka puts it, is ‘blocked . . . by his own frontal bone.’”
 >
-> —Walter Benjamin
+> —Walter Benjamin, as quoted in the Chinese announcement
 
-To **encourage the reproduction of more—and better—criticism and research on anime, comics, and games, and to foster exchange among those who undertake such work**, Lab on Roof has decided to **hold an annual call for ACG submissions beginning in 2020**. Its name is **Rags Drum 2020**.
+*Editor’s note: The Chinese announcement does not identify an edition or translator. It joins non-contiguous passages with an ellipsis and prints 前肋 (“front rib”), apparently in error, where the established English passage reads “frontal bone.” The English above otherwise translates the wording as quoted in the announcement rather than reconstructing a single Benjamin passage.*
 
-![The Rags Drum 2020 vertical poster, created by 唯一指定真实August_Rush](attachments/roof-archive/cv6007822/01-rags-drum-2020-vertical-poster.png)
+In 2020, to **foster more—and better—criticism and research on anime, comics, and games (ACG), and bring the people doing that work into conversation**, Lab on Roof announced that it would **hold an annual open call for work on ACG culture**. The first edition was called **Rags Drum 2020**.
+
+[fig] Vertical Rags Drum 2020 poster. Visible Chinese text: “Lab on Roof Annual Call for Submissions”; “Rags Drum 2020”; May 11–October 7, 2020; and the judging panel: 马小掛, 钟子默, 塔塔君, rocefactor, and 屋顶第七任所长. Poster by 唯一指定真实August_Rush.
+
+![Vertical Rags Drum 2020 poster built around an inverted grayscale cityscape and turquoise title lettering; the Chinese text identifies Lab on Roof’s annual call, its May 11–October 7, 2020 run, and its five-member judging panel](attachments/roof-archive/cv6007822/01-rags-drum-2020-vertical-poster.png)
 
 ## Fields and Format Requirements
 
-1. We welcome original critical essays and comparative research on works, creators, histories, industries, and other phenomena in **video games, anime, and comics**—regardless of country and including derivative works—from perspectives such as **philosophy and the social sciences, the humanities and arts, technology and media, and industry and production**. Straight translations and game guides will not be accepted.
+1. The call invited original criticism and comparative research on works, creators, histories, industries, and related phenomena in **video games, animation, and comics**—from any country and including fan-made and other derivative works—from perspectives such as **philosophy and the social sciences, the humanities and arts, technology and media, and industry and production**. Submissions consisting solely of translation or game guides were not accepted.
 
-2. We recommend, but do not require, an academic-paper format including **notes and citations, an abstract, keywords, and a bibliography**. Submissions may take the form of **an article, a video essay, or an audio recording**. Chinese-, English-, and Japanese-language entries are accepted, though **Simplified Chinese is recommended**. Authors must affirm that their submissions are original and have not been, and will not be, used commercially; **quoted materials and ideas must comply with accepted standards of scholarly use**. If plagiarism or misappropriation is discovered before or after judging, the organizers will announce the finding and revoke any honorarium already granted.
+2. An academic format—with **notes and citations, an abstract, keywords, and a bibliography**—was recommended but not required. Submissions could take the form of **written essays, video essays, or audio recordings**. Chinese-, English-, and Japanese-language submissions were accepted, though **Simplified Chinese was recommended**. Authors had to affirm that their work was original and had not been, and would not be, used commercially; **quotations and uses of outside material or ideas had to meet accepted academic standards**. If plagiarism or misappropriation was discovered before or after selection, the organizers would make the circumstances public and withdraw any honorarium already granted.
 
 ## Schedule and Procedures
 
-To give writers greater flexibility and make it easier to take part in this festival, the call is divided into **two** participation tracks.
+To make participation more flexible and allow more critics to join the event, the call offered **two** tracks.
 
-### 1. Entering the “Eve Festival” Only
+### 1. Eve Festival Only
 
-Eligibility: **Previously published** original work that the author has not used commercially—commercial use includes first publication by a commercial outlet in return for payment—and unpublished original work that the author has not used commercially.
+Eligibility: **Previously published** original work by the author that had not been used commercially, as well as **unpublished** original work by the author that had not been used commercially. The announcement gave first publication by a commercial outlet in return for payment as an example of commercial use.
 
-Submission format: Both kinds of work **must be submitted as a complete, full-length manuscript**.
-
-Schedule:
-
-- May 11: submissions to the “Eve Festival” open on the first day of the event.
-- August 1: submissions close for both tracks.
-- August 7: qualifying “Eve Festival” entries are announced, including entries submitted only to the “Eve Festival” and entries continuing through the “Eve Festival” and the “After Festival.” The “Eve Festival” ends and the “After Festival” begins.
-
-Judging:
-
-Entries submitted only to the “Eve Festival” will be forwarded to the judging panel promptly after the organizers receive them.
-
-The panel will determine whether an entry qualifies **by majority vote**, following a policy that **places particular weight on originality, intellectual substance, and critical force**.
-
-Publication and honoraria:
-
-Once the panel has reached a decision on an “Eve Festival”-only entry, the organizers will contact its author as quickly as possible. **Qualifying entries will then be scheduled for prompt publication across Lab on Roof’s accounts on multiple platforms**.
-
-The organizers will pay approximately **RMB 200–300** for each qualifying entry.
-
-### 2. Entering Both the “Eve Festival” and the “After Festival”
-
-Eligibility: **Unpublished** original work that the author has not used commercially.
-
-Submission format: For the **“Eve Festival,” a proposal of 200–500 characters may be submitted**, though a complete manuscript is also welcome. For the “After Festival,” a complete, full-length manuscript is required, and **its subject must remain consistent with the “Eve Festival” proposal. Only writers and submissions that qualify in the “Eve Festival” may enter the “After Festival.”**
+Submission format: Both kinds of work **had to be submitted as a complete text or finished work**.
 
 Schedule:
 
-- May 11: submissions to the “Eve Festival” and “After Festival” track open on the first day of the event.
-- August 1: submissions close for both tracks.
-- August 7: all qualifying “Eve Festival” entries are announced, including entries submitted only to the “Eve Festival” and entries continuing through both stages. The “Eve Festival” ends, and **the “After Festival” opens for submissions**.
-- October 7: submissions to the “After Festival”—the second half of this two-stage track—close.
-- Late October: all qualifying “After Festival” entries are announced. The “After Festival” and the event as a whole conclude.
+- May 11, 2020: submissions to the Eve Festival opened with the launch of the event.
+- August 1, 2020: submissions closed for both tracks.
+- August 7, 2020: qualifying Eve Festival works were to be announced, including entries submitted only to the Eve Festival and entries continuing through both the Eve Festival and After Festival. The Eve Festival would end and the After Festival would begin.
 
 Judging:
 
-Entries in the two-stage “Eve Festival” and “After Festival” track will be forwarded to the judging panel promptly after the organizers receive them.
+The organizers would forward Eve Festival–only submissions to the judging panel promptly after receiving them.
 
-The panel will determine whether an entry qualifies **by unanimous vote**, following a policy that **places particular weight on originality, intellectual substance, and critical force**.
+The panel would determine whether a submission qualified **by majority vote**, following a policy that **prioritized originality, intellectual substance, and critical force**.
 
 Publication and honoraria:
 
-Qualifying entries in the two-stage track will be announced on **August 7 and October 7**, in accordance with the panel’s decisions. They will then be scheduled for prompt publication across Lab on Roof’s accounts on multiple platforms.
+Once the panel had reached a decision on an Eve Festival–only entry, the organizers would contact its author as soon as possible. **Qualifying works would then be scheduled promptly for publication across Lab on Roof’s accounts on different platforms**.
 
-If **five or more** entries qualify, the organizers will divide **RMB 10,000 by the number of qualifying entries** and pay that amount for each. If **zero to four** entries qualify, the organizers will pay **RMB 2,000 per qualifying entry**.
+The organizers would pay each qualifying work an honorarium of approximately **RMB 200–300**.
 
-Submission methods for both tracks—choose either:
+### 2. Eve Festival + After Festival
 
-1. Email the entry to **lab_on_roof@163.com**, including a QQ contact.
+Eligibility: **Unpublished** original work by the author that had not been used commercially.
 
-2. Join the event QQ group, upload the entry to the group files, and notify the organizers: **254735319**.
+Submission format: At the **Eve Festival stage, entrants could submit a 200–500-character synopsis**, though a complete text or finished work was also welcome. The announcement does not say how this character count would apply to an English- or Japanese-language submission. At the After Festival stage, a complete text or finished work was required, and **its subject had to remain consistent with the Eve Festival entry. Only authors and submissions that qualified at the Eve Festival stage could enter the After Festival.**
 
-If exceptional circumstances make both methods impossible, contact Lab on Roof through its Zhihu or Bilibili account to make alternative arrangements.
+Schedule:
 
-## Judging Panel
+- May 11, 2020: submissions to the Eve Festival + After Festival track opened with the launch of the event.
+- August 1, 2020: submissions closed for both tracks.
+- August 7, 2020: all qualifying Eve Festival works were to be announced, including entries submitted only to the Eve Festival and entries continuing through both stages. The Eve Festival would end, and **the After Festival would open for submissions**.
+- October 7, 2020: entries closed for the After Festival, the second half of the combined track.
+- Second half of October 2020: qualifying After Festival works were to be announced together. The After Festival would end, concluding the event.
+
+Judging:
+
+The organizers would forward submissions in the combined track to the judging panel promptly after receiving them.
+
+The panel would determine whether a submission qualified **by unanimous vote**, following a policy that **prioritized originality, intellectual substance, and critical force**.
+
+Publication and honoraria:
+
+The announcement says qualifying works in the combined Eve Festival + After Festival track were to be announced in batches on **August 7 and October 7**, then published promptly across Lab on Roof’s accounts on different platforms. That conflicts with the schedule above, which makes October 7 the After Festival submission deadline and places the results announcement in the second half of October; the source does not resolve the discrepancy.
+
+If **five or more** submissions qualified in the combined track, each qualifying work would receive **RMB 10,000 divided by the number of qualifying works**. If **zero to four** works qualified, each qualifying work would receive **RMB 2,000**.
+
+The announcement offered either of the following submission routes for both tracks:
+
+1. Email the submission, together with QQ contact details, to **lab_on_roof@163.com**.
+
+2. Join the event QQ group, upload the submission to the group files, and notify the organizers: **254735319**.
+
+If exceptional circumstances made both methods impossible, entrants could contact Lab on Roof privately through its Zhihu or Bilibili account to discuss an alternative.
+
+## Jury
 
 - **马小掛**, ACG enthusiast.
 - **钟子默**, ACG enthusiast.
@@ -106,14 +112,16 @@ If exceptional circumstances make both methods impossible, contact Lab on Roof t
 
 ## Additional Provisions
 
-1. For qualifying entries submitted only to the “Eve Festival,” Lab on Roof requires only permission to **publish them nonexclusively and without any claim to first publication** across its accounts on multiple platforms; for qualifying entries submitted to both the “Eve Festival” and “After Festival,” Lab on Roof requires only permission to **publish them first, but nonexclusively**, across those accounts. **All rights not specified here remain with the author.**
+1. For a qualifying Eve Festival–only entry, Lab on Roof required only permission to **publish it nonexclusively, without requiring first publication**, across its accounts on different platforms. For a qualifying entry in the combined Eve Festival + After Festival track, Lab on Roof required only permission to **publish it first, but nonexclusively**, across those accounts. **All rights not specified here remained with the author.**
 
-2. To encourage the reproduction of more—and better—criticism and research on anime, comics, and games, **Lab on Roof may adapt qualifying entries into video essays or other formats**. It will notify the author and obtain permission before doing so, and the author’s rights will be protected in any resulting video essay.
+2. To foster more—and better—criticism and research on anime, comics, and games, **Lab on Roof might adapt qualifying submissions into video essays or other formats**. Before doing so, it would inform the author and obtain their consent; the author’s rights would be protected in any resulting video essay.
 
-3. We thank **唯一指定真实August_Rush** for creating the event posters and promotional video, and we thank the critics, organizations, and platforms that have offered kind advice and sincere assistance.
+3. The organizers thanked **唯一指定真实August_Rush** for creating the event posters and promotional video, along with the critics, groups, and platforms that had offered thoughtful advice and sincere assistance.
 
-4. Given our limited experience in organizing such events, the organizers reserve the right, to the fullest extent permitted by law and platform rules, to interpret and revise the event’s procedures and schedule. We ask writers and readers for their understanding.
+4. Given their limited organizing experience, the organizers reserved the right, within the limits of law and platform rules, to interpret and amend the event’s procedures and schedule. They asked critics and readers for their understanding.
 
-5. Readers and critics are warmly invited to **share and circulate this announcement, join the discussion, and submit work**.
+5. At the time, readers and critics were invited to **share and circulate the announcement, join the discussion, and submit their work**.
 
-![The Rags Drum 2020 horizontal poster, created by 唯一指定真实August_Rush](attachments/roof-archive/cv6007822/02-rags-drum-2020-horizontal-poster.png)
+[fig] Horizontal Rags Drum 2020 poster. Visible Chinese text: “Lab on Roof Annual Call for Submissions”; “Rags Drum 2020”; and May 11–October 7, 2020. Poster by 唯一指定真实August_Rush.
+
+![Horizontal Rags Drum 2020 poster built around an inverted grayscale cityscape and turquoise title lettering; the Chinese text identifies Lab on Roof’s annual call and its May 11–October 7, 2020 run](attachments/roof-archive/cv6007822/02-rags-drum-2020-horizontal-poster.png)

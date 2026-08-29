@@ -75,8 +75,8 @@
     "source/_translations/ja/posts/work-emotion-robots.md",
     "source/_translations/language-dispositions.json"
   ],
-  "corpusSha256": "a830c4aeec0694fe30ee02d1c471417210afa8be53008485b21585b41d3024be",
-  "fallbackCodePointCount": 134,
+  "corpusSha256": "d133f4970b91c220d205b3ca4548cf150e85d2d4ccb074349b9911525988fedd",
+  "fallbackCodePointCount": 114,
   "fonts": {
     "Roof EB Garamond Fallback": {
       "bytes": 5100,
@@ -107,12 +107,12 @@
       "weight": "400"
     },
     "Roof Noto Sans JP": {
-      "bytes": 903624,
-      "codePointCount": 2973,
+      "bytes": 903944,
+      "codePointCount": 2963,
       "family": "Roof Noto Sans JP",
       "file": "roof-noto-sans-jp.woff2",
       "kind": "primary-sans",
-      "sha256": "c13cdab1a5ba31fb58e2f020eca2081d4e756d3b3912f008a6c480d5cc4ca4f2",
+      "sha256": "2335e0a6f4eef164d391e5b7d8bfefb1377d5e7bf1ced108fbbfb37082e48d72",
       "source": "NotoSansJP.ttf",
       "sourceSha256": "c2f3b4d463500a2ddcd3849cded1fceeb9fd6d1c32e6cbecd568453ba50fc68f",
       "sourceUrl": "https://raw.githubusercontent.com/google/fonts/e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7/ofl/notosansjp/NotoSansJP%5Bwght%5D.ttf",
@@ -134,26 +134,26 @@
       "weight": "400"
     },
     "Roof Noto Sans SC Fallback": {
-      "bytes": 41724,
-      "codePointCount": 128,
+      "bytes": 36240,
+      "codePointCount": 108,
       "family": "Roof Noto Sans SC Fallback",
       "file": "roof-noto-sans-sc-fallback.woff2",
       "kind": "fallback-sans",
-      "sha256": "14f4b25af3874636088a843bcf1f116ffd370519b138ed6cc27b7cbf7285e0d1",
+      "sha256": "fa8901da34f681057af6ca330c7bcefa0a86095f7e41b2a4958180509cc76c9f",
       "source": "NotoSansSC.ttf",
       "sourceSha256": "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da",
       "sourceUrl": "https://raw.githubusercontent.com/google/fonts/e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7/ofl/notosanssc/NotoSansSC%5Bwght%5D.ttf",
-      "unicodeRange": "U+4E1A U+4E1C-4E1D U+4E3A U+4E49 U+4E66 U+4E9A U+4F26 U+517D U+519B-519C U+521B U+5267 U+52A1 U+52A8 U+534E U+5458 U+55B5 U+56E2 U+56FE U+5706 U+575B U+5987 U+5B9E U+5BAB U+5BF9 U+5E05 U+5E08 U+5E86 U+5F20 U+6000-6001 U+61D2 U+620F U+6218 U+62A5 U+62DF U+62E5 U+62E8-62E9 U+6362 U+6444 U+65F6 U+6682 U+672F U+6742 U+67AB U+67E0 U+6811 U+6837 U+6A2F U+6C47 U+6C49 U+6CFD U+7231 U+73AF-73B0 U+743C U+7535 U+7801 U+7EA0 U+7EA2 U+7EA7 U+7EAA U+7EAF U+7EB3 U+7EB9 U+7EBE U+7ED3 U+7EF4 U+7EFC U+7F16 U+8054 U+827A U+83B9 U+84DD U+8651 U+89C2 U+89C6 U+89C8 U+8BA4 U+8BB0 U+8BB2 U+8BB8-8BBA U+8BC1 U+8BC6 U+8BD1 U+8BD5 U+8BDA U+8BDD U+8BE6 U+8BED U+8BEF U+8BF4 U+8BFB U+8C01 U+8C0B U+8C14 U+8D3A U+8D44 U+8D5E U+8DB4 U+8F83 U+8F89 U+8F91 U+8FA9 U+8FD9 U+8FDC U+9009 U+903B U+9171 U+949F U+94B1 U+95EE U+95F4 U+9635 U+9646 U+97E9 U+9876 U+9884 U+9898 U+9986 U+9E20-9E21 U+9E23 U+9E2D",
+      "unicodeRange": "U+4E1A U+4E1D U+4E3A U+4E49 U+4E66 U+4F26 U+517D U+519B-519C U+521B U+5267 U+52A8 U+53D8 U+5458 U+56E2 U+575E U+5B9E U+5BA1 U+5BAB U+5BF9 U+5C4C U+5E05 U+5F20 U+6000-6001 U+61D2 U+620F U+6237 U+62A5 U+62DF U+62E5 U+62E8-62E9 U+65F6 U+6682 U+672F U+67E0 U+6811 U+6837 U+6A2F U+6C47 U+6CFD U+73B0 U+7535 U+7801 U+7EA0 U+7EA2 U+7EA7 U+7EAA U+7EB3 U+7EB9 U+7EBE U+7ED3 U+7ED8 U+7EDF U+7EF4 U+7EFC U+8054 U+827A U+83B9 U+84DD U+8651 U+88AD U+89C2 U+89C6 U+89C8 U+8BA4 U+8BB0 U+8BB8-8BBA U+8BC1 U+8BD1 U+8BD5 U+8BDD U+8BE6 U+8BED U+8BEF U+8BF4 U+8BFB U+8C01 U+8C0B U+8C14 U+8D3A U+8D44 U+8DB4 U+8F83 U+8F89 U+8F91 U+8FA9 U+8FD9 U+8FDB-8FDC U+9009 U+903B U+9171 U+949F U+95EE U+95F4 U+96CF U+97E9 U+9876 U+9884 U+9898 U+9E20-9E21 U+9E23 U+9E64",
       "variable": "--font-roof-noto-sans-sc-fallback",
       "weight": "100 900"
     },
     "Roof Noto Serif JP": {
-      "bytes": 1253408,
-      "codePointCount": 2973,
+      "bytes": 1252984,
+      "codePointCount": 2963,
       "family": "Roof Noto Serif JP",
       "file": "roof-noto-serif-jp.woff2",
       "kind": "primary-serif",
-      "sha256": "ea6ad7a18706466e7fb44bc28fa43fd9071329bc8d587c81ea21387ec62ecd96",
+      "sha256": "1158f8907665a03368364e60fadbb2886557f4ac6af69288b919b646dcc46291",
       "source": "NotoSerifJP.ttf",
       "sourceSha256": "2fd527ba12b6a44ec30d796d633360da0aeba6c5d4af1304ce12bb4dc15a7dfc",
       "sourceUrl": "https://raw.githubusercontent.com/google/fonts/e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7/ofl/notoserifjp/NotoSerifJP%5Bwght%5D.ttf",
@@ -161,16 +161,16 @@
       "weight": "200 900"
     },
     "Roof Noto Serif SC Fallback": {
-      "bytes": 52540,
-      "codePointCount": 128,
+      "bytes": 45628,
+      "codePointCount": 108,
       "family": "Roof Noto Serif SC Fallback",
       "file": "roof-noto-serif-sc-fallback.woff2",
       "kind": "fallback-serif",
-      "sha256": "869ff2f854f414b166140ab42251138f629b952fc822f5ee5bac94ed80c8f3ae",
+      "sha256": "02b41425619f0d7af16287301533769bc907fe45e3d25105712fe4b21046a276",
       "source": "NotoSerifSC.ttf",
       "sourceSha256": "050080d9255a86808f2945bffac582b31ef32bc36411ce29563b4961670c66f9",
       "sourceUrl": "https://raw.githubusercontent.com/google/fonts/e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7/ofl/notoserifsc/NotoSerifSC%5Bwght%5D.ttf",
-      "unicodeRange": "U+4E1A U+4E1C-4E1D U+4E3A U+4E49 U+4E66 U+4E9A U+4F26 U+517D U+519B-519C U+521B U+5267 U+52A1 U+52A8 U+534E U+5458 U+55B5 U+56E2 U+56FE U+5706 U+575B U+5987 U+5B9E U+5BAB U+5BF9 U+5E05 U+5E08 U+5E86 U+5F20 U+6000-6001 U+61D2 U+620F U+6218 U+62A5 U+62DF U+62E5 U+62E8-62E9 U+6362 U+6444 U+65F6 U+6682 U+672F U+6742 U+67AB U+67E0 U+6811 U+6837 U+6A2F U+6C47 U+6C49 U+6CFD U+7231 U+73AF-73B0 U+743C U+7535 U+7801 U+7EA0 U+7EA2 U+7EA7 U+7EAA U+7EAF U+7EB3 U+7EB9 U+7EBE U+7ED3 U+7EF4 U+7EFC U+7F16 U+8054 U+827A U+83B9 U+84DD U+8651 U+89C2 U+89C6 U+89C8 U+8BA4 U+8BB0 U+8BB2 U+8BB8-8BBA U+8BC1 U+8BC6 U+8BD1 U+8BD5 U+8BDA U+8BDD U+8BE6 U+8BED U+8BEF U+8BF4 U+8BFB U+8C01 U+8C0B U+8C14 U+8D3A U+8D44 U+8D5E U+8DB4 U+8F83 U+8F89 U+8F91 U+8FA9 U+8FD9 U+8FDC U+9009 U+903B U+9171 U+949F U+94B1 U+95EE U+95F4 U+9635 U+9646 U+97E9 U+9876 U+9884 U+9898 U+9986 U+9E20-9E21 U+9E23 U+9E2D",
+      "unicodeRange": "U+4E1A U+4E1D U+4E3A U+4E49 U+4E66 U+4F26 U+517D U+519B-519C U+521B U+5267 U+52A8 U+53D8 U+5458 U+56E2 U+575E U+5B9E U+5BA1 U+5BAB U+5BF9 U+5C4C U+5E05 U+5F20 U+6000-6001 U+61D2 U+620F U+6237 U+62A5 U+62DF U+62E5 U+62E8-62E9 U+65F6 U+6682 U+672F U+67E0 U+6811 U+6837 U+6A2F U+6C47 U+6CFD U+73B0 U+7535 U+7801 U+7EA0 U+7EA2 U+7EA7 U+7EAA U+7EB3 U+7EB9 U+7EBE U+7ED3 U+7ED8 U+7EDF U+7EF4 U+7EFC U+8054 U+827A U+83B9 U+84DD U+8651 U+88AD U+89C2 U+89C6 U+89C8 U+8BA4 U+8BB0 U+8BB8-8BBA U+8BC1 U+8BD1 U+8BD5 U+8BDD U+8BE6 U+8BED U+8BEF U+8BF4 U+8BFB U+8C01 U+8C0B U+8C14 U+8D3A U+8D44 U+8DB4 U+8F83 U+8F89 U+8F91 U+8FA9 U+8FD9 U+8FDB-8FDC U+9009 U+903B U+9171 U+949F U+95EE U+95F4 U+96CF U+97E9 U+9876 U+9884 U+9898 U+9E20-9E21 U+9E23 U+9E64",
       "variable": "--font-roof-noto-serif-sc-fallback",
       "weight": "200 900"
     }
@@ -212,9 +212,9 @@
     }
   },
   "strategy": "japanese-translation-corpus-variable-fonts-with-generated-script-and-symbol-fallbacks",
-  "subsetCodePointCount": 2973,
-  "targetCodePointCount": 2876,
-  "targetCodePointSha256": "b060c1387a2eea27addb6828728ba62e635e599bb121b812fb3d33b2c290b911",
+  "subsetCodePointCount": 2963,
+  "targetCodePointCount": 2852,
+  "targetCodePointSha256": "8ea1d439ad7c6b4f4f0ae37858c1c9ddc88ad6e6f7049dfb5dcf56180d70d9f1",
   "toolchainSha256": "b192f1da4344abea6d8568a33b15e3ecfb6d9f8242b22257639c7cf28d4424c3",
   "uncoveredCodePointRanges": [],
   "upstreamCommit": "e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7",

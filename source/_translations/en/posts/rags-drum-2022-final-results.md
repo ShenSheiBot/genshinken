@@ -5,9 +5,9 @@ source_slug: rags-drum-2022-final-results
 slug: rags-drum-2022-final-results
 language: en
 status: review
-title: "Changing Trains with Fate: Rags Drum 2022 Annual Selection Results"
-title_breaks: ["Changing Trains with Fate:", " Rags Drum 2022", " Annual Selection Results"]
-excerpt: "The Lab on Roof Rags Drum Committee announces the final Rags Drum 2022 results and its five prizewinning works, explains the judging and awards, and names an online dōjin magazine as the successor to the annual call for submissions."
+title: "Fate Has Us Changing Trains: Final Results of the Rags Drum 2022 Essay Contest"
+title_breaks: ["Fate Has Us Changing Trains:", "Final Results of the", "Rags Drum 2022 Essay Contest"]
+excerpt: "The Lab on Roof Rags Drum Organizing Committee announces five selected essays, explains the judging and honoraria, and reveals that a regular online dōjin magazine will succeed the annual contest."
 credits:
   - role: translator
     contributor_id: shen-shui-bot
@@ -20,53 +20,55 @@ rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-[fig] Illustration: 初鹿野凪.
+[fig] Artwork by 初鹿野凪.
 
-![Results poster for the Rags Drum 2022 annual call for submissions](/attachments/roof-archive/cv19384728/24911bebfb2840a3a46ccc940b43008238b56a8b.jpg)
+![Chinese-language Rags Drum 2022 results poster: an astronaut beneath star trails stands above a red torii gate beside the event title 拾荒战略 (“Rags Drum”)](/attachments/roof-archive/cv19384728/24911bebfb2840a3a46ccc940b43008238b56a8b.jpg)
 
 ## About Rags Drum
 
-> Once works of art were no longer made for certain people or reserved for the enjoyment of a select few, as happened after the French Revolution, new forms of aesthetic experience became open to every member of the community. Every individual was promised aesthetic equality—each and every person, without exception. … The hierarchy among a work’s subject, form, material, and interpreters was leveled, and the consequences of this aesthetic revolution were therefore shattering. … Even when we offer a critique, armed with elegant theories, all too often we soon find ourselves exchanging glances with the enemy and joining them for a picnic. Should we not mark out a new space in which those who are not yet deemed qualified to criticize—the ordinary “Zhangs and Lis”—can be given room to show what they can do?
+> Once art ceased to be made for particular patrons or reserved for a privileged few, as it did after the French Revolution, new forms of aesthetic experience became available to everyone in the community. Each person was promised aesthetic equality—each and every one, without exception. … A work’s subject matter, form, materials, and interpreters were all placed on the same plane, with shattering consequences. … Yet even when we arm ourselves with elegant theories, we often end up winking at the enemy and joining their picnic. Should we not make room for those who are not yet considered qualified to criticize—for ordinary people, for any old Zhang or Li—to show what they can do?
 >
 > —Lu Xinghua, *A Study of Rancière’s Aesthetic Thought*
 
-The Lab on Roof Rags Drum Committee has decided to announce the selection results for the second call for submissions on ACG criticism, Rags Drum 2022.
+The Lab on Roof Rags Drum Organizing Committee is pleased to announce the results of Rags Drum 2022, our second contest for writing about anime, comics, and games.
 
 ## Selection Results
 
-Following a submission period of three plus two months and more than half a month of judging, the Lab on Roof Rags Drum Committee announces that the Eve Festival, applying the principles of completeness and a simple majority of the jury, produced three prizewinning works; the After Festival, applying the principle of an absolute majority of the jury, produced two prizewinning works.
+Submissions were open for an initial three months, followed by a two-month extension. The jury then spent more than two weeks reaching its decision.
 
-### Passed the Eve Festival but Not the After Festival
+The contest called its first round the “Eve Festival” and its final round the “After Festival.” The jury selected three entries in the first round on the basis of completeness and a simple-majority vote, then selected two in the final round by an absolute-majority vote.
 
-The works that passed the Eve Festival but not the After Festival—including works entered only in the Eve Festival—are:
+### First-Round Selections (“Eve Festival”)
 
-- 河豚, [*Perception Everywhere: Experiences and Research on How 2D Animation Handles Eyebrows, Eyes, and Hair*](/en/posts/animation-eyebrow-hair-perception-video) (BV16a411D7PA)
-- Colisa, *Transforming into a Magical Girl in a Side Story* (《变身，成为外传的魔法少女》)
-- 「　」, [*Modernity Not Overcome: The Absent Origin and Subjectivity—Letter Mysticism and Science*](/en/posts/modernity-not-overcome-writing-mysticism-science) (「近代の非超克　欠席した起源と主体性—文字神秘主義と科学」)
+The following entries were selected in the first round but not the final round. This list also includes pieces entered only in the first round:
 
-### Passed Both the Eve Festival and After Festival
+- 河豚, [*Perception Everywhere: Experiences and Research on How 2D Animation Handles Eyebrows, Eyes, and Hair*](/en/posts/animation-eyebrow-hair-perception-video) (video ID: BV16a411D7PA)
+- Colisa, *Transform: Becoming a Magical Girl in a Side Story* (《变身，成为外传的魔法少女》)
+- 「　」 (a blank pen name), [*Modernity Not Overcome: The Absent Origin and Subjectivity—Mysticism of the Written Word and Science*](/en/posts/modernity-not-overcome-writing-mysticism-science) (「近代の非超克　欠席した起源と主体性—文字神秘主義と科学」)
 
-The works that passed both the Eve Festival and After Festival are:
+### Final-Round Selections (“After Festival”)
 
-- 一条, [*The Art of Animation Direction: Rediscovering Takashi Anno and Naohito Takahashi*](/en/posts/performativity-of-animation-anno-takahashi) (《动画的演出性：安浓高志与高桥直人的再发现》)
-- Sairai, [*A Quantitative Analysis of the Relationship Between Hair Color and Personality in Japanese Animation*](/en/posts/anime-hair-color-personality-quantitative-analysis) (《日本动画发色与性格关联之量化分析》)
+The following works were selected in both rounds:
 
-Congratulations to these authors! Under the previously announced rules, Eve Festival works will receive an honorarium of RMB 300 and After Festival works an honorarium of RMB 2,000.
+- 一条, [*The Performativity of Animation: Rediscovering Takashi Annō and Naohito Takahashi*](/en/posts/performativity-of-animation-anno-takahashi) (《动画的演出性：安浓高志与高桥直人的再发现》)
+- Sairai, [*A Quantitative Analysis of the Correlation Between Hair Color and Personality in Japanese Anime*](/en/posts/anime-hair-color-personality-quantitative-analysis) (《日本动画发色与性格关联之量化分析》)
 
-The committee will inform the authors of prizewinning works and publish those works after obtaining their consent. For works that did not win a prize, all rights revert to their authors, who may dispose of the works entirely as they choose. Whatever the result, we sincerely thank every author who submitted work to this event.
+Congratulations to all five authors! Under the rules announced earlier, the honorarium for an “Eve Festival” selection was RMB 300; for an “After Festival” selection, it was RMB 2,000.
+
+The committee will contact the five selected authors and publish their work only with their consent. Authors whose entries were not selected retain full control over the rights to their work and may do with it as they wish. Whatever the result, we sincerely thank everyone who submitted an essay.
 
 ## Acknowledgments
 
-We thank the jury members for volunteering their labor. They are: …
+We thank the jury members who volunteered their time and labor. In the original announcement, the list reads simply: “They are: …”
 
-**A group of enthusiasts intellectually and aesthetically equal to their audience—no academic authorities, no “places” reserved for scene celebrities!**
+**They are a group of fans, the intellectual and aesthetic equals of their audience—no academic authorities, and no “seats” reserved for the scene’s big names!**
 
-We thank **初鹿野凪** for artistic promotional support, including the event posters, and thank the critics, groups, and platforms that offered friendly advice and sincere assistance. The Lab on Roof Rags Drum Committee will present the jury and other contributors with Dangdang book cards worth RMB 50 as a token of appreciation.
+We thank **初鹿野凪** for the event artwork, the poster design, and their promotional support. We are also grateful to the critics, groups, and platforms that offered advice and practical help. As a small token of our appreciation, the Lab on Roof Rags Drum Organizing Committee will give the jury and other contributors RMB 50 Dangdang gift cards.
 
-While organizing this event, the Lab on Roof Rags Drum Committee accumulated further experience and lessons. We have concluded that the annual call for submissions, in its present form, no longer suits the needs of today’s readers and critics. This year’s annual call will be the **last for the foreseeable future**. In its place, we will work toward a regularly published **“online dōjin magazine.”** Details will be announced shortly, and we hope everyone will follow and support the project when the time comes.
+Running the contest taught us a great deal, including that an annual call for submissions in its present form no longer serves today’s readers and critics as well as it should. This will therefore be the **last Rags Drum contest for the foreseeable future**. In its place, we plan to launch an **online dōjin magazine published at regular intervals**. We will share the details soon, and we hope you will join us for what comes next.
 
-Changing trains with fate—may we meet again in the future.
+Fate has us changing trains. We hope our paths cross again.
 
-Lab on Roof Rags Drum Committee
+Lab on Roof Rags Drum Organizing Committee
 
 October 28, 2022

@@ -12,137 +12,185 @@ credits:
   - role: translator
     contributor_id: shen-shui-bot
     scope: complete work
+  - role: reviewer
+    contributor_id: shen-shui-bot
+    scope: complete work
 translation_method: agent
 source_relationship: mixed
 base_language: zh-Hans
-updated: 2026-08-22
+updated: 2026-08-28
 rights: CC BY-NC-SA 4.0
 format: article
 ---
 
+[fig] Original cover design by @拥抱月亮的太阳; English title treatment prepared for this edition.
+
+![English article banner reading “The Song of a Proud Wanderer: A Brief Look at Persona 5's Cultural Background”](attachments/roof-archive/cv1550227/translations/en/11-article-title-banner.png)
+
+> **A note on quotations, translation, and names:** The 2018 Chinese source reached many Japanese interviews and game lines through the fan translations listed in [Sources and acknowledgments](#sources-and-acknowledgments). This edition restores linked public-domain English texts where they can be securely identified and otherwise translates or paraphrases the Chinese wording; unlinked quotations should not be read as transcripts of a licensed English edition. The visible dialogue in the English-language game captures is reproduced exactly only when the prose explicitly says so. *Persona 5* leaves its protagonist unnamed: this essay generally calls him Joker, while retaining “Akira,” the manga-era name used by the Chinese source, when discussing its quoted dialogue.
+
 ## We Don't Need Interpretation; We Need an Erotics of Art
 
-Work that explores the relationship between *Persona*—and even *Shin Megami Tensei* as a whole—and analytical psychology can undoubtedly help us understand the foundations on which Atlus builds its worlds. It should never be dismissed as useless. Yet whenever I read this kind of interpretation, something feels strange. What do we mean by interpretation? Quoting the definitions of “persona” and “shadow” from *Psychological Types*? Explaining the “collective unconscious” with language originally meant to sort out relations between poetry and psychology? Have we gone astray? Are we still capable of returning to the starting point of interpretation? Extracting bits of knowledge, analyzing concepts one by one, patiently cataloguing the basic premises of a story—is there a task more primitive and more essential than these? I am in no position to decide whether other interpreters have set off in precisely the wrong direction, so I offer this clumsy essay only as an experiment: an attempt to revive the kind of awe Mr. Moretti speaks of. I hope interpretation of excellent works will stop being satisfied with the smug pleasure of spotting one or two minor references. I do not mean to claim that my own article stands above others. I sincerely hope that minds far more capable than mine will refuse to be confined to a single road. To borrow that old admonition almost literally: if all we can see is the splinter, where will we ever find the beam?
+The heading adapts Susan Sontag's closing demand in “Against Interpretation” for an “erotics of art.” Work on the relationship between *Persona*—or *Shin Megami Tensei* more broadly—and analytical psychology undoubtedly helps us understand the foundations on which Atlus builds its worlds. Yet interpretation can become a checklist: define “persona” and “shadow” from Jung's *Psychological Types*, explain the collective unconscious, then catalogue the setting's premises. This essay tries something more historical and comparative. It asks what kind of rebel *Persona 5* inherits from the picaresque novel, what kind of hero it makes from that rogue, and why that transformation matters in a story about modern social resignation. The point is not to display isolated references but to make them answer one another. In the language of Matthew 7:3–5, identifying the splinter is not enough if we never see the beam.
+
+[fig] Joker and Arsène in *Persona 5*'s red-and-black key art. Arsène, the gentleman thief, makes the game's picaresque ambition visible from the outset.
 
 ![The protagonist of *Persona 5* and his Persona Arsène in the game's red-and-black key art](attachments/roof-archive/cv1550227/01-persona-5-key-art.jpg)
 
-<strong>“suil, suil, suil arun, suil go siocair agus suil go cuin”</strong>—just as the person singing these lines can hardly avoid looking like a drunk wandering away from home, the Phantom Thieves, fixed addresses notwithstanding, often drift helplessly aboard Schopenhauer's boat. After all, the game once wanted to tell of a wanderer's great undertaking. Turn the Muse's story of Homer's man—Odysseus—inside out: the home-seeker arrives instead on a distant battlefield whipped by storm, where he joins foreign friends in resisting the gods' control over mortals. It is just as Tennyson wrote: “Some work of noble note, may yet be done, / Not unbecoming men that strove with Gods.” Like the epic of Odysseus, what the characters of *Persona 5* seek is true freedom from the confinement of the flesh and the manipulation of fate.
+The title's “proud wanderer” is not another official name for Joker. It gathers the essay's wandering figures—the pícaro, Odysseus, Arsène Lupin, and Marlowe's overreachers—into one image: a person displaced from home who refuses to submit. The argument will be that *Persona 5* turns that proud, unruly figure away from the pícaro's self-advancement and toward an outlaw heroism exercised on behalf of others.
 
-Katsura Hashino, producer of the series since *Persona 3*, said in a Famitsu interview (see the September 2015 issue) that the inner otherworld called the “Palace” this time contains the power of the “picaresque hero,” a kind of hero people long for but cannot find in the real world. In the same vein, he stated again on Toco Toco TV: “I wanted to give the game the feeling of a picaresque novel.”
+<strong>“Siúil, siúil, siúil a rún, / Siúil go socair agus siúil go ciúin”</strong>: “Walk, walk, walk, my love; walk softly and walk quietly.” These lines come from the refrain of the traditional Irish song [“Siúil a Rúin”](https://www.joeheaney.org/ga/siuil-a-ruin/), whose many variants concern departure, wandering, and a lover gone abroad. That makes the refrain a fitting threshold for the Phantom Thieves: although they have literal homes, each has been denied a secure place in school, family, or society.
 
-[fig] The Toco Toco interview with Katsura Hashino.
+The Odyssean comparison is deliberately inverted. Odysseus fights to return from a foreign war to Ithaca; Joker is sent away from home to Tokyo, finds companions there, and only returns after challenging forces that claim divine authority over human choice. Tennyson's later [“Ulysses”](https://rpo.library.utoronto.ca/content/ulysses) supplies the mood of defiant striving: “Some work of noble note, may yet be done, / Not unbecoming men that strove with Gods.” The essay's broader language of confinement refers not only to bodies but to the chains, prisons, and predetermined social roles that the game repeatedly makes visible. What the characters seek is freedom from those constraints and from a fate defined by others.
 
-![Katsura Hashino looking down over the city during an interview](attachments/roof-archive/cv1550227/translations/en/02-hashino-interview-city.png)
+Katsura Hashino, producer of the series since *Persona 3*, said in a *Famitsu* interview (the September 2015 issue, reached by the source through the relay listed below) that the Palace embodies the power of the “picaresque hero,” a kind of hero people long for but cannot find in the real world. In a later Toco Toco feature, he again said that he wanted the game to feel like a picaresque novel; *Famitsu*'s [introduction to that feature](https://www.famitsu.com/news/201703/01128081.html) identifies its focus on the real Tokyo districts behind the game. A separate [2016 *Famitsu* interview](https://www.famitsu.com/news/201606/17108604.html) describes the aim as a *picaresque romance*: the player should experience the thrill and catharsis of becoming an outlaw. At this first level, then, “picaresque” is the developers' tonal label for criminal adventure and urban rebellion.
 
-A little investigation into the word and the works associated with it turns up the usual account: *picaresque* is generally said to derive from the Spanish *picarón*, roughly meaning a rogue, hoodlum, or scoundrel, with a still earlier ancestry sometimes traced to the Vulgar Latin adjective *piccare*. In a broad sense, stories of wanderers that rebel against the conventions of chivalric romance, such as *Don Quixote*, can be placed near this tradition; *Lazarillo de Tormes* is usually treated as the genre's beginning in the stricter sense. It was followed by works such as *Guzmán de Alfarache*, even less constrained by prevailing ethics, while the device in Guevara's and Lesage's versions of *The Limping Devil*—climbing to the top of a church spire and looking down upon the ugliness of the whole city—will feel at least somewhat familiar to anyone who has gone through this game's adventure. **Hashino has also described in interviews the importance he places on the act of “looking down over” a city: thinking in a restaurant on the top floor of a high-rise let him see both Tokyo and his own self hurrying through it.** In the game, the end of one day and the arrival of another repeatedly appear against bird's-eye views of Tokyo. As players move deeper into the incident, they see that “man is a wolf to man” and come to understand that “when people crowd together and become a mass, the beasts and demons that have always lain hidden and asleep within each person are released.”
+[fig] In the Toco Toco interview, Hashino says that looking down over the city also lets him see himself working within it. The English subtitle translates the Chinese relay from which the archival still was recovered; the retained VGTime mark identifies that relay.
+
+![Katsura Hashino looking down over the city as the English subtitle reads, “I can look down over the city, and also see myself working down there”](attachments/roof-archive/cv1550227/translations/en/02-hashino-interview-city.png)
+
+The accepted etymology derives *picaresque* from the Spanish *pícaro*: a rogue or scoundrel. The Chinese source also proposed a remote Latin ancestry, but that speculation does no work in the argument and is not repeated here as established history. The literary genealogy that follows is the author's broad sketch rather than a claim that every named work belongs to one uncontested genre. *Don Quixote* stands nearby as a wandering parody of chivalric romance; *Lazarillo de Tormes* is conventionally treated as the picaresque novel's beginning, and *Guzmán de Alfarache* develops its morally compromised survivor. Players will recognize a related device in Luis Vélez de Guevara's *The Limping Devil* and Alain-René Lesage's adaptation, often titled *The Devil upon Two Sticks* in English: a supernatural vantage point exposes the vices of an entire city.
+
+That citywide view matters more here than a strict genre pedigree. **Hashino describes the act of looking down over Tokyo as a way of seeing both the metropolis and himself hurrying within it.** The game similarly marks the passing days with bird's-eye views of Tokyo. As the conspiracy unfolds, the player moves from individual crimes toward a picture of collective distortion: a Hobbesian “man is wolf to man,” amplified when a crowd releases impulses that individuals prefer not to acknowledge.
 
 [fig] Looking down over the city at night and listening to people's inner voices.
 
 ![A *Persona 5* transition screen overlaying the date on a view of Tokyo](attachments/roof-archive/cv1550227/03-tokyo-overview.jpg)
 
-The protagonist of picaresque literature enters the story in humble circumstances but can often climb toward the upper reaches of society, teaching himself deception, flattery, and similar techniques along the way until he becomes the one who rules, consumes, and exploits others. Once harmed by society, he now repays his age in kind. The picaresque novel mocks the piety, loyalty, and other supposedly chivalric virtues celebrated by romance. From the viewpoint of bankrupts and failures, in the most streetwise voice and with the most worldly strokes, it sketches a society ruled by ruthless opportunists, greedy and pedantic clerics, and nobles.
+In the type this essay draws from *Lazarillo* and *Guzmán*, the pícaro begins at the bottom of society and survives through deception, flattery, and service to successive masters. Having been exploited, he learns to exploit in turn. Picaresque narration mocks the piety and loyalty celebrated by chivalric romance; from the street-level perspective of the dispossessed, it exposes opportunists, greedy clerics, and nobles. This is a useful type for comparison, not a universal plot summary of every picaresque novel.
 
-Seen in terms of *Persona 5*'s inheritance from the picaresque tradition, the development team chose a common background for the members of the Phantom Thieves: all are “people who have had the place where they belong taken from them.” They cannot fully enter small circles of social life, nor can they fully accept certain established social values and ethics. They possess talent and admirable qualities, yet are branded as outsiders and isolated beyond the social circles of the environments they inhabit. But the strange expression “picaresque hero” tells us exactly where the difference lies: **the members of the Phantom Thieves drift and suffer setbacks, yet hold fast to their convictions; they hate evil fiercely without losing compassion for the weak.** Unlike traditional picaresque protagonists, who use tricks to obtain wealth and position, the Phantom Thieves use powers beyond ordinary society to punish evildoers above them, and then return once more to their former everyday lives as ordinary people.
+*Persona 5* inherits that marginal vantage point. The development team gave the Phantom Thieves a shared background as “people who have had the place where they belong taken from them”: Kamoshida's abuse isolates students at Shujin Academy, while the other members are pushed outside families, schools, workplaces, or reputations that should have protected them. They possess talent and admirable qualities, yet are marked as outsiders. But Hashino's odd phrase “picaresque hero” also names the revision: **the Phantom Thieves drift and suffer setbacks, yet hold fast to their convictions; they hate evil fiercely without losing compassion for the weak.** Instead of using deception to gain wealth and rank, they use outlaw methods and supernatural power to punish exploiters above them, then return to ordinary life.
+
+The essay therefore uses “picaresque” in three related but distinct senses: the developers' tone of criminal adventure; the genre's view of a corrupt city from the social margins; and the Phantom Thieves' heroic revision of the self-interested pícaro. The later allusions matter only insofar as they test that revision—whether rebellion preserves agency and compassion, or hardens into another form of domination.
 
 ## When I Took Persona Out of Jung's Domain, I Heard a Song
 
-“Everything is different from us; that is why everything exists.” In Fernando Pessoa's name, meanwhile, *pessoa* means “person” in Portuguese and shares a Latin ancestry with *persona*. This poet—this maker of heteronyms who met self-doubt, schizophrenia, and hysteria with silence and poetry—inevitably calls to mind Kierkegaard, himself a writer of countless names. And one cannot help wondering: might **thinking** itself, as a form of communication and scrutiny within the self that refuses confinement to a single viewpoint, be the origin of the special ability held by protagonists of the *Persona* series? Is this attitude and demand—to acknowledge difference and embrace distinction—one of the ideas the series has carried since *Persona 3* and has tried to convey?
+Some game terms need orientation before the argument continues. The Metaverse is the supernatural realm shaped by cognition. A Palace is the distorted inner world of a particular ruler; Mementos is the Palace of the public at large. A Shadow is a cognition's repressed or distorted counterpart, while a Persona is a self that can be consciously summoned. Joker differs from his companions in being able to wield multiple Personas. These definitions explain the mechanics, but the essay's question is what the game does with them.
 
-In an interview at the end of 2013, Hashino revealed this about the game: its characters live difficult lives in modern society and are bound in one way or another, troubled and suffering; but once they overcome their trials and break their chains, the powerful catharsis and encouragement that follow—the laughter and tears—are what the game wants to communicate. On September 1, 2014, after SCEJA's event, Hashino again described the work on the official site as “a story of young people living in today's society, struggling in the metropolis.”
+[“Everything is different from us; that is why everything exists”](https://casafernandopessoa.pt/download_file/89/493). The line is attributed to Alberto Caeiro, one of Fernando Pessoa's heteronyms, in Álvaro de Campos's “Notes in Memory of My Master Caeiro.” *Pessoa* means “person” in Portuguese and shares a Latin ancestry with *persona*. Pessoa did not merely conceal himself behind pen names: his heteronyms were distinct writers with their own styles and intellectual positions. Kierkegaard's pseudonymous works offer a related, though not identical, use of multiple authorial voices to stage competing ways of life. The comparison is therefore not a diagnosis of either writer. It supplies a model for thought as an internal encounter among different perspectives. In the game's terms, Joker's ability to hold multiple Personas makes that plurality literal: power comes not from fixing one final identity but from recognizing and negotiating difference. The essay asks whether this ideal has guided the series since *Persona 3*.
+
+In an interview at the end of 2013, Hashino described characters constrained by modern society and the catharsis that follows when they endure their trials and break their chains. On September 1, 2014, after SCEJA's event, he again described the work on the official site as a story of young people struggling in a contemporary metropolis. The Chinese source reached both statements through the translated reports listed below. A surviving [February 2015 *Famitsu* interview](https://www.famitsu.com/news/201502/05070855.html) confirms the same framing: inherited rules and values may not make people happy, yet breaking the status quo is difficult.
 
 > In our age, many people carry troubles large and small without knowing how to move forward. Simply inheriting existing rules or values may not bring happiness, yet deciding to break through the status quo is difficult.
+>
+> —Hashino, paraphrased through the Chinese source; see the linked 2015 interview above
 
-![Sojiro Sakura speaking about rebels in *Persona 5*](attachments/roof-archive/cv1550227/translations/en/04-sakura-dialogue.webp)
+[fig] A Stern Businessman in Mementos insists that standards, laws, manners, and common sense define the only correct way to live. The composite preserves both halves of the exchange.
 
-As a work once characterized by what Hashino called a “picaresque romance,” with a focus on stories told from the side of “criminals,” the form it ultimately took is deeply connected to one of his questions: “If Arsène Lupin appeared in the modern day, how would he affect society?” Unlike the protagonists of the previous games, who were swept into events, the protagonist here acts on an “impulse to break the status quo,” works to “keep things from heading toward ruin,” tries to draw society's attention, and searches for a sense of recognition that he himself does not fully understand.
+![A Stern Businessman in Mementos insisting that rules and common sense define the only correct way to live](attachments/roof-archive/cv1550227/translations/en/04-sakura-dialogue.webp)
+
+The game's final form grows from Hashino's picaresque premise and a question preserved in that [2015 *Famitsu* interview](https://www.famitsu.com/news/201502/05070855.html): what would a classical phantom thief such as Arsène Lupin do to modern society? Unlike earlier *Persona* protagonists, who are swept into events, Joker acts on an impulse to break the status quo. He tries to prevent social ruin, make the public confront corruption, and find a recognition he does not yet fully understand.
+
+[fig] Concept art for Arsène, Joker's initial Persona. The surviving archival image is low resolution; its small handwritten design notes are not legible enough to translate responsibly.
 
 ![Concept art for the Persona Arsène](attachments/roof-archive/cv1550227/05-arsene-concept-art.jpg)
 
-“Why should I have one fixed and unchanging appearance?” he says. “Why shouldn't I change a single identity and thereby avoid danger? My actions are enough to establish who I am.” Then, proudly: “It would be wonderful if no one could ever say with certainty: this is Arsène Lupin. What matters is that people dare to conclude: this was done by Arsène Lupin.”
+“Why,” he says, “why should I retain a definite form and feature? Why not avoid the danger of a personality that is ever the same? My actions will serve to identify me.” Then he adds, with a touch of pride: “So much the better if no one can ever say with absolute certainty: There is Arsène Lupin! The essential point is that the public may be able to refer to my work and say, without fear of mistake: Arsène Lupin did that!”
 
-—*L’arrestation d’Arsène Lupin*
+—Maurice Leblanc, [“The Arrest of Arsène Lupin”](https://www.gutenberg.org/files/6133/6133-h/6133-h.htm)
 
-[fig] There are many NPC lines like these in *P5*, functioning as social metaphors. Are they really meaningless?
+[fig] A Tokyo pedestrian complains that the police are lazy and “practically stealing our taxes,” one of many NPC lines that turn background chatter into a running account of public distrust.
 
-![Tokyo pedestrians discussing social issues in *Persona 5*](attachments/roof-archive/cv1550227/translations/en/06-tokyo-npc-dialogue.png)
+![Tokyo pedestrians in *Persona 5* as one complains that the police are lazy and practically stealing people's taxes](attachments/roof-archive/cv1550227/translations/en/06-tokyo-npc-dialogue.png)
 
-After entering Tokyo, we hear a pedestrian complain: “The police are useless too. They're nothing but tax thieves.”
+After entering Tokyo, we hear a pedestrian complain: “The police are so lazy… They're practically stealing our taxes.”
+
+The next two lines are translated from the Chinese source; their precise in-game locations have not been recovered:
 
 “This country of ours is already distorted. Can't we get a single halfway decent politician? Living in a country like this, there's no damn hope at all.”
 
 “Do you hear me? Society has orders and powers that you simply cannot resist” (the shopkeeper).
 
-> “We refuse, within ourselves or among friends, to admit fully that aggressive, self-protective, repulsive, lascivious frenzy belongs to the nature of the organism. Instead, we tend to idealize, whitewash, and reinterpret reality, while **blaming the fly in the ointment and the hair in the soup on some hateful person**.”
+The Chinese source next invokes an unidentified psychological passage. Its point is that people idealize human nature, disown their own aggression and appetite, then blame the “fly in the ointment” or “hair in the soup” on some hated outsider. Because the original work has not been recovered, this edition paraphrases rather than presenting the relay as an authenticated quotation. The point connects directly to Mementos: social distortion is not confined to spectacular villains but is sustained by ordinary wishes to shift responsibility elsewhere.
+
+The next passage is identified. Project Itoh, speaking through The One in *The Empire of Corpses*, asks what would be wrong with turning humanity into corpses whose souls had been covered over if people would thereby lose both the sublime and the capacity to miss it. That wording is translated from the Chinese source rather than restored from a licensed English edition.
+
+After finishing *Persona 5*, can we answer that question? The game's rebellion does not simply overthrow a fictional tyranny or defeat stock villains. Its Socratic element lies in accepting public hostility rather than allowing the crowd to decide what is just: the Phantom Thieves' approval rating rises and collapses, but popularity cannot settle the moral value of their actions. The source expresses its frustration harshly, calling the unreflective public a “petty crowd.” Its stronger analytical point is narrower: the Mementos dialogue criticizes collective surrender and the wish to delegate moral responsibility. The game's limitation is equally important: it can imagine this reform only through supernatural intervention in the Metaverse.
+
+A gifted teacher, Kamoshida, humiliates and abuses his students; a celebrated painter, Madarame, steals his pupils' work; the politician Shido turns the state itself into his ark. We spend much of the game punishing one brazen evildoer after another. But when the player reaches the sanctuary of Yaldabaoth—the being this essay calls the “false god”—the scale changes. Kamoshida and Shido are vicious, but neither alone explains the world's distortion. Their private Palaces are symptoms of Mementos, the public's collective Palace, shaped by the wish to surrender desire, judgment, and responsibility. People fear evildoers without wanting the burden of becoming heroes; they resent existing rules yet fear the consequences of changing them. Rather than pursue an uncertain freedom, they submit to “god” or “fate.” Who, then, still longs, in Orwell's phrase from *Nineteen Eighty-Four*, to meet “in the place where there is no darkness”?
+
+> “A god is born; the others die. Truth has neither arrived nor departed; only error has changed. Now we have another eternity, but the one that passed away was better.”
 >
-> “What I think you should consider is this: what problem would arise if all humanity became corpses whose souls had been covered over? Humanity would lose its sense of beauty and its sublime spirit, but at the same time it would also lose the ability to understand the sublime. If that is so, then what exactly would be wrong with it?”
+> —Fernando Pessoa, “Christmas” (translated through the Chinese source)
 
-After finishing *Persona 5*, are you capable of answering the question that Project Itoh, speaking through The One, puts to modern humanity? Perhaps one source of the game's appeal is that the rebellion it advocates is not a matter of overthrowing some fictional tyranny or defeating formulaic stock characters whose destinies have already been scripted. Its temperament is closer to Socrates, willing to lose the favor of the crowd and incur the anger of the state. What it truly despises is the decay and corruption of the age, and the petty multitude that refuses to think about crushing pressure and emptiness. The unfortunate part is that this demand can only be realized through supernatural power.
+[fig] A Drained Businessman says that “the world is already complete” and there is nothing left for him to do; a Drowsy Student concludes that surrendering to other people's will may be smarter. Together, the two Mementos scenes make collective resignation concrete.
 
-A gifted teacher humiliates his students; a celebrated painter steals other people's inspiration… We busy ourselves punishing one brazen evildoer after another. But when the player finally enters the “false god's” sanctuary, it becomes clear that neither the king in the castle nor the captain of the ark—vicious though they are—is the demon king responsible for the world's decay and distortion. They have merely moved from a cage without desire or hope into imprisonment within their own distorted desires. The public fears evildoers but does not long for heroes. People hate the restraints and rules that already exist yet continue to live by them; they lack the courage for change and do not want to bear its consequences. Rather than chase an elusive dream or freedom, they would sooner submit to the manipulations of “god” or “fate.” Who, then, still longs to meet in a place where there is no darkness?
+![A Drained Businessman in Mementos saying the world is already complete and there is nothing left to do](attachments/roof-archive/cv1550227/translations/en/07-mementos-upper-class.png)
 
-> “A god is born / the others die / the thing itself has never arrived and never departed / only one mistaken conversion. Now we have another eternity / but the one that left was better.”
-
-[fig] So this is the ordinary company employee an otaku wants to become?
-
-![Dialogue in Mementos about being unable to change the world](attachments/roof-archive/cv1550227/translations/en/07-mementos-upper-class.png)
-
-![Dialogue in Mementos about obeying other people's expectations](attachments/roof-archive/cv1550227/translations/en/08-mementos-young-woman.png)
+![A Drowsy Student in Mementos saying it may be smarter to surrender to other people's will](attachments/roof-archive/cv1550227/translations/en/08-mementos-young-woman.png)
 
 > “The first stage of the mythological journey, which we call the call to adventure, signifies that destiny has summoned the hero and transferred the center of gravity of his spirit from within the bounds of society to an unknown region… It is often a place of strange, shifting figures, unimaginable ordeals, superhuman deeds, and limitless delight.”
+>
+> —Joseph Campbell, *The Hero with a Thousand Faces* (translated through the Chinese source)
 
-Whether it constructs its world with ideas from analytical psychology or uses an art style close to urban life in order to distinguish itself as far as possible from the traditional JRPG, the story of *Persona 5* still follows an epic heroic structure that deliberately poses as heterodox: what we might call a coming-of-age rite or rite of passage, the process of separation—initiation—return. Tearing off the “persona,” subduing and mastering the Shadow, entering a Palace to change another person's mental state… all these elements are saturated with symbolic imagery and borrow from ancient narrative structures and ways of thinking.
+Whatever its debt to analytical psychology or its urban visual style, *Persona 5* still follows the broad rhythm Campbell calls separation—initiation—return: Joker is expelled from home, enters the Metaverse and gathers companions, then returns after the ordeal. Awakening a Persona, confronting Shadows, and entering Palaces give that rite of passage the game's own symbolic vocabulary.
 
-“The wind blows south, then turns north; round and round it goes, returning again to its course. Rivers run into the sea, yet the sea is never full, and the rivers return to their source.” Perhaps this is the greatest difference between *Persona 5* and the traditional hero story. Whether the traditional hero finally chooses to return home or depart, struggle and sacrifice always secure an appropriate reward: peace and harmony, or rebirth. Yet the final scene of the car driving farther and farther away instead makes me think of Ishmael peeking in on the sailors at dinner: men who have survived raging storms by a hair's breadth, who hunt whales without fear, sit around the table and nevertheless show a hint of shy unease. I did not feel, in this subdued ending, that the world had undergone any “renewal.” Pedestrians still stream past one another; society keeps running as usual. The false god is gone, and the Phantom Thieves too are destined to become a tale. Behind the lively laughter lies ordinariness. Society can worsen without collapsing; the world can move toward goodness without ever becoming a Pure Land.
+“The wind blows south, then turns north; round and round it goes, returning again to its course. Rivers run into the sea, yet the sea is never full, and the rivers return to their source” (*Ecclesiastes* 1:6–7, translated through the Chinese source). *Persona 5* completes the hero's return, but it withholds a total renewal of society. That is the narrower claim—not that every traditional hero receives a perfect reward, but that this ending refuses to make victory equivalent to a healed world. The van carrying Joker away recalls the source's image from *Moby-Dick*: Ishmael watches sailors who have survived storms and hunted whales without fear sit at dinner with an unexpected shyness. In both scenes, extraordinary fellowship subsides into ordinary social life. Pedestrians still stream past one another; society keeps running. The false god is gone, and the Phantom Thieves are destined to become a story. Society can worsen without collapsing, and it can improve without becoming a Pure Land—a Buddhist image for a realm freed from suffering. The rite of return is complete; collective salvation is not.
 
 [fig] Society keeps running as usual.
 
-![The protagonist of *Persona 5* driving away at the end of the game](attachments/roof-archive/cv1550227/09-ending-road.png)
+![Joker leaving in the Phantom Thieves' van at the end of *Persona 5*](attachments/roof-archive/cv1550227/09-ending-road.png)
 
-“Human beings who indulge their own temperament and individuality will ultimately go off the rails and become the dregs of society.”
+The Chinese source inserts another line of social orthodoxy here without identifying its speaker: “Human beings who indulge their own temperament and individuality will ultimately go off the rails and become the dregs of society.” Its function is clearer than its provenance. The sentence voices the conformity that the game tests against the vivid individuality of heroes and villains alike.
 
-Yet none of the story's many characters—whether you end by hating them or identifying with them—can be ignored as they insist upon their own distinctive traits, carry their own ambitions and desires, and head toward different endings. Even the wicked among them are rarely mediocre. Inflated desire brings destruction; a smooth life turns to hardship; the strong bind themselves through arrogance… The conduct and experience of these varied figures repeatedly calls Marlowe's Faustus to mind:
+None of the story's many characters—whether we end by hating or identifying with them—can be ignored as they insist upon distinctive traits, carry ambitions and desires, and head toward different ends. Even the wicked among them are rarely mediocre. Inflated desire brings destruction; a smooth life turns to hardship; the strong bind themselves through arrogance. The conduct and experience of these varied figures call Marlowe's Faustus to mind because his intellectual power becomes self-inflation and then ruin:
 
-> Till swoln with cunning, of a self-conceit,
+> Till swoll'n with cunning and a self-conceit,
 >
 > His waxen wings did mount above his reach,
 >
-> And, melting, heavens conspir'd his overthrow.
+> And, melting, heavens conspired his overthrow.
+>
+> —Christopher Marlowe, [*Doctor Faustus*](https://en.wikisource.org/wiki/Page:The_works_of_Christopher_Marlowe_-_ed._Dyce_-_1859.djvu/141), Chorus
 
-Perhaps the Phantom Thieves are the sort of tragic figures Aristotle describes as falling **“through some error, not through depravity.”** Yet once they gain power, they are driven by their own idea of “justice” and run themselves ragged—at least in part—in search of recognition. It is difficult to feel toward them the tragic dramatist's lament that ingenuity cannot prevail over fate. The “guilt” carried by a tragic hero comes from erroneous action produced by ignorance or fate; in its earliest sense, the word means an arrow missing its mark. The cathartic purification born from pity and fear does not seem particularly suited to explaining the appeal of this game.
+The comparison is also a limit case. The Phantom Thieves may resemble Aristotle's figures who fall [**“through some error, not through depravity”**](https://www.gutenberg.org/files/6763/6763-h/6763-h.htm): once they gain power, their idea of justice and their desire for recognition drive them close to overreach. But the game does not finally ask us to lament that ingenuity cannot defeat fate. A tragic hero's error—*hamartia*—is a mistaken act rather than a settled depravity; the word is often explained through the image of an arrow missing its mark. The Thieves correct their course, so pity, fear, and tragic purification do not fully explain the game's appeal. Faustus shows what proud rebellion can become when reflection and compassion fail; he is a warning within the picaresque-hero argument, not a new master key for the whole game.
 
 > “Every morning when I wake, I am so anxious I can hardly get through the day, almost in tears. I watch the day slip away and accomplish nothing. My longing for happiness is worn down by fault-finding, while the surging creative spirit in my breast is delayed by the foolishness of life. Whenever night falls, I lie down in unease; my mind still finds no peace, and wild nightmares make me tremble. The god within my breast deeply stirs my heart and commands all my powers, yet cannot influence the slightest thing in the outer world.”
 >
 > “Whatever clothes I wear, I feel the pain of a constricted life. I am too old merely to play, yet too young to renounce desire. What can this world still give me?”
+>
+> —Goethe, *Faust, Part One* (translated through the Chinese source)
 
-![Chihaya Mifune discussing fate and what matters in a game conversation](attachments/roof-archive/cv1550227/translations/en/10-chihaya-dialogue.png)
+[fig] Chihaya says that helping people recognize what matters more than destiny is itself her task. The longer speech quoted below is a related passage translated from the Chinese source, not a transcript of this frame.
 
-If one really must draw some “lesson” from this game, I think it should be to spit without hesitation upon the attitude toward life shown by Faust when Goethe first brings him onstage. The game is like an attendant of Mephistopheles: those marvelous phantoms and spirits stir the vitality of youth and give people the courage to open new paths and shoulder consequences without fear. As Chihaya tells Akira: “I am only a fortune-teller. My work is to offer guidance to people whose hearts are weak, so that they will not be manipulated by fate, but will hold fast to their convictions and open up a new future.” We who are weak and confused may be thoroughly tired of endless exhortation, but do we not still need to search for that kind of vigor? “I once met a young man. In a way different from mine, he is trying to set this world right. But that is an unimaginably huge mountain. I cannot travel with him, yet I will not say goodbye. We will surely meet again at the summit. He is fighting desperately to do what he wants to do. Everyone, go and find what it is that you want to do.” So says Yoshida.
+![Chihaya Mifune saying that she must help people realize there are more important things than destiny](attachments/roof-archive/cv1550227/translations/en/10-chihaya-dialogue.png)
 
-> (our souls) always moving as the restless spheres,
+If one must draw a “lesson” from the game, it is a rejection of the paralysis with which Goethe's Faust first appears. The preceding translated passages present him waking in anxiety, watching the day vanish, and feeling the force within him unable to change the outer world. *Persona 5* answers that paralysis with phantoms, spirits, and the theatrical energy associated here with Mephistopheles: not an endorsement of Faust's bargain, but a spectacle that rekindles the will to act and accept consequences. As Chihaya tells Akira in the source's translated dialogue, her work is to guide vulnerable people so they will not be manipulated by fate but can hold to their convictions and open a future. Yoshida offers the political counterpart: he cannot accompany the young man who is trying to set the world right, but expects to meet him again at the summit and urges everyone to discover what they themselves want to do. These speeches make the distinction from Faustus precise. The game values striving when it remains answerable to other people.
+
+> Our souls, always moving as the restless spheres,
 >
 > Will us to wear ourselves, and never rest,
 >
-> Until we reach the ripest fruit of all——
+> Until we reach the ripest fruit of all.
 >
-> Marlowe, *TAMBURLAINE THE GREAT*, SCENE VII
+> —Christopher Marlowe, [*Tamburlaine the Great*, Part One](https://www.gutenberg.org/files/1094/1094-h/1094-h.htm), Scene VII
 
-- Walton's sister Margaret Saville
-- Frankenstein's mother Caroline Beaufort
-- Frankenstein's neighbor Justine Moritz
-- Frankenstein's cousin Elizabeth Lavenza
+### A Naming Coda: The Velvet Room and *Frankenstein*
 
-Thanks to Gcores user LS_Crusader, whose overview of the *Persona* series pointed out the relationships between personnel in the Velvet Room and characters in *Frankenstein*. I did some simple follow-up searching on that basis and list the correspondences above.
+The Chinese source closes its literary examples with a naming pattern that was previously left as four unexplained fragments. The Velvet Room is the series' recurring liminal space, where attendants guide the protagonists. Across the *Persona* games, several attendants borrow names from Mary Shelley's *Frankenstein*. The correspondence is:
 
-I am also indebted to Zhihu user 土拨鼠桑's answer to “What Are the Characteristics of Kazuma Kaneko's Art?” and to Persona Tieba user 南条圭's post “A Few Words on Kazuma Kaneko's Design Ideas Across Different Works + DDS Settings.” Although Kaneko was not directly responsible for the art of this game, their introductions gave me a better understanding of the tone of the early series and Atlus's broader artistic preferences.
+| *Persona* attendant | *Frankenstein* namesake |
+| --- | --- |
+| Margaret | Margaret Saville, Robert Walton's sister and the recipient of his letters |
+| Caroline | Caroline Beaufort, Victor Frankenstein's mother |
+| Justine | Justine Moritz, a member of the Frankenstein household who is falsely condemned |
+| Lavenza | Elizabeth Lavenza, Victor's adopted cousin and intended bride |
 
-The staff list uploaded by Bilibili user [Clarke-超高校级的霉运](https://space.bilibili.com/1971550) reduced my workload.
+This pattern does not prove the essay's picaresque thesis, but it does show the broader literary naming practice within which Arsène belongs. Thanks are due to Gcores user LS_Crusader, whose overview first directed the author to these correspondences.
 
-P9 user psv_pengchao's substantial series “*Persona 5* Worldview and Character Settings: Compilation and Research” greatly deepened my understanding of many aspects of the game, and I drew a great deal of inspiration from it.
+## Sources and Acknowledgments
 
-Important starting points for this article also included: Hashino's message translated by TGBus in September 2014; TGBus translations of Dengeki and Famitsu interviews with Hashino in February 2015 and a video interview in May 2016; Famitsu interviews with Hashino posted on February 5 and February 10, 2015 on Weibo user 茶茶Ange's blog; a Famitsu interview translated in September 2015 on Sina Blog by user “Malas_期待NS火纹新作”; the Toco Toco interview with Hashino translated and uploaded in the first half of 2017 by Bilibili users 薛定谔的树懒 and 卡姐Cara from a YouTube user's translation; A9VG's interview with Hashino; and VGTime's June 2017 translation of an IGN interview. I used these interviews to search for the game creators' sources of inspiration. This essay could only be written on top of the translation work done by people who love games.
+The article's creator-history claims were first assembled through a network of fan translations. The direct *Famitsu* pages now linked in the body support the modern-social-constraints, Lupin, picaresque-romance, and Toco Toco claims. The following older relays remain part of the provenance because the exact pages or original wording could not all be recovered:
 
-The limits of my own position and ability may prevent me from becoming that kind of contributor, but we are willing to do everything we can to deliver strong original work and communicate our thoughts and feelings. Personally, I look forward to being made obsolete by purer and more profound essays, and refuted by judgments wiser and sharper than my own. May I travel with you and witness the growth of our peers.
+- Hashino's September 2014 message, plus Dengeki and *Famitsu* interviews from February 2015 and a May 2016 video interview, translated by TGBus.
+- *Famitsu* interviews dated February 5 and February 10, 2015, posted by Weibo user 茶茶Ange; and a September 2015 *Famitsu* interview translated on Sina Blog by “Malas_期待NS火纹新作.”
+- The Toco Toco interview translated and uploaded in the first half of 2017 by Bilibili users 薛定谔的树懒 and 卡姐Cara from a YouTube translation; an A9VG interview with Hashino; and VGTime's June 2017 translation of an IGN interview.
 
-[fig] Cover image by our account's all-rounder @拥抱月亮的太阳.
+The author also acknowledges the following research and production help:
 
-![Article banner for “The Song of a Proud Wanderer”](attachments/roof-archive/cv1550227/11-article-title-banner.jpg)
+- Zhihu user 土拨鼠桑's answer to “What Are the Characteristics of Kazuma Kaneko's Art?” and Persona Tieba user 南条圭's post “A Few Words on Kazuma Kaneko's Design Ideas Across Different Works + DDS Settings.” Kaneko did not directly create this game's art, but these pieces helped the author understand the early series' tone and Atlus's broader visual preferences.
+- The staff list uploaded by Bilibili user [Clarke-超高校级的霉运](https://space.bilibili.com/1971550).
+- P9 user psv_pengchao's series “*Persona 5* Worldview and Character Settings: Compilation and Research,” which informed the author's understanding of the game.
+- @拥抱月亮的太阳, who designed the original article cover.
+
+This essay was possible because people who love games translated, catalogued, and shared their research. My own contribution has limits, and I hope future essays will make this one obsolete or correct it with sharper judgment. What matters is that the conversation keeps growing.

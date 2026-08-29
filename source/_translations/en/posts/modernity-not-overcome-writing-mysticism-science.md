@@ -5,9 +5,9 @@ source_slug: modernity-not-overcome-writing-mysticism-science
 slug: modernity-not-overcome-writing-mysticism-science
 language: en
 status: review
-title: "Modernity Not Overcome: The Absent Origin and Subjectivity—Letter Mysticism and Science"
-title_breaks: ["Modernity Not Overcome:", "The Absent Origin and Subjectivity—Letter Mysticism and Science"]
-excerpt: "Reading East Asian letter mysticism through Western esotericism, the author asks how an absent origin, an absent subjectivity, and science leave modernity not overcome."
+title: "An Unovercome Modernity: Absent Origins, the Difficult Birth of the Subject, and the Mysticism of Writing in an Age of Science"
+title_breaks: ["An Unovercome Modernity:", "Absent Origins, the Difficult Birth of the Subject,", "and the Mysticism of Writing in an Age of Science"]
+excerpt: "Using theories of Western esotericism as comparative tools, the author asks whether mystical investments in writing, stories of origin, and models of subjectivity can illuminate an East Asian modernity that remains unovercome."
 credits:
   - role: translator
     contributor_id: shen-shui-bot
@@ -15,58 +15,33 @@ credits:
 translation_method: agent
 source_relationship: direct
 base_language: ja
-updated: 2026-08-23
+updated: 2026-08-28
 rights: CC BY-NC-SA 4.0
 format: article
 ---
 
 [author] 「　」
 
-![Portrait of the author known as 「　」](attachments/roof-archive/cv19651001/01-author-portrait-v5.png "=25%")
+![Anime profile image used by the author 「　」, showing red-haired and white-haired characters](attachments/roof-archive/cv19651001/01-author-portrait-v5.png "=25%")
 
-> **Editor’s note:** This essay received an award in the Eve Festival of Lab on Roof’s annual Rags Drum call for submissions.
+[author-bio] Profile artwork cropped from the author card archived with the original article. The archive does not identify the image’s creator or earlier source.
+
+> **Editor’s note:** This essay was a prizewinner in the Eve Festival round of Lab on Roof’s annual [Rags Drum 2022](/en/posts/rags-drum-2022-pre-festival-results) call for submissions. The byline 「　」 is a deliberately blank pen name.
+>
+> **Translation note:** “Mysticism of writing” translates the author’s coined term *moji shinpishugi* (文字神秘主義), covering letters, characters, inscriptions, and writing more broadly. Here it means a belief or representation that writing carries an efficacy beyond ordinary notation and communication. Historical or devotional practices, fictional supernatural writing, audiovisual motifs, and script conventions are therefore distinguished below rather than treated as identical evidence. “Mysticism of writing” is not a synonym for the historical field of Western esotericism. Unless otherwise noted, quotations from Japanese- and Chinese-language works are translated for this edition rather than quoted from published English translations.
 
 ## Contents
 
 - Introduction
-  - Section 1: Opening
-  - Section 2: Previous Research and Background
-  - Section 3: Theoretical Framework and Method
-- Main Argument
-  - Part I: East Asian Letter Mysticism
-    - Section 1: Western Esotericism
-      - 1. Esotericism
-      - 2. Western Esotericism
-      - 3. Letter Mysticism
-    - Section 2: Does It Exist in East Asia?
-      - 1. Candidate Cases
-        - A. Phenomena in the Domain of Writing
-        - B. Are They Esoteric?
-      - 2. Is There Something Distinctly East Asian Here?
-        - A. A Distinctive Quality Latent in Writing
-        - B. Is It East Asian?
-    - Section 3: The Esoteric in East Asian Writing
-      - 1. Elements of Early Modern Enchantment
-      - 2. Elements of the (Post)modern Occult
-      - 3. Elements of Inner Traditions
-    - Interim Conclusion: An Esotericism That Fills Everyday Life
-  - Part II: Attachment to the Time of Modernity
-    - Section 1: The Absent Origin
-      - 1. Chinese Mythological Studies
-      - 2. Divine Time and the Time of Chinese Characters
-      - 3. Temporal Genealogy and Its Place
-    - Section 2: The Absent Subjectivity
-      - 1. Speaking On in an Abandoned Land
-      - 2. The Impossibility and Incapacity of Reaching the Third-Party Instance
-      - 3. The Birth of the Subject and the Difficult Birth of Subjectivity
-    - Section 3: The “Esotericism—Religion—Science” Model
-      - 1. *Absoluter Geist* and Scientific Progress
-      - 2. God Is God, Humanity Is Humanity
-      - 3. What Remains Is the Esoteric
-    - Interim Conclusion: Modernity Not Overcome
+- Part I: East Asian Mysticism of Writing
+  - Western Esotericism
+  - Writing as Practice, Fiction, Image, and Analogy
+  - Three Comparative Models
+- Part II: Attachment to Modernity’s Time
+  - The Absent Origin
+  - The Difficult Birth of Subjectivity
+  - The “Esotericism—Religion—Science” Hypothesis
 - Conclusion
-  - Section 1: All Too Unmodern
-  - Section 2: Toward a Long, Narrow Road and an Open Sky
 - Sidebar: A World of Sorcery and a World of Abundance
 - Contributions and Limitations
 - References
@@ -75,9 +50,9 @@ format: article
 
 ### Section 1: Opening
 
-It is plain that, in modernity, East Asian modernization has consisted in imitating the West. To break out of this condition and attempt the future anew on our own terms within a postmodern world that includes postcolonialism, it is crucial that we look back and identify premodern elements. These are precisely what our long history has lacked. They are not something that performs as something else and is thereby called an “overcoming of modernity.” They are, rather, modernity not overcome.
+I begin from a familiar description of East Asian modernization: that it proceeded largely by adopting institutions and concepts associated with the modern West. To move beyond imitation and approach the future on our own terms—within a postmodern world also shaped by postcolonial thought—we must look back at the nonmodern elements omitted from the histories we tell about ourselves. The title reverses the Japanese intellectual-historical phrase usually rendered “overcoming modernity.” I am not claiming that modernity has been overcome; I am asking what it means to inhabit a modernity that remains *unovercome*.
 
-One important element in modernity not overcome is the esoteric. If we examine the modern West, an important feature of its system of knowledge is the sequence “esotericism—religion—science.” A deep understanding of science and religion is not the same as a deep understanding of esotericism. Why have we lacked a clear conception of the esoteric as a field in its own right? I want to answer that question by examining phenomena that arise among us, especially in the domain of writing.
+One neglected element in this question is esotericism. I use “esotericism—religion—science” as a speculative comparison among domains of knowledge, not as a literal chronology in which one stage simply replaces another. The traditions overlap historically, as Newton’s alchemy alone should remind us. Why, then, has esotericism remained difficult to name as a field? I approach that question through phenomena involving writing.
 
 ### Section 2: Previous Research and Background
 
@@ -85,219 +60,217 @@ The discussion draws on Masachi Osawa’s sociology, social history, and philoso
 
 ### Section 3: Theoretical Framework and Method
 
-I refer to the academic study of esotericism developed in the West in recent years and use its models of esoteric characteristics to identify and analyze phenomena that belong to East Asian letter mysticism. I then set the substance of East Asian letter mysticism against the characteristics of science as a defining feature of modernity. This allows me to ask why the paradigm shift from esotericism to religion to science did not appear in East Asia, and, finally, how the factors behind that absence continue to hold the region in a condition of modernity not overcome.
+I draw on the modern academic study of Western esotericism, using three of its models as comparative heuristics for what I call an East Asian mysticism of writing. The comparison moves across unlike kinds of evidence: historical religious practices, fictional representations, audiovisual motifs, and formal features of script. I will distinguish those levels rather than claim that a game interface or a reading convention is itself an esoteric practice. Part II then extends Masachi Osawa’s account of subject formation into a speculative comparison with Chinese-character cultures. That extension is my hypothesis; the sources cited here do not establish that script structure caused a regional form of time, subjectivity, or modernity.
 
-## Main Argument, Part I: East Asian Letter Mysticism
+## Main Argument, Part I: East Asian Mysticism of Writing
 
 ### Section 1: Western Esotericism
 
 #### 1. Esotericism
 
-As Wouter J. Hanegraaff observes, esotericism has traditionally been studied within the field of religion, and even today it remains difficult to define. As research has advanced, attention has turned to things long ignored by both the public and the academy, including esotericism itself.
+As Wouter J. Hanegraaff observes, Western esotericism remains difficult to define. He approaches it historically as currents of “rejected knowledge”: traditions marginalized in the formation of normative religion, rational philosophy, and modern science.[^29]
 
-Among its salient features is that it belongs neither to science nor to philosophy; yet it is also highly inappropriate simply to regard it as religion.
+This historical category does not mean whatever is mysterious or whatever science has not explained. It names identifiable currents, practices, texts, and claims whose boundaries with religion, philosophy, and early science have shifted over time.
 
-Examples include the magic of *Harry Potter*, the alchemy of *Fullmetal Alchemist*, and H. P. Lovecraft’s Cthulhu Mythos. Real, nonfictional examples include knowledge of the Kabbalah in Judaism, esoteric Buddhism in Japan, and Daoist thought about immortals in China.
+Popular fiction makes occult motifs familiar through the magic of *Harry Potter*, the alchemy of *Fullmetal Alchemist*, and H. P. Lovecraft’s Cthulhu Mythos. Historical currents include Jewish Kabbalah, Japanese esoteric Buddhism, and Chinese Daoist traditions of immortality.
 
 #### 2. Western Esotericism
 
-Are there principles by which we can identify this content called esotericism? Wouter J. Hanegraaff proposes three models: Early Modern Enchantment, the (Post)modern Occult, and Inner Traditions. Alongside these stands “the Rest of the West: Judaism, Christianity, Islam”—that is, esotericism within religion.
+How, then, do scholars decide what counts as esotericism? Wouter J. Hanegraaff surveys three influential models: “Early Modern Enchantment,” “the (Post)modern Occult,” and “Inner Traditions.” Alongside them he discusses “the Rest of the West: Judaism, Christianity, Islam”—esoteric currents within the monotheistic religions.
 
-These are the principal features of Western esotericism. My argument takes the first three models, rather than esotericism within religion, as its criteria.
+These are rival scholarly ways of defining Western esotericism, not three properties that every esoteric phenomenon must possess. My argument nevertheless uses the first three as comparative lenses, leaving esotericism within religion largely to one side.
 
-#### 3. Letter Mysticism
+#### 3. Mysticism of Writing
 
-Letter mysticism is a concept that will recur throughout this essay. Before applying Hanegraaff’s three models to East Asian letter mysticism, it will help to say a little about its Western counterpart.
+“Mysticism of writing” is my comparative term, not Hanegraaff’s category. It names cases in which script is believed or represented to act as more than a record of speech: it mediates divine, spiritual, magical, or otherwise transpersonal efficacy.
 
-In a broad sense, esotericism is the idea that human beings can connect with God, or with a higher will, by some means;[^1] letter mysticism is the idea that writing can serve as that means.
+The strongest cases are actual traditions and practices that give letters or inscriptions such efficacy. Fiction can represent the same idea within an imagined world. Typography, game interfaces, and ordinary reading conventions can resemble that idea visually or structurally, but resemblance alone does not turn them into esotericism.[^1]
 
-One prominent Western example is Islamic letter mysticism, on which Toshihiko Izutsu was a major authority. Since his research is only loosely connected with this essay, I will not pursue it here. A nonreligious example of letter mysticism is magic. Unlike an incantation, certain forms of magic require particular signs to be written in a particular place before the magic can be activated. Phenomena resembling these magic-activating inscriptions will become a focal point later in this essay, so I note them here in advance.
+A prominent historical example is Islamic letter mysticism, a field in which Toshihiko Izutsu did important work. Since his research is only loosely connected with my argument, I will not pursue it here. Fiction supplies a different kind of case: some magic systems require signs to be inscribed in a particular place before a spell can take effect. The first is a historical religious current; the second is a representation of supernatural writing. They may be compared, but they are not the same kind of evidence.
 
 ### Section 2: Does It Exist in East Asia?
 
 #### 1. Candidate Cases
 
-##### A. Phenomena in the Domain of Writing
+##### A. Four Kinds of Case
 
-Many things in everyday life deserve to be reconsidered. Here are a few examples.
+The examples ahead fall into four groups: devotional practice, fictional writing with supernatural efficacy, visual or interface motifs, and formal analogies drawn from writing systems.
 
-We often encounter remarks such as: “Reading this sentence healed me,” “I was moved by these words,” or “certain writing has the power to change reality.”
+Ordinary metaphor sits at the loosest edge of the comparison. We say that a sentence “healed” us or that words moved us, but those expressions do not by themselves claim a supernatural force.
 
-When people visit a shrine or temple, they write their prayers and their names in the blank space on an *ema* votive plaque, or on its reverse, in the hope that doing so will make their wishes come true.
+At Japanese shrines and temples, by contrast, people write prayers and names on *ema* votive plaques in the hope that their wishes will be heard or fulfilled. This is a living devotional practice. Whether it should also be called esoteric depends on its particular theology and use; its written efficacy alone is not enough to decide.
 
-Having offered examples from the real world, let us turn to fictional ones by comparing two games that have recently become enormously popular: *Sekiro: Shadows Die Twice* and *Elden Ring*. When a character in *Elden Ring* drinks from a Flask, imbibes the Wondrous Physick, or consumes a bolus, auras of different colors appear around them. In *Sekiro*, however, what appears is not merely an aura but a Chinese character. The character 危 (“danger”) appears above the protagonist when he faces a perilous attack; 死 (“death”) when he dies; and 回生 (“resurrection”) when the Dragon’s Heritage revives him. Other examples include 治 (“heal”), 鬼仏見出 (“Sculptor’s Idol found”), and 防 (“deflect”).
+Games offer visual motifs rather than religious practices. In *Elden Ring*, colored effects flare around the character when the player uses a Flask, the Flask of Wondrous Physick, or a bolus. *Sekiro: Shadows Die Twice* repeatedly makes Chinese characters part of the spectacle. The red 危—literally “danger”—warns of a Perilous Attack; 死 marks death; and 回生 names resurrection through the Dragon’s Heritage. Other Japanese interface notices include 治 for healing, 鬼仏見出 for discovering a Sculptor’s Idol, and 防 for a deflection.[^25]
 
-##### B. Are They Esoteric?
+##### B. What Can the Comparison Show?
 
-Do these phenomena meet our definition of the esoteric?
+These examples do not all meet a single criterion of esotericism.
 
-From the standpoint of contemporary psychology, language is simply a means by which human beings, as social creatures, exchange messages. It possesses no further physical power. Reading a sentence cannot close a wound, nor can words move a person who does not move themselves.
+Language ordinarily communicates and acts through social convention; a sentence does not thereby acquire an independent physical force. That distinction separates metaphorical “healing” from a devotional claim or a fictional spell.
 
-The example of hanging an *ema* at a shrine plainly involves a religious feeling or intention on the visitor’s part.
+An *ema* belongs to religious practice. The written spell in a fantasy belongs to a fiction. The *Sekiro* glyphs remain interface communication, even when their scale and timing bind them powerfully to the story of death and resurrection.
 
-The most interesting comparison is between *Elden Ring* and *Sekiro*. When blood loss occurs in *Elden Ring*, the words “Blood Loss” appear onscreen. Unlike the characters in *Sekiro*, this message is not integrated with the player character. It can be hidden with the rest of the interface without fundamentally obstructing play. Remove the 死 from *Sekiro*, by contrast, and the player can no longer read the timing of resurrection properly; play itself is impaired.
+The comparison with *Elden Ring* clarifies the visual point. “BLOOD LOSS” is detachable HUD information. *Sekiro*’s death and resurrection characters, by contrast, organize the moment in which the player decides whether to resurrect. Removing them would make that decision harder to read.
 
-These Chinese characters do something different from an ordinary interface. They are central visual elements in the game and connect directly to its narrative.
+The characters therefore do more than report a status: they become conspicuous visual elements tied to a narrative of death and return. That makes them useful analogies for mystical writing, not evidence of a mystical practice.
 
-As stated above, the esoteric is the idea that one can connect with God, or with a higher will, through writing. What we can say with confidence is that the examples above unconsciously seek a power beyond physical force. In other words, what they seek is not a power of this world. It is a power outside science—and in that sense it may be called esoteric.
+My comparison asks how writing is invested with powers beyond neutral notation. Only some cases claim such efficacy in the world of their practitioners; others stage, visualize, or merely resemble it. The remainder of Part I keeps those differences in view.
 
 #### 2. Is There Something Distinctly East Asian Here?
 
 ##### A. A Distinctive Quality Latent in Writing
 
-The previous subsection argued that esotericism exists in East Asia as well. But is it particular to East Asia, or common to scripts throughout the world? Let us consider the properties of Chinese characters.
+What, if anything, gives these comparisons a specifically East Asian history rather than a universal one? Chinese characters are one possible resource, but their structure cannot by itself cause mysticism.
 
-The alphabet and Chinese characters are probably the world’s most widely used writing systems. In sharp contrast to alphabetic writing, Chinese characters can be “recognized at a glance but not read.” This is true in China and Japan, as well as in Southeast Asia. The quality is often called “ideographic.”
+Alphabetic scripts and Chinese characters are among the world’s most widely used writing systems. A Chinese character may sometimes be visually recognized across communities that give it different pronunciations—or recognized without the viewer knowing how to pronounce it at all. I initially call this quality “ideographic,” but modern linguists more accurately describe Chinese writing as logographic or morphosyllabic: a character generally maps to a morpheme and a syllable, and most characters contain phonetic as well as semantic information.[^26]
 
-In an ideographic system, a single graph functions as the smallest unit of meaning. This differs from English words, although English also has affixes below the word level that carry meaning. Moreover, the meaning conveyed is for the most part independent of how the character is pronounced. The meaning of a Chinese character is strongly connected to its visual form. This is the distinctive quality of the script.
+My narrower point is that a single graph can function as a meaningful unit even when its reading changes. English also has meaningful units below the word level, such as affixes, but alphabetic spelling represents speech sounds more directly. Chinese characters make visual form unusually salient without severing writing from pronunciation. That relation can support a visual imagination of written power, but it does not produce one automatically.
 
 ##### B. Is It East Asian?
 
-As noted above, Chinese characters are ideographs whose meanings have no basic correspondence with their pronunciation. In Western alphabetic writing, by contrast, the order of letters and a limited set of pronunciation rules make it possible to distinguish both the pronunciation and meaning of a sentence. In this sense, the features of Chinese characters may be called distinctly East Asian.
+The contrast, then, is not between a soundless script and a perfectly phonetic alphabet. It is between writing systems that distribute phonetic and semantic information differently. Because Chinese characters circulated across East Asia while accumulating multiple readings, I treat that distribution as one specifically East Asian historical resource for the comparisons that follow.
 
-We may therefore conclude that East Asian writing does possess a character both esoteric and distinctive.
+This is a claim about a repertoire of images and practices, not about an inherent property of the script or everyone who uses it.
 
-### Section 3: The Esoteric in East Asian Writing
+### Section 3: Three Comparative Models
 
 #### 1. Elements of Early Modern Enchantment
 
-As I have said, it is extremely difficult to distinguish esoteric ideas with any clarity. This is because, for now, such ideas remain concealed within a “religious supermarket.”[^2] To distinguish these phenomena, Wouter J. Hanegraaff proposes the following three models.
+Esoteric currents can be difficult to distinguish in a modern “religious supermarket”—Hanegraaff’s metaphor for a marketplace in which individuals select and combine elements from many traditions.[^2] His three models help organize the comparison, although they do not certify every example as esoteric.
 
-The keyword in Early Modern Enchantment[^3] is *enchantment*: the conferral of magical power on something. “Early modern” names an age in which modern science takes the dominant position, while enchantment asserts the power to generate phenomena that deliberately resist the scientific worldview. The scientific setting is crucial. In an age without science, enchantment would instead be the prevailing paradigm of thought. Alchemy in Newton’s age, on the threshold of the Scientific Revolution, was a dominant intellectual current alongside a science not yet fully born.
+The keyword in “Early Modern Enchantment”[^3] is *enchantment*: a world understood as alive with occult forces and correspondences. The “early modern” setting matters because this model makes esotericism a worldview that flourished before Enlightenment disenchantment and later appeared to resist a dominant scientific picture. Alchemy in Newton’s age is my boundary case: it belonged to an intellectual world in which what we now separate as science and esotericism had not yet fully pulled apart.
 
-The world today is contemporary[^4]—that is, modernized. Let us analyze phenomena that occur around those of us who live our days within it.
+What happens when enchanted images appear inside an otherwise modern setting?[^4]
 
-In the anime *Noragami*, writing is the key to the protagonists’ bond with their Regalia. When Yato summons Yukine in the form of a sword, he uses a character for “snow” that resembles seal script. Yukine is the spirit of a person already dead; Yato is a god; and the sword, as a Regalia, wields a power absent from the scientific world. We may therefore call this esoteric thought that takes the Chinese character as its medium.
+In the anime *Noragami*, writing helps bind the gods to their Regalia. When Yato calls Yukine forth as a sword, the character 雪 (“snow”), rendered in a seal-script-like form, appears in the naming sequence. Yukine is the spirit of a dead person, Yato is a god, and the Regalia is a supernatural weapon. The scene therefore gives the written character a mediating role within an explicitly enchanted fiction.
 
-Another useful comparison to Hanegraaff’s account is a shot in the opening sequence of *Jujutsu Kaisen* in which characters burst outward. Like *Noragami*, the work is set in a modernized, scientific world. What issues from the wound is not simply bodily fluid that sustains physical functions but a purified aggregate of resentments invisible to ordinary people. This aggregate resembles what Hanegraaff calls Living Nature.[^5] What it contains is not like the parts of a giant clock: it is a formless life force.
+Another example appears in “Kaikai Kitan,” the first opening sequence of *Jujutsu Kaisen*, where written characters burst from a wound. Like *Noragami*, the series places supernatural forces inside a recognizable modern world. I read the image as an audiovisual motif for the negative emotions the series turns into cursed energy. Because the writing has no demonstrated in-world function in this shot, it is not itself mystical writing. It nevertheless recalls the “living nature” associated with the enchanted-world model:[^5] not a universe assembled like a clock, but one animated by formless forces.
 
-The same is true of the exorcism scene in the first episode of the television drama *Kotodamasō*: a text containing Chinese characters becomes an indispensable medium for expelling a curse.
+The first episode of TV Asahi’s horror drama *Kotodamasō* likewise makes a written text part of an attempted exorcism.[^27]
 
-A fundamental premise and defining feature of modern science is the uniformity of nature,[^6] the idea that everything, from past to future, obeys constant laws. The divine instruments of *Noragami*, the characters bursting forth in *Jujutsu Kaisen*, and the text in *Kotodamasō* all oppose this principle.
+I set these scenes against the uniformity of nature,[^6] the inductive assumption that regularities observed in some cases will continue to hold in unobserved ones. *Noragami* and *Kotodamasō* imagine supernatural exceptions within their fictional worlds; the animated writing in *Jujutsu Kaisen* evokes such an exception visually without proving one in the story.
 
 #### 2. Elements of the (Post)modern Occult
 
-The keyword in the (Post)modern Occult[^7] is *occult*, meaning “hidden” or “unseen.” Unlike Early Modern Enchantment, which points to a power that can be summoned into reality, here what is concealed is the invisible source of that power. Whereas the uniformity of nature extends “from past to future,” the source of esoteric thought “has no clear history, or lacks historical depth.” Indeed, the absence of history is precisely what allows esoteric knowledge to remain esoteric.
+The keyword in “the (Post)modern Occult”[^7] is *occult*: hidden from view. Whereas the previous model foregrounds an enchanted worldview, this one asks how identifiable esoteric currents persist and change under modern, ostensibly disenchanted conditions. My analogy emphasizes claims of power whose sources remain hidden or whose histories are narrated as ancient and inaccessible. Historical obscurity can preserve an aura of secrecy, but lack of documentation is not itself proof of esotericism.
 
-As the *Jujutsu Kaisen* opening “Kaikai Kitan” unfolds, many written characters appear. Beyond the premise-defying motion of the Living Nature discussed above, the strongest impression they convey is an absence of time. One reason is the “needlessness of reading” in ideographic writing. Unlike alphabetic words, which take a certain amount of time to read, these characters do not yield their meaning through being sounded out. Grasping them is therefore a visual process—light travels at roughly 300,000 kilometers per second, making the interval vanishingly short—rather than an auditory one, constrained by sound’s roughly 340 meters per second. A second reason is our limited knowledge of the genealogy of Chinese-character scripts, from oracle-bone inscriptions to the present. Chinese characters have a history of nearly two thousand years, and the other scripts that preceded them several thousand more; yet our study and understanding of oracle-bone script,[^8] the source of that genealogy, span barely a century. This too may be called a cause of concealment.
+As “Kaikai Kitan” unfolds, written characters flash across the image. They give me an impression of compressed time because a familiar graph can be apprehended without first being sounded out. I describe that difference through a metaphorical contrast between the speeds of light and sound, not a measurement of reading speed. A second impression comes from historical distance: Chinese writing has been in continuous use for more than three millennia, while the modern decipherment of oracle-bone inscriptions began only around the turn of the twentieth century.[^8] Recent recovery of an ancient genealogy can make origins feel concealed, although that feeling is an aesthetic response rather than historical evidence of occult transmission.
 
-Another aspect of this concealment appears within Western esotericism itself.[^9] As esoteric thought modernized and expanded beyond religion, Eastern mythology became its guidepost. This, the argument runs, is why *orientation*—guidance—derives from *orient*, the East. At this point the ambiguity surrounding the sources of Eastern myth and history exceeded East Asia and became a support for the occult, or hidden, in both an East Asian and a global sense.
+Western esotericism supplies a historical comparison.[^9] As modern esoteric movements looked beyond Europe, they often made an imagined “East” into a source of ancient wisdom. I play on *orientation* and *orient*, which share a root associated with the rising sun and the East.[^28] The etymology proves no historical causation; it only sharpens the analogy. Western occultism could project uncertainty about “Eastern” origins into a global image of ancient, hidden wisdom.
 
-This occult character of esoteric thought stands opposed to modern science’s “growth of knowledge.”[^10] If the metaphor that enables such growth, from religion through philosophy, is “God’s light illuminates the road before us, and through Hegelian dialectics we will necessarily reach the *Absoluter Geist*,” then esoteric concealment offers the opposite metaphor: “All is dark where God dwells, yet God’s power is beneath me.” It therefore obstructs the growth of knowledge.
+I contrast this rhetoric of concealment with modern science’s ideal of cumulative, public knowledge.[^10] One metaphor for that ideal runs from religion into philosophy: God’s light illuminates the road, and Hegelian dialectic promises an eventual arrival at *absoluter Geist*, “absolute spirit.” Esoteric concealment reverses the image: darkness surrounds the divine source even while its power is claimed below. This is a textual analogy between metaphors of knowledge, not evidence that esotericism historically obstructed scientific growth.
 
 #### 3. Elements of Inner Traditions
 
-“Inner Traditions”[^11] refers to traditions accessible to only a tiny number of students, and to something within them that never changes, whatever the differences of society, history, or culture. That something is “True Esoteric Spirituality.”[^12] Those who receive instruction in it belong to esoteric religious groups.
+The “Inner Traditions” model[^11] treats esotericism as a hidden teaching accessible to a spiritual elite. Beneath the differences among societies, histories, and cultures, it posits a single “true esoteric spirituality.”[^12] Hanegraaff presents this as an influential model—and criticizes the assumption of a universal inner truth—not as an established fact.
 
-An example appears in *Jujutsu Kaisen*. It is not a direct example of writing, but Toge Inumaki’s status as a cursed-speech user is inherited. Unlike the linguistic capacity people possess from birth, it is not universal.
+I find a fictional analogy in *Jujutsu Kaisen*. This is not an example of writing, but Toge Inumaki inherits the rare Cursed Speech technique. Unlike the ordinary human capacity for language, the technique belongs to a particular lineage.
 
-Seen in the real world, Chinese characters may possess a similar quality. Consider Japanese *kun’yomi*, or native readings.[^13] A character simply stands there while several sets of sounds are assigned to it at once; should we not find this strange? The causes of *kun’yomi* in Chinese-character writing can be traced to two arguments: that “a writing system so complex and confused, and increasingly confused with time, proved supremely useful in preserving the exclusivity of a scholarly class inaccessible to outsiders”; and that “in every country in the world during the feudal age, literacy was the possession of limited classes, above all of priests.”[^14]
+Japanese *kun’yomi*, the native Japanese readings assigned to Chinese characters, offers only a formal analogy.[^13] A graph remains visually stable while taking several readings. Katsuhiko Tanaka relates the historical difficulty of character literacy to social exclusion, arguing that “a writing system so complex and confused—and growing more confused with time—was supremely useful for preserving the exclusivity of a learned class inaccessible to outsiders.” He adds that “in every country in the feudal age, literacy belonged to restricted classes, above all to priests.”[^14] Restricted literacy has existed in many writing cultures. These quotations neither make *kun’yomi* an occult initiation nor show that it was designed to exclude outsiders.
 
-The arbitrariness of this transmission stands opposed to modern science’s “falsifiability.”[^15] Newton’s law of gravity can be tested by anyone in this world. If it proves wrong, the model can be reconsidered and a new one proposed for a wider range of cases. Inner transmission rejects this synchronic universality.
+The comparison with science therefore stops at access. A reading convention must be learned, while a scientific claim should in principle be open to intersubjective testing. Under Popper’s account, a scientific theory must expose itself to possible refutation; an anomalous result does not mechanically overthrow it, because tests also rely on measurements and auxiliary assumptions.[^15] *Kun’yomi* is not a hypothesis to be falsified, and learning it is not initiation into hidden truth.
 
-### Interim Conclusion: An Esotericism That Fills Everyday Life
+### Interim Conclusion: Mystical Writing in Everyday Life
 
-Let us review the subject and conclusions of Part I.
+I have used Hanegraaff’s models to compare several East Asian investments in writing: devotional *ema*, fictional *kotodama* and exorcistic texts, audiovisual and interface motifs, and the formal analogy of *kun’yomi*. Only the first two kinds attribute efficacy beyond ordinary communication within a religious or fictional world. The others show how visual salience and restricted access can echo that idea. “Mysticism of writing” therefore names a field of comparison, not a claim that all writing or literacy in East Asia is esoteric.
 
-First, esoteric thought or esotericism is the idea of connecting with God, or with a higher will, through some means. Letter mysticism treats writing as that means.
-
-Using Hanegraaff’s three models, we have located esoteric phenomena of writing in contemporary East Asia. Whether in spiritually charged *kotodama* and exorcistic texts, in core elements of anime and games, or in the *kun’yomi* of language education, these phenomena meet our esoteric criteria. This esotericism exceeds the scientific paradigm of the contemporary world we inhabit and exists in a posture of transcendence.
-
-## Part II: Attachment to the Time of Modernity
+## Part II: Attachment to Modernity’s Time
 
 ### Section 1: The Absent Origin
 
 #### 1. Chinese Mythological Studies
 
-Put schematically, China has no clearly defined mythological system. Neither the Three Sovereigns and Five Emperors nor the stories of Nüwa, Fuxi, and Pangu possess the unity of Greek mythology or a monotheistic tradition. To quote Shizuka Shirakawa, “myth was not transmitted as myth in its own form; for this reason China has often been called a land without mythology, and its myths have been said to be withered myths.”[^16] The mythologist Yuan Ke makes a similar observation: “Chinese myths were hidden in ancient documents from the Qin and Han periods; they never encountered a figure like the Greek Homer, and so never formed a long and systematic body of mythology.”[^17] The documents that preserve Chinese mythology today are for the most part secondary sources written in Chinese characters, not in oracle-bone script.[^17]
+One influential historiographical account holds that China did not preserve a single, clearly bounded mythological system. The Three Sovereigns and Five Emperors and the stories of Nüwa, Fuxi, and Pangu do not possess the narrative unity conventionally attributed to Greek mythology or monotheistic traditions. Shizuka Shirakawa writes that “myth was not transmitted as myth in its own form; for this reason China has often been called a land without mythology, and its myths have been described as withered.”[^16] The mythologist Yuan Ke similarly argues that “Chinese myths lay hidden in ancient documents from the Qin and Han periods; they never encountered a figure like the Greek Homer, and so never formed a long and systematic body of mythology.”[^17] Most surviving textual records of Chinese myth come through later documents written in received forms of Chinese script, rather than directly through oracle-bone inscriptions.[^17]
 
-From these two quotations we can conclude that China did not preserve a clear and systematic body of mythology. The withering of mythology is the withering of a spiritual origin.
+These quotations do not mean that China “has no mythology.” They support the narrower claim that no unified corpus was transmitted in the form these scholars expected. I interpret that discontinuity as an “absent origin.” This is a metaphor drawn from two historians’ descriptions of the archive, not evidence that Chinese societies lacked spiritual origins.
 
 #### 2. Divine Time and the Time of Chinese Characters
 
-Let us turn to time.
+I now turn to time.
 
-What sense of time did Protestants possess during the Reformation? According to predestination, we human beings are born bearing original sin. The incarnate Christ accepted our faith through his death, and believers will be saved when the Last Judgment arrives. God is omniscient and omnipotent; from the beginning of the world, God has already known everything. Human beings do not know whether they will receive salvation. They can only continue living out their lives until the final day.[^18]
+What sense of time, in Osawa’s account, did Reformation Protestantism produce? Human beings are born in original sin; Christ’s incarnation and death make salvation possible; and the Last Judgment fixes history toward an end. Under predestination, an omniscient God already knows who will be saved, while believers themselves do not. They can only continue through their lives toward the final day.[^18]
 
-The time of Chinese characters is the reverse. It would be wrong to say there is no mythology at all, but that mythology is unsystematic, while the written culture formed around Chinese characters stands at an immense distance from oracle-bone writing as its origin. As a result, the temporal source of Chinese-character culture has remained obscure to this day.
+I place that directional story beside a different image: dispersed myths and the historical distance between received character culture and oracle-bone inscriptions make origins appear obscure rather than a promised ending appear certain. Calling this the “time of Chinese characters” is a formal analogy, not a claim that script determines temporal consciousness.
 
-An origin resembles memory.[^19] In the modern scientific sense, people predict the future on the basis of what they remember experiencing in the past. Metaphorically speaking, if one has no memory of the past, one may to some extent forget what one wanted to do in the future. In this sense, Chinese-character culture has lost its most important memory: the memory of its own origin, whether true or false. In other words, the memory of the origin that ought to occupy the initial position is absent—and that absence persists to the present.
+Osawa compares origin to memory.[^19] People use remembered experience to anticipate what may happen next; metaphorically, a missing memory of the past can also obscure the future. I extend that metaphor to the textual archive: the absence of a single authoritative origin story leaves the origin’s place open, whether the missing account would have been historical or mythic. The evidence supports an archival comparison, not a psychological diagnosis of everyone in a “Chinese-character culture.”
 
 #### 3. Temporal Genealogy and Its Place
 
-According to the work of the historian and philosopher of science Wu Guosheng, a study of the literature formed in Chinese characters can reveal the temporal consciousness of Chinese-character culture.[^20]
+Drawing on historian and philosopher of science Wu Guosheng, I read literature written in Chinese characters as evidence for several models of time found in ancient Chinese texts.[^20]
 
-In brief, ancient China possessed both cyclical and linear senses of time. This stands in contrast with Christianity and Indian culture, each of which possesses an extreme and simple temporal model. As noted above, Christianity belongs to an extremely linear model; India, to an extremely cyclical one. It was Christianity’s linear sense of time that gave rise to modern science.
+In Wu’s schema, ancient China combined cyclical and linear senses of time, Christianity sits toward the linear pole, and Indian traditions toward the cyclical pole. His further claim—that Christianity’s linear temporality helped give rise to modern science—offers a historical correlation and an interpretive genealogy, not a sufficient causal account of the Scientific Revolution. I use it as a hypothesis to test against Osawa’s account, not as a settled map of three civilizations.
 
-### Section 2: The Absent Subjectivity
+### Section 2: The Difficult Birth of Subjectivity
 
 #### 1. Speaking On in an Abandoned Land
 
-According to Masachi Osawa’s research,[^21] at the time of the Reformation, Catholic and Protestant confession produced opposite results because spoken and written language carried different temporalities and because absolution was either present or absent. The relativization of the believer’s relation to God allowed Catholics to experience, in this world, the psychological effect of being released from sin. Protestant confession, conducted by keeping a diary, required the believer to go on repenting within linear time.
+Following Masachi Osawa’s account of the Reformation,[^21] I contrast Catholic sacramental confession with Protestant practices of written self-examination. Spoken confession and written retrospection carry different temporalities, and the availability or absence of priestly absolution changes their effect. In Osawa’s schema, a Catholic penitent can experience release from sin in the present, whereas diary writing prolongs self-scrutiny through linear time. This does not mean that all Protestants confessed by keeping diaries.
 
-Possessing a spiritual origin in original sin, and repenting throughout one’s life in a diary, gives rise to a distinction between the “I that speaks” and the “I that is spoken” within the diary. By comparison, Chinese-character culture, lacking a spiritual origin—a clear mythological system and a linear sense of time—should not have been able to generate this distinction. In historical fact, the Chinese-character sphere was not the birthplace of the diary as a literary form.
+Within the diary, Osawa’s subject can split into the “I that speaks” and the “I that is spoken about.” I then ask whether the same genealogy could operate in texts organized around different stories of origin and time. The question concerns this particular model of confessional self-examination; East Asia has its own long traditions of diary literature. Textual difference cannot establish the absence of subjectivity.
 
-#### 2. The Impossibility and Incapacity of Reaching the Third-Party Instance
+#### 2. Approaching the Instance of the Third Person
 
-The panopticon examined by Foucault was a purification of the king’s two bodies under absolute monarchy. The natural body was extracted, leaving only the body politic, with its disciplinary form and surplus power.[^22]
+Osawa connects Foucault’s panopticon to a transformation of the sovereign’s “two bodies” under absolute monarchy.[^22] That genealogy is Osawa’s. Foucault’s own panoptic mechanism is more specific: permanent visibility induces subjects to regulate themselves even when no observer is present, dispersing discipline through an apparatus rather than preserving a sovereign or divine gaze.[^30]
 
-The Protestant confession that repents through diary writing represents a continuous interrogation of one’s identity under the rule of “God ≈ the panopticon ≈ the third-party instance.” The diary’s “I that speaks” attains a position almost equivalent to the third-party instance. Ultimately, such equivalence is impossible; nevertheless, through repeated questioning in linear time, the “I that speaks” becomes the instance’s proxy.[^23]
+Osawa calls the external normative standpoint *daisansha no shinkyū*, “the instance of the third person.”[^23] My formula “God ≈ panopticon ≈ instance of the third person” compares only one function: each supplies, in the texts being compared, a standpoint from which the self imagines itself visible and judged. They are not equivalent institutions or mechanisms. The diary’s “I that speaks” can approach that standpoint without becoming God, a prison apparatus, or an objective judge; repeated self-questioning makes it an imagined proxy.
 
-By contrast, Chinese-character culture combines linear and cyclical senses of time. Even if it can temporarily approach the third-party instance, the influence of cyclical time will return it to where it began. This is not the impossibility but the incapacity of reaching the third-party instance.
+I then speculate that a text organized by both cyclical and linear temporalities might stage that approach differently. The cited works do not show that Chinese-character structure prevents people from sustaining an external standpoint. At most, the contrast suggests a question about how different textual traditions imagine recurrence, judgment, and self-observation.
 
 #### 3. The Birth of the Subject and the Difficult Birth of Subjectivity
 
-If the time of this questioning contracts to its limit, the third-party instance’s proxy becomes one with the “I that speaks,” which continues to pose the questions. At this moment, the birth of the modern subject is complete.[^24]
+If the interval between question and judgment contracts to its limit, the proxy of the instance of the third person merges with the questioning “I that speaks.” In Osawa’s genealogy, this is the birth of the modern subject.[^24]
 
-Looking back at Chinese characters shrouded in mist, the self-incarnation of the third-party instance was nearly impossible. This does not mean, of course, that people who use Chinese characters cannot embody the modern subject. Such embodiment is possible, but its realization may be the result of borrowing the power of other languages. Spiritually speaking, the difficulty faced by Chinese characters is precisely a difficult birth of the subject. Put differently, the subjectivity that should occupy the present position on the timeline is absent—and that absence will persist from here onward.
+My extension of this genealogy to Chinese-character cultures remains speculative. Nothing here shows that users of Chinese characters cannot become modern subjects, or that subjectivity had to arrive through another language. Nor have I identified a single moment or institution of transfer across China, Japan, or the rest of East Asia. “Difficult birth” therefore names a problem posed by my comparison—whether Osawa’s specifically European genealogy travels—not a civilizational incapacity caused by script.
 
-### Section 3: The “Esotericism—Religion—Science” Model
+### Section 3: The “Esotericism—Religion—Science” Hypothesis
 
 #### 1. *Absoluter Geist* and Scientific Progress
 
-As noted above, the growth of knowledge in modern science is connected with Hegelian dialectics. If we ask after the source of the dialectic in turn, we arrive at the birth of the subject within the religious environment described in the previous section. The relation is a metaphorical passage from religion into philosophy. It secured a source for modern scientific progress.
+I have linked modern science’s image of cumulative knowledge to Hegelian dialectic, and Hegelian dialectic in turn to the religious genealogy of the subject outlined above. This is a textual and genealogical analogy, not evidence that Hegel’s dialectic caused scientific discoveries. It supplies a metaphor of directed progress: contradiction is expected to yield a more comprehensive form of knowledge.
 
-#### 2. God Is God, Humanity Is Humanity
+#### 2. The Boundary between Scientific and Religious Claims
 
-As the age advances, affairs in this world come to be explained by an aggregate of scientific hypotheses regarded as truth. Alongside God’s transcendence, the unfalsifiable is treated as a false proposition, while divine salvation remains unknowable within this world. Humanity’s world prospers as it gazes up toward the distant kingdom of God.
+Modern science explains more of the world through publicly testable hypotheses. A claim that cannot in principle be tested falls outside empirical science; it does not automatically become false or meaningless. Divine salvation therefore remains a religious claim rather than an unsettled scientific problem. Historically, religion, alchemy, esotericism, and science have overlapped, but their claims cannot be sorted merely by asking whether science has explained them yet.
 
-#### 3. What Remains Is the Esoteric
+#### 3. Mystery Is Not Automatically Esotericism
 
-At the end of Part II, we return to Part I. In a human world flourishing through the uniformity of nature and the growth of knowledge, inexplicable phenomena still remain. What those phenomena leave behind is the esoteric. Just as we do not know whether Judgment Day will come, a day may perhaps arrive when the true nature of the esoteric becomes clear. For now, let us run toward the future with the third-party instance within us.
+Four domains must remain distinct. Historically identifiable esoteric traditions are not the same as religious claims; neither is equivalent to questions science has not yet settled; and all three differ from claims that conflict with good evidence. My diagram calls the surrounding domain “mystery,” not “esotericism,” because the unknown does not become an occult tradition merely by remaining unexplained. The “esotericism—religion—science” formula is therefore not a law of succession. It is a deliberately compressed hypothesis about changing ways of authorizing knowledge.
 
-### Interim Conclusion: Modernity Not Overcome
+### Interim Conclusion: An Unovercome Modernity
 
-Let us review the subject and conclusions of Part II.
-
-For Chinese characters, their own origin has been obscure and absent. With their mixed sense of time, moreover, they have not yet been able to produce subjectivity. Western culture, which did produce it, invented the model “esotericism—religion—science.”
+Part II has tested a speculative extension of Osawa’s model. Discontinuities in the textual record can be read as absent origins; different texts can organize time differently; and Osawa’s European genealogy links confessional self-examination to the instance of the third person. These points do not establish that a writing system causes subjectivity or that “the West” possesses what “East Asia” lacks. They identify a comparative problem: modern concepts imported across languages may enter histories whose accounts of origin, authority, and time were formed differently.
 
 ## Conclusion, Section 1: All Too Unmodern
 
-This essay has examined phenomena in the domain of East Asian writing. Using Wouter J. Hanegraaff’s three models for distinguishing esotericism, it analyzed phenomena that can be called East Asian letter mysticism. It also established that this form of esoteric thought fills our lives in a posture of transcendence.
+I have used Wouter J. Hanegraaff’s three models as comparative lenses for what I call East Asian mysticism of writing. The term gathers actual practices, fictional representations, visual motifs, and formal analogies without pretending that they are identical. Its most defensible claim is that writing can be imagined as efficacious beyond neutral notation, and that Chinese characters provide one historically specific repertoire for that imagination.
 
-From the perspectives of mythology and of the study of writing and literature, the essay then identified what sustains this transcendent posture: the absence of origin and subjectivity. Finally, taking the “esotericism—religion—science” model as its criterion, it concluded that East Asia remains in a condition of modernity not overcome.
+I then placed selected works of mythography and theories of subject formation beside that repertoire. The result is not a causal history of East Asia, still less a diagnosis of cultural deficiency. It is a bounded experiment with Osawa’s model: a way to ask how accounts of origin, time, and external judgment travel across languages and institutions. In that limited sense, they illuminate an East Asian modernity that remains unovercome rather than explaining it completely.
 
 ### Section 2: Toward a Long, Narrow Road and an Open Sky
 
-As the figure shows, we human beings are walking precisely along this narrow road, which continues to open out before us. The ground represents falsifiable science; what resembles the air is the domain of religion; and what meets the upper atmosphere is the esotericism that remains. At the present stage there is still very little we can touch. Yet one day, I believe, we will set out into that open sky.
+The figure recasts the argument spatially rather than historically. Inquiry begins at the center and follows the single downward arrow as the road broadens toward the viewer. Science remains a bounded path through a larger field. The visibly delimited band represents religious claims, which may orient life without becoming scientific hypotheses. Beyond it lies mystery—the unknown—not a storehouse automatically labeled esoteric. The dashed rings mark horizons of inquiry, not chronological stages or causal arrows.
 
-![Concentric-road diagram of science, religion, and esotericism](/attachments/roof-archive/cv19651001/909fc9b642b2b35d87aac20e3446dede71b75671.png)
+[fig] A spatial analogy, not a timeline: science is a bounded path of testable claims; religion is a distinct neighboring domain; mystery is the larger unknown. Historically identifiable esoteric traditions may cross these boundaries but are not represented by the unknown as such.
+
+![Inquiry starts at the center and follows one downward arrow along a blue road of testable science that broadens toward the viewer. A distinct annular band is labeled “Religious claims,” and the outer field is labeled “Mystery: questions not yet settled” and “Not identical with esotericism.” Dashed rings indicate horizons of inquiry, not historical stages.](/attachments/roof-archive/cv19651001/translations/en/science-religion-mystery-road-v2.svg)
+
+[fig-note] English vector reconstruction of the diagram in the original Bilibili article.
 
 ## Sidebar: A World of Sorcery and a World of Abundance
 
-As the main argument has shown, the East Asian world, which still uses Chinese characters, remains fascinated by their perplexing magical or esoteric qualities. Consequently, our spiritual world has remained in an immature form. This immaturity has produced disasters, as the research of many scholars of East Asia also shows.
+Cultures that use Chinese characters remain fascinated by the script’s magical or mystical possibilities. I once called the spiritual world produced by that fascination “immature” and suggested that it had destructive consequences. The examples in this essay cannot establish either causation or a regional judgment so broad. At most, they show why the fascination deserves closer historical study.
 
-Yet the discovery and decipherment of oracle-bone writing may have brought a chance to end this uncertainty. Through Shizuka Shirakawa’s research on oracle-bone inscriptions and other ancient scripts—work that ranges into anthropology and mythology—an abundant ancient world appears before us. The world of thought latent in writing is revived. Read Shirakawa.
+The discovery and decipherment of oracle-bone writing nevertheless transformed what can be known about early Chinese script. Shizuka Shirakawa’s work on oracle-bone inscriptions and other ancient forms connects paleography with anthropology and mythography. It cannot prove the causal history proposed here, but it offers a richer account of the ritual worlds in which early writing operated.
 
 ## Contributions and Limitations
 
-Because many of its supporting arguments have already been developed in other books, this essay has been able to proceed as far as it has.
+I depend on arguments developed at greater length in the works cited below.
 
-Its principal contribution is to use Wouter J. Hanegraaff’s research on esotericism to distinguish and analyze esoteric phenomena in East Asia, and then, in dialogue with Masachi Osawa’s context, to derive the condition of modernity not overcome in the East Asian world.
+My principal contribution is to use Hanegraaff’s scholarship to distinguish kinds of mystical investment in writing, and then to test a limited extension of Osawa’s account of subject formation across different textual histories.
 
-Its limitations are that the connections between its parts remain weak and that it does not pursue East Asian esotericism in depth. Future inquiry should analyze representations at the intersection of esotericism and subjectivity.
+The limitations are substantial: the connections among the cases remain provisional; the regional comparison is not a causal history; and East Asian esoteric traditions themselves require much deeper study. Future inquiry should examine historically specific representations at the intersection of writing, esotericism, and subjectivity.
 
-[^1]: In the broad sense, this also includes esoteric practices.
+[^1]: The category includes practices as well as beliefs. The distinctions in the body prevent formal resemblance from counting as a practice.
 
 [^2]: Wouter J. Hanegraaff, *Western Esotericism: A Guide for the Perplexed* (Bloomsbury, 2013), 120.
 
@@ -307,25 +280,25 @@ Its limitations are that the connections between its parts remain weak and that 
 
 [^5]: See note [^3].
 
-[^6]: On the principle that “the course of nature is always uniformly the same” as a premise of causal relations, see David Hume, *A Treatise of Human Nature*, book 1, part 3, section 6. The Japanese edition cited in the source is translated by Haruhiko Otsuki (Iwanami Bunko, 1948–52), vol. 1, 149. This note is quoted from Eiji Oguma, *Kiso kara wakaru ronbun no kakikata* [Writing Academic Papers from the Basics] (Kodansha, 2022), 124.
+[^6]: Eiji Oguma relays the proposition that “the course of nature is always uniformly the same,” citing David Hume, *A Treatise of Human Nature*, book 1, part 3, section 6, in Haruhiko Otsuki’s Japanese translation (Iwanami Bunko, 1948–52), vol. 1, 149. That wording is translated from Oguma’s relay, not quoted as Hume’s English. Hume’s argument is more cautious: causal inference assumes, but cannot demonstrate, that unobserved cases will resemble observed ones. See the [English text of section 1.3.6](https://davidhume.org/texts/t/1/3/6).
 
-[^7]: Hanegraaff, *Western Esotericism*, 7. The Japanese source cross-refers here to [^1]; the bibliographic context identifies the book cited in note 2.—Trans.
+[^7]: Hanegraaff, *Western Esotericism*, 7.
 
-[^8]: At present, oracle-bone writing is indeed understood to be the source of Chinese characters.
+[^8]: Oracle-bone inscriptions are the earliest large surviving body of mature Chinese writing, not necessarily the first stage from which every later form directly descends. For an accessible institutional overview, see the Metropolitan Museum of Art’s [“Chinese Calligraphy”](https://www.metmuseum.org/essays/chinese-calligraphy).
 
-[^9]: Hanegraaff, *Western Esotericism*, 132. Source citation: [^1].
+[^9]: Hanegraaff, *Western Esotericism*, 132.
 
 [^10]: Masachi Osawa, *“Sekaishi” no tetsugaku: Kindai-hen 1, “shutai” no tanjō* [The Philosophy of “World History”: Modernity, vol. 1, The Birth of the Subject] (Kodansha, 2021), chap. 13.
 
-[^11]: Hanegraaff, *Western Esotericism*, 10. Source citation: [^1].
+[^11]: Hanegraaff, *Western Esotericism*, 10.
 
-[^12]: Hanegraaff, *Western Esotericism*, 11. Source citation: [^1].
+[^12]: Hanegraaff, *Western Esotericism*, 11.
 
 [^13]: Katsuhiko Tanaka, *Gengogakusha ga kataru kanji bunmeiron* [A Linguist on the Civilization of Chinese Characters] (Kodansha, 2017), chap. 3.
 
-[^14]: Tanaka, *Gengogakusha ga kataru kanji bunmeiron*, chap. 3. This note cites his quotations at second hand.
+[^14]: Tanaka, *Gengogakusha ga kataru kanji bunmeiron*, chap. 3. The cited chapter presents both passages as secondary quotations; the available citation supplies neither the original authors nor page locators.
 
-[^15]: The author has in mind debates since logical positivism. Whether “testing” in the body means verification, confirmation, or corroboration will not be pursued here. Interested readers may consult Kazuhisa Todayama, *Kagaku tetsugaku no bōken: Saiensu no mokuteki to hōhō o saguru* [Adventures in the Philosophy of Science: Exploring the Aims and Methods of Science] (NHK Publishing, 2005), 55–56, 77. For historical assessments of logical positivism, accessible introductions include Tetsuji Iseda, *Kagaku tetsugaku no genryū o tadoru: Kenkyū dentō no hyakunenshi* [Tracing the Sources of Philosophy of Science: A Century of Research Traditions] (Minerva Shobo, 2018), and Keiichi Noe, *Kūn: Paradaimu* [Kuhn: Paradigm] (Kodansha, 1998), chap. 2, reissued as *Paradaimu to wa nani ka: Kūn no kagakushi kakumei* [What Is a Paradigm? Kuhn’s Revolution in the History of Science] (Kodansha Gakujutsu Bunko, 2008). This note is quoted from Oguma, *Kiso kara wakaru ronbun no kakikata*, 89.
+[^15]: Karl Popper treats falsifiability as a criterion of scientific status while also addressing how auxiliary hypotheses affect a test; see *The Logic of Scientific Discovery*, 2nd ed. (Routledge, 2002), parts II.4–6 and sec. 20, and the [publisher’s contents and edition record](https://www.routledge.com/link/link/p/book/9780415278447). The Japanese-language discussion follows Kazuhisa Todayama, *Kagaku tetsugaku no bōken: Saiensu no mokuteki to hōhō o saguru* [Adventures in the Philosophy of Science: Exploring the Aims and Methods of Science] (NHK Publishing, 2005), 55–56, 77. Historical context appears in Tetsuji Iseda, *Kagaku tetsugaku no genryū o tadoru* [Tracing the Sources of Philosophy of Science] (Minerva Shobo, 2018), and Keiichi Noe, *Kūn: Paradaimu* [Kuhn: Paradigm] (Kodansha, 1998), chap. 2. This bibliography is adapted from Eiji Oguma, *Kiso kara wakaru ronbun no kakikata*, 89.
 
 [^16]: Shizuka Shirakawa, *Chūgoku no kodai bungaku 1: Shinwa kara Sōji e* [Ancient Chinese Literature I: From Myth to the *Chu Ci*] (Chuokoron-Shinsha, 2003), chap. 1, sec. 3.
 
@@ -337,17 +310,31 @@ Its limitations are that the connections between its parts remain weak and that 
 
 [^20]: Wu Guosheng, *Shijian de guannian* [The Concept of Time] (Peking University Press, 2006), chap. 2.
 
-[^21]: Osawa, *“Sekaishi” no tetsugaku: Kindai-hen 1*, chap. 17.
+[^21]: Osawa, *“Sekaishi” no tetsugaku: Kindai-hen 1*, chap. 17. The preserved citation is chapter-level and supplies no page locator.
 
-[^22]: Osawa, *“Sekaishi” no tetsugaku: Kindai-hen 1*, chap. 16.
+[^22]: Osawa, *“Sekaishi” no tetsugaku: Kindai-hen 1*, chap. 16. The preserved citation is chapter-level and supplies no page locator.
 
-[^23]: Ibid.
+[^23]: Ibid. Osawa’s own English abstract uses “the instance of the third person”; see Masachi Osawa, [“The Origin of Sociality,”](https://doi.org/10.11218/ojjams.15.21) *Sociological Theory and Methods* 15, no. 1 (2000): 21–36.
 
-[^24]: Osawa, *“Sekaishi” no tetsugaku: Kindai-hen 1*, chap. 17.
+[^24]: Osawa, *“Sekaishi” no tetsugaku: Kindai-hen 1*, chap. 17. The preserved citation is chapter-level and supplies no page locator.
+
+[^25]: The characters are glossed according to their role in the Japanese interface; capitalization follows the corresponding English interface terms where recoverable. The warning glyph 危 remains a Chinese character in English-language play rather than being replaced by an English word.
+
+[^26]: Chaofen Sun describes Chinese writing as “a logographic system with characters that are partially morpho-syllabic” in *Chinese: A Linguistic Introduction* (Cambridge University Press, 2006), 8. See the publisher’s [book excerpt](https://assets.cambridge.org/97805215/30828/excerpt/9780521530828_excerpt.pdf). This distinguishes the linguistic description from the older “ideographic” terminology.
+
+[^27]: TV Asahi and ABEMA’s official title is 『言霊荘』, romanized here as *Kotodamasō*. See TV Asahi’s [official introduction](https://www.tv-asahi.co.jp/kotodamasou/intro/) and [episode-one synopsis](https://www.tv-asahi.co.jp/kotodamasou/story/0001/).
+
+[^28]: *Orient* comes through Latin *oriens*, “the rising sun” or east, and the verb later developed the sense of finding or setting one’s bearings. See Merriam-Webster’s [word history for “orient”](https://www.merriam-webster.com/dictionary/orient). That etymology supports the wordplay, but not the essay’s larger historical inference on its own.
+
+[^29]: Hanegraaff develops Western esotericism as forms of “rejected knowledge” in *Western Esotericism*; see also Bloomsbury Academic’s [description and table of contents](https://www.bloomsbury.com/us/western-esotericism-a-guide-for-the-perplexed-9781441146748/).
+
+[^30]: Michel Foucault, *Discipline and Punish: The Birth of the Prison*, trans. Alan Sheridan, 2nd Vintage Books ed. (1995), “Panopticism,” 195–228.
 
 ## References
 
-- Hanegraaff, Wouter J. *Western Esotericism: A Guide for the Perplexed*. Bloomsbury, 2013.
+- Foucault, Michel. *Discipline and Punish: The Birth of the Prison*. Translated by Alan Sheridan. 2nd Vintage Books ed., 1995.
+
+- Hanegraaff, Wouter J. *Western Esotericism: A Guide for the Perplexed*. Bloomsbury Academic, 2013. [Publisher record](https://www.bloomsbury.com/us/western-esotericism-a-guide-for-the-perplexed-9781441146748/).
 
 - Osawa, Masachi. *“Sekaishi” no tetsugaku: Kindai-hen 1, “shutai” no tanjō* [The Philosophy of “World History”: Modernity, vol. 1, The Birth of the Subject]. Kodansha, 2021.
 
@@ -362,3 +349,7 @@ Its limitations are that the connections between its parts remain weak and that 
 - Shirakawa, Shizuka. *Chūgoku no kodai bungaku 1: Shinwa kara Sōji e* [Ancient Chinese Literature I: From Myth to the *Chu Ci*]. Chuokoron-Shinsha, 2003.
 
 - Oguma, Eiji. *Kiso kara wakaru ronbun no kakikata* [Writing Academic Papers from the Basics]. Kodansha, 2022.
+
+- Popper, Karl. *The Logic of Scientific Discovery*. 2nd ed. Routledge, 2002.
+
+- Sun, Chaofen. *Chinese: A Linguistic Introduction*. Cambridge University Press, 2006.

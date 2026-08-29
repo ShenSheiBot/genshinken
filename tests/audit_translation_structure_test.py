@@ -47,6 +47,11 @@ class ProtectedStructureTests(unittest.TestCase):
         target = '1. <span lang="zh-Hans">中文书目</span>\n'
         self.assertEqual(self.failures(source, target), [])
 
+    def test_bibliography_list_item_with_journal_pipe_is_not_a_table(self) -> None:
+        text = "5. Rothschild T. *Medienwissenschaft Rezensionen | Reviews*, 1999(4).\n"
+        events = audit.parse_structure(text)["events"]
+        self.assertFalse(any(event[0].startswith("table-") for event in events))
+
     def test_target_may_add_structural_html(self) -> None:
         source = "Paragraph.\n"
         target = "<figure><figcaption>Caption</figcaption></figure>\n"
@@ -56,6 +61,11 @@ class ProtectedStructureTests(unittest.TestCase):
         source = "<figure><figcaption>Caption</figcaption></figure>\n"
         target = "Paragraph.\n"
         self.assertTrue(any(item["field"] == "structural_html" for item in self.failures(source, target)))
+
+    def test_presentational_line_break_may_be_reflowed(self) -> None:
+        source = "> First line.<br />\n> Second line.\n"
+        target = "> First line.\n> Second line.\n"
+        self.assertEqual(self.failures(source, target), [])
 
     def test_markdown_autolink_is_not_structural_html(self) -> None:
         events = audit.parse_structure("<https://example.test/source>\n")["events"]
@@ -84,10 +94,38 @@ class ProtectedStructureTests(unittest.TestCase):
         target = "![Translated figure](attachments/roof-archive/cv1/translations/ja/figure-3.png)\n"
         self.assertEqual(self.failures(source, target), [])
 
-    def test_unrelated_localized_media_variant_fails(self) -> None:
+    def test_localized_media_may_use_a_reader_facing_filename_in_the_same_work(self) -> None:
         source = "![Figure](attachments/roof-archive/cv1/figure-3.jpg)\n"
         target = "![Translated figure](attachments/roof-archive/cv1/translations/ja/figure-4.jpg)\n"
+        self.assertEqual(self.failures(source, target), [])
+
+    def test_localized_media_from_an_unrelated_work_fails(self) -> None:
+        source = "![Figure](attachments/roof-archive/cv1/figure-3.jpg)\n"
+        target = "![Translated figure](attachments/roof-archive/cv2/translations/ja/figure-3.jpg)\n"
         self.assertTrue(self.failures(source, target))
+
+    def test_local_attachment_leading_slash_is_not_an_identity_change(self) -> None:
+        source = "![Figure](attachments/roof-archive/cv1/figure-3.jpg)\n"
+        target = "![Translated figure](/attachments/roof-archive/cv1/figure-3.jpg)\n"
+        self.assertEqual(self.failures(source, target), [])
+
+    def test_cache_busting_query_is_not_an_image_identity_change(self) -> None:
+        source = "![Figure](attachments/roof-archive/cv1/figure-3.jpg?v=abc)\n"
+        target = "![Translated figure](attachments/roof-archive/cv1/figure-3.jpg)\n"
+        self.assertEqual(self.failures(source, target), [])
+
+    def test_localized_media_and_raw_images_may_be_reordered_without_loss(self) -> None:
+        source = (
+            "![One](attachments/roof-archive/cv1/one.jpg)\n"
+            "![Two](attachments/roof-archive/cv1/two.jpg)\n"
+        )
+        target = (
+            "![Localized two](attachments/roof-archive/cv1/translations/ja/two-reader.png)\n"
+            "![One](attachments/roof-archive/cv1/one.jpg)\n"
+        )
+        failures, warnings = self.comparison(source, target)
+        self.assertEqual(failures, [])
+        self.assertTrue(any(item["field"] == "image_order" for item in warnings))
 
     def test_localized_media_variant_cannot_use_another_locale(self) -> None:
         with tempfile.TemporaryDirectory() as directory:

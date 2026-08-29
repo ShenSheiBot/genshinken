@@ -36,6 +36,7 @@ const mimeTypes = new Map([
   [".mp3", "audio/mpeg"],
   [".mp4", "video/mp4"],
   [".png", "image/png"],
+  [".svg", "image/svg+xml"],
   [".webp", "image/webp"],
 ]);
 
@@ -69,7 +70,8 @@ function selectAssets(assets) {
 
 function buildManifest() {
   if (!fs.existsSync(sourceDirectory)) throw new Error(`Asset directory not found: ${sourceDirectory}`);
-  const assets = walk(sourceDirectory)
+  const existing = fs.existsSync(manifestPath) ? loadManifest() : null;
+  const localAssets = walk(sourceDirectory)
     .sort((left, right) => left.localeCompare(right, "en"))
     .map((absolute) => {
       const relative = path.relative(sourceDirectory, absolute).split(path.sep).join("/");
@@ -84,6 +86,12 @@ function buildManifest() {
         contentType,
       };
     });
+  const localAssetsByKey = new Map(localAssets.map((asset) => [asset.key, asset]));
+  const existingAssets = existing?.assets ?? [];
+  const existingKeys = new Set(existingAssets.map((asset) => asset.key));
+  const assets = existingAssets
+    .map((asset) => localAssetsByKey.get(asset.key) ?? asset)
+    .concat(localAssets.filter((asset) => !existingKeys.has(asset.key)));
   const manifest = {
     version: 1,
     bucket: bucketName,

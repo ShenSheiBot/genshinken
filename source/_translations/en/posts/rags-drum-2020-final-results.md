@@ -5,9 +5,9 @@ source_slug: rags-drum-2020-final-results
 slug: rags-drum-2020-final-results
 language: en
 status: review
-title: "Mission Accomplished: Rags Drum 2020 Annual Call — Final Results"
-title_breaks: ["Mission Accomplished:", "Rags Drum 2020 Annual Call", "— Final Results"]
-excerpt: "Lab on Roof announces the final results of Rags Drum 2020, naming the eight entries that qualified in both the Eve Festival and After Festival, the two that qualified in the Eve Festival, their honoraria, and the volunteer judges."
+title: "Mission Complete: Rags Drum 2020 Final Results"
+title_breaks: ["Mission Complete:", "Rags Drum 2020", "Final Results"]
+excerpt: "Lab on Roof announces the results of its 2020 open call for ACG criticism: eight works selected after both rounds, two preliminary-round selections, the writers’ honoraria, and the volunteer judging panel."
 credits:
   - role: translator
     contributor_id: shen-shui-bot
@@ -15,57 +15,63 @@ credits:
 translation_method: agent
 source_relationship: direct
 base_language: zh-Hans
-updated: 2026-08-23
-rights: CC BY-NC-SA 4.0
+updated: 2026-08-28
+rights: Original work. Reproduction without authorization is prohibited.
 format: article
 ---
 
-[Rags Drum 2020: Lab on Roof’s Annual Call for Submissions](/en/posts/rags-drum-2020-call-for-papers)
+[Rags Drum 2020: Lab on Roof’s Annual Call for ACG Criticism](/en/posts/rags-drum-2020-call-for-papers)
 
-![The poster announcing the final results of the Rags Drum 2020 annual call](attachments/roof-archive/cv8226364/01-rags-drum-2020-results-poster.png)
+![Chinese-language poster headed “屋顶现视研年度征文” and branded “Rags Drum 2020,” showing the May 11–October 7 call period, announcing doubled compensation, and listing volunteer judges 马小掛, 钟子默, 塔塔君, rocefactor, and 屋顶第七任所长](attachments/roof-archive/cv8226364/01-rags-drum-2020-results-poster.png)
 
-## About Rags Drum
+## What Is Rags Drum?
 
-> “The kingdom of poetry has collapsed from within. . . . Salvation is not a premium on existence, but the last way out for a man whose path, as Kafka puts it, is ‘blocked . . . by his own frontal bone.’” —Walter Benjamin
+The original announcement set its tone by placing two non-continuous excerpts from Walter Benjamin side by side:
 
-To encourage the reproduction of more—and better—criticism and research on anime, comics, and games, and to foster exchange among those who undertake such work, Lab on Roof decided to hold an annual call for ACG submissions beginning in 2020. Its name is **Rags Drum 2020**.
+> “The kingdom of poetry has collapsed from within.”
+
+> “Salvation is not a premium on existence, but the last way out for a man whose path, as Kafka puts it, is ‘blocked . . . by his own frontal bone.’”
+
+—Walter Benjamin
+
+Lab on Roof launched an annual open call in 2020 to encourage more—and better—criticism and research on anime, comics, and games (ACG), and to bring the people doing that work into conversation. The posters give the event the stylized English name **Rags Drum 2020**, which we retain here as its proper name.
 
 ## The Results
 
-Now, after a three-plus-two-month submission period and more than a month of judging, Lab on Roof is ready to announce the entries that qualified in both the **Eve Festival and After Festival**, together with their authors. We will first publish their titles and authors here, then release the essays themselves as soon as possible in the days ahead.
+After submissions remained open for three months, followed by a two-month extension and more than a month of judging, Lab on Roof is ready to announce the results. The call used two named stages: a preliminary round, the **“Eve Festival,”** followed by a final round, the **“After Festival.”** We are publishing the titles and authors first; the essays themselves will follow as soon as possible.
 
-Eight entries qualified in both the Eve Festival and After Festival (listed in no particular order):
+Eight works made it through both rounds, listed here in no particular order:
 
 - **[“What Is ‘Yun Behavior’? Ontology and Internal Heterogeneity”](/en/posts/what-is-cloud-behavior-ontology-internal-heterogeneity), Austoria**
-- **[“The Messiah Who Is Always Late: One Reading of *The Big O*”](/en/posts/the-big-o-messiah-always-late), 斑鸠**
-- **[“Are You Playing the Game, or Is the Game Playing You?”](/en/posts/stanley-parable-video-games), 辛巴不吃素**
+- **[“The Messiah Is Always Late: A Reading of the Anime *The Big O*”](/en/posts/the-big-o-messiah-always-late), 斑鸠**
+- **[“Do You Play the Game, or Does the Game Play You? On *The Stanley Parable* and Video Games”](/en/posts/stanley-parable-video-games), 辛巴不吃素**
 - **[“Constructing Morgan Yu’s Posthuman Body in *Prey*”](/en/posts/prey-morgan-yu-posthuman-body-construction), ilan**
 - **[“FGO 2.4: Soyons tout!”](/en/posts/fgo-lostbelt-4-black-final-human), 両儀式所失去的**
 - **[“Romero’s Monsters: The Zombie Image and the Fallen Other”](/en/posts/romero-monsters-zombie-image-fallen-other), 哲哥**
 - **[“Animation and Reality, or the Coordinates of Isao Takahata’s Realism”](/en/posts/animation-and-reality-takahata-realism), 学级委员一条同学**
-- **[“The Radicality of VR and the Limit of Bishōjo Games: On *Project LUX*”](/en/posts/project-lux-vr-radicality), 红茶泡海苔**
+- **[“The Radicality of VR, the Critical Point of Bishōjo Games: On *Project LUX*”](/en/posts/project-lux-vr-radicality), 红茶泡海苔**
 
-The following entries qualified in the Eve Festival but, regrettably, did not receive the judging panel’s unanimous approval in the After Festival:
+The following two works passed the preliminary “Eve Festival” round but did not receive the judging panel’s unanimous support in the final “After Festival” round:
 
 - **[“Tracing the Genealogy of Humor in Tomihiko Morimi’s Works”](/en/posts/morimi-tomihiko-humor-genealogy), 十文字**
-- **[“DTB: A Style of Stagnation”](/en/posts/darker-than-black-stagnant-style), 实在狗子**
+- **[“*Darker than Black*: The Style of Stagnation”](/en/posts/darker-than-black-stagnant-style), 实在狗子**
 
-Under the event rules announced earlier, each entry that qualified in both the Eve Festival and After Festival will receive an honorarium of **RMB 1,250**, while each Eve-Festival-only qualifying entry will receive **RMB 200**. Let us celebrate.
+Under the rules announced at the start of the call, each essay that made it through both rounds will receive an honorarium of **RMB 1,250**. Each essay selected in the preliminary round alone will receive **RMB 200**. Congratulations to all ten selected writers.
 
 ## Additional Notes
 
-We thank the following members of the judging panel for volunteering their time and labor:
+Our thanks to the following members of the judging panel, who volunteered their time and labor:
 
-> 马小掛, ACG enthusiast\
-> 钟子默, ACG enthusiast\
-> 塔塔君, ACG enthusiast\
-> rocefactor, ACG enthusiast\
-> 屋顶第七任所长 (Lab on Roof’s seventh director), ACG enthusiast
+> 马小掛 — ACG enthusiast\
+> 钟子默 — ACG enthusiast\
+> 塔塔君 — ACG enthusiast\
+> rocefactor — ACG enthusiast\
+> 屋顶第七任所长 (Lab on Roof’s seventh director) — ACG enthusiast
 
-We thank **唯一指定真实August_Rush** for creating the event posters and promotional video, and we thank the critics, organizations, and platforms that offered kind advice and sincere assistance.
+We also thank **唯一指定真实August_Rush** for creating the event posters and promotional video, along with the critics, groups, and platforms that shared advice and supported the call.
 
-As the organizer, Lab on Roof also learned many lessons in the course of holding this event. If our lack of experience or ability caused any inconvenience to writers or readers, we ask for your generous understanding. Next year we will learn from this experience, keep improving, and strive to expand what writers and readers can gain from the event. Thank you for your support and attention. We hope you will follow, read, and share the entries as they appear.
+We learned a great deal from organizing the event. We apologize to any writer or reader inconvenienced by our inexperience or mistakes. We will take those lessons into next year’s call, keep improving, and try to make the experience more rewarding for everyone who writes and reads with us. Thank you for supporting Rags Drum 2020. Please read and share the selected essays as they appear.
 
-Rags Drum—see you next year.
+See you next year at Rags Drum.
 
-![The horizontal poster for Rags Drum 2020](attachments/roof-archive/cv8226364/02-rags-drum-2020-horizontal-poster.png)
+![Chinese-language horizontal poster headed “屋顶现视研年度征文” and branded “Rags Drum 2020,” showing the May 11–October 7 call period and announcing doubled compensation](attachments/roof-archive/cv8226364/02-rags-drum-2020-horizontal-poster.png)

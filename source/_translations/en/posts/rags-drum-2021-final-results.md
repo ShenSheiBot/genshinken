@@ -5,9 +5,9 @@ source_slug: rags-drum-2021-final-results
 slug: rags-drum-2021-final-results
 language: en
 status: review
-title: "Strategy Unfinished: Rags Drum 2021 Annual Call — Final Results"
-title_breaks: ["Strategy Unfinished:", "Rags Drum 2021 Annual Call", "— Final Results"]
-excerpt: Lab on Roof announces the final Rags Drum 2021 results, identifying the eight Eve Festival prizewinning entries, the works that did not receive unanimous approval in the After Festival, and acknowledgements for judging and publicity.
+title: "Strategy Unfinished: The Rags Drum 2021 Essay Contest Results"
+title_breaks: ["Strategy Unfinished:", "The Rags Drum 2021", "Essay Contest Results"]
+excerpt: Eight entries won Rags Drum 2021 Eve Festival awards, each carrying an RMB 300 honorarium, while none secured the unanimous vote required for an After Festival award. Here are the full results and acknowledgements.
 credits:
   - role: translator
     contributor_id: shen-shui-bot
@@ -15,70 +15,70 @@ credits:
 translation_method: agent
 source_relationship: direct
 base_language: zh-Hans
-updated: 2026-08-23
+updated: 2026-08-28
 rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-![Rags Drum 2021 results poster](attachments/roof-archive/cv14068236/poster.png)
+![Black Rags Drum 2021 contest poster with warped Chinese lettering and vivid rainbow streaks](attachments/roof-archive/cv14068236/poster.png)
 
 ## About Rags Drum
 
-If we ignore the attitude of revolt that the present generation adopts toward what has gone before, … then it is impossible to understand the works of today. … To occupy the theater for different kinds of audiences: this is both a task and an opportunity.
+> If we ignore the present generation's rebellion against what came before, [...] we cannot understand the art being made now. [...] Claiming the theater for different kinds of audiences is both a task and an opportunity.
+>
+> —Bertolt Brecht (excerpt; translated for this edition)
 
-—Bertolt Brecht
+The poster's central slogan reads “Strategy Unfinished.” We have kept it as the title of this announcement; it is not a separate prize category.
 
-The Lab on Roof Rags Drum Organizing Committee has decided to announce the results of Rags Drum 2021, the second annual ACG call for submissions.
+The Lab on Roof Rags Drum Organizing Committee is pleased to announce the results of Rags Drum 2021, our second essay contest devoted to anime, comics, games, and related culture (ACG).
 
 ## Results
 
-After three plus two months of submissions and more than a month of judging, the Lab on Roof Rags Drum Organizing Committee announces the following results. Under the Eve Festival standard of completeness and majority approval by the jury, eight entries were ultimately named prizewinning works. Under the After Festival standard of unanimous approval, no entry received a prize.
+The call for submissions ran for five months—three months plus another two—and judging took more than a month.
 
-Two entries participated only in the Eve Festival and passed its review. They are listed in the order received:
+The contest called its preliminary round the **Eve Festival** and its final round the **After Festival**. Eve Festival consideration could begin with either an abstract or a completed manuscript, and a work needed majority support to clear the relevant vote. The After Festival set a higher bar: a completed work had to receive the jury's unanimous approval. Eight entries ultimately received Eve Festival awards; none won an After Festival award.
+
+The lists below show how those outcomes were reached. Two works entered only the Eve Festival and passed that round. The announcement does not specify why they did not enter the later round. Listed in order of submission, they are:
 
 - [“From *Nausicaä of the Valley of the Wind* to *Touhou Kikeijuu ~ Wily Beast and Weakest Creature*: ‘Entrusting the World to an Idol’ amid Many Predicaments”](/en/posts/nausicaa-wily-beast-entrusting-world-to-idol/), 宫酒姬
 - [“Beginning with the *Haruhi Suzumiya* Series and ‘Sekaikei’: Some Ramblings on Postmodernism and ACGN Studies”](/en/posts/haruhi-sekaikei-postmodern-acgn-research/), 真紅様
 
-Six entries by five authors had either a complete manuscript or an abstract pass Eve Festival review, but unfortunately did not receive unanimous approval from the jury in the After Festival:
+Six more entries, submitted by five authors, were recognized as Eve Festival winners after either an abstract or a complete manuscript cleared that round. They went on to After Festival consideration but did not receive a unanimous vote:
 
-- [“Chips, Amputation, and the Death Drive: Kaiji Itou’s Suicide Game”](/en/posts/kaiji-chips-amputation-death-drive/), 米岡
+- [“Chips, Amputation, and the Death Drive: Kaiji Itou's Suicide Game”](/en/posts/kaiji-chips-amputation-death-drive/), 米岡
 - [“From Replicas to Simulacra: The Modern Turn in Cultural Consumption”](/en/posts/from-reproduction-to-simulacra-modern-turn-in-cultural-consumption/), 米岡
 - [“Spatialized Bodies vs. Embodied Spaces: Imagining Space and the Body in Japanese Anime”](/en/posts/spatialized-body-embodied-space-anime/), 斑鸠
-- [“Decoding ‘The Drowned Giant’: An Interpretation of the ‘Giant’ Metaphor”](/en/posts/decoding-the-drowned-giant/), 心田安详
-- [“Monster-Fear: Why America Became the Homeland of the Titans”](/en/posts/fear-of-monsters-america-home-of-titans/), 哲哥
-- [“How Does Death Become ‘New Life’? Death in Isekai-Reincarnation Stories”](/en/posts/death-and-rebirth-in-isekai-reincarnation/), 甚谁
+- [“Decoding ‘The Drowned Giant’: An Interpretation of the Giant Metaphor”](/en/posts/decoding-the-drowned-giant/), 心田安详
+- [“Fear of Monsters: Why America Became the Homeland of the Titans”](/en/posts/fear-of-monsters-america-home-of-titans/), 哲哥
+- [“How Does Death Become New Life? Death in Isekai Reincarnation Stories”](/en/posts/death-and-rebirth-in-isekai-reincarnation/), 甚谁
 
-Congratulations to all these authors! Under the previously announced rules, each entry that passed the Eve Festival will receive an honorarium of RMB 300.
+Together, these two groups make up the eight Eve Festival award recipients. Congratulations to every author. Under the contest rules, each winning entry—not each individual author—will receive an honorarium of RMB 300.
 
-Three entries had their abstracts pass Eve Festival review, but their completed manuscripts unfortunately failed to win majority approval from the jury in the After Festival:
+Three other works followed a different path. Their abstracts cleared the Eve Festival review, but the completed manuscripts later failed to win even majority support in the After Festival vote. Abstract approval alone therefore did not place them among the eight award recipients:
 
-- “*Mr. Osomatsu* Season 3: Matsubara Shū’s Journey Through Sketch Comedy,” CM
-- “Post-Bishōjo and After Bishōjo: A ‘Post’-ological Study of Bishōjo Games,” 宫酒姬
-- “How Did Fan Pilgrimage Become Possible? On the Contingency of the Suicide Journey in *Narcissu*” (later retitled “Contingent *Narcissu*: Notes on an Impossible Fan Pilgrimage”),[^1] 红茶泡海苔
+- “*Mr. Osomatsu* Season 3: Matsubara Shū's Journey Through Sketch Comedy,” CM
+- “Post-Bishōjo and What Comes After Bishōjo: A Study of the ‘Post-’ in Bishōjo Games,” 宫酒姬
+- “How Did Fan Pilgrimage Become Possible? On Contingency and the Suicide Journey in *Narcissu*” (later retitled “Contingent *Narcissu*: Notes on an Impossible Fan Pilgrimage”),[^1] 红茶泡海苔
 
-For the prizewinning entries, the organizing committee will notify the authors of the results and, with their consent, publish the works as soon as possible. Authors of entries that did not receive a prize regain full discretion over what to do with them (standalone submissions are still welcome, lol). Whatever the result, we sincerely thank every author above for submitting their work.
+The committee will contact the authors of the eight Eve Festival award recipients and, with their permission, publish the works as soon as possible. Authors whose entries did not receive an award retain full control over their work. Lab on Roof would still be delighted to consider any of those pieces as a standalone submission. Whatever the result, we sincerely thank everyone who entrusted us with an essay.
 
-[^1]: The After Festival manuscript did not adequately fulfill the claims made in the abstract that had passed Eve Festival review, which affected the vote.
+[^1]: The completed manuscript did not deliver the argument promised by the abstract that had passed the Eve Festival review. This affected the vote.
 
 ## I. Acknowledgements
 
-We thank the members of the jury for volunteering their labor:
+We thank the five judges who volunteered their time. All are ACG enthusiasts:
 
-will, ACG enthusiast.
+- will
+- 马小褂
+- 有电拍拍
+- rocefactor
+- 屋顶第十一任所长
 
-马小褂, ACG enthusiast.
+We also thank 唯一指定真实August_Rush for designing the poster and helping promote the contest, along with the critics, organizations, and platforms that shared thoughtful advice and generous support. As a small token of our appreciation, the committee will give each of these six contributors—the five judges and 唯一指定真实August_Rush—a Dangdang bookstore gift card worth RMB 50.
 
-有电拍拍, ACG enthusiast.
+Running Rags Drum taught us a great deal. If our inexperience or limited resources made the process harder for writers or readers, we appreciate your patience and welcome your feedback. Next year, we will put those lessons to work and keep improving the contest so that both writers and readers can get more from it.
 
-rocefactor, ACG enthusiast.
-
-屋顶第十一任所长, ACG enthusiast.
-
-We thank 唯一指定真实August_Rush for artistic and promotional support, including production of the poster, and the writers, communities, and platforms that offered generous advice and sincere assistance. The Lab on Roof Rags Drum Organizing Committee will present each of these six people with a Dangdang bookstore gift card worth RMB 50 as a token of thanks.
-
-In organizing this event, the Lab on Roof Rags Drum Organizing Committee gained further experience and learned further lessons. If our inexperience or limited abilities caused any difficulty for writers or readers along the way, we ask for your understanding and welcome your feedback. Next year we will put those lessons into practice, continue refining the event, and address its shortcomings so that writers and readers can derive greater benefit from it. Thank you for your support and attention. We hope you will follow, read, and share the event entries to be published next.
-
-Rags Drum—we hope to see you again next year.
+Thank you for your support and interest. We hope you will read and share the winning essays as they appear—and join us for Rags Drum again next year.
 
 Lab on Roof Rags Drum Organizing Committee
 

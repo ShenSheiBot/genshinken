@@ -1559,8 +1559,8 @@
     },
     {
       "key": "roof-archive/cv1559883/07-shiki-mikiya.jpg",
-      "bytes": 64734,
-      "sha256": "c0c1d97f2f326270340e7c0ada2b2b66b22bc01fc9fb5bbe9c8be9b7724ab6d5",
+      "bytes": 60948,
+      "sha256": "39ab15d1b76ed246f5e2d69e36d42efc9a95931cd28b886970bd62a16416da58",
       "contentType": "image/jpeg"
     },
     {
@@ -17231,8 +17231,8 @@
     },
     {
       "key": "roof-archive/cv21792051/01-author-portrait-v5.png",
-      "bytes": 108405,
-      "sha256": "3fa27583c450a30f4a411d68c7dcf42d4b56d7646d3b8ef534f1800c1c2d34ca",
+      "bytes": 256432,
+      "sha256": "60188f45a468883fdf20d3f12cfdf9c5a68011196ea8dd44b7e1d2e5bc5f15d0",
       "contentType": "image/png"
     },
     {
@@ -17255,8 +17255,8 @@
     },
     {
       "key": "roof-archive/cv6229226/01-author-portrait-v5.png",
-      "bytes": 64400,
-      "sha256": "3f99379437b00b3c74580d78d5e33ac686a23e062729d351660bfe00c5082285",
+      "bytes": 48863,
+      "sha256": "ce8e0f54562d14708651c6033fdf254326b7e2f4da9918ae5267c00b5bf2fbc1",
       "contentType": "image/png"
     },
     {
@@ -17537,8 +17537,8 @@
     },
     {
       "key": "roof-archive/cv19651001/01-author-portrait-v5.png",
-      "bytes": 130988,
-      "sha256": "45b87fb036ad129b0d4b0be4c236be6ce2ecce3b22f0b2baf6edebc4d0a47d0d",
+      "bytes": 114905,
+      "sha256": "38629a233118bb891c702508d59d1ce260f24bd65e78d31028d4429b3fcca478",
       "contentType": "image/png"
     },
     {
@@ -17609,8 +17609,8 @@
     },
     {
       "key": "roof-archive/cv1765321/01-author-portrait-v5.png",
-      "bytes": 229035,
-      "sha256": "aff34bb4fe1fe0dec41f792d559c6012b1daf9dbe91320aaf415444c1177adcc",
+      "bytes": 145251,
+      "sha256": "dffaa2a05f7422515ed2291b9f0e6baab393ec2a60ac6b31ae54b9bb367f07e1",
       "contentType": "image/png"
     },
     {
@@ -17863,6 +17863,324 @@
       "key": "roof-archive/cv3381852/01-author-portrait-v5.png",
       "bytes": 72452,
       "sha256": "ae48350e2d3c95a44cae188f89ea0fc4f51b51534ef6d4de948fb4d8d7109604",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv11752140/translations/en/author-portrait.png",
+      "bytes": 22676,
+      "sha256": "3d088f66f8ade489252a9587654817beb61046c82c26bc0d30faff625f09f5c0",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv11752140/translations/en/figure-5.png",
+      "bytes": 81212,
+      "sha256": "95fac342db0e2db2b2629c0985ccd05a09b579115572dfc5e8fa44e757c37e47",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv11752140/translations/ja/author-portrait.png",
+      "bytes": 22651,
+      "sha256": "0c9297fc2ed2ec90465993676ecb83ace107d60f0fb3c0894a8f963a32461c1d",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv11752140/translations/ja/figure-2.png",
+      "bytes": 252811,
+      "sha256": "1f4f5d8201f7321ec2386ae2b3e3ab7799de02477c7dcf505650b9b286afbf08",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv11752140/translations/ja/figure-5.png",
+      "bytes": 39414,
+      "sha256": "54c58a299ee4fdb849f9390713f896aa730b7494318691620f08d441585ece7b",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv11752140/translations/ja/figure-7.png",
+      "bytes": 202570,
+      "sha256": "bc6916e26f9fa18cb58a3f54cbb0466066dc54fdd25aaacdd63d383dd909e2b7",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv11825483/translations/en/haruhi-series-timeline.png",
+      "bytes": 1278045,
+      "sha256": "8b547d2fd23e98ead22be68662f4cde1be7cea406b918207a818eaf8f020386d",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv11825483/translations/ja/haruhi-series-timeline-ja-v2.png",
+      "bytes": 614380,
+      "sha256": "4d3a5a46a40328ac0ec3e657f21bb046c1d38d275306753e33d31f22be665ee8",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv14084596/translations/en/figure-3-r2.jpg",
+      "bytes": 255604,
+      "sha256": "ac5f4fa77220425c942e474ddacfaf0af927810c8a0f52baa1d8a47ca57c5c92",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14084596/translations/en/figure-4-r2.jpg",
+      "bytes": 186253,
+      "sha256": "0621012986a52f127acb46f715f74e39ac552156692b8325e7c050c4c326ab77",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14084596/translations/en/figure-5-r2.jpg",
+      "bytes": 98642,
+      "sha256": "96072c2f49abd40c421c33ec55475402140d905502899f692021b121639c9f6f",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv14084596/translations/ja/figure-3-ja-v3.jpg",
+      "bytes": 112374,
+      "sha256": "77b79b130c27ca093a1421455ddec3fc1e7ca635c3bc6b46356bca094f793fc1",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv1550227/translations/en/11-article-title-banner.png",
+      "bytes": 1831965,
+      "sha256": "1e6373ac2ceff5d0541a7794e7d4949c4e3ef8fb47cf88289eb2e77513fb0e37",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1550227/translations/ja/03-tokyo-overview-cropped.png",
+      "bytes": 209251,
+      "sha256": "f79f5bb06744249c175ce0638e0432bf23dabaa2c4e11190975de90059292df7",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1550227/translations/ja/11-article-title-banner-ja.png",
+      "bytes": 1478283,
+      "sha256": "17c1e17cbf02476c5fe7941fef39c568b52b0ada0899df1bc7b62e38693aacb0",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1652116/translations/en/03-anime-dialogue-still-en-v2.png",
+      "bytes": 161946,
+      "sha256": "21ad5cfc4fecd61e274b85e5d082db7cd0907800849709120fb9cdabdade2905",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1652116/translations/en/08-breadth-analysis-diagram-v3.png",
+      "bytes": 396951,
+      "sha256": "1d1e1d98df4e0bdd7b427dcd65d01b3730e6c9f7ef19514f75d9f0a2b2b37d3f",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1652116/translations/en/09-criticism-dimensions-diagram-v2.png",
+      "bytes": 531694,
+      "sha256": "bd185ba60607b5ef2b78176461ce472a73f51ba410b3442b097655a98b1f48cf",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1652116/translations/en/10-fuel-drop-closing-en-v2.png",
+      "bytes": 50566,
+      "sha256": "d55ea4379617e8ef8cbd49f7ff62e4132dddbdb0acc864b4233e166fb945ee03",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1652116/translations/ja/08-breadth-analysis-diagram-v6.png",
+      "bytes": 364556,
+      "sha256": "1fedca18b3a0f19aa4de84a68af440a3a77d1cd4240895986e16dd28635ad7da",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1652116/translations/ja/09-criticism-dimensions-diagram-v5.png",
+      "bytes": 224638,
+      "sha256": "a204b2a57da5f70155f613e0b92986e00f6a3bff24140c12c54bb1ec707094cf",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1660015/translations/en/13-simple-triangle-before-en-v2.png",
+      "bytes": 172338,
+      "sha256": "f517a41ae7f521bde2b0dfb3a0db86e894d7b718e08209e7960c1636b3925d52",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1660015/translations/en/14-simple-triangle-after-en-v2.png",
+      "bytes": 178537,
+      "sha256": "4cfae13ab766298a5d7b1ed72fe245d43926775fbb6f54af5b6a9b28c7652a48",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1660015/translations/en/15-biyakuya-relations-en-v3.png",
+      "bytes": 168676,
+      "sha256": "ee10fe21639e46b5a5b722e21329bf789b0abd92e1ac8a351195538391180bdf",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1660015/translations/ja/13-simple-triangle-before-ja.png",
+      "bytes": 181814,
+      "sha256": "f88288860920aaabe40b8b25d5cff63a1c60ab34201b9addba06bfed7db93f49",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1660015/translations/ja/14-simple-triangle-after-ja.png",
+      "bytes": 209046,
+      "sha256": "d0e53edeb86c5dcb17bb2cb0eb2e349a57457e80b2acf97cb8062351cc95bbe6",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1660015/translations/ja/15-biyakuya-relations-ja.png",
+      "bytes": 173861,
+      "sha256": "d6cf0c322dd7966d560f4ea50336a59b0204bdca0e4fe43b805699026391bfb0",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv19651001/translations/en/science-religion-mystery-road-v2.svg",
+      "bytes": 2998,
+      "sha256": "bb3589662ff0573c755e63260b32ed17bfcff177ac2cb5655c0367febfe8fd87",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "key": "roof-archive/cv19651001/translations/ja/author-portrait-text-free.png",
+      "bytes": 66129,
+      "sha256": "fb26143319a0ac71b1ca8b2cf81a41508102e33609fe5c17bef206d3e99a0de4",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv19651001/translations/ja/science-religion-mystery-model-ja-v2.svg",
+      "bytes": 3355,
+      "sha256": "4f0d42826d594115a8aecbe1415d94d44682f9aded328b325370b7239b59d6fa",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "key": "roof-archive/cv21792051/translations/en/58-personality-by-hair.png",
+      "bytes": 245423,
+      "sha256": "c99a4304893abb29ed6aee26169d860c869c035e13cb0ddd261fa1aabf96684c",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv21792051/translations/en/60-personality-by-hair.png",
+      "bytes": 205637,
+      "sha256": "ac95dd7e93587339c9ffaa066df8016752b865a17c364d2bc1de9ecd1a159193",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv21792051/translations/en/62-personality-by-hair.png",
+      "bytes": 240388,
+      "sha256": "afd4c9fb003ca1dc5526d64835ef4728b393df6c03fbd72a65e6ce6e39016768",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv21792051/translations/en/64-personality-by-hair.png",
+      "bytes": 252297,
+      "sha256": "3ec002e193d6588e2560fec64f328addcadd9013cb5fbd5840938f78efd929b0",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv21792051/translations/en/73-hair-by-personality-v2.png",
+      "bytes": 1490236,
+      "sha256": "f753ac3c9150ce7989027567a7816d69977e5a1e345a2d4f744bf16083ba4550",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv21792051/translations/ja/58-personality-by-hair-ja-r2.png",
+      "bytes": 70639,
+      "sha256": "9c1eb5e68b0593b9db3bbb0283f54f679cbdf7a3955320a070dc0a65195b422d",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv21792051/translations/ja/60-personality-by-hair-ja-r2.png",
+      "bytes": 60058,
+      "sha256": "3bcdad275050c7b531ed8ca69430e67762347cf2d06b1c253eb128610bb74849",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv21792051/translations/ja/62-personality-by-hair-ja-r2.png",
+      "bytes": 68225,
+      "sha256": "2456dbba232e7897e5ddf684135ccf83b2ff75b0a45798ca31b97a0df338ed14",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv21792051/translations/ja/64-personality-by-hair-ja-r2.png",
+      "bytes": 91375,
+      "sha256": "9df445533ebda2b171e925390bbe583b627b9e9189d4ec94e4905ffecb338292",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv21792051/translations/ja/73-hair-by-personality-ja-r2.png",
+      "bytes": 373005,
+      "sha256": "45a00a63eaca49b5ebe755c62fceadb4f3057bebe09b282be6050358ebca6cf9",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8255716/translations/ja/05-3000-leagues-layout-notes-ja-r2.png",
+      "bytes": 5187339,
+      "sha256": "f9ca5978b6b75101a017fa9659d1f0e054f162b8f8131fd5cc08c5bbeadde94a",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8287922/translations/en/01-project-lux-title-en.png",
+      "bytes": 475617,
+      "sha256": "feee413cbcd69319ce9098da456c737e0ae91c14266a45e1ac388fda6709c594",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8287922/translations/en/02-bishojo-game-critical-point-en.png",
+      "bytes": 721001,
+      "sha256": "d9422358a75d51c8b75ff45ac7f2b5a1f7822a4ea1c83abe8e267c5610c7c6c9",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8287922/translations/en/04-cyberspace-book-en.png",
+      "bytes": 294895,
+      "sha256": "cd24bd68eb7214b0fca5b534a278122a72882584c3a2a2e372b3d06163b3be5b",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8287922/translations/en/05-interface-subject-diagram-en.svg",
+      "bytes": 1744,
+      "sha256": "df3a9a403a18fbf0a93cf132bb084b96ef3a216cdd6497293ee8ef9bb3dcb74e",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "key": "roof-archive/cv8322667/translations/en/01-author-portrait.png",
+      "bytes": 42113,
+      "sha256": "c78e89f84983fc085b656aba3f2e18ba551dac56bcdc711841b47ca70573899d",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8322667/translations/en/06-ending-flowchart.svg",
+      "bytes": 17029,
+      "sha256": "0e464eaf6dc07e9dbbcfb7b28cd27d08916d298f7902682d1fc999594dd49b61",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "key": "roof-archive/cv8322667/translations/ja/06-ending-flowchart-ja-v2.png",
+      "bytes": 792382,
+      "sha256": "b5f13e329b57433d6ada127cb50c481aa08a9b1fce5f6b32dd63c8f45a29b0a0",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8399890/translations/en/01-hei-opening-cropped-v2.png",
+      "bytes": 271106,
+      "sha256": "414685c84070b62aa8819dbd0c2fe4b4d7ec24ffa3851e87d7f9bc6a7ca4e082",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8399890/translations/en/05-hei-new-opening-cropped-v2.png",
+      "bytes": 127169,
+      "sha256": "bc22147357fbfc3355c897ab6be46a431b46e86886b86e4ea6c2ea8e3553105d",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8399890/translations/ja/05-hei-new-opening-ja.png",
+      "bytes": 150886,
+      "sha256": "c988fb232a0f327fbcb93a3d02a7bf037da81494b419601e76adc706ebf8e9cb",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8416238/translations/ja/custom-noun-narrative-diagram-v2.webp",
+      "bytes": 50176,
+      "sha256": "a0355dbf19482f07550e12a981f5027803169a8d814a1bed7527d7dc0e5b7466",
+      "contentType": "image/webp"
+    },
+    {
+      "key": "roof-archive/rags-drum-2022/saya-pure-love-matrix/translations/ja/relations-v2.png",
+      "bytes": 41349,
+      "sha256": "d9bc53606452dabe4f44cd8c5063c095118dec3837f05825e5bb0b3564b2afd2",
       "contentType": "image/png"
     }
   ]

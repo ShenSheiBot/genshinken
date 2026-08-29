@@ -5,9 +5,9 @@ source_slug: disaster-apocalypse-video-series
 slug: understanding-disaster-video-series
 language: en
 status: review
-title: "Understanding Disaster || Collection"
-title_breaks: ["Understanding Disaster", "|| Collection"]
-excerpt: This collection brings together four video essays by Pause and Select on Death Note, Akira, Neon Genesis Evangelion, and Yokohama Kaidashi Kikou, along with a record of the translation work by Building 7 Ultramarine.
+title: "Understanding Disaster: The Complete Series"
+title_breaks: ["Understanding Disaster:", "The Complete Series"]
+excerpt: This page collects Pause and Select’s four video essays on disaster in Japanese animation and credits the volunteers behind their Chinese-subtitled edition.
 credits:
   - role: translator
     contributor_id: shen-shui-bot
@@ -20,17 +20,19 @@ rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-Overall, despite some missteps and goofy moments, from PART 2 onward the historical range it covers, the breadth of thought in its interpretation and exposition, and the quality of its video production make this series—among the videos built from edited anime footage known to us at present—a comparatively good introduction to Japanese animation criticism / otaku culture studies / otaku culture criticism.
+This page collects the series and records the credits for its Chinese-subtitled edition.
 
-First, thanks to the **original creator: Pause and Select** for making this series and agreeing to the translation.
+Taken as a whole, the series has its share of missteps and goofy moments. From Part 2 onward, however, the range of history it covers, the breadth of its interpretation and ideas, and the quality of its production make it one of the better introductions we know to Japanese animation criticism, otaku studies, and critical approaches to otaku culture in the form of edited anime videos.
 
-Second, thanks to Lab on Roof’s volunteer translation community—Building 7 Ultramarine (群青七号楼)—for spending nearly six months completing the translation of the series.
+First, our thanks to **Pause and Select, creator of the original series**, for making the videos and authorizing the Chinese translation and subtitles.
 
-Thanks as well to the team members who helped translate, proofread, time, and upload it:
+We also thank Lab on Roof’s volunteer translation collective, 群青七号楼 (*Qunqing Qihao Lou*), whose members spent nearly six months translating the complete series into Chinese.
 
-唯一指定真实August_Rush, 杰洛·齐贝林, snoper卓尔, why7682, Kernel, fahh, 非0.
+Finally, we thank everyone who contributed to the translation, proofreading, subtitle timing, and upload:
 
-1. [Understanding Disaster, Part 1: Death Note and the Cyclical Apocalypse](https://www.bilibili.com/video/BV1Dt411u7BN) (09:17)
+唯一指定真实August_Rush, 杰洛·齐贝林, snoper卓尔, why7682, Kernel, fahh, and 非0.
+
+1. [Understanding Disaster, Part 1: The Note That Brings Death and the Cycle of Apocalypse](https://www.bilibili.com/video/BV1Dt411u7BN) (09:17)
 2. [Understanding Disaster, Part 2: Akira and the Postmodern Apocalypse](https://www.bilibili.com/video/BV1YJ411u7XG) (17:32)
-3. [Understanding Disaster, Part 3: Evangelion and the World Apocalypse](https://www.bilibili.com/video/BV1EE411Y7xf) (25:16)
-4. [Understanding Disaster, Part 4: Yokohama Kaidashi Kikou and the Harmonious Apocalypse](https://www.bilibili.com/video/BV1qJ411e7qH) (19:53)
+3. [Understanding Disaster, Part 3: Evangelion and the End of the World](https://www.bilibili.com/video/BV1EE411Y7xf) (25:16)
+4. [Understanding Disaster, Part 4: Yokohama Kaidashi Kikou](https://www.bilibili.com/video/BV1qJ411e7qH) (19:53)

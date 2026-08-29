@@ -60,7 +60,8 @@ def normalize_resource(value: str, mapping: dict[str, str]) -> str:
     # structure audit compares protected destinations, not locale routing;
     # strip only that leading locale so the semantic destination remains
     # comparable.  Locale correctness is checked by the internal-link gate.
-    return re.sub(r"^/(?:en|ja)(?=/(?:posts|books)/)", "", normalized)
+    normalized = re.sub(r"^/(?:en|ja)(?=/(?:posts|books)/)", "", normalized)
+    return re.sub(r"^/(?=(?:attachments|translations)/)", "", normalized)
 
 
 def destination_at(text: str, opening: int) -> tuple[int, str] | None:
@@ -285,12 +286,12 @@ def protected_events(text: str, media_map: dict[str, str], link_map: dict[str, s
             events.append(("heading", len(heading.group(1))))
         if HORIZONTAL_RULE_RE.match(line):
             events.append(("horizontal-rule",))
+        list_item = LIST_ITEM_RE.match(line)
         table = TABLE_SEPARATOR_RE.match(line)
         if table:
             events.append(("table-separator", table_column_count(line)))
-        elif TABLE_ROW_RE.match(line):
+        elif not list_item and TABLE_ROW_RE.match(line):
             events.append(("table-row", table_column_count(line)))
-        list_item = LIST_ITEM_RE.match(line)
         if list_item:
             marker = list_item.group(2)
             events.append(("list-item", len(list_item.group(1)), "ordered" if marker[0].isdigit() else "unordered"))
@@ -340,7 +341,7 @@ def protected_events(text: str, media_map: dict[str, str], link_map: dict[str, s
             url = trim_url(match.group(0))
             inline.append((match.start(), ("link", normalize_resource(url, link_map), True), match.span()))
         for match in HTML_TAG_RE.finditer(line):
-            if match.group(2).lower() in {"img", "a", "span"}:
+            if match.group(2).lower() in {"img", "a", "span", "br"}:
                 continue
             inline.append((match.start(), ("html-tag", "close" if match.group(1) else "open", match.group(2).lower()), match.span()))
         for match in HTML_CAPTION_RE.finditer(line):
@@ -382,7 +383,7 @@ def first_event_difference(source: list[tuple[object, ...]], target: list[tuple[
 def localized_media_identity(value: object) -> str | None:
     if not isinstance(value, str):
         return None
-    value = re.split(r"[?#]", value, maxsplit=1)[0]
+    value = re.split(r"[?#]", value, maxsplit=1)[0].lstrip("/")
     match = re.fullmatch(
         r"(.+?)/translations/(?:en|ja)/([^/]+?)(?:\.[A-Za-z0-9]+)?",
         value,
@@ -395,7 +396,7 @@ def localized_media_identity(value: object) -> str | None:
 def source_media_identity(value: object) -> str | None:
     if not isinstance(value, str):
         return None
-    value = re.split(r"[?#]", value, maxsplit=1)[0]
+    value = re.split(r"[?#]", value, maxsplit=1)[0].lstrip("/")
     match = re.fullmatch(r"(.+?)/([^/]+?)(?:\.[A-Za-z0-9]+)?", value)
     if not match:
         return None
@@ -410,8 +411,64 @@ def protected_events_equivalent(source: tuple[object, ...], target: tuple[object
     if source[2] != target[2]:
         return False
     source_identity = source_media_identity(source[1])
+    target_source_identity = source_media_identity(target[1])
+    if source_identity is not None and source_identity == target_source_identity:
+        return True
     target_identity = localized_media_identity(target[1])
-    return source_identity is not None and target_identity is not None and source_identity == target_identity
+    if source_identity is not None and target_identity is not None and source_identity == target_identity:
+        return True
+    if not isinstance(source[1], str) or not isinstance(target[1], str):
+        return False
+    source_path = re.split(r"[?#]", source[1], maxsplit=1)[0].lstrip("/")
+    target_path = re.split(r"[?#]", target[1], maxsplit=1)[0].lstrip("/")
+    localized = re.fullmatch(r"(.+?)/translations/(?:en|ja)/[^/]+", target_path)
+    return localized is not None and localized.group(1) == str(Path(source_path).parent)
+
+
+def image_inventories_equivalent(
+    source: list[tuple[object, ...]], target: list[tuple[object, ...]]
+) -> bool:
+    if len(source) != len(target):
+        return False
+    remaining = list(source)
+    localized_targets: list[tuple[tuple[object, ...], str]] = []
+    for target_event in target:
+        if not isinstance(target_event[1], str):
+            return False
+        target_path = re.split(r"[?#]", target_event[1], maxsplit=1)[0].lstrip("/")
+        localized = re.fullmatch(r"(.+?)/translations/(?:en|ja)/[^/]+", target_path)
+        if localized is not None:
+            localized_targets.append((target_event, localized.group(1)))
+            continue
+        exact = next(
+            (
+                index
+                for index, source_event in enumerate(remaining)
+                if source_event[2] == target_event[2]
+                and source_media_identity(source_event[1]) == source_media_identity(target_event[1])
+            ),
+            None,
+        )
+        if exact is not None:
+            remaining.pop(exact)
+            continue
+        return False
+    for target_event, localized_parent in localized_targets:
+        replacement = next(
+            (
+                index
+                for index, source_event in enumerate(remaining)
+                if source_event[2] == target_event[2]
+                and isinstance(source_event[1], str)
+                and str(Path(re.split(r"[?#]", source_event[1], maxsplit=1)[0].lstrip("/")).parent)
+                == localized_parent
+            ),
+            None,
+        )
+        if replacement is None:
+            return False
+        remaining.pop(replacement)
+    return not remaining
 
 
 def protected_event_sequences_equivalent(
@@ -480,9 +537,7 @@ def compare_structures(source: dict[str, object], target: dict[str, object], seg
     # global event stream to remain byte-for-byte aligned.
     source_images = events_of_kind(source_events, "image")
     target_images = events_of_kind(target_events, "image")
-    source_image_inventory = Counter(image_event_identity(event) for event in source_images)
-    target_image_inventory = Counter(image_event_identity(event) for event in target_images)
-    if source_image_inventory != target_image_inventory:
+    if not image_inventories_equivalent(source_images, target_images):
         failures.append(
             {
                 "segment": segment,
