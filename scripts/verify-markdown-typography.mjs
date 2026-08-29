@@ -731,7 +731,7 @@ assert.doesNotMatch(
   const path = await import("node:path");
   const postsDirectory = path.join(process.cwd(), "source", "_posts");
   const corpusFailures = [];
-  const markerLeak = /\[(?:fig(?:-note)?|table(?:-note)?|audio|music|video|person(?:-bio)?|author(?:-bio)?|card(?:-bio)?|gallery|slides|\/(?:gallery|slides|layout)|layout:(?:resources|timeline|reading-path|book-list|podcast|contact|comic))\]/u;
+  const markerLeak = /\[(?:fig(?:-note)?|table(?:-note)?|note|audio|music|video|person(?:-bio)?|author(?:-bio)?|card(?:-bio)?|gallery|slides|\/(?:gallery|slides|layout)|layout:(?:resources|timeline|reading-path|book-list|podcast|contact|comic))\]/u;
   const legacyItalicCaption = /^\*(?:图题[:：]|图[0-9]+[.．：:]).*\*$/mu;
   const invalidWidth = /title="=(?!(?:25|33|50|66|75|100)%")[^"]*"/u;
   const plainCompositionalityLabel = /(?<!\$)\((?:C(?:′)?|H|RR|P|F(?:all|any|cofinal)|[1-8](?:′|″)?)\)(?!\$)/u;
