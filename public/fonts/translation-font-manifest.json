@@ -75,7 +75,7 @@
     "source/_translations/ja/posts/work-emotion-robots.md",
     "source/_translations/language-dispositions.json"
   ],
-  "corpusSha256": "d133f4970b91c220d205b3ca4548cf150e85d2d4ccb074349b9911525988fedd",
+  "corpusSha256": "1fec5947d9a448744937215f98dcc1c599874ab099768cd239feac618f464dc7",
   "fallbackCodePointCount": 114,
   "fonts": {
     "Roof EB Garamond Fallback": {
@@ -107,12 +107,12 @@
       "weight": "400"
     },
     "Roof Noto Sans JP": {
-      "bytes": 903944,
-      "codePointCount": 2963,
+      "bytes": 903732,
+      "codePointCount": 2964,
       "family": "Roof Noto Sans JP",
       "file": "roof-noto-sans-jp.woff2",
       "kind": "primary-sans",
-      "sha256": "2335e0a6f4eef164d391e5b7d8bfefb1377d5e7bf1ced108fbbfb37082e48d72",
+      "sha256": "b20d4576550204136d2e423f269b423ec4cab1ef170a2705cb429dfac5aa14bb",
       "source": "NotoSansJP.ttf",
       "sourceSha256": "c2f3b4d463500a2ddcd3849cded1fceeb9fd6d1c32e6cbecd568453ba50fc68f",
       "sourceUrl": "https://raw.githubusercontent.com/google/fonts/e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7/ofl/notosansjp/NotoSansJP%5Bwght%5D.ttf",
@@ -148,12 +148,12 @@
       "weight": "100 900"
     },
     "Roof Noto Serif JP": {
-      "bytes": 1252984,
-      "codePointCount": 2963,
+      "bytes": 1252844,
+      "codePointCount": 2964,
       "family": "Roof Noto Serif JP",
       "file": "roof-noto-serif-jp.woff2",
       "kind": "primary-serif",
-      "sha256": "1158f8907665a03368364e60fadbb2886557f4ac6af69288b919b646dcc46291",
+      "sha256": "1e37e2f81a3301996a5711f18ca52b48ea337bca823cc0a90c5c5bd040775175",
       "source": "NotoSerifJP.ttf",
       "sourceSha256": "2fd527ba12b6a44ec30d796d633360da0aeba6c5d4af1304ce12bb4dc15a7dfc",
       "sourceUrl": "https://raw.githubusercontent.com/google/fonts/e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7/ofl/notoserifjp/NotoSerifJP%5Bwght%5D.ttf",
@@ -212,9 +212,9 @@
     }
   },
   "strategy": "japanese-translation-corpus-variable-fonts-with-generated-script-and-symbol-fallbacks",
-  "subsetCodePointCount": 2963,
-  "targetCodePointCount": 2852,
-  "targetCodePointSha256": "8ea1d439ad7c6b4f4f0ae37858c1c9ddc88ad6e6f7049dfb5dcf56180d70d9f1",
+  "subsetCodePointCount": 2964,
+  "targetCodePointCount": 2853,
+  "targetCodePointSha256": "912eb840c294e907102bc823e578c7ba94243a0e60212be4072978959637aa99",
   "toolchainSha256": "b192f1da4344abea6d8568a33b15e3ecfb6d9f8242b22257639c7cf28d4424c3",
   "uncoveredCodePointRanges": [],
   "upstreamCommit": "e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7",
