@@ -1,0 +1,69 @@
+{
+  "id": "battle-trauma-anime-representation-history",
+  "slug": "battle-trauma-anime-representation-history",
+  "title": "“战斗”与“创伤”的动画表象史",
+  "subtitle": "从《铁臂阿童木》到《魔法少女小圆》之后",
+  "description": "两篇节选分别讨论日本动画在国际语境中的特殊性，以及战争动画如何借由受害经验与创伤记忆传递反战信息。",
+  "documentSlug": "specificity-and-future-of-japanese-animation",
+  "script": "hans",
+  "status": "paused",
+  "authors": ["斋藤环", "Joachim Alt"],
+  "translators": ["中割Production", "幽灵在都灵", "石好汉", "ethci"],
+  "proofreaders": ["ethci"],
+  "editors": ["夜深人静"],
+  "publishedAt": "2025-04-21",
+  "updatedAt": "2026-08-29",
+  "latestChapterId": "war-anime-antiwar-trauma",
+  "citations": {
+    "original": {
+      "itemType": "book",
+      "citationKey": "moriKawaguchi2023TatakaiTraumaAnime",
+      "title": "〈戦い〉と〈トラウマ〉のアニメ表象史――「アトム」から「まどか☆マギカ」以後へ",
+      "date": "2023-07-20",
+      "publisher": "日本評論社",
+      "place": "東京",
+      "numPages": "272",
+      "ISBN": "9784535564176",
+      "url": "https://www.nippyo.co.jp/shop/book/9096.html",
+      "language": "ja"
+    },
+    "translation": {
+      "itemType": "book",
+      "citationKey": "moriKawaguchi2023TatakaiTraumaAnimeRoofZH",
+      "title": "“战斗”与“创伤”的动画表象史：从《铁臂阿童木》到《魔法少女小圆》之后",
+      "date": "2023-07-20",
+      "publisher": "屋顶现视研",
+      "language": "zh-CN",
+      "rights": "CC BY-NC-SA 4.0",
+      "extra": "中文节选；各章作者、译校与发布日期见章节信息。"
+    }
+  },
+  "chapters": [
+    {
+      "id": "specificity-and-future",
+      "number": "01",
+      "title": "日本动画的“特殊性”与未来",
+      "status": "published",
+      "anchor": "specificity-and-future",
+      "publishedAt": "2025-04-21",
+      "authors": ["斋藤环"],
+      "translators": ["中割Production", "幽灵在都灵", "石好汉", "ethci"],
+      "proofreaders": ["ethci"],
+      "editors": ["夜深人静"],
+      "tags": ["日本动画", "动画制作", "动画评论"]
+    },
+    {
+      "id": "war-anime-antiwar-trauma",
+      "number": "02",
+      "title": "战争动画与作为反战信息的创伤",
+      "status": "published",
+      "anchor": "war-anime-antiwar-trauma",
+      "publishedAt": "2026-08-29",
+      "authors": ["Joachim Alt"],
+      "translators": ["中割Production"],
+      "proofreaders": [],
+      "editors": ["夜深人静"],
+      "tags": ["战争表象", "创伤", "反战"]
+    }
+  ]
+}

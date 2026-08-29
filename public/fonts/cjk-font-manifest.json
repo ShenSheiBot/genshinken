@@ -1,41 +1,41 @@
 {
   "conversion": "opencc-js:cn2t+t2cn",
-  "corpusFileCount": 637,
+  "corpusFileCount": 640,
   "fonts": {
     "Roof STFangsong": {
-      "bytes": 1715924,
-      "codePointCount": 6716,
+      "bytes": 1721012,
+      "codePointCount": 6733,
       "file": "roof-st-fangsong.woff2",
-      "sha256": "34d4f95ec73539576bf7b1c6663429b6c8ae7f573bb4237a5461857b61eb33b1",
+      "sha256": "2f4b047234f4816ed1de29c9572ccd4fe5d6f781745d67f75830bd0e02a47baf",
       "source": "STFangsong.ttf",
       "sourceSha256": "e6326459e8e60e436c7d60e34d273bda3ba4eea2d2a5b309ff8f1b73200f2e38",
       "sourceUrl": "https://raw.githubusercontent.com/Haixing-Hu/latex-chinese-fonts/287399335ec1beb72062ce67c36eaa8bec35f386/chinese/%E4%BB%BF%E5%AE%8B%E4%BD%93/STFangsong.ttf"
     },
     "Roof STKaiti": {
-      "bytes": 2092656,
-      "codePointCount": 6716,
+      "bytes": 2098208,
+      "codePointCount": 6733,
       "file": "roof-st-kaiti.woff2",
-      "sha256": "57216469eed55711f6c88d2b80e6977649a69e63a23a74ae09b903ecd5c013ed",
+      "sha256": "2b8343682c304d0a4104b798c93e5b88c2277cafd3f22644c880842451276a56",
       "source": "STKaiti.ttf",
       "sourceSha256": "a29c99c161fc43ce6aba2d7c152065359c2cb3019be4ae6248171178cb7d04d5",
       "sourceUrl": "https://raw.githubusercontent.com/Haixing-Hu/latex-chinese-fonts/287399335ec1beb72062ce67c36eaa8bec35f386/chinese/%E6%A5%B7%E4%BD%93/STKaiti.ttf"
     },
     "Roof STSong": {
-      "bytes": 1685196,
-      "codePointCount": 6716,
+      "bytes": 1690152,
+      "codePointCount": 6733,
       "file": "roof-st-song.woff2",
-      "sha256": "edb8035666bdaf1838b393c5442bcea8dd3d46368ff285b46ef977aa697ff16a",
+      "sha256": "334246794e02d920571cd01d0f966cb64ae35bfc115d1bb96c9576ebb576de97",
       "source": "STSong.ttf",
       "sourceSha256": "c5cc2ed5e2c0e6385013fe82d950eee6960d805bd602b86c53ff454783f382c4",
       "sourceUrl": "https://raw.githubusercontent.com/Haixing-Hu/latex-chinese-fonts/287399335ec1beb72062ce67c36eaa8bec35f386/chinese/%E5%AE%8B%E4%BD%93/STSong.ttf"
     }
   },
-  "siteCodePointCount": 6811,
-  "siteCodePointSha256": "cb299744503d1c8c081c77f577b8b8f65bef4c46828adc78bbfe7b28fbbbaf50",
-  "sourceCodePointCount": 5859,
-  "sourceCodePointSha256": "78817f203dce8614f1f13ba63eb2ac3ebe66137f3f37b1cbf90895862ee3ff08",
+  "siteCodePointCount": 6828,
+  "siteCodePointSha256": "327d1da67347d321d19bc7cd4e1b221a0a82f13acfe9e8f760e3fe6245147b4e",
+  "sourceCodePointCount": 5872,
+  "sourceCodePointSha256": "cfa0b77a0138b26dc4f8afdeb4674abc716a0fc8cf2554f34653f3a1d0a7c0a6",
   "strategy": "site-corpus-opencc-closure",
-  "subsetCodePointCount": 6716,
+  "subsetCodePointCount": 6733,
   "toolchainSha256": "b192f1da4344abea6d8568a33b15e3ecfb6d9f8242b22257639c7cf28d4424c3",
   "unsupportedSiteCodePointRanges": [
     "U+2027",

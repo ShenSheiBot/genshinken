@@ -101,6 +101,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/posts/specificity-and-future-of-japanese-animation",
+        destination: "/books/battle-trauma-anime-representation-history/chapters/specificity-and-future",
+        permanent: true,
+      },
+      {
         source: "/posts/karatani-asada-orientalism-asia",
         destination: "/books/karatani-asada-complete-dialogues/chapters/orientalism-asia",
         permanent: true,

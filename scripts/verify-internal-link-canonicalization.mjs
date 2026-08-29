@@ -236,8 +236,8 @@ const archivedSourceAliases = `
 /posts/living-between-infrastructures-commuter-networks-revised	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247489568&idx=1&sn=65b03c5ae44c04bc69d094b5eba8e1a6
 /posts/sailor-antifa-radical-cosplay	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247489117&idx=1&sn=d1323c33631b722760351ec43beb8c27
 /posts/karatani-critique-space-asada-aki	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247489139&idx=1&sn=18cdf4ffe357bb30a8a5ca1e9a90525f
-/posts/specificity-and-future-of-japanese-animation	https://mp.weixin.qq.com/s/MQOhcwMrFNR8MDkVCjedBg
-/posts/specificity-and-future-of-japanese-animation	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247489014&idx=1&sn=826e19a3dce54ca90388191134125e63
+/books/battle-trauma-anime-representation-history/chapters/specificity-and-future	https://mp.weixin.qq.com/s/MQOhcwMrFNR8MDkVCjedBg
+/books/battle-trauma-anime-representation-history/chapters/specificity-and-future	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247489014&idx=1&sn=826e19a3dce54ca90388191134125e63
 /posts/azuma-hiroki-what-is-criticism	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247489470&idx=1&sn=aeac96150283bd13b2e3b02ade941b84
 /posts/mori-minoru-day-of-resurrection	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247489657&idx=1&sn=19cfa1e01b7efc1bbd936fb7ee9e25bd
 /posts/my-brilliant-friend-naples-quartet	https://mp.weixin.qq.com/s/oBdogk94BYbrN2hIGDWBcw
