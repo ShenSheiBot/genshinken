@@ -5,8 +5,9 @@ source_slug: rags-drum-2022-final-results
 slug: rags-drum-2022-final-results
 language: ja
 status: review
-title: "【運命乗り換え】拾荒戦略 Rags Drum 2022 年度公募の最終選考結果"
-title_breaks: ["【運命乗り換え】", "拾荒戦略 Rags Drum 2022 年度公募の最終選考結果"]
+title: "拾荒戦略 Rags Drum 2022 年度公募の最終選考結果"
+title_breaks: ["拾荒戦略 Rags Drum 2022 年度公募の", "最終選考結果"]
+subtitle: "運命乗り換え"
 excerpt: "屋頂現視研・拾荒戦略実行委員会が、「拾荒戦略 Rags Drum 2022」の最終選考結果と5作の受賞作を発表。審査や原稿料の規定を説明し、年度公募からオンライン同人誌へ移行する今後の方針を明らかにする。"
 credits:
   - role: translator

@@ -66,6 +66,7 @@ repeated in chapter front matter.
 
 Only `published` editions enter the sitemap and reciprocal `hreflang` links.
 Draft, review, and reviewed files remain invisible in ordinary production builds: their
-localized routes render the same availability page as a missing edition. For a
-local editorial preview, build and serve with `ROOF_TRANSLATION_PREVIEW=1`.
+localized routes render the same availability page as a missing edition. `next dev`
+exposes these editorial states automatically. For a production-mode editorial preview,
+set `ROOF_TRANSLATION_PREVIEW=1`.
 Run `npm run verify:translations` before publication.

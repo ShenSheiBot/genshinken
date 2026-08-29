@@ -5,8 +5,9 @@ source_slug: rags-drum-2021-pre-festival-results
 slug: rags-drum-2021-zenyasai-results
 language: ja
 status: review
-title: "屋頂年次原稿公募｜拾荒戦略 Rags Drum 2021 前夜祭 選考結果"
-title_breaks: ["屋頂年次原稿公募｜", "拾荒戦略 Rags Drum 2021 前夜祭 選考結果"]
+title: "拾荒戦略 Rags Drum 2021 前夜祭選考結果"
+title_breaks: ["拾荒戦略 Rags Drum 2021 前夜祭", "選考結果"]
+subtitle: "屋頂年度論考募集"
 excerpt: 屋頂現視研の年次ACG批評・研究公募「拾荒戦略 Rags Drum 2021」前夜祭の選考結果。前夜祭・後夜祭の両方に参加する13本と、前夜祭のみ参加する2本を発表する。
 credits:
   - role: translator

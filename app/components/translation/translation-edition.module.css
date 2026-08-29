@@ -143,6 +143,14 @@
 .bookContext a:hover,
 .bookContext a:focus-visible { border-bottom-color: currentColor; outline: none; }
 .coverMeta { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; margin-bottom: 34px; color: var(--ink-soft); font-family: var(--f-mono); font-size: 10px; letter-spacing: .06em; }
+.coverMetaWithTopics { margin-bottom: 10px; }
+.topicMemberships { display: flex; align-items: center; gap: 8px; margin: 0 0 28px; color: var(--ink-faint); font-family: var(--translation-sans); font-size: 10px; font-weight: 700; line-height: 1; letter-spacing: .08em; }
+.topicMemberships > span { flex: none; text-transform: uppercase; }
+.topicMemberships a { display: inline-flex; align-items: center; gap: 6px; min-width: 0; padding: 3px 6px 2px; color: var(--ink); background: color-mix(in srgb, var(--ink) 2%, transparent); border: 1px solid var(--hair-strong); letter-spacing: 0; }
+.topicMemberships a:hover,
+.topicMemberships a:focus-visible { color: var(--accent); outline: none; }
+.topicMemberships b { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.topicMemberships small { flex: none; color: var(--accent); font: 800 1em/1 var(--f-grotesk); }
 .cover h1 { margin: 0; font-family: var(--reader-title-family, var(--f-serif)); font-size: clamp(46px, 5.4vw, 76px); font-weight: 800; line-height: 1.07; letter-spacing: -.04em; text-wrap: balance; }
 .titleSegment { display: inline; }
 .compactTitleSegment { white-space: nowrap; }

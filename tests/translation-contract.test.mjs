@@ -11,6 +11,8 @@ import {
   canonicalizeLocalizedTranslationRoutes,
   translationEditionIsVisible,
   translationLifecycleValues,
+  translationPreviewEnabledForEnvironment,
+  translationTitleBreaks,
 } from "../lib/translation-contract.mjs";
 import { parseYamlFrontMatter } from "../lib/safe-front-matter.mjs";
 import {
@@ -21,6 +23,27 @@ import {
   readLanguageDispositions,
   translationAvailabilityState,
 } from "../lib/translation-language-dispositions.mjs";
+
+test("local development exposes editorial translation states without extra environment setup", () => {
+  assert.equal(translationPreviewEnabledForEnvironment("development", undefined), true);
+  assert.equal(translationPreviewEnabledForEnvironment("production", "1"), true);
+  assert.equal(translationPreviewEnabledForEnvironment("production", "0"), false);
+});
+
+test("translation title breaks use the locale's actual joining rule", () => {
+  assert.deepEqual(
+    translationTitleBreaks(["Rags Drum", "2021"], "Rags Drum 2021", "en", "english.md"),
+    ["Rags Drum", "2021"],
+  );
+  assert.deepEqual(
+    translationTitleBreaks(["拾荒戦略 Rags Drum 2021 前夜祭", "選考結果"], "拾荒戦略 Rags Drum 2021 前夜祭選考結果", "ja", "japanese.md"),
+    ["拾荒戦略 Rags Drum 2021 前夜祭", "選考結果"],
+  );
+  assert.throws(
+    () => translationTitleBreaks(["拾荒戦略 Rags Drum 2021", "前夜祭選考結果"], "拾荒戦略 Rags Drum 2021 前夜祭選考結果", "ja", "japanese.md"),
+    /must concatenate exactly/u,
+  );
+});
 
 test("translated book metadata has one directory-level source of truth", () => {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), "roof-translation-book-"));

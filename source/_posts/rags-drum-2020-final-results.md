@@ -1,6 +1,7 @@
 ---
-title: 【战略达成】拾荒战略Rags Drum 2020 年度征文评选结果
-title_breaks: [【战略达成】拾荒战略, Rags Drum 2020 年度, 征文评选结果]
+title: 拾荒战略 Rags Drum 2020：年度征文评选结果
+title_breaks: [拾荒战略 Rags Drum 2020：, 年度征文评选结果]
+subtitle: 战略达成
 date: 2020-11-05
 slug: rags-drum-2020-final-results
 script: hans
@@ -19,7 +20,7 @@ citation:
   rights: 本文为作者原创，未经授权禁止转载
 ---
 
-[【屋顶年度征文】拾荒战略Rags Drum 2020](/posts/rags-drum-2020-call-for-papers)
+[拾荒战略 Rags Drum 2020：屋顶年度征文](/posts/rags-drum-2020-call-for-papers)
 
 ![拾荒战略Rags Drum 2020年度征文评选结果海报](attachments/roof-archive/cv8226364/01-rags-drum-2020-results-poster.png)
 

@@ -1,5 +1,8 @@
 ---
 title: 《天气之子》系列评论
+localized_titles:
+  en: "Weathering with You: A Series of Critical Essays"
+  ja: "『天気の子』批評シリーズ"
 subtitle: 六种路径重读新海诚的东京与选择
 summary: 六位作者从情感经验、世界系、存在论、信仰、社会规训与系统暴力等路径，集中讨论《天气之子》。
 status: complete

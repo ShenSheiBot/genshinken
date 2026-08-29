@@ -1,5 +1,8 @@
 ---
-title: 拾荒战略Rags Drum 2022
+title: 拾荒战略 Rags Drum 2022
+localized_titles:
+  en: Rags Drum 2022
+  ja: 拾荒戦略 Rags Drum 2022
 subtitle: 年度征文流程与已收录参赛稿
 summary: 依次收录拾荒战略Rags Drum 2022年度征文的活动公告、前夜祭评选结果与年度评选结果，并汇集可在本站阅读全文的参赛作品。
 status: complete

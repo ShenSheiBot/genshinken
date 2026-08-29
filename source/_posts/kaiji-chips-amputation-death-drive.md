@@ -1,6 +1,6 @@
 ---
-title: 【拾荒战略2021】筹码、截肢与死亡冲动——伊藤开司的自杀游戏
-title_breaks: [【拾荒战略2021】, 筹码、截肢与死亡冲动, ——伊藤开司的自杀游戏]
+title: 筹码、截肢与死亡冲动——伊藤开司的自杀游戏
+title_breaks: [筹码、截肢与死亡冲动, ——伊藤开司的自杀游戏]
 date: 2021-11-20
 slug: kaiji-chips-amputation-death-drive
 script: hans

@@ -13,6 +13,7 @@ const TOPICS_DIR = path.join(process.cwd(), "source", "_topics");
 export const TOPIC_STATUSES = ["ongoing", "complete", "archived"] as const;
 export type TopicStatus = (typeof TOPIC_STATUSES)[number];
 export type TopicItemType = "post" | "book" | "media";
+export type TopicDisplayLocale = "en" | "ja";
 
 export interface TopicItemReference {
   type: TopicItemType;
@@ -64,6 +65,7 @@ export interface TopicMembership {
 }
 
 export interface Topic extends TopicSummary {
+  localizedTitles: Partial<Record<TopicDisplayLocale, string>>;
   introductionHtml: string;
   groups: TopicGroup[];
   startHere: ResolvedTopicItem;
@@ -78,6 +80,7 @@ interface TopicSource {
   published: string;
   updated: string;
   curators: string[];
+  localizedTitles: Partial<Record<TopicDisplayLocale, string>>;
   introductionMarkdown: string;
   groups: TopicGroupSource[];
   file: string;
@@ -105,6 +108,19 @@ function textList(value: unknown, label: string): string[] {
   if (value == null || value === "") return [];
   const values = Array.isArray(value) ? value : [value];
   return values.map((item, index) => requiredText(item, `${label}[${index}]`));
+}
+
+function localizedTitles(
+  value: unknown,
+  label: string,
+): Partial<Record<TopicDisplayLocale, string>> {
+  if (value == null) return {};
+  const record = asObject(value, label);
+  return Object.fromEntries(
+    (["en", "ja"] as const).flatMap((locale) => (
+      record[locale] == null ? [] : [[locale, requiredText(record[locale], `${label}.${locale}`)]]
+    )),
+  );
 }
 
 function isoDate(value: unknown, label: string): string {
@@ -219,6 +235,7 @@ function parseTopicFile(file: string): TopicSource {
     published,
     updated,
     curators: textList(data.curators, `${file}: curators`),
+    localizedTitles: localizedTitles(data.localized_titles, `${file}: localized_titles`),
     introductionMarkdown,
     groups: parseGroups(data.groups, file),
     file,
@@ -320,6 +337,7 @@ async function loadTopics(): Promise<Topic[]> {
         published: source.published,
         updated: source.updated,
         curators: source.curators,
+        localizedTitles: source.localizedTitles,
         introductionHtml: sanitizePublicContentHtml(
           await renderMarkdown(source.introductionMarkdown)
         ),
@@ -343,7 +361,8 @@ function allTopics(): Promise<Topic[]> {
 }
 
 function summary(topic: Topic): TopicSummary {
-  const { introductionHtml, groups, startHere, ...rest } = topic;
+  const { localizedTitles, introductionHtml, groups, startHere, ...rest } = topic;
+  void localizedTitles;
   void introductionHtml;
   void groups;
   void startHere;
@@ -362,17 +381,23 @@ export async function getTopicBySlug(slug: string): Promise<Topic | null> {
   return (await allTopics()).find((topic) => topic.slug === slug) ?? null;
 }
 
-export async function getTopicMembershipsForPost(slug: string): Promise<TopicMembership[]> {
+export async function getTopicMembershipsForPost(
+  slug: string,
+  locale?: TopicDisplayLocale,
+): Promise<TopicMembership[]> {
   return (await allTopics()).flatMap((topic) =>
     topic.groups.flatMap((group) => {
       const itemIndex = group.items.findIndex((item) => item.type === "post" && item.ref === slug);
-      return itemIndex >= 0
-        ? [{
-            href: `/topics/${encodeURIComponent(topic.slug)}`,
-            title: topic.title,
-            groupNumber: topicMembershipNumber(group.number, itemIndex),
-          }]
-        : [];
+      if (itemIndex < 0) return [];
+      const title = locale ? topic.localizedTitles[locale] : topic.title;
+      if (!title) {
+        throw new Error(`${topic.slug}: missing localized_titles.${locale} for translated topic membership`);
+      }
+      return [{
+        href: `/topics/${encodeURIComponent(topic.slug)}`,
+        title,
+        groupNumber: topicMembershipNumber(group.number, itemIndex),
+      }];
     })
   );
 }

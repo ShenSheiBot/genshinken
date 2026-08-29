@@ -7,6 +7,7 @@ import type {
   TranslationSource,
 } from "@/lib/translations";
 import type { RenderedApparatusParts } from "@/lib/markdown";
+import type { TopicMembership } from "@/lib/topics";
 import { splitRenderedApparatus } from "@/lib/markdown";
 import { isCompactTitleSegment } from "@/lib/title-layout";
 import LanguageSwitcher from "./LanguageSwitcher";
@@ -35,6 +36,7 @@ const ui = {
     proofreader: "Proofreading",
     editor: "Editing",
     preview: "Editorial preview",
+    topic: "Topic",
     min: "min read",
     end: "End",
     rights: "Rights",
@@ -63,6 +65,7 @@ const ui = {
     proofreader: "校閲",
     editor: "編集",
     preview: "編集プレビュー",
+    topic: "特集",
     min: "分で読了",
     end: "本文終わり",
     rights: "ライセンス",
@@ -147,12 +150,14 @@ export default function TranslationEditionPage({
   source,
   edition,
   links,
+  topicMemberships = [],
   chapterNavigation,
 }: {
   locale: TranslationLocale;
   source: TranslationSource;
   edition: TranslationEdition;
   links: EditionLanguageLink[];
+  topicMemberships?: TopicMembership[];
   chapterNavigation?: TranslationChapterNavigation;
 }) {
   const labels = ui[locale];
@@ -197,7 +202,7 @@ export default function TranslationEditionPage({
               <span aria-hidden="true"> · </span>{source.chapter.number}
             </p>
           )}
-          <div className={styles.coverMeta}>
+          <div className={`${styles.coverMeta}${topicMemberships.length > 0 ? ` ${styles.coverMetaWithTopics}` : ""}`}>
             <Link href={sourceHref} hrefLang={source.script === "hant" ? "zh-Hant" : "zh-Hans"}>
               ← {labels.original}
             </Link>
@@ -206,6 +211,20 @@ export default function TranslationEditionPage({
               <span className={styles.previewBadge}>{labels.preview}</span>
             )}
           </div>
+          {topicMemberships.length > 0 && (
+            <nav className={styles.topicMemberships} aria-label={labels.topic}>
+              <span>{labels.topic}</span>
+              {topicMemberships.map((membership) => (
+                <Link
+                  href={membership.href}
+                  key={`${membership.href}:${membership.groupNumber}`}
+                >
+                  <b>{membership.title}</b>
+                  <small>{membership.groupNumber}</small>
+                </Link>
+              ))}
+            </nav>
+          )}
           <h1 id="translated-title">
             {edition.titleBreaks.map((segment, index) => {
               const compact = isCompactTitleSegment(segment);

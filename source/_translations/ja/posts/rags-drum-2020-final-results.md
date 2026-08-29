@@ -5,8 +5,9 @@ source_slug: rags-drum-2020-final-results
 slug: rags-drum-2020-final-results
 language: ja
 status: review
-title: "【戦略達成】拾荒戦略 Rags Drum 2020年度論考公募・選考結果"
-title_breaks: ["【戦略達成】", "拾荒戦略 Rags Drum 2020年度", "論考公募・選考結果"]
+title: "拾荒戦略 Rags Drum 2020年度論考公募・選考結果"
+title_breaks: ["拾荒戦略 Rags Drum 2020年度", "論考公募・選考結果"]
+subtitle: "戦略達成"
 excerpt: "屋頂現視研が「拾荒戦略 Rags Drum 2020」の選考結果を発表。二段階の選考を通過した8作と一次選考を通過した2作、その書き手、原稿料、審査員を紹介する。"
 credits:
   - role: translator

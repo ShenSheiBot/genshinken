@@ -5,8 +5,8 @@ source_slug: animation-eyebrow-hair-perception-video
 slug: animation-eyebrow-hair-perception-video
 language: ja
 status: review
-title: "【作画論】遍在する知覚――2Dアニメーションの「眉・目と髪」をめぐる知覚経験と歴史考証"
-title_breaks: ["【作画論】遍在する知覚――", "2Dアニメーションの「眉・目と髪」をめぐる", "知覚経験と歴史考証"]
+title: "遍在する知覚――2Dアニメーションの「眉・目と髪」をめぐる知覚経験と歴史考証"
+title_breaks: ["遍在する知覚――", "2Dアニメーションの「眉・目と髪」をめぐる", "知覚経験と歴史考証"]
 excerpt: "アニメーション史と知覚現象学の両面から、前髪の下にある眉や目を見せる「透け処理」と、髪で隠す「非透け処理」をたどり、それぞれがもたらす視覚経験を考察する。"
 credits:
   - role: translator
@@ -20,7 +20,7 @@ rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-[video] 【作画論】遍在する知覚――2Dアニメーションの「眉・目と髪」をめぐる知覚経験と歴史考証
+[video] 遍在する知覚――2Dアニメーションの「眉・目と髪」をめぐる知覚経験と歴史考証
 
 [動画を再生：1080P](attachments/wechat-video/wxv_2648249728371228674/original-1920x1080.mp4 "=1920x1080 19:01")
 

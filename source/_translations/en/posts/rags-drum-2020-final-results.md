@@ -5,8 +5,9 @@ source_slug: rags-drum-2020-final-results
 slug: rags-drum-2020-final-results
 language: en
 status: review
-title: "Mission Complete: Rags Drum 2020 Final Results"
-title_breaks: ["Mission Complete:", "Rags Drum 2020", "Final Results"]
+title: "Rags Drum 2020 Final Results"
+title_breaks: ["Rags Drum 2020", "Final Results"]
+subtitle: "Mission Complete"
 excerpt: "Lab on Roof announces the results of its 2020 open call for ACG criticism: eight works selected after both rounds, two preliminary-round selections, the writers’ honoraria, and the volunteer judging panel."
 credits:
   - role: translator

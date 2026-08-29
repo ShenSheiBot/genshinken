@@ -1,6 +1,7 @@
 ---
-title: 【完结】混凝土拱廊街：静止系MAD祭典 2019
-title_breaks: [【完结】混凝土拱廊街：, 静止系MAD祭典 2019]
+title: 混凝土拱廊街：静止系MAD祭典 2019
+title_breaks: [混凝土拱廊街：, 静止系MAD祭典 2019]
+subtitle: 祭典完结
 date: 2020-04-18
 slug: concrete-arcade-still-mad-festival-2019-finale
 script: hans

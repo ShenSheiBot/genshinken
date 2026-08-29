@@ -1,6 +1,6 @@
 ---
-title: 屋顶现视研夏季征文：【都市·空间】
-title_breaks: [屋顶现视研夏季征文：, 【都市·空间】]
+title: 屋顶现视研夏季征文：都市·空间
+title_breaks: [屋顶现视研夏季征文：, 都市·空间]
 date: 2019-06-07
 slug: summer-essay-contest-city-space
 script: hans

@@ -5,8 +5,9 @@ source_slug: rags-drum-2022-call-for-papers
 slug: rags-drum-2022-call-for-papers
 language: en
 status: review
-title: "Rags Drum 2022: Lab on Roof’s Annual Call for Submissions (Closed)"
-title_breaks: ["Rags Drum 2022:", "Lab on Roof’s Annual Call for Submissions", "(Closed)"]
+title: "Rags Drum 2022"
+title_breaks: ["Rags Drum 2022"]
+subtitle: "Lab on Roof’s Annual Call for Submissions"
 excerpt: "This archived announcement for Lab on Roof’s now-closed Rags Drum 2022 call sets out its fields, two-track schedule, judging, honoraria, submission routes, and publication terms."
 credits:
   - role: translator

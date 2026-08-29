@@ -5,8 +5,9 @@ source_slug: rags-drum-2022-pre-festival-results
 slug: rags-drum-2022-pre-festival-results
 language: en
 status: review
-title: "Lab on Roof Annual Call for Submissions: Rags Drum 2022 Eve Festival Selection Results"
-title_breaks: ["Lab on Roof Annual Call for Submissions:", " Rags Drum 2022", " Eve Festival Selection Results"]
+title: "Rags Drum 2022: Eve Festival Selection Results"
+title_breaks: ["Rags Drum 2022:", "Eve Festival Selection Results"]
+subtitle: "Lab on Roof’s Annual Call for Submissions"
 excerpt: "Lab on Roof announces the seven works selected across the two Rags Drum 2022 Eve Festival tracks, their honoraria, its description of the volunteer jury, acknowledgments, and the After Festival schedule."
 credits:
   - role: translator

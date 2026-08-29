@@ -5,8 +5,9 @@ source_slug: rags-drum-2021-call-for-papers
 slug: rags-drum-2021-call-for-papers
 language: en
 status: review
-title: "Rags Drum 2021: Annual Call for Submissions (Closed)"
-title_breaks: ["Rags Drum 2021:", "Annual Call for Submissions (Closed)"]
+title: "Rags Drum 2021"
+title_breaks: ["Rags Drum 2021"]
+subtitle: "Lab on Roof’s Annual Call for Submissions"
 excerpt: This closed 2021 call invited criticism and research on anime, comics, and games through two submission tracks, with judging, honoraria, and publication terms set by Lab on Roof.
 credits:
   - role: translator

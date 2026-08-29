@@ -1,5 +1,8 @@
 ---
-title: 拾荒战略Rags Drum 2021
+title: 拾荒战略 Rags Drum 2021
+localized_titles:
+  en: Rags Drum 2021
+  ja: 拾荒戦略 Rags Drum 2021
 subtitle: 年度征文流程与八篇前夜祭受赏稿
 summary: 收录拾荒战略Rags Drum 2021的活动公告、前夜祭结果、年度结果，以及结果页确认的八篇前夜祭受赏稿。
 status: complete

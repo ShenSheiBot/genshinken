@@ -1,6 +1,7 @@
 ---
-title: "【战略未竟】拾荒战略Rags Drum 2021 年度征文评选结果"
-title_breaks: ["【战略未竟】拾荒战略", "Rags Drum 2021 年度", "征文评选结果"]
+title: "拾荒战略 Rags Drum 2021：年度征文评选结果"
+title_breaks: ["拾荒战略 Rags Drum 2021：", 年度征文评选结果]
+subtitle: 战略未竟
 date: 2021-11-19
 slug: rags-drum-2021-final-results
 script: hans

@@ -5,8 +5,9 @@ source_slug: rags-drum-2022-final-results
 slug: rags-drum-2022-final-results
 language: en
 status: review
-title: "Fate Has Us Changing Trains: Final Results of the Rags Drum 2022 Essay Contest"
-title_breaks: ["Fate Has Us Changing Trains:", "Final Results of the", "Rags Drum 2022 Essay Contest"]
+title: "Final Results of the Rags Drum 2022 Essay Contest"
+title_breaks: ["Final Results of the", "Rags Drum 2022 Essay Contest"]
+subtitle: "Fate Has Us Changing Trains"
 excerpt: "The Lab on Roof Rags Drum Organizing Committee announces five selected essays, explains the judging and honoraria, and reveals that a regular online dōjin magazine will succeed the annual contest."
 credits:
   - role: translator

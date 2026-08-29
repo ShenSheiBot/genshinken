@@ -40,6 +40,13 @@ const bookChapterSectionNumbers = new Map<string, string>();
 export const CONTENT_FORMATS = ["article", "interview", "qa"] as const;
 export type ContentFormat = (typeof CONTENT_FORMATS)[number];
 
+export const PUBLICATION_LABELS = {
+  revised: "修订版",
+  excerpt: "节译",
+  bilingual: "双语",
+} as const;
+export type PublicationLabel = keyof typeof PUBLICATION_LABELS;
+
 export type { CreditRole } from "./credit-roles";
 export { CREDIT_ROLE_META, CREDIT_ROLES, PRIMARY_CREDIT_ROLES } from "./credit-roles";
 import { CREDIT_ROLE_META, PRIMARY_CREDIT_ROLES, type CreditRole } from "./credit-roles";
@@ -66,6 +73,7 @@ export interface PostSummary {
   category: string;
   section: EditorialSection;
   format: ContentFormat;
+  publicationLabel: PublicationLabel | "";
   tags: string[];
   author: string;
   credits: Credit[];
@@ -465,6 +473,11 @@ async function loadRaw(): Promise<Post[]> {
       if (section === "interview" && format === "article") {
         throw new Error(`${file}: section: interview 必须使用 format: interview 或 format: qa`);
       }
+      const publicationLabelValue = metadataText(data.publication_label);
+      if (publicationLabelValue && !(publicationLabelValue in PUBLICATION_LABELS)) {
+        throw new Error(`${file}: publication_label 必须是 ${Object.keys(PUBLICATION_LABELS).join(" / ")} 之一`);
+      }
+      const publicationLabel = publicationLabelValue as PublicationLabel | "";
       const html = await renderMarkdown(content, { format });
       const script = resolveHanScript(data, file);
       const originalDate = metadataText(data.original_date ?? data.originalDate ?? data["原文日期"]);
@@ -515,6 +528,7 @@ async function loadRaw(): Promise<Post[]> {
         category,
         section,
         format,
+        publicationLabel,
         tags: uniqueTags,
         author: authors.join("　") || String(data.post_author ?? data.author ?? "").trim(),
         credits,

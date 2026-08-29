@@ -5,8 +5,9 @@ source_slug: rags-drum-2020-call-for-papers
 slug: rags-drum-2020-call-for-papers
 language: ja
 status: review
-title: "【2020年終了】屋頂現視研・年度論考募集「拾荒戦略 Rags Drum 2020」"
-title_breaks: ["【2020年終了】", "屋頂現視研・年度論考募集", "「拾荒戦略 Rags Drum 2020」"]
+title: "拾荒戦略 Rags Drum 2020"
+title_breaks: ["拾荒戦略 Rags Drum 2020"]
+subtitle: "屋頂年度論考募集"
 excerpt: "2020年に行われ、すでに終了した屋頂現視研の年度企画「拾荒戦略 Rags Drum 2020」。アニメ・漫画・ゲームの批評と研究を募った当時の応募区分、審査、原稿料、応募方法を記録する。"
 credits:
   - role: translator

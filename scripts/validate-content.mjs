@@ -38,6 +38,7 @@ const wechatAssetManifestFile = path.join(
 );
 const publicDirectory = path.join(process.cwd(), "public");
 const validSections = new Set(["essay", "review", "translation", "interview", "community", "multimedia", "negative"]);
+const validPublicationLabels = new Set(["revised", "excerpt", "bilingual"]);
 const validContentFormats = new Set(["article", "interview", "qa"]);
 const validCategories = new Set([
   "动画",
@@ -1112,6 +1113,15 @@ const records = validUtf8Files.map((file) => {
   }
   if (section === "interview" && format === "article") {
     report(errors, file, "section: interview 必须使用 format: interview 或 format: qa");
+  }
+
+  if (hasOwn(data, "publication_label")) {
+    const publicationLabel = typeof data.publication_label === "string"
+      ? data.publication_label.trim().toLowerCase()
+      : "";
+    if (!validPublicationLabels.has(publicationLabel)) {
+      report(errors, file, "publication_label 必须是 revised / excerpt / bilingual 之一");
+    }
   }
 
   if (!validHanScripts.has(script)) {

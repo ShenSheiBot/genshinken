@@ -5,8 +5,8 @@ source_slug: kaiji-chips-amputation-death-drive
 slug: kaiji-chips-amputation-death-drive
 language: en
 status: review
-title: "[Rags Drum 2021] Chips, Amputation, and the Death Drive: Kaiji Itou’s Suicide Game"
-title_breaks: ["[Rags Drum 2021]", "Chips, Amputation, and the Death Drive:", "Kaiji Itou’s Suicide Game"]
+title: "Chips, Amputation, and the Death Drive: Kaiji Itou’s Suicide Game"
+title_breaks: ["Chips, Amputation, and the Death Drive:", "Kaiji Itou’s Suicide Game"]
 excerpt: "Drawing on Baudrillard’s symbolic exchange and Deleuze and Guattari’s body without organs, 米岡 reads chips, bodily collateral, and the death drive as the machinery of Kaiji’s suicide game."
 credits:
   - role: translator

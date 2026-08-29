@@ -6,6 +6,7 @@ import { parseYamlFrontMatter } from "../lib/safe-front-matter.mjs";
 import {
   canonicalizeLocalizedTranslationRoutes,
   translationLifecycleValues,
+  translationTitleBreaks,
 } from "../lib/translation-contract.mjs";
 import { CONTRIBUTORS } from "../lib/contributors.ts";
 import {
@@ -23,6 +24,7 @@ import { readLanguageDispositions } from "../lib/translation-language-dispositio
 
 const root = process.cwd();
 const translationsRoot = path.join(root, "source", "_translations");
+const topicsRoot = path.join(root, "source", "_topics");
 const auditScript = path.join(root, "scripts", "audit-translation-structure.py");
 const locales = new Set(["en", "ja"]);
 const statuses = new Set(["draft", "review", "reviewed", "published"]);
@@ -58,6 +60,40 @@ function walk(directory) {
     if (entry.isDirectory()) return walk(target);
     return entry.name.endsWith(".md") ? [target] : [];
   }).sort();
+}
+
+function topicLocalizationRequirements() {
+  const requirements = new Map();
+  for (const file of walk(topicsRoot)) {
+    const data = parseYamlFrontMatter(fs.readFileSync(file, "utf8")).data;
+    const localizedTitles = data.localized_titles;
+    for (const group of Array.isArray(data.groups) ? data.groups : []) {
+      for (const item of Array.isArray(group?.items) ? group.items : []) {
+        if (item?.type !== "post" || typeof item.ref !== "string" || !item.ref.trim()) continue;
+        const slug = item.ref.trim();
+        const records = requirements.get(slug) ?? [];
+        records.push({ file, localizedTitles });
+        requirements.set(slug, records);
+      }
+    }
+  }
+  return requirements;
+}
+
+function verifyLocalizedTopicMemberships(editions) {
+  const requirements = topicLocalizationRequirements();
+  for (const edition of editions) {
+    if (edition.source.type !== "post") continue;
+    for (const requirement of requirements.get(edition.source.slug) ?? []) {
+      const title = requirement.localizedTitles?.[edition.locale];
+      if (typeof title !== "string" || !title.trim()) {
+        throw new Error(
+          `${path.relative(root, requirement.file)}: localized_titles.${edition.locale} ` +
+          `is required because ${path.relative(root, edition.file)} renders this topic membership`,
+        );
+      }
+    }
+  }
 }
 
 function sourceFor(data, file) {
@@ -218,7 +254,8 @@ for (const file of [...locales].flatMap((locale) => walk(path.join(translationsR
     ? readTranslationBookManifest(path.dirname(file), { locale, sourceBookSlug: source.bookSlug })
     : null;
   translationLifecycleValues(data, status, file);
-  requiredText(data, "title", file);
+  const title = requiredText(data, "title", file);
+  translationTitleBreaks(data.title_breaks, title, locale, file);
   if (source.type === "post" && source.metadata?.subtitle) requiredText(data, "subtitle", file);
   requiredText(data, "excerpt", file);
   requiredText(data, "base_language", file);
@@ -283,6 +320,8 @@ for (const edition of editions) {
     translatedBookRoutes.set(targetBookKey, edition.source.bookSlug);
   }
 }
+
+verifyLocalizedTopicMemberships(editions);
 
 for (const disposition of languageDispositions) {
   const source = disposition.sourceRef.type === "post"

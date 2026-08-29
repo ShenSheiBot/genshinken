@@ -1,11 +1,12 @@
 ---
-title: 写给跨性别者和所有人的简易护肤指南[更新]
-title_breaks: ["写给跨性别者和所有人的", "简易护肤指南[更新]"]
+title: 写给跨性别者和所有人的简易护肤指南
+title_breaks: ["写给跨性别者和所有人的", "简易护肤指南"]
 date: 2026-07-09
 slug: skincare-guide-for-trans-people
 categories: [屋顶社群]
 section: essay
 format: article
+publication_label: revised
 tags: ["跨性别", "身体实践", "护肤"]
 post_author: "生命体征维持茶话会"
 excerpt: 一份面向跨性别者及所有人的护肤入门指南，从皮肤状态、清洁、保湿、防晒到预算与渠道展开说明。

@@ -5,8 +5,9 @@ source_slug: rags-drum-2022-pre-festival-results
 slug: rags-drum-2022-pre-festival-results
 language: ja
 status: review
-title: "【屋頂年度論考募集】拾荒戦略 Rags Drum 2022 前夜祭選考結果"
-title_breaks: ["【屋頂年度論考募集】", "拾荒戦略 Rags Drum 2022 前夜祭選考結果"]
+title: "拾荒戦略 Rags Drum 2022 前夜祭選考結果"
+title_breaks: ["拾荒戦略 Rags Drum 2022 前夜祭", "選考結果"]
+subtitle: "屋頂年度論考募集"
 excerpt: "屋頂現視研が、「拾荒戦略 Rags Drum 2022」前夜祭の二つの参加枠で審査を通過した7作を発表し、原稿料、審査員団の位置づけ、後夜祭の日程を案内する。"
 credits:
   - role: translator

@@ -5,8 +5,9 @@ source_slug: rags-drum-2021-final-results
 slug: rags-drum-2021-final-results
 language: en
 status: review
-title: "Strategy Unfinished: The Rags Drum 2021 Essay Contest Results"
-title_breaks: ["Strategy Unfinished:", "The Rags Drum 2021", "Essay Contest Results"]
+title: "Rags Drum 2021 Essay Contest Results"
+title_breaks: ["Rags Drum 2021", "Essay Contest Results"]
+subtitle: "Strategy Unfinished"
 excerpt: Eight entries won Rags Drum 2021 Eve Festival awards, each carrying an RMB 300 honorarium, while none secured the unanimous vote required for an After Festival award. Here are the full results and acknowledgements.
 credits:
   - role: translator

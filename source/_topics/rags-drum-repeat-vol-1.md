@@ -1,5 +1,8 @@
 ---
 title: 拾荒战略 Repeat Vol.1：重思日常
+localized_titles:
+  en: "Rags Drum Repeat Vol. 1: Rethinking the Everyday"
+  ja: "拾荒戦略 Repeat Vol. 1――日常を考え直す"
 subtitle: 进行中的2026年度评论征集
 summary: 收录拾荒战略于2026年重启后的活动公告；评选结果与公开入选稿将在发布后继续纳入。
 status: ongoing

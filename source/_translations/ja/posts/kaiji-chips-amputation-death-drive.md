@@ -5,10 +5,9 @@ source_slug: kaiji-chips-amputation-death-drive
 slug: kaiji-chips-amputation-death-drive
 language: ja
 status: review
-title: "【拾荒戦略 Rags Drum 2021】チップ、身体の切断、死の欲動――伊藤開司の自殺ゲーム"
+title: "チップ、身体の切断、死の欲動――伊藤開司の自殺ゲーム"
 title_breaks:
   [
-    "【拾荒戦略 Rags Drum 2021】",
     "チップ、身体の切断、死の欲動――",
     "伊藤開司の自殺ゲーム",
   ]

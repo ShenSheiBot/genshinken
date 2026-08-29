@@ -1,6 +1,7 @@
 ---
-title: 【屋顶年度征文】拾荒战略Rags Drum 2020
-title_breaks: [【屋顶年度征文】, 拾荒战略Rags Drum 2020]
+title: 拾荒战略 Rags Drum 2020
+title_breaks: [拾荒战略 Rags Drum 2020]
+subtitle: 屋顶年度征文
 date: 2020-05-10
 slug: rags-drum-2020-call-for-papers
 script: hans

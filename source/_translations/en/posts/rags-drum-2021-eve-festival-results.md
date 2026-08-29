@@ -7,6 +7,7 @@ language: en
 status: review
 title: "Rags Drum 2021: Pre-Festival Selection Results"
 title_breaks: ["Rags Drum 2021:", "Pre-Festival Selection Results"]
+subtitle: "Lab on Roof’s Annual Call for Submissions"
 excerpt: Lab on Roof announces the fifteen works selected in the Rags Drum 2021 Pre-Festival track, distinguishing entrants registered for both event tracks from those registered for the Pre-Festival alone, and records their honoraria and acknowledgements.
 credits:
   - role: translator

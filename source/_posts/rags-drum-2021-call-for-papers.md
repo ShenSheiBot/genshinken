@@ -1,6 +1,7 @@
 ---
-title: 【屋顶年度征文】拾荒战略Rags Drum 2021
-title_breaks: [【屋顶年度征文】, 拾荒战略Rags Drum 2021]
+title: 拾荒战略 Rags Drum 2021
+title_breaks: [拾荒战略 Rags Drum 2021]
+subtitle: 屋顶年度征文
 date: 2021-05-08
 slug: rags-drum-2021-call-for-papers
 script: hans

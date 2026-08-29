@@ -5,6 +5,7 @@ import TranslationPlaceholder from "@/app/components/translation/TranslationPlac
 import { citationToMetadata } from "@/lib/citations";
 import { getPostBySlug, getPreviewableSlugs, PRIMARY_CREDIT_ROLES } from "@/lib/posts";
 import { site } from "@/lib/site";
+import { getTopicMembershipsForPost } from "@/lib/topics";
 import { translationJsonLd } from "@/lib/translation-jsonld";
 import {
   getAllTranslationEditions,
@@ -159,6 +160,9 @@ export default async function LocalizedPostPage({
   if (!resolved.edition) {
     return <TranslationPlaceholder locale={locale} source={resolved.source} links={links} disposition={resolved.disposition} />;
   }
+  const topicMemberships = resolved.source.ref.type === "post"
+    ? await getTopicMembershipsForPost(resolved.source.ref.slug, locale)
+    : [];
   return (
     <>
       <script
@@ -167,7 +171,13 @@ export default async function LocalizedPostPage({
           __html: JSON.stringify(translationJsonLd(resolved.source, resolved.edition)).replace(/</gu, "\\u003c"),
         }}
       />
-      <TranslationEditionPage locale={locale} source={resolved.source} edition={resolved.edition} links={links} />
+      <TranslationEditionPage
+        locale={locale}
+        source={resolved.source}
+        edition={resolved.edition}
+        links={links}
+        topicMemberships={topicMemberships}
+      />
     </>
   );
 }

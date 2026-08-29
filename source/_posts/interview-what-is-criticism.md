@@ -1,6 +1,6 @@
 ---
-title: 【访谈】什么是批评
-title_breaks: [【访谈】什么是批评]
+title: 什么是批评
+title_breaks: [什么是批评]
 date: 2019-08-19
 slug: interview-what-is-criticism
 script: hans

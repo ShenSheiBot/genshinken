@@ -5,8 +5,9 @@ source_slug: rags-drum-2021-call-for-papers
 slug: rags-drum-2021-call-for-papers
 language: ja
 status: review
-title: "【募集終了】屋頂年度論考募集｜拾荒戦略 Rags Drum 2021"
-title_breaks: ["【募集終了】屋頂年度論考募集｜", "拾荒戦略 Rags Drum 2021"]
+title: "拾荒戦略 Rags Drum 2021"
+title_breaks: ["拾荒戦略 Rags Drum 2021"]
+subtitle: "屋頂年度論考募集"
 excerpt: 屋頂現視研が2021年に実施した第2回ACG論考募集「拾荒戦略 Rags Drum 2021」の記録。募集分野、前夜祭・後夜祭の進行、審査、謝礼、応募方法、掲載条件を告知したもの。
 credits:
   - role: translator

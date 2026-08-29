@@ -865,6 +865,18 @@
 
 .coverKicker a { color: var(--ink); }
 
+.coverKicker .coverPublicationLabel {
+  padding: 2px 6px 1px;
+  border: 1px solid var(--hair-strong);
+  color: var(--ink-soft);
+  background: color-mix(in srgb, var(--ink) 2%, transparent);
+  font-family: var(--reader-interface-family);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: .12em;
+}
+
 .coverLanguages { margin-top: 14px; }
 
 .coverTopics {
@@ -887,6 +899,9 @@
 .coverTopics .coverTopicLink {
   gap: 6px;
   min-height: 0;
+  padding: 3px 6px 2px;
+  border: 1px solid var(--hair-strong);
+  background: color-mix(in srgb, var(--ink) 2%, transparent);
   font-family: var(--reader-interface-family);
   font-size: 11px;
   font-weight: 700;

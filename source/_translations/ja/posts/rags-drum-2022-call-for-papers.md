@@ -5,8 +5,9 @@ source_slug: rags-drum-2022-call-for-papers
 slug: rags-drum-2022-call-for-papers
 language: ja
 status: review
-title: "【屋頂・年次論考募集】拾荒戦略 Rags Drum 2022"
-title_breaks: ["【屋頂・年次論考募集】", "拾荒戦略 Rags Drum 2022"]
+title: "拾荒戦略 Rags Drum 2022"
+title_breaks: ["拾荒戦略 Rags Drum 2022"]
+subtitle: "屋頂年度論考募集"
 excerpt: "屋頂現視研が2022年に実施した「拾荒戦略 Rags Drum 2022」の募集告知記録。前夜祭・後夜祭の二部門について、募集分野、日程、審査方針、原稿料、応募方法を伝える。"
 credits:
   - role: translator

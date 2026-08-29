@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Fragment, type ReactNode } from "react";
-import type { Credit, Post, PostSummary } from "@/lib/posts";
+import { PUBLICATION_LABELS, type Credit, type Post, type PostSummary } from "@/lib/posts";
 import type { PublicContentEntry } from "@/lib/public-content";
 import type { TopicMembership } from "@/lib/topics";
 import { site } from "@/lib/site";
@@ -429,6 +429,14 @@ export function ReadingDossier({
                 {post.displayDateISO.replaceAll("-", ".")}
               </time>
               <span>{post.readMin} 分钟</span>
+              {post.publicationLabel && (
+                <span
+                  className={styles.coverPublicationLabel}
+                  title={`文章版本：${PUBLICATION_LABELS[post.publicationLabel]}`}
+                >
+                  {PUBLICATION_LABELS[post.publicationLabel]}
+                </span>
+              )}
             </div>
             {languageLinks.length > 0 && (
               <div className={styles.coverLanguages}>

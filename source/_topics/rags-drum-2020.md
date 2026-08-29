@@ -1,5 +1,8 @@
 ---
-title: 拾荒战略Rags Drum 2020
+title: 拾荒战略 Rags Drum 2020
+localized_titles:
+  en: Rags Drum 2020
+  ja: 拾荒戦略 Rags Drum 2020
 subtitle: 年度征文公告、入选评论与评选结果
 summary: 收录拾荒战略Rags Drum 2020的活动公告、十篇年度入选评论、另一篇前夜祭合格稿及最终评选结果。
 status: complete

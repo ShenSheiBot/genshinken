@@ -1,6 +1,7 @@
 ---
-title: 【命运换乘】拾荒战略Rags Drum 2022年度征文评选结果
-title_breaks: ["【命运换乘】", "拾荒战略Rags Drum 2022", "年度征文评选结果"]
+title: 拾荒战略 Rags Drum 2022：年度征文评选结果
+title_breaks: ["拾荒战略 Rags Drum 2022：", 年度征文评选结果]
+subtitle: 命运换乘
 date: 2022-10-28
 slug: rags-drum-2022-final-results
 script: hans

@@ -1,6 +1,7 @@
 ---
-title: 【屋顶年度征文】拾荒战略Rags Drum 2022 前夜祭评选结果
-title_breaks: ["【屋顶年度征文】拾荒战略", "Rags Drum 2022 前夜祭", "评选结果"]
+title: 拾荒战略 Rags Drum 2022：前夜祭评选结果
+title_breaks: ["拾荒战略 Rags Drum 2022：", 前夜祭评选结果]
+subtitle: 屋顶年度征文
 date: 2022-08-14
 slug: rags-drum-2022-pre-festival-results
 script: hans

@@ -5,8 +5,9 @@ source_slug: rags-drum-2021-final-results
 slug: rags-drum-2021-final-results
 language: ja
 status: review
-title: "【戦略、いまだ成らず】拾荒戦略 Rags Drum 2021 年度投稿企画の選考結果"
-title_breaks: ["【戦略、いまだ成らず】", "拾荒戦略 Rags Drum 2021 年度", "投稿企画の選考結果"]
+title: "拾荒戦略 Rags Drum 2021 年度投稿企画の選考結果"
+title_breaks: ["拾荒戦略 Rags Drum 2021 年度", "投稿企画の選考結果"]
+subtitle: "戦略、いまだ成らず"
 excerpt: 「拾荒戦略 Rags Drum 2021」の結果発表。前夜祭を通過した8本（前夜祭のみの2本と、後夜祭で全会一致に届かなかった6本）、要旨通過後に完成原稿が過半数に届かなかった3本を紹介し、審査・広報関係者への謝辞を記す。
 credits:
   - role: translator

@@ -23,7 +23,12 @@ import {
 import { CONTRIBUTORS } from "./contributors";
 import { hanScriptLanguageTag, type HanScript } from "./han-script";
 import type { CitationRecord } from "./citations";
-import { translationEditionIsVisible, translationLifecycleValues } from "./translation-contract.mjs";
+import {
+  translationEditionIsVisible,
+  translationLifecycleValues,
+  translationPreviewEnabledForEnvironment,
+  translationTitleBreaks,
+} from "./translation-contract.mjs";
 import { getPostBySlug } from "./posts";
 import { site } from "./site";
 import {
@@ -248,7 +253,10 @@ export function translationPlaceholderHref(locale: TranslationLocale, source: Tr
 }
 
 export function translationPreviewEnabled(): boolean {
-  return process.env.ROOF_TRANSLATION_PREVIEW === "1";
+  return translationPreviewEnabledForEnvironment(
+    process.env.NODE_ENV,
+    process.env.ROOF_TRANSLATION_PREVIEW,
+  );
 }
 
 export function getLanguageDisposition(
@@ -278,14 +286,7 @@ function stableId(data: Record<string, unknown>, key: string, source: string): s
 }
 
 function titleBreaks(value: unknown, title: string, source: string, locale: TranslationLocale): string[] {
-  if (value == null) return [title];
-  if (!Array.isArray(value)) throw new Error(`${source}: title_breaks must be a YAML array`);
-  const segments = value.map((entry) => String(entry).trim()).filter(Boolean);
-  const reconstructed = segments.join(locale === "en" ? " " : "");
-  if (segments.length === 0 || reconstructed !== title) {
-    throw new Error(`${source}: title_breaks must concatenate exactly to title`);
-  }
-  return segments;
+  return translationTitleBreaks(value, title, locale, source);
 }
 
 function parseSourceRef(data: Record<string, unknown>, source: string): TranslationSourceRef {
