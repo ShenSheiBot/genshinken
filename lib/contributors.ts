@@ -137,7 +137,7 @@ export const CONTRIBUTORS = [
   { id: "austoria", displayName: "Austoria", aliases: ["AUS"], teamMember: false },
   { id: "suetonius", displayName: "Suetonius", aliases: [], teamMember: false },
   { id: "dusty-sky", displayName: "Dusty Sky", aliases: [], teamMember: false },
-  { id: "yu-ban", displayName: "鱼板", aliases: ["🐟"], teamMember: false },
+  { id: "yu-ban", displayName: "鱼板", aliases: ["🐟", "年糕汤里的鱼板"], teamMember: false },
   { id: "chuang-zi", displayName: "窗子", aliases: [], teamMember: false },
   { id: "li-luo-hu-deng", displayName: "篱落呼灯", aliases: [], teamMember: false },
   { id: "yu-xiao-xing", displayName: "玉小兴", aliases: [], teamMember: false },

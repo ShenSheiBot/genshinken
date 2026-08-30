@@ -5369,6 +5369,66 @@
       "contentType": "image/jpeg"
     },
     {
+      "key": "wechat/jN3EZO565lxhQjgQhiEu9A/author-avatar.png",
+      "bytes": 88006,
+      "sha256": "7d8ba8040f23f7c15448c48eaf87172c91cd9833711bd283d8fe79cd5bc8c46b",
+      "contentType": "image/png"
+    },
+    {
+      "key": "wechat/jN3EZO565lxhQjgQhiEu9A/body-002.jpg",
+      "bytes": 159238,
+      "sha256": "31cab0309469bb6740ec27009344f45bc1d3840ad17a37c1bc8d90d2d293025e",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/jN3EZO565lxhQjgQhiEu9A/body-003.png",
+      "bytes": 1671421,
+      "sha256": "0f1796b4d18b5f7aba4082e209b778b5e85bb4452c3199313119b19ba5760939",
+      "contentType": "image/png"
+    },
+    {
+      "key": "wechat/jN3EZO565lxhQjgQhiEu9A/body-004.png",
+      "bytes": 1739441,
+      "sha256": "4ea2bab91625600c351341d7be37af15e6f4cd31891b39a659dbd3f6e9198dbf",
+      "contentType": "image/png"
+    },
+    {
+      "key": "wechat/jN3EZO565lxhQjgQhiEu9A/body-005.jpg",
+      "bytes": 26617,
+      "sha256": "425c1635c9aea78cb2c2bb56dd7dca058a8ee5b506c5743b33ad671b2044cf9d",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/jN3EZO565lxhQjgQhiEu9A/body-006.png",
+      "bytes": 1800138,
+      "sha256": "df9ceab13e8572a1a8526466ab0513434cdb8bc02b58423144d9e6f2efd964f8",
+      "contentType": "image/png"
+    },
+    {
+      "key": "wechat/jN3EZO565lxhQjgQhiEu9A/body-007.png",
+      "bytes": 1429983,
+      "sha256": "d627b6e64e4ff24ee9090b51d240cf5e2bb593f420409f9f9b74297301d4e1a6",
+      "contentType": "image/png"
+    },
+    {
+      "key": "wechat/jN3EZO565lxhQjgQhiEu9A/body-008.png",
+      "bytes": 1212616,
+      "sha256": "736021e366113e89f046da250d96711ff504ea09c72e5c5d18271fb2cbfd2350",
+      "contentType": "image/png"
+    },
+    {
+      "key": "wechat/jN3EZO565lxhQjgQhiEu9A/body-009.png",
+      "bytes": 1806832,
+      "sha256": "2c44687bcab7ccf3a12a053963836b422e2569094ae0fb716bd13f7ac2cc107a",
+      "contentType": "image/png"
+    },
+    {
+      "key": "wechat/jN3EZO565lxhQjgQhiEu9A/body-010.png",
+      "bytes": 1489776,
+      "sha256": "75d342811b13a0d8269c4809f09355a4ba4f90374005c83c8d7755ed87ea31f6",
+      "contentType": "image/png"
+    },
+    {
       "key": "wechat/JsYMK225Vt0IQ6ce7ByqWQ/memorial-book-cover.jpg",
       "bytes": 77081,
       "sha256": "3a8e3361032d2f6e9d115e4fc5b963e6657e200445a58982dca04889a8c5740f",
