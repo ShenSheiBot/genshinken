@@ -3,8 +3,8 @@ title: "免费的思想趣味视频慕课（人文社科艺术）介绍||24年ve
 title_breaks: ["免费的思想趣味", "视频慕课（人文社科艺术）", "介绍||24年ver"]
 date: 2024-08-28
 slug: free-humanities-video-courses-2024
-categories: ["屋顶社群"]
-section: community
+categories: ["思想与理论"]
+section: essay
 tags: []
 post_author: "茶话会班委会"
 translator: []

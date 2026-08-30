@@ -3,7 +3,7 @@ title: 写给跨性别者和所有人的简易护肤指南
 title_breaks: ["写给跨性别者和所有人的", "简易护肤指南"]
 date: 2026-07-09
 slug: skincare-guide-for-trans-people
-categories: [屋顶社群]
+categories: [思想与理论]
 section: essay
 format: article
 publication_label: revised

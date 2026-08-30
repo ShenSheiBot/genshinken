@@ -5,7 +5,7 @@ date: 2019-08-10
 slug: first-anniversary-persistence-and-outlook
 script: hans
 categories: [屋顶社群]
-section: essay
+section: community
 tags: [屋顶现视研, 组织史, 动画评论, 都市·空间, 文化批评]
 post_author: 钟子默
 excerpt: 屋顶现视研成立一周年之际，第三任及第四任所长钟子默回望社团的争议、成绩与组织实践，并讨论动画评论的方法、价值立场和未来方向。
