@@ -1,11 +1,5 @@
 import type { Metadata } from "next";
 import { getAllPublicContent, type PublicContentEntry } from "@/lib/public-content";
-import {
-  bookChapterHref,
-  getAllBooks,
-  getBookChapterCredits,
-  getBookChapterDocuments,
-} from "@/lib/books";
 import { findContributor } from "@/lib/contributors";
 import { comparePostNumbersDescending } from "@/lib/post-numbering";
 import { site } from "@/lib/site";
@@ -65,37 +59,7 @@ function orderedFacetValues(values: string[], sortByCount = false): string[] {
 
 export default async function LibraryPage() {
   const entries = await getAllPublicContent();
-  const publicationByBook = new Map(
-    entries
-      .filter((entry) => entry.kind === "book" && entry.bookSlug)
-      .map((entry) => [entry.bookSlug as string, entry])
-  );
-  const interviewChapterRows = (
-    await Promise.all(getAllBooks().map(async (book): Promise<LibraryRow[]> => {
-      const publication = publicationByBook.get(book.slug);
-      return (await getBookChapterDocuments(book))
-        .filter(({ chapter }) => chapter.format === "interview" || chapter.format === "qa")
-        .map(({ chapter, readMin, tags }) => {
-          const credits = getBookChapterCredits(book, chapter);
-          return {
-            slug: `${book.slug}--${chapter.id}`,
-            href: bookChapterHref(book, chapter),
-            title: `${book.title}｜${chapter.title}`,
-            section: "interview" as const,
-            category: publication?.category ?? "未分类",
-            tags,
-            credits,
-            author: credits.filter((credit) => credit.role === "author").map((credit) => credit.name).join("　"),
-            no: publication?.no ?? "00",
-            sectionNo: chapter.number.replace(/\s+/gu, ""),
-            displayDateISO: chapter.publishedAt,
-            readMin,
-          };
-        });
-    }))
-  ).flat();
-  const rows = [...entries.map(toLibraryRow), ...interviewChapterRows]
-    .sort(comparePostNumbersDescending);
+  const rows = entries.map(toLibraryRow).sort(comparePostNumbersDescending);
   const facets: LibraryFacetValues = {
     categories: orderedFacetValues(rows.map((entry) => entry.category)),
     tags: connectedTagFacetValues(rows.flatMap((entry) => entry.tags)),
