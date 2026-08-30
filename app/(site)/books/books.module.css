@@ -105,6 +105,108 @@
   list-style: none;
 }
 
+.catalogCollection {
+  margin: 30px 0 34px;
+  padding: 0 24px 10px;
+  border: 1px solid var(--hair-strong);
+  border-top: 5px solid var(--accent);
+  background: color-mix(in srgb, var(--hair) 18%, var(--bg));
+}
+
+.catalogCollectionHeader {
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr) auto;
+  gap: 30px;
+  align-items: center;
+  padding: 24px 0;
+}
+
+.catalogCollectionMark {
+  display: flex;
+  width: 112px;
+  aspect-ratio: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px 11px;
+  color: var(--solid-ink);
+  background: var(--solid);
+}
+
+.catalogCollectionMark span,
+.catalogCollectionMark small,
+.catalogCollectionFacts {
+  font-family: var(--f-mono);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: .06em;
+}
+
+.catalogCollectionMark span,
+.catalogCollectionMark small {
+  color: color-mix(in srgb, var(--solid-ink) 62%, transparent);
+  font-size: var(--text-2xs);
+  line-height: 1.35;
+}
+
+.catalogCollectionMark strong {
+  font-family: var(--f-grotesk);
+  font-size: 34px;
+  line-height: 1;
+  letter-spacing: -.06em;
+}
+
+.catalogCollectionIdentity { min-width: 0; }
+
+.catalogCollectionIdentity h3 {
+  margin: 12px 0 0;
+  font-family: var(--f-cjk-serif);
+  font-size: clamp(34px, 4vw, 48px);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -.045em;
+  text-wrap: balance;
+}
+
+.catalogCollectionIdentity > p {
+  margin: 10px 0 0;
+  color: var(--ink-soft);
+  font-family: var(--f-cjk-serif);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.catalogCollectionFacts {
+  display: flex;
+  gap: 24px;
+  margin: 0;
+}
+
+.catalogCollectionFacts > div { min-width: 44px; }
+
+.catalogCollectionFacts dt {
+  margin-bottom: 5px;
+  color: var(--ink-soft);
+  font-size: var(--text-xs);
+}
+
+.catalogCollectionFacts dd {
+  margin: 0;
+  color: var(--accent);
+  font-family: var(--f-grotesk);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -.04em;
+}
+
+.catalogCollectionList {
+  margin: 0;
+  padding: 0;
+  border-top: 2px solid var(--hair-strong);
+  list-style: none;
+}
+
+.catalogCollectionList > li:last-child .catalogBook { border-bottom: 0; }
+
 .catalogBook {
   display: grid;
   grid-template-columns: 116px minmax(0, 1fr) 142px 106px;
@@ -113,6 +215,37 @@
   padding: 28px 0 30px;
   border-bottom: 1px solid var(--hair-strong);
 }
+
+.catalogBookNested {
+  grid-template-columns: 54px minmax(0, 1fr) 132px 104px;
+  gap: 22px;
+  padding: 18px 0 20px;
+}
+
+.catalogNestedNumber {
+  display: grid;
+  gap: 4px;
+  align-content: start;
+  padding-top: 2px;
+  color: var(--ink-soft);
+  font-family: var(--f-mono);
+  font-size: var(--text-2xs);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: .08em;
+}
+
+.catalogNestedNumber strong {
+  color: var(--accent);
+  font-family: var(--f-grotesk);
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: -.04em;
+}
+
+.catalogBookNested .catalogTitle { margin-top: 9px; font-size: clamp(25px, 3vw, 34px); }
+.catalogBookNested .catalogSubtitle { margin-top: 6px; }
+.catalogBookNested .catalogCredits { gap: 3px; margin-top: 10px; font-size: var(--text-xs); }
+.catalogBookNested .catalogFacts { gap: 12px; }
 
 .catalogCover,
 .bookCover {
@@ -185,6 +318,7 @@
 .catalogCredits {
   display: grid;
   gap: 6px;
+  min-width: 0;
   margin-top: 17px;
   color: var(--ink-soft);
   font-size: var(--text-sm);
@@ -195,9 +329,16 @@
   display: grid;
   grid-template-columns: 38px minmax(0, 1fr);
   gap: 9px;
+  min-width: 0;
 }
 
 .catalogCredits > div > span { color: var(--ink-faint); }
+.catalogCredits :global(.credit-links) {
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  flex-wrap: wrap;
+}
 
 .catalogFacts {
   display: grid;
@@ -816,6 +957,11 @@
   .catalogCover { width: 100px; }
   .catalogOpen { grid-column: 2 / -1; justify-content: flex-end; }
 
+  .catalogCollectionHeader { grid-template-columns: 100px minmax(0, 1fr); gap: 24px; }
+  .catalogCollectionMark { width: 100px; }
+  .catalogCollectionFacts { grid-column: 2; }
+  .catalogBookNested { grid-template-columns: 54px minmax(0, 1fr) 124px; gap: 20px; }
+
   .publicationHeader { grid-template-columns: 190px minmax(0, 1fr); }
   .bookCover { width: 190px; }
   .publicationRail {
@@ -857,6 +1003,20 @@
   }
   .catalogOpen { grid-column: 2; justify-content: flex-start; }
 
+  .catalogCollection { margin: 24px 0 28px; padding: 0 14px 8px; }
+  .catalogCollectionHeader { grid-template-columns: 72px minmax(0, 1fr); gap: 18px; padding: 18px 0; }
+  .catalogCollectionMark { width: 72px; padding: 8px 7px; }
+  .catalogCollectionMark strong { font-size: 25px; }
+  .catalogCollectionIdentity h3 { margin-top: 8px; font-size: 30px; }
+  .catalogCollectionIdentity > p { margin-top: 7px; font-size: 12px; }
+  .catalogCollectionFacts { grid-column: 2; gap: 18px; }
+  .catalogCollectionFacts dd { font-size: 20px; }
+  .catalogBookNested { grid-template-columns: 48px minmax(0, 1fr); gap: 14px; padding: 17px 0 19px; }
+  .catalogNestedNumber strong { font-size: 24px; }
+  .catalogBookNested .catalogTitle { font-size: 27px; }
+  .catalogBookNested .catalogFacts { grid-column: 2; }
+  .catalogBookNested .catalogOpen { grid-column: 2; }
+
   .publicationHeader {
     grid-template-columns: 136px minmax(0, 1fr);
     gap: 24px;
@@ -892,7 +1052,14 @@
   .catalogHeader { display: block; }
   .catalogStats { margin-top: 22px; }
   .catalogCredits > div { display: block; }
-  .catalogCredits > div > span { display: block; margin-bottom: 3px; }
+  .catalogCredits > div > span:first-child { display: block; margin-bottom: 3px; }
+  .catalogCollectionHeader { grid-template-columns: 64px minmax(0, 1fr); gap: 14px; }
+  .catalogCollectionMark { width: 64px; }
+  .catalogCollectionMark small { font-size: 7px; }
+  .catalogCollectionIdentity .catalogTopline { display: block; }
+  .catalogCollectionIdentity .catalogTopline span { display: block; }
+  .catalogCollectionIdentity h3 { font-size: 27px; }
+  .catalogCollectionFacts { grid-column: 1 / -1; justify-content: flex-end; }
 
   .publicationHeader { grid-template-columns: minmax(0, 1fr); gap: 24px; }
   .bookCover { width: 120px; }
