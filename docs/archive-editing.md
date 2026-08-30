@@ -26,13 +26,15 @@
    npm run assets:wechat:register -- "$SOURCE_DIR" source/_posts/<slug>.md
    ```
 
-6. 运行 `npm run check` 和 `npm run build`。随后逐屏查看桌面与移动页面：
+6. 运行 `npm run check`。随后逐屏查看桌面与移动页面：
 
    ```bash
    npm run review:route -- /posts/<slug>
    ```
 
    命令会启动独立临时服务，输出两种视口的分段截图目录，并在退出时关闭自己启动的浏览器与服务；编辑者仍须实际查看这些截图。
+   若本次不走 Cloudflare 候选上传或生产部署，再单独运行 `npm run build`；两个发布入口自身都会执行同一套
+   OpenNext／Next 生产构建，不要在它们之前紧邻重复构建。
 7. 检查普通 Git diff，确认没有原始库存、临时 IR、构建产物或个人 agent 配置，再提交。
 
 如果上述仓库命令因环境或工具缺失而失败，停在准确命令并报告环境缺口；不要为完成单篇编辑而修改基础设施、

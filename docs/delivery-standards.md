@@ -21,7 +21,7 @@
 - [ ] **专题引用有效**：分组顺序正确，`post / media / book` 类型与目标一致，导语和编者按已复核
 - [ ] **链接有效**：正文引用的本站已收录文章／章节使用稳定站内 canonical 路径；出处字段、第三方文章及尚未收录内容保留外链；无残留的 Outline `mention://` 内链；`npm run verify:internal-links` 通过
 - [ ] **提交作者 = `ShenSheiBot <83676393+ShenSheiBot@users.noreply.github.com>`**
-- [ ] 本地 `npm run check` 与 `npm run build` 通过，再推送
+- [ ] 本地 `npm run check` 通过；不走 Cloudflare 发布入口时另行运行 `npm run build`
 
 ---
 
@@ -356,6 +356,8 @@ P1/P2/P4/P5 由 `scripts/validate-content.mjs` 的 `validateProseTypography` 在
 - 上传和部署脚本会同步字体、执行 OpenNext 构建并移除由 R2 承载的重复附件；生产部署另行拒绝带有已跟踪
   改动的工作区并从当前提交建立干净构建根。完成后必须以 Wrangler 返回的 Version ID 和目标 URL 回读，
   并对相应公开地址执行发布回归；Git push、GitHub Actions 绿色或 Worker 进程健康都不能代替线上页面验收。
+- Cloudflare 候选上传或生产部署已经包含完整 OpenNext／Next 构建。紧邻发布入口之前不要再运行一次独立
+  `npm run build`；独立构建只用于不执行发布入口的本地成品验收。
 
 ---
 

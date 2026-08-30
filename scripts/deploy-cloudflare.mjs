@@ -2,6 +2,7 @@ import { spawnSync } from "node:child_process";
 import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
+import { cloudflareBuildIdentity } from "./cloudflare-build-identity.mjs";
 
 const sourceRoot = process.cwd();
 const target = process.argv[2];
@@ -58,10 +59,6 @@ function assertTrackedWorktreeClean() {
 
 function syncFonts(root) {
   run("npm", ["run", "fonts:sync"], root);
-}
-
-function buildIdentity(root) {
-  return run("git", ["rev-parse", "HEAD"], root, { capture: true }).trim();
 }
 
 function prepareCleanBuildRoot() {
@@ -158,7 +155,8 @@ function build(buildRoot, { reuseNextCache = false } = {}) {
     fs.rmSync(path.join(buildRoot, ".next"), { recursive: true, force: true });
   }
   fs.rmSync(path.join(buildRoot, ".open-next"), { recursive: true, force: true });
-  environment.ROOF_BUILD_ID = buildIdentity(buildRoot);
+  const buildId = cloudflareBuildIdentity(buildRoot, target, environment);
+  environment.ROOF_BUILD_ID = buildId;
   console.log(`Building Cloudflare ${target} artifact (ROOF_TRANSLATION_PREVIEW=${environment.ROOF_TRANSLATION_PREVIEW})`);
   run("opennextjs-cloudflare", ["build"], buildRoot, { localBinary: true });
   normalizeWebpackRuntime(buildRoot);
@@ -178,7 +176,6 @@ try {
     // A candidate preview deliberately includes the current uncommitted working
     // tree. It cannot change a fixed domain, and keeping .next/cache makes
     // feedback iterations materially faster.
-    syncFonts(sourceRoot);
     build(sourceRoot, { reuseNextCache: true });
     if (action === "upload") {
       console.log("Uploading an undeployed preview version; fixed domains will remain unchanged");
