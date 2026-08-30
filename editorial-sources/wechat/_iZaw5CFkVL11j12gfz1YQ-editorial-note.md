@@ -11,3 +11,7 @@
 - 脚注与链接：无脚注；未检出正文超链接。
 - B站复核：未发现标题、正文锚点与责任链同时吻合的 B 站 canonical；保留为 WeChat community 公告。
 - 删除/保留：保留两项活动内容与群聊说明；raw 本身未声明许可，也没有可删除的平台投稿号召。旧 GUI ledger 的 body hash 属先前生成表示；当前 raw/payload/body、专篇说明与 preservation contract 绑定本轮状态。primary canonical 本身无需进入只登记 duplicate/superseded 来源的 `source-dispositions.json`。
+
+## 公开处置
+
+- 2026-08-29 经站点所有者确认，本条不再作为本站独立正文发布：它只是已经结束的短期打卡活动通知，现存载荷也没有文中所称的入群图片。微信原页仍为 canonical；原始载荷与本说明继续保留在归档中。

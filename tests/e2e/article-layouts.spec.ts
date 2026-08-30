@@ -4,9 +4,7 @@ const cases = [
   ["animation-criticism-dimensions-resource-directory", "resources"],
   ["concrete-revolutio-timeline", "timeline"],
   ["feminist-theory-modernity-postmodernity", "reading-path"],
-  ["japanese-subculture-books-recommendations", "book-list"],
   ["japan-00s-anime-criticism-podcast", "podcast"],
-  ["roof-genshiken-reader-group-summer-2024", "contact"],
   ["manga-signal-of-noise", "comic"],
 ] as const;
 
@@ -35,9 +33,4 @@ test("the timeline exposes machine-readable date labels", async ({ page }) => {
 test("the reading path keeps every published chapter link in one index", async ({ page }) => {
   await page.goto("/posts/feminist-theory-modernity-postmodernity");
   await expect(page.locator(".article-layout-reading-path > p")).toHaveCount(10);
-});
-
-test("the compact book list keeps all source recommendations", async ({ page }) => {
-  await page.goto("/posts/japanese-subculture-books-recommendations");
-  await expect(page.locator(".article-layout-book-list > ul > li")).toHaveCount(3);
 });

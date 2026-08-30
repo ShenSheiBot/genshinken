@@ -247,7 +247,6 @@ const archivedSourceAliases = `
 /posts/my-brilliant-friend-naples-quartet	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247488930&idx=1&sn=90c787274913bce34a3e53b062326d05
 /posts/manga-signal-of-noise	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247489378&idx=1&sn=d68cb49560a372321bbf7ca720a560ac
 /posts/skincare-guide-for-trans-people	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247489616&idx=1&sn=806cb6320df4a07f0ed4add674a26ee1
-/posts/roof-genshiken-reader-group-summer-2024	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247488782&idx=2&sn=74453a6035f5c5e9c8d1348942573486
 /posts/faust-east-asia-otaku-transversality	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247489156&idx=1&sn=d783a43f20eba2821e1ce670ceba85fa
 /posts/metonymy-redemption-nagasaki-kyoto-animation-your-color	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247489614&idx=1&sn=fe2e5df4ad70f9aa8ee0d807f6751582
 /posts/erotic-idol-female-oriented-av-men	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247489064&idx=1&sn=4c36ebb09a99924303a32e1a070adb22
