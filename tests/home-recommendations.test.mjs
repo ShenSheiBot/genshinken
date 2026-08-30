@@ -4,6 +4,13 @@ import {
   READER_EDITORIAL_SECTIONS,
   selectHomeRecommendations,
 } from "../lib/editorial.ts";
+import {
+  createHomeVariantRandom,
+  HOME_VARIANT_COUNT,
+  homeVariantPath,
+  pickHomeVariant,
+} from "../lib/home-variants.ts";
+import { needsDenseHomeTitle } from "../lib/home-wall.ts";
 
 const items = [
   { slug: "essay-new", section: "essay" },
@@ -66,4 +73,49 @@ test("missing sections and short collections remain valid", () => {
     ["essay", "community"]
   );
   assert.deepEqual(selectHomeRecommendations(items, 0), []);
+});
+
+test("pre-rendered homepage variants are stable and meaningfully different", () => {
+  const first = selectHomeRecommendations(items, 10, createHomeVariantRandom(1));
+  const repeat = selectHomeRecommendations(items, 10, createHomeVariantRandom(1));
+  const second = selectHomeRecommendations(items, 10, createHomeVariantRandom(2));
+
+  assert.deepEqual(first, repeat);
+  assert.notDeepEqual(first.map((item) => item.slug), second.map((item) => item.slug));
+});
+
+test("the request picker always resolves to a pre-rendered homepage", () => {
+  assert.equal(homeVariantPath(pickHomeVariant(() => 0)), "/home-variants/0");
+  assert.equal(
+    homeVariantPath(pickHomeVariant(() => 1)),
+    `/home-variants/${HOME_VARIANT_COUNT - 1}`
+  );
+  assert.equal(homeVariantPath(pickHomeVariant(() => Number.NaN)), "/home-variants/0");
+});
+
+test("feature titles that would occupy four CJK lines use the dense scale", () => {
+  assert.equal(
+    needsDenseHomeTitle({
+      title: "为什么日本文化中对少女有着病态般的喜爱？为什么日本女性总是要强调可爱？",
+      homeTitleBreaks: [],
+      section: "essay",
+    }),
+    true
+  );
+  assert.equal(
+    needsDenseHomeTitle({
+      title: "回答：如何评价2020年4月新番《昨日之歌》？",
+      homeTitleBreaks: [],
+      section: "review",
+    }),
+    false
+  );
+  assert.equal(
+    needsDenseHomeTitle({
+      title: "伊藤计划、大屠杀、政治国家与《和谐<harmony/>》",
+      homeTitleBreaks: [],
+      section: "review",
+    }, true),
+    true
+  );
 });

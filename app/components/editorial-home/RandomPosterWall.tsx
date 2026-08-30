@@ -1,13 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useRef, useState, type CSSProperties } from "react";
+import type { CSSProperties } from "react";
 import {
   EDITORIAL_SECTION_META,
-  selectHomeRecommendations,
   type ReaderEditorialSection,
 } from "@/lib/editorial";
-import type { HomeWallPost } from "@/lib/home-wall";
+import { needsDenseHomeTitle, type HomeWallPost } from "@/lib/home-wall";
 import CreditLinks from "@/app/components/CreditLinks";
 import styles from "./PosterWallHome.module.css";
 
@@ -116,35 +115,7 @@ function CardCredits({ post }: { post: HomeWallPost }) {
   );
 }
 
-export default function RandomPosterWall({ fallbackPosts }: { fallbackPosts: HomeWallPost[] }) {
-  const [wallPosts, setWallPosts] = useState(fallbackPosts);
-  const hasRandomized = useRef(false);
-
-  useEffect(() => {
-    if (hasRandomized.current) return;
-    hasRandomized.current = true;
-    const controller = new AbortController();
-
-    void fetch("/home-recommendations.json", {
-      cache: "no-cache",
-      signal: controller.signal,
-    })
-      .then((response) => {
-        if (!response.ok) throw new Error(`recommendation catalog returned ${response.status}`);
-        return response.json() as Promise<HomeWallPost[]>;
-      })
-      .then((posts) => {
-        if (!Array.isArray(posts)) throw new Error("recommendation catalog is not an array");
-        setWallPosts(selectHomeRecommendations(posts, 10, Math.random));
-      })
-      .catch((error: unknown) => {
-        if (error instanceof DOMException && error.name === "AbortError") return;
-        console.error("Unable to load the home recommendation catalog", error);
-      });
-
-    return () => controller.abort();
-  }, []);
-
+export default function RandomPosterWall({ posts: wallPosts }: { posts: HomeWallPost[] }) {
   const firstSlug: Partial<Record<PosterSection, string>> = {};
   for (const post of wallPosts) {
     firstSlug[post.section] ??= post.slug;
@@ -210,7 +181,12 @@ export default function RandomPosterWall({ fallbackPosts }: { fallbackPosts: Hom
                 </div>
 
                 <div className={styles.cardBody}>
-                  <h2 className={styles.postTitle}><HomeTitle post={post} /></h2>
+                  <h2
+                    className={styles.postTitle}
+                    data-title-density={needsDenseHomeTitle(post, isFirstOfSection) ? "dense" : undefined}
+                  >
+                    <HomeTitle post={post} />
+                  </h2>
                   {post.subtitle && <p className={styles.subtitle}>{post.subtitle}</p>}
                   <CardCredits post={post} />
                   <p className={styles.excerpt}>{overviewFor(post)}</p>

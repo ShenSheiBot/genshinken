@@ -38,6 +38,7 @@ const staticDynamicRoutes = [
   "app/(site)/books/[slug]/chapters/[chapter]/page.tsx",
   "app/(site)/books/[slug]/chapters/[chapter]/cite.bib/route.ts",
   "app/(site)/books/[slug]/cite.bib/route.ts",
+  "app/(site)/home-variants/[variant]/page.tsx",
 ];
 
 for (const route of staticDynamicRoutes) {

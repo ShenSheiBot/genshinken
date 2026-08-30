@@ -1,6 +1,6 @@
 {
   "conversion": "opencc-js:cn2t+t2cn",
-  "corpusFileCount": 642,
+  "corpusFileCount": 643,
   "fonts": {
     "Roof STFangsong": {
       "bytes": 1723668,

@@ -1,4 +1,5 @@
 import { NextResponse, type NextRequest } from "next/server";
+import { homeVariantPath, pickHomeVariant } from "./lib/home-variants";
 
 const legacyHexoArticlePath = /^\/(?:19|20)\d{2}\/(?:0[1-9]|1[0-2])\/(?:0[1-9]|[12]\d|3[01])(?:\/|$)/u;
 const legacyHexoIndexPath = /^\/(?:archives|categories|tags|page)(?:\/|$)/u;
@@ -12,6 +13,11 @@ const localizedEditionPath = /^\/(en|ja)(?:\/|$)/u;
  */
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
+  if (pathname === "/") {
+    const destination = request.nextUrl.clone();
+    destination.pathname = homeVariantPath(pickHomeVariant());
+    return NextResponse.rewrite(destination);
+  }
   const localizedEdition = pathname.match(localizedEditionPath);
   if (localizedEdition) {
     const response = NextResponse.next();
@@ -39,6 +45,7 @@ export const config = {
   // cite.bib request. The handler still re-validates via
   // `legacyHexoArticlePath` as defence in depth.
   matcher: [
+    "/",
     "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/:path*",
     "/archives/:path*",
     "/categories/:path*",

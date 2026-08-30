@@ -9,6 +9,7 @@ import {
   type ReaderEditorialSection,
 } from "@/lib/editorial";
 import { toHomeWallPost } from "@/lib/home-wall";
+import { createHomeVariantRandom } from "@/lib/home-variants";
 import CreditLinks from "@/app/components/CreditLinks";
 import RandomPosterWall from "./RandomPosterWall";
 import styles from "./PosterWallHome.module.css";
@@ -30,12 +31,17 @@ function isPosterPost(post: PublicContentEntry): post is PosterPost {
 export default function PosterWallHome({
   posts,
   issue,
+  recommendationSeed,
 }: {
   posts: PublicContentEntry[];
   issue: string;
+  recommendationSeed?: number;
 }) {
   const posterPosts = posts.filter(isPosterPost);
-  const fallbackPosts = selectHomeRecommendations(posterPosts).map(toHomeWallPost);
+  const recommendationRandom = recommendationSeed == null
+    ? undefined
+    : createHomeVariantRandom(recommendationSeed);
+  const wallPosts = selectHomeRecommendations(posterPosts, 10, recommendationRandom).map(toHomeWallPost);
   const latestArticles = posterPosts.slice(0, 6);
 
   return (
@@ -64,7 +70,7 @@ export default function PosterWallHome({
         </div>
       </header>
 
-      <RandomPosterWall fallbackPosts={fallbackPosts} />
+      <RandomPosterWall posts={wallPosts} />
 
       <section
         className={`${styles.latestUpdates} ${styles.latestUpdatesTransition}`}
