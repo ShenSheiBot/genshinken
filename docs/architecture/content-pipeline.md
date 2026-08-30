@@ -153,7 +153,15 @@ PowerShell 使用 `$env:ROOF_BUILD_TIMESTAMP='...'` 后再运行构建。固定�
 
 GitHub Quality 与 IndexNow runner 固定为 `ubuntu-24.04` 和 Node `22.20.0`，官方 Actions 固定到已核验的完整提交 SHA。`.github/workflows/browser-smoke.yml` 调用公开的 `UCCTB/web-test-platform` reusable workflow，并固定其完整提交 SHA；workflow 不声明或继承调用方配置的 repository／organization secrets，GitHub 自动提供的 caller `GITHUB_TOKEN` 只授予 `contents: read`，artifact 属于博客 caller run。Playwright 版本、项目矩阵、产品断言和测试素材由博客自己的 lockfile、配置与 specs 持有，完整权责和 SHA 更新流程见 [`testing.md`](../testing.md)。
 
-`scripts/deploy-cloudflare.mjs` 是现行部署入口：它以 `wrangler.jsonc` 的 preview／production 环境为目标，执行字体同步、干净提交检查、OpenNext 构建、R2 重复附件裁剪和 Wrangler 发布。部署成功只说明 Worker 接受了候选；运行时验收还必须记录提交 SHA、构建时间、Worker 版本 ID 和目标 URL，并在发布后对 Worker URL 与公开别名执行 `verify:release`。当前没有对线上 Worker 自动执行 Playwright；不得把本地 browser suite 写成部署后浏览器冒烟。
+`scripts/deploy-cloudflare.mjs` 是现行部署入口。preview 分为两个原生 Cloudflare 阶段：
+`cf:upload:preview` 从未提交工作区构建，复用本地 Next 构建缓存，并通过 Worker Versions 上传一个不承载固定域名
+流量的候选；`cf:promote:preview -- <VERSION_ID>` 只把已验收的同一版本提升到固定预览域名，不重建或重传。
+production 则由 `cf:deploy:production` 同步字体、检查干净提交、从当前提交建立隔离构建根、执行 OpenNext
+构建、裁掉 R2 已承载的重复附件后部署。预览构建的 Next Build ID 固定为其工作区基准提交，因此同一未提交稿
+的内容反馈不会为全部 OpenNext cache 文件制造新命名空间；构建时间只进入 `/about` metadata，不再污染每个
+静态路由。上传或部署成功只说明 Worker 接受了候选；运行时验收还必须记录提交 SHA 或候选基准、构建时间、
+Worker Version ID 和目标 URL，并对版本 URL或提升后的公开别名执行 `verify:release`。当前没有对线上 Worker
+自动执行 Playwright；不得把本地 browser suite 写成部署后浏览器冒烟。
 
 ## 9. 发布发现
 
@@ -168,7 +176,7 @@ IndexNow 是发现流程，不是质量门禁；它看见 2xx／3xx 不代表页
 ## 10. 发布失败与回滚
 
 1. 保留失败的提交 SHA、构建日志、Worker 版本 ID 和验证输出。
-2. 若只影响尚未提升的 preview，停止提升并前向修复。
+2. 若只影响尚未提升的 Version Preview，停止提升并前向修复；固定预览域名不受影响。
 3. 若已经影响生产，优先在新提交中修复；需要回退时对引入问题的提交使用 `git revert`，再通过 Cloudflare production 部署入口发布。
 4. 回滚后重新执行正式域名 `verify:release` 和受影响浏览器场景。
 5. sitemap、RSS 或 IndexNow 错误应修正其源码生成器，不能手工维护根目录副本掩盖问题。

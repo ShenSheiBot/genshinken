@@ -6,6 +6,11 @@ function buildTimestamp(value = process.env.ROOF_BUILD_TIMESTAMP): string {
   return new Date().toISOString();
 }
 
+// Keep the build time available to server-rendered metadata without exposing it
+// through Next's `env` option. Inlining it in the shared layout makes every SSG
+// route change on every build even though only /about displays the value.
+process.env.ROOF_BUILD_TIMESTAMP = buildTimestamp();
+
 // Content Security Policy. Script/style keep 'unsafe-inline' because the site
 // ships four inline bootstrap scripts (theme, han-script, editorial reveal,
 // library prefilter) plus JSON-LD blocks and Next's framework inline runtime,
@@ -50,14 +55,30 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   outputFileTracingRoot: process.cwd(),
+  // Preview iterations are built from one uncommitted working tree. The deploy
+  // entrypoint pins this to its base commit so content-only edits retain the
+  // same OpenNext cache namespace. Normal builds keep Next's generated ID.
+  ...(process.env.ROOF_BUILD_ID
+    ? { generateBuildId: async () => process.env.ROOF_BUILD_ID as string }
+    : {}),
+  ...(process.env.ROOF_BUILD_ID
+    ? {
+        // Next's default CSS chunk merger and webpack chunk hashes are not
+        // reproducible across identical builds. Preview feedback relies on
+        // Cloudflare's content-addressed asset upload, so build artifacts must
+        // change only when their content changes.
+        experimental: { cssChunking: false as const },
+        webpack(config: { output?: { filename?: string } }) {
+          if (typeof config.output?.filename === "string") {
+            config.output.filename = config.output.filename.replace("[chunkhash]", "[contenthash]");
+          }
+          return config;
+        },
+      }
+    : {}),
   // Markdown lives in source/_posts and is read at build time (SSG).
   // Posts reference images under /attachments — served statically from public/.
   reactStrictMode: true,
-  // This value is created when Next loads its config for the current build and is therefore
-  // baked into the generated pages, rather than being the visitor's clock.
-  env: {
-    NEXT_PUBLIC_BUILD_TIMESTAMP: buildTimestamp(),
-  },
   async headers() {
     return [
       { source: "/:path*", headers: securityHeaders },

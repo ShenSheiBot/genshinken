@@ -19,10 +19,16 @@ npm run build
 npm run start -- --hostname 127.0.0.1 --port 3100
 ```
 
-Cloudflare Workers 预览地址：<https://roof-genshinken-a8f3d7c2.hiddengem.workers.dev>。更新部署：
+上传一个不改变固定域名的候选版本：
 
 ```bash
-npm run cf:deploy
+npm run cf:upload:preview
+```
+
+命令会返回该版本独有的 `workers.dev` 预览地址和 Version ID。验收后将同一版本提升到固定预览域名：
+
+```bash
+npm run cf:promote:preview -- <VERSION_ID>
 ```
 
 ## 内容结构

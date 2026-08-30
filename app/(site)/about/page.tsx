@@ -3,6 +3,11 @@ import { site } from "@/lib/site";
 import styles from "./about.module.css";
 
 const pageDescription = `了解${site.brandCN}的历史、协作方式，以及投稿、勘误与合作联系方式。`;
+const suppliedBuildTimestamp = process.env.ROOF_BUILD_TIMESTAMP;
+const parsedBuildTimestamp = suppliedBuildTimestamp ? new Date(suppliedBuildTimestamp) : null;
+const buildTimestamp = parsedBuildTimestamp && !Number.isNaN(parsedBuildTimestamp.valueOf())
+  ? parsedBuildTimestamp.toISOString()
+  : undefined;
 export const metadata: Metadata = {
   title: "关于屋顶",
   description: pageDescription,
@@ -14,6 +19,7 @@ export const metadata: Metadata = {
     siteName: site.tabTitle,
     type: "website",
   },
+  ...(buildTimestamp ? { other: { "roof-build-timestamp": buildTimestamp } } : {}),
 };
 
 export default function AboutPage() {

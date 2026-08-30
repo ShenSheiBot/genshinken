@@ -1,14 +1,27 @@
 import { spawnSync } from "node:child_process";
+import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 
 const sourceRoot = process.cwd();
 const target = process.argv[2];
-const buildOnly = process.argv.includes("--build-only");
+const action = process.argv[3];
+const actionValue = process.argv.slice(4).find((value) => !value.startsWith("--"));
 const dryRun = process.argv.includes("--dry-run");
 
-if (!new Set(["preview", "production"]).has(target)) {
-  console.error("Usage: node scripts/deploy-cloudflare.mjs <preview|production> [--build-only|--dry-run]");
+const allowedActions = {
+  preview: new Set(["build", "upload", "promote"]),
+  production: new Set(["build", "deploy"]),
+};
+
+if (!allowedActions[target]?.has(action)) {
+  console.error("Usage: node scripts/deploy-cloudflare.mjs preview <build|upload|promote VERSION_ID> [--dry-run]");
+  console.error("   or: node scripts/deploy-cloudflare.mjs production <build|deploy> [--dry-run]");
+  process.exit(1);
+}
+
+if (action === "promote" && !/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/iu.test(actionValue ?? "")) {
+  console.error("Preview promotion requires the exact Worker Version ID returned by cf:upload:preview.");
   process.exit(1);
 }
 
@@ -18,6 +31,7 @@ for (const key of ["HOME", "PATH", "TMPDIR", "LANG", "LC_ALL", "NO_COLOR", "CI"]
 }
 environment.NEXT_TELEMETRY_DISABLED = "1";
 environment.ROOF_TRANSLATION_PREVIEW = target === "preview" ? "1" : "0";
+environment.ROOF_BUILD_TIMESTAMP = process.env.ROOF_BUILD_TIMESTAMP || new Date().toISOString();
 
 function run(command, args, cwd, { localBinary = false, capture = false } = {}) {
   const executable = localBinary ? path.join(cwd, "node_modules", ".bin", command) : command;
@@ -44,6 +58,10 @@ function assertTrackedWorktreeClean() {
 
 function syncFonts(root) {
   run("npm", ["run", "fonts:sync"], root);
+}
+
+function buildIdentity(root) {
+  return run("git", ["rev-parse", "HEAD"], root, { capture: true }).trim();
 }
 
 function prepareCleanBuildRoot() {
@@ -73,7 +91,8 @@ function removeCleanBuildRoot(stageRoot) {
 }
 
 function pruneR2BackedAssets(buildRoot) {
-  const assetRoot = path.join(buildRoot, ".open-next", "assets", "attachments");
+  const publicAssetRoot = path.join(buildRoot, ".open-next", "assets");
+  const assetRoot = path.join(publicAssetRoot, "attachments");
   const prefixes = ["roof-archive", "wechat"];
   for (const prefix of prefixes) {
     fs.rmSync(path.join(assetRoot, prefix), { recursive: true, force: true });
@@ -82,13 +101,67 @@ function pruneR2BackedAssets(buildRoot) {
   if (leaked.length) {
     throw new Error(`R2-backed assets remained in the Worker artifact: ${leaked.join(", ")}`);
   }
+  fs.rmSync(path.join(publicAssetRoot, ".DS_Store"), { force: true });
 }
 
-function build(buildRoot) {
-  fs.rmSync(path.join(buildRoot, ".next"), { recursive: true, force: true });
+function walkFiles(root) {
+  const files = [];
+  for (const entry of fs.readdirSync(root, { withFileTypes: true })) {
+    const absolute = path.join(root, entry.name);
+    if (entry.isDirectory()) files.push(...walkFiles(absolute));
+    else if (entry.isFile()) files.push(absolute);
+  }
+  return files;
+}
+
+function normalizeWebpackRuntime(buildRoot) {
+  const chunksRoot = path.join(buildRoot, ".open-next", "assets", "_next", "static", "chunks");
+  const runtimeFiles = fs.readdirSync(chunksRoot).filter((name) => /^webpack-[0-9a-f]+\.js$/u.test(name));
+  if (runtimeFiles.length !== 1) {
+    throw new Error(`Expected one webpack runtime chunk, found ${runtimeFiles.length}.`);
+  }
+
+  const oldName = runtimeFiles[0];
+  const oldPath = path.join(chunksRoot, oldName);
+  const source = fs.readFileSync(oldPath, "utf8");
+  let normalizedObject = false;
+  const normalized = source.replace(/var e=\{((?:\d+:0,?)+)\};r\.f\.j=/u, (match, entries) => {
+    const sorted = entries
+      .split(",")
+      .filter(Boolean)
+      .sort((left, right) => Number(left.split(":", 1)[0]) - Number(right.split(":", 1)[0]));
+    normalizedObject = true;
+    return `var e={${sorted.join(",")}};r.f.j=`;
+  });
+  if (!normalizedObject) {
+    throw new Error("Webpack runtime chunk registry no longer matches the expected Next.js output.");
+  }
+
+  const digest = crypto.createHash("sha256").update(normalized).digest("hex").slice(0, 16);
+  const newName = `webpack-${digest}.js`;
+  const newPath = path.join(chunksRoot, newName);
+  fs.writeFileSync(newPath, normalized);
+  if (newPath !== oldPath) fs.rmSync(oldPath);
+
+  if (newName !== oldName) {
+    const oldBytes = Buffer.from(oldName);
+    for (const file of walkFiles(path.join(buildRoot, ".open-next", "cache"))) {
+      const bytes = fs.readFileSync(file);
+      if (!bytes.includes(oldBytes)) continue;
+      fs.writeFileSync(file, Buffer.from(bytes.toString("utf8").replaceAll(oldName, newName)));
+    }
+  }
+}
+
+function build(buildRoot, { reuseNextCache = false } = {}) {
+  if (!reuseNextCache) {
+    fs.rmSync(path.join(buildRoot, ".next"), { recursive: true, force: true });
+  }
   fs.rmSync(path.join(buildRoot, ".open-next"), { recursive: true, force: true });
+  environment.ROOF_BUILD_ID = buildIdentity(buildRoot);
   console.log(`Building Cloudflare ${target} artifact (ROOF_TRANSLATION_PREVIEW=${environment.ROOF_TRANSLATION_PREVIEW})`);
   run("opennextjs-cloudflare", ["build"], buildRoot, { localBinary: true });
+  normalizeWebpackRuntime(buildRoot);
   pruneR2BackedAssets(buildRoot);
 }
 
@@ -96,24 +169,37 @@ let buildRoot = sourceRoot;
 let staged = false;
 
 try {
-  if (!buildOnly) {
-    // Reconcile deterministic font assets before enforcing the clean-commit
-    // deployment boundary. Normal check/build commands do the same, so this is
-    // a no-op unless an editor skipped them after changing the Japanese corpus.
+  if (action === "promote") {
+    const promoteArgs = ["versions", "deploy", `${actionValue}@100`, "--env", "preview", "--yes"];
+    if (dryRun) promoteArgs.push("--dry-run");
+    console.log(`${dryRun ? "Rendering" : "Promoting"} previously inspected preview version ${actionValue}`);
+    run("wrangler", promoteArgs, sourceRoot, { localBinary: true });
+  } else if (target === "preview") {
+    // A candidate preview deliberately includes the current uncommitted working
+    // tree. It cannot change a fixed domain, and keeping .next/cache makes
+    // feedback iterations materially faster.
     syncFonts(sourceRoot);
-    assertTrackedWorktreeClean();
-    buildRoot = prepareCleanBuildRoot();
-    staged = true;
-  }
-
-  build(buildRoot);
-
-  if (!buildOnly) {
-    const deployArgs = ["deploy", "--env", target];
-    if (dryRun) deployArgs.push("--dry-run");
-    const commit = run("git", ["rev-parse", "--short", "HEAD"], buildRoot, { capture: true }).trim();
-    console.log(`${dryRun ? "Rendering" : "Deploying"} Cloudflare ${target} target from clean commit ${commit}`);
-    run("wrangler", deployArgs, buildRoot, { localBinary: true });
+    build(sourceRoot, { reuseNextCache: true });
+    if (action === "upload") {
+      console.log("Uploading an undeployed preview version; fixed domains will remain unchanged");
+      run("opennextjs-cloudflare", ["upload", "--env", "preview"], sourceRoot, { localBinary: true });
+    }
+  } else {
+    if (action === "deploy") {
+      // Production remains tied to a clean Git commit.
+      syncFonts(sourceRoot);
+      assertTrackedWorktreeClean();
+      buildRoot = prepareCleanBuildRoot();
+      staged = true;
+    }
+    build(buildRoot);
+    if (action === "deploy") {
+      const deployArgs = ["deploy", "--env", "production"];
+      if (dryRun) deployArgs.push("--dry-run");
+      const commit = run("git", ["rev-parse", "--short", "HEAD"], buildRoot, { capture: true }).trim();
+      console.log(`${dryRun ? "Rendering" : "Deploying"} Cloudflare production target from clean commit ${commit}`);
+      run("wrangler", deployArgs, buildRoot, { localBinary: true });
+    }
   }
 } catch (error) {
   console.error(error instanceof Error ? error.message : error);
