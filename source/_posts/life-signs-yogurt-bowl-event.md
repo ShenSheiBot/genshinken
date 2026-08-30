@@ -23,13 +23,13 @@ citation:
   language: zh-CN
 ---
 
-![“美味代餐酸奶碗制作指南”茶话会活动海报，标有 1 月 27 日 21:00－22:30 及群聊二维码](attachments/wechat/vfgBwqx0mWORDy5_nJxzSw/body-001.jpg "=66%")
+![“美味代餐酸奶碗制作指南”茶话会活动视觉，标有 1 月 27 日 21:00－22:30](attachments/wechat/vfgBwqx0mWORDy5_nJxzSw/activity-poster.jpg "=66%")
 
 本期生命体征维持茶话会活动：
 
 **主题：** 美味代餐酸奶碗制作指南\
 **时间：** 本周六（1 月 27 日）晚 9 点\
-**地点：** 限定活动群 QQ 与微信，见海报。
+**地点：** 限定活动群（QQ 与微信）。
 
 活动将以群语音与图文的形式进行，欢迎分享加入。
 

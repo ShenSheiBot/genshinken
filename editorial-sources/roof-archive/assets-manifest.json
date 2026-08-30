@@ -10090,12 +10090,6 @@
       "contentType": "image/png"
     },
     {
-      "key": "roof-archive/cv3706352/02-activity-group-qr.png",
-      "bytes": 143634,
-      "sha256": "5b05a6a2ad2f61b9675daed46018eb32d8a39620095312098dfda749d78400e8",
-      "contentType": "image/png"
-    },
-    {
       "key": "roof-archive/cv3706352/03-horizontal-poster.png",
       "bytes": 981235,
       "sha256": "a09f348990205014d82fb2d1c36f967e4795ee30891a45a50f4469f24d0d387e",
@@ -13027,12 +13021,6 @@
       "key": "roof-archive/cv6691318/traffic-sign-system.png",
       "bytes": 36226,
       "sha256": "5a0ddff4ad0194ee7d414d79756e1414419a9b600cbd6ed12c54ce78d573d427",
-      "contentType": "image/png"
-    },
-    {
-      "key": "roof-archive/cv6691318/translation-group-qr.png",
-      "bytes": 525672,
-      "sha256": "f76537c17692900dce8d5712bd523a89f88f78f07639cc080a00ba7bbc925b16",
       "contentType": "image/png"
     },
     {
