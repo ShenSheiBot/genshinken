@@ -75,7 +75,7 @@ post_author: 作者名         # 作者，实心方块「作」
 translator: 译者名          # 可选，空心「译」
 proofreader: 校对者名       # 可选，空心「校」
 excerpt: 一句话摘要         # 可选，缺省取正文首段
-featured_order: 0        # 可选；同栏目首页推荐优先级，数值越大越靠前
+featured_order: 0        # 旧内容兼容字段；随机首页不读取
 ---
 ```
 
@@ -92,7 +92,7 @@ featured_order: 0        # 可选；同栏目首页推荐优先级，数值越�
 - `multimedia` 与 `negative` 只保留旧内容解析和旧 URL 兼容，不进入当前读者栏目筛选或首页推荐。
 - `format` 可取 `article / interview / qa`。完整访谈页使用 `section: interview`；混合书籍只在相应 chapter 节点写 `format: interview` 或 `format: qa`，不得把整本书误归为访谈。
 - `section` 与 `categories` 相互独立；不要用“历史 / 哲学”等主题分类代替栏目，也不要只依赖译者署名推断「译」栏目。
-- `featured_order` 可用于任一栏目，必须是有限数值；缺省为 `0`，数值越大则在同栏目首页越靠前。
+- `featured_order` 仅为旧内容兼容字段，若存在仍必须是有限数值；首页随机推荐不读取它。
 - 首页推荐卡页眉由 `section` 与 `categories` 组合为「栏目 · 主题分类」，不得手写 `#03` 一类类别编号。「译」栏目推荐只展示 `post_author`，完整译者署名留在正文和文库。
 - `related_posts` 只允许多媒体条目使用，写作 slug 列表，例如
   `related_posts: [lih-lenin-disputed, pechatnov-soviet-union-bretton-woods]`。目标必须是已发布的
@@ -527,6 +527,7 @@ groups:
 - `npm run verify:dependencies`：当前依赖组合的兼容边界。
 - `npm run verify:routing`：静态动态路由、`generateStaticParams` 与未知实体行为；另强制全站零请求期渲染（任何 `page.tsx` 出现 `searchParams`/`next/headers`/`force-dynamic` 即失败）、每页自持 canonical、根 layout 禁止可继承 canonical。
 - `npm run verify:library`：文库客户端筛选的纯函数语义契约（解析、别名、无效值规范化、`contributor+role` 同条署名匹配、href 往返）。
+- `npm run verify:home`：首页随机推荐的纯函数语义契约（各读者栏目先各取一篇、总量上限、无重复和缺栏目降级）。
 - `npm run typecheck`：严格 TypeScript 检查，不生成文件。
 - `npm run lint`：非交互 ESLint；任何警告也视为失败。
 - `npm run check`：按 `package.json` 串行执行以上全部门禁，适合作为提交前确定性检查。

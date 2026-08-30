@@ -21,6 +21,55 @@ export const READER_EDITORIAL_SECTIONS = [
 
 export type ReaderEditorialSection = (typeof READER_EDITORIAL_SECTIONS)[number];
 
+/**
+ * Pick one item from every reader-facing section, then fill the remaining
+ * slots from the shared pool. Omitting `random` produces a stable SSG/no-JS
+ * fallback; passing a random source produces a fresh browser recommendation.
+ */
+export function selectHomeRecommendations<
+  T extends { section: ReaderEditorialSection },
+>(
+  items: readonly T[],
+  limit = 10,
+  random?: () => number
+): T[] {
+  if (limit <= 0) return [];
+
+  const remaining = [...items];
+  const selected: T[] = [];
+
+  const drawIndex = (length: number): number => {
+    if (!random || length <= 1) return 0;
+    const value = random();
+    const bounded = Number.isFinite(value)
+      ? Math.min(Math.max(value, 0), 1 - Number.EPSILON)
+      : 0;
+    return Math.floor(bounded * length);
+  };
+
+  for (const section of READER_EDITORIAL_SECTIONS) {
+    if (selected.length >= limit) break;
+    const candidates = remaining
+      .map((item, index) => ({ item, index }))
+      .filter(({ item }) => item.section === section);
+    if (candidates.length === 0) continue;
+
+    const candidate = candidates[drawIndex(candidates.length)];
+    const { item, index } = candidate;
+    selected.push(item);
+    remaining.splice(index, 1);
+  }
+
+  if (random) {
+    for (let index = remaining.length - 1; index > 0; index -= 1) {
+      const swapIndex = drawIndex(index + 1);
+      [remaining[index], remaining[swapIndex]] = [remaining[swapIndex], remaining[index]];
+    }
+  }
+
+  return selected.concat(remaining.slice(0, Math.max(0, limit - selected.length)));
+}
+
 export const EDITORIAL_SECTION_META: Record<
   EditorialSection,
   { label: string; number: string }

@@ -53,12 +53,13 @@
     "verify:dependencies": "node scripts/verify-dependency-contract.mjs",
     "verify:routing": "node --experimental-strip-types --no-warnings scripts/verify-static-routing.mjs",
     "verify:library": "node --experimental-strip-types --no-warnings scripts/verify-library-filter.mjs",
+    "verify:home": "node --experimental-strip-types --no-warnings --test tests/home-recommendations.test.mjs",
     "verify:editorial": "node scripts/verify-editorial-release.mjs",
     "verify:wechat-assets-ready": "node scripts/verify-wechat-assets-ready.mjs",
     "verify:structured-credits": "node scripts/verify-structured-credit-lines.mjs",
     "verify:license-placement": "node scripts/verify-license-placement.mjs",
     "verify:release": "node scripts/verify-editorial-release.mjs",
-    "check": "npm run fonts:sync && npm run validate:content && npm run validate:media-html && npm run verify:wechat-converter && npm run verify:wechat-assets-ready && npm run verify:structured-credits && npm run verify:license-placement && npm run verify:typography && npm run audit:math-notation && npm run verify:book-capabilities && npm run verify:reading-progress && npm run verify:han-script && npm run verify:citations && npm run verify:translations && npm run verify:internal-links && npm run verify:dependencies && npm run verify:routing && npm run verify:library && npm run verify:fonts && npm run typecheck && npm run lint"
+    "check": "npm run fonts:sync && npm run validate:content && npm run validate:media-html && npm run verify:wechat-converter && npm run verify:wechat-assets-ready && npm run verify:structured-credits && npm run verify:license-placement && npm run verify:typography && npm run audit:math-notation && npm run verify:book-capabilities && npm run verify:reading-progress && npm run verify:han-script && npm run verify:citations && npm run verify:translations && npm run verify:internal-links && npm run verify:dependencies && npm run verify:routing && npm run verify:library && npm run verify:home && npm run verify:fonts && npm run typecheck && npm run lint"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
