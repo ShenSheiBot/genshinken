@@ -114,4 +114,4 @@ citation:
 
 [^5]: Thomas Lamarre; _Living between Infrastructures: Commuter Networks, Broadcast TV, and Mobile Phones._ boundary 2 1 August 2015; 42 (3): 157-170. 中译见[生活在基础设施的间隙中：通勤网络、广播电视与移动电话](/posts/living-between-infrastructures-commuter-networks-revised)。
 
-[^6]: Tim Shao-Hung Teng. _Time, disaster, new media: Your Name as a mind-game film_, New Review of Film and Television Studies 20 (4): 459–88. 中译见[时间、灾难与新媒体：作为心智游戏电影的《你的名字》](https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247489697&idx=1&sn=04d303ac6029bfed71b528021dee5973&scene=21#wechat_redirect)。
+[^6]: Tim Shao-Hung Teng. _Time, disaster, new media: Your Name as a mind-game film_, New Review of Film and Television Studies 20 (4): 459–88. 中译见[时间、灾难与新媒体：作为心智游戏电影的《你的名字》](/posts/time-disaster-new-media-your-name)。

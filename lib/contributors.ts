@@ -591,6 +591,7 @@ export const CONTRIBUTORS = [
   { id: "di-di-ren-x-roof", displayName: "地底人X屋顶", aliases: [], teamMember: false, entityType: "organization" },
   { id: "ishioka-yoshiharu", displayName: "石岡良治", aliases: ["石冈良治", "Yoshiharu Ishioka"], teamMember: false },
   { id: "bing-ge", displayName: "冰格", aliases: [], teamMember: false },
+  { id: "tim-shao-hung-teng", displayName: "邓绍宏", aliases: ["Tim Shao-Hung Teng"], teamMember: false },
   { id: "yuki-takinami", displayName: "滝浪佑紀", aliases: ["Yuki Takinami"], teamMember: false },
   { id: "kai-xiao-yuan-che-de", displayName: "开校园车的", aliases: [], teamMember: false },
   { id: "uemura-taro", displayName: "上村太郎", aliases: ["Taro Uemura"], teamMember: false },
