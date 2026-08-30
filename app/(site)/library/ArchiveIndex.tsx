@@ -102,7 +102,7 @@ function FacetGroup({
             aria-expanded={showAllOptions}
             onClick={() => setShowAllOptions((value) => !value)}
           >
-            {showAllOptions ? "收起低频贡献者" : `展开其余 ${hiddenCount} 位`}
+            {showAllOptions ? "收起" : `展开其余 ${hiddenCount} 位`}
           </button>
         ) : null}
       </div>
