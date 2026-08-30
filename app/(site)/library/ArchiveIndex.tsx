@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
 import { EDITORIAL_SECTION_META } from "@/lib/editorial";
-import type { LibraryRow } from "@/lib/library-filter";
+import { showContributorByDefault, type LibraryRow } from "@/lib/library-filter";
 import CreditLinks from "@/app/components/CreditLinks";
 import styles from "./archive.module.css";
 import ResponsiveFacetDetails from "./ResponsiveFacetDetails";
@@ -14,6 +15,7 @@ export type ArchiveFacetOption = {
   active: boolean;
   disabled: boolean;
   href: string;
+  totalCount?: number;
 };
 
 type ArchiveIndexProps = {
@@ -67,12 +69,22 @@ function FacetGroup({
   number,
   label,
   options,
+  collapseLowFrequency = false,
 }: {
   number: string;
   label: string;
   options: ArchiveFacetOption[];
+  collapseLowFrequency?: boolean;
 }) {
+  const [showAllOptions, setShowAllOptions] = useState(false);
   const activeCount = options.filter((option) => option.active && option.key !== "all").length;
+  const defaultOptions = collapseLowFrequency
+    ? options.filter((option) =>
+        option.key === "all" || showContributorByDefault(option.totalCount ?? option.count, option.active)
+      )
+    : options;
+  const hiddenCount = options.length - defaultOptions.length;
+  const visibleOptions = showAllOptions ? options : defaultOptions;
   return (
     <ResponsiveFacetDetails className={styles.facetGroup} number={number}>
       <summary id={`archive-facet-${number}`}>
@@ -82,7 +94,17 @@ function FacetGroup({
         </span>
       </summary>
       <div aria-labelledby={`archive-facet-${number}`}>
-        {options.map((option) => <FacetOption key={option.key} option={option} />)}
+        {visibleOptions.map((option) => <FacetOption key={option.key} option={option} />)}
+        {collapseLowFrequency && (hiddenCount > 0 || showAllOptions) ? (
+          <button
+            type="button"
+            className={styles.moreOptions}
+            aria-expanded={showAllOptions}
+            onClick={() => setShowAllOptions((value) => !value)}
+          >
+            {showAllOptions ? "收起低频贡献者" : `展开其余 ${hiddenCount} 位`}
+          </button>
+        ) : null}
       </div>
     </ResponsiveFacetDetails>
   );
@@ -137,7 +159,12 @@ export default function ArchiveIndex({
           <FacetGroup number="01" label="栏目" options={sectionOptions} />
           <FacetGroup number="02" label="主题分类" options={categoryOptions} />
           <FacetGroup number="03" label="标签" options={tagOptions} />
-          <FacetGroup number="04" label="贡献者" options={contributorOptions} />
+          <FacetGroup
+            number="04"
+            label="贡献者"
+            options={contributorOptions}
+            collapseLowFrequency
+          />
           <FacetGroup number="05" label="署名位置" options={roleOptions} />
         </aside>
 

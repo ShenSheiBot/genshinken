@@ -10,6 +10,7 @@ import {
   filterHref,
   parseLibraryFilters,
   rowMatches,
+  showContributorByDefault,
 } from "../lib/library-filter.ts";
 
 assert.deepEqual(
@@ -17,6 +18,10 @@ assert.deepEqual(
   ["共同", "另一共同"],
   "singleton tags must stay out of the default facet while connected tags sort by count"
 );
+
+assert.equal(showContributorByDefault(5), false, "contributors with five entries stay collapsed");
+assert.equal(showContributorByDefault(6), true, "contributors with six entries stay visible");
+assert.equal(showContributorByDefault(1, true), true, "an active low-frequency contributor stays visible");
 
 const facets = {
   categories: ["历史", "政治经济学"],

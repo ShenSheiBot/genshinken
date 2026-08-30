@@ -32,6 +32,12 @@ export type LibraryFacetValues = {
   contributors: { id: string; name: string }[];
 };
 
+export const LOW_FREQUENCY_CONTRIBUTOR_MAX = 5;
+
+export function showContributorByDefault(totalCount: number, active = false): boolean {
+  return active || totalCount > LOW_FREQUENCY_CONTRIBUTOR_MAX;
+}
+
 export type ActiveFilters = {
   section: EditorialSection | null;
   category: string | null;

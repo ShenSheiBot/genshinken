@@ -134,15 +134,20 @@ export default function LibraryClient({
       active: !filters.contributor,
       disabled: false,
       href: filterHref(filters, { contributor: null }),
+      totalCount: rows.length,
     },
     ...facets.contributors.map((contributor) => {
       const count = countWith({ contributor: contributor.id });
+      const totalCount = rows.filter((row) =>
+        row.credits.some((credit) => credit.contributorId === contributor.id)
+      ).length;
       return {
         key: contributor.id,
         label: contributor.name,
         count,
         active: filters.contributor === contributor.id,
         disabled: count === 0 && filters.contributor !== contributor.id,
+        totalCount,
         href: filterHref(filters, {
           contributor: filters.contributor === contributor.id ? null : contributor.id,
         }),
