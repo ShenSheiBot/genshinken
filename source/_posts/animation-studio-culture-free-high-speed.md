@@ -6,7 +6,7 @@ slug: animation-studio-culture-free-high-speed
 script: hans
 categories: [动画]
 section: translation
-tags: [京都动画, 动画制作, 工作室]
+tags: [动画制作, 京都动画]
 post_author: kViN
 translator: 石立太一
 excerpt: 以京都动画、Animation Do与《Free!》系列为例，说明员工结构、制作制度和个人风格如何共同塑造动画公司的文化。

@@ -6,7 +6,7 @@ slug: kill-la-kill-music-characterization-sawano-video
 script: hans
 categories: [动画]
 section: translation
-tags: [斩服少女, 泽野弘之, 动画音乐, 角色塑造]
+tags: [角色研究, 音乐]
 post_author: blautoothdmand
 translator: [恐怖如斯！, why7682, 杰洛·齐贝林, 加速器]
 proofreader: [加速器, 动物之森老实人_official, 游师庭]

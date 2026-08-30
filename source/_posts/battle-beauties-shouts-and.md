@@ -6,7 +6,7 @@ slug: battle-beauties-shouts-and
 script: hans
 categories: [动画]
 section: translation
-tags: [战斗美少女, 性别研究, 百合, 动画声音, 飞跃巅峰, 美少女战士S, 少女革命]
+tags: [性别研究, 百合, 少女文化, 音乐, 少女革命]
 post_author: 石田美纪
 translator: 塔塔君
 proofreader: [Leontopodium Edelweiss, 伦勃朗]

@@ -7,7 +7,7 @@ script: hans
 categories: [动画]
 section: translation
 format: article
-tags: [总之就是非常可爱, 纯爱, 恋爱漫画, 竹取物语]
+tags: [性别研究, 文学理论]
 post_author: Pause and Select
 translator: 烦一句
 proofreader: August_Rush

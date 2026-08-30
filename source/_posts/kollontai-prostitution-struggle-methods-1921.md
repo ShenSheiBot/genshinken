@@ -6,7 +6,7 @@ slug: kollontai-prostitution-struggle-methods-1921
 categories: [思想与理论]
 section: translation
 format: article
-tags: [女性主义, 马克思主义, 性别研究, 亚历山德拉·柯伦泰]
+tags: [女性主义, 性别研究, 马克思主义]
 post_author: 亚历山德拉·柯伦泰
 translator: 爱舞之阳
 proofreader: 茶话会班委

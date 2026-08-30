@@ -8,7 +8,7 @@ slug: tv-animation-chronology
 script: hans
 categories: [动画]
 section: essay
-tags: [日本动画史, 电视动画, 动画制作, 手冢治虫]
+tags: [动画制作, 日本动画史]
 post_author: 冰封的羲和
 excerpt: 从日本电视动画的发端出发，按年代梳理1958年至1974年的作品、公司、产业环境与表现形式。
 citation:

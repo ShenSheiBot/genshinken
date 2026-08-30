@@ -6,7 +6,7 @@ slug: ikuhara-sarazanmai-preview
 script: hans
 categories: [动画]
 section: translation
-tags: [皿三昧, 几原邦彦, 动画制作, 日本动画]
+tags: [动画制作, 几原邦彦]
 post_author: kViN
 translator: 石立太一
 excerpt: 在《皿三昧》开播前，kViN从武内宣之、Studio Pablo、Lapin Track与宣传片的实拍美学出发，推测几原邦彦新作的创作方法。

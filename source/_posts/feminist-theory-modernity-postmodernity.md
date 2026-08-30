@@ -6,7 +6,7 @@ slug: feminist-theory-modernity-postmodernity
 categories: [思想与理论]
 section: translation
 format: article
-tags: [女性主义, 现代性, 后现代主义]
+tags: [女性主义, 后现代, 现代性]
 post_author: Susan Archer Mann、Ashly Suzanne Patterson
 translator: 网哲邻人部
 license: CC BY-NC-SA 4.0

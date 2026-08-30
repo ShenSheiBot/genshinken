@@ -6,7 +6,7 @@ slug: natsume-book-of-friends-healing-anime
 script: hans
 categories: [动画]
 section: essay
-tags: [夏目友人帐, 治愈系, 妖怪, 日本动画]
+tags: [日常系]
 post_author: The Beatles
 excerpt: 从妖怪对短暂人世的守护、等待、报恩和相互依赖出发，讨论《夏目友人帐》如何把复杂生活中的朴素情感重新显现出来。
 citation:

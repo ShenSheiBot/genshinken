@@ -6,7 +6,7 @@ slug: lesbian-love-womanhood
 categories: [漫画]
 section: translation
 format: article
-tags: ["女同性恋", "少女漫画", "藤本由香里"]
+tags: [漫画研究, 百合, 少女文化, 酷儿理论]
 post_author: "藤本由香里"
 translator: ["FISHERMAN", "ドリドリ", "Cfox"]
 proofreader: "夜深人静"

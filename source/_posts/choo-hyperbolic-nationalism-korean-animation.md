@@ -6,7 +6,7 @@ slug: choo-hyperbolic-nationalism-korean-animation
 categories: [动画]
 section: translation
 format: article
-tags: [韩国动画, 外包产业, 民族主义]
+tags: [动画制作, 文化工业, 民族主义]
 post_author: Kukhee Choo
 translator: Murakami Yuu
 license: CC BY-NC-SA 4.0

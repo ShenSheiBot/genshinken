@@ -6,7 +6,7 @@ slug: why-acg-works-lack-more-reality
 script: hans
 categories: [思想与理论]
 section: essay
-tags: [ACG, 现实感, 精神分析, 拉康, 幻想, 实在界]
+tags: [精神分析, 拉康]
 post_author: 神的意识形态
 excerpt: 从精神分析的现实、幻想与实在界出发，回应ACG作品缺少“现实感”的质疑，并讨论二次元如何参与现实的回溯性建构。
 featured_order: 0

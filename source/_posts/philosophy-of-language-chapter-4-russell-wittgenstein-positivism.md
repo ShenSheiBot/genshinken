@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [语言哲学, 伯特兰·罗素, 维特根斯坦, 逻辑实证主义]
+tags: [认识论, 逻辑学, 语言哲学]
 post_author: Gary Kemp
 translator: HMS Dreadnought
 proofreader: 拙计者沙利叶、阿惜、lgy

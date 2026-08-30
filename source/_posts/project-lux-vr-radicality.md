@@ -6,7 +6,7 @@ slug: project-lux-vr-radicality
 script: hans
 categories: [游戏]
 section: review
-tags: [Project LUX, VR, 美少女游戏, 东浩纪, 介面主体, 触视性]
+tags: [主体性, 凝视, 技术哲学, 视觉小说, 东浩纪]
 post_author: 红茶泡海苔
 excerpt: 以《Project LUX》为中心，结合美少女游戏批评史、赛博空间想象与介面主体理论，讨论半没入VR中的知觉冲突、触视性和媒介激进性。
 featured_order: 0

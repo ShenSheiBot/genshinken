@@ -8,7 +8,7 @@ slug: karatani-inquiry-ii-singularity-particularity
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [探究Ⅱ, 柄谷行人, 专名, 单独性]
+tags: [语言哲学, 柄谷行人]
 post_author: 柄谷行人
 excerpt: 柄谷行人《探究Ⅱ》中文译文，围绕专名、单称性、特殊性与超越论动机展开对主体、他者和历史的考察。
 featured_order: 0

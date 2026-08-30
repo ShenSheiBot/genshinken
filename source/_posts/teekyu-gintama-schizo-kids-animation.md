@@ -6,7 +6,7 @@ slug: teekyu-gintama-schizo-kids-animation
 script: hans
 categories: [动画]
 section: review
-tags: [女高网球部, 银魂, 浅田彰, 德勒兹, 宏大叙事]
+tags: [浅田彰, 德勒兹]
 post_author: 实在狗子
 excerpt: 以浅田彰的“分裂孩子”和德勒兹的接续、切断概念，对照《银魂》的主线与日常篇矛盾，以及《女高网球部》在小叙事内部不断生成、切断的动画形式。
 featured_order: 0

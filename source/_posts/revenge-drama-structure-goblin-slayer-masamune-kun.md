@@ -6,7 +6,7 @@ slug: revenge-drama-structure-goblin-slayer-masamune-kun
 script: hans
 categories: [动画]
 section: review
-tags: [哥布林杀手, 政宗君的复仇, 复仇剧, 哈姆雷特, 精神分析, 欲望]
+tags: [精神分析, 欲望]
 post_author: 钟子默
 excerpt: 以《哥布林杀手》和《政宗君的复仇》为例，从象征标志、叙事回溯与精神分析的欲望结构切入，比较硬核复仇剧与恋爱复仇剧。
 featured_order: 0

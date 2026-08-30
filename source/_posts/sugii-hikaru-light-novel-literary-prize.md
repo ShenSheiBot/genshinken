@@ -6,7 +6,7 @@ slug: sugii-hikaru-light-novel-literary-prize
 categories: [思想与理论]
 section: translation
 format: article
-tags: [轻小说, 文学奖, 文学批评]
+tags: [轻小说, 文学理论]
 post_author: 杉井光
 translator: 幽灵在都灵
 proofreader: 幽灵在都灵

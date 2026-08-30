@@ -5,7 +5,7 @@ date: 2026-08-08
 slug: kizumonogatari-architecture-landscape
 categories: [动画]
 section: translation
-tags: [物语系列, 建筑]
+tags: [物语系列]
 post_author: あにもに
 translator: shiki
 proofreader: shiki

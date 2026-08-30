@@ -6,7 +6,7 @@ slug: persona-5-picaresque-cultural-background
 script: hans
 categories: [游戏]
 section: review
-tags: [女神异闻录5, 流浪汉小说, 英雄叙事, 桥野桂]
+tags: [游戏研究, 文学理论]
 post_author: hephaestus
 excerpt: 从流浪汉小说、英雄旅程及佩索阿、鲁邦、浮士德等文化线索出发，讨论《女神异闻录5》的反抗叙事与现代社会背景。
 featured_order: 0

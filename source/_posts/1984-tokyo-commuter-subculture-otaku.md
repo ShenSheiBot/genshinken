@@ -5,7 +5,7 @@ date: 2025-02-03
 slug: 1984-tokyo-commuter-subculture-otaku
 categories: ["御宅文化"]
 section: translation
-tags: [日本亚文化史, 御宅研究]
+tags: [御宅研究]
 post_author: "乙木一史"
 translator: ["神必天坑", "SFLSNZYN", "静希"]
 proofreader: ["SFLSNZYN"]

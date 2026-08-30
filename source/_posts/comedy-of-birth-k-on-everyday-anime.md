@@ -5,7 +5,7 @@ date: 2025-03-12
 slug: comedy-of-birth-k-on-everyday-anime
 categories: ["动画"]
 section: review
-tags: ["日常系动画", "轻音少女", "动画评论"]
+tags: [动画评论, 日常系, 轻音少女]
 post_author: "志津史比古"
 translator: ["中割Production", "幽灵在都灵", "微光", "Salzivelm", "雨宫优子"]
 proofreader: ["幽灵在都灵", "夜深人静"]

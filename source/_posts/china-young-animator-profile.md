@@ -6,7 +6,7 @@ slug: china-young-animator-profile
 script: hans
 categories: [动画]
 section: translation
-tags: [动画制作, 原画, 动画人]
+tags: [动画制作, 作画分析]
 post_author: kViN
 translator: 石立太一
 excerpt: 介绍16岁便进入日本动画业界的ちなChina，梳理其从原画、作监到分镜与演出的快速成长。

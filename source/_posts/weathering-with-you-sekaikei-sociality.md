@@ -6,7 +6,7 @@ slug: weathering-with-you-sekaikei-sociality
 script: hans
 categories: [动画]
 section: review
-tags: [天气之子, 新海诚, 世界系, 社会规训, 押井守]
+tags: [世界系, 社会建构, 新海诚, 押井守, 天气之子]
 post_author: 秘则为花
 proofreader: 伦勃朗
 excerpt: 以“暴雨或许不存在”的假设重读《天气之子》，辨析世界系危机与社会规训造成的两重分离，并追问如何在无定形的生活中继续前行。

@@ -6,7 +6,7 @@ slug: takinami-shinkai-landscape-materialism
 script: hans
 categories: [动画]
 section: translation
-tags: [新海诚, 动画理论, 风景, 思辨实在论, 世界系]
+tags: [动画研究, 世界系, 本体论, 新海诚, 柄谷行人, 托马斯·拉马尔]
 post_author: 滝浪佑紀
 translator: 冰格
 proofreader: 夜深人静

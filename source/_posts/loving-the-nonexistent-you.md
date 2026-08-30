@@ -6,7 +6,7 @@ slug: loving-the-nonexistent-you
 script: hans
 categories: [御宅文化]
 section: review
-tags: [明天我会死去你将重生, 轻小说, 后设小说, 游戏现实主义, 萌]
+tags: [角色研究, 轻小说, 后现代, 游戏研究]
 post_author: 红茶泡海苔
 excerpt: 从固定视点、交换日记的对话性与字体制造的多声性出发，解析《明天，我会死去。你将重生》如何塑造一位从未在故事中现身的女主角，并把主人公与轻小说读者卷入同一场关于萌、虚构和失去的悲剧。
 featured_order: 0

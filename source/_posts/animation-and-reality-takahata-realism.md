@@ -6,7 +6,7 @@ slug: animation-and-reality-takahata-realism
 script: hans
 categories: [动画]
 section: review
-tags: [高畑勋, 安德烈·巴赞, 动画演出, 日本动画史]
+tags: [动画演出, 日本动画史, 高畑勋]
 post_author: yi-tiao
 excerpt: 一条以高畑勋的生活动画为坐标，从镜头与空间、运动与时间、现实与符号三个层面讨论动画真实感的形成机制。
 featured_order: 0

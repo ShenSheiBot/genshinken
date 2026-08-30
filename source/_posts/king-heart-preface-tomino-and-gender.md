@@ -6,7 +6,7 @@ slug: king-heart-preface-tomino-and-gender
 script: hans
 categories: [动画]
 section: review
-tags: [王之心, 富野由悠季, 女性主义, 高达]
+tags: [女性主义, 富野由悠季, 高达]
 post_author: 一条
 excerpt: 一条以富野由悠季“病气三部曲”中的《王之心》为中心，讨论重力与乌托邦、女性主体、父权制象征秩序，以及富野笔下欲望和失败的复杂性。
 citation:

@@ -6,7 +6,7 @@ slug: asada-image-evolution-theory-1986-video
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [浅田彰, 影像理论, 斯宾诺莎, 科学与艺术]
+tags: [电影理论, 浅田彰]
 post_author: 浅田彰
 translator: Vall
 proofreader: 红茶泡海苔

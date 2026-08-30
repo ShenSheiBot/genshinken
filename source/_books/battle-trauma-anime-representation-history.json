@@ -50,7 +50,7 @@
       "translators": ["中割Production", "幽灵在都灵", "石好汉", "ethci"],
       "proofreaders": ["ethci"],
       "editors": ["夜深人静"],
-      "tags": ["日本动画", "动画制作", "动画评论"]
+      "tags": ["动画评论", "动画制作", "斋藤环"]
     },
     {
       "id": "war-anime-antiwar-trauma",
@@ -63,7 +63,7 @@
       "translators": ["中割Production"],
       "proofreaders": [],
       "editors": ["夜深人静"],
-      "tags": ["战争表象", "创伤", "反战"]
+      "tags": ["战争"]
     }
   ]
 }

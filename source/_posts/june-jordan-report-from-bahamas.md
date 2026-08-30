@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [女性主义, 交叉性, 新殖民主义]
+tags: [女性主义, 后殖民主义, 交叉性, 殖民主义, 种族主义]
 post_author: June Jordan
 translator: Polaris
 proofreader: 熊猫派

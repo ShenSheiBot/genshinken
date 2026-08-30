@@ -6,7 +6,7 @@ slug: animation-eyebrow-hair-perception-video
 script: hans
 categories: [动画]
 section: essay
-tags: [动画制作, 视觉知觉, 作画, 日本动画史]
+tags: [动画制作, 日本动画史, 作画分析, 凝视]
 post_author: 河豚
 excerpt: 从动画史与知觉现象学出发，考察二维动画中眉目透过头发与被头发遮挡的处理方式及其视觉效果。
 citation:

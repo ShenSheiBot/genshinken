@@ -6,7 +6,7 @@ slug: azuma-hiroki-philosopher-as-business-owner
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [东浩纪, 文化批评, 信息社会, 企业文化, 批评生态]
+tags: [文化批评, 文化工业, 媒介理论, 东浩纪]
 post_author: 东浩纪
 translator: will
 excerpt: 东浩纪回顾言论公司创立的思想背景与早期危机，反思互联网理想、另类文化、知识生产和企业经营之间的张力。

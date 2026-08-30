@@ -6,7 +6,7 @@ slug: strike-witches-girls-on-ship-of-fools
 script: hans
 categories: [动画]
 section: essay
-tags: [强袭魔女, 愚人船, 少女关系]
+tags: [百合, 少女文化]
 post_author: Ophelia
 proofreader: 作者君的后援会会长
 editor: 作者君的后援会委员

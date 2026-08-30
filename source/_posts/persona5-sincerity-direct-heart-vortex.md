@@ -6,7 +6,7 @@ slug: persona5-sincerity-direct-heart-vortex
 script: hans
 categories: [游戏]
 section: review
-tags: [女神异闻录5, 自由, 物化, 直心]
+tags: [物化, 政治哲学]
 post_author: 元达南
 excerpt: 从人物书写的真实与自然出发，沿着直心、物化、悔改与自由的线索，讨论《Persona5》如何把玩家卷入现实与虚构交叠的漩涡。
 featured_order: 0

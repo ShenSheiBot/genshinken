@@ -6,7 +6,7 @@ slug: tokusatsu-three-essays
 script: hans
 categories: [动画]
 section: essay
-tags: [特摄, 雷欧奥特曼, 镜子超人, 拉康, 怪兽, 父之名]
+tags: [拉康, 特摄]
 post_author: 屋顶现视研
 proofreader: 子厚
 excerpt: 一组关于特摄的三篇旧文，分别从《雷欧奥特曼》的怪兽、镜像与父亲召唤出发，讨论真实界、规训和想象秩序。

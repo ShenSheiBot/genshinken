@@ -6,7 +6,7 @@ slug: disaster-as-ideology
 script: hans
 categories: [电影与影视]
 section: review
-tags: [灾难想象, 意识形态, 哥斯拉, 电影理论]
+tags: [电影理论, 意识形态, 灾难想象, 哥斯拉]
 post_author: 实在狗子
 excerpt: 从《大白鲨》《迷雾》与哥斯拉的不同灾难形象出发，分析可视灾难如何以意识形态框架提供想象性解决，并为不透明的社会危机绘制认知地图。
 featured_order: 0

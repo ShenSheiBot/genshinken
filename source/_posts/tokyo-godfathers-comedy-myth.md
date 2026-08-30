@@ -6,7 +6,7 @@ slug: tokyo-godfathers-comedy-myth
 script: hans
 categories: [动画]
 section: review
-tags: [东京教父, 今敏, 都市·空间, 喜剧, 意识形态]
+tags: [意识形态, 今敏]
 post_author: Jack Cade
 proofreader: 伦勃朗
 excerpt: 从《东京教父》的圣经隐喻、都市空间与喜剧结构出发，讨论东京作为“第四位主人公”如何借流浪汉、弃婴和偶然事件显现其社会矛盾。

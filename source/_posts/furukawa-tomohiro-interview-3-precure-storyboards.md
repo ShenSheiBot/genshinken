@@ -7,7 +7,7 @@ script: hans
 categories: [动画]
 section: interview
 format: interview
-tags: [光之美少女, 动画演出, 分镜]
+tags: [动画演出]
 interviewee: furukawa-tomohiro
 interviewer: 前田久
 translator: august-rush

@@ -6,7 +6,7 @@ slug: look-back-lacanian-analysis
 script: hans
 categories: [漫画]
 section: review
-tags: [蓦然回首, 藤本树, 漫画研究, 拉康, 精神分析, 京都动画]
+tags: [精神分析, 拉康, 漫画研究, 京都动画]
 post_author: 鱼板
 excerpt: 鱼板以漫画运动表现、扭曲身体与“对客体的迷恋”为线索，对藤本树短篇《蓦然回首》及其京都动画纵火案映射进行拉康派分析。
 citation:

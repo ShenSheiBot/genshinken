@@ -6,7 +6,7 @@ slug: roof-annual-2018-one-wood-one-stone
 script: hans
 categories: [屋顶社群]
 section: community
-tags: [屋顶现视研, 组织史, 志愿协作, 动画评论]
+tags: [动画评论, 组织史]
 author: 屋顶现视研
 post_author: 屋顶现视研
 excerpt: 屋顶现视研第二任所长静希回顾社群成立以来的运行方式、成员协作与创作理念，并刊载 hep 对屋顶 2018 年写作的年度总结。

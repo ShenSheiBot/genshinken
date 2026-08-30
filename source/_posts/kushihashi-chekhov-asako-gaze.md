@@ -6,7 +6,7 @@ slug: kushihashi-chekhov-asako-gaze
 script: hans
 categories: [电影与影视]
 section: translation
-tags: [夜以继日, 滨口龙介, 三浦哲哉, 电影理论, 表演, 凝视]
+tags: [电影理论, 凝视, 滨口龙介]
 post_author: 三浦哲哉
 translator: 相纸
 proofreader: 静希

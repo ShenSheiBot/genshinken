@@ -5,7 +5,7 @@ date: 2023-03-29
 slug: feminism-rebellion-nature-1981
 categories: [思想与理论]
 section: translation
-tags: [女性主义, 生态批评, 人类中心主义]
+tags: [女性主义, 生态批评]
 post_author: Ynestra King
 translator: fool
 excerpt: Ynestra King 讨论女性主义与生态学的关联，回顾激进女性主义与社会主义女性主义的分歧，并提出超越自然／文化二元对立的生态女性主义视角。

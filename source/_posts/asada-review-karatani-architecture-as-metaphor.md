@@ -6,7 +6,7 @@ slug: asada-review-karatani-architecture-as-metaphor
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [浅田彰, 柄谷行人, 日本思想史, 后结构主义, 解构主义]
+tags: [日本思想史, 后结构主义, 柄谷行人, 浅田彰]
 post_author: 浅田彰
 translator: [will]
 license: CC BY-NC-SA 4.0

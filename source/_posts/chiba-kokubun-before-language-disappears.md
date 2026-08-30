@@ -7,7 +7,7 @@ slug: chiba-kokubun-before-language-disappears
 categories: [思想与理论]
 section: interview
 format: interview
-tags: [千叶雅也, 国分功一郎, 语言哲学, 当代思想]
+tags: [日本思想史, 语言哲学]
 participant: [千叶雅也, 国分功一郎]
 translator: 春琦美空
 proofreader: 春琦美空

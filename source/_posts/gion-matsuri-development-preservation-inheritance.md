@@ -6,7 +6,7 @@ slug: gion-matsuri-development-preservation-inheritance
 script: hans
 categories: [思想与理论]
 section: essay
-tags: [祇园祭, 日本祭典, 非物质文化遗产, 文化保护, 保存会, 数字化保护]
+tags: [文化批评, 组织史]
 post_author: wyn
 proofreader: 子厚
 editor: 伦勃朗

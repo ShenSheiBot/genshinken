@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [女性主义, 残障研究, 交叉性]
+tags: [女性主义, 交叉性]
 post_author: Rosemarie Garland-Thomson
 translator: げんいたい
 proofreader: 柴来人

@@ -5,7 +5,7 @@ date: 2026-07-20
 slug: animation-and-animism
 categories: [动画]
 section: translation
-tags: ["动画理论", "万物有灵论", "托马斯·拉马尔"]
+tags: [动画研究, 托马斯·拉马尔]
 post_author: "托马斯·拉马尔"
 translator: [KAFAK, "九畹采萧", "夜深人静", "正義の味方", "Rex salsamenta", "单字一兔"]
 proofreader: ["村上侑", "水色文书", "明总"]

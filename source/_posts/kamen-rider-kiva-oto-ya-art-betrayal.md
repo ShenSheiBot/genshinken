@@ -6,7 +6,7 @@ slug: kamen-rider-kiva-oto-ya-art-betrayal
 script: hans
 categories: [电影与影视]
 section: review
-tags: [假面骑士Kiva, 艺术哲学, 父之名]
+tags: [拉康]
 post_author: 五代雄介
 excerpt: 以红音也的艺术真实、名护启介的崩溃与“背叛”的伦理为线索，讨论《假面骑士Kiva》如何借音乐、爱情和牺牲追问命运、理解与超越。
 featured_order: 0

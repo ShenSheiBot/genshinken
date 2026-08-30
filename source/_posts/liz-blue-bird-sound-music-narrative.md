@@ -5,7 +5,7 @@ date: 2025-01-18
 slug: liz-blue-bird-sound-music-narrative
 categories: ["动画"]
 section: translation
-tags: [利兹与青鸟, 配乐, 牛尾宪辅]
+tags: [音乐, 利兹与青鸟]
 post_author: "保罗·欧康"
 translator: ["侑"]
 proofreader: ["夜深人静"]

@@ -6,7 +6,7 @@ slug: uno-akb48-perpetual-motion-machine-of-character-consumption
 script: hans
 categories: [御宅文化]
 section: translation
-tags: [宇野常宽, AKB48, 偶像文化, 角色研究, 粉丝文化, 二次创作]
+tags: [角色研究, 偶像文化, 同人文化, 粉丝文化, 宇野常宽]
 post_author: 宇野常宽
 translator: [谁也不推单纯DD, 静希]
 excerpt: 宇野常宽以AKB48的剧场、总选举、粉丝网络与歌词为线索，分析偶像角色如何在官方和消费者的反复创作中成为自我强化的永久机关。

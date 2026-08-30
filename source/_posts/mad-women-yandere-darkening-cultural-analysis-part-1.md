@@ -8,7 +8,7 @@ slug: mad-women-yandere-darkening-cultural-analysis-part-1
 script: hans
 categories: [动画]
 section: essay
-tags: [疯女人, 黑化, 病娇, 女性主义, 少女文化]
+tags: [女性主义, 少女文化]
 post_author: 钟子默
 excerpt: 从女性主义文学批评中的“疯女人”概念出发，梳理日本女性身体由前现代母职规范、明治国家身体到战后消费社会与少女文化的历史，追问黑化、病娇等动画属性中的父权话语与反抗可能。
 featured_order: 0

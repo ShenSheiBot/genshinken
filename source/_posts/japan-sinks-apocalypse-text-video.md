@@ -6,7 +6,7 @@ slug: japan-sinks-apocalypse-text-video
 script: hans
 categories: [动画]
 section: translation
-tags: [日本沉没, 灾难叙事, 日本社会, 动画评论]
+tags: [动画评论, 灾难想象]
 post_author: pause and select
 translator: [斐乐, 兔狲, snoper卓尔, KAFAK, why7682, 杰洛·齐贝林]
 proofreader: [加速器, 唯一指定真实August_Rush]

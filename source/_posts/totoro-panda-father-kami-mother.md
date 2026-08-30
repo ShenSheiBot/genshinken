@@ -6,7 +6,7 @@ slug: totoro-panda-father-kami-mother
 script: hans
 categories: [动画]
 section: review
-tags: [龙猫, 熊猫家族, 宫崎骏, 高畑勋, 童年, 自然]
+tags: [生态批评, 宫崎骏, 高畑勋]
 post_author: 窗子
 excerpt: 从《熊猫家族》与《龙猫》的人物和情节关联出发，讨论多多洛的父母原型、自然意象，以及它在梦境与现实之间的暧昧身份。
 featured_order: 0

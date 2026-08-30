@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [诗歌, 移民, 劳动]
+tags: [劳动, 诗歌]
 post_author: Emma Lazarus
 translator: zxs
 license: CC BY-NC-SA 4.0

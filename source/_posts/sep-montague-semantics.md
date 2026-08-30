@@ -6,7 +6,7 @@ slug: sep-montague-semantics
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [蒙太古语义学, 形式语义学, 语言哲学, 组合性原则, 模型论语义学]
+tags: [逻辑学, 语言哲学]
 post_author: Theo M. V. Janssen
 translator: cjy
 excerpt: 《斯坦福哲学百科》“蒙太古语义学”词条导言至第3.5节中译，介绍模型论语义学、组合性原则、广义量词、内涵逻辑、辖域与句法—语义关系；中文译文未收录第3.6节、结语和参考文献。

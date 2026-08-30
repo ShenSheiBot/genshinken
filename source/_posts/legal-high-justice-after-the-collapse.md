@@ -6,7 +6,7 @@ slug: legal-high-justice-after-the-collapse
 script: hans
 categories: [电影与影视]
 section: review
-tags: [Legal High, 正义, 犬儒主义, 政治正确, 角色研究]
+tags: [角色研究, 意识形态, 政治哲学]
 post_author: 实在狗子
 proofreader: 伦勃朗
 excerpt: 从“大写正义”的崩坏出发，分析《Legal High》中古美门、黛与羽生彼此冲突的“小正义”，以及剧集的漫画式人物逻辑。

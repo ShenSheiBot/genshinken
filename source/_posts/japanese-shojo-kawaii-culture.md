@@ -7,7 +7,7 @@ slug: japanese-shojo-kawaii-culture
 script: hans
 categories: [思想与理论]
 section: essay
-tags: [少女文化, 可爱文化, 日本文化, 性别研究, 消费文化, 欲望]
+tags: [性别研究, 角色研究, 消费文化, 欲望, 少女文化]
 post_author: 实在狗子
 excerpt: 从近代日本“少女”概念的制度性生成与欲望投射谈起，进一步分析“可爱”如何成为女性共同体的礼仪、日常标准、消费符号与性别规范。
 featured_order: 0

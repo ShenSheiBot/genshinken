@@ -6,7 +6,7 @@ slug: concrete-arcade-still-mad-festival-2019-launch
 script: hans
 categories: [屋顶社群]
 section: community
-tags: [静止系MAD祭典, 混凝土拱廊街, ZERO MAD TEAM]
+tags: [同人文化]
 post_author: 屋顶现视研
 excerpt: 屋顶现视研与ZERO MAD TEAM启动“混凝土拱廊街”静止系MAD祭典，公布参与方式、评选标准、奖项、日程与活动讨论渠道。
 citation:

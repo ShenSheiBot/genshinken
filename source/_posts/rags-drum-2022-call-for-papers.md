@@ -7,7 +7,7 @@ slug: rags-drum-2022-call-for-papers
 script: hans
 categories: [屋顶社群]
 section: community
-tags: [拾荒战略, 征文, 社群活动]
+tags: []
 post_author: 屋顶现视研
 excerpt: 屋顶现视研启动“拾荒战略Rags Drum 2022”年度征文，公布前夜祭、后夜祭两赛道的征稿领域、时间流程、评选、奖励与投稿方式。
 citation:

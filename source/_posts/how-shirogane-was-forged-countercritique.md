@@ -6,7 +6,7 @@ slug: how-shirogane-was-forged-countercritique
 script: hans
 categories: [动画]
 section: review
-tags: [辉夜大小姐想让我告白, 动画评论, 反批评, 爱情, 货币拜物教, 贩卖焦虑]
+tags: [动画评论, 消费文化, 辉夜大小姐想让我告白]
 post_author: 屋顶现视研
 excerpt: 四位匿名论者共同回应一篇对《辉夜大小姐想让我告白》的“现实爱情”解读，反驳将白银的恋情还原为财富与权力交换，并追问这种解读如何塑造观众对现实的认同。
 featured_order: 0

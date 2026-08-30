@@ -6,7 +6,7 @@ slug: fgo-babylonia-episode-5-shouta-umehara
 script: hans
 categories: [动画]
 section: translation
-tags: [Fate/Grand Order, 梅原翔太, 动画制作]
+tags: [动画制作]
 post_author: kViN
 translator: Liebestram
 proofreader: 加速器

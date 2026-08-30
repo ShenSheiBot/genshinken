@@ -6,7 +6,7 @@ slug: superman-and-fantasy-beyond-fantasy
 script: hans
 categories: [动画]
 section: review
-tags: [超人幻想, 昭和, 一九六八, 精神分析, 齐泽克, 政治哲学]
+tags: [精神分析, 政治哲学, 齐泽克, 超人幻想]
 post_author: 一只非0的O
 proofreader: 子厚
 editor: 伦勃朗

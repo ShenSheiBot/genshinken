@@ -6,7 +6,7 @@ slug: peaceful-rear-window-gundam-0080
 script: hans
 categories: [动画]
 section: review
-tags: [机动战士高达0080, 高达, 战争, 凝视, 主体性]
+tags: [主体性, 凝视, 战争, 高达]
 post_author: yin-nai-ping-pao-lu-er-liu-li-shi-suo-yu-er-94
 excerpt: 从尸骸排除与战争凝视出发，讨论《机动战士高达0080：口袋里的战争》如何借阿尔、巴尼与克莉斯的经历揭示和平、主体性及战争的荒谬。
 featured_order: 0

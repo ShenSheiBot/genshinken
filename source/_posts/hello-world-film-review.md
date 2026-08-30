@@ -6,7 +6,7 @@ slug: hello-world-film-review
 script: hans
 categories: [动画]
 section: review
-tags: [HELLO WORLD, 伊藤智彦, 日本动画, 前期配音, 新海诚, 零零年代, 世界系]
+tags: [动画制作, 世界系, 新海诚]
 post_author: 红茶泡海苔
 excerpt: 从声画配合与前期配音切入，分析《HELLO WORLD》的三重反转、替代性拯救、零零年代叙事谱系，以及动画改编对人物内面描写的取舍。
 citation:

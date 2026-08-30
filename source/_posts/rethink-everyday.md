@@ -7,7 +7,7 @@ slug: rethink-everyday
 script: hans
 categories: [屋顶社群]
 section: community
-tags: [拾荒战略, 征文, 日常, 御宅批评, 生成式人工智能]
+tags: [动画评论, 日常]
 post_author: 屋顶现视研
 excerpt: 屋顶现视研重启年度征文“拾荒战略”，以“重思日常”为共同写作基础，重新追问御宅批评与公共语言的可能。
 featured_order: 20

@@ -6,7 +6,7 @@ slug: postpandemic-disco-elysium-in-china
 categories: [游戏]
 section: translation
 format: article
-tags: [极乐迪斯科, 游戏研究, 后社会主义, 粉丝文化]
+tags: [马克思主义, 游戏研究, 粉丝文化]
 post_author: 安敏轩
 translator: 村上侑
 proofreader: Cfox

@@ -6,7 +6,7 @@ slug: feminist-theory-resource-index
 categories: ["思想与理论"]
 section: essay
 format: article
-tags: ["女性主义", "性别研究"]
+tags: [女性主义, 性别研究]
 post_author: "生命体征维持茶话会"
 excerpt: "做一下年终总结索引，摸排还有什么未尽的工作，可关注后续更新生产。或有遗漏，可考究后指出；若有帮助，欢迎分享。"
 script: hans

@@ -6,7 +6,7 @@ slug: comparing-video-game-genres
 script: hans
 categories: [游戏]
 section: essay
-tags: [荒野大镖客 救赎2, 塞尔达传说 旷野之息, 游戏类型, 游戏研究, 本质主义, 可通约性]
+tags: [科学哲学, 社会建构, 游戏研究]
 post_author: Austoria
 excerpt: 从《荒野大镖客：救赎2》与《塞尔达传说：荒野之息》的比较争议出发，讨论游戏评价的语境共识、类型边界与本质主义问题。
 featured_order: 0

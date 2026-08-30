@@ -6,7 +6,7 @@ slug: erotophobia-colonization-queers-nature
 categories: [思想与理论]
 section: translation
 format: article
-tags: ["酷儿理论", "生态女性主义", "殖民主义"]
+tags: [女性主义, 殖民主义, 酷儿理论]
 post_author: "Greta Gaard"
 translator: "美空"
 excerpt: Greta Gaard 追溯情欲恐惧症如何参与异性恋规范、种族主义与生态殖民化，并讨论酷儿与自然的解放可能。

@@ -5,7 +5,9 @@ import { parseYamlFrontMatter } from "../lib/safe-front-matter.mjs";
 const postsDirectory = path.join(process.cwd(), "source", "_posts");
 const booksDirectory = path.join(process.cwd(), "source", "_books");
 const aliasFile = path.join(process.cwd(), "editorial-sources", "tag-aliases.json");
-const aliases = JSON.parse(fs.readFileSync(aliasFile, "utf8")).aliases ?? {};
+const taxonomy = JSON.parse(fs.readFileSync(aliasFile, "utf8"));
+const aliases = taxonomy.aliases ?? {};
+const canonicalTags = new Set(taxonomy.canonicalTags ?? []);
 
 function toList(value) {
   if (value == null || value === "") return [];
@@ -69,7 +71,15 @@ const report = {
   standalonePosts,
   books: bookFiles.length,
   uniqueTags: uses.size,
+  canonicalTags: canonicalTags.size,
   singletons: [...uses.values()].filter((filesForTag) => filesForTag.length === 1).length,
+  unregisteredTags: [...uses.keys()]
+    .filter((tag) => canonicalTags.size > 0 && !canonicalTags.has(tag))
+    .map((tag) => ({ tag, files: uses.get(tag) })),
+  unusedCanonicalTags: [...canonicalTags].filter((tag) => !uses.has(tag)),
+  invalidAliasTargets: Object.entries(aliases)
+    .filter(([, canonical]) => canonicalTags.size > 0 && !canonicalTags.has(canonical))
+    .map(([alias, canonical]) => ({ alias, canonical })),
   approvedAliasesInUse: Object.entries(aliases)
     .filter(([alias]) => uses.has(alias))
     .map(([alias, canonical]) => ({ alias, canonical, files: uses.get(alias) })),
@@ -79,3 +89,12 @@ const report = {
 };
 
 console.log(JSON.stringify(report, null, 2));
+
+if (
+  report.unregisteredTags.length > 0
+  || report.approvedAliasesInUse.length > 0
+  || report.normalizedCollisions.length > 0
+  || report.invalidAliasTargets.length > 0
+) {
+  process.exitCode = 1;
+}

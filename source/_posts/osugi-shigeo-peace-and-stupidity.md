@@ -6,7 +6,7 @@ slug: osugi-shigeo-peace-and-stupidity
 categories: [思想与理论]
 section: translation
 format: article
-tags: ["东浩纪", "日本思想", "和平与愚蠢"]
+tags: [日本思想史, 东浩纪]
 post_author: "大杉重男"
 translator: ["Yisensei04", "幽灵在都灵"]
 proofreader: "幽灵在都灵"

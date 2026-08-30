@@ -7,7 +7,7 @@ slug: imagination-and-animal
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [海德格尔, 德里达, 拉康, 动物问题, 形式化]
+tags: [拉康, 后结构主义, 生态批评, 东浩纪, 海德格尔]
 post_author: 东浩纪
 translator: 红茶泡海苔
 excerpt: 东浩纪从海德格尔的动物问题与拉康的想象界出发，借德里达的“书写”概念考察语言特权化及另一种形式化的可能。

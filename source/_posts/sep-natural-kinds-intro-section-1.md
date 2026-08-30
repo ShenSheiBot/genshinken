@@ -8,7 +8,7 @@ slug: sep-natural-kinds-intro-section-1
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [自然类, 科学哲学, 本质主义]
+tags: [本体论, 科学哲学, 社会建构]
 post_author: [Alexander Bird, Emma Tobin]
 translator: Austoria
 proofreader: Teki

@@ -7,7 +7,7 @@ slug: living-between-infrastructures-commuter-networks-revised
 categories: [动画]
 section: translation
 format: article
-tags: ["媒介生态", "基础设施", "托马斯·拉马尔"]
+tags: [技术哲学, 媒介理论, 托马斯·拉马尔]
 post_author: "托马斯·拉马尔"
 translator: "Recursion"
 proofreader: ["村上侑", "单字一兔"]

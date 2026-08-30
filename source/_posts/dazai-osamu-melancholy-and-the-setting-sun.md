@@ -6,7 +6,7 @@ slug: dazai-osamu-melancholy-and-the-setting-sun
 script: hans
 categories: [思想与理论]
 section: review
-tags: [太宰治, 三岛由纪夫, 斜阳]
+tags: [太宰治, 三岛由纪夫]
 post_author: 实在狗子
 excerpt: 从三岛由纪夫对“弱点审美化”的批评出发，辨析太宰治的丧、绝望与真诚，并结合柄谷行人等人的论述解读《斜阳》的明暗结构。
 featured_order: 0

@@ -7,7 +7,7 @@ slug: kobayashi-programmer-clothes-new-family
 script: hans
 categories: [动画]
 section: review
-tags: [小林家的龙女仆, 程序员, 性别研究, 核心家庭]
+tags: [性别研究, 父权制]
 post_author: 屋顶现视研
 excerpt: 从代码、衣着与职业形象切入，讨论《小林家的龙女仆》中小林的独立女性形象、家庭角色，以及人与龙彼此带来的救赎。
 featured_order: 0

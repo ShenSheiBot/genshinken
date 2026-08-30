@@ -6,7 +6,7 @@ slug: bouyuu-toukaidou-chonin-culture-ukiyo-e
 script: hans
 categories: [游戏]
 section: review
-tags: [卯酉东海道, 东方Project, ZUN, 町人文化, 浮世绘, 葛饰北斋, 歌川广重]
+tags: [东方Project]
 post_author: crossroad
 excerpt: 从《卯酉东海道》的未来东京与京都出发，经由江户町人文化和浮世绘的发展，讨论东方Project如何在传统的流失与更新之间保留真实、欲望、包容与生命力。
 citation:

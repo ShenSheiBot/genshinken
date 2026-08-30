@@ -8,7 +8,7 @@ slug: uno-tokusatsu-history-1-hero-circuit-monsters-postwar
 script: hans
 categories: [电影与影视]
 section: translation
-tags: [宇野常宽, 小角色的时代, 特摄, 奥特曼, 奥特赛文, 假面骑士, 日本战后史]
+tags: [日本思想史, 特摄, 宇野常宽]
 post_author: 宇野常宽
 translator: 柴来人
 excerpt: 宇野常宽以奥特曼和假面骑士为线索，考察商业英雄节目如何被迫追问正义，并从圆谷特摄、旧金山体制与奥特赛文的苦恼中追溯战后日本“大人物”的坏死。

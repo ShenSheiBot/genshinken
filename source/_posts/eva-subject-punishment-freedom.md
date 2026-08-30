@@ -8,7 +8,7 @@ slug: eva-subject-punishment-freedom
 categories: [动画]
 section: essay
 format: article
-tags: [新世纪福音战士, 主体, 自由]
+tags: [主体性, 政治哲学, 新世纪福音战士]
 post_author: 霜路组合
 license: CC BY-NC-SA 4.0
 excerpt: 霜路组合从理性主义立场完整分析《新世纪福音战士》中的神罚、自由与主体问题。

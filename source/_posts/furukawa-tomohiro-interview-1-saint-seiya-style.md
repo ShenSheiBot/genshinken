@@ -7,7 +7,7 @@ script: hans
 categories: [动画]
 section: interview
 format: interview
-tags: [圣斗士星矢, 动画演出, 少女☆歌剧 Revue Starlight]
+tags: [动画演出, 少女☆歌剧 Revue Starlight]
 interviewee: furukawa-tomohiro
 interviewer: 前田久
 translator: solntse

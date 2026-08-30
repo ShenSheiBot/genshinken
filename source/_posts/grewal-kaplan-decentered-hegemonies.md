@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [女性主义, 跨国女性主义, 后殖民主义, 全球化]
+tags: [女性主义, 后殖民主义, 全球化]
 post_author: [Inderpal Grewal, Caren Kaplan]
 translator: ["47", 柴来人]
 proofreader: 静希

@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [女性主义, 激进女性主义, 妇女解放运动, 意识提升]
+tags: [女性主义, 妇女选举权]
 post_author: Redstockings
 translator: Cico
 proofreader: 人吉尔郎

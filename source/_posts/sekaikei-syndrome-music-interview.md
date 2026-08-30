@@ -6,7 +6,7 @@ slug: sekaikei-syndrome-music-interview
 categories: [动画]
 section: interview
 format: interview
-tags: ["世界系", "日本动画", "音乐"]
+tags: [世界系, 音乐, 新世纪福音战士]
 interviewee: "シガワ"
 interviewer: "北出栞"
 translator: "格译平台"

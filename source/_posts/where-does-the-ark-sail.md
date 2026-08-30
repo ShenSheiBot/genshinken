@@ -6,7 +6,7 @@ slug: where-does-the-ark-sail
 script: hans
 categories: [游戏]
 section: review
-tags: [明日方舟, 污名, 戈夫曼, 社会建构]
+tags: [社会建构]
 post_author: hood
 proofreader: 伦勃朗
 excerpt: 借《明日方舟》与《命令与征服》中的源石、泰伯利亚和感染者设定，沿戈夫曼的污名理论考察异质身份、群体认同、社会秩序与“常人化”的困境。

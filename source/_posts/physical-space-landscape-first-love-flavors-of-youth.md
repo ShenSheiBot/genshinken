@@ -6,7 +6,7 @@ slug: physical-space-landscape-first-love-flavors-of-youth
 script: hans
 categories: [动画]
 section: review
-tags: [肆式青春, 物理空间, 风景, 青春, 石库门, 柄谷行人]
+tags: [柄谷行人]
 post_author: T君
 excerpt: 从《肆式青春》的恋爱叙事与城市空间出发，讨论现代恋爱关系的物质条件，以及动画如何发现并再生产中国青春生活的风景。
 featured_order: 0

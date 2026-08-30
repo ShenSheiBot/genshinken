@@ -6,7 +6,7 @@ slug: metonymy-redemption-nagasaki-kyoto-animation-your-color
 categories: [动画]
 section: translation
 format: article
-tags: ["你的颜色", "山田尚子", "长崎"]
+tags: [山田尚子, 京都动画]
 post_author: "てらまっと"
 translator: "中割Production"
 proofreader: "中割Production"

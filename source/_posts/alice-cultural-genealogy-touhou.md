@@ -6,7 +6,7 @@ slug: alice-cultural-genealogy-touhou
 script: hant
 categories: [御宅文化]
 section: essay
-tags: [爱丽丝梦游仙境, 东方Project, 刘易斯·卡罗尔, ZUN, 同人文化]
+tags: [同人文化, 东方Project]
 post_author: 宫酒姬
 excerpt: 從劉易斯・卡羅爾的童話與愛麗絲・李道爾出發，追索「愛麗絲」在日本流行文化、精神分析、迷幻文化與《東方Project》同人創作中的流變。
 featured_order: 0

@@ -8,7 +8,7 @@ slug: layout-history-lecture-1-introduction-development
 script: hans
 categories: [动画]
 section: translation
-tags: [Layout, 透视, 构图]
+tags: [动画演出]
 post_author: 笹木信作
 translator: daicon
 proofreader: スカウト

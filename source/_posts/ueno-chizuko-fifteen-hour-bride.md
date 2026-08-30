@@ -6,7 +6,7 @@ slug: ueno-chizuko-fifteen-hour-bride
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [女性主义, 照护劳动, 婚姻制度, 家族主义, 上野千鹤子]
+tags: [女性主义, 父权制, 劳动]
 post_author: 上野千鹤子
 translator: 人吉尔朗
 excerpt: 上野千鹤子回应《周刊文春》对其婚姻关系的报道，并从亲身照护色川大吉的经历出发，反思日本法律中的家族主义与夫妇同姓制度。

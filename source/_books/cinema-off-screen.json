@@ -34,7 +34,7 @@
       "authors": ["Chenshu Zhou"],
       "translators": ["10"],
       "proofreaders": ["Syn"],
-      "tags": ["电影研究", "中国电影史", "社会主义文化"]
+      "tags": ["电影理论"]
     },
     {
       "id": "part-03-space-43-49",
@@ -46,7 +46,7 @@
       "authors": ["Chenshu Zhou"],
       "translators": ["Yan"],
       "proofreaders": ["kuma", "Syn"],
-      "tags": ["电影研究", "中国电影史", "工人文化"]
+      "tags": ["电影理论", "劳动"]
     },
     {
       "id": "part-04-labor-55-59",
@@ -58,7 +58,7 @@
       "authors": ["Chenshu Zhou"],
       "translators": ["张铭苏"],
       "proofreaders": ["Pak Syn"],
-      "tags": ["电影研究", "中国电影史", "劳动"]
+      "tags": ["电影理论", "劳动"]
     }
   ]
 }

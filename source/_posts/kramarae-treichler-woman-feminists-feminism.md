@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [女性主义, 女性主义史, 词典]
+tags: [女性主义]
 post_author: [Cheris Kramarae, Paula Treichler]
 translator: 霜雪霁寒霄
 proofreader: 柴来人

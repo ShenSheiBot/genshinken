@@ -6,7 +6,7 @@ slug: meaning-of-literary-theory
 script: hans
 categories: [思想与理论]
 section: essay
-tags: [文学理论, 解构主义]
+tags: [后结构主义, 文学理论]
 post_author: 实在狗子
 excerpt: 从理论与文学创作的交错关系出发，回望二战后的理论热潮、解构主义对文学秩序的逆转，以及理论作为反常识与战斗的双重姿态。
 featured_order: 0

@@ -6,7 +6,7 @@ slug: weathering-with-you-love-in-the-age-of-winners
 script: hans
 categories: [动画]
 section: review
-tags: [天气之子, 新海诚, 拟似家庭, 社会规训, 系统暴力, 少数主义]
+tags: [社会建构, 共同体, 新海诚, 天气之子]
 post_author: 伦勃朗
 proofreader: 伦勃朗
 excerpt: 从暴雨与社会管理的双重危机切入，检视《天气之子》中拟似家庭之爱的失效、主观暴力与系统暴力，以及帆高作为少数者的政治决断。

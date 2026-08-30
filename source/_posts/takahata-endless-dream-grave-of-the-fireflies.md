@@ -6,7 +6,7 @@ slug: takahata-endless-dream-grave-of-the-fireflies
 categories: [动画]
 section: translation
 format: article
-tags: [高畑勋, 萤火虫之墓, 动画理论, 死亡]
+tags: [动画研究, 高畑勋]
 post_author: 志津史比古
 translator: [三咲町, 微光, 幽灵在都灵, 崆峒山下三脚鸦]
 proofreader: 北原依绪

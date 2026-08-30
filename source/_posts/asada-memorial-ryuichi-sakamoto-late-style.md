@@ -6,7 +6,7 @@ slug: asada-memorial-ryuichi-sakamoto-late-style
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [浅田彰, 坂本龙一, 音乐, 后现代]
+tags: [后现代, 音乐, 浅田彰]
 post_author: 浅田彰
 translator: 人气空友
 excerpt: 浅田彰追忆与坂本龙一自YMO“散开”后开始的交往，评述他从后现代的完美匠人转向聆听世界、直面病体的音乐家，并将最后的作品视为“晚年样式”的达成。

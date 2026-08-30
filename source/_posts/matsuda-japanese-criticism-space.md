@@ -6,7 +6,7 @@ slug: matsuda-japanese-criticism-space
 categories: [思想与理论]
 section: essay
 format: article
-tags: [批评空间, 柄谷行人, 中上健次]
+tags: [日本思想史, 柄谷行人]
 post_author: 松田树
 translator: 付石
 proofreader: [夏生]

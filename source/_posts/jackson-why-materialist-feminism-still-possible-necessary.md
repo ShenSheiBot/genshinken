@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [唯物主义女权主义, 社会建构, 性别, 酷儿理论]
+tags: [女性主义, 性别研究, 社会建构, 酷儿理论]
 post_author: Stevi Jackson
 translator: 张弱难
 excerpt: 史蒂维·杰克逊回顾女权主义的“文化转向”，主张重新连接社会结构、日常实践、主体性与性别和异性恋的唯物主义分析。

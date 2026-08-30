@@ -6,7 +6,7 @@ slug: limited-space-narrative-techniques
 script: hans
 categories: [动画]
 section: essay
-tags: [都市·空间, 叙事艺术]
+tags: [文学理论]
 post_author: 林沛颖
 excerpt: 林沛颖从次元迁跃、有限建筑中的事件串联与空间暗喻入手，结合动画、漫画、电影和小说，讨论“限制空间”如何承载复杂叙事。
 citation:

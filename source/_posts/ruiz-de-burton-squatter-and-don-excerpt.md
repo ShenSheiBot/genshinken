@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [奇卡诺文学, 殖民主义, 土地]
+tags: [殖民主义, 种族主义]
 post_author: María Amparo Ruiz de Burton
 translator: 武夷蛮丁
 proofreader: 熊猫派

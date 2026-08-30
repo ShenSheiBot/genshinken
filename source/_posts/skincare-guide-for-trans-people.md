@@ -7,7 +7,7 @@ categories: [思想与理论]
 section: essay
 format: article
 publication_label: revised
-tags: ["跨性别", "身体实践", "护肤"]
+tags: [身体, 酷儿理论]
 post_author: "生命体征维持茶话会"
 excerpt: 一份面向跨性别者及所有人的护肤入门指南，从皮肤状态、清洁、保湿、防晒到预算与渠道展开说明。
 script: hans

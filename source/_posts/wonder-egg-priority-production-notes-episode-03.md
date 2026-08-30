@@ -6,7 +6,7 @@ slug: wonder-egg-priority-production-notes-episode-03
 script: hans
 categories: [动画]
 section: translation
-tags: [奇蛋物语, 动画制作, 动画演出, 作画分析]
+tags: [动画制作, 动画演出, 作画分析, 奇蛋物语]
 post_author: kViN
 translator: [生活支线玩家, blur, 晚钟送别此日]
 proofreader: 我大笑三声哈哈哈

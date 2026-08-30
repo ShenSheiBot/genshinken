@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [阶级, 性别研究, 身份政治, 美籍墨西哥人]
+tags: [性别研究, 交叉性, 政治经济学]
 post_author: Julie Bettie
 translator: 叶叶
 license: CC BY-NC-SA 4.0

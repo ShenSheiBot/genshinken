@@ -6,7 +6,7 @@ slug: iori-nagase-psychoanalysis-adventure
 script: hans
 categories: [动画]
 section: review
-tags: [恋爱随意链接, 拉康, 齐泽克, 精神分析, 镜像阶段]
+tags: [精神分析, 拉康, 齐泽克]
 post_author: 玉小兴
 excerpt: 以《恋爱随意链接》中永濑伊织的自我崩溃与重建为中心，借拉康的镜像阶段、大他者与欲望伦理讨论精神分析何以成为一场冒险。
 featured_order: 0

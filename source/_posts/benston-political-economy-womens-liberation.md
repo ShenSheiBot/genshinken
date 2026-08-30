@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [女性主义, 政治经济学, 家务劳动]
+tags: [女性主义, 政治经济学, 劳动]
 post_author: Margaret Benston
 translator: Another
 license: CC BY-NC-SA 4.0

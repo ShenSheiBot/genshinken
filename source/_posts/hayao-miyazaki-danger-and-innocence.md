@@ -6,7 +6,7 @@ slug: hayao-miyazaki-danger-and-innocence
 script: hans
 categories: [动画]
 section: essay
-tags: [宫崎骏, 红猪, 龙猫, 千与千寻, 拉康, 日常]
+tags: [拉康, 日常, 宫崎骏]
 post_author: 鱼板
 excerpt: 从《红猪》与《龙猫》的成人／儿童对立出发，分析宫崎骏以无邪视域将日常生活奇观化的天才，以及这种审美化在《起风了》等作品中显露的政治危险。
 featured_order: 0

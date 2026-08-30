@@ -6,7 +6,7 @@ slug: azuma-superflat-japanese-postmodernity
 script: hans
 categories: [御宅文化]
 section: translation
-tags: [东浩纪, 村上隆, 超扁平, 御宅研究, 后现代, 数据库消费, 民族主义]
+tags: [御宅研究, 后现代, 消费文化, 民族主义, 东浩纪]
 post_author: 东浩纪
 translator: 群青七号楼
 excerpt: 东浩纪从御宅民族主义与数据库后现代性的双重结构出发，分析村上隆“超扁平”如何把美国文化的日本化、拟像与匿名数据库带到绘画表面。

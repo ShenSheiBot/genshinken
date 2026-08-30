@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: interview
 format: interview
-tags: [东浩纪, 法月纶太郎, 推理小说, 否定神学, 后现代, 角色文化]
+tags: [角色研究, 后现代, 东浩纪]
 participant: [东浩纪, 法月纶太郎]
 translator: 帕底亚的拍拍
 excerpt: 东浩纪与法月纶太郎从埃勒里·奎因与新本格推理谈起，讨论否定神学、移情、社会派、拟像与密码如何共同改变小说和交流模式。

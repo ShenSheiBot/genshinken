@@ -6,7 +6,7 @@ slug: spatialized-body-embodied-space-anime
 script: hans
 categories: [动画]
 section: essay
-tags: [空间, 身体, 机器人动画, 主体性, 日常, 共同体]
+tags: [日常, 主体性, 身体, 共同体]
 post_author: 斑鸠
 excerpt: 斑鸠从巨大机器人与身体化空间两种动画想象出发，讨论主体、共同体、日常生活与立法暴力之间的张力。
 citation:

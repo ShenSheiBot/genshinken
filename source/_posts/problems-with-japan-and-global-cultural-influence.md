@@ -6,7 +6,7 @@ slug: problems-with-japan-and-global-cultural-influence
 script: hans
 categories: [思想与理论]
 section: essay
-tags: [日本文化, 企业文化, 意识形态, 酷日本, 文化传播]
+tags: [意识形态, 东方主义, 文化工业, 文化传播]
 post_author: 实在狗子
 excerpt: 从“温柔”、常识、责任和制度崇拜切入日本社会的意识形态结构，并借东方主义与“酷日本”反思日本文化的全球影响为何常被高估。
 featured_order: 0

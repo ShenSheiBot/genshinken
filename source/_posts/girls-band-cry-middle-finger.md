@@ -5,7 +5,7 @@ date: 2024-08-18
 slug: girls-band-cry-middle-finger
 categories: [动画]
 section: translation
-tags: [Girls Band Cry, 青春, 音乐文化]
+tags: [音乐]
 post_author: noirse
 translator: [6x1, Yisensei04, salzivelm, 河豚, 伊鸥柚, ethci]
 proofreader: [Yisensei04, 竹上青]

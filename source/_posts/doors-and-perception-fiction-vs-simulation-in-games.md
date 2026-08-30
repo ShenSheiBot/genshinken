@@ -6,7 +6,7 @@ slug: doors-and-perception-fiction-vs-simulation-in-games
 script: hans
 categories: [游戏]
 section: translation
-tags: [游戏研究, 本体论, 虚构, 模拟]
+tags: [本体论, 游戏研究]
 post_author: Espen Aarseth
 translator: 屋顶现视研
 excerpt: 区分游戏中的虚构、虚拟、模拟与现实：从龙、迷宫、可开启的门和虚拟货币出发，说明游戏对象如何由引擎实证地维持，并呈现不同于文学虚构的本体论状态。

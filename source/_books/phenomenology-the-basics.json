@@ -67,11 +67,7 @@
         "柴来人"
       ],
       "tags": [
-        "现象学",
-        "丹·扎哈维",
-        "胡塞尔",
-        "海德格尔",
-        "意向性"
+        "海德格尔"
       ]
     },
     {
@@ -97,11 +93,8 @@
         "柴来人"
       ],
       "tags": [
-        "现象学",
-        "丹·扎哈维",
-        "胡塞尔",
-        "海德格尔",
-        "生活世界"
+        "日常",
+        "海德格尔"
       ]
     },
     {
@@ -126,11 +119,7 @@
         "柴来人"
       ],
       "tags": [
-        "现象学",
-        "丹·扎哈维",
-        "胡塞尔",
-        "海德格尔",
-        "梅洛·庞蒂"
+        "海德格尔"
       ]
     },
     {
@@ -143,7 +132,7 @@
       "authors": ["Dan Zahavi"],
       "translators": ["S.C.", "三森老师"],
       "proofreaders": ["真红", "飞飞", "Va-11 Hall-A", "希文", "柴来人"],
-      "tags": ["现象学", "丹·扎哈维", "海德格尔", "梅洛·庞蒂", "身体"]
+      "tags": ["身体", "海德格尔"]
     },
     {
       "id": "chapter-08-intersubjectivity-sociality",
@@ -155,7 +144,7 @@
       "authors": ["Dan Zahavi"],
       "translators": ["Phaedrus"],
       "proofreaders": ["真红", "飞飞", "Va-11 Hall-A", "希文", "柴来人"],
-      "tags": ["现象学", "丹·扎哈维", "主体间性", "社会性", "同感"]
+      "tags": ["主体性", "共同体"]
     },
     {
       "id": "chapter-09-phenomenological-sociology",
@@ -167,7 +156,7 @@
       "authors": ["Dan Zahavi"],
       "translators": ["why7682"],
       "proofreaders": ["真红", "飞飞", "Va-11 Hall-A", "希文", "柴来人"],
-      "tags": ["现象学", "丹·扎哈维", "现象学社会学", "阿尔弗雷德·舒茨", "生活世界"]
+      "tags": ["日常"]
     },
     {
       "id": "chapter-10-and-conclusion",
@@ -179,7 +168,7 @@
       "authors": ["Dan Zahavi"],
       "translators": ["EIMY", "Kernel", "飞飞"],
       "proofreaders": ["真红", "飞飞", "Va-11 Hall-A", "希文", "柴来人"],
-      "tags": ["现象学", "丹·扎哈维", "现象学心理学", "认知科学", "定性研究"]
+      "tags": []
     }
   ]
 }

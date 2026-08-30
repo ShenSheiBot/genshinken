@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [经济学, 政治经济学, 市场机制]
+tags: [政治经济学]
 post_author: 根井雅弘
 translator: 静希
 excerpt: 根井雅弘借弗兰克·奈特对市场机制的伦理批判，重新辨析古典派与新古典派对“竞争”“均衡”和价值的不同理解。

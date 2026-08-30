@@ -6,7 +6,7 @@ slug: boku-girl-anxious-body-performance-video
 script: hans
 categories: [动画]
 section: translation
-tags: [仆少女, 身体, 性别, 动画评论]
+tags: [性别研究, 动画评论, 身体]
 post_author: pause and select
 translator: [赛克心, 十文字, dearbear, 山崎一罗]
 proofreader: [Matsutaka, 加速器, 静希]

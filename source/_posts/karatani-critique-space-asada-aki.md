@@ -6,7 +6,7 @@ slug: karatani-critique-space-asada-aki
 categories: [思想与理论]
 section: interview
 format: interview
-tags: [柄谷行人, 浅田彰, 批评空间]
+tags: [日本思想史, 东浩纪, 柄谷行人, 浅田彰]
 interviewee: 柄谷行人
 interviewer: 滝沢文那
 translator: 豆包

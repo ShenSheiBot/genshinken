@@ -5,7 +5,7 @@ date: 2025-05-15
 slug: liz-and-the-blue-bird-unconscious-animation
 categories: ["动画"]
 section: translation
-tags: ["山田尚子", "动画分析", "无意识"]
+tags: [精神分析, 动画研究, 山田尚子, 利兹与青鸟]
 post_author: "てらまっと"
 translator: ["中割Production"]
 proofreader: ["中割Production"]

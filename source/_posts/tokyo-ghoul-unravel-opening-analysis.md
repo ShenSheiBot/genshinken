@@ -6,7 +6,7 @@ slug: tokyo-ghoul-unravel-opening-analysis
 script: hans
 categories: [动画]
 section: review
-tags: [东京食尸鬼, unravel, 镜像]
+tags: [动画演出, 音乐]
 post_author: 实在狗子
 excerpt: 从《unravel》的词义、金木研的孤立姿态、人物与镜像的非对称关系及赫子的视觉表现出发，分析《东京食尸鬼》片头如何呈现自我分裂与世界崩解。
 citation:

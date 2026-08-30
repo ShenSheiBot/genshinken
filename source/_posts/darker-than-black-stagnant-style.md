@@ -6,7 +6,7 @@ slug: darker-than-black-stagnant-style
 script: hans
 categories: [动画]
 section: review
-tags: [黑之契约者, 成长叙事, 日常, 理性]
+tags: [日常]
 post_author: 实在狗子
 excerpt: 实在狗子从契约者、Doll、单元剧形式与虚假星空切入，分析《黑之契约者》如何让停滞贯穿人物精神、叙事结构和成人动画的黑色基调。
 featured_order: 0

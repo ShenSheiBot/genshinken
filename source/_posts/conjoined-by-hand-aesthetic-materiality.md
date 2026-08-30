@@ -6,7 +6,7 @@ slug: conjoined-by-hand-aesthetic-materiality
 categories: [漫画]
 section: translation
 format: article
-tags: ["在这世界的角落", "漫画物质性", "杰奎琳·伯恩特"]
+tags: [漫画研究]
 post_author: "杰奎琳·伯恩特"
 translator: "村上侑"
 excerpt: 杰奎琳·伯恩特从美学物质性出发，考察河野史代漫画《在这世界的角落》的手绘线条、媒介特性与读者参与。

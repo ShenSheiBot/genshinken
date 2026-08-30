@@ -6,7 +6,7 @@ slug: consciousness-of-agony-2021-call-for-philosophy-public-writing
 script: hans
 categories: [屋顶社群]
 section: community
-tags: [征文, 社群活动, 哲学普及]
+tags: []
 post_author: 网哲邻人部编辑部
 excerpt: 网哲邻人部发起第一届哲学普及征稿活动“苦恼意识2021”，说明征稿范围、体裁、评审方式、奖金、投稿渠道与稿件权利。
 citation:

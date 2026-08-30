@@ -6,7 +6,7 @@ slug: roof-2019-why-we-need-acgn-criticism
 script: hans
 categories: [屋顶社群]
 section: community
-tags: [屋顶现视研, 文化批评, 动画评论, 批评生态, 精神分析, 本雅明]
+tags: [精神分析, 动画评论, 文化批评, 本雅明]
 post_author: 屋顶现视研
 excerpt: 屋顶现视研借本雅明的历史观与精神分析讨论ACGN批评的处境，说明社群为何坚持以理论提出问题、质疑作品与文化中的“简单性”。
 featured_order: 0

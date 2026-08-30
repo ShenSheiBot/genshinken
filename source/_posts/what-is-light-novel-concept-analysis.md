@@ -6,7 +6,7 @@ slug: what-is-light-novel-concept-analysis
 script: hans
 categories: [御宅文化]
 section: essay
-tags: [轻小说, 泉子・K・メイナード, 角色研究, 插画, 游戏现实主义, 跨媒介]
+tags: [角色研究, 轻小说, 作画分析, 游戏研究, 跨媒介]
 post_author: 神的意识形态
 excerpt: 从插画、角色、装帧、文体、游戏现实主义和跨媒介性等方面梳理轻小说的多种定义，并讨论其作为文类或表现手法的边界。
 featured_order: 0

@@ -6,7 +6,7 @@ slug: faust-east-asia-otaku-transversality
 categories: [御宅文化]
 section: translation
 format: article
-tags: [御宅研究, 浮士德, 东亚]
+tags: [御宅研究]
 post_author: 红茶泡海苔
 translator: Yisensei04
 proofreader: 红茶泡海苔

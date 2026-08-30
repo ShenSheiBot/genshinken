@@ -7,7 +7,7 @@ script: hans
 categories: [动画]
 section: interview
 format: interview
-tags: [利兹与青鸟, 牛尾宪辅, 山田尚子, 动画配乐]
+tags: [音乐, 山田尚子, 利兹与青鸟]
 interviewee: 牛尾宪辅
 interviewer: Gracie Qu
 translator: 石立太一

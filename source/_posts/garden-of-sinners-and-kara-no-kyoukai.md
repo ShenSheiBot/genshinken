@@ -6,7 +6,7 @@ slug: garden-of-sinners-and-kara-no-kyoukai
 script: hans
 categories: [动画]
 section: review
-tags: [空之境界, 奈须蘑菇, 境界]
+tags: [空之境界]
 post_author: hephaestus
 excerpt: 从 sinner、空、境界与 garden 四组概念出发，分析《空之境界》中常识与异常、两仪式与荒耶宗莲之间的分隔和对立。
 featured_order: 0

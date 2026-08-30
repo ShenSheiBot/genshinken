@@ -8,7 +8,7 @@ slug: sep-hegel-aesthetics-sections-1-5
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [黑格尔, 美学, 艺术哲学]
+tags: [黑格尔]
 post_author: Stephen Houlgate
 translator: [有电拍拍, 暗黑寒冰]
 proofreader: [绫波丽, 柴来人]

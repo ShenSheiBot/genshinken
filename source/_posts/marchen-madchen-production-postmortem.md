@@ -6,7 +6,7 @@ slug: marchen-madchen-production-postmortem
 script: hans
 categories: [动画]
 section: translation
-tags: [原书·原书使, 动画制作]
+tags: [动画制作]
 post_author: kViN
 translator: 石立太一
 excerpt: 一位参与《原书·原书使》的匿名核心制作人员回顾工期、预算、制作管理和外包决策如何共同把片场推向崩溃。

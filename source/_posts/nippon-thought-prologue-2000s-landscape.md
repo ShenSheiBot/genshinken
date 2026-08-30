@@ -8,7 +8,7 @@ slug: nippon-thought-prologue-2000s-landscape
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [日本思想史, 佐佐木敦, 后现代, 东浩纪]
+tags: [后现代, 日本思想史, 东浩纪]
 post_author: 佐佐木敦
 translator: 米岡
 proofreader: [红茶泡海苔, 人吉尔朗]

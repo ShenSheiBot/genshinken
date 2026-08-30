@@ -6,7 +6,7 @@ slug: uekita-chiaki-quasi-everyday-theory
 script: hans
 categories: [御宅文化]
 section: translation
-tags: [拟日常, 日常系, 世界系, 东日本大地震, 昭和]
+tags: [世界系, 日常, 日常系, 灾难想象]
 post_author: 上北千明
 translator: [问天, 野菜一日分, 王晗]
 proofreader: 王晗

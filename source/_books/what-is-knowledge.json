@@ -30,7 +30,7 @@
       "authors": ["Duncan Pritchard"],
       "translators": ["Doubting Thomas"],
       "proofreaders": ["阿惜", "宙草", "春埼美空"],
-      "tags": ["认识论", "知识", "盖梯尔问题"]
+      "tags": ["认识论"]
     },
     {
       "id": "part-1-lower",
@@ -42,7 +42,7 @@
       "authors": ["Duncan Pritchard"],
       "translators": ["傲娇少女葛成巧"],
       "proofreaders": ["lian", "Teki", "宙草"],
-      "tags": ["认识论", "辩护", "德性知识论"]
+      "tags": ["认识论"]
     },
     {
       "id": "part-2",
@@ -54,7 +54,7 @@
       "authors": ["Duncan Pritchard"],
       "translators": ["阿派"],
       "proofreaders": ["宙草"],
-      "tags": ["认识论", "知觉", "证言", "归纳问题"]
+      "tags": ["认识论", "身体"]
     }
   ]
 }

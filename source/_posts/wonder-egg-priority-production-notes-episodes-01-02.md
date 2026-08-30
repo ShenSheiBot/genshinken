@@ -8,11 +8,7 @@ slug: wonder-egg-priority-production-notes-episodes-01-02
 script: hans
 categories: [动画]
 section: translation
-tags:
-  - 奇蛋物语
-  - 动画制作
-  - 动画演出
-  - 作画分析
+tags: [动画制作, 动画演出, 作画分析, 奇蛋物语]
 post_author:
   - kViN
 translator:

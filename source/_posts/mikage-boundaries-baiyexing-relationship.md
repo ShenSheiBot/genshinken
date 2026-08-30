@@ -6,7 +6,7 @@ slug: mikage-boundaries-baiyexing-relationship
 script: hans
 categories: [御宅文化]
 section: essay
-tags: [三秋缒, 白夜行, 三日间的幸福, 晴空与阴空, 存在主义, 他者伦理]
+tags: [轻小说, 文学理论]
 post_author: 钟子默
 excerpt: 从三秋缒作品中的死亡、自由、孤独与无意义出发，再阐释“白夜行”关系中的界限处境、存在交流与他者伦理，并反思存在主义轻文学的定式。
 featured_order: 0

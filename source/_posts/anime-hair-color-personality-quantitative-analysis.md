@@ -6,7 +6,7 @@ slug: anime-hair-color-personality-quantitative-analysis
 script: hans
 categories: [动画]
 section: essay
-tags: [日本动画, 角色研究, 数据分析]
+tags: [角色研究]
 author: Sairai
 post_author: Sairai
 excerpt: 以 2000—2021 年日本动画角色数据为样本，运用词频、网络分析与 TF-IDF，检验发色与性格萌点之间的关联及其成因。

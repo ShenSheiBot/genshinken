@@ -6,7 +6,7 @@ slug: beneath-chihiros-mask
 script: hans
 categories: [动画]
 section: review
-tags: [宫崎骏, 千与千寻, 隐喻]
+tags: [宫崎骏]
 post_author: 窗子
 proofreader: 伦勃朗
 editor: 子厚

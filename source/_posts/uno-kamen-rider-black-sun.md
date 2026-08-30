@@ -6,7 +6,7 @@ slug: uno-kamen-rider-black-sun
 script: hans
 categories: [电影与影视]
 section: translation
-tags: [宇野常宽, 假面骑士, 特摄, 日本战后史, 政治寓言]
+tags: [意识形态, 日本思想史, 特摄, 宇野常宽]
 post_author: 宇野常宽
 translator: 柴来人
 excerpt: 宇野常宽从《假面骑士 BLACK SUN》对日本新左翼败北史的改写出发，讨论特摄英雄如何介入政治寓言，以及作品在现实批判和类型限制之间取得的成果与遗憾。

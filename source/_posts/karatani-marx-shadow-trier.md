@@ -6,7 +6,7 @@ slug: karatani-marx-shadow-trier
 categories: [思想与理论]
 section: translation
 format: article
-tags: [柄谷行人, 马克思, 旅行书写]
+tags: [马克思主义, 柄谷行人]
 post_author: 柄谷行人
 translator: 开校园车的
 proofreader: 开校园车的

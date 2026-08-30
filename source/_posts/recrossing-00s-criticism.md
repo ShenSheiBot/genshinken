@@ -5,7 +5,7 @@ date: 2025-06-19
 slug: recrossing-00s-criticism
 categories: ["思想与理论"]
 section: translation
-tags: ["零零年代", "御宅研究", "后现代"]
+tags: [御宅研究, 后现代, 东浩纪, 宇野常宽]
 post_author: "杉田俊介"
 translator: ["幽灵在都灵", "雨宫优子", "CTFE", "石好汉", "三咲町", "星月如珏"]
 proofreader: ["幽灵在都灵", "夜深人静"]

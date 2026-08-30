@@ -6,7 +6,7 @@ slug: revue-starlight-reproduction-through-revue
 script: hans
 categories: [动画]
 section: review
-tags: [少女☆歌剧 Revue Starlight, 再生产]
+tags: [政治经济学, 少女☆歌剧 Revue Starlight]
 post_author: ⑨瑟夫
 excerpt: 以剧中多场revue为线索，分析舞台少女如何摆脱心结、重塑彼此关系，并完成闪耀与舞台的再生产。
 featured_order: 0

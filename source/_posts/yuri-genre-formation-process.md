@@ -6,7 +6,7 @@ slug: yuri-genre-formation-process
 categories: [漫画]
 section: translation
 format: article
-tags: [百合, 同人文化, 类型研究]
+tags: [百合, 同人文化]
 post_author: 上村太郎
 translator: 冰格
 proofreader: 冰格

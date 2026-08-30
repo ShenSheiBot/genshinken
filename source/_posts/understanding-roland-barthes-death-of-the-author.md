@@ -6,7 +6,7 @@ slug: understanding-roland-barthes-death-of-the-author
 script: hans
 categories: [思想与理论]
 section: essay
-tags: [罗兰·巴特, 作者之死, 米歇尔·福柯, 作者功能, 新批评, 解构主义]
+tags: [语言哲学, 后结构主义, 文学理论, 米歇尔·福柯, 罗兰·巴特]
 post_author: 实在狗子
 excerpt: 细读罗兰·巴特《作者之死》的论证与思想背景，结合新批评、德里达和福柯的回应，说明作者如何从意义中心转化为多重而不连续的作者功能，并以幽灵般的形式回归文本。
 featured_order: 0

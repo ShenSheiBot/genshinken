@@ -7,7 +7,7 @@ slug: yama-no-susume-season-3-episode-10-china
 script: hans
 categories: [动画]
 section: review
-tags: [向山进发, ちな, 动画演出]
+tags: [动画演出]
 post_author: FAR
 translator: [C7, 伞泽直美, 一样, fahh]
 proofreader: [C7, Arkgrayhe, Liebestram]

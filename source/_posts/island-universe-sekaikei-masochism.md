@@ -6,7 +6,7 @@ slug: island-universe-sekaikei-masochism
 script: hans
 categories: [动画]
 section: review
-tags: [天气之子, 新海诚, 世界系, 岛宇宙, 精神分析, 幻想]
+tags: [精神分析, 御宅研究, 世界系, 新海诚, 天气之子]
 post_author: 钟子默
 proofreader: 伦勃朗
 excerpt: 钟子默以幻象、受虐幻想与岛宇宙为线索，批评《天气之子》对社会中介、政治决断和异性恋救赎的含混处理。

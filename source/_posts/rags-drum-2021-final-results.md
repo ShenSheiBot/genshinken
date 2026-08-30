@@ -7,7 +7,7 @@ slug: rags-drum-2021-final-results
 script: hans
 categories: [屋顶社群]
 section: community
-tags: [拾荒战略, 征文, 社群活动]
+tags: []
 post_author: 屋顶现视研
 translator: []
 proofreader: []

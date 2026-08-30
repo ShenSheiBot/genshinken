@@ -6,7 +6,7 @@ slug: porphyria-answer-white-album-2
 script: hans
 categories: [动画]
 section: review
-tags: [白色相簿2, 丸户史明, 波菲利娅的情人, 主体性, 精神分析, 黑格尔, 不谐和悲剧]
+tags: [精神分析, 主体性, 黑格尔, 白色相簿2]
 post_author: ivauke
 excerpt: 以精神分析、主体承认与伦理生活为线索，重读《白色相簿2》三位主角的欲望结构，并借《波菲利娅的情人》阐释作品的不谐和悲剧。
 featured_order: 0

@@ -8,7 +8,7 @@ slug: sep-john-rawls-sections-1-4-2
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [罗尔斯, 政治哲学, 正义]
+tags: [政治哲学]
 post_author: Leif Wenar
 translator: 优昙华院
 excerpt: 《斯坦福哲学百科》“约翰·罗尔斯”词条第 1～5.6 节中译上篇，介绍罗尔斯的生平与方法、政治自由主义，以及作为公平的正义的基本结构与指导思想。

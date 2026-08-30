@@ -5,7 +5,7 @@ date: 2023-01-07
 slug: trinh-minh-ha-infinite-layers-third-world
 categories: [思想与理论]
 section: translation
-tags: [女性主义, 第三世界, 后殖民主义]
+tags: [女性主义, 后殖民主义]
 post_author: Trinh T. Minh-ha
 translator: Mac
 proofreader: Valen

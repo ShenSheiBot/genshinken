@@ -7,7 +7,7 @@ slug: from-reproduction-to-simulacra-modern-turn-in-cultural-consumption
 script: hans
 categories: [御宅文化]
 section: essay
-tags: [消费文化, 拟像, 文化工业, 本雅明, 鲍德里亚, 数字媒介]
+tags: [消费文化, 文化工业, 媒介理论, 本雅明]
 post_author: 米岡
 excerpt: 米岡《从复制品到拟像：文艺消费的现代转向》，从本雅明、斯蒂格勒与鲍德里亚出发，讨论复制技术、数字媒介与文化消费模式的现代转向。
 citation:

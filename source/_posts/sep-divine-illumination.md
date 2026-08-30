@@ -6,7 +6,7 @@ slug: sep-divine-illumination
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [神圣光照, 中世纪哲学, 认识论, 奥古斯丁]
+tags: [认识论]
 post_author: Robert Pasnau
 translator: 米岡
 excerpt: 《斯坦福哲学百科》“神圣光照”词条中译，从古代背景、奥古斯丁与十三世纪方济各会论至阿奎那、根特的亨利和司各脱对光照论的改造与终结。

@@ -8,7 +8,7 @@ slug: karatani-asada-complete-dialogues-selected-chapters
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [柄谷行人, 浅田彰, 东方主义, 日本思想史, 批评空间]
+tags: [日本思想史, 东方主义, 柄谷行人, 浅田彰]
 post_author: [柄谷行人, 浅田彰]
 translator: [Vena, 柴来人, 祈祷古典学高华被破四旧Reset的春埼美空]
 proofreader: 人吉尔郎

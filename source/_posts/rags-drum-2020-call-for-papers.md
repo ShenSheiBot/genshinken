@@ -7,7 +7,7 @@ slug: rags-drum-2020-call-for-papers
 script: hans
 categories: [屋顶社群]
 section: community
-tags: [拾荒战略, 征文, 社群活动]
+tags: []
 post_author: 屋顶现视研
 excerpt: 屋顶现视研启动年度征文“拾荒战略Rags Drum 2020”，公布前夜祭、后夜祭两赛道的征稿领域、流程、评审、奖励与投稿方式。
 featured_order: 0

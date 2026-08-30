@@ -8,7 +8,7 @@ script: hans
 categories: [动画]
 section: translation
 format: article
-tags: [少女革命, 女性主义, 性别研究, 动画研究]
+tags: [女性主义, 性别研究, 动画研究, 少女革命]
 post_author: Smash Genesis
 translator: "@su0tiuqibu"
 excerpt: 从性别建构、父权制与“诱捕”概念出发，检视《少女革命》如何一面寻求超越性别规范，一面仍受创作者内化的父权视角牵制。

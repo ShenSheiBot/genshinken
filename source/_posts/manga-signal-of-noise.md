@@ -6,7 +6,7 @@ slug: manga-signal-of-noise
 categories: [漫画]
 section: translation
 format: article
-tags: [漫画研究, 噪声, Serial Experiments Lain]
+tags: [漫画研究, 同人文化]
 post_author: ["Adèle-Elise Prévost", "MUSEbasement"]
 translator: 村上侑
 proofreader: 徒手开根号二

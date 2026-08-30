@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [生态女性主义, 发展研究, 女性主义]
+tags: [女性主义, 政治经济学, 生态批评]
 post_author: Vandana Shiva
 translator: Pessoa
 proofreader: 柴来人

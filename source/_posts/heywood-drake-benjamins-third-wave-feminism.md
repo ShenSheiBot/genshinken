@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [女性主义, 第三波女性主义, 全球化, 政治经济学]
+tags: [女性主义, 全球化, 政治经济学]
 post_author: [Leslie Heywood, Jennifer Drake]
 translator: [夜深人静, 郁远集]
 excerpt: Leslie Heywood 与 Jennifer Drake 从美国后婴儿潮一代的经济和人口结构、全球化与技术文化出发，分析第三波女性主义的物质条件及其行动主义形式。

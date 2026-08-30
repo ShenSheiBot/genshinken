@@ -8,7 +8,7 @@ slug: sep-deleuze-sections-1-2
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [德勒兹, 康德, 差异哲学]
+tags: [后结构主义, 德勒兹]
 post_author: [Daniel Smith, John Protevi]
 translator: aho
 proofreader: [aho, 斑鸠]

@@ -6,7 +6,7 @@ slug: azuma-hiroki-what-is-criticism
 categories: [思想与理论]
 section: translation
 format: article
-tags: [东浩纪, 批评, 日本思想史]
+tags: [日本思想史, 文化批评, 东浩纪]
 post_author: 东浩纪
 translator: 冰格
 proofreader: 冰格

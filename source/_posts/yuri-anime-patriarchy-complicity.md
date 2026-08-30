@@ -7,7 +7,7 @@ script: hans
 categories: [动画]
 section: translation
 format: article
-tags: [百合, 水星的魔女, 莉可丽丝, 父权制]
+tags: [百合, 父权制, 高达]
 post_author: 王琼海
 translator: 神必天坑
 proofreader: Yisensei04

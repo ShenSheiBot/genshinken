@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [女性主义, 妇女选举权, 教育]
+tags: [女性主义, 妇女选举权]
 post_author: Elizabeth Cady Stanton
 translator: celani
 license: CC BY-NC-SA 4.0

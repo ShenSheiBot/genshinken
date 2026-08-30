@@ -7,7 +7,7 @@ slug: sep-max-weber-sections-1-2
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [马克斯·韦伯, 社会学, 理性化, 现代性]
+tags: [现代性]
 post_author: Sung Ho Kim
 translator: Jeremiah
 proofreader: 柴来人

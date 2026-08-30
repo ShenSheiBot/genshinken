@@ -8,7 +8,7 @@ slug: kaguya-sama-love-is-war-season-1-episodes-01-05-production-notes
 script: hans
 categories: [动画]
 section: translation
-tags: [辉夜大小姐想让我告白, 畠山守]
+tags: [辉夜大小姐想让我告白]
 post_author: kViN
 translator: snoper卓尔
 proofreader: 加速器

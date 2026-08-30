@@ -7,7 +7,7 @@ script: hans
 categories: [动画]
 section: translation
 format: article
-tags: [少女革命, Serial Experiments Lain, 少女文化, 临界性]
+tags: [少女文化, 少女革命]
 post_author: Jane
 translator: "@su0tiuqibu"
 excerpt: 比较《少女革命》与《Serial Experiments Lain》中的临界少女、元小说现实与情感联结，并以苏珊·内皮尔的“消失的少女”论作附录。

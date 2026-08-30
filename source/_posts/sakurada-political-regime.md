@@ -6,7 +6,7 @@ slug: sakurada-political-regime
 script: hans
 categories: [动画]
 section: review
-tags: [重启咲良田, 政治哲学, 自然法, 例外状态]
+tags: [政治哲学]
 post_author: Suetonius
 excerpt: 以《重启咲良田》的人物与管理局为线索，从自然法、治理术和例外状态重构咲良田政制的生成及其应然形态。
 featured_order: 0

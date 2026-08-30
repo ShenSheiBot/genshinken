@@ -6,7 +6,7 @@ slug: ghost-in-the-shell-too-blurry-oshii
 script: hans
 categories: [动画]
 section: review
-tags: [攻壳机动队, 押井守, 电影理论, 时间－影像, 精神分析, 齐泽克]
+tags: [精神分析, 电影理论, 押井守, 齐泽克, 攻壳机动队]
 post_author: Hisui
 excerpt: 从三分钟城市空镜出发，借缝合、时间－影像与纯粹生命追问押井守的唯物主义，以及其作者立场中无法消除的模糊与摇摆。
 featured_order: 0

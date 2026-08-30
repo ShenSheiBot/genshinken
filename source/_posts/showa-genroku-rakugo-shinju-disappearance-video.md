@@ -6,7 +6,7 @@ slug: showa-genroku-rakugo-shinju-disappearance-video
 script: hans
 categories: [动画]
 section: translation
-tags: [昭和元禄落语心中, 落语, 传统文化, 动画评论]
+tags: [动画评论]
 post_author: pause and select
 translator: [赛克心, 十文字, dearbear]
 proofreader: [Matsutaka, 加速器]

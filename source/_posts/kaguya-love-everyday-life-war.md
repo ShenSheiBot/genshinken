@@ -6,7 +6,7 @@ slug: kaguya-love-everyday-life-war
 script: hans
 categories: [动画]
 section: review
-tags: [辉夜大小姐想让我告白, 恋爱喜剧, 日常系, 克尔凯戈尔, 消费文化, 爱情]
+tags: [消费文化, 日常系, 辉夜大小姐想让我告白]
 post_author: 一只非0的O
 excerpt: 从日常化、娱乐化、战争论与文化工业四个层次，分析《辉夜大小姐想让我告白》如何把恋爱变成可持续消费的头脑战。
 featured_order: 0

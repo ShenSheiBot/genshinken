@@ -6,7 +6,7 @@ slug: yoshishige-yoshida-confessions-among-actresses-model-gaze-field
 script: hans
 categories: [电影与影视]
 section: review
-tags: [吉田喜重, 日本电影, 凝视, 电影形式]
+tags: [电影理论, 凝视]
 post_author: 屋顶现视研
 translator: []
 proofreader: []

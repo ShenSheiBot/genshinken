@@ -6,7 +6,7 @@ slug: happy-hour-pregnancy
 script: hans
 categories: [电影与影视]
 section: translation
-tags: [滨口龙介, 欢乐时光, 生育, 生命政治, 电影理论]
+tags: [电影理论, 母职, 滨口龙介]
 post_author: 木下千花
 translator: hiro
 proofreader: 静希

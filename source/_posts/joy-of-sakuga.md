@@ -6,7 +6,7 @@ slug: joy-of-sakuga
 script: hans
 categories: [动画]
 section: translation
-tags: [动画制作, 作画, 原画]
+tags: [动画制作, 作画分析]
 post_author: Kevin Cirugeda
 translator: 石立太一
 excerpt: 一份面向作画爱好者的入门手册：如何识别原画师、理解镜头运动，并在资料与社群中继续追踪动画创作者。

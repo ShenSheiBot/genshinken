@@ -6,7 +6,7 @@ slug: karatani-akutagawa-in-a-grove
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [柄谷行人, 芥川龙之介, 竹林中, 文学批评, 自我意识]
+tags: [主体性, 文学理论, 柄谷行人]
 post_author: 柄谷行人
 translator: 奇霖
 excerpt: 柄谷行人重读芥川龙之介《竹林中》，从彼此冲突的证言、自我戏剧化与事实相对性出发，批判芥川文学中透明心理和主知主义的神话。

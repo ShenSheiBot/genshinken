@@ -6,7 +6,7 @@ updated: 2026-08-15
 slug: decolonising-anime-studies-prolegomenon
 categories: [动画]
 section: translation
-tags: [日本动画, 动画研究, 东方主义, 后殖民主义]
+tags: [动画研究, 后殖民主义, 殖民主义, 东方主义, 托马斯·拉马尔]
 post_author: 三原龙太郎
 translator: [崆峒山下三脚鸦, KAFAK, 正義の味方, 河豚ccc, 村上侑, U.N.オーエンは愛音なのか?, YDDD, Rex salsamenta, 水色文书, 夜深人静]
 proofreader: [村上侑, 幽灵在都灵, 夜深人静]

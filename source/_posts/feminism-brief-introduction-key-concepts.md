@@ -8,7 +8,7 @@ slug: feminism-brief-introduction-key-concepts
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [女性主义, 性别研究, 性政治, 性别劳动, 人权]
+tags: [女性主义, 性别研究, 政治哲学, 酷儿理论]
 post_author: Deborah Cameron
 translator: [春埼美空, AI + 生命体征维持茶话会]
 excerpt: Deborah Cameron以核心概念组织女性主义思想，讨论性、工作、宰制与权利如何塑造身体、劳动、亲密关系和公共制度。

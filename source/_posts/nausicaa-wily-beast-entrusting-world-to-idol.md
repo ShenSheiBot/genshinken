@@ -6,7 +6,7 @@ slug: nausicaa-wily-beast-entrusting-world-to-idol
 script: hans
 categories: [御宅文化]
 section: essay
-tags: [风之谷, 东方Project, 动物, 后人类]
+tags: [身体, 东方Project]
 post_author: 宫酒姬
 excerpt: 宫酒姬以《风之谷》《百合熊岚》《兽娘动物园》和《东方鬼形兽》为线索，讨论动物他者、人类中心主义与人工智能偶像在平成文化中的思想变奏。
 citation:

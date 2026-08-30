@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: essay
 format: article
-tags: [春节联欢晚会, 小品, 性别研究, 文化批评]
+tags: [性别研究, 文化批评]
 post_author: 春琦美空
 excerpt: 从父权角色、家庭叙事、货币关系与代际媒介冲突出发，评论五个春晚小品的文本结构。
 citation:

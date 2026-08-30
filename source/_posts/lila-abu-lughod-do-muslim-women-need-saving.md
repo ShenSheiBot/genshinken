@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [女性主义, 后殖民主义, 阿富汗]
+tags: [女性主义, 后殖民主义]
 post_author: Lila Abu-Lughod
 translator: 兜兜
 proofreader: 柴来人

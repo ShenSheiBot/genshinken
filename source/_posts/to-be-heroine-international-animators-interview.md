@@ -9,7 +9,7 @@ script: hans
 categories: [动画]
 section: interview
 format: interview
-tags: [凸变英雄, 动画制作, 原画]
+tags: [动画制作, 作画分析]
 post_author: kViN
 translator: 石立太一
 excerpt: kViN 采访参与《凸变英雄 LEAF》的国际网络动画师，讨论他们进入 Studio LAN 的契机、日式动画流程、作画风格、远程协作与职业选择。

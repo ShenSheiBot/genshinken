@@ -6,7 +6,7 @@ slug: haruhi-sekaikei-postmodern-acgn-research
 script: hans
 categories: [御宅文化]
 section: essay
-tags: [凉宫春日系列, 世界系, 后现代, 文化研究]
+tags: [世界系, 后现代, 文化批评]
 post_author: 真紅様
 excerpt: 真紅様从“世界系”、后现代性与文化研究三条线索重读《凉宫春日》系列，反思标签化、理论先行与忽视作品细读的ACGN研究路径。
 citation:

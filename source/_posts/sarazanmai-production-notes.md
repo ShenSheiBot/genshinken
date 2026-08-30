@@ -8,7 +8,7 @@ slug: sarazanmai-production-notes
 script: hans
 categories: [动画]
 section: translation
-tags: [皿三昧, 几原邦彦, 动画制作, 动画演出, 作画]
+tags: [动画制作, 动画演出, 作画分析, 几原邦彦]
 post_author: kViN
 translator: [我大笑三声哈哈哈, 熊猫派, 頑張らナイト, Phaedo, rychard, 长城以北的非酋, 唯一指定August_Rush, 李怀言]
 proofreader: 我大笑三声哈哈哈

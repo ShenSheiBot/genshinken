@@ -6,7 +6,7 @@ updated: 2026-08-15
 slug: mohanty-western-eyes-feminist-scholarship
 categories: [思想与理论]
 section: translation
-tags: [女性主义, 后殖民主义, Chandra Talpade Mohanty]
+tags: [女性主义, 后殖民主义]
 post_author: Chandra Talpade Mohanty
 translator: 竹兮
 proofreader: 柴来人

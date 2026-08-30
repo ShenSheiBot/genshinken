@@ -6,7 +6,7 @@ slug: how-to-evaluate-ultraman-leo
 script: hans
 categories: [动画]
 section: review
-tags: [雷欧奥特曼, 奥特曼, 特摄]
+tags: [特摄]
 post_author: 实在狗子
 excerpt: 以《泰罗奥特曼》为对照，讨论《雷欧奥特曼》如何书写失去故乡的英雄、残缺的父子关系，以及圆盘生物篇的末世氛围。
 featured_order: 0

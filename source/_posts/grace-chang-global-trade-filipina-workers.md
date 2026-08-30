@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [女性劳工, 跨国迁移, 菲律宾, 照护劳动]
+tags: [全球化, 劳动]
 post_author: Grace Chang
 translator: Pessoa
 license: CC BY-NC-SA 4.0

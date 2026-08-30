@@ -6,7 +6,7 @@ slug: clarifying-rationalization-in-animation-criticism
 script: hans
 categories: [动画]
 section: review
-tags: [动画评论, 合理化, 隐喻, 作画分析, 精神分析, 社会建构]
+tags: [精神分析, 动画评论, 作画分析, 社会建构]
 post_author: Austoria
 excerpt: 从语言的隐喻性、作画分析的求真问题、精神分析的科学性与审美判断的社会建构出发，回应动画评论中的“过度合理化”批评。
 featured_order: 0

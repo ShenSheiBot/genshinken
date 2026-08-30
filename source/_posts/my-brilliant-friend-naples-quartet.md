@@ -5,7 +5,7 @@ date: 2025-03-08
 slug: my-brilliant-friend-naples-quartet
 categories: ["思想与理论"]
 section: translation
-tags: ["女性主义", "文学理论"]
+tags: [女性主义, 文学理论]
 post_author: "Emma Heaney"
 translator: ["林新知", "革利牙"]
 proofreader: []

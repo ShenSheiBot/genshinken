@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [劳工运动, 女性主义, 工会]
+tags: [女性主义, 劳动]
 post_author: Rose Schneiderman
 translator: Eurya
 proofreader: 柴来人

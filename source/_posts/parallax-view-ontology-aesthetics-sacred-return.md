@@ -6,7 +6,7 @@ slug: parallax-view-ontology-aesthetics-sacred-return
 script: hans
 categories: [思想与理论]
 section: essay
-tags: [二次元, 美学, 本雅明, 灵韵, 崇拜价值, 拉康]
+tags: [拉康, 御宅研究, 消费文化, 本雅明]
 post_author: 神的意识形态
 excerpt: 从本雅明论机械复制时代的“灵韵”出发，比较电影与二次元的距离结构，讨论圣象崇拜、拟像、信仰仪式与灵韵的回归。
 featured_order: 0

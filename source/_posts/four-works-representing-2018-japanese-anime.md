@@ -6,7 +6,7 @@ slug: four-works-representing-2018-japanese-anime
 script: hans
 categories: [动画]
 section: review
-tags: [日本动画, 零的执行人, POP TEAM EPIC, 朝花夕誓, 恶魔人 Crybaby, 动画制作]
+tags: [动画制作]
 post_author: 塔塔君 Minkun
 excerpt: 以社会现象、网络模因、女性创作者与海外流媒体四条线索，挑选四部作品回望2018年日本动画的新动向。
 featured_order: 0

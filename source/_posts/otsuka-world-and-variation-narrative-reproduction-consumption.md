@@ -6,7 +6,7 @@ slug: otsuka-world-and-variation-narrative-reproduction-consumption
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [大塚英志, 物语消费, 御宅研究, 同人文化, 媒介融合]
+tags: [御宅研究, 消费文化, 同人文化, 跨媒介, 大塚英志]
 post_author: 大塚英志
 translator: [Marc Steinberg, 王晗]
 excerpt: 大塚英志《物语消费论》的核心文章，从仙魔大战贴纸、动画世界观与《足球小将》同人创作出发，说明消费者如何经由小叙事接近并再生产大叙事。

@@ -8,7 +8,7 @@ slug: cinema-off-screen
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [电影研究, 中国电影史, 社会主义文化]
+tags: [电影理论]
 post_author: Chenshu Zhou
 translator: [10, Yan, 张铭苏]
 proofreader: [Syn, kuma, Pak Syn]

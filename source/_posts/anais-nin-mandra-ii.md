@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [女性主义, 女性文学, 女性情欲]
+tags: [女性主义, 性别研究]
 post_author: Anaïs Nin
 translator: Cico
 license: CC BY-NC-SA 4.0

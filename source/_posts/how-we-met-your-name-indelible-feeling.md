@@ -6,7 +6,7 @@ slug: how-we-met-your-name-indelible-feeling
 script: hans
 categories: [动画]
 section: review
-tags: [你的名字, 新海诚, 世界系, 无意识]
+tags: [精神分析, 世界系, 新海诚]
 post_author: 红茶泡海苔
 excerpt: 从世界系、可能世界与无意识出发，追问《你的名字。》中泷与三叶为何能跨越忘却相认。
 citation:

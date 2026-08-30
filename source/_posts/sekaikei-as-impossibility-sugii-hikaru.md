@@ -5,7 +5,7 @@ date: 2025-03-21
 slug: sekaikei-as-impossibility-sugii-hikaru
 categories: ["思想与理论"]
 section: translation
-tags: ["世界系", "轻小说", "日本文化评论"]
+tags: [世界系, 轻小说, 文化批评]
 post_author: "红茶泡海苔"
 translator: ["Yisensei04"]
 proofreader: ["幽灵在都灵"]

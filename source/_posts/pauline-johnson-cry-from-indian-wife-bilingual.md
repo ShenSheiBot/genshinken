@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [诗歌, 原住民研究, 殖民主义]
+tags: [殖民主义, 原住民研究, 诗歌]
 post_author: E. Pauline Johnson
 translator: Eurya
 license: CC BY-NC-SA 4.0

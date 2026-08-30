@@ -6,7 +6,7 @@ slug: tsurune-kyudo-cultural-details
 script: hans
 categories: [动画]
 section: essay
-tags: [弦音, 京都动画, 弓道]
+tags: [京都动画]
 post_author: 长门有希的水瓶
 excerpt: 从和弓的构造、历史和射法八节，逐项观察《弦音》第一话对弓道动作与精神状态的呈现。
 citation:

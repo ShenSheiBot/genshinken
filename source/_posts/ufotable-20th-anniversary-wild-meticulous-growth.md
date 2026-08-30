@@ -6,7 +6,7 @@ slug: ufotable-20th-anniversary-wild-meticulous-growth
 script: hans
 categories: [动画]
 section: translation
-tags: [ufotable, 动画公司, 动画制作, 平尾隆之, 近藤光]
+tags: [动画制作]
 post_author: kvin
 translator: [dong-ye-lv-ren, cthugha, arkgrayhe, shan-ze-zhi-mei, liebestram, lieriheart]
 proofreader: [jia-su-qi, ju-yu]

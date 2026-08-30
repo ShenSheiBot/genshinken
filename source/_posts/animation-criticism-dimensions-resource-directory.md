@@ -7,7 +7,7 @@ slug: animation-criticism-dimensions-resource-directory
 script: hans
 categories: [动画]
 section: essay
-tags: [动画评论, 动画制作, 艺术哲学, 电影理论, 日本动画史, 评论方法]
+tags: [动画评论, 动画制作, 日本动画史, 电影理论]
 post_author: 伦勃朗
 excerpt: 从动画制作、美术与艺术哲学、哲学社科、电影理论、日本动画史及评论实践七个方向，整理拓展动画鉴赏与评论维度的学习路径与资料目录。
 featured_order: 0

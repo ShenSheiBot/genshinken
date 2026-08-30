@@ -6,7 +6,7 @@ slug: asada-akira-bts-radio-sakamoto
 categories: [思想与理论]
 section: interview
 format: interview
-tags: [浅田彰, BTS, Radio Sakamoto]
+tags: [浅田彰]
 speaker: 浅田彰
 translator: 豆包
 excerpt: 浅田彰在《Radio Sakamoto》中谈论BTS、防弹少年团与流行音乐文化。

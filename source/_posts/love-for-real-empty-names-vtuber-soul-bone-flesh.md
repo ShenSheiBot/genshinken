@@ -6,7 +6,7 @@ slug: love-for-real-empty-names-vtuber-soul-bone-flesh
 script: hans
 categories: [御宅文化]
 section: essay
-tags: [Vtuber, 中之人, 空名]
+tags: [角色研究, 御宅研究, 本体论]
 post_author: 鲜奶饼干
 proofreader: 子厚
 editor: 伦勃朗

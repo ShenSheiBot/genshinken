@@ -6,7 +6,7 @@ slug: ghost-in-the-shell-two-answers-one-essay
 script: hans
 categories: [动画]
 section: review
-tags: [攻壳机动队, 银翼杀手, 机动警察, 押井守, 赛博朋克, 国家主义, 柄谷行人]
+tags: [意识形态, 政治哲学, 民族主义, 柄谷行人, 押井守, 攻壳机动队, 机动警察]
 post_author: 秘则为花
 excerpt: 合收两篇回答与一篇随笔：比较《银翼杀手》与《攻壳机动队》的进步观和宗教意象，分析S.A.C.的国家主义结构，并由柄谷行人重读《和平保卫战》与2nd GIG。
 citation:

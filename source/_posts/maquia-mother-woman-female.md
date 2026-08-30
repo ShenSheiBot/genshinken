@@ -6,7 +6,7 @@ slug: maquia-mother-woman-female
 script: hans
 categories: [动画]
 section: review
-tags: [朝花夕誓, 冈田麿里, 性别研究, 精神分析, 女性主义, 母职, 俄狄浦斯情结]
+tags: [女性主义, 性别研究, 精神分析, 母职]
 post_author: 钟子默
 excerpt: 以症候式阅读分析玛琪雅与艾瑞尔、蕾莉亚的关系，从父亲功能、俄狄浦斯情结与女性欲望切入，讨论《朝花夕誓》中母亲、女人和女性的分裂与转换。
 featured_order: 0

@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [女性主义, 黑人女性主义, 奴隶制]
+tags: [女性主义, 种族主义]
 post_author: Sojourner Truth
 translator: 柴来人
 license: CC BY-NC-SA 4.0

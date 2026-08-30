@@ -6,7 +6,7 @@ slug: body-prosthesis-cannon-fodder
 script: hans
 categories: [动画]
 section: review
-tags: [大炮之街, 大友克洋, 身体, 技术物体, 极权主义, 身体现象学, 生活世界]
+tags: [意识形态, 日常, 身体, 技术哲学]
 post_author: Gi
 excerpt: 以《大炮之街》中的巨炮系统与身体关系为中心，借海德格尔、梅洛－庞蒂和斯蒂格勒讨论技术物体的自治及其对人的对象化。
 featured_order: 0

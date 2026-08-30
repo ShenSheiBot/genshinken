@@ -9,7 +9,7 @@ script: hans
 license: CC BY-NC-SA 4.0
 categories: [动画]
 section: translation
-tags: [宇野常宽, 母性敌托邦, 日本动画史, 宫崎骏, 富野由悠季, 押井守]
+tags: [日本动画史, 母职, 宇野常宽, 押井守, 宫崎骏, 富野由悠季]
 post_author: 宇野常宽
 translator: ["Va-11 Hall-A"]
 proofreader: []

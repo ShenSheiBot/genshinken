@@ -8,7 +8,7 @@ slug: debating-otaku-contemporary-japan-selected-chapters
 script: hans
 categories: [御宅文化]
 section: translation
-tags: [御宅研究, 宫崎勤事件, 媒体话语, 文化批评]
+tags: [御宅研究, 文化批评, 文化工业]
 post_author: [大塚英志, Björn-Ole Kamm]
 translator: [幽灵在都灵, 王晗]
 editor: 夜深人静

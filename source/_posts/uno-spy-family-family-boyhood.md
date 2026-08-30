@@ -7,7 +7,7 @@ script: hans
 categories: [动画]
 section: translation
 format: article
-tags: [间谍过家家, 宇野常宽, 家族主义, 少年漫画]
+tags: [漫画研究, 父权制, 宇野常宽]
 post_author: 宇野常宽
 translator: Yisensei04
 excerpt: 宇野常宽从战后幸福核家庭与《周刊少年Jump》的男同性社会传统出发，分析《间谍过家家》如何以“虚假家庭”的设定重新强化家庭模式，又可能从这种封闭性中开拓别样的幸福。

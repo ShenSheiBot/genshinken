@@ -6,7 +6,7 @@ slug: kasai-uno-sekaikei-state-of-exception
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [笠井洁, 宇野常宽, 世界系, 例外状态, 社会契约, 决断主义]
+tags: [世界系, 政治哲学, 宇野常宽]
 post_author: 笠井洁
 translator: [天坑, CTFE, Yisensei04, 雨宫优子, 河豚, ethci]
 proofreader: [双柱, 天坑, 夜深人静]

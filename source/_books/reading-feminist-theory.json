@@ -34,7 +34,7 @@
       "authors": ["Susan Archer Mann", "Ashly Suzanne Patterson"],
       "translators": ["柴来人", "エミヤたにゆき", "煮鱼", "buhrwana", "vall", "Chris", "TangerineKnight", "su0tiuibu"],
       "proofreaders": ["春埼美空", "Chris"],
-      "tags": ["女性主义", "女性主义理论", "现代性", "后现代主义"]
+      "tags": ["女性主义", "后现代", "现代性"]
     },
     {
       "id": "chapter-01-doing-feminist-theory",
@@ -46,7 +46,7 @@
       "authors": ["Susan Archer Mann", "Ashly Suzanne Patterson"],
       "translators": ["snoper卓尔", "柴来人", "エミヤたにゆき", "Chris"],
       "proofreaders": ["snoper卓尔", "Chris", "春埼美空"],
-      "tags": ["女性主义", "女性主义认识论", "立场理论", "后现代主义"]
+      "tags": ["女性主义", "后现代"]
     },
     {
       "id": "chapter-02-liberal-feminism",
@@ -58,7 +58,7 @@
       "authors": ["Susan Archer Mann", "Ashly Suzanne Patterson"],
       "translators": ["煮鱼", "Va-11 Hall-A", "エミヤたにゆき", "伞泽直美"],
       "proofreaders": ["春埼美空", "Chris"],
-      "tags": ["女性主义", "自由主义女性主义", "妇女选举权"]
+      "tags": ["女性主义", "妇女选举权"]
     },
     {
       "id": "chapter-03-radical-feminism",
@@ -70,7 +70,7 @@
       "authors": ["Susan Archer Mann", "Ashly Suzanne Patterson"],
       "translators": ["dieSigurd", "エミヤたにゆき"],
       "proofreaders": ["蒸汽黎明", "春埼美空"],
-      "tags": ["女性主义", "激进女性主义", "性政治", "生态女性主义"]
+      "tags": ["女性主义", "性别研究", "酷儿理论"]
     },
     {
       "id": "chapter-04-socialist-feminism",
@@ -82,7 +82,7 @@
       "authors": ["Susan Archer Mann", "Ashly Suzanne Patterson"],
       "translators": ["慧慧", "柴来人", "Chris", "伞泽直美", "Labour", "エミヤたにゆき", "buhrwana"],
       "proofreaders": ["春埼美空"],
-      "tags": ["女性主义", "社会主义女性主义", "马克思主义女性主义"]
+      "tags": ["女性主义"]
     },
     {
       "id": "chapter-05-intersectionality",
@@ -94,7 +94,7 @@
       "authors": ["Susan Archer Mann", "Ashly Suzanne Patterson"],
       "translators": ["柴来人", "dieGrox", "初鹿野凪", "伞泽直美", "buhrwana", "another"],
       "proofreaders": ["春埼美空"],
-      "tags": ["女性主义", "交叉性", "身份政治"]
+      "tags": ["女性主义", "交叉性"]
     },
     {
       "id": "chapter-06-postmodern-poststructural-queer-transgender",
@@ -112,7 +112,7 @@
       "authors": ["Susan Archer Mann", "Ashly Suzanne Patterson"],
       "translators": ["煮鱼", "伞泽直美", "another", "柴来人", "エミヤたにゆき"],
       "proofreaders": ["春埼美空"],
-      "tags": ["女性主义", "第三波女性主义", "交叉性", "后结构主义"]
+      "tags": ["女性主义", "交叉性", "后结构主义"]
     },
     {
       "id": "chapter-08-early-modernity-imperialism",
@@ -124,7 +124,7 @@
       "authors": ["Susan Archer Mann", "Ashly Suzanne Patterson"],
       "translators": ["煮鱼", "another", "柴来人", "エミヤたにゆき"],
       "proofreaders": ["春埼美空"],
-      "tags": ["女性主义", "帝国主义", "反战运动", "罗莎·卢森堡"]
+      "tags": ["女性主义", "殖民主义", "战争"]
     },
     {
       "id": "chapter-09-late-modernity-imperialism",
@@ -136,7 +136,7 @@
       "authors": ["Susan Archer Mann", "Ashly Suzanne Patterson"],
       "translators": ["another", "柴来人", "エミヤたにゆき"],
       "proofreaders": ["春埼美空"],
-      "tags": ["女性主义", "帝国主义", "新自由主义", "反战运动"]
+      "tags": ["女性主义", "殖民主义", "战争"]
     },
     {
       "id": "chapter-10-postmodernism-imperialism",
@@ -148,7 +148,7 @@
       "authors": ["Susan Archer Mann", "Ashly Suzanne Patterson"],
       "translators": ["柴来人", "エミヤたにゆき"],
       "proofreaders": ["春埼美空"],
-      "tags": ["女性主义", "帝国主义", "后殖民主义", "跨国女性主义"]
+      "tags": ["女性主义", "后殖民主义", "殖民主义"]
     }
   ]
 }

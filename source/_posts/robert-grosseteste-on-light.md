@@ -6,7 +6,7 @@ slug: robert-grosseteste-on-light
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [罗伯特·格罗斯特, 经院哲学, 光, 形而上学]
+tags: [本体论]
 post_author: 罗伯特·格罗斯特
 translator: 米岡
 excerpt: 罗伯特·格罗斯特《论光》中译，论证光如何作为第一个形体形式，通过无限倍增、稀释与聚集生成宇宙诸球体及其数理秩序。

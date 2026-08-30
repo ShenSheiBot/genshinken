@@ -6,7 +6,7 @@ slug: uno-gundam-witch-from-mercury-war-school-diorama
 script: hans
 categories: [电影与影视]
 section: translation
-tags: [水星的魔女, 宇野常宽, 高达, 战争, 学园]
+tags: [战争, 宇野常宽, 高达]
 post_author: 宇野常宽
 translator: 人吉尔朗
 excerpt: 宇野常宽评析《水星的魔女》如何将高达式架空年代记与学园箱庭短路连接，又如何让战争成为箱庭未被消化的外部。

@@ -6,7 +6,7 @@ slug: ordinary-readers-literary-theory
 script: hans
 categories: [思想与理论]
 section: essay
-tags: [文学理论, 罗兰·巴特, 萨特, 本雅明]
+tags: [文学理论, 本雅明, 罗兰·巴特]
 post_author: 实在狗子
 excerpt: 从文学理论对常识和系统性解释的质疑出发，讨论理论、现代文学与一般读者如何在文学危机及阅读关系中相互构成。
 featured_order: 0

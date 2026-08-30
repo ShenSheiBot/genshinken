@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: essay
 format: article
-tags: [偶像研究, 日本流行文化, 音乐]
+tags: [偶像文化, 音乐]
 post_author: 指原莉乃
 excerpt: 从电视普及、后福特主义与泡沫经济，到AKB48、坂道系和流媒体时代，梳理日本女偶像产业半个世纪的社会史。
 citation:

@@ -6,7 +6,7 @@ slug: godzilla-meiji-restoration-pure-life-garbage-classification
 script: hans
 categories: [电影与影视]
 section: review
-tags: [哥斯拉, 明治维新, 纯粹生命, 黑船, 视差, 垃圾分类]
+tags: [哥斯拉]
 post_author: Jack Cade
 proofreader: 伦勃朗
 excerpt: 从《哥斯拉2怪兽之王》与幕末明治叙事出发，讨论纯粹生命、黑船与哥斯拉如何在现代秩序的外部反复成为被禁绝的主体。

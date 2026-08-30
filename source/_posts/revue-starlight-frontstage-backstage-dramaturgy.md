@@ -6,7 +6,7 @@ slug: revue-starlight-frontstage-backstage-dramaturgy
 script: hans
 categories: [动画]
 section: review
-tags: [少女☆歌剧 Revue Starlight, 戈夫曼, 拟剧论, 前台与后台, 印象管理, 容器人]
+tags: [少女☆歌剧 Revue Starlight]
 post_author: hood
 excerpt: 借戈夫曼拟剧论中的角色扮演、印象管理与前后台概念，分析《少女☆歌剧》人物如何在舞台上撕开日常表演、显露被隐藏的真实。
 featured_order: 0

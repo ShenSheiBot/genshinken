@@ -6,7 +6,7 @@ slug: wartime-models-and-imaginary-weapons
 script: hans
 categories: [御宅文化]
 section: essay
-tags: [军事模型, 机械化, 跨媒介, 日本战时史, 空想兵器]
+tags: [战争, 技术哲学, 跨媒介]
 post_author: 松井广志
 translator: [Leontopodium Edelweiss, 远月, 红茶泡海苔]
 proofreader: 红茶泡海苔

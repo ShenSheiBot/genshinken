@@ -7,7 +7,7 @@ slug: lamarre-speciesism-wartime-animation
 categories: ["动画"]
 section: translation
 format: article
-tags: [托马斯·拉马尔, 动物性]
+tags: [生态批评, 托马斯·拉马尔]
 post_author: "拉马尔"
 translator: ["FISHERMAN"]
 proofreader: ["Cfox", "郁远集"]

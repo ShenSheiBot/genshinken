@@ -6,7 +6,7 @@ slug: invisible-guardian-new-experience-classic-genre-story
 script: hans
 categories: [游戏]
 section: review
-tags: [隐形守护者, 国产游戏, 互动影视, 视觉小说, 谍战, 游戏叙事]
+tags: [游戏研究, 跨媒介, 视觉小说]
 post_author: 空
 excerpt: 从橙光原型到真人互动影视重制，讨论《隐形守护者》的谍战题材、选项机制、影像形式、叙事结构与传播路径。
 featured_order: 0

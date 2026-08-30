@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [女性主义, 第二波女性主义, 第三波女性主义]
+tags: [女性主义]
 post_author: Cathryn Bailey
 translator: Snoper卓尔
 proofreader: 柴来人

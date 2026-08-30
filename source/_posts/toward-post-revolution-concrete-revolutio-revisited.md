@@ -6,7 +6,7 @@ slug: toward-post-revolution-concrete-revolutio-revisited
 script: hans
 categories: [动画]
 section: review
-tags: [超人幻想, 精神分析, 对象a, 意识形态, 革命, 正义]
+tags: [精神分析, 拉康, 意识形态, 政治哲学, 超人幻想]
 post_author: Ludwigsama
 excerpt: 从超人的小客体身份与意识形态功能出发，经由《超人幻想》中革命、暴力与正义的失败，追问符号秩序瓦解后新能指与新秩序的可能。
 featured_order: 0

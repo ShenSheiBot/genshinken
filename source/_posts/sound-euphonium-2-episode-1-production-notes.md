@@ -8,7 +8,7 @@ slug: sound-euphonium-2-episode-1-production-notes
 script: hans
 categories: [动画]
 section: translation
-tags: [吹响！上低音号, 京都动画, 石原立也, 藤田春香]
+tags: [京都动画, 吹响！上低音号]
 post_author: kViN
 translator: [Phaedrus, 唯一指定真实August_Rush]
 proofreader: [唯一指定真实August_Rush, 我有越甲三千, 伦勃朗君]

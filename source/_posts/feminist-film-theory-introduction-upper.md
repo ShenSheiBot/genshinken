@@ -8,7 +8,7 @@ slug: feminist-film-theory-introduction-upper
 script: hans
 categories: [电影与影视]
 section: translation
-tags: [Mari Ruti, 女性主义, 电影理论, 男性凝视, 精神分析, 拉康, 父权制]
+tags: [女性主义, 性别研究, 精神分析, 拉康, 电影理论, 父权制, 凝视]
 post_author: Mari Ruti
 translator: [another, 小小贤者, 伞, 杰洛·齐贝林, E酱]
 proofreader: [柴来人, 春崎美空]

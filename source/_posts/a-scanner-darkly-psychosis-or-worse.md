@@ -6,7 +6,7 @@ slug: a-scanner-darkly-psychosis-or-worse
 script: hans
 categories: [电影与影视]
 section: review
-tags: [黑暗扫描仪, 菲利普·K·迪克, 精神分析, 反文化]
+tags: [精神分析]
 post_author: 一只非0的O
 excerpt: 从反文化、精神分析、监控与欲望重构出发，讨论《黑暗扫描仪》小说及电影改编中的分裂主体，并以作品内部的反论重新审视蓝花、错误与纪念。
 citation:

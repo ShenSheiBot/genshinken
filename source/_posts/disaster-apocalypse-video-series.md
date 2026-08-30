@@ -6,7 +6,7 @@ slug: disaster-apocalypse-video-series
 script: hans
 categories: [动画]
 section: translation
-tags: [灾难启示录, 动画评论, 日本动画史, 灾难想象]
+tags: [动画评论, 日本动画史, 灾难想象, 新世纪福音战士]
 post_author: pause and select
 translator: 群青七号楼
 excerpt: 收录 pause and select 围绕《死亡笔记》《阿基拉》《新世纪福音战士》和《横滨购物纪行》制作的四部“灾难启示录”视频论文，并记录群青七号楼的翻译协作。

@@ -7,7 +7,7 @@ updated: 2023-04-16
 slug: psychoanalysis-desire-3-lacanian-impasse
 categories: [思想与理论]
 section: translation
-tags: [精神分析的欲望, 拉康, 精神分析]
+tags: [精神分析, 拉康]
 post_author: Gabriel Tupinambá
 translator: Jack Cade
 proofreader: [我魔法少女呢, 五光十色的垃圾场]

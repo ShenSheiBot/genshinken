@@ -6,7 +6,7 @@ slug: post-apocalyptic-games-heroism-great-recession
 script: hans
 categories: [游戏]
 section: translation
-tags: [游戏研究, 后启示录, 新自由主义]
+tags: [游戏研究, 灾难想象]
 post_author: Óliver Pérez-Latorre
 translator: [哲哥, Mefls]
 excerpt: 以2009至2017年的欧美后启示录游戏为语料，考察大衰退如何借敌托邦、孤胆英雄、回归自然与社区领袖等形象进入电子游戏的社会想象。

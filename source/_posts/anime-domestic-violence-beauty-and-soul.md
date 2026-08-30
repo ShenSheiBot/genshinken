@@ -6,7 +6,7 @@ slug: anime-domestic-violence-beauty-and-soul
 script: hans
 categories: [思想与理论]
 section: essay
-tags: [家庭暴力, 性别研究, 父权制, 安全的痛苦, 身体]
+tags: [性别研究, 身体, 父权制]
 post_author: 实在狗子
 proofreader: 子厚
 editor: 伦勃朗

@@ -8,7 +8,7 @@ slug: boys-love-manga-and-beyond-selected-chapters
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [BL, 少女漫画, 性别研究, 性别表现]
+tags: [性别研究, 漫画研究, 少女文化, 酷儿理论]
 post_author: [藤本由香里, Kazumi Nagaike, Tomoko Aoyama]
 translator: Surveiller
 proofreader: [夜深人静, 肇, 郁远集]

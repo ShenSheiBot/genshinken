@@ -7,7 +7,7 @@ slug: japan-00s-anime-criticism-podcast
 categories: ["动画"]
 section: interview
 format: interview
-tags: ["日本动画", "后现代", "动画评论"]
+tags: [动画评论, 后现代]
 participant: ["钻石", "夜深人静", "天坑"]
 translator: []
 proofreader: []

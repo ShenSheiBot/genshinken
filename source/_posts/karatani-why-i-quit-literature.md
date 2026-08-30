@@ -6,7 +6,7 @@ slug: karatani-why-i-quit-literature
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [柄谷行人, 文学批评, 跨越性批判, 想象力]
+tags: [全球化, 文学理论, 柄谷行人]
 post_author: 柄谷行人
 translator: will
 license: CC BY-NC-SA 4.0

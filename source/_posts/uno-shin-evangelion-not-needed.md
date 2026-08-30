@@ -9,7 +9,7 @@ script: hans
 license: CC BY-NC-SA 4.0
 categories: [动画]
 section: translation
-tags: [宇野常宽, 2020年代, 新世纪福音战士, 花束般的恋爱, 日本文化批评]
+tags: [宇野常宽, 新世纪福音战士]
 post_author: 宇野常宽
 translator: ["人吉尔朗"]
 proofreader: []

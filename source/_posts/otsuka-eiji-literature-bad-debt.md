@@ -6,7 +6,7 @@ slug: otsuka-eiji-literature-bad-debt
 categories: [思想与理论]
 section: translation
 format: article
-tags: [大塚英志, 群像]
+tags: [大塚英志]
 post_author: 大塚英志
 translator: ["神必天坑", "幽灵在都灵", "水色文书", "Yisensei04", "三咲町"]
 license: CC BY-NC-SA 4.0

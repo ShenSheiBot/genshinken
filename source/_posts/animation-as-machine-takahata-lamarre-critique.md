@@ -6,7 +6,7 @@ slug: animation-as-machine-takahata-lamarre-critique
 script: hans
 categories: [动画]
 section: review
-tags: [高畑勋, 辉夜姬物语, 技术哲学, 日本动画]
+tags: [技术哲学, 高畑勋, 托马斯·拉马尔]
 post_author: 屋顶现视研
 translator: []
 proofreader: []

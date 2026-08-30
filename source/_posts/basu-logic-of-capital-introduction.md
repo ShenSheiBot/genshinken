@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [马克思主义, 政治经济学, 资本论]
+tags: [马克思主义, 政治经济学]
 post_author: Deepankar Basu
 translator: 柴来人
 license: CC BY-NC-SA 4.0

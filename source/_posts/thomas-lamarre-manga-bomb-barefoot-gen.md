@@ -5,7 +5,7 @@ date: 2026-07-20
 slug: thomas-lamarre-manga-bomb-barefoot-gen
 categories: [思想与理论]
 section: translation
-tags: [漫画研究, 赤足小子, 战争, 历史记忆]
+tags: [漫画研究, 战争, 托马斯·拉马尔]
 post_author: Thomas LaMarre
 translator: 单字一兔
 excerpt: Thomas LaMarre 讨论《赤足小子》如何通过漫画线条、形式与结构，在广岛原子弹创伤的再现中合成生命力与毁灭力。

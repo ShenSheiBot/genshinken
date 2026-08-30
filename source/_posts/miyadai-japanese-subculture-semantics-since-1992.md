@@ -6,7 +6,7 @@ slug: miyadai-japanese-subculture-semantics-since-1992
 script: hans
 categories: [御宅文化]
 section: translation
-tags: [宫台真司, 日本亚文化史, 御宅研究, 世界系, 大逃杀系, 社会系统理论]
+tags: [御宅研究, 世界系]
 post_author: 宫台真司
 translator: [落語三森, 本体是包, 杰洛·齐贝林, 李抛抛]
 proofreader: 王晗

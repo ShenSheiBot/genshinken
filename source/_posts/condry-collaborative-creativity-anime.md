@@ -6,7 +6,7 @@ slug: condry-collaborative-creativity-anime
 script: hans
 categories: [动画]
 section: translation
-tags: [动画制作, 创意协作, 媒介民族志, 动画之魂, 粉丝文化]
+tags: [动画制作, 动画研究, 粉丝文化, 媒介理论, 高达]
 post_author: 伊恩·康德利
 translator: [英翻苦力bot01, "帷·幕", hirooooo, 电扇呼呼, wjk, "シャン[オルタ]", 三昧茄子, 熊猫派]
 proofreader: 熊猫派

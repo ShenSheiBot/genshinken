@@ -6,7 +6,7 @@ slug: genocidal-organ-crime-and-punishment
 script: hans
 categories: [动画]
 section: review
-tags: [伊藤计划, 虐杀器官, 主体性, 自由意志, 现象学]
+tags: [主体性, 自由意志]
 post_author: mi-gang
 excerpt: 以克拉维斯・谢泼德寻找罪责与惩罚的历程为线索，讨论《虐杀器官》中的主体性、自由意志、赦免以及现代世界的罪感结构。
 featured_order: 0

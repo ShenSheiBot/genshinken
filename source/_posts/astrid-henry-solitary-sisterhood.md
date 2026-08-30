@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [女性主义, 第三波女性主义, 女性主义运动]
+tags: [女性主义]
 post_author: Astrid Henry
 translator: Snoper卓尔
 license: CC BY-NC-SA 4.0

@@ -9,7 +9,7 @@ script: hans
 license: CC BY-NC-SA 4.0
 categories: [御宅文化]
 section: translation
-tags: [宇野常宽, 零零年代, 世界系, 决断主义, 后现代]
+tags: [世界系, 后现代, 政治哲学, 宇野常宽]
 post_author: 宇野常宽
 translator: [Phaedo, 柴来人]
 proofreader: [人吉尔朗]

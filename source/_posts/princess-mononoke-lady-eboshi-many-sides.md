@@ -6,7 +6,7 @@ slug: princess-mononoke-lady-eboshi-many-sides
 script: hans
 categories: [动画]
 section: review
-tags: [幽灵公主, 宫崎骏, 性别研究, 女性主义, 人类中心主义, 生态批评]
+tags: [女性主义, 性别研究, 生态批评, 宫崎骏]
 post_author: 屋顶现视研
 excerpt: 从弱势者关怀、人类中心主义与“雌雄同体”的理想性格出发，讨论《幽灵公主》中黑帽大人的复杂面貌及人与自然共存的出路。
 featured_order: 0

@@ -6,7 +6,7 @@ slug: revue-starlight-eternal-recurrence-desire
 script: hans
 categories: [动画]
 section: review
-tags: [少女☆歌剧 Revue Starlight, 尼采, 德勒兹, 永恒轮回, 欲望]
+tags: [欲望, 德勒兹, 少女☆歌剧 Revue Starlight]
 post_author: hephaestus
 excerpt: 以尼采的永恒轮回、日神与酒神，以及德勒兹的欲望生产观念，分析大场奈奈的重演、绝望与转变。
 featured_order: 0

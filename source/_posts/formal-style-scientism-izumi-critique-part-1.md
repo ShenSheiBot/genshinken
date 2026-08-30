@@ -8,7 +8,7 @@ slug: formal-style-scientism-izumi-critique-part-1
 script: hans
 categories: [漫画]
 section: review
-tags: [漫画研究, 形式风格, 泉信行, 魔法老师, 构图]
+tags: [动画演出, 漫画研究]
 post_author: 鲜奶饼干
 excerpt: 鲜奶饼干以泉信行《漫画视线力学基础》为反例，逐格复原《魔法老师》的分镜序列，批评选择性遗漏、单一归因与不可证伪的形式风格研究。
 featured_order: 0

@@ -6,7 +6,7 @@ slug: fgo-lostbelt-4-black-final-human
 script: hans
 categories: [游戏]
 section: review
-tags: [Fate/Grand Order, 阿甘本, 人类学机器, 反乌托邦, 意识形态]
+tags: [意识形态]
 post_author: ryougi-shiki-lost
 excerpt: 从印度异闻带的轮回与排除机制出发，借阿甘本的人类学机器讨论阿周那、吉娜可与迦尔纳所呈现的反乌托邦政治。
 featured_order: 0

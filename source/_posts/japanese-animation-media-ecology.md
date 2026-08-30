@@ -6,7 +6,7 @@ slug: japanese-animation-media-ecology
 categories: [动画]
 section: interview
 format: interview
-tags: ["日本动画", "媒介生态", "京都学派"]
+tags: [跨媒介, 媒介理论]
 interviewee: ["马克·斯坦伯格", "亚历山大·扎尔滕"]
 interviewer: "门林岳史"
 translator: "冰格"

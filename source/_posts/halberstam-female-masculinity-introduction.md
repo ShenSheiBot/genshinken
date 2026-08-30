@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [女性主义, 男性气质, 性别研究]
+tags: [女性主义, 性别研究, 男性气质]
 post_author: Jack Halberstam
 translator: 暗黑寒冰领主＆免费版DeepL
 proofreader: 柴来人

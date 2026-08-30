@@ -6,7 +6,7 @@ slug: hyouka-character-expression-adolescent-daydreaming
 script: hans
 categories: [动画]
 section: translation
-tags: [冰菓, 京都动画, 武本康弘, 动画演出, 角色研究, 幻想场景]
+tags: [动画演出, 角色研究, 京都动画]
 post_author: kViN
 translator: [我有越甲三千, 静希]
 excerpt: 梳理《冰菓》各集以幻想、隐喻、色彩和动态图形进入人物主观世界的演出，讨论这些形式如何表现角色的内心活动。

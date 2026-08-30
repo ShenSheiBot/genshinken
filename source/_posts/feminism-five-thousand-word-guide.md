@@ -5,7 +5,7 @@ date: 2025-03-08
 slug: feminism-five-thousand-word-guide
 categories: ["思想与理论"]
 section: translation
-tags: ["女性主义", "性别研究"]
+tags: [女性主义, 性别研究, 交叉性]
 post_author: "茶话会班委会编译"
 translator: []
 proofreader: []

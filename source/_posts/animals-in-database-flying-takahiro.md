@@ -5,7 +5,7 @@ date: 2025-05-09
 slug: animals-in-database-flying-takahiro
 categories: ["动画"]
 section: translation
-tags: ["科幻文学", "数字生命", "媒介理论"]
+tags: [技术哲学, 媒介理论]
 post_author: "布莱恩·怀特"
 translator: ["侑"]
 proofreader: ["郁远集", "侑"]

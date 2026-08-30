@@ -7,7 +7,7 @@ slug: rags-drum-2021-pre-festival-results
 script: hans
 categories: [屋顶社群]
 section: community
-tags: [拾荒战略, 征文, 社群活动]
+tags: []
 post_author: 屋顶现视研
 excerpt: 屋顶现视研公布拾荒战略Rags Drum 2021前夜祭两条赛道的入选稿件、稿酬及评审和海报制作致谢。
 citation:

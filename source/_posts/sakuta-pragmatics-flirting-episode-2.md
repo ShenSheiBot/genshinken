@@ -6,7 +6,7 @@ slug: sakuta-pragmatics-flirting-episode-2
 script: hans
 categories: [动画]
 section: essay
-tags: [语用学, 青春猪头少年, 动画评论]
+tags: [动画评论, 语言哲学]
 post_author: 篱落呼灯
 excerpt: 从合作原则、礼貌原则与会话含义入手，分析咲太如何在《青春猪头少年不会梦见兔女郎学姐》第二集中安抚麻衣的不安。
 citation:

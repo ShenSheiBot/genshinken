@@ -6,7 +6,7 @@ slug: why-praise-depth-in-animation-model
 script: hans
 categories: [思想与理论]
 section: essay
-tags: [动画评论, 深刻性, 科学哲学, 科学模型, 本体论, 评论方法]
+tags: [动画评论, 本体论, 科学哲学]
 post_author: Austoria
 excerpt: 从动画评论中的“深刻性疑难”出发，本文借助科学模型的结构、表征与说明功能，论证动画作品何以能够负载独特洞见。
 featured_order: 0

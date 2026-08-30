@@ -6,7 +6,7 @@ slug: yesterday-wo-utatte-anime-manga-adaptation
 script: hans
 categories: [动画]
 section: review
-tags: [昨日之歌, 动画改编, 动画演出, 漫画研究]
+tags: [动画制作, 动画演出, 漫画研究, 跨媒介]
 post_author: 鲜奶饼干
 excerpt: 对照《昨日之歌》动画第一集与冬目景漫画原作，分析人物设计、时代背景、剧本合并、镜头调度和环境光线如何把原作的颓废与间离改写为青春、明亮而富于能动性的观看体验。
 featured_order: 0

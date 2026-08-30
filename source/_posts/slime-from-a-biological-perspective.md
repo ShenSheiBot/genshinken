@@ -6,7 +6,7 @@ slug: slime-from-a-biological-perspective
 script: hans
 categories: [动画]
 section: review
-tags: [关于我转生变成史莱姆这档事, 史莱姆, 刺胞动物, 黏菌]
+tags: []
 post_author: 言几时
 excerpt: 从修格斯、《龙与地下城》和《勇者斗恶龙》梳理史莱姆形象的流变，再以刺胞动物与黏菌解释其生物学设定。
 featured_order: 0

@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [女性劳工, 全球化, 跨国公司, 血汗工厂]
+tags: [动画制作, 全球化, 劳动]
 post_author: [Barbara Ehrenreich, Annette Fuentes]
 translator: Apeiron
 license: CC BY-NC-SA 4.0

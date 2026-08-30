@@ -6,7 +6,7 @@ slug: parallax-overlooked-sora-no-method
 script: hans
 categories: [动画]
 section: review
-tags: [天体的秩序, 视差, 齐泽克, 拉康, 黑格尔]
+tags: [拉康, 齐泽克, 黑格尔]
 post_author: Ludwigsama
 proofreader: 子厚
 editor: 伦勃朗

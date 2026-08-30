@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [女性主义, 女同性恋, 女性文学]
+tags: [女性主义, 百合, 酷儿理论]
 post_author: Gertrude Stein
 translator: 伞泽直美
 license: CC BY-NC-SA 4.0

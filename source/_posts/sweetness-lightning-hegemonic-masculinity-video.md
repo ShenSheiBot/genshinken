@@ -6,7 +6,7 @@ slug: sweetness-lightning-hegemonic-masculinity-video
 script: hans
 categories: [动画]
 section: translation
-tags: [天真与闪电, 男性气质, 家庭, 动画评论]
+tags: [动画评论, 男性气质]
 post_author: pause and select
 translator: 群青七号楼
 excerpt: Pause and Select 从《天真与闪电》的父职与家庭叙事出发，讨论霸权男性气质及其反调；群青七号楼志愿翻译。

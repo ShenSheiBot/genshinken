@@ -7,7 +7,7 @@ slug: su-hari-gender-perspective-part-1
 script: hans
 categories: [游戏]
 section: review
-tags: [素晴日, 性别研究, 女性主义, 精神分析, 物化, 百合]
+tags: [女性主义, 性别研究, 精神分析, 百合, 物化]
 post_author: 钟子默
 proofreader: 子厚
 excerpt: 钟子默以精神分析、酷儿理论和性别社会学为线索，对《素晴日》人物、欲望与权力关系所作的三篇系列评论。

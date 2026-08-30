@@ -6,7 +6,7 @@ slug: fiction-truth-tension-seeking-realism
 script: hans
 categories: [思想与理论]
 section: essay
-tags: [虚构主义, 逻辑学, 塔尔斯基, 可能世界, 自由逻辑, 超赋值语义学]
+tags: [逻辑学, 语言哲学, 游戏研究]
 post_author: 乌有之人
 excerpt: 从阿虚关于虚构与真实感的名句出发，借助真谓词层级、摹状词、可能世界、自由逻辑与超赋值语义学，辨析虚构世界、对象与真值之间的关系。
 featured_order: 0

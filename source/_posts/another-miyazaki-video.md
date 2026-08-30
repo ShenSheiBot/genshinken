@@ -6,7 +6,7 @@ slug: another-miyazaki-video
 script: hans
 categories: [动画]
 section: translation
-tags: [宫崎骏, 萌, 御宅研究, 动画评论]
+tags: [动画评论, 角色研究, 御宅研究, 宫崎骏]
 post_author: pause and select
 translator: [唯一指定真实August_Rush, 杰洛·齐贝林, snoper卓尔, fahh]
 excerpt: Pause and Select 与 Patrick W. Galbraith 讨论宫崎骏、萌与御宅文化；群青七号楼志愿翻译。

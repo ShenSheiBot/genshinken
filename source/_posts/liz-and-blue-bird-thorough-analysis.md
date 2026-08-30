@@ -6,7 +6,7 @@ slug: liz-and-blue-bird-thorough-analysis
 script: hans
 categories: [动画]
 section: translation
-tags: [利兹与青鸟, 山田尚子, 吹响！上低音号, 影像, 少女关系]
+tags: [百合, 少女文化, 山田尚子, 利兹与青鸟, 吹响！上低音号]
 post_author: 富崎 学
 translator: [远月, 浅神, T君, 大平猫, 唯一指定真实August_Rush, 三翼菌]
 proofreader: Leontopodium Edelweiss

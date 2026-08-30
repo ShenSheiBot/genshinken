@@ -6,7 +6,7 @@ slug: diaosi-culture-logic-of-counterattack
 script: hans
 categories: [思想与理论]
 section: essay
-tags: [吊丝文化, 犬儒主义, 阿Q, 逆袭, 物化]
+tags: [物化]
 post_author: 实在狗子
 excerpt: 以阿Q与犬儒主义为参照，分析吊丝文化如何借自我物化、反讽距离和“逆袭”想象，把现实失败转换为一种永不落败的特权位置。
 featured_order: 0

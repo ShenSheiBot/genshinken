@@ -6,7 +6,7 @@ slug: sep-rudolf-carnap-supplement-c-inductive-logic
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [鲁道夫·卡尔纳普, 科学哲学, 逻辑学]
+tags: [科学哲学, 逻辑学, 鲁道夫·卡尔纳普]
 post_author: [Hannes Leitgeb, André Carus]
 translator: Meowth
 excerpt: 《斯坦福哲学百科》“鲁道夫·卡尔纳普”词条补充词条C“归纳逻辑”全篇中译，讨论确认与概率、对称性和不变性、归纳学习及卡尔纳普方案所受的批评。

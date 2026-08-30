@@ -7,7 +7,7 @@ script: hans
 license: CC BY-NC-SA 4.0
 categories: [思想与理论]
 section: translation
-tags: [齐泽克, 辩证唯物主义, 马克思主义, 精神分析]
+tags: [精神分析, 拉康, 马克思主义, 齐泽克]
 post_author: Adrian Johnston
 translator: [snoper卓尔]
 proofreader: []

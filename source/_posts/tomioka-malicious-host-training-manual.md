@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [日本社会, 性别, 消费文化]
+tags: [性别研究, 消费文化]
 post_author: 富岡悠希
 translator: 人吉尔郎
 license: CC BY-NC-SA 4.0

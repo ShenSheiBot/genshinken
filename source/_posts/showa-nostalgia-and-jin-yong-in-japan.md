@@ -6,7 +6,7 @@ slug: showa-nostalgia-and-jin-yong-in-japan
 script: hans
 categories: [思想与理论]
 section: essay
-tags: [昭和怀旧, 日本文化, 金庸, 武侠小说, 轻小说, 零零年代]
+tags: [轻小说, 宇野常宽]
 post_author: 实在狗子
 proofreader: 张无忌
 excerpt: 两则彼此独立的文化问答：一则从《永远的三丁目的夕阳》与宇野常宽的批评解释昭和怀旧，另一则梳理金庸小说在日本的出版、接受及其与轻小说文化的交错。

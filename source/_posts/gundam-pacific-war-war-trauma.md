@@ -6,7 +6,7 @@ slug: gundam-pacific-war-war-trauma
 categories: [动画]
 section: translation
 format: article
-tags: [高达, 战争表象, 创伤]
+tags: [战争, 高达]
 post_author: 小岛伸之
 translator: 中割Production
 license: CC BY-NC-SA 4.0

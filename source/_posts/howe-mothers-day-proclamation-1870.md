@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [女性主义, 反战, 和平运动]
+tags: [女性主义, 战争]
 post_author: 朱莉娅·沃德·豪
 translator: Fanger
 license: CC BY-NC-SA 4.0

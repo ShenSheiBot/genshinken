@@ -7,7 +7,7 @@ slug: meta-animation-criticism-expression
 script: hans
 categories: [御宅文化]
 section: essay
-tags: [动画评论, 元评论, 冰菓, 隐喻, 崇高, 偶像文化, Vtuber, 深刻性, Macross7]
+tags: [动画评论, 偶像文化]
 post_author: Austoria
 excerpt: Austoria 对动画评论表述本身的系列研究，从意义传递、隐喻与自然主义，延伸至崇高、私人体验，以及动画“深刻性”的多重面貌。
 featured_order: 0

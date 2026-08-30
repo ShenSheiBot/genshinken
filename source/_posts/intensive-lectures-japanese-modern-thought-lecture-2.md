@@ -8,7 +8,7 @@ slug: intensive-lectures-japanese-modern-thought-lecture-2
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [日本思想史, 现代思想, 新左翼, 后现代, 批评空间]
+tags: [后现代, 日本思想史, 现代性]
 post_author: 仲正昌樹
 translator: ["川井ルナ", "杉原 音", "志賀四季", "柴来人", "Boki", "静希草十郎", "人吉尔朗", "兔引", "Va-11 Hall-A"]
 proofreader: ["柴来人", "静希草十郎", "人吉尔朗", "恐怖如斯"]

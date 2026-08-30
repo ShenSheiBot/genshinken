@@ -6,7 +6,7 @@ slug: we-are-dancing-empty-throne-after-humanity
 script: hans
 categories: [动画]
 section: review
-tags: [玲音, 凝视, 米歇尔·福柯, 信息社会, 技术哲学, 本体论]
+tags: [本体论, 凝视, 技术哲学, 媒介理论, 米歇尔·福柯]
 post_author: 芳草
 excerpt: 从玲音的凝视、连线世界与信息统一体出发，讨论人在技术中被符号化之后，主体、隐秘、神灵与爱的对象如何围绕空无的王位重新排列。
 featured_order: 0

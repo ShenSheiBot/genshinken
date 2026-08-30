@@ -6,7 +6,7 @@ slug: sakuga-mysteries-identifying-animators
 script: hans
 categories: [动画]
 section: translation
-tags: [作画分析, 动画制作, 原画师]
+tags: [动画制作, 作画分析]
 post_author: kViN
 translator: 石立太一
 excerpt: kViN从绘柄、张数分配、运动特点和制作人员表谈辨认原画师的方法，也提醒作画爱好者不要让“认人”取代对动画整体的理解。

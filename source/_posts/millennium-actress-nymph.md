@@ -6,7 +6,7 @@ slug: millennium-actress-nymph
 script: hans
 categories: [动画]
 section: review
-tags: [千年女优, 今敏, 影像, 记忆, 宁芙, 阿甘本, 日本电影]
+tags: [今敏]
 post_author: Jack Cade
 proofreader: 伦勃朗
 excerpt: 从《千年女优》的剧中剧与回忆交织出发，讨论影像如何成为通向过去的记忆技术，以及今敏对日本电影史的想象性回应。

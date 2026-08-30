@@ -6,7 +6,7 @@ slug: karatani-inquiry-ii-proper-names-guide
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [探究Ⅱ, 柄谷行人, 专名]
+tags: [语言哲学, 柄谷行人]
 post_author: 屋顶现视研
 excerpt: 汇集柄谷行人《探究Ⅱ》第一部五章，并以詹姆逊、东浩纪、日热克和柄谷行人的引文勾勒这部著作及其批评位置。
 featured_order: 0

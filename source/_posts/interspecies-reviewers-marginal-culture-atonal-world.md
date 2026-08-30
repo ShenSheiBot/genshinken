@@ -6,7 +6,7 @@ slug: interspecies-reviewers-marginal-culture-atonal-world
 script: hans
 categories: [动画]
 section: review
-tags: [异种族风俗娘评鉴指南, 多元文化主义, 后现代, 物化]
+tags: [后现代, 物化]
 post_author: 治部少
 excerpt: 以《异种族风俗娘评鉴指南》为对象，从风俗店、边缘文化与身份政治切入，批评多元文化主义式“容忍”，并讨论无调世界中的性享乐、爱情与真理。
 featured_order: 0

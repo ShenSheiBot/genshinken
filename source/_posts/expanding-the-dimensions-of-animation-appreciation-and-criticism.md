@@ -7,7 +7,7 @@ slug: expanding-the-dimensions-of-animation-appreciation-and-criticism
 script: hans
 categories: [动画]
 section: essay
-tags: [动画评论, 动画制作, 美术史, 电影理论, 日本动画史, 评论方法]
+tags: [动画评论, 动画制作, 日本动画史, 电影理论]
 post_author: 屋顶现视研
 excerpt: 从动画制作、美术与艺术哲学、哲学社科、电影理论、日本动画史及评论实践六个方向，讨论如何拓展动画鉴赏与评论的维度。
 featured_order: 0

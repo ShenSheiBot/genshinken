@@ -6,7 +6,7 @@ slug: deca-dence-project-history-production-notes
 script: hans
 categories: [动画]
 section: translation
-tags: [没落要塞, 立川让, NUT, 作画分析]
+tags: [作画分析]
 post_author: kViN
 translator: [Phaedrus, 艳光, 十文字]
 proofreader: 加速器

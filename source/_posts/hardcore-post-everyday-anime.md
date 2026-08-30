@@ -5,7 +5,7 @@ date: 2025-05-08
 slug: hardcore-post-everyday-anime
 categories: ["动画"]
 section: translation
-tags: ["日常系动画", "后日常系动画", "动画评论"]
+tags: [动画评论, 日常系]
 post_author: "てらまっと"
 translator: ["中割Production"]
 proofreader: ["中割Production"]

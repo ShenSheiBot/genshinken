@@ -6,7 +6,7 @@ slug: marc-steinberg-introduction-otsuka-world-and-variation
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [大塚英志, 物语消费, 御宅研究, 媒介融合]
+tags: [御宅研究, 消费文化, 跨媒介, 大塚英志]
 post_author: Marc Steinberg
 translator: celani
 excerpt: Marc Steinberg 为大塚英志《世界与变异：叙事的再生产与消费》英译所写的导读，梳理物语消费论、媒介融合、御宅文化与粉丝生产之间的思想联系。

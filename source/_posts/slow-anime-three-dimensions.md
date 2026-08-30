@@ -8,7 +8,7 @@ slug: slow-anime-three-dimensions
 script: hans
 categories: [动画]
 section: review
-tags: [缓慢动画, 动画美学, 押井守, 机动警察, 场面调度, 时间－影像, 长镜头]
+tags: [动画演出, 动画研究, 押井守, 机动警察]
 post_author: 鲜奶饼干
 proofreader: 伦勃朗
 excerpt: 从空间写实、爱与超验、时间－影像三个维度出发，分析押井守、高桥直人与川面真也如何借助静止、长镜头和场面调度形成独特的缓慢动画美学。

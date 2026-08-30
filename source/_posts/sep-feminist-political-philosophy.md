@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [女性主义, 政治哲学, 自由主义, 交叉性]
+tags: [女性主义, 交叉性, 政治哲学]
 post_author: Noëlle McAfee、Katie B. Howard
 translator: J.C.
 proofreader: 柴来人

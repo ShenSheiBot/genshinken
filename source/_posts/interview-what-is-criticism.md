@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: interview
 format: interview
-tags: [文化批评, 意识形态, 作者之死, 东浩纪, 德里达, 酷日本]
+tags: [意识形态, 语言哲学, 文化批评, 后结构主义, 文学理论, 东方主义, 东浩纪]
 interviewee: 实在狗子
 interviewer: 非实在狗子
 excerpt: 实在狗子与非实在狗子围绕“什么是批评”展开对谈，从理论介入生活、原创幻觉与作者中心主义谈到面向他者的批评和二次元文化研究。

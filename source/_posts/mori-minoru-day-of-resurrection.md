@@ -5,7 +5,7 @@ date: 2026-08-02
 slug: mori-minoru-day-of-resurrection
 categories: [漫画]
 section: translation
-tags: [漫画研究, 日本漫画史, 小松左京, 科幻文学]
+tags: [日本动画史, 漫画研究]
 post_author: "巽孝之"
 translator: "侑"
 proofreader: "村上侑"

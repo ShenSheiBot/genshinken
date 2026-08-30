@@ -6,7 +6,7 @@ slug: zombieland-saga-can-idols-become-legends
 script: hans
 categories: [动画]
 section: review
-tags: [佐贺偶像是传奇, 偶像文化, 文化工业, 荒诞]
+tags: [偶像文化, 文化工业]
 post_author: hephaestus
 excerpt: 以《佐贺偶像是传奇》为引线，回顾日本偶像形态的变化，并讨论大众偶像、英雄崇拜、荒诞与文化工业之间的关系。
 featured_order: 0

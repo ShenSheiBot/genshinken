@@ -6,7 +6,7 @@ slug: gundam-plural-grand-narratives-creative-forms
 script: hans
 categories: [动画]
 section: essay
-tags: [高达, 宏大叙事, 伪史, 世界观, 多重宇宙, 动物化的后现代]
+tags: [御宅研究, 后现代, 高达]
 post_author: 李抛抛
 excerpt: 以高达系列的外传、设定集、游戏与平行世界为例，讨论虚构历史如何通过多种创作形式形成多元的大叙事。
 featured_order: 0

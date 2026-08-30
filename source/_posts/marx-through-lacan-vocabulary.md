@@ -8,7 +8,7 @@ slug: marx-through-lacan-vocabulary
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [马克思主义, 精神分析, 拉康]
+tags: [精神分析, 拉康, 马克思主义]
 post_author: [Carlos Andrés Umaña González, Agustina Saubidet]
 translator: [柴来人, 烦一句]
 proofreader: [fʷat̚³⁵!, 球团]

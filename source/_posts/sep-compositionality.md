@@ -6,7 +6,7 @@ slug: sep-compositionality
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [组合性原则, 形式语义学, 语言哲学]
+tags: [逻辑学, 语言哲学]
 post_author: Zoltán Gendler Szabó
 translator: [cjy, zz, 折口]
 proofreader: cjy

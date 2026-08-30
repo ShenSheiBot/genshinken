@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [百合, 少女文化, 日本社会史]
+tags: [百合, 少女文化]
 post_author: レニ
 translator: [New Bing, 天坑]
 proofreader: [qfwfq, 静希]

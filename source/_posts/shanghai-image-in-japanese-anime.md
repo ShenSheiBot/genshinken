@@ -6,7 +6,7 @@ slug: shanghai-image-in-japanese-anime
 script: hans
 categories: [动画]
 section: essay
-tags: [上海, 都市·空间, 日本动画, 近代文学, 世界主义, 东方主义]
+tags: [全球化, 东方主义]
 post_author: T君
 excerpt: T君从日本动漫与近现代文学中的上海形象出发，梳理“魔都”想象在世界主义、殖民秩序与日本现代化历程中的变化。
 citation:

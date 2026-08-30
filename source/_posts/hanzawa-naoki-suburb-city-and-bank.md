@@ -6,7 +6,7 @@ slug: hanzawa-naoki-suburb-city-and-bank
 script: hans
 categories: [电影与影视]
 section: review
-tags: [半泽直树, 日剧, 日本社会, 昭和怀旧]
+tags: [现代性, 政治经济学]
 post_author: 实在狗子
 excerpt: 从郊区与城市、家庭与制度的矛盾切入，分析半泽直树如何同时承载银行资本的运转逻辑与日本社会的昭和怀旧愿望。
 citation:

@@ -6,7 +6,7 @@ slug: saito-tamaki-and-psychoanalysis
 script: hans
 categories: [动画]
 section: essay
-tags: [斋藤环, 战斗美少女, 御宅研究, 精神分析, 拉康, 实在界]
+tags: [精神分析, 拉康, 御宅研究, 少女文化, 斋藤环]
 post_author: Ludwigsama
 excerpt: 从“歇斯底里的菲勒斯少女”出发，重审斋藤环关于战斗美少女、御宅族、虚构自治性与享乐的理论，并从拉康派精神分析内部追问其限度。
 citation:

@@ -7,7 +7,7 @@ slug: stanley-parable-video-games
 script: hans
 categories: [游戏]
 section: review
-tags: [史丹利的寓言, 游戏研究, 游戏叙事, 拉康, 自由意志]
+tags: [拉康, 游戏研究, 自由意志]
 post_author: xin-ba-bu-chi-su
 excerpt: 从元游戏、旁白与玩家的权力关系、荒诞主义和镜像认同出发，讨论《史丹利的寓言》如何迫使玩家重新理解选择、自由与游玩。
 featured_order: 0

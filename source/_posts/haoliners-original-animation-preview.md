@@ -6,7 +6,7 @@ slug: haoliners-original-animation-preview
 script: hans
 categories: [动画]
 section: review
-tags: [国产动画, 绘梦动画, 竖屏动画, 国创发布会]
+tags: []
 post_author: 篱落呼灯
 excerpt: 从竖屏构图的空间潜力、游戏规则的现实隐喻与科幻视觉风格出发，前瞻绘梦在国创发布会上公开的四部原创动画。
 featured_order: 0

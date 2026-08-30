@@ -6,7 +6,7 @@ slug: ex-lovers-and-ntr-affect
 script: hans
 categories: [御宅文化]
 section: essay
-tags: [NTR, 异度之刃2, 偶像文化, 恋爱叙事]
+tags: [偶像文化]
 post_author: Austoria
 excerpt: 从前任话题切入，串联游戏、动画、偶像文化、情歌与恋爱喜剧，讨论纯爱想象、双向NTR及忠诚与背叛之间的审美张力。
 featured_order: 0

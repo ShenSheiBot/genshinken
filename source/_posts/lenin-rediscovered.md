@@ -7,7 +7,7 @@ slug: lenin-rediscovered
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [列宁, 马克思主义, 社会民主主义]
+tags: [马克思主义]
 post_author: Lars T. Lih
 translator: Jack Cade
 proofreader: [秦明, 赫列斯塔科夫, 山神庙客卿Vall, 赤地-田蝉, 好得很, 五光十色的垃圾场, 鹰之都芳草, Ludwigsama]

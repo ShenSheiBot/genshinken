@@ -7,7 +7,7 @@ script: hans
 categories: [动画]
 section: translation
 format: article
-tags: [新海诚, 铃芽之旅, 日本动画, 灾难叙事, 宇野常宽]
+tags: [灾难想象, 新海诚, 宇野常宽]
 post_author: 宇野常宽
 translator: 伞泽直美
 proofreader: 柴来人

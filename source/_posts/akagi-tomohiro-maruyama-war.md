@@ -6,7 +6,7 @@ slug: akagi-tomohiro-maruyama-war
 categories: [思想与理论]
 section: translation
 format: article
-tags: [丸山真男, 战争, 后泡沫世代]
+tags: [战争]
 post_author: 赤木智弘
 translator: 幽灵在都灵
 proofreader: 幽灵在都灵

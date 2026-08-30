@@ -6,7 +6,7 @@ slug: sound-euphonium-performance-scenes-making
 script: hans
 categories: [动画]
 section: translation
-tags: [吹响！上低音号, 京都动画, 动画制作]
+tags: [动画制作, 京都动画, 吹响！上低音号]
 post_author: kViN
 translator: 唯一指定真实August_Rush
 excerpt: kViN结合《吹响！上低音号》设定资料，分解演奏场景从曲目选择、录音和参考律表，到分镜、Layout、原画、背景、上色与合成的制作流程。

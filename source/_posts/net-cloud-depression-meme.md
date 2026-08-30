@@ -6,7 +6,7 @@ slug: net-cloud-depression-meme
 script: hans
 categories: [思想与理论]
 section: essay
-tags: [网抑云, 抑郁症, 网络文化]
+tags: [粉丝文化]
 post_author: 实在狗子
 excerpt: 从桑塔格的疾病隐喻出发，讨论抑郁如何在网络表达中成为社会意义、情绪经验与身体状态相互转化的媒介，并追问嘲讽“网抑云”所遮蔽的社会结构。
 citation:

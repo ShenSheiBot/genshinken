@@ -8,7 +8,7 @@ slug: feminist-thought-fifth-edition
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [女性主义, 自由主义女性主义, 存在主义, 后结构主义]
+tags: [女性主义, 后结构主义]
 post_author: [Rosemarie Tong, Tina Fernandes Botts]
 translator: [柴来人, Snoper卓尔]
 proofreader: 柴来人

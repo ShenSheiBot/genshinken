@@ -6,7 +6,7 @@ slug: wasteful-days-smile-through-meaninglessness
 script: hans
 categories: [动画]
 section: review
-tags: [女高中生的虚度日常, 喜剧, 日常系, 青春, 角色研究]
+tags: [角色研究, 日常系]
 post_author: Ako的红
 excerpt: 从笑点的运行、现实感的介入、角色属性的运用和青春时间的流动四个层面，回望《女高中生的虚度日常》动画如何让“虚度”之中的欢笑成为前进的力量。
 featured_order: 0

@@ -6,7 +6,7 @@ slug: penguin-highway-aoyama-inner-world
 script: hans
 categories: [动画]
 section: review
-tags: [企鹅公路, 森见登美彦, 拉康, 精神分析, 实在界, 对象a]
+tags: [精神分析, 拉康, 森见登美彦]
 post_author: pendulum man
 proofreader: 子厚
 editor: 伦勃朗

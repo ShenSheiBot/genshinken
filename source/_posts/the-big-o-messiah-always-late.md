@@ -6,7 +6,7 @@ slug: the-big-o-messiah-always-late
 script: hans
 categories: [动画]
 section: review
-tags: [The Big-O, 机器人动画, 弥赛亚, 神圣暴力]
+tags: [政治哲学]
 post_author: 斑鸠
 excerpt: 斑鸠从巨大机器人作为肉身、怪兽与神圣暴力、失忆城市的历史时间出发，讨论《The Big-O》如何让弥赛亚救赎不断迟到。
 citation:

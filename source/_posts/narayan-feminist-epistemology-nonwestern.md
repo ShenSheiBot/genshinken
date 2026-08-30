@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [女性主义, 女性主义认识论, 后殖民主义]
+tags: [女性主义, 后殖民主义]
 post_author: Uma Narayan
 translator: 许阳
 proofreader: 静希

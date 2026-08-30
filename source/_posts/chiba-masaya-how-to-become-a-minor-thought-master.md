@@ -6,7 +6,7 @@ slug: chiba-masaya-how-to-become-a-minor-thought-master
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [千叶雅也, 现代思想, 后结构主义, 差异哲学, 哲学方法]
+tags: [日本思想史, 现代性, 后结构主义]
 post_author: 千叶雅也
 translator: will
 excerpt: 千叶雅也把法兰西现代思想的创新方式归纳为他者性、先验性、激进化与反常识四项原则，并以马拉布和梅亚苏说明后－后结构主义的“逆向发明”。

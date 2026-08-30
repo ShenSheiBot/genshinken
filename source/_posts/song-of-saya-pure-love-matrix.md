@@ -6,7 +6,7 @@ slug: song-of-saya-pure-love-matrix
 script: hans
 categories: [游戏]
 section: review
-tags: [沙耶之歌, 视觉小说, 游戏叙事, 纯爱]
+tags: [游戏研究, 视觉小说]
 post_author: 非木
 excerpt: 非木从《沙耶之歌》开篇给出的角色关系出发，以完全图和纯爱逻辑为框架，推演视觉小说三个结局的结构位置。
 citation:

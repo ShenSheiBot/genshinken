@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [女性主义, 女同性恋, 激进女性主义]
+tags: [女性主义, 百合, 酷儿理论]
 post_author: Radicalesbians
 translator: 昭昭
 proofreader: 静希

@@ -7,7 +7,7 @@ script: hans
 categories: [电影与影视]
 section: interview
 format: interview
-tags: [滨口龙介, 莲实重彦, 夜以继日, 电影理论, 表演, 三浦哲哉]
+tags: [电影理论, 滨口龙介]
 participant: [滨口龙介, 莲实重彦, 三浦哲哉]
 translator: [一条, 静希]
 excerpt: 滨口龙介与莲实重彦围绕《夜以继日》的创作、表演、摄影与剪辑展开长篇对谈，三浦哲哉补充追问其中的电影观。

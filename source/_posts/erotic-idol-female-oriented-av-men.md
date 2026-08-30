@@ -5,7 +5,7 @@ date: 2025-06-09
 slug: erotic-idol-female-oriented-av-men
 categories: ["思想与理论"]
 section: translation
-tags: ["偶像文化", "性别研究", "情色文化"]
+tags: [性别研究, 偶像文化, 酷儿理论]
 post_author: "服部恵典"
 translator: ["DeepSeek"]
 proofreader: ["生命体征维持茶话会"]

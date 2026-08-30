@@ -32,7 +32,7 @@
       "publishedAt": "2025-06-09",
       "authors": ["Deborah Cameron"],
       "translators": ["AI + 生命体征维持茶话会"],
-      "tags": ["女性主义", "性政治", "性别研究"]
+      "tags": ["女性主义", "性别研究", "酷儿理论"]
     },
     {
       "id": "work",
@@ -43,7 +43,7 @@
       "publishedAt": "2025-05-12",
       "authors": ["Deborah Cameron"],
       "translators": ["春埼美空"],
-      "tags": ["女性主义", "性别劳动", "照护劳动"]
+      "tags": ["女性主义", "性别研究", "劳动"]
     },
     {
       "id": "domination",
@@ -54,7 +54,7 @@
       "publishedAt": "2023-11-22",
       "authors": ["Deborah Cameron"],
       "translators": ["春埼美空"],
-      "tags": ["女性主义", "父权制", "性别"]
+      "tags": ["女性主义", "性别研究", "父权制"]
     },
     {
       "id": "rights",
@@ -65,7 +65,7 @@
       "publishedAt": "2023-11-25",
       "authors": ["Deborah Cameron"],
       "translators": ["春埼美空"],
-      "tags": ["女性主义", "人权", "性别"]
+      "tags": ["女性主义", "性别研究", "政治哲学"]
     }
   ]
 }

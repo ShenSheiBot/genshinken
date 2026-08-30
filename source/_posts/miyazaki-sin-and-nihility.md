@@ -8,7 +8,7 @@ slug: miyazaki-sin-and-nihility
 script: hans
 categories: [动画]
 section: essay
-tags: [宫崎骏, 风之谷, 动画研究]
+tags: [动画研究, 宫崎骏]
 post_author: 窗子
 excerpt: 以《风之谷》为引线，贯穿《幽灵公主》《红猪》《哈尔的移动城堡》与《起风了》，追索宫崎骏作品中罪恶、自然、爱情和虚无的纠缠。
 citation:

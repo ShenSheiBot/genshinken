@@ -8,10 +8,7 @@ slug: romero-monsters-zombie-image-fallen-other
 script: hans
 categories: [电影与影视]
 section: essay
-tags:
-  - 僵尸
-  - 后启示录
-  - 乔治·A·罗梅罗
+tags: [灾难想象]
 post_author:
   - 哲哥
 excerpt: 从海地巫术、奴役劳动与现代电影的形象流变出发，讨论罗梅罗之后的僵尸如何成为后启示录叙事中的堕落他者，并延伸至电子游戏中的怪物经验。

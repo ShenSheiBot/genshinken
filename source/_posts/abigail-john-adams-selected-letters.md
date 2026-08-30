@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [女性主义, 女性主义史, 美国革命]
+tags: [女性主义]
 post_author: [Abigail Adams, John Adams]
 translator: 伞泽直美
 license: CC BY-NC-SA 4.0

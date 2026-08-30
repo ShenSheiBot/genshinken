@@ -8,10 +8,7 @@ slug: prey-morgan-yu-posthuman-body-construction
 script: hans
 categories: [游戏]
 section: review
-tags:
-  - 掠食
-  - 后人类
-  - 技术哲学
+tags: [身体, 技术哲学]
 post_author:
   - ilan
 excerpt: 以《掠食》的神经调整仪与摩根·余为中心，结合身体技术、具身性和离身性理论，分析游戏如何构建后人类身体。

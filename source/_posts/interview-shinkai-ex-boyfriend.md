@@ -5,7 +5,7 @@ date: 2024-12-30
 slug: interview-shinkai-ex-boyfriend
 categories: ["动画"]
 section: interview
-tags: [新海诚, 恋爱关系]
+tags: [新海诚]
 format: qa
 interviewee: "匿名受访者"
 interviewer: "ペシミ"

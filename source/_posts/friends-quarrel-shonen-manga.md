@@ -7,7 +7,7 @@ slug: friends-quarrel-shonen-manga
 script: hans
 categories: [御宅文化]
 section: essay
-tags: [漫画研究, 少年漫画, 叙事研究, 友情]
+tags: [漫画研究, 文学理论]
 post_author: 篱落呼灯
 excerpt: 篱落呼灯以《K》中的伏见猿比古与八田美咲为中心，讨论少年漫画中朋友由分道扬镳走向理解与和解的典型叙事，并把它同少女漫画的初恋结构并置考察。
 citation:

@@ -8,7 +8,7 @@ script: hans
 categories: ["思想与理论"]
 section: translation
 format: article
-tags: ["齐泽克", "拉康", "实在界", "黑格尔", "三体"]
+tags: [拉康, 齐泽克, 黑格尔]
 post_author: "Slavoj Žižek"
 translator: "Jack Cade"
 excerpt: "齐泽克从《三体》切入实在界的变迁，继而讨论主体、否定性、机制、配置与自在之物。"

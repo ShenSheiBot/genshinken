@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [女性主义, 女性劳动, 奴隶制]
+tags: [女性主义, 劳动, 种族主义]
 post_author: Sarah M. Grimké
 translator: 李林
 proofreader: 柴来人

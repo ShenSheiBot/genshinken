@@ -6,7 +6,7 @@ slug: kojimas-sekaikei
 script: hans
 categories: [游戏]
 section: review
-tags: [死亡搁浅, 小岛秀夫, 世界系, 新世纪福音战士, 拟似家庭, 父之名]
+tags: [拉康, 世界系, 共同体, 新世纪福音战士]
 post_author: 秘则为花
 excerpt: 从《死亡搁浅》与《新世纪福音战士》的叙事同构出发，讨论世界系如何把世界之谜收束为家庭、父之名与成为父亲的个人之谜，并检视游戏连接机制与播片叙事的割裂。
 featured_order: 0

@@ -6,7 +6,7 @@ slug: fear-of-monsters-america-home-of-titans
 script: hans
 categories: [电影与影视]
 section: essay
-tags: [金刚, 巨兽电影, 美国文化, 环境史, 博物学]
+tags: [生态批评]
 post_author: 哲哥
 excerpt: 从殖民时期的巨人遗骸、美洲不明生物与建国神话，到《金刚》的银幕重生，哲哥追踪美国如何借巨兽想象确认国家、自然与文明的边界。
 license: CC BY-NC-SA 4.0

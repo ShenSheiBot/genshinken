@@ -6,7 +6,7 @@ slug: sailor-antifa-radical-cosplay
 categories: [动画]
 section: translation
 format: article
-tags: [Cosplay, 智利抗议, 美少女战士]
+tags: [同人文化]
 post_author: aliwen
 translator: 尼格羅尼
 proofreader: 北原依绪

@@ -6,7 +6,7 @@ slug: liz-and-blue-bird-annecy-impressions
 script: hans
 categories: [动画]
 section: translation
-tags: [利兹与青鸟, 山田尚子, 京都动画, 动画制作]
+tags: [动画制作, 山田尚子, 京都动画, 利兹与青鸟]
 post_author: kViN
 translator: 石立太一
 excerpt: kViN从安纳西电影节的观影经验出发，分析《利兹与青鸟》如何用步伐、声音、印花和互质数把人物关系变成可感知的形式。

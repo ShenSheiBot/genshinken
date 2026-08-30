@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [BL研究, 漫画研究, 日本流行文化]
+tags: [漫画研究, 酷儿理论]
 post_author: [堀あきこ, 守如子]
 translator: Homura
 excerpt: 从网络社群、出版数量、故事和角色子类，到跨媒体与海外传播，梳理2000至2010年代BL文化的深化和多样化。

@@ -5,7 +5,7 @@ date: 2025-05-16
 slug: silent-vampire-kizumonogatari
 categories: ["动画"]
 section: translation
-tags: ["物语系列", "动画评论", "电影分析"]
+tags: [动画评论, 电影理论, 物语系列]
 post_author: "あにもに"
 translator: ["幽灵在都灵"]
 proofreader: ["幽灵在都灵", "夜深人静"]

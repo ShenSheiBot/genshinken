@@ -8,7 +8,7 @@ slug: otsuka-character-novel-method-lecture-1
 script: hans
 categories: [御宅文化]
 section: translation
-tags: [大塚英志, 角色小说, 轻小说, 角色研究, 小说创作]
+tags: [角色研究, 轻小说, 文学理论, 大塚英志]
 post_author: 大塚英志
 translator: ["Va-11 Hall-A"]
 proofreader: ["春埼美空"]

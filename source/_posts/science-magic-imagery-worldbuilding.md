@@ -8,7 +8,7 @@ slug: science-magic-imagery-worldbuilding
 script: hans
 categories: [御宅文化]
 section: essay
-tags: [科学意象, 魔法意象, 科学哲学, 世界观, 高达, 魔法禁书目录]
+tags: [科学哲学, 高达]
 post_author: Austoria
 excerpt: 从似真的科幻性与作为他者的属性出发，讨论动画、漫画、游戏和轻小说中科学与魔法意象的形成，以及二者边界为何趋于模糊。
 citation:

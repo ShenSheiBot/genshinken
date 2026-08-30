@@ -7,7 +7,7 @@ script: hans
 categories: [动画]
 section: interview
 format: interview
-tags: [机动警察, 动画演出, 押井守]
+tags: [动画演出, 押井守, 机动警察]
 interviewee: furukawa-tomohiro
 interviewer: 前田久
 translator: august-rush

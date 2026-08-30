@@ -12,11 +12,7 @@ license: CC BY-NC-SA 4.0
 categories:
   - 思想与理论
 section: translation
-tags:
-  - 京都学派
-  - 马克思主义
-  - 世界史哲学
-  - 日本思想史
+tags: [马克思主义, 日本思想史]
 post_author:
   - 慕唯仁
   - Fabian Schäfer

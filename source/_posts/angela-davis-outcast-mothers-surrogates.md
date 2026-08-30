@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [生殖政治, 种族主义, 母职, 代孕]
+tags: [母职, 种族主义]
 post_author: Angela Y. Davis
 translator: Eurya
 proofreader: [熊猫派, 柴来人]

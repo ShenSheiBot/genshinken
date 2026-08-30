@@ -6,7 +6,7 @@ slug: kaiji-chips-amputation-death-drive
 script: hans
 categories: [漫画]
 section: review
-tags: [赌博默示录, 福本伸行, 赌博, 死亡冲动, 鲍德里亚, 德勒兹]
+tags: [精神分析, 德勒兹]
 post_author: 米岡
 excerpt: 米岡以鲍德里亚的象征交换和德勒兹的无器官身体为线索，分析《赌博默示录》中筹码、身体抵押与死亡冲动构成的自杀游戏。
 citation:

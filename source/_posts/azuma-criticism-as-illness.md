@@ -6,7 +6,7 @@ slug: azuma-criticism-as-illness
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [东浩纪, 柄谷行人, 文化批评]
+tags: [文化批评, 东浩纪, 柄谷行人]
 post_author: 东浩纪
 translator: 王晗
 excerpt: 东浩纪回顾战后日本“批评”这一思辨文体的形成与衰退，并以柄谷行人《探究》、语言博弈和观众共同体追问批评如何可能。

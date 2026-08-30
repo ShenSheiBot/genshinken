@@ -9,7 +9,7 @@ script: hans
 license: CC BY-NC-SA 4.0
 categories: [思想与理论]
 section: translation
-tags: [齐泽克, 电影理论, 拉康, 精神分析, 意识形态]
+tags: [精神分析, 拉康, 电影理论, 意识形态, 齐泽克]
 post_author: Matthew Flisfeder
 translator: 款冬
 proofreader: snoper卓尔

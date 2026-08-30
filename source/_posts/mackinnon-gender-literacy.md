@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [女性主义, 女性主义法学, 性别]
+tags: [女性主义, 性别研究]
 post_author: Catharine A. MacKinnon
 translator: yuyugayu
 proofreader: 柴来人

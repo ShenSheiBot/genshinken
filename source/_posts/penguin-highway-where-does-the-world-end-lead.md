@@ -6,7 +6,7 @@ slug: penguin-highway-where-does-the-world-end-lead
 script: hans
 categories: [动画]
 section: review
-tags: [企鹅公路, 森见登美彦, 石田祐康, 弗洛伊德, 梦境, 精神分析]
+tags: [精神分析, 森见登美彦]
 post_author: 屋顶现视研
 proofreader: 伦勃朗
 excerpt: 从梦境、洞穴与空洞的意象出发，解读《企鹅公路》中宫田的故乡、童年创伤与“世界尽头”，并追踪滨本与宫田之间的隐秘对应。

@@ -6,7 +6,7 @@ slug: kimura-1959-generation-toei-animation
 categories: [动画]
 section: translation
 format: article
-tags: [高畑勋, 东映动画, 日本动画史]
+tags: [日本动画史, 高畑勋]
 post_author: 木村智哉
 translator: fgccc
 license: CC BY-NC-SA 4.0

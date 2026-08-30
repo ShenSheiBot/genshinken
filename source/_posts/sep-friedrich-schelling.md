@@ -6,7 +6,7 @@ slug: sep-friedrich-schelling
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [谢林, 德国观念论, 自然哲学, 黑格尔]
+tags: [本体论, 黑格尔]
 post_author: Andrew Bowie
 translator: 何啸风
 proofreader: 网哲邻人部

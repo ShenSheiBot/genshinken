@@ -6,7 +6,7 @@ slug: how-to-view-shinkais-weathering-with-you
 script: hans
 categories: [动画]
 section: review
-tags: [天气之子, 新海诚, 世界系, 灾难想象, 都市·空间]
+tags: [世界系, 灾难想象, 新海诚, 天气之子]
 post_author: 实在狗子
 excerpt: 实在狗子以暴雨的不可视灾难、大叔的外部视角与东京的城市空间为三条线索，重读《天气之子》对《你的名字》式世界系结构的反省。
 citation:

@@ -8,12 +8,7 @@ slug: morimi-tomihiko-humor-genealogy
 script: hans
 categories: [御宅文化]
 section: essay
-tags:
-  - 森见登美彦
-  - 四叠半神话大系
-  - 幽默
-  - 关联理论
-  - 黑格尔
+tags: [黑格尔, 森见登美彦]
 post_author:
   - 十文字
 excerpt: 从关联理论、黑格尔喜剧论与森见作品中的“自定义名词”出发，分析其幽默如何在语句、叙事结构和主题层面生成。

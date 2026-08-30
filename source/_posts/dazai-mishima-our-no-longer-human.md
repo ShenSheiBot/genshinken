@@ -6,7 +6,7 @@ slug: dazai-mishima-our-no-longer-human
 script: hans
 categories: [思想与理论]
 section: review
-tags: [人间失格, 太宰治, 三岛由纪夫]
+tags: [太宰治, 三岛由纪夫]
 post_author: 实在狗子
 excerpt: 以死亡前后的他者视线为线索，对读太宰治《人间失格》与三岛由纪夫《忧国》，并从叙述人称、女性凝视和价值相对化讨论叶藏的自我否定。
 featured_order: 0

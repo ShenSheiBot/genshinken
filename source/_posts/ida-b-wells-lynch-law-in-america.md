@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [种族, 法律, 美国史]
+tags: [政治哲学, 种族主义]
 post_author: Ida B. Wells-Barnett
 translator: Fanger
 proofreader: 静希

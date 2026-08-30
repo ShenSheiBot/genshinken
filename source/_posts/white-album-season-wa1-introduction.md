@@ -6,7 +6,7 @@ slug: white-album-season-wa1-introduction
 script: hans
 categories: [动画]
 section: review
-tags: [白色相簿, 白色相簿2, 丸户史明, 偶像文化, 互文性]
+tags: [偶像文化, 文学理论, 白色相簿2]
 post_author: 静希草十郎
 excerpt: 从《白色相簿2》与前作的互文关系出发，介绍《白色相簿》动画的音乐、时代背景、偶像观、人物及制作阵容。
 featured_order: 0

@@ -5,7 +5,7 @@ date: 2025-03-18
 slug: hiroshi-nagasaki-rebellion-theory
 categories: ["思想与理论"]
 section: translation
-tags: ["日本思想", "政治理论", "新左翼"]
+tags: [日本思想史, 政治哲学]
 post_author: "长崎浩"
 translator: ["CTFE", "ethci", "崆峒山下三脚鸦", "石好汉", "幽灵在都灵", "骁骑校尉"]
 proofreader: ["CTFE"]

@@ -27,7 +27,7 @@
       "anchor": "introduction",
       "publishedAt": "2018-08-19",
       "authors": ["Austoria"],
-      "tags": ["科学意象", "魔法意象", "科学哲学"]
+      "tags": ["科学哲学"]
     },
     {
       "id": "science-imagery",
@@ -37,7 +37,7 @@
       "anchor": "science-imagery",
       "publishedAt": "2018-08-23",
       "authors": ["Austoria"],
-      "tags": ["科学意象", "科学哲学", "高达"]
+      "tags": ["科学哲学", "高达"]
     },
     {
       "id": "magic-imagery",
@@ -47,7 +47,7 @@
       "anchor": "magic-imagery",
       "publishedAt": "2018-08-26",
       "authors": ["Austoria"],
-      "tags": ["魔法意象", "世界观"]
+      "tags": []
     },
     {
       "id": "blurred-boundaries",
@@ -57,7 +57,7 @@
       "anchor": "blurred-boundaries",
       "publishedAt": "2018-08-30",
       "authors": ["Austoria"],
-      "tags": ["科学意象", "魔法意象", "世界观"]
+      "tags": []
     }
   ]
 }

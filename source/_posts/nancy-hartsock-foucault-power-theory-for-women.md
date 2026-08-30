@@ -6,7 +6,7 @@ slug: nancy-hartsock-foucault-power-theory-for-women
 categories: [思想与理论]
 section: translation
 format: article
-tags: [女性主义, 米歇尔·福柯, 后结构主义, 立场理论]
+tags: [女性主义, 后结构主义, 米歇尔·福柯]
 post_author: 南希·哈索克
 translator: Another
 license: CC BY-NC-SA 4.0

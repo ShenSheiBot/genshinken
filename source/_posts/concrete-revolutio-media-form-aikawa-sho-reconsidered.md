@@ -6,7 +6,7 @@ slug: concrete-revolutio-media-form-aikawa-sho-reconsidered
 script: hans
 categories: [动画]
 section: review
-tags: [超人幻想, 会川升, 动画媒介, 特摄, 社会派, 时间叙事]
+tags: [动画研究, 媒介理论, 特摄, 超人幻想]
 post_author: 秘则为花
 excerpt: 从《超人幻想》的时间跳跃与空间表现出发，追溯特摄中身体、微缩模型和“身体考古”的媒介条件，并讨论动画角色与社会背景之间的资源分配。
 featured_order: 0

@@ -6,7 +6,7 @@ slug: weathering-with-you-tragic-hero-knight-of-faith
 script: hans
 categories: [动画]
 section: review
-tags: [天气之子, 新海诚, 克尔凯戈尔, 精神分析, 否定之否定]
+tags: [精神分析, 新海诚, 天气之子]
 post_author: Ludwigsama
 proofreader: 伦勃朗
 excerpt: 从克尔凯郭尔的悲剧英雄、无限弃绝骑士与信仰骑士出发，以精神分析和黑格尔式辩证法重审《天气之子》中帆高的选择、牺牲与享乐。

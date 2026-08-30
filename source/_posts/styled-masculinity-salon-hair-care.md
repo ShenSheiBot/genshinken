@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [男性气质, 性别研究, 消费文化]
+tags: [性别研究, 消费文化, 男性气质]
 post_author: Kristen Barber
 translator: ttpp
 excerpt: 克里斯滕·巴伯通过南加州一家美发沙龙的田野调查，分析男性如何借护发消费协商阶级、种族、性取向与男性气质的边界。

@@ -6,7 +6,7 @@ slug: beastars-from-animality-to-humanity
 script: hans
 categories: [动画]
 section: review
-tags: [BEASTARS, 动物性, 人类中心主义, 精神分析]
+tags: [精神分析, 生态批评]
 post_author: 钟子默
 excerpt: 从动物性、人类机制、欲望与内在违越出发，分析《Beastars》如何以拟人动物揭露物种、性别与阶级秩序，又如何在叙事中从动物性返回人性。
 citation:

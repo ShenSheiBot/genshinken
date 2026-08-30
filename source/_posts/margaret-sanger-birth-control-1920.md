@@ -6,7 +6,7 @@ slug: margaret-sanger-birth-control-1920
 categories: [思想与理论]
 section: translation
 format: article
-tags: [女性主义, 节育, 玛格丽特·桑格]
+tags: [女性主义]
 post_author: 玛格丽特·桑格
 translator: 不爱喝水的鱼
 excerpt: 玛格丽特·桑格回忆其护士工作中接触贫困女性及不安全堕胎的经历，并叙述这段经历如何促使她投身节育倡导。

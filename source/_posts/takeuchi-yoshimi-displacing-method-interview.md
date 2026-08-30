@@ -5,7 +5,7 @@ date: 2026-08-03
 slug: takeuchi-yoshimi-displacing-method-interview
 categories: [思想与理论]
 section: interview
-tags: [竹内好, 日本思想史, 后殖民主义, 跨文化研究]
+tags: [后殖民主义, 日本思想史, 全球化, 文化传播]
 interviewee: 慕唯仁
 format: interview
 excerpt: 慕唯仁从后殖民研究、跨文化思想网络与“去地方化”的问题出发，讨论竹内好如何成为一种可被重新部署的思想方法。

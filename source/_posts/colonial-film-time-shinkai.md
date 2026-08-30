@@ -5,7 +5,7 @@ date: 2025-02-17
 slug: colonial-film-time-shinkai
 categories: ["动画"]
 section: translation
-tags: ["殖民性", "动画电影"]
+tags: [后殖民主义, 殖民主义, 新海诚]
 post_author: "加文·沃克"
 translator: ["侑"]
 proofreader: ["郁远集"]

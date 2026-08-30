@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [女性主义, 情爱自由, 婚姻制度, 性自主, 社会自由]
+tags: [女性主义, 性别研究, 欲望]
 post_author: Victoria C. Woodhull
 translator: Anthropocene
 proofreader: 熊猫派

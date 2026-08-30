@@ -6,7 +6,7 @@ slug: iron-blood-hot-blood-cold-blood
 script: hans
 categories: [漫画]
 section: review
-tags: [灌篮高手, 井上雄彦, 身体]
+tags: [身体]
 post_author: 秘则为花
 proofreader: 伦勃朗
 excerpt: 从《灌篮高手》中不完美而不断受伤的身体出发，讨论热血如何产生于凡人限度、竞技疼痛与超越冲动之间的张力。

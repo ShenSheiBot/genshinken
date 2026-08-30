@@ -6,7 +6,7 @@ slug: roof-cultural-research-manifesto
 script: hans
 categories: [屋顶社群]
 section: community
-tags: [屋顶现视研, 动画评论, 文化研究]
+tags: [动画评论, 文化批评]
 post_author: 屋顶现视研
 excerpt: 屋顶现视研的发刊词：我们研究什么、为什么借鉴产业之外的理论资源，以及希望怎样组织共同的写作与学习。
 citation:

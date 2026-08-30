@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [女性主义, 第三波女性主义, 朋克音乐]
+tags: [女性主义, 音乐]
 post_author: Bikini Kill
 translator: sanzezhimei
 license: CC BY-NC-SA 4.0

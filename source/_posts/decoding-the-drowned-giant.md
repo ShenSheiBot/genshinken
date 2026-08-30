@@ -6,7 +6,7 @@ slug: decoding-the-drowned-giant
 script: hans
 categories: [动画]
 section: review
-tags: [爱，死亡和机器人, 巴拉德, 科幻动画, 古今之争, 现代性]
+tags: [现代性]
 post_author: 心田安详
 excerpt: 心田安详结合巴拉德、斯威夫特与古今之争，解读《溺水的巨人》中巨人、侏儒、记忆与遗忘的隐喻。
 citation:

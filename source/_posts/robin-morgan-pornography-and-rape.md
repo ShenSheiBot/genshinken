@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [女性主义, 色情作品, 性暴力]
+tags: [女性主义]
 post_author: Robin Morgan
 translator: celani
 proofreader: 柴来人

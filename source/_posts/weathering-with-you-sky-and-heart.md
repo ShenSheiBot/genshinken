@@ -6,7 +6,7 @@ slug: weathering-with-you-sky-and-heart
 script: hans
 categories: [动画]
 section: review
-tags: [天气之子, 新海诚, 海德格尔, 本体论, 隐喻]
+tags: [本体论, 新海诚, 海德格尔, 天气之子]
 post_author: 窗子
 proofreader: 伦勃朗
 excerpt: 窗子从天气与情绪的隐喻关系出发，借海德格尔的基础存在论分析都市、乡村与天气相处的生活样态，并重读《天气之子》中的荒谬、奇迹与爱。

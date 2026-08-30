@@ -6,7 +6,7 @@ slug: work-emotion-robots
 script: hans
 categories: [动画]
 section: review
-tags: [夏娃的时间, 世界系, 日常系, 机器人]
+tags: [世界系, 日常系, 技术哲学]
 post_author: 秘则为花
 excerpt: 以《夏娃的时间》为中心，从机器人作为他者、空气系与世界系的分野，以及工作世界对情感世界的殖民，讨论现代社会中的家庭、劳动与日常。
 citation:

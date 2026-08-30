@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [原住民研究, 殖民主义, 口述史]
+tags: [殖民主义, 原住民研究]
 post_author: [Waheenee, Gilbert L. Wilson]
 translator: Eurya
 license: CC BY-NC-SA 4.0

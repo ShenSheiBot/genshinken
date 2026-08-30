@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [女性主义, 美国文学, 哈勒姆文艺复兴, 婚姻, 家庭暴力]
+tags: [女性主义]
 post_author: Zora Neale Hurston
 translator: KoPaNo
 license: CC BY-NC-SA 4.0

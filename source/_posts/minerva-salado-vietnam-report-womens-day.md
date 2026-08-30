@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [女性主义, 反战, 越南战争]
+tags: [女性主义, 战争]
 post_author: 密涅瓦·萨拉多
 translator: 喵喵单推人
 license: CC BY-NC-SA 4.0

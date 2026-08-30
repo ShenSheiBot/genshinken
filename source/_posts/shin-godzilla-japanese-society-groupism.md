@@ -6,7 +6,7 @@ slug: shin-godzilla-japanese-society-groupism
 script: hans
 categories: [电影与影视]
 section: review
-tags: [新哥斯拉, 庵野秀明, 日本社会, 中根千枝, 纵式社会, 场所型集团]
+tags: [共同体, 特摄, 庵野秀明, 哥斯拉]
 post_author: 远月
 excerpt: 以中根千枝的纵式社会理论解读《新哥斯拉》，从场所型集团、离群者与“居場所”出发，说明影片中的日本式组织和家庭情感。
 featured_order: 0

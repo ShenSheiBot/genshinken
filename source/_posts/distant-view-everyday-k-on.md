@@ -5,7 +5,7 @@ date: 2025-02-28
 slug: distant-view-everyday-k-on
 categories: ["动画"]
 section: review
-tags: ["轻音少女", "京都动画", "世界系", "日常系", "动画评论"]
+tags: [动画评论, 世界系, 日常系, 京都动画, 轻音少女]
 post_author: "志津史比古"
 translator: ["中割Production"]
 proofreader: ["幽灵在都灵"]

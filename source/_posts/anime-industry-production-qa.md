@@ -8,7 +8,7 @@ slug: anime-industry-production-qa
 script: hans
 categories: [动画]
 section: translation
-tags: [动画制作, 作画, 京都动画]
+tags: [动画制作, 作画分析, 京都动画]
 post_author: [kViN, Ryan, Liborek, Megax, Rant, Ray]
 translator: 石立太一
 excerpt: 围绕动画师谱系、制作流程、工期与预算、工作室体制、作画术语和海外动画师等问题展开的四期问答。

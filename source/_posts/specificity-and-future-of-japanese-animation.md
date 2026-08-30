@@ -7,7 +7,7 @@ updated: 2026-08-29
 slug: specificity-and-future-of-japanese-animation
 categories: [动画]
 section: translation
-tags: [日本动画, 动画制作, 动画评论, 战争表象, 创伤]
+tags: [动画评论, 动画制作, 战争]
 post_author: [斋藤环, Joachim Alt]
 translator: [中割Production, 幽灵在都灵, 石好汉, ethci]
 proofreader: [ethci]

@@ -6,7 +6,7 @@ slug: urban-legends-concepts
 script: hans
 categories: [思想与理论]
 section: essay
-tags: [都市传说, 民俗学, 谣言, 怪谈, 都市·空间, 文化传播]
+tags: [文化传播]
 post_author: hephaestus
 excerpt: hephaestus 从民俗学、谣言研究与传播机制出发，辨析都市传说、传统传说和流言之间不断变动的边界。
 citation:

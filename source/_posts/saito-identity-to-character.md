@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [斋藤环, 角色研究, 身份认同, 精神分析, 媒介环境]
+tags: [精神分析, 角色研究, 社会建构, 媒介理论, 斋藤环]
 post_author: 斋藤环
 translator: [神必天坑, ethci, or, Yisensei04]
 proofreader: [生于安乐, 神必天坑]

@@ -6,7 +6,7 @@ slug: imagination-after-earthquake-otaku-culture-2010s
 script: hans
 categories: [御宅文化]
 section: translation
-tags: [东日本大地震, 世界系, 日常系, 圣地巡礼, 增强现实, 宏大叙事]
+tags: [世界系, 日常系, 游戏研究, 灾难想象, 粉丝文化, 宇野常宽]
 post_author: 宇野常宽
 translator: 王晗
 excerpt: 从东日本大地震后的日常与非日常出发，梳理世界系、日常系、圣地巡礼和增强现实，讨论御宅文化如何呈现全球化时代的新体制。

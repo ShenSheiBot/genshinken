@@ -6,7 +6,7 @@ slug: adventures-of-the-name-of-the-father
 script: hans
 categories: [动画]
 section: review
-tags: [新世纪福音战士, 庵野秀明, 新海诚, 拉康, 父之名, 精神分析, 后俄狄浦斯主体]
+tags: [精神分析, 拉康, 主体性, 新海诚, 庵野秀明, 新世纪福音战士]
 post_author: 鱼板
 excerpt: 以《新世纪福音战士》和新海诚作品为文本，经由拉康的父之名、欲望与Ate概念，讨论后俄狄浦斯主体及其抵抗路径。
 featured_order: 0

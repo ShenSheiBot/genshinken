@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: interview
 format: interview
-tags: [女性主义, 翻译实践, 同人文化, 独立游戏]
+tags: [女性主义, 同人文化, 游戏研究]
 post_author: 网哲邻人部
 excerpt: 网哲邻人部的女性主义翻译小组围绕志愿翻译、网络社群、文化批评与独立游戏企划展开的一次匿名茶话会。
 citation:

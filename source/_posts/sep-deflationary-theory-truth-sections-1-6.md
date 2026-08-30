@@ -8,7 +8,7 @@ slug: sep-deflationary-theory-truth-sections-1-6
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [真之紧缩论, 逻辑学]
+tags: [逻辑学]
 post_author: [Daniel Stoljar, Nic Damnjanovic]
 translator: [luanzhao, Suetonius, 一般通过ANIMA, 奇怪的阿法南猿]
 proofreader: [乌有之人, Suetonius]

@@ -9,12 +9,7 @@ script: hans
 categories:
   - 思想与理论
 section: translation
-tags:
-  - 少女漫画
-  - 少年爱
-  - 百合
-  - 性别研究
-  - 女性欲望
+tags: [性别研究, 漫画研究, 欲望, 少女文化, 酷儿理论]
 post_author:
   - James Welker
 translator:

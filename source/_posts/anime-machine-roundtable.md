@@ -6,7 +6,7 @@ slug: anime-machine-roundtable
 categories: [动画]
 section: interview
 format: interview
-tags: [动画研究, 动画机器, 媒介理论]
+tags: [动画研究, 媒介理论, 托马斯·拉马尔]
 participant: ["Thomas LaMarre", "石岡良治"]
 interviewer: 門林岳史
 translator: 冰格

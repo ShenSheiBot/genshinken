@@ -6,7 +6,7 @@ slug: nichijo-anime-kyoto-animation-bocchi
 categories: [动画]
 section: interview
 format: interview
-tags: [日常系, 京都动画, 孤独摇滚]
+tags: [动画评论, 日常系, 共同体, 京都动画]
 participant: [舞風つむじ, noirse, てらまっと]
 translator: shiraki
 license: CC BY-NC-SA 4.0

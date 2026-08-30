@@ -6,7 +6,7 @@ slug: sousa-weebwave-2010s-music-videos
 categories: [动画]
 section: translation
 format: article
-tags: [音乐视频, 御宅研究, 全球化]
+tags: [御宅研究, 全球化, 音乐]
 post_author: Ana Matilde Sousa
 translator: 村上侑
 proofreader: [Cfox]

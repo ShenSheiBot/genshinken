@@ -7,7 +7,7 @@ slug: relational-form-analysis-love-triangle-biyakuya
 script: hans
 categories: [御宅文化]
 section: essay
-tags: [关系形式, 白夜行, 文化传播, 互文性, 意识形态]
+tags: [意识形态, 文学理论, 文化传播]
 post_author: 钟子默
 excerpt: 从剧中人物的三角恋与“白夜行”模式出发，进一步讨论作者、作品与读者之间的文化传播、编码与解码及互文关系。
 featured_order: 0

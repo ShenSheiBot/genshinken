@@ -6,7 +6,7 @@ slug: concrete-revolutio-timeline
 script: hans
 categories: [动画]
 section: essay
-tags: [超人幻想, 特摄, 日本战后史]
+tags: [日本思想史, 特摄, 超人幻想]
 post_author: 宇宙神牛
 excerpt: 按“神化”纪年梳理《Concrete Revolutio 超人幻想》从怪兽戈贡被发现到冲绳决战及其后日谈的主要事件。
 featured_order: 0

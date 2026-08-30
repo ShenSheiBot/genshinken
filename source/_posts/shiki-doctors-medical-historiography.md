@@ -7,7 +7,7 @@ slug: shiki-doctors-medical-historiography
 script: hans
 categories: [御宅文化]
 section: essay
-tags: [医学人文, 医学史, 医生形象, 尸鬼]
+tags: []
 post_author: 篱落呼灯
 excerpt: 篱落呼灯从《青年黑杰克》《尸鬼》《医院》与《工作细胞》出发，梳理医学叙事中英雄医生、绝症共同体与去人格化医疗三种传统。
 citation:

@@ -6,7 +6,7 @@ slug: reasoning-in-narrative-art
 script: hans
 categories: [漫画]
 section: essay
-tags: [螺丝钉人, 若木民喜, 叙事艺术, 说理, 媒介]
+tags: [文学理论, 媒介理论]
 post_author: 别牙狂
 proofreader: 伦勃朗
 editor: 子厚

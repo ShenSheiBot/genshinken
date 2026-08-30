@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [黑格尔, 辩证法, 德国观念论]
+tags: [黑格尔]
 post_author: Julie E. Maybee
 translator: 子川
 proofreader: 寅

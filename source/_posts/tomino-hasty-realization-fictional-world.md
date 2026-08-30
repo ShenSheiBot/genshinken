@@ -6,7 +6,7 @@ slug: tomino-hasty-realization-fictional-world
 script: hans
 categories: [御宅文化]
 section: translation
-tags: [富野由悠季, 奥姆真理教, 日本动画史, 御宅研究, 视觉文化]
+tags: [日本动画史, 御宅研究, 媒介理论, 富野由悠季]
 post_author: 富野由悠季
 translator: [人气空友, 萝姬]
 excerpt: 富野由悠季借奥姆真理教事件反思机器人动画虚构的现实化、动画迷收藏文化的转变，以及影像创作者对视觉审美与社会伦理负有的责任。

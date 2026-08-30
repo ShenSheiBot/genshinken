@@ -6,7 +6,7 @@ slug: sep-foreknowledge-and-free-will
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [自由意志, 宿命论]
+tags: [自由意志]
 post_author: Linda Zagzebski
 translator: [乌有之人, 猫大猛]
 proofreader: [吉, 乌有之人]

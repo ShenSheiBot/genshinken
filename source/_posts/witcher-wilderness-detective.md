@@ -6,7 +6,7 @@ slug: witcher-wilderness-detective
 script: hans
 categories: [游戏]
 section: review
-tags: [巫师3, 游戏叙事, 本雅明, 记忆, 救赎]
+tags: [游戏研究, 本雅明]
 post_author: 斑鸠
 excerpt: 从《巫师3》迟缓的任务节奏出发，斑鸠把杰洛特视为追踪私人历史的“荒野侦探”，讨论回望过去如何使日常时间重新孕育剧变与救赎。
 license: CC BY-NC-SA 4.0

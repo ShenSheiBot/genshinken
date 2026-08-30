@@ -6,7 +6,7 @@ slug: sep-rudolf-carnap-supplement-e-scientific-theory-reconstruction-part-3
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [鲁道夫·卡尔纳普, 科学哲学]
+tags: [科学哲学, 鲁道夫·卡尔纳普]
 post_author: [Hannes Leitgeb, André Carus]
 translator: Meowth
 excerpt: 《斯坦福哲学百科》“鲁道夫·卡尔纳普”词条补充词条E“科学理论的重构”第3部分中译，完整收录第6节，讨论卡尔纳普成熟理论重构中的结构主义及其与结构实在论的区别。

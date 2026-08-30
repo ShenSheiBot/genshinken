@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [女性主义, 交叉性, 种族]
+tags: [女性主义, 交叉性, 种族主义]
 post_author: Audre Lorde
 translator: Cico
 proofreader: 柴来人

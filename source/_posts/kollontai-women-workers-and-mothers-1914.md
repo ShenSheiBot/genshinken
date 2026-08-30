@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [女性主义, 社会主义女性主义, 母职]
+tags: [女性主义, 母职]
 post_author: 亚历山德拉·柯伦泰
 translator: 凡
 license: CC BY-NC-SA 4.0

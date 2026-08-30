@@ -7,7 +7,7 @@ slug: rags-drum-2022-final-results
 script: hans
 categories: [屋顶社群]
 section: community
-tags: [拾荒战略, 征文, 社群活动]
+tags: []
 post_author: 屋顶现视研
 excerpt: 屋顶现视研·拾荒战略组委会公布拾荒战略Rags Drum 2022最终评选结果、五篇受赏稿件、评选与奖励规则，并宣布年度征文将由线上同人杂志计划接替。
 citation:

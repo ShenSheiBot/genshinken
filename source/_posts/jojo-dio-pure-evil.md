@@ -6,7 +6,7 @@ slug: jojo-dio-pure-evil
 script: hans
 categories: [漫画]
 section: review
-tags: [JOJO的奇妙冒险, 女性主义]
+tags: [女性主义, JOJO的奇妙冒险]
 post_author: 实在狗子
 excerpt: 从阶级出身、教育和性别化他者的位置重读DIO，讨论其求知、阶级攀升、与母亲的同一化以及对他者的拒绝，同时保留对其剥削底层者的批判。
 featured_order: 0

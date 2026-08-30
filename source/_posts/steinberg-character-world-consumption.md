@@ -6,7 +6,7 @@ slug: steinberg-character-world-consumption
 categories: [御宅文化]
 section: translation
 format: article
-tags: [媒体组合, 角色研究, 消费]
+tags: [角色研究, 消费文化, 跨媒介, 媒介理论]
 post_author: Marc Steinberg
 translator: ["KAFAK", "水色文书", "Salzivelm", "YDDD", "KuronekoS", "Rex salsamenta", "U.N.オーエンは愛音なのか?", "JALKKK", "九畹采萧"]
 license: CC BY-NC-SA 4.0

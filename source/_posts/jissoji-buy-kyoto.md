@@ -7,7 +7,7 @@ script: hans
 categories: [电影与影视]
 section: essay
 format: article
-tags: [实相寺昭雄, 怪奇大作战, 特摄, 影像美学]
+tags: [电影理论, 特摄]
 post_author: 学级委员一条同学
 excerpt: 从人脸特写、音画配置、京都漫游蒙太奇与光的质感，细读实相寺昭雄《怪奇大作战》名篇《买下京都》。
 citation:

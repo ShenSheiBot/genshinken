@@ -6,7 +6,7 @@ slug: shinkai-urban-space-theory
 script: hans
 categories: [动画]
 section: review
-tags: [新海诚, 都市·空间, 基础设施, 世界系]
+tags: [世界系, 技术哲学, 新海诚]
 post_author: 鱼板
 excerpt: 鱼板从新宿御苑的现代城市史出发，讨论新海诚作品如何把城市空间表现为构成人际关系的基础设施，并追问其“技术生存”想象中的乐观与局限。
 license: CC BY-NC-SA 4.0

@@ -7,7 +7,7 @@ script: hans
 categories: [屋顶社群]
 section: community
 format: article
-tags: [屋顶现视研]
+tags: [组织史]
 post_author: 屋顶现视研
 excerpt: 屋顶现视研于2023年末发布的休刊通知，回顾2018年以来的同人志活动，并说明历史内容与账号将继续留存。
 citation:

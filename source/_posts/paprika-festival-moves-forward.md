@@ -6,7 +6,7 @@ slug: paprika-festival-moves-forward
 script: hans
 categories: [动画]
 section: review
-tags: [红辣椒, 今敏, 拉康, 精神分析, 梦境]
+tags: [精神分析, 拉康, 今敏]
 post_author: Jack Cade
 excerpt: 从《红辣椒》的梦境与现实之争出发，借拉康的能指、欲望、对象a与强迫症结构，分析理事长的游行和粉川警官的追逐如何通向和解。
 featured_order: 0

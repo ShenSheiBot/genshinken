@@ -6,7 +6,7 @@ slug: jane-addams-municipal-housekeeping-1907
 categories: [思想与理论]
 section: translation
 format: article
-tags: [女性主义, 妇女选举权, 生态女性主义]
+tags: [女性主义, 妇女选举权]
 post_author: 简·亚当斯
 translator: 城
 proofreader: 柴来人

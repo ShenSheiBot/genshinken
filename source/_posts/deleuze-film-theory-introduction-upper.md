@@ -6,7 +6,7 @@ slug: deleuze-film-theory-introduction-upper
 script: hans
 categories: [电影与影视]
 section: translation
-tags: [德勒兹, 电影理论, 运动－影像, 时间－影像]
+tags: [电影理论, 德勒兹]
 post_author: Richard Rushton
 translator: 春琪美空
 excerpt: 理查德·拉什顿以奥菲尔斯的《众人之妻》和《轮舞》为例，区分德勒兹的运动－影像与时间－影像，并讨论开放的过去与历史变化。

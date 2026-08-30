@@ -6,7 +6,7 @@ slug: what-is-cloud-behavior-ontology-internal-heterogeneity
 script: hans
 categories: [思想与理论]
 section: essay
-tags: [网络文化, 元评论, 本体论, 社会建构]
+tags: [动画评论, 本体论, 社会建构, 粉丝文化]
 post_author: Austoria
 excerpt: Austoria 从参与缺失、拟似评论性、公共共同体与基本信念出发，为“云观众”“云玩家”等网络称谓建立本体论框架，并分析其语用诉求中的内在异质性。
 featured_order: 0

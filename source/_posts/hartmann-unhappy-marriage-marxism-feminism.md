@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [女性主义, 马克思主义, 资本主义]
+tags: [女性主义, 马克思主义, 父权制, 政治经济学]
 post_author: Heidi I. Hartmann
 translator: Jane Plus
 proofreader: 柴来人

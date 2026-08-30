@@ -7,7 +7,7 @@ slug: jojo5-golden-wind-direction-analysis-episode-02
 script: hans
 categories: [动画]
 section: review
-tags: [JOJO的奇妙冒险, 动画演出, 分镜, 构图]
+tags: [动画演出, JOJO的奇妙冒险]
 post_author: 速音
 excerpt: 速音对《JOJO的奇妙冒险 黄金之风》第02集及第03至07集的演出分析，讨论色彩、分镜、转场、构图与声画关系。
 featured_order: 0

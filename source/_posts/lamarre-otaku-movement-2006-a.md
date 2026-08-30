@@ -6,7 +6,7 @@ slug: lamarre-otaku-movement-2006-a
 categories: [御宅文化]
 section: translation
 format: article
-tags: [御宅研究, 全球化, 媒介理论]
+tags: [御宅研究, 全球化, 媒介理论, 托马斯·拉马尔]
 post_author: Thomas Lamarre
 translator: ["崆峒山下三角鸦", "JALKKK", "KuronekoS", "雨宫优子", "水色文书", "KAFAK", "YDDD", "九畹采萧", "三咲町", "星月如珏"]
 license: CC BY-NC-SA 4.0

@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [经济学, 政治经济学, 亚当·斯密]
+tags: [政治经济学]
 post_author: [野原慎司, 沖公祐, 高見典和]
 translator: 柴来人
 license: CC BY-NC-SA 4.0

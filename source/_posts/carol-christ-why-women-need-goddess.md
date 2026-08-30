@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [女性主义, 女性主义神学, 宗教]
+tags: [女性主义]
 post_author: Carol P. Christ
 translator: celani
 proofreader: 柴来人

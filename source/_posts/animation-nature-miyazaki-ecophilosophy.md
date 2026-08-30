@@ -8,7 +8,7 @@ slug: animation-nature-miyazaki-ecophilosophy
 script: hans
 categories: [动画]
 section: translation
-tags: [宫崎骏, 动画研究, 生态哲学]
+tags: [动画研究, 生态批评, 宫崎骏]
 post_author: Pamela Gossin
 translator: [Hephaestus, 风林火山]
 proofreader: Hyperzoic

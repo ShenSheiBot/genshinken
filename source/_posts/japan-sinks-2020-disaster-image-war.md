@@ -6,7 +6,7 @@ slug: japan-sinks-2020-disaster-image-war
 script: hans
 categories: [动画]
 section: translation
-tags: [日本动画, 灾难想象, 3·11, 日本沉没2020]
+tags: [灾难想象]
 post_author: Pause and Select
 translator: [一般通过ANIMONK, 十文字, repapec i, snoper卓尔, fahh, 红茶泡海苔]
 proofreader: [ΟΔΥΣΣΕΙΑ, 唯一指定真实August_Rush, 烦一句]

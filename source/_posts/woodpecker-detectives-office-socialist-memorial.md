@@ -6,7 +6,7 @@ slug: woodpecker-detectives-office-socialist-memorial
 script: hans
 categories: [动画]
 section: review
-tags: [啄木鸟侦探社, 石川啄木, 社会主义]
+tags: [马克思主义]
 post_author: 怀剣
 excerpt: 怀剣对照石川啄木的生平、诗歌与社会主义思想，审视《啄木鸟侦探社》如何将一位困苦的革命诗人改写成商业动画中的侦探，并追问这种“庸俗纪念”的意义。
 citation:

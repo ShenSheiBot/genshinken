@@ -8,7 +8,7 @@ slug: monogatari-love-deishu-kaiki-speech-fracture-self-deception
 script: hans
 categories: [动画]
 section: review
-tags: [物语系列, 西尾维新, 精神分析, 性恶说, 真伪]
+tags: [精神分析, 物语系列]
 post_author: [一只非0的O, 十文字]
 excerpt: 两篇围绕《物语》系列人物、言说与真伪问题展开的评论，分别讨论《恋物语》中贝木泥舟的自我欺诈，以及《伪物语》与荀子性恶说之间的关联。
 featured_order: 0

@@ -6,7 +6,7 @@ slug: what-we-watch-in-monster-movies
 script: hans
 categories: [电影与影视]
 section: review
-tags: [哥斯拉, 怪兽, 特摄, 环太平洋, 人类中心主义, 生态批评]
+tags: [生态批评, 特摄, 哥斯拉]
 post_author: 屋顶现视研
 excerpt: 从《哥斯拉》《环太平洋》等作品出发，讨论怪兽电影在特效奇观之外对灾难、人性及人类中心主义的呈现。
 featured_order: 0

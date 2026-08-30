@@ -6,7 +6,7 @@ slug: liz-and-the-blue-bird-score-analysis
 script: hans
 categories: [动画]
 section: review
-tags: [利兹与青鸟, 吹响！上低音号, 牛尾宪辅, 山田尚子, 配乐]
+tags: [音乐, 山田尚子, 利兹与青鸟, 吹响！上低音号]
 post_author: Dusty Sky
 excerpt: 从标题中青鸟的主体地位出发，细读《利兹与青鸟》片头八分钟的音色、脚步与画面调度，并分析双簧管和长笛合奏中的人物错位。
 featured_order: 0

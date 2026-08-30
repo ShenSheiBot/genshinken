@@ -9,11 +9,7 @@ script: hans
 categories:
   - 漫画
 section: translation
-tags:
-  - 手冢治虫
-  - 漫画史
-  - 迪士尼
-  - 新宝岛
+tags: [漫画研究]
 post_author:
   - Ryan Holmberg
 translator:

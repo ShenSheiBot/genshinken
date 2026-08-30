@@ -6,7 +6,7 @@ slug: shinya-ohira-expressionism-in-motion
 script: hans
 categories: [动画]
 section: translation
-tags: [动画制作, 原画, 表现主义]
+tags: [动画制作, 作画分析]
 post_author: blautoothdmand
 translator: 石立太一
 excerpt: 从形变、线条与运动的不稳定感出发，讨论大平晋也的原画如何把表现主义绘画转化为动画运动。

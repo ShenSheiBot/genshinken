@@ -6,7 +6,7 @@ slug: suan-anime-spatiality
 categories: [动画]
 section: translation
 format: article
-tags: [日本动画, 媒介形式, 全球化]
+tags: [全球化, 媒介理论, 托马斯·拉马尔]
 post_author: Stevie Suan
 translator: 村上侑
 proofreader: Alex

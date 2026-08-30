@@ -9,12 +9,7 @@ script: hans
 categories:
   - 思想与理论
 section: essay
-tags:
-  - 黑之契约者
-  - 拉康
-  - 精神分析
-  - 欲望
-  - 崇高
+tags: [精神分析, 拉康, 欲望]
 post_author: 加速器
 excerpt: 从“门”、契约者、Doll 与虚假星空出发，以拉康派精神分析重读《黑之契约者》中欲望、匮乏、幻象与崇高客体的关系。
 citation:

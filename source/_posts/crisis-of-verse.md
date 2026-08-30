@@ -6,7 +6,7 @@ slug: crisis-of-verse
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [文学理论, 诗歌, 象征主义, 自由诗]
+tags: [文学理论, 诗歌]
 post_author: stephane-mallarme
 translator: yang-sang-xi-huan-chi-shi-zi
 excerpt: 马拉美从雨果之后亚历山大诗行的解体出发，讨论自由诗、语言的缺陷、音乐与暗示，以及诗人从“纯粹作品”中的消失。

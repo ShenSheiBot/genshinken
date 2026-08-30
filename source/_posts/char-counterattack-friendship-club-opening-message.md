@@ -8,7 +8,7 @@ slug: char-counterattack-friendship-club-opening-message
 script: hans
 categories: [御宅文化]
 section: translation
-tags: [逆袭的夏亚, 庵野秀明, 同人文化, 动画评论, 日本动画史]
+tags: [动画评论, 日本动画史, 同人文化, 庵野秀明, 高达]
 post_author: 庵野秀明
 translator: 冰-koori
 excerpt: 庵野秀明在1993年同人本《逆袭的夏亚友之会》的开篇寄语中，从动画媒介的闭塞与绝望出发，说明发起这本分析、访谈与寄稿合集的缘由。

@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [女性主义, 跨国女性主义, 后殖民主义]
+tags: [女性主义, 后殖民主义]
 post_author: Jyotsna Agnihotri Gupta
 translator: Hugh
 proofreader: 柴来人

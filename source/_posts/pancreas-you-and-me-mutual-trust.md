@@ -6,7 +6,7 @@ slug: pancreas-you-and-me-mutual-trust
 script: hans
 categories: [动画]
 section: review
-tags: [我想吃掉你的胰脏, 青春, 角色研究, 生死叙事]
+tags: [角色研究]
 post_author: 三好文雄
 excerpt: 从反套路的生死叙事、暧昧而难以命名的关系，以及山内樱良的青春形象，短评动画电影《我想吃掉你的胰脏》。
 featured_order: 0

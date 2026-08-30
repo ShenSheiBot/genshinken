@@ -8,7 +8,7 @@ slug: what-is-knowledge
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [认识论]
+tags: [科学哲学]
 post_author: Duncan Pritchard
 translator: [Doubting Thomas, 傲娇少女葛成巧, 阿派]
 proofreader: [阿惜, 宙草, 春埼美空, lian, Teki]

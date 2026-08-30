@@ -7,7 +7,7 @@ slug: yasashii-gentle-kind-strong
 script: hans
 categories: [御宅文化]
 section: essay
-tags: [日语, 翻译, 语用学]
+tags: [语言哲学]
 post_author: 篱落呼灯
 editor: 伦勃朗
 excerpt: 篱落呼灯借语料库与流行文化用例比较日语“優しい”和汉语“温柔”的语义、搭配与情感差异，并讨论“亚撒西”等音译词如何进入中文亚文化语境。

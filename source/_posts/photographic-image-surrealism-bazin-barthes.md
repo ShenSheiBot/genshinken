@@ -8,7 +8,7 @@ slug: photographic-image-surrealism-bazin-barthes
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [摄影, 安德烈·巴赞, 罗兰·巴特, 萨特, 超现实主义, 电影理论]
+tags: [电影理论, 罗兰·巴特]
 post_author: Adam Lowenstein
 translator: will
 excerpt: Adam Lowenstein 由萨特、巴赞与巴特重审摄影现实主义的超现实主义维度；两章摘译覆盖原论文第54—64页。

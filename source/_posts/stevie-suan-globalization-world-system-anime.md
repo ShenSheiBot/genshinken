@@ -6,7 +6,7 @@ slug: stevie-suan-globalization-world-system-anime
 categories: [动画]
 section: translation
 format: article
-tags: [日本动画, 御宅研究, 世界系, 全球化]
+tags: [御宅研究, 世界系, 全球化]
 post_author: Stevie Suan
 translator: 村上侑
 license: CC BY-NC-SA 4.0

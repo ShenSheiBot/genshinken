@@ -6,7 +6,7 @@ slug: death-and-rebirth-in-isekai-reincarnation
 script: hans
 categories: [御宅文化]
 section: essay
-tags: [异世界转生, 轻小说, 无职转生, 劳动, 重开]
+tags: [轻小说, 劳动]
 post_author: 甚谁
 excerpt: 甚谁从奇幻到异世界转生的谱系出发，讨论主人公死亡、人生重置、劳动伦理与中日“重开”想象的差异。
 citation:

@@ -8,7 +8,7 @@ slug: closer-to-the-world-chapter-1-arai-motoko-family
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [东浩纪, 世界系, 日本文学, 角色小说]
+tags: [角色研究, 世界系, 东浩纪]
 post_author: 东浩纪
 translator: 有电拍拍
 excerpt: 东浩纪通过新井素子、法月纶太郎、押井守与小松左京，讨论与现实分离的文学如何重新接近社会、家庭、恋爱与未来。

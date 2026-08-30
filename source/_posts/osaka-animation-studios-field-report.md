@@ -6,7 +6,7 @@ slug: osaka-animation-studios-field-report
 script: hans
 categories: [动画]
 section: translation
-tags: [动画制作, 日本动画, 工作室]
+tags: [动画制作]
 post_author: kViN
 translator: 石立太一
 excerpt: kViN走访大阪的GoHands、Animation Do、Liden Films、Anime R、Studio Mu与Wanpack等工作室，记录东京之外的动画生产网络。

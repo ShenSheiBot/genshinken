@@ -6,7 +6,7 @@ slug: taekwondo-park-manga-study
 script: hans
 categories: [漫画]
 section: review
-tags: [跆拳道朴, 漫画研究, 民族主义, 历史记忆, 日韩关系]
+tags: [漫画研究, 民族主义]
 post_author: 实在狗子
 excerpt: 从《跆拳道朴》对日韩、中韩历史冲突的夸张演绎出发，分析漫画如何以擂台式狂欢拆解民族主义叙事，并让无法直面的历史创伤以喜剧形式返回。
 featured_order: 0

@@ -6,7 +6,7 @@ slug: jojo-memes-spring-festival-survival
 script: hans
 categories: [动画]
 section: review
-tags: [JOJO的奇妙冒险, 网络迷因]
+tags: [粉丝文化, JOJO的奇妙冒险]
 post_author: 屋顶现视研
 excerpt: 把春节期间常见的工作、对象、婚姻、成绩与升职追问，逐一改写成《JOJO的奇妙冒险》角色台词与名场面回应。
 featured_order: 0

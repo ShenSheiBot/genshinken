@@ -6,7 +6,7 @@ slug: penguindrum-anatomy-how-we-achieve-nothing
 script: hans
 categories: [动画]
 section: review
-tags: [回转企鹅罐, 几原邦彦, 东京地铁事件, 意识形态, 精神分析, 日常]
+tags: [精神分析, 意识形态, 日常, 几原邦彦]
 post_author: 一只非0的O
 excerpt: 从东京地铁事件与日本社会的日常危机出发，借村上春树、阿尔都塞和拉康解剖《回转企鹅罐》中的爱、家庭、秩序与主体困境。
 featured_order: 0

@@ -8,7 +8,7 @@ slug: reading-feminist-theory
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [女性主义, 女性主义理论, 现代性, 后现代主义]
+tags: [女性主义, 后现代, 现代性]
 post_author: [Susan Archer Mann, Ashly Suzanne Patterson]
 translator: [柴来人, エミヤたにゆき, 煮鱼, buhrwana, vall, Chris, TangerineKnight, su0tiuibu, snoper卓尔, Va-11 Hall-A, 伞泽直美, dieSigurd, 慧慧, Labour, dieGrox, 初鹿野凪, another]
 proofreader: [春埼美空, Chris, snoper卓尔, 蒸汽黎明]

@@ -6,7 +6,7 @@ slug: ito-project-genocide-political-state-harmony
 script: hans
 categories: [动画]
 section: review
-tags: [伊藤计划, 虐杀器官, 和谐, 大屠杀, 现代性]
+tags: [现代性, 灾难想象]
 post_author: 秘则为花
 excerpt: 从《虐杀器官》的两种大屠杀及国家理性化工程出发，讨论现代性、政治国家与《和谐》“生府社会”中身体治理和自我意识的消除。
 featured_order: 0

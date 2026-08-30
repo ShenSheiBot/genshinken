@@ -6,7 +6,7 @@ slug: author-of-tachiguishi-oshii
 script: hans
 categories: [电影与影视]
 section: review
-tags: [押井守, 立餐师列传, 元动画, 纪录片, 电影理论, 作者研究]
+tags: [动画评论, 电影理论, 文化批评, 押井守]
 post_author: 新宿森林
 proofreader: 伦勃朗
 excerpt: 从《立餐师列传》的动画形式、人物素材与伪纪录片结构出发，考察押井守如何打破动画与实拍、真实与虚构之间的界限。

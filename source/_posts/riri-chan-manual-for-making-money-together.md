@@ -6,7 +6,7 @@ slug: riri-chan-manual-for-making-money-together
 script: hans
 categories: [御宅文化]
 section: translation
-tags: [日本社会, 性别研究, 消费文化, 亲密关系, 牛郎文化]
+tags: [性别研究, 消费文化]
 post_author: りりちゃん
 translator: [神必天坑, ethci, Salzivelm, 竹上青, 雨宫优子]
 editor: 夜深人静

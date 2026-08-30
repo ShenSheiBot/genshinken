@@ -6,7 +6,7 @@ slug: arknights-and-modern-totems
 script: hans
 categories: [思想与理论]
 section: essay
-tags: [明日方舟, 现代图腾, 数据库消费, 后现代, 抽卡游戏, 列维－斯特劳斯]
+tags: [后现代, 消费文化]
 post_author: 窗子
 proofreader: 伦勃朗
 editor: 子厚

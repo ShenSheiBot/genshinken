@@ -6,7 +6,7 @@ slug: modernity-not-overcome-writing-mysticism-science
 script: hans
 categories: [思想与理论]
 section: essay
-tags: [神秘主义, 汉字, 科学哲学, 主体性, 现代性]
+tags: [现代性, 科学哲学, 主体性]
 post_author: blank-brackets
 excerpt: 作者以西方神秘学模型分析汉字文化中的文字神秘主义，并从起源、主体性与科学的关系讨论东洋现代性的“非超克”状态。
 citation:

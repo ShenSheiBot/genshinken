@@ -6,7 +6,7 @@ slug: judith-levine-hating-motherhood
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [女性主义, 母职, 家庭]
+tags: [女性主义, 母职]
 post_author: Judith Levine
 translator: 彼得潘
 proofreader: 人吉尔朗

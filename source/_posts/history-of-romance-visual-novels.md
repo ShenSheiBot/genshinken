@@ -6,7 +6,7 @@ slug: history-of-romance-visual-novels
 script: hans
 categories: [游戏]
 section: translation
-tags: [视觉小说, 恋爱游戏, 美少女游戏, 游戏史]
+tags: [游戏研究, 视觉小说]
 post_author: Warudo Chaos
 translator: [波尔艾南, Liebestram, 伞泽直美, 人参果味砒霜, 香饵]
 proofreader: [人参果味砒霜, Liebestram]

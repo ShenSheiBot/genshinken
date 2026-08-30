@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [女性主义, 月经, 性别政治]
+tags: [女性主义, 性别研究]
 post_author: Gloria Steinem
 translator: celani
 proofreader: 人吉尔郎

@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [女性主义, 后殖民主义, 第三世界, Chandra Talpade Mohanty, 马克思主义]
+tags: [女性主义, 后殖民主义, 马克思主义]
 post_author: Feyzi Ismail
 translator: 来自太平洋的湿润季风
 proofreader: 柴来人

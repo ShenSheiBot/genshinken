@@ -6,7 +6,7 @@ slug: anonymous-phantom-on-the-roof
 script: hans
 categories: [屋顶社群]
 section: community
-tags: [屋顶现视研, 社群自治, 志愿协作, 批评生态, 组织史]
+tags: [文化批评, 共同体, 组织史]
 post_author: 屋顶现视研
 excerpt: 屋顶现视研第二任负责人以匿名组织口吻回顾社群成立半年后的协作方式、经费安排与开放批评生态。
 featured_order: 10

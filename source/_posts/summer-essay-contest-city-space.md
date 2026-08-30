@@ -6,7 +6,7 @@ slug: summer-essay-contest-city-space
 script: hans
 categories: [屋顶社群]
 section: community
-tags: [都市·空间, 社群活动, 动画评论]
+tags: [动画评论]
 post_author: 屋顶现视研
 excerpt: 屋顶现视研第一次征文活动以“都市·空间”为主题，说明征文缘起、讨论方向、投稿要求与7月14日截止日期，并附部长子默的活动寄语。
 featured_order: 0

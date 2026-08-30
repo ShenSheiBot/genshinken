@@ -6,7 +6,7 @@ slug: hibike-euphonium-cinematography-analysis
 script: hans
 categories: [动画]
 section: translation
-tags: [吹响！上低音号, 构图, 影像]
+tags: [动画演出, 吹响！上低音号]
 post_author: njjgnuoy
 translator: Jumbohard
 proofreader: [唯一真实, 子厚]

@@ -6,7 +6,7 @@ slug: fujitsu-ryota-porco-rosso-patlabor-2
 categories: [动画]
 section: translation
 format: article
-tags: [动画研究, 战争与和平, 红猪, 机动警察]
+tags: [动画研究, 战争, 押井守, 机动警察]
 post_author: 藤津亮太
 translator: 中割Production
 license: CC BY-NC-SA 4.0

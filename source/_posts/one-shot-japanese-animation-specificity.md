@@ -6,7 +6,7 @@ slug: one-shot-japanese-animation-specificity
 script: hans
 categories: [动画]
 section: essay
-tags: [日本动画, 偏移取景, 形式风格, 构图, 蒙太奇, 动画主义]
+tags: [动画演出, 动画研究]
 post_author: 鲜奶饼干
 excerpt: 从日本动画惯用而实拍电影罕见的“偏移取景”出发，比较古典好莱坞与艺术电影的构图传统，追溯固定镜头蒙太奇、多图层空间和制作流程如何形成日本动画独特的媒介想象力。
 featured_order: 0

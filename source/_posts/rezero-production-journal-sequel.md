@@ -6,7 +6,7 @@ slug: rezero-production-journal-sequel
 script: hans
 categories: [动画]
 section: translation
-tags: [Re:从零开始的异世界生活, 渡边政治, 动画改编, 动画演出]
+tags: [动画制作, 动画演出, 跨媒介]
 post_author: kViN
 translator: 晚钟送别此日
 proofreader: 加速器

@@ -6,7 +6,7 @@ slug: animation-criticism-stranger-perspective
 script: hans
 categories: [御宅文化]
 section: essay
-tags: [动画评论, 陌生人, 齐美尔, 结构性思维, 亚文化, 御宅研究]
+tags: [动画评论, 御宅研究]
 post_author: 钟子默
 excerpt: 从动画评论所遭遇的理论排斥与话语权争议出发，引入齐美尔的“陌生人”视角，讨论漫评的广度、深度与结构性思维。
 featured_order: 0

@@ -6,7 +6,7 @@ slug: fall-2018-anime-preview
 script: hans
 categories: [动画]
 section: translation
-tags: [新番, 动画制作, 2018年动画]
+tags: [动画评论, 动画制作, 日本动画史]
 post_author: [Kevin Cirugeda, Liborek]
 translator: 石立太一
 excerpt: 从监督、人设、作画团队与制作工期出发，前瞻《强风吹拂》《弦音》《SSSS.GRIDMAN》等2018年秋季动画。

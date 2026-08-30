@@ -7,7 +7,7 @@ script: hans
 categories: [思想与理论]
 section: translation
 format: article
-tags: [工作伦理, 女性主义, 情感劳动, 后福特主义]
+tags: [女性主义, 政治经济学, 劳动]
 post_author: Kathi Weeks
 translator: [宋赛博, sos团长]
 excerpt: Kathi Weeks借助20世纪70年代女性主义对浪漫爱的批判，分析当代管理话语如何要求雇员热爱工作并为工作感到幸福。

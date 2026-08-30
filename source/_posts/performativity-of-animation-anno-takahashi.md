@@ -6,7 +6,7 @@ slug: performativity-of-animation-anno-takahashi
 script: hans
 categories: [动画]
 section: review
-tags: [安浓高志, 高桥直人, 动画演出, 日本动画史, 凝视, 时间－影像]
+tags: [动画演出, 日本动画史, 凝视]
 post_author: 一条
 excerpt: 一条从安浓高志与高桥直人的作品出发，沿时间、相片、凝视、表层和触觉等问题，讨论日本动画如何在静止、反复与媒介限制中生成独特的演出性。
 citation:

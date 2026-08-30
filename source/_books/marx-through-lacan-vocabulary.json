@@ -32,7 +32,7 @@
       "authors": ["Carlos Andrés Umaña González"],
       "translators": ["柴来人"],
       "proofreaders": ["fʷat̚³⁵!", "球团"],
-      "tags": ["马克思主义", "精神分析", "拉康"]
+      "tags": ["精神分析", "拉康", "马克思主义"]
     },
     {
       "id": "consumption",
@@ -44,7 +44,7 @@
       "authors": ["Agustina Saubidet"],
       "translators": ["烦一句"],
       "proofreaders": ["球团", "fʷat̚³⁵!"],
-      "tags": ["马克思主义", "精神分析", "拉康"]
+      "tags": ["精神分析", "拉康", "马克思主义"]
     }
   ]
 }

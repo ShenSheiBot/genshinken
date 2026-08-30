@@ -6,7 +6,7 @@ slug: hello-world-hal-9000-white-hat
 script: hans
 categories: [动画]
 section: review
-tags: [HELLO WORLD, 拉康, 精神分析, 对象a, 父之名]
+tags: [精神分析, 拉康]
 post_author: Jack Cade
 excerpt: 从《HELLO WORLD》的双重虚拟世界与主体分裂出发，借助拉康的对象a、询唤和父性隐喻，重读影片结尾所许诺的“真正现实”。
 citation:

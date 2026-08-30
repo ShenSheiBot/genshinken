@@ -6,7 +6,7 @@ slug: how-shinkai-became-first-rate-animation-creator
 script: hans
 categories: [动画]
 section: essay
-tags: [新海诚, Layer的美学, 蒙太奇, 星之声, 大塚英志, 日本动画史]
+tags: [日本动画史, 新海诚, 大塚英志]
 post_author: 红茶泡海苔
 translator: 红茶泡海苔
 excerpt: 从新海诚的非科班经历切入，借大塚英志“Layer的美学”讨论图层、卡与声音的多重蒙太奇，说明《星之声》如何在正统动画史之外形成独特方法。

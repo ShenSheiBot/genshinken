@@ -6,7 +6,7 @@ slug: limits-of-communication-understanding-a-silent-voice
 script: hans
 categories: [动画]
 section: review
-tags: [声之形, 沟通, 戴维森, 宽容原则, 共同体, 校园欺凌]
+tags: [语言哲学, 共同体]
 post_author: Suetonius
 proofreader: [hood, 袁青日月郎, 芳草]
 excerpt: 以戴维森的三角测量法和宽容原则分析《声之形》中的沟通困境，进而追问理论上的可理解性、现实伤害与共同体排斥之间无法轻易抹平的距离。

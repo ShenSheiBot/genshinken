@@ -8,7 +8,7 @@ slug: phenomenology-the-basics-introduction-chapters-1-2
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [现象学, 丹·扎哈维, 胡塞尔, 海德格尔, 梅洛·庞蒂, 意向性]
+tags: [海德格尔]
 post_author: Dan Zahavi
 translator: [飞飞, 阿惜, 我大笑三声哈哈哈, Wasted., 加速器, S.C., Raymond, 小小圣人, Avva Κομνηνή, 三森老师, Phaedrus, why7682, EIMY, Kernel]
 proofreader: [真红, 飞飞, Va-11 Hall-A, 希文, 柴来人]

@@ -7,7 +7,7 @@ slug: jk-koharu-in-another-world-review
 script: hans
 categories: [御宅文化]
 section: review
-tags: [轻小说, 异世界, 性别研究]
+tags: [性别研究, 轻小说]
 post_author: 实在狗子
 proofreader: 伦勃朗
 excerpt: 实在狗子以《女高中生小春在异世界成为娼妓》的女性第一人称叙述为切口，讨论异世界轻小说如何否认男性主人公的欲望、排除真正的他者，并批评作品结尾接受虚假选择的局限。

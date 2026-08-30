@@ -6,7 +6,7 @@ slug: heart-made-of-iron-and-wind
 script: hans
 categories: [游戏]
 section: review
-tags: [苍之彼方的四重奏, 海德格尔]
+tags: [海德格尔]
 post_author: 元达南
 excerpt: 从《苍之彼方的四重奏》中“心就是铁和风做成的”这一比喻出发，讨论心的开启、决断，以及游戏经验中不可穷尽的迷乱。
 citation:

@@ -6,7 +6,7 @@ slug: softcore-kara-no-kyoukai-quiz
 script: hans
 categories: [动画]
 section: review
-tags: [空之境界, 奈须蘑菇, 型月]
+tags: [空之境界]
 post_author: hephaestus
 excerpt: hephaestus 以十八道选择题回望《空之境界》的人物、设定、访谈与主题，在软核问卷里检验读者对观布子市诸多细节的记忆与理解。
 featured_order: 0

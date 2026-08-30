@@ -6,7 +6,7 @@ slug: weathering-with-you-review
 script: hans
 categories: [动画]
 section: review
-tags: [天气之子, 新海诚, 世界系, 动画评论, 灾难想象]
+tags: [动画评论, 世界系, 灾难想象, 新海诚, 天气之子]
 post_author: 红茶泡海苔
 proofreader: 伦勃朗
 excerpt: 红茶泡海苔从天气意象、世界系结构、独白与共情出发，讨论《天气之子》如何把世界与少女的选择转化为共同生活的姿态。

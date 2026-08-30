@@ -6,7 +6,7 @@ slug: azuma-heidegger-beyond-wittgenstein
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [东浩纪, 海德格尔, 维特根斯坦, 逻辑实证主义, 本体论, 形式化]
+tags: [本体论, 科学哲学, 东浩纪, 海德格尔]
 post_author: 东浩纪
 translator: 养鸡场客卿
 excerpt: 东浩纪以卡尔纳普和维特根斯坦对逻辑界限的规定为参照，解释海德格尔如何借此在的二重结构建立思考存在的严密方法。

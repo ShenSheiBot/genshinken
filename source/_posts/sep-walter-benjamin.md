@@ -6,7 +6,7 @@ slug: sep-walter-benjamin
 script: hans
 categories: [思想与理论]
 section: translation
-tags: [本雅明, 批判理论, 现代性, 历史哲学]
+tags: [现代性, 文化批评, 本雅明]
 post_author: [Peter Osborne, Matthew Charles]
 translator: [aho, juckmade]
 proofreader: 晴信

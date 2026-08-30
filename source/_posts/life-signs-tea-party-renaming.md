@@ -7,7 +7,7 @@ script: hans
 categories: [屋顶社群]
 section: community
 format: article
-tags: [生命体征维持茶话会, 日常]
+tags: [日常]
 post_author: 生命体征维持茶话会
 excerpt: “网哲邻人部”更名为“生命体征维持茶话会”时发布的说明：知识生产将从学院化话语转向对庶民日常生活、照护与具体需求的关注。
 citation:

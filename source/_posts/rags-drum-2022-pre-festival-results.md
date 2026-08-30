@@ -7,7 +7,7 @@ slug: rags-drum-2022-pre-festival-results
 script: hans
 categories: [屋顶社群]
 section: community
-tags: [拾荒战略, 征文, 社群活动]
+tags: []
 post_author: 屋顶现视研
 excerpt: 屋顶现视研公布拾荒战略Rags Drum 2022前夜祭两条赛道的七篇入选稿件、稿酬、评委口径及后夜祭时间安排。
 citation:
