@@ -258,6 +258,7 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
+  :global(html[data-reading-chrome-entry="route"]) .searchButton,
   :global(html[data-reading-chrome-entry="route"]) .themeButton {
     animation: reading-theme-shift-left 420ms cubic-bezier(.2, .75, .3, 1) both;
   }
@@ -267,6 +268,7 @@
     animation: reading-tool-enter 340ms cubic-bezier(.2, .75, .3, 1) 70ms both;
   }
 
+  :global(html[data-reading-chrome-exit="route"]) .searchButton,
   :global(html[data-reading-chrome-exit="route"]) .themeButton {
     animation: reading-theme-shift-right 420ms cubic-bezier(.4, 0, .8, .25) both;
   }
