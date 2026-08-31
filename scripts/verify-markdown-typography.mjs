@@ -1,6 +1,98 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
+import remarkGfm from "remark-gfm";
+import remarkParse from "remark-parse";
+import { unified } from "unified";
 import { renderMarkdown } from "../lib/markdown.ts";
+
+function markdownNodeText(node) {
+  if (typeof node.value === "string") return node.value;
+  return (node.children ?? []).map(markdownNodeText).join("");
+}
+
+function isApparatusBoundary(node, depth) {
+  if (node.type === "heading") return node.depth <= depth;
+  if (node.type !== "html") return false;
+  const match = (node.value ?? "").match(/^\s*<h([1-6])\b/iu);
+  return Boolean(match && Number(match[1]) <= depth);
+}
+
+function isInvisibleApparatusNode(node) {
+  return node.type === "footnoteDefinition"
+    || node.type === "thematicBreak"
+    || (node.type === "html" && /^\s*<!--/u.test(node.value ?? ""));
+}
+
+/**
+ * A GFM definition is moved into the generated footnote section. A source
+ * heading whose whole section consists only of those definitions therefore
+ * becomes an empty article heading. Iterate over a virtual child list so a
+ * stack such as “译注 → 附录 → definitions” reports both detached headings.
+ * This is advisory: an editor may deliberately retain an otherwise empty
+ * heading, while a real bibliography paragraph/list must never be warned.
+ */
+function detachedFootnoteHeadings(markdown) {
+  const children = [
+    ...(unified().use(remarkParse).use(remarkGfm).parse(markdown).children ?? []),
+  ];
+  const warnings = new Map();
+
+  while (true) {
+    let removed = false;
+    for (let index = 0; index < children.length; index += 1) {
+      const heading = children[index];
+      if (heading.type !== "heading") continue;
+
+      const section = [];
+      let cursor = index + 1;
+      while (
+        cursor < children.length
+        && !isApparatusBoundary(children[cursor], heading.depth)
+      ) {
+        section.push(children[cursor]);
+        cursor += 1;
+      }
+      if (!section.some((node) => node.type === "footnoteDefinition")) continue;
+      if (section.some((node) => !isInvisibleApparatusNode(node))) continue;
+
+      const line = heading.position?.start?.line ?? 0;
+      warnings.set(`${line}:${markdownNodeText(heading)}`, {
+        line,
+        title: markdownNodeText(heading).trim(),
+      });
+      children.splice(index, 1);
+      removed = true;
+      break;
+    }
+    if (!removed) break;
+  }
+
+  return [...warnings.values()].sort((left, right) => left.line - right.line);
+}
+
+assert.deepEqual(
+  detachedFootnoteHeadings("正文[^1]。\n\n## 参考文献\n\n[^1]: 文献。"),
+  [{ line: 3, title: "参考文献" }],
+  "a heading emptied by GFM footnote extraction must be reported",
+);
+assert.deepEqual(
+  detachedFootnoteHeadings("## 译注\n\n## 附录\n\n[^1]: 注释。"),
+  [
+    { line: 1, title: "译注" },
+    { line: 3, title: "附录" },
+  ],
+  "consecutive detached apparatus headings must all be reported",
+);
+assert.deepEqual(
+  detachedFootnoteHeadings("## 参考文献\n\n1. 真实书目。\n\n[^1]: 注释。"),
+  [],
+  "a heading with a visible bibliography must remain accepted",
+);
+assert.deepEqual(
+  detachedFootnoteHeadings("## 单独标题"),
+  [],
+  "an intentionally standalone heading without extracted definitions must remain accepted",
+);
 
 const localeLayoutSource = await readFile(new URL("../app/[locale]/layout.tsx", import.meta.url), "utf8");
 assert.match(
@@ -762,6 +854,7 @@ assert.doesNotMatch(
   const path = await import("node:path");
   const postsDirectory = path.join(process.cwd(), "source", "_posts");
   const corpusFailures = [];
+  const corpusWarnings = [];
   const markerLeak = /\[(?:fig(?:-note)?|table(?:-note)?|note|audio|music|video|person(?:-bio)?|author(?:-bio)?|card(?:-bio)?|gallery|slides|\/(?:gallery|slides|layout)|layout:(?:resources|timeline|reading-path|book-list|podcast|contact|comic))\]/u;
   const legacyItalicCaption = /^\*(?:图题[:：]|图[0-9]+[.．：:]).*\*$/mu;
   const invalidWidth = /title="=(?!(?:25|33|50|66|75|100)%")[^"]*"/u;
@@ -816,6 +909,11 @@ assert.doesNotMatch(
     for (const line of authorPortraitsWithFigureCaptions(body)) {
       corpusFailures.push(`${name}:${line}: 作者头像不能使用普通 [fig]；请改用 [author]/[card]/[person]，说明文字另入作者简介或编者按`);
     }
+    for (const warning of detachedFootnoteHeadings(body)) {
+      corpusWarnings.push(
+        `${name}:${warning.line}: 标题“${warning.title}”下只有会被 GFM 移入注释区的脚注定义；请复核是否删除这个空壳标题`,
+      );
+    }
     const html = await renderMarkdown(body);
     if (markerLeak.test(html.replace(/<[^>]+>/gu, ""))) {
       corpusFailures.push(`${name}: 图版/表格标记字面渲染进了页面（[fig]/[fig-note]/[table]/[table-note] 位置或格式有误）`);
@@ -849,6 +947,11 @@ assert.doesNotMatch(
     for (const line of authorPortraitsWithFigureCaptions(body)) {
       corpusFailures.push(`${relative}:${line}: 译文作者头像不能使用普通 [fig]；请改用 [author]/[card]/[person]`);
     }
+    for (const warning of detachedFootnoteHeadings(body)) {
+      corpusWarnings.push(
+        `${relative}:${warning.line}: 标题“${warning.title}”下只有会被 GFM 移入注释区的脚注定义；请复核是否删除这个空壳标题`,
+      );
+    }
     const language = relative.includes(`${path.sep}ja${path.sep}`) ? "ja" : "en";
     const html = await renderMarkdown(body, { language });
     if (markerLeak.test(html.replace(/<[^>]+>/gu, ""))) corpusFailures.push(`${relative}: 译文图版／特殊版式标记字面渲染进页面`);
@@ -861,7 +964,11 @@ assert.doesNotMatch(
     [],
     `全语料渲染扫描发现 ${corpusFailures.length} 处标记泄漏`
   );
-  console.log(`corpus render scan passed for ${posts.length} posts and ${translationFiles(translationRoot).length} translations`);
+  for (const warning of corpusWarnings) console.warn(`警告：${warning}`);
+  console.log(
+    `corpus render scan passed for ${posts.length} posts and ${translationFiles(translationRoot).length} translations` +
+    ` (${corpusWarnings.length} detached-footnote-heading warnings)`,
+  );
 }
 
 console.log("markdown typography verification passed");

@@ -157,8 +157,6 @@ citation:
 
 
 
-## 译注
-
 [^译注1]: 韩国的第一个牙膏品牌，1954年由乐喜化学工业社（现LG集团子公司LG生活健康）推出
 
 [^译注2]: Sinalco是1902年创立于德国的碳酸饮料品牌；二十世纪五十年代末，Sinalco和OB啤酒公司（OB 맥주）联合推出了面向韩国市场的“시날코”
@@ -176,8 +174,6 @@ citation:
 [^译注7]: 马山市的机器人主题乐园已顺利开张（2019年9月），参见：themeparX (Robot Land Masan)
 
 
-
-## 附录
 
 [^1]: 孙贞（Sun Jung）用“花美男”（꽃미남）综合征一词来形容魅力十足的韩国男性艺人的崛起，参见孙贞，<跨国的（초국적）泛东亚温和男子气概>（Chogukjeok Pan-East Asian Soft Masculinity），《复杂的流动：媒体流动、软实力和东亚》（Complicated Currents: Media Flows, Soft Power, and East Asia），丹尼尔·布莱克（Daniel Black）、斯蒂芬·爱泼斯坦（Stephen Epstein）、艾莉森·时田（Alison Tokita）编辑，维多利亚州［澳大利亚］：蒙纳士大学电子出版社，2010年，页8.1-8.16.
 

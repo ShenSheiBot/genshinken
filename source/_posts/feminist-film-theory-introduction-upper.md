@@ -272,8 +272,6 @@ citation:
 
 ……（请期待导论的下半部分！）
 
-## 尾注
-
 [^2]: 中文译文正文有注2调用，但所附尾注从注3开始，未收录注2内容。
 
 [^3]: For a brilliant analysis of the ideology of gender complementarity, see Hilary Neroni, The Violent Woman: Femininity, Narrative, and Violence in Contemporary American Cinema (Albany, NY: SUNY Press, 2005).
@@ -377,9 +375,6 @@ citation:
 [^52]: Joan Riviere, “Womanliness as a Masquerade,” in Psychoanalysis and Female Sexuality, ed. Hendrik Ruitenbeek (New Haven: College and University Press, 1966), 213. Riviere’s essay was originally published in International Journal of Psychoanalysis 10 (1929): 3–13.
 
 [^53]: Ibid., 213
-
-
----
 
 <h2 id="introduction-lower">导论（下）：新自由主义女性气质</h2>
 

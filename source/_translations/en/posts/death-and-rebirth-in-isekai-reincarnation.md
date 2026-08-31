@@ -136,8 +136,6 @@ That break can support a genuine refusal. Azusa does not stop working; she escap
 
 Isekai reincarnation, then, does not escape the work ethic or competitive success by definition. It creates the space in which a story might do so. Its most revealing question is not whether the protagonist receives a cheat, works hard, or wins. It is whether rebirth changes what counts as a life worth living. If the answer is still power, status, and victory, death has only restarted the old contest under more favorable rules. If the new life makes room for chosen effort, reciprocal ties, and the right to have enough without defeating anyone, then the one-way door opens onto something genuinely new.
 
-### Notes
-
 [^1]: Quoted in this article’s English rendering from the Chinese translation of Ao Jyumonji, *Grimgar of Fantasy and Ash*, Vol. 1 (Ching Win Publishing). The ellipsis marks an omission in the cited afterword.
 
 [^2]: Quoted in this article’s English rendering from the Chinese translation of Hiroki Azuma, *The Birth of Game-Like Realism: Animalizing Postmodernity 2* (Tonsan Publications).

@@ -246,8 +246,6 @@ format: article
 
 このミニゲームは、ゲーム『Desert Bus』やアンディ・ウォーホルの映画『Empire』にも通じる。作品の内容以上に、それをプレイし、見続ける行為が意味を持つ。そして、その行為をどう読むかが、さらに別の意味を生む。最後に突きつけられるのは、やはりこの問いである。**一人前のプレイヤーとは、いったい何者なのか。**[^ref-25]
 
-## 参考文献
-
 [^ref-1]: Bogost I. How to talk about videogames[M]. U of Minnesota Press, 2015.
 
 [^ref-2]: Elson M, Breuer J, Ivory J D, et al. More than stories with buttons: Narrative, mechanics, and context as determinants of player experience in digital games[J]. Journal of Communication, 2014, 64(3): 521-542.

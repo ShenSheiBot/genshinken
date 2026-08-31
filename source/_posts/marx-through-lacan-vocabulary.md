@@ -122,8 +122,6 @@ citation:
 
 > 人们无法清除社会剥削秩序的排泄物之瘟疫，因为这种秩序以主体的这个开口为基础，因此无论人们用什么办法思考它、即使在马克思主义中，也不会在社会剥削的秩序中产生异化。（SXIII，20.04.66）
 
-## Notes
-
 [^bourgeoisie-bourgeoisie-1]: See Lacan (_SXVI_, 13.11.68).
 
 [^bourgeoisie-bourgeoisie-2]: Our translation.

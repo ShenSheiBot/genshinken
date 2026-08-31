@@ -188,8 +188,6 @@ The Art Ending asks the player to perform a transparently boring task: keep pres
 
 Yet a player might genuinely find a reading in those four hours: the repetitive emptiness of work, the blurred boundary between labor and games[^ref-12] (the computer is both an office tool and a game machine, and the apartment sequence turns domestic life into button prompts), or questions about play itself. What does unthinking repetition mean? How is another game different? Would an automated four-hour input change the work[^ref-5][^ref-12]? The player may reconsider the time spent pursuing victory, or mock both game and audience: perhaps the makers and admirers of *The Stanley Parable* are flattering themselves just as we flatter ourselves by extracting so much from this tedious button game[^ref-14]. But once the game has provoked those thoughts, can it still be dismissed as meaningless? The essay ends with a polemical question: if players want games recognized as art while rejecting the criticism routinely applied to novels and films as mere overinterpretation, is that not contradictory[^ref-1]? Like *Desert Bus* or Andy Warhol’s film *Empire*, this little game makes **the act of playing matter more than the finished object, and the act of interpretation matter more than either. It asks, finally, what kind of player we choose to be.**
 
-## References
-
 [^ref-1]: Ian Bogost, *How to Talk about Videogames* (University of Minnesota Press, 2015).
 
 [^ref-2]: Malte Elson, Johannes Breuer, James D. Ivory, et al., “More than Stories with Buttons: Narrative, Mechanics, and Context as Determinants of Player Experience in Digital Games,” *Journal of Communication* 64, no. 3 (2014): 521–42.

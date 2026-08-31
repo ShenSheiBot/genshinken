@@ -326,8 +326,6 @@ A. Richardson and T. Uebel editors (2007) The Cambridge Companion to Logical Emp
 
 Uebel, T. (2007) Empiricism at the Crossroads. The Vienna Circle’s Protocol Sentence Debate. Details of a fascinating story
 
-## 注释
-
 [^1]: 第五公理：F的集合 = G的集合当且仅当：对于任一x，x为F当且仅当x为G。
 
 [^2]: 这不是说真理为事实的对应这一观点不能合理化。一本发展了这一观点的好书是Barwise and Etchemendy（1987）。

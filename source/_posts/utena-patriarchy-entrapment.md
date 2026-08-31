@@ -109,8 +109,6 @@ citation:
 
 总而言之，《少女革命》是一部试图在社会层面上努力探讨性别规范与压迫束缚的作品。它在很大程度上取得了成功，但仍在一些关键之处搬起石头砸了自己的隐喻之脚。作为观众，我们必须在理解它的同时牢记这些失败，因为这将深化我们对该剧的鉴赏，并帮助我们在它触礁之处重新起航。
 
-## 参考
-
 [^1]: Butler, J. (1989). Subjects of Sex/Gender/Desire. In Gender trouble: Feminism and the subversion of identity. New York: Routledge.
 
 [^2]: Sinfield, A. (1992). Faultlines: Cultural materialism and the politics of dissident reading. Bekeley: University of California Press.

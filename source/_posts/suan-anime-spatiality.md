@@ -147,8 +147,6 @@ citation:
 2. 这里可参考《你的名字》中JR信浓町站前的人行天桥、《BanG Dream! It’s MyGO!!!!!》中的千登世步道桥等等进行理解。
 3. 原文为“an international framework, where one nation is situated inside another”，这里所谓“将一国定位于另一国之内”，可以理解成中国动画挪用日漫风格、或日本元素侵入中国背景。
 
-## 原文注释
-
 
 [^suan-1]: 杰奎琳·伯恩特：<学术界中的日本动画：表征对象、媒介形式与日本研究>（Anime in Academia: Representative Object, Media Form, and Japanese Studies），《Arts》，第7卷第4期，2018），1-13
 

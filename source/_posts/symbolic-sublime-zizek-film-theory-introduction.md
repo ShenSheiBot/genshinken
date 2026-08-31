@@ -154,8 +154,6 @@ citation:
 
 我希望，在本书的开头深受绝望与困惑打击的读者——“他在说什么？” “这个齐泽克是谁？为什么他这么重要？” “电影分析难道不应该仅仅限于形式和对作者身份，类型和国族传统的研究吗？” ——在读完本书后，她不仅能掌握齐泽克理论和拉康精神分析，而且还能以彻底转变的革命主体的身份，参与到电影批评中来，最后从完全不同的角度回到了她初始的位置。
 
-## 参考文献
-
 [^introduction-symbolic-sublime-introduction-1]: Alain Badiou, “Dialectiques de la fable,” in Matrix: Machine philosophique, ed. Alain Badiou (Paris: Ellipses, 2003), 120. My translation.
 
 [^introduction-symbolic-sublime-introduction-2]: Ibid.
@@ -771,8 +769,6 @@ citation:
 这就是为什么齐泽克将对象a称为“意识形态的崇高客体”。“崇高客体”让我们得以在“后意识形态时代”中的后现代语境之下，解释人们对意识形态的依附状态。它代表了病理性的补充——一种“前信仰的信仰”，甚至超出了“虚假意识”或质朴意识的范围。齐泽克接受了彼得·斯劳特戴克（Peter Sloterdijk）的观点，利用“崇高客体”的概念，解释了为什么在意识形态末期占主导地位的意识形态会是犬儒主义。对于齐泽克来说，马诺尼（Octave Manoni）为了解释“恋物癖式的否认”而发展出的精神分析公式能够非常好地解释犬儒主义：“我很清楚，但是……”（Je suis bien, mais quand même...）。正如斯劳特戴克所说，犬儒主义是“已被启蒙的虚假意识”，是“出现在质朴意识形态与启蒙之后的意识状态”[^chapter-02-lower-symbolic-sublime-ch2-lower-45]。对齐泽克来说，犬儒主义是（正如他在《捍卫失落的事业（In Defence of Lost Causes）》的导言中所说的那样）在“大解释”已经不够的时代诞生的一种意识形态；当旨在解放的大型政治工程不再引起共鸣时；当“常识”告诉我们“最远也就是开明的保守自由主义……没有可行的资本主义替代品……（只）剩下其本身时，资本主义的波动便会破坏自己的根基。这不仅涉及经济的波动……还涉及到意识形态政治的波动。在这一层面上讲，问题的答案既不是哈耶克的激进自由主义，也不是粗糙的保守主义，更不应坚持老旧的福利国家理想，而是应当将经济自由主义和最低限度的社群‘威权’精神结合……从而抵消该体系的过度（excesses）”[^chapter-02-lower-symbolic-sublime-ch2-lower-46]时。只有这时，犬儒主义意识形态才会出现。
 
 齐泽克对“后理论”的反动性和保护性立场，及其对大理论的“反革命”攻击，表示反对与拒绝。而前文所讲的，正是其表达反对意见时的语境。“后理论学者”的态度或多或少地代表了盛行当下的犬儒理性——那就是断定“大理论”之终结的态度。
-
-## 参考文献
 
 [^chapter-02-lower-symbolic-sublime-ch2-lower-27]: It is difficult not to assume here that Žižek is relying on Fredric Jameson’s Marxian notion of modern allegory developed in The Political Unconscious: Narrative as a Socially Symbolic Act (Ithaca, NY: Cornell University Press, 1981).
 

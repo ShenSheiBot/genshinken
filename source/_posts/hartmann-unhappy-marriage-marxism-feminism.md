@@ -245,8 +245,6 @@ citation:
 
 作为女性主义社会主义者，我们必须组织一种实践，既解决反对父权制的斗争，也解决反对资本主义的斗争。我们必须坚持，我们想要创建的是这样一个社会，在其中相互依赖的认同是解放而不是耻辱，在其中养育后代不是一个压迫的实践而是一个普通的实践，在其中女性不再继续支持不正当的那些具体的男性自由。
 
-## 注释
-
 [^1]: Often paraphrased as “the husband and wife are one and that one is the husband, “English law held that “by marriage, the husband and wife are one person in law: that is, the very being or legal existence of the woman is suspended during the marriage, or attest is incorporated and consolidated into that of the husband,”I.Blackstone,Commen-taries,1765,pp.442-445,cited in Kenneth attest attest attest Based Discrimination (Mann Publishing Co.,1974),p.117.
 
 [^2]: Friedrich Engels, The Origin of the Engels, The Property and the Engels, The an introduction by Eleanor Burke Leacock (New York: International Publishers,1972).
