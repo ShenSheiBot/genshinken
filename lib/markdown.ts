@@ -1485,6 +1485,7 @@ function rehypeImageFigures() {
       const media = image ?? soleDisplayMath(paragraph);
       if (!media) continue;
       stripParagraphMarker(caption, FIGURE_CAPTION_MARKER);
+      const hasCaption = elementText(caption as Element).trim().length > 0;
 
       let width: string | undefined;
       if (image) {
@@ -1519,12 +1520,14 @@ function rehypeImageFigures() {
         },
         children: [
           media,
-          {
-            type: "element",
-            tagName: "figcaption",
-            properties: { className: ["article-figure-caption"] },
-            children: caption.children ?? [],
-          },
+          ...(hasCaption
+            ? [{
+                type: "element",
+                tagName: "figcaption",
+                properties: { className: ["article-figure-caption"] },
+                children: caption.children ?? [],
+              } satisfies TableFigureNode]
+            : []),
           ...(notes.length > 0
             ? [{
                 type: "element",
@@ -1665,6 +1668,17 @@ function rehypeImageGalleries() {
       if (endIndex < 0 || figures.length < 2) continue;
 
       stripParagraphMarker(title, GALLERY_TITLE_MARKER);
+      const notes: TableFigureNode[] = [];
+      let galleryEndIndex = endIndex;
+      let nextIndex = significantSibling(children, endIndex + 1, 1);
+      while (nextIndex >= 0 && markerParagraph(children[nextIndex], FIGURE_NOTE_MARKER)) {
+        const note = children[nextIndex];
+        stripParagraphMarker(note, FIGURE_NOTE_MARKER);
+        note.properties = { ...(note.properties ?? {}), className: ["article-figure-note"] };
+        notes.push(note);
+        galleryEndIndex = nextIndex;
+        nextIndex = significantSibling(children, nextIndex + 1, 1);
+      }
       const gallery: TableFigureNode = {
         type: "element",
         tagName: "figure",
@@ -1682,9 +1696,17 @@ function rehypeImageGalleries() {
             properties: { className: ["article-gallery-grid"] },
             children: figures,
           },
+          ...(notes.length > 0
+            ? [{
+                type: "element",
+                tagName: "div",
+                properties: { className: ["article-figure-notes"] },
+                children: notes,
+              } satisfies TableFigureNode]
+            : []),
         ],
       };
-      children.splice(index, endIndex - index + 1, gallery);
+      children.splice(index, galleryEndIndex - index + 1, gallery);
     }
 
     for (const child of children) {

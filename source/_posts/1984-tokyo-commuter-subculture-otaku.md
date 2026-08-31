@@ -53,7 +53,7 @@ citation:
 
 [fig] Olive杂志，1984年4月3日号。
 
-![《Olive》杂志1984年4月3日号封面](attachments/wechat/KJ5_akkiwUEUEs8KeNVKsg/001.jpg)
+![《Olive》杂志1984年4月3日号封面](attachments/wechat/KJ5_akkiwUEUEs8KeNVKsg/001.jpg "=33%")
 
 就通过大量存在的杂志和书籍中学习而言，我的同年级也有一些不是Olive族（指不追随Olive杂志潮流）的女生和假装是波派少年（POPEYE杂志风格）[^otaku-1984-6]的男生，还有被称为“秋叶原的下水道老鼠”的电脑宅。但是至少在我身边，没有那种沉迷戏剧、经常往返东京地下剧场的亚文化少年少女。
 
@@ -143,7 +143,7 @@ citation:
 
 [fig] Model Graphix编《高达前哨站》（1989年，大日本绘画）。
 
-![《高达前哨站》封面](attachments/wechat/KJ5_akkiwUEUEs8KeNVKsg/002.png)
+![《高达前哨站》封面](attachments/wechat/KJ5_akkiwUEUEs8KeNVKsg/002.png "=33%")
 
 当时说到《巫术》，众所周知堀井雄二和集英社的鸟嶋和彦一起沉迷其中。通过1983年在艾尼克斯的游戏程序大赛中入选的堀井的牵线搭桥，艾尼克斯将集英社桂正和的《银翼超人》改编成游戏，取得了一定成功。在桂正和和他的前编辑鸟嶋的推荐下，促成了鸟山明参与勇者斗恶龙的设计工作。
 
@@ -179,7 +179,7 @@ citation:
 
 [fig] 士郎正宗《苹果核战记》第1卷，青心社1985年出版。
 
-![《苹果核战记》第1卷封面](attachments/wechat/KJ5_akkiwUEUEs8KeNVKsg/003.png)
+![《苹果核战记》第1卷封面](attachments/wechat/KJ5_akkiwUEUEs8KeNVKsg/003.png "=33%")
 
 ## 暧昧的界限
 

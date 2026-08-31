@@ -152,8 +152,6 @@ citation:
 
 ![甜食与牙医](attachments/roof-archive/cv3120530/12-sweets-dentist.png)
 
-[fig-note] 滨本童年线索。
-
 ![滨本童年线索](attachments/roof-archive/cv3120530/11-childhood-clue.png)
 
 ### 证据3：国际象棋。滨本与宫田都是国际象棋的高手。青山的棋艺是宫田教的，后来，他代表自己的老师击败了滨本。这暗示长大以后的宫田在棋艺上有所精进。

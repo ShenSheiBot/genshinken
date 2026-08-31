@@ -1,6 +1,7 @@
 # 诞生的喜剧——动画《轻音少女！》与日常系的临界点
 
 - 2026-08-17 责任字段复核：原页编辑署名已进入结构化 `editor`／`editors` 元数据，读者正文不重复责任行；本条取代下方早期“正文保留编辑署名”或“schema 无编辑字段”的处理说明。
+- 2026-08-30 图版复核：逐张目检 33 个正文图片 placement，并将原页紧随图片的题名／版权段恢复为语义 figure。四组共用题名的连续图改为显式 gallery；第 19–33 图原有 alt 连续错位，已按原页紧邻图题逐项订正，不另据画面补写说明。图片资产、字节与顺序均未改变。
 
 - sourceId: glxfMFECVJ2A_yWgZ1KA3w
 - canonical URL: https://mp.weixin.qq.com/s/glxfMFECVJ2A_yWgZ1KA3w

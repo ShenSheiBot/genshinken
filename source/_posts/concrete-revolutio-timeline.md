@@ -127,6 +127,8 @@ FIN
 
 [/layout]
 
+[fig]
+
 ![里见谈“为了正义”](attachments/roof-archive/cv1907081/02-for-justice.png)
 
-编者按：图片来自网络。
+[fig-note] 图片来自网络。

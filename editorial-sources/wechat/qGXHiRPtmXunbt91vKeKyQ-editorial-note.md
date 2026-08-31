@@ -1,6 +1,7 @@
 # 救赎的转喻——长崎、京阿尼、你的颜色：微信归档编辑记录
 
 - 2026-08-17 责任字段复核：原页编辑署名已进入结构化 `editor`／`editors` 元数据，读者正文不重复责任行；本条取代下方早期“正文保留编辑署名”或“schema 无编辑字段”的处理说明。
+- 2026-08-30 图版复核：逐张目检 21 个正文图片 placement；将原页的图片说明与版权／来源拆为 `[fig]`、`[fig-note]`，并订正第 5–21 图连续错位的 alt。图片资产、字节与顺序均未改变。
 
 - sourceId：`qGXHiRPtmXunbt91vKeKyQ`；canonical：`https://mp.weixin.qq.com/s/qGXHiRPtmXunbt91vKeKyQ`；公开日：2026-06-30。
 - raw.html SHA-256：`deb740ec2246580f0206cab4f0eebc86f65bd9ac4756b461ee6dc9949a0cb414`；#js_content body.html SHA-256：`245e1a1af2b125d1d6cbf7eff6265392337bb7b99f4d51fe58d5d38604871000`。

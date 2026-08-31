@@ -100,7 +100,7 @@ Steinberg Marc. “Character, World, Consumption.” In Anime’s Media Mix: Fra
 
 春树的商业模式或代表了一种直接移置（transposition），即大塚英志所说的媒体组合作品之间**“从右往左”**的转录（transcription）。[^35]大塚在八十年代末暗中批判过这种“从右往左”的转录模式，并在近期关于轻小说的文章中对它作出了明确批评。（这表明，角川春树的制作风格不但仍未消失，而且依然在很大程度上代表着许多当代的媒体组合作品）
 
-[fig] 稍微不那么血腥的MPD Psycho配图。。
+[fig] 稍微不那么血腥的 MPD Psycho 配图。
 
 ![电影《サイコ》宣传画中的人物与标题](attachments/wechat/lh_cF0IbjFOeVwUaDw4PWQ/body-003.jpg)
 

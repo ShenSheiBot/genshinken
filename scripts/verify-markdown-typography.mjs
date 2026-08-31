@@ -286,6 +286,15 @@ assert.match(
 assert.doesNotMatch(semanticFigureHtml, /\[fig(?:-note)?\]/u, "figure markers must never render");
 assert.doesNotMatch(semanticFigureHtml, /title="/u, "a consumed width hint must not survive as a title");
 
+const noteOnlyFigureHtml = await renderMarkdown(`[fig]\n![无题图版](attachments/note-only.png)\n[fig-note] © 原权利人。`);
+assert.match(
+  noteOnlyFigureHtml,
+  /<figure class="article-figure"><img src="\/attachments\/note-only\.png"[^>]*><div class="article-figure-notes">/u,
+  "a source note may attach to an untitled figure without inventing a visible caption"
+);
+assert.doesNotMatch(noteOnlyFigureHtml, /<figcaption/u, "untitled figures must not render an empty caption");
+assert.doesNotMatch(noteOnlyFigureHtml, /\[fig(?:-note)?\]/u);
+
 const semanticFormulaFigureHtml = await renderMarkdown(`[fig] TF-IDF 计算公式。
 
 $$
@@ -379,6 +388,8 @@ const semanticGalleryHtml = await renderMarkdown(`
 ![修改后](attachments/after.png)
 
 [/gallery]
+
+[fig-note] 两图为同一来源。
 `);
 assert.match(
   semanticGalleryHtml,
@@ -386,7 +397,12 @@ assert.match(
   "explicitly delimited figures must become one semantic gallery"
 );
 assert.equal((semanticGalleryHtml.match(/class="article-figure"/gu) ?? []).length, 2);
-assert.doesNotMatch(semanticGalleryHtml, /\[(?:gallery|\/gallery)\]/u);
+assert.match(
+  semanticGalleryHtml,
+  /<div class="article-figure-notes"><p class="article-figure-note">两图为同一来源。<\/p><\/div><\/figure>/u,
+  "a shared gallery note must belong to the whole comparison rather than its last plate"
+);
+assert.doesNotMatch(semanticGalleryHtml, /\[(?:fig-note|gallery|\/gallery)\]/u);
 
 const semanticSlidesHtml = await renderMarkdown(`
 [slides] 连续扫描页
@@ -511,7 +527,7 @@ function unclassifiedExplicitImageCaptions(markdown) {
   const lines = markdown.split(/\r?\n/u);
   const failures = [];
   const isImage = (line) => /^!\[[^\]]*\]\([^\n]+\)\s*$/u.test(line.trim());
-  const captionLike = /^(?:(?:左|右|上|下|中)图(?:为|是|中|上|下|左|右|[:：.．]|\s)|图(?:[一二三四五六七八九十\d.-]+)?(?:为|是|中|上|下|左|右|[:：.．]|\s)|(?:片段|截图)[一二三四五六七八九十\d]+(?:[:：.．]|$)|(?:原画|作画|画师|摄影|来源|出处)[:：])/u;
+  const captionLike = /^(?:(?:左|右|上|下|中)图(?:为|是|中|上|下|左|右|[:：.．]|\s)|图(?:[一二三四五六七八九十\d.-]+)?(?:为|是|中|上|下|左|右|[:：.．]|\s)|(?:片段|截图)[一二三四五六七八九十\d]+(?:[:：.．]|$)|(?:原画|作画|画师|摄影|来源|出处|图源)[:：]|(?:编者按[:：]\s*)?(?:图片|图像|照片)(?:来自|来源|出处)|pid[:：]\s*\d+|(?:\*\*)?.*(?:©|Wikimedia Commons|wikimedia commons|制作委员会|製作委員会))/u;
   const previousSignificant = (index) => {
     for (let cursor = index - 1; cursor >= 0; cursor -= 1) {
       if (lines[cursor].trim()) return cursor;
@@ -588,6 +604,21 @@ assert.deepEqual(
   unclassifiedExplicitImageCaptions('![作品图](attachments/a.jpg)\n\n<!--source-centered-prose-->\n\n图为理解本文主题的一个入口。'),
   [],
   "an explicitly reviewed source-styled prose block may remain ordinary prose"
+);
+assert.deepEqual(
+  unclassifiedExplicitImageCaptions('![作品图](attachments/a.jpg)\n\n出自《作品》；© 2024 “作品”制作委员会。'),
+  [3],
+  "a copyright-bearing source caption beside an image must be classified"
+);
+assert.deepEqual(
+  unclassifiedExplicitImageCaptions('![作品图](attachments/a.jpg)\n\n编者按：图片来自网络。'),
+  [3],
+  "an image source note must attach semantically instead of remaining body prose"
+);
+assert.deepEqual(
+  unclassifiedExplicitImageCaptions('[fig] 插图\n\n![作品图](attachments/a.jpg)\n\n[fig-note] Pixiv 作品 ID：84264964。'),
+  [],
+  "a classified platform image identifier may remain as a source note"
 );
 const standaloneEmphasisHtml = await renderMarkdown('![图](attachments/a.jpg)\n\n<!--standalone-emphasis-->\n*确为独立说明。*');
 assert.doesNotMatch(standaloneEmphasisHtml, /standalone-emphasis/u, "standalone-emphasis markers must not enter public HTML");

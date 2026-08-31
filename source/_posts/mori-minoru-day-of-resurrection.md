@@ -63,7 +63,7 @@ citation:
 
 [fig] 图2：《大地底海》漫画封面。
 
-![《大地底海》漫画封面](attachments/wechat/O_bzV4aWwE_f9DbM0L-2Jw/002.jpg)
+![《大地底海》漫画封面](attachments/wechat/O_bzV4aWwE_f9DbM0L-2Jw/002.jpg "=33%")
 
 [fig] 图3：《大地底海》漫画内页。
 
@@ -87,11 +87,11 @@ citation:
 
 [fig] 图6：《第五实验室》漫画封面。
 
-![《第五实验室》漫画封面](attachments/wechat/O_bzV4aWwE_f9DbM0L-2Jw/006.jpg)
+![《第五实验室》漫画封面](attachments/wechat/O_bzV4aWwE_f9DbM0L-2Jw/006.jpg "=33%")
 
 [fig] 图7：《第五实验室》漫画封底。
 
-![《第五实验室》漫画封底](attachments/wechat/O_bzV4aWwE_f9DbM0L-2Jw/007.jpg)
+![《第五实验室》漫画封底](attachments/wechat/O_bzV4aWwE_f9DbM0L-2Jw/007.jpg "=33%")
 
 [/slides]
 
@@ -101,7 +101,7 @@ citation:
 
 [fig] 图8：《仙女座：宇宙的恐怖存在》漫画封面。
 
-![《仙女座：宇宙的恐怖存在》漫画封面](attachments/wechat/O_bzV4aWwE_f9DbM0L-2Jw/008.jpg)
+![《仙女座：宇宙的恐怖存在》漫画封面](attachments/wechat/O_bzV4aWwE_f9DbM0L-2Jw/008.jpg "=33%")
 
 [fig] 图9：《仙女座：宇宙的恐怖存在》漫画内页。
 
@@ -121,7 +121,7 @@ citation:
 
 [fig] 图11：《傻子伊凡》漫画封面。
 
-![《傻子伊凡》漫画封面](attachments/wechat/O_bzV4aWwE_f9DbM0L-2Jw/011.jpg)
+![《傻子伊凡》漫画封面](attachments/wechat/O_bzV4aWwE_f9DbM0L-2Jw/011.jpg "=33%")
 
 [fig] 图12：《傻子伊凡》漫画开场。
 
@@ -141,11 +141,11 @@ citation:
 
 [fig] 图14：《我们的地球》漫画封面。
 
-![《我们的地球》漫画封面](attachments/wechat/O_bzV4aWwE_f9DbM0L-2Jw/014.jpg)
+![《我们的地球》漫画封面](attachments/wechat/O_bzV4aWwE_f9DbM0L-2Jw/014.jpg "=33%")
 
 [fig] 图15：《我们的地球》漫画封底。
 
-![《我们的地球》漫画封底](attachments/wechat/O_bzV4aWwE_f9DbM0L-2Jw/015.jpg)
+![《我们的地球》漫画封底](attachments/wechat/O_bzV4aWwE_f9DbM0L-2Jw/015.jpg "=33%")
 
 [/slides]
 

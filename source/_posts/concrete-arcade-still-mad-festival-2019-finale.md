@@ -18,9 +18,11 @@ citation:
   url: "https://www.bilibili.com/read/cv5674115/"
 ---
 
-[fig] 竖海报BY一般有趣。
+[fig] 竖海报。
 
 ![“混凝土拱廊街”静止系MAD祭典2019竖海报](attachments/roof-archive/cv5674115/01-vertical-poster.png)
+
+[fig-note] BY 一般有趣。
 
 ## 一、简介
 
@@ -550,9 +552,11 @@ citation:
 
 ## 五、关于混凝土拱廊街、屋顶现视研、ZERO MAD TEAM
 
-[fig] 横海报，BY一般有趣。
+[fig] 横海报。
 
 ![“混凝土拱廊街”静止系MAD祭典2019横海报](attachments/roof-archive/cv5674115/02-horizontal-poster.png)
+
+[fig-note] BY 一般有趣。
 
 > 混凝土拱廊街是本活动的slogan，静止系MAD祭典是活动的具体内容。
 >

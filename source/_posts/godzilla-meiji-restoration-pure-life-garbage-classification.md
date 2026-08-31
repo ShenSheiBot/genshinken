@@ -99,7 +99,8 @@ citation:
 ![文中配图 65](/attachments/roof-archive/cv3064956/22-samurai-face.jpg)
 
 ![文中配图 67](/attachments/roof-archive/cv3064956/23-samurai-procession.jpg)
-[fig] 所谓倒幕运动的最后一场战争是清缴作为曾经的倒幕主力的那些底层士族的西南战争。
+
+所谓倒幕运动的最后一场战争是清缴作为曾经的倒幕主力的那些底层士族的西南战争。
 
 ![文中配图 69](/attachments/roof-archive/cv3064956/24-samurai-woman-closeup.jpg)
 

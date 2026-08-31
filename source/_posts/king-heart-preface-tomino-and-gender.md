@@ -21,6 +21,7 @@ citation:
 
 ![学级委员一条同学作者卡](attachments/wechat/8o6fg0lHMTeNtJUisVNb5w/body-001.jpg)
 
+<!--standalone-emphasis-->
 _波德莱尔变成白痴后，他只用一个词来表达人生观，那就是“女阴”。_
 
 ——芥川龙之介
