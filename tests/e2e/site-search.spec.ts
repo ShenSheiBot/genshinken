@@ -30,8 +30,23 @@ test("offers canonical library links for matching tags", async ({ page }) => {
   );
 });
 
+test("treats an exact contributor name as an entity rather than loose Chinese tokens", async ({ page }) => {
+  await page.goto("/");
+  await page.getByRole("button", { name: "搜索本站" }).click();
+
+  const dialog = page.getByRole("dialog", { name: "在屋顶寻找文本" });
+  await dialog.getByRole("searchbox").fill("甚谁");
+
+  await expect(dialog.getByRole("heading", { name: "作者作品 · 甚谁" })).toBeVisible();
+  await expect(dialog.getByRole("listitem")).toHaveCount(2);
+  await expect(dialog.getByRole("link", { name: /死亡何以“新生”/u })).toBeVisible();
+  await expect(dialog.getByRole("link", { name: /日常的空间/u })).toBeVisible();
+  await expect(dialog.getByRole("link", { name: /The Joy of Sakuga/u })).toHaveCount(0);
+});
+
 test("opens from the keyboard and closes with Escape", async ({ page }) => {
   await page.goto("/");
+  await expect(page.getByRole("button", { name: "搜索本站" })).toBeVisible();
   await page.keyboard.press("Control+K");
   await expect(page.getByRole("dialog", { name: "在屋顶寻找文本" })).toBeVisible();
   await page.keyboard.press("Escape");

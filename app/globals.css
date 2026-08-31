@@ -221,7 +221,7 @@ body:has(.translation-edition-page) { background-image: none; }
   .topbar:has(.global-section-nav) .status { justify-content: flex-start; }
   .topbar:has(.global-section-nav) .topbar-tools { grid-column: auto; }
 }
-/* 顶栏工具：搜索在宽屏保留文字标签，显示模式保持单一图标。 */
+/* 显示模式切换与搜索：单一图标按钮。 */
 .topbar .topbar-tools { justify-self: end; display: flex; align-items: center; }
 .topbar .toggle,
 .topbar .search-trigger {
@@ -231,7 +231,6 @@ body:has(.translation-edition-page) { background-image: none; }
   font-family: var(--f-grotesk); font-size: 15px;
   transition: background .15s, color .15s;
 }
-.topbar .search-trigger { width: auto; gap: 7px; padding-inline: 11px; }
 .topbar .toggle:hover,
 .topbar .toggle:focus-visible,
 .topbar .search-trigger:hover,
@@ -1703,11 +1702,6 @@ html[data-article-nav="compact"] .topbar .mobile-section-item[data-active="true"
   }
   /* 顶栏页眉信息在窄屏隐去署名，只留标题，避免拥挤 */
   body { background-image: none; }
-}
-
-@media (max-width: 960px) {
-  .topbar .search-trigger { width: 40px; gap: 0; padding-inline: 0; }
-  .topbar .search-trigger span { display: none; }
 }
 
 @media (min-width: 681px) and (max-width: 1023px) {

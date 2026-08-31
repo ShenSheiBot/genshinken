@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Fragment, type ReactNode } from "react";
 import { PUBLICATION_LABELS, type Credit, type Post, type PostSummary } from "@/lib/posts";
+import { searchCreditToken } from "@/lib/search-entities";
 import type { PublicContentEntry } from "@/lib/public-content";
 import type { TopicMembership } from "@/lib/topics";
 import { site } from "@/lib/site";
@@ -479,6 +480,17 @@ export function ReadingDossier({
             <CreditLine credits={displayCredits(post)} />
             <span className="sr-only" data-pagefind-meta="credits">
               {post.credits.map((credit) => `${credit.mark} ${credit.name}`).join(" · ")}
+            </span>
+            <span
+              className="sr-only"
+              aria-hidden="true"
+              data-pagefind-ignore=""
+              data-pagefind-meta="search_entities"
+            >
+              {post.credits.flatMap((credit) => [
+                searchCreditToken(credit.name, "contributor"),
+                ...(credit.role === "author" ? [searchCreditToken(credit.name, "author")] : []),
+              ]).join(" ")}
             </span>
           </p>
           {post.tags.length > 0 && (

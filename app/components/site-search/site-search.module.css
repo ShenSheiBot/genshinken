@@ -11,8 +11,6 @@
   border: 1px solid var(--hair-strong);
 }
 
-.triggerLabel { line-height: 1; }
-
 .dialog::backdrop {
   background: color-mix(in srgb, var(--solid) 58%, transparent);
   backdrop-filter: blur(3px);

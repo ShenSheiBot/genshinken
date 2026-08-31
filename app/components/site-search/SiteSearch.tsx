@@ -12,6 +12,7 @@ import {
   useState,
   type ReactNode,
 } from "react";
+import { normalizeSearchEntity, searchCreditToken } from "@/lib/search-entities";
 import styles from "./site-search.module.css";
 
 export type SearchTag = { name: string; count: number };
@@ -39,7 +40,6 @@ type PagefindApi = {
     results: PagefindSearchResult[];
     unfilteredResultCount: number;
   }>;
-  preload: (query: string) => Promise<void>;
 };
 
 type SearchResult = {
@@ -52,6 +52,7 @@ type SearchResult = {
 };
 
 type SearchContextValue = { openSearch: () => void };
+type ContributorMatch = { name: string; role: "author" | "contributor" };
 
 const SearchContext = createContext<SearchContextValue | null>(null);
 let pagefindPromise: Promise<PagefindApi> | null = null;
@@ -72,15 +73,47 @@ function loadPagefind(): Promise<PagefindApi> {
 }
 
 function normalized(value: string): string {
-  return value.normalize("NFKC").trim().replace(/^#+/u, "").toLocaleLowerCase("zh-CN");
+  return normalizeSearchEntity(value);
 }
 
-function bestResult(result: PagefindResultData): Pick<SearchResult, "url" | "excerpt"> {
-  const section = result.sub_results?.find((item) => item.url.includes("#"));
+function bestResult(
+  result: PagefindResultData,
+  preferSection: boolean
+): Pick<SearchResult, "url" | "excerpt"> {
+  const section = preferSection
+    ? result.sub_results?.find((item) => item.url.includes("#"))
+    : undefined;
   return {
     url: section?.url || result.url,
     excerpt: section?.excerpt || result.excerpt,
   };
+}
+
+async function exactContributorSearch(
+  pagefind: PagefindApi,
+  query: string
+): Promise<{ match: ContributorMatch; response: Awaited<ReturnType<PagefindApi["search"]>> } | null> {
+  const name = normalizeSearchEntity(query);
+  for (const role of ["author", "contributor"] as const) {
+    const token = searchCreditToken(name, role);
+    const response = await pagefind.search(token);
+    const exactResults: PagefindSearchResult[] = [];
+    for (const result of response.results) {
+      const data = await result.data();
+      if ((data.meta.search_entities ?? "").split(/\s+/u).includes(token)) exactResults.push(result);
+    }
+    if (exactResults.length > 0) {
+      return {
+        match: { name: query.trim(), role },
+        response: {
+          ...response,
+          results: exactResults,
+          unfilteredResultCount: exactResults.length,
+        },
+      };
+    }
+  }
+  return null;
 }
 
 export function SiteSearchProvider({
@@ -98,6 +131,7 @@ export function SiteSearchProvider({
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<SearchResult[]>([]);
   const [resultCount, setResultCount] = useState(0);
+  const [contributorMatch, setContributorMatch] = useState<ContributorMatch | null>(null);
   const [status, setStatus] = useState<"idle" | "loading" | "ready" | "error">("idle");
 
   const closeSearch = useCallback(() => setOpen(false), []);
@@ -136,6 +170,7 @@ export function SiteSearchProvider({
     if (!term) {
       setResults([]);
       setResultCount(0);
+      setContributorMatch(null);
       setStatus("idle");
       return;
     }
@@ -144,10 +179,12 @@ export function SiteSearchProvider({
     const timer = window.setTimeout(async () => {
       try {
         const pagefind = await loadPagefind();
-        const response = await pagefind.search(term);
+        const contributorSearch = await exactContributorSearch(pagefind, term);
+        const exactContributor = contributorSearch?.match ?? null;
+        const response = contributorSearch?.response ?? await pagefind.search(term);
         const visible = await Promise.all(response.results.slice(0, 12).map(async (result) => {
           const data = await result.data();
-          const best = bestResult(data);
+          const best = bestResult(data, !exactContributor);
           return {
             id: result.id,
             url: best.url,
@@ -160,16 +197,17 @@ export function SiteSearchProvider({
         if (sequence !== searchSequence.current) return;
         setResults(visible);
         setResultCount(response.unfilteredResultCount || response.results.length);
+        setContributorMatch(exactContributor);
         setStatus("ready");
       } catch {
         if (sequence !== searchSequence.current) return;
         setResults([]);
         setResultCount(0);
+        setContributorMatch(null);
         setStatus("error");
       }
     }, 160);
 
-    void loadPagefind().then((pagefind) => pagefind.preload(term)).catch(() => undefined);
     return () => window.clearTimeout(timer);
   }, [query]);
 
@@ -241,7 +279,11 @@ export function SiteSearchProvider({
 
           <section className={styles.results} aria-labelledby="search-results-title" aria-live="polite">
             <header>
-              <h3 id="search-results-title">正文命中</h3>
+              <h3 id="search-results-title">
+                {contributorMatch
+                  ? `${contributorMatch.role === "author" ? "作者作品" : "署名页面"} · ${contributorMatch.name}`
+                  : "正文命中"}
+              </h3>
               <span>{status === "ready" ? resultCount.toString().padStart(2, "0") : "—"}</span>
             </header>
             {!query && <p className={styles.prompt}>输入词语后，将检索全部公开文章与连载章节。</p>}
@@ -289,13 +331,7 @@ function SearchGlyph() {
   );
 }
 
-export function SiteSearchTrigger({
-  className = "",
-  showLabel = false,
-}: {
-  className?: string;
-  showLabel?: boolean;
-}) {
+export function SiteSearchTrigger({ className = "" }: { className?: string }) {
   const context = useContext(SearchContext);
   if (!context) return null;
   return (
@@ -307,7 +343,6 @@ export function SiteSearchTrigger({
       title="搜索本站（⌘K）"
     >
       <SearchGlyph />
-      {showLabel && <span className={styles.triggerLabel}>搜索</span>}
     </button>
   );
 }

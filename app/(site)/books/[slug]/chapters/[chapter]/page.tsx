@@ -27,6 +27,7 @@ import {
 import { EDITORIAL_SECTION_META } from "@/lib/editorial";
 import { getBookPublicContent } from "@/lib/public-content";
 import { hanScriptLanguageTag } from "@/lib/han-script";
+import { searchCreditToken } from "@/lib/search-entities";
 import { isCompactTitleSegment } from "@/lib/title-layout";
 import {
   getEditionLanguageLinks,
@@ -369,6 +370,17 @@ export default async function BookChapterPage({
             />
             <span className="sr-only" data-pagefind-meta="credits">
               {credits.map((credit) => `${credit.mark} ${credit.name}`).join(" · ")}
+            </span>
+            <span
+              className="sr-only"
+              aria-hidden="true"
+              data-pagefind-ignore=""
+              data-pagefind-meta="search_entities"
+            >
+              {credits.flatMap((credit) => [
+                searchCreditToken(credit.name, "contributor"),
+                ...(credit.role === "author" ? [searchCreditToken(credit.name, "author")] : []),
+              ]).join(" ")}
             </span>
           </p>
           {document.tags.length > 0 && (
