@@ -44,6 +44,8 @@ citation:
 
 *原文：Tim Shao-Hung Teng，〈[Time, disaster, new media: Your Name as a mind-game film](https://doi.org/10.1080/17400309.2022.2113713)〉，_New Review of Film and Television Studies_ 20(4)，第459—488页。*
 
+<!--continue-->
+
 *审校：邓绍宏。*
 
 ## 摘要
