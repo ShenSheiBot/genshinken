@@ -9,6 +9,7 @@ const target = process.argv[2];
 const action = process.argv[3];
 const actionValue = process.argv.slice(4).find((value) => !value.startsWith("--"));
 const dryRun = process.argv.includes("--dry-run");
+const wranglerAdapter = process.env.ROOF_WRANGLER_BIN?.trim();
 
 const allowedActions = {
   preview: new Set(["build", "upload", "promote"]),
@@ -48,6 +49,32 @@ function run(command, args, cwd, { localBinary = false, capture = false } = {}) 
     throw new Error(`${command} exited with status ${result.status}${detail}`);
   }
   return capture ? result.stdout : undefined;
+}
+
+function activateWranglerAdapter(root) {
+  if (!wranglerAdapter) return () => {};
+  if (!path.isAbsolute(wranglerAdapter)) {
+    throw new Error("ROOF_WRANGLER_BIN must be an absolute executable path.");
+  }
+  fs.accessSync(wranglerAdapter, fs.constants.X_OK);
+
+  const localWrangler = path.join(root, "node_modules", ".bin", "wrangler");
+  const current = fs.lstatSync(localWrangler);
+  if (!current.isSymbolicLink()) {
+    throw new Error(`Cannot attach the Wrangler adapter: ${localWrangler} is not a symlink.`);
+  }
+
+  const originalTarget = fs.readlinkSync(localWrangler);
+  if (path.resolve(path.dirname(localWrangler), originalTarget) === wranglerAdapter) {
+    return () => {};
+  }
+
+  fs.unlinkSync(localWrangler);
+  fs.symlinkSync(wranglerAdapter, localWrangler);
+  return () => {
+    fs.rmSync(localWrangler, { force: true });
+    fs.symlinkSync(originalTarget, localWrangler);
+  };
 }
 
 function assertTrackedWorktreeClean() {
@@ -165,8 +192,10 @@ function build(buildRoot, { reuseNextCache = false } = {}) {
 
 let buildRoot = sourceRoot;
 let staged = false;
+let restoreWranglerAdapter = () => {};
 
 try {
+  restoreWranglerAdapter = activateWranglerAdapter(sourceRoot);
   if (action === "promote") {
     const promoteArgs = ["versions", "deploy", `${actionValue}@100`, "--env", "preview", "--yes"];
     if (dryRun) promoteArgs.push("--dry-run");
@@ -209,5 +238,11 @@ try {
       console.error(`Failed to remove temporary build worktree ${buildRoot}:`, error);
       process.exitCode = 1;
     }
+  }
+  try {
+    restoreWranglerAdapter();
+  } catch (error) {
+    console.error("Failed to restore the repository Wrangler executable:", error);
+    process.exitCode = 1;
   }
 }

@@ -53,7 +53,7 @@
     "verify:translations": "node --test tests/translation-contract.test.mjs && PYTHONDONTWRITEBYTECODE=1 python3 -m unittest tests/audit_translation_structure_test.py && node --experimental-strip-types --no-warnings scripts/verify-translations.mjs",
     "verify:internal-links": "node scripts/verify-internal-link-canonicalization.mjs",
     "verify:dependencies": "node scripts/verify-dependency-contract.mjs",
-    "verify:cloudflare-build": "node --test tests/cloudflare-build-identity.test.mjs",
+    "verify:cloudflare-build": "node --test tests/cloudflare-build-identity.test.mjs tests/cloudflare-deploy-adapter.test.mjs",
     "verify:routing": "node --experimental-strip-types --no-warnings scripts/verify-static-routing.mjs",
     "verify:library": "node --experimental-strip-types --no-warnings scripts/verify-library-filter.mjs",
     "verify:home": "node --experimental-strip-types --no-warnings --test tests/home-recommendations.test.mjs",
