@@ -21,6 +21,9 @@ process.env.ROOF_BUILD_TIMESTAMP = buildTimestamp();
 const scriptSources = [
   "'self'",
   "'unsafe-inline'",
+  // Pagefind's same-origin search bundle compiles its generated WebAssembly
+  // index reader in the browser. This does not permit JavaScript eval.
+  "'wasm-unsafe-eval'",
   // Next's development runtime uses eval for React Refresh. Keep the
   // exception out of production while allowing the local preview to hydrate.
   ...(process.env.NODE_ENV === "development" ? ["'unsafe-eval'"] : []),

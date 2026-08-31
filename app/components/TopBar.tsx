@@ -8,6 +8,7 @@ import { GLOBAL_NAV_ITEMS, isReadingRoute } from "@/lib/navigation";
 import { useArticleHeader } from "./ArticleHeader";
 import CreditLinks from "./CreditLinks";
 import { toggleTheme, useTheme } from "./useTheme";
+import { SiteSearchTrigger } from "./site-search/SiteSearch";
 import { READING_VIEWPORT_ANCHOR_RATIO } from "./reading-edition/reading-progress";
 
 type MobileSection = { key: string; title: string; level: number };
@@ -219,9 +220,12 @@ export default function TopBar() {
         ) : null}
       </div>
 
-      <button className="toggle" onClick={toggleTheme} aria-label="切换明暗主题" title="切换明暗主题">
-        {theme === "dark" ? "☾" : "☼"}
-      </button>
+      <div className="topbar-tools">
+        <SiteSearchTrigger className="search-trigger" />
+        <button className="toggle" onClick={toggleTheme} aria-label="切换明暗主题" title="切换明暗主题">
+          {theme === "dark" ? "☾" : "☼"}
+        </button>
+      </div>
 
       {meta && sections.length > 0 && (
         <nav

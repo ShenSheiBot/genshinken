@@ -30,6 +30,7 @@ import {
   useHanScriptConversion,
 } from "@/app/components/useHanScriptConversion";
 import { toggleTheme, useTheme } from "@/app/components/useTheme";
+import { SiteSearchTrigger } from "@/app/components/site-search/SiteSearch";
 import styles from "./reading-edition.module.css";
 
 type ReaderSize = "small" | "medium" | "large";
@@ -1846,6 +1847,7 @@ export default function ReadingEditionChrome({
         <button className={styles.mobileSectionButton} type="button" onClick={(event) => openSheet("toc", event.currentTarget)} aria-label={`文章目录：${currentSection}`} aria-haspopup="dialog" aria-expanded={sheet === "toc"}><span>{currentSection}</span><b>⌄</b></button>
         <div className={styles.runningTools}>
           <button className={styles.compactTocButton} type="button" onClick={(event) => openSheet("toc", event.currentTarget)} aria-haspopup="dialog" aria-expanded={sheet === "toc"}>目录</button>
+          <SiteSearchTrigger className={styles.searchButton} />
           <button className={styles.themeButton} type="button" onClick={toggleTheme} aria-label="切换明暗主题">{dark ? "☾" : "☼"}</button>
           <button
             className={`${styles.hanScriptButton} ignore-opencc`}

@@ -219,17 +219,22 @@ body:has(.translation-edition-page) { background-image: none; }
     grid-template-columns: max-content minmax(0, 1fr) max-content;
   }
   .topbar:has(.global-section-nav) .status { justify-content: flex-start; }
-  .topbar:has(.global-section-nav) .toggle { grid-column: auto; }
+  .topbar:has(.global-section-nav) .topbar-tools { grid-column: auto; }
 }
 /* 显示模式切换：单一图标按钮（无中英文字） */
-.topbar .toggle {
+.topbar .topbar-tools { justify-self: end; display: flex; align-items: center; }
+.topbar .toggle,
+.topbar .search-trigger {
   justify-self: end; display: inline-flex; align-items: center; justify-content: center;
   width: 40px; height: 34px; padding: 0; color: var(--ink);
   border: 0;
   font-family: var(--f-grotesk); font-size: 15px;
   transition: background .15s, color .15s;
 }
-.topbar .toggle:hover { background: var(--solid); color: var(--solid-ink); }
+.topbar .toggle:hover,
+.topbar .toggle:focus-visible,
+.topbar .search-trigger:hover,
+.topbar .search-trigger:focus-visible { background: var(--solid); color: var(--solid-ink); outline: 0; }
 
 /* 滚动后顶栏显形的「页眉文章信息」：标题（可省略号）+ 署名。
    字号与垂直对齐均与左侧品牌一致（16px、整体居中对齐）。 */

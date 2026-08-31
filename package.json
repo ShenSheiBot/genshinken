@@ -18,6 +18,7 @@
     "dev": "next dev",
     "prebuild": "npm run fonts:sync",
     "build": "next build",
+    "postbuild": "node scripts/build-search-index.mjs",
     "cf:build:preview": "node scripts/deploy-cloudflare.mjs preview build",
     "cf:upload:preview": "node scripts/deploy-cloudflare.mjs preview upload",
     "cf:promote:preview": "node scripts/deploy-cloudflare.mjs preview promote",
@@ -104,6 +105,7 @@
     "@types/sanitize-html": "^2.16.1",
     "eslint": "^9.39.1",
     "eslint-config-next": "15.5.21",
+    "pagefind": "1.5.2",
     "typescript": "^5.7.3",
     "wrangler": "^4.121.0"
   }

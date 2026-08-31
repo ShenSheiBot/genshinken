@@ -330,7 +330,7 @@ export default async function BookChapterPage({
                 <LanguageSwitcher current={hanScriptLanguageTag(book.script)} links={languageLinks} />
               </div>
             )}
-            <p className={bookStyles.chapterSeriesLine}>
+            <p className={bookStyles.chapterSeriesLine} data-pagefind-meta="series">
               <b>连载</b>
               <Link href={bookHref(book)}>
                 {book.subtitle ? `${book.title}：${book.subtitle}` : book.title}
@@ -338,7 +338,7 @@ export default async function BookChapterPage({
               <strong>{chapterUnitLabel(chapter.number)}</strong>
             </p>
           </div>
-          <h1 className="art-title">
+          <h1 className="art-title" data-pagefind-meta="title">
             {chapter.titleBreaks ? chapter.titleBreaks.map((segment, segmentIndex, segments) => {
               const compact = isCompactTitleSegment(segment);
               return (
@@ -367,9 +367,12 @@ export default async function BookChapterPage({
               itemClassName={readerStyles.credit}
               markClassName={readerStyles.creditMark}
             />
+            <span className="sr-only" data-pagefind-meta="credits">
+              {credits.map((credit) => `${credit.mark} ${credit.name}`).join(" · ")}
+            </span>
           </p>
           {document.tags.length > 0 && (
-            <nav className={readerStyles.tagLine} aria-label="按标签筛选文库">
+            <nav className={readerStyles.tagLine} aria-label="按标签筛选文库" data-pagefind-meta="tags">
               {document.tags.map((tag) => (
                 <Link
                   className={readerStyles.libraryFilterLink}

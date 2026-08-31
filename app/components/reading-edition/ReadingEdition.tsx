@@ -153,6 +153,7 @@ function Appendices({ parts }: { parts: ArticleParts }) {
           </summary>
           <div
             className={`art-body ${styles.appendixContent}`}
+            data-pagefind-body=""
             dangerouslySetInnerHTML={{ __html: parts.notes }}
           />
         </details>
@@ -165,6 +166,7 @@ function Appendices({ parts }: { parts: ArticleParts }) {
           </summary>
           <div
             className={`art-body ${styles.appendixContent}`}
+            data-pagefind-body=""
             dangerouslySetInnerHTML={{ __html: parts.sources }}
           />
         </details>
@@ -190,6 +192,7 @@ export function ArticleFlow({
         className={`art-body ${styles.body} reading-edition-body`}
         lang={hanScriptLanguageTag(sourceScript)}
         data-han-convert-lang
+        data-pagefind-body=""
         dangerouslySetInnerHTML={{ __html: parts.main }}
       />
       <div className={styles.endMark} aria-label={endLabel}>
@@ -462,7 +465,7 @@ export function ReadingDossier({
               </nav>
             )}
           </div>
-          <h1 id="article-title" className="art-title">
+          <h1 id="article-title" className="art-title" data-pagefind-meta="title">
             <PreferredTitle post={post} />
             {post.titleNote && (
               <sup className={styles.titleNoteRef}>
@@ -472,9 +475,14 @@ export function ReadingDossier({
           </h1>
           {post.subtitle && <p className={styles.subtitle}>{post.subtitle}</p>}
           <p className={styles.dek}>{post.excerpt}</p>
-          <p className={styles.byline}><CreditLine credits={displayCredits(post)} /></p>
+          <p className={styles.byline}>
+            <CreditLine credits={displayCredits(post)} />
+            <span className="sr-only" data-pagefind-meta="credits">
+              {post.credits.map((credit) => `${credit.mark} ${credit.name}`).join(" · ")}
+            </span>
+          </p>
           {post.tags.length > 0 && (
-            <nav className={styles.tagLine} aria-label="按标签筛选文库">
+            <nav className={styles.tagLine} aria-label="按标签筛选文库" data-pagefind-meta="tags">
               {post.tags.map((tag) => (
                 <Link
                   className={styles.libraryFilterLink}

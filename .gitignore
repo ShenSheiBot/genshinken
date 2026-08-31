@@ -8,6 +8,7 @@
 /.open-next/
 /.wrangler/
 /out/
+/public/pagefind/
 
 # production
 /build
