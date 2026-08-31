@@ -143,13 +143,22 @@ citation:
 
 [fig] 直接语义解释。
 
-![蒙太古的直接语义解释公式](attachments/roof-archive/cv6584358/01-direct-semantic-interpretation.png)
+$$
+\begin{aligned}
+G_3&\text{ is that function }f\in\bigl((2^I)^{A\times A}\bigr)^{A^\omega}\text{ such that,}\\
+&\text{for all }x\in A^\omega,\text{ all }u,t\in A\text{ and all }i\in I:\\
+&f(x)(t,u)(i)=1\text{ if and only if }t=u.\\
+&\text{(Montague 1970a, 194)}
+\end{aligned}
+$$
 
 [重写后的间接语义解释]:
 
 [fig] 重写。
 
-![内涵逻辑重写公式](attachments/roof-archive/cv6584358/02-intensional-logic-rewrite.png)
+$$
+{}^{\wedge}\lambda t\lambda u[t=u]
+$$
 
 这些描述并不好懂而且用起来也不方便。蒙太古(1973)指出，或许间接地处理它们会更加清晰明了。因此他引进了一种叫“内涵逻辑(intensional logic)”的语言，上述引文中的操作被重新表达为上图所示的形式。$\lambda t$意味着一个$t$为自变量的函数，同样对于$\lambda u$也是。$\lambda t\lambda u[t = u]$是一个有两个自变量的函数，当两个自变量相等时它输出为真，反之为假。前面的${}^{\wedge}$[必须注意的是，这里这个符号是一个上标，它被称作内涵算子(intensor)而不是合取符]意味着，我们将其考虑作一个从可能世界以及时刻[都为复数，possible words, moments of time]，到一个如此被定义[参照了具体的某个可能世界及时刻]的函数的函数[The preceding ∧ says that we consider a function from possible worlds and moments of time to the thus defined function]。
 
@@ -219,7 +228,16 @@ Frege(1892)引进了涵义(sense[英], sinn[德])与意谓(reference[英], bedeu
 
 [fig] 塔斯基对谓词逻辑的解释。
 
-![塔斯基式谓词逻辑解释公式](attachments/roof-archive/cv6584358/03-tarskian-interpretation.png)
+$$
+\begin{aligned}
+\llbracket\varphi\land\psi\rrbracket^g=1
+&\text{ if and only if }\llbracket\varphi\rrbracket^g=1
+\text{ and }\llbracket\psi\rrbracket^g=1,\\
+\llbracket\forall x\varphi\rrbracket^g=1
+&\text{ if and only if for all }h\sim_x g
+\text{ holds }\llbracket\varphi\rrbracket^h=1.
+\end{aligned}
+$$
 
 第一个式子声称$\varphi \land \psi$在指派(assignment)$g$下是真的，当且仅当在指派$g$下$\varphi$与$\psi$都是真的。而第二个式子引入了指派$h$，它和指派$g$是相等的，除了它们可能都指派了变项$x$的值这种情况。蒙太古运用了相同的格式，但有个不同是，在上标中，包括$g$，他还有$i$，这与时间相关，以及$j$，与可能世界相关。
 

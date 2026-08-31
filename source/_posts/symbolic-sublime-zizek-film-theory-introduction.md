@@ -732,7 +732,14 @@ citation:
 
 因此，齐泽克笔下的林奇将他的作品呈现为一种思考女性原乐概念的关键所在。拉康的“性化公式”区分了“男性（masculinity）”和“女性（feminine）”享乐方式的不同。在《研讨班XX：再来一次》（1972－1973）中，拉康给出了以下公式：
 
-![拉康的性化公式](/attachments/roof-archive/cv10897532/figure-3.png)
+[fig] Figure 2.4　Lacanian logic of sexuation.
+
+$$
+\begin{array}{cc|cc}
+\exists x & \overline{\Phi x} & \overline{\exists x} & \overline{\Phi x} \\
+\forall x & \Phi x & \overline{\forall x} & \Phi x
+\end{array}
+$$
 
 这些公式不是在探讨男性/女性享乐的本质，而是在说享乐的建构是性差僵局的结果。
 

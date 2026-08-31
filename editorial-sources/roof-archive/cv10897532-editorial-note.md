@@ -5,3 +5,7 @@
 - Paragraphs 20–23 are navigation cards for the introduction, chapter 1, and the chapter 2 upper half; they are not body images. The three substantive diagrams at source paragraphs 37, 41, and 78 are retained in place.
 - Mechanical cleanup restores `希区柯特` to `希区柯克`, Chinese name separators and obvious typos (`时侯`/`女姓`/`更遭`), escapes literal Lacanian dollar signs from Markdown math parsing, joins bibliography line wraps, and restores `MarXIan` to `Marxian`.
 - `editorial-sources/roof-archive/cv10897532.json` is a byte-identical snapshot of the archived source article.
+
+## 2026-08-30 formula reflow
+
+- The typeset Lacanian sexuation formula was transcribed from its source image into KaTeX so its symbols are searchable and readable without the bitmap. The visible caption, “Figure 2.4 Lacanian logic of sexuation,” is now preserved as semantic figure text; the archived image remains part of the source record.
