@@ -18170,6 +18170,60 @@
       "bytes": 41349,
       "sha256": "d9bc53606452dabe4f44cd8c5063c095118dec3837f05825e5bb0b3564b2afd2",
       "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1708099/translations/en/01-family-triangle.png",
+      "bytes": 9806,
+      "sha256": "71bbb843bd8f5136f4febc908ee22a302418ef0905ac200c54f1fbb017cc029b",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1708099/translations/en/06-humiliated-father.png",
+      "bytes": 126378,
+      "sha256": "d29e68981c0f226535fdfc366d589ce826305a9d66889056778400e7beca3e99",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1708099/translations/en/09-clouds-beyond-scene-one.png",
+      "bytes": 285314,
+      "sha256": "c69a47857e996adcbfbf1ff8eaae9ef514115a863a0b2d66e51f08f93b73a727",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1708099/translations/en/10-clouds-beyond-scene-two.png",
+      "bytes": 310505,
+      "sha256": "227d31c2e31b7ed8e27ab660754895d19ae963d355ae5ce9d2a15954430d0fc5",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1708099/translations/en/20-editor-note-meme.png",
+      "bytes": 128101,
+      "sha256": "441fbe2b1b9bc2d3b861e47ea4d5b984e622281ded7bab0aa8b811a66329d5bc",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1708099/translations/ja/01-family-triangle.png",
+      "bytes": 13206,
+      "sha256": "d917063be140a9a5d36560f88aa800443714e7223feff9a5614bf95acba3699a",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1708099/translations/ja/06-humiliated-father.png",
+      "bytes": 144143,
+      "sha256": "624910df78c1ab0faf034fdf8e3b439249e01276329872a30eb53d4089377ea1",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1708099/translations/ja/09-clouds-beyond-scene-one.png",
+      "bytes": 265646,
+      "sha256": "27aab7d933a971dee97308690d77fd574149bf951a63742a8105340ac8d1e3e1",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1708099/translations/ja/20-editor-note-meme.png",
+      "bytes": 129240,
+      "sha256": "30a59682bf0efe57ebe09aee73c900b230b3297c1813da977939f6d512125c09",
+      "contentType": "image/png"
     }
   ]
 }

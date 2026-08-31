@@ -1,5 +1,5 @@
 {
-  "corpusFileCount": 73,
+  "corpusFileCount": 74,
   "corpusFiles": [
     "app/[locale]/books/[book]/chapters/[chapter]/cite.bib/route.ts",
     "app/[locale]/books/[book]/chapters/[chapter]/page.tsx",
@@ -21,6 +21,7 @@
     "source/_translations/ja/books/meta-anime-hyoron/macross7-fukasa-ni-aragau.md",
     "source/_translations/ja/books/monogatari-series-ronko/book.json",
     "source/_translations/ja/books/monogatari-series-ronko/kaiki-gensetsu-hasai-jiko-giman.md",
+    "source/_translations/ja/posts/adventures-of-the-name-of-the-father.md",
     "source/_translations/ja/posts/animation-and-reality-takahata-realism.md",
     "source/_translations/ja/posts/animation-as-machine-takahata-lamarre-critique.md",
     "source/_translations/ja/posts/animation-criticism-stranger-perspective.md",
@@ -75,7 +76,7 @@
     "source/_translations/ja/posts/work-emotion-robots.md",
     "source/_translations/language-dispositions.json"
   ],
-  "corpusSha256": "8915280f0a90189f02040b49fe00d6f93a241a8ad79b0501283dfa99865a5bf2",
+  "corpusSha256": "5b6207c7ce1b264b4896b46848849860e3e20b783345bc44f2c0ccc5c8ec7440",
   "fallbackCodePointCount": 114,
   "fonts": {
     "Roof EB Garamond Fallback": {
@@ -107,12 +108,12 @@
       "weight": "400"
     },
     "Roof Noto Sans JP": {
-      "bytes": 903732,
-      "codePointCount": 2964,
+      "bytes": 904068,
+      "codePointCount": 2968,
       "family": "Roof Noto Sans JP",
       "file": "roof-noto-sans-jp.woff2",
       "kind": "primary-sans",
-      "sha256": "b20d4576550204136d2e423f269b423ec4cab1ef170a2705cb429dfac5aa14bb",
+      "sha256": "2a69a689f1cb2154a611913056e8b0eadad8ef50f418290bcc9b72fde89a66da",
       "source": "NotoSansJP.ttf",
       "sourceSha256": "c2f3b4d463500a2ddcd3849cded1fceeb9fd6d1c32e6cbecd568453ba50fc68f",
       "sourceUrl": "https://raw.githubusercontent.com/google/fonts/e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7/ofl/notosansjp/NotoSansJP%5Bwght%5D.ttf",
@@ -148,12 +149,12 @@
       "weight": "100 900"
     },
     "Roof Noto Serif JP": {
-      "bytes": 1252844,
-      "codePointCount": 2964,
+      "bytes": 1253720,
+      "codePointCount": 2968,
       "family": "Roof Noto Serif JP",
       "file": "roof-noto-serif-jp.woff2",
       "kind": "primary-serif",
-      "sha256": "1e37e2f81a3301996a5711f18ca52b48ea337bca823cc0a90c5c5bd040775175",
+      "sha256": "e0da57ea310219ada27768c73457d878053af3ad120aa8a8fb6555747b909ede",
       "source": "NotoSerifJP.ttf",
       "sourceSha256": "2fd527ba12b6a44ec30d796d633360da0aeba6c5d4af1304ce12bb4dc15a7dfc",
       "sourceUrl": "https://raw.githubusercontent.com/google/fonts/e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7/ofl/notoserifjp/NotoSerifJP%5Bwght%5D.ttf",
@@ -212,9 +213,9 @@
     }
   },
   "strategy": "japanese-translation-corpus-variable-fonts-with-generated-script-and-symbol-fallbacks",
-  "subsetCodePointCount": 2964,
-  "targetCodePointCount": 2853,
-  "targetCodePointSha256": "912eb840c294e907102bc823e578c7ba94243a0e60212be4072978959637aa99",
+  "subsetCodePointCount": 2968,
+  "targetCodePointCount": 2857,
+  "targetCodePointSha256": "5f69fa70f3fb00cca44d21a6b5569182b291ab54b5495583a478eca87daf55af",
   "toolchainSha256": "b192f1da4344abea6d8568a33b15e3ecfb6d9f8242b22257639c7cf28d4424c3",
   "uncoveredCodePointRanges": [],
   "upstreamCommit": "e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7",
