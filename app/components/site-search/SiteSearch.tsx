@@ -289,7 +289,13 @@ function SearchGlyph() {
   );
 }
 
-export function SiteSearchTrigger({ className = "" }: { className?: string }) {
+export function SiteSearchTrigger({
+  className = "",
+  showLabel = false,
+}: {
+  className?: string;
+  showLabel?: boolean;
+}) {
   const context = useContext(SearchContext);
   if (!context) return null;
   return (
@@ -301,6 +307,7 @@ export function SiteSearchTrigger({ className = "" }: { className?: string }) {
       title="搜索本站（⌘K）"
     >
       <SearchGlyph />
+      {showLabel && <span className={styles.triggerLabel}>搜索</span>}
     </button>
   );
 }

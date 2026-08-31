@@ -221,7 +221,7 @@ export default function TopBar() {
       </div>
 
       <div className="topbar-tools">
-        <SiteSearchTrigger className="search-trigger" />
+        <SiteSearchTrigger className="search-trigger" showLabel />
         <button className="toggle" onClick={toggleTheme} aria-label="切换明暗主题" title="切换明暗主题">
           {theme === "dark" ? "☾" : "☼"}
         </button>
