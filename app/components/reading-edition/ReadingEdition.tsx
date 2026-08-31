@@ -478,11 +478,15 @@ export function ReadingDossier({
           <p className={styles.dek}>{post.excerpt}</p>
           <p className={styles.byline}>
             <CreditLine credits={displayCredits(post)} />
-            <span className="sr-only" data-pagefind-meta="credits">
+            <span
+              className={styles.visuallyHidden}
+              aria-hidden="true"
+              data-pagefind-meta="credits"
+            >
               {post.credits.map((credit) => `${credit.mark} ${credit.name}`).join(" · ")}
             </span>
             <span
-              className="sr-only"
+              className={styles.visuallyHidden}
               aria-hidden="true"
               data-pagefind-ignore=""
               data-pagefind-meta="search_entities"

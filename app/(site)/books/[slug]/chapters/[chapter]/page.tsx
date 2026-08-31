@@ -368,11 +368,15 @@ export default async function BookChapterPage({
               itemClassName={readerStyles.credit}
               markClassName={readerStyles.creditMark}
             />
-            <span className="sr-only" data-pagefind-meta="credits">
+            <span
+              className={readerStyles.visuallyHidden}
+              aria-hidden="true"
+              data-pagefind-meta="credits"
+            >
               {credits.map((credit) => `${credit.mark} ${credit.name}`).join(" · ")}
             </span>
             <span
-              className="sr-only"
+              className={readerStyles.visuallyHidden}
               aria-hidden="true"
               data-pagefind-ignore=""
               data-pagefind-meta="search_entities"

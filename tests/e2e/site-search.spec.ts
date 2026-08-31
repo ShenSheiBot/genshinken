@@ -44,6 +44,22 @@ test("treats an exact contributor name as an entity rather than loose Chinese to
   await expect(dialog.getByRole("link", { name: /The Joy of Sakuga/u })).toHaveCount(0);
 });
 
+test("keeps search-only credit metadata out of the reading cover", async ({ page }) => {
+  await page.goto("/posts/sekaikei-syndrome-music-interview");
+
+  for (const metadata of [
+    page.locator('[data-pagefind-meta="credits"]'),
+    page.locator('[data-pagefind-meta="search_entities"]'),
+  ]) {
+    await expect(metadata).toHaveCount(1);
+    await expect(metadata).toHaveAttribute("aria-hidden", "true");
+    await expect(metadata).toHaveCSS("position", "absolute");
+    await expect(metadata).toHaveCSS("width", "1px");
+    await expect(metadata).toHaveCSS("height", "1px");
+    await expect(metadata).toHaveCSS("overflow", "hidden");
+  }
+});
+
 test("opens from the keyboard and closes with Escape", async ({ page }) => {
   await page.goto("/");
   await expect(page.getByRole("button", { name: "搜索本站" })).toBeVisible();

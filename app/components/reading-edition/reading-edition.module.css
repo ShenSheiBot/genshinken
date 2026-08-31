@@ -975,6 +975,21 @@
   font-weight: 700;
 }
 
+/* Pagefind metadata remains in the document for indexing without entering the
+   visible or assistive reading order. */
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* 署名角色是文章档案的一部分：作者为实心红章，译者等为红色描边章。 */
 .creditLine {
   display: inline-flex;
