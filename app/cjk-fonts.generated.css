@@ -17,16 +17,17 @@
 
 @font-face {
   font-family: "Roof WenKai";
-  src: url("/fonts/roof-wenkai.woff2?v=fc9bf256c958") format("woff2");
+  src: url("/fonts/roof-wenkai.woff2?v=0f192a0a0ad7") format("woff2");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
+  unicode-range: U+00B7,U+00D7,U+00F7,U+2010-203B,U+2E80-312F,U+31A0-31EF,U+3400-9FFF,U+F900-FAFF,U+FE10-FE4F,U+FF00-FFEF;
 }
 
 @font-face {
-  font-family: "Roof WenKai";
-  src: url("/fonts/roof-wenkai.woff2?v=fc9bf256c958") format("woff2");
-  font-style: italic;
+  font-family: "Roof WenKai Emphasis";
+  src: url("/fonts/roof-wenkai.woff2?v=0f192a0a0ad7") format("woff2");
+  font-style: normal;
   font-weight: 400;
   font-display: swap;
 }

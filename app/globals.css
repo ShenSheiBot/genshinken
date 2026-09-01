@@ -25,7 +25,7 @@
   --f-grotesk: "Helvetica Neue", Helvetica, var(--f-cjk-sans), Arial, sans-serif;
   --f-serif: var(--font-newsreader), var(--f-cjk-serif), Georgia, serif;
   --f-mono: var(--font-space-mono), var(--f-cjk-sans), monospace;
-  --f-emphasis-serif: "Roof WenKai", "Times New Roman", Times, "Kaiti SC", "KaiTi", serif;
+  --f-emphasis-serif: "Roof WenKai Emphasis", "Roof WenKai", "Kaiti SC", "KaiTi", "楷体", serif;
   --f-editorial-note-latin: Georgia, "Times New Roman", Times, serif;
   --f-note: "Times New Roman", Times, var(--f-cjk-serif);
   --f-quote-latin: var(--font-eb-garamond), Garamond, Georgia, serif;
@@ -513,6 +513,7 @@ body:has(main[data-archive-page="true"]) {
 .art-body em { font-style: italic; }
 html:is([lang="zh"], [lang="zh-Hans"], [lang="zh-Hant"]) .art-body em {
   font-family: var(--f-emphasis-serif);
+  font-style: normal;
   font-synthesis: none;
 }
 .art-body p .latin-run,
@@ -549,6 +550,10 @@ html:is([lang="zh"], [lang="zh-Hans"], [lang="zh-Hant"]) .art-body em {
 .art-body blockquote .latin-run,
 .art-body blockquote p .latin-run {
   font-family: var(--f-quote-latin);
+}
+html:is([lang="zh"], [lang="zh-Hans"], [lang="zh-Hant"]) .art-body em .latin-run {
+  font-family: inherit;
+  font-style: inherit;
 }
 .art-body blockquote strong { font-weight: 600; }
 .art-body blockquote p:last-child { margin-bottom: 0; }

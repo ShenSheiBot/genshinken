@@ -33,8 +33,8 @@ CONVERTER_PATH = ROOT / "scripts" / "convert-cjk-font-corpus.mjs"
 CACHE_DIR = ROOT / ".local-archive" / "font-sources" / "roof-cjk-open-20260831"
 GOOGLE_FONTS_COMMIT = "e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7"
 LXGW_WENKAI_GB_COMMIT = "7e280c0880f6171d8e969b5c4bd3451f6094cce7"
-GENERATOR_VERSION = 5
-GENERATOR_STRATEGY = "chinese-site-corpus-opencc-closure-variable-pair-and-emphasis"
+GENERATOR_VERSION = 6
+GENERATOR_STRATEGY = "chinese-site-corpus-opencc-closure-variable-pair-and-upright-wenkai-emphasis"
 TEXT_EXTENSIONS = {".css", ".json", ".md", ".mjs", ".ts", ".tsx", ".txt"}
 CORPUS_ROOTS = (ROOT / "app", ROOT / "lib", ROOT / "source")
 LOCALE_FONT_OWNED_ROOTS = (
@@ -44,6 +44,19 @@ LOCALE_FONT_OWNED_ROOTS = (
     ROOT / "source" / "_translations",
 )
 ALWAYS_INCLUDE = "思源宋体黑体文楷衬线无衬线，。；：？！“”‘’（）《》〈〉【】——……·"
+# Chinese-page emphasis stays in one upright WenKai face even when a span
+# contains Western words, numerals, or combining accents. Keep the complete
+# common Latin repertoire in that face so a newly introduced term does not
+# silently split into a device-serif italic before the next corpus rebuild.
+WENKAI_EMPHASIS_RANGES = (
+    (0x0020, 0x007E),
+    (0x00A0, 0x024F),
+    (0x0300, 0x036F),
+)
+WENKAI_BASE_UNICODE_RANGE = (
+    "U+00B7,U+00D7,U+00F7,U+2010-203B,U+2E80-312F,U+31A0-31EF,"
+    "U+3400-9FFF,U+F900-FAFF,U+FE10-FE4F,U+FF00-FFEF"
+)
 
 FONTS = (
     {
@@ -75,9 +88,18 @@ FONTS = (
         "source_sha256": "295568c131648062107543aa159c97dd49564be791136c2abf74cad83eba3f7f",
         "output": "roof-wenkai.woff2",
         "weight": "400",
-        "upright_italic_alias": True,
+        "emphasis_alias": "Roof WenKai Emphasis",
+        "base_unicode_range": WENKAI_BASE_UNICODE_RANGE,
     },
 )
+
+
+def range_code_points(ranges: Iterable[tuple[int, int]]) -> set[int]:
+    return {
+        code_point
+        for start, end in ranges
+        for code_point in range(start, end + 1)
+    }
 
 
 def is_cjk_text_code_point(code_point: int) -> bool:
@@ -323,21 +345,24 @@ def generated_css(records: dict[str, dict[str, object]]) -> str:
     faces: list[str] = []
     for record in FONTS:
         built = records[record["family"]]
-        faces.append("\n".join((
+        face_lines = [
             "@font-face {",
             f'  font-family: "{record["family"]}";',
             f'  src: url("/fonts/{built["file"]}?v={str(built["sha256"])[:12]}") format("woff2");',
             "  font-style: normal;",
             f'  font-weight: {record["weight"]};',
             "  font-display: swap;",
-            "}",
-        )))
-        if record.get("upright_italic_alias"):
+        ]
+        if base_unicode_range := record.get("base_unicode_range"):
+            face_lines.append(f"  unicode-range: {base_unicode_range};")
+        face_lines.append("}")
+        faces.append("\n".join(face_lines))
+        if emphasis_alias := record.get("emphasis_alias"):
             faces.append("\n".join((
                 "@font-face {",
-                f'  font-family: "{record["family"]}";',
+                f'  font-family: "{emphasis_alias}";',
                 f'  src: url("/fonts/{built["file"]}?v={str(built["sha256"])[:12]}") format("woff2");',
-                "  font-style: italic;",
+                "  font-style: normal;",
                 f'  font-weight: {record["weight"]};',
                 "  font-display: swap;",
                 "}",
@@ -386,6 +411,7 @@ def main() -> None:
         record["family"]: font_code_points(source)
         for record, source in sources
     }
+    wenkai_emphasis_points = range_code_points(WENKAI_EMPHASIS_RANGES)
     body_fallback_supported = (
         (supported_by_family["Roof Noto Serif SC"] | supported_by_family["Roof WenKai"])
         & (supported_by_family["Roof Noto Sans SC"] | supported_by_family["Roof WenKai"])
@@ -395,8 +421,11 @@ def main() -> None:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     manifest_fonts: dict[str, dict[str, object]] = {}
     for record, source in sources:
-        subset_points = site_points & supported_by_family[record["family"]]
-        unsupported_points = site_points - supported_by_family[record["family"]]
+        target_points = site_points
+        if record.get("emphasis_alias"):
+            target_points = site_points | wenkai_emphasis_points
+        subset_points = target_points & supported_by_family[record["family"]]
+        unsupported_points = target_points - supported_by_family[record["family"]]
         if len(subset_points) < 2_500:
             raise SystemExit(
                 f"refusing to build unexpectedly small {record['family']} subset "

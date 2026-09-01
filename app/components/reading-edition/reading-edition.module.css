@@ -19,7 +19,7 @@
   --reader-quote-family: var(--f-cjk-kaiti);
   --reader-quote-latin-family: var(--font-eb-garamond), Garamond, "Times New Roman", Times, serif;
   --reader-interface-family: "Segoe UI", "Helvetica Neue", Arial, var(--f-cjk-sans), sans-serif;
-  --reader-emphasis-family: "Roof WenKai", "Times New Roman", Times, "Kaiti SC", "KaiTi", serif;
+  --reader-emphasis-family: var(--f-emphasis-serif);
   --reader-note-family: var(--reader-body-latin-family);
   min-height: 100vh;
   padding-top: var(--site-header-height);
@@ -428,7 +428,7 @@
 
 .body :global(em) {
   font-family: var(--reader-emphasis-family);
-  font-style: italic;
+  font-style: normal;
   font-synthesis: none;
 }
 
@@ -525,6 +525,13 @@
 .root .appendixContent :global(blockquote .latin-run),
 .root .referenceDetail :global(blockquote .latin-run) {
   font-family: var(--reader-quote-latin-family);
+}
+
+.root .body :global(em .latin-run),
+.root .appendixContent :global(em .latin-run),
+.root .referenceDetail :global(em .latin-run) {
+  font-family: inherit;
+  font-style: inherit;
 }
 
 .body :global(a) {
@@ -2120,7 +2127,6 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
   --reader-quote-family: var(--f-cjk-kaiti);
   --reader-quote-latin-family: var(--font-eb-garamond), Garamond, "Times New Roman", Times, serif;
   --reader-interface-family: "Segoe UI", "Helvetica Neue", Arial, var(--f-cjk-sans), sans-serif;
-  --reader-emphasis-family: "Roof WenKai", "Times New Roman", Times, "Kaiti SC", "KaiTi", serif;
   --reader-note-family: var(--reader-body-latin-family);
 }
 
@@ -2130,7 +2136,6 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
   --reader-quote-family: var(--f-cjk-sans);
   --reader-quote-latin-family: Optima, "Segoe UI", "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --reader-interface-family: "Segoe UI", "Helvetica Neue", Arial, var(--f-cjk-sans), sans-serif;
-  --reader-emphasis-family: "Roof WenKai", "Helvetica Neue", Helvetica, Arial, "Kaiti SC", "KaiTi", serif;
   --reader-note-family: var(--reader-body-latin-family);
 }
 

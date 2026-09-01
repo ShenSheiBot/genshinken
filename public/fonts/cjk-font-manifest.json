@@ -35,14 +35,26 @@
       "weight": "200 900"
     },
     "Roof WenKai": {
-      "bytes": 1678280,
-      "codePointCount": 6839,
+      "bytes": 1708996,
+      "codePointCount": 7418,
       "file": "roof-wenkai.woff2",
-      "sha256": "fc9bf256c958408c8c534318d0fdca46817269129214800156ae25780c1953b6",
+      "sha256": "0f192a0a0ad7dc70763247adb898eb267ab928ff1b4b970a59ce1635827f2301",
       "source": "LXGWWenKaiGB-Regular.ttf",
       "sourceSha256": "295568c131648062107543aa159c97dd49564be791136c2abf74cad83eba3f7f",
       "sourceUrl": "https://raw.githubusercontent.com/lxgw/LxgwWenKaiGB/7e280c0880f6171d8e969b5c4bd3451f6094cce7/fonts/TTF/LXGWWenKaiGB-Regular.ttf",
       "unsupportedCodePointRanges": [
+        "U+00AD",
+        "U+030E",
+        "U+0310",
+        "U+0312-0315",
+        "U+0321-0322",
+        "U+032B",
+        "U+0333",
+        "U+0337",
+        "U+033E-033F",
+        "U+0342-0357",
+        "U+0359-0360",
+        "U+0362-036F",
         "U+202C",
         "U+FAFF"
       ],
@@ -53,7 +65,7 @@
   "siteCodePointSha256": "0895f775378fe0ba13e42e1e6c093b74794bd989dae73f9660f31d82667efb7c",
   "sourceCodePointCount": 5881,
   "sourceCodePointSha256": "38b4509dc9decb8d0dda53d578b30dac15063879af352721436bcfb191732f66",
-  "strategy": "chinese-site-corpus-opencc-closure-variable-pair-and-emphasis",
+  "strategy": "chinese-site-corpus-opencc-closure-variable-pair-and-upright-wenkai-emphasis",
   "targetCodePointCount": 6841,
   "toolchainSha256": "b192f1da4344abea6d8568a33b15e3ecfb6d9f8242b22257639c7cf28d4424c3",
   "unsupportedBodyCodePointRanges": [
@@ -64,5 +76,5 @@
     "google/fonts": "e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7",
     "lxgw/LxgwWenKaiGB": "7e280c0880f6171d8e969b5c4bd3451f6094cce7"
   },
-  "version": 5
+  "version": 6
 }

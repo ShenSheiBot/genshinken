@@ -57,7 +57,7 @@ const expectedFonts = [
     sourceSha256: "295568c131648062107543aa159c97dd49564be791136c2abf74cad83eba3f7f",
     variable: "--f-cjk-kaiti",
     weight: "400",
-    uprightItalicAlias: true,
+    emphasisAlias: "Roof WenKai Emphasis",
   },
 ];
 
@@ -139,10 +139,10 @@ assert.ok(fs.existsSync(manifestPath), "missing generated CJK font manifest; run
 const manifest = JSON.parse(readUtf8(manifestPath));
 assert.ok(fs.existsSync(translationFontManifestPath), "missing generated Japanese translation font manifest");
 const translationFontManifest = JSON.parse(readUtf8(translationFontManifestPath));
-assert.equal(manifest.version, 5, "unsupported CJK font manifest version");
+assert.equal(manifest.version, 6, "unsupported CJK font manifest version");
 assert.equal(
   manifest.strategy,
-  "chinese-site-corpus-opencc-closure-variable-pair-and-emphasis",
+  "chinese-site-corpus-opencc-closure-variable-pair-and-upright-wenkai-emphasis",
   "Chinese fonts must cover the rendered corpus and its OpenCC conversion closure"
 );
 assert.equal(
@@ -207,6 +207,27 @@ for (const expected of expectedFonts) {
   assert.equal(record.bytes, bytes.length);
   assert.ok(record.codePointCount >= 2_500, `${expected.family} coverage is unexpectedly small`);
   assert.equal(record.sha256, digest);
+  if (expected.emphasisAlias) {
+    assert.ok(
+      record.codePointCount >= manifest.siteCodePointCount + 500,
+      "Roof WenKai must include the common Latin repertoire used by upright Chinese emphasis"
+    );
+    assert.equal(
+      propertyValue(face, "unicode-range"),
+      "U+00B7,U+00D7,U+00F7,U+2010-203B,U+2E80-312F,U+31A0-31EF,U+3400-9FFF,U+F900-FAFF,U+FE10-FE4F,U+FF00-FFEF",
+      "the ordinary WenKai family must not capture Latin text outside emphasis"
+    );
+    const emphasisFace = faceBlocks.find((block) =>
+      new RegExp(`font-family\\s*:\\s*["']${escapeRegExp(expected.emphasisAlias)}["']\\s*;`).test(block)
+    );
+    assert.ok(emphasisFace, "missing the Latin-capable WenKai emphasis alias");
+    assert.doesNotMatch(emphasisFace, /unicode-range\s*:/u);
+    assert.match(
+      emphasisFace,
+      new RegExp(`url\\(["']?/fonts/${escapeRegExp(expected.file)}\\?v=${digest.slice(0, 12)}["']?\\)`),
+      "the WenKai emphasis alias must reuse the same cached font asset"
+    );
+  }
   assert.match(
     face,
     new RegExp(
@@ -215,14 +236,6 @@ for (const expected of expectedFonts) {
     `${expected.file} cache key must match its current SHA-256 digest`
   );
 
-  if (expected.uprightItalicAlias) {
-    const italicFace = faceBlocks.find((block) =>
-      new RegExp(`font-family\\s*:\\s*["']${escapeRegExp(expected.family)}["']\\s*;`).test(block)
-      && /font-style\s*:\s*italic\s*;/.test(block)
-    );
-    assert.ok(italicFace, `${expected.family} must expose its upright glyphs for italic emphasis`);
-    assert.match(italicFace, new RegExp(`url\\(["']?/fonts/${escapeRegExp(expected.file)}\\?v=${digest.slice(0, 12)}["']?\\)`));
-  }
 }
 
 // 根 layout 只预载中文正文衬线体；URL 与缓存键来自生成清单。
@@ -253,15 +266,25 @@ assert.equal(propertyValue(serifRule, "--reader-quote-family"), "var(--f-cjk-kai
 assert.equal(propertyValue(sansRule, "--reader-body-family"), "var(--f-cjk-sans)");
 assert.equal(propertyValue(sansRule, "--reader-quote-family"), "var(--f-cjk-sans)");
 assert.notEqual(propertyValue(serifRule, "--reader-body-family"), propertyValue(sansRule, "--reader-body-family"));
+assert.equal(propertyValue(readerCss, "--reader-emphasis-family"), "var(--f-emphasis-serif)");
+assert.equal(
+  [...readerCss.matchAll(/--reader-emphasis-family\s*:/gu)].length,
+  1,
+  "reading editions must inherit the single global emphasis stack"
+);
 assert.match(readerCss, /\.body :global\(p\)\s*{[\s\S]*?font-family\s*:\s*var\(--reader-body-family\)\s*;/);
 assert.match(readerCss, /\.serifSample\s*{\s*font-family\s*:\s*var\(--f-cjk-serif\)\s*;/);
 assert.match(
   readerCss,
   /\.sansSample\s*{\s*font-family\s*:\s*var\(--f-cjk-sans\)\s*;/
 );
-assert.match(readerCss, /\.body :global\(em\)\s*\{[\s\S]*?font-family\s*:\s*var\(--reader-emphasis-family\)\s*;[\s\S]*?font-synthesis\s*:\s*none\s*;/u);
+assert.match(readerCss, /\.body :global\(em\)\s*\{[\s\S]*?font-family\s*:\s*var\(--reader-emphasis-family\)\s*;[\s\S]*?font-style\s*:\s*normal\s*;[\s\S]*?font-synthesis\s*:\s*none\s*;/u);
+assert.match(readerCss, /\.root \.body :global\(em \.latin-run\)[\s\S]*?font-family\s*:\s*inherit\s*;[\s\S]*?font-style\s*:\s*inherit\s*;/u);
 assert.match(globalsCss, /\.art-body p\s*\{[\s\S]*?font-family\s*:\s*var\(--reader-body-family,\s*var\(--f-cjk-serif\)\)\s*;/u);
 assert.match(globalsCss, /html:is\(\[lang="zh"\],\s*\[lang="zh-Hans"\],\s*\[lang="zh-Hant"\]\) \.art-body em/u);
+assert.match(globalsCss, /html:is\(\[lang="zh"\],\s*\[lang="zh-Hans"\],\s*\[lang="zh-Hant"\]\) \.art-body em\s*\{[\s\S]*?font-style\s*:\s*normal\s*;/u);
+assert.match(globalsCss, /html:is\(\[lang="zh"\],\s*\[lang="zh-Hans"\],\s*\[lang="zh-Hant"\]\) \.art-body em \.latin-run\s*\{[\s\S]*?font-family\s*:\s*inherit\s*;/u);
+assert.match(globalsCss, /\.art-body em\s*\{\s*font-style\s*:\s*italic\s*;\s*\}/u, "non-Chinese editions must retain italic emphasis");
 assert.doesNotMatch(`${globalsCss}\n${readerCss}\n${translationCss}\n${foundationSource}`, /Roof ST|STSong|STFangsong|STKaiti|STZhongsong|Roof Rare Han/u);
 
 const japaneseEditionRule = /\.page:lang\(ja\)\s*\{([\s\S]*?)\}/u.exec(translationCss)?.[1];
