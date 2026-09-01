@@ -14,6 +14,7 @@ import LanguageSwitcher from "./LanguageSwitcher";
 import TranslationDocumentIndex from "./TranslationDocumentIndex";
 import TranslationReferences from "./TranslationReferences";
 import ArticleMediaRuntime from "@/app/components/ArticleMediaRuntime";
+import ArticleLinkPreviewRuntime from "@/app/components/ArticleLinkPreviewRuntime";
 import { translationReferenceUi } from "./translationUi";
 import styles from "./translation-edition.module.css";
 
@@ -318,6 +319,7 @@ export default function TranslationEditionPage({
             </nav>
           )}
           <ArticleMediaRuntime />
+          <ArticleLinkPreviewRuntime />
         </div>
         {hasReferences && (
           <aside

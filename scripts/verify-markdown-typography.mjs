@@ -1023,6 +1023,30 @@ assert.doesNotMatch(
   /speaker-turn|<strong>https:<\/strong>/u,
   "repeated URL schemes must not become speaker labels"
 );
+assert.match(
+  interviewUrlHtml,
+  /class="external-link-chip"[^>]*data-link-preview="https:\/\/example\.com\/a"/u,
+  "a visible raw URL must render as an external-link chip"
+);
+assert.match(
+  interviewUrlHtml,
+  /class="external-link-chip-label">example\.com<\/span>/u,
+  "an external-link chip must have a compact host fallback before metadata loads"
+);
+
+const descriptiveLinkHtml = await renderMarkdown(
+  "[这篇文章](https://example.com/a)"
+);
+assert.doesNotMatch(
+  descriptiveLinkHtml,
+  /external-link-chip|data-link-preview/u,
+  "descriptive Markdown links must remain ordinary prose links"
+);
+assert.match(
+  descriptiveLinkHtml,
+  />这篇文章<\/a>/u,
+  "descriptive Markdown link text must remain intact"
+);
 
 const interviewPostscriptHtml = await renderMarkdown(`追记1：这是文后补充，不是新的发言人。`, {
   format: "interview",

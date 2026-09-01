@@ -40,6 +40,7 @@
     "assets:verify": "node scripts/manage-roof-assets.mjs verify",
     "validate:media-html": "node --experimental-strip-types --no-warnings scripts/verify-media-sanitizer.mjs",
     "verify:typography": "node --experimental-strip-types --no-warnings scripts/verify-markdown-typography.mjs",
+    "verify:link-preview": "node --experimental-strip-types --no-warnings --test tests/external-link-preview.test.mjs",
     "verify:book-capabilities": "node --experimental-strip-types --no-warnings scripts/verify-book-capabilities.mjs",
     "verify:fonts": "node scripts/verify-font-contract.mjs",
     "fonts:cjk:sync": "python3 scripts/build-cjk-font-subsets.py --if-stale",
@@ -62,7 +63,7 @@
     "verify:structured-credits": "node scripts/verify-structured-credit-lines.mjs",
     "verify:license-placement": "node scripts/verify-license-placement.mjs",
     "verify:release": "node scripts/verify-editorial-release.mjs",
-    "check": "npm run fonts:sync && npm run validate:content && npm run audit:tags && npm run validate:media-html && npm run verify:wechat-converter && npm run verify:wechat-assets-ready && npm run verify:structured-credits && npm run verify:license-placement && npm run verify:typography && npm run audit:math-notation && npm run verify:book-capabilities && npm run verify:reading-progress && npm run verify:han-script && npm run verify:citations && npm run verify:translations && npm run verify:internal-links && npm run verify:dependencies && npm run verify:cloudflare-build && npm run verify:routing && npm run verify:library && npm run verify:home && npm run verify:fonts && npm run typecheck && npm run lint"
+    "check": "npm run fonts:sync && npm run validate:content && npm run audit:tags && npm run validate:media-html && npm run verify:wechat-converter && npm run verify:wechat-assets-ready && npm run verify:structured-credits && npm run verify:license-placement && npm run verify:typography && npm run verify:link-preview && npm run audit:math-notation && npm run verify:book-capabilities && npm run verify:reading-progress && npm run verify:han-script && npm run verify:citations && npm run verify:translations && npm run verify:internal-links && npm run verify:dependencies && npm run verify:cloudflare-build && npm run verify:routing && npm run verify:library && npm run verify:home && npm run verify:fonts && npm run typecheck && npm run lint"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

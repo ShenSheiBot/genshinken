@@ -15,6 +15,7 @@ import styles from "@/app/components/reading-edition/reading-edition.module.css"
 import { hanScriptLanguageTag, type HanScript } from "@/lib/han-script";
 import LanguageSwitcher from "@/app/components/translation/LanguageSwitcher";
 import ArticleMediaRuntime from "@/app/components/ArticleMediaRuntime";
+import ArticleLinkPreviewRuntime from "@/app/components/ArticleLinkPreviewRuntime";
 import type { EditionLanguageLink } from "@/lib/translations";
 import { countRenderedListItems, splitRenderedApparatus } from "@/lib/markdown";
 import { isCompactTitleSegment } from "@/lib/title-layout";
@@ -204,6 +205,7 @@ export function ArticleFlow({
       <Appendices parts={parts} />
       {children}
       <ArticleMediaRuntime />
+      <ArticleLinkPreviewRuntime />
     </div>
   );
 }

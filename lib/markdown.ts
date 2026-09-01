@@ -825,6 +825,66 @@ function rehypeLatinRuns() {
   return (tree: Root) => walk(tree as unknown as { children: unknown[] });
 }
 
+/**
+ * Mark external links whose visible label is the URL itself. Descriptive
+ * Markdown links remain ordinary prose links: the client enhancer only owns
+ * links that would otherwise print an unreadably long URL into the article.
+ */
+function rehypeVisibleUrlLinks() {
+  return (tree: Root) => {
+    visit(tree, "element", (node: Element) => {
+      if (node.tagName !== "a") return;
+      const href = typeof node.properties?.href === "string"
+        ? node.properties.href
+        : "";
+      if (!/^https?:\/\//iu.test(href)) return;
+
+      const visible = elementText(node).trim();
+      if (visible !== href) return;
+
+      let hostname: string;
+      try {
+        hostname = new URL(href).hostname.replace(/^www\./iu, "");
+      } catch {
+        return;
+      }
+
+      const classes = Array.isArray(node.properties?.className)
+        ? node.properties.className.map(String)
+        : node.properties?.className
+          ? [String(node.properties.className)]
+          : [];
+      classes.push("external-link-chip");
+      node.properties = {
+        ...(node.properties ?? {}),
+        className: Array.from(new Set(classes)),
+        "data-link-preview": href,
+        "aria-label": `${hostname}：${href}`,
+      };
+      node.children = [
+        {
+          type: "element",
+          tagName: "span",
+          properties: { className: ["external-link-chip-icon"], "aria-hidden": "true" },
+          children: [],
+        },
+        {
+          type: "element",
+          tagName: "span",
+          properties: { className: ["external-link-chip-label"] },
+          children: [{ type: "text", value: hostname }],
+        },
+        {
+          type: "element",
+          tagName: "span",
+          properties: { className: ["external-link-chip-arrow"], "aria-hidden": "true" },
+          children: [{ type: "text", value: "↗" }],
+        },
+      ];
+    });
+  };
+}
+
 const TABLE_CAPTION_MARKER = "[table]";
 const TABLE_NOTE_MARKER = "[table-note]";
 
@@ -1853,6 +1913,7 @@ function createProcessor(
   .use(rehypeCjkInterpuncts)
   .use(rehypeRareHanGlyphs)
   .use(rehypeLatinRuns)
+  .use(rehypeVisibleUrlLinks)
   .use(rehypeKatex)
   .use(rehypeStringify, { allowDangerousHtml: true });
 }
