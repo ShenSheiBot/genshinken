@@ -338,7 +338,7 @@ function validateTypography(file, content, data) {
   // a footnote system. It renders as ordinary article text and severs every
   // backlink between the prose and its note. This is deliberately narrower than
   // a generic numeric-reference heuristic: it only rejects the reproduced defect.
-  const manualFootnoteSection = /^(?:#{2,6}\s*)?(?:注释|脚注)[：:]?\s*$\n(?:\s*\n)*(?:1[.、．]|☆1|\[1\]|[（(]1[）)])\s+/gmu;
+  const manualFootnoteSection = /^(?:#{2,6}\s*)?(?:注释|脚注)[：:。．.]?\s*$\n(?:\s*\n)*(?:1[.、．]|☆1|\[1\]|[（(]1[）)])\s+/gmu;
   for (const match of content.matchAll(manualFootnoteSection)) {
     const line = content.slice(0, match.index).split(/\r?\n/u).length;
     report(
