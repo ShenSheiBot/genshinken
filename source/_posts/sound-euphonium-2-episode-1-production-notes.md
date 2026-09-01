@@ -401,5 +401,3 @@ citation:
 ## 编者按
 
 京吹2制作笔记翻译补完，祝贺京吹新剧场版上映。伦勃朗君有参与两篇翻译的校对。
-
-![《吹响！上低音号2》第13集画面（7）](attachments/wechat/2_D6w0D2fqAPZ8p0-mg9TQ/body-019.jpg)

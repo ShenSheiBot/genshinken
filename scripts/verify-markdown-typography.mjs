@@ -620,6 +620,20 @@ function authorPortraitsWithFigureCaptions(markdown) {
   return failures;
 }
 
+function forbiddenGenericPromoAssetReferences(markdown, assetHashByKey, forbiddenHashes) {
+  const references = [];
+  const pattern = /attachments\/((?:wechat|roof-archive)\/[^\s)"'?]+?\.(?:avif|gif|jpe?g|png|webp))(?:\?[^)\s"']*)?/giu;
+  for (const match of markdown.matchAll(pattern)) {
+    const hash = assetHashByKey.get(match[1]);
+    if (!hash || !forbiddenHashes.has(hash)) continue;
+    references.push({
+      key: match[1],
+      line: markdown.slice(0, match.index).split(/\r?\n/u).length,
+    });
+  }
+  return references;
+}
+
 function unclassifiedItalicImageNeighbors(markdown) {
   const lines = markdown.split(/\r?\n/u);
   const failures = [];
@@ -705,6 +719,15 @@ assert.deepEqual(
   authorPortraitsWithFigureCaptions('[card] Author Name\n\n![Author](attachments/article/01-author-portrait-v5.png "=25%")'),
   [],
   "a semantic author card must pass"
+);
+assert.deepEqual(
+  forbiddenGenericPromoAssetReferences(
+    '正文。\n\n![误标的动画画面](attachments/wechat/example/body-019.jpg)',
+    new Map([["wechat/example/body-019.jpg", "confirmed-generic-promo"]]),
+    new Set(["confirmed-generic-promo"]),
+  ),
+  [{ key: "wechat/example/body-019.jpg", line: 3 }],
+  "a confirmed generic promotion image must be rejected regardless of its alt text",
 );
 
 assert.deepEqual(
@@ -890,6 +913,18 @@ assert.doesNotMatch(
   const postsDirectory = path.join(process.cwd(), "source", "_posts");
   const corpusFailures = [];
   const corpusWarnings = [];
+  const forbiddenGenericPromoHashes = new Set([
+    "641b5689de47e7e6c37c30c0a8bf36fc89539347a44d9b3fcbf3ff3f033d261c",
+    "41b9cd01da24ae05e9160d4e36e70515bee61bc5efee56d2efdbeb9f182224fb",
+  ]);
+  const assetHashByKey = new Map();
+  for (const manifestPath of [
+    path.join(process.cwd(), "editorial-sources", "wechat", "assets-manifest.json"),
+    path.join(process.cwd(), "editorial-sources", "roof-archive", "assets-manifest.json"),
+  ]) {
+    const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf8"));
+    for (const asset of manifest.assets ?? []) assetHashByKey.set(asset.key, asset.sha256);
+  }
   const markerLeak = /\[(?:fig(?:-note)?|table(?:-note)?|note|audio|music|video|person(?:-bio)?|author(?:-bio)?|card(?:-bio)?|gallery|slides|\/(?:gallery|slides|layout)|layout:(?:resources|timeline|reading-path|book-list|podcast|contact|comic))\]/u;
   const legacyItalicCaption = /^\*(?:图题[:：]|图[0-9]+[.．：:]).*\*$/mu;
   const invalidWidth = /title="=(?!(?:25|33|50|66|75|100)%")[^"]*"/u;
@@ -944,6 +979,9 @@ assert.doesNotMatch(
     for (const line of authorPortraitsWithFigureCaptions(body)) {
       corpusFailures.push(`${name}:${line}: 作者头像不能使用普通 [fig]；请改用 [author]/[card]/[person]，说明文字另入作者简介或编者按`);
     }
+    for (const reference of forbiddenGenericPromoAssetReferences(body, assetHashByKey, forbiddenGenericPromoHashes)) {
+      corpusFailures.push(`${name}:${reference.line}: 已确认的通用投稿／社群宣传图不能进入文章正文（${reference.key}）`);
+    }
     for (const warning of detachedFootnoteHeadings(body)) {
       corpusWarnings.push(
         `${name}:${warning.line}: 标题“${warning.title}”下只有会被 GFM 移入注释区的脚注定义；请复核是否删除这个空壳标题`,
@@ -981,6 +1019,9 @@ assert.doesNotMatch(
     }
     for (const line of authorPortraitsWithFigureCaptions(body)) {
       corpusFailures.push(`${relative}:${line}: 译文作者头像不能使用普通 [fig]；请改用 [author]/[card]/[person]`);
+    }
+    for (const reference of forbiddenGenericPromoAssetReferences(body, assetHashByKey, forbiddenGenericPromoHashes)) {
+      corpusFailures.push(`${relative}:${reference.line}: 已确认的通用投稿／社群宣传图不能进入译文正文（${reference.key}）`);
     }
     for (const warning of detachedFootnoteHeadings(body)) {
       corpusWarnings.push(
