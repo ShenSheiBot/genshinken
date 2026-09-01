@@ -101,15 +101,95 @@
 .socials {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 12px 22px;
   margin-top: 26px;
   font-family: var(--f-mono);
   font-size: var(--text-caption);
 }
 
-.socials a { color: var(--ink-soft); }
+.socialItem {
+  position: relative;
+  display: inline-flex;
+}
+
+.socials a {
+  display: inline-flex;
+  align-items: center;
+  color: var(--ink-soft);
+}
+
+.socialLink { gap: 7px; }
+.socialIcon {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  color: var(--ink);
+  fill: currentColor;
+}
+
 .socials a:hover,
 .socials a:focus-visible { color: var(--accent); outline: none; text-decoration: underline; }
+
+.qrPopup {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  top: calc(100% + 14px);
+  width: 164px;
+  padding: 12px 12px 10px;
+  border: 1px solid var(--hair-strong);
+  border-top: 3px solid var(--accent);
+  color: var(--accent);
+  background: var(--bg);
+  box-shadow: 8px 8px 0 color-mix(in srgb, var(--accent) 14%, transparent);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translate(-50%, -7px);
+  transition: opacity 140ms ease, transform 140ms ease, visibility 140ms;
+}
+
+.qrPopup::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 9px;
+  height: 9px;
+  border-top: 1px solid var(--hair-strong);
+  border-left: 1px solid var(--hair-strong);
+  background: var(--bg);
+  transform: translate(-50%, -6px) rotate(45deg);
+}
+
+.qrCode {
+  display: block;
+  width: 138px;
+  height: 138px;
+  margin: 0 auto;
+}
+
+.qrPopup > span {
+  display: block;
+  margin-top: 5px;
+  color: var(--ink-soft);
+  font-size: 10px;
+  line-height: 1.4;
+  letter-spacing: .04em;
+  text-align: center;
+}
+
+.socialItem:hover .qrPopup,
+.socialItem:focus-within .qrPopup {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .qrPopup { transition: none; }
+}
 
 @media (max-width: 760px) {
   .page { padding: 46px 20px 0; }
@@ -120,4 +200,5 @@
   .principles article { min-height: 0; padding: 22px 0 28px; }
   .principles article + article { padding-left: 0; border-top: 1px solid var(--hair); border-left: 0; }
   .principles h2 { margin-top: 24px; }
+  .qrPopup { display: none; }
 }

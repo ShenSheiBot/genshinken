@@ -16,7 +16,7 @@ export const site = {
   /** 公开主页；正式上线前只列已经核验的入口。 */
   social: [
     { label: "哔哩哔哩", href: "https://space.bilibili.com/355943807" },
-    { label: "GitHub", href: "https://github.com/ShenSheiBot/genshinken" },
+    { label: "知乎", href: "https://www.zhihu.com/column/c_1885047759737971171" },
   ],
   infoEmail: "a1835631041@163.com",
   editorEmail: "a1835631041@163.com",
