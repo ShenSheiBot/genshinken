@@ -21,6 +21,9 @@ process.env.ROOF_BUILD_TIMESTAMP = buildTimestamp();
 const scriptSources = [
   "'self'",
   "'unsafe-inline'",
+  // Cloudflare Web Analytics is injected at the edge. Keep the exception
+  // limited to its documented beacon origin.
+  "https://static.cloudflareinsights.com",
   // Pagefind's same-origin search bundle compiles its generated WebAssembly
   // index reader in the browser. This does not permit JavaScript eval.
   "'wasm-unsafe-eval'",
@@ -36,7 +39,9 @@ const contentSecurityPolicy = [
   "font-src 'self'",
   "img-src 'self' data: https:",
   "media-src 'self' https://assets.labonroof.top",
-  "connect-src 'self'",
+  // Proxied traffic reports to same-origin /cdn-cgi/rum; the explicit origin
+  // also covers Cloudflare's documented direct beacon endpoint.
+  "connect-src 'self' https://cloudflareinsights.com",
   "frame-src 'self' https://music.163.com",
   "object-src 'none'",
   "base-uri 'self'",
