@@ -81,7 +81,7 @@ export const CONTRIBUTORS = [
   {
     id: "you-fisherman",
     displayName: "侑",
-    aliases: ["fisherman"],
+    aliases: ["fisherman", "长相最刻板印象的亚洲企鹅"],
     teamMember: false,
   },
   { id: "gi", displayName: "Gi", aliases: [], teamMember: false },
@@ -467,6 +467,7 @@ export const CONTRIBUTORS = [
   { id: "znqrwod", displayName: "ZnQRwoD", aliases: [], teamMember: false },
   { id: "disordered-heaven", displayName: "Disordered Heaven", aliases: [], teamMember: false },
   { id: "marc-steinberg", displayName: "Marc Steinberg", aliases: ["马克·斯坦伯格"], teamMember: false },
+  { id: "mark-langer", displayName: "马克·兰格", aliases: ["Mark Langer"], teamMember: false },
   { id: "celani", displayName: "celani", aliases: [], teamMember: false },
   { id: "qi-lin", displayName: "奇霖", aliases: [], teamMember: false },
   { id: "riri-chan", displayName: "りりちゃん", aliases: [], teamMember: false },
