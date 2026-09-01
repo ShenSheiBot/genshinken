@@ -63,7 +63,7 @@
   margin: 0;
   font-family: var(--f-cjk-serif);
   font-size: clamp(58px, 7vw, 84px);
-  font-weight: 900;
+  font-weight: 700;
   line-height: .88;
   letter-spacing: -.065em;
 }
@@ -127,7 +127,7 @@
   margin: 0;
   font-family: var(--f-cjk-serif);
   font-size: clamp(32px, 3.7vw, 48px);
-  font-weight: 900;
+  font-weight: 500;
   line-height: 1.03;
   letter-spacing: -.045em;
   text-wrap: balance;
@@ -258,7 +258,7 @@
   margin: 0;
   font-family: var(--f-cjk-serif);
   font-size: clamp(48px, 5.8vw, 70px);
-  font-weight: 900;
+  font-weight: 700;
   line-height: .96;
   letter-spacing: -.055em;
   text-wrap: balance;
@@ -424,6 +424,7 @@
   margin: 14px 0 0;
   font-family: var(--f-cjk-serif);
   font-size: clamp(25px, 2.65vw, 34px);
+  font-weight: 500;
   line-height: 1.12;
   letter-spacing: -.025em;
   text-wrap: balance;

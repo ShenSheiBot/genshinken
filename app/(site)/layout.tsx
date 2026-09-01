@@ -16,7 +16,7 @@ import {
   hanScriptBootstrap,
   siteJsonLd,
   siteViewport,
-  stSongHref,
+  chineseSerifHref,
   themeScript,
 } from "@/app/document-foundation";
 
@@ -61,7 +61,7 @@ export default async function SiteLayout({ children }: Readonly<{ children: Reac
     >
       <head>
         <meta name="darkreader-lock" />
-        <link rel="preload" as="font" type="font/woff2" href={stSongHref} crossOrigin="anonymous" />
+        <link rel="preload" as="font" type="font/woff2" href={chineseSerifHref} crossOrigin="anonymous" />
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <script dangerouslySetInnerHTML={{ __html: hanScriptBootstrap }} />
         <script dangerouslySetInnerHTML={{ __html: editorialRevealBootstrap }} />

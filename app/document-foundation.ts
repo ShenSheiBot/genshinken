@@ -46,8 +46,8 @@ export const documentFontVariables = [
   spaceMono.variable,
 ].join(" ");
 
-const ST_SONG = cjkFontManifest.fonts["Roof STSong"];
-export const stSongHref = `/fonts/${ST_SONG.file}?v=${ST_SONG.sha256.slice(0, 12)}`;
+const CHINESE_SERIF = cjkFontManifest.fonts["Roof Noto Serif SC"];
+export const chineseSerifHref = `/fonts/${CHINESE_SERIF.file}?v=${CHINESE_SERIF.sha256.slice(0, 12)}`;
 const NOTO_SERIF_JP = translationFontManifest.fonts["Roof Noto Serif JP"];
 export const japaneseSerifHref = `/fonts/${NOTO_SERIF_JP.file}?v=${NOTO_SERIF_JP.sha256.slice(0, 12)}`;
 

@@ -17,18 +17,19 @@
   --text-sm: 10px;
   --text-caption: 11px;
   --text-meta: 12px;
-  --f-brand: "Roof STSong", "STSong", "华文宋体", "Songti SC", "SimSun", serif;
-  --f-grotesk: "Helvetica Neue", Helvetica, "PingFang SC", "Microsoft YaHei", "微软雅黑", "Noto Sans SC", Arial, sans-serif;
-  --f-serif: var(--font-newsreader), "Roof STSong", "STSong", "华文宋体", "Songti SC", "SimSun", "Noto Serif SC", Georgia, serif;
-  --f-mono: var(--font-space-mono), "PingFang SC", "Noto Sans SC", monospace;
-  --f-cjk-serif: "Roof STSong", "STSong", "华文宋体", "Songti SC", "SimSun", "Noto Serif SC", serif;
-  --f-cjk-fangsong: "Roof STFangsong", "STFangsong", "华文仿宋", "FangSong", "FangSong_GB2312", "Noto Serif SC", serif;
-  --f-cjk-kaiti: "Roof STKaiti", "STKaiti", "华文楷体", "KaiTi", "楷体", serif;
-  --f-cjk-dengxian: "DengXian", "等线", "Microsoft YaHei", "微软雅黑", "PingFang SC", "Noto Sans SC", Arial, sans-serif;
+  --f-cjk-serif: "Roof Noto Serif SC", "Roof WenKai", "Noto Serif SC", "Source Han Serif SC", serif;
+  --f-cjk-sans: "Roof Noto Sans SC", "Roof WenKai", "Noto Sans SC", "Source Han Sans SC", sans-serif;
+  --f-cjk-kaiti: "Roof WenKai", "Kaiti SC", "KaiTi", "楷体", serif;
+  --f-cjk-fangsong: var(--f-cjk-kaiti);
+  --f-brand: var(--f-cjk-serif);
+  --f-grotesk: "Helvetica Neue", Helvetica, var(--f-cjk-sans), Arial, sans-serif;
+  --f-serif: var(--font-newsreader), var(--f-cjk-serif), Georgia, serif;
+  --f-mono: var(--font-space-mono), var(--f-cjk-sans), monospace;
+  --f-emphasis-serif: "Roof WenKai", "Times New Roman", Times, "Kaiti SC", "KaiTi", serif;
   --f-editorial-note-latin: Georgia, "Times New Roman", Times, serif;
   --f-note: "Times New Roman", Times, var(--f-cjk-serif);
   --f-quote-latin: var(--font-eb-garamond), Garamond, Georgia, serif;
-  --f-quote-cjk: var(--f-cjk-fangsong);
+  --f-quote-cjk: var(--f-cjk-kaiti);
   --f-quote: var(--f-quote-latin), var(--f-quote-cjk);
   --maxw: 1280px;
   --grid-step: 160px;
@@ -51,27 +52,6 @@
   --accent-hover: #78acd2;  /* 浅色主题黑底 hover 的浅蓝 */
   --panel: #e8e7e3;
   --code-bg: rgba(26, 25, 22, 0.05);
-}
-
-/* U+4337 is absent from the three ST source fonts. These one-glyph Noto
-   subsets prevent platform-dependent glyph and baseline fallback without
-   shipping another full CJK font. */
-@font-face {
-  font-family: "Roof Rare Han Serif";
-  src: url("/fonts/roof-rare-han-serif.woff2?v=fcbebb5254a4") format("woff2");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  unicode-range: U+4337;
-}
-
-@font-face {
-  font-family: "Roof Rare Han Sans";
-  src: url("/fonts/roof-rare-han-sans.woff2?v=bf88159b46a8") format("woff2");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  unicode-range: U+4337;
 }
 
 html[data-theme="dark"] {
@@ -247,7 +227,7 @@ body:has(.translation-edition-page) { background-image: none; }
 .topbar[data-revealed="true"] .art-running { opacity: 1; transform: none; }
 .topbar .art-running .rt {
   flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
-  font-family: var(--f-cjk-serif); font-weight: 700; font-size: 16px; line-height: 1.2;
+  font-family: var(--f-cjk-serif); font-weight: 500; font-size: 16px; line-height: 1.2;
   letter-spacing: 0; color: var(--ink);
 }
 .topbar .art-running .rc {
@@ -396,7 +376,7 @@ body:has(.translation-edition-page) { background-image: none; }
 .srow:hover .sno .when b { color: var(--solid-ink); }
 .srow:hover .sno .when > span { color: var(--solid-ink); opacity: .7; }
 .srow .smain .sen { font-family: var(--f-mono); font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
-.srow .smain h3 { font-family: var(--f-cjk-serif); font-weight: 900; font-size: clamp(30px, 4.4vw, 52px); line-height: 1.04; margin: 0 0 12px; letter-spacing: -.01em; }
+.srow .smain h3 { font-family: var(--f-cjk-serif); font-weight: 700; font-size: clamp(30px, 4.4vw, 52px); line-height: 1.04; margin: 0 0 12px; letter-spacing: -.01em; }
 .srow .smain .sauthor { display: flex; flex-wrap: wrap; align-items: center; gap: 1em; font-family: var(--f-cjk-serif); font-weight: 500; font-size: 16px; color: var(--ink); margin: 0 0 10px; }
 .srow:hover .smain .sauthor { color: var(--solid-ink); }
 /* 署名方块（首页卡片 + 文章页元信息共用）：方块与名字间半个全角，署名之间一个全角 */
@@ -456,7 +436,7 @@ body:has(.translation-edition-page) { background-image: none; }
   letter-spacing: .04em; margin-bottom: 26px; text-transform: uppercase;
 }
 .art-meta .d { width: 4px; height: 4px; background: var(--accent); }
-.art-title { position: relative; z-index: 2; margin: 0; font-family: var(--f-cjk-serif); font-weight: 900; font-size: clamp(34px, 6vw, 82px); line-height: 1.0; letter-spacing: -.015em; text-wrap: balance; }
+.art-title { position: relative; z-index: 2; margin: 0; font-family: var(--f-cjk-serif); font-weight: 700; font-size: clamp(34px, 6vw, 82px); line-height: 1.0; letter-spacing: -.015em; text-wrap: balance; }
 .art-title [data-reader-title-punctuation="open"] { margin-inline-start: -.5em; }
 .art-title [data-reader-title-punctuation="close"] { margin-inline-end: -.5em; }
 .art-subtitle {
@@ -485,7 +465,7 @@ body:has(.translation-edition-page) { background-image: none; }
 }
 .art-body > :first-child { margin-top: 0; }
 .art-body p {
-  font-family: var(--f-cjk-serif); font-size: 18px; line-height: 1.85;
+  font-family: var(--reader-body-family, var(--f-cjk-serif)); font-size: 18px; line-height: 1.85;
   margin: 0 0 26px; text-wrap: pretty; text-align: justify;
   text-justify: inter-character; word-break: normal; overflow-wrap: normal;
   text-indent: 2em;
@@ -501,7 +481,7 @@ body:has(.translation-edition-page) { background-image: none; }
 .art-body p.epigraph-attribution { font-family: var(--f-cjk-kaiti); }
 .art-body p.article-summary-meta strong { font-family: var(--f-grotesk); font-weight: 700; color: var(--ink); }
 .art-body h1, .art-body h2, .art-body h3, .art-body h4 {
-  font-family: var(--f-grotesk); font-weight: 700; line-height: 1.18;
+  font-family: var(--reader-title-family, var(--f-grotesk)); font-weight: 500; line-height: 1.18;
   margin: 52px 0 22px; letter-spacing: -.02em; scroll-margin-top: 80px;
   position: relative;
 }
@@ -525,12 +505,16 @@ body:has(main[data-archive-page="true"]) {
 .art-body strong { font-weight: 700; color: var(--ink); }
 .art-body p.editorial-note > strong:first-child,
 .art-body p.speaker-turn > strong:first-child {
-  font-family: var(--f-cjk-dengxian);
+  font-family: var(--f-cjk-sans);
   font-weight: 700;
   letter-spacing: 0;
 }
 .art-body p.speaker-turn > strong:first-child:not(:last-child) { margin-inline-end: .5em; }
 .art-body em { font-style: italic; }
+html:is([lang="zh"], [lang="zh-Hans"], [lang="zh-Hant"]) .art-body em {
+  font-family: var(--f-emphasis-serif);
+  font-synthesis: none;
+}
 .art-body p .latin-run,
 .art-body li .latin-run,
 .art-body td .latin-run,
@@ -540,12 +524,12 @@ body:has(main[data-archive-page="true"]) {
 }
 .art-body p.editorial-note .latin-run { font-family: var(--f-editorial-note-latin); }
 .art-body p.editorial-note > strong:first-child .latin-run,
-.art-body p.speaker-turn > strong:first-child .latin-run { font-family: var(--f-cjk-dengxian); }
+.art-body p.speaker-turn > strong:first-child .latin-run { font-family: var(--f-cjk-sans); }
 .art-body .cjk-interpunct {
   font-family: inherit;
 }
 .art-body ul, .art-body ol {
-  font-family: var(--f-cjk-serif); font-size: 17px; line-height: 1.85;
+  font-family: var(--reader-body-family, var(--f-cjk-serif)); font-size: 17px; line-height: 1.85;
   margin: 0 0 26px; padding-left: 1.4em; text-align: justify;
   text-justify: inter-character; word-break: normal; overflow-wrap: normal;
 }
@@ -558,7 +542,7 @@ body:has(main[data-archive-page="true"]) {
   font-family: var(--f-quote); color: var(--ink-soft); font-style: normal;
 }
 .art-body blockquote p {
-  font-family: var(--f-quote-cjk);
+  font-family: var(--reader-quote-family, var(--f-quote-cjk));
   font-size: 18px; line-height: 1.8; margin: 0 0 14px;
   text-align: justify; text-justify: inter-character;
 }
@@ -1526,8 +1510,8 @@ body:has(main[data-archive-page="true"]) {
   letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft);
 }
 .art-body .footnotes h2::before { content: none; }
-.art-body .footnotes ol { font-family: var(--f-cjk-serif); margin: 0; padding-left: 1.6em; }
-.art-body .footnotes li { margin: 0 0 12px; font-family: var(--f-cjk-serif); line-height: 1.75; color: var(--ink-soft); text-align: left; }
+.art-body .footnotes ol { font-family: var(--reader-body-family, var(--f-cjk-serif)); margin: 0; padding-left: 1.6em; }
+.art-body .footnotes li { margin: 0 0 12px; font-family: var(--reader-body-family, var(--f-cjk-serif)); line-height: 1.75; color: var(--ink-soft); text-align: left; }
 .art-body .footnotes li::marker { color: var(--ink-faint); font-family: "Times New Roman", Times, serif; }
 .art-body .footnotes li.title-note::marker {
   content: "* ";
@@ -1535,7 +1519,7 @@ body:has(main[data-archive-page="true"]) {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 700;
 }
-.art-body .footnotes p { margin: 0; font-family: var(--f-cjk-serif); text-align: left; text-indent: 0; }
+.art-body .footnotes p { margin: 0; font-family: var(--reader-body-family, var(--f-cjk-serif)); text-align: left; text-indent: 0; }
 .art-body .footnotes a[data-footnote-backref] { color: var(--accent); border: none; margin-left: 4px; }
 .art-body .footnotes a[data-footnote-backref]:hover { background: none; }
 
@@ -1552,10 +1536,10 @@ body:has(main[data-archive-page="true"]) {
   letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft);
 }
 .art-body .source-notes h2::before { content: none; }
-.art-body .source-notes ol { font-family: var(--f-cjk-serif); margin: 0; padding-left: 1.8em; list-style-type: lower-roman; }
-.art-body .source-notes li { margin: 0 0 12px; font-family: var(--f-cjk-serif); line-height: 1.75; color: var(--ink-soft); text-align: left; }
+.art-body .source-notes ol { font-family: var(--reader-body-family, var(--f-cjk-serif)); margin: 0; padding-left: 1.8em; list-style-type: lower-roman; }
+.art-body .source-notes li { margin: 0 0 12px; font-family: var(--reader-body-family, var(--f-cjk-serif)); line-height: 1.75; color: var(--ink-soft); text-align: left; }
 .art-body .source-notes li::marker { color: var(--ink-faint); font-family: "Times New Roman", Times, serif; }
-.art-body .source-notes p { margin: 0; font-family: var(--f-cjk-serif); text-align: left; text-indent: 0; }
+.art-body .source-notes p { margin: 0; font-family: var(--reader-body-family, var(--f-cjk-serif)); text-align: left; text-indent: 0; }
 .art-body .source-backref { color: var(--accent); border: none; margin-left: 4px; }
 .art-body .source-backref:hover { background: none; }
 
@@ -1574,7 +1558,7 @@ body:has(main[data-archive-page="true"]) {
 .nextrow:hover { background: var(--solid); color: var(--solid-ink); }
 .nextrow .nlabel { font-family: var(--f-mono); font-size: var(--text-meta); letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft); }
 .nextrow:hover .nlabel { color: var(--solid-ink); opacity: .7; }
-.nextrow .ntitle { font-family: var(--f-cjk-serif); font-weight: 900; font-size: 28px; margin-top: 8px; letter-spacing: -.01em; }
+.nextrow .ntitle { font-family: var(--f-cjk-serif); font-weight: 700; font-size: 28px; margin-top: 8px; letter-spacing: -.01em; }
 .nextrow .narrow { font-family: var(--f-grotesk); font-weight: 700; font-size: 30px; flex: none; }
 
 /* ============================================================
@@ -1632,7 +1616,7 @@ html[data-article-nav="compact"] .topbar .mobile-section-nav { display: block; w
 html[data-article-nav="compact"] .topbar .mobile-section-trigger {
   width: 100%; min-width: 0; height: 36px;
   display: flex; align-items: center; justify-content: flex-start; gap: 6px;
-  color: var(--ink); font-family: var(--f-cjk-serif); font-weight: 700;
+  color: var(--ink); font-family: var(--f-cjk-serif); font-weight: 500;
   font-size: 16px; line-height: 1.1; text-align: left; pointer-events: auto;
 }
 html[data-article-nav="compact"] .topbar .mobile-section-trigger:disabled { cursor: default; }

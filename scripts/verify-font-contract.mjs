@@ -35,35 +35,29 @@ const fontToolchainDigest = crypto
 
 const expectedFonts = [
   {
-    family: "Roof STSong",
-    file: "roof-st-song.woff2",
-    source: "STSong.ttf",
+    family: "Roof Noto Serif SC",
+    file: "roof-noto-serif-sc.woff2",
+    source: "NotoSerifSC.ttf",
+    sourceSha256: "050080d9255a86808f2945bffac582b31ef32bc36411ce29563b4961670c66f9",
     variable: "--f-cjk-serif",
+    weight: "200 900",
   },
   {
-    family: "Roof STFangsong",
-    file: "roof-st-fangsong.woff2",
-    source: "STFangsong.ttf",
-    variable: "--f-cjk-fangsong",
+    family: "Roof Noto Sans SC",
+    file: "roof-noto-sans-sc.woff2",
+    source: "NotoSansSC.ttf",
+    sourceSha256: "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da",
+    variable: "--f-cjk-sans",
+    weight: "100 900",
   },
   {
-    family: "Roof STKaiti",
-    file: "roof-st-kaiti.woff2",
-    source: "STKaiti.ttf",
+    family: "Roof WenKai",
+    file: "roof-wenkai.woff2",
+    source: "LXGWWenKaiGB-Regular.ttf",
+    sourceSha256: "295568c131648062107543aa159c97dd49564be791136c2abf74cad83eba3f7f",
     variable: "--f-cjk-kaiti",
-  },
-];
-
-const rareHanFonts = [
-  {
-    family: "Roof Rare Han Serif",
-    file: "roof-rare-han-serif.woff2",
-    sha256: "fcbebb5254a4a8ae5edde4d1b7e548c1fb859e1843d00d4f3161b509153925ac",
-  },
-  {
-    family: "Roof Rare Han Sans",
-    file: "roof-rare-han-sans.woff2",
-    sha256: "bf88159b46a80c7d19c95d8d8f6c434518c9363fbd20a37db3acd9a0cb045bf3",
+    weight: "400",
+    uprightItalicAlias: true,
   },
 ];
 
@@ -94,7 +88,7 @@ const localeFontOwnedRoots = [
   "app/translation-fonts.generated.css",
   "source/_translations/",
 ];
-const alwaysInclude = "华文宋体仿宋楷体衬线无衬线，。；：？！“”‘’（）《》〈〉【】——……·";
+const alwaysInclude = "思源宋体黑体文楷衬线无衬线，。；：？！“”‘’（）《》〈〉【】——……·";
 
 function escapeRegExp(value) {
   return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -145,24 +139,32 @@ assert.ok(fs.existsSync(manifestPath), "missing generated CJK font manifest; run
 const manifest = JSON.parse(readUtf8(manifestPath));
 assert.ok(fs.existsSync(translationFontManifestPath), "missing generated Japanese translation font manifest");
 const translationFontManifest = JSON.parse(readUtf8(translationFontManifestPath));
-assert.equal(manifest.version, 4, "unsupported CJK font manifest version");
+assert.equal(manifest.version, 5, "unsupported CJK font manifest version");
 assert.equal(
   manifest.strategy,
-  "site-corpus-opencc-closure",
-  "CJK font subsets must cover the rendered corpus and its OpenCC conversion closure"
+  "chinese-site-corpus-opencc-closure-variable-pair-and-emphasis",
+  "Chinese fonts must cover the rendered corpus and its OpenCC conversion closure"
 );
 assert.equal(
   manifest.toolchainSha256,
   fontToolchainDigest,
   "CJK font outputs were not built with the pinned repository-private toolchain"
 );
-assert.equal(
-  manifest.upstreamCommit,
-  "287399335ec1beb72062ce67c36eaa8bec35f386",
-  "CJK font source commit changed without review"
+assert.deepEqual(
+  manifest.upstreamCommits,
+  {
+    "google/fonts": "e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7",
+    "lxgw/LxgwWenKaiGB": "7e280c0880f6171d8e969b5c4bd3451f6094cce7",
+  },
+  "Chinese font source commits changed without review"
 );
 assert.equal(manifest.conversion, "opencc-js:cn2t+t2cn");
-assert.ok(manifest.subsetCodePointCount >= 2_500, "hosted CJK subsets are unexpectedly small");
+assert.ok(manifest.targetCodePointCount >= 2_500, "hosted Chinese subsets are unexpectedly small");
+assert.deepEqual(
+  manifest.unsupportedBodyCodePointRanges,
+  ["U+202C", "U+FAFF"],
+  "Chinese body roles plus WenKai fallback must cover every visible site-corpus character"
+);
 
 const faceBlocks = [...`${globalsCss}\n${cjkFontCss}`.matchAll(/@font-face\s*{[\s\S]*?}/g)].map((match) => match[0]);
 const hashes = new Set();
@@ -170,6 +172,7 @@ const hashes = new Set();
 for (const expected of expectedFonts) {
   const face = faceBlocks.find((block) =>
     new RegExp(`font-family\\s*:\\s*["']${escapeRegExp(expected.family)}["']\\s*;`).test(block)
+    && /font-style\s*:\s*normal\s*;/.test(block)
   );
   assert.ok(face, `missing self-hosted @font-face for ${expected.family}`);
   assert.match(
@@ -179,7 +182,7 @@ for (const expected of expectedFonts) {
   );
   assert.match(face, /format\(["']woff2["']\)/);
   assert.match(face, /font-style\s*:\s*normal\s*;/);
-  assert.match(face, /font-weight\s*:\s*400\s*;/);
+  assert.match(face, new RegExp(`font-weight\\s*:\\s*${expected.weight.replace(" ", "\\s+")}\\s*;`));
   assert.match(face, /font-display\s*:\s*swap\s*;/);
 
   const variable = propertyValue(globalsCss, expected.variable);
@@ -199,8 +202,10 @@ for (const expected of expectedFonts) {
   assert.ok(record, `manifest is missing ${expected.family}`);
   assert.equal(record.file, expected.file);
   assert.equal(record.source, expected.source);
+  assert.equal(record.sourceSha256, expected.sourceSha256);
+  assert.equal(record.weight, expected.weight);
   assert.equal(record.bytes, bytes.length);
-  assert.equal(record.codePointCount, manifest.subsetCodePointCount);
+  assert.ok(record.codePointCount >= 2_500, `${expected.family} coverage is unexpectedly small`);
   assert.equal(record.sha256, digest);
   assert.match(
     face,
@@ -209,79 +214,55 @@ for (const expected of expectedFonts) {
     ),
     `${expected.file} cache key must match its current SHA-256 digest`
   );
+
+  if (expected.uprightItalicAlias) {
+    const italicFace = faceBlocks.find((block) =>
+      new RegExp(`font-family\\s*:\\s*["']${escapeRegExp(expected.family)}["']\\s*;`).test(block)
+      && /font-style\s*:\s*italic\s*;/.test(block)
+    );
+    assert.ok(italicFace, `${expected.family} must expose its upright glyphs for italic emphasis`);
+    assert.match(italicFace, new RegExp(`url\\(["']?/fonts/${escapeRegExp(expected.file)}\\?v=${digest.slice(0, 12)}["']?\\)`));
+  }
 }
 
-assert.ok(
-  manifest.unsupportedSiteCodePointRanges.includes("U+4337"),
-  "the ST manifest must continue to declare U+4337 unsupported"
-);
-
-// 根 layout 对正文 STSong 做 <link rel="preload">。href 必须从本 manifest
-// 推导（sha256 前 12 位），与 globals.css 的 ?v= 缓存键同源同锁——手写
-// 字面 URL 会在字体重建后悄悄失效。运行期的一致性由
-// verify-editorial-release.mjs 的 verifyHostedCjkFonts 复核。
+// 根 layout 只预载中文正文衬线体；URL 与缓存键来自生成清单。
 const layoutSource = readUtf8(path.join(root, "app", "(site)", "layout.tsx"));
 const foundationSource = readUtf8(path.join(root, "app", "document-foundation.ts"));
 assert.match(
   layoutSource,
-  /rel="preload"\s+as="font"\s+type="font\/woff2"\s+href=\{stSongHref\}\s+crossOrigin="anonymous"/u,
-  "app/(site)/layout.tsx must preload the STSong body face"
+  /rel="preload"\s+as="font"\s+type="font\/woff2"\s+href=\{chineseSerifHref\}\s+crossOrigin="anonymous"/u,
+  "app/(site)/layout.tsx must preload the Chinese serif body face"
 );
 assert.match(
   foundationSource,
-  /cjkFontManifest\.fonts\["Roof STSong"\]/u,
-  "the STSong preload must derive from cjk-font-manifest.json"
+  /cjkFontManifest\.fonts\["Roof Noto Serif SC"\]/u,
+  "the Chinese serif preload must derive from cjk-font-manifest.json"
 );
 assert.match(
   foundationSource,
   /sha256\.slice\(0,\s*12\)/u,
-  "the STSong preload href must reuse the manifest cache key"
+  "the Chinese serif preload href must reuse the manifest cache key"
 );
-
-for (const expected of rareHanFonts) {
-  const face = faceBlocks.find((block) =>
-    new RegExp(`font-family\\s*:\\s*["']${escapeRegExp(expected.family)}["']\\s*;`).test(block)
-  );
-  assert.ok(face, `missing rare Han @font-face for ${expected.family}`);
-  assert.match(
-    face,
-    new RegExp(
-      `url\\(["']?/fonts/${escapeRegExp(expected.file)}\\?v=${expected.sha256.slice(0, 12)}["']?\\)`
-    ),
-    `${expected.file} must use its content-derived cache key`
-  );
-  assert.match(face, /format\(["']woff2["']\)/);
-  assert.match(face, /font-style\s*:\s*normal\s*;/);
-  assert.match(face, /font-weight\s*:\s*400\s*;/);
-  assert.match(face, /font-display\s*:\s*swap\s*;/);
-  assert.match(face, /unicode-range\s*:\s*U\+4337\s*;/i);
-
-  const assetPath = path.join(root, "public", "fonts", expected.file);
-  assert.ok(fs.existsSync(assetPath), `missing ${expected.file}`);
-  const bytes = fs.readFileSync(assetPath);
-  assert.equal(bytes.subarray(0, 4).toString("ascii"), "wOF2", `${expected.file} is not WOFF2`);
-  assert.ok(bytes.length >= 500, `${expected.file} is implausibly small`);
-  assert.ok(bytes.length <= 5_000, `${expected.file} exceeds the single-glyph budget`);
-  const digest = crypto.createHash("sha256").update(bytes).digest("hex");
-  assert.equal(digest, expected.sha256, `${expected.file} digest changed`);
-  assert.ok(!hashes.has(digest), `${expected.file} duplicates another hosted font`);
-  hashes.add(digest);
-}
 
 const serifRule = /:global\(html\[data-reader-font="serif"\]\) \.root\s*{([\s\S]*?)}/.exec(readerCss)?.[1];
 const sansRule = /:global\(html\[data-reader-font="sans"\]\) \.root\s*{([\s\S]*?)}/.exec(readerCss)?.[1];
 assert.ok(serifRule, "missing serif reader rule");
 assert.ok(sansRule, "missing sans reader rule");
 assert.equal(propertyValue(serifRule, "--reader-body-family"), "var(--f-cjk-serif)");
-assert.equal(propertyValue(serifRule, "--reader-quote-family"), "var(--f-cjk-fangsong)");
+assert.equal(propertyValue(serifRule, "--reader-quote-family"), "var(--f-cjk-kaiti)");
+assert.equal(propertyValue(sansRule, "--reader-body-family"), "var(--f-cjk-sans)");
+assert.equal(propertyValue(sansRule, "--reader-quote-family"), "var(--f-cjk-sans)");
 assert.notEqual(propertyValue(serifRule, "--reader-body-family"), propertyValue(sansRule, "--reader-body-family"));
-assert.doesNotMatch(sansRule, /Roof ST(?:Song|Fangsong|Kaiti)/);
 assert.match(readerCss, /\.body :global\(p\)\s*{[\s\S]*?font-family\s*:\s*var\(--reader-body-family\)\s*;/);
 assert.match(readerCss, /\.serifSample\s*{\s*font-family\s*:\s*var\(--f-cjk-serif\)\s*;/);
 assert.match(
   readerCss,
-  /\.root :global\(\.rare-han\)\s*{[\s\S]*?font-family\s*:\s*["']Roof Rare Han Serif["']\s*;/
+  /\.sansSample\s*{\s*font-family\s*:\s*var\(--f-cjk-sans\)\s*;/
 );
+assert.match(readerCss, /\.body :global\(em\)\s*\{[\s\S]*?font-family\s*:\s*var\(--reader-emphasis-family\)\s*;[\s\S]*?font-synthesis\s*:\s*none\s*;/u);
+assert.match(globalsCss, /\.art-body p\s*\{[\s\S]*?font-family\s*:\s*var\(--reader-body-family,\s*var\(--f-cjk-serif\)\)\s*;/u);
+assert.match(globalsCss, /html:is\(\[lang="zh"\],\s*\[lang="zh-Hans"\],\s*\[lang="zh-Hant"\]\) \.art-body em/u);
+assert.doesNotMatch(`${globalsCss}\n${readerCss}\n${translationCss}\n${foundationSource}`, /Roof ST|STSong|STFangsong|STKaiti|STZhongsong|Roof Rare Han/u);
 
 const japaneseEditionRule = /\.page:lang\(ja\)\s*\{([\s\S]*?)\}/u.exec(translationCss)?.[1];
 assert.ok(japaneseEditionRule, "missing Japanese translation-edition font rule");
@@ -306,11 +287,6 @@ assert.match(
   /\.page:lang\(en\) \.body :global\(\.art-body blockquote\)[\s\S]*?font-family\s*:\s*var\(--font-eb-garamond\)/u,
   "English block quotations must consume the Latin quotation face"
 );
-assert.match(
-  readerCss,
-  /html\[data-reader-font="sans"\][\s\S]*?\.rare-han[\s\S]*?font-family\s*:\s*["']Roof Rare Han Sans["']\s*;/
-);
-
 assert.equal(translationFontManifest.version, 3, "unsupported Japanese translation font manifest version");
 assert.equal(
   translationFontManifest.strategy,
@@ -545,7 +521,7 @@ for (const character of "軟頭髮後臺幹頁網絡閱讀記錄開啓專題連"
 }
 
 console.log(
-  `hosted font contract passed (${manifest.subsetCodePointCount} OpenCC-closed CJK points, `
+  `hosted font contract passed (${manifest.targetCodePointCount} OpenCC-closed Chinese points, `
   + `${translationFontManifest.subsetCodePointCount} Japanese corpus points in ${japaneseFontBytes.toLocaleString()} bytes, `
-  + `${rareHanFonts.length} rare Han faces)`
+  + `${expectedFonts.length} Chinese roles)`
 );

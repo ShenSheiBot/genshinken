@@ -19,7 +19,7 @@
   margin: 0;
   font-family: var(--f-brand);
   font-size: clamp(58px, 10vw, 126px);
-  font-weight: 900;
+  font-weight: 700;
   line-height: .94;
   letter-spacing: -.06em;
 }

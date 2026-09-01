@@ -84,7 +84,7 @@
 
 .page :lang(zh-Hans),
 .page :lang(zh-Hant) {
-  font-family: "Roof STSong", var(--font-roof-noto-serif-sc-fallback), var(--font-roof-eb-garamond-fallback), serif;
+  font-family: "Roof Noto Serif SC", var(--font-roof-noto-serif-sc-fallback), var(--font-roof-eb-garamond-fallback), serif;
 }
 
 .header {

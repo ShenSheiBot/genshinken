@@ -1,24 +1,28 @@
 # Webfont assets
 
-## Site-corpus ST subsets
+## Chinese reading fonts
 
-The primary self-hosted CJK assets are generated from three source fonts:
+The Chinese site self-hosts three open-licensed, corpus-subsetted roles:
 
 | Output | Required source filename | CSS family |
 | --- | --- | --- |
-| `roof-st-song.woff2` | `STSong.ttf` | `Roof STSong` |
-| `roof-st-fangsong.woff2` | `STFangsong.ttf` | `Roof STFangsong` |
-| `roof-st-kaiti.woff2` | `STKaiti.ttf` | `Roof STKaiti` |
+| `roof-noto-serif-sc.woff2` | `NotoSerifSC.ttf` | `Roof Noto Serif SC` |
+| `roof-noto-sans-sc.woff2` | `NotoSansSC.ttf` | `Roof Noto Sans SC` |
+| `roof-wenkai.woff2` | `LXGWWenKaiGB-Regular.ttf` | `Roof WenKai` |
 
 The original TTF files are not committed. The generator downloads them from a
-pinned `latex-chinese-fonts` commit into the ignored
+pinned Google Fonts or LXGW WenKai GB commit into the ignored
 `.local-archive/font-sources` cache and verifies the recorded SHA-256 values;
 never regenerate from an unverified font with the same display name.
 
 `scripts/build-cjk-font-subsets.py` scans text under `app/`, `lib/`, `source/`
 and `public/llms.txt`, adds the Simplified/Traditional OpenCC closure, intersects
-the result with the code points shared by all three source fonts, and writes the
-three WOFF2 files plus `cjk-font-manifest.json`.
+the result with each source font's coverage, and writes the three WOFF2 files
+plus `cjk-font-manifest.json`. Noto Serif/Sans SC form the reader's paired body
+faces. `Roof WenKai` is the renamed, subsetted LXGW WenKai GB face used for
+Chinese emphasis, epigraphs, signatures, quotations, and editorial notes. Its
+italic CSS face deliberately reuses upright WenKai glyphs, so Chinese emphasis
+does not acquire a synthetic slant while Latin fallbacks remain truly italic.
 
 Normal development, checks, builds, and deployments all run the idempotent
 font synchronizer automatically:
@@ -45,8 +49,12 @@ generator writes `app/translation-fonts.generated.css`. Neither generator
 edits hand-maintained CSS. Cache keys, WOFF2 files, and manifests are updated
 together.
 
-`verify:fonts` checks the corpus inventory, OpenCC closure, output hashes, byte
-sizes, cache keys and rare Han fallback contract.
+`verify:fonts` checks the corpus inventory, OpenCC closure, source pins, output
+hashes, byte sizes, cache keys, reader-mode separation, and emphasis contract.
+
+The Noto fonts and LXGW WenKai GB are distributed under the SIL Open Font
+License 1.1. See `OFL-Noto-CJK.txt` and `OFL-LXGW-WenKai.txt`. The webfont name
+`Roof WenKai` intentionally avoids LXGW WenKai GB's reserved font names.
 
 ## Japanese translation fonts
 
@@ -72,21 +80,3 @@ The output manifest records the complete input-file inventory and literal
 code-point set. Prose-only rewrites refresh the inventory under the shared
 font-build lock without rebuilding the font binaries; only a code-point-set,
 pinned-source, generator-strategy, or pinned-toolchain change rebuilds them.
-
-## Rare Han fallbacks
-
-`roof-rare-han-serif.woff2` and `roof-rare-han-sans.woff2` are
-one-glyph Google Fonts text subsets for `U+4337`, generated from Noto Serif SC
-400 and Noto Sans SC 400 respectively.
-
-They are separate from the site-corpus ST subsets because the three ST source
-fonts do not contain this code point. CSS `unicode-range` ensures these
-approximately 1 KB assets are requested only on pages that use it.
-
-Source CSS:
-
-- `https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400&display=swap&text=%E4%8C%B7`
-- `https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400&display=swap&text=%E4%8C%B7`
-
-The Noto fonts are distributed under the SIL Open Font License 1.1; see
-`OFL-Noto-CJK.txt`.

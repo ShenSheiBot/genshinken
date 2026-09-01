@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
-"""Build the three self-hosted ST CJK webfont subsets.
+"""Build the self-hosted Chinese reader webfont subsets.
 
 Normal dev, check, build, and deploy commands invoke this script automatically.
 Pinned source fonts are cached outside Git; --source-dir may override that cache.
 Generated WOFF2 files cover every supported CJK/punctuation code point currently
-present in the rendered site corpus. The committed manifest lets CI fail when new
-site text needs the subsets to be regenerated, avoiding a permanent GB2312 payload
-on pages that use only a fraction of it.
+present in the rendered site corpus. Noto Serif/Sans SC provide the paired reader
+faces; WenKai provides upright Chinese emphasis and editorial matter.
 """
 
 from __future__ import annotations
@@ -31,10 +30,11 @@ OUTPUT_DIR = ROOT / "public" / "fonts"
 MANIFEST_PATH = OUTPUT_DIR / "cjk-font-manifest.json"
 CSS_PATH = ROOT / "app" / "cjk-fonts.generated.css"
 CONVERTER_PATH = ROOT / "scripts" / "convert-cjk-font-corpus.mjs"
-CACHE_DIR = ROOT / ".local-archive" / "font-sources" / "st-cjk-28739933"
-UPSTREAM_COMMIT = "287399335ec1beb72062ce67c36eaa8bec35f386"
-GENERATOR_VERSION = 4
-GENERATOR_STRATEGY = "site-corpus-opencc-closure"
+CACHE_DIR = ROOT / ".local-archive" / "font-sources" / "roof-cjk-open-20260831"
+GOOGLE_FONTS_COMMIT = "e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7"
+LXGW_WENKAI_GB_COMMIT = "7e280c0880f6171d8e969b5c4bd3451f6094cce7"
+GENERATOR_VERSION = 5
+GENERATOR_STRATEGY = "chinese-site-corpus-opencc-closure-variable-pair-and-emphasis"
 TEXT_EXTENSIONS = {".css", ".json", ".md", ".mjs", ".ts", ".tsx", ".txt"}
 CORPUS_ROOTS = (ROOT / "app", ROOT / "lib", ROOT / "source")
 LOCALE_FONT_OWNED_ROOTS = (
@@ -43,29 +43,39 @@ LOCALE_FONT_OWNED_ROOTS = (
     ROOT / "app" / "translation-fonts.generated.css",
     ROOT / "source" / "_translations",
 )
-ALWAYS_INCLUDE = "华文宋体仿宋楷体衬线无衬线，。；：？！“”‘’（）《》〈〉【】——……·"
+ALWAYS_INCLUDE = "思源宋体黑体文楷衬线无衬线，。；：？！“”‘’（）《》〈〉【】——……·"
 
 FONTS = (
     {
-        "family": "Roof STSong",
-        "source": "STSong.ttf",
-        "source_path": "chinese/宋体/STSong.ttf",
-        "source_sha256": "c5cc2ed5e2c0e6385013fe82d950eee6960d805bd602b86c53ff454783f382c4",
-        "output": "roof-st-song.woff2",
+        "family": "Roof Noto Serif SC",
+        "source": "NotoSerifSC.ttf",
+        "repository": "google/fonts",
+        "commit": GOOGLE_FONTS_COMMIT,
+        "source_path": "ofl/notoserifsc/NotoSerifSC[wght].ttf",
+        "source_sha256": "050080d9255a86808f2945bffac582b31ef32bc36411ce29563b4961670c66f9",
+        "output": "roof-noto-serif-sc.woff2",
+        "weight": "200 900",
     },
     {
-        "family": "Roof STFangsong",
-        "source": "STFangsong.ttf",
-        "source_path": "chinese/仿宋体/STFangsong.ttf",
-        "source_sha256": "e6326459e8e60e436c7d60e34d273bda3ba4eea2d2a5b309ff8f1b73200f2e38",
-        "output": "roof-st-fangsong.woff2",
+        "family": "Roof Noto Sans SC",
+        "source": "NotoSansSC.ttf",
+        "repository": "google/fonts",
+        "commit": GOOGLE_FONTS_COMMIT,
+        "source_path": "ofl/notosanssc/NotoSansSC[wght].ttf",
+        "source_sha256": "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da",
+        "output": "roof-noto-sans-sc.woff2",
+        "weight": "100 900",
     },
     {
-        "family": "Roof STKaiti",
-        "source": "STKaiti.ttf",
-        "source_path": "chinese/楷体/STKaiti.ttf",
-        "source_sha256": "a29c99c161fc43ce6aba2d7c152065359c2cb3019be4ae6248171178cb7d04d5",
-        "output": "roof-st-kaiti.woff2",
+        "family": "Roof WenKai",
+        "source": "LXGWWenKaiGB-Regular.ttf",
+        "repository": "lxgw/LxgwWenKaiGB",
+        "commit": LXGW_WENKAI_GB_COMMIT,
+        "source_path": "fonts/TTF/LXGWWenKaiGB-Regular.ttf",
+        "source_sha256": "295568c131648062107543aa159c97dd49564be791136c2abf74cad83eba3f7f",
+        "output": "roof-wenkai.woff2",
+        "weight": "400",
+        "upright_italic_alias": True,
     },
 )
 
@@ -148,10 +158,7 @@ def sha256(path: Path) -> str:
 
 def source_url(record: dict[str, str]) -> str:
     encoded_path = "/".join(quote(part) for part in record["source_path"].split("/"))
-    return (
-        "https://raw.githubusercontent.com/Haixing-Hu/latex-chinese-fonts/"
-        f"{UPSTREAM_COMMIT}/{encoded_path}"
-    )
+    return f'https://raw.githubusercontent.com/{record["repository"]}/{record["commit"]}/{encoded_path}'
 
 
 def source_font(record: dict[str, str], source_dir: Path) -> Path:
@@ -263,8 +270,6 @@ def generated_outputs_are_current(
         return False
     if manifest.get("siteCodePointSha256") != code_point_digest(site_points):
         return False
-    if manifest.get("upstreamCommit") != UPSTREAM_COMMIT:
-        return False
     css = CSS_PATH.read_text(encoding="utf-8")
     records = manifest.get("fonts")
     if not isinstance(records, dict) or not records:
@@ -279,6 +284,8 @@ def generated_outputs_are_current(
         if record.get("sourceSha256") != expected["source_sha256"]:
             return False
         if record.get("sourceUrl") != source_url(expected):
+            return False
+        if record.get("weight") != expected["weight"]:
             return False
         file_name = record.get("file")
         expected_digest = record.get("sha256")
@@ -321,10 +328,20 @@ def generated_css(records: dict[str, dict[str, object]]) -> str:
             f'  font-family: "{record["family"]}";',
             f'  src: url("/fonts/{built["file"]}?v={str(built["sha256"])[:12]}") format("woff2");',
             "  font-style: normal;",
-            "  font-weight: 400;",
+            f'  font-weight: {record["weight"]};',
             "  font-display: swap;",
             "}",
         )))
+        if record.get("upright_italic_alias"):
+            faces.append("\n".join((
+                "@font-face {",
+                f'  font-family: "{record["family"]}";',
+                f'  src: url("/fonts/{built["file"]}?v={str(built["sha256"])[:12]}") format("woff2");',
+                "  font-style: italic;",
+                f'  font-weight: {record["weight"]};',
+                "  font-display: swap;",
+                "}",
+            )))
     return "/* Generated by scripts/build-cjk-font-subsets.py. */\n" + "\n\n".join(faces) + "\n"
 
 
@@ -334,7 +351,7 @@ def main() -> None:
         "--source-dir",
         type=Path,
         default=CACHE_DIR,
-        help="Directory containing STSong.ttf, STFangsong.ttf, and STKaiti.ttf",
+        help="Directory containing the pinned Noto SC and WenKai source fonts",
     )
     parser.add_argument(
         "--if-stale",
@@ -365,20 +382,26 @@ def main() -> None:
     toolchain_digest = ensure_pinned_font_environment(ROOT)
     source_dir = args.source_dir.expanduser().resolve()
     sources = [(record, source_font(record, source_dir)) for record in FONTS]
-    common_supported: set[int] | None = None
-    for _, source in sources:
-        supported = font_code_points(source)
-        common_supported = supported if common_supported is None else common_supported & supported
-    assert common_supported is not None
-
-    subset_points = site_points & common_supported
-    unsupported_site_points = site_points - common_supported
-    if len(subset_points) < 2_500:
-        raise SystemExit(f"refusing to build unexpectedly small CJK subsets ({len(subset_points)} code points)")
+    supported_by_family = {
+        record["family"]: font_code_points(source)
+        for record, source in sources
+    }
+    body_fallback_supported = (
+        (supported_by_family["Roof Noto Serif SC"] | supported_by_family["Roof WenKai"])
+        & (supported_by_family["Roof Noto Sans SC"] | supported_by_family["Roof WenKai"])
+    )
+    unsupported_body_points = site_points - body_fallback_supported
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     manifest_fonts: dict[str, dict[str, object]] = {}
     for record, source in sources:
+        subset_points = site_points & supported_by_family[record["family"]]
+        unsupported_points = site_points - supported_by_family[record["family"]]
+        if len(subset_points) < 2_500:
+            raise SystemExit(
+                f"refusing to build unexpectedly small {record['family']} subset "
+                f"({len(subset_points)} code points)"
+            )
         output = OUTPUT_DIR / record["output"]
         subset_font(source, output, subset_points)
         manifest_fonts[record["family"]] = {
@@ -389,6 +412,8 @@ def main() -> None:
             "source": record["source"],
             "sourceSha256": sha256(source),
             "sourceUrl": source_url(record),
+            "unsupportedCodePointRanges": compact_ranges(unsupported_points),
+            "weight": record["weight"],
         }
         print(f"built {output.relative_to(ROOT)} ({output.stat().st_size:,} bytes)")
 
@@ -401,9 +426,12 @@ def main() -> None:
         "siteCodePointCount": len(site_points),
         "siteCodePointSha256": code_point_digest(site_points),
         "strategy": GENERATOR_STRATEGY,
-        "subsetCodePointCount": len(subset_points),
-        "unsupportedSiteCodePointRanges": compact_ranges(unsupported_site_points),
-        "upstreamCommit": UPSTREAM_COMMIT,
+        "targetCodePointCount": len(site_points),
+        "unsupportedBodyCodePointRanges": compact_ranges(unsupported_body_points),
+        "upstreamCommits": {
+            "google/fonts": GOOGLE_FONTS_COMMIT,
+            "lxgw/LxgwWenKaiGB": LXGW_WENKAI_GB_COMMIT,
+        },
         "toolchainSha256": toolchain_digest,
         "version": GENERATOR_VERSION,
     }
@@ -414,8 +442,8 @@ def main() -> None:
     )
     CSS_PATH.write_text(generated_css(manifest_fonts), encoding="utf-8", newline="\n")
     print(
-        f"covered {len(subset_points):,} code points from {len(corpus_files)} site files; "
-        f"{len(unsupported_site_points)} site code points remain on fallback"
+        f"covered {len(site_points):,} target code points from {len(corpus_files)} site files; "
+        f"{len(unsupported_body_points)} body code points remain on fallback"
     )
 
 
