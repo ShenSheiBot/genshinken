@@ -156,31 +156,20 @@ citation:
 
 ## 注释
 
-[^1]: 摘自其个人网站简介：
+[^1]: 摘自其个人网站简介：https://www.blogger.com/profile/04112626487420242777（2022年10月18日访问）。
 
-https://www.blogger.com/profile/04112626487420242777
-
-（2022年10月18日访问）。
-
-[^2]: 摘自其个人网站简介：
-
-https://www.blogger.com/profile/04112626487420242777
-（2022年10月18日访问）
+[^2]: 摘自其个人网站简介：https://www.blogger.com/profile/04112626487420242777（2022年10月18日访问）
 
 [^3]: 将文本批评和民族志相结合，以此强调东方主义所预设的文本及其读者——与之类似的方法论策略，另请参见艾莉森（2012）
 [^4]: 我之前用日语发表了一篇较为简略、基于萨义德的东方主义的，对纳皮尔（2007）的批判性解读——它（因此）广泛为主流的英语动画研究所忽视（三原，2010 74）
 [^5]: https://www.upress.umn.edu/9781452956947/the-anime-ecology/
 （2024年11月26日访问）
-[^6]: https://yalebooks.yale.edu/book/9780300248593/miyazakiworld/
-
-（2022年12月20日访问）。
+[^6]: https://yalebooks.yale.edu/book/9780300248593/miyazakiworld/（2022年12月20日访问）。
 [^7]: 除却本文前几节所探讨的作品，拉马尔和纳皮尔在他们的其他著作中亦重复了这种对日本原理介入（Japanese intervention）的修辞性回避。例如，拉马尔（2009）在批评村上隆（2000）的超扁平概念只是部分理解西方的同时（拉马尔 2009 113），却拒绝了村上隆（2000）关于“日本艺术史在日本以外只能被部分理解”的主张（22-25），并暗示，村上隆的这种说法犯了一种“不够精致”的*日本人论*（参见拉马尔 2009 114）。纳皮尔（2013）在她的英语写作中“故意”使用带有东方主义色彩的日语词汇以表明她不是东方主义者，却对质询其东方主义倾向的日文文本保持沉默（例如三原 2010）。回到她的宫崎骏专著（2018），纳皮尔或是在试图利用耶鲁大学出版社的学术声誉为其作品增色，由此，把宫崎骏列入西方那些“伟大的幻想世界构建者之一”（如刘易斯·卡罗尔、儒勒·凡尔纳、J.R.R.托尔金、J.K.罗琳和沃尔特·迪士尼）的她将一举成为日本动画导演研究的学阀大手子（页xii）——但纳皮尔没有深入宫崎骏电影作品中的本土细节（参见小原，2019）
 [^8]: 例如，人类学家伊安·康德里（2013）在其有关日本动画场景的民族志研究中的确反思了他的立场，然而，这仅限于性别议题——“我承认我所使用的案例更偏向于动画领域中的男性群体”（页6）。与之形成鲜明对比的，是亨利·詹金斯对自己写作的西方流行文化研究专著的反思（2006）：他承认，书中的受访者“不成比例地是*白人*、男性、中产阶级和受过大学教育的人”（页23：笔者强调）
 
 
-[^9]: https://www.mechademia.net/2022/11/10/cfp-for-may-27-29th-2023-at-the-kyoto-international-manga-museum/。
-
-（2023年1月24日访问）。
+[^9]: https://www.mechademia.net/2022/11/10/cfp-for-may-27-29th-2023-at-the-kyoto-international-manga-museum/。（2023年1月24日访问）。
 
 ## 参考文献
 安妮·艾莉森（Anne Allison），《千禧年怪兽：日本玩具与全球想象》（Millennial Monsters: Japanese Toys and the Global Imagination），伯克利：加州大学出版社，2006年。
@@ -191,7 +180,7 @@ https://www.blogger.com/profile/04112626487420242777
 
 〈‘但我不懂日语’——‘全球英语’与日本动漫研究〉（But I don’t know Japanese’—‘Global English’ and anime and manga studies.），Anime and Manga Studies，2023年3月16日，。
 
-https://www.animemangastudies.com/2023/03/16/but-i-dont-know-japanese-global-english-andanime-and-manga-studies/#more-11222。
+https://www.animemangastudies.com/2023/03/16/but-i-dont-know-japanese-global-english-and-anime-and-manga-studies/#more-11222。
 
 （2024年9月9日访问）。
 

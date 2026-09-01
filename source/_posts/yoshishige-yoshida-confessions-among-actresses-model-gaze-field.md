@@ -431,13 +431,13 @@ https://eprints.lib.hokudai.ac.jp/dspace/bitstream/2115/51975/1/018_ZHU.pdf。
 
 (19) Marc VERENT《空间的结构化》。
 
-(20) https://www.网页链接​952348。
+(20) https://www.bilibili.com/video/av62952348。
 
 (21) 转引自https://zhuanlan.zhihu.com/p/51962685。
 
-(22) https://www.网页链接​6582。
+(22) https://www.bilibili.com/read/cv5126582。
 
-(23) https://www.网页链接​9792。
+(23) https://www.bilibili.com/read/cv4929792。
 
 (24) 同(21)。
 

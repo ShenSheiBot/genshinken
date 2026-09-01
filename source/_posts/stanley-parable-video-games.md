@@ -202,7 +202,7 @@ citation:
 
 [^ref-24]: Žižek S, Thinking the Human[G/OL]. Axworthy Distinguished Lecture Series on Social Justice and the Public Good, University of Winnipeg, 2019(20190818)[2019-08-18]
 
-25. 蓝江，电子游戏世代的存在哲学[G/OL]. 《信睿周报》2019(20190912)[2019-09-12] https://www.thepaper.cn/newsDetail\_forward\_4407441
+25. 蓝江，电子游戏世代的存在哲学[G/OL]. 《信睿周报》2019(20190912)[2019-09-12] <https://www.thepaper.cn/newsDetail_forward_4407441>
 
 [^ref-26]: Zizek S. The pervert’s guide to cinema[J]. P Guide Ltd, 2006.
 

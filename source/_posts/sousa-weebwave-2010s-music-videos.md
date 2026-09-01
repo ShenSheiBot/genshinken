@@ -211,7 +211,7 @@ Doja Cat和其他本文中爆红艺术家的案例表明：在这个充斥着各
 
 [^8]: 杰森·理查兹（Jason Richards），<日本对Grimes的影响越来越深>（Japan’s Influence on Grimes Grows Deeper），《日本时报》，2013年3月21日，第一和第四段，https://www.japantimes.co.jp/culture/2013/03/21/music/japans-influence-on-grimes-grows-deeper/
 
-[^9]: <哈日族>，Know Your Meme，第1-2段，https://knowyourmeme.-com/memes/weeaboo，2021年1月29日读取
+[^9]: <哈日族>，Know Your Meme，第1-2段，https://knowyourmeme.com/memes/weeaboo，2021年1月29日读取
 
 [^10]: 参见<哈日族>第3-4段
 
@@ -243,7 +243,7 @@ Doja Cat和其他本文中爆红艺术家的案例表明：在这个充斥着各
 
 [^24]: 帕特里克·W·加尔布雷斯：<‘御宅族’研究和对失败男性的焦虑>（‘Otaku’ Research and Anxiety About Failed Men），《当代日本御宅族讨论：历史视角与新视野》（Debating Otaku in Contemporary Japan: Historical Perspectives and New Horizons），帕特里克·W·加尔布雷斯、谭发甘（Thiam Huat Kam）、比约恩－奥勒·卡姆（Björn-Ole Kamm）编，伦敦：Bloomsbury Academic出版社，2015年，页21
 
-[^25]: <为什么日本动画社区憎恨腐女子？>（Why Does the Anime Community Show Hate towards Fujoshis?），MyAnimeList.net，https://myanime-list.net/forum/?topicid=1729866，2021年4月28日读取
+[^25]: <为什么日本动画社区憎恨腐女子？>（Why Does the Anime Community Show Hate towards Fujoshis?），MyAnimeList.net，https://myanimelist.net/forum/?topicid=1729866，2021年4月28日读取
 
 [^26]: 史蒂芬妮·奥姆（Stephanie Orme）：<女性气质与同人圈：女性美国漫画爱好者的双重污名化>（Femininity and Fandom: The Dual-Stigmatisation of Female Comic Book Fans），《Journal of Graphic Novels and Comics》，第7卷、第4期（2016年10月1日），页403-416，https://doi.org/10.1080/21504857.2016.1219958
 
@@ -339,7 +339,7 @@ Doja Cat和其他本文中爆红艺术家的案例表明：在这个充斥着各
 
 [^72]: 乔安妮·麦克尼尔：<从匿名到另类右翼：4chan上的危险渔夫>（From Anon to Alt-Right: The Dangerous Tricksters of 4chan），Literary Hub，2020年3月2日，第1-2段，https://lithub.com/from-anon-to-alt-right-the-dangerous-tricksters-of-4chan/
 
-[^73]: 凯西·约翰斯顿（Casey Johnston）：<聊天记录展现了4chan用户是如何创造#GamerGate争议的>（Chat Logs Show How 4chan Users Created #GamerGate Controversy），Ars Technica，2014年9月9日，https://arste-chnica.com/gaming/2014/09/new-chat-logs-show-how-4chan-users-pushed-gamergate-into-the-national-spotlight/
+[^73]: 凯西·约翰斯顿（Casey Johnston）：<聊天记录展现了4chan用户是如何创造#GamerGate争议的>（Chat Logs Show How 4chan Users Created #GamerGate Controversy），Ars Technica，2014年9月9日，https://arstechnica.com/gaming/2014/09/new-chat-logs-show-how-4chan-users-pushed-gamergate-into-the-national-spotlight/
 
 [^74]: 参见麦克尼尔，<从匿名到另类右翼>
 
@@ -359,7 +359,7 @@ Doja Cat和其他本文中爆红艺术家的案例表明：在这个充斥着各
 
 [^82]: 参见恩盖，《丑陋的情感》，页271
 
-[^83]: 朱莉安娜·帕齐（Juliana Pache）：<Doja Cat会做她想做的任何事>（Doja Cat Will Do Whatever She Wants），The FADER，第4段，https://www.thefader.com/2019/09/19/doja-cat-amala-hot-pink-intervie-w，2021年1月23日读取
+[^83]: 朱莉安娜·帕齐（Juliana Pache）：<Doja Cat会做她想做的任何事>（Doja Cat Will Do Whatever She Wants），The FADER，第4段，https://www.thefader.com/2019/09/19/doja-cat-amala-hot-pink-interview，2021年1月23日读取
 
 [^84]: cereals：<‘Doja Cat — ‘Mooo!’ （Official Video)’评论区的留言>，YouTube，2020年，https://www.youtube.com/watch?v=mXnJqYwebF8
 

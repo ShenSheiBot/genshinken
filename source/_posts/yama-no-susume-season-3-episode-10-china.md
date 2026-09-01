@@ -195,25 +195,25 @@ FANBOX 是一个粉丝交流平台, 在这里, 粉丝可以通过长期地赞助
 
 ちな的履历
 
-符腾堡公爵W. (2018, Oct 6). [动画人巡礼②ちなChina] 16 岁从业的超级天才原画师!. bilibili. 网页链接。
+符腾堡公爵W. (2018, Oct 6). [动画人巡礼②ちなChina] 16 岁从业的超级天才原画师!. bilibili. [网页链接](https://www.bilibili.com/read/cv1286052)。
 
-动画学术趴. (2018, Oct 13). 16 岁入行, 19 岁作监, 22 岁演出, 你的人生理想他都实现了. bilibili. 网页链接。
+动画学术趴. (2018, Oct 13). 16 岁入行, 19 岁作监, 22 岁演出, 你的人生理想他都实现了. bilibili. [网页链接](https://www.bilibili.com/read/cv1319589)。
 
 ちな“钟爱小动作演技”。
 
 ちな的手语. https://imgur.com/a/3RmvdJz。
 
-lll (动画魂). (2018, Sep 18). 小动作蕴含丰富演技, 22 岁原画师分享业界经验. bilibili. 网页链接。
+lll (动画魂). (2018, Sep 18). 小动作蕴含丰富演技, 22 岁原画师分享业界经验. bilibili. [网页链接](https://www.bilibili.com/read/cv1177547)。
 
 作画监督：今冈律之。
 
-HB (动画魂). (2018, May 8). 站着说话不腰疼, 看可爱少女爬山——《向山进发》的作画奥秘. bilibili. 网页链接。
+HB (动画魂). (2018, May 8). 站着说话不腰疼, 看可爱少女爬山——《向山进发》的作画奥秘. bilibili. [网页链接](https://www.bilibili.com/read/cv458919)。
 
 从第一季开始, 不论城区还是山岳, 制作组都通过大量的考证使得动画尽可能贴近现实.
 
-izumi (动画魂). (2018, Jul 21). 硬核登山剧不真爬山怎么能拍美少女的写真. bilibili. 网页链接。
+izumi (动画魂). (2018, Jul 21). 硬核登山剧不真爬山怎么能拍美少女的写真. bilibili. [网页链接](https://www.bilibili.com/read/cv770512)。
 
-HB (动画魂). (2018, Oct 30).《向山进发》监督: 努力实践很重要, 交流学习不可丢. bilibili. 网页链接。
+HB (动画魂). (2018, Oct 30).《向山进发》监督: 努力实践很重要, 交流学习不可丢. bilibili. [网页链接](https://www.bilibili.com/read/cv1415073)。
 
 如何把照片加工成动画背景。
 
@@ -223,7 +223,7 @@ HB (动画魂). (2018, Oct 30).《向山进发》监督: 努力实践很重要, 
 
 圣地巡礼
 
-夜空の花火. (2018, May 4). 还原原作画面!《向山进发》圣地巡礼!. bilibili. 网页链接。
+夜空の花火. (2018, May 4). 还原原作画面!《向山进发》圣地巡礼!. bilibili. [网页链接](https://www.bilibili.com/read/cv445206)。
 
 MICHAEL. (2018, Jun 8). Pilgrimage to Hanno for Yama no Susume [Blogpost]. like a fish in water. https://likeafishinwater.com/2018/06/08/pilgrimage-to-hanno-for-yama-no-susume/。
 
@@ -233,11 +233,11 @@ kViN. (2018, Oct 11). YAMA NO SUSUME SEASON 3 – PRODUCTION NOTES 7-13 [Blogpos
 
 “无影&#​34; 囊括了多种风格与应用方法, 包括 “全影&#​34;.
 
-kViN. (2020, Jun 26).《辉夜大小姐: 恋爱即战争》第一季 1~5 集制作笔记 (屋顶现视研, 发布译文). bilibili. 网页链接。
+kViN. (2020, Jun 26).《辉夜大小姐: 恋爱即战争》第一季 1~5 集制作笔记 (屋顶现视研, 发布译文). [站内译文](/books/kaguya-sama-production-notes)。
 
 山田: “眼睛可能是心灵的窗户&#​34;, 但我认为腿也是这样.
 
-kViN. (2020, Feb 3). 山田尚子: 用心创造影像 (下集) (我大笑三声哈哈哈, 发布译文). bilibili. 网页链接。
+kViN. (2020, Feb 3). 山田尚子: 用心创造影像 (下集) (我大笑三声哈哈哈, 发布译文). bilibili. [网页链接](https://www.bilibili.com/read/cv4557081)。
 
 残影 (smears): 这个词好像没有非常统一的翻译, 参考了马小褂的翻译.
 

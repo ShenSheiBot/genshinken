@@ -76,7 +76,7 @@ _Saku Q&A: Anime Industry and Production Questions_
 
 ![楼基本造好了](attachments/wechat/As7wS1L7ej8One9vMVytNA/body-007.jpg)
 
-[fig-note] https://twitter.com/moze\_25252/status/837536292481064963
+[fig-note] <https://twitter.com/moze_25252/status/837536292481064963>
 
 **总部**
 

@@ -70,6 +70,138 @@ function detachedFootnoteHeadings(markdown) {
   return [...warnings.values()].sort((left, right) => left.line - right.line);
 }
 
+const hiddenUrlCharacter = /[\u200B\u200C\u200D\u2060\uFEFF]/u;
+
+/**
+ * Reject only link defects whose target is mechanically absent or corrupted.
+ * A visible “网页链接” label remains legal when it is an actual HTTP(S) link;
+ * repeated destinations and live/dead network state are editorial facts, not
+ * deterministic build failures.
+ */
+function linkIntegrityFailures(markdown) {
+  const tree = unified().use(remarkParse).use(remarkGfm).parse(markdown);
+  const failures = new Map();
+
+  function report(node, reason) {
+    const line = node.position?.start?.line ?? 0;
+    if (!failures.has(line)) failures.set(line, { line, reason });
+  }
+
+  function walk(node, resolvedPlaceholder = false) {
+    if (node.type === "link") {
+      const label = markdownNodeText(node);
+      const target = node.url ?? "";
+      const validTarget = /^https?:\/\/\S+$/iu.test(target)
+        && !target.includes("网页链接")
+        && !hiddenUrlCharacter.test(target);
+      if (target.includes("网页链接")) report(node, "URL 中混入了“网页链接”占位符");
+      else if (hiddenUrlCharacter.test(target)) report(node, "URL 中混入了零宽字符");
+      else if (label.includes("网页链接") && !validTarget) report(node, "“网页链接”占位符没有有效的 HTTP(S) 目标");
+      else if (/^https?:\/\//iu.test(target)) {
+        try {
+          const hostname = new URL(target).hostname;
+          if (hostname.split(".").some((part) => part.startsWith("-") || part.endsWith("-"))) {
+            report(node, "URL 域名标签以连字符开头或结尾");
+          }
+        } catch {
+          report(node, "URL 语法无效");
+        }
+      }
+      for (const child of node.children ?? []) walk(child, true);
+      return;
+    }
+    if (node.type === "text" && node.value?.includes("网页链接") && !resolvedPlaceholder) {
+      report(node, "裸“网页链接”占位符没有可点击目标");
+    }
+    for (const child of node.children ?? []) walk(child, resolvedPlaceholder);
+  }
+
+  walk(tree);
+  markdown.split(/\r?\n/u).forEach((line, index) => {
+    if (/https?:\/\/[^\s<>()]*[\u200B\u200C\u200D\u2060\uFEFF]/iu.test(line)) {
+      if (!failures.has(index + 1)) {
+        failures.set(index + 1, { line: index + 1, reason: "URL 中混入了零宽字符" });
+      }
+    }
+    if (/https?:\/\/[^\s<>()]*\\_/iu.test(line) && !failures.has(index + 1)) {
+      failures.set(index + 1, {
+        line: index + 1,
+        reason: "URL 中错误保留了 Markdown 下划线转义",
+      });
+    }
+  });
+  return [...failures.values()].sort((left, right) => left.line - right.line);
+}
+
+/**
+ * A blank line ends an unindented GFM footnote continuation. Catch the two
+ * high-confidence shapes that otherwise look normal in source but leak into
+ * article prose: a standalone URL or a standalone access-date line.
+ */
+function detachedFootnoteContinuations(markdown) {
+  const lines = markdown.split(/\r?\n/u);
+  const failures = [];
+  const footnoteDefinition = /^\[\^[^\]]+\]:/u;
+  const detachedUrl = /^https?:\/\/\S+[。.]?$/iu;
+  const detachedAccessDate = /^[（(]\d{4}年\d{1,2}月\d{1,2}日访问[）)][。.]?$/u;
+
+  for (let index = 0; index < lines.length; index += 1) {
+    if (!footnoteDefinition.test(lines[index]) || lines[index + 1]?.trim() !== "") continue;
+    let cursor = index + 2;
+    while (cursor < lines.length && lines[cursor].trim() === "") cursor += 1;
+    const candidate = lines[cursor] ?? "";
+    if (footnoteDefinition.test(candidate) || /^\s/u.test(candidate)) continue;
+    if (detachedUrl.test(candidate) || detachedAccessDate.test(candidate)) {
+      failures.push({
+        line: cursor + 1,
+        reason: detachedUrl.test(candidate) ? "URL 因空行逃出了脚注" : "访问日期因空行逃出了脚注",
+      });
+    }
+  }
+  return failures;
+}
+
+assert.deepEqual(
+  linkIntegrityFailures("来源：[网页链接](https://example.org/read)。"),
+  [],
+  "a placeholder label is legal when it has a real HTTP target",
+);
+assert.deepEqual(
+  linkIntegrityFailures("来源：网页链接。"),
+  [{ line: 1, reason: "裸“网页链接”占位符没有可点击目标" }],
+  "a bare platform placeholder must not survive into public prose",
+);
+assert.deepEqual(
+  linkIntegrityFailures("https://www.网页链接\u200B9792。"),
+  [{ line: 1, reason: "URL 中混入了“网页链接”占位符" }],
+  "a platform-split pseudo URL must be rejected",
+);
+assert.deepEqual(
+  linkIntegrityFailures("来源：https://example.org/user\\_name/status/1"),
+  [{ line: 1, reason: "URL 中错误保留了 Markdown 下划线转义" }],
+  "Markdown escapes must not become part of a public URL",
+);
+assert.deepEqual(
+  linkIntegrityFailures("来源：https://example.-org/read"),
+  [{ line: 1, reason: "URL 域名标签以连字符开头或结尾" }],
+  "a hostname label must not start or end with a hyphen",
+);
+assert.deepEqual(
+  detachedFootnoteContinuations("正文[^1]。\n\n[^1]: 来源：\n\nhttps://example.org/read\n\n（2024年1月2日访问）。"),
+  [{ line: 5, reason: "URL 因空行逃出了脚注" }],
+  "a blank line must not detach a footnote URL into article prose",
+);
+assert.deepEqual(
+  detachedFootnoteContinuations("正文[^1]。\n\n[^1]: https://example.org/read\n\n（2024年1月2日访问）。"),
+  [{ line: 5, reason: "访问日期因空行逃出了脚注" }],
+  "a blank line must not detach an access date from its footnote URL",
+);
+assert.deepEqual(
+  detachedFootnoteContinuations("正文[^1]。\n\n[^1]: https://example.org/read（2024年1月2日访问）。"),
+  [],
+  "a self-contained footnote link and access date must remain accepted",
+);
+
 assert.deepEqual(
   detachedFootnoteHeadings("正文[^1]。\n\n## 参考文献\n\n[^1]: 文献。"),
   [{ line: 3, title: "参考文献" }],
@@ -987,6 +1119,12 @@ assert.doesNotMatch(
         `${name}:${warning.line}: 标题“${warning.title}”下只有会被 GFM 移入注释区的脚注定义；请复核是否删除这个空壳标题`,
       );
     }
+    for (const failure of linkIntegrityFailures(body)) {
+      corpusFailures.push(`${name}:${failure.line}: ${failure.reason}`);
+    }
+    for (const failure of detachedFootnoteContinuations(body)) {
+      corpusFailures.push(`${name}:${failure.line}: ${failure.reason}`);
+    }
     const html = await renderMarkdown(body);
     if (markerLeak.test(html.replace(/<[^>]+>/gu, ""))) {
       corpusFailures.push(`${name}: 图版/表格标记字面渲染进了页面（[fig]/[fig-note]/[table]/[table-note] 位置或格式有误）`);
@@ -1027,6 +1165,12 @@ assert.doesNotMatch(
       corpusWarnings.push(
         `${relative}:${warning.line}: 标题“${warning.title}”下只有会被 GFM 移入注释区的脚注定义；请复核是否删除这个空壳标题`,
       );
+    }
+    for (const failure of linkIntegrityFailures(body)) {
+      corpusFailures.push(`${relative}:${failure.line}: ${failure.reason}`);
+    }
+    for (const failure of detachedFootnoteContinuations(body)) {
+      corpusFailures.push(`${relative}:${failure.line}: ${failure.reason}`);
     }
     const language = relative.includes(`${path.sep}ja${path.sep}`) ? "ja" : "en";
     const html = await renderMarkdown(body, { language });
