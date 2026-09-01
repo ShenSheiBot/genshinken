@@ -17,6 +17,7 @@ export const site = {
   social: [
     { label: "哔哩哔哩", href: "https://space.bilibili.com/355943807" },
     { label: "知乎", href: "https://www.zhihu.com/column/c_1885047759737971171" },
+    { label: "微信", href: "http://weixin.qq.com/r/mp/jBzq8iHEKXxWrWWR90me" },
   ],
   infoEmail: "a1835631041@163.com",
   editorEmail: "a1835631041@163.com",
