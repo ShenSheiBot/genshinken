@@ -35,10 +35,18 @@ export type ExternalLinkIcon = {
   contentType: "image/gif" | "image/jpeg" | "image/png" | "image/webp" | "image/x-icon";
 };
 
-const SITE_NAME_FALLBACKS = new Map<string, string>([
-  ["zhihu.com", "知乎"],
-  ["www.zhihu.com", "知乎"],
-  ["zhuanlan.zhihu.com", "知乎专栏"],
+type SiteFallback = {
+  siteName: string;
+  iconUrl?: string;
+};
+
+const SITE_FALLBACKS = new Map<string, SiteFallback>([
+  ["zhihu.com", { siteName: "知乎" }],
+  ["zhuanlan.zhihu.com", { siteName: "知乎专栏" }],
+  ["kakuyomu.jp", {
+    siteName: "カクヨム",
+    iconUrl: "https://cdn-static.kakuyomu.jp/images/brand/favicons/app-256.png",
+  }],
 ]);
 
 function attribute(node: HtmlNode, name: string): string {
@@ -123,20 +131,25 @@ function conciseSiteName(value: string, hostname: string): string {
   return boundedText(first || hostname.replace(/^www\./iu, ""), 36);
 }
 
+function siteFallback(hostname: string): SiteFallback | undefined {
+  return SITE_FALLBACKS.get(hostname.toLowerCase().replace(/^www\./u, ""));
+}
+
 function fallbackSiteName(hostname: string): string {
-  return SITE_NAME_FALLBACKS.get(hostname.toLowerCase()) || hostname.replace(/^www\./iu, "");
+  return siteFallback(hostname)?.siteName || hostname.replace(/^www\./iu, "");
 }
 
 export function fallbackExternalLinkPreview(value: string): ExternalLinkPreview | null {
   if (!isPreviewablePublicUrl(value)) return null;
   const url = new URL(value);
   const hostname = url.hostname.replace(/^www\./iu, "");
+  const fallback = siteFallback(url.hostname);
   return {
     url: url.href,
     hostname,
-    siteName: fallbackSiteName(url.hostname),
+    siteName: fallback?.siteName || hostname,
     title: "",
-    iconUrl: new URL("/favicon.ico", url).href,
+    iconUrl: fallback?.iconUrl || new URL("/favicon.ico", url).href,
   };
 }
 

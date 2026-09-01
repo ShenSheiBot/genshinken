@@ -10,6 +10,15 @@ function publicPreview(preview: ExternalLinkPreview) {
   return { url, hostname, siteName, title };
 }
 
+function fallbackReason(error: unknown): string {
+  if (!(error instanceof Error)) return "unknown";
+  const upstream = error.message.match(/^upstream returned (\d{3})$/u)?.[1];
+  if (upstream) return `upstream-${upstream}`;
+  if (error.name === "TimeoutError") return "timeout";
+  if (/redirect/iu.test(error.message)) return "redirect";
+  return "fetch-error";
+}
+
 export async function GET(request: NextRequest) {
   const target = request.nextUrl.searchParams.get("url")?.trim() ?? "";
   if (!target || target.length > 4_096) {
@@ -32,6 +41,7 @@ export async function GET(request: NextRequest) {
           "Cache-Control": "public, max-age=300",
           "X-Content-Type-Options": "nosniff",
           "X-Link-Preview": "identity-fallback",
+          "X-Link-Preview-Reason": fallbackReason(error),
         },
       });
     }

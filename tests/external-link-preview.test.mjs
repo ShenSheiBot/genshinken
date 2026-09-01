@@ -39,3 +39,14 @@ test("metadata-blocking sites retain site identity and an origin favicon", () =>
   assert.equal(fallback?.title, "");
   assert.equal(fallback?.iconUrl, "https://zhuanlan.zhihu.com/favicon.ico");
 });
+
+test("a confirmed blocked site can use its stable lightweight official icon", () => {
+  const fallback = fallbackExternalLinkPreview(
+    "https://kakuyomu.jp/works/16817330669771510815/episodes/822139845419609812"
+  );
+  assert.equal(fallback?.siteName, "カクヨム");
+  assert.equal(
+    fallback?.iconUrl,
+    "https://cdn-static.kakuyomu.jp/images/brand/favicons/app-256.png"
+  );
+});
