@@ -16,7 +16,7 @@
   --reader-body-family: var(--f-cjk-serif);
   --reader-body-latin-family: "Times New Roman", Times, serif;
   --reader-title-family: var(--f-cjk-serif);
-  --reader-quote-family: var(--f-cjk-kaiti);
+  --reader-quote-family: var(--f-cjk-fangsong);
   --reader-quote-latin-family: var(--font-eb-garamond), Garamond, "Times New Roman", Times, serif;
   --reader-interface-family: "Segoe UI", "Helvetica Neue", Arial, var(--f-cjk-sans), sans-serif;
   --reader-emphasis-family: var(--f-emphasis-serif);
@@ -392,13 +392,13 @@
 }
 
 .body :global(.signature-block p) {
-  font-family: var(--f-cjk-kaiti);
+  font-family: var(--f-cjk-fangsong);
   font-size: var(--reader-font);
 }
 
 .body :global(p.epigraph-text),
 .body :global(p.epigraph-attribution) {
-  font-family: var(--f-cjk-kaiti);
+  font-family: var(--f-cjk-fangsong);
 }
 
 .body > :global(p:first-child),
@@ -414,7 +414,7 @@
 .body :global(p.speaker-turn),
 .body :global(p.cont) { text-indent: 0; }
 
-.body :global(p.editorial-note) { font-family: var(--f-cjk-kaiti); }
+.body :global(p.editorial-note) { font-family: var(--f-cjk-fangsong); }
 .body :global(p.editorial-note .latin-run) { font-family: var(--f-editorial-note-latin); }
 .body :global(p.editorial-note > strong:first-child),
 .body :global(p.speaker-turn > strong:first-child),
@@ -2124,7 +2124,7 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
 :global(html[data-reader-font="serif"]) .root {
   --reader-body-family: var(--f-cjk-serif);
   --reader-body-latin-family: "Times New Roman", Times, serif;
-  --reader-quote-family: var(--f-cjk-kaiti);
+  --reader-quote-family: var(--f-cjk-fangsong);
   --reader-quote-latin-family: var(--font-eb-garamond), Garamond, "Times New Roman", Times, serif;
   --reader-interface-family: "Segoe UI", "Helvetica Neue", Arial, var(--f-cjk-sans), sans-serif;
   --reader-note-family: var(--reader-body-latin-family);

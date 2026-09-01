@@ -8,10 +8,10 @@ The Chinese site self-hosts three open-licensed, corpus-subsetted roles:
 | --- | --- | --- |
 | `roof-noto-serif-sc.woff2` | `NotoSerifSC.ttf` | `Roof Noto Serif SC` |
 | `roof-noto-sans-sc.woff2` | `NotoSansSC.ttf` | `Roof Noto Sans SC` |
-| `roof-wenkai.woff2` | `LXGWWenKaiGB-Regular.ttf` | `Roof WenKai` |
+| `roof-zhuque-fangsong.woff2` | `ZhuqueFangsong-Regular.ttf` | `Roof Zhuque Fangsong` |
 
 The original TTF files are not committed. The generator downloads them from a
-pinned Google Fonts or LXGW WenKai GB commit into the ignored
+pinned Google Fonts commit or Zhuque Fangsong release into the ignored
 `.local-archive/font-sources` cache and verifies the recorded SHA-256 values;
 never regenerate from an unverified font with the same display name.
 
@@ -19,10 +19,11 @@ never regenerate from an unverified font with the same display name.
 and `public/llms.txt`, adds the Simplified/Traditional OpenCC closure, intersects
 the result with each source font's coverage, and writes the three WOFF2 files
 plus `cjk-font-manifest.json`. Noto Serif/Sans SC form the reader's paired body
-faces. `Roof WenKai` is the renamed, subsetted LXGW WenKai GB face used for
-Chinese emphasis, epigraphs, signatures, quotations, and editorial notes. Its
-italic CSS face deliberately reuses upright WenKai glyphs, so Chinese emphasis
-does not acquire a synthetic slant while Latin fallbacks remain truly italic.
+faces. `Roof Zhuque Fangsong` is the renamed, subsetted Zhuque Fangsong face used
+for Chinese emphasis, epigraphs, signatures, quotations, and editorial notes.
+Its emphasis alias includes Zhuque's Alegreya Latin glyphs, so a mixed Chinese
+and Western emphasis span remains one upright typographic system without a
+synthetic slant or a mid-span family change.
 
 Normal development, checks, builds, and deployments all run the idempotent
 font synchronizer automatically:
@@ -52,9 +53,10 @@ together.
 `verify:fonts` checks the corpus inventory, OpenCC closure, source pins, output
 hashes, byte sizes, cache keys, reader-mode separation, and emphasis contract.
 
-The Noto fonts and LXGW WenKai GB are distributed under the SIL Open Font
-License 1.1. See `OFL-Noto-CJK.txt` and `OFL-LXGW-WenKai.txt`. The webfont name
-`Roof WenKai` intentionally avoids LXGW WenKai GB's reserved font names.
+The Noto fonts and Zhuque Fangsong are distributed under the SIL Open Font
+License 1.1. See `OFL-Noto-CJK.txt` and `OFL-Zhuque-Fangsong.txt`. The hosted
+family is renamed because the committed WOFF2 is a corpus subset rather than
+the upstream installable font.
 
 ## Japanese translation fonts
 

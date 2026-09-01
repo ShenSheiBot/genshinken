@@ -5,19 +5,21 @@ Normal dev, check, build, and deploy commands invoke this script automatically.
 Pinned source fonts are cached outside Git; --source-dir may override that cache.
 Generated WOFF2 files cover every supported CJK/punctuation code point currently
 present in the rendered site corpus. Noto Serif/Sans SC provide the paired reader
-faces; WenKai provides upright Chinese emphasis and editorial matter.
+faces; Zhuque Fangsong provides upright Chinese emphasis and editorial matter.
 """
 
 from __future__ import annotations
 
 import argparse
 import hashlib
+from io import BytesIO
 import json
 from pathlib import Path
 import subprocess
 from typing import Iterable
 from urllib.parse import quote
 from urllib.request import urlopen
+from zipfile import ZipFile
 
 from font_build_support import (
     acquire_font_build_lock,
@@ -30,11 +32,11 @@ OUTPUT_DIR = ROOT / "public" / "fonts"
 MANIFEST_PATH = OUTPUT_DIR / "cjk-font-manifest.json"
 CSS_PATH = ROOT / "app" / "cjk-fonts.generated.css"
 CONVERTER_PATH = ROOT / "scripts" / "convert-cjk-font-corpus.mjs"
-CACHE_DIR = ROOT / ".local-archive" / "font-sources" / "roof-cjk-open-20260831"
+CACHE_DIR = ROOT / ".local-archive" / "font-sources" / "roof-cjk-open-20260901"
 GOOGLE_FONTS_COMMIT = "e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7"
-LXGW_WENKAI_GB_COMMIT = "7e280c0880f6171d8e969b5c4bd3451f6094cce7"
-GENERATOR_VERSION = 6
-GENERATOR_STRATEGY = "chinese-site-corpus-opencc-closure-variable-pair-and-upright-wenkai-emphasis"
+ZHUQUE_FANGSONG_VERSION = "v0.212"
+GENERATOR_VERSION = 7
+GENERATOR_STRATEGY = "chinese-site-corpus-opencc-closure-variable-pair-and-upright-zhuque-emphasis"
 TEXT_EXTENSIONS = {".css", ".json", ".md", ".mjs", ".ts", ".tsx", ".txt"}
 CORPUS_ROOTS = (ROOT / "app", ROOT / "lib", ROOT / "source")
 LOCALE_FONT_OWNED_ROOTS = (
@@ -43,17 +45,17 @@ LOCALE_FONT_OWNED_ROOTS = (
     ROOT / "app" / "translation-fonts.generated.css",
     ROOT / "source" / "_translations",
 )
-ALWAYS_INCLUDE = "思源宋体黑体文楷衬线无衬线，。；：？！“”‘’（）《》〈〉【】——……·"
-# Chinese-page emphasis stays in one upright WenKai face even when a span
+ALWAYS_INCLUDE = "思源宋体黑体文楷仿宋朱雀衬线无衬线，。；：？！“”‘’（）《》〈〉【】——……·"
+# Chinese-page emphasis stays in one upright Zhuque face even when a span
 # contains Western words, numerals, or combining accents. Keep the complete
 # common Latin repertoire in that face so a newly introduced term does not
 # silently split into a device-serif italic before the next corpus rebuild.
-WENKAI_EMPHASIS_RANGES = (
+EMPHASIS_RANGES = (
     (0x0020, 0x007E),
     (0x00A0, 0x024F),
     (0x0300, 0x036F),
 )
-WENKAI_BASE_UNICODE_RANGE = (
+ZHUQUE_BASE_UNICODE_RANGE = (
     "U+00B7,U+00D7,U+00F7,U+2010-203B,U+2E80-312F,U+31A0-31EF,"
     "U+3400-9FFF,U+F900-FAFF,U+FE10-FE4F,U+FF00-FFEF"
 )
@@ -80,16 +82,15 @@ FONTS = (
         "weight": "100 900",
     },
     {
-        "family": "Roof WenKai",
-        "source": "LXGWWenKaiGB-Regular.ttf",
-        "repository": "lxgw/LxgwWenKaiGB",
-        "commit": LXGW_WENKAI_GB_COMMIT,
-        "source_path": "fonts/TTF/LXGWWenKaiGB-Regular.ttf",
-        "source_sha256": "295568c131648062107543aa159c97dd49564be791136c2abf74cad83eba3f7f",
-        "output": "roof-wenkai.woff2",
+        "family": "Roof Zhuque Fangsong",
+        "source": "ZhuqueFangsong-Regular.ttf",
+        "archive_url": "https://github.com/TrionesType/zhuque/releases/download/v0.212/ZhuqueFangsong-v0.212.zip",
+        "archive_member": "ZhuqueFangsong-Regular.ttf",
+        "source_sha256": "558c62730844fe54ba220146ed62f859d4e2880188d92d985f8921c6e3743bc4",
+        "output": "roof-zhuque-fangsong.woff2",
         "weight": "400",
-        "emphasis_alias": "Roof WenKai Emphasis",
-        "base_unicode_range": WENKAI_BASE_UNICODE_RANGE,
+        "emphasis_alias": "Roof Zhuque Fangsong Emphasis",
+        "base_unicode_range": ZHUQUE_BASE_UNICODE_RANGE,
     },
 )
 
@@ -179,6 +180,8 @@ def sha256(path: Path) -> str:
 
 
 def source_url(record: dict[str, str]) -> str:
+    if archive_url := record.get("archive_url"):
+        return f'{archive_url}#{record["archive_member"]}'
     encoded_path = "/".join(quote(part) for part in record["source_path"].split("/"))
     return f'https://raw.githubusercontent.com/{record["repository"]}/{record["commit"]}/{encoded_path}'
 
@@ -189,8 +192,12 @@ def source_font(record: dict[str, str], source_dir: Path) -> Path:
         return path
     source_dir.mkdir(parents=True, exist_ok=True)
     temporary = path.with_suffix(".download")
-    with urlopen(source_url(record), timeout=60) as response:
-        temporary.write_bytes(response.read())
+    with urlopen(record.get("archive_url", source_url(record)), timeout=60) as response:
+        payload = response.read()
+    if archive_member := record.get("archive_member"):
+        with ZipFile(BytesIO(payload)) as archive:
+            payload = archive.read(archive_member)
+    temporary.write_bytes(payload)
     actual = sha256(temporary)
     if actual != record["source_sha256"]:
         raise SystemExit(
@@ -376,7 +383,7 @@ def main() -> None:
         "--source-dir",
         type=Path,
         default=CACHE_DIR,
-        help="Directory containing the pinned Noto SC and WenKai source fonts",
+        help="Directory containing the pinned Noto SC and Zhuque Fangsong source fonts",
     )
     parser.add_argument(
         "--if-stale",
@@ -411,10 +418,10 @@ def main() -> None:
         record["family"]: font_code_points(source)
         for record, source in sources
     }
-    wenkai_emphasis_points = range_code_points(WENKAI_EMPHASIS_RANGES)
+    emphasis_points = range_code_points(EMPHASIS_RANGES)
     body_fallback_supported = (
-        (supported_by_family["Roof Noto Serif SC"] | supported_by_family["Roof WenKai"])
-        & (supported_by_family["Roof Noto Sans SC"] | supported_by_family["Roof WenKai"])
+        (supported_by_family["Roof Noto Serif SC"] | supported_by_family["Roof Zhuque Fangsong"])
+        & (supported_by_family["Roof Noto Sans SC"] | supported_by_family["Roof Zhuque Fangsong"])
     )
     unsupported_body_points = site_points - body_fallback_supported
 
@@ -423,7 +430,7 @@ def main() -> None:
     for record, source in sources:
         target_points = site_points
         if record.get("emphasis_alias"):
-            target_points = site_points | wenkai_emphasis_points
+            target_points = site_points | emphasis_points
         subset_points = target_points & supported_by_family[record["family"]]
         unsupported_points = target_points - supported_by_family[record["family"]]
         if len(subset_points) < 2_500:
@@ -444,6 +451,17 @@ def main() -> None:
             "unsupportedCodePointRanges": compact_ranges(unsupported_points),
             "weight": record["weight"],
         }
+        if record.get("emphasis_alias"):
+            ascii_points = set(range(0x0020, 0x007F))
+            missing_ascii = ascii_points - supported_by_family[record["family"]]
+            if missing_ascii:
+                raise SystemExit(
+                    f"{record['family']} cannot provide a unified emphasis face; "
+                    f"missing ASCII code points: {compact_ranges(missing_ascii)}"
+                )
+            manifest_fonts[record["family"]]["emphasisCodePointCount"] = len(
+                subset_points & emphasis_points
+            )
         print(f"built {output.relative_to(ROOT)} ({output.stat().st_size:,} bytes)")
 
     manifest = {
@@ -459,7 +477,7 @@ def main() -> None:
         "unsupportedBodyCodePointRanges": compact_ranges(unsupported_body_points),
         "upstreamCommits": {
             "google/fonts": GOOGLE_FONTS_COMMIT,
-            "lxgw/LxgwWenKaiGB": LXGW_WENKAI_GB_COMMIT,
+            "TrionesType/zhuque": ZHUQUE_FANGSONG_VERSION,
         },
         "toolchainSha256": toolchain_digest,
         "version": GENERATOR_VERSION,

@@ -17,19 +17,18 @@
   --text-sm: 10px;
   --text-caption: 11px;
   --text-meta: 12px;
-  --f-cjk-serif: "Roof Noto Serif SC", "Roof WenKai", "Noto Serif SC", "Source Han Serif SC", serif;
-  --f-cjk-sans: "Roof Noto Sans SC", "Roof WenKai", "Noto Sans SC", "Source Han Sans SC", sans-serif;
-  --f-cjk-kaiti: "Roof WenKai", "Kaiti SC", "KaiTi", "楷体", serif;
-  --f-cjk-fangsong: var(--f-cjk-kaiti);
+  --f-cjk-serif: "Roof Noto Serif SC", "Roof Zhuque Fangsong", "Noto Serif SC", "Source Han Serif SC", serif;
+  --f-cjk-sans: "Roof Noto Sans SC", "Roof Zhuque Fangsong", "Noto Sans SC", "Source Han Sans SC", sans-serif;
+  --f-cjk-fangsong: "Roof Zhuque Fangsong", "FangSong", "仿宋", serif;
   --f-brand: var(--f-cjk-serif);
   --f-grotesk: "Helvetica Neue", Helvetica, var(--f-cjk-sans), Arial, sans-serif;
   --f-serif: var(--font-newsreader), var(--f-cjk-serif), Georgia, serif;
   --f-mono: var(--font-space-mono), var(--f-cjk-sans), monospace;
-  --f-emphasis-serif: "Roof WenKai Emphasis", "Roof WenKai", "Kaiti SC", "KaiTi", "楷体", serif;
+  --f-emphasis-serif: "Roof Zhuque Fangsong Emphasis", "Roof Zhuque Fangsong", "FangSong", "仿宋", serif;
   --f-editorial-note-latin: Georgia, "Times New Roman", Times, serif;
   --f-note: "Times New Roman", Times, var(--f-cjk-serif);
   --f-quote-latin: var(--font-eb-garamond), Garamond, Georgia, serif;
-  --f-quote-cjk: var(--f-cjk-kaiti);
+  --f-quote-cjk: var(--f-cjk-fangsong);
   --f-quote: var(--f-quote-latin), var(--f-quote-cjk);
   --maxw: 1280px;
   --grid-step: 160px;
@@ -476,9 +475,9 @@ body:has(.translation-edition-page) { background-image: none; }
 .art-body p.article-summary-meta { text-indent: 0; }
 .art-body p.editorial-note,
 .art-body p.speaker-turn { text-indent: 0; }
-.art-body p.editorial-note { font-family: var(--f-cjk-kaiti); }
+.art-body p.editorial-note { font-family: var(--f-cjk-fangsong); }
 .art-body p.epigraph-text,
-.art-body p.epigraph-attribution { font-family: var(--f-cjk-kaiti); }
+.art-body p.epigraph-attribution { font-family: var(--f-cjk-fangsong); }
 .art-body p.article-summary-meta strong { font-family: var(--f-grotesk); font-weight: 700; color: var(--ink); }
 .art-body h1, .art-body h2, .art-body h3, .art-body h4 {
   font-family: var(--reader-title-family, var(--f-grotesk)); font-weight: 500; line-height: 1.18;

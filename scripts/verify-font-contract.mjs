@@ -51,13 +51,13 @@ const expectedFonts = [
     weight: "100 900",
   },
   {
-    family: "Roof WenKai",
-    file: "roof-wenkai.woff2",
-    source: "LXGWWenKaiGB-Regular.ttf",
-    sourceSha256: "295568c131648062107543aa159c97dd49564be791136c2abf74cad83eba3f7f",
-    variable: "--f-cjk-kaiti",
+    family: "Roof Zhuque Fangsong",
+    file: "roof-zhuque-fangsong.woff2",
+    source: "ZhuqueFangsong-Regular.ttf",
+    sourceSha256: "558c62730844fe54ba220146ed62f859d4e2880188d92d985f8921c6e3743bc4",
+    variable: "--f-cjk-fangsong",
     weight: "400",
-    emphasisAlias: "Roof WenKai Emphasis",
+    emphasisAlias: "Roof Zhuque Fangsong Emphasis",
   },
 ];
 
@@ -88,7 +88,7 @@ const localeFontOwnedRoots = [
   "app/translation-fonts.generated.css",
   "source/_translations/",
 ];
-const alwaysInclude = "思源宋体黑体文楷衬线无衬线，。；：？！“”‘’（）《》〈〉【】——……·";
+const alwaysInclude = "思源宋体黑体文楷仿宋朱雀衬线无衬线，。；：？！“”‘’（）《》〈〉【】——……·";
 
 function escapeRegExp(value) {
   return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -139,10 +139,10 @@ assert.ok(fs.existsSync(manifestPath), "missing generated CJK font manifest; run
 const manifest = JSON.parse(readUtf8(manifestPath));
 assert.ok(fs.existsSync(translationFontManifestPath), "missing generated Japanese translation font manifest");
 const translationFontManifest = JSON.parse(readUtf8(translationFontManifestPath));
-assert.equal(manifest.version, 6, "unsupported CJK font manifest version");
+assert.equal(manifest.version, 7, "unsupported CJK font manifest version");
 assert.equal(
   manifest.strategy,
-  "chinese-site-corpus-opencc-closure-variable-pair-and-upright-wenkai-emphasis",
+  "chinese-site-corpus-opencc-closure-variable-pair-and-upright-zhuque-emphasis",
   "Chinese fonts must cover the rendered corpus and its OpenCC conversion closure"
 );
 assert.equal(
@@ -154,7 +154,7 @@ assert.deepEqual(
   manifest.upstreamCommits,
   {
     "google/fonts": "e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7",
-    "lxgw/LxgwWenKaiGB": "7e280c0880f6171d8e969b5c4bd3451f6094cce7",
+    "TrionesType/zhuque": "v0.212",
   },
   "Chinese font source commits changed without review"
 );
@@ -162,8 +162,8 @@ assert.equal(manifest.conversion, "opencc-js:cn2t+t2cn");
 assert.ok(manifest.targetCodePointCount >= 2_500, "hosted Chinese subsets are unexpectedly small");
 assert.deepEqual(
   manifest.unsupportedBodyCodePointRanges,
-  ["U+202C", "U+FAFF"],
-  "Chinese body roles plus WenKai fallback must cover every visible site-corpus character"
+  ["U+202C", "U+9FFF", "U+F900", "U+FA41", "U+FAFF"],
+  "Chinese body roles plus Zhuque fallback must cover every visible site-corpus character"
 );
 
 const faceBlocks = [...`${globalsCss}\n${cjkFontCss}`.matchAll(/@font-face\s*{[\s\S]*?}/g)].map((match) => match[0]);
@@ -209,23 +209,23 @@ for (const expected of expectedFonts) {
   assert.equal(record.sha256, digest);
   if (expected.emphasisAlias) {
     assert.ok(
-      record.codePointCount >= manifest.siteCodePointCount + 500,
-      "Roof WenKai must include the common Latin repertoire used by upright Chinese emphasis"
+      record.emphasisCodePointCount >= 200,
+      "Roof Zhuque Fangsong must include the Latin repertoire used by unified Chinese emphasis"
     );
     assert.equal(
       propertyValue(face, "unicode-range"),
       "U+00B7,U+00D7,U+00F7,U+2010-203B,U+2E80-312F,U+31A0-31EF,U+3400-9FFF,U+F900-FAFF,U+FE10-FE4F,U+FF00-FFEF",
-      "the ordinary WenKai family must not capture Latin text outside emphasis"
+      "the ordinary Zhuque family must not capture Latin text outside emphasis"
     );
     const emphasisFace = faceBlocks.find((block) =>
       new RegExp(`font-family\\s*:\\s*["']${escapeRegExp(expected.emphasisAlias)}["']\\s*;`).test(block)
     );
-    assert.ok(emphasisFace, "missing the Latin-capable WenKai emphasis alias");
+    assert.ok(emphasisFace, "missing the Latin-capable Zhuque emphasis alias");
     assert.doesNotMatch(emphasisFace, /unicode-range\s*:/u);
     assert.match(
       emphasisFace,
       new RegExp(`url\\(["']?/fonts/${escapeRegExp(expected.file)}\\?v=${digest.slice(0, 12)}["']?\\)`),
-      "the WenKai emphasis alias must reuse the same cached font asset"
+      "the Zhuque emphasis alias must reuse the same cached font asset"
     );
   }
   assert.match(
@@ -262,7 +262,7 @@ const sansRule = /:global\(html\[data-reader-font="sans"\]\) \.root\s*{([\s\S]*?
 assert.ok(serifRule, "missing serif reader rule");
 assert.ok(sansRule, "missing sans reader rule");
 assert.equal(propertyValue(serifRule, "--reader-body-family"), "var(--f-cjk-serif)");
-assert.equal(propertyValue(serifRule, "--reader-quote-family"), "var(--f-cjk-kaiti)");
+assert.equal(propertyValue(serifRule, "--reader-quote-family"), "var(--f-cjk-fangsong)");
 assert.equal(propertyValue(sansRule, "--reader-body-family"), "var(--f-cjk-sans)");
 assert.equal(propertyValue(sansRule, "--reader-quote-family"), "var(--f-cjk-sans)");
 assert.notEqual(propertyValue(serifRule, "--reader-body-family"), propertyValue(sansRule, "--reader-body-family"));
@@ -285,6 +285,7 @@ assert.match(globalsCss, /html:is\(\[lang="zh"\],\s*\[lang="zh-Hans"\],\s*\[lang
 assert.match(globalsCss, /html:is\(\[lang="zh"\],\s*\[lang="zh-Hans"\],\s*\[lang="zh-Hant"\]\) \.art-body em\s*\{[\s\S]*?font-style\s*:\s*normal\s*;/u);
 assert.match(globalsCss, /html:is\(\[lang="zh"\],\s*\[lang="zh-Hans"\],\s*\[lang="zh-Hant"\]\) \.art-body em \.latin-run\s*\{[\s\S]*?font-family\s*:\s*inherit\s*;/u);
 assert.match(globalsCss, /\.art-body em\s*\{\s*font-style\s*:\s*italic\s*;\s*\}/u, "non-Chinese editions must retain italic emphasis");
+assert.doesNotMatch(`${globalsCss}\n${readerCss}\n${cjkFontCss}`, /Roof WenKai|--f-cjk-kaiti/u);
 assert.doesNotMatch(`${globalsCss}\n${readerCss}\n${translationCss}\n${foundationSource}`, /Roof ST|STSong|STFangsong|STKaiti|STZhongsong|Roof Rare Han/u);
 
 const japaneseEditionRule = /\.page:lang\(ja\)\s*\{([\s\S]*?)\}/u.exec(translationCss)?.[1];
