@@ -982,7 +982,7 @@
   margin: 30px 0 0;
   font-family: var(--reader-body-family);
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 /* Pagefind metadata remains in the document for indexing without entering the
