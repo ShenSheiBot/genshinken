@@ -104,6 +104,41 @@ assert.match(
 const bibliography = "Gaido, Daniel 2003, ‘“The American Worker” and the Theory of Permanent Revolution: Karl Kautsky on Werner Sombart’s *Why Is There No Socialism in the United States?*’, *Historical Materialism*, 11, 4: 79-123.";
 const bibliographyHtml = await renderMarkdown(bibliography);
 
+const cjkEmphasisHtml = await renderMarkdown(`_译者导言。_
+
+**词典释义。**
+
+_Mixed 中文 emphasis._`);
+assert.match(
+  cjkEmphasisHtml,
+  /<em>译者导言。<\/em>/u,
+  "CJK Markdown emphasis must retain em semantics instead of becoming strong",
+);
+assert.match(
+  cjkEmphasisHtml,
+  /<strong>词典释义。<\/strong>/u,
+  "explicit CJK strong emphasis must remain strong",
+);
+assert.match(
+  cjkEmphasisHtml,
+  /<em><span class="latin-run">Mixed<\/span> 中文 <span class="latin-run">emphasis\.<\/span><\/em>/u,
+  "mixed-language Markdown emphasis must retain em semantics",
+);
+
+const japaneseEmphasisHtml = await renderMarkdown("_日本語の強調。_", { language: "ja" });
+assert.match(
+  japaneseEmphasisHtml,
+  /<em>日本語の強調。<\/em>/u,
+  "Japanese Markdown emphasis must retain em semantics",
+);
+
+const rawCjkEmphasisHtml = await renderMarkdown("<em>原始 HTML 强调。</em>");
+assert.match(
+  rawCjkEmphasisHtml,
+  /<em>原始 <span class="latin-run">HTML<\/span> 强调。<\/em>/u,
+  "raw HTML emphasis must retain em semantics",
+);
+
 assert.match(
   bibliographyHtml,
   /<span class="latin-run">Gaido, Daniel 2003, ‘“The American Worker” and the Theory of Permanent Revolution: Karl Kautsky on Werner Sombart’s<\/span>/,

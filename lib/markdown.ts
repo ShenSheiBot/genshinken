@@ -482,16 +482,6 @@ function elementText(node: Element): string {
   return out;
 }
 
-function rehypeCjkEmphasis() {
-  return (tree: Root) => {
-    visit(tree, "element", (node: Element) => {
-      if (node.tagName === "em" && CJK_TEXT.test(elementText(node))) {
-        node.tagName = "strong";
-      }
-    });
-  };
-}
-
 /* ---------------- 弯引号规范化（构建期）----------------
    正文里的 ASCII 直引号 " ' 统一改成方向性 Unicode 引号 “ ” ‘ ’，
    由字体按中英文环境渲染为全角/半角。只处理文本节点，跳过 code/pre，
@@ -1859,7 +1849,6 @@ function createProcessor(
   .use(rehypeImageGalleries)
   .use(() => rehypeImageSlides(language))
   .use(rehypeBareImageWidths)
-  .use(rehypeCjkEmphasis)
   .use(rehypeSmartQuotes)
   .use(rehypeCjkInterpuncts)
   .use(rehypeRareHanGlyphs)
