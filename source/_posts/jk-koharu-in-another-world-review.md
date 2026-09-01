@@ -19,7 +19,11 @@ citation:
   url: https://mp.weixin.qq.com/s/_3niUB0w_gqJGh66r8wYJA
 ---
 
-![实在狗子作者卡](attachments/wechat/jg5Jq3T6JmLtscko9ee93g/body-001.jpg)
+[author] 实在狗子
+
+![实在狗子头像](attachments/wechat/jg5Jq3T6JmLtscko9ee93g/author-avatar.png "=25%")
+
+[author-bio] 在没有世界的时代，传播无意义之爱。
 
 首先概述一下2017年由早川书房出版的《女高中生小春在异世界成为娼妓》（以下简称《小春》）的剧情。
 

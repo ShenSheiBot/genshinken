@@ -22,7 +22,11 @@ citation:
   language: zh-CN
 ---
 
-![学级委员一条同学的作者介绍卡](attachments/wechat/T2VJ_WAOMl3Z_2ocBwpqhw/body-001.jpg)
+[author] 学级委员一条同学
+
+![学级委员一条同学头像](attachments/wechat/T2VJ_WAOMl3Z_2ocBwpqhw/author-avatar.png "=25%")
+
+[author-bio] Words are flowing out like endless rain into a paper cup.
 
 “**老师，让我们创造吧，尽早创造出属于这些佛像的城市……**”远离人间烟火似地研究、热爱着佛像，与藤森教授和众多僧侣们作为共犯将佛像从如今已是尘俗喧嚣、无人关心文化的京都中盗走的美弥子（斎藤チヤ子饰）如此说道。接着，她仰望向佛像，一滴泪从眼角滑下，然而，就在泪从脸颊滴落的瞬间，刑警突然开门打断了僧侣们的念经声。这是喜欢着如此纯洁无暇地与佛像共处的美弥子，却又必须坚持作为科学搜查研究所（SRI）研究员的大义的牧（岸田森饰）告发了她的行径的后果。
 

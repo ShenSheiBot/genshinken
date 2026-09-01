@@ -17,9 +17,11 @@ citation:
   url: https://mp.weixin.qq.com/s/z6qau0uB0v3FCu4LifdIfg
 ---
 
-![怀剣作者卡](attachments/wechat/z6qau0uB0v3FCu4LifdIfg/body-001.png)
+[author] 怀剣
 
-**作者君**
+![怀剣头像](attachments/wechat/z6qau0uB0v3FCu4LifdIfg/author-avatar.png "=25%")
+
+[author-bio] 打捞星星的废人
 
 1912年的日本，一位信仰社会主义的天才歌人，带着改变“时代闭塞之现状”的愿望，在26岁早早离开了人世。他为了变革社会，写了小说，写了带着革命热血的现代诗。但人们记住的，只有被他当做“悲哀的玩具”的短歌。他有天才之誉，得到森鸥外、与谢野晶子的赏识，却在现实生活中频频失意，举债持家，最后在贫病交加中死去。
 

@@ -2189,10 +2189,10 @@
       "contentType": "image/png"
     },
     {
-      "key": "wechat/8o6fg0lHMTeNtJUisVNb5w/body-001.jpg",
-      "bytes": 24093,
-      "sha256": "000f389b0b430420ba0f9180787ca1b48bd66814e248ae11b389dc1111d487b8",
-      "contentType": "image/jpeg"
+      "key": "wechat/8o6fg0lHMTeNtJUisVNb5w/author-avatar.png",
+      "bytes": 74327,
+      "sha256": "350d5fc81880f9f782680784f86eb04bdc528f363846ab16b1bc7cfbf387388c",
+      "contentType": "image/png"
     },
     {
       "key": "wechat/8o6fg0lHMTeNtJUisVNb5w/body-002.jpg",
@@ -5315,10 +5315,10 @@
       "contentType": "image/jpeg"
     },
     {
-      "key": "wechat/jg5Jq3T6JmLtscko9ee93g/body-001.jpg",
-      "bytes": 10289,
-      "sha256": "9a4b44bf9b2fece51583d15495f49e5386c08690535559f0e4d92af548c7d06e",
-      "contentType": "image/jpeg"
+      "key": "wechat/jg5Jq3T6JmLtscko9ee93g/author-avatar.png",
+      "bytes": 20426,
+      "sha256": "b927c41cd8d3672eb3af13471175d4fe0e757b6f8126434167729edf25a467bd",
+      "contentType": "image/png"
     },
     {
       "key": "wechat/jg5Jq3T6JmLtscko9ee93g/body-002.jpg",
@@ -7751,10 +7751,10 @@
       "contentType": "image/png"
     },
     {
-      "key": "wechat/T2VJ_WAOMl3Z_2ocBwpqhw/body-001.jpg",
-      "bytes": 24160,
-      "sha256": "016ca6ea210f8999e7bd830dbb5cb61e74f0764063e5ff5b62f6ad298a0b94a1",
-      "contentType": "image/jpeg"
+      "key": "wechat/T2VJ_WAOMl3Z_2ocBwpqhw/author-avatar.png",
+      "bytes": 74202,
+      "sha256": "bc5111b89e6c932f9e2a76bb3169bf4f0699a18ae04b1b96e6375e9898cd736a",
+      "contentType": "image/png"
     },
     {
       "key": "wechat/T2VJ_WAOMl3Z_2ocBwpqhw/body-002.jpg",
@@ -9233,9 +9233,9 @@
       "contentType": "image/png"
     },
     {
-      "key": "wechat/z6qau0uB0v3FCu4LifdIfg/body-001.png",
-      "bytes": 65535,
-      "sha256": "08e3ea284b3258e40f2c2b4cec0e244a39435ec5ac05f39e277a777f08912a8e",
+      "key": "wechat/z6qau0uB0v3FCu4LifdIfg/author-avatar.png",
+      "bytes": 51856,
+      "sha256": "962616e8564a5ac4486ee2b61a7cf99e90f352ffd945e055983a37f23fcec68e",
       "contentType": "image/png"
     },
     {

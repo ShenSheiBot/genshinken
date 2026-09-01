@@ -17,9 +17,11 @@ citation:
   url: https://mp.weixin.qq.com/s/8o6fg0lHMTeNtJUisVNb5w
 ---
 
-[fig] 作者君。
+[author] 学级委员一条同学
 
-![学级委员一条同学作者卡](attachments/wechat/8o6fg0lHMTeNtJUisVNb5w/body-001.jpg)
+![学级委员一条同学头像](attachments/wechat/8o6fg0lHMTeNtJUisVNb5w/author-avatar.png "=25%")
+
+[author-bio] Words are flowing out like endless rain into a paper cup.
 
 <!--standalone-emphasis-->
 _波德莱尔变成白痴后，他只用一个词来表达人生观，那就是“女阴”。_
