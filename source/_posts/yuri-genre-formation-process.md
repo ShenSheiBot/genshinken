@@ -1,6 +1,6 @@
 ---
 title: 「百合」类型的成立过程之检讨
-title_breaks: ["「百合」类型的成立过程之检讨"]
+title_breaks: ["「百合」类型的", 成立过程之检讨]
 date: 2026-03-08
 slug: yuri-genre-formation-process
 categories: [漫画]

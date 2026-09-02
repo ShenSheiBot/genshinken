@@ -1,5 +1,5 @@
 {
-  "corpusFileCount": 74,
+  "corpusFileCount": 71,
   "corpusFiles": [
     "app/[locale]/books/[book]/chapters/[chapter]/cite.bib/route.ts",
     "app/[locale]/books/[book]/chapters/[chapter]/page.tsx",
@@ -9,12 +9,9 @@
     "app/[locale]/posts/[slug]/cite.bib/route.ts",
     "app/[locale]/posts/[slug]/page.tsx",
     "app/components/translation/LanguageSwitcher.tsx",
-    "app/components/translation/TranslationDocumentIndex.tsx",
     "app/components/translation/TranslationEditionPage.tsx",
     "app/components/translation/TranslationPlaceholder.tsx",
-    "app/components/translation/TranslationReferences.tsx",
     "app/components/translation/translation-edition.module.css",
-    "app/components/translation/translationUi.ts",
     "source/_translations/ja/books/kankei-keishiki-bunseki/book.json",
     "source/_translations/ja/books/kankei-keishiki-bunseki/sankaku-kankei-biyakuya.md",
     "source/_translations/ja/books/meta-anime-hyoron/book.json",
@@ -76,7 +73,7 @@
     "source/_translations/ja/posts/work-emotion-robots.md",
     "source/_translations/language-dispositions.json"
   ],
-  "corpusSha256": "e3397fbc7577368302aa24595e8d59a2bba14af261f3661174f817feb38defba",
+  "corpusSha256": "b4477d0044fd53b0b93871581f402710d7a47eaa1a5ff91ecb5df85a09ac4625",
   "fallbackCodePointCount": 114,
   "fonts": {
     "Roof EB Garamond Fallback": {
@@ -108,12 +105,12 @@
       "weight": "400"
     },
     "Roof Noto Sans JP": {
-      "bytes": 904068,
-      "codePointCount": 2968,
+      "bytes": 904572,
+      "codePointCount": 2969,
       "family": "Roof Noto Sans JP",
       "file": "roof-noto-sans-jp.woff2",
       "kind": "primary-sans",
-      "sha256": "2a69a689f1cb2154a611913056e8b0eadad8ef50f418290bcc9b72fde89a66da",
+      "sha256": "cb7737961a95a0b0c644adc2105c0f75831f12e7c07077e40b596b725f155733",
       "source": "NotoSansJP.ttf",
       "sourceSha256": "c2f3b4d463500a2ddcd3849cded1fceeb9fd6d1c32e6cbecd568453ba50fc68f",
       "sourceUrl": "https://raw.githubusercontent.com/google/fonts/e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7/ofl/notosansjp/NotoSansJP%5Bwght%5D.ttf",
@@ -149,12 +146,12 @@
       "weight": "100 900"
     },
     "Roof Noto Serif JP": {
-      "bytes": 1253720,
-      "codePointCount": 2968,
+      "bytes": 1254176,
+      "codePointCount": 2969,
       "family": "Roof Noto Serif JP",
       "file": "roof-noto-serif-jp.woff2",
       "kind": "primary-serif",
-      "sha256": "e0da57ea310219ada27768c73457d878053af3ad120aa8a8fb6555747b909ede",
+      "sha256": "a457ee77d0dc7504ef092c628535308a878f8e0ca7c37a1326081ec7597c5494",
       "source": "NotoSerifJP.ttf",
       "sourceSha256": "2fd527ba12b6a44ec30d796d633360da0aeba6c5d4af1304ce12bb4dc15a7dfc",
       "sourceUrl": "https://raw.githubusercontent.com/google/fonts/e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7/ofl/notoserifjp/NotoSerifJP%5Bwght%5D.ttf",
@@ -213,9 +210,9 @@
     }
   },
   "strategy": "japanese-translation-corpus-variable-fonts-with-generated-script-and-symbol-fallbacks",
-  "subsetCodePointCount": 2968,
-  "targetCodePointCount": 2857,
-  "targetCodePointSha256": "5f69fa70f3fb00cca44d21a6b5569182b291ab54b5495583a478eca87daf55af",
+  "subsetCodePointCount": 2969,
+  "targetCodePointCount": 2858,
+  "targetCodePointSha256": "a405575426ff937f46c7d50ecc07b99951959235c5f3864cf1731dd82d09133c",
   "toolchainSha256": "b192f1da4344abea6d8568a33b15e3ecfb6d9f8242b22257639c7cf28d4424c3",
   "uncoveredCodePointRanges": [],
   "upstreamCommit": "e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7",

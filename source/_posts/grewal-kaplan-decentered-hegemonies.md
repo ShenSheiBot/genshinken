@@ -1,6 +1,6 @@
 ---
 title: 分散的霸权：后现代性和跨国女性主义实践（1994）
-title_breaks: [分散的霸权：, 后现代性和跨国女性主义实践（1994）]
+title_breaks: [分散的霸权：, 后现代性和, 跨国女性主义实践, （1994）]
 date: 2023-12-04
 slug: grewal-kaplan-decentered-hegemonies
 script: hans

@@ -8,6 +8,10 @@ for (const pathname of [
   "/posts/example/",
   "/books/example/chapters/chapter-1",
   "/books/example/chapters/chapter-1/",
+  "/en/posts/example",
+  "/ja/posts/example/",
+  "/en/books/example/chapters/chapter-1",
+  "/ja/books/example/chapters/chapter-1/",
 ]) {
   assert.equal(isReadingRoute(pathname), true, `${pathname} must be a Reader route`);
 }
@@ -19,6 +23,9 @@ for (const pathname of [
   "/books/example/chapters/",
   "/books/example/chapters/chapter-1/extra",
   "/media/example",
+  "/fr/posts/example",
+  "/en/posts/",
+  "/ja/books/example/chapters/",
 ]) {
   assert.equal(isReadingRoute(pathname), false, `${pathname} must not be a Reader route`);
 }

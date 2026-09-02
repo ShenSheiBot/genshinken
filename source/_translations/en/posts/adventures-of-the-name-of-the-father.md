@@ -7,7 +7,7 @@ language: en
 status: published
 published: 2026-08-31
 title: "The Adventures of the Name-of-the-Father: Looking Awry at Evangelion and Makoto Shinkai"
-title_breaks: ["The Adventures of the Name-of-the-Father:", "Looking Awry at Evangelion", "and Makoto Shinkai"]
+title_breaks: ["The Adventures of", "the Name-of-the-Father:", "Looking Awry", "at Evangelion and", "Makoto Shinkai"]
 excerpt: "A Lacanian discussion of the Name-of-the-Father, desire, Atè, the post-Oedipal subject, and possible paths of resistance, through Evangelion and the films of Makoto Shinkai."
 credits:
   - role: translator

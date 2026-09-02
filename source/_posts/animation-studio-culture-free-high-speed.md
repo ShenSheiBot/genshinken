@@ -1,6 +1,6 @@
 ---
 title: 什么是动画公司文化：从京阿尼、内海紘子和Free!谈起
-title_breaks: [什么是动画公司文化：从京阿尼、, 内海紘子和Free!谈起]
+title_breaks: [什么是动画公司, 文化：从京阿尼、, 内海紘子和Free!谈起]
 date: 2018-09-27
 slug: animation-studio-culture-free-high-speed
 script: hans

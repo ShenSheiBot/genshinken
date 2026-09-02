@@ -8,9 +8,11 @@ status: published
 published: 2026-08-27
 title: "The Machine Behind Ghibli’s Nature: Isao Takahata and the Technology of Animation"
 title_breaks:
-  - "The Machine Behind Ghibli’s Nature:"
+  - "The Machine Behind"
+  - "Ghibli’s Nature:"
   - "Isao Takahata and"
-  - "the Technology of Animation"
+  - "the Technology"
+  - "of Animation"
 excerpt: "Princess Kaguya’s view of a small blue Earth belongs as much to the age of spaceflight as to an ancient moon tale. What else does Ghibli’s handmade pastoral conceal about the technologies that shape vision, time, and animated labor?"
 credits:
   - role: translator

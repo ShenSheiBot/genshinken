@@ -26,11 +26,18 @@ const bookChapterSource = fs.readFileSync(
   path.join(process.cwd(), "app", "(site)", "books", "[slug]", "chapters", "[chapter]", "page.tsx"),
   "utf8",
 );
+const translationPageSource = fs.readFileSync(
+  path.join(process.cwd(), "app", "components", "translation", "TranslationEditionPage.tsx"),
+  "utf8",
+);
 if (!siteSource.includes("CC BY-NC-SA 4.0")
   || !siteSource.includes("布尔乔亚法权")
+  || !siteSource.includes("bourgeois rights")
+  || !siteSource.includes("ブルジョア法権")
   || !readingSource.includes("site.rightsNotice")
-  || !bookChapterSource.includes("site.rightsNotice")) {
-  failures.push("全站权利提示未在文章与文库章节阅读页统一呈现");
+  || !bookChapterSource.includes("site.rightsNotice")
+  || !translationPageSource.includes("site.rightsNotice[locale]")) {
+  failures.push("全站权利提示未在中、英、日文章与文库章节阅读页统一呈现");
 }
 
 if (failures.length > 0) {

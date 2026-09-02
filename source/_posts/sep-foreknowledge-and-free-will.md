@@ -1,6 +1,6 @@
 ---
 title: SEP：预知与自由意志（Foreknowledge and Free Will）
-title_breaks: ["SEP：预知与自由意志", "（Foreknowledge and Free Will）"]
+title_breaks: ["SEP：预知与自由意志", "（Foreknowledge ", "and Free Will）"]
 date: 2020-03-29
 slug: sep-foreknowledge-and-free-will
 script: hans

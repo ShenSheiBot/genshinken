@@ -1,6 +1,6 @@
 ---
 title: 成为你的“还好”——《天气之子》观后感
-title_breaks: [成为你的“还好”——, 《天气之子》, 观后感]
+title_breaks: [成为你的“还好”, ——《天气之子》, 观后感]
 date: 2019-07-21
 slug: weathering-with-you-review
 script: hans

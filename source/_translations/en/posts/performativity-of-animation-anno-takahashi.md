@@ -7,7 +7,7 @@ language: en
 status: published
 published: 2026-08-27
 title: "Still Images, Living Time: Takashi Anno and Naohito Takahashi at Animation’s Limits"
-title_breaks: ["Still Images, Living Time:", "Takashi Anno and Naohito Takahashi", "at Animation’s Limits"]
+title_breaks: ["Still Images,", "Living Time:", "Takashi Anno and", "Naohito Takahashi", "at Animation’s Limits"]
 excerpt: "Takashi Anno and Naohito Takahashi make stillness, repetition, and the gap between drawings reveal what cel animation can—and cannot—do with memory, sight, surface, and touch."
 credits:
   - role: translator

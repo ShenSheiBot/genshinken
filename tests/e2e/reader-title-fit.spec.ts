@@ -1,15 +1,19 @@
 import { expect, test, type Page } from "./fixtures";
 
-const DESKTOP_WIDTHS = [1024, 1440] as const;
+const READER_WIDTHS = [390, 1024, 1440] as const;
 
 type TitleLayoutFailure = {
   route: string;
   viewportWidth: number;
   documentOverflow: number;
+  viewportLeftOverflow: number;
+  viewportRightOverflow: number;
+  fontSize: number;
   lineCount: number;
   lineStartPunctuation: string[];
   singleGlyphLines: string[];
   splitWords: string[];
+  wrappedSegments: string[];
   segments: Array<{
     text: string;
     leftOverflow: number;
@@ -25,22 +29,34 @@ async function titleLayoutFailure(page: Page, route: string, viewportWidth: numb
 
   return page.locator("#reading-cover h1").evaluate((heading, options) => {
     const tolerance = 1;
+    const fixedSegments = heading.hasAttribute("data-reader-title-fixed");
     const forbiddenLineStart = /^[，。！？；：、）》】〕〉」』”’]/u;
     const headingRect = heading.getBoundingClientRect();
-    const segments = Array.from(
+    const segmentElements = Array.from(
       heading.querySelectorAll<HTMLElement>("[data-reader-title-segment]")
-    ).flatMap((segment) => Array.from(segment.getClientRects()).map((rect) => ({
-      text: (segment.textContent ?? "").trim(),
-      leftOverflow: Number(Math.max(0, headingRect.left - rect.left).toFixed(2)),
-      rightOverflow: Number(Math.max(0, rect.right - headingRect.right).toFixed(2)),
-    }))).filter(({ leftOverflow, rightOverflow }) =>
+    );
+    const segmentTexts = segmentElements
+      .map((segment) => (segment.textContent ?? "").trim())
+      .filter(Boolean);
+    const segments = segmentElements.map((segment) => {
+      const rect = segment.getBoundingClientRect();
+      return {
+        text: (segment.textContent ?? "").trim(),
+        leftOverflow: fixedSegments
+          ? 0
+          : Number(Math.max(0, headingRect.left - rect.left).toFixed(2)),
+        rightOverflow: fixedSegments
+          ? Number(Math.max(0, segment.scrollWidth - segment.clientWidth).toFixed(2))
+          : Number(Math.max(0, rect.right - headingRect.right).toFixed(2)),
+      };
+    }).filter(({ leftOverflow, rightOverflow }) =>
       leftOverflow > tolerance || rightOverflow > tolerance
     );
     const documentOverflow = Number(Math.max(
       0,
       document.documentElement.scrollWidth - document.documentElement.clientWidth
     ).toFixed(2));
-    const glyphs: Array<{ glyph: string; top: number; left: number }> = [];
+    const glyphs: Array<{ glyph: string; top: number; left: number; right: number }> = [];
     const walker = document.createTreeWalker(heading, NodeFilter.SHOW_TEXT);
     let node: Node | null;
     while ((node = walker.nextNode())) {
@@ -51,11 +67,16 @@ async function titleLayoutFailure(page: Page, route: string, viewportWidth: numb
         range.setStart(node, offset);
         range.setEnd(node, nextOffset);
         const rect = range.getClientRects()[0];
-        if (rect && rect.width > 0) glyphs.push({ glyph, top: rect.top, left: rect.left });
+        if (rect && rect.width > 0) {
+          glyphs.push({ glyph, top: rect.top, left: rect.left, right: rect.right });
+        }
         offset = nextOffset;
       }
     }
-    const rows: Array<{ top: number; glyphs: Array<{ glyph: string; left: number }> }> = [];
+    const rows: Array<{
+      top: number;
+      glyphs: Array<{ glyph: string; left: number; right: number }>;
+    }> = [];
     for (const glyph of glyphs) {
       let row = rows.find((candidate) => Math.abs(candidate.top - glyph.top) < 2);
       if (!row) {
@@ -64,19 +85,26 @@ async function titleLayoutFailure(page: Page, route: string, viewportWidth: numb
       }
       row.glyphs.push(glyph);
     }
-    const titleLines = rows
-      .sort((a, b) => a.top - b.top)
-      .map((row) => row.glyphs
-        .sort((a, b) => a.left - b.left)
-        .map(({ glyph }) => glyph)
-        .join("")
-        .trim())
-      .filter(Boolean);
+    const titleLines = fixedSegments ? segmentTexts : rows
+        .sort((a, b) => a.top - b.top)
+        .map((row) => row.glyphs
+          .sort((a, b) => a.left - b.left)
+          .map(({ glyph }) => glyph)
+          .join("")
+          .trim())
+        .filter(Boolean);
     const lineStartPunctuation = titleLines.filter((line) => forbiddenLineStart.test(line));
-    const singleGlyphLines = titleLines.filter((line) => Array.from(
-      line.replace(/[\s，。！？；：、）》】〕〉「」『』“”‘’（）【】《》—－｜|/]/gu, "")
-    ).length === 1);
-    const splitWords = Array.from(
+    const singleGlyphLines = titleLines.length > 1
+      && (fixedSegments || options.viewportWidth >= 1024)
+      ? titleLines.filter((line) => Array.from(
+        line.replace(/[\s，。！？；：、）》】〕〉「」『』“”‘’（）【】《》—－｜|/]/gu, "")
+      ).length === 1)
+      : [];
+    const wrappedSegments = fixedSegments ? segmentElements.filter((segment) => {
+      const style = getComputedStyle(segment);
+      return style.display !== "block" || style.whiteSpace !== "nowrap";
+    }).map((segment) => (segment.textContent ?? "").trim()).filter(Boolean) : [];
+    const splitWords = fixedSegments ? [] : Array.from(
       heading.querySelectorAll<HTMLElement>("[data-reader-title-word]")
     ).filter((word) => {
       const tops: number[] = [];
@@ -96,28 +124,53 @@ async function titleLayoutFailure(page: Page, route: string, viewportWidth: numb
       }
       return tops.length > 1;
     }).map((word) => (word.textContent ?? "").trim()).filter(Boolean);
+    const viewportLeftOverflow = Number(Math.max(
+      0,
+      fixedSegments
+        ? -headingRect.left
+        : -Math.min(headingRect.left, ...glyphs.map(({ left }) => left))
+    ).toFixed(2));
+    const viewportRightOverflow = Number(Math.max(
+      0,
+      (fixedSegments
+        ? headingRect.right
+        : Math.max(headingRect.right, ...glyphs.map(({ right }) => right)))
+        - document.documentElement.clientWidth
+    ).toFixed(2));
+    const fontSize = Number.parseFloat(getComputedStyle(heading).fontSize);
+    const minimumReadableFontSize = options.viewportWidth < 1024 ? 24.1 : 44.1;
+    const undersized = fixedSegments && fontSize < minimumReadableFontSize;
+    const tooManyLines = titleLines.length > 6
+      && (fixedSegments || options.viewportWidth >= 1024);
 
     return segments.length > 0
-      || documentOverflow > tolerance
+      || viewportLeftOverflow > tolerance
+      || viewportRightOverflow > tolerance
       || lineStartPunctuation.length > 0
       || singleGlyphLines.length > 0
       || splitWords.length > 0
-      || titleLines.length > 5 ? {
+      || (fixedSegments && wrappedSegments.length > 0)
+      || undersized
+      || tooManyLines ? {
       route: options.route,
       viewportWidth: options.viewportWidth,
       documentOverflow,
+      viewportLeftOverflow,
+      viewportRightOverflow,
+      fontSize,
       lineCount: titleLines.length,
       lineStartPunctuation,
       singleGlyphLines,
       splitWords,
+      wrappedSegments,
       segments,
     } : null;
   }, { route, viewportWidth });
 }
 
-test("all public reader titles fit the desktop column without typographic orphan lines", async ({ isMobile, page }) => {
-  test.setTimeout(180_000);
-  test.skip(Boolean(isMobile), "desktop title segments wrap normally below the desktop breakpoint");
+test("all public reader titles fit the reader column without typographic orphan lines", async ({ isMobile, page }) => {
+  test.setTimeout(240_000);
+  test.skip(Boolean(isMobile), "the desktop project exercises every reader width once");
   await page.emulateMedia({ reducedMotion: "reduce" });
 
   const sitemap = await page.request.get("/sitemap.xml");
@@ -125,17 +178,24 @@ test("all public reader titles fit the desktop column without typographic orphan
   const routes = Array.from((await sitemap.text()).matchAll(/<loc>(.*?)<\/loc>/gu))
     .map((match) => new URL(match[1]).pathname)
     .filter((pathname) =>
-      pathname.startsWith("/posts/") || /^\/books\/[^/]+\/chapters\/[^/]+$/u.test(pathname)
+      /^\/(?:en\/|ja\/)?posts\//u.test(pathname)
+      || /^\/(?:en\/|ja\/)?books\/[^/]+\/chapters\/[^/]+$/u.test(pathname)
     );
 
   const failures: TitleLayoutFailure[] = [];
   for (const route of routes) {
-    await page.setViewportSize({ width: Math.max(...DESKTOP_WIDTHS), height: 900 });
+    await page.setViewportSize({ width: Math.max(...READER_WIDTHS), height: 900 });
     const response = await page.goto(route);
     expect(response?.status(), route).toBe(200);
     await page.evaluate(() => document.fonts.ready);
 
-    for (const viewportWidth of DESKTOP_WIDTHS) {
+    if (/^\/(?:en|ja)\//u.test(route)) {
+      const visibleTitle = (await page.locator("#reading-cover h1").textContent())?.trim();
+      const metadataTitle = await page.locator('meta[property="og:title"]').getAttribute("content");
+      expect(visibleTitle, `${route}: rendered title must preserve the localized metadata title`).toBe(metadataTitle);
+    }
+
+    for (const viewportWidth of READER_WIDTHS) {
       const failure = await titleLayoutFailure(page, route, viewportWidth);
       if (failure) failures.push(failure);
     }

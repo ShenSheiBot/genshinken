@@ -301,15 +301,44 @@ assert.match(
   "Japanese editions must use the generated hosted sans stack"
 );
 assert.match(
-  translationCss,
-  /\.page:lang\(ja\) \.body :global\(\.art-body p\)[\s\S]*?font-family\s*:\s*var\(--translation-serif\)\s*;/u,
-  "Japanese body paragraphs must explicitly consume the hosted Japanese face"
+  propertyValue(japaneseEditionRule, "--f-cjk-sans"),
+  /^var\(--translation-sans\)$/u,
+  "the shared sans-serif reader mode must consume the hosted Japanese sans stack"
+);
+assert.match(
+  propertyValue(japaneseEditionRule, "--reader-body-family"),
+  /^var\(--translation-serif\)$/u,
+  "the shared reader body must consume the hosted Japanese face"
 );
 assert.doesNotMatch(foundationSource, /Noto_(?:Serif|Sans)_JP/u, "Japanese fonts must not use next/font's full shard set");
+const englishEditionRule = /\.page:lang\(en\)\s*\{([\s\S]*?)\}/u.exec(translationCss)?.[1];
+assert.ok(englishEditionRule, "missing English translation-edition font rule");
 assert.match(
-  translationCss,
-  /\.page:lang\(en\) \.body :global\(\.art-body blockquote\)[\s\S]*?font-family\s*:\s*var\(--font-eb-garamond\)/u,
-  "English block quotations must consume the Latin quotation face"
+  propertyValue(englishEditionRule, "--f-cjk-serif"),
+  /^var\(--translation-body-serif\)$/u,
+  "shared-reader English body copy must retain the dedicated body serif instead of the display face"
+);
+assert.match(
+  propertyValue(englishEditionRule, "--reader-quote-family"),
+  /^var\(--font-eb-garamond\)/u,
+  "shared-reader English block quotations must consume the Latin quotation face"
+);
+const englishSerifReaderRule = /:global\(html\[data-reader-font="serif"\]\) \.page:lang\(en\)\s*\{([\s\S]*?)\}/u.exec(translationCss)?.[1];
+assert.ok(englishSerifReaderRule, "missing English serif-mode cascade override");
+assert.match(
+  propertyValue(englishSerifReaderRule, "--reader-body-family"),
+  /^var\(--translation-body-serif\)$/u,
+  "English serif-mode paragraphs must retain the dedicated body face after the shared reader cascade"
+);
+assert.match(
+  propertyValue(englishSerifReaderRule, "--reader-body-latin-family"),
+  /^var\(--translation-body-serif\)$/u,
+  "English serif-mode Latin runs must retain the dedicated body face after the shared reader cascade"
+);
+assert.match(
+  propertyValue(englishSerifReaderRule, "--reader-quote-latin-family"),
+  /^var\(--font-eb-garamond\)/u,
+  "English serif-mode quotation runs must retain the quotation face after the shared reader cascade"
 );
 assert.equal(translationFontManifest.version, 3, "unsupported Japanese translation font manifest version");
 assert.equal(

@@ -1,8 +1,8 @@
 ---
 title: DTB与精神分析——穿越繁星的幻象
 title_breaks:
-  - DTB与精神分析——
-  - 穿越繁星的幻象
+  - DTB与精神分析
+  - ——穿越繁星的幻象
 date: 2022-06-21
 slug: darker-than-black-psychoanalysis-crossing-starry-fantasy
 script: hans

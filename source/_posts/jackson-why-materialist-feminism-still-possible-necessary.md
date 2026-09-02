@@ -1,6 +1,6 @@
 ---
 title: 为什么唯物主义女权主义（仍然）是可能的，也是必要的？
-title_breaks: [为什么唯物主义女权主义, （仍然）是可能的，也是必要的？]
+title_breaks: [为什么唯物主义, 女权主义（仍然）, 是可能的，也是必要的？]
 date: 2023-05-09
 slug: jackson-why-materialist-feminism-still-possible-necessary
 script: hans

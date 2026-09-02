@@ -29,6 +29,7 @@ export default function LanguageSwitcher({
     <nav className={styles.languageSwitcher} aria-label={labels[current]}>
       {links.map((link) => {
         const isCurrent = link.language === current;
+        const hasReadingDestination = link.state === "available" || link.state === "preview";
         return (
           <Link
             href={link.href}
@@ -38,6 +39,8 @@ export default function LanguageSwitcher({
             aria-current={isCurrent ? "page" : undefined}
             aria-label={`${link.label}: ${stateLabels[current][link.state]}`}
             data-state={link.state}
+            data-reading-edition-switch={isCurrent ? undefined : ""}
+            data-reading-edition-entry={!isCurrent && hasReadingDestination ? "" : undefined}
           >
             <span>{link.label}</span>
             <i aria-hidden="true" />

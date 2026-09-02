@@ -16,6 +16,8 @@ import {
   themeScript,
 } from "@/app/document-foundation";
 import { TRANSLATION_LOCALES, type TranslationLocale } from "@/lib/translations";
+import { SiteSearchProvider } from "@/app/components/site-search/SiteSearch";
+import { getSearchTags } from "@/lib/search-tags";
 
 export const viewport = siteViewport;
 
@@ -57,6 +59,7 @@ export default async function LocaleLayout({
   const { locale: rawLocale } = await params;
   if (!TRANSLATION_LOCALES.includes(rawLocale as TranslationLocale)) notFound();
   const locale = rawLocale as TranslationLocale;
+  const searchTags = await getSearchTags(locale);
   return (
     <html
       lang={locale}
@@ -78,9 +81,11 @@ export default async function LocaleLayout({
         />
       </head>
       <body>
-        <a href="#main" className="skip-link">{skipLabels[locale]}</a>
-        {children}
-        <EditorialReveal />
+        <SiteSearchProvider tags={searchTags} locale={locale}>
+          <a href="#main" className="skip-link">{skipLabels[locale]}</a>
+          {children}
+          <EditorialReveal />
+        </SiteSearchProvider>
       </body>
     </html>
   );

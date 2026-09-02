@@ -1,6 +1,6 @@
 ---
 title: 解开母／女的包袱：重评第二次和第三次女性主义浪潮间的紧张关系
-title_breaks: [解开母／女的包袱：, 重评第二次和第三次女性主义浪潮间的紧张关系]
+title_breaks: [解开母／女的包袱：, 重评第二次和第三次, 女性主义浪潮间的, 紧张关系]
 date: 2022-08-09
 slug: bailey-mother-daughter-baggage-feminism
 script: hans

@@ -7,7 +7,7 @@ language: en
 status: published
 published: 2026-08-27
 title: "The Danger in Hayao Miyazaki’s Innocent Eye"
-title_breaks: ["The Danger in Hayao Miyazaki’s Innocent Eye"]
+title_breaks: ["The Danger in", "Hayao Miyazaki’s", "Innocent Eye"]
 excerpt: "From the damaged romances of Porco Rosso to the ravishing war machines of The Wind Rises, this essay follows the gift—and the danger—in Miyazaki’s ability to make the world look newly innocent."
 credits:
   - role: translator

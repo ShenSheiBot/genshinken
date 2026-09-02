@@ -1,6 +1,6 @@
 ---
 title: 从《转生王女与天才千金的魔法革命》解读百合动画与父权制的共犯关系
-title_breaks: ["从《转生王女与天才千金的魔法革命》", "解读百合动画与父权制的共犯关系"]
+title_breaks: ["从《转生王女与", "天才千金的魔法革命》", "解读百合动画与", "父权制的共犯关系"]
 date: 2024-07-16
 slug: yuri-anime-patriarchy-complicity
 script: hans

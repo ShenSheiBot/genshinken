@@ -1,6 +1,6 @@
 ---
 title: 从凉宫系列与“世界系”谈起——有关后现代和ACGN研究的一些呓语
-title_breaks: [从凉宫系列与“世界系”谈起——, 有关后现代和ACGN研究的, 一些呓语]
+title_breaks: [从凉宫系列与, “世界系”谈起——, 有关后现代和, ACGN研究的一些呓语]
 date: 2021-06-21
 slug: haruhi-sekaikei-postmodern-acgn-research
 script: hans

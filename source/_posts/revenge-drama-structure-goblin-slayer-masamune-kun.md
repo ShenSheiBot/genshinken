@@ -1,6 +1,6 @@
 ---
 title: 复仇剧的结构：“哥杀”与“政宗君”
-title_breaks: ["复仇剧的结构：", "“哥杀”与“政宗君”"]
+title_breaks: ["复仇剧的结构：", "“哥杀”与", "“政宗君”"]
 date: 2018-12-09
 slug: revenge-drama-structure-goblin-slayer-masamune-kun
 script: hans

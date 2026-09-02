@@ -1,6 +1,6 @@
 ---
 title: 全体目光向本杰明［货币头像］看齐：第三波女性主义中的经济决定因素
-title_breaks: ["全体目光向本杰明［货币头像］看齐：", "第三波女性主义中的经济决定因素"]
+title_breaks: ["全体目光向本杰明", "［货币头像］看齐：", "第三波女性主义中的", "经济决定因素"]
 date: 2024-03-08
 slug: heywood-drake-benjamins-third-wave-feminism
 script: hans

@@ -1,6 +1,6 @@
 ---
 title: 御宅文化的跨越性——《浮士德》在东亚如何被“误读”
-title_breaks: ["御宅文化的跨越性——", "《浮士德》在东亚如何被“误读”"]
+title_breaks: ["御宅文化的跨越性——", "《浮士德》在东亚", "如何被“误读”"]
 date: 2025-08-16
 slug: faust-east-asia-otaku-transversality
 categories: [御宅文化]

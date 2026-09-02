@@ -8,7 +8,7 @@ language: en
 status: published
 published: 2026-08-27
 title: "Macross 7 Against the Demand for Depth"
-title_breaks: ["Macross 7", "Against the Demand for Depth"]
+title_breaks: ["Macross 7", "Against the Demand", "for Depth"]
 excerpt: "Macross 7 can bear all the interpretation we bring to it. Yet its songs, characters, and absurd convictions make hidden meaning feel beside the point. What can criticism do with an attachment that needs no deeper justification?"
 credits:
   - role: translator

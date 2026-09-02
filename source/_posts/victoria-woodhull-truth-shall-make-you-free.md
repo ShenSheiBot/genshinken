@@ -1,6 +1,6 @@
 ---
 title: 而那真理许你自由——有关社会自由之准则的演讲（1871）
-title_breaks: [而那真理许你自由——, 有关社会自由之准则的演讲（1871）]
+title_breaks: [而那真理许你自由——, 有关社会自由之准则的, 演讲（1871）]
 date: 2023-03-25
 slug: victoria-woodhull-truth-shall-make-you-free
 script: hans

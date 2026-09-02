@@ -22,6 +22,9 @@ export const site = {
   infoEmail: "a1835631041@163.com",
   editorEmail: "a1835631041@163.com",
   /** 全站文章默认许可与转载提示；另有明确许可者从其特别说明。 */
-  rightsNotice:
-    "除另有说明外，本站内容采用 CC BY-NC-SA 4.0 许可。欢迎规范转载。如有侵犯您的布尔乔亚法权，请联系并提醒号主立刻践行游士删文跑路伦理。",
+  rightsNotice: {
+    zh: "除另有说明外，本站内容采用 CC BY-NC-SA 4.0 许可。欢迎规范转载。如有侵犯您的布尔乔亚法权，请联系并提醒号主立刻践行游士删文跑路伦理。",
+    en: "Unless otherwise stated, content on this site is licensed under CC BY-NC-SA 4.0. Reuse in accordance with the license is welcome. If we have infringed your bourgeois rights, please get in touch and remind the editor to put the wandering scholar’s code into immediate practice: delete the post and make a run for it.",
+    ja: "特記のない限り、当サイトのコンテンツは CC BY-NC-SA 4.0 で提供します。ライセンスに沿った転載を歓迎します。もし皆さまのブルジョア法権を侵害していたら、ご一報ください。管理人に、ただちに記事を消してずらかる「遊士の倫理」を実践せよ、と釘を刺していただければ幸いです。",
+  },
 } as const;

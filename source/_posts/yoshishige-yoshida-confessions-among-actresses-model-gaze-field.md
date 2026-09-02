@@ -1,6 +1,6 @@
 ---
 title: "吉田喜重的《告白的女优论》：人模、目光与场"
-title_breaks: ["吉田喜重的《告白的女优论》：", "人模、目光与场"]
+title_breaks: ["吉田喜重的", "《告白的女优论》：", "人模、目光与场"]
 date: 2021-08-08
 slug: yoshishige-yoshida-confessions-among-actresses-model-gaze-field
 script: hans

@@ -1,6 +1,6 @@
 ---
 title: 《吹响！上低音号》制作入门：演奏场景的制作
-title_breaks: [《吹响！上低音号》制作入门：, 演奏场景的制作]
+title_breaks: [《吹响！上低音号》, 制作入门：, 演奏场景的制作]
 date: 2020-10-30
 slug: sound-euphonium-performance-scenes-making
 script: hans

@@ -1,6 +1,6 @@
 ---
 title: “山田是我最好的伙伴”：Anime Expo 2018牛尾宪辅访谈
-title_breaks: [“山田是我最好的伙伴”：, Anime Expo 2018牛尾宪辅访谈]
+title_breaks: [“山田是我最好的伙伴”：, Anime Expo 2018, 牛尾宪辅访谈]
 date: 2018-10-30
 slug: kensuke-ushio-anime-expo-2018-interview
 script: hans

@@ -1,6 +1,6 @@
 ---
 title: 从《K》伏八等看少年漫中关于“朋友吵架”的典型叙事
-title_breaks: [从《K》伏八等看少年漫中关于, “朋友吵架”的典型叙事]
+title_breaks: [从《K》伏八等看, 少年漫中关于, “朋友吵架”的, 典型叙事]
 date: 2018-12-02
 updated: 2019-05-26
 slug: friends-quarrel-shonen-manga

@@ -3,6 +3,34 @@
 import { useEffect, useRef, useState } from "react";
 
 type CopyStatus = "copying" | "copied" | "failed";
+type CitationCopyLocale = "zh" | "en" | "ja";
+
+const copyUi = {
+  zh: {
+    action: "复制 BibTeX",
+    ariaLabel: "复制本页 BibTeX 引用",
+    copying: "复制中…",
+    copied: "已复制 ✓",
+    success: "BibTeX 已复制到剪贴板",
+    failure: "复制失败，请重试",
+  },
+  en: {
+    action: "Copy",
+    ariaLabel: "Copy this edition’s BibTeX citation",
+    copying: "Copying…",
+    copied: "Copied ✓",
+    success: "BibTeX copied to the clipboard",
+    failure: "Copy failed. Please try again.",
+  },
+  ja: {
+    action: "コピー",
+    ariaLabel: "この版の BibTeX 引用をコピー",
+    copying: "コピー中…",
+    copied: "コピー済み ✓",
+    success: "BibTeX をクリップボードにコピーしました",
+    failure: "コピーできませんでした。もう一度お試しください",
+  },
+} as const;
 
 async function writeClipboard(text: string): Promise<void> {
   if (navigator.clipboard && typeof navigator.clipboard.writeText === "function") {
@@ -25,12 +53,15 @@ async function writeClipboard(text: string): Promise<void> {
 export default function CitationCopyButton({
   bibtex,
   className,
-  label = "复制 BibTeX",
+  label,
+  locale = "zh",
 }: {
   bibtex: string;
   className?: string;
   label?: string;
+  locale?: CitationCopyLocale;
 }) {
+  const labels = copyUi[locale];
   const [status, setStatus] = useState<CopyStatus | null>(null);
   const resetTimer = useRef<number | null>(null);
 
@@ -56,16 +87,16 @@ export default function CitationCopyButton({
         type="button"
         onClick={copy}
         disabled={status === "copying"}
-        aria-label="复制本页 BibTeX 引用"
+        aria-label={labels.ariaLabel}
       >
         <span>BIB</span>
-        {status === "copied" ? "已复制 ✓" : status === "copying" ? "复制中…" : label}
+        {status === "copied" ? labels.copied : status === "copying" ? labels.copying : label ?? labels.action}
       </button>
       <span role="status" aria-live="polite" aria-atomic="true">
         {status === "copied"
-          ? "BibTeX 已复制到剪贴板"
+          ? labels.success
           : status === "failed"
-            ? "复制失败，请重试"
+            ? labels.failure
             : ""}
       </span>
     </span>

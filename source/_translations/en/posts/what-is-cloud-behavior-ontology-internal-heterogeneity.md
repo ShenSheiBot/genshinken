@@ -9,7 +9,8 @@ published: 2026-08-28
 title: What Is “Yun Behavior”? Ontology and Internal Heterogeneity
 title_breaks:
   - What Is “Yun Behavior”?
-  - Ontology and Internal Heterogeneity
+  - Ontology and
+  - Internal Heterogeneity
 excerpt: Beginning with four features—no firsthand participation, conduct that comments on a work, a community able to enforce the label, and a breach of what that community takes for granted—Austoria asks what Chinese internet labels such as *yun* viewer and *yun* player actually classify, then shows how the same insult draws on two competing standards for when someone has a right to comment.
 credits:
   - role: translator

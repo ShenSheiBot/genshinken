@@ -662,7 +662,7 @@ function nonEmptyString(value) {
   return typeof value === "string" && value.trim() !== "";
 }
 
-function stringArray(value, file, field, { required = false } = {}) {
+function stringArray(value, file, field, { required = false, preserveWhitespace = false } = {}) {
   if (!Array.isArray(value)) {
     report(errors, file, `${field} 必须是字符串数组`);
     return [];
@@ -672,7 +672,7 @@ function stringArray(value, file, field, { required = false } = {}) {
     if (!nonEmptyString(item)) {
       report(errors, file, `${field}[${index}] 必须是非空字符串`);
     } else {
-      strings.push(item.trim());
+      strings.push(preserveWhitespace ? item : item.trim());
     }
   });
   if (required && strings.length === 0) report(errors, file, `${field} 至少需要一项`);
@@ -737,7 +737,7 @@ function validateTitleBreaks(file, data) {
       data.home_title_breaks,
       file,
       "home_title_breaks",
-      { required: true }
+      { required: true, preserveWhitespace: true }
     );
     if (homeSegments.length === 0 || homeSegments.join("") !== title) {
       report(errors, file, "home_title_breaks 按顺序拼接后必须与 title 完全一致");
@@ -751,7 +751,10 @@ function validateTitleBreaks(file, data) {
     );
     return;
   }
-  const segments = stringArray(data.title_breaks, file, "title_breaks", { required: true });
+  const segments = stringArray(data.title_breaks, file, "title_breaks", {
+    required: true,
+    preserveWhitespace: true,
+  });
   if (segments.length === 0 || segments.join("") !== title) {
     report(errors, file, "title_breaks 按顺序拼接后必须与 title 完全一致");
     return;

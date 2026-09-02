@@ -1,6 +1,6 @@
 ---
 title: 《少女革命》、《玲音》与日本：处于临界地带的“少女”们
-title_breaks: [《少女革命》、《玲音》与日本：, 处于临界地带的“少女”们]
+title_breaks: [《少女革命》、《玲音》与日本：, 处于临界地带的, “少女”们]
 date: 2021-11-16
 slug: utena-lain-liminal-girls
 script: hans

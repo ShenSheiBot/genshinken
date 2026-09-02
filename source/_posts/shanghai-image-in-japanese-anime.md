@@ -1,6 +1,6 @@
 ---
 title: “魔都”的虚像与实像——从日本动漫作品中的上海形象谈起
-title_breaks: [“魔都”的虚像与实像——从, 日本动漫作品中的, 上海形象谈起]
+title_breaks: [“魔都”的虚像与实像, ——从日本动漫作品中的, 上海形象谈起]
 date: 2019-08-15
 slug: shanghai-image-in-japanese-anime
 script: hans

@@ -5,8 +5,9 @@ export const GLOBAL_NAV_ITEMS = [
   { href: "/about", label: "关于" },
 ] as const;
 
-const POST_ROUTE = /^\/posts\/[^/]+\/?$/;
-const BOOK_CHAPTER_ROUTE = /^\/books\/[^/]+\/chapters\/[^/]+\/?$/;
+const LOCALE_PREFIX = "(?:/(?:en|ja))?";
+const POST_ROUTE = new RegExp(`^${LOCALE_PREFIX}/posts/[^/]+/?$`);
+const BOOK_CHAPTER_ROUTE = new RegExp(`^${LOCALE_PREFIX}/books/[^/]+/chapters/[^/]+/?$`);
 
 export function isReadingRoute(pathname: string): boolean {
   return POST_ROUTE.test(pathname) || BOOK_CHAPTER_ROUTE.test(pathname);

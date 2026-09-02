@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Fragment } from "react";
+import type { CSSProperties } from "react";
 import { notFound } from "next/navigation";
 import {
   bookChapterHref,
@@ -28,7 +28,7 @@ import { EDITORIAL_SECTION_META } from "@/lib/editorial";
 import { getBookPublicContent } from "@/lib/public-content";
 import { hanScriptLanguageTag } from "@/lib/han-script";
 import { searchCreditToken } from "@/lib/search-entities";
-import { isCompactTitleSegment } from "@/lib/title-layout";
+import { isCompactTitleSegment, longestTitleSegmentWidthEm } from "@/lib/title-layout";
 import {
   getEditionLanguageLinks,
   getPublishedTranslationEditions,
@@ -51,6 +51,12 @@ import readerStyles from "@/app/components/reading-edition/reading-edition.modul
 import bookStyles from "../../../books.module.css";
 
 export const dynamicParams = false;
+
+function readerTitleFitStyle(segments: string[]): CSSProperties {
+  return {
+    "--reader-title-longest-em": longestTitleSegmentWidthEm(segments).toFixed(2),
+  } as CSSProperties;
+}
 
 export function generateStaticParams() {
   return getAllBooks().flatMap((book) =>
@@ -339,20 +345,23 @@ export default async function BookChapterPage({
               <strong>{chapterUnitLabel(chapter.number)}</strong>
             </p>
           </div>
-          <h1 className="art-title" data-pagefind-meta="title">
-            {chapter.titleBreaks ? chapter.titleBreaks.map((segment, segmentIndex, segments) => {
+          <h1
+            className="art-title"
+            data-pagefind-meta="title"
+            data-reader-title-fixed={chapter.titleBreaks ? "" : undefined}
+            style={chapter.titleBreaks ? readerTitleFitStyle(chapter.titleBreaks) : undefined}
+          >
+            {chapter.titleBreaks ? chapter.titleBreaks.map((segment, segmentIndex) => {
               const compact = isCompactTitleSegment(segment);
               return (
-                <Fragment key={`${segment}-${segmentIndex}`}>
-                  <span
-                    className={`${readerStyles.titleSegment}${compact ? ` ${readerStyles.compactTitleSegment}` : ""}`}
-                    data-reader-title-segment
-                    data-reader-title-compact={compact ? "" : undefined}
-                  >
-                    <ReaderTitleText text={segment} />
-                  </span>
-                  {segmentIndex < segments.length - 1 && <wbr />}
-                </Fragment>
+                <span
+                  className={`${readerStyles.titleSegment}${compact ? ` ${readerStyles.compactTitleSegment}` : ""}`}
+                  data-reader-title-segment
+                  data-reader-title-compact={compact ? "" : undefined}
+                  key={`${segment}-${segmentIndex}`}
+                >
+                  <ReaderTitleText text={segment} />
+                </span>
               );
             }) : (
               <span data-reader-title-segment>
@@ -410,7 +419,7 @@ export default async function BookChapterPage({
         leftRailLabel="署名、行数与本章目录"
       >
         {document.isSectionLanding && <SectionChildren book={book} chapters={chapter.children} />}
-        <p className={readerStyles.rightsNotice}>{site.rightsNotice}</p>
+        <p className={readerStyles.rightsNotice}>{site.rightsNotice.zh}</p>
         <ChapterNavigation book={book} previous={previous} next={next} />
       </DossierReading>
     </ReadingDossierRoot>

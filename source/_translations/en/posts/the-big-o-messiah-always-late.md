@@ -7,7 +7,7 @@ language: en
 status: published
 published: 2026-08-27
 title: "The Messiah Is Always Late: Redemption in The Big O"
-title_breaks: ["The Messiah Is Always Late:", " Redemption in The Big O"]
+title_breaks: ["The Messiah Is", "Always Late:", "Redemption in The Big O"]
 excerpt: "Through giant robots as second bodies, apocalyptic monsters, and the broken history of an amnesiac city, this essay asks why The Big O can imagine redemption only as something perpetually deferred."
 credits:
   - role: translator

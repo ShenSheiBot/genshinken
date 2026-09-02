@@ -36,6 +36,34 @@ export type ReadingMeasurement = {
   lines: ReadingLineMeasurement[];
 };
 
+export type ReadingProgressMessages = {
+  appended: string;
+  approximate: string;
+  restored: string;
+  disabled: string;
+  disabledNotStored: string;
+  enabled: string;
+  enabledNotStored: string;
+  clearCurrentFailed: string;
+  clearCurrentDone: string;
+  clearAllFailed: string;
+  clearAllDone: string;
+};
+
+const DEFAULT_MESSAGES: ReadingProgressMessages = {
+  appended: "文章已有新增内容，已回到上次读完的位置",
+  approximate: "文章已更新，已恢复到上次位置附近",
+  restored: "已恢复到上次阅读位置",
+  disabled: "已停止保存本机阅读记录",
+  disabledNotStored: "本页已停止保存；浏览器未能记住此设置",
+  enabled: "已开启本机阅读记录",
+  enabledNotStored: "本页已开启保存；浏览器未能记住此设置",
+  clearCurrentFailed: "浏览器未能清除本文阅读记录",
+  clearCurrentDone: "已清除本文阅读记录",
+  clearAllFailed: "浏览器未能清除全部阅读记录",
+  clearAllDone: "已清除全部阅读记录",
+};
+
 type RestoreConfidence = "exact" | "near" | "approximate";
 
 type RestoreResult = {
@@ -212,7 +240,7 @@ function resolveRestore(
   if (record.status === "completed" && endFingerprintIndex === lastBlockIndex) {
     const endMark = measurement.body
       .closest<HTMLElement>(".reading-edition-flow")
-      ?.querySelector<HTMLElement>('[aria-label="正文完"]');
+      ?.querySelector<HTMLElement>("[data-reading-end]");
     if (endMark) {
       return {
         top: Math.max(0, documentTop(endMark) - viewportAnchor() + 1),
@@ -289,12 +317,14 @@ export function useReadingProgress({
   revision,
   measurement,
   viewportAnchor,
+  messages = DEFAULT_MESSAGES,
 }: {
   active: boolean;
   slug: string;
   revision: string;
   measurement: ReadingMeasurement | null;
   viewportAnchor: () => number;
+  messages?: ReadingProgressMessages;
 }) {
   const [trackingEnabled, setTrackingEnabledState] = useState(true);
   const [preferenceReady, setPreferenceReady] = useState(false);
@@ -538,16 +568,16 @@ export function useReadingProgress({
         }
         installBoundary(result.boundaryAfter);
         restoredReadingRef.current = { record, restoredAt: performance.now(), measurement };
-        if (result.appended) showStatus("文章已有新增内容，已回到上次读完的位置");
-        else if (result.confidence === "approximate") showStatus("文章已更新，已恢复到上次位置附近");
-        else showStatus("已恢复到上次阅读位置");
+        if (result.appended) showStatus(messages.appended);
+        else if (result.confidence === "approximate") showStatus(messages.approximate);
+        else showStatus(messages.restored);
       });
     });
     return () => {
       cancelAnimationFrame(firstFrame);
       cancelAnimationFrame(secondFrame);
     };
-  }, [active, installBoundary, measurement, preferenceReady, revision, showStatus, slug, viewportAnchor]);
+  }, [active, installBoundary, measurement, messages, preferenceReady, revision, showStatus, slug, viewportAnchor]);
 
   useEffect(() => {
     const restored = restoredReadingRef.current;
@@ -588,7 +618,7 @@ export function useReadingProgress({
       : (sectionLinesBefore + location.lineIndex) / (sectionLineCount - 1);
     const endMark = currentMeasurement.body
       .closest<HTMLElement>(".reading-edition-flow")
-      ?.querySelector<HTMLElement>('[aria-label="正文完"]');
+      ?.querySelector<HTMLElement>("[data-reading-end]");
     const crossedEnd = !!endMark && endMark.getBoundingClientRect().top <= viewportAnchor();
     const previousRecord = latestRecordRef.current ?? recordRef.current;
     const sameRevisionCompleted = previousRecord?.revision === revision && previousRecord.status === "completed";
@@ -637,22 +667,22 @@ export function useReadingProgress({
       latestRecordRef.current = null;
       userInteractedRef.current = false;
       showStatus(preferenceStored
-        ? "已停止保存本机阅读记录"
-        : "本页已停止保存；浏览器未能记住此设置");
+        ? messages.disabled
+        : messages.disabledNotStored);
     } else {
       restorePhaseRef.current = "done";
       writeReadyRef.current = true;
       userInteractedRef.current = false;
       showStatus(preferenceStored
-        ? "已开启本机阅读记录"
-        : "本页已开启保存；浏览器未能记住此设置");
+        ? messages.enabled
+        : messages.enabledNotStored);
     }
-  }, [clearSaveTimer, showStatus]);
+  }, [clearSaveTimer, messages, showStatus]);
 
   const clearCurrent = useCallback(() => {
     clearSaveTimer();
     if (!removeReadingProgress(slug)) {
-      showStatus("浏览器未能清除本文阅读记录");
+      showStatus(messages.clearCurrentFailed);
       return;
     }
     recordRef.current = null;
@@ -661,13 +691,13 @@ export function useReadingProgress({
     userInteractedRef.current = false;
     setHasCurrentRecord(false);
     clearBoundary();
-    showStatus("已清除本文阅读记录");
-  }, [clearBoundary, clearSaveTimer, showStatus, slug]);
+    showStatus(messages.clearCurrentDone);
+  }, [clearBoundary, clearSaveTimer, messages, showStatus, slug]);
 
   const clearAll = useCallback(() => {
     clearSaveTimer();
     if (removeAllReadingProgress() === null) {
-      showStatus("浏览器未能清除全部阅读记录");
+      showStatus(messages.clearAllFailed);
       return;
     }
     recordRef.current = null;
@@ -676,8 +706,8 @@ export function useReadingProgress({
     userInteractedRef.current = false;
     setHasCurrentRecord(false);
     clearBoundary();
-    showStatus("已清除全部阅读记录");
-  }, [clearBoundary, clearSaveTimer, showStatus]);
+    showStatus(messages.clearAllDone);
+  }, [clearBoundary, clearSaveTimer, messages, showStatus]);
 
   useEffect(() => () => {
     clearSaveTimer();

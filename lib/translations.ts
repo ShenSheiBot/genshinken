@@ -99,6 +99,7 @@ export type TranslationEdition = {
   title: string;
   subtitle: string;
   titleBreaks: string[];
+  titleBreaksExplicit: boolean;
   excerpt: string;
   credits: TranslationCredit[];
   translationMethod: TranslationMethod;
@@ -504,6 +505,7 @@ async function loadLocale(locale: TranslationLocale): Promise<TranslationEdition
     const rendered = indexRenderedTranslation(
       await renderMarkdown(parsed.content, { format, language: locale })
     );
+    const titleBreaksValue = data.title_breaks;
     const edition: TranslationEdition = {
       workId: stableId(data, "work_id", sourcePath),
       sourceRef,
@@ -519,7 +521,8 @@ async function loadLocale(locale: TranslationLocale): Promise<TranslationEdition
       href: "",
       title,
       subtitle,
-      titleBreaks: titleBreaks(data.title_breaks, title, sourcePath, locale),
+      titleBreaks: titleBreaks(titleBreaksValue, title, sourcePath, locale),
+      titleBreaksExplicit: titleBreaksValue != null,
       excerpt: requiredText(data, "excerpt", sourcePath),
       credits,
       translationMethod: method as TranslationMethod,

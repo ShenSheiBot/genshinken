@@ -65,6 +65,7 @@ export interface PostSummary {
   script: HanScript;
   title: string;
   titleBreaks: string[];
+  titleBreaksExplicit: boolean;
   homeTitleBreaks: string[];
   subtitle: string;
   titleNote: string;
@@ -267,7 +268,7 @@ function titleBreaks(
   if (!Array.isArray(value)) {
     throw new Error(`${file}: ${field} 必须是按显示顺序填写的字符串数组`);
   }
-  const segments = value.map((segment) => String(segment).trim()).filter(Boolean);
+  const segments = value.map((segment) => String(segment)).filter((segment) => segment.trim().length > 0);
   if (segments.length === 0 || segments.join("") !== title) {
     throw new Error(`${file}: ${field} 拼接后必须与 title 完全一致`);
   }
@@ -451,7 +452,8 @@ async function loadRaw(): Promise<Post[]> {
       const date = toDate(data.date);
       const updated = toDate(data.updated);
       const title = String(data.title ?? baseName).trim();
-      const preferredTitleBreaks = titleBreaks(data.title_breaks ?? data.titleBreaks, title, file);
+      const titleBreaksValue = data.title_breaks ?? data.titleBreaks;
+      const preferredTitleBreaks = titleBreaks(titleBreaksValue, title, file);
       const homeTitleBreaksValue = data.home_title_breaks ?? data.homeTitleBreaks;
       const preferredHomeTitleBreaks = homeTitleBreaksValue == null
         ? []
@@ -520,6 +522,7 @@ async function loadRaw(): Promise<Post[]> {
         script,
         title,
         titleBreaks: preferredTitleBreaks,
+        titleBreaksExplicit: titleBreaksValue != null,
         homeTitleBreaks: preferredHomeTitleBreaks,
         subtitle,
         titleNote,

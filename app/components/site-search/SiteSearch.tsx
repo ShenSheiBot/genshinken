@@ -13,9 +13,40 @@ import {
   type ReactNode,
 } from "react";
 import { normalizeSearchEntity, searchCreditToken } from "@/lib/search-entities";
+import type { SearchTag } from "@/lib/search-tags";
 import styles from "./site-search.module.css";
 
-export type SearchTag = { name: string; count: number };
+export type SearchLocale = "zh" | "en" | "ja";
+
+const searchUi = {
+  zh: {
+    kicker: "SEARCH / 全站检索", title: "在屋顶寻找文本", close: "关闭搜索",
+    placeholder: "搜索标题、作者、标签与正文……", input: "搜索标题、作者、标签与正文",
+    matchedTags: "匹配标签", commonTags: "常用标签", authorWorks: "作者作品", contributorWorks: "署名页面",
+    textMatches: "正文命中", prompt: "输入词语后，将检索全部公开文章与连载章节。", loading: "正在检索文本……",
+    error: "全文索引暂时不可用；标签入口仍可正常使用。", empty: "没有找到正文命中。可以缩短关键词，或从标签继续浏览。",
+    untitled: "无题", more: (shown: number, total: number) => `显示相关度最高的 ${shown} 项，共 ${total} 项`,
+    trigger: "搜索本站", triggerTitle: "搜索本站（⌘K）",
+  },
+  en: {
+    kicker: "SEARCH / SITE INDEX", title: "Search Lab on Roof", close: "Close search",
+    placeholder: "Search titles, authors, tags, and full text…", input: "Search titles, authors, tags, and full text",
+    matchedTags: "Matching tags", commonTags: "Common tags", authorWorks: "Works by author", contributorWorks: "Contributor pages",
+    textMatches: "Text matches", prompt: "Enter a term to search every public article and book chapter.", loading: "Searching the archive…",
+    error: "Full-text search is temporarily unavailable; tag links still work.", empty: "No text matches found. Try a shorter term or browse by tag.",
+    untitled: "Untitled", more: (shown: number, total: number) => `Showing the ${shown} closest matches out of ${total}`,
+    trigger: "Search this site", triggerTitle: "Search this site (⌘K)",
+  },
+  ja: {
+    kicker: "SEARCH / サイト内検索", title: "屋頂現視研を検索", close: "検索を閉じる",
+    placeholder: "タイトル、著者、タグ、本文を検索…", input: "タイトル、著者、タグ、本文を検索",
+    matchedTags: "一致するタグ", commonTags: "よく使われるタグ", authorWorks: "著者の記事", contributorWorks: "クレジット掲載記事",
+    textMatches: "本文の検索結果", prompt: "語句を入力すると、公開中の記事と連載章を検索します。", loading: "検索中…",
+    error: "全文検索を利用できません。タグからの閲覧は引き続き可能です。", empty: "本文に一致する箇所がありません。語句を短くするか、タグからお探しください。",
+    untitled: "無題", more: (shown: number, total: number) => `全${total}件のうち、関連度の高い${shown}件を表示`,
+    trigger: "サイト内を検索", triggerTitle: "サイト内を検索（⌘K）",
+  },
+} as const;
 
 type PagefindResultData = {
   url: string;
@@ -51,7 +82,7 @@ type SearchResult = {
   tags: string;
 };
 
-type SearchContextValue = { openSearch: () => void };
+type SearchContextValue = { openSearch: () => void; locale: SearchLocale };
 type ContributorMatch = { name: string; role: "author" | "contributor" };
 
 const SearchContext = createContext<SearchContextValue | null>(null);
@@ -119,10 +150,13 @@ async function exactContributorSearch(
 export function SiteSearchProvider({
   tags,
   children,
+  locale = "zh",
 }: {
   tags: SearchTag[];
   children: ReactNode;
+  locale?: SearchLocale;
 }) {
+  const labels = searchUi[locale];
   const pathname = usePathname();
   const dialogRef = useRef<HTMLDialogElement | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
@@ -188,7 +222,7 @@ export function SiteSearchProvider({
           return {
             id: result.id,
             url: best.url,
-            title: data.meta.title || "无题",
+            title: data.meta.title || labels.untitled,
             excerpt: best.excerpt,
             credits: data.meta.credits || "",
             tags: data.meta.tags || "",
@@ -209,14 +243,14 @@ export function SiteSearchProvider({
     }, 160);
 
     return () => window.clearTimeout(timer);
-  }, [query]);
+  }, [labels.untitled, query]);
 
   const matchingTags = useMemo(() => {
     const term = normalized(query);
     return (term ? tags.filter((tag) => normalized(tag.name).includes(term)) : tags).slice(0, 8);
   }, [query, tags]);
 
-  const context = useMemo(() => ({ openSearch }), [openSearch]);
+  const context = useMemo(() => ({ openSearch, locale }), [locale, openSearch]);
 
   return (
     <SearchContext.Provider value={context}>
@@ -236,10 +270,10 @@ export function SiteSearchProvider({
         <section className={styles.panel}>
           <header className={styles.heading}>
             <div>
-              <span>SEARCH / 全站检索</span>
-              <h2 id="site-search-title">在屋顶寻找文本</h2>
+              <span>{labels.kicker}</span>
+              <h2 id="site-search-title">{labels.title}</h2>
             </div>
-            <button type="button" onClick={closeSearch} aria-label="关闭搜索">×</button>
+            <button type="button" onClick={closeSearch} aria-label={labels.close}>×</button>
           </header>
 
           <form className={styles.form} role="search" onSubmit={(event) => event.preventDefault()}>
@@ -249,8 +283,8 @@ export function SiteSearchProvider({
               type="search"
               value={query}
               onChange={(event) => setQuery(event.target.value)}
-              placeholder="搜索标题、作者、标签与正文……"
-              aria-label="搜索标题、作者、标签与正文"
+              placeholder={labels.placeholder}
+              aria-label={labels.input}
               autoComplete="off"
               spellCheck={false}
             />
@@ -260,7 +294,7 @@ export function SiteSearchProvider({
           {matchingTags.length > 0 && (
             <section className={styles.tags} aria-labelledby="search-tags-title">
               <header>
-                <h3 id="search-tags-title">{query ? "匹配标签" : "常用标签"}</h3>
+                <h3 id="search-tags-title">{query ? labels.matchedTags : labels.commonTags}</h3>
                 <span>{matchingTags.length.toString().padStart(2, "0")}</span>
               </header>
               <div>
@@ -281,18 +315,18 @@ export function SiteSearchProvider({
             <header>
               <h3 id="search-results-title">
                 {contributorMatch
-                  ? `${contributorMatch.role === "author" ? "作者作品" : "署名页面"} · ${contributorMatch.name}`
-                  : "正文命中"}
+                  ? `${contributorMatch.role === "author" ? labels.authorWorks : labels.contributorWorks} · ${contributorMatch.name}`
+                  : labels.textMatches}
               </h3>
               <span>{status === "ready" ? resultCount.toString().padStart(2, "0") : "—"}</span>
             </header>
-            {!query && <p className={styles.prompt}>输入词语后，将检索全部公开文章与连载章节。</p>}
-            {query && status === "loading" && <p className={styles.prompt}>正在检索文本……</p>}
+            {!query && <p className={styles.prompt}>{labels.prompt}</p>}
+            {query && status === "loading" && <p className={styles.prompt}>{labels.loading}</p>}
             {query && status === "error" && (
-              <p className={styles.prompt}>全文索引暂时不可用；标签入口仍可正常使用。</p>
+              <p className={styles.prompt}>{labels.error}</p>
             )}
             {query && status === "ready" && results.length === 0 && (
-              <p className={styles.prompt}>没有找到正文命中。可以缩短关键词，或从标签继续浏览。</p>
+              <p className={styles.prompt}>{labels.empty}</p>
             )}
             {results.length > 0 && (
               <ol>
@@ -313,7 +347,7 @@ export function SiteSearchProvider({
               </ol>
             )}
             {status === "ready" && resultCount > results.length && (
-              <p className={styles.more}>显示相关度最高的 {results.length} 项，共 {resultCount} 项</p>
+              <p className={styles.more}>{labels.more(results.length, resultCount)}</p>
             )}
           </section>
         </section>
@@ -334,13 +368,14 @@ function SearchGlyph() {
 export function SiteSearchTrigger({ className = "" }: { className?: string }) {
   const context = useContext(SearchContext);
   if (!context) return null;
+  const labels = searchUi[context.locale];
   return (
     <button
       type="button"
       className={className}
       onClick={context.openSearch}
-      aria-label="搜索本站"
-      title="搜索本站（⌘K）"
+      aria-label={labels.trigger}
+      title={labels.triggerTitle}
     >
       <SearchGlyph />
     </button>

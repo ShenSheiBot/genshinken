@@ -1,6 +1,6 @@
 ---
 title: 《比基尼杀戮》爱好者杂志封面（1991）
-title_breaks: [《比基尼杀戮》爱好者杂志封面, （1991）]
+title_breaks: [《比基尼杀戮》, 爱好者杂志封面, （1991）]
 date: 2023-02-12
 slug: bikini-kill-fanzine-cover-1991
 script: hans

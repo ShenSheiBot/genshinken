@@ -225,20 +225,50 @@ assert.match(
   /readingViewportAnchor as visualAnchor/u,
   "the Chinese reader must consume the shared reading anchor"
 );
-const translationReferencesSource = fs.readFileSync(
+const translationEditionSource = fs.readFileSync(
   path.join(
     process.cwd(),
     "app",
     "components",
     "translation",
-    "TranslationReferences.tsx"
+    "TranslationEditionPage.tsx"
+  ),
+  "utf8"
+);
+const readingEditionSource = fs.readFileSync(
+  path.join(
+    process.cwd(),
+    "app",
+    "components",
+    "reading-edition",
+    "ReadingEdition.tsx"
   ),
   "utf8"
 );
 assert.match(
-  translationReferencesSource,
-  /scrollElementToReadingAnchor/u,
-  "translated endnotes must consume the shared reading anchor"
+  translationEditionSource,
+  /<ReadingEditionChrome/u,
+  "translated editions must use the shared reading chrome"
+);
+assert.match(
+  translationEditionSource,
+  /<DossierReading/u,
+  "translated editions must use the shared reading layout"
+);
+assert.match(
+  readingEditionSource,
+  /data-reading-end/u,
+  "the shared reading body must expose a locale-neutral completion marker"
+);
+assert.match(
+  hookSource,
+  /querySelector<HTMLElement>\("\[data-reading-end\]"\)/u,
+  "reading progress must locate completion through the locale-neutral marker"
+);
+assert.doesNotMatch(
+  hookSource,
+  /aria-label=["']正文完["']/u,
+  "reading progress must not depend on a Chinese accessibility label"
 );
 assert.doesNotMatch(
   chromeSource,

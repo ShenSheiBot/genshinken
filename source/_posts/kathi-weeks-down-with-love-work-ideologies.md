@@ -1,6 +1,6 @@
 ---
 title: 打倒爱：女性主义批判与新的工作意识形态
-title_breaks: [打倒爱：, 女性主义批判与新的工作意识形态]
+title_breaks: [打倒爱：, 女性主义批判与, 新的工作意识形态]
 date: 2023-05-09
 slug: kathi-weeks-down-with-love-work-ideologies
 script: hans

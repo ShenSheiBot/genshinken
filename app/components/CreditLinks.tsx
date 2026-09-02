@@ -15,7 +15,7 @@ const styles = {
 } as const;
 
 type CreditLinksProps = {
-  credits: readonly Credit[];
+  credits: readonly CreditLinkItem[];
   className?: string;
   itemClassName?: string;
   markClassName?: string;
@@ -24,6 +24,12 @@ type CreditLinksProps = {
   limit?: number;
   separator?: ReactNode;
   fallbackName?: string;
+};
+
+export type CreditLinkItem = Omit<Credit, "role" | "contributorId"> & {
+  role: Credit["role"] | "reviewer";
+  contributorId: string;
+  roleLabel?: string;
 };
 
 function classes(...values: Array<string | undefined | false>): string {
@@ -77,7 +83,10 @@ export default function CreditLinks({
                   markClassName
                 )}
                 role="img"
-                aria-label={CREDIT_ROLE_META[credit.role].label}
+                aria-label={
+                  credit.roleLabel
+                  ?? (credit.role === "reviewer" ? "Reviewer" : CREDIT_ROLE_META[credit.role].label)
+                }
               >
                 {credit.mark}
               </span>

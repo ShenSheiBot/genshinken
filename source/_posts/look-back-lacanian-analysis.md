@@ -1,6 +1,6 @@
 ---
 title: "回答：如何评价藤本树的短篇漫画《Look Back》（蓦然回首）？——一种拉康派分析"
-title_breaks: ["回答：如何评价", "藤本树的短篇漫画", "《Look Back》（蓦然回首）？", "——一种拉康派分析"]
+title_breaks: ["回答：如何评价", "藤本树的短篇漫画", "《Look Back》", "（蓦然回首）？", "——一种拉康派分析"]
 date: 2021-08-11
 slug: look-back-lacanian-analysis
 script: hans

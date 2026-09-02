@@ -7,7 +7,7 @@ language: en
 status: published
 published: 2026-08-27
 title: "What It Means to Say “We’ll Be All Right”: Reflections on Weathering with You"
-title_breaks: ["What It Means to Say", "“We’ll Be All Right”:", "Reflections on Weathering with You"]
+title_breaks: ["What It Means to Say", "“We’ll Be All Right”:", "Reflections on", "Weathering with You"]
 excerpt: Hongcha Pao Haitai asks why Weathering with You’s attempt to tie an intimate romance to a crisis engulfing Tokyo falters, then finds unexpected power in its final promise to face a damaged world side by side.
 credits:
   - role: translator

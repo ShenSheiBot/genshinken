@@ -5,13 +5,10 @@ import type { FormEvent, MouseEvent as ReactMouseEvent, PointerEvent as ReactPoi
 import { createPortal } from "react-dom";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import type { Credit } from "@/lib/posts";
-import { CREDIT_ROLE_META } from "@/lib/credit-roles";
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import type { HanScript } from "@/lib/han-script";
-import { site } from "@/lib/site";
 import { GLOBAL_NAV_ITEMS, isReadingRoute } from "@/lib/navigation";
-import CreditLinks from "@/app/components/CreditLinks";
+import CreditLinks, { type CreditLinkItem } from "@/app/components/CreditLinks";
 import CitationCopyButton from "@/app/components/CitationCopyButton";
 import {
   fingerprintReadingNodes,
@@ -32,12 +29,38 @@ import {
 import { toggleTheme, useTheme } from "@/app/components/useTheme";
 import { SiteSearchTrigger } from "@/app/components/site-search/SiteSearch";
 import styles from "./reading-edition.module.css";
+import { READING_UI, type ReadingUiLocale } from "./reading-edition-ui";
 
 type ReaderSize = "small" | "medium" | "large";
 type ReaderFont = "serif" | "sans";
 type ReferenceKind = "annotation" | "source";
 type Sheet = "toc" | "settings" | ReferenceKind | null;
 type FigureIndexMode = "toc" | "figures" | "book";
+const READING_ENTRY_INTENT_KEY = "roof_reading_entry_intent";
+
+function readReadingEntryIntent(): string | null {
+  try {
+    return sessionStorage.getItem(READING_ENTRY_INTENT_KEY);
+  } catch {
+    return null;
+  }
+}
+
+function clearReadingEntryIntent(): void {
+  try {
+    sessionStorage.removeItem(READING_ENTRY_INTENT_KEY);
+  } catch {
+    // Storage policy may reject access; the intent is optional and short-lived.
+  }
+}
+
+function storeReadingEntryIntent(pathname: string): void {
+  try {
+    sessionStorage.setItem(READING_ENTRY_INTENT_KEY, pathname);
+  } catch {
+    // Entry animation is optional; storage policy must never block navigation.
+  }
+}
 type TocItem = { id: string; title: string; level: number };
 type TocNode = TocItem & { children: TocNode[] };
 type FigureIndexItem = { id: string; index: number; caption: string; kind: "figure" | "table" };
@@ -317,7 +340,13 @@ function tableColumnCount(table: HTMLTableElement): number {
   }, 0);
 }
 
-function referenceItem(target: HTMLElement, kind: ReferenceKind, index: number, label: string): ReferenceItem {
+function referenceItem(
+  target: HTMLElement,
+  kind: ReferenceKind,
+  index: number,
+  label: string,
+  viewTableLabel: string,
+): ReferenceItem {
   const sourceTables = Array.from(target.querySelectorAll<HTMLTableElement>("table"));
   sourceTables.forEach((table, tableIndex) => {
     const columnCount = tableColumnCount(table);
@@ -344,7 +373,7 @@ function referenceItem(target: HTMLElement, kind: ReferenceKind, index: number, 
     const link = document.createElement("a");
     link.href = `#${sourceTable.id}`;
     link.setAttribute("data-reference-table-link", "true");
-    link.textContent = "查看文后表格";
+    link.textContent = viewTableLabel;
     table.replaceWith(link);
   });
 
@@ -372,17 +401,22 @@ export default function ReadingEditionChrome({
   citationBibtex,
   citationHref,
   bookToc,
+  uiLocale = "zh",
+  hanConversionEnabled = true,
 }: {
   title: string;
   slug: string;
   contentRevision: string;
   sourceScript: HanScript;
-  credits: Credit[];
+  credits: CreditLinkItem[];
   fallbackAuthor: string;
   citationBibtex?: string;
   citationHref?: string;
   bookToc?: ReadingBookToc;
+  uiLocale?: ReadingUiLocale;
+  hanConversionEnabled?: boolean;
 }) {
+  const ui = READING_UI[uiLocale];
   const router = useRouter();
   const [toc, setToc] = useState<TocItem[]>([]);
   const [activeId, setActiveId] = useState("");
@@ -419,7 +453,11 @@ export default function ReadingEditionChrome({
     statusMessage: hanScriptStatus,
     conversionRevision,
     toggleScript: toggleHanScript,
-  } = useHanScriptConversion({ sourceScript, contentRevision });
+  } = useHanScriptConversion({
+    sourceScript,
+    contentRevision,
+    active: hanConversionEnabled,
+  });
 
   const tocRef = useRef<TocItem[]>([]);
   const figureItemsRef = useRef<FigureIndexItem[]>([]);
@@ -450,6 +488,26 @@ export default function ReadingEditionChrome({
     pageX: number;
     pageY: number;
   } | null>(null);
+
+  useLayoutEffect(() => {
+    const intendedPath = readReadingEntryIntent();
+    if (intendedPath !== window.location.pathname) {
+      clearReadingEntryIntent();
+      return;
+    }
+    const root = document.documentElement;
+    delete root.dataset.readingChromeExit;
+    root.dataset.readingChromeEntry = "route";
+    const consumeTimer = window.setTimeout(clearReadingEntryIntent, 0);
+    const timer = window.setTimeout(() => {
+      delete root.dataset.readingChromeEntry;
+    }, 800);
+    return () => {
+      window.clearTimeout(consumeTimer);
+      window.clearTimeout(timer);
+      delete root.dataset.readingChromeEntry;
+    };
+  }, [slug]);
 
   useEffect(() => () => {
     figureScrollRequestRef.current += 1;
@@ -491,7 +549,8 @@ export default function ReadingEditionChrome({
       const destination = new URL(anchor.href, window.location.href);
       if (
         destination.origin !== window.location.origin
-        || isReadingRoute(destination.pathname)
+        || destination.href === window.location.href
+        || (isReadingRoute(destination.pathname) && !anchor.hasAttribute("data-reading-edition-switch"))
       ) return;
 
       event.preventDefault();
@@ -509,6 +568,9 @@ export default function ReadingEditionChrome({
       const root = document.documentElement;
       delete root.dataset.readingChromeEntry;
       root.dataset.readingChromeExit = "route";
+      if (anchor.hasAttribute("data-reading-edition-entry")) {
+        storeReadingEntryIntent(destination.pathname);
+      }
       exitNavigationTimerRef.current = window.setTimeout(() => {
         exitNavigationTimerRef.current = null;
         router.push(href);
@@ -523,8 +585,8 @@ export default function ReadingEditionChrome({
 
   const tocTree = useMemo(() => buildTocTree(toc), [toc]);
   const currentSection = useMemo(
-    () => toc.find((item) => item.id === activeId)?.title || "导读",
-    [activeId, toc]
+    () => toc.find((item) => item.id === activeId)?.title || ui.introduction,
+    [activeId, toc, ui.introduction]
   );
   const progress = lineCount > 0 ? currentLine / lineCount : 0;
   const pct = Math.round(progress * 100);
@@ -533,9 +595,11 @@ export default function ReadingEditionChrome({
   const hasFigureIndex = figureItems.length > 0;
   const showFigureIndex = desktopDesk && hasFigureIndex;
   const showReadingIndexTabs = hasFigureIndex || Boolean(bookToc);
-  const readingIndexTabsLabel = hasFigureIndex
-    ? bookToc ? "目录、图表与全书目录切换" : "目录与图表切换"
-    : "目录与全书目录切换";
+  const readingIndexTabsLabel = [
+    ui.contents,
+    ...(hasFigureIndex ? [ui.figures] : []),
+    ...(bookToc ? [ui.bookContents] : []),
+  ].join(" / ");
   const {
     trackingEnabled: readingProgressEnabled,
     hasCurrentRecord,
@@ -551,6 +615,7 @@ export default function ReadingEditionChrome({
     revision: contentRevision,
     measurement: readingMeasurement,
     viewportAnchor: visualAnchor,
+    messages: ui.progressMessages,
   });
   const readerStatus = hanScriptStatus || readingProgressStatus;
 
@@ -596,7 +661,7 @@ export default function ReadingEditionChrome({
 
     const headings = Array.from(body.querySelectorAll<HTMLElement>("h1, h2, h3, h4")).map((heading, index) => {
       if (!heading.id) heading.id = `reading-section-${index + 1}`;
-      return { id: heading.id, title: (heading.textContent || `第 ${index + 1} 节`).trim(), level: Number(heading.tagName.slice(1)) };
+      return { id: heading.id, title: (heading.textContent || ui.untitledSection(index + 1)).trim(), level: Number(heading.tagName.slice(1)) };
     });
     tocRef.current = headings;
     setToc(headings);
@@ -636,12 +701,13 @@ export default function ReadingEditionChrome({
         target,
         "annotation",
         index,
-        labels.get(target.id) || target.dataset.referenceLabel || String(index + 1)
+        labels.get(target.id) || target.dataset.referenceLabel || String(index + 1),
+        ui.viewTable
       );
     });
     const sourceItems = Array.from(document.querySelectorAll<HTMLElement>(".reading-edition-appendix .source-notes li")).map((target, index) => {
       if (!target.id) target.id = `reading-source-${index + 1}`;
-      return referenceItem(target, "source", index, labels.get(target.id) || toRoman(index + 1));
+      return referenceItem(target, "source", index, labels.get(target.id) || toRoman(index + 1), ui.viewTable);
     });
     annotationRef.current = annotationItems;
     sourceRef.current = sourceItems;
@@ -656,7 +722,7 @@ export default function ReadingEditionChrome({
       figureElementsRef.current.clear();
       setLineMarkerHost(null);
     };
-  }, [contentRevision, conversionRevision, slug]);
+  }, [contentRevision, conversionRevision, slug, ui]);
 
   const syncReadingPosition = useCallback(() => {
     const body = bodyRef.current;
@@ -1391,7 +1457,7 @@ export default function ReadingEditionChrome({
       <div className={styles.tocBranch} key={node.id} data-depth={depth}>
         <div className={styles.tocRow} data-active={node.id === activeId ? "true" : "false"}>
           {hasChildren ? (
-            <button type="button" className={styles.tocDisclosure} aria-label={`${expanded ? "折叠" : "展开"}${node.title}的下级标题`} aria-expanded={expanded} aria-controls={childrenId} onClick={() => toggleToc(node.id)}>
+            <button type="button" className={styles.tocDisclosure} aria-label={`${expanded ? ui.collapse : ui.expand} ${node.title}${ui.subsections}`} aria-expanded={expanded} aria-controls={childrenId} onClick={() => toggleToc(node.id)}>
               {expanded ? "−" : "+"}
             </button>
           ) : <span className={styles.tocDisclosurePlaceholder} />}
@@ -1418,9 +1484,9 @@ export default function ReadingEditionChrome({
   };
 
   const lineNavigator = (
-    <form className={styles.lineNavigator} onSubmit={jumpToLine} aria-label="按正文视觉行跳转">
+    <form className={styles.lineNavigator} onSubmit={jumpToLine} aria-label={ui.jumpToLine}>
       <div className={styles.lineNumbers}>
-        <span>阅读进度</span>
+        <span>{ui.readingProgress}</span>
         <strong>
           {editingLine ? (
             <input
@@ -1432,7 +1498,7 @@ export default function ReadingEditionChrome({
               enterKeyHint="go"
               autoComplete="off"
               value={lineDraft}
-              aria-label={`输入正文行数，共 ${lineCount} 行`}
+              aria-label={`${ui.jumpToLine}: ${lineCount} ${ui.line}`}
               onChange={(event) => setLineDraft(event.target.value.replace(/\D/g, ""))}
               onKeyDown={(event) => {
                 if (event.key !== "Enter") return;
@@ -1445,13 +1511,13 @@ export default function ReadingEditionChrome({
               className={styles.lineCurrent}
               type="button"
               disabled={lineCount === 0}
-              aria-label={lineCount === 0 ? "正文行数正在计算" : `当前第 ${currentLine} 行，点击输入行数跳转`}
+              aria-label={lineCount === 0 ? ui.lineCountPending : `${ui.readingProgress}: ${currentLine} / ${lineCount} ${ui.line}`}
               onClick={beginLineEdit}
             >
               {String(currentLine)}
             </button>
           )}
-          <small> / {String(lineCount)} 行</small>
+          <small> / {String(lineCount)} {ui.line}</small>
         </strong>
       </div>
       <span className={styles.lineTrack} aria-hidden="true"><i style={{ width: `${pct}%` }} /></span>
@@ -1459,7 +1525,7 @@ export default function ReadingEditionChrome({
   );
 
   const tocContents = tocTree.length === 0
-    ? <p className={styles.emptyRail}>本文没有分节标题，可按视觉行定位。</p>
+    ? <p className={styles.emptyRail}>{ui.noSections}</p>
     : tocTree.map((node, index) => renderTocNode(node, String(index), 0, index));
 
   const renderBookTocItem = (item: ReadingBookTocItem, depth: number) => {
@@ -1470,7 +1536,7 @@ export default function ReadingEditionChrome({
       <>
         <span>{item.number}</span>
         <b>{item.title}</b>
-        {item.status === "forthcoming" && <small>待更新</small>}
+        {item.status === "forthcoming" && <small>{ui.forthcoming}</small>}
       </>
     );
     return (
@@ -1489,7 +1555,7 @@ export default function ReadingEditionChrome({
             <button
               type="button"
               className={styles.bookTocDisclosure}
-              aria-label={`${expanded ? "折叠" : "展开"}${item.title}的次级标题`}
+              aria-label={`${expanded ? ui.collapse : ui.expand} ${item.title}${ui.subsections}`}
               aria-expanded={expanded}
               aria-controls={sectionsId}
               onClick={() => toggleBookChapter(item.id)}
@@ -1503,7 +1569,7 @@ export default function ReadingEditionChrome({
             id={sectionsId}
             className={styles.bookTocSections}
             data-expanded={expanded ? "true" : "false"}
-            aria-label={`${item.title}的次级标题`}
+            aria-label={`${item.title}${ui.subsections}`}
             aria-hidden={!expanded}
             inert={!expanded}
           >
@@ -1516,7 +1582,7 @@ export default function ReadingEditionChrome({
                   aria-disabled="true"
                   key={section.id}
                 >
-                  <span aria-hidden="true">↳</span><b>{section.title}</b><small>待更新</small>
+                  <span aria-hidden="true">↳</span><b>{section.title}</b><small>{ui.forthcoming}</small>
                 </div>
               ) : item.current ? (
                 <button
@@ -1562,22 +1628,23 @@ export default function ReadingEditionChrome({
     <footer
       className={styles.tocActions}
       data-citation={hasCitationActions ? "true" : "false"}
-      aria-label="文章操作"
+      aria-label={ui.articleActions}
     >
       {citationBibtex && citationHref && (
         <>
           <CitationCopyButton
             bibtex={citationBibtex}
             className={styles.citationRailCopy}
-            label="复制"
+            label={ui.copy}
+            locale={uiLocale}
           />
-          <a href={citationHref} download={`${slug}.bib`} aria-label="下载本页 BibTeX 引用">
+          <a href={citationHref} download={`${slug}.bib`} aria-label={`${ui.download} BibTeX`}>
             <span>BIB</span>
-            下载
+            {ui.download}
           </a>
         </>
       )}
-      <button className={styles.toTop} type="button" onClick={returnToPageStart}>返回篇首</button>
+      <button className={styles.toTop} type="button" onClick={returnToPageStart}>{ui.backToTop}</button>
     </footer>
   );
 
@@ -1587,16 +1654,12 @@ export default function ReadingEditionChrome({
       data-figure-index-mode={figureIndexMode}
       data-has-figures={hasFigureIndex ? "true" : "false"}
       data-has-book={bookToc ? "true" : "false"}
-      aria-label={figureIndexMode === "toc" ? "文章目录" : figureIndexMode === "figures" ? "文章图表索引" : "全书目录"}
+      aria-label={figureIndexMode === "toc" ? ui.articleContents : figureIndexMode === "figures" ? ui.figureIndex : ui.bookContents}
     >
       <header className={styles.figureIndexTabs} data-has-figures={hasFigureIndex ? "true" : "false"} data-has-book={bookToc ? "true" : "false"} role="tablist" aria-label={readingIndexTabsLabel}>
-        <span className={styles.figureIndexThumb} aria-hidden="true" />
-        <b className={styles.figureIndexTabLabel} data-slot="toc" data-selected={figureIndexMode === "toc" ? "true" : "false"} aria-hidden="true">目录</b>
-        {hasFigureIndex && <b className={styles.figureIndexTabLabel} data-slot="figures" data-selected={figureIndexMode === "figures" ? "true" : "false"} aria-hidden="true">图表</b>}
-        {bookToc && <b className={styles.figureIndexTabLabel} data-slot="book" data-selected={figureIndexMode === "book" ? "true" : "false"} aria-hidden="true">全书目录</b>}
-        <button data-slot="toc" type="button" role="tab" aria-label="目录" aria-selected={figureIndexMode === "toc"} aria-controls="reading-index-toc" onClick={() => setFigureIndexMode("toc")} />
-        {hasFigureIndex && <button data-slot="figures" type="button" role="tab" aria-label="图表" aria-selected={figureIndexMode === "figures"} aria-controls="reading-index-figures" onClick={() => setFigureIndexMode("figures")} />}
-        {bookToc && <button data-slot="book" type="button" role="tab" aria-label="全书目录" aria-selected={figureIndexMode === "book"} aria-controls="reading-index-book" onClick={() => setFigureIndexMode("book")} />}
+        <button type="button" role="tab" aria-selected={figureIndexMode === "toc"} aria-controls="reading-index-toc" onClick={() => setFigureIndexMode("toc")}>{ui.contents}</button>
+        {hasFigureIndex && <button type="button" role="tab" aria-selected={figureIndexMode === "figures"} aria-controls="reading-index-figures" onClick={() => setFigureIndexMode("figures")}>{ui.figures}</button>}
+        {bookToc && <button type="button" role="tab" aria-selected={figureIndexMode === "book"} aria-controls="reading-index-book" onClick={() => setFigureIndexMode("book")}>{ui.bookContents}</button>}
       </header>
       <div className={styles.figureIndexViewport}>
         <div className={styles.figureIndexPanels} data-mode={figureIndexMode} data-has-figures={hasFigureIndex ? "true" : "false"} data-has-book={bookToc ? "true" : "false"}>
@@ -1629,7 +1692,7 @@ export default function ReadingEditionChrome({
                   onClick={() => jumpToFigure(item.id)}
                   key={item.id}
                 >
-                  <span>{item.kind === "table" ? `表${item.index}` : `图${item.index}`}</span>
+                  <span>{item.kind === "table" ? `${ui.table} ${item.index}` : `${ui.figure} ${item.index}`}</span>
                   {item.caption && <b>{item.caption}</b>}
                 </button>
               );
@@ -1652,15 +1715,15 @@ export default function ReadingEditionChrome({
       {tocActions}
     </nav>
   ) : (
-    <nav className={styles.tocPanel} aria-label="文章目录">
-      <header><b>目录</b></header>
+    <nav className={styles.tocPanel} aria-label={ui.articleContents}>
+      <header><b>{ui.contents}</b></header>
       <div className={`${styles.tocViewport} ${styles.styledScroller}`}>{tocContents}</div>
       {tocActions}
     </nav>
   );
 
   const compactCredits = (
-    <section className={styles.compactCredits} aria-label="署名">
+    <section className={styles.compactCredits} aria-label={ui.credits}>
       <dl>
         {credits.length > 0 ? credits.map((credit) => (
           <div key={`${credit.role}-${credit.contributorId}`}>
@@ -1669,7 +1732,7 @@ export default function ReadingEditionChrome({
                 className={styles.creditMark}
                 data-solid={credit.solid ? "true" : "false"}
                 role="img"
-                aria-label={CREDIT_ROLE_META[credit.role].label}
+                aria-label={credit.roleLabel ?? ui.roleLabels[credit.role]}
               >
                 {credit.mark}
               </span>
@@ -1678,8 +1741,8 @@ export default function ReadingEditionChrome({
           </div>
         )) : (
           <div>
-            <dt><span className={styles.creditMark} data-solid="true" role="img" aria-label="作者">作</span></dt>
-            <dd>{fallbackAuthor || `${site.brandCN}编辑部`}</dd>
+            <dt><span className={styles.creditMark} data-solid="true" role="img" aria-label={ui.author}>{ui.roleMarks.author}</span></dt>
+            <dd>{fallbackAuthor || ui.brand}</dd>
           </div>
         )}
       </dl>
@@ -1690,9 +1753,9 @@ export default function ReadingEditionChrome({
     const items = kind === "annotation" ? annotations : sources;
     const active = kind === "annotation" ? activeAnnotationId : activeSourceId;
     const current = Math.max(1, items.findIndex((item) => item.id === active) + 1);
-    const heading = kind === "annotation" ? "注释" : "文献";
+    const heading = kind === "annotation" ? ui.annotation : ui.source;
     return (
-      <form className={styles.referenceCounter} onSubmit={(event) => jumpToReferenceNumber(event, kind, surface)} aria-label={`按序号跳转${heading}`}>
+      <form className={styles.referenceCounter} onSubmit={(event) => jumpToReferenceNumber(event, kind, surface)} aria-label={ui.referenceJump(heading)}>
         {editingReference === kind ? (
           <input
             ref={referenceInputRef}
@@ -1703,7 +1766,7 @@ export default function ReadingEditionChrome({
             enterKeyHint="go"
             autoComplete="off"
             value={referenceDraft}
-            aria-label={`输入${heading}序号，共 ${items.length} 条`}
+            aria-label={ui.referenceInput(heading, items.length)}
             onChange={(event) => setReferenceDraft(event.target.value.replace(/\D/g, ""))}
             onKeyDown={(event) => {
               if (event.key !== "Enter") return;
@@ -1712,7 +1775,7 @@ export default function ReadingEditionChrome({
             }}
           />
         ) : (
-          <button className={styles.referenceCurrent} type="button" aria-label={`当前第 ${current} 条${heading}，点击输入序号跳转`} onClick={() => beginReferenceEdit(kind, current)}>
+          <button className={styles.referenceCurrent} type="button" aria-label={ui.referenceCurrent(heading, current)} onClick={() => beginReferenceEdit(kind, current)}>
             {String(current)}
           </button>
         )}
@@ -1724,7 +1787,8 @@ export default function ReadingEditionChrome({
   const referencePane = (kind: ReferenceKind, compact = false) => {
     const items = kind === "annotation" ? annotations : sources;
     const active = kind === "annotation" ? activeAnnotationId : activeSourceId;
-    const heading = kind === "annotation" ? "注释" : "文献";
+    const heading = kind === "annotation" ? ui.annotation : ui.source;
+    const singularHeading = kind === "annotation" ? ui.annotationSingular : ui.sourceSingular;
     return (
       <section className={styles.referencePane} data-kind={kind} data-compact={compact ? "true" : "false"}>
         {!compact && <header><b>{heading}</b>{referenceCounter(kind, "desk")}</header>}
@@ -1735,7 +1799,7 @@ export default function ReadingEditionChrome({
             if (!followReferenceTable(event) && compact) followSheetReference(event);
           }}
         >
-          {items.length === 0 ? <p className={styles.emptyRail}>本文没有{heading}。</p> : items.map((item) => {
+          {items.length === 0 ? <p className={styles.emptyRail}>{ui.noReference(heading)}</p> : items.map((item) => {
             const selected = item.id === active;
             return (
               <article id={`reading-reference-${kind}-${item.index}`} key={item.id} className={styles.referenceItem} data-reference-kind={kind} data-reference-id={item.id} data-active={selected ? "true" : "false"}>
@@ -1749,14 +1813,14 @@ export default function ReadingEditionChrome({
             );
           })}
         </div>
-        {items.length > 0 && <footer><button type="button" onClick={() => scrollReferenceEdge(kind, "start", compact ? "sheet" : "desk")}>首条{heading}</button><button type="button" onClick={() => scrollReferenceEdge(kind, "end", compact ? "sheet" : "desk")}>末条{heading}</button><button type="button" onClick={() => viewReferenceOrigin(kind)}>原文位置</button></footer>}
+        {items.length > 0 && <footer><button type="button" onClick={() => scrollReferenceEdge(kind, "start", compact ? "sheet" : "desk")}>{ui.firstReference(singularHeading)}</button><button type="button" onClick={() => scrollReferenceEdge(kind, "end", compact ? "sheet" : "desk")}>{ui.lastReference(singularHeading)}</button><button type="button" onClick={() => viewReferenceOrigin(kind)}>{ui.sourcePosition}</button></footer>}
       </section>
     );
   };
 
   const articleIdentity = (
     <section className={styles.articleIdentity}>
-      <span className={styles.eyebrow}>您正在读</span>
+      <span className={styles.eyebrow}>{ui.youAreReading}</span>
       <b title={title}>{title}</b>
     </section>
   );
@@ -1791,9 +1855,9 @@ export default function ReadingEditionChrome({
     : null;
   const readingUpdateBoundaryPortal = readingUpdateBoundaryHost
     ? createPortal(
-      <div className={styles.readingUpdateBoundary} role="note" aria-label="文章更新边界">
-        <span>上次读完至此</span>
-        <b>以下为更新内容</b>
+      <div className={styles.readingUpdateBoundary} role="note" aria-label={ui.updateBoundary}>
+        <span>{ui.readUntil}</span>
+        <b>{ui.updatedBelow}</b>
       </div>,
       readingUpdateBoundaryHost
     )
@@ -1818,7 +1882,7 @@ export default function ReadingEditionChrome({
         if (sheet === "settings") closeSheet();
         else openSheet("settings", event.currentTarget);
       }}
-      aria-label={"阅读习惯"}
+      aria-label={ui.settings}
       aria-haspopup="dialog"
       aria-expanded={sheet === "settings"}
     >
@@ -1836,20 +1900,20 @@ export default function ReadingEditionChrome({
         </p>
       )}
       <header className={styles.runningHeader}>
-        <Link href="/" className={`${styles.runningBrand} ignore-opencc`} aria-label={`返回${site.brandCN}首页`}><i /><span className={styles.runningBrandName}>{site.brandCN}</span></Link>
-        <nav className={styles.runningSections} aria-label="全站导航">
-          {GLOBAL_NAV_ITEMS.map((item) => (
+        <Link href="/" className={`${styles.runningBrand} ignore-opencc`} aria-label={ui.home}><i /><span className={styles.runningBrandName}>{ui.brand}</span></Link>
+        <nav className={styles.runningSections} aria-label={ui.globalNav}>
+          {GLOBAL_NAV_ITEMS.map((item, index) => (
             <Link key={item.href} href={item.href} className={styles.runningSectionLink}>
-              <b>{item.label}</b>
+              <b>{ui.nav[index]}</b>
             </Link>
           ))}
         </nav>
-        <button className={styles.mobileSectionButton} type="button" onClick={(event) => openSheet("toc", event.currentTarget)} aria-label={`文章目录：${currentSection}`} aria-haspopup="dialog" aria-expanded={sheet === "toc"}><span>{currentSection}</span><b>⌄</b></button>
+        <button className={styles.mobileSectionButton} type="button" onClick={(event) => openSheet("toc", event.currentTarget)} aria-label={`${ui.articleContents}: ${currentSection}`} aria-haspopup="dialog" aria-expanded={sheet === "toc"}><span>{currentSection}</span><b>⌄</b></button>
         <div className={styles.runningTools}>
-          <button className={styles.compactTocButton} type="button" onClick={(event) => openSheet("toc", event.currentTarget)} aria-haspopup="dialog" aria-expanded={sheet === "toc"}>目录</button>
+          <button className={styles.compactTocButton} type="button" onClick={(event) => openSheet("toc", event.currentTarget)} aria-haspopup="dialog" aria-expanded={sheet === "toc"}>{ui.contents}</button>
           <SiteSearchTrigger className={styles.searchButton} />
-          <button className={styles.themeButton} type="button" onClick={toggleTheme} aria-label="切换明暗主题">{dark ? "☾" : "☼"}</button>
-          <button
+          <button className={styles.themeButton} type="button" onClick={toggleTheme} aria-label={ui.theme}>{dark ? "☾" : "☼"}</button>
+          {hanConversionEnabled && <button
             className={`${styles.hanScriptButton} ignore-opencc`}
             type="button"
             onClick={toggleHanScript}
@@ -1864,7 +1928,7 @@ export default function ReadingEditionChrome({
               <span className={styles.hanTraditional}>繁</span>
               <span className={styles.hanSimplified}>简</span>
             </span>
-          </button>
+          </button>}
           {settingsControl}
         </div>
         <span className={styles.topRule} data-rail-progress={desktopDesk ? "true" : "false"} aria-hidden="true">
@@ -1874,16 +1938,16 @@ export default function ReadingEditionChrome({
 
       {sheet && (
         <div className={styles.sheetLayer} data-sheet={sheet} data-closing={sheetClosing ? "true" : "false"} role="presentation" onMouseDown={(event) => { if (event.currentTarget === event.target) closeSheet(); }}>
-          <section ref={sheetRef} className={styles.sheet} data-sheet={sheet} role="dialog" aria-modal="true" aria-hidden={sheetClosing || undefined} inert={sheetClosing} tabIndex={-1} aria-label={sheet === "toc" ? "文章目录" : sheet === "settings" ? "阅读习惯" : sheet === "annotation" ? "文章注释" : "文章文献"}>
+          <section ref={sheetRef} className={styles.sheet} data-sheet={sheet} role="dialog" aria-modal="true" aria-hidden={sheetClosing || undefined} inert={sheetClosing} tabIndex={-1} aria-label={sheet === "toc" ? ui.articleContents : sheet === "settings" ? ui.settings : sheet === "annotation" ? ui.annotation : ui.source}>
             <div className={styles.sheetHandle} />
             <header className={styles.sheetHeader}>
               <div className={styles.sheetHeading}>
-                {previousReference && (sheet === "annotation" || sheet === "source") && <button type="button" className={styles.referenceBack} onClick={returnToPreviousReference}>← 返回{previousReference.kind === "annotation" ? "注释" : "文献"} {previousReference.label}</button>}
-                <div><h2>{sheet === "toc" ? "文章目录" : sheet === "settings" ? "阅读习惯" : sheet === "annotation" ? "注释" : "文献"}</h2></div>
+                {previousReference && (sheet === "annotation" || sheet === "source") && <button type="button" className={styles.referenceBack} onClick={returnToPreviousReference}>← {ui.back} {previousReference.kind === "annotation" ? ui.annotation : ui.source} {previousReference.label}</button>}
+                <div><h2>{sheet === "toc" ? ui.articleContents : sheet === "settings" ? ui.settings : sheet === "annotation" ? ui.annotation : ui.source}</h2></div>
               </div>
               <div className={styles.sheetHeaderActions}>
                 {(sheet === "annotation" || sheet === "source") && referenceCounter(sheet, "sheet")}
-                <button type="button" onClick={() => closeSheet()} aria-label={"关闭"}>{"×"}</button>
+                <button type="button" onClick={() => closeSheet()} aria-label={ui.close}>{"×"}</button>
               </div>
             </header>
             {sheet === "toc" ? <>
@@ -1892,41 +1956,41 @@ export default function ReadingEditionChrome({
             </> : sheet === "annotation" ? referencePane("annotation", true) : sheet === "source" ? referencePane("source", true) : (
               <>
                 <section className={styles.settingGroup}>
-                  <span>字族</span>
+                  <span>{ui.fontFamily}</span>
                   <div className={styles.fontChooser}>
-                    <button type="button" data-active={readerFont === "serif"} onClick={() => updateFont("serif")}><b className={styles.serifSample}>字</b><span>衬线</span></button>
-                    <button type="button" data-active={readerFont === "sans"} onClick={() => updateFont("sans")}><b className={styles.sansSample}>字</b><span>无衬线</span></button>
+                    <button type="button" data-active={readerFont === "serif"} onClick={() => updateFont("serif")}><b className={styles.serifSample}>{ui.sample}</b><span>{ui.serif}</span></button>
+                    <button type="button" data-active={readerFont === "sans"} onClick={() => updateFont("sans")}><b className={styles.sansSample}>{ui.sample}</b><span>{ui.sans}</span></button>
                   </div>
                 </section>
-                <section className={styles.settingGroup}><span>字号</span><div className={styles.sizeChooser}>{(["small", "medium", "large"] as const).map((size, index) => <button key={size} type="button" data-active={size === readerSize} onClick={() => updateSize(size)}><b style={{ fontSize: `${15 + index * 4}px` }}>字</b><span>{["小", "中", "大"][index]}</span></button>)}</div></section>
-                <button className={styles.themeChoice} type="button" onClick={toggleTheme}><span>{dark ? "☾" : "☼"}</span><b>{dark ? "切换到浅色" : "切换到深色"}</b><i>→</i></button>
+                <section className={styles.settingGroup}><span>{ui.fontSize}</span><div className={styles.sizeChooser}>{(["small", "medium", "large"] as const).map((size, index) => <button key={size} type="button" data-active={size === readerSize} onClick={() => updateSize(size)}><b style={{ fontSize: `${15 + index * 4}px` }}>{ui.sample}</b><span>{ui.sizes[index]}</span></button>)}</div></section>
+                <button className={styles.themeChoice} type="button" onClick={toggleTheme}><span>{dark ? "☾" : "☼"}</span><b>{dark ? ui.lightTheme : ui.darkTheme}</b><i>→</i></button>
                 <section className={`${styles.settingGroup} ${styles.readingProgressGroup}`}>
-                  <span>阅读记录</span>
+                  <span>{ui.readingRecords}</span>
                   <div className={styles.readingProgressSetting}>
                     <div>
-                      <b>保存本机阅读记录</b>
-                      <small>默认开启；记录仅保存在当前浏览器，不会上传或跨设备同步。</small>
+                      <b>{ui.saveReadingRecords}</b>
+                      <small>{ui.readingRecordsNote}</small>
                     </div>
                     <button
                       className={styles.readingProgressSwitch}
                       type="button"
                       role="switch"
                       aria-checked={readingProgressEnabled}
-                      aria-label="保存本机阅读记录"
+                      aria-label={ui.saveReadingRecords}
                       onClick={() => setReadingProgressEnabled(!readingProgressEnabled)}
                     >
                       <span aria-hidden="true" />
                     </button>
                   </div>
                   <div className={styles.readingProgressActions}>
-                    <button type="button" disabled={!hasCurrentRecord} onClick={clearCurrentReadingProgress}>清除本文记录</button>
+                    <button type="button" disabled={!hasCurrentRecord} onClick={clearCurrentReadingProgress}>{ui.clearCurrent}</button>
                     <button
                       type="button"
                       onClick={() => {
-                        if (window.confirm("确定清除当前浏览器中的全部阅读记录吗？")) clearAllReadingProgress();
+                        if (window.confirm(ui.clearAllConfirm)) clearAllReadingProgress();
                       }}
                     >
-                      清除全部记录
+                      {ui.clearAll}
                     </button>
                   </div>
                 </section>

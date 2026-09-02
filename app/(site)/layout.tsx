@@ -8,8 +8,8 @@ import TopBar from "@/app/components/TopBar";
 import Footer from "@/app/components/Footer";
 import { ArticleHeaderProvider } from "@/app/components/ArticleHeader";
 import EditorialReveal from "@/app/components/editorial-motion/EditorialReveal";
-import { SiteSearchProvider, type SearchTag } from "@/app/components/site-search/SiteSearch";
-import { getAllPublicContent } from "@/lib/public-content";
+import { SiteSearchProvider } from "@/app/components/site-search/SiteSearch";
+import { getSearchTags } from "@/lib/search-tags";
 import {
   documentFontVariables,
   editorialRevealBootstrap,
@@ -40,15 +40,7 @@ export const metadata: Metadata = {
 };
 
 export default async function SiteLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  const tagCounts = new Map<string, number>();
-  for (const entry of await getAllPublicContent()) {
-    for (const tag of new Set(entry.tags)) {
-      tagCounts.set(tag, (tagCounts.get(tag) ?? 0) + 1);
-    }
-  }
-  const searchTags: SearchTag[] = [...tagCounts]
-    .map(([name, count]) => ({ name, count }))
-    .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name, "zh-CN"));
+  const searchTags = await getSearchTags();
 
   return (
     <html

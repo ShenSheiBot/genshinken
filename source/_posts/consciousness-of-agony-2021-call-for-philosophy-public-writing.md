@@ -1,6 +1,6 @@
 ---
 title: 苦恼意识2021：网哲邻人部第一届哲普征稿活动
-title_breaks: [苦恼意识2021：, 网哲邻人部第一届哲普征稿活动]
+title_breaks: [苦恼意识2021：, 网哲邻人部第一届, 哲普征稿活动]
 date: 2021-10-05
 slug: consciousness-of-agony-2021-call-for-philosophy-public-writing
 script: hans

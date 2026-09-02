@@ -1,6 +1,6 @@
 ---
 title: 《HELLO WORLD》，HAL9000和白帽子
-title_breaks: [《HELLO WORLD》，, HAL9000和白帽子]
+title_breaks: ["《HELLO ", "WORLD》，", HAL9000和白帽子]
 date: 2020-05-27
 slug: hello-world-hal-9000-white-hat
 script: hans

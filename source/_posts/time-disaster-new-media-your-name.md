@@ -1,6 +1,6 @@
 ---
 title: 时间、灾难与新媒体：作为心智游戏电影的《你的名字》
-title_breaks: [时间、灾难与新媒体：, 作为心智游戏电影的《你的名字》]
+title_breaks: [时间、灾难与新媒体：, 作为心智游戏电影的, 《你的名字》]
 date: 2026-08-15
 slug: time-disaster-new-media-your-name
 script: hans

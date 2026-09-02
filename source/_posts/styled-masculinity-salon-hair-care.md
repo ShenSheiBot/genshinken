@@ -1,6 +1,6 @@
 ---
 title: 有型的男性气质：男性的沙龙护发消费与差异建构
-title_breaks: [有型的男性气质：, 男性的沙龙护发消费与差异建构]
+title_breaks: [有型的男性气质：, 男性的沙龙护发消费与, 差异建构]
 date: 2022-09-06
 slug: styled-masculinity-salon-hair-care
 script: hans

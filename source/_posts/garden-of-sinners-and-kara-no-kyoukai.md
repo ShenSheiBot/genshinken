@@ -1,6 +1,6 @@
 ---
 title: 专题探讨｜“The garden of sinners”与“空之境界”
-title_breaks: ["专题探讨｜", "“The garden of sinners”与", "“空之境界”"]
+title_breaks: ["专题探讨｜", "“The garden of ", "sinners”与", "“空之境界”"]
 date: 2018-11-23
 slug: garden-of-sinners-and-kara-no-kyoukai
 script: hans

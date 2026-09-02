@@ -215,9 +215,11 @@ export function hanSourceAttribute(
 export function useHanScriptConversion({
   sourceScript,
   contentRevision,
+  active = true,
 }: {
   sourceScript: HanScript;
   contentRevision: string;
+  active?: boolean;
 }) {
   const [script, setScript] = useState<HanScript>(sourceScript);
   const [requestedScript, setRequestedScript] = useState<HanScript>(sourceScript);
@@ -229,6 +231,7 @@ export function useHanScriptConversion({
   const preserveFailureStatus = useRef(false);
 
   useEffect(() => {
+    if (!active) return;
     mounted.current = true;
     const declared = document.documentElement.dataset.chineseScriptRequested;
     const initial = isHanScript(declared)
@@ -271,9 +274,10 @@ export function useHanScriptConversion({
       document.documentElement.lang = "zh";
       delete document.documentElement.dataset.chineseConverting;
     };
-  }, [sourceScript]);
+  }, [active, sourceScript]);
 
   useEffect(() => {
+    if (!active) return;
     const root = document.querySelector<HTMLElement>(CONVERSION_ROOT);
     if (!root) return;
 
@@ -367,7 +371,7 @@ export function useHanScriptConversion({
       cancelled = true;
       observer?.disconnect();
     };
-  }, [contentRevision, requestedScript, sourceScript]);
+  }, [active, contentRevision, requestedScript, sourceScript]);
 
   const selectScript = useCallback((next: HanScript) => {
     pendingPersistScript.current = next;

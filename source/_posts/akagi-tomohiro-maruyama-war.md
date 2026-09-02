@@ -1,6 +1,6 @@
 ---
 title: 想把“丸山真男”呼死——31岁、无业、愿望是打仗
-title_breaks: ["想把“丸山真男”呼死——", "31岁、无业、愿望是打仗"]
+title_breaks: ["想把“丸山真男”", "呼死——", "31岁、无业、", "愿望是打仗"]
 date: 2026-01-06
 slug: akagi-tomohiro-maruyama-war
 categories: [思想与理论]

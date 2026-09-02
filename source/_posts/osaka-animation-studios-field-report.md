@@ -1,6 +1,6 @@
 ---
 title: 城中村也要做动画！实访你所不知的大阪动画生态圈
-title_breaks: [城中村也要做动画！, 实访你所不知的大阪动画生态圈]
+title_breaks: [城中村也要做动画！, 实访你所不知的, 大阪动画生态圈]
 date: 2018-11-26
 slug: osaka-animation-studios-field-report
 script: hans

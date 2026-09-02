@@ -7,7 +7,7 @@ language: en
 status: published
 published: 2026-08-27
 title: "What Is a Robot’s Inner Life For?"
-title_breaks: ["What Is a Robot’s Inner Life For?"]
+title_breaks: ["What Is a Robot’s", "Inner Life For?"]
 excerpt: "Time of Eve gives household robots a café where they can speak as equals. But if feeling makes a servant more attentive, does recognition set the robot free—or simply make it more useful to its owner?"
 credits:
   - role: translator

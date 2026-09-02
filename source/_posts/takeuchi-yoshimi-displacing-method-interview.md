@@ -1,6 +1,6 @@
 ---
 title: 作为方法的竹内好——关于“错位竹内好”
-title_breaks: ["作为方法的竹内好", "——关于“错位竹内好”"]
+title_breaks: ["作为方法的", "竹内好——关于", "“错位竹内好”"]
 date: 2026-08-03
 slug: takeuchi-yoshimi-displacing-method-interview
 categories: [思想与理论]

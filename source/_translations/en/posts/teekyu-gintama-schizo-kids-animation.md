@@ -7,7 +7,7 @@ language: en
 status: published
 published: 2026-08-27
 title: "Run Away Twice: Teekyu, Gintama, and Akira Asada’s Art of Escape"
-title_breaks: ["Run Away Twice:", "Teekyu, Gintama, and Akira Asada’s Art of Escape"]
+title_breaks: ["Run Away Twice:", "Teekyu, Gintama,", "and Akira Asada’s", "Art of Escape"]
 excerpt: "Gintama escapes from its epic historical plot into everyday comedy, only to be drawn back. Teekyu goes further: it abandons each new premise, identity, and destination before any of them can become a new home."
 credits:
   - role: translator

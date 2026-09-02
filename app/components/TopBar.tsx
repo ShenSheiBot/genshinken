@@ -40,13 +40,14 @@ export default function TopBar() {
     const root = document.documentElement;
     const previousPathname = previousPathnameRef.current;
 
-    delete root.dataset.readingChromeEntry;
-    if (
-      previousPathname !== null
-      && !isReadingRoute(previousPathname)
-      && isReadingRoute(pathname)
-    ) {
-      root.dataset.readingChromeEntry = "route";
+    if (previousPathname !== null) {
+      delete root.dataset.readingChromeEntry;
+      if (
+        !isReadingRoute(previousPathname)
+        && isReadingRoute(pathname)
+      ) {
+        root.dataset.readingChromeEntry = "route";
+      }
     }
     previousPathnameRef.current = pathname;
 

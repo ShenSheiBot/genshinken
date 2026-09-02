@@ -32,6 +32,10 @@ test("local development exposes editorial translation states without extra envir
 
 test("translation title breaks use the locale's actual joining rule", () => {
   assert.deepEqual(
+    translationTitleBreaks(undefined, "A Naturally Wrapping Title", "en", "english.md"),
+    ["A Naturally Wrapping Title"],
+  );
+  assert.deepEqual(
     translationTitleBreaks(["Rags Drum", "2021"], "Rags Drum 2021", "en", "english.md"),
     ["Rags Drum", "2021"],
   );

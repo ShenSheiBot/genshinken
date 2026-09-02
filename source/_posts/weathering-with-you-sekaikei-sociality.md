@@ -1,6 +1,6 @@
 ---
 title: 一场或许不存在的暴雨——当“世界系”遭遇“社会性”
-title_breaks: [一场或许不存在的暴雨——, 当“世界系”遭遇“社会性”]
+title_breaks: [一场或许不存在的暴雨——, 当“世界系”遭遇, “社会性”]
 date: 2019-11-09
 slug: weathering-with-you-sekaikei-sociality
 script: hans

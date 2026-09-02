@@ -1,6 +1,6 @@
 ---
 title: 阿比盖尔：万万不要让权力全盘落入丈夫手中
-title_breaks: [阿比盖尔：, 万万不要让权力全盘落入丈夫手中]
+title_breaks: [阿比盖尔：, 万万不要让权力, 全盘落入丈夫手中]
 date: 2022-12-07
 slug: abigail-john-adams-selected-letters
 script: hans

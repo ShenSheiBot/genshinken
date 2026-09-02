@@ -1,6 +1,6 @@
 ---
 title: "噪声的信号——《Serial Experiments Lain》同人漫画兼图像式论文*"
-title_breaks: ["噪声的信号——《", "Serial Experiments Lain》", "同人漫画兼图像式论文*"]
+title_breaks: ["噪声的信号——", "《Serial Experiments ", "Lain》同人漫画", "兼图像式论文*"]
 date: 2026-01-25
 slug: manga-signal-of-noise
 categories: [漫画]

@@ -1,6 +1,6 @@
 ---
 title: 经济学再入门：奈特的“市场机制”与古典派的“竞争”
-title_breaks: [经济学再入门：, 奈特的“市场机制”与古典派的“竞争”]
+title_breaks: [经济学再入门：, 奈特的“市场机制”与, 古典派的“竞争”]
 date: 2023-12-06
 slug: nei-masahiro-market-mechanism-competition
 script: hans
