@@ -26,8 +26,8 @@
       "name": "roof-genshinken-production",
       "routes": [
         {
-          "pattern": "labonroof.top",
-          "custom_domain": true
+          "pattern": "labonroof.top/*",
+          "zone_name": "labonroof.top"
         }
       ],
       "vars": {
