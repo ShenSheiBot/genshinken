@@ -4,7 +4,7 @@ source_type: post
 source_slug: what-is-cloud-behavior-ontology-internal-heterogeneity
 slug: what-is-cloud-behavior-ontology-internal-heterogeneity
 language: en
-status: published
+status: review
 published: 2026-08-28
 title: What Is “Yun Behavior”? Ontology and Internal Heterogeneity
 title_breaks:

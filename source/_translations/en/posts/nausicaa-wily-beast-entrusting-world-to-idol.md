@@ -4,7 +4,7 @@ source_type: post
 source_slug: nausicaa-wily-beast-entrusting-world-to-idol
 slug: nausicaa-wily-beast-entrusting-world-to-idol
 language: en
-status: published
+status: review
 published: 2026-08-28
 title: "From Nausicaä to Wily Beast and Weakest Creature: The Predicaments of Entrusting the World to Idols"
 title_breaks: ["From Nausicaä to", "Wily Beast and", "Weakest Creature:", "The Predicaments", "of Entrusting the World", "to Idols"]

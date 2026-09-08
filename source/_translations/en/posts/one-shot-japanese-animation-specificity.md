@@ -4,7 +4,7 @@ source_type: post
 source_slug: one-shot-japanese-animation-specificity
 slug: one-shot-japanese-animation-specificity
 language: en
-status: published
+status: review
 published: 2026-08-27
 title: "The Face at the Edge: How Anime Uses Decentered Framing"
 title_breaks: ["The Face at the Edge: ", "How Anime Uses ", "Decentered Framing"]

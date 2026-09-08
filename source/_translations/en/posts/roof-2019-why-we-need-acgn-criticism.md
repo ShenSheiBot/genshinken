@@ -4,7 +4,7 @@ source_type: post
 source_slug: roof-2019-why-we-need-acgn-criticism
 slug: roof-2019-why-we-need-acgn-criticism
 language: en
-status: published
+status: review
 published: 2026-08-27
 title: "Against Easy Answers: Why ACGN Criticism Still Matters"
 title_breaks: ["Against Easy Answers:", "Why ACGN Criticism", "Still Matters"]

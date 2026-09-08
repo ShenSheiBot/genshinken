@@ -4,7 +4,7 @@ source_type: post
 source_slug: animation-as-machine-takahata-lamarre-critique
 slug: animation-as-machine-takahata-lamarre-critique
 language: en
-status: published
+status: review
 published: 2026-08-27
 title: "The Machine Behind Ghibli’s Nature: Isao Takahata and the Technology of Animation"
 title_breaks:

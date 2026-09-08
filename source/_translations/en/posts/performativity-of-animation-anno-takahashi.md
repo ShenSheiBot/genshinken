@@ -4,7 +4,7 @@ source_type: post
 source_slug: performativity-of-animation-anno-takahashi
 slug: performativity-of-animation-anno-takahashi
 language: en
-status: published
+status: review
 published: 2026-08-27
 title: "Still Images, Living Time: Takashi Anno and Naohito Takahashi at Animation’s Limits"
 title_breaks: ["Still Images,", "Living Time:", "Takashi Anno and", "Naohito Takahashi", "at Animation’s Limits"]

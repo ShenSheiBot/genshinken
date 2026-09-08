@@ -4,7 +4,7 @@ source_type: post
 source_slug: how-we-met-your-name-indelible-feeling
 slug: how-we-met-your-name-indelible-feeling
 language: en
-status: reviewed
+status: review
 title: "How We Met: The Indelible Feeling in Your Name."
 title_breaks: ["How We Met:", "The Indelible Feeling", "in Your Name."]
 excerpt: Drawing on sekaikei, possible worlds, and the unconscious, the critic Hongcha Pao Haitai (红茶泡海苔) asks what enables Taki and Mitsuha to recognize each other even after their memories are erased in Your Name.

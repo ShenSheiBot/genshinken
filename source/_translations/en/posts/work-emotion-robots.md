@@ -4,7 +4,7 @@ source_type: post
 source_slug: work-emotion-robots
 slug: work-emotion-robots
 language: en
-status: published
+status: review
 published: 2026-08-27
 title: "What Is a Robot’s Inner Life For?"
 title_breaks: ["What Is a Robot’s", "Inner Life For?"]

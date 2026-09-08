@@ -4,7 +4,7 @@ source_type: post
 source_slug: weathering-with-you-tragic-hero-knight-of-faith
 slug: weathering-with-you-tragic-hero-knight-of-faith
 language: en
-status: reviewed
+status: review
 title: "The Tragic Hero, the Knight of Infinite Resignation, and the Knight of Faith"
 title_breaks: ["The Tragic Hero,", " the Knight of Infinite Resignation,", " and the Knight of Faith"]
 excerpt: A psychoanalytic reading of Makoto Shinkai’s *Weathering with You* asks whether Hodaka’s choice to save Hina at Tokyo’s expense is an ethical act—or a way to enjoy sacrifice itself.

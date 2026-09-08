@@ -4,7 +4,7 @@ source_type: post
 source_slug: teekyu-gintama-schizo-kids-animation
 slug: teekyu-gintama-schizo-kids-animation
 language: en
-status: published
+status: review
 published: 2026-08-27
 title: "Run Away Twice: Teekyu, Gintama, and Akira Asada’s Art of Escape"
 title_breaks: ["Run Away Twice:", "Teekyu, Gintama,", "and Akira Asada’s", "Art of Escape"]

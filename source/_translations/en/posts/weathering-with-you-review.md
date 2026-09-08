@@ -4,7 +4,7 @@ source_type: post
 source_slug: weathering-with-you-review
 slug: weathering-with-you-review
 language: en
-status: published
+status: review
 published: 2026-08-27
 title: "What It Means to Say “We’ll Be All Right”: Reflections on Weathering with You"
 title_breaks: ["What It Means to Say", "“We’ll Be All Right”:", "Reflections on", "Weathering with You"]

@@ -4,7 +4,7 @@ source_type: post
 source_slug: the-big-o-messiah-always-late
 slug: the-big-o-messiah-always-late
 language: en
-status: published
+status: review
 published: 2026-08-27
 title: "The Messiah Is Always Late: Redemption in The Big O"
 title_breaks: ["The Messiah Is", "Always Late:", "Redemption in The Big O"]

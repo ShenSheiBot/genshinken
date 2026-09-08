@@ -5,7 +5,7 @@ source_book_slug: meta-animation-criticism
 source_chapter_id: two-one-macross7
 slug: two-one-macross7
 language: en
-status: published
+status: review
 published: 2026-08-27
 title: "Macross 7 Against the Demand for Depth"
 title_breaks: ["Macross 7", "Against the Demand", "for Depth"]

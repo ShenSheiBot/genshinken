@@ -4,7 +4,7 @@ source_type: post
 source_slug: adventures-of-the-name-of-the-father
 slug: adventures-of-the-name-of-the-father
 language: en
-status: published
+status: review
 published: 2026-08-31
 title: "The Adventures of the Name-of-the-Father: Looking Awry at Evangelion and Makoto Shinkai"
 title_breaks: ["The Adventures of", "the Name-of-the-Father:", "Looking Awry", "at Evangelion and", "Makoto Shinkai"]

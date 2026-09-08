@@ -4,7 +4,7 @@ source_type: post
 source_slug: hayao-miyazaki-danger-and-innocence
 slug: hayao-miyazaki-danger-and-innocence
 language: en
-status: published
+status: review
 published: 2026-08-27
 title: "The Danger in Hayao Miyazaki’s Innocent Eye"
 title_breaks: ["The Danger in", "Hayao Miyazaki’s", "Innocent Eye"]
