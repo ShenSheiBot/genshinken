@@ -11,6 +11,7 @@ import {
   canonicalizeLocalizedTranslationRoutes,
   translationEditionIsVisible,
   translationLifecycleValues,
+  translationPublicEnabledForEnvironment,
   translationPreviewEnabledForEnvironment,
   translationTitleBreaks,
 } from "../lib/translation-contract.mjs";
@@ -28,6 +29,12 @@ test("local development exposes editorial translation states without extra envir
   assert.equal(translationPreviewEnabledForEnvironment("development", undefined), true);
   assert.equal(translationPreviewEnabledForEnvironment("production", "1"), true);
   assert.equal(translationPreviewEnabledForEnvironment("production", "0"), false);
+});
+
+test("translation publication can be hidden without changing editorial lifecycle", () => {
+  assert.equal(translationPublicEnabledForEnvironment(undefined), true);
+  assert.equal(translationPublicEnabledForEnvironment("1"), true);
+  assert.equal(translationPublicEnabledForEnvironment("0"), false);
 });
 
 test("translation title breaks use the locale's actual joining rule", () => {

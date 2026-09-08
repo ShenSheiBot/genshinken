@@ -18,13 +18,21 @@
     "preview": {
       "name": "roof-genshinken-a8f3d7c2",
       "vars": {
-        "ROOF_TRANSLATION_PREVIEW": "1"
+        "ROOF_TRANSLATION_PREVIEW": "1",
+        "ROOF_TRANSLATIONS_PUBLIC": "1"
       }
     },
     "production": {
       "name": "roof-genshinken-production",
+      "routes": [
+        {
+          "pattern": "labonroof.top",
+          "custom_domain": true
+        }
+      ],
       "vars": {
-        "ROOF_TRANSLATION_PREVIEW": "0"
+        "ROOF_TRANSLATION_PREVIEW": "0",
+        "ROOF_TRANSLATIONS_PUBLIC": "0"
       }
     }
   }

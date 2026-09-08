@@ -68,5 +68,7 @@ Only `published` editions enter the sitemap and reciprocal `hreflang` links.
 Draft, review, and reviewed files remain invisible in ordinary production builds: their
 localized routes render the same availability page as a missing edition. `next dev`
 exposes these editorial states automatically. For a production-mode editorial preview,
-set `ROOF_TRANSLATION_PREVIEW=1`.
+set `ROOF_TRANSLATION_PREVIEW=1`. A production deployment may temporarily hide every
+on-site translation without changing its editorial lifecycle by setting
+`ROOF_TRANSLATIONS_PUBLIC=0`; the maintained production deploy target currently does so.
 Run `npm run verify:translations` before publication.

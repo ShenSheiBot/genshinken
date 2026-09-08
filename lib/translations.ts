@@ -26,6 +26,7 @@ import type { CitationRecord } from "./citations";
 import {
   translationEditionIsVisible,
   translationLifecycleValues,
+  translationPublicEnabledForEnvironment,
   translationPreviewEnabledForEnvironment,
   translationTitleBreaks,
 } from "./translation-contract.mjs";
@@ -258,6 +259,10 @@ export function translationPreviewEnabled(): boolean {
     process.env.NODE_ENV,
     process.env.ROOF_TRANSLATION_PREVIEW,
   );
+}
+
+export function translationPublicEnabled(): boolean {
+  return translationPublicEnabledForEnvironment(process.env.ROOF_TRANSLATIONS_PUBLIC);
 }
 
 export function getLanguageDisposition(
@@ -547,6 +552,7 @@ async function loadLocale(locale: TranslationLocale): Promise<TranslationEdition
 let cache: Promise<TranslationEdition[]> | null = null;
 
 export function getAllTranslationEditions(): Promise<TranslationEdition[]> {
+  if (!translationPreviewEnabled() && !translationPublicEnabled()) return Promise.resolve([]);
   if (!cache) {
     cache = Promise.all(TRANSLATION_LOCALES.map(loadLocale)).then((groups) => {
       const editions = groups.flat();

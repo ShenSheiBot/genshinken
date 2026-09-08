@@ -13,8 +13,8 @@
 import fs from "node:fs";
 import path from "node:path";
 
-const SITE = "https://roof-genshinken-production.hiddengem.workers.dev";
-const HOST = "roof-genshinken-production.hiddengem.workers.dev";
+const SITE = "https://labonroof.top";
+const HOST = "labonroof.top";
 const POSTS_DIR = path.join(process.cwd(), "source", "_posts");
 const BOOKS_DIR = path.join(process.cwd(), "source", "_books");
 const TOPICS_DIR = path.join(process.cwd(), "source", "_topics");

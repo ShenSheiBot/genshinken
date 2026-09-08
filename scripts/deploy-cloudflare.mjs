@@ -33,6 +33,7 @@ for (const key of ["HOME", "PATH", "TMPDIR", "LANG", "LC_ALL", "NO_COLOR", "CI"]
 }
 environment.NEXT_TELEMETRY_DISABLED = "1";
 environment.ROOF_TRANSLATION_PREVIEW = target === "preview" ? "1" : "0";
+environment.ROOF_TRANSLATIONS_PUBLIC = target === "preview" ? "1" : "0";
 environment.ROOF_BUILD_TIMESTAMP = process.env.ROOF_BUILD_TIMESTAMP || new Date().toISOString();
 
 function run(command, args, cwd, { localBinary = false, capture = false } = {}) {
@@ -184,7 +185,7 @@ function build(buildRoot, { reuseNextCache = false } = {}) {
   fs.rmSync(path.join(buildRoot, ".open-next"), { recursive: true, force: true });
   const buildId = cloudflareBuildIdentity(buildRoot, target, environment);
   environment.ROOF_BUILD_ID = buildId;
-  console.log(`Building Cloudflare ${target} artifact (ROOF_TRANSLATION_PREVIEW=${environment.ROOF_TRANSLATION_PREVIEW})`);
+  console.log(`Building Cloudflare ${target} artifact (ROOF_TRANSLATION_PREVIEW=${environment.ROOF_TRANSLATION_PREVIEW}, ROOF_TRANSLATIONS_PUBLIC=${environment.ROOF_TRANSLATIONS_PUBLIC})`);
   run("opennextjs-cloudflare", ["build"], buildRoot, { localBinary: true });
   normalizeWebpackRuntime(buildRoot);
   pruneR2BackedAssets(buildRoot);

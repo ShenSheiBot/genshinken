@@ -900,7 +900,7 @@ export function getBookChapterCitation(
       })),
     abstractNote: `${book.subtitle ? `${book.title}（${book.subtitle}）` : book.title}${chapter.number}：${chapter.title}`,
     date: chapter.publishedAt,
-    url: `https://roof-genshinken-a8f3d7c2.hiddengem.workers.dev${bookChapterHref(book, chapter)}`,
+    url: `https://labonroof.top${bookChapterHref(book, chapter)}`,
     language: parent.language,
     rights: parent.rights,
     extra: parent.extra,

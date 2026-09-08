@@ -29,7 +29,7 @@ const base = {
   title: "Notes & Methods",
   creators: [author],
   date: "2026-07-24",
-  url: "https://roof-genshinken-a8f3d7c2.hiddengem.workers.dev/posts/notes",
+  url: "https://labonroof.top/posts/notes",
   language: "en",
   rights: "CC0 1.0 Universal",
 };
@@ -217,7 +217,7 @@ const hantMediaCitation = pageCitationDefaults({
   creators: [{ creatorType: "author", name: "測試作者" }],
   date: "2026-07-25",
 });
-assert.equal(hantMediaCitation.url, "https://roof-genshinken-a8f3d7c2.hiddengem.workers.dev/media/media-fixture");
+assert.equal(hantMediaCitation.url, "https://labonroof.top/media/media-fixture");
 assert.equal(hantMediaCitation.language, "zh-Hant");
 assert.equal(citationToMetadata(hantMediaCitation).citation_language, "zh-Hant");
 
@@ -229,7 +229,7 @@ const hansPostCitation = pageCitationDefaults({
   creators: [{ creatorType: "author", name: "测试作者" }],
   date: "2026-07-25",
 });
-assert.equal(hansPostCitation.url, "https://roof-genshinken-a8f3d7c2.hiddengem.workers.dev/posts/post-fixture");
+assert.equal(hansPostCitation.url, "https://labonroof.top/posts/post-fixture");
 assert.equal(hansPostCitation.language, "zh-Hans");
 assert.equal(
   bookCitationDefaults({
@@ -329,12 +329,12 @@ for (const book of bookManifests) {
   );
   assert.equal(
     translationCitation.url,
-    `https://roof-genshinken-a8f3d7c2.hiddengem.workers.dev/books/${book.slug}`,
+    `https://labonroof.top/books/${book.slug}`,
     `${book.slug} must cite its /books/ URL`
   );
   const bibtex = citationToBibtex(translationCitation);
   assert.ok(bibtex.startsWith("@book{"), `${book.slug} translation must export as @book`);
-  assert.match(bibtex, new RegExp(`url = \\{https://roof-genshinken-a8f3d7c2\\.hiddengem\\.workers\\.dev/books/${book.slug}\\}`));
+  assert.match(bibtex, new RegExp(`url = \\{https://labonroof\\.top/books/${book.slug}\\}`));
   const expectedPublisher = book.citations.translation.publisher ?? "屋顶现视研";
   assert.ok(
     bibtex.includes(`publisher = {${expectedPublisher}}`),
