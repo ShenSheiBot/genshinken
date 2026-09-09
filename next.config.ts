@@ -135,6 +135,81 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/posts/gundam-pacific-war-war-trauma",
+        destination: "/books/battle-trauma-anime-representation-history/chapters/gundam-pacific-war",
+        permanent: true,
+      },
+      {
+        source: "/books/jojo5-golden-wind-direction-analysis",
+        destination: "/posts/jojo5-golden-wind-direction-analysis-episode-02",
+        permanent: true,
+      },
+      {
+        source: "/books/jojo5-golden-wind-direction-analysis/chapters/episode-02",
+        destination: "/posts/jojo5-golden-wind-direction-analysis-episode-02",
+        permanent: true,
+      },
+      {
+        source: "/books/jojo5-golden-wind-direction-analysis/chapters/episodes-03-07",
+        destination: "/posts/jojo5-golden-wind-direction-analysis-episodes-03-07",
+        permanent: true,
+      },
+      {
+        source: "/books/monogatari-series-articles",
+        destination: "/posts/monogatari-love-deishu-kaiki-speech-fracture-self-deception",
+        permanent: true,
+      },
+      {
+        source: "/books/monogatari-series-articles/chapters/kaiki-speech-self-deception",
+        destination: "/posts/monogatari-love-deishu-kaiki-speech-fracture-self-deception",
+        permanent: true,
+      },
+      {
+        source: "/books/monogatari-series-articles/chapters/nisemonogatari-human-nature-authenticity",
+        destination: "/posts/nisemonogatari-human-nature-authenticity",
+        permanent: true,
+      },
+      {
+        source: "/en/books/monogatari-series-essays",
+        destination: "/en/posts/kaiki-speech-fracture-self-deception",
+        permanent: true,
+      },
+      {
+        source: "/en/books/monogatari-series-essays/chapters/kaiki-speech-fracture-self-deception",
+        destination: "/en/posts/kaiki-speech-fracture-self-deception",
+        permanent: true,
+      },
+      {
+        source: "/ja/books/monogatari-series-ronko",
+        destination: "/ja/posts/kaiki-gensetsu-hasai-jiko-giman",
+        permanent: true,
+      },
+      {
+        source: "/ja/books/monogatari-series-ronko/chapters/kaiki-gensetsu-hasai-jiko-giman",
+        destination: "/ja/posts/kaiki-gensetsu-hasai-jiko-giman",
+        permanent: true,
+      },
+      {
+        source: "/topics/concrete-revolutio-two-perspectives",
+        destination: "/library?tag=%E8%B6%85%E4%BA%BA%E5%B9%BB%E6%83%B3",
+        permanent: true,
+      },
+      {
+        source: "/topics/feminist-key-concepts-and-debates",
+        destination: "/books/feminism-brief-introduction-key-concepts",
+        permanent: true,
+      },
+      {
+        source: "/topics/hibike-euphonium-article-series",
+        destination: "/library?tag=%E5%88%A9%E5%85%B9%E4%B8%8E%E9%9D%92%E9%B8%9F",
+        permanent: true,
+      },
+      {
+        source: "/topics/weathering-with-you-commentaries",
+        destination: "/library?tag=%E5%A4%A9%E6%B0%94%E4%B9%8B%E5%AD%90",
+        permanent: true,
+      },
+      {
         source: "/posts/karatani-asada-orientalism-asia",
         destination: "/books/karatani-asada-complete-dialogues/chapters/orientalism-asia",
         permanent: true,

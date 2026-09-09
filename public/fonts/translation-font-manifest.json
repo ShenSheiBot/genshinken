@@ -1,5 +1,5 @@
 {
-  "corpusFileCount": 71,
+  "corpusFileCount": 70,
   "corpusFiles": [
     "app/[locale]/books/[book]/chapters/[chapter]/cite.bib/route.ts",
     "app/[locale]/books/[book]/chapters/[chapter]/page.tsx",
@@ -16,8 +16,6 @@
     "source/_translations/ja/books/kankei-keishiki-bunseki/sankaku-kankei-biyakuya.md",
     "source/_translations/ja/books/meta-anime-hyoron/book.json",
     "source/_translations/ja/books/meta-anime-hyoron/macross7-fukasa-ni-aragau.md",
-    "source/_translations/ja/books/monogatari-series-ronko/book.json",
-    "source/_translations/ja/books/monogatari-series-ronko/kaiki-gensetsu-hasai-jiko-giman.md",
     "source/_translations/ja/posts/adventures-of-the-name-of-the-father.md",
     "source/_translations/ja/posts/animation-and-reality-takahata-realism.md",
     "source/_translations/ja/posts/animation-as-machine-takahata-lamarre-critique.md",
@@ -38,6 +36,7 @@
     "source/_translations/ja/posts/hayao-miyazaki-danger-and-innocence.md",
     "source/_translations/ja/posts/how-we-met-your-name-indelible-feeling.md",
     "source/_translations/ja/posts/kaiji-chips-amputation-death-drive.md",
+    "source/_translations/ja/posts/kaiki-gensetsu-hasai-jiko-giman.md",
     "source/_translations/ja/posts/kara-no-kyoukai-garden-of-sinners.md",
     "source/_translations/ja/posts/kojimas-sekaikei.md",
     "source/_translations/ja/posts/modernity-not-overcome-writing-mysticism-science.md",
@@ -73,7 +72,7 @@
     "source/_translations/ja/posts/work-emotion-robots.md",
     "source/_translations/language-dispositions.json"
   ],
-  "corpusSha256": "b4477d0044fd53b0b93871581f402710d7a47eaa1a5ff91ecb5df85a09ac4625",
+  "corpusSha256": "f201817aef53f573003376730c444065faae9eb5e86f348fe6b62a6367983947",
   "fallbackCodePointCount": 114,
   "fonts": {
     "Roof EB Garamond Fallback": {

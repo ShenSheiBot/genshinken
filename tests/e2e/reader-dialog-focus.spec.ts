@@ -146,7 +146,7 @@ test("mobile annotation dialog returns focus to the footnote", async ({ isMobile
 });
 
 test("article footnotes preserve the reading position and return to their source", async ({ isMobile, page }) => {
-  await page.goto("/books/monogatari-series-articles/chapters/kaiki-speech-self-deception");
+  await page.goto("/posts/monogatari-love-deishu-kaiki-speech-fracture-self-deception");
   await page.evaluate(async () => {
     await document.fonts.ready;
     await Promise.all(
@@ -174,7 +174,7 @@ test("article footnotes preserve the reading position and return to their source
 
 test("article endnote backrefs return to the stable reading line", async ({ page }) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
-  await page.goto("/books/monogatari-series-articles/chapters/kaiki-speech-self-deception");
+  await page.goto("/posts/monogatari-love-deishu-kaiki-speech-fracture-self-deception");
   const backref = page.locator(".reading-edition-appendix a[data-footnote-backref]").first();
   const href = await backref.getAttribute("href");
   expect(href).toMatch(/^#/u);

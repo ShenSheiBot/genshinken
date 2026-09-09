@@ -55,7 +55,7 @@ citation:
 
 ![知乎“日本动画有什么常见而且有特色的演出手法”页面截图](attachments/roof-archive/cv1842794/03-animation-direction-zhihu.png)
 
-[《JOJO5 黄金之风》第03-07集演出分析](/books/jojo5-golden-wind-direction-analysis/chapters/episodes-03-07)
+[《JOJO5 黄金之风》第03－07集演出分析](/posts/jojo5-golden-wind-direction-analysis-episodes-03-07)
 
 前期的企划酝酿和后期的摄影合成等环节，我们这里就按下不表了。书籍方面，比如：
 

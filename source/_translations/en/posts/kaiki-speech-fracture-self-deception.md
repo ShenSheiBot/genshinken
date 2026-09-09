@@ -1,8 +1,7 @@
 ---
 work_id: monogatari-kaiki-speech-self-deception
-source_type: book-chapter
-source_book_slug: monogatari-series-articles
-source_chapter_id: kaiki-speech-self-deception
+source_type: post
+source_slug: monogatari-love-deishu-kaiki-speech-fracture-self-deception
 slug: kaiki-speech-fracture-self-deception
 language: en
 status: review

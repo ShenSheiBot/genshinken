@@ -190,7 +190,7 @@ const chapterAliases = [
 const archivedSourceAliases = `
 /posts/imagination-after-earthquake-otaku-culture-2010s	https://www.bilibili.com/read/cv2058668/
 /books/meta-animation-criticism/chapters/i-i-sublime-tide	https://www.bilibili.com/read/cv1895936/
-/books/jojo5-golden-wind-direction-analysis/chapters/episodes-03-07	https://www.bilibili.com/read/cv1816281/
+/posts/jojo5-golden-wind-direction-analysis-episodes-03-07	https://www.bilibili.com/read/cv1816281/
 /posts/liz-blue-bird-sound-music-narrative	https://mp.weixin.qq.com/s/-j1TGu6g6ZeKmMBM6z8_nw
 /posts/liz-blue-bird-sound-music-narrative	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247488888&idx=1&sn=3a4b4a4d22052376804c18224b63acc9
 /posts/sugii-hikaru-light-novel-literary-prize	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247489389&idx=1&sn=2174a1049c546d4c8c9e29b759108b83
@@ -216,7 +216,7 @@ const archivedSourceAliases = `
 /posts/lesbian-love-womanhood	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247489540&idx=4&sn=065127bc7efd5bf9349d203377369b64
 /posts/decolonising-anime-studies-prolegomenon	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247489457&idx=1&sn=aeb5c68cf412d2b379e79c8078c2ee2a
 /posts/japan-00s-anime-criticism-podcast	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247489058&idx=1&sn=9433ccd5eea673ff3ffd55e046f0b851
-/posts/gundam-pacific-war-war-trauma	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247489240&idx=1&sn=83b3ffe3a47fd4d7c26f082df9a7dd60
+/books/battle-trauma-anime-representation-history/chapters/gundam-pacific-war	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247489240&idx=1&sn=83b3ffe3a47fd4d7c26f082df9a7dd60
 /posts/stevie-suan-globalization-world-system-anime	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247489494&idx=1&sn=d18fabe3a78a43fd7d516a06be014712
 /posts/japanese-animation-media-ecology	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247489578&idx=1&sn=77ca7d2d3aa02823f18c327963aab560
 /posts/silent-vampire-kizumonogatari	https://mp.weixin.qq.com/s?__biz=Mzg5MjAwMDM0Ng==&mid=2247489052&idx=1&sn=8118ba23eadf74366fb930380b234c5a

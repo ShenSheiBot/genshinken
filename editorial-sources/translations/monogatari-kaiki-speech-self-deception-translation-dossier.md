@@ -126,7 +126,7 @@ reviews:
 
 ## Serial memory
 
-- This work is chapter 01 of the paused two-chapter book `monogatari-series-articles`.
-- Chinese canonical route: `/books/monogatari-series-articles/chapters/kaiki-speech-self-deception`.
-- The next Chinese chapter is `nisemonogatari-human-nature-authenticity`; it has not been translated in this pilot.
-- Translation routing uses stable `work_id` for the work and language-specific book/chapter slugs for each target.
+- This work is published as a standalone article; it was formerly presented as chapter 01 of the artificial two-item container `monogatari-series-articles`.
+- Chinese canonical route: `/posts/monogatari-love-deishu-kaiki-speech-fracture-self-deception`.
+- The related Chinese article `nisemonogatari-human-nature-authenticity` remains a separate, untranslated post.
+- Translation routing uses the stable `work_id` for the work and language-specific post slugs for each target.
