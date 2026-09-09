@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
+import { translationPreviewEnabledForEnvironment } from "@/lib/translation-contract.mjs";
 import styles from "./about.module.css";
 
 const pageDescription = `了解${site.brandCN}的历史、协作方式，以及投稿、勘误与合作联系方式。`;
@@ -8,6 +9,10 @@ const parsedBuildTimestamp = suppliedBuildTimestamp ? new Date(suppliedBuildTime
 const buildTimestamp = parsedBuildTimestamp && !Number.isNaN(parsedBuildTimestamp.valueOf())
   ? parsedBuildTimestamp.toISOString()
   : undefined;
+const previewDeployment = translationPreviewEnabledForEnvironment(
+  process.env.NODE_ENV,
+  process.env.ROOF_TRANSLATION_PREVIEW,
+);
 export const metadata: Metadata = {
   title: "关于屋顶",
   description: pageDescription,
@@ -94,10 +99,12 @@ export default function AboutPage() {
             <p>尊重独立论者各自开拓门户，以更多元、更高水平的总体评论生态为目标。</p>
           </article>
         </div>
-        <p className={styles.archiveNote}>
-          本站目前为内容档案与新文章发布系统的预览版。文章沿用原作者、译者、校对者署名，
-          并尽可能保留原注、参考文献和最初发布信息。
-        </p>
+        {previewDeployment ? (
+          <p className={styles.archiveNote}>
+            本站目前为内容档案与新文章发布系统的预览版。文章沿用原作者、译者、校对者署名，
+            并尽可能保留原注、参考文献和最初发布信息。
+          </p>
+        ) : null}
       </section>
       <section className={styles.contact} aria-labelledby="about-contact">
         <div className={styles.contactContent}>
