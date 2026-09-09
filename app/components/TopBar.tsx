@@ -29,7 +29,9 @@ export default function TopBar() {
   const [activeHeadingKey, setActiveHeadingKey] = useState("");
   const [activeH2Key, setActiveH2Key] = useState("");
   const [sectionMenuOpen, setSectionMenuOpen] = useState(false);
+  const [globalMenuOpen, setGlobalMenuOpen] = useState(false);
   const headerRef = useRef<HTMLElement | null>(null);
+  const globalMenuTriggerRef = useRef<HTMLButtonElement | null>(null);
   const sectionRefs = useRef<SectionRef[]>([]);
   const previousPathnameRef = useRef<string | null>(null);
   const ah = useArticleHeader();
@@ -145,15 +147,19 @@ export default function TopBar() {
   }, [meta]);
 
   useEffect(() => {
-    if (!sectionMenuOpen) return;
+    if (!sectionMenuOpen && !globalMenuOpen) return;
 
     const onPointerDown = (event: PointerEvent) => {
       const target = event.target as Node | null;
       if (target && headerRef.current?.contains(target)) return;
       setSectionMenuOpen(false);
+      setGlobalMenuOpen(false);
     };
     const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setSectionMenuOpen(false);
+      if (event.key !== "Escape") return;
+      setSectionMenuOpen(false);
+      setGlobalMenuOpen(false);
+      if (globalMenuOpen) globalMenuTriggerRef.current?.focus();
     };
 
     document.addEventListener("pointerdown", onPointerDown);
@@ -162,10 +168,11 @@ export default function TopBar() {
       document.removeEventListener("pointerdown", onPointerDown);
       document.removeEventListener("keydown", onKeyDown);
     };
-  }, [sectionMenuOpen]);
+  }, [globalMenuOpen, sectionMenuOpen]);
 
   useEffect(() => {
     if (!revealed) setSectionMenuOpen(false);
+    else setGlobalMenuOpen(false);
   }, [revealed]);
 
   const activeSectionTitle = useMemo(() => {
@@ -184,20 +191,34 @@ export default function TopBar() {
   return (
     <>
 <header className="topbar" data-revealed={revealed ? "true" : "false"} ref={headerRef}>
-      <Link href="/" className="brand">
+      <Link href="/" className="brand" aria-label="返回首页">
         <span className="blot" />
         <span className="brandName">{site.brandCN}</span>
       </Link>
 
       <div className="status">
         {!revealed ? (
-          <nav className="global-section-nav" aria-label="全站导航">
-            {GLOBAL_NAV_ITEMS.map((item) => (
-              <Link key={item.href} href={item.href} className="global-section-link">
-                <strong>{item.label}</strong>
-              </Link>
-            ))}
-          </nav>
+          <>
+            <nav className="global-section-nav" aria-label="全站导航">
+              {GLOBAL_NAV_ITEMS.map((item) => (
+                <Link key={item.href} href={item.href} className="global-section-link">
+                  <strong>{item.label}</strong>
+                </Link>
+              ))}
+            </nav>
+            <button
+              ref={globalMenuTriggerRef}
+              type="button"
+              className="mobile-global-nav-trigger"
+              aria-label="全站导航"
+              aria-expanded={globalMenuOpen}
+              aria-controls="mobile-global-nav-menu"
+              onClick={() => setGlobalMenuOpen((open) => !open)}
+            >
+              <span>导航</span>
+              <ChevronIcon />
+            </button>
+          </>
         ) : meta ? (
           <div className="art-running">
             <span className="rt">{meta.title}</span>
@@ -221,12 +242,40 @@ export default function TopBar() {
         ) : null}
       </div>
 
-      <div className="topbar-tools">
+      <div className="topbar-tools" onClick={() => setGlobalMenuOpen(false)}>
         <SiteSearchTrigger className="search-trigger" />
         <button className="toggle" onClick={toggleTheme} aria-label="切换明暗主题" title="切换明暗主题">
           {theme === "dark" ? "☾" : "☼"}
         </button>
       </div>
+
+      {!revealed && (
+        <nav
+          id="mobile-global-nav-menu"
+          className="mobile-global-nav-menu"
+          data-open={globalMenuOpen ? "true" : "false"}
+          aria-label="移动端全站导航"
+          aria-hidden={!globalMenuOpen}
+          inert={!globalMenuOpen}
+        >
+          {GLOBAL_NAV_ITEMS.map((item) => {
+            const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="mobile-global-nav-item"
+                data-active={active ? "true" : "false"}
+                aria-current={active ? "page" : undefined}
+                onClick={() => setGlobalMenuOpen(false)}
+              >
+                <span className="mark" aria-hidden="true" />
+                <strong>{item.label}</strong>
+              </Link>
+            );
+          })}
+        </nav>
+      )}
 
       {meta && sections.length > 0 && (
         <nav

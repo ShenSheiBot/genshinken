@@ -1,4 +1,4 @@
-import { expect, test } from "@playwright/test";
+import { expect, test } from "./fixtures";
 
 test("searches public prose and preserves section anchors", async ({ page }) => {
   await page.goto("/");
@@ -12,11 +12,12 @@ test("searches public prose and preserves section anchors", async ({ page }) => 
     name: /富野由悠季与“母性敌托邦”（下）/,
   }).first();
   await expect(result).toBeVisible();
-  await expect(result).toHaveAttribute(
-    "href",
-    /^\/books\/maternal-dystopia\/chapters\/tomino-lower#.+/u
-  );
-  await expect(result).not.toHaveAttribute("href", /\.html(?:#|$)/u);
+  const href = await result.getAttribute("href");
+  expect(href).not.toBeNull();
+  const destination = new URL(href!, page.url());
+  expect(destination.pathname).toBe("/books/maternal-dystopia/chapters/tomino-lower");
+  expect(destination.hash.length).toBeGreaterThan(1);
+  expect(destination.pathname).not.toMatch(/\.html$/u);
 });
 
 test("offers canonical library links for matching tags", async ({ page }) => {

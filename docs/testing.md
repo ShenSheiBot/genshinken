@@ -60,6 +60,7 @@ Quality 与 Browser workflow 都会独立安装、检查和构建调用方代码
 | `tests/e2e/reader-chrome-transition.spec.ts` | `implemented` | 连载页进入章节的页眉入场、离开 Reader 的反向动效，以及章节间导航不误触发离场。 |
 | `tests/e2e/reader-clipboard.spec.ts` | `implemented` | BibTeX 写入数据、成功 live status、拒绝反馈和重试能力。 |
 | `tests/e2e/reader-title-fit.spec.ts` | `implemented` | 枚举 sitemap 中全部文章与章节，在 1024px／1440px 真实标题字体下阻止标题段越出标题栏、页面横向溢出、视觉行以闭标点起头、单字孤行、实词跨行及超过五行的封面标题。 |
+| `tests/e2e/topbar-mobile.spec.ts` | `implemented` | 在移动 Chromium／WebKit 中逐一覆盖 320、360、375、390、412、430px，阻止普通页面顶栏控件重叠、裁切、横向溢出及导航菜单触控项过矮。 |
 
 测试优先使用角色、中文可访问名称、稳定 URL 与内容语义。只有验证 Reader 内部组件协作时才使用 `reading-edition-*` 等内部协议；更名时生产者、使用者、验证脚本和本文映射必须原子更新。
 
