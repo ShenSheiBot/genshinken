@@ -55,6 +55,18 @@ export const CONTRIBUTORS = [
     teamMember: false,
   },
   {
+    id: "shinkai-makoto",
+    displayName: "新海诚",
+    aliases: ["新海誠", "Makoto Shinkai"],
+    teamMember: false,
+  },
+  {
+    id: "nishijima-daisuke",
+    displayName: "西岛大介",
+    aliases: ["西島大介", "Daisuke Nishijima"],
+    teamMember: false,
+  },
+  {
     id: "red-tea-seaweed",
     displayName: "红茶泡海苔",
     aliases: ["王琼海"],

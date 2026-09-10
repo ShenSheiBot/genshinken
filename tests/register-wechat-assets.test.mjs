@@ -42,6 +42,28 @@ test("registers only images retained by the final Markdown", () => {
   assert.equal(result.manifest.assets.length, 1);
 });
 
+test("accepts the flat image inventory emitted by the legacy fetcher", () => {
+  const sourceDirectory = fs.mkdtempSync(path.join(os.tmpdir(), "wechat-assets-flat-"));
+  fs.writeFileSync(path.join(sourceDirectory, "images.json"), JSON.stringify([{
+    file: "assets/002.jpg",
+    downloaded: true,
+    bytes: 56,
+    sha256: "c".repeat(64),
+  }]));
+  const sourceId = path.basename(sourceDirectory);
+  const result = registerWechatAssets({
+    manifest: { version: 1, public: true, assets: [] },
+    sourceDirectory,
+    markdown: `![正文](attachments/wechat/${sourceId}/002.jpg)`,
+  });
+  assert.deepEqual(result.additions, [{
+    key: `wechat/${sourceId}/002.jpg`,
+    bytes: 56,
+    sha256: "c".repeat(64),
+    contentType: "image/jpeg",
+  }]);
+});
+
 test("rejects references that are not present in the source image inventory", () => {
   const sourceDirectory = fixture();
   const sourceId = path.basename(sourceDirectory);

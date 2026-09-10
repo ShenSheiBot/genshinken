@@ -13,6 +13,7 @@ const mimeTypes = new Map([
 ]);
 
 function sourceImages(imageManifest) {
+  if (Array.isArray(imageManifest)) return imageManifest;
   return [imageManifest?.cover, ...(imageManifest?.body ?? imageManifest?.images ?? [])]
     .filter(Boolean);
 }
