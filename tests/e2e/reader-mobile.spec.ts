@@ -1,6 +1,6 @@
 import { expect, test } from "./fixtures";
 
-const READER_PATH = "/posts/guxiang-de-bianzhengfa";
+const READER_PATH = "/posts/darker-than-black-psychoanalysis-crossing-starry-fantasy";
 
 test("mobile reader controls and sheet stay inside the visual viewport", async ({
   isMobile,
@@ -12,8 +12,10 @@ test("mobile reader controls and sheet stay inside the visual viewport", async (
   await page.evaluate(() => document.fonts.ready);
 
   const reader = page.locator("main.reading-edition-page");
-  const tocTrigger = reader.getByRole("button", { name: /^文章目录：/ });
+  const tocTrigger = reader.getByRole("button", { name: /^文章目录[:：]/ });
   await expect(tocTrigger).toBeVisible();
+  await expect.poll(async () => (await tocTrigger.boundingBox())?.height ?? 0).toBeGreaterThanOrEqual(48);
+  await expect.poll(async () => (await tocTrigger.boundingBox())?.width ?? 0).toBeGreaterThanOrEqual(180);
   await expect(reader.getByRole("button", { name: /切.*中文/ })).toBeVisible();
   await expect(reader.getByRole("button", { name: "阅读习惯" })).toBeVisible();
   await expect(reader.getByRole("navigation", { name: "全站导航" })).toBeHidden();
@@ -30,7 +32,7 @@ test("mobile reader controls and sheet stay inside the visual viewport", async (
   await expect(dialog).toBeVisible();
   await expect(page.locator("body")).toHaveCSS("overflow", "hidden");
   await expect(page.getByRole("button", { name: "复制本页 BibTeX 引用" })).toBeVisible();
-  await expect(page.getByRole("link", { name: "下载本页 BibTeX 引用" })).toBeVisible();
+  await expect(page.getByRole("link", { name: "下载 BibTeX" })).toBeVisible();
   await expect(dialog.getByRole("button", { name: "返回篇首" })).toBeVisible();
 
   await expect.poll(async () => dialog.evaluate((element) => {
