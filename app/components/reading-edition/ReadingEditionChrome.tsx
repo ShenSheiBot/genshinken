@@ -447,6 +447,13 @@ export default function ReadingEditionChrome({
   const [lineMarkers, setLineMarkers] = useState<LineMarker[]>([]);
   const [lineMarkerHost, setLineMarkerHost] = useState<HTMLElement | null>(null);
   const [readingMeasurement, setReadingMeasurement] = useState<ReadingMeasurement | null>(null);
+  const scrollRailRef = useRef<HTMLDivElement | null>(null);
+  const scrollRailDragRef = useRef<{
+    startClientY: number;
+    startScrollY: number;
+    railHeight: number;
+    maxScroll: number;
+  } | null>(null);
   const {
     script: hanScript,
     busy: hanScriptBusy,
@@ -618,6 +625,50 @@ export default function ReadingEditionChrome({
     messages: ui.progressMessages,
   });
   const readerStatus = hanScriptStatus || readingProgressStatus;
+
+  const onScrollRailPointerDown = useCallback((event: ReactPointerEvent<HTMLDivElement>) => {
+    const rail = scrollRailRef.current;
+    if (!rail) return;
+    /* Snapshot every metric once. Mobile URL bars resize the viewport while
+       the page scrolls, so re-reading rail height or maxScroll on each move
+       creates a feedback loop that makes the scroll position oscillate.
+       Dragging is therefore pure delta against these frozen values, matching
+       native thumb-drag semantics (no jump-to-tap). */
+    scrollRailDragRef.current = {
+      startClientY: event.clientY,
+      startScrollY: window.scrollY,
+      railHeight: Math.max(1, rail.getBoundingClientRect().height),
+      maxScroll: Math.max(0, document.documentElement.scrollHeight - window.innerHeight),
+    };
+    event.currentTarget.setPointerCapture(event.pointerId);
+  }, []);
+
+  const onScrollRailPointerMove = useCallback((event: ReactPointerEvent<HTMLDivElement>) => {
+    const drag = scrollRailDragRef.current;
+    if (!drag) return;
+    const delta = ((event.clientY - drag.startClientY) / drag.railHeight) * drag.maxScroll;
+    window.scrollTo({
+      top: Math.max(0, Math.min(drag.maxScroll, drag.startScrollY + delta)),
+      behavior: "auto",
+    });
+  }, []);
+
+  const onScrollRailPointerUp = useCallback((event: ReactPointerEvent<HTMLDivElement>) => {
+    scrollRailDragRef.current = null;
+    if (event.currentTarget.hasPointerCapture(event.pointerId)) event.currentTarget.releasePointerCapture(event.pointerId);
+  }, []);
+
+  const onScrollRailKeyDown = useCallback((event: React.KeyboardEvent<HTMLDivElement>) => {
+    const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+    const step = Math.max(80, window.innerHeight * 0.8);
+    const current = window.scrollY;
+    const next = event.key === "ArrowDown" || event.key === "PageDown" ? current + step
+      : event.key === "ArrowUp" || event.key === "PageUp" ? current - step
+        : event.key === "Home" ? 0 : event.key === "End" ? maxScroll : null;
+    if (next === null) return;
+    event.preventDefault();
+    window.scrollTo({ top: Math.max(0, Math.min(maxScroll, next)), behavior: "smooth" });
+  }, []);
 
   useEffect(() => {
     const savedSize = readLocalSetting("roof_reader_size");
@@ -1935,6 +1986,24 @@ export default function ReadingEditionChrome({
           <span className={styles.topProgress} style={{ width: `${pct}%` }} />
         </span>
       </header>
+
+      <div
+        ref={scrollRailRef}
+        className={styles.scrollRail}
+        data-scroll-rail="true"
+        role="scrollbar"
+        aria-label={ui.readingProgress}
+        aria-controls="main"
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-valuenow={pct}
+        tabIndex={0}
+        onPointerDown={onScrollRailPointerDown}
+        onPointerMove={onScrollRailPointerMove}
+        onPointerUp={onScrollRailPointerUp}
+        onPointerCancel={onScrollRailPointerUp}
+        onKeyDown={onScrollRailKeyDown}
+      />
 
       {sheet && (
         <div className={styles.sheetLayer} data-sheet={sheet} data-closing={sheetClosing ? "true" : "false"} role="presentation" onMouseDown={(event) => { if (event.currentTarget === event.target) closeSheet(); }}>

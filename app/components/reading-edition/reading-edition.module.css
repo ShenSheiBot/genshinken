@@ -329,6 +329,28 @@
 .mobileSectionButton { display: none; }
 .runningTools .compactTocButton { display: none; }
 
+/* A fully transparent, edge-to-edge drag surface that makes the fine native
+   scrollbar usable with a fingertip. It draws nothing itself — the native
+   scrollbar stays the only visual — and consumes no layout width. */
+.scrollRail {
+  position: fixed;
+  /* Stay below article controls and overlays; the rail only occupies the
+     otherwise empty screen edge and must never steal a citation click. */
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 32px;
+  touch-action: none;
+  cursor: ns-resize;
+}
+.scrollRail:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+
+/* Desktop pointers already handle the native scrollbar precisely. */
+@media (min-width: 1024px) {
+  .scrollRail { display: none; }
+}
+
 /* -------------------------------------------------------------------------- */
 /* Shared article text                                                        */
 /* -------------------------------------------------------------------------- */
