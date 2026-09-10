@@ -1975,15 +1975,9 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
     display: flex;
     align-items: center;
     justify-content: center;
-    /* Borrow the header's 24px grid gap so edge-biased taps still land on
-       the same control, while retaining a 12px separation from neighbors. */
-    width: calc(100% + 24px);
-    margin-inline: -12px;
-    min-width: 48px;
-    /* Keep the label visually compact while giving the whole control a
-       generous 48px touch target inside the 52px running header. */
-    height: 48px;
-    padding: 0 16px;
+    min-width: 0;
+    height: 36px;
+    padding: 0 12px;
     color: var(--ink);
   }
   .mobileSectionButton span { overflow: hidden; font-family: var(--reader-title-family); font-size: 13px; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; }
