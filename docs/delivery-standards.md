@@ -350,10 +350,11 @@ P1/P2/P4/P5 由 `scripts/validate-content.mjs` 的 `validateProseTypography` 在
 
   只有 Author 与 Committer 的姓名、邮箱都完全一致时才可推送。
 - 推送 `main` 只发布 Git 提交并触发 GitHub 质量与内容发现流程，不会自动部署站点。
-- 未确认稿使用 `npm run cf:upload:preview` 从当前工作区构建并上传为**未部署**的 Cloudflare Worker
-  Version。命令返回的版本化 `workers.dev` URL 是此阶段唯一的公开预览地址；上传不得改变任何固定域名。
-- 用户确认达到发布等级后，先提交已经验收的工作区，再以
-  `npm run cf:promote:preview -- <VERSION_ID>` 将刚才验收的同一 Version 提升到固定预览域名。提升不重新构建、
+- 预览稿使用 `npm run cf:upload:preview` 从当前工作区构建并上传 Cloudflare Worker Version，随后自动将同一
+  Version 提升到固定预览域名 `https://preview.labonroof.top`。命令输出的版本化 `workers.dev` URL 仅是内部
+  故障诊断地址，不作为交付入口。
+- 用户确认达到发布等级后，提交已经验收的工作区并按需发布生产；固定预览域名已经由上传命令指向该候选
+  Version。若自动提升中断，才使用 `npm run cf:promote:preview -- <VERSION_ID>` 恢复同一 Version；恢复不重新构建、
   不重新上传，也不得换成另一个候选版本。生产发布仍使用 `npm run cf:deploy:production`，并从干净提交构建。
 - 上传和部署脚本会同步字体、执行 OpenNext 构建并移除由 R2 承载的重复附件；生产部署另行拒绝带有已跟踪
   改动的工作区并从当前提交建立干净构建根。完成后必须以 Wrangler 返回的 Version ID 和目标 URL 回读，
@@ -552,7 +553,7 @@ groups:
 ### 12.3 CI 与部署
 
 - GitHub Actions 在 `main` push 和所有 pull request 上执行 `npm ci → check → build → start → verify:release`；功能分支 push 由 pull request 覆盖，避免重复运行。
-- Cloudflare 候选上传、固定预览提升和生产发布分别使用 `cf:upload:preview`、`cf:promote:preview` 与
+- Cloudflare 预览上传（含自动固定域名提升）、手动固定预览恢复和生产发布分别使用 `cf:upload:preview`、`cf:promote:preview` 与
   `cf:deploy:production`；脚本与 `wrangler.jsonc` 是现行部署入口。
 - IndexNow 只负责内容发现，不是发布质量门禁。
 - 正式冻结还需要精确提交、Worker 版本 ID、目标 URL、构建时间、公开域名回归、代表性浏览器证据和已知未覆盖范围。

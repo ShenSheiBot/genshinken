@@ -19,13 +19,13 @@ npm run build
 npm run start -- --hostname 127.0.0.1 --port 3100
 ```
 
-上传一个不改变固定域名的候选版本：
+构建并上传预览版本，然后将同一版本提升到固定预览域名：
 
 ```bash
 npm run cf:upload:preview
 ```
 
-命令会返回该版本独有的 `workers.dev` 预览地址和 Version ID。验收后将同一版本提升到固定预览域名：
+命令会输出 Version ID，并在上传成功后自动更新 `https://preview.labonroof.top`。Version ID 仅用于内部回滚或在自动提升中断时恢复：
 
 ```bash
 npm run cf:promote:preview -- <VERSION_ID>

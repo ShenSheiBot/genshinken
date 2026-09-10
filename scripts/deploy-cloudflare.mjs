@@ -3,6 +3,7 @@ import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 import { cloudflareBuildIdentity } from "./cloudflare-build-identity.mjs";
+import { extractWorkerVersionId } from "./cloudflare-preview-version.mjs";
 
 const sourceRoot = process.cwd();
 const target = process.argv[2];
@@ -36,19 +37,20 @@ environment.ROOF_TRANSLATION_PREVIEW = target === "preview" ? "1" : "0";
 environment.ROOF_TRANSLATIONS_PUBLIC = target === "preview" ? "1" : "0";
 environment.ROOF_BUILD_TIMESTAMP = process.env.ROOF_BUILD_TIMESTAMP || new Date().toISOString();
 
-function run(command, args, cwd, { localBinary = false, capture = false } = {}) {
+function run(command, args, cwd, { localBinary = false, capture = false, captureOutput = false } = {}) {
   const executable = localBinary ? path.join(cwd, "node_modules", ".bin", command) : command;
   const result = spawnSync(executable, args, {
     cwd,
     env: environment,
-    encoding: capture ? "utf8" : undefined,
-    stdio: capture ? "pipe" : "inherit",
+    encoding: capture || captureOutput ? "utf8" : undefined,
+    stdio: capture || captureOutput ? "pipe" : "inherit",
   });
   if (result.error) throw result.error;
   if (result.status !== 0) {
-    const detail = capture ? `\n${result.stderr || result.stdout || ""}` : "";
+    const detail = capture || captureOutput ? `\n${result.stderr || result.stdout || ""}` : "";
     throw new Error(`${command} exited with status ${result.status}${detail}`);
   }
+  if (captureOutput) return { stdout: result.stdout || "", stderr: result.stderr || "" };
   return capture ? result.stdout : undefined;
 }
 
@@ -208,8 +210,18 @@ try {
     // feedback iterations materially faster.
     build(sourceRoot, { reuseNextCache: true });
     if (action === "upload") {
-      console.log("Uploading an undeployed preview version; fixed domains will remain unchanged");
-      run("opennextjs-cloudflare", ["upload", "--env", "preview"], sourceRoot, { localBinary: true });
+      console.log("Uploading preview version and promoting it to the fixed preview domain");
+      const upload = run("opennextjs-cloudflare", ["upload", "--env", "preview"], sourceRoot, {
+        localBinary: true,
+        captureOutput: true,
+      });
+      process.stdout.write(upload.stdout);
+      process.stderr.write(upload.stderr);
+      const versionId = extractWorkerVersionId(`${upload.stdout}\n${upload.stderr}`);
+      const promoteArgs = ["versions", "deploy", `${versionId}@100`, "--env", "preview", "--yes"];
+      console.log(`Promoting preview version ${versionId} to preview.labonroof.top`);
+      run("wrangler", promoteArgs, sourceRoot, { localBinary: true });
+      console.log("Fixed preview URL: https://preview.labonroof.top");
     }
   } else {
     if (action === "deploy") {

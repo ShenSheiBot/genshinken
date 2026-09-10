@@ -153,9 +153,9 @@ PowerShell 使用 `$env:ROOF_BUILD_TIMESTAMP='...'` 后再运行构建。固定�
 
 GitHub Quality 与 IndexNow runner 固定为 `ubuntu-24.04` 和 Node `22.20.0`，官方 Actions 固定到已核验的完整提交 SHA。`.github/workflows/browser-smoke.yml` 调用公开的 `UCCTB/web-test-platform` reusable workflow，并固定其完整提交 SHA；workflow 不声明或继承调用方配置的 repository／organization secrets，GitHub 自动提供的 caller `GITHUB_TOKEN` 只授予 `contents: read`，artifact 属于博客 caller run。Playwright 版本、项目矩阵、产品断言和测试素材由博客自己的 lockfile、配置与 specs 持有，完整权责和 SHA 更新流程见 [`testing.md`](../testing.md)。
 
-`scripts/deploy-cloudflare.mjs` 是现行部署入口。preview 分为两个原生 Cloudflare 阶段：
-`cf:upload:preview` 从未提交工作区构建，复用本地 Next 构建缓存，并通过 Worker Versions 上传一个不承载固定域名
-流量的候选；`cf:promote:preview -- <VERSION_ID>` 只把已验收的同一版本提升到固定预览域名，不重建或重传。
+`scripts/deploy-cloudflare.mjs` 是现行部署入口。preview 上传从未提交工作区构建，复用本地 Next 构建缓存，
+通过 Worker Versions 上传候选并自动把同一个 Version 提升到固定预览域名；Version ID 仍会输出，供回滚或自动提升
+中断时使用 `cf:promote:preview -- <VERSION_ID>` 恢复，不重新构建或重传。
 production 则由 `cf:deploy:production` 同步字体、检查干净提交、从当前提交建立隔离构建根、执行 OpenNext
 构建、裁掉 R2 已承载的重复附件后部署。预览构建的 Next Build ID 固定为其工作区基准提交，因此同一未提交稿
 的内容反馈不会为全部 OpenNext cache 文件制造新命名空间；构建时间只进入 `/about` metadata，不再污染每个
