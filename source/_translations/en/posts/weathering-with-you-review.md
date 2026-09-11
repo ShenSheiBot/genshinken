@@ -1,14 +1,30 @@
 ---
+title: "Becoming Your “Alright”—Reflections on Weathering with You"
+title_breaks: ["Becoming Your “Alright”—Reflections on Weathering with You"]
+date: 2019-07-21
+slug: weathering-with-you-review
+script: latn
+categories: [Animation]
+section: review
+tags: ["Animation Criticism", "Sekai-kei", "Disaster Imaginaries", "Makoto Shinkai", "Weathering with You"]
+post_author: Hongcha Pao Haitai
+proofreader: Rembrandt
+excerpt: >-
+  Beginning with weather imagery, sekai-kei structures, monologue, and empathy,
+  Hongcha Pao Haitai discusses how Weathering with You turns the choice between
+  the world and the girl into a stance toward living together.
+citation:
+  itemType: blogPost
+  citationKey: hongcha2019weatheringWithYou
+  date: "2019-07-21"
+  blogTitle: Roof Research Society
+  url: "https://www.bilibili.com/read/cv3126542/"
 work_id: weathering-with-you-review
 source_type: post
 source_slug: weathering-with-you-review
-slug: weathering-with-you-review
 language: en
 status: review
-published: 2026-08-27
-title: "What It Means to Say “We’ll Be All Right”: Reflections on Weathering with You"
-title_breaks: ["What It Means to Say", "“We’ll Be All Right”:", "Reflections on", "Weathering with You"]
-excerpt: Hongcha Pao Haitai asks why Weathering with You’s attempt to tie an intimate romance to a crisis engulfing Tokyo falters, then finds unexpected power in its final promise to face a damaged world side by side.
+published: 2026-09-11
 credits:
   - role: translator
     contributor_id: shen-shui-bot
@@ -19,111 +35,97 @@ credits:
 translation_method: agent
 source_relationship: direct
 base_language: zh-Hans
-updated: 2026-08-27
+updated: 2026-09-11
 rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-[author] Red Tea Seaweed
+[author] Hongcha Pao Haitai
 
-![Portrait of Red Tea Seaweed](attachments/roof-archive/cv3126542/01-author-portrait-v4.png "=25%")
+![Hongcha Pao Haitai’s avatar](attachments/roof-archive/cv3126542/01-author-portrait-v4.png "=25%")
 
-[author-bio] MA in literature; critic of otaku culture, literature, and the arts.
+[author-bio] MA in Literature. Criticism of otaku culture, literature, and the arts.
 
-> Editor’s note: Spoilers follow.
+> Editor’s note: Spoiler warning.
 
-I had been counting down the days to the premiere of *Weathering with You*, and my first reaction was disappointment. When the lights came up, I wondered whether some of the sold-out audience felt the same. At screenings of *Rascal Does Not Dream of a Dreaming Girl* earlier that month and *Your Name.* a few years before, I had heard the theater fill with sobs. This time I did not. More importantly, *Weathering with You* had not surpassed what Shinkai achieved in *Your Name.*, as I had hoped it would. I want to explain what I found missing—and why, despite those reservations, the ending has stayed with me.
+I had eagerly awaited the opening day of *Weathering with You*, but my immediate response after seeing it was disappointment. I suspect quite a few people shared that feeling when the lights came up at the end of the screening. The theater was packed, but unlike the *Rascal Does Not Dream* film I saw at the beginning of the month—or *Your Name.* back then—*Weathering with You* did not set off sobs from every direction. That, first and foremost, was the source of my disappointment. Makoto Shinkai had not moved me in a new way, as I had expected him to. Let me take my time explaining why.
 
-## Weather as Feeling
+## Representations of Landscape
 
-Weather is the film’s governing image. As in Shinkai’s earlier work, it makes emotion visible. Hodaka’s voice-over repeatedly treats a clear sky as more than a forecast: to long for sunlight and an expanse of blue is also to long for happiness, relief, and a clear mind.
+The story of *Weathering with You*, as its title suggests, is about the weather. Here, as in Shinkai’s previous work, the weather expresses the characters’ emotions. Through Hodaka’s monologues, the film repeatedly gives voice to this thought: the weather is people’s state of mind, their emotions. Praying for fine weather and open blue skies is therefore synonymous with praying for happiness and a cheerful state of mind. It is within a landscape of precisely this kind of “weather” that Hodaka, the male protagonist, makes his way to Tokyo. He pedals through wind and rain that stand for his gloomy mood, chasing a shaft of sunlight all the way to the edge of the outlying island. Rain clouds cover the entire sea, while the sunlight’s destination across the strait is Tokyo, where Hina, the female protagonist, lives. Hina does much the same: listening to the sorrowful sound of rain in her mother’s hospital room, she looks toward that shaft of light outside the window, climbs to the roof of an abandoned building, and prays for a bright future. Nor is there any surprise in the sequence where, after meeting, the two set up a platform for weather prayers. The 100% sunshine girl brings people happiness and joy along with clear skies. The music’s rhythm is cheerful here, and so is the audience’s mood.
 
-Before leaving his island for Tokyo, Hodaka rides his bicycle through wind and rain, chasing a sliver of sunlight to the edge of the sea. Clouds darken the water, but the light seems to reach across the strait toward the city where Hina lives. Hina answers a similar call. In her mother’s hospital room, with rain tapping at the window, she notices a shaft of sunlight, climbs to the shrine atop an abandoned building, and prays for brighter days. After Hodaka and Hina meet, they set up a website offering clear skies on demand. Hina’s prayers never fail. As the “sunshine girl,” she brings brief spells of good weather to people who need them. Music and brisk editing give this run of commissions an infectious lift; for a while, I share her customers’ delight.
+![A still from Weathering with You](attachments/roof-archive/cv3126542/02-weathering-with-you.jpg)
 
-![Promotional image of Hina praying as sunlight breaks through the clouds and leaves swirl around her](attachments/roof-archive/cv3126542/02-weathering-with-you.jpg)
+Yet, familiar though this approach is in Shinkai’s work, I have to admit that the link between representations of weather and the characters’ states of mind is too simple, too clichéd. I suspect that many people share my preference: our favorite representations of landscape in Shinkai are probably still the school rooftop towering above the entire city and the angels’ stairway shooting into the clouds in the opening movies for the two *ef* games. By comparison, the landscapes in *Weathering with You* have only their exquisite surfaces; the richness of feeling is gone. As a viewer, I cannot feel the characters’ anguish and unease as I did through the flickering lens flare at twilight in *Your Name.* Of course, this is not to say that *Weathering with You* has no representations of landscape beyond the weather. But I have to say that the excessive emphasis on weather, and the overly simple binary of clear skies and rain, have greatly diminished the power of Shinkai’s lyrical use of landscape.
 
-This is recognizably Shinkai, but the equation between weather and feeling is also very simple. I still remember the school rooftops high above the city and the shafts of sunlight—“angel’s ladders”—descending through the clouds in the opening sequences of the anime series *ef: A Tale of Memories* and *ef: A Tale of Melodies*. Those images gather longing and distance around them without assigning every kind of weather a single emotion. *Weathering with You* is just as dazzling to look at, but its skies often feel overdetermined: sunlight means hope; rain means sorrow. That rigid contrast narrows the emotional range of its landscapes. Nor did the film’s use of light produce the knot of anxiety I felt at twilight in *Your Name.*, when the final chance for recognition seemed about to vanish with the day.
+## Stepping Outside Sekai-kei
 
-## Where the Film Leaves Sekaikei Behind
+In fact, I had already said in an earlier “thoughts” post that I would find it hard to give *Weathering with You* a positive assessment if it failed to reach new heights in its treatment of the abstract elements that sever the “you and I” relationship—or even retreated to the intermediary social layer. I was not setting out to make a prediction, but *Weathering with You* has unfortunately walked straight into that prediction’s line of fire. Put simply, it inherits all manner of elements from *Your Name.*, but not its sekai-kei aesthetic.[^sekaikei]
 
-Before going further, I should say exactly what I mean by *sekaikei*. The term has never had a single settled definition. I use it here for stories that connect an intimate relationship directly to a crisis on the scale of the world, with family, government, and society largely absent from the space between. In the branch of the form I value most, impersonal forces such as time, distance, or memory separate the lovers, leaving the boy painfully unable to save the girl. That is not the only way to understand *sekaikei*. It is the particular aesthetic tradition against which I am measuring Shinkai.
+Beginning with *Children Who Chase Lost Voices*, Shinkai has gradually replaced the science-fiction premises of his earlier work with premises drawn from folklore. The same is true of *Weathering with You*: Hina, with her ability to clear the skies without fail, is cast as a “weather maiden,” a figure that has kept human civilization stable for centuries. The price of this power is to become a *hitobashira*, a human sacrifice. As the maiden uses her power, she will gradually become as transparent as rainwater, until she finally disappears into the world in the sky. A girl bearing the fate of humanity on her shoulders, and a choice between that girl and humanity’s fate: this would seem to be a classic sekai-kei structure. In fact, it is not. There are three reasons.
 
-What I wanted from *Weathering with You* was a new variation on those impersonal forces, not a retreat into familiar social machinery. Although the film borrows freely from *Your Name.*, it does not inherit that film’s *sekaikei* tension.
+![The weather maiden in Weathering with You](attachments/roof-archive/cv3126542/03-weather-maiden.png)
 
-Beginning with *Children Who Chase Lost Voices*, Shinkai gradually traded the science-fiction premises of his early work for folklore. *Weathering with You* continues that turn. Hina is the latest in a long succession of “weather maidens,” women whose prayers restore the balance between human life and the weather. Their power exacts a terrible price. The more Hina uses it, the more her body turns translucent and dissolves into rain, until she disappears into the world above the clouds. A girl made responsible for humanity’s fate, and a choice between that girl and everyone else: on the surface, this is classic *sekaikei*. For me, however, the resemblance breaks down in three ways.
+First: in confronting this choice, Hodaka does not display sekai-kei’s most important feature—powerlessness. In *Iriya no Sora, UFO no Natsu*, for instance, this oppositional structure is present, but the male protagonist, Asaba, cannot make any choice, nor does he have any real say in the choice. All he can do is watch helplessly as Iriya boards a fighter plane with no return ticket, immersed in his own sense of powerlessness. Or take *Owaru Sekai no Album*:[^album] all “I” can do is silently remember the name of the girl who is about to disappear, leaving tears on a parched beach. Or take the final chapter of *AIR*, Hiroki Azuma’s favorite sekai-kei work: the protagonist/player turns into a crow and is stripped of every choice, able only to watch helplessly before the screen as Misuzu moves toward her end, unable to do anything at all.
 
-[fig] The promotional text introduces Hodaka as “a runaway who came to Tokyo” and credits voice actor Kotaro Daigo.
+To put it in less than flattering terms, the powerlessness of sekai-kei is an aesthetic of taking pleasure in this sense of powerlessness, taking pleasure in a certain powerlessness of the male subject—or, as we might put it more obscenely, impotence. *Your Name.* cleverly strikes a balance between powerlessness and a happy ending through its protagonists’ body-swapping and the fusion of two narrative strands: saving the village and forgetting names. But in *Weathering with You*, faced with this choice, Hodaka chooses the girl without hesitation. There is no hesitation, no obstacle of any kind; simply longing for her is enough to bring fulfillment. This undoubtedly pales beside that precious final turn back in *Your Name.*
 
-![Promotional image of Hodaka on a ferry at sunset, captioned “Hodaka, a runaway who came to Tokyo,” with voice actor Kotaro Daigo’s name](attachments/roof-archive/cv3126542/03-weather-maiden.png)
+![Hodaka and Hina](attachments/roof-archive/cv3126542/04-hodaka-hina.png)
 
-First, Hodaka never suffers the powerlessness that defines the version of *sekaikei* I have in mind. *Iriya’s Sky, Summer of the UFOs* presents the same choice, but Asaba has no real say in it. He can only watch Iriya leave on a mission from which she will not return. In Hikaru Sugii’s *Owaru Sekai no Album* (*Album of a World Coming to an End*), the unnamed narrator can do no more than remember the name of a girl about to disappear and weep on a dried-out shore. In the final route of the visual novel *AIR*, the story shifts to the perspective of a crow. Earlier routes at least let the player guide a human protagonist through decisions; now there are no meaningful choices and no way to help Misuzu. The player can only watch her approach death.
+Second: as I said in that earlier post, the chief obstacle separating the two should be an abstract element. The weather maiden’s power seems to fit, but the problem is that it does not become the chief obstacle separating them. When we dwell less on the story’s premises and attend instead to how Shinkai actually depicts this separation and these obstacles, we discover that the real obstacle here is the police. And the police stand in their way not because of Hina’s abstract power, but because Hodaka has run away from home and possesses a gun, and because Hina has lied about her age.
 
-The peculiar pleasure of these stories lies partly in dwelling on that helplessness. They turn the male subject’s inability to act into an aesthetic. Put less politely, they aestheticize his impotence. *Your Name.* complicates the pattern. Body swapping gives both protagonists unusual access to each other’s lives, and their attempt to save Itomori allows them to act decisively. Yet even success cannot close the three-year gap or defeat forgetting. Saving the town keeps open the possibility that they might meet again; it cannot guarantee that they will recognize each other if they do. Their eventual reunion feels hard won because action alone cannot bring it about.
+*Children Who Chase Lost Voices* is undoubtedly a turning point for Shinkai. From that film onward, he has repeatedly declared his intention to pursue entertainment in animated film. The police chases in *Weathering with You*, like the battles between the organization and the underground people in *Children Who Chase Lost Voices*, seem to embody what Shinkai understands by “entertainment.” These beautifully animated cops-and-robbers chases, coupled with the sound editing at which Shinkai excels, do indeed have extraordinary force and expressive power, just as he says in interviews and in the novelization’s afterword. But that expressive power cannot conceal how clichéd this “entertainment” feels. After all, we do not go to the cinema to see Shinkai for action scenes like those in *Detective Conan*.
 
-Hodaka, by contrast, chooses Hina at once. The film puts him through an obstacle course, but it never makes him hesitate over the choice or seriously confront the limits of his power to carry it out. He wants Hina back, races to reach her, and succeeds. Beside the fragile, belated turn toward each other at the end of *Your Name.*, his rescue of Hina above the clouds feels too certain.
+So when Shinkai places the police chase at the story’s climax, treating it as the solution to the crisis in the “you and I” relationship, premises such as the world’s secret and the maiden’s power become empty trappings. Escape the police, and the maiden’s curse is defeated too. The world’s secret is discarded before it has even begun to show itself. Looking back at *Your Name.*, we find that saving the village does not provide an occasion for the two to meet; on the contrary, it becomes the reason they cannot recognize each other. Even the power to save hundreds of people cannot overcome forgetting. Thus, although *Your Name.* has its own “entertainment” in saving the village, its chief obstacles remain abstract elements such as time and forgetting.
 
-![Hodaka and Hina facing each other high above a sea of clouds](attachments/roof-archive/cv3126542/04-hodaka-hina.png)
+![Police chase](attachments/roof-archive/cv3126542/05-police-chase.png)
 
-Second, the film replaces an impersonal barrier with a familiar institution: the police. Hina’s supernatural power is what takes her away, but the practical obstacles that dominate Hodaka’s attempt to reach her are officers pursuing him for running away and carrying a gun. They are also after Hina because she lied about her age.
+Third: the fate of the world—or rather, the crisis threatening it—is not on a grand enough scale. Although three years of unceasing rain submerge the parts of central Tokyo toward Minato Ward, they cause no deaths or injuries. Nor has people’s everyday life come to a halt. At the end of the story, even the elderly woman who once prayed for clear skies says that the land Tokyo stands on used to be sea: now it has simply gone back to how Tokyo was a few hundred years ago, in the Edo period. Here, the fate of the world, the enormous disaster, becomes the everyday life that has accompanied humanity in the past and will accompany it in the future. Once the world crisis the girl bears on her shoulders is dissolved into everyday life, what meaning can the opposition between the world and the girl still have?
 
-This does not make the supernatural rescue irrelevant. Hodaka must still bring Hina back from the sky. But the climax is staged chiefly as an action chase, and that conventional machinery pushes the weather maiden’s curse into the background. Shinkai began embracing the pace and spectacle of mainstream feature animation in *Children Who Chase Lost Voices*, where an armed outside organization battles the inhabitants of an underground world. In *Weathering with You*, the pursuit is beautifully animated, and the sound editing gives it tremendous speed. Yet the excitement is also utterly familiar: the slick, breathless escalation of a *Detective Conan* set piece, from the franchise released in English as *Case Closed*. That is not what I go to a Shinkai film for.
+## Monologue and Empathy
 
-Once the chase supplies most of the climax’s concrete obstacles, the film no longer has to develop its supernatural cosmology. Escaping the police is not the same thing as breaking the weather maiden’s curse. Rather, familiar action plotting takes up the dramatic space where Shinkai’s abstract barriers once stood. *Your Name.* balances the two more successfully. The rescue of Itomori provides spectacle and keeps Mitsuha alive, but time and oblivion remain the final obstacles to recognition. The external adventure does not displace the intimate mystery.
+Of Shinkai’s animated films, the ones I rate most highly are *Voices of a Distant Star* and *Your Name.* It is in these two works that the method of “vertical montage”[^montage] unique to Shinkai finds its fullest expression. Crucial to this is the way the male and female protagonists’ monologues overlap and separate. The voices of the monologues in *Voices of a Distant Star* travel faster than the fastest speed in this universe, the speed of light: they allow the voices of a boy and girl on planets tens of light-years apart to overlap in an instant. In *Your Name.*, the voices of the monologues cross the dimension of time, coming together in a single sentence across a three-year gap on the timeline. But in *Weathering with You*, the female protagonist Hina’s monologues are absent. Apart from the dream that night at the hotel, almost all the film’s monologues belong to Hodaka, the male protagonist. The absence of the female protagonist’s monologues is undoubtedly the main reason *Weathering with You* has such difficulty eliciting empathy.
 
-![Hodaka and Hina standing at a rain-soaked rooftop railing, facing a break in the storm clouds](attachments/roof-archive/cv3126542/05-police-chase.png)
+![Hina](attachments/roof-archive/cv3126542/06-hina.jpg)
 
-Third, the film scales back the disaster awaiting everyone beyond the couple. Three years of unbroken rain flood Tokyo’s low-lying districts, but the film shows no deaths and concentrates instead on the ways people adapt. Daily life continues, altered but recognizable. Near the end, the older woman who once asked Hina for sunshine notes that the same land lay beneath the sea during the Edo period. Tokyo has merely returned to an earlier shoreline.
+The first thing this absence makes me feel is a difference in temperature between the two protagonists as their romance develops. In *Your Name.*, the monologues that transcend time and space and are heard over the same image let me feel the two falling in love with each other, step by step, at the same time. But without the female protagonist’s monologues, *Weathering with You* lets me feel only Hodaka’s one-sided ardor. I cannot feel the stirrings of Hina’s inner life. Viewers confined to the male protagonist’s monologues naturally cannot feel the kind of anxiety we feel when Mitsuha goes to Tokyo in search of Taki in *Your Name.* Nor can they gain a god’s-eye view from which to watch over the course of the protagonists’ romance. There is thus no basis for speaking of “anxiety about the contingency of romantic relationships,” an important theme in *Your Name.* and an aspect of sekai-kei’s problem of fate.
 
-That perspective points toward the film’s most interesting conclusion, but it also weakens the case for Hina’s sacrifice. The flood becomes less an apocalypse than another upheaval to which ordinary life must adjust. If people can absorb this “end of the world” into their daily routines, why should one girl bear the burden of preventing it? The supposed choice between the girl and the world starts to collapse—not because Hodaka has solved the dilemma, but because the film quietly makes its consequences survivable.
+What I feel in *Weathering with You*, then, is closer to the Shinkai of the *She and Her Cat* era. I feel an overlap between Hodaka, who flees his hometown and comes to Tokyo, and Shinkai, who breaks away from his father’s construction company and seeks his own path at Falcom. The male protagonist’s monologue becomes that of the cat = Shinkai. The impression of the boy’s one-sided longing likewise becomes the cat’s one-sided love. And this is not the Shinkai I like.
 
-## Monologue, Montage, and Mutual Feeling
+## The Meaning of “Alright”
 
-Of Shinkai’s animated films, I value *Voices of a Distant Star* and *Your Name.* most highly. In both, his distinctive use of what I would call vertical montage reaches its fullest expression. By that I mean the way image, music, and separate voice-over tracks are layered within a single moment. The scene takes its meaning from the way those elements align—or fail to align. Most important is the alternation and overlap between the boy’s and the girl’s inner voices.
+![The ending of Weathering with You](attachments/roof-archive/cv3126542/07-ending.png)
 
-In *Voices of a Distant Star*, editing draws together the voices of two teenagers separated by dozens of light-years and makes them seem, for an instant, to inhabit the same time. In *Your Name.*, two monologues bridge a three-year gap and meet in a single sentence. The distance remains, but the soundtrack lets us feel both people reaching across it.
+Perhaps, then, *Weathering with You* was, from the outset, not a film that set out to surpass *Your Name.*, but one that deliberately distanced itself from it. Or, as Shinkai put it in an interview, a film “full of willfulness.” Certainly, to see Hodaka choose Hina without hesitation when faced with a choice between the world and the girl—to see such a “fastball down the middle” in a film on this scale—does indeed give a sense of willfulness. But what puzzles me most is this: everyone says with one voice that the two need not feel guilty about the sudden change in the weather, that they need not take responsibility for the world’s transformation. Yet in the final scene, on seeing Hina offer a prayer facing the submerged city, Hodaka firmly rejects what everyone has said, declaring with absolute conviction—
 
-Hina is denied that interior presence in *Weathering with You*. Apart from her dream in the hotel, almost all the film’s voice-over belongs to Hodaka. The missing half of the duet is one major reason I found the romance difficult to believe in.
+> That’s not true. The world wasn’t crazy from the start. We changed it. That summer, up on the dome of that sky, I made the choice. Hina mattered more than blue skies. Hina’s life mattered more than the happiness of so many people. And so we, too, prayed: whatever shape the world might take, we would simply go on living.[^dialogue]
 
-![Promotional portrait of Hina, with the Japanese and English film titles](attachments/roof-archive/cv3126542/06-hina.jpg)
+Yet, at odds with that firm tone, inexplicable tears run down Hodaka’s cheeks. Hina asks, “Are you alright?” Hodaka gathers himself, recovers that firm tone, and delivers the most powerful line in the entire film, the ending that says the most—
 
-The result is an emotional imbalance between the lovers. *Your Name.* lets us hear Mitsuha and Taki falling in love in parallel. We share Mitsuha’s anxiety when she travels to Tokyo in search of Taki, and we often understand what each of them feels before the other does. That double knowledge makes the relationship feel mutual yet precarious: chance, time, and forgetting could so easily keep it from happening at all.
+> 「陽菜さん、僕たちは――」。
+> “Hina, we—”
+>
+> 「僕たちは、大丈夫だ」。
+> “We’re alright.”
 
-*Weathering with You* keeps us inside Hodaka instead. We know the intensity of his love, but not the turmoil behind Hina’s choices. She speaks, makes decisions, and acts for herself, yet the film rarely lets us inhabit her uncertainty. Without reciprocal inner voices, the romance feels less like two people discovering each other than like a boy pouring all his passion into a girl we are not allowed to know as deeply.
+I have not yet fully sorted out what I feel about this ending. But perhaps that is only natural: in the novelization’s afterword, Shinkai says that this ending remained unsettled during production. He had never managed to capture precisely what the two were feeling at that moment. What finally decided it for him was “We’ll Be Alright,” a song Yojiro had proposed at the outset but which had never found a suitable place. And so Shinkai said: “(What they’re feeling) is all already written here.”
 
-The Shinkai I sense here is closer to the filmmaker of *She and Her Cat*, his early short narrated by a cat who adores the woman he lives with but cannot share her inner life. The evidence is in the film itself: because only the boy receives a sustained inner voice, I sometimes feel Shinkai speaking through Hodaka rather than presenting him as one half of a pair. His love, like the cat’s, reaches us entirely from one side and remains sealed within that single perspective. That is not the Shinkai I love.
+The heart of the lyrics to “We’ll Be Alright” can be summed up in 「君の大丈夫になりたい」—“I want to become your ‘alright,’ rather than make you ‘alright.’”
 
-## What “We’ll Be All Right” Promises
+![The ending of Weathering with You](attachments/roof-archive/cv3126542/08-lyrics.png)
 
-[fig] The visible wishes ask for clear skies, an end to the rain, and good weather when a mother leaves the hospital.
+So, as Hodaka watches Hina offer a prayer facing the submerged city in the final scene, the decision he makes—the decision he made up on the dome of the sky—is not to abandon the world and choose Hina. The real power to decide has always weighed on Hina’s shoulders. As he looks at Hina—no longer a weather maiden, yet still offering a prayer as she faces the submerged city—he resolves no longer to affirm his own choice, but to affirm Hina’s. What he does is precisely what the lyrics describe: in this submerged world, in this storm-lashed weather, he goes on living as Hina’s “alright,” goes on living as Hina’s “happiness.” This is not a story about choosing between the world and the girl. It is a story about the stance we take as we go on living. So it is at the end of the novelization: once such a stance has been chosen, the raindrops that submerged Tokyo can glide across their joined hands like a caress on the skin, turning from disaster into blessing.
 
-![Rain-beaded prayer plaques at the Meteorological Shrine; among the visible wishes are clear skies, an end to the rain, and good weather when a mother leaves the hospital](attachments/roof-archive/cv3126542/07-ending.png)
+One final point perhaps needs adding. Although the representations of everyday life after Tokyo’s submersion keep bringing to mind the question of everyday life after the earthquake disaster, I do not particularly want to put the two together. Read that way, *Weathering with You* would not even measure up to *Hakubo*, which depicts everyday life continuing after the earthquake disaster, with boys and girls still capable of innocent romance. Commenting on Twitter on the similarities between *Weathering with You* and *Ponyo*, Naoya Fujita described the latter as “a work about establishing the attitude one ought to take in a country continually facing disasters of every kind.”[^fujita] I think he is absolutely right to dissolve the singularity of 3.11—the earthquake disaster of March 11, 2011—by placing it within the broad category of “disaster.” As *Weathering with You* puts it, “whatever shape the world takes”—whether earthquakes, tsunamis, torrential rain, or ice and snow—we will go on living together with those who become our “happiness,” our “alright.”
 
-Perhaps, then, *Weathering with You* was never trying to surpass *Your Name.* on its own terms. Perhaps it meant to turn away from them. At any rate, it is a stubborn film. Faced with a choice between the world and a girl, Hodaka rejects the morally respectable answer and chooses Hina without hesitation.
+> Editor’s note: Most of the controversy over *Weathering with You* centers on whether this is a regression in the sekai-kei imagination or an expression of the imagination of the 2010s—perhaps here we can glimpse the animation industry’s development… or decline.
 
-What puzzles me most comes afterward. By the end, the adults around Hodaka and Hina have all told them the same thing: they need not feel guilty about the weather, and they are not responsible for changing the world. Yet when Hodaka finds Hina praying over the flooded city in the final scene, his voice-over rejects that absolution:
+[^sekaikei]: *Translator’s note:* Sekai-kei (“world-type”) names a strand of Japanese fiction in which the intimate “you and I” relationship is joined directly to a world-scale crisis, with the intermediary layer of society largely absent.
 
-> No. That wasn’t it. The world wasn’t broken from the start. We changed it. That summer, up in the sky, I made my choice. Hina mattered more to me than blue skies; her life mattered more than everyone else’s happiness. And so we made a wish: no matter what the world became, we would keep living in it.
+[^album]: *Translator’s note:* *Owaru Sekai no Album* (終わる世界のアルバム), a novel by Hikaru Sugii with no official English edition, is cited in the essay under its Chinese title, 《请记得我》 (“Please Remember Me”).
 
-The words are certain, but the tears on Hodaka’s face are not. They hold the guilt, grief, relief, and strain that his declaration tries to master. When Hina asks, “Are you all right?” Hodaka pulls himself together and answers with the line that unlocks the ending:
+[^montage]: *Translator’s note:* “Vertical montage” is Sergei Eisenstein’s term for the coordinated composition of sound and image; the essay brings the overlap and separation of the protagonists’ monologues into its scope.
 
-> “Hina, we—we’ll be all right.”
+[^dialogue]: *Translator’s note:* English renderings of film dialogue follow the quotations reproduced in this essay; they have not been verified against an official English subtitle track.
 
-I still have not completely sorted out what I feel about this ending, which may be part of its force. In the afterword to his *Weathering with You* novelization, Shinkai writes that throughout production he remained unsure what the two characters should feel in this moment. The answer finally came from “We’ll Be Alright,” a song that RADWIMPS frontman and film collaborator Yojiro Noda had proposed early on, but for which the filmmakers had found no place. Shinkai realized that the characters’ state of mind was already present in its lyrics. The song’s official English title spells *Alright* as one word; the dialogue above uses the ordinary two-word phrase *all right*.
-
-The song’s key line is difficult to carry into English. A literal gloss—I want to become your “all right”—shows the grammatical trick but misses the emotional sense. The speaker does not promise to fix the other person or make every circumstance okay. He wants to become the reason that person can believe they will be okay, whatever happens.
-
-![Hina walking across a rain-wet rooftop as sunlight pours through the clouds](attachments/roof-archive/cv3126542/08-lyrics.png)
-
-Seen this way, Hodaka’s final promise does more than repeat the choice he made above the clouds. First he decided to take Hina back from the sky. Now he must decide whether he can stay beside her and face what that decision has brought about. Hina has borne the greater burden all along. The role of sacrifice was imposed on her, even if she accepted it; after Hodaka frees her, she still looks out over the flooded city and prays. Hodaka now resolves not merely to defend what he did, but to stand with her in the world that followed.
-
-To become a source of reassurance for Hina is not to stop the rain. It is to give her a reason to keep living through it. In the end, the film is not about choosing between the world and a girl so much as choosing how to live beside another person once the world has changed. At the end of the novel, raindrops slide across their joined hands. The flood is not redeemed, much less turned into a blessing for everyone it affects. But in that small image, hostile weather becomes the medium of a caress. Disaster has not vanished; tenderness has learned to live within it.
-
-## Living After Disaster
-
-The promise between Hodaka and Hina does not exhaust the meaning of flooded Tokyo. The ending also pulls the film outward, from the couple’s private resolve toward Japan’s public memory of disaster. Images of ordinary life continuing amid inundated streets recall March 11, 2011: the Tōhoku earthquake and tsunami, followed by the Fukushima nuclear disaster. I do not want to turn the film’s flood into a direct allegory of those events. That would flatten both the history and the fiction.
-
-Nor is *Weathering with You* especially attentive to the texture of daily life in a place marked by catastrophe. Yutaka Yamamoto’s 2019 anime *Hakubo*—released in English as *Twilight*—looks more closely at ordinary routines and a young romance in Fukushima after the Great East Japan Earthquake. Shinkai’s flooded Tokyo works at a broader, more fantastic scale.
-
-Critic Naoya Fujita’s comparison of *Weathering with You* with Hayao Miyazaki’s *Ponyo* gives me a more useful frame than a one-to-one historical allegory. Put side by side, both become films about how people live in a country where disaster repeatedly overturns ordinary life. The comparison works as long as that broad category does not erase what makes each catastrophe distinct. Earthquakes, tsunamis, torrential rain, and snowstorms are not interchangeable. What *Weathering with You* finally asks is how people go on after any such event has changed the terms of daily life—and how they might give one another reason to believe they can endure it.
-
-> Editor’s note: One way to read *Weathering with You* is as a retreat from *sekaikei*: social institutions return to mediate the couple’s crisis. Another is to see its flooded Tokyo and its insistence on adaptation as part of a post–March 11 concern with living after irreversible damage. These readings describe a shift in the priorities of contemporary anime; they do not by themselves tell us whether that shift is an artistic gain or loss.
+[^fujita]: *Translator’s note:* The original tweet has not been independently verified; the quotation is translated as reproduced by the essay’s author.

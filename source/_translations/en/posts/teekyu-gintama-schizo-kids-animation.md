@@ -1,14 +1,31 @@
 ---
+title: "A Kind of Schizo-Kid Anime: Teekyu VS Gintama"
+title_breaks: ["A Kind of Schizo-Kid Anime: Teekyu VS Gintama"]
+date: 2020-02-25
+slug: teekyu-gintama-schizo-kids-animation
+script: latn
+categories: [Animation]
+section: review
+tags: [Akira Asada, Gilles Deleuze]
+post_author: Shizai Gouzi
+excerpt: >-
+  Through Akira Asada’s “schizo-kids” and Deleuze’s concepts of connection and
+  cutting, this essay contrasts the contradiction between Gintama’s main plot
+  and everyday-life arcs with Teekyu’s animated form, which keeps becoming and
+  cutting itself apart within small narratives.
+featured_order: 0
+citation:
+  itemType: blogPost
+  citationKey: shiZaiGouZi2020TeekyuGintama
+  date: "2020-02-25"
+  blogTitle: Roof Research Society
+  url: "https://www.bilibili.com/read/cv4808363/"
 work_id: teekyu-gintama-schizo-kids-animation
 source_type: post
 source_slug: teekyu-gintama-schizo-kids-animation
-slug: teekyu-gintama-schizo-kids-animation
 language: en
 status: review
-published: 2026-08-27
-title: "Run Away Twice: Teekyu, Gintama, and Akira Asada’s Art of Escape"
-title_breaks: ["Run Away Twice:", "Teekyu, Gintama,", "and Akira Asada’s", "Art of Escape"]
-excerpt: "Gintama escapes from its epic historical plot into everyday comedy, only to be drawn back. Teekyu goes further: it abandons each new premise, identity, and destination before any of them can become a new home."
+published: 2026-09-11
 credits:
   - role: translator
     contributor_id: shen-shui-bot
@@ -19,141 +36,95 @@ credits:
 translation_method: agent
 source_relationship: direct
 base_language: zh-Hans
-updated: 2026-08-27
+updated: 2026-09-11
 rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-[author] Shi Zai Gou Zi
+[author] Shizai Gouzi
 
-![Portrait of Shi Zai Gou Zi](attachments/roof-archive/cv4808363/01-author-portrait-v4.png "=25%")
+![Shizai Gouzi’s avatar](attachments/roof-archive/cv4808363/01-author-portrait-v4.png "=25%")
 
-[author-bio] “In an age without a world, spread meaningless love.”
+[author-bio] Spreading meaningless love in an age without a world.
 
-Its strangeness is part of the invitation: what might affection look like when there is no stable world to contain it or give it a purpose?
+The paired terms schizophrenia/paranoia, popularized by the Japanese philosopher Akira Asada, the “god of the young,” won bronze in the new-word category of the 1984 Buzzword Awards. To put it simply: **paranoiacs are modern people competing to “catch up and overtake,” believers in History and Order with capital letters; schizophrenics are the postmodern people who “run, run.”** Run from where? From the established order, of course. Asada calls these postmoderns “schizo-kids,” because all children are schizophrenic: they are forever doing things that adults see as meaningless and unnecessary, and can never concentrate. (*Translator’s note:* Here “schizo-kids” is Asada’s cultural-critical label, coined in 1984 Japan, not a clinical description of schizophrenia.) Asada champions “schizo-kids,” champions our becoming “children.” This means not simply that we turn into children, but that, as we become children, the very concept of the child changes too.
 
-In 1984, the coinages “schizo” and “parano” won the bronze prize in the new-words category of Japan’s annual buzzword awards. They had been popularized by Akira Asada, a philosopher so fashionable among young readers that his admirers called him a “god of youth.” Both terms belong to that particular intellectual moment. Today, “schizo” is a derogatory English abbreviation for schizophrenia; I use it here only for Asada’s historical concept. “Parano” is likewise Asada’s shorthand for the opposing, paranoid pole, not a word in ordinary English.
+[fig] *Complete Dialogues*
 
-Asada’s distinction is deliberately stark. The paranoid type belongs to modernity and lives under the command to “catch up and overtake.” This person believes in capital-H History and capital-O Order: a single story of progress in which everyone has a secure place. Asada’s postmodern “schizo,” by contrast, hears only “Run away, run away.” The idea is not to leave one institution and submit to another. It is to flee the fixed position from which any institution can tell you who you are.
+![Cover of Complete Dialogues by Kōjin Karatani and Akira Asada](attachments/roof-archive/cv4808363/02-karatani-asada-dialogue-cover.png "=25%")
 
-Hence Asada’s “schizo-kids.” The child in this model pours energy into whatever adults dismiss as pointless, drops one obsession and rushes toward the next, and has not yet accepted a permanent social identity. Asada’s ideal was a Deleuzian “becoming-child,” not an adult pretending to be young. In a becoming, neither side remains intact: the adult changes, and so does the idea of what a child can be.
+[fig-note] By Kōjin Karatani and Akira Asada.
 
-[fig] Kojin Karatani and Akira Asada, Complete Dialogues.
+> What a true player needs is to live not in a home in the traditional sense, but in a wandering home on the move—to live in deserts, in the mountains, in the sea.
 
-![Japanese cover of Complete Dialogues by Kojin Karatani and Akira Asada](attachments/roof-archive/cv4808363/02-karatani-asada-dialogue-cover.png "=25%")
+This looks like a good moment to introduce *Teekyu*. Its four heroines are high-school girls—JKs: Yuri, Kanae, Marimo, and Nasuno. Kanae’s grandmother lives in the Egyptian desert. By the second episode, Kanae is already treating a stranger’s home as her own, sliding along on a swim ring with Marimo and into someone else’s house. Nasuno is so rich that everywhere is her home (or rather, part of her property holdings). As for Marimo’s home, a cute alien girl has moved in, and it has been twisted into some freaky space. In season four, the four JKs drift out to sea together and live there for a long time…
 
-In one of the collected dialogues between Kojin Karatani and Asada, a “player” is someone who slips out of an assigned position—not an athlete or gambler, but a person who refuses to be pinned to one role or place. Such freedom requires a home that will not become another anchor:
+![The four Teekyu girls running toward the school gate](attachments/roof-archive/cv4808363/03-teekyu-school-scene.png)
 
-> What a true player needs is not a home in the traditional sense, but a wandering dwelling: in the desert, in the mountains, or at sea.
+*Teekyu* looks like a genuine schizo-kid anime. The girls can never concentrate and are always doing meaningless things. But one point needs stressing: this does not mean the anime itself has no meaning, no narrative. *Teekyu* has an obvious theme: tennis. This is where its narrative begins. When we say that it has a theme, we are already tacitly operating within the paranoiac framework of Order and History. In fact, this is precisely *Teekyu*’s point of departure. The anime opens just as the manga does, with a tennis match between Yuri and Kanae. “Here I go, Senpai,” says Yuri. Kanae takes up her stance, her face serious, and says, “Bring it on.” This is exactly the posture of Asada’s “catch up and overtake” moderns. Seen from this angle, *Teekyu* addresses precisely the problem of how “catch up and overtake” modern people become “run, run” postmodern schizo-kids.
 
-That wandering dwelling might have been designed for *Teekyu*. The series follows Yuri, Kanae, Marimo, and Nasuno, four members of a high-school tennis club. Kanae’s grandmother lives in the Egyptian desert. In episode two, a waterslide deposits Kanae and Marimo in a stranger’s house, which they promptly make themselves at home in. Nasuno is so rich that almost anywhere is either her home or her property. A cute alien girl occupies Marimo’s house and turns it into an uncanny realm. By season four, all four girls have drifted out to sea and stayed there for a surprisingly long time.
+Atsushi Sasaki notes that a certain subtle uncertainty still lingered in Asada’s *Structure and Power*, but had all but disappeared by *On Escape* (*Japanese Thought*). Asada seems to have had too much faith in schizo-kids. He gave little thought to their regression into paranoiac moderns, nor did he think concretely enough about the process by which paranoiac moderns become schizo-kids.
 
-[fig] The four members of Teekyu’s tennis club, briefly headed in the same direction.
+[fig] *Structure and Power*
 
-![Yuri, Kanae, Marimo, and Nasuno running toward their school](attachments/roof-archive/cv4808363/03-teekyu-school-scene.png)
+![Cover of Structure and Power by Akira Asada](attachments/roof-archive/cv4808363/04-structure-and-power-cover.png "=33%")
 
-*Teekyu* may look like the purest schizo-kid anime imaginable. Its characters cannot concentrate, and nearly everything they do is gloriously unnecessary. Yet the series is not meaningless, nor does it dispense with narrative. It begins with a perfectly clear premise: tennis.
+[fig-note] By Akira Asada.
 
-Subject matter alone does not determine a story’s structure. Tennis matters here because it supplies rules, ranks, competition, and a goal—the ingredients of a small but stable order. Both the manga and anime open with Yuri preparing to serve to her upperclassman Kanae. “I’ll start, senpai,” Yuri says. Kanae takes her stance: “Come on.” For a moment, they inhabit Asada’s modern world, facing each other as competitors. *Teekyu* does not begin beyond order. It begins at the instant when a disciplined contest starts running away from itself.
+This essay, then, is by no means simply an exercise in imposing philosophical concepts on anime. It is a two-way process: examining anime through concepts, then returning from anime to reflect on thought itself.
 
-Atsushi Sasaki detects a hesitation in Asada’s *Structure and Power* that has nearly disappeared by *A Theory of Escape*. That hesitation leaves room for questions that Asada later hurries past when he embraces the schizo-kid as a political model. How does anyone actually escape a fixed order? Once they do, what stops the new position from hardening into an order of its own? A schizo-kid can always become paranoid again.
+There seems to be a consensus within *Gintama*’s fandom that the series has failed. Why? *Gintama* used to be one of the most popular anime, with terrifyingly high ratings on Douban. I am a devoted *Gintama* fan myself, but I have little time for other fans’ comments bordering on mindless fan worship. As for *Gintama* itself, I dislike most of its “hot-blooded” storylines. It is hard for me to understand why so many people love this hot-blooded side of *Gintama*. Most of its fights follow the same speech-powered formula. You preach, then the preaching powers you up and you beat the crap out of the other guy: “Because I have something to protect, you know.” From the start, I never found in *Gintama* the rejection of feel-good life lessons that some of its fans expected. Look closely and **we find that much of *Gintama*’s preaching follows the logic of Japanese TV dramas and hot-blooded manga.** A glance at *Gintama*’s episode titles is enough to reveal the author’s powerful urge to preach. Here are a few at random: **17, “Fathers and Sons Even Hate the Same Things”; 22, “Marriage Means Keeping a Mistake Going for a Lifetime”; 25, “Hot Pot Is a Microcosm of Life”; 28, “Good Things Never Come in a Row, So Why Do Bad Things Keep Coming One After Another?”**
 
-[fig] Akira Asada, Structure and Power: Beyond Semiotics.
+![Gintama title card: “Marriage Means Keeping a Mistake Going for a Lifetime”](attachments/roof-archive/cv4808363/05-gintama-marriage-title-card.png)
 
-![Japanese cover of Akira Asada’s Structure and Power: Beyond Semiotics](attachments/roof-archive/cv4808363/04-structure-and-power-cover.png "=33%")
+The preaching in *Gintama*’s titles is very interesting: on the one hand, the content preaches; on the other, the tone does not. The tone is approachable, and this approachability comes precisely from its offhand disregard for us: “I’m just saying. Don’t take it seriously. I don’t give a damn about you anyway.”
 
-My purpose is not to paste philosophy onto anime, as though *Gintama* and *Teekyu* merely illustrated conclusions reached elsewhere. The exchange works both ways. Asada and Deleuze help us see what the anime are doing; the anime, in turn, reveal what their concepts leave unresolved.
+We cannot take this synthesis to be Deleuze’s disjunctive synthesis: we are dealing with two internally related elements. It is precisely the non-preachy tone that makes the content easier for us to accept. We do not see the speaker as an elder far removed from us, but as someone close. “Close” has two senses here: first, his sensibility is close to ours; second, he puts on no airs—there is no barrier between him and us.
 
-## Gintama’s first escape
+Connecting one arc to another is a major problem for any long-running manga. How do you get from one arc to the next? What kind of transition do you need between them? *Gintama* has a clear main plot, a plot of History with a capital H: the Jōi patriots against the Amanto, the nation against foreign enemies. Don’t forget that many early episodes opened with the same footage to explain the setting: “**It has been a long time since our country was known as the land of the samurai.**” (A little-known detail: this footage turns up in an episode of *Futurama*’s final season that pays homage to/parodies Japanese anime.) *Gintama*’s first few episodes are not “especially” outstanding; they take some getting used to. Then the backdrop of history = main plot gradually recedes, the everyday-life arcs occupy an ever-larger place, and *Gintama* becomes more and more popular. Few viewers still remember that Shinpachi was originally supposed to revive his dojo.
 
-I want to risk a provocative word: *Gintama* failed. Not commercially, not in its audience’s affections, and not by becoming a bad series. It remained enormously popular, with astonishingly high ratings on Douban, China’s major film-and-television review platform. I mean something narrower, and more subjective. *Gintama* tried to sustain an epic historical plot and an endless supply of throwaway everyday comedy within the same world. Over time, I found the passage between those two modes harder and harder to believe.
+But the main plot still returns from time to time. Then the atmosphere of the everyday-life arcs is abruptly interrupted, and a sense of seriousness seeps into the story already in progress. Once the main plot reaches a stopping point, the protagonists enter the everyday-life arcs again. The Shinsengumi and the Odd Jobs crew can queue together to buy a game, squabble as rival fans cheering for Otae, get stranded together in the snowy mountains, go swimming together with the shogun. Then back to the main plot, over and over. Here we face what Deleuze calls the connective synthesis: **“and . . .” “and then . . .” […] “Every ‘object’ presupposes the continuity of a flow; every flow, the fragmentation of the object.”** (*Anti-Oedipus*, cited from the Japanese edition, 『反オイディプス』.)
 
-I say that as a devoted fan, not as someone itching to tear the series down. What leaves me cold is the unquestioning praise that declares every side of *Gintama* equally successful. I have little patience for its “hot-blooded” mode, the anime-and-manga convention in which heroic combat, moral exhortation, and emotional intensity all spur one another on. Many fights follow a familiar sequence: a speech, a power-up, a defeated enemy. The speeches usually arrive at some variation on “Because I’ve got something I have to protect!” For all its irreverence, *Gintama* is not consistently hostile to inspirational cliché. Its serious arcs often run on the same machinery as earnest television melodrama and heroic battle manga: a moral lesson, a rush of feeling, and a climactic reversal.
+![The principal cast of Gintama](attachments/roof-archive/cv4808363/06-gintama-ensemble.png)
 
-Even the episode titles reveal the impulse to preach. The following examples are English streaming titles, so they do not prove the exact tone of the Japanese: episode 17, “Sons Only Take After Their Father’s Negative Attributes”; episode 22, “Marriage Is Prolonging an Illusion for Your Whole Life”; episode 25, “A Shared Soup Pot Is a Microcosm of Life”; and episode 28, “Good Things Never Come in Twos (but bad things do).” This is how many Anglophone viewers encounter the series: life advice delivered with a shrug. The lesson comes not from an elder behind a lectern but from a disreputable friend sprawled on the sofa. The joke does not undermine the moral. It slips the moral past our defenses.
+*Gintama*’s failure lies in its refusal to give up the main plot, its refusal to give up History, and its unwillingness to give up the everyday-life arcs either. In the end, the two become less and less compatible. For viewers, the protagonists’ lines come to feel increasingly empty. It really is like that baby who wants everything, the one Deleuze mentions while explaining connective synthesis.
 
-[fig] Episode 22’s Japanese title card, shown here with a Chinese subtitle. Its English streaming title is “Marriage Is Prolonging an Illusion for Your Whole Life.”
+Now let us return to Asada’s schizophrenia/paranoia. *Gintama*’s problem is a regression from schizophrenia to paranoia. From the end of history back to History. Asada initially underestimated the danger of such a regression. He forgot that the schizo-kids he liked could, through the games he liked, produce a History he feared. For this History never really disappeared. The entire movement becomes History’s self-relating movement: this “cunning of reason” is a textbook Hegelian nightmare. No amount of fooling around in *Gintama*’s everyday-life arcs diminishes the seriousness of the main plot. What really diminishes it is the main plot itself: after getting so very serious, it still intends to carry on with everyday life as though nothing had happened. It is like a corporate drone who goes to work in a suit by day and wears women’s clothes at night. At first everyone can accept it, until one day the day job leaves him exhausted and he puts on his maid outfit before he has even shaved properly. Like Master Reigen in *Mob Psycho 100* trying to sneak into a girls’ high school…
 
-![Gintama episode 22 title card reading “Marriage Is Prolonging an Illusion for Your Whole Life”](attachments/roof-archive/cv4808363/translations/en/05-gintama-marriage-title-card.png)
+![Character design sheet for Arataka Reigen from Mob Psycho 100](attachments/roof-archive/cv4808363/07-reigen-character-sheet.png)
 
-Any long-running manga eventually faces a problem of continuity. How does one arc lead into the next? What must the series remember, and what is it free to discard? Beneath all the jokes, *Gintama* has an unusually clear historical throughline. In its science-fiction version of late-Edo Japan, the Amanto aliens occupy the country while the *jōi* patriots fight to expel them, recasting a historical anti-foreign movement as space opera. Many early episodes begin with the same samurai tableau and the same narration: “It was long ago that our country was called the Land of the Samurai.”
+To make our present topic clearer, we might bring in the concepts of tree and rhizome from *A Thousand Plateaus*. The tree symbolizes a shared grand narrative, while the rhizome symbolizes an individual’s small narrative. **The everyday-life arcs in *Gintama* bring countless small narratives under the umbrella of its own grand narrative. Countless rhizomes (the everyday-life arcs) are cut from the tree (the main plot), then return to the main plot (the tree).** Tsunehiro Uno is quite right on this point: small narratives do not necessarily oppose grand narratives; often they reinforce them.
 
-The opening episodes take some getting used to. Little by little, the historical backdrop retreats and self-contained stories about daily life move forward. Here *Gintama* discovers its peculiar appeal. Shinpachi first sets out to revive his family dojo; before long, even a devoted viewer may forget that he ever had such a goal.
+But here is the paradox: **the more the grand narrative is reinforced, the more fragile it becomes.** This, too, is a lesson *Gintama* teaches us. Grand narrative is like the paranoiac: the further it progresses, the heavier it gets. That weight produces subsequent “difficulties of connection”—the difficulty of moving into the everyday-life arcs.
 
-History never stays away for good. A serious arc interrupts the comic rhythm, and when it ends the cast return to their ordinary idiocy. The Shinsengumi police and Gintoki’s Yorozuya odd-jobs trio can stand in the same queue to buy a game, bicker while cheering on Shinpachi’s sister Tae, become stranded together on a snowy mountain, or go swimming with the Shogun. Then war, old loyalties, and past wounds surge back, and the cycle starts over.
+We have to say that *Gintama*’s failure is not a failure in its handling of grand narrative, but the failure of grand narrative itself. Just look at the decline of traditional *Jump* manga with their tournament-and-power-up format, and this becomes perfectly clear.
 
-Deleuze and Guattari call this kind of linkage “connective synthesis,” the grammar of “and . . . and then.” In English translation, a passage from the Japanese edition used here reads: “Every ‘object’ presupposes the continuity of a flow; every flow presupposes the fragmentation of the object” (*Anti-Oedipus*). If we borrow the terms loosely for serial storytelling, the flow is the series carrying on, while each arc is an object temporarily cut from that movement. The arc holds still long enough to acquire a premise and shape. When it ends, the boundary falls away, the characters return to the serial current, and another arc soon takes form.
+*Gintama*’s main plot (the tree) keeps cutting itself open to connect with the everyday-life arcs (the rhizomes). But one everyday-life arc connects to another, then returns to the main plot. This is precisely what Masaya Chiba calls a world of “excess connection.” The first principle of the rhizome in *A Thousand Plateaus* is the principle of connection: any rhizome can connect with any other. Yet this excess connection may lead to “**an imperialism of all-pervasive transformation that levels all things, and ontological fascism**.” To avoid this world of excess connection, of too much meaning, we need to look again at the two kinds of cut Chiba describes: **the cut from tree to rhizome is the first cut; the cutting of the rhizome itself is the second.** Chiba acutely recognizes how difficult it is to become a “schizo-kid”: **flight must therefore accelerate at least twice.** *Gintama* made the first cut, but never dared to make the second. Instead, it remained in a world of excess connection.
 
-At first, that rhythm is *Gintama*’s great strength. It begins to fail—at least for me—when the serious arcs have accumulated so much grief, sacrifice, and political consequence that the comedy’s effortless resets strain belief. This is not a ledger in which one joke cancels one tragedy. The problem is cumulative. The higher the historical plot pushes the emotional stakes, the more trivial the next return to daily life can feel. Yet every clean reset also makes the previous declaration of irreversible consequence ring a little hollower.
+The lyrics of one *Gintama* ending theme go roughly like this: **memories that once burned make melancholy build up; perhaps only by forgetting what happened that day can you grow up.** These words profoundly reflect *Gintama*’s narrative logic. Its characters never forget the past and are always thinking about growing up. Granted, *Gintama*’s initial premise largely sidestepped the question of growth: as a “mature” adult man, Gin needs neither mental nor physical upgrades. But the people in it have wanted to return to the grand narrative all along. This also shows how difficult it is to become a schizo-kid. In the ending sequence for that same song, Gin, Shinpachi, and Kagura each get their own close-up with a serious expression. On one side, the smile of the postmodern schizo-kid; on the other, the gloom of the paranoiac seeking growth and longing for History. These “two faces” embody *Gintama*’s contradiction.
 
-[fig] A coordinated portrait draws some of Gintama’s enormous cast into a single ensemble.
+![Gin, Shinpachi, and Kagura in a Gintama ending sequence](attachments/roof-archive/cv4808363/08-gintama-serious-faces.png)
 
-![An ensemble of Gintama characters posed together](attachments/roof-archive/cv4808363/06-gintama-ensemble.png)
+Let me stress again: pointing out *Gintama*’s flaws does not mean I think it is not an excellent work. *Gintama* pushes the grand narrative to its limit and makes it implode within those limits. I do not like straight-up “postmodern” anime that simply abandon narrative and go completely abstract. That is why, when I first discussed *Teekyu*, I stressed that this is an anime with a narrative. Its subject matter destines it from the outset to be a small narrative, and even within that small narrative it keeps cutting itself apart. This makes it an exemplar of schizo-kid anime.
 
-This is where the distinction between two kinds of escape becomes useful. Deleuze and Guattari’s tree and rhizome offer a picture of the first. A tree grows from a trunk, along a hierarchy and a single line of descent; a rhizome spreads sideways, without a privileged center. The following analogy is mine, not a definition from Deleuze and Guattari: *Gintama*’s war and national history form the tree, while its everyday stories run like rhizomes through minor characters, passing obsessions, and private troubles. Whenever the series leaves war behind for a game queue or a mountain outing, it makes a first escape from the trunk into one of these lateral stories.
+![A cooking showdown in Teekyu](attachments/roof-archive/cv4808363/09-teekyu-cooking-scene.png)
 
-But the ordinary adventures do not disappear when their premises end. A queue, an outing, or a swim with the Shogun may be disposable as a plot, yet the cast do not emerge from it as strangers. Their irritation, trust, rivalry, and affection remain. Each joke adds another strand to the world’s emotional history, and the serious plot can later turn those relationships into reasons to fight or make sacrifices. *Gintama* abandons the gag’s immediate premise, but not the web of meaning the gag has thickened. It completes the first escape and stops short of the second.
+*Teekyu* has its main characters, but they keep changing. Yuri, who plays the straight woman, is forever having to ask, “**Who are you?**” **Every episode keeps changing; everyone keeps changing.** Rapid connections, ruthless cuts: in the installment where Kanae signs a contract with a crab and becomes a magical girl, she is struggling in battle when she is told that the only way to power up is to eat the flesh of her crab companion. **Kanae sorrowfully asks, “How could I do that?” even as her other hand has already snapped off one of the crab’s legs**… All of this happens within a single panel. “You made that decision way too fast!” Yuri retorts. By the end of the installment, Kanae herself has become a crab. A magical crab. Before being eaten, the crab teaches Kanae about being a magical girl, including **“Drink water when you get up” and “Your hands get slippery after you eat crab.”** Both the person becoming a magical girl and the very category of “magical girl” are in a process of becoming.
 
-Masaya Chiba calls this tendency toward a world in which everything reconnects “excessive connection.” In his deliberately alarming phrase, it risks “a pan-reifying imperialism that makes everything equivalent, and an ontological fascism.” By “pan-reifying,” he means a system that converts every difference into one more comparable object within a total whole. “Imperialism” and “fascism” are polemical names for the pressure of that totality: nothing is permitted to remain outside it. Put more modestly, no *Gintama* joke can stay merely meaningless. The game queue, the snowy mountain, and the Shogun’s swim all deepen the bonds among the same people. Every disposable adventure becomes part of their shared emotional life.
+> Nietzsche says: “They come like fate, without cause, reason, consideration, or pretext.”
 
-Tsunehiro Uno’s account of small and grand narratives sharpens the point. A small story does not necessarily challenge the larger one. By making a world intimate and lovable, it may give the grand narrative more texture, affection, and force. The everyday stories seem to flee *Gintama*’s historical trunk, but the same friendships, loyalties, and memories lead them back.
+*Teekyu* must, of course, involve tennis. But for these girls, tennis is x: **there is no knowing what tennis is.** There are no shared rules. The filthy-rich upperclassman’s rules require you to take your panties off first; Kanae can duplicate herself mid-game, split, become two Kanaes. In the first installment, Kanae suddenly sinks into the ground halfway through a game of tennis. Outside the panel, the author writes: “That’s basically the kind of manga this is.”
 
-Chiba therefore argues that escape requires two disconnections. The first leaves the tree for the rhizome: the grand historical story gives way to a local, everyday adventure. The second happens within the rhizome, when that adventure breaks its own premise, identity, or chain of cause and effect before it can become a replacement order—or feed everything back into the old one. *Gintama* makes the first move whenever it wanders from war into daily life. It seldom makes the second, because its jokes and minor adventures keep accumulating meaning within the same beloved world.
+There is no growth here, only becoming. In volume 15, the JKs suddenly turn into old women, but they happily exclaim, “Growth just won’t stop!” **It is not that I want to grow; it is that “growth” won’t stop. It can’t stop.**
 
-In Asada’s terms, this is a drift from schizo back to parano: the supposedly posthistorical freedom of everyday play is gathered once more into a story governed by historical destiny. Asada underestimated how easily a temporary escape could be absorbed into a new History, especially when the old one had never gone away. Hegel’s “cunning of reason” neatly names the nightmare: the attempt to escape a system becomes one of the means by which that system reproduces itself.
+It is not without narrative. The creepy art-museum episode is a very good example. The four JKs step into the world inside a painting and get trapped in the labyrinth of some weirdo’s art museum. But then: **“Come to think of it, this is only an anime—and one that barely moves at that. Oh, forget it. Let’s go, let’s go.”**
 
-The paradox makes *Gintama* more fragile as its grand narrative grows stronger. Every sacrifice raises the stakes, and each rise in stakes makes the next round of knockabout comedy harder to accept. The comedy does not make the main plot less serious. Rather, the main plot weakens its own claim to seriousness when it reaches an emotional extreme and then serenely prepares for everyone to resume daily life. A work can contain two tones; the trouble begins when the seam between them becomes impossible to ignore.
+![A tennis-court scene from Teekyu](attachments/roof-archive/cv4808363/10-teekyu-tennis-opening.png)
 
-Imagine an actor performing a boardroom drama and a bedroom farce on the same stage while the crew changes the set around him. Eventually he wanders into the farce without stopping his climactic boardroom speech. Arataka Reigen, the *Mob Psycho 100* con man, turns such frantic role-switching into comedy: he survives by changing personas before anyone can inspect the join. For Reigen the visible seam is the joke. In *Gintama*’s gravest arcs, it is the strain the story cannot always conceal.
+In its instant-noodle-length TV format, *Teekyu* leaves viewers no time to react. Before we can react, it is already over. (*Translator’s note:* The Chinese label for such micro-short series compares an episode’s running time to the wait for instant noodles—roughly two to three minutes.) Here automatic recognition has broken down. We have no choice but to turn to attentive recognition, actualize the virtual, and reconstruct the whole narrative. *Teekyu* not only breaks with those slow-paced anime narratives; it also interrupts our perception as viewers.
 
-[fig] A character sheet for Arataka Reigen, whose quick changes of pose and persona are part of the joke.
+Asada says that **an attachment to “living somewhere” is the paranoiac’s defining trait.** We can see *Teekyu*’s response in volume 15: the three older girls on a school trip want to film the details of their trip for Yuri. Yuri notices that the plane’s fuselage is very short. Just as she starts to worry, the older girls have already sent her a video saying they have arrived safely, though a crashed plane is plainly visible in it. Kanae asks whether this is a foreign country, and Yuri notices that the video clearly shows her own school. A little later, Kanae sends another video saying they have finally arrived. This one clearly shows penguins, and Nasuno says that this is what kangaroos look like. In the end, they come to stay at Yuri’s home… **They have not gone to a foreign country; they have turned their own country into a foreign country, and home into a hotel. Home itself thus starts moving.** On the other hand, anywhere at all is these children’s home. In volume 10, they go out into the wild for a barbecue and reach the wild after just two steps.
 
-![Japanese character sheet showing Arataka Reigen in several poses and expressions](attachments/roof-archive/cv4808363/07-reigen-character-sheet.png)
+Schizo-kids have no parents, no home. Only in the final volume does Kanae ask Yuri why her parents have never appeared. There is no need for them to appear, though there is no reason they cannot, either. Marimo casually draws two faces for Yuri’s parents, and even draws her own father with a mohawk.
 
-One of *Gintama*’s ending themes recasts the same problem as a question about growing up. Its point, rather than its exact wording, is that memories of a burning past deepen the characters’ melancholy, and that adulthood might require forgetting the day when everything burned. The characters never forget. Nor do they need a conventional training or coming-of-age arc: Gintoki enters the story as a formidable adult fighter, already mentally and physically prepared for its battles. Yet he and the others cannot imagine maturity apart from the historical trauma that formed them. Whenever the story asks how they have changed, it measures that change against the past they still carry. The ending sequence gives Gintoki, Shinpachi, and Kagura separate, solemn close-ups, setting that historical gravity beside their familiar comic selves.
-
-The still below belongs to the other register. Kagura and Shinpachi grin while Gintoki looks exhausted beneath Sadaharu’s paw. Daily life wins this frame, even if it cannot escape the larger story.
-
-[fig] Everyday life wins the frame, if not the larger story.
-
-![Kagura and Shinpachi smiling while an exasperated Gintoki is pinned beneath Sadaharu’s paw](attachments/roof-archive/cv4808363/08-gintama-serious-faces.png)
-
-None of this makes *Gintama* less than an excellent work. Its formal failure is productive: by insisting on both historical consequence and comic renewal, it drives the grand narrative until we can see exactly where it buckles. Nor do I want to praise an anime simply for throwing away its plot and dissolving into free-form abstraction. *Teekyu* matters because it keeps a narrative, however small, and then performs Chiba’s second disconnection from within.
-
-## Teekyu’s second escape
-
-Tennis gives *Teekyu* a modest organizing premise, not a destiny. Its story is small not because tennis is inherently trivial, but because no national or historical future rests on these matches. Then, within that local frame, each gag breaks loose from the rule, role, or cause the previous gag established. The series escapes the tree and refuses to plant another.
-
-[fig] A cooking duel veers into a ritual-suicide gag: Yuri serves as the chef’s “second,” the assistant poised to deliver the final stroke.
-
-![A Teekyu cooking duel in which Yuri raises a sword behind a kneeling chef and says, “I’ll act as your second”](attachments/roof-archive/cv4808363/translations/en/09-teekyu-cooking-scene.png)
-
-*Teekyu* has principal characters, but even their identities refuse to hold still. Yuri is the group’s designated straight woman, forever forced to ask, “Who are you?” More than the scene changes from one moment to the next. A character adopts a new role, the role summons a new world, and the next joke demolishes both before either can become normal.
-
-In one episode, Kanae signs a contract with a crab and becomes a magical girl. When she falters in battle, she learns that she can power up only by eating her crab companion. “How could I do that?” she asks mournfully, though her free hand has already snapped off one of its legs. The entire moral crisis lasts a single shot. “That was way too fast!” Yuri protests. By the end of the episode, Kanae has turned into a crab herself—a magic crab. Before being eaten, her companion offers such nuggets of magical-girl wisdom as “Drink water when you wake up” and “Your hands get slippery after eating crab.” Kanae never settles into a magical-girl identity. The transformation keeps transforming.
-
-Nietzsche has a phrase for the sheer abruptness of such arrivals. In *On the Genealogy of Morality* (Second Essay, §17), his conquerors “come like fate, without cause, reason, consideration, or pretext.” The comparison stops at that sudden entrance: in *Teekyu*, a crab contract, a missing leg, and a new species likewise become facts before anyone can ask why. The gravity is gone; only the refusal to explain remains.
-
-Of course *Teekyu* still has to play tennis. For these girls, though, tennis works like an unknown variable: its name remains constant while each scene supplies a different value. At the start of one match, Nasuno, the rich upperclassman, takes off her panties. Kanae duplicates herself during play, splitting into two Kanaes. Halfway through the first episode’s match, she simply sinks into the ground. In the margin beside the manga panel, the author comments, “This is basically what the manga is like.”
-
-There is no steady development here, only becoming. In volume 15, one of the girls suddenly turns into an old woman and cries with delight, “I can’t stop growing!” The joke is not that she has chosen to grow old. Growth has become an independent process, and even its supposed endpoint cannot stop it.
-
-None of this abolishes narrative. In the haunted-art-museum episode, the four girls enter the world inside a painting and become trapped in a mysterious man’s labyrinthine gallery. The episode gives them a setting, a danger, and a goal. Then one of them shrugs: “Come to think of it, this is only an anime—and one that barely moves. Whatever. Let’s go.” The line does not rescue them from the gallery. It makes the episode stop caring about the trap, and the girls simply move on.
-
-[fig] The opening credits return the girls to the tennis court, their nominal point of origin.
-
-![The four Teekyu girls on a tennis court beneath Japanese opening credits](attachments/roof-archive/cv4808363/10-teekyu-tennis-opening.png)
-
-The television episodes are so short and fast that viewers barely register one event before the next replaces it. Ordinarily, recognition is automatic: familiar characters, settings, and causal cues let us grasp a scene without rebuilding it from scratch. *Teekyu* repeatedly sabotages those cues. It pushes us toward what Bergson and Deleuze call attentive recognition—actively selecting details and trying to work out what has just happened—only to change the object of our attention again. The series breaks not only with leisurely pacing but with the habits that let viewers turn motion into a stable story.
-
-For Asada, attachment to a “dwelling” marks the paranoid pole: a fixed home promises a fixed identity. Volume 15 of *Teekyu* answers with a school trip. The three upperclassmen promise to send Yuri videos of their travels. Yuri notices that their airplane is absurdly short, but before she can finish worrying, they send a video announcing their safe arrival; the wreckage is clearly visible behind them. “So this is a foreign country?” Kanae asks. Yuri realizes they are still filming at school. Another arrival video follows, now with a penguin in view. “So that’s what a kangaroo looks like,” Nasuno says. At last the travelers reach Yuri’s house, where they spend the night.
-
-They have not crossed a border. Instead, each claim relabels the ground beneath their feet: the school becomes a foreign country, a penguin vouches for the wrong continent, and Yuri’s home becomes a hotel. The building never moves; the meaning of “home” does. Elsewhere, in volume ten, the girls set off for a barbecue in the wilderness and arrive after walking two steps. Distance cannot keep a place in its assigned category.
-
-Parents fare no better as guarantees of a stable identity. Kanae waits until the final volume to ask why Yuri’s parents have never appeared. Marimo fixes the omission by drawing two faces and declaring them Yuri’s parents; she gives her own father a mohawk just as casually. Family can enter the story, but only as another improvised premise.
-
-Every television opening casts the same girls in a different genre or costume: delinquent drama, Chinese and Indian motifs, a Hawaiian holiday, idol pop. The effect recalls a *Simpsons* gag in which Homer starts listing all the jobs he has held as Marge gets into the bath and is still going when she nods off. Identity becomes an inexhaustible costume rack.
-
-The girls cannot focus on tennis long enough to turn it into a destiny; their national-tournament arc lasts a single episode. They possess all the surplus energy and scattered attention of Asada’s schizo-kid. “Let’s become the toughest delinquents in Kantō!” Kanae announces, invoking the region around Tokyo in the grandiose manner of delinquent fiction. A cafeteria cook-off, a bowling contest, a barbecue battle, a martial-arts tournament, and a ski race begin without warning, then turn into different contests halfway through. “Nothing my upperclassmen do makes any sense!” Yuri protests. The answer is simple: “You’re only young once, so do whatever you want!”
-
-That is the schizo-kid manifesto, but it also marks the difference between these two anime. *Gintama* runs from History into daily life, then carries every joke, friendship, and wound back into the same accumulating world. *Teekyu* runs a second time, away from the temporary world it created only moments ago. The cost is obvious: almost nothing can gather the emotional weight that makes *Gintama* so moving. Yet that lightness is also *Teekyu*’s answer to the question Asada left open. Escape does not become a new order because, before anyone can settle in, home has moved again.
+Every season of the TV anime brings forth new JKs in its opening sequence, brings forth delinquent-JKs, Chinese-JKs, Indian-JKs, Hawaiian-JKs, idol-JKs… Homer Simpson says he can go on listing the jobs he has held from the time his wife gets into the shower until she goes to bed—and he keeps talking. The girls can never concentrate on tennis; their national-tournament arc is over in a single installment. Like children, they have excess energy and scattered attention. Kanae says, “**Come be Kantō’s number-one punk with me!**” Out of nowhere, they start a cafeteria showdown, a bowling showdown, a barbecue showdown, a showdown at a martial-arts tournament, a skiing showdown—and halfway through, it turns into a different showdown. “What you’re doing makes no sense, Senpai!” Yuri retorts. “Only when you’re young can you do what you want!” This is the schizo-kids’ declaration.

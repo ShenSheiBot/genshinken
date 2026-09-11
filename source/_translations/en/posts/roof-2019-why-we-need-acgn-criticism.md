@@ -1,14 +1,31 @@
 ---
+title: "Roof Research Society 2019: Why There Is Still a Need for Roof Research Society and Its ACGN Criticism"
+title_breaks: ["Roof Research Society 2019: Why There Is Still a Need for Roof Research Society and Its ACGN Criticism"]
+date: 2020-01-01
+slug: roof-2019-why-we-need-acgn-criticism
+script: latn
+categories: [Roof Community]
+section: community
+tags: [Psychoanalysis, Animation Criticism, Cultural Criticism, Benjamin]
+post_author: Roof Research Society
+excerpt: >-
+  Drawing on Benjamin’s conception of history and psychoanalysis, Roof Research
+  Society examines the predicament of ACGN criticism and explains why the
+  community insists on using theory to pose questions and challenge “simplicity”
+  in works and culture.
+featured_order: 0
+citation:
+  itemType: blogPost
+  citationKey: roof2019WhyWeNeedAcgnCriticism
+  date: "2020-01-01"
+  blogTitle: Roof Research Society
+  url: "https://www.bilibili.com/read/cv4267686/"
 work_id: roof-2019-why-we-need-acgn-criticism
 source_type: post
 source_slug: roof-2019-why-we-need-acgn-criticism
-slug: roof-2019-why-we-need-acgn-criticism
 language: en
 status: review
-published: 2026-08-27
-title: "Against Easy Answers: Why ACGN Criticism Still Matters"
-title_breaks: ["Against Easy Answers:", "Why ACGN Criticism", "Still Matters"]
-excerpt: "In its final essay of 2019, Lab on Roof asks what criticism can still do for animation, comics, games, and novels (ACGN): stay with pleasure while questioning the fantasies, institutions, and habits of thought that make pleasure feel self-explanatory."
+published: 2026-09-11
 credits:
   - role: translator
     contributor_id: shen-shui-bot
@@ -19,157 +36,123 @@ credits:
 translation_method: agent
 source_relationship: direct
 base_language: zh-Hans
-updated: 2026-08-27
+updated: 2026-09-11
 rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-[card] Lab on Roof
+[card] Roof Research Society
 
-![Lab on Roof title-card portrait](attachments/roof-archive/cv4267686/01-roof-portrait-v4.png "=25%")
+![Roof Research Society title-card figure](attachments/roof-archive/cv4267686/01-roof-portrait-v4.png "=25%")
 
-[card-bio] I, Truth, shall speak.
+[card-bio] I, truth, shall speak.
 
-> First seek food and clothing;
+> Seek first food and clothing,
 >
-> then the Kingdom of God shall be added unto you.
+> and the kingdom of God will come to you of its own accord.
 >
-> —a line attributed to G. W. F. Hegel by Walter Benjamin[^1]
+> —G. W. F. Hegel, 1807[^1]
 
-## The Fiction of a Fresh Start
+## 1
 
-The epigraph turns Christ’s injunction in the Gospel of Matthew inside out: secure the necessities of life first; salvation can wait. It is a bracing way to begin a New Year’s greeting, a form that tends to promise transcendence on schedule.
+This will be the last article Roof Research Society publishes this year/this decade. By a certain convention, the pages that follow will serve—or be pressed into service—to look back on the past year’s “labors” (perhaps those of the past decade, Roof Research Society’s “pre-history”), or to set out a grand blueprint for the year ahead. What this “convention” perhaps overlooks, however, is what mediates between the two: **this “New Year’s address” itself**. We therefore need to subject it to a thorough ontological examination: before the “address” begins to speak, it is already a problem.
 
-This is Lab on Roof’s final article of 2019—and of the decade. We write about animation, comics, games, and novels, a field often abbreviated in East Asian fan cultures as ACGN. A conventional year-end address would review what we have done, reach back into the years before Lab on Roof had a name, and unveil a grand plan for the year ahead. Between the retrospective and the forecast, however, sits a peculiar little form: the greeting itself.
+This brings us to the article’s first question: why do we need an empty New Year’s address, a matter of pure form, to connect 2019 and 2020? In other words, if some major rupture really does occur on December 31 or January 1, what could that rupture be? The answer, of course, is that **we have introduced an entirely new calendar**—one in which the days gone by have been wiped clean, leaving:
 
-Why should a few ceremonial words be enough to carry us from 2019 into 2020? Nothing in time actually breaks at midnight on December 31. Yet the calendar lets us behave for a moment as if it did. Turn the page and the future looks empty, released from everything written before it. In 1958, Mao Zedong made the blank page an image of revolutionary possibility:
+> A blank sheet of paper, unburdened, on which to write the newest and most beautiful words and paint the newest and most beautiful pictures.[^2]
 
-> A blank sheet, free of every burden, ready for the newest and most beautiful words and the newest and most beautiful pictures.[^2]
+And it is here, too, that we encounter Walter Benjamin’s messianic time:
 
-The image is exhilarating, but it is also dangerous. To call the page blank is to forget whatever—and whoever—was already there. Walter Benjamin’s calendar offers a different kind of beginning. A clock divides time into identical units; a calendar can preserve the memory of a break. Writing about the July Revolution of 1830, he recalls an extraordinary attack on time itself:
+> Calendars, then, do not count time as clocks do. They are monuments to a historical consciousness of which, in Europe, not the faintest trace seems to have survived for a hundred years. Yet in the July Revolution an incident occurred in which this consciousness came into its own. On the evening of the first day of fighting, the tower clocks were fired upon, independently and simultaneously, at several places in Paris. An eyewitness, who may have owed his insight to rhyme, wrote at the time:
+>
+> Who would believe it! They say that, angry at the hour,
+> New Joshuas, at the foot of every tower,
+> Fired at the dials to halt the day.[^3]
 
-> Calendars do not measure time as clocks do. They are monuments to historical consciousness. . . . On the first evening of fighting, clock towers in several places in Paris came under fire at once. A witness wrote: “Who would have believed it? New Joshuas at the foot of every tower, as if enraged by time itself, fired at the dials to stop the day.”[^3]
+Perhaps the point of connection between this article, as a New Year’s address, and Benjamin’s “Theses on the Philosophy of History” lies in how this time shatters the everyday order. It resembles the reign of the “Lord of Misrule” in medieval Europe, under which we overturn every aspect of the social order—from the economy to the governance of life, gender, and so on. In the French Revolution and the countless struggles that followed, the potential displayed in these festivities exceeded the bounds of a mere “joke” and became a genuinely subversive force, much like the counteroffensive that “subcultural” practices launch against the “mainstream.” Reversing this logic, **we can also give this “address” of ours an emancipatory meaning, treating it as our wish to remain at this point of rupture in time.** Seen in this light, the irony is considerable: an “address” is first of all a war, a war directed at the future (“firing at the hands of the clock”)—a war in which the words we write turn into soldiers charging into battle, armed with a weapon called the past.
 
-This is the promise of what Benjamin calls messianic time. He does not mean a supernatural countdown. He means an instant when history no longer looks like a smooth march of progress, when an unfinished demand from the past becomes visible again. New Year’s Day cannot produce that rupture. It can give us a ritual in which to imagine one.
+![Revue Starlight, episode 09](attachments/roof-archive/cv4267686/02-revue-starlight-episode-09.png)
 
-The medieval Lord of Misrule offers another, more limited version of the same ritual. During a festival, hierarchy could be inverted and ordinary rules suspended. Because the inversion was licensed and temporary, it could release pressure only to restore the old order when the feast ended. Its critical force should not be romanticized. Still, people briefly performed rank as something that could be rearranged rather than a fact of nature. That is not a direct road from carnival to the French Revolution. It is a small demonstration that an order survives through repeated conventions—and that those conventions can be made strange. Subcultures can do this too, although a subculture is perfectly capable of reproducing the hierarchies it mocks.
+## 2
 
-Our New Year’s greeting asks us to linger at this imagined break instead of hurrying into another year. What is at stake, modestly, is whether the future arrives already written by the present. Benjamin’s Parisians fired at clock faces. We have only sentences, and whatever charge they carry comes from the past.
+History and the past occupy a large part of Benjamin’s thought, as they do in the *Angelus Novus* he has given us: he studied German Baroque drama and nineteenth-century France. At the same time, his observations of the “present” saved him from having to settle for the paltry title of “historian.” To “sum him up in a word,” Benjamin perhaps comes closest to being a critic—as distinct from a reviewer or an essayist. To borrow his own description:
 
-[fig] An end-credit frame from episode 9 of *Revue Starlight*. Over the Japanese credits, a Chinese subtitle from an unidentified source reads, “I will stop the hands of the clock,” echoing Benjamin’s revolutionary image.
+> If, by way of a simile, we regard the growing work as a blazing funeral pyre, the reviewer stands before it like a chemist, the critic like an alchemist. Where the former has only wood and ash as the objects of his analysis, for the latter the flame alone harbors an enigma: that of the living. Thus the critic asks after the truth whose living flame continues to burn above the heavy logs of the past and the light ashes of lived experience.
 
-![An end-credit frame from Revue Starlight episode 9 showing several characters beneath the lyric “I’ll stop the hands of the clock”](attachments/roof-archive/cv4267686/translations/en/02-revue-starlight-episode-09.png)
+Yet this characterization is itself contradictory. Again, in his words:
 
-## Criticism at Point-Blank Range
+> Fools lament the decay of criticism. Its hour has long since passed. Criticism is a matter of the right distance. It is at home in a world where perspectives and prospects matter, and where taking a standpoint was still possible. Things, meanwhile, have pressed far too urgently upon human society. … **Today’s most essential gaze into the heart of things—the mercantile gaze—is called advertising. It demolishes the free space of contemplation and thrusts things dangerously close to our faces, like a car growing to gigantic proportions as it hurtles toward us from the cinema screen.** … With this, “objectivity” is finally dismissed. … The warmth of the subject opens itself to him and stirs his feelings. What, in the end, makes advertising so superior to criticism? Not what the red electric lettering says, but the pool of fire it reflects on the asphalt.[^4]
 
-History runs through Benjamin’s work: his study of German Baroque drama, his unfinished archaeology of nineteenth-century Paris, and his reading of Paul Klee’s painting *Angelus Novus*. But the pressure of the present in his writing makes “historian” feel incomplete. If we had to choose one word, “critic” might come closest—not as a professional title, but as a name for a way of approaching a work.
+*One-Way Street* was published in 1928—and we can only acknowledge, with melancholy, that even today we could apply this verdict without changing a word. If there is any difference between the reality we face and his description, it is that we can no longer clearly distinguish “reviewing” from “criticism.” This anti-traditional practice, saturated with imagination, has now become a university discipline. At this point, the way certain people spend their days clamoring about “the imagination of cultural studies” is better described as a kind of hysteria, reminding us that imagination has become the scarcest commodity of all—assuming imagination can even become a commodity in their hands.
 
-Benjamin explains the difference by picturing a work as a funeral pyre. The commentator is a chemist, sorting the wood and ash: what the work contains, where it came from, what remains. The critic is an alchemist, drawn to the flame—to whatever in the work is still alive enough to illuminate or scorch the present.[^4] Criticism needs commentary’s facts, but it does not stop with them.
+Worse still, **even “reviewing” is increasingly losing its former efficacy.** We need only observe the convergence of today’s reviewers with the things they review: as the ocularcentrism of mainstream cultural products reaches its peak, our reviews, too, must take the form of videos to establish themselves at all. Much review writing has even degenerated further into memes and loud, exaggerated typography. We have reduced the efficacy of words to its lowest point in history—and all merely to turn reviews of artistic and literary works, even “Harry Potter literature,” into restaurant reviews, injecting more capital into a work’s sales and word of mouth.
 
-It is a grand account, and one Benjamin later called into question. In *One-Way Street*, he argues that modern life has destroyed the distance from which criticism once claimed to look:
+Living criticism, we might say, has long been dead, replaced by an entire critical machine tainted by academia. In otaku culture, criticism–reviewing is even bound up from the outset with the production, sale, and exchange of works, and exerts an almost unprecedented influence on the formation of its audience’s identities. We must therefore ask: why insist on bringing to ACGN works a perspective that is less academicized, yet still “theoretical”? Why is there still a need for Roof Research Society and its ACGN criticism?
 
-> It is foolish to lament the decline of criticism, because its day has long since passed. Criticism depends on the right distance from things, on a legitimate vantage point from which one can still take a position and look. Today, things press too closely on human society. . . . Advertising gives the most truthful view of them because it destroys the open space where contemplation once stood. They rush toward us like a car magnified on a cinema screen. . . . The object’s heat reaches the observer and sets feeling in motion. What puts advertising so far above criticism? Not the words in the glowing sign, but their fiery reflection on the asphalt.[^5]
+## 3
 
-Advertising is “truthful” here not because it tells the truth, but because it reveals how powerfully things act on us once any claim to detached observation has collapsed. Published in 1928, the passage still feels uncomfortably near.
+To answer this question, we must return to the first section. At the point of rupture in time, our writing–praxis is concerned precisely with **the potential lost within history**:
 
-Cultural criticism has since become an academic profession, especially in fields such as cultural studies. That is not a failure in itself; this essay owes an obvious debt to academic theory. The danger lies in professional habits that turn a vocabulary into proof of insight. A familiar method, fluently applied, can protect the critic from the risk of discovering that the work does not behave as expected.
+> The past carries with it a secret index that refers it to redemption. There is a secret agreement between past generations and our own. Our coming was expected on this earth. Like every generation before us, we have been endowed with a weak messianic power on which the past has a claim.[^5]
 
-Outside the university, commentary faces a different pressure. Feature-length video essays can sustain complex arguments, but short reaction clips, verdict-first reviews, and thumbnails built from giant text and exaggerated faces are designed to register in an instant. The form is not the problem. The platform’s incentives are: speed, recognition, and a judgment that can be converted into a click or a purchase. Discussion of a sprawling phenomenon such as *Harry Potter* can then shrink to the language of a restaurant review: Is it good? Is it worth my time or money? Commentary becomes one more stage in promotion, adding visibility and sales to the object it assesses.
+Is this not precisely Benjamin’s point? The past is always a failure, yet future success can be built only on redeeming the failures of the past. What truly matters, then, is the reflective movement of “plunging headlong into the past”—a stance we should maintain without compromise until the true Messiah comes. **If this article has any ambition, it can only be this: this “address” will attempt to redeem our criticism, which has already failed and will fail, and to provide a rudimentary outline for Roof Research Society’s writing.**
 
-These are not the only two kinds of criticism. They are two pressures: at one end, theory hardens into professional machinery; at the other, judgment merges with advertising. The encounter Benjamin imagined is squeezed between them. ACGN fandom makes the squeeze especially visible because reviews, rankings, interpretations, fan identities, and merchandise circulate alongside the works and help one another sell.
+## 4
 
-One term needs a boundary before we go further. In Japan, *otaku* became a contested social label for intensely committed fans, shadowed by a history of public stigma. English-speaking fans often use the word more loosely. In this essay, *otaku* refers to the Japanese social category at issue in Tamaki Saitō’s work and the panic discussed below; “ACGN fans” names the broader, transnational audience.
+When Zhong discussed psychoanalysis—Lacan–Žižek—as a paradigm for ACGN criticism at our first anniversary, they did not address Lacan’s nearly traumatic first appearance in otaku culture: how Tamaki Saitō’s *Beautiful Fighting Girl* attempted to defend otaku and their desires. When the book appeared in 2000, the shadow of Tsutomu Miyazaki had not yet faded; we can also observe an astonishing convergence between *Evangelion* and the Tokyo subway incident in their attitudes toward “apocalypse” and “post-apocalypse.” Saitō’s first priority was therefore to prove that otaku were not perverts:
 
-Lab on Roof’s question, then, is not simply whether fans should read “more deeply.” It is whether viewers, readers, and players still need ACGN criticism willing to use theory without pretending to be an academic discipline. What could such criticism do—and why should Lab on Roof be the place to do it?
+> The tremendous response to beautiful fighting girls perfectly symbolizes society today, particularly the situation of women within it. That may be true … but it holds little interest for me. Such a view is somewhat too naïve: it treats fiction as a “true” reflection of real life, when this is precisely a classic case of confusing fact and fiction.[^6]
 
-## What the Past Asks of Us
+We acknowledge that Saitō takes the right position on this question, but he goes astray in developing it. He takes the economy of desire in the otaku–beautiful fighting girl relation to exist for itself, yet at the same time makes it dependent on “the highly contextualized nature of Japanese space”—before ultimately turning to the concept of the “uncastrated imagination.”
 
-The answer begins with the break imagined by our New Year’s greeting. At that pause, criticism can look backward without treating the past as a storehouse of settled facts. It can search instead for defeated projects, abandoned possibilities, and questions that earlier readings failed to ask:
+Lud’s article has already offered a further response to and critique of this problem, so we may turn instead to another aspect of Saitō’s theory. His writing could almost be called an exemplary description of the mission of today’s psychoanalysts:
 
-> The past carries a temporal index that entrusts it to redemption. A secret pact binds those who lived before us to those alive today. Our arrival was expected on earth. Like our predecessors, we have been granted a weak messianic power, and the past is entitled to make a claim upon it.[^6]
+> It is difficult … to find reasonable ways of alerting the public to problems, but above all without creating panic … Today’s psychoanalysts, theorists of psychoanalysis, should be able to convey to the state, to the state’s representatives … a certain amount of knowledge they possess, knowledge that can genuinely deal with the waves of panic that periodically erupt.[^7]
 
-Benjamin’s “weak messianic power” does not promise that a literal Messiah will arrive to finish our work. It names a modest obligation in the present. People before us imagined futures that never came. We can recover their demands, learn from their defeats, and carry unfinished work somewhere they could not. Redemption does not mean vindicating every failed project. It means refusing the comforting assumption that defeat proved a project had nothing left to teach us.
+If psychoanalytic discourse in Freud’s day arose to cure “non-normal” patients, then this “tradition” has arguably been preserved most faithfully by today’s analysts. Through a course of analysis, we can all tell ourselves that we are not “perverts” in any sense, and that we can hold fast to our enjoyment. The same argument can be extended to Tsutomu Miyazaki, or, more recently, Shinji Aoba. First, consider how disgusting it is that they could defend themselves this way; then turn it around and consider how very Miyazaki—or Aoba—this sort of defense is.
 
-That return must include the critic. We have to ask not only what older works meant, but what earlier readings—including our own—failed to see. This greeting can make one limited, concrete promise: Lab on Roof will revisit kinds of criticism we have attempted and mishandled, and say more clearly what we want our writing to do even though we will get it wrong again.
+This is precisely where Roof Research Society’s insistence on applying psychoanalysis to ACGN criticism begins. Now that Saitō’s attempt has failed and been forgotten, **our criticism concerns not only the works “themselves”; it also seeks to open a new path for theory—rather than settling for existing interpretations.**
 
-## Psychoanalysis After the Otaku Panic
+## 5
 
-At its first-anniversary gathering, Lab on Roof proposed psychoanalysis in the Lacan–Žižek tradition as one model for ACGN criticism. That argument overlooked an important predecessor: Tamaki Saitō’s *Beautiful Fighting Girl*, published in 2000, which used Lacanian theory to defend otaku desire.
+Likewise, in responding to challenges to the psychoanalytic paradigm, we can point to the aim of psychoanalysis: traversing the fantasy (*la traversée du fantasme*):
 
-That defense had an urgent context. The moral panic surrounding Tsutomu Miyazaki—a serial murderer whom the Japanese press turned into an emblem of supposedly dangerous otaku—had not yet faded. Saitō’s first task was to show that desire for fictional girls did not make otaku criminals or perverts.
+> The most important question is not how to condemn and rationally defeat the enemy—a task that can all too easily strengthen the enemy’s hold over us—but **how to break the (fantasmatic) spell the enemy casts upon us**. The point of traversing the fantasy is not to dispense with enjoyment, as in the puritanical model of the old Left. Distance from fantasy means that I “unbind” enjoyment-meaning from its fantasmatic frame and recognize it as an indeterminate remainder: neither inherently “reactionary,” a support for historical inertia, nor an emancipatory force enabling us to break the constraints of the existing order.[^8]
 
-The reception of *Neon Genesis Evangelion* presents a related problem. The series appeared in a Japan still processing Aum Shinrikyo’s 1995 sarin attack on the Tokyo subway. Because *Evangelion* arrived in the attack’s aftermath, critics and viewers have often treated its apocalyptic imagery as an expression of a “post-Aum” mood. That may be a defensible account of reception, but chronology alone cannot establish it. A critic has to distinguish among what shaped a work’s production, how its first audience understood it, and how later audiences use a historical event to interpret it. Neither the attack nor the series can stand in for a single national attitude. Their relation has to be shown.
+Our insistence on this principle, we might say, is also part of our criticism. As cultural products of this era, ACGN works are a part of social and cultural reality that cannot be ignored and deserve our closest scrutiny. To answer how the views and thoughts conveyed in a work come to be accepted by viewers through its form, **what we need is not mere empathy and being moved, but a complete set of critical tools, a dissection of the work, and the imagination that arises from it.**
 
-Saitō was right to resist a crude mirror theory. His “beautiful fighting girl” is a recognizable fictional type: a young heroine whose combat power and sexual appeal coexist. Desire for that figure cannot simply be read as a transparent symbol of Japanese society, much less as a report on the lives of actual women. Fiction has conventions and psychic effects of its own. Fact and fantasy are not interchangeable.[^7]
+## 6
 
-His alternative, however, does not settle the problem. To protect fantasy from becoming a mere social symptom, Saitō treats the otaku’s desire for the beautiful fighting girl as a circuit governed by fiction’s own conventions. He then explains the circuit’s Japanese specificity through what he calls a highly contextual visual space: an image takes its reality from the frame or situation it occupies rather than from one continuous relation to the external world. Finally, he invokes an “uncastrated imaginary,” an image-world apparently exempt from the lack that, in Lacanian theory, sets desire in motion.
+We have never concealed Roof Research Society’s reflective—or rather, anti-“non-reflective”—stance. On this basis, we question ACGN works as material realizations of ideological state apparatuses, or ISAs, in Althusser’s terms, with something like a conditioned reflex. We question every encomium to “simplicity”:
 
-These claims may be intended to work at different levels—one describes a convention of representation, another a psychic structure. But Saitō does not make their relation clear enough for the weight placed on them. The autonomy claim protects fantasy from crude sociology; the appeal to Japanese context makes culture explanatory again; the “uncastrated imaginary” seems to release desire from the very lack on which the Lacanian account depends. The terms mark the tension without resolving it.
+**We reject simple, fetishistic intoxication with ACGN works and their derivatives** (the most obvious example: VTubers), especially when we consider their pornographic character;
 
-The problem matters because a theory designed to analyze desire can retreat into social reassurance. In a 2003 telephone interview with journalist Jean-Pierre Elkabbach and French politician Bernard Accoyer, the psychoanalyst Jacques-Alain Miller argued that analysts should be able to offer the public and its representatives knowledge capable of addressing recurrent waves of panic.[^8]
+**We reject simply endorsing the values a work conveys.** In the vast majority of works, it can be said, the blunt, brainless glorification of family affection, friendship, and romantic love often rests on the very absence of these supposedly “beautiful things” from the order of everyday life, and on the endless defense of—and howling on behalf of—what was never there to begin with, abandoning even the slightest reflection;
 
-Miller was speaking in a French public-policy dispute, not about Japanese otaku, and his statement does not prove that psychoanalysis exists to certify anyone as normal. It matters here as a temptation built into the public role he describes. If analysis is judged only by its ability to calm a panic, reassurance can become its endpoint.
+…
 
-Saitō’s defense against collective blame was necessary. But if the analysis ends once otaku have been declared normal, psychoanalysis has not escaped the old division between normal and abnormal; it has simply issued a favorable verdict. The audience is protected from stigma, but nothing is asked of its desire. A defense can be humane and still be critically incomplete.
+At this point, we should return to the question posed at the outset: why is there still a need for Roof Research Society and its ACGN criticism? The subject of this question is missing—who/what still needs Roof Research Society? The answer cannot be any so-called “spirit of history.” As Benjamin writes:
 
-Nor can the distinction between fiction and reality become a universal alibi. Miyazaki’s crimes do not condemn otaku culture, and Shinji Aoba’s 2019 arson attack on Kyoto Animation does not make fandom collectively guilty. Neither crime proves that fiction causes violence. But “fantasy is not fact” cannot mean that fantasy, desire, and conduct occupy sealed compartments. A fantasy can give a grievance its object, offer someone a role to inhabit, or supply a story that makes an action feel justified; it can also remain entirely within play. Those are possible interactions, not a claim of mechanical causation, and only evidence can establish them in a particular case. The necessary refusal of collective blame should keep inquiry open, not close it in advance.
+> A storm is blowing from Paradise. It has caught in the angel’s wings and is so strong that he can no longer close them. This storm drives him irresistibly into the future, to which his back is turned, while the heap of rubble before him grows toward the sky. This storm is what we call progress.[^9]
 
-Lab on Roof’s insistence on psychoanalysis begins here. The work is not criticism’s only object. We must also examine the fantasies through which an audience encounters it, the social panic that frames it, and the critic’s own wish to reassure or condemn. Theory itself has to be put at risk. Rather than apply a ready-made interpretation, we want the encounter with ACGN to test the concepts we bring to it.
+Here, our answer is this: **Roof Research Society writes for one simple purpose—we wish to pose questions and to inspire more readers to join in questioning every “simplicity.” Our writing does not attempt to solve any problem. As we have already stressed, we know full well that, from the very moment we begin writing, we have always-already failed insofar as “solving problems” or “giving answers” is concerned. On the contrary, we insist on posing questions and have unshakable faith in their power: questions can change how people think and thereby bring about a “paradigm revolution” in Kuhn’s sense.** This questioning, whose purpose is to pose questions—negation in Hegel’s sense—is nothing other than the best expression of our reason. On the one hand, it can lead us toward the future; on the other, this journey into the future will necessarily be arduous. In Hegel’s words, it is a journey of “formation,” in which “Spirit silently weaves.”
 
-## Traversing the Fantasy
+—Roof Research Society, on the night of December 31, 2019
 
-Psychoanalysis has a name for this kind of encounter: traversing the fantasy (*la traversée du fantasme*). Here, fantasy does not mean a mere falsehood. It is the frame that organizes what appears desirable, threatening, or possible. The Lacanian term *jouissance* means more than pleasure: it is an excessive enjoyment, often tangled up with strain, compulsion, or pain.
+[^1]: Walter Benjamin, “Theses on the Philosophy of History,” IV.
 
-Žižek gives the idea a political edge. Defeating an enemy in argument may leave untouched the fantasy that made the enemy so compelling in the first place. The harder task is to break that spell: to “unhook” *jouissance* from the story that assigns it a fixed political meaning. Enjoyment, on this account, is neither reactionary nor liberating by nature.[^9]
+[^2]: “Introducing a Cooperative,” *Red Flag*, no. 1 (1958).
 
-Žižek’s immediate example is the fantasy through which we imagine an enemy. Loving a character is not the same as hating a political opponent, but the two fantasies can perform a similar operation. One casts the enemy as the thief of a fullness we ought to possess; the other casts a beloved figure or ideal as the thing that could complete us. In both cases, fantasy attaches an intensity to an explanatory story and makes the frame disappear.
+[^3]: Walter Benjamin, “Theses on the Philosophy of History,” XV.
 
-To traverse a fantasy is therefore not to stop loving a character, renounce erotic attachment, or scold yourself for being moved. It is to loosen the bond between that intensity and the story that makes it seem self-explanatory. A viewer may be deeply moved by a work’s vision of family. Criticism asks how the form produces that longing, what absence the vision covers, and what social arrangement it makes feel natural. The answer may complicate the pleasure without abolishing it.
+[^4]: Walter Benjamin, *One-Way Street*, “This Space for Rent.”
 
-This is why ACGN works deserve exacting attention. They do not carry ideas as cargo. Animation gives ideas movement, rhythm, color, and voice; comics arrange them across panels and pages; games turn them into rules, choices, and repeated actions; novels give them narration and point of view. A viewer’s identification with a character, and the emotions a work elicits, are evidence that an effect has occurred. They do not yet explain how the effect was made or what it asks the audience to accept. Critical tools can help us answer those questions—and imagine how the work, or the world around it, might be arranged otherwise.
+[^5]: Walter Benjamin, “Theses on the Philosophy of History,” II.
 
-## Against Easy Answers
+[^6]: Tamaki Saitō, *Beautiful Fighting Girl* (*Sentō bishōjo no seishin bunseki*).
 
-Lab on Roof has never claimed neutrality. We begin from suspicion: ACGN works circulate through families, schools, markets, platforms, and media industries. Althusser called institutions that reproduce a society’s ruling habits and beliefs “ideological state apparatuses.” A work is not itself such an apparatus, but it can make an institution’s values and routines feel natural. Suspicion is not a verdict. It is where the questions start.
+[^7]: Jean-Pierre Elkabbach’s telephone interview with Jacques-Alain Miller and Bernard Accoyer, October 31, 2003.
 
-The simplicity we oppose is not aesthetic minimalism, popular pleasure, direct emotion, or an easy-to-follow story. It is the demand that a cultural attachment be granted an easy innocence: because pleasure feels immediate, nothing that mediates it needs examination; because a work declares family, friendship, or love to be good, its politics must be good; because fantasy is not fact, it can have no consequences. This kind of simplicity closes the question precisely where criticism should begin.
+[^8]: Slavoj Žižek, “‘I Hear You with My Eyes’; or, The Invisible Master,” in *Gaze and Voice as Love Objects* (Durham, NC: Duke University Press, 1996).
 
-**We reject immersion that insists on going unexamined.** A VTuber is a performer who appears through an animated avatar, sustaining a virtual persona across streams, recordings, and fan interactions. The form makes the layers of attachment unusually visible. A viewer may be attached at once to a fictional character, the performer’s continuing labor, the platform that manages access, and the commercial system that turns attention into income. Our objection is not to desire. It is to the insistence that desire owes no account of the conditions that sustain it.
-
-**We reject automatic identification with the values a work declares.** Family, friendship, and romantic love can be genuinely moving. Their emotional force may come precisely from how scarce or fragile they feel in everyday life. But longing is not proof that an ideal—or the narrative built around it—is innocent. Criticism holds the gap open: What does the work offer? What conditions make that offer feel necessary? What or whom does its version of happiness leave out?
-
-So who needs Lab on Roof? No spirit of history is waiting for us to do our part. We write first for ourselves, and then for viewers, readers, and players who share our pleasures but do not want pleasure to end the conversation. No one is obliged to need this institution, and theory grants us no special authority. Lab on Roof is useful only while it makes room for questions that publicity, fan identification, and academic routine close too quickly.
-
-Benjamin’s angel of history warns us against assuming that time itself will settle those questions:
-
-> A storm blows from Paradise. It strikes the angel’s wings so violently that he can no longer fold them. The storm drives him irresistibly into the future, to which his back is turned, while the wreckage before him mounts ever higher toward the sky. This storm is what we call progress.[^10]
-
-In Benjamin’s reading of Klee, the angel moves into the future while facing the wreckage of the past. Criticism adopts something of that posture. It lets ruined possibilities and failed readings disturb the confidence of the present.
-
-Questions are not substitutes for answers, and Lab on Roof does not refuse judgment. Every critical answer, however, remains partial and revisable. The more basic task is to expose the premise that makes an answer look inevitable. Hegel called this work negation: not automatic dissent, but testing an idea against what it leaves out. One question may change a reader’s habit of thought. When enough readers bring such questions to how they discuss, recommend, buy, and make works, the habits of thought shared across those practices can change as well.
-
-That is why Lab on Roof continues. We want to distrust easy innocence in works, fandom, theory, and ourselves. Hegel called the slow formation of judgment through experience *Bildung*.[^11] No theory can complete that education for us, and no turn of the calendar can make it new. We can only keep returning to the work, the pleasure, and the questions they leave unfinished.
-
-—Lab on Roof, New Year’s Eve, 2019
-
-[^1]: Walter Benjamin places these lines at the head of thesis IV of “On the Concept of History,” where he attributes them to G. W. F. Hegel in 1807. They reverse the order of Matthew 6:33.
-
-[^2]: Mao Zedong, “Introducing a Cooperative,” first published in *Red Flag*, no. 1 (1958). The passage is given in Lab on Roof’s own English wording.
-
-[^3]: Walter Benjamin, “On the Concept of History,” thesis XV. Benjamin’s works appear in several English editions; the passages quoted in this essay use Lab on Roof’s own wording, while thesis and section titles are supplied where available so readers can locate them across editions.
-
-[^4]: Walter Benjamin, “Goethe’s Elective Affinities.” The funeral-pyre image is paraphrased in the text rather than quoted from a particular English edition.
-
-[^5]: Walter Benjamin, *One-Way Street*, “These Spaces for Rent.”
-
-[^6]: Walter Benjamin, “On the Concept of History,” thesis II.
-
-[^7]: Tamaki Saitō, *Beautiful Fighting Girl*, first published in Japanese in 2000. The discussion here paraphrases Saitō’s account of fictional reality, Japanese visual space, and the “uncastrated imaginary”; it does not quote the wording of a particular English edition.
-
-[^8]: Telephone interview conducted by Jean-Pierre Elkabbach with Jacques-Alain Miller and Bernard Accoyer, October 31, 2003. Miller’s position is paraphrased in the text.
-
-[^9]: Slavoj Žižek, “‘I Hear You with My Eyes’; or, The Invisible Master,” in *Gaze and Voice as Love Objects* (Durham, NC: Duke University Press, 1996). The text summarizes Žižek’s argument and retains only his metaphor of “unhooking.”
-
-[^10]: Walter Benjamin, “On the Concept of History,” thesis IX.
-
-[^11]: G. W. F. Hegel, *Phenomenology of Spirit*. The description of *Bildung* in the text is a gloss, not a direct quotation.
+[^9]: Walter Benjamin, “Theses on the Philosophy of History,” IX.

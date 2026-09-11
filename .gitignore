@@ -48,6 +48,10 @@ next-env.d.ts
 
 # Codex local task artifacts
 /.codex/
+/.claude/
+
+# Local translation rollback copies
+*.bak-*
 
 # Generated ebook artifacts stay out of git; only source/_ebooks/manifest.json
 # (the published-download manifest) is committed. public/downloads/ holds the
