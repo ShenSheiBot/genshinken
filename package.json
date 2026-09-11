@@ -48,6 +48,9 @@
     "fonts:translations:sync": "python3 scripts/build-translation-font-subsets.py --if-stale",
     "fonts:translations:build": "python3 scripts/build-translation-font-subsets.py",
     "fonts:sync": "npm run fonts:cjk:sync && npm run fonts:translations:sync",
+    "ebooks:build": "node --experimental-strip-types --no-warnings --import ./scripts/ebook-ts-loader.mjs scripts/build-ebooks.mjs --if-stale",
+    "ebooks:build:all": "node --experimental-strip-types --no-warnings --import ./scripts/ebook-ts-loader.mjs scripts/build-ebooks.mjs",
+    "verify:ebooks": "node --experimental-strip-types --no-warnings --import ./scripts/ebook-ts-loader.mjs --test tests/ebook-manifest.test.mjs tests/ebook-epub.test.mjs tests/ebook-ui.test.mjs",
     "verify:reading-progress": "node --experimental-strip-types --no-warnings scripts/verify-reading-progress.mjs",
     "verify:han-script": "node --experimental-strip-types --no-warnings scripts/verify-han-script.mjs",
     "verify:citations": "node --experimental-strip-types --no-warnings scripts/verify-citations.mjs",
@@ -63,7 +66,7 @@
     "verify:structured-credits": "node scripts/verify-structured-credit-lines.mjs",
     "verify:license-placement": "node scripts/verify-license-placement.mjs",
     "verify:release": "node scripts/verify-editorial-release.mjs",
-    "check": "npm run fonts:sync && npm run validate:content && npm run audit:tags && npm run validate:media-html && npm run verify:wechat-converter && npm run verify:wechat-assets-ready && npm run verify:structured-credits && npm run verify:license-placement && npm run verify:typography && npm run verify:link-preview && npm run audit:math-notation && npm run verify:book-capabilities && npm run verify:reading-progress && npm run verify:han-script && npm run verify:citations && npm run verify:translations && npm run verify:internal-links && npm run verify:dependencies && npm run verify:cloudflare-build && npm run verify:routing && npm run verify:library && npm run verify:home && npm run verify:fonts && npm run typecheck && npm run lint"
+    "check": "npm run fonts:sync && npm run validate:content && npm run audit:tags && npm run validate:media-html && npm run verify:wechat-converter && npm run verify:wechat-assets-ready && npm run verify:structured-credits && npm run verify:license-placement && npm run verify:typography && npm run verify:link-preview && npm run audit:math-notation && npm run verify:book-capabilities && npm run verify:reading-progress && npm run verify:han-script && npm run verify:citations && npm run verify:translations && npm run verify:internal-links && npm run verify:dependencies && npm run verify:cloudflare-build && npm run verify:routing && npm run verify:library && npm run verify:home && npm run verify:fonts && npm run verify:ebooks && npm run typecheck && npm run lint"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
@@ -106,6 +109,7 @@
     "@types/sanitize-html": "^2.16.1",
     "eslint": "^9.39.1",
     "eslint-config-next": "15.5.21",
+    "fflate": "0.8.3",
     "pagefind": "1.5.2",
     "typescript": "^5.7.3",
     "wrangler": "^4.121.0"

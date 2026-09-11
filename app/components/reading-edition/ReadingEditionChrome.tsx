@@ -400,6 +400,8 @@ export default function ReadingEditionChrome({
   fallbackAuthor,
   citationBibtex,
   citationHref,
+  epubDownloadUrl,
+  epubDownloadName,
   bookToc,
   uiLocale = "zh",
   hanConversionEnabled = true,
@@ -412,6 +414,10 @@ export default function ReadingEditionChrome({
   fallbackAuthor: string;
   citationBibtex?: string;
   citationHref?: string;
+  /** Manifest EPUB URL (article, or whole book on chapter pages); absent slugs render no button. */
+  epubDownloadUrl?: string;
+  /** Saved filename; defaults to `${slug}.epub` (chapter pages pass the book slug instead). */
+  epubDownloadName?: string;
   bookToc?: ReadingBookToc;
   uiLocale?: ReadingUiLocale;
   hanConversionEnabled?: boolean;
@@ -1679,6 +1685,7 @@ export default function ReadingEditionChrome({
     <footer
       className={styles.tocActions}
       data-citation={hasCitationActions ? "true" : "false"}
+      data-epub={epubDownloadUrl ? "true" : "false"}
       aria-label={ui.articleActions}
     >
       {citationBibtex && citationHref && (
@@ -1694,6 +1701,12 @@ export default function ReadingEditionChrome({
             {ui.download}
           </a>
         </>
+      )}
+      {epubDownloadUrl && (
+        <a href={epubDownloadUrl} download={epubDownloadName ?? `${slug}.epub`} aria-label={ui.epubDownload}>
+          <span>EPUB</span>
+          {ui.download}
+        </a>
       )}
       <button className={styles.toTop} type="button" onClick={returnToPageStart}>{ui.backToTop}</button>
     </footer>

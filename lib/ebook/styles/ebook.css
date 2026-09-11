@@ -1,0 +1,174 @@
+/* ============================================================
+   屋顶现视研 ebook stylesheet (EPUB reflowable editions).
+   Token VALUES are copied from app/globals.css:20-22 (CJK stacks)
+   and reading-edition.module.css:15-21 (reader families); the
+   screen module CSS itself is never imported here. @font-face
+   rules for the embedded per-book subsets are prepended by the
+   generator (lib/ebook/epub.ts).
+   ============================================================ */
+
+:root {
+  --f-cjk-serif: "Roof Noto Serif SC", "Roof Zhuque Fangsong", "Noto Serif SC", "Source Han Serif SC", serif;
+  --f-cjk-sans: "Roof Noto Sans SC", "Roof Zhuque Fangsong", "Noto Sans SC", "Source Han Sans SC", sans-serif;
+  --f-cjk-fangsong: "Roof Zhuque Fangsong", "FangSong", "仿宋", serif;
+  --reader-body-family: var(--f-cjk-serif);
+  --reader-body-latin-family: "Times New Roman", Times, serif;
+  --reader-title-family: var(--f-cjk-serif);
+  --reader-quote-family: var(--f-cjk-fangsong);
+  --reader-interface-family: "Segoe UI", "Helvetica Neue", Arial, var(--f-cjk-sans), sans-serif;
+  --reader-emphasis-family: "Roof Zhuque Fangsong Emphasis", "Roof Zhuque Fangsong", "FangSong", "仿宋", serif;
+  --accent: #1d4f78;
+  --solid: #1a1916;
+  --solid-ink: #e8e7e3;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--reader-body-family);
+  line-height: 1.95;
+  text-align: justify;
+  widows: 2;
+  orphans: 2;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--reader-title-family);
+  font-weight: 600;
+  line-height: 1.35;
+  page-break-after: avoid;
+  break-after: avoid;
+}
+
+a { color: var(--accent); text-decoration: none; }
+
+blockquote {
+  margin: 1em 0 1em 1.5em;
+  font-family: var(--reader-quote-family);
+}
+
+em, strong em, em strong {
+  font-family: var(--reader-emphasis-family);
+  font-style: normal;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+figure { margin: 1.4em 0; page-break-inside: avoid; break-inside: avoid; }
+/* .article-profile-name covers captions demoted to <p> by the generator's
+   figure normalization (XHTML forbids mid-figure figcaption). */
+figcaption,
+figure .article-profile-name {
+  font-family: var(--reader-interface-family);
+  font-size: 0.82em;
+  opacity: 0.75;
+}
+figure .article-profile-name { margin: 0.4em 0 0; }
+
+hr { border: 0; border-top: 1px solid currentColor; opacity: 0.35; }
+
+table { border-collapse: collapse; font-size: 0.92em; }
+th, td { border: 1px solid currentColor; padding: 0.3em 0.6em; }
+
+code, pre { font-family: monospace, var(--f-cjk-sans); font-size: 0.9em; }
+
+/* Chapter opening */
+.ebook-chapter-header { margin: 0 0 2.2em; }
+.ebook-chapter-number {
+  margin: 0 0 0.5em;
+  font-family: var(--reader-interface-family);
+  font-size: 0.8em;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  opacity: 0.7;
+}
+.ebook-chapter-title {
+  margin: 0;
+  font-size: 1.7em;
+  letter-spacing: -0.02em;
+}
+
+/* Footnotes / source notes */
+section.footnotes, section.source-notes {
+  margin-top: 3em;
+  font-size: 0.9em;
+}
+section.footnotes h2, section.source-notes h2 {
+  font-family: var(--reader-interface-family);
+  font-size: 0.85em;
+  letter-spacing: 0.13em;
+}
+a[data-footnote-ref] { font-family: var(--reader-interface-family); }
+
+.ebook-media-link { font-family: var(--reader-interface-family); font-size: 0.9em; }
+
+/* Typographic cover: reproduces the site's auto-generated composition
+   (app/(site)/books/page.tsx:102-108) with values from
+   books.module.css:250-282 and :431-452 at full-page scale. */
+body.ebook-cover-page {
+  background: var(--solid);
+  color: var(--solid-ink);
+}
+.ebook-cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* em fallback first: several EPUB engines ignore viewport units, and the
+     cover must still read as a tall solid plate there. */
+  min-height: 34em;
+  min-height: 96vh;
+  padding: 7% 8%;
+  background: var(--solid);
+  color: var(--solid-ink);
+}
+.ebook-cover-kicker, .ebook-cover-footer {
+  font-family: monospace, var(--f-cjk-sans);
+  font-size: 0.72em;
+  letter-spacing: 0.08em;
+  line-height: 1.35;
+  color: var(--solid-ink);
+  opacity: 0.62;
+}
+.ebook-cover-title {
+  margin: 0.8em 0 auto;
+  font-family: var(--f-cjk-serif);
+  font-size: 2.1em;
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+  text-align: left;
+}
+.ebook-cover-subtitle {
+  margin: 1.2em 0 0;
+  font-family: var(--f-cjk-serif);
+  font-size: 0.95em;
+  opacity: 0.85;
+  text-align: left;
+}
+
+/* Colophon */
+.ebook-colophon {
+  margin-top: 4em;
+  font-size: 0.9em;
+}
+.ebook-colophon h1 {
+  font-family: var(--reader-interface-family);
+  font-size: 0.9em;
+  letter-spacing: 0.13em;
+}
+.ebook-colophon dl { margin: 1.4em 0; }
+.ebook-colophon dt {
+  font-family: var(--reader-interface-family);
+  font-size: 0.8em;
+  letter-spacing: 0.08em;
+  opacity: 0.7;
+}
+.ebook-colophon dd { margin: 0.2em 0 1em; }

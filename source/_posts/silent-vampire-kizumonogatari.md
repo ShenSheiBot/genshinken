@@ -46,7 +46,7 @@ citation:
 
 2016年至17年期间，以三部曲形式在影院上映的电影《伤物语》，是一部关于动画的动画。动画中包含的某种政治性，而《伤物语》于内部中蕴含着使其浮现出的契机——更严格地说，《伤物语》是一部具有自我指涉性的动画。
 
-<a href="/posts/embracing-the-flawed-kizumonogatari"><img src="attachments/wechat/CnXZzlLBTx3a7NnMldsIpw/002.jpg" alt="电影《伤物语：历·Vamp》中姬丝秀忒与阿良良木的场景" /></a>
+[![电影《伤物语：历·Vamp》中姬丝秀忒与阿良良木的场景](attachments/wechat/CnXZzlLBTx3a7NnMldsIpw/002.jpg)](/posts/embracing-the-flawed-kizumonogatari)
 
 点击图片跳转作者另文，屋顶翻译：《拥抱着残缺之物——电影伤物语与动画的政治性》。
 

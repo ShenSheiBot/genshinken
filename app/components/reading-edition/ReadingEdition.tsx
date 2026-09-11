@@ -453,6 +453,7 @@ export function ReadingDossier({
   topicMemberships = [],
   citationBibtex,
   citationHref,
+  epubDownloadUrl,
   languageLinks = [],
 }: {
   post: Post;
@@ -461,6 +462,7 @@ export function ReadingDossier({
   topicMemberships?: TopicMembership[];
   citationBibtex?: string;
   citationHref?: string;
+  epubDownloadUrl?: string;
   languageLinks?: EditionLanguageLink[];
 }) {
   const section = sectionMeta[sectionFor(post)];
@@ -475,6 +477,7 @@ export function ReadingDossier({
         fallbackAuthor={post.author}
         citationBibtex={citationBibtex}
         citationHref={citationHref}
+        epubDownloadUrl={epubDownloadUrl}
       />
 
       <DossierCover

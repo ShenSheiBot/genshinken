@@ -29,7 +29,11 @@ if (action === "promote" && !/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[
 }
 
 const environment = {};
-for (const key of ["HOME", "PATH", "TMPDIR", "LANG", "LC_ALL", "NO_COLOR", "CI"]) {
+for (const key of [
+  "HOME", "PATH", "TMPDIR", "LANG", "LC_ALL", "NO_COLOR", "CI",
+  // R2 upload auth for the ebook artifact sync (production deploy only).
+  "CLOUDFLARE_API_TOKEN", "WRANGLER_OAUTH_CONFIG",
+]) {
   if (process.env[key]) environment[key] = process.env[key];
 }
 environment.NEXT_TELEMETRY_DISABLED = "1";
@@ -91,6 +95,17 @@ function syncFonts(root) {
   run("npm", ["run", "fonts:sync"], root);
 }
 
+/**
+ * Build and upload any stale EPUB artifacts, updating the committed manifest.
+ * Runs before assertTrackedWorktreeClean: new uploads dirty the manifest, the
+ * clean check then refuses to deploy until the manifest is committed — the
+ * same contract fonts:sync has with public/fonts. When everything is current
+ * this is a no-op and needs no credentials.
+ */
+function syncEbooks(root) {
+  run("npm", ["run", "ebooks:build"], root);
+}
+
 function prepareCleanBuildRoot() {
   // Keep the staged tree beside the source tree. Next.js output tracing follows
   // the shared node_modules symlink and requires both paths to share a writable root.
@@ -124,7 +139,11 @@ function pruneR2BackedAssets(buildRoot) {
   for (const prefix of prefixes) {
     fs.rmSync(path.join(assetRoot, prefix), { recursive: true, force: true });
   }
-  const leaked = prefixes.filter((prefix) => fs.existsSync(path.join(assetRoot, prefix)));
+  // Local-preview EPUB copies (scripts/build-ebooks.mjs --local-preview) live
+  // in gitignored public/downloads; published EPUBs are served from R2.
+  fs.rmSync(path.join(publicAssetRoot, "downloads"), { recursive: true, force: true });
+  const leaked = [...prefixes.map((prefix) => path.join("attachments", prefix)), "downloads"]
+    .filter((prefix) => fs.existsSync(path.join(publicAssetRoot, prefix)));
   if (leaked.length) {
     throw new Error(`R2-backed assets remained in the Worker artifact: ${leaked.join(", ")}`);
   }
@@ -227,6 +246,7 @@ try {
     if (action === "deploy") {
       // Production remains tied to a clean Git commit.
       syncFonts(sourceRoot);
+      syncEbooks(sourceRoot);
       assertTrackedWorktreeClean();
       buildRoot = prepareCleanBuildRoot();
       staged = true;

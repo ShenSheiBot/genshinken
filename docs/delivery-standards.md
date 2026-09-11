@@ -361,6 +361,11 @@ P1/P2/P4/P5 由 `scripts/validate-content.mjs` 的 `validateProseTypography` 在
   并对相应公开地址执行发布回归；Git push、GitHub Actions 绿色或 Worker 进程健康都不能代替线上页面验收。
 - Cloudflare 候选上传或生产部署已经包含完整 OpenNext／Next 构建。紧邻发布入口之前不要再运行一次独立
   `npm run build`；独立构建只用于不执行发布入口的本地成品验收。
+- 电子书成品与字体同为哈希增量产物：发布内容更新后运行 `npm run ebooks:build`（等价于 `--if-stale`，
+  内容修订未变的书直接跳过并打印 skip），命令把 EPUB 生成到 gitignored 的 `.ebook-dist/`、上传 R2
+  `downloads/` 内容寻址键，并更新提交制品 `source/_ebooks/manifest.json`；站点 UI 只读该清单。
+  本地排查可加 `--only <slug>` 与 `--skip-upload`（后者不改动清单，绝不产生死链）。没有产物变化时
+  站点构建与部署流程不受影响。
 
 ---
 
@@ -536,6 +541,7 @@ groups:
 - `npm run verify:routing`：静态动态路由、`generateStaticParams` 与未知实体行为；另强制全站零请求期渲染（任何 `page.tsx` 出现 `searchParams`/`next/headers`/`force-dynamic` 即失败）、每页自持 canonical、根 layout 禁止可继承 canonical。
 - `npm run verify:library`：文库客户端筛选的纯函数语义契约（解析、别名、无效值规范化、`contributor+role` 同条署名匹配、href 往返）。
 - `npm run verify:home`：首页随机推荐的纯函数语义契约（各读者栏目先各取一篇、总量上限、无重复和缺栏目降级）。
+- `npm run verify:ebooks`：电子书清单的陈旧判定与磁盘往返、EPUB 结构不变式（`mimetype` 首条目且不压缩、OPF 引用闭合、目录覆盖全部章节、图片与字体全部打包、脚注引用往返、数学以内嵌 MathML 呈现）、R2 上传契约，以及书籍页下载入口严格按已提交清单显隐（清单缺席即无入口，不留死链）。
 - `npm run typecheck`：严格 TypeScript 检查，不生成文件。
 - `npm run lint`：非交互 ESLint；任何警告也视为失败。
 - `npm run check`：按 `package.json` 串行执行以上全部门禁，适合作为提交前确定性检查。

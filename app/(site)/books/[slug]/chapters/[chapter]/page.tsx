@@ -19,6 +19,7 @@ import {
   type PublishedBookChapter,
 } from "@/lib/books";
 import { site } from "@/lib/site";
+import { getBookEbookDownloads } from "@/lib/ebooks";
 import {
   citationToBibtex,
   citationToJsonLd,
@@ -316,6 +317,8 @@ export default async function BookChapterPage({
         fallbackAuthor={book.authors.join("　")}
         citationBibtex={citationToBibtex(citation)}
         citationHref={`${bookChapterHref(book, chapter)}/cite.bib`}
+        epubDownloadUrl={getBookEbookDownloads(book.slug)?.epubUrl}
+        epubDownloadName={`${book.slug}.epub`}
         bookToc={readingBookToc(book, documents, chapter.id)}
       />
 

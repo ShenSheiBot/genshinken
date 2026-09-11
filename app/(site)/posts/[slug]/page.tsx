@@ -7,6 +7,7 @@ import { contributorEntityType } from "@/lib/contributors";
 import { postPath } from "@/lib/editorial";
 import { getTopicMembershipsForPost } from "@/lib/topics";
 import { bookHref, getBookByDocumentSlug } from "@/lib/books";
+import { getArticleEbookDownloads } from "@/lib/ebooks";
 import {
   getEditionLanguageLinks,
   getPublishedTranslationEditions,
@@ -194,6 +195,7 @@ export default async function ArticlePage({
         topicMemberships={topicMemberships}
         citationBibtex={citationToBibtex(citation)}
         citationHref={`${book ? bookHref(book) : postPath(post)}/cite.bib`}
+        epubDownloadUrl={getArticleEbookDownloads(post.slug)?.epubUrl}
         languageLinks={languageLinks}
       />
     </>

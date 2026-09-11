@@ -20,6 +20,7 @@ import {
   type BookChapter,
 } from "@/lib/books";
 import { site } from "@/lib/site";
+import { getBookEbookDownloads } from "@/lib/ebooks";
 import {
   citationToBibtex,
   citationToJsonLd,
@@ -278,7 +279,7 @@ export default async function BookPage({
               : undefined}
             translationBibtex={citationToBibtex(book.translationCitation)}
             pdfUrl={book.pdfUrl}
-            epubUrl={book.epubUrl}
+            epubUrl={getBookEbookDownloads(book.slug)?.epubUrl ?? book.epubUrl}
           />
         </div>
       </div>

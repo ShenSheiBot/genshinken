@@ -1500,6 +1500,12 @@ input.lineCurrent::selection { color: var(--solid-ink); background: var(--solid)
   grid-template-columns: 1fr;
 }
 
+/* With the article EPUB download present the row holds four actions
+   (BIB 复制 / BIB 下载 / EPUB 下载 / 返回篇首): wrap as a 2×2 grid. */
+.tocActions[data-epub="true"] {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .tocPanel .tocActions button,
 .tocPanel .tocActions > a {
   display: inline-flex;

@@ -49,6 +49,12 @@ next-env.d.ts
 # Codex local task artifacts
 /.codex/
 
+# Generated ebook artifacts stay out of git; only source/_ebooks/manifest.json
+# (the published-download manifest) is committed. public/downloads/ holds the
+# --local-preview copies served by next dev.
+/.ebook-dist/
+/public/downloads/
+
 # Exact crawler snapshots stay as local editorial evidence. Commit the
 # human-authored cv*-evidence/editorial-note Markdown, not complete page state.
 /editorial-sources/roof-archive/cv*.json

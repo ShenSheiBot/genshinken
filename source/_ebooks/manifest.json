@@ -1,0 +1,3863 @@
+{
+  "version": 1,
+  "books": {
+    "animation-nature-miyazaki-ecophilosophy": {
+      "epubUrl": "https://assets.labonroof.top/downloads/animation-nature-miyazaki-ecophilosophy-dde1d8eb17648310.epub",
+      "sha256": "7b1b0c3f11a1f149f572e322b4a9075fbd18b1a5cc9e77117325509985f3fe0d",
+      "bytes": 2064508,
+      "contentRevision": "dde1d8eb17648310",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:13:05.950Z"
+    },
+    "anime-industry-production-qa": {
+      "epubUrl": "https://assets.labonroof.top/downloads/anime-industry-production-qa-5cfe4c89b284d7ad.epub",
+      "sha256": "bdd0bb8df4e4bff61b43717e3e1d9243a14086fb8ee7d5911dc79b378da2f7e7",
+      "bytes": 5414882,
+      "contentRevision": "5cfe4c89b284d7ad",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:08:49.081Z"
+    },
+    "battle-trauma-anime-representation-history": {
+      "epubUrl": "https://assets.labonroof.top/downloads/battle-trauma-anime-representation-history-26b1962a97edb1ea.epub",
+      "sha256": "9750d568de121d9c5d1f3f94d80661f379d775820d4ca0bfc6a95a54976714aa",
+      "bytes": 2683388,
+      "contentRevision": "26b1962a97edb1ea",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:03:41.599Z"
+    },
+    "boys-love-manga-and-beyond": {
+      "epubUrl": "https://assets.labonroof.top/downloads/boys-love-manga-and-beyond-2c504da655f19959.epub",
+      "sha256": "ef1d3145c9724e3aec2d39e4c9835aa3398b7f22916c0d0542e33cb8dfc090c7",
+      "bytes": 2077568,
+      "contentRevision": "2c504da655f19959",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:03:50.388Z"
+    },
+    "char-counterattack-friendship-club": {
+      "epubUrl": "https://assets.labonroof.top/downloads/char-counterattack-friendship-club-d5be74dd1d579c6d.epub",
+      "sha256": "a953083bfa6a0c054d5ec817d3b505f9a0f91fb7af99dc329c9fa9a90c4ce0d2",
+      "bytes": 4129181,
+      "contentRevision": "d5be74dd1d579c6d",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:06:16.399Z"
+    },
+    "character-novel-writing-method": {
+      "epubUrl": "https://assets.labonroof.top/downloads/character-novel-writing-method-56dad95c48d22904.epub",
+      "sha256": "912c115bb63ad6c2510895f05ec2db4224c33eadfd00d7e7951b6959c4b2ac17",
+      "bytes": 4074524,
+      "contentRevision": "56dad95c48d22904",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:07:06.424Z"
+    },
+    "cinema-off-screen": {
+      "epubUrl": "https://assets.labonroof.top/downloads/cinema-off-screen-7e853f988fd969d8.epub",
+      "sha256": "b74bc2618f9a3c61dd323505a1e37d21636041d1fbb37f7b8fd72824a5db958e",
+      "bytes": 2689563,
+      "contentRevision": "7e853f988fd969d8",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:05:59.614Z"
+    },
+    "closer-to-the-world": {
+      "epubUrl": "https://assets.labonroof.top/downloads/closer-to-the-world-91af2391400b64d9.epub",
+      "sha256": "03acf9b89db9d176eb392b0ffc351a0fde19af33e2875eb32bbd6e062f6b7a47",
+      "bytes": 4118074,
+      "contentRevision": "91af2391400b64d9",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:10:48.794Z"
+    },
+    "confronting-capital-and-empire": {
+      "epubUrl": "https://assets.labonroof.top/downloads/confronting-capital-and-empire-eb0464c12ac77441.epub",
+      "sha256": "f0bd0154798c835157c9f33745461ae25de9ba40ff4ac2f63a53d174b51652cc",
+      "bytes": 10069119,
+      "contentRevision": "eb0464c12ac77441",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:09:16.566Z"
+    },
+    "debating-otaku-in-contemporary-japan": {
+      "epubUrl": "https://assets.labonroof.top/downloads/debating-otaku-in-contemporary-japan-ea1af836f817e5b7.epub",
+      "sha256": "5c7e99ff066ccf42ea00fa8fe32f67fa93e02e35af5830464e660851ede825fe",
+      "bytes": 2679274,
+      "contentRevision": "ea1af836f817e5b7",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:03:59.462Z"
+    },
+    "eva-subject-punishment-freedom": {
+      "epubUrl": "https://assets.labonroof.top/downloads/eva-subject-punishment-freedom-63481123216c83ac.epub",
+      "sha256": "46a3f859e8a70cd76335d0c5b338fcd90713be35c1fde24253a4bc4c9274c720",
+      "bytes": 15395878,
+      "contentRevision": "63481123216c83ac",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:08:58.440Z"
+    },
+    "feminism-brief-introduction-key-concepts": {
+      "epubUrl": "https://assets.labonroof.top/downloads/feminism-brief-introduction-key-concepts-3c61e43217bdb9bf.epub",
+      "sha256": "d7e287dd3af40b95dcedb30780c940443a62ec915c09966195e3d948e5d6e6f5",
+      "bytes": 1639878,
+      "contentRevision": "3c61e43217bdb9bf",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:04:08.133Z"
+    },
+    "feminist-film-theory-and-pretty-woman": {
+      "epubUrl": "https://assets.labonroof.top/downloads/feminist-film-theory-and-pretty-woman-e3df3864a6832781.epub",
+      "sha256": "5b944cb85a23beb36f5b9b2a12ced4e2dccebbec35351e992abaab8544e8301c",
+      "bytes": 3092690,
+      "contentRevision": "e3df3864a6832781",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:06:35.106Z"
+    },
+    "feminist-thought-fifth-edition": {
+      "epubUrl": "https://assets.labonroof.top/downloads/feminist-thought-fifth-edition-593e54113e898857.epub",
+      "sha256": "bab988404d4689e51a0c51b37e6d27e904159ef5892f6dcc382c5f7b4e2a9450",
+      "bytes": 1854115,
+      "contentRevision": "593e54113e898857",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:05:12.705Z"
+    },
+    "formal-style-scientism": {
+      "epubUrl": "https://assets.labonroof.top/downloads/formal-style-scientism-1e441f762eb01a68.epub",
+      "sha256": "5d36b62689849a8644a14628f0a1276900fae18b33947f78d5162c3b7863a225",
+      "bytes": 5217466,
+      "contentRevision": "1e441f762eb01a68",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:07:47.842Z"
+    },
+    "gender-perspective-subahibi": {
+      "epubUrl": "https://assets.labonroof.top/downloads/gender-perspective-subahibi-f3d5c51a057ca6fc.epub",
+      "sha256": "075665b7188901554b4918dbdb6c80893d3d58eeb60f2dcc3141f0e834ddc8cf",
+      "bytes": 37215902,
+      "contentRevision": "f3d5c51a057ca6fc",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:10:59.206Z"
+    },
+    "incontinence-of-the-void": {
+      "epubUrl": "https://assets.labonroof.top/downloads/incontinence-of-the-void-6b23abe498ba313c.epub",
+      "sha256": "2f743c4e7000504fc1f212f6f16d0f56b12c7f727679ed44bae2062ba2d2252b",
+      "bytes": 1509112,
+      "contentRevision": "6b23abe498ba313c",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:05:29.519Z"
+    },
+    "intensive-lectures-japanese-modern-thought": {
+      "epubUrl": "https://assets.labonroof.top/downloads/intensive-lectures-japanese-modern-thought-dcd4235620acb872.epub",
+      "sha256": "3e8891ddaa09fe1422f67a6ad25b24083cee7c5f3d11286aa15867cb6ff275dd",
+      "bytes": 2502468,
+      "contentRevision": "dcd4235620acb872",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:06:56.504Z"
+    },
+    "kaguya-sama-production-notes": {
+      "epubUrl": "https://assets.labonroof.top/downloads/kaguya-sama-production-notes-8889cfba1c5ec121.epub",
+      "sha256": "fcf35764f4ce86c99dbfdf6a4260d4c3187a724ca994c777bbf173e514e93682",
+      "bytes": 214116091,
+      "contentRevision": "8889cfba1c5ec121",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:11:20.796Z"
+    },
+    "karatani-asada-complete-dialogues": {
+      "epubUrl": "https://assets.labonroof.top/downloads/karatani-asada-complete-dialogues-c2b878f2da7d431b.epub",
+      "sha256": "33d62357100d1559545b8812bcd4ed8ba580a9d922cf72327444fdc1eefce0d6",
+      "bytes": 1575746,
+      "contentRevision": "c2b878f2da7d431b",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:05:36.661Z"
+    },
+    "karatani-inquiry-ii": {
+      "epubUrl": "https://assets.labonroof.top/downloads/karatani-inquiry-ii-35090f1d33d3c6ed.epub",
+      "sha256": "a4c6db76fb22f38eeba6d4637ac8d61d795d6a01c47ff50f3ae57876ec615bd2",
+      "bytes": 5092739,
+      "contentRevision": "35090f1d33d3c6ed",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:10:01.695Z"
+    },
+    "lamarre-speciesism": {
+      "epubUrl": "https://assets.labonroof.top/downloads/lamarre-speciesism-07c9216eed740648.epub",
+      "sha256": "7d558c068cb502958f97002e56fb1346d0326006217b410db2b9bd4af9a7bf8c",
+      "bytes": 1788411,
+      "contentRevision": "07c9216eed740648",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:04:16.559Z"
+    },
+    "layout-history-lectures": {
+      "epubUrl": "https://assets.labonroof.top/downloads/layout-history-lectures-3a422b62fee003bb.epub",
+      "sha256": "05d5558ed272baabfc9c07276b4ac53fe99927e1fde63281909372971dbcee83",
+      "bytes": 2238656,
+      "contentRevision": "3a422b62fee003bb",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:07:14.119Z"
+    },
+    "lenin-rediscovered": {
+      "epubUrl": "https://assets.labonroof.top/downloads/lenin-rediscovered-4c65ba5a5f78cf70.epub",
+      "sha256": "4c7508323d7443c57ce84261a463c35c11f2c21e5edf7993c760515521beb189",
+      "bytes": 1888603,
+      "contentRevision": "4c65ba5a5f78cf70",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:05:45.668Z"
+    },
+    "mad-women-yandere-darkening-cultural-analysis": {
+      "epubUrl": "https://assets.labonroof.top/downloads/mad-women-yandere-darkening-cultural-analysis-6d4b38a2b0f19ba2.epub",
+      "sha256": "5f7dd0bbc5ec994c0beccb12e7b2b91c53f3aa39a82ae308ff987da2db6d35ee",
+      "bytes": 8130743,
+      "contentRevision": "6d4b38a2b0f19ba2",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:12:56.649Z"
+    },
+    "marx-through-lacan-vocabulary": {
+      "epubUrl": "https://assets.labonroof.top/downloads/marx-through-lacan-vocabulary-635199c62b7dc9c6.epub",
+      "sha256": "e712218749db336dbe067688ed26c67bcb0e4920b18625609d9e56d5dcc9268c",
+      "bytes": 1289177,
+      "contentRevision": "635199c62b7dc9c6",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:05:52.393Z"
+    },
+    "maternal-dystopia": {
+      "epubUrl": "https://assets.labonroof.top/downloads/maternal-dystopia-f6572f97c00c9e32.epub",
+      "sha256": "0a47c559034f98d061ad9dd7129f4e39cb93e8e6e1b091f809351663cb7e339d",
+      "bytes": 70977465,
+      "contentRevision": "f6572f97c00c9e32",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:04:30.463Z"
+    },
+    "meta-animation-criticism": {
+      "epubUrl": "https://assets.labonroof.top/downloads/meta-animation-criticism-6a1c1a7716c547df.epub",
+      "sha256": "f1f815c38096a8e5b28ae0b074b048390ba28294eb4624508211e24f421a2f8e",
+      "bytes": 22675807,
+      "contentRevision": "6a1c1a7716c547df",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:08:03.808Z"
+    },
+    "miyazaki-sin-and-nihility": {
+      "epubUrl": "https://assets.labonroof.top/downloads/miyazaki-sin-and-nihility-3975f40acfdf71a4.epub",
+      "sha256": "99893199399dfbebf64fdc2df44bf9ee8a94ec558e6c04d7b49f26e91fed4c20",
+      "bytes": 2385947,
+      "contentRevision": "3975f40acfdf71a4",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:13:27.313Z"
+    },
+    "nippon-thought": {
+      "epubUrl": "https://assets.labonroof.top/downloads/nippon-thought-b8ad81f6869dd01c.epub",
+      "sha256": "1e7df27741f935b0dbb79a5641e0e2f2d3c139be1e82ca908510d2c43748d4d6",
+      "bytes": 8354699,
+      "contentRevision": "b8ad81f6869dd01c",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:10:15.991Z"
+    },
+    "phenomenology-the-basics": {
+      "epubUrl": "https://assets.labonroof.top/downloads/phenomenology-the-basics-0632bb3673dc514a.epub",
+      "sha256": "f05695758c45c0da12a514d10841c6f73b726573399a57a61da8d0b11031f7e7",
+      "bytes": 2101811,
+      "contentRevision": "0632bb3673dc514a",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:10:36.994Z"
+    },
+    "photographic-image-surrealism": {
+      "epubUrl": "https://assets.labonroof.top/downloads/photographic-image-surrealism-62ee2ce1f02eb5a4.epub",
+      "sha256": "d5e922a708eae3261c09308940f1bf7dc25d51df1750128d79629be86a24a7c4",
+      "bytes": 1381089,
+      "contentRevision": "62ee2ce1f02eb5a4",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:07:55.192Z"
+    },
+    "psychoanalysis-desire": {
+      "epubUrl": "https://assets.labonroof.top/downloads/psychoanalysis-desire-a3477d97da60e9bd.epub",
+      "sha256": "53b83284a8067f55d575e9e28987d508d6c8f265c180b9330379875ba1bad16f",
+      "bytes": 4461651,
+      "contentRevision": "a3477d97da60e9bd",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:05:21.150Z"
+    },
+    "reading-feminist-theory": {
+      "epubUrl": "https://assets.labonroof.top/downloads/reading-feminist-theory-827d56f883cfb8c8.epub",
+      "sha256": "7b10c4274e522f132f68c21862611026d1a8aa0e9e188a86301d875af9a47dd2",
+      "bytes": 2601439,
+      "contentRevision": "827d56f883cfb8c8",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:06:46.096Z"
+    },
+    "relational-form-analysis": {
+      "epubUrl": "https://assets.labonroof.top/downloads/relational-form-analysis-a2ddd36e1bd24715.epub",
+      "sha256": "9579ead8aa461b3b7c939ff2e42068dc1b1a1bd3407d3b8c3678d2a2495e88e9",
+      "bytes": 5294979,
+      "contentRevision": "a2ddd36e1bd24715",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:08:28.083Z"
+    },
+    "sarazanmai-production-notes": {
+      "epubUrl": "https://assets.labonroof.top/downloads/sarazanmai-production-notes-5baef72368c53d8d.epub",
+      "sha256": "6e6f7b66434df064c15abc65bd525da551dadb1780a15da839571580910daf2d",
+      "bytes": 14165102,
+      "contentRevision": "5baef72368c53d8d",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:08:17.249Z"
+    },
+    "science-magic-imagery-worldbuilding": {
+      "epubUrl": "https://assets.labonroof.top/downloads/science-magic-imagery-worldbuilding-58ddaa20ad60ee0b.epub",
+      "sha256": "7b48121b15ac9b15a200354f8ed749dae51c22d5ff41266a73d1942637281d88",
+      "bytes": 2179597,
+      "contentRevision": "58ddaa20ad60ee0b",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:13:19.091Z"
+    },
+    "sep-deflationary-theory-of-truth": {
+      "epubUrl": "https://assets.labonroof.top/downloads/sep-deflationary-theory-of-truth-d370989ec04d6d03.epub",
+      "sha256": "61e49ea808548efd615ec59afcae892006379be8aa8b97a39cb703831e191dec",
+      "bytes": 966261,
+      "contentRevision": "d370989ec04d6d03",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:12:36.733Z"
+    },
+    "sep-deleuze": {
+      "epubUrl": "https://assets.labonroof.top/downloads/sep-deleuze-7b78d7725401ac16.epub",
+      "sha256": "c5b1ae9d15fc556d9c57871ca361d119d93d7c5702288cdf974cb1f6f06d5ea4",
+      "bytes": 1463354,
+      "contentRevision": "7b78d7725401ac16",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:12:24.439Z"
+    },
+    "sep-hegel-aesthetics": {
+      "epubUrl": "https://assets.labonroof.top/downloads/sep-hegel-aesthetics-a42510aff2fb151a.epub",
+      "sha256": "c6323c8f16ea810cd155ef3f83cd5ee4702c41c9121451a53eb03b80ca4b920d",
+      "bytes": 7006699,
+      "contentRevision": "a42510aff2fb151a",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:10:25.725Z"
+    },
+    "sep-john-rawls": {
+      "epubUrl": "https://assets.labonroof.top/downloads/sep-john-rawls-bc5b5081347b8f4c.epub",
+      "sha256": "c87f575820dfa074badfa1808307f2c3b5c3a18084f1f8ca803c81d881971d1f",
+      "bytes": 1275601,
+      "contentRevision": "bc5b5081347b8f4c",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:07:20.786Z"
+    },
+    "sep-max-weber": {
+      "epubUrl": "https://assets.labonroof.top/downloads/sep-max-weber-335979fb56161e9f.epub",
+      "sha256": "55c36482b117ffc3a7b0fce43166eee55a920432f230b4c2e4f86506cd43d84c",
+      "bytes": 1434627,
+      "contentRevision": "335979fb56161e9f",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:07:41.386Z"
+    },
+    "sep-natural-kinds": {
+      "epubUrl": "https://assets.labonroof.top/downloads/sep-natural-kinds-b4ab61fd394b3a62.epub",
+      "sha256": "f90483ba97333400422698ddd08d63611169edf87df35e75ba5be5523d4e461c",
+      "bytes": 1345326,
+      "contentRevision": "b4ab61fd394b3a62",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:12:31.283Z"
+    },
+    "slow-anime-three-dimensions": {
+      "epubUrl": "https://assets.labonroof.top/downloads/slow-anime-three-dimensions-872aa5b67a36f507.epub",
+      "sha256": "dc6188c583f8fc70857a45db9dd309cb06921ce7216dcc8e4c7ac0754f8ffff2",
+      "bytes": 5672169,
+      "contentRevision": "872aa5b67a36f507",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:12:46.239Z"
+    },
+    "sound-euphonium-2-production-notes": {
+      "epubUrl": "https://assets.labonroof.top/downloads/sound-euphonium-2-production-notes-4ffb588f97cd0d4e.epub",
+      "sha256": "1f85d6f110f8b924ad63542dbe322d0d072f6a18a394fc298248272b271ecb98",
+      "bytes": 27286129,
+      "contentRevision": "4ffb588f97cd0d4e",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:07:28.248Z"
+    },
+    "symbolic-sublime-zizek-film-theory": {
+      "epubUrl": "https://assets.labonroof.top/downloads/symbolic-sublime-zizek-film-theory-512c52ba44361423.epub",
+      "sha256": "8cbea7dd3164f724818588cea6903cd10e943444e34534c76932ae6b70becf6b",
+      "bytes": 20534788,
+      "contentRevision": "512c52ba44361423",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:09:45.855Z"
+    },
+    "to-be-heroine-international-animators-interview": {
+      "epubUrl": "https://assets.labonroof.top/downloads/to-be-heroine-international-animators-interview-5167cb485c8a1538.epub",
+      "sha256": "6f742e7b4865519dad731100c333e18ab3e8f012cfaf7113b74ea5dde3f6d7c1",
+      "bytes": 1881925,
+      "contentRevision": "5167cb485c8a1538",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:13:12.246Z"
+    },
+    "tv-animation-chronology": {
+      "epubUrl": "https://assets.labonroof.top/downloads/tv-animation-chronology-21f00200a26986ce.epub",
+      "sha256": "f29280e6de378076c5778f39933400a2c47e0a8a2812ebbe0bf414499768d1ab",
+      "bytes": 7055395,
+      "contentRevision": "21f00200a26986ce",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:08:40.664Z"
+    },
+    "uno-tokusatsu-history-little-people-era": {
+      "epubUrl": "https://assets.labonroof.top/downloads/uno-tokusatsu-history-little-people-era-a6454c1b19172bcc.epub",
+      "sha256": "61ee590558c880298c89d4cae36b19c0458d288cdfdd118885a827cc1a482bcf",
+      "bytes": 18649202,
+      "contentRevision": "a6454c1b19172bcc",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:04:59.782Z"
+    },
+    "wednesday-no-work": {
+      "epubUrl": "https://assets.labonroof.top/downloads/wednesday-no-work-b3fa70b796cea9e9.epub",
+      "sha256": "bccd2238cf702b1d397678316645e527fad72efb9c2e6884fa681a9123421d13",
+      "bytes": 2852150,
+      "contentRevision": "b3fa70b796cea9e9",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:06:06.342Z"
+    },
+    "what-is-knowledge": {
+      "epubUrl": "https://assets.labonroof.top/downloads/what-is-knowledge-7c1a1e6a1d4f2f5d.epub",
+      "sha256": "7d83929dd7345937053af01d197b525d9e0d59cc628eb81226acc0023ab46a36",
+      "bytes": 4757476,
+      "contentRevision": "7c1a1e6a1d4f2f5d",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:06:24.856Z"
+    },
+    "zero-years-imagination": {
+      "epubUrl": "https://assets.labonroof.top/downloads/zero-years-imagination-1726c0f44b8b5419.epub",
+      "sha256": "2c3543e5341a0877a7605e15c12cb98fbcbe16fb24a869665925cbdb5358a7b9",
+      "bytes": 10722077,
+      "contentRevision": "1726c0f44b8b5419",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:09:33.159Z"
+    }
+  },
+  "articles": {
+    "1984-tokyo-commuter-subculture-otaku": {
+      "epubUrl": "https://assets.labonroof.top/downloads/1984-tokyo-commuter-subculture-otaku-86338a393310ffc8.epub",
+      "sha256": "7fa7bc117c2137d874ff00f9c304499d34a3e8167fca487ad9629897823c7587",
+      "bytes": 3195438,
+      "contentRevision": "86338a393310ffc8",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:21:29.970Z"
+    },
+    "a-scanner-darkly-psychosis-or-worse": {
+      "epubUrl": "https://assets.labonroof.top/downloads/a-scanner-darkly-psychosis-or-worse-cd0006dc0ebe0d70.epub",
+      "sha256": "b7579a4158334f4be3f91cce03f5a0d954c64f3e861f6d14a2666d7990392d2c",
+      "bytes": 3004293,
+      "contentRevision": "cd0006dc0ebe0d70",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:46:19.694Z"
+    },
+    "abigail-john-adams-selected-letters": {
+      "epubUrl": "https://assets.labonroof.top/downloads/abigail-john-adams-selected-letters-43c6bb2ac2156a2b.epub",
+      "sha256": "196e254ed2dde16e901d421dea0f3d6e9608bf78bffb46b11aa2904b2f697294",
+      "bytes": 449797,
+      "contentRevision": "43c6bb2ac2156a2b",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:29:16.300Z"
+    },
+    "acg-character-interiority-attributes-literariness": {
+      "epubUrl": "https://assets.labonroof.top/downloads/acg-character-interiority-attributes-literariness-36fec906ca3df291.epub",
+      "sha256": "b2d8c3a0f799531d7ff55043c1c18f857918f5e27fb90ab22213fda77a81cf5b",
+      "bytes": 2278761,
+      "contentRevision": "36fec906ca3df291",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:53:21.809Z"
+    },
+    "adventures-of-the-name-of-the-father": {
+      "epubUrl": "https://assets.labonroof.top/downloads/adventures-of-the-name-of-the-father-766cab73bf25fa9b.epub",
+      "sha256": "77d577320d8ad04928e4c16f6edbb01f0a566d3114972129e5b90a2700a3f40c",
+      "bytes": 3838171,
+      "contentRevision": "766cab73bf25fa9b",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:57:55.624Z"
+    },
+    "akagi-tomohiro-maruyama-war": {
+      "epubUrl": "https://assets.labonroof.top/downloads/akagi-tomohiro-maruyama-war-3e4f94c54e9e10f5.epub",
+      "sha256": "d388ef8e23d5ec0190122d0cb155dda6ec23935b4c6ac8b4c068a51e3e56dd97",
+      "bytes": 1847428,
+      "contentRevision": "3e4f94c54e9e10f5",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:17:41.855Z"
+    },
+    "alice-cultural-genealogy-touhou": {
+      "epubUrl": "https://assets.labonroof.top/downloads/alice-cultural-genealogy-touhou-af39b6b4aed8a85b.epub",
+      "sha256": "b04c88dcf96eb9aa959e0ae6bc9ffa4ec6d4a4e62ccb2f91aed86113c8453d3b",
+      "bytes": 4587578,
+      "contentRevision": "af39b6b4aed8a85b",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:46:11.797Z"
+    },
+    "alice-walker-womanist-1983": {
+      "epubUrl": "https://assets.labonroof.top/downloads/alice-walker-womanist-1983-8b35771d528cad1f.epub",
+      "sha256": "81e729732cae2667b6e7f25826bebe99b091bdbdf16ce467256b452595e2790f",
+      "bytes": 792027,
+      "contentRevision": "8b35771d528cad1f",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:24:43.010Z"
+    },
+    "anais-nin-mandra-ii": {
+      "epubUrl": "https://assets.labonroof.top/downloads/anais-nin-mandra-ii-3b5a1ffd6b040fe2.epub",
+      "sha256": "8735416815afce079f59f84ca3e63ae870e1386fe8de9766794e83d664b6d778",
+      "bytes": 884525,
+      "contentRevision": "3b5a1ffd6b040fe2",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:28:15.674Z"
+    },
+    "angela-davis-outcast-mothers-surrogates": {
+      "epubUrl": "https://assets.labonroof.top/downloads/angela-davis-outcast-mothers-surrogates-a4146a2af419c7c2.epub",
+      "sha256": "9b7e98b3f0eecfece7f4ae5c9b66c6b78ced9ebc9883ebc43b5bfabea5abfc63",
+      "bytes": 883565,
+      "contentRevision": "a4146a2af419c7c2",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:27:19.270Z"
+    },
+    "animals-in-database-flying-takahiro": {
+      "epubUrl": "https://assets.labonroof.top/downloads/animals-in-database-flying-takahiro-463d6ba0d76fe21c.epub",
+      "sha256": "7451f5061e1f8129543b6f97b43118b8a358c5b492414e41e4dc694fefd0446c",
+      "bytes": 1684829,
+      "contentRevision": "463d6ba0d76fe21c",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:20:01.529Z"
+    },
+    "animation-and-animism": {
+      "epubUrl": "https://assets.labonroof.top/downloads/animation-and-animism-3e586b0e26be9179.epub",
+      "sha256": "5d9529f533be543a1fa269edc919ecf431579435f46c4e9d29cc23a498793a2d",
+      "bytes": 2617827,
+      "contentRevision": "3e586b0e26be9179",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:14:59.443Z"
+    },
+    "animation-and-reality-takahata-realism": {
+      "epubUrl": "https://assets.labonroof.top/downloads/animation-and-reality-takahata-realism-5e7f8d4f94f0e040.epub",
+      "sha256": "6e3ddab2743c7320347156a36572466e5b7a116064f8025469c89f8000b7a817",
+      "bytes": 19806151,
+      "contentRevision": "5e7f8d4f94f0e040",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:40:15.234Z"
+    },
+    "animation-as-machine-takahata-lamarre-critique": {
+      "epubUrl": "https://assets.labonroof.top/downloads/animation-as-machine-takahata-lamarre-critique-ce1d56fe539abbf0.epub",
+      "sha256": "ffbea477fe258ef7ac347f543e01c0b24e64951d17f832c0a3f77401e32f2391",
+      "bytes": 1181165,
+      "contentRevision": "ce1d56fe539abbf0",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:36:40.515Z"
+    },
+    "animation-criticism-dimensions-resource-directory": {
+      "epubUrl": "https://assets.labonroof.top/downloads/animation-criticism-dimensions-resource-directory-1d2c32553673c106.epub",
+      "sha256": "321d5c0440a581f8651b596e3c838e196ec1c5fc462cef47a11a66d92d7d598f",
+      "bytes": 9785660,
+      "contentRevision": "1d2c32553673c106",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:53:14.354Z"
+    },
+    "animation-criticism-stranger-perspective": {
+      "epubUrl": "https://assets.labonroof.top/downloads/animation-criticism-stranger-perspective-1aef592e0381746c.epub",
+      "sha256": "327a0412f95b7b1e981d8d399b93cfa9a36647a08fdbaf91cc105b2aa8be5440",
+      "bytes": 1824253,
+      "contentRevision": "1aef592e0381746c",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:58:45.836Z"
+    },
+    "animation-eyebrow-hair-perception-video": {
+      "epubUrl": "https://assets.labonroof.top/downloads/animation-eyebrow-hair-perception-video-da461f3cb800e473.epub",
+      "sha256": "551c9e704a1f1967c7bde0966e064343fdc3a3da79959bff5361bdc00dce12d5",
+      "bytes": 258003,
+      "contentRevision": "da461f3cb800e473",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:29:54.873Z"
+    },
+    "animation-studio-culture-free-high-speed": {
+      "epubUrl": "https://assets.labonroof.top/downloads/animation-studio-culture-free-high-speed-0472087af1f1326e.epub",
+      "sha256": "60bd31b993f0f538292f5c89144f101b26b6e6bb8c10d9b4d65c75507543bac8",
+      "bytes": 1293401,
+      "contentRevision": "0472087af1f1326e",
+      "generator": 1,
+      "generatedAt": "2026-09-11T00:00:53.140Z"
+    },
+    "anime-domestic-violence-beauty-and-soul": {
+      "epubUrl": "https://assets.labonroof.top/downloads/anime-domestic-violence-beauty-and-soul-e11c503eae7170e2.epub",
+      "sha256": "906ab229c85bc20d67f201a01e20844b57f6aea3aa73db119f3686b83dcd4700",
+      "bytes": 2927093,
+      "contentRevision": "e11c503eae7170e2",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:50:43.880Z"
+    },
+    "anime-hair-color-personality-quantitative-analysis": {
+      "epubUrl": "https://assets.labonroof.top/downloads/anime-hair-color-personality-quantitative-analysis-83bf61a9560ee446.epub",
+      "sha256": "a51851120ed7b0c841d849ed425808be0d4be4eb11eaa902124ae2bad0d64797",
+      "bytes": 1782565,
+      "contentRevision": "83bf61a9560ee446",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:28:31.167Z"
+    },
+    "anime-machine-roundtable": {
+      "epubUrl": "https://assets.labonroof.top/downloads/anime-machine-roundtable-f5e0ce6fa94f51d0.epub",
+      "sha256": "678be8a9f42ac41498188c79ed90a56d5d9321c023ad40c67ff3da7ad0232d7c",
+      "bytes": 2725849,
+      "contentRevision": "f5e0ce6fa94f51d0",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:17:11.710Z"
+    },
+    "anime-newcomers-struggle": {
+      "epubUrl": "https://assets.labonroof.top/downloads/anime-newcomers-struggle-23b9814515c0494e.epub",
+      "sha256": "d5a5426544bc6ce8ad026babb90113786da2bb02937bc31cdfbe5bb344a78839",
+      "bytes": 1102175,
+      "contentRevision": "23b9814515c0494e",
+      "generator": 1,
+      "generatedAt": "2026-09-11T00:00:02.103Z"
+    },
+    "anonymous-phantom-on-the-roof": {
+      "epubUrl": "https://assets.labonroof.top/downloads/anonymous-phantom-on-the-roof-5cf510c8e0efe679.epub",
+      "sha256": "f0bc46da7df2b8e0d2feda8d1a53c60d2c86ee8d465f7c4667fe996f042f5e8c",
+      "bytes": 1538580,
+      "contentRevision": "5cf510c8e0efe679",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:54:26.593Z"
+    },
+    "another-miyazaki-video": {
+      "epubUrl": "https://assets.labonroof.top/downloads/another-miyazaki-video-19b6e59477b169c0.epub",
+      "sha256": "67923978c99f2f1efb7945243644cb2c60d42936eb9697eb87465cf22e007054",
+      "bytes": 239380,
+      "contentRevision": "19b6e59477b169c0",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:41:16.673Z"
+    },
+    "arknights-and-modern-totems": {
+      "epubUrl": "https://assets.labonroof.top/downloads/arknights-and-modern-totems-e833700c0c327607.epub",
+      "sha256": "47d4ae7a5118d50f042fa13b073a1c6ab9d92eb4265ca087d17f8992bbd6ebcb",
+      "bytes": 5041539,
+      "contentRevision": "e833700c0c327607",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:50:33.085Z"
+    },
+    "asada-akira-bts-radio-sakamoto": {
+      "epubUrl": "https://assets.labonroof.top/downloads/asada-akira-bts-radio-sakamoto-0fa045e167782860.epub",
+      "sha256": "7663a91436fb0782a72819390836a9d10d36945e029e4328d427967ac36e226c",
+      "bytes": 3411360,
+      "contentRevision": "0fa045e167782860",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:19:04.634Z"
+    },
+    "asada-image-evolution-theory-1986-video": {
+      "epubUrl": "https://assets.labonroof.top/downloads/asada-image-evolution-theory-1986-video-dc66e31b1967e0f9.epub",
+      "sha256": "3abd8181f8a1dad609daecdd68386f2a1a912325b6b8a79b54f104f421e5f53c",
+      "bytes": 252572,
+      "contentRevision": "dc66e31b1967e0f9",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:34:52.840Z"
+    },
+    "asada-memorial-ryuichi-sakamoto-late-style": {
+      "epubUrl": "https://assets.labonroof.top/downloads/asada-memorial-ryuichi-sakamoto-late-style-90fd72c8ab2df96b.epub",
+      "sha256": "b84684916cf0c075aa8efbeeece266e0d6016230ccf47714c4acf7927c01e483",
+      "bytes": 687688,
+      "contentRevision": "90fd72c8ab2df96b",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:27:29.224Z"
+    },
+    "asada-review-karatani-architecture-as-metaphor": {
+      "epubUrl": "https://assets.labonroof.top/downloads/asada-review-karatani-architecture-as-metaphor-d21fbfc78eafe21f.epub",
+      "sha256": "bb7282d9a4a344c8d4365110527f7fe5d2c9c3eb3e28efaef5be1d483e1fd570",
+      "bytes": 2876085,
+      "contentRevision": "d21fbfc78eafe21f",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:32:31.190Z"
+    },
+    "astrid-henry-solitary-sisterhood": {
+      "epubUrl": "https://assets.labonroof.top/downloads/astrid-henry-solitary-sisterhood-0ca0a926e61b8c45.epub",
+      "sha256": "60921ac60541c4269c0c526ad2cfb3ca4b46892199d26398e73d183d61d7f970",
+      "bytes": 1009207,
+      "contentRevision": "0ca0a926e61b8c45",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:29:25.145Z"
+    },
+    "audre-lorde-masters-tools-house": {
+      "epubUrl": "https://assets.labonroof.top/downloads/audre-lorde-masters-tools-house-852012848f615a23.epub",
+      "sha256": "b42519fab166b1de89292b041d5fe1f1ec939506a0836f18569008bf2ba4821f",
+      "bytes": 753456,
+      "contentRevision": "852012848f615a23",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:25:34.562Z"
+    },
+    "author-of-tachiguishi-oshii": {
+      "epubUrl": "https://assets.labonroof.top/downloads/author-of-tachiguishi-oshii-9f9541690ffeb58a.epub",
+      "sha256": "297b93fe492f22ef024295444ff1e2fed83a68164ac724f2365c13c2d0842068",
+      "bytes": 4582928,
+      "contentRevision": "9f9541690ffeb58a",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:48:36.698Z"
+    },
+    "azuma-criticism-as-illness": {
+      "epubUrl": "https://assets.labonroof.top/downloads/azuma-criticism-as-illness-168dd98753a711db.epub",
+      "sha256": "7887199895543866e575b7f52620dbcd829c9c07812d30499953fe7f273c8f69",
+      "bytes": 1069994,
+      "contentRevision": "168dd98753a711db",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:45:22.717Z"
+    },
+    "azuma-heidegger-beyond-wittgenstein": {
+      "epubUrl": "https://assets.labonroof.top/downloads/azuma-heidegger-beyond-wittgenstein-4d6bdaafcd114818.epub",
+      "sha256": "98a1d45720f7174d5732c6891f949cbc7b6d4a12c93a1ddbcfedff45c34409a6",
+      "bytes": 1074807,
+      "contentRevision": "4d6bdaafcd114818",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:33:18.129Z"
+    },
+    "azuma-hiroki-philosopher-as-business-owner": {
+      "epubUrl": "https://assets.labonroof.top/downloads/azuma-hiroki-philosopher-as-business-owner-d5c64db485f4c2ed.epub",
+      "sha256": "44648aee72a69f5e543f9ab4620a0fb1b1cb030916e297d17bec842f46e3d6da",
+      "bytes": 2268466,
+      "contentRevision": "d5c64db485f4c2ed",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:34:39.331Z"
+    },
+    "azuma-hiroki-what-is-criticism": {
+      "epubUrl": "https://assets.labonroof.top/downloads/azuma-hiroki-what-is-criticism-d55c6ff25895d922.epub",
+      "sha256": "5d9fa92db7124c89aa04082e17820ee6be445a69eb71ba157c6dd84db2aa2783",
+      "bytes": 1571167,
+      "contentRevision": "d55c6ff25895d922",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:16:55.531Z"
+    },
+    "azuma-norizuki-dialogue-1-mystery-and-cryptography": {
+      "epubUrl": "https://assets.labonroof.top/downloads/azuma-norizuki-dialogue-1-mystery-and-cryptography-aa97ddc3697aa1cf.epub",
+      "sha256": "1b7dbc46e88252cd9356efeefec95bbf440d73197f76b48cb566a49290eff0f0",
+      "bytes": 1518179,
+      "contentRevision": "aa97ddc3697aa1cf",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:30:02.080Z"
+    },
+    "azuma-superflat-japanese-postmodernity": {
+      "epubUrl": "https://assets.labonroof.top/downloads/azuma-superflat-japanese-postmodernity-51c0a5a26d9ad500.epub",
+      "sha256": "fdc4ddce99a657b08529a4317af7163dcb72ae98e52cd92426f4d18df4e507ee",
+      "bytes": 6104177,
+      "contentRevision": "51c0a5a26d9ad500",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:44:24.534Z"
+    },
+    "bailey-mother-daughter-baggage-feminism": {
+      "epubUrl": "https://assets.labonroof.top/downloads/bailey-mother-daughter-baggage-feminism-f71e30a1594f2e0f.epub",
+      "sha256": "a174f328fb2f80b97634823764b4545ab6ea3ce6663b0df96027c013bdb3ce42",
+      "bytes": 1250712,
+      "contentRevision": "f71e30a1594f2e0f",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:31:06.120Z"
+    },
+    "basu-logic-of-capital-introduction": {
+      "epubUrl": "https://assets.labonroof.top/downloads/basu-logic-of-capital-introduction-dc01c9366711b6c2.epub",
+      "sha256": "527df52c24b72ca3af152cfb3f6ae3a2f4ccbab5ecb7c8f17cb29fd7ca5a1035",
+      "bytes": 935246,
+      "contentRevision": "dc01c9366711b6c2",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:28:45.283Z"
+    },
+    "battle-beauties-shouts-and": {
+      "epubUrl": "https://assets.labonroof.top/downloads/battle-beauties-shouts-and-fe8930436b0fc3d2.epub",
+      "sha256": "9315c678d80162a1f6ffd41478fb42b60807879ab93c6fa24ec9811b153adee5",
+      "bytes": 3329419,
+      "contentRevision": "fe8930436b0fc3d2",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:51:43.483Z"
+    },
+    "beastars-from-animality-to-humanity": {
+      "epubUrl": "https://assets.labonroof.top/downloads/beastars-from-animality-to-humanity-4f0d4f120ad9dd55.epub",
+      "sha256": "3d3bad8186138d0bf47570052ae6cef60de6e5d833bf228d766e20bce7f539ef",
+      "bytes": 2766362,
+      "contentRevision": "4f0d4f120ad9dd55",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:45:05.167Z"
+    },
+    "bell-hooks-theory-as-liberatory-practice": {
+      "epubUrl": "https://assets.labonroof.top/downloads/bell-hooks-theory-as-liberatory-practice-644475f7bbfa4dce.epub",
+      "sha256": "5016b30591b83db2e194cfe9630a4831dbdad307e8979bdd569434156441f190",
+      "bytes": 3560663,
+      "contentRevision": "644475f7bbfa4dce",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:30:27.335Z"
+    },
+    "beneath-chihiros-mask": {
+      "epubUrl": "https://assets.labonroof.top/downloads/beneath-chihiros-mask-4481ce4f961ba25f.epub",
+      "sha256": "8d9cf5e273edfee2378e3fe45d4564750050741d45504e759de2537d5c40e300",
+      "bytes": 9008510,
+      "contentRevision": "4481ce4f961ba25f",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:50:06.340Z"
+    },
+    "benston-political-economy-womens-liberation": {
+      "epubUrl": "https://assets.labonroof.top/downloads/benston-political-economy-womens-liberation-9cb2c316b9af83e7.epub",
+      "sha256": "28e26f9b0d040d80d37dde9a4a4bb07fc757b2fb84f4c2058f0717358d30d4f8",
+      "bytes": 721248,
+      "contentRevision": "9cb2c316b9af83e7",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:26:23.702Z"
+    },
+    "bikini-kill-fanzine-cover-1991": {
+      "epubUrl": "https://assets.labonroof.top/downloads/bikini-kill-fanzine-cover-1991-a8ffa3b4992b7538.epub",
+      "sha256": "34f719c62bd5f1d9d8af7f6f7018921d82ee296be2634fab5bab40a88954c66b",
+      "bytes": 575897,
+      "contentRevision": "a8ffa3b4992b7538",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:28:40.078Z"
+    },
+    "bl-penetration-deepening-diversification-2000s-2010s": {
+      "epubUrl": "https://assets.labonroof.top/downloads/bl-penetration-deepening-diversification-2000s-2010s-a72225377d5da042.epub",
+      "sha256": "2a9b28e9c4e1115b985d9bd95c003f34a9a3c9cb04dc63c6c166799b8f3c828c",
+      "bytes": 2276443,
+      "contentRevision": "a72225377d5da042",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:24:23.515Z"
+    },
+    "blue-emoi-novels-roundtable": {
+      "epubUrl": "https://assets.labonroof.top/downloads/blue-emoi-novels-roundtable-af33b3c5480f9f4f.epub",
+      "sha256": "baa8c8629ce06cfcd98a5bd0647c3c1b4080497ca2b11a6f50ed3d9fc80b0410",
+      "bytes": 15447016,
+      "contentRevision": "af33b3c5480f9f4f",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:21:44.361Z"
+    },
+    "body-prosthesis-cannon-fodder": {
+      "epubUrl": "https://assets.labonroof.top/downloads/body-prosthesis-cannon-fodder-8314153d2eed8efd.epub",
+      "sha256": "2b8ed1f8ef3f881e7079b6751390c07f12aa47b9a791752a6ad0c85f3c833caf",
+      "bytes": 1359610,
+      "contentRevision": "8314153d2eed8efd",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:57:28.718Z"
+    },
+    "boku-girl-anxious-body-performance-video": {
+      "epubUrl": "https://assets.labonroof.top/downloads/boku-girl-anxious-body-performance-video-2359f6ade3f48639.epub",
+      "sha256": "953ebb93c7bf1f1b2323f17c66b0a416090342dcdb560611084c70c4ac58c2d5",
+      "bytes": 242705,
+      "contentRevision": "2359f6ade3f48639",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:41:24.306Z"
+    },
+    "bouyuu-toukaidou-chonin-culture-ukiyo-e": {
+      "epubUrl": "https://assets.labonroof.top/downloads/bouyuu-toukaidou-chonin-culture-ukiyo-e-f335f1b6a89d9b66.epub",
+      "sha256": "67841005c5682361b4e78d727d43cc4cb71eb40d4e2392724c6f70a27f3ce13e",
+      "bytes": 6321230,
+      "contentRevision": "f335f1b6a89d9b66",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:43:11.715Z"
+    },
+    "carol-christ-why-women-need-goddess": {
+      "epubUrl": "https://assets.labonroof.top/downloads/carol-christ-why-women-need-goddess-72ae7075dc85daac.epub",
+      "sha256": "faf8d3472e9a471d6c79fae529a54ad263145ea4221dfa97bb8e02afe42ae9a5",
+      "bytes": 742797,
+      "contentRevision": "72ae7075dc85daac",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:31:32.509Z"
+    },
+    "chiba-kokubun-before-language-disappears": {
+      "epubUrl": "https://assets.labonroof.top/downloads/chiba-kokubun-before-language-disappears-5e8674fc12b32d22.epub",
+      "sha256": "cdd75bcd9bdd745441e2accb3297be027c40a509580de76870b02368fa25c1ef",
+      "bytes": 1335102,
+      "contentRevision": "5e8674fc12b32d22",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:32:59.199Z"
+    },
+    "chiba-masaya-how-to-become-a-minor-thought-master": {
+      "epubUrl": "https://assets.labonroof.top/downloads/chiba-masaya-how-to-become-a-minor-thought-master-e5e2d30f3ed2f14e.epub",
+      "sha256": "841fc9d37327d4506e530a8575f3487f78a2582a230819abc72ede35e9e548a1",
+      "bytes": 3460800,
+      "contentRevision": "e5e2d30f3ed2f14e",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:32:52.284Z"
+    },
+    "china-young-animator-profile": {
+      "epubUrl": "https://assets.labonroof.top/downloads/china-young-animator-profile-e906a06934a1a24d.epub",
+      "sha256": "4ab9af13aa2655289d10a67a97ec92928976bc84bbd3ea689c0b03b7d290371d",
+      "bytes": 1253027,
+      "contentRevision": "e906a06934a1a24d",
+      "generator": 1,
+      "generatedAt": "2026-09-11T00:00:17.751Z"
+    },
+    "choo-hyperbolic-nationalism-korean-animation": {
+      "epubUrl": "https://assets.labonroof.top/downloads/choo-hyperbolic-nationalism-korean-animation-c4785fcecb292d32.epub",
+      "sha256": "da5409adfb0ac53c3924394f4bb5160f0feac8d0785ec51178410a2432035f60",
+      "bytes": 2258013,
+      "contentRevision": "c4785fcecb292d32",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:18:06.187Z"
+    },
+    "clarifying-rationalization-in-animation-criticism": {
+      "epubUrl": "https://assets.labonroof.top/downloads/clarifying-rationalization-in-animation-criticism-501f72f2700f4828.epub",
+      "sha256": "9ae60a0c55ae86c6c7b243b2fc819c45d2ef8716c5c5421457a84271dc6976b5",
+      "bytes": 10793892,
+      "contentRevision": "501f72f2700f4828",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:55:10.618Z"
+    },
+    "colonial-film-time-shinkai": {
+      "epubUrl": "https://assets.labonroof.top/downloads/colonial-film-time-shinkai-55904d83a6e82214.epub",
+      "sha256": "ee426d14b3b864581e155c214cadad11c800b19efc4783ec8dd5d90060fd1f60",
+      "bytes": 5633444,
+      "contentRevision": "55904d83a6e82214",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:21:22.220Z"
+    },
+    "combahee-river-collective-black-feminist-statement": {
+      "epubUrl": "https://assets.labonroof.top/downloads/combahee-river-collective-black-feminist-statement-b9bdfb88cc0de8be.epub",
+      "sha256": "d8b744e5cd4d71a86997844ca45a9179e5804c857027eb1c2add3dfb882fc36a",
+      "bytes": 1185156,
+      "contentRevision": "b9bdfb88cc0de8be",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:29:07.176Z"
+    },
+    "comedy-of-birth-k-on-everyday-anime": {
+      "epubUrl": "https://assets.labonroof.top/downloads/comedy-of-birth-k-on-everyday-anime-e394c7711a7b0bd7.epub",
+      "sha256": "b85c44dad1b1a9a9734001cd81881b557401412585ef10d0b9ec7e53dfa879f9",
+      "bytes": 19880933,
+      "contentRevision": "e394c7711a7b0bd7",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:20:43.065Z"
+    },
+    "comparing-video-game-genres": {
+      "epubUrl": "https://assets.labonroof.top/downloads/comparing-video-game-genres-2e01cc47388094d5.epub",
+      "sha256": "30fae333014ed05859b97a2ea1236efbb3c53065cf4d46dd4751f0328f52e6df",
+      "bytes": 1440492,
+      "contentRevision": "2e01cc47388094d5",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:57:33.630Z"
+    },
+    "concrete-arcade-still-mad-festival-2019-finale": {
+      "epubUrl": "https://assets.labonroof.top/downloads/concrete-arcade-still-mad-festival-2019-finale-72ef5a1e18f47907.epub",
+      "sha256": "a115a35ca85483d531589b03d44e309c915acf06557563066e302012d2abba70",
+      "bytes": 2290357,
+      "contentRevision": "72ef5a1e18f47907",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:43:47.327Z"
+    },
+    "concrete-arcade-still-mad-festival-2019-launch": {
+      "epubUrl": "https://assets.labonroof.top/downloads/concrete-arcade-still-mad-festival-2019-launch-2026abf9a74c69d3.epub",
+      "sha256": "e8cce4b91b6e413132f223fbc3e37db542fc2798bf91b112fff628ef75e5a489",
+      "bytes": 1709118,
+      "contentRevision": "2026abf9a74c69d3",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:47:18.266Z"
+    },
+    "concrete-revolutio-media-form-aikawa-sho-reconsidered": {
+      "epubUrl": "https://assets.labonroof.top/downloads/concrete-revolutio-media-form-aikawa-sho-reconsidered-6ca6e6fd7e2fd85f.epub",
+      "sha256": "1dafef8749e12b71a73b4a666bd2e36a0116841733481fb14324d82db8299275",
+      "bytes": 8730916,
+      "contentRevision": "6ca6e6fd7e2fd85f",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:52:31.114Z"
+    },
+    "concrete-revolutio-timeline": {
+      "epubUrl": "https://assets.labonroof.top/downloads/concrete-revolutio-timeline-a7a7d24f9af02b61.epub",
+      "sha256": "5fe979a1ce7f803689a93be1d1909aad7d4fa6d60521691bb07643ef84f0206b",
+      "bytes": 1981681,
+      "contentRevision": "a7a7d24f9af02b61",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:55:49.642Z"
+    },
+    "condry-collaborative-creativity-anime": {
+      "epubUrl": "https://assets.labonroof.top/downloads/condry-collaborative-creativity-anime-4e55d99cbd7c1e20.epub",
+      "sha256": "c485b654f74469cbc8de386511d7c84607ff8f80098259545aa1a03115abbc28",
+      "bytes": 1577527,
+      "contentRevision": "4e55d99cbd7c1e20",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:51:36.000Z"
+    },
+    "conjoined-by-hand-aesthetic-materiality": {
+      "epubUrl": "https://assets.labonroof.top/downloads/conjoined-by-hand-aesthetic-materiality-1f56607950e60057.epub",
+      "sha256": "5ad8e01baab4e6ef23665a11674db0db1c2ee631e14a5d9f9e1e680e14290357",
+      "bytes": 3119955,
+      "contentRevision": "1f56607950e60057",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:15:45.167Z"
+    },
+    "consciousness-of-agony-2021-call-for-philosophy-public-writing": {
+      "epubUrl": "https://assets.labonroof.top/downloads/consciousness-of-agony-2021-call-for-philosophy-public-writing-960d325d6b2bde9d.epub",
+      "sha256": "9d6fde511944b18e27b43ab648a23a3ba0557828590775ae9326a793b2898939",
+      "bytes": 1694884,
+      "contentRevision": "960d325d6b2bde9d",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:34:49.558Z"
+    },
+    "crisis-of-verse": {
+      "epubUrl": "https://assets.labonroof.top/downloads/crisis-of-verse-9e752d6b849325c8.epub",
+      "sha256": "bf6c48083dab2e0cb7d60d97f9bb9767aa6be914316620fddaefbc9db50cfec6",
+      "bytes": 3542481,
+      "contentRevision": "9e752d6b849325c8",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:29:39.849Z"
+    },
+    "crystal-eastman-now-we-can-begin": {
+      "epubUrl": "https://assets.labonroof.top/downloads/crystal-eastman-now-we-can-begin-5ef14d71d79ab6cb.epub",
+      "sha256": "440c09672f3442b441999efdd66f3315e516b04dc896f1368bfdcfc9e9013c9a",
+      "bytes": 785556,
+      "contentRevision": "5ef14d71d79ab6cb",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:27:08.898Z"
+    },
+    "darker-than-black-psychoanalysis-crossing-starry-fantasy": {
+      "epubUrl": "https://assets.labonroof.top/downloads/darker-than-black-psychoanalysis-crossing-starry-fantasy-688217c41de20399.epub",
+      "sha256": "7780900bc2f2276ac7154cc7f6070a1bd362d293046fd11da05e6e9f4335c415",
+      "bytes": 13849132,
+      "contentRevision": "688217c41de20399",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:32:04.715Z"
+    },
+    "darker-than-black-stagnant-style": {
+      "epubUrl": "https://assets.labonroof.top/downloads/darker-than-black-stagnant-style-6e10d63bef319218.epub",
+      "sha256": "e6a815f7a4eac9e76847f25bcea572b36caf9b1660e7017dae7899880b9d49c5",
+      "bytes": 2472946,
+      "contentRevision": "6e10d63bef319218",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:39:20.935Z"
+    },
+    "dazai-mishima-our-no-longer-human": {
+      "epubUrl": "https://assets.labonroof.top/downloads/dazai-mishima-our-no-longer-human-8443ff4401f2ff8e.epub",
+      "sha256": "ee1fb9820db2e9fd5c7782d2d9e7573fe5c1dbfe0eb1cfc706f1f908d82f4722",
+      "bytes": 805767,
+      "contentRevision": "8443ff4401f2ff8e",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:43:21.709Z"
+    },
+    "dazai-osamu-and-mishima-yukio-literary-dislike": {
+      "epubUrl": "https://assets.labonroof.top/downloads/dazai-osamu-and-mishima-yukio-literary-dislike-0d89b6a24e7082fd.epub",
+      "sha256": "cee913b16cfd950b952a0e38dcc81a2df3e8d6d042ada0255c92bc94d432a20f",
+      "bytes": 980663,
+      "contentRevision": "0d89b6a24e7082fd",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:44:09.553Z"
+    },
+    "dazai-osamu-melancholy-and-the-setting-sun": {
+      "epubUrl": "https://assets.labonroof.top/downloads/dazai-osamu-melancholy-and-the-setting-sun-00064380805ce0fa.epub",
+      "sha256": "1d83414b8674e6f9e6ae4dcc4f8a1b8ed390fc84151c43bf998e1d5d79a9ce04",
+      "bytes": 1084892,
+      "contentRevision": "00064380805ce0fa",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:43:37.252Z"
+    },
+    "death-and-rebirth-in-isekai-reincarnation": {
+      "epubUrl": "https://assets.labonroof.top/downloads/death-and-rebirth-in-isekai-reincarnation-e976b4c0bc184137.epub",
+      "sha256": "a9ae0598f548cb531e211306cb49bb7ea2e039c32b8ca075383c3c490536c82e",
+      "bytes": 1185119,
+      "contentRevision": "e976b4c0bc184137",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:33:49.209Z"
+    },
+    "deca-dence-project-history-production-notes": {
+      "epubUrl": "https://assets.labonroof.top/downloads/deca-dence-project-history-production-notes-056faaa2bcc64405.epub",
+      "sha256": "d3050a4135dd47e1b091699d77ee53c5fe63f51d2d39a0490e5a90c1662efb91",
+      "bytes": 68822525,
+      "contentRevision": "056faaa2bcc64405",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:41:38.255Z"
+    },
+    "decoding-the-drowned-giant": {
+      "epubUrl": "https://assets.labonroof.top/downloads/decoding-the-drowned-giant-367aa8ef80d05f5f.epub",
+      "sha256": "f0392162368fd89d5cd69cbebfe5ccfc9b983fefb0d6d21657eb9d1bcd7e35e3",
+      "bytes": 1140007,
+      "contentRevision": "367aa8ef80d05f5f",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:33:55.490Z"
+    },
+    "decolonising-anime-studies-prolegomenon": {
+      "epubUrl": "https://assets.labonroof.top/downloads/decolonising-anime-studies-prolegomenon-37304d464c061042.epub",
+      "sha256": "84535c7ede5b8da27dc7031d12290db02512a976f8fff17fa4e748405300b280",
+      "bytes": 1745756,
+      "contentRevision": "37304d464c061042",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:17:03.882Z"
+    },
+    "deleuze-film-theory-introduction-upper": {
+      "epubUrl": "https://assets.labonroof.top/downloads/deleuze-film-theory-introduction-upper-a5a0cbb8068c3ea0.epub",
+      "sha256": "e314939c5258db79e7facc376aca598a7c8eded19de90c408ee1c5a0f0409b73",
+      "bytes": 1819558,
+      "contentRevision": "a5a0cbb8068c3ea0",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:25:57.261Z"
+    },
+    "diaosi-culture-logic-of-counterattack": {
+      "epubUrl": "https://assets.labonroof.top/downloads/diaosi-culture-logic-of-counterattack-da6b8d807baccce4.epub",
+      "sha256": "221f4e7d4079ed3de70e22625ffc1b414966f933eedcbb688ef43585e21f7dcf",
+      "bytes": 924056,
+      "contentRevision": "da6b8d807baccce4",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:45:26.800Z"
+    },
+    "disaster-apocalypse-video-series": {
+      "epubUrl": "https://assets.labonroof.top/downloads/disaster-apocalypse-video-series-50ae79d2042b0cac.epub",
+      "sha256": "b2e799a8de4e5b475ff605190f8be4763bf9aad42b6b4c0209de5d7e501548fb",
+      "bytes": 335849,
+      "contentRevision": "50ae79d2042b0cac",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:45:30.113Z"
+    },
+    "disaster-as-ideology": {
+      "epubUrl": "https://assets.labonroof.top/downloads/disaster-as-ideology-0f978ba02b9b310f.epub",
+      "sha256": "ae03dd526f761bcea2d48865af8db6855f9f1d0708f9f52220a0bb36c86d3a19",
+      "bytes": 2088533,
+      "contentRevision": "0f978ba02b9b310f",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:44:45.796Z"
+    },
+    "distant-view-everyday-k-on": {
+      "epubUrl": "https://assets.labonroof.top/downloads/distant-view-everyday-k-on-f2426b5c946c86f9.epub",
+      "sha256": "93abbff72369294dfba290d906af7cf83936144c7c4fcef04d7fdc756b05ee7b",
+      "bytes": 7144900,
+      "contentRevision": "f2426b5c946c86f9",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:21:12.993Z"
+    },
+    "doors-and-perception-fiction-vs-simulation-in-games": {
+      "epubUrl": "https://assets.labonroof.top/downloads/doors-and-perception-fiction-vs-simulation-in-games-b9772111fd040f94.epub",
+      "sha256": "65562a2fe622acd8d5a1a0aa3171284ee6c6b421c824a9ac3943ab6501c9b0e1",
+      "bytes": 2065022,
+      "contentRevision": "b9772111fd040f94",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:44:51.739Z"
+    },
+    "economic-thought-history-adam-smith": {
+      "epubUrl": "https://assets.labonroof.top/downloads/economic-thought-history-adam-smith-faa4694c6916173e.epub",
+      "sha256": "f5d855fde0b4e000ac0c625c6fe0a6c17034d6f8aabf4cd3099a4e677a7c7c03",
+      "bytes": 1278867,
+      "contentRevision": "faa4694c6916173e",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:25:29.782Z"
+    },
+    "ehrenreich-fuentes-life-global-assembly-line": {
+      "epubUrl": "https://assets.labonroof.top/downloads/ehrenreich-fuentes-life-global-assembly-line-2a3556814580f03c.epub",
+      "sha256": "35ea1b8902be64e1bd629f7a9b4baaea1b8488c9a89d513b075fbc6dbf8481c8",
+      "bytes": 1147382,
+      "contentRevision": "2a3556814580f03c",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:27:04.133Z"
+    },
+    "embracing-the-flawed-kizumonogatari": {
+      "epubUrl": "https://assets.labonroof.top/downloads/embracing-the-flawed-kizumonogatari-2e24dcb5811f836c.epub",
+      "sha256": "31e6101f8a427b4f26c4370b0f04a62fec420cbafea45a8040cadecc455c201f",
+      "bytes": 3300201,
+      "contentRevision": "2e24dcb5811f836c",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:20:15.793Z"
+    },
+    "emma-lazarus-new-colossus-bilingual": {
+      "epubUrl": "https://assets.labonroof.top/downloads/emma-lazarus-new-colossus-bilingual-9b9cbe17efc4dee5.epub",
+      "sha256": "b90557aad778ff27af68bc966e0c65d4cc80bc63bdad4d07f9e83e7ce1530b57",
+      "bytes": 441272,
+      "contentRevision": "9b9cbe17efc4dee5",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:25:48.586Z"
+    },
+    "erotic-idol-female-oriented-av-men": {
+      "epubUrl": "https://assets.labonroof.top/downloads/erotic-idol-female-oriented-av-men-b3a2cc48b671d53f.epub",
+      "sha256": "3d8e4c2bd1e4b34e46d336935665aa0576b16d1209f019f1299a29a2a5aec174",
+      "bytes": 3732337,
+      "contentRevision": "b3a2cc48b671d53f",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:19:35.711Z"
+    },
+    "erotophobia-colonization-queers-nature": {
+      "epubUrl": "https://assets.labonroof.top/downloads/erotophobia-colonization-queers-nature-d998f402d423a520.epub",
+      "sha256": "2ad3cbec5d9d8b8bbb7aa18143d907132bfd62ab7843d8332bada9306eca0a50",
+      "bytes": 813925,
+      "contentRevision": "d998f402d423a520",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:15:50.927Z"
+    },
+    "everyday-space-light-novel-slow-life": {
+      "epubUrl": "https://assets.labonroof.top/downloads/everyday-space-light-novel-slow-life-87c5b94805e9d327.epub",
+      "sha256": "735abe36a97650ad33aa1be8a138908761382d44aabeb5ab3f0b987d8bcb9147",
+      "bytes": 1914376,
+      "contentRevision": "87c5b94805e9d327",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:48:00.703Z"
+    },
+    "ex-lovers-and-ntr-affect": {
+      "epubUrl": "https://assets.labonroof.top/downloads/ex-lovers-and-ntr-affect-d3f47bb9b11ca87d.epub",
+      "sha256": "5472c521ec6a42fbcaad579377e287d63c1220f1a14bf07ce2afb2027909f889",
+      "bytes": 2531732,
+      "contentRevision": "d3f47bb9b11ca87d",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:58:07.506Z"
+    },
+    "expanding-the-dimensions-of-animation-appreciation-and-criticism": {
+      "epubUrl": "https://assets.labonroof.top/downloads/expanding-the-dimensions-of-animation-appreciation-and-criticism-ebf23cddd373816b.epub",
+      "sha256": "75a14811d308a7949714c360ff1e12ff917d7c29c916406e6c5a12fe8f35c4ed",
+      "bytes": 16015055,
+      "contentRevision": "ebf23cddd373816b",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:56:14.579Z"
+    },
+    "fall-2018-anime-preview": {
+      "epubUrl": "https://assets.labonroof.top/downloads/fall-2018-anime-preview-e3e9da7c9a0e04a7.epub",
+      "sha256": "efcf537a1cbbc86b9df76a59f14586231b798792b5fc34ace00559e42d5985d7",
+      "bytes": 1426128,
+      "contentRevision": "e3e9da7c9a0e04a7",
+      "generator": 1,
+      "generatedAt": "2026-09-11T00:00:24.444Z"
+    },
+    "faust-east-asia-otaku-transversality": {
+      "epubUrl": "https://assets.labonroof.top/downloads/faust-east-asia-otaku-transversality-ae03a3d1f07b633a.epub",
+      "sha256": "b057efef2243dac36a7086abd42dce1375f56f0f1925cadf45bb15b6f48b4b56",
+      "bytes": 8816494,
+      "contentRevision": "ae03a3d1f07b633a",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:18:57.146Z"
+    },
+    "fear-of-monsters-america-home-of-titans": {
+      "epubUrl": "https://assets.labonroof.top/downloads/fear-of-monsters-america-home-of-titans-920729cb5df116fa.epub",
+      "sha256": "19d39134d2a2126a425bea9b9bdd9a84f128cb9c68d00d4af7a855c360f081ca",
+      "bytes": 1577581,
+      "contentRevision": "920729cb5df116fa",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:34:07.266Z"
+    },
+    "feminism-five-thousand-word-guide": {
+      "epubUrl": "https://assets.labonroof.top/downloads/feminism-five-thousand-word-guide-9abfd272a52f7a5e.epub",
+      "sha256": "d5348f33ae4de1390e7669f482ce7e6b677454fdb4695bc5aee491f66691532f",
+      "bytes": 3094987,
+      "contentRevision": "9abfd272a52f7a5e",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:20:56.915Z"
+    },
+    "feminism-rebellion-nature-1981": {
+      "epubUrl": "https://assets.labonroof.top/downloads/feminism-rebellion-nature-1981-3ccf2c6c2019fef7.epub",
+      "sha256": "7c6928a2547dae55f47ecdd06c7abff4c0f7d479c530b23f72fa324f87ec3346",
+      "bytes": 832089,
+      "contentRevision": "3ccf2c6c2019fef7",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:27:40.826Z"
+    },
+    "feminist-theory-modernity-postmodernity": {
+      "epubUrl": "https://assets.labonroof.top/downloads/feminist-theory-modernity-postmodernity-e3ea991b42e75e18.epub",
+      "sha256": "2231adc58c12918dfb24931f33801ea3928862caf8f703f10374abdc38c5c060",
+      "bytes": 518718,
+      "contentRevision": "e3ea991b42e75e18",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:32:18.027Z"
+    },
+    "feminist-theory-resource-index": {
+      "epubUrl": "https://assets.labonroof.top/downloads/feminist-theory-resource-index-7be44befe2317c44.epub",
+      "sha256": "cff2c7f1d5f26dd1765a19f2878f94e75ff69a23d4852d8dde09c9d19f4c07db",
+      "bytes": 968945,
+      "contentRevision": "7be44befe2317c44",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:23:12.404Z"
+    },
+    "fgo-babylonia-episode-5-shouta-umehara": {
+      "epubUrl": "https://assets.labonroof.top/downloads/fgo-babylonia-episode-5-shouta-umehara-f12189fd90379195.epub",
+      "sha256": "843d82e9012a1a83e499a424d7b2a382164d04a55a6a443085bec2beb613cade",
+      "bytes": 28266207,
+      "contentRevision": "f12189fd90379195",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:40:41.484Z"
+    },
+    "fgo-lostbelt-4-black-final-human": {
+      "epubUrl": "https://assets.labonroof.top/downloads/fgo-lostbelt-4-black-final-human-dedd32a2806eb77f.epub",
+      "sha256": "2c83716d51f0c5848c72e78330d9d26fe56dcda0c4a023036399484539450166",
+      "bytes": 2273426,
+      "contentRevision": "dedd32a2806eb77f",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:39:27.009Z"
+    },
+    "fiction-truth-tension-seeking-realism": {
+      "epubUrl": "https://assets.labonroof.top/downloads/fiction-truth-tension-seeking-realism-b7d77a03c5b3a8cb.epub",
+      "sha256": "3ef9db31546b3c5277e8faef9a7ff71b5078692c782c0f12a80210ef8e0d5658",
+      "bytes": 4037508,
+      "contentRevision": "b7d77a03c5b3a8cb",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:54:50.635Z"
+    },
+    "first-anniversary-persistence-and-outlook": {
+      "epubUrl": "https://assets.labonroof.top/downloads/first-anniversary-persistence-and-outlook-01c82b4549e4f016.epub",
+      "sha256": "c5ddf4868b433f53c2faa1a9bbdd0233885482af244d82afd8f7d39befa9b432",
+      "bytes": 1755924,
+      "contentRevision": "01c82b4549e4f016",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:48:43.892Z"
+    },
+    "flower-tribes-female-desire-shojo-manga": {
+      "epubUrl": "https://assets.labonroof.top/downloads/flower-tribes-female-desire-shojo-manga-9e08fbe6022bea70.epub",
+      "sha256": "2568baa5437f33b6682cf496b021afa323596f5720bb0e1a98310ad653e1a164",
+      "bytes": 1357592,
+      "contentRevision": "9e08fbe6022bea70",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:38:51.637Z"
+    },
+    "four-works-representing-2018-japanese-anime": {
+      "epubUrl": "https://assets.labonroof.top/downloads/four-works-representing-2018-japanese-anime-3903736ad15c931b.epub",
+      "sha256": "23fc085cd67f0aad33399f1e21f3695ee9fd89c8288c9345c4ef3bc7e21a50cf",
+      "bytes": 3386377,
+      "contentRevision": "3903736ad15c931b",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:57:23.044Z"
+    },
+    "frederick-douglass-womens-suffrage-1888": {
+      "epubUrl": "https://assets.labonroof.top/downloads/frederick-douglass-womens-suffrage-1888-a23c52278b7494ca.epub",
+      "sha256": "7206760e07756881a79d2bd78e366be0c914f57e0aa8ab47d42c394686ef33e5",
+      "bytes": 945503,
+      "contentRevision": "a23c52278b7494ca",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:28:21.090Z"
+    },
+    "free-humanities-video-courses-2024": {
+      "epubUrl": "https://assets.labonroof.top/downloads/free-humanities-video-courses-2024-bba269308b6e6154.epub",
+      "sha256": "e97bdd42dbd58bb91d185cf8c06ccdcc070f7fc0407c50cf34bb92258a22be30",
+      "bytes": 396520,
+      "contentRevision": "bba269308b6e6154",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:22:06.389Z"
+    },
+    "friends-quarrel-shonen-manga": {
+      "epubUrl": "https://assets.labonroof.top/downloads/friends-quarrel-shonen-manga-9bdc73c8ecc3cb56.epub",
+      "sha256": "c4bafd9e2759165ddb6f882b6f27d75e293d12c2cdda6af9d884c0681a70e458",
+      "bytes": 1283683,
+      "contentRevision": "9bdc73c8ecc3cb56",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:58:51.395Z"
+    },
+    "from-reproduction-to-simulacra-modern-turn-in-cultural-consumption": {
+      "epubUrl": "https://assets.labonroof.top/downloads/from-reproduction-to-simulacra-modern-turn-in-cultural-consumption-210663a93c5caa3b.epub",
+      "sha256": "6ba3d4b3f6fe8ff9b23dfaa4022bf4a9a016d9088c0a3cc6f8fb596305492193",
+      "bytes": 1699352,
+      "contentRevision": "210663a93c5caa3b",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:36:27.673Z"
+    },
+    "fujitsu-ryota-porco-rosso-patlabor-2": {
+      "epubUrl": "https://assets.labonroof.top/downloads/fujitsu-ryota-porco-rosso-patlabor-2-a8e2d68d50a00089.epub",
+      "sha256": "50f96724028cbbe1011afec7d409bb7b9f24450ac4458e206e673eae39f7bc4a",
+      "bytes": 1681809,
+      "contentRevision": "a8e2d68d50a00089",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:16:26.683Z"
+    },
+    "furukawa-tomohiro-interview-1-saint-seiya-style": {
+      "epubUrl": "https://assets.labonroof.top/downloads/furukawa-tomohiro-interview-1-saint-seiya-style-e530d6a4569c8eda.epub",
+      "sha256": "4122d26971f8187c1948e73991d85b3ca8e6b55f4f8b8a7e61cb9aecc22796f2",
+      "bytes": 725117,
+      "contentRevision": "e530d6a4569c8eda",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:33:33.962Z"
+    },
+    "furukawa-tomohiro-interview-2-patlabor-original-animation": {
+      "epubUrl": "https://assets.labonroof.top/downloads/furukawa-tomohiro-interview-2-patlabor-original-animation-18bf8959ea5e0d24.epub",
+      "sha256": "6a6ede940d7b76f1acb8d2d25edb9fa0e3ce9f79c816e8edc84619372a14ae8b",
+      "bytes": 681509,
+      "contentRevision": "18bf8959ea5e0d24",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:33:38.309Z"
+    },
+    "furukawa-tomohiro-interview-3-precure-storyboards": {
+      "epubUrl": "https://assets.labonroof.top/downloads/furukawa-tomohiro-interview-3-precure-storyboards-175c30eccc4e9239.epub",
+      "sha256": "47fe067ece229180f43439d33b0cd6358a9a1dc153d29a7341e5b8f0d323af8e",
+      "bytes": 625580,
+      "contentRevision": "175c30eccc4e9239",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:33:42.507Z"
+    },
+    "gage-indian-citizenship-1878": {
+      "epubUrl": "https://assets.labonroof.top/downloads/gage-indian-citizenship-1878-23fa524d2be315bc.epub",
+      "sha256": "e8058e320083ab7b6b5dadd2fbc550d249175ff7c1fa042451ada2fbeb637e67",
+      "bytes": 697950,
+      "contentRevision": "23fa524d2be315bc",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:23:50.992Z"
+    },
+    "garden-of-sinners-and-kara-no-kyoukai": {
+      "epubUrl": "https://assets.labonroof.top/downloads/garden-of-sinners-and-kara-no-kyoukai-ea40c85473274fa3.epub",
+      "sha256": "429dede065ebb8492c3f98155562ee37ac5b43538634400513cb09871c7cab76",
+      "bytes": 2072135,
+      "contentRevision": "ea40c85473274fa3",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:59:28.366Z"
+    },
+    "garland-thomson-integrating-disability-transforming-feminist-theory": {
+      "epubUrl": "https://assets.labonroof.top/downloads/garland-thomson-integrating-disability-transforming-feminist-theory-95315e745f5df4de.epub",
+      "sha256": "f30ad08354e840ee38187ede0aed50b1c20316165a3662b2b5e41f7052c6971e",
+      "bytes": 910227,
+      "contentRevision": "95315e745f5df4de",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:26:19.375Z"
+    },
+    "genocidal-organ-crime-and-punishment": {
+      "epubUrl": "https://assets.labonroof.top/downloads/genocidal-organ-crime-and-punishment-19f44168c28f8944.epub",
+      "sha256": "726fc1649a3fdfec4949b2219c645cfd024c1797da9b31c91988a0c4939b256d",
+      "bytes": 1334099,
+      "contentRevision": "19f44168c28f8944",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:38:58.219Z"
+    },
+    "gertrude-stein-miss-furr-and-miss-skeene-excerpt": {
+      "epubUrl": "https://assets.labonroof.top/downloads/gertrude-stein-miss-furr-and-miss-skeene-excerpt-9943698132d95a2e.epub",
+      "sha256": "65dc83388ba29ebdbcc1c2ea0011696ec03ec744e2f1d89cef72aef601f13e8c",
+      "bytes": 572971,
+      "contentRevision": "9943698132d95a2e",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:29:20.071Z"
+    },
+    "ghost-in-the-shell-too-blurry-oshii": {
+      "epubUrl": "https://assets.labonroof.top/downloads/ghost-in-the-shell-too-blurry-oshii-7ac304175a576532.epub",
+      "sha256": "cd4633d31cfbb47f909f945bc758468d60b0967a755f56fb7acdbb3853d98b35",
+      "bytes": 8464443,
+      "contentRevision": "7ac304175a576532",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:47:31.160Z"
+    },
+    "ghost-in-the-shell-two-answers-one-essay": {
+      "epubUrl": "https://assets.labonroof.top/downloads/ghost-in-the-shell-two-answers-one-essay-c39469c1601a4c59.epub",
+      "sha256": "fec1c8ef9cfe825042c5e0f7c7230c9c6e9d2731b84f7c8c5dbbf15b4ed054f3",
+      "bytes": 3580629,
+      "contentRevision": "c39469c1601a4c59",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:43:03.978Z"
+    },
+    "gion-matsuri-development-preservation-inheritance": {
+      "epubUrl": "https://assets.labonroof.top/downloads/gion-matsuri-development-preservation-inheritance-7b2d3861c66c7d66.epub",
+      "sha256": "b52b3df34426be562f2b5a71dea4e97dd20c5afc21e30e1b6ba0ca07fc6295a4",
+      "bytes": 4406143,
+      "contentRevision": "7b2d3861c66c7d66",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:50:54.939Z"
+    },
+    "girls-band-cry-middle-finger": {
+      "epubUrl": "https://assets.labonroof.top/downloads/girls-band-cry-middle-finger-9a3bbe8b6b79e098.epub",
+      "sha256": "b9b2f640c5bc7c4b0c05d360d192b8a44d1373150f44358dd5020167c1897ef7",
+      "bytes": 1426740,
+      "contentRevision": "9a3bbe8b6b79e098",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:22:13.199Z"
+    },
+    "gloria-steinem-if-men-could-menstruate": {
+      "epubUrl": "https://assets.labonroof.top/downloads/gloria-steinem-if-men-could-menstruate-2a7cc96fa79e9b95.epub",
+      "sha256": "2b8a7ee6f57de295d2bbeac464fbf2fe910b4a082fc7b1e9cf969c4d9de80783",
+      "bytes": 882125,
+      "contentRevision": "2a7cc96fa79e9b95",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:31:11.231Z"
+    },
+    "godzilla-meiji-restoration-pure-life-garbage-classification": {
+      "epubUrl": "https://assets.labonroof.top/downloads/godzilla-meiji-restoration-pure-life-garbage-classification-82074f3aa76a750b.epub",
+      "sha256": "e20f26db58ba47259aaae6b76e9e4d8ad00a5fce6a613dc1ba56cbacf25c6ec1",
+      "bytes": 3401829,
+      "contentRevision": "82074f3aa76a750b",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:49:43.137Z"
+    },
+    "grace-chang-global-trade-filipina-workers": {
+      "epubUrl": "https://assets.labonroof.top/downloads/grace-chang-global-trade-filipina-workers-76e811b0a289dcb5.epub",
+      "sha256": "7668ee34c789d3b3cb9e77092c3d1019a8544aaf53ca938908df1296b912a6ad",
+      "bytes": 954740,
+      "contentRevision": "76e811b0a289dcb5",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:26:58.071Z"
+    },
+    "grewal-kaplan-decentered-hegemonies": {
+      "epubUrl": "https://assets.labonroof.top/downloads/grewal-kaplan-decentered-hegemonies-e71b66307e4bf91d.epub",
+      "sha256": "80989745b71ef0b83d98dc45fcc3c45dca87cf160109ef873cc4503d4bc8ae3a",
+      "bytes": 995181,
+      "contentRevision": "e71b66307e4bf91d",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:23:41.942Z"
+    },
+    "gundam-plural-grand-narratives-creative-forms": {
+      "epubUrl": "https://assets.labonroof.top/downloads/gundam-plural-grand-narratives-creative-forms-0142e046ee8fba9b.epub",
+      "sha256": "0722ed5bd457f2c1a8e630af7d7c536e34e0a9eb9e43a2f9ae4c80983ce19412",
+      "bytes": 3594855,
+      "contentRevision": "0142e046ee8fba9b",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:56:08.192Z"
+    },
+    "gupta-towards-transnational-feminisms": {
+      "epubUrl": "https://assets.labonroof.top/downloads/gupta-towards-transnational-feminisms-21f81e4deba2cbe8.epub",
+      "sha256": "cd96e84a68283a55c5e1d876a8bbbdb8a12611657ff4d790e126f186423988cc",
+      "bytes": 677006,
+      "contentRevision": "21f81e4deba2cbe8",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:30:55.729Z"
+    },
+    "halberstam-female-masculinity-introduction": {
+      "epubUrl": "https://assets.labonroof.top/downloads/halberstam-female-masculinity-introduction-508fd7abed4b1e4b.epub",
+      "sha256": "e6fd42fa8a64b841b224940595d6f1bdeef8c65f451386ba3195154d9523e48d",
+      "bytes": 997931,
+      "contentRevision": "508fd7abed4b1e4b",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:31:17.040Z"
+    },
+    "hanzawa-naoki-suburb-city-and-bank": {
+      "epubUrl": "https://assets.labonroof.top/downloads/hanzawa-naoki-suburb-city-and-bank-395fe1a43c3b9bf3.epub",
+      "sha256": "40d3037b7f3f0ec1c3fd430c05269f18c4912440edc34bea56610a41c1676659",
+      "bytes": 2410053,
+      "contentRevision": "395fe1a43c3b9bf3",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:48:05.467Z"
+    },
+    "haoliners-original-animation-preview": {
+      "epubUrl": "https://assets.labonroof.top/downloads/haoliners-original-animation-preview-cf78978f812818dc.epub",
+      "sha256": "beb80903583ee8f97acd08ebd8b90f5d4326a76981f2113028c7abde8091787c",
+      "bytes": 2359713,
+      "contentRevision": "cf78978f812818dc",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:57:38.457Z"
+    },
+    "happy-hour-pregnancy": {
+      "epubUrl": "https://assets.labonroof.top/downloads/happy-hour-pregnancy-b73d65f3abd3db0c.epub",
+      "sha256": "f097ede294306fd747bdde9b0e9d5191b82698df0e5c6d23634af93a1a5c82eb",
+      "bytes": 1410470,
+      "contentRevision": "b73d65f3abd3db0c",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:31:57.893Z"
+    },
+    "hardcore-post-everyday-anime": {
+      "epubUrl": "https://assets.labonroof.top/downloads/hardcore-post-everyday-anime-7d67ce398cc6455b.epub",
+      "sha256": "9f41329bbed740d3cd33e001939a9894e0fd6e4c3a02cd7ebe5046f68317b037",
+      "bytes": 2338775,
+      "contentRevision": "7d67ce398cc6455b",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:20:08.912Z"
+    },
+    "hartmann-unhappy-marriage-marxism-feminism": {
+      "epubUrl": "https://assets.labonroof.top/downloads/hartmann-unhappy-marriage-marxism-feminism-4aee121a4faa6bc0.epub",
+      "sha256": "cf6f3db58e5beceb3dfa1098d697bf141b446b0065bf121931545513fb7d1f36",
+      "bytes": 1241985,
+      "contentRevision": "4aee121a4faa6bc0",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:30:44.820Z"
+    },
+    "haruhi-sekaikei-postmodern-acgn-research": {
+      "epubUrl": "https://assets.labonroof.top/downloads/haruhi-sekaikei-postmodern-acgn-research-0f79147185088e1f.epub",
+      "sha256": "436d1b57be90ef4c8f59855ccd0a59b8744a35654e6d4030227e7b4b75e9ec15",
+      "bytes": 1959528,
+      "contentRevision": "0f79147185088e1f",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:36:21.296Z"
+    },
+    "hayao-miyazaki-danger-and-innocence": {
+      "epubUrl": "https://assets.labonroof.top/downloads/hayao-miyazaki-danger-and-innocence-150c7ecf1bcbf0da.epub",
+      "sha256": "d062a828afaf3de95fd56b1450d67500dde17bdc208b4c411ded28319fb5edb3",
+      "bytes": 1524708,
+      "contentRevision": "150c7ecf1bcbf0da",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:50:26.383Z"
+    },
+    "heart-made-of-iron-and-wind": {
+      "epubUrl": "https://assets.labonroof.top/downloads/heart-made-of-iron-and-wind-5e617802b8967a29.epub",
+      "sha256": "bd86bf4bbc73722e2b1e04e7821b650536216ddf369891790e168980b3519786",
+      "bytes": 12162820,
+      "contentRevision": "5e617802b8967a29",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:46:59.356Z"
+    },
+    "hello-world-film-review": {
+      "epubUrl": "https://assets.labonroof.top/downloads/hello-world-film-review-5de34966eeb17e07.epub",
+      "sha256": "4cf365442e05986a49b6f9cc36b78d9bb7cb7c96e74764d057370af07a989269",
+      "bytes": 5362060,
+      "contentRevision": "5de34966eeb17e07",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:47:24.589Z"
+    },
+    "hello-world-hal-9000-white-hat": {
+      "epubUrl": "https://assets.labonroof.top/downloads/hello-world-hal-9000-white-hat-4fd7adc11c4d6978.epub",
+      "sha256": "922fec608017afb6c578946afcbdd3b469f06f0a6dbe084fac5d6f4fa85cab54",
+      "bytes": 1223587,
+      "contentRevision": "4fd7adc11c4d6978",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:43:17.745Z"
+    },
+    "heywood-drake-benjamins-third-wave-feminism": {
+      "epubUrl": "https://assets.labonroof.top/downloads/heywood-drake-benjamins-third-wave-feminism-07ac1e1094f2b8f6.epub",
+      "sha256": "145151590136975e6f452ed53f41eac36ac35adf9ab50825caa950a966e95852",
+      "bytes": 988140,
+      "contentRevision": "07ac1e1094f2b8f6",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:22:48.552Z"
+    },
+    "hibike-euphonium-cinematography-analysis": {
+      "epubUrl": "https://assets.labonroof.top/downloads/hibike-euphonium-cinematography-analysis-f599d82384d06ad4.epub",
+      "sha256": "5aa26f184441cd3f98ea45df7768385a8c8873a115f9fc4777cade1c2e69ee71",
+      "bytes": 40770426,
+      "contentRevision": "f599d82384d06ad4",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:52:09.458Z"
+    },
+    "hiroshi-nagasaki-rebellion-theory": {
+      "epubUrl": "https://assets.labonroof.top/downloads/hiroshi-nagasaki-rebellion-theory-19bef3b62c18d64b.epub",
+      "sha256": "75d93e8b5aeac8fb18efdea866589c94744e511d8a90c1962a62ee858f30c6e0",
+      "bytes": 1716047,
+      "contentRevision": "19bef3b62c18d64b",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:20:32.516Z"
+    },
+    "history-of-romance-visual-novels": {
+      "epubUrl": "https://assets.labonroof.top/downloads/history-of-romance-visual-novels-705816b6a563c3a7.epub",
+      "sha256": "208f6db69408606a5f8de1464658af5ab3a4fcc13b5a094e428957ff87ae6187",
+      "bytes": 8785390,
+      "contentRevision": "705816b6a563c3a7",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:32:24.318Z"
+    },
+    "how-shinkai-became-first-rate-animation-creator": {
+      "epubUrl": "https://assets.labonroof.top/downloads/how-shinkai-became-first-rate-animation-creator-56f659151bffd676.epub",
+      "sha256": "c79c77a14a00ad4e313acb7f3fb393d64c0571ccc3359dd5564995587d925892",
+      "bytes": 1327969,
+      "contentRevision": "56f659151bffd676",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:52:45.390Z"
+    },
+    "how-shirogane-was-forged-countercritique": {
+      "epubUrl": "https://assets.labonroof.top/downloads/how-shirogane-was-forged-countercritique-99d0a8eab6879a2a.epub",
+      "sha256": "62715def46d2eb24796badd74a5f0c3f08a9d861dc978e82f660ae4240c2be06",
+      "bytes": 989335,
+      "contentRevision": "99d0a8eab6879a2a",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:53:02.371Z"
+    },
+    "how-to-evaluate-ultraman-leo": {
+      "epubUrl": "https://assets.labonroof.top/downloads/how-to-evaluate-ultraman-leo-3f9f50ff4e0bf86f.epub",
+      "sha256": "53a928ac1b37a8e0c72c05033714222d37fd7afe4628dcd143796af9f1bc38a7",
+      "bytes": 2240412,
+      "contentRevision": "3f9f50ff4e0bf86f",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:42:07.707Z"
+    },
+    "how-to-view-shinkais-weathering-with-you": {
+      "epubUrl": "https://assets.labonroof.top/downloads/how-to-view-shinkais-weathering-with-you-39a0af282c90b84b.epub",
+      "sha256": "5988f4fc38b484e2d5d89da0b8dad38d2f18f8821cf8f57a5cd1369ac5b479b2",
+      "bytes": 1179776,
+      "contentRevision": "39a0af282c90b84b",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:41:31.422Z"
+    },
+    "how-we-met-your-name-indelible-feeling": {
+      "epubUrl": "https://assets.labonroof.top/downloads/how-we-met-your-name-indelible-feeling-bac50295c839b976.epub",
+      "sha256": "4de11b9cd2d0ceb71d0e196fb011bcef49c0b7e353af70808949da3bc78c62b4",
+      "bytes": 1134988,
+      "contentRevision": "bac50295c839b976",
+      "generator": 1,
+      "generatedAt": "2026-09-11T00:01:04.606Z"
+    },
+    "howe-mothers-day-proclamation-1870": {
+      "epubUrl": "https://assets.labonroof.top/downloads/howe-mothers-day-proclamation-1870-9132b9fa7a12cce7.epub",
+      "sha256": "19fe98ae6c18dce8507d3d5cd9e9b93679e03b5788c4474fc3b5b7ba80f531cb",
+      "bytes": 452997,
+      "contentRevision": "9132b9fa7a12cce7",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:23:54.698Z"
+    },
+    "hyouka-character-expression-adolescent-daydreaming": {
+      "epubUrl": "https://assets.labonroof.top/downloads/hyouka-character-expression-adolescent-daydreaming-fab8d4e28c2684d8.epub",
+      "sha256": "4d482673bd5759235773b193133157b2089cde98fef88c7092bd06932d863308",
+      "bytes": 13973822,
+      "contentRevision": "fab8d4e28c2684d8",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:55:55.195Z"
+    },
+    "hystericized-postmodern-azuma-critique": {
+      "epubUrl": "https://assets.labonroof.top/downloads/hystericized-postmodern-azuma-critique-d728bc62b378539d.epub",
+      "sha256": "4d174e7d004052424285b8b1142347b265e0ce3144967e2a72b0de351cf62c3b",
+      "bytes": 852512,
+      "contentRevision": "d728bc62b378539d",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:56:58.121Z"
+    },
+    "ida-b-wells-lynch-law-in-america": {
+      "epubUrl": "https://assets.labonroof.top/downloads/ida-b-wells-lynch-law-in-america-af1ec8d2c0e29eef.epub",
+      "sha256": "6255ee1a5e34999178e8fa4983dcd4e869b85999b688a862d26c34862890559a",
+      "bytes": 836467,
+      "contentRevision": "af1ec8d2c0e29eef",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:26:02.315Z"
+    },
+    "ikuhara-sarazanmai-preview": {
+      "epubUrl": "https://assets.labonroof.top/downloads/ikuhara-sarazanmai-preview-70997aa7aebcce0c.epub",
+      "sha256": "c5bc67ddec829c25bcd5e7b33fd21171834f83e6991c3daf1358652db6caaf3e",
+      "bytes": 2392585,
+      "contentRevision": "70997aa7aebcce0c",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:59:38.796Z"
+    },
+    "imagination-after-earthquake-otaku-culture-2010s": {
+      "epubUrl": "https://assets.labonroof.top/downloads/imagination-after-earthquake-otaku-culture-2010s-235579100a1d277e.epub",
+      "sha256": "2c70a4415b15576aab89dc0235c9da07605fee8026be4b5585f43af25b961c30",
+      "bytes": 1382707,
+      "contentRevision": "235579100a1d277e",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:54:45.008Z"
+    },
+    "imagination-and-animal": {
+      "epubUrl": "https://assets.labonroof.top/downloads/imagination-and-animal-ac45f38bb29f927f.epub",
+      "sha256": "a5f9fdc32bc794bb3d38c8602c17df167846483a4b8f9355ad2a751c5ceecea4",
+      "bytes": 1128705,
+      "contentRevision": "ac45f38bb29f927f",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:44:58.471Z"
+    },
+    "interspecies-reviewers-marginal-culture-atonal-world": {
+      "epubUrl": "https://assets.labonroof.top/downloads/interspecies-reviewers-marginal-culture-atonal-world-6beae5168b162ede.epub",
+      "sha256": "5d0bce2533af6d52305ed5dd8692b90215da5aea82763e6e336a798c3a850f08",
+      "bytes": 2700445,
+      "contentRevision": "6beae5168b162ede",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:42:58.339Z"
+    },
+    "interview-shinkai-ex-boyfriend": {
+      "epubUrl": "https://assets.labonroof.top/downloads/interview-shinkai-ex-boyfriend-e1213222b8cd63d0.epub",
+      "sha256": "d27f0a0aa45d6fd5a7beec294ecf92e6d64af97c15eefee294199574214ad5fe",
+      "bytes": 1238248,
+      "contentRevision": "e1213222b8cd63d0",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:21:53.800Z"
+    },
+    "interview-what-is-criticism": {
+      "epubUrl": "https://assets.labonroof.top/downloads/interview-what-is-criticism-e6d95dcf48b985cd.epub",
+      "sha256": "86579b4cb86c75253eb0951d44c7a050f257d7c8c45558a860fa4116dd087695",
+      "bytes": 1337121,
+      "contentRevision": "e6d95dcf48b985cd",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:48:16.490Z"
+    },
+    "invisible-guardian-new-experience-classic-genre-story": {
+      "epubUrl": "https://assets.labonroof.top/downloads/invisible-guardian-new-experience-classic-genre-story-8d34d9add0a6e34f.epub",
+      "sha256": "393aff958c6d71e4886ef363ee5c114ec53d41534bbe0a8757b8084125eda8f6",
+      "bytes": 9228255,
+      "contentRevision": "8d34d9add0a6e34f",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:53:52.808Z"
+    },
+    "iori-nagase-psychoanalysis-adventure": {
+      "epubUrl": "https://assets.labonroof.top/downloads/iori-nagase-psychoanalysis-adventure-e8f447e3b0cfc2e8.epub",
+      "sha256": "9bafbdcd6e98c2e1fdd759a155f01693cdc71c94644a874c7a4278e4e3af9860",
+      "bytes": 1808821,
+      "contentRevision": "e8f447e3b0cfc2e8",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:57:07.486Z"
+    },
+    "iron-blood-hot-blood-cold-blood": {
+      "epubUrl": "https://assets.labonroof.top/downloads/iron-blood-hot-blood-cold-blood-93f005057f2c527e.epub",
+      "sha256": "f87f22eff0dc4b2700db8de780b77efe8d93b307f457a085373b195d481d51ed",
+      "bytes": 731345,
+      "contentRevision": "93f005057f2c527e",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:46:55.035Z"
+    },
+    "island-universe-sekaikei-masochism": {
+      "epubUrl": "https://assets.labonroof.top/downloads/island-universe-sekaikei-masochism-0f2144cbd7826f09.epub",
+      "sha256": "b041dfb92212aec5ab50848a6abc32f49f9a9bfd40189d09b85fb4d88277a22b",
+      "bytes": 4395291,
+      "contentRevision": "0f2144cbd7826f09",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:46:25.014Z"
+    },
+    "ito-project-genocide-political-state-harmony": {
+      "epubUrl": "https://assets.labonroof.top/downloads/ito-project-genocide-political-state-harmony-45c1418606ab3b75.epub",
+      "sha256": "c1a6cd51570845c82304bfdaf8cb31e41fe8135d6c43c8651acbcbc5bdfc2cdb",
+      "bytes": 11978231,
+      "contentRevision": "45c1418606ab3b75",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:44:31.335Z"
+    },
+    "jackson-why-materialist-feminism-still-possible-necessary": {
+      "epubUrl": "https://assets.labonroof.top/downloads/jackson-why-materialist-feminism-still-possible-necessary-68ced8042b804e5c.epub",
+      "sha256": "37254041a384e5a4e3cad614334a8cfeed8bb4af375c953473333066e78abb9a",
+      "bytes": 1028572,
+      "contentRevision": "68ced8042b804e5c",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:26:45.174Z"
+    },
+    "jane-addams-municipal-housekeeping-1907": {
+      "epubUrl": "https://assets.labonroof.top/downloads/jane-addams-municipal-housekeeping-1907-f2d257cb4db4dd8b.epub",
+      "sha256": "4c49d8a5d30deed6c6fa2123b555e2610bc6158576d803ca146bf3b919dba0d4",
+      "bytes": 831011,
+      "contentRevision": "f2d257cb4db4dd8b",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:28:06.375Z"
+    },
+    "japan-00s-anime-criticism-podcast": {
+      "epubUrl": "https://assets.labonroof.top/downloads/japan-00s-anime-criticism-podcast-0547391f29acabd2.epub",
+      "sha256": "e764a824c5bac238e38895d10943a6059db1b1f8f7f49ee894f83c989b282656",
+      "bytes": 462987,
+      "contentRevision": "0547391f29acabd2",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:19:39.897Z"
+    },
+    "japan-sinks-2020-disaster-image-war": {
+      "epubUrl": "https://assets.labonroof.top/downloads/japan-sinks-2020-disaster-image-war-2e63ca883f96b29f.epub",
+      "sha256": "57cf95a66addfaf865263d25f37d4c9ac19b5ba4ff81707077a65b07893bdd48",
+      "bytes": 1546632,
+      "contentRevision": "2e63ca883f96b29f",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:35:00.397Z"
+    },
+    "japan-sinks-apocalypse-text-video": {
+      "epubUrl": "https://assets.labonroof.top/downloads/japan-sinks-apocalypse-text-video-7da0bd3af0c28d39.epub",
+      "sha256": "59253c9d1bdc3cd9c372ca2093512006e7a0bed72dde19bbbf96196dd030cb07",
+      "bytes": 258677,
+      "contentRevision": "7da0bd3af0c28d39",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:41:27.053Z"
+    },
+    "japanese-animation-media-ecology": {
+      "epubUrl": "https://assets.labonroof.top/downloads/japanese-animation-media-ecology-42faaede53f93d46.epub",
+      "sha256": "dad46ddddb68fec1f7c843e96970ac2ba308eecdd5fa4f276cbe69fcbb75e98f",
+      "bytes": 1027792,
+      "contentRevision": "42faaede53f93d46",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:15:29.176Z"
+    },
+    "japanese-female-idol-history": {
+      "epubUrl": "https://assets.labonroof.top/downloads/japanese-female-idol-history-6bfbd26aaf96a212.epub",
+      "sha256": "8d13576ad279f713b10d8403db6a49eb1351fdbc96fe9646a8d5271489301cc2",
+      "bytes": 3613352,
+      "contentRevision": "6bfbd26aaf96a212",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:24:01.601Z"
+    },
+    "japanese-shojo-kawaii-culture": {
+      "epubUrl": "https://assets.labonroof.top/downloads/japanese-shojo-kawaii-culture-0f7d5a92714d051b.epub",
+      "sha256": "b41334157901090ae9d55207ef9de32f76eebf6a2da9eefc0c531ccdf17293d6",
+      "bytes": 816124,
+      "contentRevision": "0f7d5a92714d051b",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:54:21.797Z"
+    },
+    "jissoji-buy-kyoto": {
+      "epubUrl": "https://assets.labonroof.top/downloads/jissoji-buy-kyoto-b6ea66f557795a9f.epub",
+      "sha256": "0d65cbf84cff3e43f39e10ede5abb0e07bb11ac90a7ea47a294b38506aa0ebc6",
+      "bytes": 1586115,
+      "contentRevision": "b6ea66f557795a9f",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:33:29.372Z"
+    },
+    "jk-koharu-in-another-world-review": {
+      "epubUrl": "https://assets.labonroof.top/downloads/jk-koharu-in-another-world-review-1ca17bdc3d4fe644.epub",
+      "sha256": "0629d626c9ed10f4ec1a3ceefd272f458ec2de09d2ae13cd11d6dda00c58998e",
+      "bytes": 981149,
+      "contentRevision": "1ca17bdc3d4fe644",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:49:02.564Z"
+    },
+    "jojo-dio-pure-evil": {
+      "epubUrl": "https://assets.labonroof.top/downloads/jojo-dio-pure-evil-615904e761c88664.epub",
+      "sha256": "1929b6e085a74356b564514db3fd10ece3f278cc86eecfca8fd4511d36536e1f",
+      "bytes": 1558041,
+      "contentRevision": "615904e761c88664",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:44:13.271Z"
+    },
+    "jojo-memes-spring-festival-survival": {
+      "epubUrl": "https://assets.labonroof.top/downloads/jojo-memes-spring-festival-survival-bb2c32758be46abe.epub",
+      "sha256": "e3e9bc54d4d4bd08483d7ba63e8e444010c381812b9b82cb4e0aac8ae1c0e644",
+      "bytes": 9779776,
+      "contentRevision": "bb2c32758be46abe",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:54:55.416Z"
+    },
+    "jojo5-golden-wind-direction-analysis-episode-02": {
+      "epubUrl": "https://assets.labonroof.top/downloads/jojo5-golden-wind-direction-analysis-episode-02-6cc6bc90dc0fb0ef.epub",
+      "sha256": "61fcb2f9b98a12189c99fe772ca9049b61d175b42e1ff50f43ac93a20c365c52",
+      "bytes": 1764404,
+      "contentRevision": "6cc6bc90dc0fb0ef",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:58:22.301Z"
+    },
+    "jojo5-golden-wind-direction-analysis-episodes-03-07": {
+      "epubUrl": "https://assets.labonroof.top/downloads/jojo5-golden-wind-direction-analysis-episodes-03-07-2c6ad1cc52abdfe2.epub",
+      "sha256": "62ca85118b5d62cb213159c095d673a8fa8a6ae1cc3e49a177d661aa050f975d",
+      "bytes": 28616903,
+      "contentRevision": "2c6ad1cc52abdfe2",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:56:41.499Z"
+    },
+    "joy-of-sakuga": {
+      "epubUrl": "https://assets.labonroof.top/downloads/joy-of-sakuga-0cda27a5e978c64b.epub",
+      "sha256": "fcc982530cc6631c2fd9ab6e522b8c1d4fc5034fb463fdeafc20ecb7481007dc",
+      "bytes": 11472100,
+      "contentRevision": "0cda27a5e978c64b",
+      "generator": 1,
+      "generatedAt": "2026-09-11T00:00:39.240Z"
+    },
+    "judith-levine-hating-motherhood": {
+      "epubUrl": "https://assets.labonroof.top/downloads/judith-levine-hating-motherhood-50b480d22c476908.epub",
+      "sha256": "d4e72547ac8240ffd1d99eddf669a4d7278891d2a6caa80d9f6f314fa6b45b28",
+      "bytes": 1430612,
+      "contentRevision": "50b480d22c476908",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:23:20.441Z"
+    },
+    "julie-bettie-women-without-class": {
+      "epubUrl": "https://assets.labonroof.top/downloads/julie-bettie-women-without-class-4d7d0c8279205833.epub",
+      "sha256": "a03afa04af9fb7824d4f80a89bb955c611ef7c456c159a5126c13906b0210b06",
+      "bytes": 1032737,
+      "contentRevision": "4d7d0c8279205833",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:27:14.142Z"
+    },
+    "june-jordan-report-from-bahamas": {
+      "epubUrl": "https://assets.labonroof.top/downloads/june-jordan-report-from-bahamas-fe0400aae2c5de5c.epub",
+      "sha256": "63e4ae54997024dee8a1ce0c42112e3142a747511988253bd6f671db657f49a4",
+      "bytes": 1053070,
+      "contentRevision": "fe0400aae2c5de5c",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:25:44.989Z"
+    },
+    "kaguya-love-everyday-life-war": {
+      "epubUrl": "https://assets.labonroof.top/downloads/kaguya-love-everyday-life-war-c33fba5dfb98a41b.epub",
+      "sha256": "ef79f68204eaaf933a626d741603a0dd670c888bfdcd8061f616e36157e893dd",
+      "bytes": 1201640,
+      "contentRevision": "c33fba5dfb98a41b",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:55:32.888Z"
+    },
+    "kaiji-chips-amputation-death-drive": {
+      "epubUrl": "https://assets.labonroof.top/downloads/kaiji-chips-amputation-death-drive-4de7ad50b378fe5f.epub",
+      "sha256": "9b88e9d28ee04c47ae77a12f64cf4cf7fc5b1756e87081db2ec10e6d62ec6914",
+      "bytes": 1849987,
+      "contentRevision": "4de7ad50b378fe5f",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:34:14.285Z"
+    },
+    "kamen-rider-kiva-oto-ya-art-betrayal": {
+      "epubUrl": "https://assets.labonroof.top/downloads/kamen-rider-kiva-oto-ya-art-betrayal-ad3a992ccf1b5340.epub",
+      "sha256": "cbcc934711f601a732c4797b08161855144548fe7a4522a3b1c18eeea7d7d2e6",
+      "bytes": 2782497,
+      "contentRevision": "ad3a992ccf1b5340",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:51:28.759Z"
+    },
+    "karatani-akutagawa-in-a-grove": {
+      "epubUrl": "https://assets.labonroof.top/downloads/karatani-akutagawa-in-a-grove-2810c309f609f175.epub",
+      "sha256": "29936cf660215349b82e9c40f3feda3c9d4961c1cc60a52bf693b5c025194516",
+      "bytes": 1133327,
+      "contentRevision": "2810c309f609f175",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:24:29.207Z"
+    },
+    "karatani-critique-space-asada-aki": {
+      "epubUrl": "https://assets.labonroof.top/downloads/karatani-critique-space-asada-aki-37e4c522875dbfa2.epub",
+      "sha256": "1ddaf873ace6486a1c89b86f237ac75efa964c59b2b43d962190b03e803d89cd",
+      "bytes": 1153190,
+      "contentRevision": "37e4c522875dbfa2",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:19:11.012Z"
+    },
+    "karatani-inquiry-ii-proper-names-guide": {
+      "epubUrl": "https://assets.labonroof.top/downloads/karatani-inquiry-ii-proper-names-guide-616fb80c625edf4c.epub",
+      "sha256": "1f7e1e0eadae87e69c3bc0a663accd1773f950dd3f1a284369e60c1d84191d3d",
+      "bytes": 536409,
+      "contentRevision": "616fb80c625edf4c",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:43:41.284Z"
+    },
+    "karatani-marx-shadow-trier": {
+      "epubUrl": "https://assets.labonroof.top/downloads/karatani-marx-shadow-trier-d99e2be98b4e18ba.epub",
+      "sha256": "2686f52542adc0df81eec4a8e8b8a622720d129812c2823f2680e5134018e310",
+      "bytes": 1280952,
+      "contentRevision": "d99e2be98b4e18ba",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:17:26.399Z"
+    },
+    "karatani-why-i-quit-literature": {
+      "epubUrl": "https://assets.labonroof.top/downloads/karatani-why-i-quit-literature-774e305ad71bafe1.epub",
+      "sha256": "7d2eb2b21a6d666172314f4108fe0dcbf12f8578aa0c05818c4fe1f586e42a1e",
+      "bytes": 1897220,
+      "contentRevision": "774e305ad71bafe1",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:34:45.349Z"
+    },
+    "kasai-uno-sekaikei-state-of-exception": {
+      "epubUrl": "https://assets.labonroof.top/downloads/kasai-uno-sekaikei-state-of-exception-c8a64f8ac3396b6e.epub",
+      "sha256": "e440c591b101ace15b70377bde9165f40169986674a5dbcc88e182e5282fa008",
+      "bytes": 6119885,
+      "contentRevision": "c8a64f8ac3396b6e",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:22:01.827Z"
+    },
+    "kathi-weeks-down-with-love-work-ideologies": {
+      "epubUrl": "https://assets.labonroof.top/downloads/kathi-weeks-down-with-love-work-ideologies-17ed5c682041a481.epub",
+      "sha256": "c11a9382919ab3abfbecaacc80f06d40d73aff7a15a81e427e82229cf541209d",
+      "bytes": 2865189,
+      "contentRevision": "17ed5c682041a481",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:26:52.070Z"
+    },
+    "kensuke-ushio-anime-expo-2018-interview": {
+      "epubUrl": "https://assets.labonroof.top/downloads/kensuke-ushio-anime-expo-2018-interview-d1bcbd3028019715.epub",
+      "sha256": "ad22093b6c8cd5cd8541b865a47873a4d2c7149080c599c3c3d76ff0dceecd8f",
+      "bytes": 952450,
+      "contentRevision": "d1bcbd3028019715",
+      "generator": 1,
+      "generatedAt": "2026-09-11T00:00:12.198Z"
+    },
+    "kensuke-ushio-liz-and-blue-bird-anime-trending-interview": {
+      "epubUrl": "https://assets.labonroof.top/downloads/kensuke-ushio-liz-and-blue-bird-anime-trending-interview-a44c44aac6bf18b0.epub",
+      "sha256": "0bef5482934d04002eca67c7fe7b3c494eb7b2cf6a087200c633454ad9ee35ed",
+      "bytes": 1163126,
+      "contentRevision": "a44c44aac6bf18b0",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:59:33.271Z"
+    },
+    "kill-la-kill-music-characterization-sawano-video": {
+      "epubUrl": "https://assets.labonroof.top/downloads/kill-la-kill-music-characterization-sawano-video-2efe1e0ea6d24d27.epub",
+      "sha256": "33696544a19404baf71f5e5f1da0fd85d5d17de5d5a539f6ca3047df7b15c568",
+      "bytes": 267510,
+      "contentRevision": "2efe1e0ea6d24d27",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:33:12.279Z"
+    },
+    "kimura-1959-generation-toei-animation": {
+      "epubUrl": "https://assets.labonroof.top/downloads/kimura-1959-generation-toei-animation-95396fe9846d93a8.epub",
+      "sha256": "5ed03e00f441c9b5e92e8cdb09b6c646f28e26db77396bed88fd075d1825a4a8",
+      "bytes": 1273720,
+      "contentRevision": "95396fe9846d93a8",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:18:42.604Z"
+    },
+    "king-heart-preface-tomino-and-gender": {
+      "epubUrl": "https://assets.labonroof.top/downloads/king-heart-preface-tomino-and-gender-11361b1401f1b116.epub",
+      "sha256": "ec0aedce2c21a69e88fb68be343cdc1d04db71227b2949383d7a24f49d0e2ca0",
+      "bytes": 1522016,
+      "contentRevision": "11361b1401f1b116",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:36:34.299Z"
+    },
+    "kizumonogatari-architecture-landscape": {
+      "epubUrl": "https://assets.labonroof.top/downloads/kizumonogatari-architecture-landscape-21c4d9252ff477a3.epub",
+      "sha256": "4d7f9c8bbce39d5616b147f587d1d2eadabc3f1795c4515877a1ebcf46155eac",
+      "bytes": 3137727,
+      "contentRevision": "21c4d9252ff477a3",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:14:36.889Z"
+    },
+    "kobayashi-programmer-clothes-new-family": {
+      "epubUrl": "https://assets.labonroof.top/downloads/kobayashi-programmer-clothes-new-family-6a0112c9d9efef75.epub",
+      "sha256": "cdd6d932886e208f68a6f6a39286f71ef80744ab33d1fa8b1f96d46b75621b9a",
+      "bytes": 4143537,
+      "contentRevision": "6a0112c9d9efef75",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:56:03.161Z"
+    },
+    "kojimas-sekaikei": {
+      "epubUrl": "https://assets.labonroof.top/downloads/kojimas-sekaikei-bfe16ae52300c69e.epub",
+      "sha256": "51dc470b3d1d208661f513e5140fb2582c3a60b36c65dd9aadb25bed3c3e9617",
+      "bytes": 4156854,
+      "contentRevision": "bfe16ae52300c69e",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:45:10.297Z"
+    },
+    "kollontai-prostitution-struggle-methods-1921": {
+      "epubUrl": "https://assets.labonroof.top/downloads/kollontai-prostitution-struggle-methods-1921-63401c72588151e2.epub",
+      "sha256": "5d23d36291872dff035055f1d5834105034636bb42f74db6c18993ab67af07d6",
+      "bytes": 1119271,
+      "contentRevision": "63401c72588151e2",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:22:54.516Z"
+    },
+    "kollontai-women-workers-and-mothers-1914": {
+      "epubUrl": "https://assets.labonroof.top/downloads/kollontai-women-workers-and-mothers-1914-ebe12e718f100133.epub",
+      "sha256": "5dd2356abee7df477798ef63dee3f39307e6e24e3af63f8b7b60a71cf0ca20f8",
+      "bytes": 793613,
+      "contentRevision": "ebe12e718f100133",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:28:36.244Z"
+    },
+    "kramarae-treichler-woman-feminists-feminism": {
+      "epubUrl": "https://assets.labonroof.top/downloads/kramarae-treichler-woman-feminists-feminism-268a39465e436ea8.epub",
+      "sha256": "cad67b52e8a8bc15df4209ae1a2dd0945556dead063804c81b9ac9037f8c807c",
+      "bytes": 637261,
+      "contentRevision": "268a39465e436ea8",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:25:14.536Z"
+    },
+    "kushihashi-chekhov-asako-gaze": {
+      "epubUrl": "https://assets.labonroof.top/downloads/kushihashi-chekhov-asako-gaze-99b5f9bbec7888bb.epub",
+      "sha256": "9019ba68e85cf97c541c45d08990dfaa2a21612c71663b1746043a2d354369df",
+      "bytes": 1663712,
+      "contentRevision": "99b5f9bbec7888bb",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:30:51.002Z"
+    },
+    "lamarre-otaku-movement-2006-a": {
+      "epubUrl": "https://assets.labonroof.top/downloads/lamarre-otaku-movement-2006-a-9926e5298c37fa28.epub",
+      "sha256": "cb879ca4acfd55dad32dcdf65066128b1c6bff461c5050acb4ee14adc6abe203",
+      "bytes": 3190627,
+      "contentRevision": "9926e5298c37fa28",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:18:15.274Z"
+    },
+    "legal-high-justice-after-the-collapse": {
+      "epubUrl": "https://assets.labonroof.top/downloads/legal-high-justice-after-the-collapse-79d3e384455d6e24.epub",
+      "sha256": "867e765cd26810e401303a7c362acebbef49ad778e4a021cd76dd0268ccc0cea",
+      "bytes": 13626059,
+      "contentRevision": "79d3e384455d6e24",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:48:53.770Z"
+    },
+    "lesbian-love-womanhood": {
+      "epubUrl": "https://assets.labonroof.top/downloads/lesbian-love-womanhood-cddb0b1745092f60.epub",
+      "sha256": "12279682a444b6994a71203b067c6597c74dd19e737182029a366aa12e140814",
+      "bytes": 6314625,
+      "contentRevision": "cddb0b1745092f60",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:16:00.560Z"
+    },
+    "life-signs-tea-party-renaming": {
+      "epubUrl": "https://assets.labonroof.top/downloads/life-signs-tea-party-renaming-666d27e51b381ea4.epub",
+      "sha256": "c309154de5926fc7e6649b036dfe0b558304933493bfbe236ff1b2d7714f958d",
+      "bytes": 686095,
+      "contentRevision": "666d27e51b381ea4",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:23:46.460Z"
+    },
+    "life-signs-yogurt-bowl-event": {
+      "epubUrl": "https://assets.labonroof.top/downloads/life-signs-yogurt-bowl-event-5ec260ca5bb64777.epub",
+      "sha256": "de44441420482d8ff9c53527a07552bf0a66c5f37de72f88c648ca91809eb861",
+      "bytes": 503175,
+      "contentRevision": "5ec260ca5bb64777",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:22:57.669Z"
+    },
+    "lila-abu-lughod-do-muslim-women-need-saving": {
+      "epubUrl": "https://assets.labonroof.top/downloads/lila-abu-lughod-do-muslim-women-need-saving-dfa49f31e9d1be95.epub",
+      "sha256": "05882a1c035691f55c042d42511db2304f424a3f588c2e66b67c789211bf013b",
+      "bytes": 1580747,
+      "contentRevision": "dfa49f31e9d1be95",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:28:52.170Z"
+    },
+    "limited-space-narrative-techniques": {
+      "epubUrl": "https://assets.labonroof.top/downloads/limited-space-narrative-techniques-db059ab94cacdf09.epub",
+      "sha256": "8fca3547a5dabd2aae79ecba2617d4b6b0869255ba4a2ce532dc86caef5e0bd0",
+      "bytes": 17789652,
+      "contentRevision": "db059ab94cacdf09",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:47:45.210Z"
+    },
+    "limits-of-communication-understanding-a-silent-voice": {
+      "epubUrl": "https://assets.labonroof.top/downloads/limits-of-communication-understanding-a-silent-voice-d7b695022602e9bd.epub",
+      "sha256": "102eb52a3c0e33b93e42af14743fe094bffcbbeebbce7142868e8437b0f8be78",
+      "bytes": 5793684,
+      "contentRevision": "d7b695022602e9bd",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:51:21.542Z"
+    },
+    "living-between-infrastructures-commuter-networks-revised": {
+      "epubUrl": "https://assets.labonroof.top/downloads/living-between-infrastructures-commuter-networks-revised-c6da6e8c85d8c312.epub",
+      "sha256": "04067aa70c7b307bf05919ac8a2728b8f1b1f70028bea70dcd9b8d6178acbd04",
+      "bytes": 2519891,
+      "contentRevision": "c6da6e8c85d8c312",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:15:36.543Z"
+    },
+    "liz-and-blue-bird-annecy-impressions": {
+      "epubUrl": "https://assets.labonroof.top/downloads/liz-and-blue-bird-annecy-impressions-54ef6cb48bd3126c.epub",
+      "sha256": "6f63da9f62bc185a3d3e596e660a2e838bf87c746d82820c3f08468f7d76ea62",
+      "bytes": 1054267,
+      "contentRevision": "54ef6cb48bd3126c",
+      "generator": 1,
+      "generatedAt": "2026-09-11T00:00:46.900Z"
+    },
+    "liz-and-blue-bird-thorough-analysis": {
+      "epubUrl": "https://assets.labonroof.top/downloads/liz-and-blue-bird-thorough-analysis-f86780376db65cc8.epub",
+      "sha256": "c266fe07781cfd80cc1e208ec7cca34fce9a7e40292d9836ed1529e9063bb888",
+      "bytes": 2988195,
+      "contentRevision": "f86780376db65cc8",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:57:16.141Z"
+    },
+    "liz-and-the-blue-bird-score-analysis": {
+      "epubUrl": "https://assets.labonroof.top/downloads/liz-and-the-blue-bird-score-analysis-4b4d8d90a3c6e0bb.epub",
+      "sha256": "e192e6f5251cb70cae9db8cb0700bb61e196b430c3f89a792628afa839e7e557",
+      "bytes": 1173268,
+      "contentRevision": "4b4d8d90a3c6e0bb",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:57:49.649Z"
+    },
+    "liz-and-the-blue-bird-unconscious-animation": {
+      "epubUrl": "https://assets.labonroof.top/downloads/liz-and-the-blue-bird-unconscious-animation-93f1f91b7baa1963.epub",
+      "sha256": "cc183383eabacd7a329ba27ad379fd833967fb052fe7b247057d392011127dd0",
+      "bytes": 2099136,
+      "contentRevision": "93f1f91b7baa1963",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:19:54.317Z"
+    },
+    "liz-blue-bird-sound-music-narrative": {
+      "epubUrl": "https://assets.labonroof.top/downloads/liz-blue-bird-sound-music-narrative-c50d9e3b71d7b999.epub",
+      "sha256": "442a2736cfada378fd0c188577dbbfc0d2790586e78acd0d7b20bb44e1935c1c",
+      "bytes": 1561829,
+      "contentRevision": "c50d9e3b71d7b999",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:21:37.690Z"
+    },
+    "look-back-lacanian-analysis": {
+      "epubUrl": "https://assets.labonroof.top/downloads/look-back-lacanian-analysis-ad9284e84e2a7152.epub",
+      "sha256": "5e6b5b55fbf3b997fa95fac1fcdbc97fa35132108a5a502cc67d04b0ae8ceb1c",
+      "bytes": 1506710,
+      "contentRevision": "ad9284e84e2a7152",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:35:09.943Z"
+    },
+    "love-for-real-empty-names-vtuber-soul-bone-flesh": {
+      "epubUrl": "https://assets.labonroof.top/downloads/love-for-real-empty-names-vtuber-soul-bone-flesh-5f261a1580b6a3b8.epub",
+      "sha256": "29e0d37beab25cf2a2c4d053db2636a80d810c9e6638244d5457bf360d613515",
+      "bytes": 959241,
+      "contentRevision": "5f261a1580b6a3b8",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:50:49.750Z"
+    },
+    "loving-the-nonexistent-you": {
+      "epubUrl": "https://assets.labonroof.top/downloads/loving-the-nonexistent-you-efd3ddf3495faaa3.epub",
+      "sha256": "0d3d76ff9bb71ba4f9b8570b45ed4961e6446378b773a2e87ef7e0a7838bd40a",
+      "bytes": 3024446,
+      "contentRevision": "efd3ddf3495faaa3",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:54:02.161Z"
+    },
+    "luckily-hamaguchi-likes-actors": {
+      "epubUrl": "https://assets.labonroof.top/downloads/luckily-hamaguchi-likes-actors-9585fcd50b95b6b7.epub",
+      "sha256": "4215719139afba20dc56d480bf1701819e42236962cd9aab89f8024ce9cc20a7",
+      "bytes": 41731934,
+      "contentRevision": "9585fcd50b95b6b7",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:31:40.087Z"
+    },
+    "mackinnon-gender-literacy": {
+      "epubUrl": "https://assets.labonroof.top/downloads/mackinnon-gender-literacy-b6b3d15e31c2d90d.epub",
+      "sha256": "98f8275b7aee41695857c548a8dc213ff2fe7607fb6264376bb6c09c44574ce9",
+      "bytes": 908811,
+      "contentRevision": "b6b3d15e31c2d90d",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:23:36.103Z"
+    },
+    "manga-signal-of-noise": {
+      "epubUrl": "https://assets.labonroof.top/downloads/manga-signal-of-noise-a9e650728f1a6953.epub",
+      "sha256": "233f936d36b762d44284c3dbb68f7110f42462f9cef0ad0bd42a768877669ce2",
+      "bytes": 5615337,
+      "contentRevision": "a9e650728f1a6953",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:17:34.635Z"
+    },
+    "maquia-mother-woman-female": {
+      "epubUrl": "https://assets.labonroof.top/downloads/maquia-mother-woman-female-d012d11b8f5d2060.epub",
+      "sha256": "b0ccbcaa6de0885cf2c414a3ab2773de355c3230bcc94f3b5f60e55130921670",
+      "bytes": 2157502,
+      "contentRevision": "d012d11b8f5d2060",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:54:16.885Z"
+    },
+    "marc-steinberg-introduction-otsuka-world-and-variation": {
+      "epubUrl": "https://assets.labonroof.top/downloads/marc-steinberg-introduction-otsuka-world-and-variation-25ffd3a5655d2b79.epub",
+      "sha256": "6ed0c2e428086d22d734a26eabf4fa1550a7e63188b9bf2a0628e6f061b7cff5",
+      "bytes": 818819,
+      "contentRevision": "25ffd3a5655d2b79",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:24:34.296Z"
+    },
+    "marchen-madchen-production-postmortem": {
+      "epubUrl": "https://assets.labonroof.top/downloads/marchen-madchen-production-postmortem-3713ae1369b831c1.epub",
+      "sha256": "c59f257a016bc65bb90d631326b18b0b0a1c9127fffe278107d45708b7b9d1e1",
+      "bytes": 1290583,
+      "contentRevision": "3713ae1369b831c1",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:58:12.940Z"
+    },
+    "margaret-sanger-birth-control-1920": {
+      "epubUrl": "https://assets.labonroof.top/downloads/margaret-sanger-birth-control-1920-576ccc46ac5e2917.epub",
+      "sha256": "cc6c58f5dddcd7671e632c5c9e32d0adfe8a2d3b29413dddd4f6eb23da6c5e52",
+      "bytes": 1055683,
+      "contentRevision": "576ccc46ac5e2917",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:23:03.828Z"
+    },
+    "mark-langer-end-of-animation-history": {
+      "epubUrl": "https://assets.labonroof.top/downloads/mark-langer-end-of-animation-history-8b0c2dfabaed988f.epub",
+      "sha256": "f3a7956fc33ee24e5df9eb8eb0a1dae7a46231ce088617d8fb9d30f0fef0e21c",
+      "bytes": 10010709,
+      "contentRevision": "8b0c2dfabaed988f",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:14:13.893Z"
+    },
+    "matsuda-japanese-criticism-space": {
+      "epubUrl": "https://assets.labonroof.top/downloads/matsuda-japanese-criticism-space-b889e90f8b6b1ef1.epub",
+      "sha256": "49f8ccd3492cc178d321747353ba59a3638389b7342a31e2f1e3466db6288119",
+      "bytes": 3130530,
+      "contentRevision": "b889e90f8b6b1ef1",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:18:34.636Z"
+    },
+    "meaning-of-literary-theory": {
+      "epubUrl": "https://assets.labonroof.top/downloads/meaning-of-literary-theory-70a29114507e5152.epub",
+      "sha256": "fafc1a128786c42109bec25b23ac6598147189c3aa4220c590e93327563a96f0",
+      "bytes": 609881,
+      "contentRevision": "70a29114507e5152",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:41:02.083Z"
+    },
+    "metonymy-redemption-nagasaki-kyoto-animation-your-color": {
+      "epubUrl": "https://assets.labonroof.top/downloads/metonymy-redemption-nagasaki-kyoto-animation-your-color-27b5c04026884cbe.epub",
+      "sha256": "fc42b738e018c2da13969c5a1159d1c60da217bb188b9c525009611ec5fc1632",
+      "bytes": 5815373,
+      "contentRevision": "27b5c04026884cbe",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:15:22.242Z"
+    },
+    "mikage-boundaries-baiyexing-relationship": {
+      "epubUrl": "https://assets.labonroof.top/downloads/mikage-boundaries-baiyexing-relationship-498032e9782eb54f.epub",
+      "sha256": "4fecb45a4333c205c6a8ba553fa3a9645d92e851253ad633cf2be5d2dd4f82b2",
+      "bytes": 2547493,
+      "contentRevision": "498032e9782eb54f",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:55:03.879Z"
+    },
+    "millennium-actress-nymph": {
+      "epubUrl": "https://assets.labonroof.top/downloads/millennium-actress-nymph-c4c352d60b299778.epub",
+      "sha256": "f8d89e0048b9ccad2e7790d782afb06eb624377c1ea7974d9f64897488dd611b",
+      "bytes": 7590889,
+      "contentRevision": "c4c352d60b299778",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:49:08.199Z"
+    },
+    "minerva-salado-vietnam-report-womens-day": {
+      "epubUrl": "https://assets.labonroof.top/downloads/minerva-salado-vietnam-report-womens-day-c6c7d0040c7523b6.epub",
+      "sha256": "e155fb53e35c9bb9c94abdcfca9aff220b8960c3974cb16c888f2840c2cd0844",
+      "bytes": 487197,
+      "contentRevision": "c6c7d0040c7523b6",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:23:24.311Z"
+    },
+    "miyadai-japanese-subculture-semantics-since-1992": {
+      "epubUrl": "https://assets.labonroof.top/downloads/miyadai-japanese-subculture-semantics-since-1992-f5353d3362580f71.epub",
+      "sha256": "51349a1f74eb931e8d8c860e11012afeb03e47f26eb742195f55440ba8834c98",
+      "bytes": 1563259,
+      "contentRevision": "f5353d3362580f71",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:53:36.456Z"
+    },
+    "modernity-not-overcome-writing-mysticism-science": {
+      "epubUrl": "https://assets.labonroof.top/downloads/modernity-not-overcome-writing-mysticism-science-4a01838252772702.epub",
+      "sha256": "ee4edea68ef58b1f9377967c4a940df1014ff6fd5ba3115b89b90e74461917f8",
+      "bytes": 1312648,
+      "contentRevision": "4a01838252772702",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:29:51.831Z"
+    },
+    "mohanty-third-world-feminism": {
+      "epubUrl": "https://assets.labonroof.top/downloads/mohanty-third-world-feminism-2602b0e4da9f46f2.epub",
+      "sha256": "64a7168eaf28a8b4d8534fa95d019abd25dbad8f73c3887bbc16e9633792b944",
+      "bytes": 900331,
+      "contentRevision": "2602b0e4da9f46f2",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:22:24.044Z"
+    },
+    "mohanty-western-eyes-feminist-scholarship": {
+      "epubUrl": "https://assets.labonroof.top/downloads/mohanty-western-eyes-feminist-scholarship-c32ba7caa0b17e2f.epub",
+      "sha256": "a376783f9b32ecf6ea1e1f6fd53aa3ad29e876159562f6e40a77bc5604ad2c76",
+      "bytes": 1871969,
+      "contentRevision": "c32ba7caa0b17e2f",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:24:59.164Z"
+    },
+    "monogatari-love-deishu-kaiki-speech-fracture-self-deception": {
+      "epubUrl": "https://assets.labonroof.top/downloads/monogatari-love-deishu-kaiki-speech-fracture-self-deception-9a232e7c629a459c.epub",
+      "sha256": "4409168a264b159364661272db2bfc749324d2adab5ac65f72032a4fea3767fb",
+      "bytes": 3522923,
+      "contentRevision": "9a232e7c629a459c",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:56:52.834Z"
+    },
+    "mori-minoru-day-of-resurrection": {
+      "epubUrl": "https://assets.labonroof.top/downloads/mori-minoru-day-of-resurrection-4e22485900d018b6.epub",
+      "sha256": "6ac98a5acd1d3619f876c47b8c541b9c41d54c2078cdda3f69fadd3f0cd2c3f2",
+      "bytes": 3727554,
+      "contentRevision": "4e22485900d018b6",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:14:51.510Z"
+    },
+    "morimi-tomihiko-humor-genealogy": {
+      "epubUrl": "https://assets.labonroof.top/downloads/morimi-tomihiko-humor-genealogy-9962f57ae5f1e7d5.epub",
+      "sha256": "9acbe03caa328c93116004e64df52e78430a0f2774f5716de58e8a9ffad3db6f",
+      "bytes": 1342291,
+      "contentRevision": "9962f57ae5f1e7d5",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:39:15.725Z"
+    },
+    "my-brilliant-friend-naples-quartet": {
+      "epubUrl": "https://assets.labonroof.top/downloads/my-brilliant-friend-naples-quartet-af237453106cdb68.epub",
+      "sha256": "ff73015b4fee96375e6d4f3301725f321e86e89591784cdddc58a5f6a57b1d33",
+      "bytes": 2341115,
+      "contentRevision": "af237453106cdb68",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:21:05.293Z"
+    },
+    "nancy-hartsock-foucault-power-theory-for-women": {
+      "epubUrl": "https://assets.labonroof.top/downloads/nancy-hartsock-foucault-power-theory-for-women-059d6d6032812fe2.epub",
+      "sha256": "08b99f649b48351616bcd34eb9576233433fcd29f4ea2e8f77144e2eb53039ae",
+      "bytes": 708547,
+      "contentRevision": "059d6d6032812fe2",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:28:11.075Z"
+    },
+    "narayan-feminist-epistemology-nonwestern": {
+      "epubUrl": "https://assets.labonroof.top/downloads/narayan-feminist-epistemology-nonwestern-1261f23a3a162abf.epub",
+      "sha256": "36329cbec2b5912724de788011cc905688ad6f59320d221f9250c56f23d9c46b",
+      "bytes": 829001,
+      "contentRevision": "1261f23a3a162abf",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:31:22.624Z"
+    },
+    "natsume-book-of-friends-healing-anime": {
+      "epubUrl": "https://assets.labonroof.top/downloads/natsume-book-of-friends-healing-anime-a4b647301bdee711.epub",
+      "sha256": "ce5a3e0d28cf0b5fb4d89d2d7f24a9235f01afe48792e828a6f1a70aeed36d04",
+      "bytes": 1365193,
+      "contentRevision": "a4b647301bdee711",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:59:22.638Z"
+    },
+    "nausicaa-wily-beast-entrusting-world-to-idol": {
+      "epubUrl": "https://assets.labonroof.top/downloads/nausicaa-wily-beast-entrusting-world-to-idol-ee4b0f403b4dc220.epub",
+      "sha256": "e9d8085fe3c8729ddbaa5bdfe13865cefe06ab7e2aeb8296d59be4ca7984f1fc",
+      "bytes": 14058874,
+      "contentRevision": "ee4b0f403b4dc220",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:39:06.608Z"
+    },
+    "nei-masahiro-market-mechanism-competition": {
+      "epubUrl": "https://assets.labonroof.top/downloads/nei-masahiro-market-mechanism-competition-41c65aacaf477c0e.epub",
+      "sha256": "7e3feddc8bf65a0863168f3579b650c68e5f24e7c8987f59d4f441b010b9887f",
+      "bytes": 1158495,
+      "contentRevision": "41c65aacaf477c0e",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:23:30.859Z"
+    },
+    "net-cloud-depression-meme": {
+      "epubUrl": "https://assets.labonroof.top/downloads/net-cloud-depression-meme-41e515116d1bbe4f.epub",
+      "sha256": "d31998747d095d08d8be3e930db5a512443ce30e17d33f88342f2c3dcf7e7f31",
+      "bytes": 740155,
+      "contentRevision": "41e515116d1bbe4f",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:41:59.117Z"
+    },
+    "nichijo-anime-kyoto-animation-bocchi": {
+      "epubUrl": "https://assets.labonroof.top/downloads/nichijo-anime-kyoto-animation-bocchi-c59f350e4940df72.epub",
+      "sha256": "91fc20620e3a07e4f20e9f0c860686d6f3893258daeeefb4d2d953c9a460cf0a",
+      "bytes": 7301148,
+      "contentRevision": "c59f350e4940df72",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:16:18.306Z"
+    },
+    "nisemonogatari-human-nature-authenticity": {
+      "epubUrl": "https://assets.labonroof.top/downloads/nisemonogatari-human-nature-authenticity-9fadee6d3d436905.epub",
+      "sha256": "2aed6e8c01e59dc1676f6a5318982b91a2be4cd711cc873bb5e65bb94db0304f",
+      "bytes": 1653218,
+      "contentRevision": "9fadee6d3d436905",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:53:08.080Z"
+    },
+    "one-shot-japanese-animation-specificity": {
+      "epubUrl": "https://assets.labonroof.top/downloads/one-shot-japanese-animation-specificity-8645ea20950b1e26.epub",
+      "sha256": "2219fe35029389dede967e8cc32c736233223022475190579c1b81091374caf4",
+      "bytes": 5091502,
+      "contentRevision": "8645ea20950b1e26",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:43:53.730Z"
+    },
+    "ordinary-readers-literary-theory": {
+      "epubUrl": "https://assets.labonroof.top/downloads/ordinary-readers-literary-theory-a9d71462609fc39c.epub",
+      "sha256": "542ac4d8240fae0bec6d6e3b42ffb85d8cf2cc6a69b62cd06d315f806ea784ab",
+      "bytes": 1075956,
+      "contentRevision": "a9d71462609fc39c",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:43:32.085Z"
+    },
+    "osaka-animation-studios-field-report": {
+      "epubUrl": "https://assets.labonroof.top/downloads/osaka-animation-studios-field-report-910d4094265d87f6.epub",
+      "sha256": "70c6d7107b843d041c4ba330ff8885f36faf5d1869c800b70a88feaeff250f83",
+      "bytes": 1665921,
+      "contentRevision": "910d4094265d87f6",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:59:12.206Z"
+    },
+    "osugi-shigeo-peace-and-stupidity": {
+      "epubUrl": "https://assets.labonroof.top/downloads/osugi-shigeo-peace-and-stupidity-026884462f9874b8.epub",
+      "sha256": "6f4327ec4ff965cb76623fe4e125352fd919615b3c1bdd1d1304d07fbcfd7f19",
+      "bytes": 1211404,
+      "contentRevision": "026884462f9874b8",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:16:08.718Z"
+    },
+    "otsuka-eiji-literature-bad-debt": {
+      "epubUrl": "https://assets.labonroof.top/downloads/otsuka-eiji-literature-bad-debt-7c8c685ac1a055b6.epub",
+      "sha256": "ddf629e41bfb6192ff6fe22cbe9a2156399dcd612f5a594ce2b337161cf2503a",
+      "bytes": 1994886,
+      "contentRevision": "7c8c685ac1a055b6",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:17:58.196Z"
+    },
+    "otsuka-world-and-variation-narrative-reproduction-consumption": {
+      "epubUrl": "https://assets.labonroof.top/downloads/otsuka-world-and-variation-narrative-reproduction-consumption-5470d35e3dc8c9f1.epub",
+      "sha256": "3eaa49e995a362ee394fe671967d98930eaeeaaabd54218a14741c052af9ff9a",
+      "bytes": 968541,
+      "contentRevision": "5470d35e3dc8c9f1",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:24:39.362Z"
+    },
+    "pancreas-you-and-me-mutual-trust": {
+      "epubUrl": "https://assets.labonroof.top/downloads/pancreas-you-and-me-mutual-trust-1acd4aac0ea52705.epub",
+      "sha256": "4d8a48adde64680f594ebda5fc8f9e8bdf3ef211db6b4988ed9841438e46d8e7",
+      "bytes": 2513951,
+      "contentRevision": "1acd4aac0ea52705",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:55:44.498Z"
+    },
+    "paprika-festival-moves-forward": {
+      "epubUrl": "https://assets.labonroof.top/downloads/paprika-festival-moves-forward-a385bac30426436c.epub",
+      "sha256": "ac9281d88901a87d265756d82ce001d07fceaadc58aacdaaebbb2961a2302d64",
+      "bytes": 2435460,
+      "contentRevision": "a385bac30426436c",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:47:08.623Z"
+    },
+    "parallax-overlooked-sora-no-method": {
+      "epubUrl": "https://assets.labonroof.top/downloads/parallax-overlooked-sora-no-method-93da5105d654c95d.epub",
+      "sha256": "f9b476b7008f7f51bac03b4932fc4c26e70efd3c445f6ced108dc7a8f8fd135a",
+      "bytes": 5317261,
+      "contentRevision": "93da5105d654c95d",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:52:39.028Z"
+    },
+    "parallax-view-ontology-aesthetics-sacred-return": {
+      "epubUrl": "https://assets.labonroof.top/downloads/parallax-view-ontology-aesthetics-sacred-return-ac205d6ca12bb9b0.epub",
+      "sha256": "3b13d3e49291282075e44b92a4a32cda18ff80809db2bb648a4f5325f9eaf997",
+      "bytes": 1881739,
+      "contentRevision": "ac205d6ca12bb9b0",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:56:22.528Z"
+    },
+    "patricia-hill-collins-black-feminist-thought-excerpt": {
+      "epubUrl": "https://assets.labonroof.top/downloads/patricia-hill-collins-black-feminist-thought-excerpt-1f0101575b5f35bb.epub",
+      "sha256": "f4e5fda568961f209a59e039c0b224c799fdd6d74ba2ec9bc5b2cb10cdd06cba",
+      "bytes": 902827,
+      "contentRevision": "1f0101575b5f35bb",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:28:57.188Z"
+    },
+    "pauline-johnson-cry-from-indian-wife-bilingual": {
+      "epubUrl": "https://assets.labonroof.top/downloads/pauline-johnson-cry-from-indian-wife-bilingual-b57194e2eb144082.epub",
+      "sha256": "214911e70e0cd5b22d2a28a329cc41cb684dac6be5eb02cb837348c949788565",
+      "bytes": 599044,
+      "contentRevision": "b57194e2eb144082",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:26:10.650Z"
+    },
+    "peaceful-rear-window-gundam-0080": {
+      "epubUrl": "https://assets.labonroof.top/downloads/peaceful-rear-window-gundam-0080-72e58d11f3b4a3ff.epub",
+      "sha256": "1b79cc343dcac1a74c82a5f1805d44298dfeb95dc8fa0f99d20ab1f7196e9171",
+      "bytes": 1101134,
+      "contentRevision": "72e58d11f3b4a3ff",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:38:45.906Z"
+    },
+    "penguin-highway-aoyama-inner-world": {
+      "epubUrl": "https://assets.labonroof.top/downloads/penguin-highway-aoyama-inner-world-97888953ce6af3d8.epub",
+      "sha256": "3311e83e3e5c934dcd9858fd9ea00a8537646851634e259dba5a9e33cdb90812",
+      "bytes": 1952123,
+      "contentRevision": "97888953ce6af3d8",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:51:00.325Z"
+    },
+    "penguin-highway-where-does-the-world-end-lead": {
+      "epubUrl": "https://assets.labonroof.top/downloads/penguin-highway-where-does-the-world-end-lead-d6938910d4ceb1ca.epub",
+      "sha256": "577c156d18c4396c4db6b4001d79930b78f2ee4ab1ec76588470d79c87e76736",
+      "bytes": 4773572,
+      "contentRevision": "d6938910d4ceb1ca",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:49:35.164Z"
+    },
+    "penguindrum-anatomy-how-we-achieve-nothing": {
+      "epubUrl": "https://assets.labonroof.top/downloads/penguindrum-anatomy-how-we-achieve-nothing-9adc8f74ee58c533.epub",
+      "sha256": "e6669c39b33891735077ffc215bb269bf358ff597c24f57f490b213b78fad5c7",
+      "bytes": 4143345,
+      "contentRevision": "9adc8f74ee58c533",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:54:09.293Z"
+    },
+    "performativity-of-animation-anno-takahashi": {
+      "epubUrl": "https://assets.labonroof.top/downloads/performativity-of-animation-anno-takahashi-25ccb12babc7108e.epub",
+      "sha256": "c136716f10e880ece627232b73c402a4093039799c66cdfa2fcb08c4dbc2eae5",
+      "bytes": 1896754,
+      "contentRevision": "25ccb12babc7108e",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:30:11.026Z"
+    },
+    "persona-5-picaresque-cultural-background": {
+      "epubUrl": "https://assets.labonroof.top/downloads/persona-5-picaresque-cultural-background-84864b40eaee2652.epub",
+      "sha256": "ed008d80e0dc4e87324e674b931b2dd21125ec898034a24487e8ca8fd4ae3e93",
+      "bytes": 9075741,
+      "contentRevision": "84864b40eaee2652",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:59:45.847Z"
+    },
+    "persona5-sincerity-direct-heart-vortex": {
+      "epubUrl": "https://assets.labonroof.top/downloads/persona5-sincerity-direct-heart-vortex-b270f09a86a761f7.epub",
+      "sha256": "0649dc04b09be0ad32526ad88b2050d10ad3b3932ea2557e0f7640884649618f",
+      "bytes": 1884560,
+      "contentRevision": "b270f09a86a761f7",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:53:28.186Z"
+    },
+    "philosophy-of-language-chapter-4-russell-wittgenstein-positivism": {
+      "epubUrl": "https://assets.labonroof.top/downloads/philosophy-of-language-chapter-4-russell-wittgenstein-positivism-95f690938b9358cb.epub",
+      "sha256": "ceaffa91d5b9957ec6eedd0940d79d303b87fa93188228f76791b88aeeaaeb31",
+      "bytes": 1272401,
+      "contentRevision": "95f690938b9358cb",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:32:47.014Z"
+    },
+    "physical-space-landscape-first-love-flavors-of-youth": {
+      "epubUrl": "https://assets.labonroof.top/downloads/physical-space-landscape-first-love-flavors-of-youth-94dbb54d87568e7e.epub",
+      "sha256": "5881f47ac9370f278a2a2523416d264eef43011aa0b263ca8f16a9fb327244f8",
+      "bytes": 1434216,
+      "contentRevision": "94dbb54d87568e7e",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:59:52.590Z"
+    },
+    "porphyria-answer-white-album-2": {
+      "epubUrl": "https://assets.labonroof.top/downloads/porphyria-answer-white-album-2-56558e51a77d8aae.epub",
+      "sha256": "db38db8653bd954ba10d63f04b291eccab92dd730ec02be884f396a0aeff9959",
+      "bytes": 9165013,
+      "contentRevision": "56558e51a77d8aae",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:54:34.949Z"
+    },
+    "post-apocalyptic-games-heroism-great-recession": {
+      "epubUrl": "https://assets.labonroof.top/downloads/post-apocalyptic-games-heroism-great-recession-f864399d7b230389.epub",
+      "sha256": "9582fa95f4ad98e71575ddf3d80fea913be971739d6d1baa98549832eb3b78ef",
+      "bytes": 1163923,
+      "contentRevision": "f864399d7b230389",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:42:25.371Z"
+    },
+    "postpandemic-disco-elysium-in-china": {
+      "epubUrl": "https://assets.labonroof.top/downloads/postpandemic-disco-elysium-in-china-fc9aac82e98cf0ca.epub",
+      "sha256": "19ff4efe81a502dff31d818ffcc9f29e59fe2efa83cc470f3f7e993965b5c407",
+      "bytes": 5100798,
+      "contentRevision": "fc9aac82e98cf0ca",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:16:42.865Z"
+    },
+    "prey-morgan-yu-posthuman-body-construction": {
+      "epubUrl": "https://assets.labonroof.top/downloads/prey-morgan-yu-posthuman-body-construction-5f61734888b03407.epub",
+      "sha256": "cb4f701cac97b27e9cb99a42420185a7a347a834f99110003af9f1a09c3dae55",
+      "bytes": 2609630,
+      "contentRevision": "5f61734888b03407",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:39:32.686Z"
+    },
+    "princess-mononoke-lady-eboshi-many-sides": {
+      "epubUrl": "https://assets.labonroof.top/downloads/princess-mononoke-lady-eboshi-many-sides-ec9332c631de96e5.epub",
+      "sha256": "ac4e9f3cbba7e4a7f3a2f1a35e32061741f23ac9e24c597f78ef21ba770452dc",
+      "bytes": 21588400,
+      "contentRevision": "ec9332c631de96e5",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:55:23.016Z"
+    },
+    "problems-with-japan-and-global-cultural-influence": {
+      "epubUrl": "https://assets.labonroof.top/downloads/problems-with-japan-and-global-cultural-influence-2a485d34ef778c8e.epub",
+      "sha256": "8ff77c0ca1f05e6957e59b6633325e74c59fa6c626401a4adb31380fa6ffff2a",
+      "bytes": 978775,
+      "contentRevision": "2a485d34ef778c8e",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:52:56.785Z"
+    },
+    "project-lux-vr-radicality": {
+      "epubUrl": "https://assets.labonroof.top/downloads/project-lux-vr-radicality-4d206b75cc3e4f13.epub",
+      "sha256": "0ad5c2ab53c6541a297c5e11d5ec063b8df9478acc3c3785e1843d8e5e6ce5d5",
+      "bytes": 4174542,
+      "contentRevision": "4d206b75cc3e4f13",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:39:58.327Z"
+    },
+    "radicalesbians-woman-identified-woman": {
+      "epubUrl": "https://assets.labonroof.top/downloads/radicalesbians-woman-identified-woman-d242f041d0188404.epub",
+      "sha256": "aac2ba777d1a467d2d7943fa79a6e392a7ff1c8f63e814d785b48b7c8284af6b",
+      "bytes": 929775,
+      "contentRevision": "d242f041d0188404",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:28:26.338Z"
+    },
+    "rags-drum-2020-call-for-papers": {
+      "epubUrl": "https://assets.labonroof.top/downloads/rags-drum-2020-call-for-papers-9a21104cedcd8ba5.epub",
+      "sha256": "daeb82d41198fc46e3a94bde461fd284456dbcd50dbec9a308746216de4d7ad9",
+      "bytes": 6986337,
+      "contentRevision": "9a21104cedcd8ba5",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:43:25.940Z"
+    },
+    "rags-drum-2020-final-results": {
+      "epubUrl": "https://assets.labonroof.top/downloads/rags-drum-2020-final-results-678b068b8c0958cb.epub",
+      "sha256": "542ad4e656df34c5256ae189ef68bc3869522d95b13bca7956b1e24bcdc88820",
+      "bytes": 2554292,
+      "contentRevision": "678b068b8c0958cb",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:40:24.597Z"
+    },
+    "rags-drum-2021-call-for-papers": {
+      "epubUrl": "https://assets.labonroof.top/downloads/rags-drum-2021-call-for-papers-26ff6db4e062b2eb.epub",
+      "sha256": "66d53e69816b9fcfd17f5ba9f092217ad30e28ed2e6e982dcfbe7b43f86fa99e",
+      "bytes": 1895003,
+      "contentRevision": "26ff6db4e062b2eb",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:36:44.698Z"
+    },
+    "rags-drum-2021-final-results": {
+      "epubUrl": "https://assets.labonroof.top/downloads/rags-drum-2021-final-results-a4f39fb78dc54314.epub",
+      "sha256": "9435f39e2c1e056905c6efd3ee92ca7e0496cb4c9a80463347a82c342d59d064",
+      "bytes": 1231464,
+      "contentRevision": "a4f39fb78dc54314",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:34:18.561Z"
+    },
+    "rags-drum-2021-pre-festival-results": {
+      "epubUrl": "https://assets.labonroof.top/downloads/rags-drum-2021-pre-festival-results-98d32c47e1f6ac06.epub",
+      "sha256": "8b0db6893042d5efadfcd91cd83f70309db850c8b6d5b5ce068c834f8c62345b",
+      "bytes": 1168446,
+      "contentRevision": "98d32c47e1f6ac06",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:35:04.329Z"
+    },
+    "rags-drum-2022-call-for-papers": {
+      "epubUrl": "https://assets.labonroof.top/downloads/rags-drum-2022-call-for-papers-a9f6b9c8e2dab8fc.epub",
+      "sha256": "8173abc26ce7c487ed075daa4a7aaa2066068ae8efca964cb3546f9047f10ed0",
+      "bytes": 684915,
+      "contentRevision": "a9f6b9c8e2dab8fc",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:32:40.211Z"
+    },
+    "rags-drum-2022-final-results": {
+      "epubUrl": "https://assets.labonroof.top/downloads/rags-drum-2022-final-results-f49adf7bdbfaee85.epub",
+      "sha256": "db68260e0f16efa345365e2f2bc9ed57f7a1382f55f437c65a839e328b3ec3e3",
+      "bytes": 836374,
+      "contentRevision": "f49adf7bdbfaee85",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:30:15.497Z"
+    },
+    "rags-drum-2022-pre-festival-results": {
+      "epubUrl": "https://assets.labonroof.top/downloads/rags-drum-2022-pre-festival-results-3d21e44f7628233f.epub",
+      "sha256": "1320623b177ef3008777dd146e8a3512b2d19263d640221718eba1e8444ee3ae",
+      "bytes": 711859,
+      "contentRevision": "3d21e44f7628233f",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:30:59.465Z"
+    },
+    "reasoning-in-narrative-art": {
+      "epubUrl": "https://assets.labonroof.top/downloads/reasoning-in-narrative-art-fb63c1ab56c379c1.epub",
+      "sha256": "4d83d39320e947558e141b3f4d52931bac346ad9fc2259a43f46f28c006e2595",
+      "bytes": 10518742,
+      "contentRevision": "fb63c1ab56c379c1",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:49:56.729Z"
+    },
+    "rebecca-walker-being-real-introduction": {
+      "epubUrl": "https://assets.labonroof.top/downloads/rebecca-walker-being-real-introduction-f12a317c91609f39.epub",
+      "sha256": "1ebbea5f9e32409146bea7ca9d7323ec1c832ab6865acc9e5b84389796957708",
+      "bytes": 1166545,
+      "contentRevision": "f12a317c91609f39",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:30:21.290Z"
+    },
+    "recrossing-00s-criticism": {
+      "epubUrl": "https://assets.labonroof.top/downloads/recrossing-00s-criticism-fb13b93a4653c330.epub",
+      "sha256": "c013aa7c11f2a56eaaaa69b6b834879c301142858fb44e541f6086298a567616",
+      "bytes": 12301598,
+      "contentRevision": "fb13b93a4653c330",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:19:26.673Z"
+    },
+    "redstockings-manifesto-1969": {
+      "epubUrl": "https://assets.labonroof.top/downloads/redstockings-manifesto-1969-4189a534123e464c.epub",
+      "sha256": "e8820edb9fb55d9191404ef487a52526261794890fb13e70c69058e56b99bd9e",
+      "bytes": 598941,
+      "contentRevision": "4189a534123e464c",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:27:44.894Z"
+    },
+    "rehman-hernandez-colonize-this-introduction": {
+      "epubUrl": "https://assets.labonroof.top/downloads/rehman-hernandez-colonize-this-introduction-916e1b5897956eb2.epub",
+      "sha256": "e087d2a175356c8cf04c3295e3fe45f5b7a0a9b8205b8acc85bb79bd8bbf316c",
+      "bytes": 1099516,
+      "contentRevision": "916e1b5897956eb2",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:25:10.373Z"
+    },
+    "rethink-everyday": {
+      "epubUrl": "https://assets.labonroof.top/downloads/rethink-everyday-0e0dd7c4fdc5b2a5.epub",
+      "sha256": "49a702dd3ee770ee9a753a6d09a50c31a4beff8b1182f7bece3331f292b853ba",
+      "bytes": 1509696,
+      "contentRevision": "0e0dd7c4fdc5b2a5",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:16:49.212Z"
+    },
+    "revenge-drama-structure-goblin-slayer-masamune-kun": {
+      "epubUrl": "https://assets.labonroof.top/downloads/revenge-drama-structure-goblin-slayer-masamune-kun-2e4ca01e78cdd4af.epub",
+      "sha256": "7ddf247a4373ee90b3a04b3442cc58b3513e7d1088c6a512790742113aa9534d",
+      "bytes": 3801090,
+      "contentRevision": "2e4ca01e78cdd4af",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:58:28.845Z"
+    },
+    "revue-starlight-eternal-recurrence-desire": {
+      "epubUrl": "https://assets.labonroof.top/downloads/revue-starlight-eternal-recurrence-desire-7acdd0cbc78d146e.epub",
+      "sha256": "08f2b871961349a269c507fe32005ff9ada0eb205d841c0f2901c271ed5ed9f2",
+      "bytes": 2953132,
+      "contentRevision": "7acdd0cbc78d146e",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:59:01.389Z"
+    },
+    "revue-starlight-frontstage-backstage-dramaturgy": {
+      "epubUrl": "https://assets.labonroof.top/downloads/revue-starlight-frontstage-backstage-dramaturgy-3c808d0af03fb6f7.epub",
+      "sha256": "a8d625d7ab3a901cc6bdc6ad955770750c5a05cec4e55b646298d8b9d9d3c222",
+      "bytes": 1323854,
+      "contentRevision": "3c808d0af03fb6f7",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:52:51.407Z"
+    },
+    "revue-starlight-reproduction-through-revue": {
+      "epubUrl": "https://assets.labonroof.top/downloads/revue-starlight-reproduction-through-revue-870aa6fc22032875.epub",
+      "sha256": "2652a18ca121ed764c76a815e757288c9374c9d08243f9a881c33a4a99b3582d",
+      "bytes": 1224852,
+      "contentRevision": "870aa6fc22032875",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:59:16.995Z"
+    },
+    "rezero-production-journal-sequel": {
+      "epubUrl": "https://assets.labonroof.top/downloads/rezero-production-journal-sequel-759adc0c13507b53.epub",
+      "sha256": "fa1fcdcf34c315fb15da9a85447121cb604f12d8f6f88ee408feb39af34f45dd",
+      "bytes": 38465090,
+      "contentRevision": "759adc0c13507b53",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:42:43.713Z"
+    },
+    "riri-chan-manual-for-making-money-together": {
+      "epubUrl": "https://assets.labonroof.top/downloads/riri-chan-manual-for-making-money-together-e5ac38da3d013b6e.epub",
+      "sha256": "d7ce2b4e71518969e128480568af10ac0bbbc2bddf72449cefbd879da1919b10",
+      "bytes": 2646891,
+      "contentRevision": "e5ac38da3d013b6e",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:22:31.201Z"
+    },
+    "robert-grosseteste-on-light": {
+      "epubUrl": "https://assets.labonroof.top/downloads/robert-grosseteste-on-light-57a6d082e70043ec.epub",
+      "sha256": "19516d1af5de568753816a07fbee99471aca2861d74f614c468fcee911bc4272",
+      "bytes": 707386,
+      "contentRevision": "57a6d082e70043ec",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:40:52.273Z"
+    },
+    "robin-morgan-pornography-and-rape": {
+      "epubUrl": "https://assets.labonroof.top/downloads/robin-morgan-pornography-and-rape-6153b887e789a5d5.epub",
+      "sha256": "51c458e13f0d7f2fbec88e330119fd57b0242d7bd87c5cf78141f1bebb3674c6",
+      "bytes": 928969,
+      "contentRevision": "6153b887e789a5d5",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:31:27.921Z"
+    },
+    "romero-monsters-zombie-image-fallen-other": {
+      "epubUrl": "https://assets.labonroof.top/downloads/romero-monsters-zombie-image-fallen-other-5912e8c9472e6021.epub",
+      "sha256": "0e6258d438c5dda7a8bb3655b635227bb4c83982bfbd962f089a9e0f960f56ef",
+      "bytes": 2800247,
+      "contentRevision": "5912e8c9472e6021",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:40:05.975Z"
+    },
+    "roof-2019-why-we-need-acgn-criticism": {
+      "epubUrl": "https://assets.labonroof.top/downloads/roof-2019-why-we-need-acgn-criticism-f865b663a246c154.epub",
+      "sha256": "346a1460b85798038bfb504bf4d839ae1e8b6739d7aee44b0dc62eaa54961c9c",
+      "bytes": 1385447,
+      "contentRevision": "f865b663a246c154",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:45:16.714Z"
+    },
+    "roof-annual-2018-one-wood-one-stone": {
+      "epubUrl": "https://assets.labonroof.top/downloads/roof-annual-2018-one-wood-one-stone-d8dafe45bba3de1f.epub",
+      "sha256": "af02e478c8532784a765b3b0f66cd049f47c96e4da08ec4565e842899c8e493b",
+      "bytes": 2096816,
+      "contentRevision": "d8dafe45bba3de1f",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:57:02.753Z"
+    },
+    "roof-cultural-research-manifesto": {
+      "epubUrl": "https://assets.labonroof.top/downloads/roof-cultural-research-manifesto-cd85f87945bc69f9.epub",
+      "sha256": "30a90779edba04cc2113d7f5ae90e7c5313d7426ebfdecbc5cbdde7f5adf7125",
+      "bytes": 845846,
+      "contentRevision": "cd85f87945bc69f9",
+      "generator": 1,
+      "generatedAt": "2026-09-11T00:00:58.493Z"
+    },
+    "roof-genshiken-hiatus-notice": {
+      "epubUrl": "https://assets.labonroof.top/downloads/roof-genshiken-hiatus-notice-4deafb75ef410560.epub",
+      "sha256": "ebbe4e38827e837556861b42442831cfbb6423359d2265cb3e3c3e1919bee9e0",
+      "bytes": 394846,
+      "contentRevision": "4deafb75ef410560",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:23:07.003Z"
+    },
+    "rose-schneiderman-we-found-you-wanting": {
+      "epubUrl": "https://assets.labonroof.top/downloads/rose-schneiderman-we-found-you-wanting-404e52e6a55a898a.epub",
+      "sha256": "dbedeb118e29fd33a43f07907995f63c696876a998b3f953fdb7f0f9ba4ba3d3",
+      "bytes": 541914,
+      "contentRevision": "404e52e6a55a898a",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:26:14.276Z"
+    },
+    "ruiz-de-burton-squatter-and-don-excerpt": {
+      "epubUrl": "https://assets.labonroof.top/downloads/ruiz-de-burton-squatter-and-don-excerpt-a4a80ba9b66a4916.epub",
+      "sha256": "de9d8e4214ccdbc33e2cb79d932db49f3ac345da5dd41225b3047dc592034767",
+      "bytes": 691232,
+      "contentRevision": "a4a80ba9b66a4916",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:26:34.726Z"
+    },
+    "sailor-antifa-radical-cosplay": {
+      "epubUrl": "https://assets.labonroof.top/downloads/sailor-antifa-radical-cosplay-0192620bd70a5691.epub",
+      "sha256": "2cdaa1980d7863b7e7f7f3c386d89e52a78fa7562492700dba8c428ec6bd3fb1",
+      "bytes": 3066949,
+      "contentRevision": "0192620bd70a5691",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:19:18.491Z"
+    },
+    "saito-identity-to-character": {
+      "epubUrl": "https://assets.labonroof.top/downloads/saito-identity-to-character-53fe5592fa27d1df.epub",
+      "sha256": "2f6c2e52eff41b9920ecb7771485d13b7b5ee74e2e4f33d3019ed09df010295a",
+      "bytes": 1168375,
+      "contentRevision": "53fe5592fa27d1df",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:22:38.182Z"
+    },
+    "saito-tamaki-and-psychoanalysis": {
+      "epubUrl": "https://assets.labonroof.top/downloads/saito-tamaki-and-psychoanalysis-1a8bc8cd006526ab.epub",
+      "sha256": "6c3a5f70a1ca0d9dacf714c86d264e4a2ac1889808d96d90bd96deb4f0a0a7a9",
+      "bytes": 2021467,
+      "contentRevision": "1a8bc8cd006526ab",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:47:38.623Z"
+    },
+    "sakuga-mysteries-identifying-animators": {
+      "epubUrl": "https://assets.labonroof.top/downloads/sakuga-mysteries-identifying-animators-56c7ef57822eeefb.epub",
+      "sha256": "6966780223b7acc6792dd5944302da2495e95e590b5f1635d57cae0da74fc86f",
+      "bytes": 1936173,
+      "contentRevision": "56c7ef57822eeefb",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:58:34.702Z"
+    },
+    "sakurada-political-regime": {
+      "epubUrl": "https://assets.labonroof.top/downloads/sakurada-political-regime-037dbd9d49599d87.epub",
+      "sha256": "cfdaf35ed1598918b16b5cbec3d961ce2be757d9d46391d7e27c4d584c9cf7fd",
+      "bytes": 1404561,
+      "contentRevision": "037dbd9d49599d87",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:58:18.094Z"
+    },
+    "sakuta-pragmatics-flirting-episode-2": {
+      "epubUrl": "https://assets.labonroof.top/downloads/sakuta-pragmatics-flirting-episode-2-f3738ffd446a7adc.epub",
+      "sha256": "1eaacb5c2ec3dbfde86d397d8dcbeed40d009094be287f77ea1a14b88c9a74ab",
+      "bytes": 829114,
+      "contentRevision": "f3738ffd446a7adc",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:59:57.012Z"
+    },
+    "sarah-grimke-letters-equality-of-sexes-excerpt": {
+      "epubUrl": "https://assets.labonroof.top/downloads/sarah-grimke-letters-equality-of-sexes-excerpt-a25fc34b250970ce.epub",
+      "sha256": "535a781cdf7f1f86019985551ec9765f03a4d76b859b1b99cf34721ee9229f60",
+      "bytes": 916594,
+      "contentRevision": "a25fc34b250970ce",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:29:12.597Z"
+    },
+    "sekaikei-as-impossibility-sugii-hikaru": {
+      "epubUrl": "https://assets.labonroof.top/downloads/sekaikei-as-impossibility-sugii-hikaru-7e586a31cde4ed51.epub",
+      "sha256": "50f1b55742cd140230cc088dac99daf79774384df4b4eb91e32917becfa2ea38",
+      "bytes": 2114866,
+      "contentRevision": "7e586a31cde4ed51",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:20:23.743Z"
+    },
+    "sekaikei-syndrome-music-interview": {
+      "epubUrl": "https://assets.labonroof.top/downloads/sekaikei-syndrome-music-interview-a2b10790c238bcf4.epub",
+      "sha256": "fa3fdc4ea01ab10f7789090a4538255d9888ab5c89d3b25104fecf2a9c6d6274",
+      "bytes": 1484773,
+      "contentRevision": "a2b10790c238bcf4",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:14:31.136Z"
+    },
+    "seneca-falls-declaration-of-sentiments": {
+      "epubUrl": "https://assets.labonroof.top/downloads/seneca-falls-declaration-of-sentiments-82cca48421a3bdf1.epub",
+      "sha256": "63a623327944f2c277308fea833a97522adcb55ee733c4863a5885ff2679e3b9",
+      "bytes": 739403,
+      "contentRevision": "82cca48421a3bdf1",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:26:39.418Z"
+    },
+    "sep-compositionality": {
+      "epubUrl": "https://assets.labonroof.top/downloads/sep-compositionality-6e99bb1513fd2c88.epub",
+      "sha256": "776e09addaa3764573e64f8a99787a659b783563b9664b71f785e0061bc494c8",
+      "bytes": 1136601,
+      "contentRevision": "6e99bb1513fd2c88",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:42:31.568Z"
+    },
+    "sep-divine-illumination": {
+      "epubUrl": "https://assets.labonroof.top/downloads/sep-divine-illumination-268bf0a720297e3f.epub",
+      "sha256": "636f1de0e69700de079fc9e2a882ea9fcca713f8cea664b4e35189878ca98ae5",
+      "bytes": 1065827,
+      "contentRevision": "268bf0a720297e3f",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:40:35.149Z"
+    },
+    "sep-feminist-political-philosophy": {
+      "epubUrl": "https://assets.labonroof.top/downloads/sep-feminist-political-philosophy-ae7ad350ce2ebea4.epub",
+      "sha256": "1b6b109e6a874d32ade90a0b302a3b13318db9dadda3f294bb3a5a082dbbb069",
+      "bytes": 1092438,
+      "contentRevision": "ae7ad350ce2ebea4",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:32:14.117Z"
+    },
+    "sep-foreknowledge-and-free-will": {
+      "epubUrl": "https://assets.labonroof.top/downloads/sep-foreknowledge-and-free-will-24c6222e6ee3de16.epub",
+      "sha256": "87a59f5f06bb139fb3fb153bb6ce8752848bdf4e60e92565da2ec5c67d02cf26",
+      "bytes": 1033336,
+      "contentRevision": "24c6222e6ee3de16",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:44:18.710Z"
+    },
+    "sep-friedrich-schelling": {
+      "epubUrl": "https://assets.labonroof.top/downloads/sep-friedrich-schelling-a4a4e198904ca99a.epub",
+      "sha256": "0ee84016d391d8f442fedf54dad0743547a279e10fc84a90b59696e3c7b6c826",
+      "bytes": 1509831,
+      "contentRevision": "a4a4e198904ca99a",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:42:13.763Z"
+    },
+    "sep-hegel-dialectics": {
+      "epubUrl": "https://assets.labonroof.top/downloads/sep-hegel-dialectics-24fb543581b80002.epub",
+      "sha256": "1e18b0869bd00abb756d15c9b3ba84a3aa9111c0df9b30a3b4f775951300a705",
+      "bytes": 1693975,
+      "contentRevision": "24fb543581b80002",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:28:00.991Z"
+    },
+    "sep-montague-semantics": {
+      "epubUrl": "https://assets.labonroof.top/downloads/sep-montague-semantics-1fa61b1f4a705e1f.epub",
+      "sha256": "d180ffaf277f874983226fa276f325b2b8e3875a10af5fd99cbf7f7b285c6860",
+      "bytes": 909547,
+      "contentRevision": "1fa61b1f4a705e1f",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:42:37.009Z"
+    },
+    "sep-rudolf-carnap-supplement-c-inductive-logic": {
+      "epubUrl": "https://assets.labonroof.top/downloads/sep-rudolf-carnap-supplement-c-inductive-logic-2b158d691bdbec25.epub",
+      "sha256": "7515cd576b1fb2932a861f94b60695191dd3948647c03d70dccb81f7a45e940d",
+      "bytes": 837331,
+      "contentRevision": "2b158d691bdbec25",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:42:19.191Z"
+    },
+    "sep-rudolf-carnap-supplement-e-scientific-theory-reconstruction-part-3": {
+      "epubUrl": "https://assets.labonroof.top/downloads/sep-rudolf-carnap-supplement-e-scientific-theory-reconstruction-part-3-7ef6b032b2acf43a.epub",
+      "sha256": "95a8d66363f9aa6093393e1e9fc36e499096cb293ae0d16142ebfe23951ec288",
+      "bytes": 769040,
+      "contentRevision": "7ef6b032b2acf43a",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:42:03.763Z"
+    },
+    "sep-social-ontology-sections-1-3": {
+      "epubUrl": "https://assets.labonroof.top/downloads/sep-social-ontology-sections-1-3-ed590f74e727814e.epub",
+      "sha256": "a21ddb91f4f84bbc6bc08dd1aa171cb248b288a7bc4a85c479fcd9526901fd3e",
+      "bytes": 1015255,
+      "contentRevision": "ed590f74e727814e",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:40:57.873Z"
+    },
+    "sep-walter-benjamin": {
+      "epubUrl": "https://assets.labonroof.top/downloads/sep-walter-benjamin-580bd1c602f48fe7.epub",
+      "sha256": "4d5c3f5927b006d75f3ec9c46091c5ea45fb9f95c4e90b491f489fee03515012",
+      "bytes": 1427703,
+      "contentRevision": "580bd1c602f48fe7",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:34:32.469Z"
+    },
+    "shanghai-image-in-japanese-anime": {
+      "epubUrl": "https://assets.labonroof.top/downloads/shanghai-image-in-japanese-anime-37b208f299e51676.epub",
+      "sha256": "a7351b7b09b91a6d6a7866f5f3f7e14b6be2b8205e55e1ac7958f7dcbbff4659",
+      "bytes": 3656986,
+      "contentRevision": "37b208f299e51676",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:48:28.106Z"
+    },
+    "shiki-doctors-medical-historiography": {
+      "epubUrl": "https://assets.labonroof.top/downloads/shiki-doctors-medical-historiography-20204c76995db3cc.epub",
+      "sha256": "fb21593efa35533106a3871395801403ffeaed0c68c04e8dde02475b381c5cb5",
+      "bytes": 1240799,
+      "contentRevision": "20204c76995db3cc",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:59:06.944Z"
+    },
+    "shin-godzilla-japanese-society-groupism": {
+      "epubUrl": "https://assets.labonroof.top/downloads/shin-godzilla-japanese-society-groupism-9b01cc18bd872008.epub",
+      "sha256": "66fbaf7b092b7c99cbc477bf9cfba81c140ec53345de3422f646680edbef4a70",
+      "bytes": 6941643,
+      "contentRevision": "9b01cc18bd872008",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:55:38.520Z"
+    },
+    "shinkai-nishijima-azuma-sekai-farther-dialogue-part-1": {
+      "epubUrl": "https://assets.labonroof.top/downloads/shinkai-nishijima-azuma-sekai-farther-dialogue-part-1-a3b8696df3a8a75a.epub",
+      "sha256": "4221b994cad5e62f8e05c18da26a447118c8d17466be06d7b288c2ef3563299e",
+      "bytes": 2732305,
+      "contentRevision": "a3b8696df3a8a75a",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:13:34.891Z"
+    },
+    "shinkai-urban-space-theory": {
+      "epubUrl": "https://assets.labonroof.top/downloads/shinkai-urban-space-theory-194d9f3055a0bcf9.epub",
+      "sha256": "d3cb85cab7cb80c1cd402abffbbebf3083e6cf78f9987b1f9ea1cd17eaa78f9b",
+      "bytes": 12645688,
+      "contentRevision": "194d9f3055a0bcf9",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:13:42.072Z"
+    },
+    "shinya-ohira-expressionism-in-motion": {
+      "epubUrl": "https://assets.labonroof.top/downloads/shinya-ohira-expressionism-in-motion-d70b88848e85ebff.epub",
+      "sha256": "65fbb5e00158c8acf59a9fb20009263533c305e6e372e49fa924fcc51e871045",
+      "bytes": 14660319,
+      "contentRevision": "d70b88848e85ebff",
+      "generator": 1,
+      "generatedAt": "2026-09-11T00:00:30.006Z"
+    },
+    "showa-genroku-rakugo-shinju-disappearance-video": {
+      "epubUrl": "https://assets.labonroof.top/downloads/showa-genroku-rakugo-shinju-disappearance-video-8441e4f4026a16f9.epub",
+      "sha256": "034655a3f26c5452783da09a71fa2484d2511c6b818bbacb73641c6839b770b2",
+      "bytes": 243409,
+      "contentRevision": "8441e4f4026a16f9",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:41:14.028Z"
+    },
+    "showa-nostalgia-and-jin-yong-in-japan": {
+      "epubUrl": "https://assets.labonroof.top/downloads/showa-nostalgia-and-jin-yong-in-japan-4835939a838614f5.epub",
+      "sha256": "1174dc565d55920fb5ebbe2a25fbbe8d870b9f210ad83ae9f40e3e1e7d235100",
+      "bytes": 2433393,
+      "contentRevision": "4835939a838614f5",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:52:02.489Z"
+    },
+    "silent-vampire-kizumonogatari": {
+      "epubUrl": "https://assets.labonroof.top/downloads/silent-vampire-kizumonogatari-0a5a29927eca52c4.epub",
+      "sha256": "0efc6b9cfc379ae04aadc79abb127855195d80584b370dc0afa0038892fc76b5",
+      "bytes": 6370996,
+      "contentRevision": "0a5a29927eca52c4",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:19:47.334Z"
+    },
+    "sister-sama-social-history": {
+      "epubUrl": "https://assets.labonroof.top/downloads/sister-sama-social-history-400b878ccbaf1516.epub",
+      "sha256": "83cb6bff1de9bfec9ffe3dba9da2e6b6ed110f5d5f9aa498fef520b099938d7d",
+      "bytes": 4952552,
+      "contentRevision": "400b878ccbaf1516",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:24:09.129Z"
+    },
+    "skincare-guide-for-trans-people": {
+      "epubUrl": "https://assets.labonroof.top/downloads/skincare-guide-for-trans-people-3140e1da8a78772e.epub",
+      "sha256": "50c309ff3e21d0b40789e9691fc16ebcf7ef03f41acabdc30d9be514c7b7163a",
+      "bytes": 2160532,
+      "contentRevision": "3140e1da8a78772e",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:15:13.854Z"
+    },
+    "slime-from-a-biological-perspective": {
+      "epubUrl": "https://assets.labonroof.top/downloads/slime-from-a-biological-perspective-3ae6f5d618c020dc.epub",
+      "sha256": "930431d5989e90329ca49406aee7b3326fcd9a3671af0a859057ffe24b8aeee2",
+      "bytes": 2293667,
+      "contentRevision": "3ae6f5d618c020dc",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:58:40.317Z"
+    },
+    "softcore-kara-no-kyoukai-quiz": {
+      "epubUrl": "https://assets.labonroof.top/downloads/softcore-kara-no-kyoukai-quiz-f16d6b6d16a68269.epub",
+      "sha256": "db2301a6c71d6aed5296a858dad9d6145fd7e660b3ab1434c0ec0c3db5759edb",
+      "bytes": 1911471,
+      "contentRevision": "f16d6b6d16a68269",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:53:41.977Z"
+    },
+    "sojourner-truth-aint-i-a-woman": {
+      "epubUrl": "https://assets.labonroof.top/downloads/sojourner-truth-aint-i-a-woman-e47eeadbe85936de.epub",
+      "sha256": "1fcedcd015a54e2215fb7bc5f8214b5c0ce6ed29679956e0d2170d451a0c6573",
+      "bytes": 475949,
+      "contentRevision": "e47eeadbe85936de",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:30:38.212Z"
+    },
+    "song-of-saya-pure-love-matrix": {
+      "epubUrl": "https://assets.labonroof.top/downloads/song-of-saya-pure-love-matrix-1f5b9b6f9cb6dfe7.epub",
+      "sha256": "45707eb7eaf50ab3e6a1450719e4c8dafe25e5da9de5b627dd35abdbb13954e8",
+      "bytes": 960045,
+      "contentRevision": "1f5b9b6f9cb6dfe7",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:36:07.404Z"
+    },
+    "sound-euphonium-performance-scenes-making": {
+      "epubUrl": "https://assets.labonroof.top/downloads/sound-euphonium-performance-scenes-making-489860d331730005.epub",
+      "sha256": "5cb5261282aa08323cd08176622c1c77b0cdd0248b31aff04ff94dd78cf1ba25",
+      "bytes": 1111041,
+      "contentRevision": "489860d331730005",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:40:29.106Z"
+    },
+    "sousa-weebwave-2010s-music-videos": {
+      "epubUrl": "https://assets.labonroof.top/downloads/sousa-weebwave-2010s-music-videos-1b3cd11f5ccd5c7d.epub",
+      "sha256": "c264ca2eb1c11ab3720e717463b311faab5cf7170a8c3dcfce16b529f942af2a",
+      "bytes": 3033799,
+      "contentRevision": "1b3cd11f5ccd5c7d",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:18:25.219Z"
+    },
+    "spatialized-body-embodied-space-anime": {
+      "epubUrl": "https://assets.labonroof.top/downloads/spatialized-body-embodied-space-anime-633ff91cf693a7ce.epub",
+      "sha256": "4246168c8e4955214525d2e6c6bf3d1c7c2aea6f05fc05ba007de38794375558",
+      "bytes": 1445035,
+      "contentRevision": "633ff91cf693a7ce",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:34:00.889Z"
+    },
+    "spring-festival-gala-sketches-textual-critique": {
+      "epubUrl": "https://assets.labonroof.top/downloads/spring-festival-gala-sketches-textual-critique-1dba7215cea97863.epub",
+      "sha256": "d4fd7d0d00339f3f14aeb380b98ae294191415fd4bab903402c8814dec5ce509",
+      "bytes": 859496,
+      "contentRevision": "1dba7215cea97863",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:33:09.268Z"
+    },
+    "stanley-parable-video-games": {
+      "epubUrl": "https://assets.labonroof.top/downloads/stanley-parable-video-games-a517a046e5d0403e.epub",
+      "sha256": "ae0e4bcbe04ddd9595a9896048e0a572601e17fe2c0907f3482eefe47fda1aa4",
+      "bytes": 4209141,
+      "contentRevision": "a517a046e5d0403e",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:39:45.152Z"
+    },
+    "stanton-gompers-hawaiian-women-suffrage-1899": {
+      "epubUrl": "https://assets.labonroof.top/downloads/stanton-gompers-hawaiian-women-suffrage-1899-7f191b54984ce8f2.epub",
+      "sha256": "6570490010c33a8ce4258d1e9faf0611e56bddaf95666ef75ff97ec09947ad21",
+      "bytes": 553006,
+      "contentRevision": "7f191b54984ce8f2",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:25:18.412Z"
+    },
+    "stanton-on-educated-suffrage": {
+      "epubUrl": "https://assets.labonroof.top/downloads/stanton-on-educated-suffrage-e0d0ddf12b4c549b.epub",
+      "sha256": "a4a79bd20b04c2dd6e3d3e2c071ba6b2c5ae940428b087ee30a6e9b323dd9312",
+      "bytes": 607011,
+      "contentRevision": "e0d0ddf12b4c549b",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:26:06.692Z"
+    },
+    "steinberg-character-world-consumption": {
+      "epubUrl": "https://assets.labonroof.top/downloads/steinberg-character-world-consumption-1682e8d71c025ccb.epub",
+      "sha256": "ff4b6930690b289b25c6d8f73774107b804bec6d3906c681b748a30209749028",
+      "bytes": 3766231,
+      "contentRevision": "1682e8d71c025ccb",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:17:50.982Z"
+    },
+    "stevie-suan-globalization-world-system-anime": {
+      "epubUrl": "https://assets.labonroof.top/downloads/stevie-suan-globalization-world-system-anime-c9186d7a9df6fcb2.epub",
+      "sha256": "2b82e350c3b9974be59c76d6b4585596278003c208cfbc13fcb6ea4a75a1f32c",
+      "bytes": 3925422,
+      "contentRevision": "c9186d7a9df6fcb2",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:16:33.799Z"
+    },
+    "strike-witches-girls-on-ship-of-fools": {
+      "epubUrl": "https://assets.labonroof.top/downloads/strike-witches-girls-on-ship-of-fools-5304ec9ec16612d2.epub",
+      "sha256": "d488b61297412fa6f294f72f13f9631a3eae4e70b2e7c47f4ebcabaca90b5dda",
+      "bytes": 4814255,
+      "contentRevision": "5304ec9ec16612d2",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:51:49.702Z"
+    },
+    "sturm-und-drang-introduction-to-psychoanalysis-excerpt": {
+      "epubUrl": "https://assets.labonroof.top/downloads/sturm-und-drang-introduction-to-psychoanalysis-excerpt-9f869d1c3fb27fcc.epub",
+      "sha256": "bd89455dc1d5868a36d8b24c452fea9a1defbd2f44ea368e13976bb409a07282",
+      "bytes": 1235578,
+      "contentRevision": "9f869d1c3fb27fcc",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:24:53.628Z"
+    },
+    "styled-masculinity-salon-hair-care": {
+      "epubUrl": "https://assets.labonroof.top/downloads/styled-masculinity-salon-hair-care-145fca17d8c47a50.epub",
+      "sha256": "2321efbc028a423c83b16043a63e798cfc1c07c82f7fcb44641a5bf880a3dd96",
+      "bytes": 1375328,
+      "contentRevision": "145fca17d8c47a50",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:30:34.116Z"
+    },
+    "suan-anime-spatiality": {
+      "epubUrl": "https://assets.labonroof.top/downloads/suan-anime-spatiality-dac264624ad8ac07.epub",
+      "sha256": "9587c527a84fb27140581097e1e1337f6c810f0affa343b3da62b7b9b54bfb77",
+      "bytes": 2867141,
+      "contentRevision": "dac264624ad8ac07",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:18:49.235Z"
+    },
+    "sugii-hikaru-light-novel-literary-prize": {
+      "epubUrl": "https://assets.labonroof.top/downloads/sugii-hikaru-light-novel-literary-prize-c15a2f4794ccf1fd.epub",
+      "sha256": "58520150e93717e44b64345c41828cda2b18ea68cd8ec2dd1722169aefed6b27",
+      "bytes": 1186065,
+      "contentRevision": "c15a2f4794ccf1fd",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:17:31.199Z"
+    },
+    "summer-essay-contest-city-space": {
+      "epubUrl": "https://assets.labonroof.top/downloads/summer-essay-contest-city-space-eab6b928f876d123.epub",
+      "sha256": "065232288d07f262e38abdcddcd33370bb27c589f8c22e1972ee8193faf1252e",
+      "bytes": 7446118,
+      "contentRevision": "eab6b928f876d123",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:50:38.478Z"
+    },
+    "superman-and-fantasy-beyond-fantasy": {
+      "epubUrl": "https://assets.labonroof.top/downloads/superman-and-fantasy-beyond-fantasy-62b214c511ec6aa3.epub",
+      "sha256": "6e5039b1f6555cee549e85dc253f9e0d27167eec3d38d5a15d0582cd0a40b392",
+      "bytes": 3596179,
+      "contentRevision": "62b214c511ec6aa3",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:52:25.798Z"
+    },
+    "sweetness-lightning-hegemonic-masculinity-video": {
+      "epubUrl": "https://assets.labonroof.top/downloads/sweetness-lightning-hegemonic-masculinity-video-cb8197456107e33c.epub",
+      "sha256": "e9fb591f7c75eacef6d556836c5538b8ffbf5acfcfccae4ac81b1156469b03e2",
+      "bytes": 231091,
+      "contentRevision": "cb8197456107e33c",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:41:11.231Z"
+    },
+    "taekwondo-park-manga-study": {
+      "epubUrl": "https://assets.labonroof.top/downloads/taekwondo-park-manga-study-14827023c24c664f.epub",
+      "sha256": "5f6b20ba5df76e9005548e2e62318ab203864dd22914fa2f2a664b2071f9f17e",
+      "bytes": 1251819,
+      "contentRevision": "14827023c24c664f",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:47:13.768Z"
+    },
+    "takahata-endless-dream-grave-of-the-fireflies": {
+      "epubUrl": "https://assets.labonroof.top/downloads/takahata-endless-dream-grave-of-the-fireflies-d0db832fc7309e5b.epub",
+      "sha256": "e2681221e0ae7dc6cbeaaab9973688d331ee2353f71b11c4be9b6d7fb0cf1d0d",
+      "bytes": 13487705,
+      "contentRevision": "d0db832fc7309e5b",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:13:53.372Z"
+    },
+    "takeuchi-yoshimi-displacing-method-interview": {
+      "epubUrl": "https://assets.labonroof.top/downloads/takeuchi-yoshimi-displacing-method-interview-6561549b20e52ac1.epub",
+      "sha256": "83e6e5e06d6abed2ac99e237292157c1a68fe26df613068c47998f233850db38",
+      "bytes": 6088555,
+      "contentRevision": "6561549b20e52ac1",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:14:44.458Z"
+    },
+    "takinami-shinkai-landscape-materialism": {
+      "epubUrl": "https://assets.labonroof.top/downloads/takinami-shinkai-landscape-materialism-225b311b20635497.epub",
+      "sha256": "bd51fd6badc3a22de43414f7e25d0dfb49957278799bc7dec8f36fb6039ef2d0",
+      "bytes": 14046363,
+      "contentRevision": "225b311b20635497",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:14:04.257Z"
+    },
+    "teekyu-gintama-schizo-kids-animation": {
+      "epubUrl": "https://assets.labonroof.top/downloads/teekyu-gintama-schizo-kids-animation-a0f80eab320bb035.epub",
+      "sha256": "dd66deb5ef03680808ab2aeb5c2110a969657988e75555303881ee66ea3f83a3",
+      "bytes": 8831109,
+      "contentRevision": "a0f80eab320bb035",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:44:40.004Z"
+    },
+    "tezuka-phantom-blot-new-treasure-island": {
+      "epubUrl": "https://assets.labonroof.top/downloads/tezuka-phantom-blot-new-treasure-island-c0b55e4d2fe000db.epub",
+      "sha256": "e89df48ef9ee3cc16bcba48043c3f7c901b5de3ec21fe511f26b419ba3ec24f8",
+      "bytes": 3451554,
+      "contentRevision": "c0b55e4d2fe000db",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:38:39.279Z"
+    },
+    "the-big-o-messiah-always-late": {
+      "epubUrl": "https://assets.labonroof.top/downloads/the-big-o-messiah-always-late-1c0eebb56c6be1b6.epub",
+      "sha256": "a29b5d10142b2c20d4c85ccd119baf7d3651dec035427c514b839308cda77790",
+      "bytes": 1468596,
+      "contentRevision": "1c0eebb56c6be1b6",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:39:51.324Z"
+    },
+    "thomas-lamarre-manga-bomb-barefoot-gen": {
+      "epubUrl": "https://assets.labonroof.top/downloads/thomas-lamarre-manga-bomb-barefoot-gen-f1385e36f3774610.epub",
+      "sha256": "d5d6d1db7180c2e0be1bfd0faf6642781d5fa9ba65c8716251d1b09457e369a2",
+      "bytes": 3599785,
+      "contentRevision": "f1385e36f3774610",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:15:08.158Z"
+    },
+    "tillie-olsen-women-up-north-know": {
+      "epubUrl": "https://assets.labonroof.top/downloads/tillie-olsen-women-up-north-know-9ae7164f7b88e63c.epub",
+      "sha256": "c5f1eaa712430c51a286c04aa420af17e3f418bf7d130a4de5db4636f3a4db63",
+      "bytes": 792936,
+      "contentRevision": "9ae7164f7b88e63c",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:25:04.127Z"
+    },
+    "time-disaster-new-media-your-name": {
+      "epubUrl": "https://assets.labonroof.top/downloads/time-disaster-new-media-your-name-13218f0d771bd211.epub",
+      "sha256": "39e216355fa15ac5255a463225467e42c29c360ae123a338e3012591403ddace",
+      "bytes": 2423352,
+      "contentRevision": "13218f0d771bd211",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:14:24.784Z"
+    },
+    "tokusatsu-three-essays": {
+      "epubUrl": "https://assets.labonroof.top/downloads/tokusatsu-three-essays-01d67b1f989b88a5.epub",
+      "sha256": "e006dc0613134ff645692dd7fb655f1e1c245fcb3bbeef8e5dd1203344b0a3d7",
+      "bytes": 17584388,
+      "contentRevision": "01d67b1f989b88a5",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:49:16.459Z"
+    },
+    "tokyo-ghoul-unravel-opening-analysis": {
+      "epubUrl": "https://assets.labonroof.top/downloads/tokyo-ghoul-unravel-opening-analysis-e2ba8ed7b81d835a.epub",
+      "sha256": "2b34e9348eba57212eef7bdeb75f446632804862fbddefb450f08a6e537dc4ea",
+      "bytes": 5219868,
+      "contentRevision": "e2ba8ed7b81d835a",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:41:20.411Z"
+    },
+    "tokyo-godfathers-comedy-myth": {
+      "epubUrl": "https://assets.labonroof.top/downloads/tokyo-godfathers-comedy-myth-8ec6684c9f824ea8.epub",
+      "sha256": "3b1ef76972d459dc98b868ce1c520be988150e6931b9afd277e7f90dfa790c7c",
+      "bytes": 1873255,
+      "contentRevision": "8ec6684c9f824ea8",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:48:11.831Z"
+    },
+    "tomino-hasty-realization-fictional-world": {
+      "epubUrl": "https://assets.labonroof.top/downloads/tomino-hasty-realization-fictional-world-c951ce818c3bb6df.epub",
+      "sha256": "b941d627898b1496facb95b121de20a24d2f5c16be229a23c52f50ef2a3aec1c",
+      "bytes": 694281,
+      "contentRevision": "c951ce818c3bb6df",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:32:36.183Z"
+    },
+    "tomioka-malicious-host-training-manual": {
+      "epubUrl": "https://assets.labonroof.top/downloads/tomioka-malicious-host-training-manual-9eb89e35e1600612.epub",
+      "sha256": "17f9f5e881928d9fd6297df37977772b7e548497c65692dc1f82938a06e40d81",
+      "bytes": 867699,
+      "contentRevision": "9eb89e35e1600612",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:24:14.885Z"
+    },
+    "tonikawa-pure-love-inversion": {
+      "epubUrl": "https://assets.labonroof.top/downloads/tonikawa-pure-love-inversion-dae878acd7400d58.epub",
+      "sha256": "6c8b9a25280c1c31b5e9fdfc6ecf4afd1186fc4206dc85533ad899703648d9e0",
+      "bytes": 781544,
+      "contentRevision": "dae878acd7400d58",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:33:04.317Z"
+    },
+    "totoro-panda-father-kami-mother": {
+      "epubUrl": "https://assets.labonroof.top/downloads/totoro-panda-father-kami-mother-eb52ec859a81650a.epub",
+      "sha256": "3a5bc840709f7f079e864ddf0319342ef2b09a6d638c604a49f24f6c29c72517",
+      "bytes": 1629635,
+      "contentRevision": "eb52ec859a81650a",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:57:44.863Z"
+    },
+    "toward-post-revolution-concrete-revolutio-revisited": {
+      "epubUrl": "https://assets.labonroof.top/downloads/toward-post-revolution-concrete-revolutio-revisited-e0f8cc18ee9c82b8.epub",
+      "sha256": "54a44f6bf8e7c5b357ba2938c33793212b61ca44b7a0af10696953410fa35f32",
+      "bytes": 18031654,
+      "contentRevision": "e0f8cc18ee9c82b8",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:51:06.441Z"
+    },
+    "translators-tea-party-volunteer-feminist-translation": {
+      "epubUrl": "https://assets.labonroof.top/downloads/translators-tea-party-volunteer-feminist-translation-f88dcd9a014cd7fa.epub",
+      "sha256": "ed37e8a851166e9d777b29a0522ff8805289ae1a477e274dfb03fcbcc05c95a4",
+      "bytes": 3892026,
+      "contentRevision": "f88dcd9a014cd7fa",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:26:29.085Z"
+    },
+    "trinh-minh-ha-infinite-layers-third-world": {
+      "epubUrl": "https://assets.labonroof.top/downloads/trinh-minh-ha-infinite-layers-third-world-fcfdec3331660640.epub",
+      "sha256": "a7bd389c17a4769e6b90ae37268872ee94d28e50bca90bbebb0fab2d20094998",
+      "bytes": 762667,
+      "contentRevision": "fcfdec3331660640",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:29:01.683Z"
+    },
+    "tsurune-kyudo-cultural-details": {
+      "epubUrl": "https://assets.labonroof.top/downloads/tsurune-kyudo-cultural-details-ec4c18113484a9e1.epub",
+      "sha256": "9e1069aafd80319933ee42b6b95b57a302138445bfbe0080b9c32dcd567d2819",
+      "bytes": 1594137,
+      "contentRevision": "ec4c18113484a9e1",
+      "generator": 1,
+      "generatedAt": "2026-09-11T00:00:07.296Z"
+    },
+    "uekita-chiaki-quasi-everyday-theory": {
+      "epubUrl": "https://assets.labonroof.top/downloads/uekita-chiaki-quasi-everyday-theory-c8f39994686d88dc.epub",
+      "sha256": "b6fd52fc4b8628c4783fcfbb0fb3910ddaa13ab28d1032da0a6b4736e7cf5025",
+      "bytes": 2062703,
+      "contentRevision": "c8f39994686d88dc",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:46:44.226Z"
+    },
+    "ueno-chizuko-fifteen-hour-bride": {
+      "epubUrl": "https://assets.labonroof.top/downloads/ueno-chizuko-fifteen-hour-bride-b9dbe92f6706c762.epub",
+      "sha256": "9d4f4bed4bfc98b44d2c68fc10e50f3a59e7305875b92e4235c62d1694bf1d22",
+      "bytes": 1062281,
+      "contentRevision": "b9dbe92f6706c762",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:27:54.888Z"
+    },
+    "ufotable-20th-anniversary-wild-meticulous-growth": {
+      "epubUrl": "https://assets.labonroof.top/downloads/ufotable-20th-anniversary-wild-meticulous-growth-09e25a59274e1e97.epub",
+      "sha256": "ec0657e74d91a4155d4cdca77c4c263f33f195c63bf8adf6884dfa8098619d4e",
+      "bytes": 24452429,
+      "contentRevision": "09e25a59274e1e97",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:38:27.334Z"
+    },
+    "understanding-roland-barthes-death-of-the-author": {
+      "epubUrl": "https://assets.labonroof.top/downloads/understanding-roland-barthes-death-of-the-author-70a17032339198a3.epub",
+      "sha256": "b1d68fed8965e302c20db2faf41752bb68a349fd36ea74fe08137e55aa031cc5",
+      "bytes": 893750,
+      "contentRevision": "70a17032339198a3",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:53:47.273Z"
+    },
+    "uno-akb48-perpetual-motion-machine-of-character-consumption": {
+      "epubUrl": "https://assets.labonroof.top/downloads/uno-akb48-perpetual-motion-machine-of-character-consumption-c5b24f693284c063.epub",
+      "sha256": "76b6fbf8cadd0e6dc84175292dcec173308f4589000693416cfa3266539c4671",
+      "bytes": 7121697,
+      "contentRevision": "c5b24f693284c063",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:29:32.081Z"
+    },
+    "uno-gundam-witch-from-mercury-war-school-diorama": {
+      "epubUrl": "https://assets.labonroof.top/downloads/uno-gundam-witch-from-mercury-war-school-diorama-926a61d211ce4dbd.epub",
+      "sha256": "1c132179843bb1c8a0b5929312bb6b1713e0ca70b77dd21b8c7104233515cb51",
+      "bytes": 1421530,
+      "contentRevision": "926a61d211ce4dbd",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:24:47.296Z"
+    },
+    "uno-kamen-rider-black-sun": {
+      "epubUrl": "https://assets.labonroof.top/downloads/uno-kamen-rider-black-sun-0dea5d52f759844e.epub",
+      "sha256": "93a29f58a85a0d83c3121a015e104ff51d317e1fdee99d20c5ccc635b34ec5bd",
+      "bytes": 4192208,
+      "contentRevision": "0dea5d52f759844e",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:29:44.657Z"
+    },
+    "uno-spy-family-family-boyhood": {
+      "epubUrl": "https://assets.labonroof.top/downloads/uno-spy-family-family-boyhood-bc7ee6e30f36303e.epub",
+      "sha256": "91eaf5630c4e90d5b4d9cd9abf8e6af88d3d7f1e8f91d480db7b96faa9150742",
+      "bytes": 1202501,
+      "contentRevision": "bc7ee6e30f36303e",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:22:42.883Z"
+    },
+    "uno-suzume-national-author-awareness": {
+      "epubUrl": "https://assets.labonroof.top/downloads/uno-suzume-national-author-awareness-179707dc1e1327bc.epub",
+      "sha256": "2a9c67a091f44a620980122a47021aa3c13555ec07fb5bb8d813e3f6c7d0802d",
+      "bytes": 1747452,
+      "contentRevision": "179707dc1e1327bc",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:27:24.833Z"
+    },
+    "urban-legends-concepts": {
+      "epubUrl": "https://assets.labonroof.top/downloads/urban-legends-concepts-83f465b07dff2fe6.epub",
+      "sha256": "7039c130124bc2e9cdc0edd95c2b507b04b70d7b6ed53b58a52941b4b2f96d85",
+      "bytes": 2030193,
+      "contentRevision": "83f465b07dff2fe6",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:48:22.519Z"
+    },
+    "utena-lain-liminal-girls": {
+      "epubUrl": "https://assets.labonroof.top/downloads/utena-lain-liminal-girls-6411f4f83adea947.epub",
+      "sha256": "ca88035887727daa2777294e6ae2ebbb28c2a6e5cfeb3afe57a24b41032e28ad",
+      "bytes": 1700737,
+      "contentRevision": "6411f4f83adea947",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:34:25.035Z"
+    },
+    "utena-patriarchy-entrapment": {
+      "epubUrl": "https://assets.labonroof.top/downloads/utena-patriarchy-entrapment-5af0fa429e398a0c.epub",
+      "sha256": "cdccb760bbe5720deef4c72811f19f5478dfa2014a4a65fd825fe45bef60b116",
+      "bytes": 1962686,
+      "contentRevision": "5af0fa429e398a0c",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:36:50.700Z"
+    },
+    "vandana-shiva-development-ecology-women-1989": {
+      "epubUrl": "https://assets.labonroof.top/downloads/vandana-shiva-development-ecology-women-1989-75757fe43158ebfd.epub",
+      "sha256": "fc00b52fd202882d1d7df350bc14762c86c686c64a89ca3a68974b2f8b8f6ef5",
+      "bytes": 966411,
+      "contentRevision": "75757fe43158ebfd",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:25:23.688Z"
+    },
+    "victoria-woodhull-truth-shall-make-you-free": {
+      "epubUrl": "https://assets.labonroof.top/downloads/victoria-woodhull-truth-shall-make-you-free-af346b5a62525c23.epub",
+      "sha256": "efe05b28418124be2d82b53b2c48a2ff663886d49c9321a02022876c544013db",
+      "bytes": 816439,
+      "contentRevision": "af346b5a62525c23",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:27:49.866Z"
+    },
+    "waheenee-indian-girls-story-bilingual": {
+      "epubUrl": "https://assets.labonroof.top/downloads/waheenee-indian-girls-story-bilingual-5e5299ff7bbeb023.epub",
+      "sha256": "c92af16a3122d28d4dede014f87f251a6a80daeacbb2f9811a281929df053766",
+      "bytes": 396452,
+      "contentRevision": "5e5299ff7bbeb023",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:25:51.814Z"
+    },
+    "wartime-models-and-imaginary-weapons": {
+      "epubUrl": "https://assets.labonroof.top/downloads/wartime-models-and-imaginary-weapons-7dfe68466c231b7e.epub",
+      "sha256": "847b0367ce3a4832e6ec873bc08407058b3bfdf29bdfc839dd7233b1bff16af6",
+      "bytes": 5698477,
+      "contentRevision": "7dfe68466c231b7e",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:49:49.811Z"
+    },
+    "wasteful-days-smile-through-meaninglessness": {
+      "epubUrl": "https://assets.labonroof.top/downloads/wasteful-days-smile-through-meaninglessness-7cfd322a35d9bb59.epub",
+      "sha256": "df7c3128682de4c1132f61dea3f22fea87d1a423f1e4ef41b9a674ad514cccdd",
+      "bytes": 1650758,
+      "contentRevision": "7cfd322a35d9bb59",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:46:50.501Z"
+    },
+    "we-are-dancing-empty-throne-after-humanity": {
+      "epubUrl": "https://assets.labonroof.top/downloads/we-are-dancing-empty-throne-after-humanity-750a1c308fc0d373.epub",
+      "sha256": "376797882dfb93b86e30a253949f5677adbe8d2b69cfef71ab2c057a9f540a79",
+      "bytes": 1491249,
+      "contentRevision": "750a1c308fc0d373",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:51:57.434Z"
+    },
+    "weathering-with-you-love-in-the-age-of-winners": {
+      "epubUrl": "https://assets.labonroof.top/downloads/weathering-with-you-love-in-the-age-of-winners-67a936c1511d943d.epub",
+      "sha256": "587a4da8055af9cd79210a4824ef7aaa32ba2165c036e3e85b19546d0adb14c2",
+      "bytes": 17309321,
+      "contentRevision": "67a936c1511d943d",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:45:45.495Z"
+    },
+    "weathering-with-you-review": {
+      "epubUrl": "https://assets.labonroof.top/downloads/weathering-with-you-review-84cc2ab6a19116a4.epub",
+      "sha256": "bd990782475b5f76f5468c57b7887008e9fa1298286547fbe4510c2e4f1a18c9",
+      "bytes": 8831101,
+      "contentRevision": "84cc2ab6a19116a4",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:49:26.934Z"
+    },
+    "weathering-with-you-sekaikei-sociality": {
+      "epubUrl": "https://assets.labonroof.top/downloads/weathering-with-you-sekaikei-sociality-0eb1707da030c7a0.epub",
+      "sha256": "9ac1a1b6f33e6db6c877704b76f571f0bee46e0f913f97a9b3f297bca9a807e7",
+      "bytes": 7803861,
+      "contentRevision": "0eb1707da030c7a0",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:46:30.441Z"
+    },
+    "weathering-with-you-sky-and-heart": {
+      "epubUrl": "https://assets.labonroof.top/downloads/weathering-with-you-sky-and-heart-cd5a704b8a35a1b3.epub",
+      "sha256": "29f49ce298901ebdc5a56f796267d574c30cc0286881fe09e55b194f0a90023f",
+      "bytes": 22175241,
+      "contentRevision": "cd5a704b8a35a1b3",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:45:57.969Z"
+    },
+    "weathering-with-you-tragic-hero-knight-of-faith": {
+      "epubUrl": "https://assets.labonroof.top/downloads/weathering-with-you-tragic-hero-knight-of-faith-18ead4164ea6da13.epub",
+      "sha256": "f8c5e3965dc9397dee8a8b3cf3e043de58c772d2ac8be9e59c725dda0e176e5e",
+      "bytes": 4522617,
+      "contentRevision": "18ead4164ea6da13",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:46:36.169Z"
+    },
+    "what-is-cloud-behavior-ontology-internal-heterogeneity": {
+      "epubUrl": "https://assets.labonroof.top/downloads/what-is-cloud-behavior-ontology-internal-heterogeneity-739233be87ccd99f.epub",
+      "sha256": "2816fc938084273da48d0ca7383590561de46de3030c3824d6cc6a0e0de3bfdb",
+      "bytes": 956319,
+      "contentRevision": "739233be87ccd99f",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:39:38.532Z"
+    },
+    "what-is-light-novel-concept-analysis": {
+      "epubUrl": "https://assets.labonroof.top/downloads/what-is-light-novel-concept-analysis-6a7f4926bb77ef7a.epub",
+      "sha256": "6232347efea6e21bb9b1b5e37d74ab75776d4b1478d1df527621fe131d09f9ca",
+      "bytes": 2856814,
+      "contentRevision": "6a7f4926bb77ef7a",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:55:17.132Z"
+    },
+    "what-we-watch-in-monster-movies": {
+      "epubUrl": "https://assets.labonroof.top/downloads/what-we-watch-in-monster-movies-d1ac3945f0a208be.epub",
+      "sha256": "6cc4035af31123420899b95bc9c9ab8f26c6515df184b2905263794e198742fe",
+      "bytes": 980190,
+      "contentRevision": "d1ac3945f0a208be",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:58:56.256Z"
+    },
+    "where-does-the-ark-sail": {
+      "epubUrl": "https://assets.labonroof.top/downloads/where-does-the-ark-sail-ecc39de3efbb1e50.epub",
+      "sha256": "ced6709f6f209a68d390db75d114794dc061a34e9d240ee821a642029a504b9a",
+      "bytes": 18383134,
+      "contentRevision": "ecc39de3efbb1e50",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:50:14.884Z"
+    },
+    "white-album-season-wa1-introduction": {
+      "epubUrl": "https://assets.labonroof.top/downloads/white-album-season-wa1-introduction-a33c9f3e41ec5f14.epub",
+      "sha256": "6340c0adf17ca94ebab231ae6b4e4ebaf279b6b60069db5697ca29dba3c8806a",
+      "bytes": 13026372,
+      "contentRevision": "a33c9f3e41ec5f14",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:56:33.085Z"
+    },
+    "why-acg-works-lack-more-reality": {
+      "epubUrl": "https://assets.labonroof.top/downloads/why-acg-works-lack-more-reality-d726dc322574f65b.epub",
+      "sha256": "58e17e80e110cf65ddcfb55d9974b3f97a951bfea29289b19e3056eaae2b5e2b",
+      "bytes": 2884220,
+      "contentRevision": "d726dc322574f65b",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:56:27.096Z"
+    },
+    "why-praise-depth-in-animation-model": {
+      "epubUrl": "https://assets.labonroof.top/downloads/why-praise-depth-in-animation-model-fd05365d0408eb93.epub",
+      "sha256": "4ffbe2d96b1bc19cd0e049f6d404fb37c44e73947dabf3a0836ca57ed1a72db9",
+      "bytes": 13939440,
+      "contentRevision": "fd05365d0408eb93",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:45:35.893Z"
+    },
+    "witcher-wilderness-detective": {
+      "epubUrl": "https://assets.labonroof.top/downloads/witcher-wilderness-detective-1f9dc7e3074317df.epub",
+      "sha256": "a4f60f8e9b7f506cacc501d7fdfa64281d91791dd13b1dc3a2d4b3e68c2a62d2",
+      "bytes": 845063,
+      "contentRevision": "1f9dc7e3074317df",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:33:22.814Z"
+    },
+    "wonder-egg-priority-production-notes-episode-03": {
+      "epubUrl": "https://assets.labonroof.top/downloads/wonder-egg-priority-production-notes-episode-03-b44fb3300ce98046.epub",
+      "sha256": "457ff45f9f2d453bf760a3075d265265464758572d2529df11dad8fd915d48f9",
+      "bytes": 68550565,
+      "contentRevision": "b44fb3300ce98046",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:37:47.978Z"
+    },
+    "wonder-egg-priority-production-notes-episodes-01-02": {
+      "epubUrl": "https://assets.labonroof.top/downloads/wonder-egg-priority-production-notes-episodes-01-02-b8d4fcc1a75fbf68.epub",
+      "sha256": "c38adc1715e6b091fe98624b1a171040a5d9475dd3eec6f371e16b04f461c2a9",
+      "bytes": 39523277,
+      "contentRevision": "b8d4fcc1a75fbf68",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:38:11.372Z"
+    },
+    "wonder-egg-priority-production-notes-episodes-04-07": {
+      "epubUrl": "https://assets.labonroof.top/downloads/wonder-egg-priority-production-notes-episodes-04-07-43c5bcf74d71831c.epub",
+      "sha256": "2ba57def5ab15afaa9549e61a471c8e5e463b73975b4620a5bdea15c1b3cf88d",
+      "bytes": 146582981,
+      "contentRevision": "43c5bcf74d71831c",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:37:07.504Z"
+    },
+    "woodpecker-detectives-office-socialist-memorial": {
+      "epubUrl": "https://assets.labonroof.top/downloads/woodpecker-detectives-office-socialist-memorial-daf4a002d4875700.epub",
+      "sha256": "0782833233f538e7f874b2a373cb302e31cc4edc54d9edbad0e5aba11d8dc84b",
+      "bytes": 3100622,
+      "contentRevision": "daf4a002d4875700",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:41:07.718Z"
+    },
+    "work-emotion-robots": {
+      "epubUrl": "https://assets.labonroof.top/downloads/work-emotion-robots-14bab2477fb88d3c.epub",
+      "sha256": "8d76bfc084f79fca61dd9badf35268363989259095aa67ae325f724f34fa8070",
+      "bytes": 4873865,
+      "contentRevision": "14bab2477fb88d3c",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:48:48.286Z"
+    },
+    "yama-no-susume-season-3-episode-10-china": {
+      "epubUrl": "https://assets.labonroof.top/downloads/yama-no-susume-season-3-episode-10-china-75b5b8d4724c0e25.epub",
+      "sha256": "1eb56c21ba38d5d789bd34758fa76f7a35bce33bfd4ea62a6067905e363e76ee",
+      "bytes": 5011742,
+      "contentRevision": "75b5b8d4724c0e25",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:36:57.221Z"
+    },
+    "yasashii-gentle-kind-strong": {
+      "epubUrl": "https://assets.labonroof.top/downloads/yasashii-gentle-kind-strong-3c958d8bb5e4696d.epub",
+      "sha256": "72439026ca3417d434ed7821acba158955d0776bd89f4426c6a64c3e3a4c0dcf",
+      "bytes": 1024816,
+      "contentRevision": "3c958d8bb5e4696d",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:51:16.485Z"
+    },
+    "yesterday-wo-utatte-anime-manga-adaptation": {
+      "epubUrl": "https://assets.labonroof.top/downloads/yesterday-wo-utatte-anime-manga-adaptation-1d3da47c9abf3b49.epub",
+      "sha256": "b9954ae159733f6ba4581214880195ac8512f8f678a481018e87c77346ec5249",
+      "bytes": 19713019,
+      "contentRevision": "1d3da47c9abf3b49",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:44:00.424Z"
+    },
+    "yoshishige-yoshida-confessions-among-actresses-model-gaze-field": {
+      "epubUrl": "https://assets.labonroof.top/downloads/yoshishige-yoshida-confessions-among-actresses-model-gaze-field-8f7e5b808001c387.epub",
+      "sha256": "5424b135ec2ef35c9944228b0a059b2ff19f681de702a218520d188ce7ff4c1a",
+      "bytes": 161047245,
+      "contentRevision": "8f7e5b808001c387",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:35:20.109Z"
+    },
+    "yuri-anime-patriarchy-complicity": {
+      "epubUrl": "https://assets.labonroof.top/downloads/yuri-anime-patriarchy-complicity-25bad25038cdffea.epub",
+      "sha256": "41b43221e99a66656a0576050b9b57aa0aaa8030af9d720aad9aa07c09bc1bd3",
+      "bytes": 989036,
+      "contentRevision": "25bad25038cdffea",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:22:18.950Z"
+    },
+    "yuri-genre-formation-process": {
+      "epubUrl": "https://assets.labonroof.top/downloads/yuri-genre-formation-process-c263d4704783bea0.epub",
+      "sha256": "39ee79df3e730501eb45634efadff8fe582ee9aa0a081633631ba9752de980e6",
+      "bytes": 2584062,
+      "contentRevision": "c263d4704783bea0",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:17:19.803Z"
+    },
+    "zitkala-sa-american-indian-stories-excerpts": {
+      "epubUrl": "https://assets.labonroof.top/downloads/zitkala-sa-american-indian-stories-excerpts-63ae6ba8e629b552.epub",
+      "sha256": "fac704ac81b61f032aac8e98d50c8675c5f4cffdbc8912c986ad27d7c2f6b8a6",
+      "bytes": 800622,
+      "contentRevision": "63ae6ba8e629b552",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:25:39.367Z"
+    },
+    "zizek-materialism-without-materialism": {
+      "epubUrl": "https://assets.labonroof.top/downloads/zizek-materialism-without-materialism-8cd18dc82086d60d.epub",
+      "sha256": "bf51347e7119837d8880b34835c9098e6417f920dc804a2246a1fb3bab498a2e",
+      "bytes": 1149343,
+      "contentRevision": "8cd18dc82086d60d",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:36:13.439Z"
+    },
+    "zombieland-saga-can-idols-become-legends": {
+      "epubUrl": "https://assets.labonroof.top/downloads/zombieland-saga-can-idols-become-legends-b77ab85de6fda9ad.epub",
+      "sha256": "312b8f96afed8657cfcdd291fae176f2f2974eb86160e6482bb4cdb10e325af9",
+      "bytes": 1589265,
+      "contentRevision": "b77ab85de6fda9ad",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:58:02.148Z"
+    },
+    "zora-neale-hurston-sweat": {
+      "epubUrl": "https://assets.labonroof.top/downloads/zora-neale-hurston-sweat-959b0ab81f7f6668.epub",
+      "sha256": "0ee59ba65112e8336d5f3ed09ceedc8e1db6b1e24a680e93110554310b6f0542",
+      "bytes": 1360465,
+      "contentRevision": "959b0ab81f7f6668",
+      "generator": 1,
+      "generatedAt": "2026-09-10T23:27:35.919Z"
+    }
+  }
+}
