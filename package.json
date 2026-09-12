@@ -50,7 +50,7 @@
     "fonts:sync": "npm run fonts:cjk:sync && npm run fonts:translations:sync",
     "ebooks:build": "node --experimental-strip-types --no-warnings --import ./scripts/ebook-ts-loader.mjs scripts/build-ebooks.mjs --if-stale",
     "ebooks:build:all": "node --experimental-strip-types --no-warnings --import ./scripts/ebook-ts-loader.mjs scripts/build-ebooks.mjs",
-    "verify:ebooks": "node --experimental-strip-types --no-warnings --import ./scripts/ebook-ts-loader.mjs --test tests/ebook-manifest.test.mjs tests/ebook-epub.test.mjs tests/ebook-ui.test.mjs",
+    "verify:ebooks": "node --experimental-strip-types --no-warnings --import ./scripts/ebook-ts-loader.mjs --test tests/ebook-manifest.test.mjs tests/ebook-epub.test.mjs tests/ebook-ui.test.mjs tests/ebook-coverage.test.mjs",
     "verify:reading-progress": "node --experimental-strip-types --no-warnings scripts/verify-reading-progress.mjs",
     "verify:han-script": "node --experimental-strip-types --no-warnings scripts/verify-han-script.mjs",
     "verify:citations": "node --experimental-strip-types --no-warnings scripts/verify-citations.mjs",
