@@ -1825,7 +1825,6 @@ input.referenceCurrent::selection { color: var(--solid-ink); background: var(--s
 .layoutChoices button[aria-pressed="true"] { border-color: var(--accent); box-shadow: inset 0 -3px var(--accent); }
 .settingHint { margin: 10px 0 0; font-family: var(--reader-interface-family); font-size: 12px; line-height: 1.65; color: var(--ink-soft); }
 @media (min-width: 1024px) {
-  .runningTools[data-contents-mode="auto"] .compactTocButton,
   .runningTools[data-contents-mode="hidden"] .compactTocButton { display: inline-flex; }
 }
 @media (prefers-reduced-motion: reduce) {

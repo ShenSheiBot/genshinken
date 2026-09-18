@@ -138,6 +138,13 @@ test("hover notes allow moving into the popup and dismiss on leaving", async ({ 
 test("contents auto-hide, remain usable by keyboard, and can be pinned", async ({ page, isMobile }) => {
   test.skip(isMobile, "narrow screens retain the header contents control");
   await page.goto(route);
+  const headerContents = page.locator('button[class*="compactTocButton"]');
+  await expect(headerContents).toBeHidden();
+  const desktopViewport = page.viewportSize()!;
+  await page.setViewportSize({ width: 900, height: desktopViewport.height });
+  await expect(headerContents).toBeVisible();
+  await page.setViewportSize(desktopViewport);
+  await expect(headerContents).toBeHidden();
   await reference(page).scrollIntoViewIfNeeded();
   const reveal = page.locator("#reader-hover-contents");
   const trigger = page.locator('#reading-left-rail button[aria-controls="reader-hover-contents"]');
@@ -191,6 +198,9 @@ test("hidden contents remain accessible from the header and quiet defaults can b
   await settings.getByRole("button", { name: "隐藏", exact: true }).click();
   await settings.getByRole("button", { name: "关闭", exact: true }).click();
   await expect(page.locator("#reading-left-rail > div")).toHaveCount(0);
+  if (page.viewportSize()!.width >= 1024) {
+    await expect(page.locator('button[class*="compactTocButton"]')).toBeVisible();
+  }
   const header = page.locator("header").filter({ has: page.getByRole("button", { name: "阅读习惯", exact: true }) });
   await header.locator('button[aria-haspopup="dialog"]').filter({ hasText: /目录|导读/ }).filter({ visible: true }).first().click();
   const contents = page.getByRole("dialog", { name: "文章目录", exact: true });
