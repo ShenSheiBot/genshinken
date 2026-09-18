@@ -61,9 +61,21 @@ function resolveContributorId(
   ids: ReadonlySet<string>
 ): string | null {
   const id = requested.trim().toLocaleLowerCase("en-US");
-  if (id === "you-fisherman" && ids.has("murakami-yu")) return "murakami-yu";
-  return ids.has(id) ? id : null;
+  const mergedId = MERGED_CONTRIBUTOR_IDS[id] ?? id;
+  return ids.has(mergedId) ? mergedId : null;
 }
+
+/** Contributor IDs retired by confirmed identity merges; preserve old library links. */
+const MERGED_CONTRIBUTOR_IDS: Readonly<Record<string, string>> = {
+  "kongtongshanxia-sanjiaoya": "kong-tong-shan-xia-san-jiao-ya",
+  "jing-xi-cao-shi-lang": "jing-xi",
+  "lun-bo-lang-jun": "lun-bo-lang",
+  "an-hei-han-bing-ling-zhu-deepl": "an-hei-han-bing",
+  "he-tun-ccc": "he-tun",
+  "ai-sheng-ming-ti-zheng-wei-chi-cha-hua-hui": "sheng-ming-ti-zheng-wei-chi-cha-hua-hui",
+  "wang-qionghai": "red-tea-seaweed",
+  "you-fisherman": "murakami-yu",
+};
 
 function resolveRole(requested: string): CreditRole | null {
   const value = requested.trim().toLocaleLowerCase("en-US");

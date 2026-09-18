@@ -76,14 +76,41 @@ assert.equal(parse("category=历史").filters.category, "历史");
 for (const byline of ["侑", "村上侑", "长相最刻板印象的亚洲企鹅"]) {
   assert.equal(findContributorByName(byline)?.id, "murakami-yu", `${byline} must share one identity`);
 }
-{
+assert.notEqual(
+  findContributorByName("实在狗子")?.id,
+  findContributorByName("非实在狗子")?.id,
+  "the interview explicitly introduces them as two people"
+);
+for (const [byline, currentId] of Object.entries({
+  "崆峒山下三角鸦": "kong-tong-shan-xia-san-jiao-ya",
+  "静希草十郎": "jing-xi",
+  "伦勃朗君": "lun-bo-lang",
+  "暗黑寒冰领主＆免费版DeepL": "an-hei-han-bing",
+  "河豚ccc": "he-tun",
+  "AI + 生命体征维持茶话会": "sheng-ming-ti-zheng-wei-chi-cha-hua-hui",
+  "王琼海": "red-tea-seaweed",
+})) {
+  const contributor = findContributorByName(byline);
+  assert.equal(contributor?.id, currentId, `${byline} must share the confirmed identity`);
+  assert.equal(contributor.preserveSourceByline, true, `${byline} must remain visible in its original credit`);
+}
+for (const [oldId, currentId] of Object.entries({
+  "kongtongshanxia-sanjiaoya": "kong-tong-shan-xia-san-jiao-ya",
+  "jing-xi-cao-shi-lang": "jing-xi",
+  "lun-bo-lang-jun": "lun-bo-lang",
+  "an-hei-han-bing-ling-zhu-deepl": "an-hei-han-bing",
+  "he-tun-ccc": "he-tun",
+  "ai-sheng-ming-ti-zheng-wei-chi-cha-hua-hui": "sheng-ming-ti-zheng-wei-chi-cha-hua-hui",
+  "wang-qionghai": "red-tea-seaweed",
+  "you-fisherman": "murakami-yu",
+})) {
   const mergedFacets = {
     ...facets,
-    contributors: [{ id: "murakami-yu", name: "村上侑" }],
+    contributors: [{ id: currentId, name: currentId }],
   };
-  const legacy = parseLibraryFilters(new URLSearchParams("contributor=you-fisherman"), mergedFacets);
-  assert.equal(legacy.filters.contributor, "murakami-yu", "merged contributor links must still resolve");
-  assert.equal(legacy.normalizedHref, "/library?contributor=murakami-yu");
+  const legacy = parseLibraryFilters(new URLSearchParams(`contributor=${oldId}`), mergedFacets);
+  assert.equal(legacy.filters.contributor, currentId, `${oldId} must resolve to its confirmed identity`);
+  assert.equal(legacy.normalizedHref, `/library?contributor=${currentId}`);
 }
 
 // --- 无效值：标记 invalid 并保留其余有效 facet（旧 307 语义） ----------
