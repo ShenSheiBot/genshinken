@@ -9,6 +9,7 @@ export function HoverContents({ label, children }: { label: string; children: Re
   useEffect(() => {
     if (!open) return;
     const closeOutside = (event: PointerEvent) => {
+      if (event.pointerType === "mouse") return;
       if (event.target instanceof Node && !container.current?.contains(event.target)) setOpen(false);
     };
     document.addEventListener("pointerdown", closeOutside);
@@ -17,9 +18,17 @@ export function HoverContents({ label, children }: { label: string; children: Re
   return (
     <div ref={container} className={styles.hoverContents} data-open={open}
       onPointerEnter={(event) => { if (event.pointerType === "mouse") setOpen(true); }}
-      onPointerLeave={(event) => { if (!event.currentTarget.contains(document.activeElement)) setOpen(false); }}
+      onPointerLeave={(event) => {
+        if (event.pointerType !== "mouse") return;
+        const focused = document.activeElement;
+        if (focused instanceof HTMLElement && event.currentTarget.contains(focused) && focused.matches(":focus-visible")) return;
+        if (focused instanceof HTMLElement && event.currentTarget.contains(focused)) focused.blur();
+        setOpen(false);
+      }}
       onFocus={() => setOpen(true)}
-      onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) setOpen(false); }}
+      onBlur={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget) && !event.currentTarget.matches(":hover")) setOpen(false);
+      }}
       onKeyDown={(event) => {
         if (event.key === "Escape") {
           event.stopPropagation();

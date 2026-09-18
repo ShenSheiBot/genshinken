@@ -163,6 +163,27 @@ test("contents auto-hide, remain usable by keyboard, and can be pinned", async (
   await expect(page.locator("#reader-hover-contents")).toHaveCount(0);
 });
 
+test("hover contents stay open after a heading jump until the mouse leaves", async ({ page, isMobile }) => {
+  test.skip(isMobile, "the desktop hover rail is absent on touch screens");
+  await page.goto(route);
+  const reveal = page.locator("#reader-hover-contents");
+  const trigger = page.locator('#reading-left-rail button[aria-controls="reader-hover-contents"]');
+  await trigger.hover();
+  await expect(reveal).toBeVisible();
+  await reveal.locator('[class*="tocJump"]').first().click();
+  await expect.poll(() => page.evaluate(() => document.activeElement?.matches("h1, h2, h3, h4, h5, h6"))).toBe(true);
+  await page.waitForTimeout(300);
+  await expect(reveal).toBeVisible();
+  await page.mouse.move(700, 700);
+  await expect(reveal).toBeHidden();
+  await trigger.hover();
+  await expect(reveal).toBeVisible();
+  await trigger.click();
+  await expect(reveal).toBeVisible();
+  await page.mouse.move(700, 700);
+  await expect(reveal).toBeHidden();
+});
+
 test("hidden contents remain accessible from the header and quiet defaults can be restored", async ({ page }) => {
   await page.goto(route);
   await page.getByRole("button", { name: "阅读习惯", exact: true }).click();
