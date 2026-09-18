@@ -76,6 +76,11 @@ assert.equal(parse("category=历史").filters.category, "历史");
 for (const byline of ["侑", "村上侑", "长相最刻板印象的亚洲企鹅"]) {
   assert.equal(findContributorByName(byline)?.id, "murakami-yu", `${byline} must share one identity`);
 }
+for (const byline of ["天坑", "神必天坑"]) {
+  const contributor = findContributorByName(byline);
+  assert.equal(contributor?.id, "tian-keng", `${byline} must share the confirmed identity`);
+  assert.equal(contributor.preserveSourceByline, true, `${byline} must remain visible in its original credit`);
+}
 assert.notEqual(
   findContributorByName("实在狗子")?.id,
   findContributorByName("非实在狗子")?.id,
@@ -103,6 +108,7 @@ for (const [oldId, currentId] of Object.entries({
   "ai-sheng-ming-ti-zheng-wei-chi-cha-hua-hui": "sheng-ming-ti-zheng-wei-chi-cha-hua-hui",
   "wang-qionghai": "red-tea-seaweed",
   "you-fisherman": "murakami-yu",
+  "shen-bi-tian-keng": "tian-keng",
 })) {
   const mergedFacets = {
     ...facets,

@@ -75,6 +75,7 @@ const MERGED_CONTRIBUTOR_IDS: Readonly<Record<string, string>> = {
   "ai-sheng-ming-ti-zheng-wei-chi-cha-hua-hui": "sheng-ming-ti-zheng-wei-chi-cha-hua-hui",
   "wang-qionghai": "red-tea-seaweed",
   "you-fisherman": "murakami-yu",
+  "shen-bi-tian-keng": "tian-keng",
 };
 
 function resolveRole(requested: string): CreditRole | null {
