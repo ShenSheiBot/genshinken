@@ -1,5 +1,9 @@
 import { expect, test } from "./fixtures";
 
+test.beforeEach(async ({ page }) => {
+  await page.addInitScript(() => localStorage.setItem("roof_reader_contents", "pinned"));
+});
+
 const ARTICLE_PATH = "/posts/azuma-superflat-japanese-postmodernity";
 const CHAPTER_PATH = "/books/zero-years-imagination/chapters/chapter-02";
 const BOOK_PATH = "/books/zero-years-imagination";

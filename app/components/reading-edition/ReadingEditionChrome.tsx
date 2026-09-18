@@ -30,9 +30,13 @@ import { toggleTheme, useTheme } from "@/app/components/useTheme";
 import { SiteSearchTrigger } from "@/app/components/site-search/SiteSearch";
 import styles from "./reading-edition.module.css";
 import { READING_UI, type ReadingUiLocale } from "./reading-edition-ui";
+import { HoverContents, ReferencePopover } from "./ReaderOverlays";
+import ReaderSidenotes from "./ReaderSidenotes";
 
 type ReaderSize = "small" | "medium" | "large";
 type ReaderFont = "serif" | "sans";
+type ContentsMode = "auto" | "pinned" | "hidden";
+type NotesMode = "sidenotes" | "popup" | "rail";
 type ReferenceKind = "annotation" | "source";
 type Sheet = "toc" | "settings" | ReferenceKind | null;
 type FigureIndexMode = "toc" | "figures" | "book";
@@ -435,9 +439,14 @@ export default function ReadingEditionChrome({
   const [sheetClosing, setSheetClosing] = useState(false);
   const [readerSize, setReaderSize] = useState<ReaderSize>("medium");
   const [readerFont, setReaderFont] = useState<ReaderFont>("serif");
+  const [contentsMode, setContentsMode] = useState<ContentsMode>("auto");
+  const [notesMode, setNotesMode] = useState<NotesMode>("sidenotes");
+  const [floatingNote, setFloatingNote] = useState<{ anchor: HTMLAnchorElement; id: string; focus: boolean } | null>(null);
+  const suppressNoteFocus = useRef(false);
   const theme = useTheme();
   const dark = theme === "dark";
   const [desktopDesk, setDesktopDesk] = useState(false);
+  const useNotePopup = notesMode === "popup" || (notesMode === "sidenotes" && !desktopDesk);
   const [slots, setSlots] = useState<DeskSlots | null>(null);
   const [annotations, setAnnotations] = useState<ReferenceItem[]>([]);
   const [sources, setSources] = useState<ReferenceItem[]>([]);
@@ -683,6 +692,10 @@ export default function ReadingEditionChrome({
     const font: ReaderFont = savedFont === "sans" ? "sans" : "serif";
     setReaderSize(size);
     setReaderFont(font);
+    const savedContents = readLocalSetting("roof_reader_contents");
+    setContentsMode(savedContents === "pinned" || savedContents === "hidden" ? savedContents : "auto");
+    const savedNotes = readLocalSetting("roof_reader_notes");
+    setNotesMode(savedNotes === "rail" || savedNotes === "popup" ? savedNotes : "sidenotes");
     document.documentElement.dataset.readerSize = size;
     document.documentElement.dataset.readerFont = font;
     return () => {
@@ -1125,21 +1138,81 @@ export default function ReadingEditionChrome({
     if (!hash) return;
     const link = referenceLinksRef.current.find((item) => item.target.id === hash);
     if (!link) return;
+    if (notesMode === "sidenotes" && desktopDesk) {
+      window.scrollTo({ top: Math.max(0, link.anchor.getBoundingClientRect().top + window.scrollY - visualAnchor()), behavior: "instant" });
+      return;
+    }
+    if (useNotePopup) {
+      // Initial deep links jump immediately; a long smooth scroll would open the
+      // popup while its marker was still several viewports away.
+      window.scrollTo({ top: Math.max(0, link.anchor.getBoundingClientRect().top + window.scrollY - visualAnchor()), behavior: "instant" });
+      setFloatingNote({ anchor: link.anchor, id: hash, focus: false });
+      return;
+    }
     selectReference(link.kind, hash, desktopDesk ? "desk" : "sheet");
     if (!desktopDesk) {
       lastNoteAnchor.current = link.anchor;
       setReferenceTrail([]);
       setSheet(link.kind);
     }
-  }, [annotations, desktopDesk, selectReference, sources]);
+  }, [annotations, desktopDesk, notesMode, selectReference, sources, useNotePopup]);
 
   const activateReference = useCallback((anchor: HTMLAnchorElement, target: HTMLElement) => {
+    if (notesMode === "sidenotes" && desktopDesk) {
+      const note = document.getElementById(`reading-sidenote-${target.id}`);
+      if (note) {
+        const rect = note.getBoundingClientRect();
+        if (rect.top < readingRailTop() || rect.bottom > window.innerHeight) note.scrollIntoView({ block: "center", behavior: "auto" });
+        note.focus({ preventScroll: true });
+        return;
+      }
+    }
+    if (useNotePopup) {
+      // Nested notes keep the original text marker as the positioning/focus anchor.
+      setFloatingNote((current) => ({
+        anchor: anchor.closest("#reader-note-popover") && current ? current.anchor : anchor,
+        id: target.id,
+        focus: true,
+      }));
+      return;
+    }
     const kind: ReferenceKind = target.closest(".source-notes") ? "source" : "annotation";
     lastNoteAnchor.current = anchor;
     setReferenceTrail([]);
     selectReference(kind, target.id, desktopDesk ? "desk" : "sheet");
     if (!desktopDesk) setSheet(kind);
-  }, [desktopDesk, selectReference]);
+  }, [desktopDesk, notesMode, selectReference, useNotePopup]);
+
+  const closeFloatingNote = useCallback((restoreFocus = false) => {
+    if (restoreFocus && floatingNote) {
+      suppressNoteFocus.current = true;
+      floatingNote.anchor.focus({ preventScroll: true });
+      suppressNoteFocus.current = false;
+    }
+    setFloatingNote(null);
+  }, [floatingNote]);
+
+  useEffect(() => {
+    if (!useNotePopup || sheet) return;
+    const show = (event: Event) => {
+      if (suppressNoteFocus.current) return;
+      if (event instanceof PointerEvent && event.pointerType !== "mouse") return;
+      const anchor = (event.target as HTMLElement | null)?.closest<HTMLAnchorElement>('a[href^="#"]');
+      if (!anchor || anchor.closest("#reader-note-popover, .reading-edition-appendix")) return;
+      if (!anchor.closest(".reading-edition-page")) return;
+      const target = safeTarget(anchor.getAttribute("href") || "");
+      if (!target?.closest(".footnotes, .source-notes")) return;
+      setFloatingNote((current) => current?.anchor === anchor ? current : { anchor, id: target.id, focus: false });
+    };
+    document.addEventListener("pointerover", show);
+    document.addEventListener("focusin", show);
+    return () => {
+      document.removeEventListener("pointerover", show);
+      document.removeEventListener("focusin", show);
+    };
+  }, [useNotePopup, sheet]);
+
+  useEffect(() => { setFloatingNote(null); }, [slug, conversionRevision, notesMode, desktopDesk, sheet]);
 
   const followReferenceTable = useCallback((event: ReactMouseEvent<HTMLElement>): boolean => {
     const anchor = (event.target as HTMLElement | null)?.closest<HTMLAnchorElement>('a[data-reference-table-link="true"]');
@@ -1150,8 +1223,12 @@ export default function ReadingEditionChrome({
     event.preventDefault();
     event.stopPropagation();
     const details = target.closest("details");
-    if (details) details.open = true;
+    if (details) {
+      details.open = true;
+      details.dataset.referenceExpanded = "true";
+    }
     setSheet(null);
+    setFloatingNote(null);
     setReferenceTrail([]);
     const hash = anchor.getAttribute("href") || "";
     history.replaceState(history.state, "", window.location.pathname + window.location.search + hash);
@@ -1169,6 +1246,8 @@ export default function ReadingEditionChrome({
     const onClick = (event: MouseEvent) => {
       const anchor = (event.target as HTMLElement | null)?.closest<HTMLAnchorElement>('a[href^="#"]');
       if (!anchor || !flow.contains(anchor)) return;
+      // Let the dedicated full-table handler run before changing note state.
+      if (anchor.dataset.referenceTableLink === "true") return;
       const target = safeTarget(anchor.getAttribute("href") || "");
       if (target && anchor.closest(".reading-edition-appendix, .footnotes, .source-notes") && bodyRef.current?.contains(target)) {
         event.preventDefault();
@@ -1188,6 +1267,17 @@ export default function ReadingEditionChrome({
     flow.addEventListener("click", onClick);
     return () => flow.removeEventListener("click", onClick);
   }, [activateReference]);
+
+  useEffect(() => {
+    if (!annotations.length) return;
+    const appendix = document.querySelector<HTMLElement>("[data-reader-annotations]");
+    if (!appendix) return;
+    appendix.dataset.readerEnhanced = "true";
+    return () => {
+      delete appendix.dataset.readerEnhanced;
+      delete appendix.dataset.referenceExpanded;
+    };
+  }, [annotations]);
 
   const followSheetReference = useCallback((event: ReactMouseEvent<HTMLElement>) => {
     const anchor = (event.target as HTMLElement | null)?.closest<HTMLAnchorElement>('a[href^="#"]');
@@ -1882,6 +1972,16 @@ export default function ReadingEditionChrome({
     );
   };
 
+  const sidenotes = useMemo(() => [...annotations, ...sources].map((item) => ({
+    id: item.id, label: item.label, html: item.html,
+    anchor: referenceLinksRef.current.find((link) => link.target.id === item.id
+      && !link.anchor.closest(".reading-edition-appendix, [data-reader-sidenotes], #reader-note-popover"))?.anchor ?? null,
+  })).sort((a, b) => {
+    if (!a.anchor) return b.anchor ? 1 : 0;
+    if (!b.anchor) return -1;
+    return a.anchor.compareDocumentPosition(b.anchor) & Node.DOCUMENT_POSITION_FOLLOWING ? -1 : 1;
+  }), [annotations, sources]);
+
   const articleIdentity = (
     <section className={styles.articleIdentity}>
       <span className={styles.eyebrow}>{ui.youAreReading}</span>
@@ -1898,11 +1998,14 @@ export default function ReadingEditionChrome({
   ) : null;
   const portalDesk = desktopDesk && slots ? (
     <>
-      {createPortal(leftDesk, slots.left)}
-      {rightDesk && slots.right && createPortal(rightDesk, slots.right)}
+      {contentsMode !== "hidden" && createPortal(contentsMode === "auto"
+        ? <HoverContents label={ui.contents}>{leftDesk}</HoverContents> : leftDesk, slots.left)}
+      {notesMode === "rail" && rightDesk && slots.right && createPortal(rightDesk, slots.right)}
+      {notesMode === "sidenotes" && slots.right && createPortal(
+        <div onClick={followReferenceTable}><ReaderSidenotes notes={sidenotes} originLabel={ui.sourcePosition} typography={`${readerFont}:${readerSize}`} /></div>, slots.right)}
     </>
   ) : null;
-  const lineMarkerPortal = lineMarkerHost && lineMarkers.length > 0
+  const lineMarkerPortal = contentsMode === "pinned" && lineMarkerHost && lineMarkers.length > 0
     ? createPortal(
       <div className={styles.visualLineMarkers} aria-hidden="true">
         {lineMarkers.map((marker) => (
@@ -1937,6 +2040,15 @@ export default function ReadingEditionChrome({
     document.documentElement.dataset.readerFont = font;
     writeLocalSetting("roof_reader_font", font);
   };
+  const updateContentsMode = (mode: ContentsMode) => {
+    setContentsMode(mode);
+    writeLocalSetting("roof_reader_contents", mode);
+  };
+  const updateNotesMode = (mode: NotesMode) => {
+    setNotesMode(mode);
+    writeLocalSetting("roof_reader_notes", mode);
+  };
+  const floatingItem = floatingNote && [...annotations, ...sources].find((item) => item.id === floatingNote.id);
   const settingsControl = (
     <button
       ref={settingsButtonRef}
@@ -1958,6 +2070,13 @@ export default function ReadingEditionChrome({
       {portalDesk}
       {lineMarkerPortal}
       {readingUpdateBoundaryPortal}
+      {floatingNote && floatingItem && !sheet && useNotePopup && (
+        <div onClick={followReferenceTable}>
+          <ReferencePopover anchor={floatingNote.anchor} html={floatingItem.html}
+            label={`${floatingItem.kind === "annotation" ? ui.annotation : ui.source} ${floatingItem.label}`}
+            closeLabel={ui.close} focus={floatingNote.focus} onClose={closeFloatingNote} />
+        </div>
+      )}
       {readerStatus && (
         <p id="reader-status" className={styles.readingResumeStatus} role="status" aria-live="polite">
           {readerStatus}
@@ -1973,7 +2092,7 @@ export default function ReadingEditionChrome({
           ))}
         </nav>
         <button className={styles.mobileSectionButton} type="button" onClick={(event) => openSheet("toc", event.currentTarget)} aria-label={`${ui.articleContents}: ${currentSection}`} aria-haspopup="dialog" aria-expanded={sheet === "toc"}><span>{currentSection}</span><b>⌄</b></button>
-        <div className={styles.runningTools}>
+        <div className={styles.runningTools} data-contents-mode={contentsMode}>
           <button className={styles.compactTocButton} type="button" onClick={(event) => openSheet("toc", event.currentTarget)} aria-haspopup="dialog" aria-expanded={sheet === "toc"}>{ui.contents}</button>
           <SiteSearchTrigger className={styles.searchButton} />
           <button className={styles.themeButton} type="button" onClick={toggleTheme} aria-label={ui.theme}>{dark ? "☾" : "☼"}</button>
@@ -2037,6 +2156,31 @@ export default function ReadingEditionChrome({
               {tocPanel}
             </> : sheet === "annotation" ? referencePane("annotation", true) : sheet === "source" ? referencePane("source", true) : (
               <>
+                <section className={styles.settingGroup}>
+                  <span>{ui.readingLayout}</span>
+                  <div className={styles.layoutChoices}>
+                    <button type="button" aria-pressed={contentsMode === "auto" && notesMode === "sidenotes"}
+                      onClick={() => { updateContentsMode("auto"); updateNotesMode("sidenotes"); }}>{ui.cleanLayout}</button>
+                    <button type="button" aria-pressed={contentsMode === "pinned" && notesMode === "rail"}
+                      onClick={() => { updateContentsMode("pinned"); updateNotesMode("rail"); }}>{ui.deskLayout}</button>
+                  </div>
+                </section>
+                <section className={styles.settingGroup}>
+                  <span>{ui.contentsDisplay}</span>
+                  <div className={styles.layoutChoices}>
+                    {(["auto", "pinned", "hidden"] as const).map((mode, index) => <button key={mode} type="button"
+                      aria-pressed={contentsMode === mode} onClick={() => updateContentsMode(mode)}>{ui.contentsModes[index]}</button>)}
+                  </div>
+                  <p className={styles.settingHint}>{ui.contentsHint}</p>
+                </section>
+                <section className={styles.settingGroup}>
+                  <span>{ui.notesDisplay}</span>
+                  <div className={styles.layoutChoices}>
+                    {(["sidenotes", "popup", "rail"] as const).map((mode, index) => <button key={mode} type="button"
+                      aria-pressed={notesMode === mode} onClick={() => updateNotesMode(mode)}>{ui.notesModes[index]}</button>)}
+                  </div>
+                  <p className={styles.settingHint}>{ui.notesHint}</p>
+                </section>
                 <section className={styles.settingGroup}>
                   <span>{ui.fontFamily}</span>
                   <div className={styles.fontChooser}>

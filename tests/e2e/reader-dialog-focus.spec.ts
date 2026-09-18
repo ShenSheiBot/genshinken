@@ -1,5 +1,13 @@
 import { expect, test } from "./fixtures";
 
+// These cases exercise the optional side-panel layout; quiet mode has its own suite.
+test.beforeEach(async ({ page }) => {
+  await page.addInitScript(() => {
+    localStorage.setItem("roof_reader_contents", "pinned");
+    localStorage.setItem("roof_reader_notes", "rail");
+  });
+});
+
 type SettingsButtonFrame = { count: number; visibleCount: number };
 
 async function captureReadingSettingsButtonFrames(
@@ -172,8 +180,8 @@ test("article footnotes preserve the reading position and return to their source
   await expect(footnote).toBeInViewport();
 });
 
-test("article endnote backrefs return to the stable reading line", async ({ page }) => {
-  await page.emulateMedia({ reducedMotion: "reduce" });
+test("print endnote backrefs return to the stable reading line", async ({ page }) => {
+  await page.emulateMedia({ media: "print", reducedMotion: "reduce" });
   await page.goto("/posts/monogatari-love-deishu-kaiki-speech-fracture-self-deception");
   const backref = page.locator(".reading-edition-appendix a[data-footnote-backref]").first();
   const href = await backref.getAttribute("href");

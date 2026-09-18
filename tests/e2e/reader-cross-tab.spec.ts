@@ -1,5 +1,9 @@
 import { expect, test, type Page } from "./fixtures";
 
+test.beforeEach(async ({ context }) => {
+  await context.addInitScript(() => localStorage.setItem("roof_reader_contents", "pinned"));
+});
+
 const READER_PATH = "/posts/guxiang-de-bianzhengfa";
 const ENABLED_KEY = "roof_reading:enabled";
 const RECORD_KEY = "roof_reading:v1:post:guxiang-de-bianzhengfa";

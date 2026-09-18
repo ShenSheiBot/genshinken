@@ -1,5 +1,13 @@
 import { expect, test } from "@playwright/test";
 
+// Preserve coverage of the optional reference rails after changing the default.
+test.beforeEach(async ({ page }) => {
+  await page.addInitScript(() => {
+    localStorage.setItem("roof_reader_contents", "pinned");
+    localStorage.setItem("roof_reader_notes", "rail");
+  });
+});
+
 const EDITIONS = [
   {
     language: "English",
@@ -120,10 +128,10 @@ for (const edition of EDITIONS) test(`${edition.language} tablet layout keeps th
   await expect(dialog).toContainText(edition.noteText);
 });
 
-for (const edition of EDITIONS) test(`${edition.language} appendix backrefs return to the stable reading line`, async ({ page }) => {
+for (const edition of EDITIONS) test(`${edition.language} print appendix backrefs return to the stable reading line`, async ({ page }) => {
   test.skip(!process.env.ROOF_TRANSLATION_PREVIEW, "review editions require the translation preview build");
 
-  await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.emulateMedia({ media: "print", reducedMotion: "reduce" });
   await page.goto(edition.path);
   await page.evaluate(() => document.fonts.ready);
   await expect(page.locator(".reading-edition-body")).toBeAttached();

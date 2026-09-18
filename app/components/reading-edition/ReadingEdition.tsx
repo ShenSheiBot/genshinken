@@ -172,7 +172,7 @@ function Appendices({
   return (
     <div className={`${styles.appendices} reading-edition-appendix`}>
       {parts.noteCount > 0 && (
-        <details open>
+        <details open data-reader-annotations>
           <summary>
             <span>{noteLabel}</span>
             <b>{String(parts.noteCount).padStart(2, "0")}</b>
