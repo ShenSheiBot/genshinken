@@ -9,6 +9,8 @@ export interface Contributor {
   displayName: string;
   /** Historical spellings, romanizations and bylines accepted in old front matter. */
   aliases: readonly string[];
+  /** Show the byline as written in the article when historical pen names differ. */
+  preserveSourceByline?: boolean;
   /** Team membership is opt-in; publishing a contribution does not imply membership. */
   teamMember: boolean;
   entityType?: "person" | "organization";
@@ -88,12 +90,6 @@ export const CONTRIBUTORS = [
     id: "harusaki-misora",
     displayName: "春埼美空",
     aliases: ["春琦美空", "春崎美空", "祈祷古典学高华被破四旧Reset的春埼美空"],
-    teamMember: false,
-  },
-  {
-    id: "you-fisherman",
-    displayName: "侑",
-    aliases: ["fisherman", "长相最刻板印象的亚洲企鹅"],
     teamMember: false,
   },
   { id: "gi", displayName: "Gi", aliases: [], teamMember: false },
@@ -528,7 +524,13 @@ export const CONTRIBUTORS = [
     teamMember: false,
   },
   { id: "seigi-no-mikata", displayName: "正義の味方", aliases: [], teamMember: false },
-  { id: "murakami-yu", displayName: "村上侑", aliases: ["Murakami Yuu"], teamMember: false },
+  {
+    id: "murakami-yu",
+    displayName: "村上侑",
+    aliases: ["侑", "fisherman", "长相最刻板印象的亚洲企鹅", "Murakami Yuu"],
+    preserveSourceByline: true,
+    teamMember: false,
+  },
   { id: "un-owen-aiyin", displayName: "U.N.オーエンは愛音なのか?", aliases: [], teamMember: false },
   { id: "yddd", displayName: "YDDD", aliases: [], teamMember: false },
   { id: "rex-salsamenta", displayName: "Rex salsamenta", aliases: [], teamMember: false },

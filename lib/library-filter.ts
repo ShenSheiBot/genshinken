@@ -61,6 +61,7 @@ function resolveContributorId(
   ids: ReadonlySet<string>
 ): string | null {
   const id = requested.trim().toLocaleLowerCase("en-US");
+  if (id === "you-fisherman" && ids.has("murakami-yu")) return "murakami-yu";
   return ids.has(id) ? id : null;
 }
 

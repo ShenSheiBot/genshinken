@@ -191,7 +191,9 @@ function buildCredits(data: Record<string, unknown>, file: string): Credit[] {
         role: field.role,
         contributorId: contributor.id,
         mark: meta.mark,
-        name: contributor.displayName,
+        name: "preserveSourceByline" in contributor && contributor.preserveSourceByline
+          ? rawName
+          : contributor.displayName,
         solid: meta.solid,
       });
     }

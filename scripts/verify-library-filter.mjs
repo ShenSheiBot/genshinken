@@ -5,6 +5,7 @@
    对照 front matter 再验一次（C3），这里锁定语义边界。
    ============================================================ */
 import assert from "node:assert/strict";
+import { findContributorByName } from "../lib/contributors.ts";
 import {
   connectedTagFacetValues,
   filterHref,
@@ -72,6 +73,18 @@ assert.equal(parse("section=社").filters.section, "community", "community alias
 assert.equal(parse("section=ESSAY").filters.section, "essay", "section must be case-insensitive");
 assert.equal(parse("contributor=WANG-YU").filters.contributor, "wang-yu");
 assert.equal(parse("category=历史").filters.category, "历史");
+for (const byline of ["侑", "村上侑", "长相最刻板印象的亚洲企鹅"]) {
+  assert.equal(findContributorByName(byline)?.id, "murakami-yu", `${byline} must share one identity`);
+}
+{
+  const mergedFacets = {
+    ...facets,
+    contributors: [{ id: "murakami-yu", name: "村上侑" }],
+  };
+  const legacy = parseLibraryFilters(new URLSearchParams("contributor=you-fisherman"), mergedFacets);
+  assert.equal(legacy.filters.contributor, "murakami-yu", "merged contributor links must still resolve");
+  assert.equal(legacy.normalizedHref, "/library?contributor=murakami-yu");
+}
 
 // --- 无效值：标记 invalid 并保留其余有效 facet（旧 307 语义） ----------
 {
