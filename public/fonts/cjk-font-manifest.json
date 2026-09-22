@@ -3,10 +3,10 @@
   "corpusFileCount": 665,
   "fonts": {
     "Roof Noto Sans SC": {
-      "bytes": 2010884,
-      "codePointCount": 6843,
+      "bytes": 2010656,
+      "codePointCount": 6844,
       "file": "roof-noto-sans-sc.woff2",
-      "sha256": "f79ef55302bc602c98795f41c7ed80c4416bdb6c756c27f3732e68b864f7306d",
+      "sha256": "fe49d91c0c9062e5e9aa399bb1369e841912851319664d3615b6389771793bd5",
       "source": "NotoSansSC.ttf",
       "sourceSha256": "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da",
       "sourceUrl": "https://raw.githubusercontent.com/google/fonts/e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7/ofl/notosanssc/NotoSansSC%5Bwght%5D.ttf",
@@ -19,10 +19,10 @@
       "weight": "100 900"
     },
     "Roof Noto Serif SC": {
-      "bytes": 2738692,
-      "codePointCount": 6843,
+      "bytes": 2738020,
+      "codePointCount": 6844,
       "file": "roof-noto-serif-sc.woff2",
-      "sha256": "64bb9e2540fb01de55e895911c0e5b610f0f3a53e3db42e615029bc154bd93d9",
+      "sha256": "aca269eb42b6a81312ba49bd2c3e43f1e4121b233a988dc6d455cf16272d32c5",
       "source": "NotoSerifSC.ttf",
       "sourceSha256": "050080d9255a86808f2945bffac582b31ef32bc36411ce29563b4961670c66f9",
       "sourceUrl": "https://raw.githubusercontent.com/google/fonts/e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7/ofl/notoserifsc/NotoSerifSC%5Bwght%5D.ttf",
@@ -35,11 +35,11 @@
       "weight": "200 900"
     },
     "Roof Zhuque Fangsong": {
-      "bytes": 2629772,
-      "codePointCount": 7073,
+      "bytes": 2630388,
+      "codePointCount": 7074,
       "emphasisCodePointCount": 438,
       "file": "roof-zhuque-fangsong.woff2",
-      "sha256": "282c2f94effc683eede5ff543608b89a61542fb0ca9012b7d874be8c6b49da5a",
+      "sha256": "5a90591ef1994b50e92fcfbe134d8f8747d094c72908f506e76ca9a1c3de9b5f",
       "source": "ZhuqueFangsong-Regular.ttf",
       "sourceSha256": "558c62730844fe54ba220146ed62f859d4e2880188d92d985f8921c6e3743bc4",
       "sourceUrl": "https://github.com/TrionesType/zhuque/releases/download/v0.212/ZhuqueFangsong-v0.212.zip#ZhuqueFangsong-Regular.ttf",
@@ -219,12 +219,12 @@
       "weight": "400"
     }
   },
-  "siteCodePointCount": 6847,
-  "siteCodePointSha256": "75c936571b534ac7a7ac710f3d67cb4776e240d7c76a452932fb92aaf64adb4b",
-  "sourceCodePointCount": 5889,
-  "sourceCodePointSha256": "48e65f05e2249af591f6d0de77664965d812d6ef40886b63af502da881263d76",
+  "siteCodePointCount": 6848,
+  "siteCodePointSha256": "aeba233b4ff0f10d98cf1042e0f9d434ab1e20e93f5073a7c4091a1d17ca82f1",
+  "sourceCodePointCount": 5890,
+  "sourceCodePointSha256": "f0f73ab9ca0c6128330dec300bda18f3bb7580fb31f972c14c0c5c0951b39e53",
   "strategy": "chinese-site-corpus-opencc-closure-variable-pair-and-upright-zhuque-emphasis",
-  "targetCodePointCount": 6847,
+  "targetCodePointCount": 6848,
   "toolchainSha256": "b192f1da4344abea6d8568a33b15e3ecfb6d9f8242b22257639c7cf28d4424c3",
   "unsupportedBodyCodePointRanges": [
     "U+202C",
