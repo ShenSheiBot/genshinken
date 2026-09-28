@@ -1,7 +1,7 @@
 ---
 title: 浅田彰《影像进化论》（1986）
 title_breaks: [浅田彰, 《影像进化论》, （1986）]
-date: 2021-09-21
+date: 2021-09-26
 slug: asada-image-evolution-theory-1986-video
 script: hans
 categories: [思想与理论]

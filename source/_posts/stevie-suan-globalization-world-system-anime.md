@@ -1,7 +1,7 @@
 ---
 title: 日本动画的（反）个体主义
 title_breaks: ["日本动画的", "（反）个体主义"]
-date: 2026-04-05
+date: 2026-09-21
 updated: 2026-09-22
 slug: stevie-suan-globalization-world-system-anime
 categories: [动画]
@@ -28,7 +28,7 @@ citation:
       name: Stevie Suan
   language: zh-CN
   url: https://mp.weixin.qq.com/s/GyiINiMtntL_ffj6Of9xww
-  extra: "中文译文分两次刊载；后半原载：https://mp.weixin.qq.com/s/cGybIywBkt6DZVg92RRJtw"
+  extra: "中文译文分两次刊载：后半先于2026-04-05刊载，前半于2026-09-21刊载后合并为完整章节；后半原载：https://mp.weixin.qq.com/s/cGybIywBkt6DZVg92RRJtw"
 ---
 
 ## 从《新世纪福音战士》到世界系
