@@ -5,9 +5,6 @@ source_slug: diaosi-culture-logic-of-counterattack
 slug: diaosi-culture-logic-of-counterattack
 language: en
 status: review
-title: "A Few Thoughts on Diaosi Culture: The Logic of Counterattack"
-title_breaks: ["A Few Thoughts on Diaosi Culture:", "The Logic of Counterattack"]
-excerpt: Taking Ah Q and cynicism as reference points, this essay examines how diaosi culture turns real-world failure into a privileged position that can never lose through self-objectification, ironic distance, and the fantasy of “counterattack.”
 credits:
   - role: translator
     contributor_id: shen-shui-bot
@@ -15,76 +12,97 @@ credits:
 translation_method: agent
 source_relationship: direct
 base_language: zh-Hans
-updated: 2026-08-28
+updated: 2026-09-29
 rights: CC BY-NC-SA 4.0
 format: article
+title: "A Few Thoughts on Diaosi Culture: The Logic of Counterattack"
+date: 2019-12-25
+categories: [Thought and Theory]
+section: essay
+tags: [Objectification]
+post_author: Shizai Gouzi
+excerpt: "Through Ah Q and cynicism, an examination of how diaosi culture uses self-objectification, ironic distance and fantasies of ‘counterattack’ to turn real-world failure into a privileged position that can never lose."
+featured_order: 0
+citation:
+  itemType: blogPost
+  citationKey: shiZaiGouZi2019DiaosiCounterattack
+  date: "2019-12-25"
+  blogTitle: Lab on Roof
+  url: "https://www.bilibili.com/read/cv4224834/"
+  extra: "Author: Shizai Gouzi."
 ---
 
-[author] Shi Zai Gou Zi
+[author] Shizai Gouzi
 
-![Author card for Shi Zai Gou Zi, with a cartoon dog in a pharaoh’s headdress beside pyramids.](attachments/roof-archive/cv4224834/01-author-portrait-v5.png "=25%")
+![Shizai Gouzi’s avatar](attachments/roof-archive/cv4224834/01-author-portrait-v5.png "=25%")
 
-[author-bio] “In an age without a world, spread meaningless love.”
+[author-bio] Spreading meaningless love in an age without a world.
 
-By the time this essay was written, *diaosi*—a coarse Chinese internet label, usually written 屌丝 (“pubic hair”) but euphemistically spelled 吊丝 here—had largely fallen out of fashion. The attitude packed into the word had not. People who saw themselves as socially and romantically disadvantaged had reclaimed the insult as a self-mocking identity. Yet the mentality itself was hardly new. It can be read as a mutation of the one embodied by Ah Q, the hapless protagonist of Lu Xun’s novella *The True Story of Ah Q*. Ah Q practices “spiritual victory,” the compensatory habit of reinterpreting defeat as proof of superiority. He resents the sort of man later slang would call *gaofushuai*—“tall, rich, and handsome”—and covets the *baifumei*, the “fair-skinned, rich, and beautiful” woman.
+The word diaosi[^diaosi] is pretty much outdated by now, but the attitude it implies certainly is not. In many respects, it is not a particularly new attitude, either. You could even call it a variation on Ah Q.[^ah-q] It comes as no surprise that Ah Q and the diaosi have much in common. Ah Q has his method of spiritual victory; he cannot stand the “tall, rich and handsome,” and he covets the “fair-skinned, rich and beautiful.”
 
-The difference matters more than the resemblance. Ah Q is an overly straightforward diaosi: when a gaofushuai returned from studying abroad gets on his nerves, he confronts him. Most diaosi would steer well clear. Ah Q’s spiritual victory can also rest on a retrospective fiction: the soothing boast that his ancestors were richer than the other man’s, whether or not they actually were. The diaosi has no need for such a claim. He may happily announce that his family has been diaosi for generations. “I would never dare challenge the gaofushuai” and “none of my ancestors were rich either” both deepen, rather than threaten, his identity.
+Of course, the differences between Ah Q and the diaosi seem more important. Ah Q is an overly “straightforward” diaosi: when he cannot stand a “tall, rich and handsome” man (back from studying abroad), he confronts him outright. This is clearly an attitude most diaosi would avoid. Likewise, Ah Q’s method of spiritual victory is “My ancestors were richer than you,” another claim most diaosi are not keen to make. In fact, many are happy to announce that they come from a long line of diaosi. Both “I don’t dare confront the tall, rich and handsome” and “My ancestors weren’t rich either” reinforce their identity as diaosi.
 
-I am concerned here with a specifically cynical kind of diaosi—or, more plainly, a diaosi with a “sense of humor.” He mocks everything and tends to believe, judging from his words and conduct, that he has society all figured out. That conviction is one reason he embraces the name: I know perfectly well that I do not measure up by society’s standards. I also know that I am powerless to change those standards. So I stand back and laugh at them.
+I want to stress here that this essay is mainly concerned with diaosi who have a cynical attitude. To put it more plainly: diaosi with a “sense of humor.” They like to mock all sorts of things, and often believe—at least judging by the attitude their words and actions convey—that they understand society “inside out.” This is precisely one reason they call themselves “diaosi”: I know perfectly well that, socially speaking, I’m “not much of a success” right now, and I also know perfectly well that I’m powerless to change society, so I maintain an ironic distance from it.
 
-[fig] A posed studio portrait evokes the polished, affluent masculinity associated here with *gaofushuai*. It is used as an illustration; the original source information is unavailable.
+[fig] Image from the internet.
 
-![A man in sunglasses, a black fur coat, white shirt, and tie poses against a gray studio backdrop.](attachments/roof-archive/cv4224834/02-high-rich-handsome-stock-photo.jpg)
+![A man wearing fur and sunglasses](attachments/roof-archive/cv4224834/02-high-rich-handsome-stock-photo.jpg)
 
-Li Yi Bar, the famous birthplace of diaosi culture, was itself built on this brand of cynicism, which makes the definition defensible. It is a discussion board on Baidu Tieba, a large forum platform; it began as a board linked to the footballer Li Yi and developed a much broader subculture. Its users liked to stress *neihan*—their word for knowing, layered humor—and fancied themselves exceptionally funny.
+Given that the Li Yi forum on Baidu Tieba, the famous birthplace of diaosi culture, is founded on precisely this kind of cynicism, this essay considers such a definition acceptable. Don’t forget how much the forum’s users like to emphasize their “depth,”[^depth] and how incredibly funny they think they are.
 
-Diaosi culture loves labels that turn people into objects: *gaofushuai*, *baifumei*, “black fungus”—a misogynistic metaphor for female genitals and, by extension, for a woman presumed to be sexually experienced. Its adherents also love to rate women: “This is my girlfriend. What would you give her out of ten?” Li Yi Bar users would usually give a very low number, or say that any woman who refused them sex deserved one: “If she won’t let me fuck her, zero points.” This was one of their chief ways of displaying that prized *neihan*.
+Diaosi culture likes to objectify all sorts of things: “tall, rich and handsome,” “fair-skinned, rich and beautiful,” “black fungus.”[^black-fungus] Don’t forget their favorite pastime, “rating”: “This is my girlfriend. What would you give her out of ten?” (Li Yi forum users usually give a very low rating, or hint that they will give one if the woman won’t have sex with them = if she won’t let me fuck her, she gets a zero. This is clearly an important way for them to display their “depth.”)
 
-But diaosi do not only objectify women. They objectify themselves, too, and then treat that self-abasement as a special advantage. This is the feature no account of diaosi culture should miss: in its own peculiar logic, being a diaosi already feels like winning.
+They haven’t forgotten to “objectify” themselves, either. But they put themselves in a privileged position, which I will discuss in detail below. This is an important point that I believe absolutely cannot be overlooked in any discussion of diaosi culture: being diaosi itself represents a kind of victory.
 
-[fig] An anime couple lie face-to-face beneath the covers. The still is used here only to illustrate the sexual fantasy described below; its original title and source information are unavailable.
+[fig] Just putting a few pictures here.
 
-![A dark-haired young man and a blushing blue-haired young woman lie face-to-face beneath bedcovers; a Bilibili watermark appears at upper right.](attachments/roof-archive/cv4224834/03-anime-bedroom-still.jpg)
+![Animated characters talking in bed](attachments/roof-archive/cv4224834/03-anime-bedroom-still.jpg)
 
-This self-objectification begins with genitals. The very name *diaosi* reduces the speaker to a crude piece of anatomy. Genitals stand for both his sexual anxiety and his posture of having given up on himself. Respectable society will not accept such naked references to genitals, yet the diaosi knows that society is intimately bound up with sex. He makes a performance of saying what respectability conceals. In one of his basic fantasies, the gaofushuai may look glamorous and proper in public, but behind closed doors he spends all day having sex with the baifumei.
+So how do they objectify themselves? Through gen\*tals.[^masking] Gen\*tals represent their sexual anxiety, as well as their attitude of “giving up on themselves.” Because gen\*tals are something society does not (directly) accept. On the other hand, the diaosi also know perfectly well that this society is intimately bound up with gen\*tals (sex). One of their basic fantasies is this: the tall, rich and handsome may look polished and upright all day long, but behind the scenes they spend all day having sex with the fair-skinned, rich and beautiful.
 
-By reducing himself to genitals, the diaosi creates a detached vantage on himself and mistakes that distance for objective insight. If genitals are the truth polite society conceals, he imagines that this vantage lets him see all its other truths too. That is precisely the perspective he claims the gaofushuai lacks.
+From this position, the diaosi turn themselves into objects of observation. They are not really objectifying themselves as gen\*tals. What they actually make objective is a distance, a way of looking—the distance from which I can be seen objectively as “gen\*tals.” Gen\*tals are the truth about this society. From this position, I can objectively observe all its other truths, which is precisely what the tall, rich and handsome cannot do. Don’t forget a line the diaosi love to repeat: “The tall, rich and handsome will never understand the diaosi.” The ambiguity of this statement is very interesting. At first it means that the tall, rich and handsome cannot know the diaosi’s hardships firsthand; but then this inability to share an experience is turned into a general incapacity on their part. They lack an objective way of looking—though, of course, we can already see quite clearly that this supposedly objective way of looking is a cynical, ironic way of looking.
 
-This helps explain one of the culture’s favorite sayings: “The gaofushuai will never understand the diaosi.” At first it means only that a privileged man cannot know the hardships of someone lower in the hierarchy. The diaosi then turns that difference in experience into a defect in the gaofushuai: the privileged man supposedly lacks the distance needed to see society clearly. The diaosi’s “objective” gaze is therefore nothing of the kind. It is a cynical, ironic posture that turns humiliation into a claim of superior knowledge.
+Next we come to an absolutely crucial point in diaosi culture: the tall, rich and handsome cannot imagine what life is like for the diaosi, but the diaosi can always imagine what life is like for the tall, rich and handsome, because they are very good at mental masturbation. Too good, we can’t help saying—so good that what they fantasize about often cannot be found in reality.
 
-The next move is crucial. The gaofushuai cannot imagine what it is like to be a diaosi, the argument goes, but the diaosi can always imagine being gaofushuai. That apparent one-way insight is really wishful thinking, often with no basis in reality. Still, it lets the diaosi believe that he has seen through society. From there comes his fundamental fantasy: the diaosi “counterattack.”
+It is precisely this objective way of looking that gives the diaosi the illusion that “I can see through society,” and precisely this illusion that leads them to another fundamental fantasy: the diaosi counterattack.[^counterattack]
 
-[fig] Promotional art for the Japanese visual novel *Koi Kakeru Shin-Ai Kanojo*, whose visible English title is *School Girls Stories*. Four schoolgirls appear beneath cherry blossoms; the image includes the romantic tagline “Our first promise and our word—I wanted to convey to you that day,” credits for illustration, scenario, and music, and an October 30, 2015 release date. It serves here as an illustration of the romantic fantasy onto which a “counterattack” may be projected, not as evidence about diaosi culture; the original image provenance is unavailable.
+[fig] Just putting a few pictures here.
 
-![Four schoolgirls pose beneath cherry blossoms outside a school; Japanese text gives the visual novel’s title, a romantic tagline, staff credits, and the October 30, 2015 release date.](attachments/roof-archive/cv4224834/04-koikake-shojo-visual.jpg)
+![Key visual for Koi-Kakeru Shin-Ai Kanojo](attachments/roof-archive/cv4224834/04-koikake-shojo-visual.jpg)
 
-Here “counterattack” does not mean striking back in an argument or battle. It means reversing social and romantic humiliation: the poor, undesirable loser becomes wealthy, admired, and sexually successful, leaving the people who once looked down on him beneath him. This imagined reversal is the real secret of diaosi culture. A man willingly calls himself diaosi because the label keeps that possibility alive. It places him in a game that seems impossible to lose:
+The diaosi counterattack is the truth of diaosi culture, its real secret. The very reason someone willingly calls himself a diaosi is that he always keeps “the possibility of a counterattack” in mind. Here, too, the diaosi puts himself in a privileged position in which he simply cannot lose:
 
-1. I am a diaosi, so if I never rise, nothing surprising has happened.
-2. If I do rise, I will enjoy not only wealth, status, and romance, but the revenge of having climbed out of humiliation—an experience the man born gaofushuai can never have.
+1. I’m a diaosi, so it’s only to be expected that I haven’t pulled off a counterattack.
+2. If I do pull off a counterattack, I’ll experience a kind of enjoyment the tall, rich and handsome can never know.
 
-This is the first “double” victory: the successful diaosi gets the desired status and the pleasure of reversal. He becomes gaofushuai, as it were, with an extra triumph attached.
+This means becoming a doubled version of the tall, rich and handsome man.
 
-The comparison with Ah Q is useful only if we keep it narrow. Ah Q’s compensatory boast looks backward, toward a supposedly grander ancestry; the diaosi’s looks forward, toward a supposedly grander future. The diaosi is Ah Q with the direction of time reversed: not “my family was richer than yours,” but “one day I will be richer than you.” The gaofushuai cannot enjoy a counterattack because he already occupies the winning position. The word itself encapsulates the diaosi’s distinctive pleasure.
+So how do we understand the diaosi against the background of Ah Q? The diaosi is simply Ah Q in reverse: not richer than you in the past, but richer than you in the future. The tall, rich and handsome man can never pull off a counterattack. Because he is already tall, rich and handsome. The word “counterattack” condenses the diaosi’s enjoyment. Conversely, the diaosi has always already pulled off his counterattack: because he is a diaosi, whatever he does and however badly he fails, it is only to be expected. He has an excuse for every failure, and every success is a miracle (= a counterattack).
 
-In a limited psychological sense, then, the diaosi can cash in on the counterattack before it happens. Failure is what his identity predicts, so every failure comes ready-made with an excuse. Success, however small, can be hailed as a miraculous reversal. This does not mean that he has literally risen simply by losing. It means that the identity cushions every defeat while allowing him to treat any victory as exceptional.
+The diaosi is a time-traveling version of Ah Q: Ah Q draws on the past—what is already there—to prove his superiority, while the diaosi draws on the future—what is not there (not yet there)—to display his superiority.
 
-Here diaosi fantasy may be even more debilitating than Ah Q’s retrospective boast. Ah Q’s appeal to the past leaves him dissatisfied with the present and repeatedly trying to change it; he is not simply a man who thinks and never acts. The diaosi can enjoy the future twice: once as the success he imagines will eventually arrive, and once as the pleasure of anticipating it now. This is the second kind of doubling—not two layers of status, but future satisfaction borrowed by the present. He can wind up spending most of his life inside that fantasy. The more pleasure it supplies now, the less reason there is to act; the less he acts, the harder the fantasy becomes to realize.
+And to some extent the diaosi are worse than Ah Q. Ah Q’s past makes him very dissatisfied with the present, and he keeps trying to change his circumstances. The diaosi’s future does more than leave them very satisfied with the future; in many cases, this prospect of satisfaction enters the present directly. This satisfaction is doubled. The result is that they no longer try to do anything in the present. In fact, Ah Q does not merely think without ever acting, whereas the diaosi get so much enjoyment out of mental masturbation that they spend most of their lives on it. As a direct result, those fantasies become harder to realize.
 
-Social position and diaosi identity must therefore be separated. A man can acquire the money, looks, or romantic success associated with gaofushuai and still choose to call himself diaosi. “A diaosi can never become gaofushuai” is true only at the level of that chosen identity, not as a literal claim about mobility. The language of counterattack is too pleasurable to surrender. Even after one success, he can find another hierarchy in which to cast himself as the underdog and begin again.
+So we have to take the statement “The diaosi can never become tall, rich and handsome” literally. The diaosi gets so much enjoyment out of the very term “diaosi (counterattack)” that, even if he becomes tall, rich and handsome (by his own standards), he will never let go of the word “counterattack.” He can keep pulling off counterattacks, because the very possibility of a counterattack is itself a form of enjoyment. The possibility of a counterattack is doubled, so that “being in a position to counterattack” itself becomes a kind of counterattack.
 
-The third “doubling” joins two elements: the ordinary possibility that his fortunes may one day reverse, and the pleasure available now from already inhabiting the underdog position that licenses him to imagine that reversal as heroic. The first remains uncertain and lies in the future; the second can be renewed whenever he finds another hierarchy in which to place himself at the bottom. Merely occupying the starting position can therefore feel like a victory before any money, status, or romance arrives. This is not the same as gaining status plus revenge, or enjoying a hoped-for future in advance. The identity continually renews the very position from which a counterattack can be imagined.
+[fig] Just putting a few pictures here.
 
-[fig] An anime schoolgirl runs beneath cherry blossoms with a schoolbag in hand. This image is purely illustrative; its original title and source information are unavailable.
+![An anime girl on a street in spring](attachments/roof-archive/cv4224834/05-anime-girl-spring.jpg)
 
-![A schoolgirl in a pink jacket runs beneath blossoming cherry trees, carrying a brown schoolbag with a small blue toy attached.](attachments/roof-archive/cv4224834/05-anime-girl-spring.jpg)
+Finally, let’s look again at the word diaosi itself. Don’t forget that the diaosi disgustingly reduce all women to gen\*tals. The question, then, is why they don’t reduce the “tall, rich and handsome” to gen\*tals. Why not—according to their own fantasies—“tall, rich and well-hung”? Because the real gen\*tals are on the diaosi’s side. The diaosi know the secret of organizing enjoyment. The tall, rich and handsome man, by contrast, is a “castrated” diaosi, a poor wretch with no chance to counterattack who could be defeated by a counterattack at any moment.
 
-Return to the word *diaosi*. This culture crudely reduces women to genitals. Why does it not do the same to the gaofushuai? Why not call him *gaofuchang*—“tall, rich, and long”—with penis length replacing handsomeness?
+I’ll finish by briefly considering an extension of diaosi culture. The phenomenon of playing up one’s weakness, which I have discussed before, follows the same logic as diaosi culture. This includes an unexpected, cute version of diaosi culture: “You’re all such pros; I’m the only lil’ bit of trash here.”[^cute-talk] Such cute, seemingly self-deprecating talk may, unexpectedly, have something to do with diaosi culture. Fewer people use the word diaosi now; fewer call themselves diaosi. But this way of thinking—“I’m weaker than you now, so I’ll be richer than you in the future”—is still everywhere, a new kind of “air.”
 
-Because that substitution would give the gaofushuai everything. The pun does more than credit him with sexual power: it redescribes elite male status in diaosi culture’s own genital metric, symbolically admitting the elite man into the same vulgar language that the diaosi treats as a badge of insight. He would then possess public prestige, sexual power, and the supposed insight of the diaosi’s vulgar register. The fantasy cannot allow that. It reserves the “real” genitals for the diaosi, who claims to know where pleasure comes from: respectable appearances merely cover desire, and reversing humiliation makes success feel sweeter. His self-degradation is thus converted into secret expertise, while the gaofushuai’s polish becomes a kind of blindness.
+[^diaosi]: Translator’s note: Diaosi is a Chinese internet insult roughly meaning “loser,” also adopted as a self-mocking identity. The usual spelling, 屌丝, contains a vulgar word for the penis; this essay uses 吊丝, substituting a similar-sounding character. The Li Yi forum is named after a footballer. See Yang, Tang and Wang, [“Diaosi as infrapolitics”](https://peidongyang.com/wp-content/uploads/2025/02/diaosi-as-infrapolitics-yang-tang-wang-2015.pdf) (2015), pp. 201–202.
 
-Only in this restricted, symbolic sense can the gaofushuai be called a “castrated” diaosi. The claim is not that he lacks sex or sexual power; the diaosi’s own fantasy usually grants him plenty of both. What he supposedly lacks is the diaosi’s knowledge of humiliation and, above all, the special pleasure of reversing it. Already at the top, he has nowhere to counterattack from. He can only wait to be displaced. The conclusion is less a truth about the gaofushuai than a defensive maneuver in diaosi fantasy: it invents one enjoyment that privilege cannot buy.
+[^ah-q]: Translator’s note: Ah Q is the protagonist of Lu Xun’s *The True Story of Ah Q*. His “method of spiritual victory” turns humiliation and defeat into subjective victories. The boast about his ancestors is the essayist’s paraphrase, not a verbatim quotation from Lu Xun. See [Lu Xun’s Chinese text, chapters 2–3](https://zh.wikisource.org/wiki/%E9%98%BF%EF%BC%B1%E6%AD%A3%E5%82%B3).
 
-One extension of this logic is what I call “playing up one’s weakness”: exaggerating one’s inferiority so that the low position itself becomes pregnant with future reversal. It even has a cutesy form: “You’re all amazing; I’m the only one who’s trash.” This apparent self-deprecation turns present weakness into the same protected position that diaosi culture offers.
+[^depth]: Translator’s note: Neihan, “depth” or “substance,” here includes indirect allusions, innuendo and in-group jokes whose point the knowing reader is expected to catch.
 
-Fewer people now use the word *diaosi*, and fewer still adopt it as an identity. The underlying reflex remains widespread: I am weaker than you now, therefore one day I will be richer than you. What survives is not merely a piece of obsolete slang, but an ambient social posture—self-abasement used as consolation, special insight, and a promissory note for revenge.
+[^black-fungus]: Translator’s note: “Black fungus” is a misogynistic slur that likens women’s genitals to the fungus and uses that image to shame them as sexually experienced. The association rests on prejudice, not anatomy.
+
+[^masking]: Translator’s note: The source masks one character in the word for “genitals” with the letter O. The asterisk preserves that partial masking.
+
+[^counterattack]: Translator’s note: Nixi (逆袭), translated here as “counterattack,” is internet slang for an underdog’s reversal of fortune: rising from defeat to victory.
+
+[^cute-talk]: Translator’s note: Dada is an affectionate honorific for an admired or accomplished person. Laji, written with characters meaning “spicy chicken,” playfully substitutes for the near-homophonous word for “trash.” The English uses diminutive phrasing rather than reproducing the pun.

@@ -1,14 +1,26 @@
 ---
+title: "Rags Drum 2022: Pre-Festival Selection Results"
+title_breaks: ["Rags Drum 2022:", "Pre-Festival Selection Results"]
+subtitle: Lab on Roof’s Annual Call for Submissions
+date: 2022-08-14
+categories: [Lab on Roof Community]
+section: community
+tags: []
+post_author: Lab on Roof
+excerpt: Lab on Roof announces the seven submissions selected across the two tracks of the Rags Drum 2022 Pre-Festival, contributor fees, the judging panel’s stance, and the Post-Festival schedule.
+citation:
+  itemType: blogPost
+  citationKey: roof2022RagsDrumPreFestivalResults
+  title: 【屋顶年度征文】拾荒战略Rags Drum 2022 前夜祭评选结果
+  date: "2022-08-14"
+  blogTitle: 屋顶现视研
+  url: "https://www.bilibili.com/read/cv18100135/"
 work_id: rags-drum-2022-pre-festival-results
 source_type: post
 source_slug: rags-drum-2022-pre-festival-results
 slug: rags-drum-2022-pre-festival-results
 language: en
 status: review
-title: "Rags Drum 2022: Eve Festival Selection Results"
-title_breaks: ["Rags Drum 2022:", "Eve Festival Selection Results"]
-subtitle: "Lab on Roof’s Annual Call for Submissions"
-excerpt: "Lab on Roof announces the seven works selected across the two Rags Drum 2022 Eve Festival tracks, their honoraria, its description of the volunteer jury, acknowledgments, and the After Festival schedule."
 credits:
   - role: translator
     contributor_id: shen-shui-bot
@@ -16,92 +28,68 @@ credits:
 translation_method: agent
 source_relationship: direct
 base_language: zh-Hans
-updated: 2026-08-28
 rights: CC BY-NC-SA 4.0
 format: article
+updated: 2026-09-29
 ---
 
-> Once works of art were no longer made for certain people or reserved for the enjoyment of a select few, as happened after the French Revolution, new forms of aesthetic experience became open to every member of the community. Every individual was promised aesthetic equality—each and every person, without exception. … The hierarchy among a work’s subject, form, material, and interpreters was leveled, and the consequences of this aesthetic revolution were therefore shattering. … Even when we offer a critique, armed with elegant theories, all too often we soon find ourselves flirting with the enemy and joining them for a picnic. Should we not mark out a new space in which those who are not yet deemed qualified to criticize—ordinary people, the proverbial “Zhangs and Lis”—can be given room to show what they can do?
+> Once works of art are no longer made for particular people or reserved for the enjoyment of a select few, as happened after the French Revolution, new forms of aesthetic experience become available to everyone in the community. Every individual is promised aesthetic equality—each and every one, anyone at all, without exception. … The hierarchies between works’ subject matter, forms, materials and interpreters are leveled; the consequences of the aesthetic revolution are therefore shattering. … Even when we engage in critique, armed with elegant theories, the result is often that before long we are flirting with the enemy and going on picnics together. Shouldn’t we mark out new spaces for those who are not yet entitled to engage in critique—that is, “Tom, Dick and Harry”—to show what they can do?
 >
 > —Lu Xinghua, *A Study of Rancière’s Aesthetic Thought*
 
-Lu’s “Zhangs and Lis”—two common surnames standing here for ordinary people without official cultural authority—provide the premise for this call: criticism should not be the preserve of a credentialed few. Rags Drum invites anime, comics, and games enthusiasts to test what they can do as critics and researchers. The Chinese announcement cites the quotation only with Lu’s name and the shortened title *A Study of Rancière’s Aesthetic Thought*. [The Commercial Press catalog](https://www.cp.com.cn/book/b45c55e9-6.html) identifies the book as *Art: The Future of Politics—A Study of Jacques Rancière’s Aesthetic Thought* (2017). The announcement gives no page number or link, and the English wording above is this edition’s translation.
-
 ## About Rags Drum
 
-Lab on Roof launched its third annual call for criticism and research on anime, comics, and games in 2022. Its aim was to encourage more—and better—work in those fields and to bring the people doing it into conversation.
+To **encourage the continued production of more and better criticism and research on anime, comics and games (ACG), and exchange among those who write it**, Lab on Roof has decided to **continue its ACG submission event with a third edition in 2022**, under the name:
 
 ### Rags Drum 2022
 
-“Rags Drum” is the English name used here for the recurring call, and 2022 was its third edition. The announcement gives no further explanation of the name.
+![Rags Drum 2022 square event poster](/attachments/roof-archive/cv18100135/e1f39598e034667a2fd70f75cc3abc7417691463.jpg)
 
-[fig] Square event poster for Rags Drum 2022.
+## Pre-Festival Selection Results
 
-![Chinese-language square poster for Rags Drum 2022: an astronaut beneath star trails stands behind a red torii gate; the text announces Lab on Roof’s May–October 2022 annual call and the title 拾荒战略 (“Rags Drum”)](/attachments/roof-archive/cv18100135/e1f39598e034667a2fd70f75cc3abc7417691463.jpg)
+After three months of submissions and selection (and we’re very sorry for slacking off for a week and missing the promised announcement date), Lab on Roof hereby announces the submissions that have passed the Pre-Festival review and their authors. All entries below are listed in no particular order:
 
-[fig-note] English caption: Lab on Roof’s May–October 2022 annual call for submissions, “Rags Drum.” The poster shows an astronaut beneath star trails, behind a red torii gate.
+### Registered for Both the Pre-Festival + Post-Festival
 
-## Eve Festival Selection Results
+The following five submissions, listed with their authors, have passed the Pre-Festival’s initial review:
 
-The 2022 call had two routes. One covered both stages, the Eve Festival and the later After Festival; the other ended with the Eve Festival. Five works in the combined track cleared the preliminary Eve review, while two works entered only in the Eve Festival were selected there. The announcement does not say whether authors in the combined track had to take any further action to enter the After Festival.
+- Isolde, “Singing Between Two Worlds”
+- Colisa, “The Magical Girl Who Becomes a Side Story”
+- 一条, [“Animation as Staging: Rediscovering Takashi Annō and Naohito Takahashi”](/posts/performativity-of-animation-anno-takahashi)
+- 「　」, [“The Non-Overcoming of Modernity, Absent Origins and Subjectivity—Writing Mysticism and Science”](/posts/modernity-not-overcome-writing-mysticism-science)
+- Sairai, [“Blond Tsundere? Pink-Haired Yandere? A Quantitative Analysis of the Relationship Between Hair Color, Eye Color and Personality in Japanese Animation”](/posts/anime-hair-color-personality-quantitative-analysis)
 
-Submissions had been open for three months. The organizers admitted that they had then dragged their feet for a week over the judging, and apologized for missing the promised announcement date. This results page is dated August 14, 2022; it does not restate the opening and closing dates. The seven selected works are listed in no particular order.
+### Registered for the Pre-Festival Only
 
-### Selected in the Eve Festival + After Festival Track
+The following two submissions, listed with their authors, were entered for the Pre-Festival only and have passed its review:
 
-The following five works, each by a different author, cleared the preliminary Eve review in the combined track:
+- 河豚酱酱酱, [“[Animation Discussion] Ubiquitous Perception: Viewing Impressions and Research on the Treatment of ‘Eyebrows and Eyes in Relation to Hair’ in 2D Animation”](/posts/animation-eyebrow-hair-perception-video) (video, 19:02)
 
-- Isolde, *Singing Between Two Worlds* (《在两个世界之间吟唱》; no publication link is included in this announcement)
-- Colisa, *Becoming a Magical Girl in a Side Story* (《成为外传的魔法少女》; no publication link is included in this announcement)
-- 一条, [*Still Images, Living Time: Takashi Anno and Naohito Takahashi at Animation’s Limits*](/en/posts/performativity-of-animation-anno-takahashi); listed here as *The Performativity of Animation: Rediscovering Takashi Anno and Naohito Takahashi* (《动画的演出性：安浓高志与高桥直人的再发现》)
-- 「　」, [*Modernity Not Overcome: The Absent Origin and Subjectivity—Letter Mysticism and Science*](/en/posts/modernity-not-overcome-writing-mysticism-science) (「近代の非超克・欠席した起源と主体性―文字神秘主義と科学」)
-- Sairai, [*Blond Tsunderes? Pink-Haired Yanderes? A Quantitative Analysis of Hair Color and Personality in Japanese Anime*](/en/posts/anime-hair-color-personality-quantitative-analysis); listed here as *Blond Tsundere? Pink-Haired Yandere? A Quantitative Analysis of Hair Color, Eye Color, and Personality in Japanese Anime* (《金发傲娇？粉发病娇？日本动画发色瞳色与性格关联之量化分析》)
+[![“Ubiquitous Perception” video thumbnail: viewing impressions and research into the treatment of eyebrows and eyes in 2D animation](/attachments/roof-archive/cv18100135/807184dc48e985f18978e101364120ee2e192a82.jpg)](/posts/animation-eyebrow-hair-perception-video)
 
-Where a linked work’s current publication title differs from the title recorded in this announcement, both titles are given; the announcement does not explain the later changes.
+- 非木, [“The Pure-Love Matrix of *The Song of Saya*”](/posts/song-of-saya-pure-love-matrix)
 
-### Selected in the Eve Festival–Only Track
+Under the previously announced event rules, contributors whose submissions pass the Pre-Festival review will receive a fee of RMB 200–300 for their work.
 
-Two works entered only in the Eve Festival and were selected in that round:
+Let’s celebrate!
 
-- 河豚酱酱酱, [*Perception Everywhere: Experiences and Research on How 2D Animation Handles Eyebrows, Eyes, and Hair*](/en/posts/animation-eyebrow-hair-perception-video); listed here as *[Sakuga Discussion] Perception Everywhere: Experiences and Research on How 2D Animation Handles Eyebrows, Eyes, and Hair* (《【作画讨论】无处不在的知觉：关于二维动画“眉目－头发”处理的体验与考据》; video, 19:02)
+## Further Information
 
-[fig] Video cover for *Perception Everywhere*.
+Thank you to the judging panel members for their voluntary work reviewing submissions. They are:
 
-![Chinese-language video cover for *Perception Everywhere*: an anime character appears behind the title 无处不在的知觉 and the subtitle “Experiences and Research on Handling Eyebrows and Eyes in 2D Animation”](/attachments/roof-archive/cv18100135/807184dc48e985f18978e101364120ee2e192a82.jpg)
+**A group of enthusiasts who are the audience’s intellectual and aesthetic equals!**
 
-[fig-note] English caption: “Experiences and Research on Handling Eyebrows and Eyes in 2D Animation”; “Perception Everywhere.” The published title above also mentions hair, which does not appear in the cover text. [Open the work.](/en/posts/animation-eyebrow-hair-perception-video)
+Thank you to 初鹿野凪 for creating the event’s posters and promotional video, and to the critics and researchers, groups and platforms that offered kind suggestions and sincere help.
 
-- 非木, [“The Pure-Love Matrix of *Saya no Uta*”](/en/posts/song-of-saya-pure-love-matrix) (《沙耶之歌》的纯爱矩阵)
+- October 7: Submission deadline for the Post-Festival (the second half of the combined Pre-Festival + Post-Festival track).
+- Second half of October: All qualifying Post-Festival submissions will be announced together, bringing the Post-Festival and the event as a whole to a close.
 
-Several contributors use pen names written in CJK characters. They are reproduced exactly as credited because no romanizations were supplied. In particular, 「　」—a pair of corner brackets enclosing a blank space—is the author’s pen name, not a typographical omission.
+See you when the Post-Festival wraps up!
 
-Under rules announced elsewhere but not linked from this page, each work selected in the Eve Festival round will receive an honorarium of RMB 200–300. The basis for assigning an amount within that range is not stated here.
+Given our limited experience in running events, the organizers reserve the right, to the fullest extent permitted by laws, regulations and platform rules, to interpret and amend the provisions governing how the event is run, including its procedures. We ask contributors and readers to take note of this and appreciate your understanding.
 
-Congratulations to all seven selected authors!
+Contact Lab on Roof: lab_on_roof@163.com
 
-## Other Notes
+Readers and contributors are welcome to share this announcement and other information about the event, spread the word, join the discussion and submit their work!
 
-The organizers thank the jury members for volunteering their time to review the submissions. No individual jurors are named in this announcement; they are described collectively as:
-
-**A group of enthusiasts intellectually and aesthetically equal to their audience!**
-
-They also thank **初鹿野凪**—credited in that form, with no romanization supplied—for creating the event posters and promotional video, as well as the critics, groups, and platforms that offered advice and support.
-
-The remaining 2022 schedule was:
-
-- October 7: entries close for the After Festival, the second half of the combined track.
-- Second half of October: works selected in the After Festival are announced at the same time, bringing the event to a close.
-
-The announcement does not provide the After Festival’s eligibility rules, submission instructions, or a link to the original call. Nor does it state what the five combined-track entrants listed above had to submit by October 7. At the time, the organizers invited readers and critics to circulate the announcement, join the discussion, and submit work, and supplied the contact address below.
-
-The organizers were still learning how to run the event and reserved the right to interpret or amend its procedures, processes, and related rules, to the fullest extent permitted by law and platform rules. This notice does not specify what might change, how changes would be announced, or whether existing submissions could be affected. Readers and critics were asked to bear that uncertainty in mind.
-
-Lab on Roof contact: lab_on_roof@163.com
-
-See you when the After Festival wraps up!
-
-[fig] Horizontal event poster for Rags Drum 2022.
-
-![Chinese-language horizontal poster for Rags Drum 2022: an astronaut beneath star trails stands behind a red torii gate; the text announces Lab on Roof’s May–October 2022 annual call and the title 拾荒战略 (“Rags Drum”)](/attachments/roof-archive/cv18100135/9724f297a750d0bbe2e5fa9a5607254e7270a970.jpg)
-
-[fig-note] English caption: Lab on Roof’s May–October 2022 annual call for submissions, “Rags Drum.” The poster shows an astronaut beneath star trails, behind a red torii gate.
+![Rags Drum 2022 landscape event poster](/attachments/roof-archive/cv18100135/9724f297a750d0bbe2e5fa9a5607254e7270a970.jpg)

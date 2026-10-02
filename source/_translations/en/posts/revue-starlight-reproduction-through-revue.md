@@ -5,9 +5,6 @@ source_slug: revue-starlight-reproduction-through-revue
 slug: revue-starlight-reproduction-through-revue
 language: en
 status: review
-title: "New Anime, New Words | Revue Starlight — Reproduction Through Revue"
-title_breaks: ["New Anime, New Words | Revue Starlight —", "Reproduction Through Revue"]
-excerpt: Writing under the handle ⑨瑟夫, the first contributor considers how the series' revues let its stage girls confront their inner conflicts, remake their relationships, and reproduce their brilliance—and perhaps the stage itself.
 credits:
   - role: translator
     contributor_id: shen-shui-bot
@@ -15,95 +12,91 @@ credits:
 translation_method: agent
 source_relationship: direct
 base_language: zh-Hans
-updated: 2026-08-28
+updated: 2026-09-29
 rights: CC BY-NC-SA 4.0
 format: article
+title: "New Anime, New Takes | Revue Starlight—Reproduction through Revue"
+excerpt: "Tracing the show's revues, this article examines how the stage girls work through their inner conflicts, reshape their relationships, and bring about the reproduction of radiance and the stage."
+date: 2018-11-25
+categories: [Animation]
+section: review
+tags: [Political economy, Revue Starlight]
+post_author: "⑨ Sefu"
+featured_order: 0
+citation:
+  itemType: blogPost
+  citationKey: sefu2018revueStarlightReproduction
+  date: "2018-11-25"
+  blogTitle: Lab on Roof
+  url: "https://www.bilibili.com/read/cv1568362/"
 ---
 
-## ⑨瑟夫 (online handle): Reproducing Brilliance
+By ⑨ Sefu
 
-Honestly, the premise of *Revue Starlight* left me cold. How many shows had already worked the idol-plus-yuri-subtext formula into the ground? In an age when anyone—or anything, even a horse—could become an idol, another multimedia franchise selling idols and yuri did not exactly inspire confidence.
+When I first read the description of *Revue Starlight*, honestly, I had no particular feelings about it. Countless shows had already done the idol-and-light-yuri setup to death. In an age when humans, horses—anything could be an idol, with the whole DSSQ bandwagon turning everything into idols, here was a multimedia project still selling itself on idols and yuri.[^dssq] Forgive my bluntness, but on that basis alone, I really wasn't optimistic.
 
-![Banner of the Seisho Music Academy stage girls](attachments/roof-archive/cv1568362/01-stage-girls-banner.png)
+![A strip of portraits of the stage girls at Seisho Music Academy](attachments/roof-archive/cv1568362/01-stage-girls-banner.png)
 
-By the end, though, I saw the series in an entirely different light. Its soul lies in revue after revue. What, then, do those revues actually do?
+But by the time I finished *Revue Starlight*, I had come to see it in an entirely new light. Its soul lies in one revue after another—but what does revue represent? In the first few episodes, apart from the revue between Bro Karen (Karen Aijo) and Junna, there wasn't much that particularly caught my attention. To my mind, revue in the true sense begins with Bro Karen versus Ms. Tsuyuzaki—Mahiru Tsuyuzaki.
 
-By “reproduction,” I do not mean simple repetition. I mean the process by which a stage girl recovers or remakes her brilliance by confronting another girl in a revue. Nana Daiba's failed attempts to repeat one perfect performance make the difference especially clear.
+![Stylized illustration of Mahiru Tsuyuzaki in stage costume, raising her mace](attachments/roof-archive/cv1568362/02-tsuyuzaki-mahiru.jpg "=33%")
 
-The early revues did not especially grab me, apart from Karen Aijo's bout with Junna Hoshimi. For me, the idea comes alive in Karen's Revue of Jealousy with Mahiru Tsuyuzaki.
+Ms. Tsuyuzaki developed a love of musical theater under her grandmother's influence and won a place at Seisho Music Academy. But in this new environment, faced with the likes of Maya Tendo and Claudine, who shone more brightly than she did, she stopped believing in her own radiance and made Bro Karen her sole emotional anchor. When Hikari appeared, no one but Bro Karen was affected more than Ms. Tsuyuzaki. Her friendship with Bro Karen gradually turned into possessiveness: she wanted to hold on to her place in Bro Karen's heart. The theme of their revue, “Jealousy,” is precisely Ms. Tsuyuzaki's jealousy of Hikari. She wants to remain in Bro Karen's heart just as Hikari does. But faced with Bro Karen's invincible non-non (“no, no”) sword style, Ms. Tsuyuzaki realizes that her own radiance does exist, and so achieves its “reproduction.” We can also see that before this revue, Ms. Tsuyuzaki is hostile toward Hikari and possessive toward Bro Karen. Afterward, her friendship with Bro Karen becomes normal, and she becomes friends with Hikari too.
 
-![Character image of Mahiru Tsuyuzaki](attachments/roof-archive/cv1568362/02-tsuyuzaki-mahiru.jpg "=33%")
+![Stylized illustration of Hikari Kagura in stage costume, holding her dagger](attachments/roof-archive/cv1568362/03-kagura-hikari.jpg "=33%")
 
-> **Naming note:** The character cards use Japanese family-name-first order; the prose uses given-name-first order.
+Apart from Tendo and Claudine, each member of the 99th class has her own inner problems, and those problems gradually wear away the radiance she once had. Revue is the reproduction of radiance through which these once-shining stage girls free themselves of their inner knots. Take Kaoruko and Futaba, the despair duo. My waifu Kaoruko's inner knot is her resentment and decline as she goes from STAR to ordinary person: the daughter of a distinguished family finds herself initially excluded by Class B from the cast of the 100th Seisho Festival. Her feelings finally erupt when Futaba, whom she has always regarded as her audience, becomes someone who shines more brightly than she does. Futaba's inner knot, meanwhile, is that she doesn't know what she wants. She has always thought of herself as Kaoruko's supporting player, her audience. She applied to Seisho Music Academy because she thought Kaoruko couldn't even get herself to school alone, and because she wanted to see Kaoruko at her very brightest. But after meeting the rest of the 99th class, Futaba gradually begins to think that she too could become a STAR. This feeling clashes with another: that she exists only as Kaoruko's number-one audience member, there to watch her shine at her brightest. Futaba no longer knows what she really wants. Through their revue of “Promise,” Kaoruko understands that her radiance exists for Futaba, and thus brings about its reproduction.
 
-Mahiru grew to love theater through her grandmother and earned a place at Seisho Music Academy. Once there, however, she found herself surrounded by girls who seemed to shine more brightly, above all Maya Tendo and Claudine Saijo. Her faith in her own talent faded, and Karen became her sole emotional anchor. Then Hikari Kagura arrived. Besides Karen herself, Mahiru was the person Hikari's return affected most. She wanted to remain as important to Karen as Hikari was, and affection hardened into possessiveness.
+BANANA (Nana Daiba), on the other hand, is imprisoned in the past. Her old drama club never had enough members to put on a show. For BANANA, the 99th Seisho Festival was, you could say, her first performance and the stage on which she shone most brightly. Her inner knot, we can see, is that no number of loops can recreate that first performance at the 99th Seisho Festival. Just as you cannot step twice into the same river, each loop actually deepens BANANA's obsession with recreating STARLIGHT at the 99th Seisho Festival once more.
 
-The Revue of Jealousy gives that fear a stage. Mahiru wants to occupy the same place in Karen's heart that Hikari does, while Karen meets her jealousy with the unbeatable “No, no!” sword technique. The duel leads Mahiru to recognize that she possesses a brilliance of her own; that recognition is what I mean by “reproducing” her brilliance. Before the revue, Mahiru treats Hikari as an enemy and clings possessively to Karen. Afterward, her bond with Karen returns to a less possessive friendship, and she begins to form a friendship with Hikari as well.
+Even after the giraffe tricks BANANA by playing on human nature and she takes to the stage of unpredictable destiny, her aim is still to restage it all once more. After BANANA versus Hikari, she begins to doubt her past self. Then, in the next episode's revue, BANANA versus Bro Karen, the non-non sword style proves invincible once again. BANANA finally understands that stage girls are constantly evolving. The stage of unpredictable destiny makes Bro Karen, who has been slacking off until now, begin to shine. Her radiance drives the reproduction of BANANA's radiance onstage, so that BANANA no longer clings to the past but looks to the future.
 
-![Character image of Hikari Kagura](attachments/roof-archive/cv1568362/03-kagura-hikari.jpg "=33%")
+![Stylized illustration of Nana Daiba with two swords and a banana-shaped name panel; a background poster retains Japanese text meaning “99th,” above “STARLIGHT”](attachments/roof-archive/cv1568362/04-daiba-nana.jpg "=33%")
 
-Apart from Maya and Claudine, the girls in Seisho's 99th graduating class each face conflicts that gradually dim their original brilliance. Their revues let them work through those conflicts and return to the stage changed. Take the “despair duo” of Kaoruko Hanayagi and Futaba Isurugi. Kaoruko—my wife, for the record—comes from a prestigious dance family, but cannot accept what feels like a fall from future Top Star to ordinary girl. Her complacency collapses when Class B's initial casting for the 100th Seisho Festival leaves her out and when Futaba—the girl she has always treated as her private audience—begins to outshine her. Losing both the role and Futaba's undivided admiration brings her resentment to a boil.
+Claudine and Tendo are already shining, but revue is a process of growth for them both. Tendo goes from “I'm a STAR even on my own” to telling Claudine, after losing to the team of Bro Karen and Hikari, “With you by my side, I can certainly fly higher.” Claudine, meanwhile, becomes still more certain of her feelings.
 
-Futaba, meanwhile, does not know which ambition is truly hers. She has always understood herself as Kaoruko's foil and number-one fan. She followed Kaoruko to Seisho partly because Kaoruko could barely get herself to school alone, and partly because she wanted to witness Kaoruko at her brightest. But after meeting the rest of the class, Futaba begins to believe that she, too, could become a Top Star. That ambition clashes with her old desire to stand just outside the spotlight and watch Kaoruko shine.
+Finally, Bro Karen and Hikari. Bro Karen is the only stage girl with a transformation sequence. We can see that what she throws into the furnace during her transformation is her hairpin, and we all know that the hairpin represents her radiance (her true form). As tangible forms of their promise to each other, Bro Karen's and Hikari's hairpins can be regarded as the two girls' radiance. **Bro Karen throwing her own radiance into the furnace shows that revue is, in essence, a comparison of the stage girls' radiance.** And her wish is the same as Hikari's: for the two of them to STARLIGHT together. Without Hikari, Bro Karen loses her radiance; the same goes for Hikari without her. So in the finale, we see Bro Karen, who shone together with Hikari, lose her radiance when she loses Hikari. Yet as she keeps searching for Hikari, her radiance undergoes reproduction. The final revue shows that Bro Karen does not produce her radiance independently: only together with Hikari can she shine. (We're two-in-one Kamen—no, stage girls!)[^kamen] In the end, their radiance breaks through the heavens and destroys the entire stage, achieving the reproduction of both the stage and radiance in the true sense.
 
-Their Revue of Promise brings that conflict to a head. Through it, Kaoruko understands that her brilliance exists for Futaba. That realization, rather than a return to her old complacency, reproduces Kaoruko's brilliance.
+![Stylized illustration of Karen Aijo in stage costume, with a sword, hair ornament, and crown motif](attachments/roof-archive/cv1568362/05-aijo-karen.jpg "=33%")
 
-Nana Daiba—nicknamed Banana—is trapped by a different idea of reproduction: repetition. Before Seisho, her drama club never had enough members to stage a play. The 99th Seisho Festival was therefore both her first real production and the moment when she shone most brightly. She becomes convinced that preserving that happiness means restaging the festival's *Starlight* exactly as it was. Yet no number of loops can reproduce the first performance, because the girls who made it are changed by every return. No one steps into the same river twice.
+Jun-Jun… Actually, Junna's storyline is one of *Revue Starlight*'s few flaws. For an ensemble show, she appears too early and gets too little screen time; later on she even starts going into Akarin mode.[^junna] Her characterization is just the standard class-president type, and the fact that she is a girl who has left home isn't put to good use either. STAR is another of *Revue Starlight*'s major themes, and there is a great deal one could write connecting it to the name Junna Hoshimi. Unfortunately, with only so much running time, her storyline is hastily wrapped up, far too bland next to the other characters' later arcs.
 
-The giraffe exploits Nana's very human wish to repeat a lost happiness and places her on a stage whose outcome she cannot predict. Even there, she wants another repeat performance. After her revue with Hikari, Nana begins to doubt her attachment to the past. Her next duel with Karen—and Karen's once again invincible “No, no!” swordplay—finishes the job. Karen has spent much of the series coasting, but the unpredictable stage draws a new brilliance out of her. That brilliance, in turn, rekindles Nana's own brilliance onstage. Nana finally understands that stage girls never stop evolving. She releases the past and looks toward the future.
+![Stylized illustration of Junna Hoshimi in stage costume with glasses, bow, and arrow](attachments/roof-archive/cv1568362/06-hoshimi-junna.jpg "=33%")
 
-![Character image of Nana Daiba](attachments/roof-archive/cv1568362/04-daiba-nana.jpg "=33%")
+To my mind, **revue, as the soul of *Revue Starlight*, sets out to portray the reproduction of the stage girls' radiance.** In duels brimming with passion—yuri passion—they turn their previous radiance into the capes they wear, and achieve the reproduction of radiance through combat. That is revue.
 
-Maya and Claudine already shine, so for them the revues are a process of growth rather than recovery. Maya begins from the conviction that she can become a Top Star entirely by herself. After she and Claudine lose to Karen and Hikari, she tells Claudine, “With you by my side, I can fly even higher.” Claudine, in turn, becomes more certain of her own feelings.
+[fig] I understand.
 
-That leaves Karen and Hikari. Karen is the only stage girl given a complete transformation sequence. She throws her hairpin into the furnace; because her hairpin matches Hikari's, it gives material form to their childhood promise and can also be read as an emblem of their shared brilliance. The gesture does not, by itself, make the revue a comparison. It matters because the furnace turns that private emblem into a stage costume and sends Karen into a duel where her brilliance can exist only in relation to someone else's. A revue, in this sense, puts two forms of brilliance face-to-face and changes both through the encounter. Karen and Hikari share the same wish: to perform *Starlight* together.
-
-Without Hikari, Karen loses her brilliance; without Karen, Hikari does too. In the finale, Hikari has disappeared and Karen's former brilliance with her has vanished, yet Karen keeps searching and trying to bring it back into being. The final revue shows that Karen's brilliance is not produced independently: she can shine only together with Hikari. They are two people acting as one, like *Kamen Rider W*—no, like a single stage girl in two parts.
-
-At last, their combined brilliance pierces the heavens and destroys the entire stage. Destruction is not automatically reproduction, and I do not mean that smashing a set somehow preserves it. My claim is narrower: the old stage, built around their separation, can no longer hold the performance they create together. By breaking it and meeting again in performance, Karen and Hikari make a new stage possible and recover the shared brilliance that the old one had taken from them. This is the boldest version of what I mean by reproduction: not restoring the stage exactly as it was, but making both stage and brilliance anew.
-
-![Character image of Karen Aijo](attachments/roof-archive/cv1568362/05-aijo-karen.jpg "=33%")
-
-Jun-Jun… Junna's storyline remains one of the series' few weaknesses. Her central conflict arrives early, receives too little time, and later slips into “Akarin mode”—the anime joke for a character who practically disappears into the background. She never grows far beyond the familiar conscientious class-representative type, and the fact that she has left home also goes largely unused. Stars are one of *Revue Starlight*'s great motifs; even her surname, Hoshimi, contains *hoshi*, the Japanese word for “star.” The series could have done much more with that connection. Instead, its short runtime leaves Junna's story perfunctory and flat beside those that follow.
-
-![Character image of Junna Hoshimi](attachments/roof-archive/cv1568362/06-hoshimi-junna.jpg "=33%")
-
-In my view, **the revue is the soul of *Revue Starlight*, and what it seeks to express is the reproduction of the stage girls' brilliance.** Each girl enters with a brilliance shaped by her past, then risks it against another girl's desire, jealousy, rivalry, or love. The capes give that risk a visible form, though I do not mean that the cloth literally contains anyone's former brilliance. In combat, each girl discovers that what she brought to the stage cannot simply be preserved: it must be tested, changed, and made present again. That is reproduction, and that is the revue.
-
-[fig] “I understand.”
-
-![Giraffe with the caption “I understand”](attachments/roof-archive/cv1568362/07-giraffe-wakarimasu.jpg "=33%")
-
----
-
-## Xiaoyi: Mahiru Is Not Cured
-
-*Xiaoyi, King of the Deranged Mahiru Stans.*
-
-I partly disagree with ⑨瑟夫's view. The Revue of Jealousy does not cure Mahiru or give her a desire independent of Karen. Their friendship has never been healthy, and I do not think it ever will be. Hikari's arrival changes its form without breaking Mahiru's dependence.
-
-The concrete problem comes first: Hikari's return draws Karen's attention away from Mahiru. Mahiru tries to call back their former closeness and make Karen hear how much that bond means to her, but Karen refuses the appeal. That is what I mean when I say Mahiru's “recollection” becomes impossible: she cannot restore the old relationship simply by reminding Karen of it.
-
-In Lacanian terms, Karen occupies the position of Mahiru's big Other: the imagined authority whose recognition tells Mahiru who she is. When that recognition is withdrawn, Mahiru answers with intense possessiveness because she wants to be heard. The Revue of Jealousy gives this demand a stage. Mahiru goes so long without scoring not because she cannot, but because she does not want to: every attack is part of the message she is trying to deliver to Karen. Karen's refusal produces the anxiety in which Mahiru is caught.
-
-Karen's repeated “No, no!” finally cuts off the demand driving Mahiru's performance: hear me, and give me back my privileged place. In Lacanian language, the ending “castrates” that desire by denying the fantasy that Karen's full recognition could make Mahiru whole. But this is not a cure. Mahiru stops pressing a desire she can call her own, yet her emotional world remains organized around Karen. Hikari is folded into that structure as well. Exactly how is ambiguous: Hikari may be another rival object around whom Mahiru's desire turns, or a second person whose recognition Mahiru must negotiate. Either way, adding Hikari does not free Mahiru from dependence on others' desire.
-
-![Mahiru Tsuyuzaki looking confused](attachments/roof-archive/cv1568362/08-mahiru-reaction.jpg "=33%")
+![Front-facing cartoon giraffe on a white background, with retained Japanese text meaning “I understand.”](attachments/roof-archive/cv1568362/07-giraffe-wakarimasu.jpg "=33%")
 
 ---
 
-## Sue: Orthodoxy, Critique, and the Culture Industry
+Twisted Mahiru Stan Wang Xiaoyi:
 
-As a “2.5D” franchise—a project designed to move between anime and live stage performance—*Revue Starlight* sticks the landing. It tells a well-paced story with assured storyboarding and direction, then adds enough yuri subtext to please a good portion of its otaku audience. The viewers most likely to leave disappointed are the forum theorycrafters who took episode 7 as proof that some breakneck escalation was coming. What arrived instead was Karen's endlessly cheerful “No, no!” and a thoroughly orthodox story. Wild theories are bad for you, lol.
+I disagree with some of the author's views. Tsuyuzaki and Karen's friendship has never been normal, and never will be. Everything begins to change with Hikari's arrival. For Ms. Tsuyuzaki, Hikari's arrival means that **Karen, who occupies the position of the big Other, begins refusing to listen to what Ms. Tsuyuzaki has to say, making recollection impossible for her.** Ms. Tsuyuzaki is compelled, inevitably, to act with intense “possessiveness” to convey her message. The revue of jealousy expresses precisely this. Ms. Tsuyuzaki goes so long without scoring not because she cannot, but because she does not want to. All she wants is to communicate her message to Karen, her big Other. It is Karen, and Karen alone, who puts Ms. Tsuyuzaki in this state of anxiety. And the outcome of this revue directly causes the castration of Ms. Tsuyuzaki's desire. From this point on, she has failed to hold her ground on her own desire; nor has she avoided becoming absorbed in the desire of Karen, this Other. Instead, she has added one more object to the Other of her desire: Hikari.[^other]
 
-As a capsule review of an excellent new anime, perhaps that is enough. But—as Adorno would lament—*Revue Starlight* is also a culture-industry commodity, and its polish helps reinforce the ideology of late modernity. It conforms to an established idea of what “Anime” should look and feel like. Its language of “brilliance” turns discipline, diligence, positivity, and competitive self-improvement into personal virtue—the same qualities bourgeois society rewards in a good worker. Its “light yuri” works similarly: the series suggests female romance strongly enough to entice viewers while stopping short of making that romance explicit. What I am calling the male gaze is the packaging of that intimacy for a presumed male otaku audience.
+![Hikari holds a pale snack near her mouth, looking uncertain](attachments/roof-archive/cv1568362/08-mahiru-reaction.jpg "=33%")
 
-The same economy extends to criticism. Core fans turn fluency in “Ikuhara style,” storyboarding, and other specialist terms into cultural and symbolic capital, subtly drawing boundaries between groups of viewers. I would go further: in the director's eyes, even knowledgeable viewers remain alienated “consumers” who can be satisfied by a dependable set of formulas. Mastering those formulas does not take us outside the system; it can make us better consumers of it.
+Sue:
 
-For aestheticians such as Hans Robert Jauss, a work that merely satisfies its audience's “horizon of expectations” gives up art's critical force. Art ought to surpass that familiar horizon, allowing the viewer to step beyond an established way of seeing and encounter the world anew.
+As a 2.5D project, *Revue Starlight* ultimately brings its story to a smooth landing, with fine storyboarding and direction and a sprinkling of light yuri.[^project] That is enough to please a sizable proportion of otaku. Perhaps the only people dissatisfied are some of Zhanba's “fake-medicine” enthusiasts.[^medicine] They expected a torrent of developments after episode 7, but what they got was non-non da and tried-and-true storytelling. (So fake medicine is bad for you, hahahahaha.)
 
-From a suitably rarefied perch, that general critique of the culture industry may already satisfy readers who pride themselves on thinking deeply. But **if I merely repeat these theories at second hand, I am doing the same thing I just criticized: displaying cultural symbols in order to draw distinctions within the audience. Even theories devised to criticize late modernity have long since been absorbed into it.**
+As a brief assessment of an **excellent new anime**, that paragraph might be enough. But—the process Adorno lamented is at work here: as a product of the culture industry, *Revue Starlight* reinforces the ideology of late modernity. It caters to an established definition of “Anime” and is, in the end, yet another extension of the discipline imposed by the existing order: “radiance” is the diligence and “positivity” that capitalists value in workers; the obvious male gaze in “light yuri” goes without saying; core viewers put cultural and symbolic capital to work through discussions of “Ikuhara-esque” style, “storyboarding,” and so on, subtly constructing distinctions among groups; finally, in the director's eyes, viewers are nothing but alienated “consumers” who can be fed their fill with certain stock formulas. For aestheticians such as Hans Robert Jauss, it is a mockery of art for a work to satisfy its audience's expectations: art ought continually to go beyond people's horizons, enabling the subject to transcend itself and bring the world into unconcealment.
 
-[fig] “I don't understand.”
+The account above looks at *Revue Starlight* from a different, more elevated vantage point. As a general critique of the culture industry, it may already satisfy some readers who enjoy thinking. But—**these uses of theory do no more than repeat academic babble at a low level. They are still nothing more than a way of using cultural symbols to construct distinctions among viewers. Theories that criticize late modernity have long since been co-opted by late modernity.**
 
-![Giraffe leaning into a car with the caption “I don't understand”](attachments/roof-archive/cv1568362/09-giraffe-wakarimasen.jpg)
+[fig] I don’t understand.
+
+![A giraffe smashes a silver car's window, with retained red Japanese text meaning “I don’t understand.”](attachments/roof-archive/cv1568362/09-giraffe-wakarimasen.jpg)
+
+[^dssq]: Translator's note: DSSQ abbreviates *da shi suo qu*, “the prevailing trend,” used disparagingly in Chinese online subcultures for bandwagon trends and the pursuit of mass popularity.
+
+[^kamen]: Translator's note: A joke on *Kamen Rider W*, in which two people transform into one Rider. See [Toei's official series introduction](https://www.kamen-rider-official.com/series/double/).
+
+[^junna]: Translator's note: “Akarin mode” invokes *YuruYuri*'s Akari and the running joke about her lack of presence. Hoshimi, Junna's surname, combines the characters for “star” and “see.”
+
+[^other]: Translator's note: The big Other is a Lacanian term for the symbolic position to which speech is addressed, not simply another person. The Chinese shifts from “the desire of the Other” to the inverted “the Other of desire.” That distinction is retained here.
+
+[^project]: Translator's note: “2.5D” here refers to the project's combination of animation and live stage performance.
+
+[^medicine]: Translator's note: Zhanba is short for Mengzhan Ba, an anime discussion forum on Baidu Tieba. “Fake medicine” is fandom slang here for speculative plot theories, especially those imagining emotionally fraught developments—not actual medicine.

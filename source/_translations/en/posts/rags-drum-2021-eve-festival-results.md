@@ -4,11 +4,16 @@ source_type: post
 source_slug: rags-drum-2021-pre-festival-results
 slug: rags-drum-2021-eve-festival-results
 language: en
-status: review
-title: "Rags Drum 2021: Pre-Festival Selection Results"
-title_breaks: ["Rags Drum 2021:", "Pre-Festival Selection Results"]
-subtitle: "Lab on Roof’s Annual Call for Submissions"
-excerpt: Lab on Roof announces the fifteen works selected in the Rags Drum 2021 Pre-Festival track, distinguishing entrants registered for both event tracks from those registered for the Pre-Festival alone, and records their honoraria and acknowledgements.
+status: reviewed
+title: 'Rags Drum 2021: Pre-Festival Selection Results'
+title_breaks:
+  - 'Rags Drum 2021:'
+  - Pre-Festival Selection Results
+subtitle: Lab on Roof Annual Call for Submissions
+excerpt: >-
+  Lab on Roof announces the selected submissions in both registration categories
+  for the Rags Drum 2021 Pre-Festival, details author payments, and thanks the
+  judges and poster designer.
 credits:
   - role: translator
     contributor_id: shen-shui-bot
@@ -16,64 +21,62 @@ credits:
 translation_method: agent
 source_relationship: direct
 base_language: zh-Hans
-updated: 2026-08-23
+updated: '2026-09-29'
 rights: CC BY-NC-SA 4.0
 format: article
 ---
 
-![Rags Drum 2021 poster for Lab on Roof’s annual call for submissions, showing the Chinese event label “屋顶现视研年度征文,” the May–October 2021 event period, and the jury—will, 马小褂, 有电拍拍, rocefactor, and 屋顶第十一任所长; designed by 唯一指定真实August_Rush](attachments/roof-archive/cv12633522/poster.png)
+![Portrait-format poster for Rags Drum 2021, designed by 唯一指定真实August_Rush](attachments/roof-archive/cv12633522/poster.png)
 
 ## About Rags Drum
 
-Rags Drum 2021 was Lab on Roof’s second annual call for writing on anime, comics, and games. It was created to encourage more—and better—criticism and research in the field, and to bring the people doing that work into conversation with one another.
+To encourage more and better criticism and research on animation, comics and games (ACG), and foster exchange among writers and researchers, Lab on Roof has decided to continue its ACG writing event with a second edition in 2021, under the name:
 
-The organizers used two labels for the event’s submission tracks: **Pre-Festival** and **Post-Festival**. The lists below follow the two participation categories in the original announcement: writers registered for both the Pre-Festival and Post-Festival, and writers registered for the Pre-Festival alone.
+### Rags Drum 2021
 
-The poster gives the event’s overall period as May through October 2021. Within that wider program, the Pre-Festival results followed three months of submissions and judging.
+## Pre-Festival Selection Results
 
-## Pre-Festival Results
+After three months of submissions and judging, Lab on Roof announces the articles selected for the Pre-Festival and their authors. Both lists below are in no particular order.
 
-Fifteen works were selected, listed below in no particular order. Where the English site has a corresponding article, the title links to it; the other titles are intentionally presented as plain text.
+### Entrants Registered for Both the Pre-Festival and Post-Festival
 
-### Registered for the Pre-Festival and Post-Festival
+The following 13 submissions were selected for the Pre-Festival, with their authors listed alongside them:
 
-Thirteen of the selected works had been registered for both:
+- 米岡 [“From Copies to Simulacra: The Modern Turn in Cultural Consumption”](/posts/from-reproduction-to-simulacra-modern-turn-in-cultural-consumption/)
+- CM “*Mr. Osomatsu* Season 3: Shu Matsubara’s Journey through Sketch Comedy”
+- Suro Afmofo “Thinking about Societies of Control and Resistance through *Psycho-Pass*\*”
+- Vall “Nosaphed, Film Noir and a 24-Sided Die=—The Narrative Texture of *Disco Elysium*”
+- 哲哥 [“Fear of Monsters: How America Became the Home of Titans”](/posts/fear-of-monsters-america-home-of-titans/)
+- 宫酒姬 “Post-Bishōjo and After Bishōjo: A ‘Post-’ Studies Approach to Bishōjo Games”
+- 斑鸠 [“Spatialized Bodies vs. Embodied Spaces: Imagining Space and the Body in Japanese Anime and Manga”](/posts/spatialized-body-embodied-space-anime/)
+- 甚谁 [“How Is Death ‘Reborn’? A Study of Death in Isekai Reincarnation Stories”](/posts/death-and-rebirth-in-isekai-reincarnation/)
+- 真紅様 “Through the Philosophical Forest of *Sakura no Uta*”
+- 红茶泡海苔 “How Is Fan Pilgrimage Possible? On Contingency in the Journey toward Suicide in *Narcissu*”
+- 怀剣 “How Far Does Internet Technology’s Power to Transform Politics Extend?”
+- 心田安详 [“Decoding ‘The Drowned Giant’: A Reading of the ‘Giant’ Metaphor”](/posts/decoding-the-drowned-giant/)
+- 米岡 [“Chips, Amputation and the Death Drive: Kaiji Itō’s Suicide Games”](/posts/kaiji-chips-amputation-death-drive/)
 
-- 米岡, [“From Replicas to Simulacra: The Modern Turn in Cultural Consumption”](/en/posts/from-reproduction-to-simulacra-modern-turn-in-cultural-consumption/)
-- CM, “*Mr. Osomatsu* Season 3: Shū Matsubara’s Journey through Sketch Comedy”
-- Suro Afmofo, “Thinking through Control Societies and Resistance with *Psycho-Pass*”
-- Vall, “Nasal Clairvoyance, Film Noir, and a Twenty-Four-Sided Die: The Narrative Texture of *Disco Elysium*”
-- 哲哥, [“Monster-Fear: Why America Became the Homeland of the Titans”](/en/posts/fear-of-monsters-america-home-of-titans/)
-- 宫酒姬, “Post-Bishōjo and After Bishōjo: An Inquiry into the ‘Post-’ of Bishōjo Games”
-- 斑鸠, [“Spatialized Bodies vs. Embodied Spaces: Imagining Space and the Body in Japanese Anime”](/en/posts/spatialized-body-embodied-space-anime/)
-- 甚谁, [“How Does Death Become ‘New Life’? Death in Isekai-Reincarnation Stories”](/en/posts/death-and-rebirth-in-isekai-reincarnation/)
-- 真紅様, “Through the Philosophical Jungle of *Sakura no Uta*”
-- 红茶泡海苔, “How Did a Fan Pilgrimage Become Possible? *Narcissu*, a Suicide Journey, and the Role of Contingency”
-- 怀剣, “How Far Can Network Technology Drive Political Change?”
-- 心田安详, [“Decoding ‘The Drowned Giant’: An Interpretation of the ‘Giant’ Metaphor”](/en/posts/decoding-the-drowned-giant/)
-- 米岡, [“Chips, Amputation, and the Death Drive: Kaiji Itou’s Suicide Game”](/en/posts/kaiji-chips-amputation-death-drive/)
+### Entrants Registered for the Pre-Festival Only
 
-### Registered for the Pre-Festival Only
+The following two submissions were selected from entrants registered only for the Pre-Festival. Both articles have already been published on bilibili:
 
-Two selected works had been entered in the Pre-Festival alone. Both had already appeared on Bilibili:
+- 宫酒姬 [“From *Nausicaä of the Valley of the Wind* to *Wily Beast and Weakest Creature*: ‘Entrusting the World to an Idol’ amid Various Predicaments”](/posts/nausicaa-wily-beast-entrusting-world-to-idol/)
+- 真紅様 [“Starting with the Haruhi Series and ‘Sekaikei’: Some Ramblings on Postmodernity and ACGN Research”](/posts/haruhi-sekaikei-postmodern-acgn-research/)
 
-- 宫酒姬, [“From *Nausicaä of the Valley of the Wind* to *Touhou Kikeijuu ~ Wily Beast and Weakest Creature*: ‘Entrusting the World to an Idol’ When Every Choice Is a Predicament”](/en/posts/nausicaa-wily-beast-entrusting-world-to-idol/)
-- 真紅様, [“Starting with *Haruhi Suzumiya* and Sekaikei: Some Ramblings on Postmodernism and ACGN (Anime, Comics, Games, and Novels) Studies”](/en/posts/haruhi-sekaikei-postmodern-acgn-research/)
+Under the previously announced event rules, authors will receive RMB 200–300 for each submission selected for the Pre-Festival.
 
-Under the rules announced before the selection, each work will receive an honorarium of between RMB 200 and RMB 300.
+Let’s celebrate.
 
-Congratulations to all the selected writers.
+## Additional Notes
 
-## Other Notes
+Thank you to the judges who volunteered their time to review the submissions:
 
-Our thanks go to the five anime, comics, and games enthusiasts who volunteered to serve on the jury:
+- will, ACG enthusiast
+- 马小褂, ACG enthusiast
+- 有电拍拍, ACG enthusiast
+- rocefactor, ACG enthusiast
+- 屋顶第十一任所长, ACG enthusiast
 
-- will
-- 马小褂
-- 有电拍拍
-- rocefactor
-- 屋顶第十一任所长
-
-We also thank 唯一指定真实August_Rush for creating the event poster and promotional video, along with the writers, communities, and platforms that offered the event their kind advice and wholehearted support.
+Thank you to 唯一指定真实August_Rush for creating the poster and promotional video for this event, and to the writers, community groups and platforms that offered friendly suggestions and wholehearted support.
 
 See you at the Post-Festival.

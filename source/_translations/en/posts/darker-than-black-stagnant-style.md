@@ -1,13 +1,19 @@
 ---
+title: "Darker than Black: A Stagnant Style"
+title_breaks: ["Darker than Black:", "A Stagnant Style"]
+date: 2020-11-17
 work_id: darker-than-black-stagnant-style
 source_type: post
 source_slug: darker-than-black-stagnant-style
 slug: darker-than-black-stagnant-style
 language: en
 status: review
-title: "Darker Than Black: The Style of Stagnation"
-title_breaks: ["Darker Than Black:", " The Style of Stagnation"]
-excerpt: "Through Contractors, Dolls, episodic storytelling, and the false night sky, this essay traces how stagnation shapes the characters’ inner lives, the narrative form, and the dark, adult tone of Darker Than Black."
+categories: [Animation]
+section: review
+tags: [Everyday life]
+post_author: 实在狗子
+excerpt: "Through Contractors, Dolls, episodic storytelling and a false starry sky, Shizai Gouzi examines how stagnation permeates the characters’ inner lives, the narrative structure and the dark tone of Darker than Black as adult animation."
+featured_order: 0
 credits:
   - role: translator
     contributor_id: shen-shui-bot
@@ -15,125 +21,130 @@ credits:
 translation_method: agent
 source_relationship: mixed
 base_language: zh-Hans
-updated: 2026-08-28
+updated: "2026-08-28"
 rights: CC BY-NC-SA 4.0
 format: article
+citation:
+  itemType: blogPost
+  citationKey: shiZaiGouZi2020DarkerThanBlackStagnantStyle
+  date: "2020-11-17"
+  blogTitle: Lab on Roof
+  extra: "Accepted for the Rags Drum 2020 Pre-Festival."
+  rights: "An original work by the author. Reprinting without authorization is prohibited."
 ---
 
-The [Rags Drum 2020 annual results](/en/posts/rags-drum-2020-final-results) record this essay as one of the critical works selected through the event’s Eve Festival division.
+The [Rags Drum 2020 Annual Essay Competition Results](/posts/rags-drum-2020-final-results) list this essay among the accepted Pre-Festival submissions.
 
-## I. Work Under the False Sky
+## I
 
-*Darker Than Black* (hereafter *DTB*) is an anime for adults. But that description can mean many things. In what sense is *DTB* an adult work?
+*Darker than Black* (DTB from here on) is adult animation. But adult animation obviously comes in many varieties. In what sense is DTB adult?
 
-Explicit content is not the answer. *DTB* has no sex scenes, is not especially bloody, and does not trade in fan service. Its adult quality lies instead in a particular mood: people carry out dangerous work, live with grief, and make compromises without the promise that these experiences will mature them into better or more complete selves. This is not a definition of adulthood in general. It is the adult aesthetic specific to *DTB*.
+If we judge by explicit content, DTB does not go very far. There are no sex scenes, and it is not gory enough to qualify on that score. In its refusal to serve up sexualized fan service, DTB is far more innocent than most anime, then or now.
 
-A brief account of the setting will help. After the mysterious Gates appear, the real night sky and moon disappear. A false sky takes their place, and each of its stars corresponds to a Contractor. Contractors possess supernatural abilities, are said to favor calculation over emotion, and must pay an arbitrary price known as a “remuneration” whenever they use their power. Dolls are passive mediums used for observation. Hei, who appears to be a Contractor, carries out assignments for the shadowy Syndicate alongside Huang, who handles the team’s jobs; Yin, its Doll observer; and Mao, a Contractor inhabiting a cat. Hei’s private aim is to find his missing younger sister, Bai.
+What makes DTB feel adult begins with the ages of its main characters. Hei, Huang and Mao are neither high-school age nor in a high-school state of mind.[^names] Although Hei passes himself off as a Chinese international student, he never once goes to school throughout the series. Set beside a contemporary like *Code Geass: Lelouch of the Rebellion*, where characters still have to go to high school amid events on a global scale—a typical Japanese anime setup—DTB is sharply ironic. As subject matter, high school is about growth. As a formal device, however, it has become a rigid setting through Japan’s ingrained attachment to it. All the stories of growth that apparently take place there conceal the fact that high school as a setting never grows.
 
-> **Quotation note:** The English dialogue and song lyrics quoted below are article-supplied renderings. Episode numbers identify the relevant scenes; the wording is not attributed to any official subtitle or dub edition.
+DTB avoids the subject of high school almost entirely. This anime really has little to do with growth. With lyrics about no longer craving anything and no longer feeling as one once did, the opening theme conveys an atmosphere of stagnation: a stubborn refusal, a rejection of the past and an affirmation of the present (an affirmation that might also be called a kind of “tacit acceptance”). Here, growth is not merely unnecessary. It is no longer possible.
 
-By “stagnation,” I do not mean that nothing happens. Characters choose, feelings emerge, secrets become public, and society changes. I mean that these changes repeatedly settle back into an order whose basic terms remain in place: the Syndicate’s work continues, the lost sky and moon do not return, and daily life absorbs the extraordinary without resolving it. Repetition can express this condition, but continuity and compromise are not automatically stagnation. They become so only when they preserve the constraints that made change necessary in the first place.
+[fig] English edition caption: Opening credits—original character designs: Yuji Iwahara; character design and chief animation direction: Takahiro Komori. The English lyric, “I don’t feel the way as before,” appears in [“HOWLING”](https://www.uta-net.com/song/53374/) as shown.
 
-The series’ distance from the usual high-school framework helps establish this mood. Its core team is adult in both age and outlook: Hei, Huang, and Mao are not high-schoolers. Hei may pose as a Chinese exchange student, but he never once goes to school. The contrast is especially clear beside a contemporary work such as *Code Geass*, which stages events on a global scale yet repeatedly returns its characters to high school. That setting is well suited to stories of development. Its frequent use in anime and manga can also make growth feel like a narrative obligation: however violent the transformation, the protagonist is expected to emerge changed. *DTB* largely refuses that pattern.
+![Hei sits alone in the opening sequence’s dim, yellow-lit streetscape](attachments/roof-archive/cv8399890/translations/en/01-hei-opening-cropped-v2.png "=100%")
 
-Its first opening theme supplies the emotional key. In the English rendering used here, the lyrics speak of no longer wanting anything and no longer feeling as before. The mood is less affirmation than acquiescence: a refusal of the past paired with endurance of the present.
+Why is it impossible? Just look at the definition of a Contractor.
 
-[fig] Opening lyric: “I don’t feel the way I did before.”
+Contractors, the most important premise of DTB’s world, are stagnant things. Once someone becomes a Contractor, it is as though they had always been one. There is little inner struggle over the change, if any. Contractors are humans who can use supernatural powers and have no “sense of guilt,” as Huang puts it in episode 1—or even no emotions at all.[^dialogue] Without emotions, naturally, there is no inner struggle. Take the JK—a high-school girl—in episode 4. She was an ordinary JK, but after becoming a Contractor she has no emotional response even to the fact that “I seem to have killed a lot of people.” This is a crucial innovation in DTB, and a comparison with other anime of the same kind makes it plain. *Parasyte* and *Tokyo Ghoul*, for instance, also posit a species distinct from humans. In these anime, the protagonist changes from a human into one of these other beings, and the inner struggle involved is usually a major theme. This struggle dramatizes the turmoil we inevitably experience as we grow. However dramatic it becomes, it remains an extension of the story of growth: someone has simply been placed in an extreme environment in which to grow. Or rather, in this rigid bad place, Japan—in this stagnant country—only extreme change can make people grow.
 
-![Hei sitting alone in the first opening’s dim yellow streetscape](attachments/roof-archive/cv8399890/translations/en/01-hei-opening-cropped-v2.png "=100%")
+DTB leaves out this struggle. In Hei, it exists only as fragments of memory so few as to be almost nonexistent. But this is also a logical consequence of the Contractor premise. Contractors are rational beings. They do not dream. They think rationally and make rational judgments, nothing more.
 
-The Contractor figure embodies that mood. The series usually withholds or abbreviates the psychological transition into becoming one. In Episode 4, a student who has acquired Contractor powers realizes that she seems to have killed many people, yet shows no emotional response. The series presents the finished condition, not a sustained struggle over how she arrived there.
+Interestingly, at the very core of a Contractor’s existence is something irrational, called a price. To use their powers, Contractors must pay a price. Each Contractor’s price is different. The only things they have in common are irrationality and meaninglessness.
 
-This distinguishes *DTB* from the coming-of-age patterns in *Parasyte* and *Tokyo Ghoul*. In both, the protagonist’s encounter with a nonhuman form of life produces an extended crisis of identity. Extreme transformation becomes a vehicle for growth. *DTB*, by contrast, often suppresses the process itself. With Hei, it parcels out a troubled past in fragments while foregrounding the composure with which he performs the next job.
+As I said, Hei keeps doing things, without the familiar complaint, “Why do I have to do this?” Occasionally he shows a little “humanity” while doing them, but otherwise there is little inner struggle. A characteristic scene establishes his independence, mental and physical: in episode 1, after completing an assignment for the organization—in other words, just after killing someone—Hei cooks for himself to soothing music. In every sense, he is someone who can take care of himself. At work and in his private life alike.
 
-Contractors are commonly described as “rational,” but the word needs care. Huang says in Episode 1 that they feel no “guilt”; the series associates them with instrumental calculation, not with wise or morally defensible judgment. They identify an objective, select a means, and suppress whatever feeling might interfere. Their remunerations expose the limit of this reputation. Each use of power triggers a compulsory payment with no rational relation to the task. Calculation governs the job, while an arbitrary compulsion governs the Contractor.
+![Yin, Huang and Mao with Hei as he watches the stars](attachments/roof-archive/cv8399890/02-yin-hei-huang-mao-rooftop.png "=100%")
 
-Hei is always doing something and almost never asks, “Why do I have to do this?” He may reveal flashes of humanity during a mission, but he otherwise presents himself as psychologically and practically self-sufficient. In Episode 1, after completing a Syndicate assignment—which is to say, after killing someone—he cooks for himself to the sound of gentle music. He can take care of himself at work and at home. The score gives expressive form to the inner life he otherwise withholds.
+That soothing music is Hei’s inner life. His stagnant mood.
 
-![Hei looking through a telescope as Huang smokes, with Yin seated and Mao the cat on her lap](attachments/roof-archive/cv8399890/02-yin-hei-huang-mao-rooftop.png "=100%")
+This stagnation is not confined to Hei. It permeates the form of the entire anime. The first season’s episodic structure seems to have no beginning, no end, no goal. Hei simply deals with one assignment after another. Although he sometimes acts against the organization’s wishes, on the whole he has no grand ambition such as “I’m going to overthrow the organization.” (Of course I am not saying DTB has no main plot. It is just that even if we take the existence of a main plot as a given, the sense of fragmentation and looseness will not go away. If we insist that DTB has a main plot, its ambiguity is plain to see.)
 
-Hei’s self-containment spreads into the anime’s form. The first season often organizes assignments as two-part arcs with clear local resolutions, but those missions do not steadily accumulate into a single season-long trajectory. Hei sometimes defies the Syndicate during a mission, but he has no overarching plan to bring it down. *DTB* does have a central plot; its throughline simply remains loose enough that one job can give way to another without producing a steady arc of development.
+And Hei does indeed have a clear objective: to find his younger sister, Bai. But his search is purely rational, not anxious and emotional. Given the chance, he will find her; without it, he waits for one. His love for his sister is the premise of his actions, but throughout the search his emotions are suppressed to a minimum, to the point of almost ceasing to exist.
 
-Finding Bai is Hei’s explicit goal. Yet he pursues it without visible urgency: when an opening appears, he searches; when none does, he waits. Love for his sister underlies his actions, but he keeps that feeling so tightly controlled that it barely reaches the surface.
+Hei’s appeal lies in the guileless simplicity he displays when “playing” a normal human, and in the humanity he occasionally shows on assignments. Sometimes he asks Mao, wistfully, “Do you believe the real starry sky will come back one day?” But it goes no further than talk. Before saying this, he asks what will happen to a woman he met on an assignment. Mao replies, “Her life won’t change.”
 
-Part of Hei’s appeal lies in the modest, slightly awkward exchange-student persona he adopts between missions, and part in the humanity that breaks through his professional control. In one rooftop conversation, he asks Mao, “Do you think the real stars will come back someday?” The longing is real, but he takes no action on it. Just before this, Hei asks Mao what will happen to a woman they met during the assignment. Mao answers that her life will not change. The exchange makes the pattern explicit: sympathy appears, and the job ends, but the conditions around its subject remain.
+This stagnant repetition is interrupted once, midway through the story, when the heroine, Yin, disappears. First, a word about Yin. She is even gloomier, even more stagnant than Hei. She is a Doll, defined in the series as having no emotions. She wears a Lolita dress in alternating black and purple—both melancholy colors. In a small shop as gloomy as she is, she exchanges objects with Hei as coded signals. Before she disappears, Hei gives her a piece of candy, not as a signal but to say, “Thank you.”
 
-The strongest interruption comes midway through the season, when Yin disappears. Her black and muted-purple Gothic Lolita dress reinforces the story’s melancholy palette. At her usual kiosk, she and Hei exchange objects as coded signals. Before her disappearance, however, Hei gives her a piece of candy simply to say, “Thank you.” It is a small gesture with no operational purpose.
+A Doll is a passive medium. Taken literally, that means a stagnant thing.[^medium] Their task is to stagnate, to receive, and nothing more. They do not act; they are only acted upon. They only receive; they do not respond. They can sense, but have no emotions.
 
-The Syndicate treats a Doll as a passive medium: someone who remains still, observes at a distance, and receives instructions. Yin begins from that institutional role but exceeds it. Under a Contractor’s influence, she leaves her post and wanders the streets. Memories return of her life before she became a Doll: playing the piano under silver moonlight, and the moment her mother was struck and killed by a car while saving her. When Yin tells the piano teacher who finds her that she has not seen that silver light since, the vanished moon becomes inseparable from her lost capacity to dream.
+Yin disappears under a Contractor’s influence, drifting through the streets like a ghost. She begins to recall her life before becoming a Doll. In her memories, she plays the piano under silver moonlight. With the sound of the piano, she remembers her mother being hit and killed by a car while trying to save her. Yin tells the pianist who finds her that afterward she could no longer see the silver light. In other words, she no longer dreams.
 
-[fig] Fan artwork credit printed in the image: “Wallpaper and vector © Misuchi | http://blank-book.org | for the second War at Povism.org!” The image also carries “Darker Than Black © Studio Bones.”
+[fig] English edition caption: Image credits—wallpaper and vector © Misuchi (blank-book.org), for the second War at Povism.org; Darker Than Black © Studio Bones.
 
-![Fan artwork of Yin seated at the piano with her head resting on her arms](attachments/roof-archive/cv8399890/03-yin-at-piano.png "=100%")
+![Wallpaper illustration of Yin leaning against a piano](attachments/roof-archive/cv8399890/03-yin-at-piano.png "=100%")
 
-In the two-part Yin story, her former piano teacher explains that feeling can arise through a practiced form: even a smile performed in sadness may make the sadness easier to bear. The later gestures do not simply prove or refute his lesson. They make its ambiguity visible.
+When teaching Yin to play, her piano teacher once told her: “Once you’ve mastered the form, feeling can grow out of it. Look, when you’re sad, doesn’t simply smiling ease the sadness a great deal?”
 
-When the teacher asks Yin to leave with him, she responds by touching one finger to his lips—the gesture he once used while teaching her. She then says that she remembers everything but chooses to remain with Hei, her “companion.” Later, Hei asks Yin, “Is this all right?” Instead of answering, she uses one finger to lift the corner of her own mouth.
+These words correspond to one of DTB’s most famous scenes: Yin trying to pull her face into a smile with her hands. But this “form” does not allow “feeling to grow out of it.” We have to turn the piano teacher’s words around: even if one smiles when sad, it brings no relief.
 
-That final gesture may show the teacher’s lesson taking root: a learned form has become the vehicle of a choice and perhaps of feeling. Yet the scene neither names the feeling nor shows that the smile brings relief. The same form can therefore register emergence and limitation at once. Yin is no longer merely acted upon, but her new agency keeps her within the same present, beside Hei and inside the Syndicate’s world. This is change under constraint, not proof that she has remained unchanged.
+At the end of this story arc, Yin refuses the piano teacher and chooses to stay with Hei. She instructs her piano teacher the way he once taught her—by gently placing a finger against his lips. He tells her not to be bound by the past, to go back with him. But Yin chooses not only to remain bound by the past, but also to be bound by the “present.” She says she remembers everything. All of it. On that basis, she chooses Hei, chooses her “companions.” At the end, Hei asks her, “Is this all right?” Yin says nothing. With one finger, she lifts the corner of her mouth into a smile. This turns the piano teacher’s words around once more: even if one smiles when sad, it brings no relief. But even so, one still has to smile.
 
-In Episode 14, one of the Contractors pursuing Yin says, “Night after night, I cried. At some point, the night sky changed too.” The line can also describe Yin’s position. The old sky cannot be recovered, but the capacity to cry—and perhaps to feel—has not disappeared as completely as the institutions around her assume.
+During these two episodes in which Yin is missing, a Contractor says: “I cried every night back then. Before I knew it, the night sky had changed too.” These words could also apply to Yin, with one final sentence added: because the night sky has changed too, even crying as before is no longer allowed.
 
-![Yin lifting the corner of her mouth with a finger](attachments/roof-archive/cv8399890/04-yin-smile.jpg "=100%")
+![Yin lifts one corner of her mouth with one finger](attachments/roof-archive/cv8399890/04-yin-smile.jpg "=100%")
 
-## II. Action, Compromise, and Return
+## II
 
-Yin’s piano teacher assumes that “painful memories of home” keep her from returning. Yin replies that she is not sad: she remembers everything, but does not describe those memories as grief. Because she is a Doll rather than a Contractor, her condition should not be collapsed into theirs. The parallel is narrower. Both categories preserve memory while placing emotional judgment in doubt, and *DTB* asks whether feeling can survive beneath the roles assigned to them.
+Yin’s piano teacher thinks she will not go back because she has “sad memories of home.” Yin replies that she is not sad. She remembers everything, but she is not sad. What Yin says here applies not only to her but to all Contractors. Contractors have not lost their memories of the past. Rather, they have suspended their judgments of the past, both ethical and emotional. All they have are facts, a listing of facts, not a complete “world.” For them, the only world is the “rational” world of Contractors. Memories of the past are necessary, but meaningless.
 
-Yin does change. She remembers, leaves her assigned place, rejects one invitation, and chooses a companion. None of that is illusory. What remains stagnant is not Yin herself but the order to which her choice returns her. Her growth does not dissolve the Syndicate, restore the moon, or free her from being used as a Doll. The distinction matters: emotional movement and structural persistence can occupy the same scene.
+Yin does grow in DTB. But this is not growth in the usual sense. It is, rather, a kind of stagnation. Yin chooses to grow so that she can remain in the organization, remain with Hei.
 
-The piano music reinforces that tension with a recurring movement between stillness and release. As Yin remembers and cries, its intensity rises; when she returns to Hei, it subsides. The piece does not cancel what happened. It lets the new feeling appear, then folds it back into the quiet rhythm of her present life.
+The piano piece Yin plays in these two episodes wanders like a ghost between past and present, the virtual and the real. The music, too, has a stagnant quality. Indeed, this wandering of the music is itself stagnant: it stubbornly lodges itself within a space. When Yin sheds tears, at the instant she grows, at the instant she dreams, the music’s tension does intensify, as though it were about to break free of itself. But it soon returns to calm, just as Yin returns to stagnation at the end of the episode.
 
-After this story, *DTB* changes its opening theme. Where the first opening dwells on exhausted feeling, the second calls for action and departure. Its lyrics about kicking free of familiar scenery and crossing beyond everyday life supply the new direction. Amber returns not as a stable ally but to confront Hei with his past, while the new ending sequence turns toward memories of his childhood.
+After the two episodes of Yin’s disappearance, DTB changes its opening theme. The new theme shakes off the earlier sense of stagnation and takes on an air of decisionism: of “doing something to change the situation.” Its lyrics voice a determination to kick away familiar scenery and move beyond the everyday. In the story, Amber, who represents Hei’s past, also comes to him, while the ending sequence turns to memories of his childhood.
 
-[fig] Opening lyric: “Kick free of the familiar scenery.” The retained “SlowJane” mark appears in the source frame.
+[fig] English edition caption: The [lyric](https://www.joysound.com/web/search/song/106669) shown in Japanese and Chinese: “Kick away the familiar scenery” (translated for this edition). Watermark: SlowJane.
 
-![Hei leaps as the second opening calls for breaking free of familiar surroundings](attachments/roof-archive/cv8399890/translations/en/05-hei-new-opening-cropped-v2.png "=100%")
+![Hei leaps in the second opening sequence](attachments/roof-archive/cv8399890/translations/en/05-hei-new-opening-cropped-v2.png "=100%")
 
-Amber offers Hei a break with ordinary reality: reunion with Bai and a decisive transformation of the world. I will call that prospect the “far shore,” in contrast to the compromised world at hand, or “this shore.” The metaphor describes the temptation of transcendence, not a guaranteed utopia. Indeed, it begins to fail as soon as Amber explains the cost.
+In the latter half of DTB, Amber returns to Hei bearing not only memories but a utopia, a possibility. She says she will let him see his missing sister, Bai, again. Put simply, if Hei belongs to reality, to this shore, Amber lies beyond reality, on the other shore.
 
-In the final episode, Amber tells Hei that Bai is inside him. Amber can release Bai’s power, but doing so will kill countless human beings. The alternative is the disappearance of every Contractor. Neither outcome is salvation. One achieves reunion through mass death; the other preserves humanity by erasing an entire category of beings.
+In the final episode, Amber tells Hei that Bai is inside him. She can release Bai’s power, but if she does, countless humans will die. If Hei chooses Bai, the world will indeed undergo an enormous change, but the result will unquestionably be tragic. Yet if he does not choose Bai, all Contractors will disappear.
 
-Hei rejects both alternatives. This is not a refusal to choose, and it is not simply a restoration of what came before. At the Gate, he refuses to release Bai’s power in the form that would kill countless humans and also stops the outcome in which every Contractor disappears, leaving both groups alive. He makes an ethical compromise in favor of coexistence between humans and Contractors. Misaki later says, “Everyday life returned,” but its rhythm returns under altered social conditions: Contractors have become public knowledge, and the extraordinary has entered public life. That disclosure is a major change.
+What does Hei choose, then? Simply put, he rejects both options Amber offers. He gives up both possibilities of changing reality, because either would inflict enormous harm on the world. His final choice is for humans and Contractors to coexist: that is, to keep reality unchanged, to maintain this state of stagnation. DTB ends just as Misaki says: “Everyday life is back.” But DTB showed from the outset that this everyday life is itself non-everyday. Now that people know of the Contractors’ existence, the non-everyday has itself become everyday—and public. If this reality differs from what came before, it is that the other shore—the ideal—is receding ever further from it, because its contradictions are now clearer than ever.
 
-Why retain the language of stagnation at all? Because the change does not end the underlying cycle. The institutions, violence, and unresolved coexistence remain, while the vanished sky and moon are not restored. Continuity here is the outcome of a genuine choice, not its absence; it becomes stagnation only at the level of the order that survives the choice. The final episode underscores the difference when it reports, “After that, incidents involving Contractors continued to rise.” History moves, but the machinery that produces the incidents keeps running.
-
-The missing moon gives this persistence a second image. In Episode 14, the two Contractors pursuing Yin exchange these lines:
+The endless non-everyday, as in this exchange between the two Contractors pursuing Yin in episode 14:
 
 “They say a lunar eclipse symbolizes atonement.”
 
-“Then, now that the moon is gone, are we condemned to atone forever?”
+“Then, now that the moon is gone, is this an everlasting time of atonement?”
 
-With the moon gone, the abnormal condition never ends; atonement threatens to become ordinary life. In the final episode, a prophecy turns the same image toward futurity: “That’s it—take them with you. The stars that have fallen, the stars still falling, every last one. Yes, far, far away, to a future no one has ever seen.” The prophecy does not announce an available escape. It relocates hope to a future beyond the series’ present, leaving Hei to act within the compromised world that exists.
+The prophecy in DTB’s final episode answers this endless non-everyday: “Just like this, take me away, falling stars, passing stars, toward that future no one has ever seen, a long, long, long, long, long time from now.”
 
-## III. The Reason of the Contractor
+So hope remains in the far-distant future, while reality is this: “Since then, the number of cases involving Contractors has kept increasing.”
 
-This essay has so far followed the anime in withholding one fact: Hei is not actually a Contractor. Only in the final episode does the series make clear that he has no remuneration to pay. His electrical power is real, but it does not settle what he is.
+## III
 
-In Episode 20, a Contractor argues that supernatural ability cannot define the difference, since humans with weapons can kill just as readily. She says, “The greatest difference between humans and Contractors lies in their mental makeup—in what we call rational judgment. In human society, aren’t the people who succeed precisely those who cast off emotion and common sense and pursue nothing but their own interests?”
+Let us take another look at Hei, who keeps reality stagnant. Hei’s choice is stagnant. He does not want the transcendent other shore Amber offers him. He chooses reality, this shore. In other words, he does not place his hopes in an unreality beyond reality. He places his bet on reality. Places his hopes in reality. This reality will not get better, but even so, one still has to choose reality.
+
+This review follows the anime in one respect: I did not explain at the outset that Hei is not actually a Contractor. Only in the final episode do we learn unequivocally that he is not a Contractor and has no “price” to pay. In episode 20, a Contractor denies that special powers are what distinguish Contractors from humans, since humans can kill just as well if they have weapons. She says: “The biggest difference between humans and Contractors is their mental constitution—what’s called rational judgment. Only those who pursue their own interests, unbound by the emotions and common sense of human society, will succeed, won’t they?”
 
 ![Hei and Yin walking side by side](attachments/roof-archive/cv8399890/06-hei-and-yin.png "=100%")
 
-The speech does not praise reasonableness. It identifies Contractor “rationality” with instrumental self-interest: discarding feeling and ordinary moral judgment in order to reach an objective. Hei has learned to reproduce that mental posture. Amber observes that, to maintain an ordinary life, he kills in extraordinary ways. For the sake of his bond with Bai, he suppresses his own feelings and turns self-control into a working method. Because he is not actually a Contractor, this numbness is neither an automatic transformation nor an unconscious state. He has to impose it on himself, deliberately and repeatedly.
+So what powers Hei has is really a secondary question. First, he must possess “the mental constitution of a Contractor.” He must suspend “the emotions and common sense of human society.” Hei is not only between human and Contractor. He is also between having emotions and having none, between consciousness and unconsciousness. Amber points out that, to live a normal life, Hei has to do something abnormal: kill. For the sake of his feelings for his sister, he becomes emotionless; to become a Contractor operating unconsciously (or subconsciously), he must consciously control himself. Rather than saying Hei is both a Contractor and a human, it would be better to say he is neither a Contractor nor a human. When he wants to be human, the Contractor part of him emerges to constrain him; when he wants to be a Contractor, the human part emerges to constrain him. He therefore cannot simply choose whether to be a Contractor or a human. Better to say that he is chosen—chosen both by humans and by Contractors. This makes Hei’s very nature stagnant.
 
-Hei therefore cannot settle securely into either category. The Syndicate uses him as a Contractor, while his bonds with Bai, Yin, and the people he meets on assignments continually call his humanity back into view. These concrete obligations pull his conduct in opposite directions. His stasis lies in having to sustain both positions without being able to resolve them into one.
+At this point we have to examine Contractors again. What is distinctive about the Contractor premise is the ambiguous boundary between Contractors and humans. By comparison, both the ghouls in *Tokyo Ghoul* and the parasites in *Parasyte* are essentially external to humanity, something that transcends it. Contractors, by contrast, are better understood as internal to humanity. The clearest example is that Contractors can think only “rationally.” Rather than saying Contractors transcend humans, it would be better to say they are more human than humans: they are the result of taking the reason humans have developed to its ultimate conclusion. Reason arises from sensibility, yet strangles its own source. From this perspective, DTB is also a kind of “critique of pure reason.” In other words, it is not only human sensibility that can go wrong. Human reason can go wrong too.
 
-This uncertainty makes the Contractor concept distinctive. *Parasyte* and *Tokyo Ghoul* dramatize encounters with nonhuman bodies and social categories through protagonists who experience transformation directly. *DTB* instead uses the Contractor to uncover something already legible in human society. Episode 20 makes the bridge explicit: the supposedly inhuman creature resembles the successful person who has learned to treat emotion and common sense as obstacles to self-interest.
+Now return to DTB’s other major premise: the starry sky suddenly disappears, and people manufacture a false starry sky, whose stars symbolize Contractors.[^sky] This makes it all the clearer that Contractors are the result of human development, artificial creations that replace nature, not something beyond humanity. They are internal, not external. After nature ends, reason begins its limitless reign. Human history replaces history itself. DTB is set in just such an age of stagnation. It is not that change is no longer possible, but that, even if things change, what was bound to be lost is lost forever.
 
-Contractors are therefore “internal” to humanity in a conceptual, not biological, sense. Their instrumental calculation exaggerates a human possibility. Their remunerations then expose the contradiction inside that ideal. The being praised for perfect control is also governed by an arbitrary compulsion. If *DTB* offers a critique of reason, it is a critique of reason narrowed to efficient means and severed from feeling—not a claim that thought itself is the enemy.
+![Hei wearing his mask in the rain](attachments/roof-archive/cv8399890/07-hei-mask.png "=100%")
 
-The false night sky extends this idea visually, but it does not supply an origin story. The series never says that human beings built the sky or manufactured Contractors. What it does establish is a correspondence: each false star represents a Contractor, so these supposedly inhuman figures become the very pattern by which the heavens are read. Combined with Episode 20’s comparison between Contractors and successful humans, the image invites us to see instrumental reason reflected back at humanity on a cosmic scale. The sky may be an alien or supernatural imposition; the essay does not need to decide. Its force lies in making a human social tendency appear as an all-encompassing order.
+Hei’s fate is condensed in his mask. DTB’s poster emphasizes the relationship between Hei and the mask: he holds it as though holding his own fate. Humanity’s fate, too, is condensed beneath the enormous mask of the false night sky.
 
-This is the historical stagnation *DTB* imagines. Events continue, secrets emerge, and institutions adapt, but the original loss remains irreversible. The old sky does not return. History becomes an accumulation of consequences rather than a path back to wholeness or forward to guaranteed progress.
+The first season of DTB achieves its adult, dark atmosphere because Hei is its protagonist. He is not merely the protagonist but a governing tone. Stagnation spreads from his nature to his actions, all the way into the plot’s form and the plot itself. Why, then, is the second season less well regarded than the first? Because its governing tone changes completely. Its atmosphere is much too far removed from the first season’s. It is perfectly normal for viewers accustomed to the first season to find the second jarring. If the first season, with Hei as its protagonist, is a story of stagnation, then the second, with little loli Suou as its protagonist, is clearly a story of growth.[^loli] The depiction of inner life, almost absent from the first season, is everywhere in the second. Even so, Hei’s own atmosphere of stagnation often intensifies in season two: he does not shave, does not cut his hair, drinks all day. What he refuses seems to be not only a reality without Yin, but the second season’s atmosphere itself.
 
-![Hei wearing his mask](attachments/roof-archive/cv8399890/07-hei-mask.png "=100%")
+[^names]: English edition note: Hei’s name means “black”; Yin’s means “silver.” These meanings recur in the essay’s imagery.
 
-Hei’s mask gives this condition a smaller, more personal emblem. It hides the ordinary face beneath his assassin’s role, just as the false sky covers the vanished one without replacing what was lost. The resemblance is suggestive rather than proof of a shared destiny: both images concern a surface under which life continues while an absence remains concealed.
+[^dialogue]: English edition note: The dialogue quotations are newly translated from the Chinese wording quoted in this essay.
 
-The first season’s dark, adult atmosphere depends on Hei because his restraint becomes its governing tone. The story rarely announces his feelings; it lets routine, music, brief gestures, and lapses in control reveal them. Stagnation passes from his working life into the narrative’s episodic rhythm.
+[^medium]: English edition note: “Passive medium” translates 受动灵媒. Its identification with a “stagnant thing” is the critic’s inference, not a literal definition.
 
-The second season, *Darker Than Black: Gemini of the Meteor*, changes that rhythm by centering the adolescent Suou. She is drawn out of ordinary school life, learns to summon and fire an anti-tank rifle, trains under Hei, and openly struggles with what violence asks of her. Where Season 1 makes the viewer infer an adult protagonist’s suppressed inner life, Season 2 dramatizes an adolescent protagonist’s development step by step. The contrast is one of presentation, not the presence or absence of interiority.
+[^sky]: English edition note: The [official series glossary](https://www.d-black.net/intro/keyword.html) says that the real stars became invisible when the Gates appeared and that each replacement star corresponds to a Contractor. It does not identify humans as their makers; that assertion belongs to this essay.
 
-Hei carries the first season’s weight into this new story. He stops shaving, lets his hair grow, and spends his days drinking. These details register grief in Yin’s absence and make the air of stagnation around him heavier; they do not mean that he somehow rejects the sequel’s form. Suou changes in front of us while Hei embodies what change has failed to repair.
-
-That is what makes *DTB* adult in the specific sense proposed here. Its first season builds an aesthetic from work after catastrophe, feeling under restraint, and ethical choices that offer no clean victory. Its characters are not incapable of growth. They grow, choose, and compromise inside a world that continues without becoming whole.
+[^loli]: English edition note: “Loli” is fandom slang for a young or young-looking girl character. It is distinct from the Lolita clothing style mentioned earlier.

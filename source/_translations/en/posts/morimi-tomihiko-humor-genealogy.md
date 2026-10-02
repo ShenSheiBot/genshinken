@@ -5,11 +5,6 @@ source_slug: morimi-tomihiko-humor-genealogy
 slug: morimi-tomihiko-humor-genealogy
 language: en
 status: review
-title: "Tracing the Sources of Tomihiko Morimi’s Humor"
-title_breaks:
-  - "Tracing the Sources of"
-  - "Tomihiko Morimi’s Humor"
-excerpt: "Drawing on relevance theory, Hegel’s theory of comedy, and the coined terms that recur throughout Tomihiko Morimi’s fiction, this essay examines how Morimi’s humor works at the levels of the sentence, narrative structure, and theme."
 credits:
   - role: translator
     contributor_id: shen-shui-bot
@@ -17,36 +12,36 @@ credits:
 translation_method: agent
 source_relationship: mixed
 base_language: zh-Hans
-updated: 2026-08-28
+updated: 2026-09-29
 rights: Original work. Reproduction without authorization is prohibited.
 format: article
+title: Tracing the Sources of Humor in Tomihiko Morimi’s Works
+excerpt: Drawing on relevance theory, Hegel’s account of comedy, and the “custom-defined nouns” in Morimi’s works, this essay examines how their humor takes shape at the levels of language, narrative structure, and theme.
 ---
 
-> This essay won a prize in the Eve Festival of Rags Drum 2020, organized by Lab on Roof.
+By Shi Wenzi · November 18, 2020
 
-[fig] The black-haired young woman encounters the trouserless Senior in Masaaki Yuasa’s 2017 animated adaptation of *The Night Is Short, Walk on Girl*.
+> This article was a prizewinning entry in the pre-event celebration for Lab on Roof’s “Rags Drum 2020.”
 
-![The black-haired young woman standing between the bare legs of the Senior in *The Night Is Short, Walk on Girl*](attachments/roof-archive/cv8416238/night-is-short-walk-on-girl.png)
+[fig] Still from the animated film *The Night Is Short, Walk on Girl*.
 
-## Foreword
+![A short-haired woman in a yellow top and red skirt stands at night, framed by bare legs and feet in the foreground.](attachments/roof-archive/cv8416238/night-is-short-walk-on-girl.png)
 
-> The fearsome black hole in that pit toilet could hold its own against “the child-snatching man” and “the bottomless swamp deep in the woods” among the greatest terrors of my imagination.
->
-> Tomihiko Morimi, *The Sun and the Maiden* (*Taiyō to Otome*), “Memories of the Toilet”
+## Preface
 
-The humor of Tomihiko Morimi’s fiction is obvious at a glance. He often pauses to expound an arcane-looking expression—sometimes a coinage of his own, sometimes an ordinary phrase such as “four-and-a-half tatami mats” made to sound like private mythology. The effect is one of solemnly explaining pure nonsense. A first encounter with his writing also brings a certain freshness, even unease. The reader feels abruptly thrust into a world at once ordinary and peculiar, a sensation not wholly unlike beginning Kafka’s *The Metamorphosis*. Read a little further, however, and the resemblance vanishes.
+> The spine-chilling black hole in that “plop toilet” could almost stand alongside “the man who kidnaps children” and “the bottomless swamp deep in the forest” among the greatest terrors in my imagination. —“Memories of Toilets,” *The Sun and the Maiden*[^quotations]
 
-But once we ask why Morimi’s fiction is funny, the question resists any brief answer. We might attribute its humor to his fertile imagination, but that tells us nothing about how the humor is made. A novelist can make readers laugh without possessing an explicit theory of laughter; the writer need only know, intuitively, which idea and which phrasing will reach them. This essay is concerned with that resonance between writer and reader and with the formal mechanisms that sustain it.
+We can readily see the humor in Tomihiko Morimi’s works at a glance. When we first begin reading, for instance, the first thing Morimi does is explain words he has created that look extraordinarily abstruse and unfamiliar, such as “four-and-a-half tatami.”[^tatami] It feels as though he is offering nonsensical explanations in a solemn tone. Beginning to read Morimi also brings a sense of novelty, even unease: new readers feel they have suddenly wandered into a world that is ordinary yet peculiar. The feeling is even somewhat like reading Kafka’s *The Metamorphosis*. But as we read on, we discover that it is nothing of the sort.
 
-The established English titles and recurring terms used below follow the licensed translations where they exist.[^1] The quoted wording, however, is translated from the Chinese-language excerpts used by the original essay and is not presented as text from those licensed editions. *The Sun and the Maiden* is a descriptive translation of *Taiyō to Otome*, which has not been published in English.
+Yet if we take the question of why Morimi’s works are funny on its own, it is hard to answer in a few words. We might attribute their humor to his rich imagination, but that does not explain the mechanism by which the humor is generated. After all, a writer can use his craft to produce humorous sentences that make readers unable to resist laughing. This shows that he can clearly establish an empathetic connection with them, but he need not actually understand where that connection comes from. All he needs to do is put the amusing ideas that occur to him down on paper. The central concern of this essay, then, is to unravel a certain resonance between author and reader at the level of humor.
 
-## Humor and theories of humor
+## Humor and Theories of Humor
 
-Any attempt to trace humor to its sources must begin with the most basic question: what is humor?
+In tracing the sources of humor, we cannot bypass the most fundamental question: what exactly is humor?
 
-Lin Yutang coined the Chinese term *youmo* (幽默) in 1924 as a phonetic rendering of the English word *humor*, then campaigned to naturalize it in the 1930s.[^2] That history matters to the Chinese essay from which this edition is translated, but it does not tell us why anything is funny. Modern accounts of humor are often grouped into three broad families: superiority or disparagement theories, relief theories, and incongruity theories. The first locates laughter in contempt or a pleasurable sense of being above someone else. The second treats it as a release of tension or repression. The third finds humor in elements that do not seem to fit together but are suddenly brought into an intelligible relation. Incongruity cannot explain every instance, yet it informs many more specific theories and gives us a powerful instrument of analysis. It will guide the discussion of Morimi’s work below, alongside the other two approaches.
+The Chinese word for “humor” in modern use comes from the English *humor*. It describes something deliberately intended to make people laugh. Its meaning does not specify what causes the laughter, but it must, by some means, prompt the recipient of information to display sudden pleasure. Accounts of humor’s causes fall into three main theoretical categories: superiority/contempt theory, relief theory, and incongruity theory. Superiority theory grounds humor in resentment, contempt, and superiority; relief theory attributes it to the release of tension and psychological repression produced by social constraints; incongruity theory holds that humor arises from “inconsistent, unsuitable, or incongruous parts or circumstances, considered as united in one complex object or assemblage, or as acquiring a sort of mutual relation from the peculiar manner in which the mind takes notice of them.”[^beattie] Incongruity theory can account for the vast majority of humor. This does not mean it is absolutely correct. Still, we cannot deny that it has been put to use in many specific theories of humor, giving us a powerful analytical tool. My analysis of Morimi’s works uses incongruity theory while also drawing on the other two theories.
 
-Different kinds of humor also produce different experiences. The humor of a novel, for example, often feels unlike that of a stand-alone joke. Both can give a reader or listener pleasure, but humor in fiction seems much more complex. Consider these two passages:
+When we classify humor, we find that different kinds give us different feelings. We often notice, for instance, a certain difference between humor in novels and the humor of everyday short jokes. Both give readers or listeners a sense of pleasure, but humor in novels seems far more complex. Consider the following examples:
 
 > Little Robert asked his mother for two cents. “What did you do with the money I gave you yesterday?”
 >
@@ -54,194 +49,159 @@ Different kinds of humor also produce different experiences. The humor of a nove
 >
 > “You’re a good boy,” said the mother proudly. “Here are two cents more. But why are you so interested in the old woman?”
 >
-> “She sells candy.”
->
-> A familiar joke often titled “Good Boy”
+> “She is the one who sells the candy.” —“good boy”
 
-> “She won’t want to come back to a place like this.” The words had barely left my mouth when Professor Akadama let rip a thunderous fart. Even he was startled by its volume and gave a little “Eh?”
->
-> *The Eccentric Family*
+> “She won’t want to come back to a place like this.” No sooner had I said this than Sensei let out a loud fart. It was so loud that even Sensei was startled, and he could not help letting out an “Eh?” —*The Eccentric Family*
 
-The joke reveals, through a quick reversal, that the boy gave the woman money to buy candy, not to help her. The reader grasps the point at once. The second passage, embedded in a literary context, works differently. Its humor is richer and more complex, yet when taken out of the novel it can sound remarkably crude. What the excerpt loses is the place of humor among the novel’s other elements. Professor Akadama’s response belongs to his characterization, and its comedy extends beyond the sentence to the work as a whole. Put another way, humor does not always arise solely from a sudden shift in relevance. It can also arise from the comic form of the larger work.
+Comparing these two examples, we see that in the joke the boy has actually given the old woman money to buy candy, not to help her. Readers quickly grasp the point through this turn in the plot. By contrast, a passage embedded in the context of a literary work contains a distinctly different kind of humor. It is richer and more complex, so much so that when we extract a passage on its own, its humor seems decidedly crude. This is because we have overlooked how humor manifests itself in the elements of the novel. The portrayal of Sensei here, for example, is bound up with his characterization; its humor extends beyond the passage to the work as a whole. Put another way, humor often arises not merely from a sudden change or shift in relevance, but also from something comic.
 
-Whether approached by cause or by form, humor is a complicated product. I will not add another general causal theory. Instead, I will approach Morimi’s humor at several scales: the self-contained passage; the work as comedy; the recurring element of the “coined term”; and the level of literary ideas.
+Looking at both its causes and its classification, we find that humor is a complex product. Rather than offer further explanations of its causes, this essay seeks to analyze humor from several levels and perspectives: the individual passage; the work as a comedy in its entirety; elements running throughout the works (“custom-defined nouns”);[^nouns] and literary ideas.
 
-## A cognitive-pragmatic analysis: Morimi’s fiction as a chain of short jokes
+## Humor at the Level of Cognitive Pragmatics—Morimi’s Works as a Succession of Short Jokes
 
-Many excerpts from Morimi retain a strong comic charge outside their original context. The humor of these self-contained passages can be studied most directly. Relevance theory, developed by Dan Sperber and Deirdre Wilson in *Relevance: Communication and Cognition*, provides the main framework for doing so.
+Many passages from Morimi’s works retain a strong sense of humor when excerpted. The humor in some individual passages therefore does not depend on the surrounding text. The simplest approach is to take these passages out and study them separately. The principal theoretical basis for this analysis is the relevance theory proposed by Sperber and Wilson in *Relevance: Communication and Cognition*.
 
-Relevance theory treats linguistic communication as an inferential cognitive process. Sperber and Wilson formulate two principles: human cognition tends to be geared toward maximizing relevance, and every ostensive act of communication conveys a presumption of its own optimal relevance.[^3] Relevance increases with worthwhile cognitive effects and decreases with the effort required to process them. A speaker supplies evidence of an intention; a listener uses that evidence and the available context to infer what the speaker means.
+Relevance theory proposes that linguistic communication is a cognitive process that must rely on inferential thinking. It contains two principles: the Cognitive Principle (people tend toward optimal relevance in cognition) and the Communicative Principle (acts of communication should be presumed to have optimal relevance in themselves).[^relevance] In other words, speech, as a purposeful activity, is an ostensive-inferential cognitive process. In this process, both parties tend to seek optimal relevance at the lowest cost, and believe the other party has the same tendency. The degree of relevance depends on cognitive effects—that is, effects on the existing context—and the difficulty of processing.
 
-The recipient begins with the interpretation that seems most relevant, then revises it as more information arrives until an optimally relevant reading is found. Humor often arises from the gap between the first inference and the final one. That gap takes the form of incongruity. The framework can illuminate a wide range of comic passages. In Morimi’s fiction, the following types are especially visible, though they are not exhaustive.
+From the perspective of relevance theory, communicators often provide the necessary information while recipients infer the intentions implicit in it. When recipients receive information, they usually begin by inferring the communicator’s intention on the basis of maximal relevance. As the communicator supplies more and more information, recipients continually adjust their inferences to arrive at optimal relevance. Many humorous effects arise from the difference between the maximal relevance previously inferred and optimal relevance. This difference constitutes an incongruity. The theory can accommodate and analyze almost every humorous passage. In Morimi’s works, for example, we find the following kinds of humor, though these are by no means exhaustive.
 
-### 1. Humor produced by a clash of discursive contexts
+### (1) Humor Arising from Differences in the Context of Expression
 
-> Let me state at once that, although I am in such a sorry state now, I was not always like this.
->
-> Shortly after birth I was the very incarnation of purity and innocence ... Why have you come to this? Is this the final reckoning of your life?
->
-> Some may say that I am still young and that human beings can change without limit.
->
-> What nonsense. Young people must not be coddled.
->
-> *The Tatami Galaxy*
+> This is what I have become, but let me say at the outset that I was not born this way.\
+> Just after I was born, I was, on the contrary, purity itself. [Passage omitted] … Why have you come to this? Is this the reckoning for your life?\
+> Some people will probably say: you’re still young, after all; life holds endless possibilities.\
+> What utter nonsense. Young people must not be spoiled. —*The Tatami Galaxy*
 
-The first two paragraphs dwell on the narrator’s present wretchedness. When the third turns to other people’s encouragement, the ordinary expectation is that a more hopeful account will follow. At the very least, he might recognize the kindness of those trying to console him. Instead, the narrator rejects the hopeful remark and insists that indulging the young would be absurd. The final line forces the reader to revise the expected consolation into one more performance of grandiose despair.
+The humor here works as follows. The first two paragraphs describe the sorry state the narrator is now in. When the third turns to other people’s words of encouragement, we would normally expect the narrative to take a positive turn—the familiar movement of first bringing something low in order to raise it up. At the very least, the narrator ought to appreciate their good intentions in comforting him. In other words, the maximal relevance as readers understand it is that the fourth paragraph will offer a positive narrative. Instead, it refutes the hopeful words of the third paragraph. The protagonist’s assessment of his own situation has reached the point of hopelessness, beyond all remedy. Contrary to expectation, optimal relevance lies in expressing his desperate situation.
 
-### 2. Humor produced by a dense accumulation of tropes
+### (2) Humor Arising from Densely Layered Figures of Speech
 
-> “Use too much and every dish will turn into curry.” The concision of this description strikes the nail squarely on the head. The danger is so grave that a responsible adult must warn us, “Take care to control the quantity.” Who knew curry powder could be so perilous? I could already see the curry demon lurking deep in the woods.
->
-> *The Sun and the Maiden*, “The Curry Demon”
+> “Use too much, and every dish turns into curry.” This succinct description cut straight to the heart of the matter. The situation was serious enough to require a mature adult to warn us, “You must control the amount.” To think curry powder was so dangerous! I could almost see the curry demon lurking deep in the forest. —“The Curry Demon,” *The Sun and the Maiden*
 
-“Use too much and every dish will turn into curry” is already an obvious exaggeration. Ordinarily we do not pile figurative devices together at such density, still less embed one inside another. Here the narrator first treats the warning as a maxim of grave importance, then converts curry powder into a demon lurking in the woods. The extra figures contribute little new information. Their disproportionate solemnity is the point: the reader keeps searching for a significance equal to the rhetoric, only to find childish delight in the rhetoric itself.
+The initial quotation, “Use too much, and every dish turns into curry,” clearly contains hyperbole. Ordinarily, we do not use figures of speech in such density, particularly by nesting one inside another. Here, however, the passage uses hyperbole and then figuratively recasts a statement that has already been exaggerated. This is highly unusual. From the perspective of relevance theory, its way of using figures of speech does not conform to the Communicative Principle, because it seems highly redundant at the level of meaning. When readers consider maximal relevance, then, they will assume that the “curry demon” matters a great deal: that “curry demon” has a deeper meaning than “dangerous”—the more vivid meaning produced by the figurative comparison. Appearing where it seems redundant, an expression like “curry demon” instead takes on a childlike charm.
 
-### 3. Humor produced by the unexpected reuse of a noun
+### (3) Humor Arising from the Unexpected Reuse of Nouns
 
-> “The Speedy Kotatsu is no easy customer either.” “The Speedy Kotatsu? A kotatsu is a kotatsu, but what’s this ‘Speedy’ business?” “A strange lot of people carry a kotatsu around the campus. It comes and goes without a trace, so we call it the Speedy Kotatsu.”
->
-> *The Night Is Short, Walk on Girl*
+> “The Idaten Kotatsu is another nuisance.” “The Idaten Kotatsu?! A kotatsu is a kotatsu—what has Idaten got to do with it?” “A bunch of oddballs carry a kotatsu around campus. They appear and disappear without warning, so it’s called the Idaten Kotatsu.” —*The Night Is Short, Walk on Girl*[^kotatsu]
 
-The dialogue explains how the “Speedy Kotatsu” got its name. The Japanese name invokes Idaten, a Buddhist guardian deity famed for speed. Combining the god with a heated table is already unexpected. At first, the reader is inclined to treat the phrase as a momentary simile rather than as the creation of a proper name; it sounds far too unserious for that. Yet Morimi goes on using the name again and again. Only then does the reader realize that the phrase has become a proper noun. The optimally relevant interpretation is not that the kotatsu merely resembles Idaten but that this one kotatsu, carried roaming through the campus, is called the Speedy Kotatsu.
+This passage explains the origin of the name “Idaten Kotatsu” through dialogue. Idaten is a Buddhist deity known for his running. Combining “Idaten” and “kotatsu” into a new term is already a very unexpected move. In this passage, readers are more inclined to see it as an expressive device than as the actual creation of a new word, because the name does not sound like a serious term. Unexpectedly, Morimi goes on to repeat “Idaten Kotatsu” frequently. Only then do readers realize that it is already being used as a name. Optimal relevance consists in calling the kotatsu carried around campus the “Idaten Kotatsu,” rather than seeing the expression merely as a figurative comparison.
 
-Morimi uses the same device throughout his fiction with expressions such as “four-and-a-half tatami mats,” *The Crackpot of Monte Cristo*, and “proxy war.” By stacking these novel terms on top of one another, he gives the stories much of their expressive force.
+Morimi’s novels use this device extensively elsewhere, too, with expressions such as “four-and-a-half tatami,” *The Stubborn King*, and “proxy war.” Continually piling these novel nouns on top of one another greatly enhances the story’s expressive force.
 
-Relevance theory can analyze the comic elements in a great many individual passages, but it has a limit here. It explains how a stretch of language changes a reader’s context; by itself, it does not account for an element that gathers force across an entire novel. A passage-level analysis will not automatically connect every incident involving the same character or object. I therefore use relevance theory only to describe the local mechanics of Morimi’s humor before turning to larger forms.
+It is worth noting that although relevance theory can analyze the humorous elements in the vast majority of passages, it cannot overcome one limitation: ultimately, it analyzes how a passage affects context and cannot grasp the larger entities that exist as elements of a novel. That is, this kind of analysis always branches outward. It does not connect all the events involving a single character, and pays insufficient attention to the context the text constructs. It is therefore rigorous but also limited. I use relevance theory here to offer one way of explaining the mechanisms that generate humor at the most basic level.
 
-## Humor and comic form: Morimi’s fiction as comedy
+## Analyzing Humor through the Comic—Morimi’s Literature as a Kind of Comedy
 
-Hegel observes that “every contrast between something substantive and its appearance, between an end and the means may be laughable.”[^4] The contradiction defeats itself: an appearance collapses, or the attempt to realize an end destroys the end. But the laughable alone does not yet amount to comedy.
+As Hegel says, “Any contrast between essence and appearance, or between purpose and means, can be called laughable if it reveals a contradiction or disproportion that consequently leads the appearance to negate itself, or causes the opposition to come to nothing in its realization. But the comic makes a deeper demand.” If we regard a work as a collage of insubstantial humorous episodes, we will naturally overlook certain aspects of it as a whole. The most important of these is the comic.
 
-If we treat a novel as a patchwork of empty comic episodes, we inevitably miss some of what it does as a whole. The most important loss is its comic form.
+In Hegel’s thought, substantiality is the totality of universally rational moral powers, the highest good in law and subjective morality. Subjectivity, by contrast, does not contain the objective content of ethical substance, but is merely a standard of good and evil generated within the individual. In comedy, “subjectivity” is the principal factor, while substantiality is kept out of view. In tragedy, it is substantiality that operates.
 
-In Hegel’s account of drama, ethical substance consists of the powers that characters take to be objectively binding: family, law, civic order, and the divine. Subjectivity is the individual’s own aims and self-relation. Tragedy pits substantial ethical powers against one another. Comedy moves the emphasis toward a subject who can survive the collapse of an inadequate aim and remain cheerfully self-possessed.
+Viewed through Hegel’s aesthetic theory, *The Tatami Galaxy* is not a typical example. If we take the “rosy life” in the protagonist’s mind as a form of substantiality—an idea concerning social status and personal value—then we can say that substantiality is present throughout. At first, the protagonist feels himself far removed from actual value, and there is even something tragic about this. As the story progresses, however, a tremendous change takes place: it depicts the absurdity of continually pursuing substantiality. Through an absurd form of induction, it repeatedly plays out tragedies with the same ending—or what the protagonist considers tragedies. Only when he finally views all this from the perspective of a parallel space-time of infinite four-and-a-half-tatami rooms does he understand that the “rosy life” he longs for does not exist. In short, the comic quality of *The Tatami Galaxy* consists not merely in comedy itself, but also in the dissolution of a certain tragic paradigm.
 
-My application of those terms to *The Tatami Galaxy* is deliberately loose. Suppose we treat the protagonist’s dream of a “rose-colored campus life” as though it were a substantial good, an ideal that promises social standing and personal worth. That ideal remains present throughout. At first his distance from it carries an almost tragic weight. As the linked versions of his student life unfold, however, his relentless pursuit of the ideal comes to look absurd. Each route repeats what he regards as the same tragic failure. Only from the perspective of the endless parallel world of four-and-a-half-tatami rooms does he understand that his imagined “rose-colored campus life” never existed as a ready-made possibility. The comedy therefore includes the dissolution of a tragic story he has been telling about himself.
+Hegel briefly discusses three kinds of content that can be the subject of comedy. These are also worth discussing in the context of Morimi’s literature, and I will analyze them in detail here.
 
-Hegel briefly identifies three kinds of content that can become objects of comedy. Each repays attention in the context of Morimi’s fiction.
+### (1) The purposes and character traits portrayed in comedy are entirely without substantiality, yet contain contradictions and therefore cannot realize themselves. In *The Tatami Galaxy*, the protagonist’s longing and greed for a nonexistent “perfect rosy life” are one source of the comic. Because this “perfect rosy life” is abstract and nonexistent, and because he has also relinquished his satisfaction with his current life for its sake, he not only fails to reach his goal but gives up too many valuable things and opportunities. The comic situation lies in the fact that, after he discovers that he cannot attain an ideal state of life, his exchange with Ozu is reversed in the final cycle: the two speakers take each other’s lines.
 
-### 1. Trivial or insubstantial aims that defeat themselves
+In the earlier cycles, the protagonist still yearns for a perfect life:
 
-In *The Tatami Galaxy*, the protagonist’s obsessive desire for a nonexistent “perfect rose-colored life” produces this kind of comedy. Such a life is abstract and unreal. In pursuing it, he forfeits what satisfaction the present might offer. Not only can he never reach his goal; he abandons valuable things and opportunities along the way. The comic turn comes when, after failing to reach that ideal state, his final exchange with Ozu reverses their earlier roles.
+> I demanded to know what fun he got out of [making sport of][^ozu-conjecture] lovable little me. Ozu wore his usual goblin-like smile and chuckled. “This is my love for you.” “I don’t need this filthy stuff,” I replied.
 
-In the earlier routes, the protagonist still longs for the perfect life:
+By the end of the story, the protagonist realizes that what he has been pursuing is empty and illusory. He can cheerfully disregard this failure, feeling that he stands above it.
 
-> I demanded to know what amusement he found in making my pitiful life still more miserable. Ozu showed his customary yokai grin and chuckled. “This is my love for you.”
->
-> “I have no need of anything so filthy,” I replied.
+> “Enough talk. Let me pay!” “Why are you so eager to pay?” I gave him a sly grin. “This is my love for you.” “I don’t need that filthy stuff,” he replied.
 
-At the end of the story, the protagonist realizes that what he sought was insubstantial. He happily rises above the failure and ceases to care about it:
+(2) Individual characters intend to realize purposes and traits that have substantiality, yet, as individuals, they are instruments that work entirely against their realization. We find this form of the comic in Morimi’s works, but ultimately it is dissolved, and readers are deliberately led to misread it. In *The Night Is Short, Walk on Girl*, for instance, the Underpants Ringleader vows not to change his underpants until he finds the girl he has fallen for. This seems to fit the category, but from beginning to end it never actually affects the plot of his meeting the girl. Of course, if we examine the details of the animated adaptation, we can find situations in which “the individual works against the realization of his purpose.” The animated adaptation of *The Night Is Short, Walk on Girl*, for example, adds a scene in which the protagonist tries to retrieve his trousers from Rihaku’s tram. Just then, the tram pulls away. Unable to get his trousers, he appears before the heroine naked from the waist down. Having gone to immense trouble to reach her, he is punched into the water by her “Fist of Friendship,” leaving a bad impression.
 
-> “Enough nonsense. Let me pay!”
->
-> “Why are you so determined to pay?”
->
-> I gave him a wicked grin. “This is my love for you.”
->
-> “I have no need of anything so filthy,” he replied.
+[fig] Still from the animated film *The Night Is Short, Walk on Girl*.
 
-### 2. Characters who become obstacles to their own ends
+![A short-haired woman in a yellow top and red skirt stands at night, framed by bare legs and feet in the foreground.](attachments/roof-archive/cv8416238/night-is-short-walk-on-girl.png)
 
-Morimi’s stories do contain this kind of comedy, but they often soften it after first steering the reader toward a harsher judgment. In *The Night Is Short, Walk on Girl*, for example, Chief-in-Chief Underpants vows not to change his underwear until he finds the woman he once met and fell in love with. The vow looks like a perfect case of a person obstructing his own end, yet it does not actually determine whether he finds her. The 2017 animated adaptation supplies a clearer example. The Senior tries to retrieve his trousers from Rihaku’s tram, but the tram pulls away before he can reach them. He then appears bare from the waist down before the black-haired young woman. After enduring every imaginable hardship to reach her, he makes a terrible impression and is knocked into the water by her “friendly punch.”
+Why do we find so few clear instances of this form of the comic in Morimi’s works? One important reason is that Morimi’s literature does not give prominence to overly pointed social issues. It often centers on the individual, and its endings, too, are often not tragic. When creating characters, especially male college students, Morimi never ridicules the group because of some behavior of theirs—he was one of them himself, after all. But neither does he evade some of their more outrageous conduct. He often begins by giving the story this comic quality, as most stories do, before treating it in a positive way. His ultimate hope is to find an ingenious way of bringing readers to sympathize with these characters rather than ridicule them freely from the outside.
 
-[fig] The same film frame makes the Senior’s self-defeating arrival literal: he reaches the young woman only after losing his trousers.
+(3) External contingencies bring about intricate changes in the situation, allowing purposes to be realized. Both the characters’ inner traits and their external circumstances become comic contradictions, leading to a comic resolution. We can readily see that every cycle in *The Tatami Galaxy* is ultimately handled this way. The decisive turn always hinges on two elements: “Akashi is afraid of moths” and “the protagonist has the Mochi Bear she lost.” Both of these arise by chance.
 
-![The black-haired young woman standing between the bare legs of the Senior in *The Night Is Short, Walk on Girl*](attachments/roof-archive/cv8416238/night-is-short-walk-on-girl.png)
+Morimi is also adept at combining coincidence with conspicuously complex relationships among characters to produce a comic scene. At the end of *The Eccentric Family*, for example, when the tanuki hold a council of elders and elect their “Nise-emon,” the people in the private dining room next door turn out to be members of the Friday Club, preparing to feast on tanuki. They have moved their banquet here at short notice because of the earlier chaos. When Yaichirō turns into a huge tiger in his rage, he destroys the partition between the rooms. This coincidence gives Yasaburō an opportunity to rescue his mother and makes the atmosphere of the prose lighter and more humorous. The following scene ensues:
 
-Why is this form of comedy seldom dominant in Morimi’s fiction? One reason may be that his writing usually centers on individuals rather than sharply defined social issues, and its endings are seldom tragic. When he portrays male university students, he does not simply mock them as a group; he was once one of them, after all. Nor does he look away from their excesses. He gives their behavior a comic form, then leaves room for recognition and sympathy. The reader is invited to see something of himself in these characters, not merely to jeer at them from outside.
+> Everyone in the private room next door, from the elders to the senior officials, was huddled together. At the warning cry, “The Friday Club is here!” the room filled with inarticulate wails. In their panic, the tanuki reverted to their true forms, and countless balls of fur appeared in the room. It was like a carpet writhing across the floor. Professor Yodogawa burst in among them, shouting, “Sorry! Sorry!” Without meaning to, he sent quite a few furballs flying with his feet. —*The Eccentric Family*
 
-### 3. Accidents that produce a comic resolution
+Chance incidents are not merely a form of the comic; they are a device commonly used in stories of any kind. As we can see above, Morimi’s literature does indeed use these “incidents” to reveal something novel.
 
-Across the routes of *The Tatami Galaxy*, the protagonist’s eventual opportunity depends on two recurring accidents: Akashi’s fear of moths and the *mochiguma* keychain she has lost, which happens to be in his possession.
+## “Custom-Defined Nouns” and a Richly Developed Narrative Structure
 
-Morimi also delights in combining coincidence with conspicuously complicated relations among his characters to create comic scenes. Near the end of *The Eccentric Family*, for example, the tanuki elders meet to elect the next Trick Magister (*Nise-emon*) while, in the room next door, the Friday Fellows are preparing a tanuki hot-pot banquet after earlier disorder forced them to move there. Yaichiro turns into a great tiger in his fury and destroys the partition. This coincidence gives Yasaburo a chance to save his mother and turns the surrounding atmosphere comic:
+Having analyzed Morimi’s literature broadly through individual passages and the work as a whole, we need to examine some of its distinctive features in greater detail. To my mind, a prominent feature is the use of “custom-defined nouns.” Earlier, I used relevance theory to analyze the incongruity of their appearance, but that was an examination of their meaning within an individual passage. Their role, however, is not limited to the moment they appear in the text. They also serve the narrative of an entire work, and even of all the works. They are not merely isolated figures of speech within passages, but elements of the novel’s narrative. Some examples of these “custom-defined nouns” follow.
 
-> The adjoining room, packed tight with everyone from the elders to the senior officers, heard the warning “The Friday Fellows are here!” Inarticulate cries filled the chamber. The panicking tanuki all lost their disguises, and countless balls of fur welled up until the floor looked covered by a writhing carpet. Professor Yodogawa burst in crying, “Sorry! Sorry!” and, though entirely by accident, sent more than a few furballs flying with his feet.
->
-> *The Eccentric Family*
+### (1) Nouns Explained Once and Used Repeatedly
 
-Accident is not exclusive to comedy; it is a familiar device in all kinds of stories. Even so, Morimi’s fiction plainly uses accidents to produce its distinctive sense of the strange.
+Examples: “the Fist of Friendship,” “the Underpants Ringleader,” “the Friday Club,” and so on.
 
-## Coined terms and a densely furnished narrative
+> Do you know the Fist of Friendship? When people have no choice but to swing a fist at the face of someone beside them, they clench it tightly. … But now, loosen your fist, and try making one with your four fingers wrapped around your thumb. All at once, that hard, powerful fist loses its confidence and becomes as full of affection as the paw of a beckoning cat. … Her older sister had taught her the “Fist of Friendship” when she was little. Her sister said, “… Only with the Fist of Friendship can you live gracefully in this world and open up a beautiful, harmonious life.” A beautiful, harmonious life. Those words touched her deeply. And so she has the special move known as the “Fist of Friendship.” —*The Night Is Short, Walk on Girl*
 
-Having considered Morimi’s fiction through both local passages and broad comic form, we can turn to one of its more distinctive features in detail. What stands out to me is his use of “coined terms.” Relevance theory has already shown how their first appearance can be incongruous, but that analysis was confined to the meaning of an individual passage. These terms do more than work at the moment they appear. They serve the narrative of an entire book, and even the narratives of several books. Rather than isolated figures of speech, they are elements built into the fiction. The following examples indicate how.
+This passage at the beginning of the work explains what the “Fist of Friendship” means: a way of throwing a punch that is “full of affection.” The “Fist of Friendship” portrays the heroine as an innocent who longs for beauty and harmony. The account is lively, amusing, and convincing. Later, when she encounters Mr. Tōdō’s harassment, the words “Fist of Friendship” allow her to remain graceful while also expressing her decisiveness. As an expression, it is novel, too.
 
-### 1. Terms explained once and used many times
+### (2) Nouns Explained Repeatedly and Used Repeatedly
 
-Examples include the “friendly punch,” “Chief-in-Chief Underpants,” and the “Friday Fellows.”
+Examples: “Pseudo–Denki Bran,” “cat ramen,” and so on.
 
-> Are you familiar with the friendly punch? When people must raise a fist against someone close to them, they clench it tight. ... But hide the thumb inside the other four fingers and try clenching it that way. The hard, powerful fist suddenly loses its confidence and becomes as loving as a lucky cat’s paw. ... When she was little, her older sister taught her the friendly punch. Her sister said, “Only by using the friendly punch can you move gracefully through the world and open the way to a beautiful, harmonious life.” A beautiful, harmonious life. The words struck her deeply. And so she possessed the esoteric art of the friendly punch.
->
-> *The Night Is Short, Walk on Girl*
+> “The recipe for Denki Bran is a closely guarded secret. An employee of the Kyoto Central Telephone Exchange once tried to reproduce its flavor. After endless experiments, at his wits’ end, he miraculously invented Pseudo–Denki Bran. Because it came about by accident, its flavor and aroma are completely different from those of Denki Bran.” —*The Night Is Short, Walk on Girl*\
+> Poured into a glass, the Pseudo–Denki Bran was as clear as water, with a faint orange tint. I took the glass in my hand and sniffed gently, and for a moment I thought an enormous flower had appeared before my eyes. —*The Night Is Short, Walk on Girl*
 
-The opening explanation defines the friendly punch as a way of striking someone “with love.” It gives the heroine an innocent desire for a beautiful, harmonious life. Because the idea is vivid, amusing, and persuasive, its later use when Mr. Todou harasses her keeps her elegant composure intact even as it reveals her resolve. The term feels fresh, too.
+This mysterious Pseudo–Denki Bran receives extensive treatment in *The Night Is Short, Walk on Girl*, emphasizing its air of mystery. It is no longer a particular liquor but something Morimi has created. In the drinking contest with Rihaku, Pseudo–Denki Bran acquires another layer of value: it is understood as a fragrant flavor that brings warmth to life. This further reinforces its distinctive properties. Then, in *The Eccentric Family*, something called a Denki Bran factory appears. It is treated as an ordinary part of their world and left unexplained, immediately heightening the novel’s fantastical quality.
 
-### 2. Terms explained repeatedly and used many times
+From these examples, we can infer a certain pattern for “custom-defined nouns.”
 
-Examples include “faux electric brandy” and “cat ramen.”
+[fig] Diagram of the explanation and narrative process of “custom-defined nouns.”
 
-> “The recipe for electric brandy is kept under lock and key. An employee of the Kyoto Central Telephone Company once tried to recreate its flavor. After endless experimentation had brought him to the end of his wits, he miraculously invented faux electric brandy. Because it came about by accident, its flavor and aroma are completely different from the real thing.”
->
-> *The Night Is Short, Walk on Girl*
->
-> The faux electric brandy in the glass was clear as water, with the faintest orange tinge. I took the glass in my hand and inhaled gently. For an instant, I thought a tremendous flower had opened before my eyes.
->
-> *The Night Is Short, Walk on Girl*
+![A rightward arrow connects seven nodes: noun created; noun explained for the first, second, and third times; noun enters narrative contexts 1 and 2; ellipsis.](/attachments/translation-revisions/en/morimi-tomihiko-humor-genealogy/custom-noun-narrative-diagram.png)
 
-The novel devotes a great deal of attention to the mysterious faux electric brandy. It ceases to be merely a particular liquor and becomes one of Morimi’s own creations. During the drinking contest with Rihaku it acquires another value: the fragrant flavor of a life warmed through. In *The Eccentric Family*, an Electric Brandy factory appears without explanation as an ordinary part of the characters’ world, immediately deepening the novel’s fantastic atmosphere.
+When a noun is created, it first has a certain literal meaning. “Idaten Kotatsu,” for example, is, as the name suggests, a kotatsu that runs about. The head of the festival office explains that it is a real headache for the office: this gives it its first explanation. When he discovers that the Idaten Kotatsu is being used to write the script of *The Stubborn King*, it receives a second explanation. At the same time, it also enters multiple narrative contexts: the series of events that unfold when the heroine happens upon the group; the soy-milk hot pot on the kotatsu; Higuchi using it as a base from which to resell books for profit; or the romantic figure of the Underpants Ringleader as he writes his script there.
 
-From these examples we can derive a general pattern. A coined term is introduced, explained repeatedly, and then allowed to enter a growing number of narrative situations.
+What, in concrete terms, do nouns of this kind do? We might begin with an ordinary noun referring to a material object. Consider a “door key.” When it appears in a text, what comes to mind is probably something that opens a particular door, consisting of a long part that goes into the lock and a short, thick part that we hold. This is abstract information drawn from our previous encounters with keys. Similarly, when we see the sentence “He walked up to the door with a door key in his hand,” we usually assume that he is about to unlock the door. This, too, follows from our experience of keys as objects. In other words, besides what it refers to, a noun contains many properties we have attributed to it. The noun thus becomes a carrier of numerous properties.
 
-[fig] A coined term accumulates meaning as successive explanations and scenes attach new properties to it.
+A “custom-defined noun,” meanwhile, may initially be a combination of two existing nouns. That is, it may already contain some of the properties originally possessed by both nouns. But this does not mean it has many properties. On the contrary, it is an unknown to readers, because it has not yet been explained: everything experience suggests remains only a possibility. “Custom-defined nouns” sometimes also narrow a definition. The “Idaten Kotatsu,” for instance, refers specifically to that one kotatsu. This allows all these referents to be understood as entirely new things. As they are described and participate in the narrative, they are continually endowed with new properties. In a sense, this device is more commonly used in characterization, but Morimi applies it extensively in depicting the people or things to which nouns refer. Objects ought ultimately to serve characterization. Yet Morimi sometimes treats objects as narrative subjects in their own right, keeping the people to be portrayed through them out of plain sight. Ultimately, he spreads the objects’ sense of wonder throughout the social environment the work depicts. This device may be a source of the bizarre, kaleidoscopic quality of Morimi’s works and their distinctive sense of incongruity.
 
-![A horizontal timeline showing a coined term being created, explained three times, and entering two narrative settings](attachments/roof-archive/cv8416238/translations/en/custom-noun-narrative-diagram.webp)
+## A Tentative Case Study of Humor and Theme—The Tatami Galaxy
 
-When a term is created, it first carries the literal meaning of its form. The Speedy Kotatsu, for instance, suggests a kotatsu that can run. The head of the School Festival Office supplies its first explanation: it is a persistent nuisance to the office. When he discovers that Chief-in-Chief Underpants is using it while writing the script of *The Crackpot of Monte Cristo*, it receives a second explanation. At the same time, the object enters the narrative repeatedly: the heroine’s chance encounter with its riders and the incidents that follow; the pot of soy milk on its tabletop; Higuchi’s use of it as a base from which to resell books at a profit; and the romantic spectacle of Chief-in-Chief Underpants writing his script there.
+When we analyze the humorous features of Morimi’s works, close reading of the text itself is not the only approach. The themes running through the works also contain humor: self-mockery that may extend to the readership, or a sense of superiority over the characters. Because their themes differ, each work may require separate examination. Here, then, I will attempt a case study of *The Tatami Galaxy*.
 
-What does such a term actually do? Begin with an ordinary noun that denotes a material object. Consider a “door key.” When the word appears, we imagine something that opens a particular door, with a long shaft inserted into the lock and a shorter, thicker end held by the hand. We abstract this information from our previous encounters with keys. When we read “He walked to the door with the key in his hand,” we normally assume that he is about to unlock it. That inference, too, comes from our experience of keys. A noun therefore carries far more than its referent. It bears a large collection of properties we have attached to it.
+*The Tatami Galaxy* exemplifies the college-student subject matter that Morimi uses so widely. It mainly depicts a protagonist who expresses a longing for a “rosy college life” but actually lives what he considers a thoroughly miserable one. He believes that his most important problem is his troublemaking friend Ozu. Only through one cycle after another does he finally realize that he can never attain an ideal state that does not actually exist. Giving up this ideal and enjoying life in the present instead is one answer *The Tatami Galaxy* offers.
 
-A coined term may initially combine two existing nouns and thus inherit some of their properties. But that does not mean it arrives richly endowed. On the contrary, it remains unknown to the reader because it has not yet been explained. Everything supplied by prior experience is only a possibility. A coined term can also narrow its definition. “Speedy Kotatsu,” for example, designates that one kotatsu and no other. Such referents can therefore be understood as entirely new things, and as they are described and take part in the narrative, they continuously acquire new properties.
+Having a college student as the protagonist directly expresses a predicament college students face in their lives. Throughout the work, the root of that predicament is depicted as an extreme imbalance between idealism and reality. As we found through Hegel’s theory of comedy, the ending of *The Tatami Galaxy* breaks with the tragic narrative and strengthens its comic quality. Before the ending, however, the protagonist experiences a continual tragedy of “time lost beyond recovery.” In the first half of each story, he even resembles “the most wretched college student, caught up in one upheaval after another.” This draws out and awakens a shared experience. On this basis, readers slip into feelings of superiority or self-mockery while taking satisfaction in an answer the work offers that seems entirely reasonable: accept the gap between reality and the ideal, and enjoy reality.
 
-The same method is often used to construct characters. Morimi applies it widely to the people and objects named by his invented terms. Where an object might ordinarily serve only as an accessory to characterization, he sometimes makes it a narrative subject in its own right and leaves the person behind it temporarily out of view. The object’s strangeness then spreads through the entire social world of the story. This may be one source of the phantasmagoric quality and peculiar incongruity of Morimi’s fiction.
+This one-size-fits-all answer does provide a kind of humor, but it actually contains a dramatic ambiguity. *The Tatami Galaxy* posits “endless four-and-a-half-tatami rooms” through which one can learn all of one’s own possibilities. Only after the protagonist has continually wandered through them and observed all manner of lives he could lead does he finally recognize that he has no way of reaching an unattainable ideal state. His ideal differs from all ideals that can be pursued: it is merely a perfect state already known to be beyond reach. In reality, however, ideals are often attainable. What needs to change then is our frequent inability to move forward courageously. It is not as simple as casually making peace with ourselves. We could say that if these concepts are conflated and applied to real life, in extreme cases this leads to a fatalism that cancels one’s own agency.
 
-## A thematic case study: *The Tatami Galaxy*
+From another perspective, the ideas expressed in *The Tatami Galaxy* seem to imply a critique of systems that construct a single standard of evaluation. The work also seems to try to express a hope that a multicultural consciousness might act on individuals. The ideal of “perfection” is defined and constructed by power. The ultimate response to its unattainability may be to pay it no heed and construct a pluralistic system of values. This concerns an awareness of the debate over pluralism in Japan, a country that has long been monoethnic.[^japan] The diverse civilizations brought by globalization have made Japan increasingly conscious of the question of a “multicultural society,” and this seems to lie hidden within the theme of *The Tatami Galaxy*. Within the university system as a whole, the protagonist occupies something like the position of an “outsider.” Just as the perfect life is forever out of reach, the outsider can never become a member of the Japanese ethnic group.
 
-Close reading is not the only way to analyze humor in Morimi. Humor also runs through a work’s themes as self-mockery directed at the author and his readers, or as a feeling of superiority toward a character. Since every work has a different theme, each may require a separate account. Here I will use *The Tatami Galaxy* as a preliminary case study.
-
-The novel exemplifies Morimi’s frequent use of the university-student setting. Its unnamed protagonist longs for a “rose-colored campus life” but instead lives what he considers a dreadful existence, for which he holds his no-good friend Ozu chiefly responsible. Only after passing through several parallel versions of that life does he realize that the ideal state he desires does not exist. One answer offered by *The Tatami Galaxy* is to relinquish the prefabricated ideal and attend to the life already within reach.
-
-Making a university student the protagonist brings a student’s predicament directly into view. The novel locates its source in an extreme imbalance between idealism and reality. As the discussion of Hegelian comedy suggested, the ending breaks apart a tragic narrative and strengthens the novel’s comic quality. Before that ending, however, the protagonist repeatedly mourns time that cannot be recovered. In the first half of each route, he seems like the unluckiest student alive, swept into one turmoil after another. The pattern distills and awakens an experience shared with the reader. Readers are drawn at once into a sense of superiority over him and into self-mockery, then find satisfaction in the apparently sensible answer the novel provides: accept the distance between reality and the ideal, and learn to inhabit reality.
-
-This all-purpose answer creates humor, but it also contains a dramatic ambiguity. *The Tatami Galaxy* imagines an endless suite of four-and-a-half-tatami rooms from which the protagonist can survey many possible lives. Only after wandering through them does he recognize that he cannot reach the ideal state he had imagined. Yet his “rose-colored campus life” differs from an attainable goal: it is perfection defined in advance as always elsewhere. In ordinary life, some ideals can be pursued. What may need to change is not our failure to make peace with ourselves but our failure to move forward with courage. If we confuse the two, the novel’s consoling answer can harden into a fatalism that cancels agency.
-
-I want to push this ambiguity one speculative step further. The “rose-colored” ideal can be read as a critique of any institution governed by a single standard of value. Perfection is not innocent: someone defines it, and a person unable to attain it may instead need a plural set of values. Japan has long been represented through an ideology of ethnic homogeneity, even though its society has never been as uniform as that ideology claims. In debates about a multicultural society, the question is therefore not only whether an outsider can adapt, but whether the standard itself can change. *The Tatami Galaxy* is not an allegory of immigration, and its protagonist is not literally an immigrant. Still, within the university he occupies the structural position of a stranger, unable to enter the ideal community he imagines.
-
-That analogy also exposes a problem. *The Tatami Galaxy* directs its demand for change toward the “stranger.” The result can resemble a didactic compromise, asking the excluded individual to adjust while society remains intact. The story does not imagine the reconstruction of a multicultural community; it changes the mentality of the person who feels shut out. Taken as a universal prescription, its self-mockery could therefore become cynical: the institution solves nothing and congratulates the outsider for learning not to mind.
+The problem here, however, is that *The Tatami Galaxy* addresses its expectation to the “outsider.” This resembles a sermon urging accommodation—a forced acceptance of existing social conditions. It does not attempt to construct a multicultural society but to change the mindset of individuals excluded from the community. If readers grasp this idea, humor then comes to arise from a form of cynical mockery: it does not solve the problem, but instead feigns self-deprecation and strikes a pose of cynical irreverence.
 
 ## Conclusion
 
-No single theory has fully explained why humor works. This essay has therefore moved from the small scale to the large along four lines of inquiry: relevance theory and optimal relevance; Hegel’s account of comic form; Morimi’s narrative technique of the coined term; and a thematic case study.
-
-Humor can operate at every level of a work, but its causes and effects remain distinct even as they reinforce one another. At the microscopic level, very different works may be funny in much the same way. The larger the comic element becomes, however, the more particular it is to a single work. At that point, only a case-by-case analysis will do.
+Humor is a complex field of analysis, and its causes have yet to receive a fully unified explanation. Drawing on the three major theories of humor, this essay has therefore tried to proceed systematically through analytical theories and approaches from the micro to the macro level: relevance theory at the pragmatic level (the principle of optimal relevance); Hegel’s aesthetic theory at the level of the comic (comic quality); Morimi’s techniques at the narrative level (“custom-defined nouns”); and a case study at the thematic level. It has attempted, through these separate discussions, to reconstruct in full the humorous elements that appear in literary works. This process shows that works can manifest humorous elements at every level, and that the causes and effects of these elements are distinct yet advance one another. For individual works, humor at the micro level may be similar, while the more macro-level humorous elements seem increasingly particular. At that point, some case-by-case analysis may be needed to explain them.
 
 ## References
 
-1. Cai Hui and Yin Xing. “A Review of Western Theories of Humor.” *Foreign Language Research*, 2005(1): 5–8, 15. [Chinese]
-1. Wang Qinling. *A Cognitive-Pragmatic Study of Verbal Humor*. Doctoral dissertation, Fudan University, 2005. [Chinese]
-1. Liu Yang. *Humorous Incongruity and Its Resolution in Harry Potter from the Perspective of Relevance Theory*. Master’s thesis, South-Central Minzu University, 2011. [Chinese]
-1. Wang Zefang, Zhang Xiaobo, and Li Jun. “An Analysis of Humorous Talk-Show Discourse from the Perspective of Relevance Theory.” *China Newspaper Industry*, 2020(6): 78–79. [Chinese]
-1. Li Teng. “Reading Verbal Humor in English Jokes from the Perspective of Relevance Theory.” *The Adviser of Peasants*, 2020(3): 226, 291. [Chinese]
-1. Wang Ying. *An Analysis of Verbal Humor in Friends from the Perspective of Relevance Theory*. Master’s thesis, Xi’an International Studies University, 2019. [Chinese]
-1. Hegel, G. W. F. *Aesthetics*. Beijing: The Commercial Press, 2006. [Chinese edition]
-1. Zhang Tianqi. *On the Aesthetics of Drama in Hegel’s Aesthetics*. Master’s thesis, Shandong University, 2019. [Chinese]
-1. He Wenhui. “A Preliminary Study of Hegel’s Aesthetics.” *Home Drama*, 2015(11): 256–257. [Chinese]
-1. Sheng Baihui. “The Origins and Spiritual Content of Expressionist Art.” *Comparative Study of Cultural Innovation* 3, no. 8 (2019): 16–17. [Chinese]
-1. Sperber, Dan, and Deirdre Wilson. *Relevance: Communication and Cognition*. 2nd ed. Blackwell, 1995.
-1. Morimi, Tomihiko. *The Night Is Short, Walk on Girl*. Translated by Emily Balistrieri. Yen On, 2019.
-1. Morimi, Tomihiko. *The Tatami Galaxy*. Translated by Emily Balistrieri. HarperVia, 2022.
-1. Rea, Christopher. *The Age of Irreverence: A New History of Laughter in China*. University of California Press, 2015.
+1. Cai Hui and Yin Xing. “A Review of Western Theories of Humor.” Journal article. *Waiyu Yanjiu* [Foreign Languages Research], 2005, no. 1: 5–8, 15.
+1. Wang Qinling. “A Cognitive-Pragmatic Study of Humorous Utterances.” Thesis. Fudan University, 2005.
+1. Liu Yang. “Humorous Incongruity and Resolution in *Harry Potter* from the Perspective of Relevance Theory.” Thesis. South-Central Minzu University, 2011.
+1. Wang Zefang, Zhang Xiaobo, and Li Jun. “An Analysis of Humorous Discourse in Talk Shows from the Perspective of Relevance Theory.” Journal article. *Zhongguo Baoye* [China Newspaper Industry], 2020, no. 6: 78–79.
+1. Li Teng. “Interpreting Verbal Humor in English Jokes from the Perspective of Relevance Theory.” Journal article. *Nongjia Canmou* [The Farmer’s Adviser], 2020, no. 3: 226, 291.
+1. Wang Ying. “An Analysis of Verbal Humor in *Friends* from the Perspective of Relevance Theory.” Thesis. Xi’an International Studies University, 2019.
+1. Hegel. *Aesthetics*. Monograph. Beijing: The Commercial Press, 2006.
+1. Zhang Tianqi. “On the Aesthetics of Drama in Hegel’s *Aesthetics*.” Thesis. Shandong University, 2019.
+1. He Wenhui. “A Preliminary Inquiry into the Thought of Hegel’s *Aesthetics*.” Journal article. *Xiju Zhi Jia* [Home Drama], 2015, no. 11: 256–257.
+1. Sheng Baihui. “Tracing the Origins and Spiritual Content of Expressionist Art.” Journal article. *Wenhua Chuangxin Bijiao Yanjiu* [Comparative Study of Cultural Innovation], 2019, vol. 3, no. 8: 16–17.
 
-[^1]: [Yen Press](https://yenpress.com/titles/9781975383312-the-night-is-short-walk-on-girl) publishes *The Night Is Short, Walk on Girl* under that title; the licensed translation also establishes “Speedy Kotatsu,” “Chief-in-Chief Underpants,” “friendly punch,” “faux electric brandy,” and *The Crackpot of Monte Cristo*. *The Tatami Galaxy* and “rose-colored campus life” follow Emily Balistrieri’s [HarperVia translation](https://rcwlitagency.com/books/the-tatami-galaxy). The English title *The Eccentric Family* and names such as Yasaburo and Yaichiro follow the [licensed anime edition](https://www.crunchyroll.com/series/GRVNPEQWY/the-eccentric-family).
-[^2]: See Christopher Rea, [“The Invention of Humor”](https://academic.oup.com/california-scholarship-online/book/29843/chapter-abstract/252909296), in *The Age of Irreverence*. Rea describes Lin’s 1930s campaign to naturalize *youmo* after coining the transliteration in 1924.
-[^3]: Sperber and Wilson, *Relevance*, 260–266.
-[^4]: The wording follows the English text of Hegel’s [“Dramatic Poetry”](https://www.marxists.org/reference/archive/hegel/works/ae/part3-section3-chapter3.htm) in the *Aesthetics*. The longer quotation in the Chinese source comes from the Chinese edition listed above.
+[^quotations]: Translator’s note: Quotations from Morimi and Hegel are newly translated from the Chinese passages quoted in this article, not taken from published English translations. *The Sun and the Maiden* is a descriptive English rendering of *Taiyō to Otome*. The “plop toilet” is a pit toilet.
+
+[^tatami]: Translator’s note: “Four-and-a-half tatami” denotes a room’s size in tatami mats; it is not itself a newly coined expression.
+
+[^beattie]: Translator’s note: The English wording is restored from James Beattie, “On Laughter and Ludicrous Composition,” *Essays*, vol. II (1776), p. 347. The source article does not name Beattie here. See the [page image](https://archive.org/download/essaysonnatureim02beat/page/n358.jpg).
+
+[^nouns]: Translator’s note: “Custom-defined nouns” is the author’s working term for names and expressions given particular meanings within the stories; it is not restricted to newly coined words.
+
+[^relevance]: Translator’s note: The article initially assigns “optimal relevance” to both principles, then uses maximal and optimal relevance as successive stages of interpretation. Wilson and Sperber distinguish the cognitive tendency to maximize relevance from the presumption of optimal relevance conveyed by an act of communication. The article’s usage is retained here. See their [“Relevance Theory”](https://www.dan.sperber.fr/?p=93).
+
+[^kotatsu]: Translator’s note: A kotatsu is a low table fitted with a heater and covered with a quilt.
+
+[^japan]: Translator’s note: “Long been monoethnic” is the author’s generalization, not an uncontested description. Japan’s Cabinet Secretariat, for example, recognizes the Ainu as an indigenous people with a distinct language, religion, and culture. See its [Ainu policy overview](https://www.cas.go.jp/jp/seisakukaigi/ainusuishin/index_e.html).
+
+[^ozu-conjecture]: Translator’s note: “[making sport of]” is this edition’s uncertain conjecture for corrupt wording in the Chinese quotation, not authenticated wording from Morimi’s original.

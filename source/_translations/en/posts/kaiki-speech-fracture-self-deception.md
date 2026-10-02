@@ -5,109 +5,147 @@ source_slug: monogatari-love-deishu-kaiki-speech-fracture-self-deception
 slug: kaiki-speech-fracture-self-deception
 language: en
 status: review
-title: "Monogatari / Love / Deishu Kaiki: Speech / Fracture / Self-Deception"
-title_breaks: ["Monogatari / Love / Deishu Kaiki:", "Speech / Fracture / Self-Deception"]
-excerpt: "A reading of Deishu Kaiki as liar, realist, and participant in KOIMONOGATARI: the fabrications in his account reveal the desires he tries to disavow."
 credits:
   - role: translator
     contributor_id: shen-shui-bot
-    scope: complete chapter
+    scope: complete article
   - role: reviewer
     contributor_id: shen-shui-bot
-    scope: complete chapter
+    scope: complete article
 translation_method: agent
 source_relationship: mixed
 base_language: zh-Hans
-updated: 2026-08-28
+updated: 2026-09-29
 format: article
+title: "Monogatari / Love / Deishu Kaiki: Speech / Fracture / Self-Deception"
+excerpt: "Through speech, deception, and the subject’s position, this essay considers how Deishu Kaiki uses lies to evade his own desires in Koimonogatari—and how traces of the genuine emerge in his fictions."
+date: 2019-01-02
+post_author: "An O That Isn’t a 0"
+categories: [Animation]
+section: review
+tags: [Psychoanalysis, Monogatari Series]
+featured_order: 0
+citation:
+  itemType: blogPost
+  citationKey: roof2019monogatariLoveKaikiSelfDeception
+  date: "2019-01-02"
+  blogTitle: Lab on Roof
+  url: "https://www.bilibili.com/read/cv1804388/"
 ---
 
-## 001 · Prologue
+## 【001 Introduction】
 
-Lacan’s dictum is that truth can only ever be half-said.[^1] We might understand it this way: any truth we put into words is distorted by the telling, while part of the truth remains outside speech altogether. In the terms of this essay, truth can reside in a lie as well.
+Lacan teaches us that truth can only be half-said. We might understand this as follows: on the one hand, the truth we speak is always distorted; on the other, “truth” often also exists outside discourse. In the context of this essay, “truth” also exists within lies.
 
-[fig] The Chinese edition of Slavoj Žižek’s *Enjoy Your Symptom! Jacques Lacan in Hollywood and Out*. The English title appears above its Chinese translation.
+[fig] Chinese edition of Slavoj Žižek’s *Enjoy Your Symptom! Jacques Lacan in Hollywood and Out*, as reproduced in the source essay.
 
-![Chinese edition cover of Slavoj Žižek’s *Enjoy Your Symptom! Jacques Lacan in Hollywood and Out*](attachments/roof-archive/cv1804388/01-enjoy-your-symptom-cover.png)
+![White book cover with large red Ž lettering and the title and author printed in English and Chinese.](attachments/roof-archive/cv1804388/01-enjoy-your-symptom-cover.png)
 
-This essay is about Deishu Kaiki. To me, he is one of the most intriguing characters in the entire *Monogatari* series, though the Kaiki I can set down here will inevitably be incomplete. After all, this essay is like *KOIMONOGATARI* itself: the reader is under no obligation to believe it.[^2]
+This essay is about Deishu Kaiki’s story. Personally, I find him one of the most intriguing characters in all of *Monogatari*. These pale words are all I have to convey the Kaiki I see—ultimately, as with *Koimonogatari*, you needn’t believe this essay either.
 
-## 002 · Nadeko Sengoku
+## 【002 Nadeko Sengoku】
 
-At the level of plot, *KOIMONOGATARI*—adapted in the anime as the six-part arc “Hitagi End”—has an immediate problem to solve. Nadeko Sengoku has become the god of North Shirahebi Shrine and intends to kill both Koyomi Araragi and Hitagi Senjogahara. My claim is that no one but Kaiki can end this crisis, because Kaiki alone is a con man. Meme Oshino is not, and neither is Koyomi.
+Back to the story itself. *Koimonogatari* must first resolve its central conflict: Nadeko Sengoku, a girl in love, running amok. So **no one but Deishu Kaiki can subdue Nadeko’s aberration**, because only Kaiki is a con man. Meme Oshino is not, and neither is Koyomi Araragi.
 
-It is tempting to say that Kaiki merely takes Koyomi’s place in this arc, but their positions are fundamentally different. Koyomi tends to open himself to other people without reserve, Nadeko included. Against the destructive force of her obsession, that openness becomes fatal. Koyomi is the object of Nadeko’s hatred; on this reading, her wish to kill him is also a displaced wish to destroy herself. She does not hate him as another person so much as she hates what her attachment to him has made of her.
+We may be inclined to think that Kaiki takes Koyomi Araragi’s role in *Koimonogatari*, but his position differs fundamentally from Koyomi’s. Araragi tends to open himself unconditionally to others, accepting even Nadeko. Faced with her destructiveness, this is fatal: Koyomi is the object of Nadeko’s hatred, and she wants to “kill herself” by killing him. Her hatred of Koyomi is not hatred of another, but hatred of herself.
 
-[fig] Nadeko Sengoku before the confrontation that brings her romantic fantasy to an end.
+![Nadeko Sengoku smiles with her hands held together near her face.](attachments/roof-archive/cv1804388/02-nadeko-sengoku.png)
 
-![Nadeko Sengoku smiling with her hands clasped](attachments/roof-archive/cv1804388/02-nadeko-sengoku.png)
+Ultimately, **Nadeko’s “love” is nothing but a deception**: what I love is not “you,” but certain qualities you have; what I love is not a subject, but a position; I don’t love you, but you satisfy my desire. I love only myself, and this love is not directed at any particular person. Nadeko, born for romance alone, will let herself be filled with nothing but lies. Only lies can reach her true core—and this is Kaiki’s job: to tear open Nadeko’s A.T. Field through the kindness of a complete stranger.
 
-After all, **Nadeko’s “love” is itself a confidence trick**. Put the fantasy’s unspoken logic into the first person and it runs like this: *I do not love you but a collection of traits you possess; not a person but a position. I do not love you—you merely satisfy my desire. What I love is myself, and that love need not fasten on any one person in particular.* The Nadeko who has built her identity entirely around a crush can absorb only another lie. Only a lie can reach the core that her performance conceals. That is Kaiki’s work: the kindness of a complete stranger breaks through defenses that Koyomi’s intimacy only reinforces—her A.T. Field, to borrow *Neon Genesis Evangelion*’s term.
+Nadeko’s reason for existing is Koyomi Araragi, and Koyomi Araragi alone. What Kaiki does is make her face her utterly empty heart, then point out, as Touko Aozaki does: **“Precisely because the heart is empty like a hollow shrine, it can hold more.”**[^hollow]
 
-Nadeko has made Koyomi the sole reason for her existence. Kaiki makes her face the emptiness underneath that role, then discovers something that the role had hidden: she wants to draw manga. Her private creative desire gives him another future to offer her. The comparison I have in mind is Touko Aozaki’s “hollow shrine” in *The Garden of Sinners*. Touko uses that image to describe Shiki Ryougi’s emptiness not simply as a lack, but as a space that can receive something new. **Precisely because Nadeko’s old identity is hollow, it can make room for another desire.**
+But how does Kaiki tell Koyomi Araragi this story?[^dialogue]
 
-How, then, does Kaiki describe this encounter when Koyomi asks what he said to Nadeko? He omits the danger, the discovery, and his appeal to her secret ambition. Instead he reduces the intervention to the usual advice adults give children: romance is not everything; other pleasures exist; everyone endures an embarrassing phase of youth and eventually moves beyond it. Even his physical closeness to Nadeko is narrated as a practical effort to keep Koyomi from interfering. Kaiki concludes that he did only “perfectly ordinary, commonplace things,” as if he were merely performing a function in someone else’s story.[^3]
+> “—What did you say?”
+>
+> “Said what needed saying, that’s all.”
+>
+> As I answered, I crouched beside Sengoku, making a show of ignoring Araragi. The job was almost finished. I didn’t want this kid getting in the way.
+>
+> “Just said what needed saying. Romance isn’t everything, there are plenty of other things to enjoy, keep looking ahead, everyone’s had an awkward youth they can’t bear to look back on, just hang in there and you’ll be fine… You know, the same old lessons adults give kids.”
+>
+> So if you’re asking what I did—
+>
+> I did nothing more than these utterly ordinary little things.
 
-That account is itself a second confidence trick. Kaiki’s first plan—to deceive Nadeko with a plausible story about Koyomi and Senjogahara’s deaths—fails when she uncovers the lie. He succeeds only after he stops treating her as a passive target and addresses the desire she had concealed. Yet when he retells the scene, he disguises that personal intervention as routine adult common sense. We should remember his opening warning that his account contains invention. He is not hiding whether Nadeko was saved; he is hiding how much of himself he risked in saving her. He redirects her capacity for self-erasure away from physical destruction and toward the end of the identity she built around Koyomi.[^4] But what part of his own identity is he trying to erase?
+According to Deishu Kaiki, he merely gave Nadeko a lecture (as a friendly adult). The implication is that Kaiki is telling us **he is only a pawn**, with no agency of his own. Here, of course, we should bring out Kaiki’s own warning: there is fiction in what he says. We have very good reason to think he is evading something. Of course it was Kaiki who saved Nadeko, leading her toward another form of self-destruction[^1] and thus ensuring that the story could continue—but what is Deishu Kaiki evading?
 
-## 003 · Hitagi Senjogahara
+[^1]: On Nadeko, see the Zhihu column essay “Signs Revolt Against the Author—Nadeko Sengoku’s ‘anti-metafiction’” by Yiyan, a respected fellow fan. It was one of the inspirations for this essay. Nadeko Sengoku leaves the stage of the *Monogatari* series entirely after *Koimonogatari*—I suppose this also counts as a kind of self-destruction, or perhaps a death and resurrection like Christ’s.
 
-Kaiki begins *KOIMONOGATARI* by warning us that the story he is about to tell may be false. Readers often invoke that warning only when discussing the apparent attack on him at the end. Yet Koyomi and Yotsugi Ononoki can confirm the broad outcome: Nadeko is no longer a god, and Kaiki carried out the job. What neither can verify is the wording of his private encounters, the motives he assigns to himself, or the version of Senjogahara he constructs. The outcome constrains his lie; the crucial details remain his alone.
+    **Translator’s note:** The author does not limit this claim to the anime. The Nadeko-centered novel *Nademonogatari* was published on July 28, 2016, before this essay appeared. See [Kodansha’s publication record](https://www.kodansha.co.jp/titles/1000027539).
 
-[fig] Hitagi Senjogahara stands before Kaiki, whose account of her is central to this reading of his narration.
+## 【003 Hitagi Senjougahara】
 
-![Hitagi Senjogahara standing in front of Deishu Kaiki](attachments/roof-archive/cv1804388/03-hitagi-senjougahara.png)
+Kaiki warns readers from the outset that the story of *Koimonogatari* contains fiction. Yet readers seem to relish this point almost exclusively when discussing his death. After all, there is virtually only one way the story of subduing Nadeko could have gone; at most, Kaiki’s inventions lie in its details.
 
-Those details are what matter. The bare fact that Nadeko is defeated tells us little about Kaiki. The unverifiable parts of his account tell us why he acted and how he wishes those actions to appear. Fraud becomes his means of escape once again. My answer to the preceding section’s question is this: **Deishu Kaiki is running from his own position**. He has desires and attachments. He is a participant in *KOIMONOGATARI*, even one of its driving forces—not the disinterested observer his narration tries to create.
+![Hitagi Senjougahara faces forward with Kaiki turned away behind her.](attachments/roof-archive/cv1804388/03-hitagi-senjougahara.png)
 
-[fig] Kaiki framed by the anime’s red, leafless woods: an image of the cold distance he cultivates as a narrator.
+But it is precisely these details that are most fatal. *Koimonogatari* is a story Kaiki narrates. The true part of his account—that he subdued Nadeko—is an empty statement of what everyone already knows. Only the fictional part—the why and the how, in those passages where the absolutely impartial Koyomi Araragi / Yotsugi Ononoki are absent—gives us the key to understanding Deishu Kaiki. His deception once again becomes his means of escape. To return to the question in the previous section: what is Deishu Kaiki evading? My answer is this: **Deishu Kaiki is evading his own position**. He has desires and feelings; he is a participant in *Koimonogatari*, a driving force, and precisely not an impartial onlooker (the image he hopes to project through his account).
 
-![Deishu Kaiki silhouetted among red trees](attachments/roof-archive/cv1804388/04-deishu-kaiki-red-trees.png)
+![Deishu Kaiki stands in shadow among black tree branches against a red background.](attachments/roof-archive/cv1804388/04-deishu-kaiki-red-trees.png)
 
-The *Monogatari* series often resembles a psychoanalytic process: speech circles a truth that the speaker cannot state directly. But explanation does not cancel responsibility. Kaiki presents himself as a con man following the logic of his trade, then as an adult dispensing generic advice. Both explanations make his choices sound inevitable and impersonal. His own narration betrays that defense, because he cannot tell the story without giving Senjogahara a privileged place inside it.
+As an aside, the *Monogatari* series is actually much like a process of psychoanalysis, and **any attempt to use psychoanalysis to evade one’s responsibility as a subject is necessarily vulgar**. Clearly, Kaiki does not realize this—or, if he does, he is powerless to do anything about it—because he brings Hitagi into his own story.
 
-The evidence here is cumulative rather than a single confession. Kaiki makes Senjogahara the person who can see through his deceptions and care about what becomes of him. He acknowledges guilt toward her only to deny that it governs him. Most tellingly, he writes her apparent disavowal of affection as the severing act that will leave his own exit properly cold. The arc’s opening duet, “Kogarashi Sentiment,” supplies the same emotional structure: a love letter that never arrives—or is deliberately left unheard—and a story that continues into a future without the beloved.[^5] None of this proves that Kaiki lies about one particular line. It shows what his arrangement of the story is trying to accomplish. He pours feeling into the portrait, then uses denial to drain that feeling away.
+> 夜明け前の 一瞬の静寂，\
+> (A moment’s silence before dawn,)\
+> 耳の中を 記憶が支配する，\
+> (My mind is full of memories,)\
+> その背中に あの瞬間 つぶやいた，\
+> (That lonely figure, seen from behind,)\
+> 聴こえないふりをした 恋文，\
+> (Love, indistinct as words murmured in a dream,)\
+> すれ違い 振り向くこともなく，\
+> (Let us simply pass each other by,)\
+> 選んだ物語の続きは，\
+> (The story I chose.)\
+> 今日という，\
+> (From now on,)\
+> あなたじゃない\
+> (A future without you.)[^lyrics]
 
-The triangle Kaiki → Senjogahara ↔ Koyomi consequently mirrors Nadeko → Koyomi ↔ Senjogahara. The resemblance is not merely geometric. Nadeko protects her place in the second triangle by pretending that her projected romance is a complete self; Kaiki protects his place in the first by pretending that he has no personal stake at all. Their confrontation breaks both poses. By appealing to Nadeko’s hidden wish to draw manga, Kaiki forces her to admit a desire that does not depend on Koyomi. In making that appeal, he performs a kindness that cannot be explained by the detached role he claims for himself. Nadeko is made to relinquish the identity of the lovesick girl; Kaiki is exposed as more than the neutral fraud he pretends to be. His later narration tries to conceal that exposure by recasting the exchange as a lecture anyone could have delivered.
+In the absence of the impartial Koyomi Araragi, we have reason to believe any character in Kaiki’s story—but not Hitagi Senjougahara as Kaiki describes her. He has invested too much feeling in Senjougahara. In fact, she may be one of the few people who understand what Kaiki really thinks behind his deceptions, and who genuinely care about him. At the same time, Deishu Kaiki’s guilt toward Hitagi Senjougahara is plain for all to see (although Kaiki himself strenuously denies it, there is an ironic honesty to him on questions like these).
 
-[fig] The god Nadeko confronts Kaiki after his deception is exposed.
+It is hard not to see the shadow of “Sengoku → Araragi ↔ Senjougahara” in the triangle “Kaiki → Senjougahara ↔ Araragi.” Thus **Nadeko Sengoku’s exit must be followed immediately by Deishu Kaiki’s**—maintaining a precarious stability is difficult in itself. Here we have another reason why only Kaiki can resolve Nadeko’s problem: if every aberration can ultimately be resolved only by the person concerned, then Kaiki and Nadeko achieve a strange unity here, too.
 
-![A bloodied Nadeko Sengoku facing forward, her eyes shining with concentric colors](attachments/roof-archive/cv1804388/05-nadeko-confrontation.png)
+![A dark-haired figure in a pale robe, with blood on the face and eyes glowing blue and pink.](attachments/roof-archive/cv1804388/05-nadeko-confrontation.png)
 
-This is why the hollow-shrine analogy returns. Kaiki’s pose of detachment conceals an emptiness much like Nadeko’s: neither of them has found a durable way to live with desire. The difference is that Kaiki offers Nadeko a new object for hers while refusing the same possibility for himself. His intervention is not merely a grown man lecturing a child, because it depends on recognizing a desire she kept hidden and giving her the agency to choose it. At the same time, he cannot guarantee that this wager will work; his con has already failed, and the appeal puts his own life at risk.
+This, then, explains Kaiki’s evasion. His conversation with Nadeko really was a deception: isn’t Kaiki’s own heart a hollow shrine? Finding an anchor for that hollow shrine beyond kindness and feeling is difficult (think of the “hollow shrine” Touko speaks of, Shiki Ryougi). Kaiki himself cannot guarantee that his method is workable, so the account of it as an adult’s lecture to a child (an infant) does not hold up either. Similarly, giving up his romantically ambiguous relationship with Senjougahara is bound to be difficult, even devastating. Kaiki the realist must be able to foresee his own wretched exit. Senjougahara’s denial of “love” is precisely one of the episodes I consider closest to fiction: **only if Senjougahara severs her ties with him can his death (or his exit) be lonely and cold, rather than tinged with even a trace of warmth. This is the redemption of Deishu Kaiki in the story.**
 
-Giving up his unresolved attachment to Senjogahara would be harder still. Kaiki the realist can foresee that the relationship has no livable future, so he arranges his account to end it for him. Her apparent denial of affection is, to my mind, one of the details most likely to be invented—not because I can prove what she said, but because the denial does such precise work for his narration. It cuts the last tie that might warm his departure. **By writing Senjogahara as the one who severs their connection, Kaiki can imagine his own death—or simply his exit—as lonely and cold rather than tender. That self-punishing isolation is the salvation he writes for himself.**
+## 【004 Deishu Kaiki】
 
-## 004 · Deishu Kaiki
+Ononoki pronounces Kaiki’s failure from the outset: when Kaiki feels most certain, he is bound to fail; when he believes his lies are certain to reach some kind of “truth,” he is bound to fail. For he has made a mistake here: “the fake is more genuine than the genuine article,” so the “genuine article” should not exist in a reality constituted by “fakes.” **When Kaiki’s lies reach “truth,” the lies themselves no longer hold.**
 
-I take Yotsugi’s warning as a verdict on Kaiki: he will fail precisely when he is most certain of success, when he believes his lie is guaranteed to arrive at the truth.[^6] His first deception of Nadeko demonstrates the obvious kind of failure: the target discovers the trick. The more interesting failure comes with his eventual success. Once he addresses Nadeko’s real desire and saves her, his performance is no longer merely an efficient con. It has become an act of care. **The lie reaches a truth, but in doing so it destroys the detached identity from which Kaiki wanted to tell it.**
+Earlier I declared Deishu Kaiki a realist. He tore apart reality’s hypocritical facade long ago, and so would rather tread on “fiction” and “lies”—whether by making a career as a con man or by pursuing “money,” that vast fraud. Yet through his lies, he really has seen what the “real thing” looks like: pure, genuine, never fading. What is “genuine” in love is overlapping and becoming one; what is “genuine” in society is bringing down the walls around the heart. Ultimately, there really are traces of a search for the “real thing” in Kaiki’s words and actions. **Kaiki has still not escaped the spiral of contradiction between “genuine ↔ fake.”** In a verdict on Kaiki, we might say that he has encountered anxiety itself:
 
-That is the problem with his claim that the fake can be more valuable—or even more real—than the genuine. Kaiki has lived by treating the genuine as unnecessary: fraud is his profession, money is the universal substitute he pursues, and lies let him act without admitting what he wants. Yet his lies keep revealing the very thing he has tried to exclude. His rescue of Nadeko reveals kindness; his portrait of Senjogahara reveals attachment; his insistence on a cold exit reveals how much warmth he must renounce. For him, genuine love would mean two selves overlapping, and genuine social life would mean lowering the walls around the heart. **He has not escaped the spiral that binds the genuine to the fake, because every lie meant to protect him from feeling becomes evidence of feeling.**
+> A grief without a pang, void, dark, and drear,
+>
+> A stifled, drowsy, unimpassioned grief,
+>
+> Which finds no natural outlet, no relief,
+>
+> In word, or sigh, or tear—[^poem]
 
-Kaiki therefore fails as the perfectly self-contained con man even when he succeeds at the job. The success costs him the fiction of detachment. What remains is a grief he can neither confess nor fully suppress—the condition Samuel Taylor Coleridge describes in “Dejection: An Ode”:[^7]
+[fig] Deishu Kaiki, the con man: Japanese-language character profile reproduced unchanged from the source essay.
 
-> A grief without a pang, void, dark, and drear,\
-> A stifled, drowsy, unimpassioned grief,\
-> Which finds no natural outlet, no relief,\
-> In word, or sigh, or tear—
+![Deishu Kaiki in a dark suit, shown in front and side head studies and a full-length pose on a gray Japanese character profile.](attachments/roof-archive/cv1804388/06-deishu-kaiki-character-sheet.png)
 
-[fig] Kaiki’s Japanese character sheet identifies him as a con man who has no qualms about deceiving women or children and works his schemes for money. It also credits voice actor Shin-ichiro Miki.
+The end of *Koimonogatari* also announces the opening of the final act of *Monogatari*’s story of youth. Koyomi Araragi is at last forced to confront his own greatest contradiction: Ougi Oshino. As for Deishu Kaiki, in the story he lets go of the feelings that will haunt him forever and finds his final release. **We might as well believe that he is “probably really” dead.**[^kong]
 
-![Japanese character sheet for Deishu Kaiki, showing full-body, frontal, and profile views](attachments/roof-archive/cv1804388/06-deishu-kaiki-character-sheet.png)
+## Editor’s Note
 
-The end of *KOIMONOGATARI* also opens the final movement of *Monogatari*’s story of adolescence. Koyomi will at last have to face his own greatest contradiction, Ougi Oshino. Kaiki’s deliverance is narrower and darker. It does not mean that he has discovered a life beyond fraud, or even that he has escaped his attachment to Senjogahara. It means that his narration has severed the attachment, punished him for having it, and removed him from the triangle that could not hold him. The attack at the end supplies the perfect uncertain exit: death if we believe it, departure if we do not.
+Deishu has found release. Then he is probably really dead.
 
-[fig] A final, tightly cropped image of Kaiki in the red woods repeats the chapter’s visual motif of isolation and departure.
+Apparently, there are more articles on the *Monogatari* series to come.
 
-![Close view of Deishu Kaiki silhouetted among red trees](attachments/roof-archive/cv1804388/07-deishu-kaiki-conclusion.png)
+![A wide, tightly cropped view of Deishu Kaiki in shadow against red and black tree branches.](attachments/roof-archive/cv1804388/07-deishu-kaiki-conclusion.png)
 
-So let us indulge the fiction that Kaiki perhaps truly died.[^8] The point is not to settle his fate. It is that the ending gives his disavowed feeling its final form: a truth spoken as a lie, and therefore only half-said.
+[^hollow]: **Translator’s note:** Touko Aozaki and Shiki Ryougi are characters in *the Garden of sinners*, whose fourth film is titled “The Hollow Shrine.” The quotation here is translated from the essay’s Chinese wording, not taken from an English subtitle edition. See [Aniplex’s series and character information](https://aniplexusa.com/thegardenofsinners/).
 
-[^1]: Jacques Lacan develops the “half-said” (*mi-dire*) of truth in [*The Seminar of Jacques Lacan, Book XVII: The Other Side of Psychoanalysis*](https://wwnorton.co.uk/books/9780393062632-the-seminar-of-jacques-lacan), trans. Russell Grigg (Norton, 2007), especially the sessions on knowledge and truth.
-[^2]: Title styling follows [Kodansha’s English novel listing](https://kodansha.us/series/monogatari/); “Deishu Kaiki” and “Hitagi End” follow [Aniplex of America’s release](https://aniplexusa.com/monogatarisecondseason/index.html). Kodansha’s spelling “Senjogahara” is used throughout.
-[^3]: Kaiki’s advice is summarized from the Chinese quotation in the original 2019 publication. It is not wording from the licensed English edition of *KOIMONOGATARI*.
-[^4]: The original publication cites Yi Yan’s Zhihu column “The Sign’s Revolt against the Author: Nadeko Sengoku’s ‘Anti-Metafiction’” as an inspiration. Its description of Nadeko leaving the series after *KOIMONOGATARI* is best understood as the end of this identity and this arc, not a literal account of her later appearances.
-[^5]: “Kogarashi Sentiment” is the opening theme for the anime’s “Hitagi End” arc. The 2019 publication quoted an extended passage from its lyrics; this edition summarizes that passage.
-[^6]: This is an interpretive paraphrase of Yotsugi’s warning in “Hitagi End,” not a quotation from a licensed English script or novel.
-[^7]: Samuel Taylor Coleridge, [“Dejection: An Ode”](https://www.poetryfoundation.org/poems/43973/dejection-an-ode).
-[^8]: The 2019 publication ended with an editor’s joke that Kaiki had found deliverance and therefore “probably really did” die, followed by a promise of further *Monogatari* essays. The next essay survives as another chapter in this book; the joke has been folded into the argument here rather than left as a detached editorial postscript.
+[^dialogue]: **Translator’s note:** From Kaiki’s narration in NISIOISIN’s *Koimonogatari*, translated here from the Chinese excerpt quoted in the essay.
+
+[^lyrics]: **Translator’s note:** From “Kogarashi Sentiment,” sung in the television version by Hitagi Senjougahara and Deishu Kaiki; see the [official release information](https://www.monogatari-series.com/bddvdcd/detail/?id=3210). The Japanese is retained as printed in the essay. The parenthesized English translates the essay’s Chinese rendering, not the Japanese directly. The two differ: for example, the Japanese refers to pretending not to hear a love letter, where the Chinese describes indistinct feelings of love.
+
+[^poem]: **Translator’s note:** Samuel Taylor Coleridge, “Dejection: An Ode,” stanza II, lines 21–24. The English original is restored from *The Complete Poetical Works*, edited by Ernest Hartley Coleridge (1912), vol. I, p. 364, available through [Project Gutenberg](https://www.gutenberg.org/files/29090/29090-h/29090-h.htm#stcvol1_Page_364). The essay quotes a Chinese rendering whose wording differs.
+
+[^kong]: **Translator’s note:** “Probably really” echoes the contradictory pairing of uncertainty and certainty in the final sentence of Lu Xun’s [“Kong Yiji”](https://zh.wikisource.org/wiki/%E5%AD%94%E4%B9%99%E5%B7%B1). The editor’s note repeats the echo.

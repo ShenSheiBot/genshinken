@@ -1,13 +1,18 @@
 ---
+title: "The Pure-Love Matrix of The Song of Saya"
+description: "Starting from the relationships established at the opening of The Song of Saya, Fei Mu uses complete graphs and the logic of pure love to derive the structural positions of its three endings."
+date: 2021-07-31
 work_id: song-of-saya-pure-love-matrix
 source_type: post
 source_slug: song-of-saya-pure-love-matrix
 slug: song-of-saya-pure-love-matrix
 language: en
 status: review
-title: "The Song of Saya’s Pure-Love Matrix"
-title_breaks: ["The Song of Saya’s", "Pure-Love Matrix"]
-excerpt: "Beginning with the web of relationships established in The Song of Saya’s opening, this essay uses a four-node graph and the logic of Japanese pure-love fiction to explain the structural place of each of the visual novel’s three endings."
+categories: [Games]
+section: review
+tags: [Game Studies, Visual Novels]
+post_author: 非木
+excerpt: "Starting from the relationships established at the opening of The Song of Saya, Fei Mu uses complete graphs and the logic of pure love to derive the structural positions of its three endings."
 credits:
   - role: translator
     contributor_id: shen-shui-bot
@@ -15,117 +20,152 @@ credits:
 translation_method: agent
 source_relationship: direct
 base_language: zh-Hans
-updated: 2026-08-28
+updated: 2026-09-29T00:00:00.000Z
 rights: CC BY-NC-SA 4.0
 format: article
+citation:
+  itemType: blogPost
+  citationKey: feiMu2021SongOfSayaPureLoveMatrix
+  title: 《沙耶之歌》的纯爱矩阵
+  creators:
+    - creatorType: author
+      name: 非木
+  date: "2021-07-31"
+  blogTitle: 知乎专栏
+  url: "https://zhuanlan.zhihu.com/p/385829684"
+  language: zh-CN
+  extra: "屋顶现视研‘拾荒战略 Rags Drum 2022’前夜祭入选稿。"
 ---
 
-> This essay was selected in the preliminary round of Lab on Roof’s 2022 Rags Drum call for submissions.
+> Selected for the Pre-Festival of Lab on Roof’s “Rags Drum 2022.”
 
-You wake to find that everyone around you looks like a monster. That is the premise shared by Osamu Tezuka’s *Phoenix: Resurrection* and Gen Urobuchi’s visual novel *The Song of Saya*. In Urobuchi’s game, however, the people have not actually transformed. After a terrible accident, Sakisaka Fuminori perceives ordinary human bodies as heaving masses of flesh and the everyday world as a charnel house. Saya, who really is nonhuman, is the sole exception: to him she appears as a beautiful young woman. The reversal is the game’s central trick and the source of both its romance and its horror.
+You wake up to find that everyone around you has become a monster. This is how *Phoenix: Resurrection* begins, and it is the central selling point of *The Song of Saya*. Gen Urobuchi undoubtedly borrowed far more than this from Osamu Tezuka. But if we want to pin down what the two works have in common, *The Song of Saya*’s one explicit reference to the manga already says it all. After Sakisaka kills his neighbor and rescues Saya from him, she realizes, uneasily, that he has begun to turn against humanity for her sake. To persuade Saya to “accept him completely,” Sakisaka brings up *Phoenix*—“a manga I read once”—and points out the resemblance between his own predicament and that of the protagonist of *Resurrection*. He then describes what the latter did: “That man who fell in love with something nonhuman finally gave up being human, and in doing so fulfilled his love.” This is both Sakisaka’s promise to Saya and his definition of the entire work: at this moment, he is Urobuchi’s incarnation. To fall in love with something nonhuman, then give certain things up in order to be with her: unlike the protagonist of *Resurrection*, that really is all Sakisaka does.
 
-The game’s explicit allusion to *Phoenix* comes after Fuminori has killed his neighbor and rescued Saya. Alarmed that he has turned against humanity for her, Saya asks whether he can still accept her completely. Fuminori recalls “Resurrection” and describes its protagonist’s choice: “The man fell in love with something that was not human. In the end, he abandoned his own humanity to fulfill that love.”[^18] The line also defines Fuminori’s course. He loves a nonhuman being, abandons his moral and social humanity to remain with her, and treats murder as proof of that commitment.
+*The Song of Saya* is, after all, a work of pure love.
 
-At heart, then, *The Song of Saya* is a *jun’ai* story, a work of Japanese “pure love.” It is also a savage test of what that formula excludes.
+The differences between the two works, however, emerge much earlier. The opening CG in *The Song of Saya*—its first illustrated scene—also shows other humans transformed into monsters. But unlike *Resurrection*, this is not the first thing Sakisaka sees on waking. We are immediately told that “I have been living like this for more than three months now.” Urobuchi has chosen to begin at a point when the abnormality caused by the accident has already become the norm: “I gave up resisting long ago and accepted the facts.” Clicking “Start,” the player abruptly intrudes upon this normality. Only afterward, through the protagonist’s account, do we gradually learn about the accident in the background.
 
-## From an event to a condition
+The same trope thus serves entirely different narrative functions. In *Phoenix: Resurrection*, the catastrophe and the amnesia that follows—an **event**—establish a compelling mystery around which the protagonist organizes his actions. It is, quite literally, the first mover of the main narrative. Moreover, once we “recover our memory” along with him, we discover that the reversal of perspective itself marks a major turn in a complete chain of events. With its “help,” he can resolve conflicts and grievances that had previously been insoluble. In *The Song of Saya*, by contrast, the accident barely gets a part. Perhaps the only reason Urobuchi bothers to mention it in so concise a work is that a premise cannot come from nowhere. The abnormal normality at the root of everything—a **situation**—does, after all, need a logical pretext to justify its appearance before the player.
 
-The difference between Tezuka’s story and Urobuchi’s game appears at the beginning. *The Song of Saya* also opens on a grotesque image of the people around its protagonist, but this is not Fuminori’s first encounter with his altered vision. “This life has gone on for more than three months now,” he tells us. “I gave up resisting long ago and accepted the facts.”[^18] The accident is backstory. By the time the player clicks *Start*, the impossible has become Fuminori’s routine.
+There is an interesting distinction here. At the risk of coining new terms, let us call it the opposition between a starting **point** and a starting **plane**. The former, as we have said, is an event; and in physics an event happens to be defined as a mathematical point in four-dimensional spacetime. The latter has a network structure: it is the result of projecting the basic premise onto the protagonist. We can define it as the set of all relations that arise from the underlying situation and surround the protagonist when the narration begins.[^1] The story develops from this entire plane, and readers naturally begin to form expectations about how its various elements will change.
 
-The same device therefore does two different jobs. In *Phoenix: Resurrection*, the disaster and the amnesia that follows it are an **event**: the point that starts the mystery and sets the protagonist in motion. The later recovery of his memory becomes a major reversal. In *The Song of Saya*, the accident supplies a narrative explanation for a **condition** already in force. What matters is not the instant of the accident but the altered set of relations it has produced by the time the story begins.
+Initial conditions are largely independent of the laws governing how particular things evolve, as in an ordinary dynamical system. We can therefore imagine that, in most cases, the opening need not impose much constraint on the pattern of subsequent developments. Indeed, in the ordinary business of writing, an opening may well be no more than a convenient route to scenes already conceived. For *The Song of Saya*, however, the reverse is true in one particular sense. Experienced readers will find an implicit structure unfolding within its starting plane, with that plane itself as its prototype. This structure—or framework; better still, **matrix**—sets the bounds for all subsequent plot developments, or their possibilities, and gives them a common space in which to evolve. We will even see that if we take the “initial conditions” supplied by the opening and let them operate according to the logic of pure love, the game’s three endings correspond naturally and exactly to all the possible plot developments derivable under these constraints.[^2]
 
-At the risk of inventing a term, call the first kind of beginning a starting **point** and the second a starting **field**.[^1] A point launches a chain of events. A field describes the forces already acting on the protagonist: whom he loves, whom he fears, who worries about him, and who might discover his secret. Most openings do not dictate everything that comes later, and neither does this one. But *The Song of Saya* is unusually economical. Its first three scenes introduce a small cast and a closed set of tensions that the routes repeatedly recombine.[^2]
+To make this claim more precise, let us return to the opening. The player is shown three expository scenes in succession. Sakisaka first talks to his former friends at university, then goes to the clinic to see his female doctor, and finally returns home to Saya, who is living there. Along the way, we meet every important character who will appear later, all from his perspective. In turn, we learn how everyone except Saya sees him. The information gathered in this sequence can readily be assembled in the following diagram:
 
-## What the diagram can—and cannot—show
+[fig] Principal actors in *The Song of Saya* and their relations.
 
-Those three scenes form a compact sequence. Fuminori speaks with his former friends at the university, visits the doctor treating him, and goes home to Saya. We meet almost every major living participant through his distorted senses, while their reactions show us how withdrawn and alarming he has become.
+![Four-node relationship diagram for The Song of Saya, with solid, dashed, and red arrows. The complete English legend follows.](/attachments/translation-revisions/en/song-of-saya-pure-love-matrix/relations-2026.png)
 
-[fig] Opening relations among the four functional actor groups. Arrows run from the person experiencing a relation toward its object; solid arrows mark established relations, dashed arrows mark possible future contacts, and red marks the reciprocal romance.
+[fig-note] English relabelling of [Fei Mu’s original diagram](/attachments/roof-archive/rags-drum-2022/saya-pure-love-matrix/relations.jpg). Source: Zhihu @非木.
 
-![Directed relationship diagram: Fuminori at the center is linked to his classmates, Dr. Ryoko, and Saya; the solid arrows distinguish his disgust and love from their concern, wariness, and love, while dashed arrows connect actors who have not yet met](/attachments/roof-archive/rags-drum-2022/saya-pure-love-matrix/translations/en/relations.png)
+**Diagram legend.** The four nodes occupy the corners: A, **Sakisaka**, upper left; B, **Classmates**, lower left; C, **Ryoko**, lower right; D, **Saya**, upper right. Solid arrows show relations established at the opening; dashed arrows show possible relations not yet established.
 
-Here A is Fuminori; B, his classmates; C, Dr. Ryoko; and D, Saya. These are **actors** in a functional rather than strictly individual sense: each node represents a person or group that occupies a distinct position in the conflict.[^3] The grouping is deliberately coarse. B initially includes Koji, Yoh, and Omi, whose fates diverge sharply; by the final confrontation, Koji effectively carries that node alone.
+**Direction — Line and label**
 
-The arrows preserve an important asymmetry. Fuminori’s revulsion toward his friends is not the same as their concern for him, and Ryoko’s wary professional interest is not the same as his fear that she will expose Saya. Only Fuminori and Saya share a positive, reciprocal relation, the red pair $AD$. The black solid arrows around Fuminori mark estrangement, suspicion, or unwanted concern. The dashed arrows do not predict meetings. They simply identify contacts that the story could establish among actors who have already entered its field.
+- A ↔ D: Red solid two-way arrow: **Romantic love**.
+- A → B: Black solid arrow: **Aversion**.
+- B → A: Separate black solid arrow: **Concern / he seems a stranger**—the classmates’ view of Sakisaka.
+- A → C: Black solid arrow: **Aversion**.
+- C → A: Separate black solid arrow: **Wariness**.
+- B ↔ C; B ↔ D; C ↔ D: Three black dashed two-way relations, without emotional labels.
 
-If we temporarily discard direction, motive, and change over time, the three established pairs $AB$, $AC$, and $AD$ form a connected subgraph of the complete graph $K_4$.[^4] The full $K_4$ is the diagram of all six possible pairwise contacts among four nodes. That mathematical fact does **not** prove that every pair will meet, much less tell us whether a meeting will produce love, alliance, or violence. It gives us a useful ceiling: the largest contact network this deliberately closed cast can form. One route eventually reaches that ceiling, while the others stop short of it.[^5] The graph is thus a map of available relations, not an engine that generates the plot.
+The diagonal crossings are not nodes.
 
-That distinction also clarifies the title. I use **matrix** in the ordinary sense of an underlying arrangement, not as a synonym for a plane, a graph, or a mathematical adjacency matrix. The graph is one representation of the matrix: four functional positions, their opening relations, and the alignments the routes allow. Later, when we classify allies and enemies, we must restore the motives and capabilities that the stripped-down contact graph set aside.
+As we can see, the principal characters fall naturally, according to who they are, into four distinct units of action, or actors. An actor is an individual or a group whose members share similar motives, functions or capacities, goals, and ways of acting, distinguishing it from the other units.[^3] Everyone except Saya is on guard around Sakisaka. His former friends may be more concerned about his health, but every player knows that, from Sakisaka’s own point of view, he has no use for this extra curiosity and attention. On the contrary, anything that might expose Saya to the world threatens him. For now, then, Saya is the only character with whom he retains a “positive relation”—$AD$, marked in red. Every other relation is a potential source of conflict.
 
-The game helps this reduction work by keeping its cast remarkably closed. Ryoko even tells Koji not to call the police, a plausible choice within the story that also prevents a fifth organized force from entering the conflict.[^6] This is evidence of narrative economy, not proof that Urobuchi consciously designed the script from graph theory.
+The diagram tells us more than that. Only the three relations centered on Sakisaka—$AB$, $AC$, and $AD$—have actually been established. Yet once all the principal actors have appeared as nodes, the possibilities of all the other relations, shown as dashed lines, are activated along with them. A convenient mathematical fact makes this possible: even if we restrict the graph’s “available” edges to $\{AB, AC, AD\}$, the resulting structure, a subgraph of the complete graph $K_4$,[^4] is still connected. Since all the characters can, in theory, come to know one another through Sakisaka, and since they do have motives for approaching and investigating him, we have no reason to assume that they will not, in fact, come to know one another this way. In other words, the entire complete graph $K_4$ is ultimately available.
 
-## Why four actors?
+What is more, there are only four important actors in the work, and the completed $K_4$ contains every possible relation. We can therefore go further: the stage-matrix really has been given in full from the outset. The moment we enter the game, we are handed the key to unfolding every subsequent plot structure. Playing on only strengthens this conviction, as the intensifying conflicts eventually make one ending[^5] **fill out exactly** the complete graph $K_4$ that serves as the matrix.[^6]
 
-Nothing in graph theory requires four. The number comes from the game’s cast design: the lovers, Fuminori and Saya, face two different human forms of opposition, personal concern from the classmates and informed suspicion from Ryoko. Grouping three classmates into one node is analytically convenient, but it is not a law of the story.
+To a certain extent, *The Song of Saya* follows a plot logic resembling formal derivation.
 
-Four-part schemes nevertheless invite comparison because a pair of oppositions can produce a square. Graham Harman’s object-oriented ontology repeatedly uses fourfold structures, while Greimas’s semiotic square offers a familiar literary example.[^7] *The Song of Saya* does not fit either scheme exactly. Its governing opposition is human versus nonhuman, and even that line keeps moving. Fuminori is biologically human but chooses Saya’s side against humanity; Saya is nonhuman, yet the romance requires Fuminori—and the player—to recognize some personhood in her.[^8] Meanwhile, the classmates and Ryoko represent different human responses rather than two clean logical contraries. The equations $2 \times 2 = 4$ or $2^2 = 4$ are suggestive mnemonics, not derivations of the cast.
+---
 
-## Pure love through a horror lens
+## Interlude: Questions and Answers
 
-In what sense is *The Song of Saya* a work of pure love? The term *jun’ai* has a longer and less tidy history than any single definition can capture. For this essay, two conventions matter.
+**1. Q:** Why $K_4$ rather than, say, $K_5$? Is there something special about four?
 
-First, pure-love fiction often gives its central couple a kind of genre guarantee. The audience recognizes the destined pair early; the question is not whether they are right for each other but what their love will endure. *The Song of Saya* makes that guarantee part of its premise. A later flashback sketches Fuminori and Saya’s first meeting, but the game begins with them already established as lovers. Their bond is the story’s foundation, not a conclusion that the plot must earn.[^9] Even romances that narrate a full courtship often announce the destined partner on arrival; Urobuchi simply makes the convention unusually stark.[^10]
+**A:** There may be no necessity to it. But $K_4$ is the simplest of all the “nontrivial” choices. To take two examples: $K_3$ has only three edges and little dramatic scope, while $K_5$, with its ten edges, is too complicated for a work as short as *The Song of Saya*.
 
-Second, in the narrow model at work here, serious conflict comes from outside the couple. Adversity tests love and, when overcome, appears to deepen it. That does not mean every work called *jun’ai* forbids betrayal or internal conflict. It means *The Song of Saya* treats Fuminori and Saya’s mutual devotion as fixed, then sends other loyalties—friendship, society, morality, even species—against it. “And they lived happily ever after” may be the purest expression of such harmony, but it is also where description usually ends.[^11] A plot needs resistance.
+As for the second question, the twofold symmetry of four makes $K_4$ a favored framework for many conceptual systems based on dualism. Graham Harman has observed that similar fourfold structures appear in many of the world’s philosophical traditions—his own object-oriented ontology is one example. They generally arise from the intersection of two binary oppositions: $2 \times 2 = 4$.[^7] *The Song of Saya* also takes a dichotomy as its point of departure, so the appearance of four is unsurprising. Strictly speaking, of course, it does not fit Harman’s account, since it has only one dichotomy: human–nonhuman. It obtains its four nodes by a different strategy: relativizing the same binary opposition, then applying it to itself a second time.
 
-Urobuchi makes that resistance horrifyingly concrete. Saya and Fuminori do not merely offend an abstract moral law. They murder people; Yoh is abducted, sexually abused, and grotesquely remade in body and mind. Fuminori converts her suffering into evidence of Saya’s devotion:
+Specifically, Sakisaka and Saya plainly form the basic human–nonhuman pair.[^8] But Sakisaka combines human and nonhuman elements, so in another sense we can place him, together with Saya, on the side opposed to humanity. For the sake of their love, he does eventually choose that position himself. The empty side of this second opposition, founded on the same pair of concepts, then requires two further nodes. Sakisaka’s classmates and his doctor serve this function. In short, the generative formula for *The Song of Saya* is $2^2 = 4$.
 
-> Burning with love for me, Saya put that woman Yoh to the torch. One look at what became of Yoh tells me just how fiercely, how passionately Saya loves me.
+**2. Q:** In what sense is *The Song of Saya* a work of pure love?
+
+**A:** It is a work of pure love because it possesses all the core features of one kind of Japanese pure-love fiction. We need not get bogged down in exact definitions here. What matters most for us is that its portrayal of romantic love meets two conditions:
+
+1. **Meta-ness.** Pure-love works are, fundamentally, emotional devices. Readers invest their emotions in reading, immersing themselves in a fantasy romance and temporarily escaping life’s troubles. In the reading contract between author and reader, romance itself is sold as the ultimate antidote. Everything about the romance in a pure-love work is therefore decided at the meta-level: it is logically prior to the work itself. This is what I mean by meta-ness. Consider, for example, what the synopsis of a pure-love work usually contains. Besides the identities of the hero and heroine, it will often assure us that their romance is a certainty. After all, they are designed for each other. *The Song of Saya* is no exception. Indeed, Urobuchi is unusually bold and direct in laying pure love’s meta-ness out in the open.[^9] He trusts this reading contract enough to make the protagonists’ extraordinary romance part of the background. A later flashback sketches their first encounter, but we do not need an exhaustive account of how Sakisaka and Saya fell in love: it simply does not matter. Their togetherness is the foundation of everything, not a conclusion that needs to be justified by some external logic.[^10]
+
+2. **Purity.** The function of pure-love works drives their authors to portray an Edenic ideal of love. Yet this state cannot be described directly.[^11] The only workable method is to construct it in reverse, through its opposite: to express the harmony of a loving relationship through the negation of conflict. “Pure love means love without quarrels” is a roughly accurate summary. Even if conflict does arise, for a “pure-love couple” it can only come from outside, and it will ultimately be overcome. Or their own character flaws may bring the relationship to an impasse, but transformative events will give them a chance to put everything right. The protagonists can always be relied on to seize those chances to improve themselves, resolving the conflict while taking their love to a higher level. In short, pure-love works permit no plot development that genuinely damages love—infidelity, for example. Instead, they often feed on adversity, demonstrating love’s power by successfully conquering its various enemies. This is the strategy *The Song of Saya* adopts. Its premise brings love up against the most formidable opponent of all: morality itself. We cannot help being reminded of the Marquis de Sade’s sovereign men, whose ceaseless aggrandizement likewise makes stepping stones of ethics and virtue. Perhaps this passage from Sakisaka’s inner monologue gives concrete force to our somewhat playful analogy:
+
+> With her burning love for me, Saya condemned that woman called Yoh to the flames. You only had to look at Yoh’s wretched state to see how fiercely, how ardently Saya loved me.
 >
-> Somewhere along the way, I began to welcome Saya’s gifts.[^18]
+> Somewhere along the way, I had begun to welcome Saya’s gifts.
 
-The distorted viewpoint lets the game stage tenderness from inside an atrocity. Read one way, it sincerely fulfills the pure-love promise: nothing can divide the couple. Read another, it grotesquely literalizes the promise’s exclusionary logic: everyone outside the couple becomes material to be used or an enemy to be destroyed. The game can also look like a parody of *jun’ai* for precisely that reason. These readings are not mutually exclusive. Its romance works because the lovers’ devotion is unwavering; its horror works because devotion does not absolve what they do.
+No wonder so many people find *The Song of Saya* morally sickening.[^12]
 
-The comparison with the sovereign libertines of the Marquis de Sade is therefore more than a joke. In both cases, a character turns conventional virtue into an obstacle whose destruction confirms his own freedom. Fuminori does the same in the name of love rather than appetite. That is why calling the game morally repellent need not mean that its pure-love structure has failed. The revulsion may be the structure’s most extreme effect.[^12]
+---
 
-## From alignments to routes
+Let us return to the question of structure. If anything emerges from the discussion above, it is a teleology of pure love. *The Song of Saya* constructs a framework in which the protagonists’ love is opposed to certain forces. As a work of pure love, its first task is therefore to show how love defeats those forces in the conflicts that follow. But this demand applies to works in general; we cannot simply impose it on a visual novel. The nonlinearity of visual novels makes them, by necessity, a combinatorial genre. A visual novel’s fundamental aim is to exhaust the possibilities of a given narrative framework in the richest possible variety of ways. It must discover and realize every interesting development derivable from that framework, taking the story as far as logic permits. For *The Song of Saya*, one rather unfortunate consequence is that it cannot show only love’s victory. Sakisaka and Saya’s opponents are powerful enough that defeat cannot be ruled out. The work must therefore not only realize this possibility, but place it alongside the successful ending on an equal footing, favoring neither.
 
-The graph records possible contacts; route structure determines which ones occur. Visual novels can use branches in many ways, and some clearly privilege a “true” ending. *The Song of Saya* uses its two choice points more narrowly: it tests whether the central romance continues, then—if it does—whether Koji faces it alone or with Ryoko. The form does not require this combinatorial neatness. This particular game chooses it.
+How many fundamentally different trajectories, then, are available to *The Song of Saya*? To answer this, we need to note two things. First, its conflicts are fights to the death. Sheer force is the only means of resolving them: everything eventually escalates into a zero-sum game of “either you die or I do.” Under these conditions, any possible ending is determined directly by the relative strength of the two sides. Second, Urobuchi seems to have resolved to keep all the actors’ fighting capacities at roughly the same level. Sakisaka has three classmates, but two of them, Yoh and Omi, have clearly devoted themselves to the great cause of escalating the conflict. Through their deaths, they draw the sole remaining classmate, Koji, ever deeper into the affair until he becomes Sakisaka’s mortal enemy.[^13] In the end, *The Song of Saya* is really “an arena for four,” with the balance of power as even as its premise will allow.[^14]
 
-The first choice belongs to Fuminori: he can ask Saya to restore his normal senses or refuse the cure and remain with her. If he asks, the story moves directly to “White Room” and the later confrontation never takes place. If he remains with Saya, the deaths of Omi and Yoh leave Koji as the surviving representative of the classmate group.[^13] Koji investigates Fuminori and Saya, and the second choice—made from Koji’s point of view—is whether to call Ryoko for help.[^16]
+To sum up: the ending depends directly on the relative strength of the two sides, and this in turn is determined entirely by the relative numbers of allies and enemies. That fact is crucial for us. It means that we now have enough information to derive every outcome of *The Song of Saya*. The matrix left Sakisaka few ways out to begin with. They amount to the following four cases. Here $S$ denotes the set of allies and $E$ the set of enemies;[^15] the remaining letters come from the diagram above.
 
-That sequence matters because the two variables are not independent. The first choice determines whether the second is reached at all. Nor can head count alone settle the battles. By the end, B means Koji rather than three interchangeable classmates, and Ryoko’s knowledge and firearms matter more than an extra body.[^14] The useful claim is modest: the routes arrange the same four positions into a small set of alliances, then let information, access, and equipment decide what those alignments can do.
+1. $S = \{\}$, with $E \subseteq \{B, C\}$ nonempty;
+2. $S = \{D\}$, $E = \{B\}$;
+3. $S = \{D\}$, $E = \{C\}$;
+4. $S = \{D\}$, $E = \{B, C\}$.
 
-Let $S$ denote Fuminori’s active allies and $E$ the actors actively opposing him. The notation is bookkeeping, not a proof of exhaustiveness. It gives us three realized route configurations and one illuminating counterfactual:
+All four options are determined by two independent variables, $S$ and $E$, which correspond exactly to the only two choices the player makes in the entire game.[^16] On this count alone, we are already most of the way there. All that remains is to read the endings of *The Song of Saya* out of these options, one by one:
 
-1. **Romance suspended:** $S = \varnothing$. Fuminori accepts restoration, Saya ceases to be his active partner, and the final enemy alignment never forms.
-2. **The lovers against Koji:** $S = \{D\}$ and $E = \{B\}$.
-3. **The lovers against Ryoko alone:** $S = \{D\}$ and $E = \{C\}$. The game offers no such route.
-4. **The lovers against Koji and Ryoko:** $S = \{D\}$ and $E = \{B, C\}$.
+- Since Sakisaka and Saya’s relationship is given in advance, option 1 actually corresponds to the dissolution of their love. Naturally, this cannot literally occur in a pure-love work. Urobuchi’s solution is to hold their love in abeyance, preserving option 1 without violating the logic of pure love. The result is the first ending, “**White Room**.” It is easy to see that all subsequent conflicts are held in abeyance along with it: as we have said, Sakisaka and Saya’s relationship is the point of departure for everything that follows.
+- Option 2 unquestionably means victory for Sakisaka and Saya. Koji must face both of them alone and, under the principle of balanced strength, has no chance. Indeed, option 2 corresponds exactly to the ending that shares the work’s title, “**The Song of Saya**.” Yoh takes the gun Koji obtained from Ryoko out of play at the cost of her life; Sakisaka and Saya then kill him together. Although Ryoko reconstructs the truth from Ogai’s notes, she is powerless to change the outcome.
+- Option 3 is completely isomorphic to option 2 at the structural level, but remains only a theoretical possibility. Ryoko cannot reach Saya on her own.[^17] Only by following Koji as he investigates Sakisaka can she reach Saya. But then her position is bound to put her on Koji’s side, contradicting the premise.
+- Option 4 corresponds to “**World’s Sanity**”: victory for the “villains,” because Ryoko’s shotgun directly breaks the two-against-two balance of power. And so, in the actual course of the story, Koji is the only survivor of the final battle. Everything about Saya is ultimately buried.
 
-The empty enemy set is not excluded by mathematics; it is simply absent from the written routes. Once Fuminori refuses restoration, Koji’s opposition is already part of the common plot, and the game offers no later reconciliation.[^15] Configuration 3 is absent for a different reason. Ryoko cannot locate and confront Saya independently. She reaches the final conflict by following Koji’s investigation, so any route that activates C also retains B.[^17] Access, not the abstract graph, rules out the Ryoko-only branch.
+At this point we can say, without exaggeration, that we have unlocked all the narrative secrets of *The Song of Saya*. We may not have addressed enough of the details, but once the broad outlines are clear, spelling out what each detail does is mere legwork. Let us dispense, then, with a lengthy examination of the minutiae and end instead with a familiar question:
 
-## Three endings, one matrix
+**Q:** Is *The Song of Saya* a tragedy?
 
-- In **“White Room,”** Fuminori asks Saya to restore his senses. The request interrupts the couple’s shared course before the network of conflicts closes. Fuminori ends in the white room of the title, with normal perception restored but Saya absent. Pure-love logic is not overturned by betrayal or a quarrel; the route suspends the romance by separating the lovers.
+**A:** No, because it is a visual novel.
 
-- In **“The Song of Saya,”** Fuminori rejects restoration and Koji does not call Ryoko. Koji is not simply outnumbered: he loses the use of the gun Ryoko gave him during his struggle with the transformed Yoh, and Fuminori and Saya kill him together. Ryoko later reconstructs much of the truth from Professor Ogai’s notes, but too late to affect the outcome. The lovers win, and the ending carries their exclusive paradise to its apocalyptic conclusion.
+[^1]: This definition can be seen as an extension and reworking of what traditional narrative analysis treats as the full set of character relations introduced in a work’s “exposition.” Note the protagonist’s central position in the definition.
 
-- In **“World’s Sanity,”** Koji calls Ryoko, completing all six pairwise contacts in the four-node graph. The nominal two-against-two balance is misleading. Ryoko brings specialized knowledge and a shotgun, and that capability breaks the apparent symmetry; Koji survives the final battle while Fuminori, Saya, and Ryoko die. From the lovers’ perspective, their enemies have won. From an ordinary moral perspective, Koji and Ryoko have stopped a murderous pair. What dies with the others is not Koji’s knowledge that Saya existed, but the evidence and expertise that might make the full story publicly intelligible.
+[^2]: We must keep reminding ourselves that *The Song of Saya* is not a novel in the traditional sense, but what is called a visual novel. The latter’s greatest advantage is its ability to make possibility and actuality exactly equivalent. Urobuchi’s ability to use this to select the organizing logic best suited to the medium is unmistakable evidence of his mastery of the visual-novel form.
 
-The matrix does not unlock every secret in *The Song of Saya*, and it cannot explain the routes from cast size alone. It does something smaller and, I think, more useful. It shows how the game begins with four tightly bounded positions, makes one relationship nonnegotiable, and then uses two choices to halt that relationship, let it defeat an isolated opponent, or assemble enough opposing force to destroy it. The horror lies in what the clean arrangement cannot measure: what happens to Yoh and Omi, what Fuminori’s vision lets him deny, and how easily “pure” devotion converts everyone beyond the couple into an obstacle.
+[^3]: Our definition directly excludes the dead from being actors, so Professor Ogai does not count (and his role in the plot falls far short of that of a central character anyway).
 
-## Is *The Song of Saya* a tragedy?
+[^4]: A complete graph is a simple undirected graph in which every pair of distinct vertices is joined by a unique edge. The complete graph on $n$ vertices is denoted by $K_n$. Here we set aside the specific properties of relations, such as their direction and variability, and ask only whether a relation exists between two actors—that is, whether they know one another.
 
-Not as a whole, because it is a visual novel. “White Room” can be read as a tragedy of separation. “World’s Sanity” is a tragedy for the lovers and a grim deliverance for Koji. “The Song of Saya” fulfills the romance while turning that fulfillment into a catastrophe for humanity. The branching form places those incompatible perspectives side by side, preventing any single tragic verdict from governing the whole work.
+[^5]: The second bad ending, “World’s Sanity.” See below.
 
-That is the final use of the pure-love matrix. It does not decide which ending is the truth. It places incompatible truths beside one another: love as salvation, love as monstrosity, and sanity as the name given to whatever survives.
+[^6]: It takes little thought to see that Urobuchi is clearly conscious of keeping the plot within this framework. For instance, when Dr. Ryoko tells Koji not to call the police, this is really the scriptwriter avoiding the introduction of further forces: under the circumstances, either calling the police or not calling them could be justified. (Not calling them can also be seen as a Lovecraftian element.)
 
-[^1]: A “field” here means the web of relations established around the protagonist when the narrative begins. The word contrasts with the “point” of an initiating event—an event being, in physics, a point in four-dimensional spacetime—without claiming that a character network is literally a mathematical plane or physical field.
-[^2]: A visual novel can actualize several authored alternatives as separate routes. That does not make every imaginable possibility actual, nor does it mean that all visual novels organize their branches this way.
-[^3]: Professor Ogai is not a node because he is dead before the present action and never acts as an independent participant. His surviving notes still exert causal force through Ryoko, which is why “actor” should not be confused with “anything that affects the plot.”
-[^4]: A complete graph is a simple undirected graph with one edge between each pair of distinct vertices; the complete graph on $n$ vertices is written $K_n$. The reduction used here asks only whether two actors make contact. It deliberately discards the direction, quality, and mutability of their relation, none of which may be discarded when interpreting the story.
-[^5]: “World’s Sanity,” discussed below. Calling it a “bad ending” would already adopt the lovers’ perspective; the route’s moral valence changes with the observer.
-[^6]: The refusal to call the police also suits the game’s Lovecraftian atmosphere, in which terrible knowledge isolates those who possess it.
-[^7]: These comparisons concern the recurrence of four-part structures, not a direct influence on Urobuchi. Harman’s object-oriented ontology and Greimas’s semiotic square divide conceptual fields into four positions for reasons specific to their own systems.
-[^8]: The paradox is essential: romance requires Saya to be recognizable as a person even when the story insists that she is not human.
-[^9]: The effect may suit a compact visual novel, but economy alone does not explain the artistic choice.
-[^10]: The destined-couple convention asks the audience to grant the pairing at the level of genre. Showing the courtship can enrich that promise, but does not necessarily produce it from scratch.
-[^11]: Direct description of perfect harmony is possible, of course, but often only in the terminal shorthand “And they lived happily ever after.”
-[^12]: Pure love is exclusive: under pressure, fidelity to one beloved can become hostility toward everyone else. Arguments about Makoto Shinkai’s *Weathering with You* often turn on a less horrific version of the same problem—whether choosing the beloved over the wider world is romantic, selfish, or both.
-[^13]: Ryoko needs no personal loss to oppose Saya. Her earlier dealings with Professor Ogai have already given her knowledge of Saya and reason to regard her as a threat.
-[^14]: Saya’s physical vulnerability matters to the balance. For all the game’s Lovecraftian imagery, she is not an invincible cosmic entity; ordinary weapons can threaten her.
-[^15]: In set notation, the excluded no-enemy state would be $E = \varnothing$. Its absence is a fact about the game’s route design, not an “obvious” logical necessity.
-[^16]: There is a pointed irony in making the second choice from Koji’s perspective: by then, Fuminori no longer holds his fate entirely in his own hands.
-[^17]: Saya’s elusiveness supplies the practical constraint. Her physical scale and combat strength are close enough to a human’s for weapons to matter, yet she remains outside ordinary human society and cannot be reached without following the traces around Fuminori.
-[^18]: Quotations from *The Song of Saya* are identified in the body by their scenes: the opening narration, Fuminori’s explanation to Saya after killing his neighbor, and his later inner monologue after Yoh’s captivity and transformation. Because the text is a visual novel rather than a paginated work, scene references are used in place of page numbers.
+[^7]: Literature offers a perfect example too: Greimas’s semiotic square.
+
+[^8]: Paradoxically, you can only fall in love with a person. If Saya had no genuine humanity, the story could not even begin.
+
+[^9]: Once again: perhaps to save space.
+
+[^10]: Those who think the protagonists “just get together out of nowhere,” then, do not really understand the logic of pure love. Even works that appear to show the entire process of falling in love use a device provided for in the reading contract to signal, the instant the heroine or hero appears: this is the one they are destined for. They are, in fact, already together before they ever meet.
+
+[^11]: Actually, it is not impossible. Sadly, though, such direct description can appear only as a fleeting conclusion: “And they lived happily ever after.”
+
+[^12]: Rather than saying Urobuchi went too far, however, we should say that *The Song of Saya*’s extreme working-out of pure love reveals the danger in pure love itself. After all, its exclusiveness means that, when necessary, it is willing to make an enemy of everything. The controversy over Makoto Shinkai’s *Weathering with You* arose in part for similar reasons.
+
+[^13]: By contrast, the doctor, Ryoko, needs no such incentive. Her fundamental opposition to Saya was already established in her dealings with Dr. Ogai.
+
+[^14]: Saya’s fighting abilities are probably so weak compared with those of other Lovecraftian creatures for the same reason: to achieve the final balance.
+
+[^15]: We can rule out $E = \{\}$ immediately. The reason is obvious.
+
+[^16]: Somewhat ironically, the second choice—the choice of $E$—is made from Koji’s perspective. Sakisaka’s fate is not entirely in his own hands.
+
+[^17]: Saya’s elusive comings and goings are intriguing. Her basic physical properties are much like a human’s, and she is not much of a fighter, yet she can remain entirely outside human society.
+
+<!-- Edition note: separate from the author's numbered notes. -->
+
+*Editorial note: The source’s 奥涯 and 奥司 refer to the same doctor, Masahiko Ogai (奥涯雅彦), identified in [Nitroplus’s original character material](https://www.nitroplus.co.jp/pc/lineup/into_06/#link-character).*

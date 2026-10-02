@@ -1,13 +1,13 @@
 ---
+title: "Rags Drum Repeat Vol. 1: Rethinking the Everyday"
+title_breaks: ["Rags Drum Repeat Vol. 1:", "Rethinking the Everyday"]
+excerpt: "Lab on Roof relaunches its annual call for submissions, Rags Drum, taking “Rethinking the Everyday” as common ground for writing and asking anew about the possibilities for otaku criticism and a public language."
 work_id: rethink-everyday
 source_type: post
 source_slug: rethink-everyday
 slug: rethink-everyday
 language: en
 status: review
-title: "Rags Drum Repeat Vol. 1: Rethinking the Everyday"
-title_breaks: ["Rags Drum Repeat Vol. 1:", " Rethinking the Everyday"]
-excerpt: "Lab on Roof relaunches Rags Drum, its annual call for criticism, under the theme “Rethinking the Everyday”—and asks again what otaku criticism and a public language might make possible."
 credits:
   - role: translator
     contributor_id: shen-shui-bot
@@ -15,104 +15,103 @@ credits:
 translation_method: agent
 source_relationship: mixed
 base_language: zh-Hans
-updated: 2026-08-28
 rights: CC BY-NC-SA 4.0
 format: article
+updated: 2026-09-29
+date: 2026-03-22
+categories: [Lab on Roof Community]
+section: community
+tags: [Animation Criticism, The Everyday]
+post_author: Lab on Roof
+featured_order: 20
+citation:
+  itemType: blogPost
+  citationKey: roof2026rethinkEveryday
+  date: "2026-03-22"
+  blogTitle: Lab on Roof
+  url: "https://bgm.tv/group/topic/455462"
+  extra: "Published March 23, 2026; submission rules on generative artificial intelligence added March 24, 2026; extension of the submission deadline to August 15 confirmed August 12, 2026, with the remaining schedule postponed accordingly"
 ---
 
-**Archived announcement: this call is closed. The submission period ended on August 15, 2026, after the original July 22 deadline was extended to give prospective contributors more time to write. Because the notice postponed all later dates, including judging, its previously announced September 1 results date is superseded; no replacement date is stated. The call and its original submission instructions are preserved below for reference and are no longer active.**
+**As many prospective contributors still need more time to write, the deadline for this year’s Lab on Roof Rags Drum submissions has been extended from July 22 to August 15. The rest of the schedule, including judging, will also be postponed. We ask for your understanding and welcome anyone interested to continue writing and submitting their work.**
 
 ## Introduction
 
-> Yes, like Mother Courage, we have the same war at our gates, and a handsbreadth from us, if not in us, the same horrible blindness, the same dust in our eyes, the same earth in our mouths. We have the same dawn and night, we skirt the same abysses: our unconsciousness. We even share the same history—and that is how it all started.
+> Indeed, like Mother Courage, we face the same war: it is close at hand, even within us. We share the same terrible blindness, the same ashes in our eyes, the same earth in our mouths. We have the same dawns and nights, and at our feet lies the same abyss: our unconscious. In short, we share the same history—this is the starting point of the whole problem.
 >
-> —Louis Althusser, “The ‘Piccolo Teatro’: Bertolazzi and Brecht,” trans. Ben Brewster
+> —Louis Althusser, [“Bertolazzi and Brecht”](https://www.marxists.org/reference/archive/althusser/1962/materialist-theatre.htm), translated for this edition.
 
-The name may be new to some readers and familiar to others. From 2020 to 2022, Rags Drum was Lab on Roof’s annual call for criticism, bringing together strong writing on ACGN culture—animation, comics, games, and novels. We later put the event on hold while both Lab on Roof and Chinese otaku criticism were changing direction. Chinese translations of Japanese otaku theory were appearing in book form, and thinkers such as Hiroki Azuma, Tsunehiro Uno, and Tamaki Saitō, already familiar to our readers, were reaching a broader intellectual audience. We began to wonder whether a grassroots group like ours still needed to rally criticism around Japanese animation and manga. If publishers, scholars, and critics were introducing this theory in a more organized way, perhaps the ideas now circulating in readers’ daily lives would generate a new wave of criticism on their own.
+Some readers may find this title surprising; others may find it familiar. Rags Drum was Lab on Roof’s annual call for submissions from 2020 to 2022, which prompted or brought together many excellent pieces of criticism on anime, comics, games, and novels (ACGN). It was subsequently suspended for various reasons—in part because both Lab on Roof and Chinese otaku criticism as a whole were in a period of transition, changing direction. As translated books reached the market, enthusiasm for otaku criticism emerged in Chinese-language intellectual circles. Although the work of Hiroki Azuma, Tsunehiro Uno, and Tamaki Saitō introduced through these translations was no longer particularly new to Lab on Roof’s readers, we nevertheless felt that, as a grassroots organization producing ideas, we might no longer need to write criticism of Japanese anime and manga to set a wave in motion. After all, with theory being introduced on a relatively professional basis and at scale, it seemed that existing knowledge, as part of readers’ everyday lives, would suffice to foster new criticism of higher quality.
 
-They did not. During Rags Drum’s hiatus, the wave we expected never arrived. Criticism, as we understand it, does more than apply a theory or announce a verdict: it puts the language of a work into contact with the language of its viewers and readers, changing how the work can be seen and what its audience can say in response. That practice has grown rarer. Conversations about animation and manga that once thrived on Chinese platforms such as Zhihu now draw little attention. Academic and commercial discussions have continued, but persistent misunderstandings of terms such as *sekaikei* show how quickly a concept can harden into a label. Institutional attention alone has not produced a vigorous public conversation.
+In retrospect, however, that optimistic assessment of the prospects for criticism was not borne out. In the years since Rags Drum was suspended, we do not seem to have witnessed the wave of criticism we once imagined. Rather, otaku criticism—a performative practice of ongoing exchange between works and language—has become increasingly rare. Most visibly, the anime and manga discussions once so lively on Chinese internet platforms such as Zhihu now attract little interest. Even within the academic institutions and intellectual marketplace that introduced otaku criticism, misreadings of it and of concepts such as the so-called “sekai-kei” (“world-type” narratives) have become deeply entrenched and difficult to undo. These institutional undertakings in otaku criticism seem to have prematurely lost the vitality and potential to open up new spaces for discourse. By contrast, consumption of anime, manga, and related culture in China is booming. Amid this great wave called the “IP economy,” we Chinese otaku can take in anime and manga and enjoy modern audiovisual arts; we can attend live shows in person and experience the allure of idols; we can buy character merchandise and arrange it in elaborate displays, gaining recognition within our respective circles. These have become part of our everyday lives, shaping a reality that continues on from the 2010s without being quite the same. We see countless accounts and performances of the self within this otaku everyday life of consumption, and even a myth divorced from context: as though all works and merchandise simply grew on store shelves, and all we needed to do was consume with an easy conscience in our own island universes, without asking why these particular works and ideas have appeared here and now. Within this boundless reality, what is missing is a parallax through which we can attend to one another’s everyday lives—a language called publicness.
 
-Consumer culture, meanwhile, is booming. China’s *erciyuan*, or “two-dimensional,” culture now sits comfortably inside an “IP economy” built on franchises, licensing, platforms, and merchandise. Chinese otaku can watch animation, read manga, go to concerts, follow idols, collect goods, and arrange those goods into elaborate displays that earn recognition within fan circles. These pleasures are real. They have become part of ordinary life, extending habits formed in the 2010s into a different media and commercial landscape.
+Of course, even as we write this brief introduction, this everyday life of consumption has already entered a crisis. Recent shifts in East Asia and across the world allow us to discern the crisis drawing near. In this prolonged postwar condition, it is not difficult to see that even this everyday life is fragile. We cannot help asking: as people caught up in a crisis, enjoying the present, what gives us the confidence that this everyday life will continue indefinitely? Yet even amid crisis, there still seems to be an everyday life that can serve as a basis for resistance. We can draw on the intellectual stance Harry Harootunian presents in his discussion of Kiyoshi Miki and Jun Tosaka: a belief that a concrete everyday life can bring utopian hope. This everyday, of course, is firmly situated in a specific time and place, and thus differs from the boundless everyday described above, which has forgotten its own origins. To activate this everyday as a utopian presence, rooted in a specific historical situation yet capable of aesthetic transcendence, reflection on the everyday also seems urgently necessary.
 
-But consumer life can also make the present look natural and complete. Works and commodities seem to arrive fully formed on a store shelf or platform feed; each fan can tend a private universe without asking who made it, what institutions carried it, what histories shaped it, or why it became available here and now. By a **public language**, we mean a way to connect those private pleasures to shared conditions. Criticism can supply that language. It can put one fan’s routine beside another’s, relate taste to labor and technology, and show how platforms, industries, histories, and political borders enter even the most intimate experience of a work. It does not abolish private enjoyment. It gives us enough common ground to compare our lives, disagree about them, and recognize that the consumer world around us is neither timeless nor inevitable.
+As it happens, Lab on Roof translated and edited many articles on the everyday in 2025. Several surveys of “nichijō-kei,” or slice-of-life, anime by Ayahiko Shizu and teramat (てらまっと) offered a historical reference for situating the genre’s rise and development since the 2000s. Shunsuke Sugita’s reconsideration of criticism in the 2000s also gave the well-known critical concept of game-like realism a grounding in everyday life akin to what Berlant calls “cruel optimism.” Stevie Suan’s reflections on the “spatiality” of Japanese animation partly revealed an anxiety beneath the popularity of slice-of-life anime: unease about the separation of Japanese animation’s form from its national character in a transnational age. Meanwhile, Hongcha Pao Haitai (红茶泡海苔), in an analysis of the transformations and misreadings of the literary magazine *Faust* in East Asia, depicted young people’s reading at a time when the youth-oriented literature and arts of the 2000s intersected with the light novel movement. It also offered a historical possibility for today’s ACGN ecosystem, dominated by platform capital such as that of Kadokawa: things were not always entirely this way. Whether implicit or explicit, the concept of “the everyday” runs through these articles. Even as it is criticized and dismantled, it also exists as a desirable utopia, offering an occasion for reflection. These analyses crossing national borders give us points of reference. Beyond this, however, we hope to see criticism in the Chinese-language sphere that is both locally grounded and able to reach beyond its immediate context: criticism rooted in works, moving beyond direct statements about reality yet always connected to it—even if, as the articles by Thomas Lamarre and Eiji Ōtsuka point out, criticism always runs the risk of being reduced to a technology of subject formation.
 
-That recognition matters because the ordinary life organized around consumption is fragile. The crisis we have in mind is not a single event. War and renewed geopolitical confrontation, economic insecurity, and the growing concentration of cultural life in corporate platforms are converging across East Asia and the wider world. The region’s present also remains shaped by an unfinished postwar order: the settlements, divisions, and political arrangements left by twentieth-century wars and the Cold War still structure movement, markets, media, and national identity. A supply chain can break, a platform can close, a border can harden, and a familiar routine can suddenly become impossible. Enjoying the present gives us no reason to assume that it will last forever.
+We have said all this both to explain why it is necessary to raise the question of criticism again in an age of crisis and to establish common ground for thinking and writing in Lab on Roof’s 2026 call for submissions: **this year’s submissions will concern the everyday.**
 
-Yet the everyday is not only where power becomes habitual. It can also be where people notice its pressure, preserve other ways of living, and begin to resist. Harry Harootunian’s readings of the Japanese thinkers Kiyoshi Miki and Jun Tosaka suggest how to hold these two sides together. Everyday life is concrete: it is made from habits, work, objects, places, and relationships formed under particular historical conditions. Because those arrangements were made, rather than given by nature, they can also be questioned and remade. Utopian hope, in this sense, is not a fantasy of escaping history. It lies in unrealized possibilities already present in ordinary practices—the capacity to live, relate, and create otherwise. Art can make those possibilities perceptible before they become a program. To find that resistant and aesthetic force in daily life, however, we first have to recover its history instead of treating it as an endless consumer present.
+## Submission Areas and Format Requirements
 
-This question ran through much of the work Lab on Roof translated and edited in 2025. Ayahiko Shizu and teramat traced the rise and transformation of *nichijō-kei*, or “everyday-type,” anime since the 2000s. Shunsuke Sugita’s reconsideration of criticism in that decade placed the familiar concept of game-like realism within an everyday condition resembling what Lauren Berlant called “cruel optimism”: attachment to something that promises a good life while helping to keep it out of reach. Stevie Suan’s reflections on the “spatiality” of Japanese animation explored an anxiety beneath the popularity of *nichijō-kei*: as production and circulation become transnational, what makes animation recognizably “Japanese,” and can that designation remain stable? Hongcha Pao Haitai (红茶泡海苔), writing on the East Asian circulation and misreading of the literary magazine *Faust*, reconstructed a culture of young readers where 2000s youth literature met the light-novel movement. That history recalls an ACGN ecology not yet dominated by the corporate platform power represented by companies such as Kadokawa.
+1. We invite original critical analyses or comparative studies of **video games, animation, comics, light novels, films, and related works, creators, histories, industries, and other phenomena**, approached through **philosophy and the social sciences, the humanities and arts, technology and media, industry and production, communication and political economy**, or related perspectives. There are no geographical restrictions, and fan-created derivative works are included. We do not accept submissions consisting solely of translations or game guides. We encourage criticism of works that takes content and form as its basic analytical considerations, and also welcome autoethnographic writing on the conditions of otaku life. Submissions addressing the broader intellectual space of postwar literature and the arts are equally welcome, but we hope that articles will engage as closely as possible with this year’s theme: **Rethinking the Everyday**.
 
-In all these essays, the everyday is both an object of criticism and a source of possibility. Their movement across countries gives us useful points of comparison. We now hope to see Chinese criticism that is equally grounded and mobile: writing that begins with the form and detail of particular works, crosses borders between media, nations, and experiences, and reaches social reality without reducing art to a disguised news report.
-
-That ambition carries a danger. As Thomas Lamarre and Eiji Ōtsuka remind us, criticism does not merely describe an audience; it can help produce one. Its categories can tell readers what a “proper” otaku looks like, which desires count as legitimate, and whose experience falls outside the field. A shared public language can open a conversation, but it can also turn into a script that assigns people identities in advance. We therefore want criticism alert to the subjects it helps create as well as the works it interprets: criticism that offers concepts for common use without mistaking them for rules about who readers must become.
-
-This is why Lab on Roof is taking up the annual call again in 2026. **The theme of Rags Drum Repeat Vol. 1 is “Rethinking the Everyday.”**
-
-## Fields and Submission Format
-
-1. For this edition, we invited original critical essays and comparative studies of video games, animation, manga, light novels, film, and related works, creators, histories, industries, and cultural phenomena. Fan and other derivative works could be discussed, and subjects from any region were welcome. Possible approaches included philosophy, the social sciences, art and the humanities, media and technology, production and industry, communications, and political economy. We did not accept translations of existing essays or game guides. We especially encouraged criticism attentive to both form and content, but also welcomed autoethnographic writing about the conditions in which otaku live. Essays on post-1945 art and intellectual history were eligible as well. Whatever the approach, the submission had to maintain a clear connection to this year’s theme: **Rethinking the Everyday**.
-
-2. An academic format is welcome but not required. Authors may include citations or notes, an abstract, keywords, and a bibliography as appropriate. Essays and edited transcripts of roundtables are both accepted. A length of 5,000–20,000 characters is recommended. The announcement does not specify separate equivalents for English and Japanese submissions; the range is guidance, not a hard limit. Submissions may be in Chinese, English, or Japanese, though Simplified Chinese is preferred. Both new work and eligible previously published work are accepted; see “Eligible work” below. Quotations must be accurate, and sources for quotations and borrowed ideas must be cited. If plagiarism or misappropriation is discovered before or after judging, the organizers will make the finding public and revoke any award already granted.
+2. We recommend following an academic format, **providing notes and citations, an abstract, keywords, and references**, **but this is not compulsory. The suggested length is 5,000–20,000 characters**. Submissions may take the form of **articles or transcripts of recorded roundtable discussions**. They may be in Chinese, English, or Japanese, though **Simplified Chinese is recommended**. We encourage authors to submit original articles, but also accept previously published work that complies with commercial-use and republication requirements. **Quoted materials, cited ideas, and other sources must be used in accordance with accepted academic standards**. If plagiarism or unauthorized appropriation is discovered before or after selection, the organizers will announce the matter publicly and withdraw any rewards issued.
 
 3. Use of generative artificial intelligence:
 
-   (1) The submission must be the author’s own work and credited only to its human author or authors. We **do not accept** an AI-generated text presented as an article.
+   (1) We **do not accept** manuscripts credited to or written by generative AI tools, or submissions that directly present content generated by such tools as an article.
 
-   (2) Generative AI may not supply the thesis, core argument, substantive interpretation, principal structure, or passages that carry the article’s analysis. It may not be used to rewrite existing scholarship. We also **do not accept** submissions that conceal or misrepresent AI use; fabricate or falsify sources, quotations, facts, data, or other material; use generated images based on existing ACGN works; or otherwise violate accepted standards of academic and AI ethics.
+   (2) We **do not accept** submissions involving any of the following: using generative AI tools to generate an article’s overall structure, central arguments, or main content, or to rewrite existing research; providing false information about AI tools or concealing their use; using generative AI tools to falsify or fabricate references, content, data, or other materials; using generative AI tools to create images of existing ACGN works; or other violations of AI ethics or academic standards.
 
-   (3) Generative AI may be used **only** for non-core tasks such as language polishing, literature searches, and data organization or analysis. Such use must comply with generally accepted standards of academic and AI ethics.
+   (3) Generative AI tools may be used **only** for non-core tasks such as language polishing, literature searches, and data organization and analysis. Such use must comply with generally accepted AI ethics and academic standards.
 
-   (4) Any contributor who uses generative AI **must disclose** the tool and version, the date or period of use, the task performed, and the portions of the submission or data affected. The disclosure must also include a record of the relevant interaction: screenshots for a browser or app interface, or an exported transcript, log, commands and output, API record, or comparable evidence for a tool without pages. Authors bear full legal and ethical responsibility for everything in their submission.
+   (4) Authors who use generative AI **must disclose** which parts of their submissions involved these tools, including but not limited to data collection and analysis. They must specify the tool’s name and version, when it was used, and provide screenshots of the output page. Authors bear full legal and ethical responsibility for the entire content of their submissions.
 
-   We want to encounter the author’s own language and thought in every submission.
+   We look forward to seeing the authors’ own language and thought in their submissions.
 
-## Process and Rules
+## Procedures and Schedule
 
-To make participation more flexible, this edition of Rags Drum will not use the former “Eve Festival” and “After Festival” tracks or hold two rounds of judging. A single round will determine whether each submission is a **qualifying essay**. That term is used throughout the rules below.
+To make submissions more flexible and allow more critics to participate in this festival, **this year’s call will no longer have separate “Festival Eve” and “After-Festival” tracks or two rounds of selection. Instead, a single round will determine the final selection of articles for this Rags Drum Repeat.**
 
-**Eligible work:** We accepted the submitter’s own previously published or unpublished work, provided it had not been “used commercially.” The original announcement did not define “used commercially” beyond giving this example: work first published by a commercial outlet that acquired its copyright was ineligible. For qualifying essays, it separately required the author to grant Lab on Roof nonexclusive, non-first-publication permission to publish on its platforms. That wording is preserved here without extending it to situations the announcement did not address. Dōjinshi inclusion required a separate authorization and was optional.
+Eligibility: **Previously published** original manuscripts that have not been used commercially; and **unpublished** original manuscripts that have not been used commercially. Commercial use includes, for example, first publication in a commercial media outlet that acquired the copyright.
 
-**Submission form:** Both kinds of work must be submitted in full.
+Submission format: Both types of manuscript **must be submitted in full**.
 
-**Schedule:**
+Schedule:
+- March 22: Submissions open on the launch day of Rags Drum Repeat.
+- August 15: Submission deadline.
+- September 1: A roundup of accepted submissions will be announced, and production will begin on this Rags Drum Repeat dōjinshi (self-published anthology of criticism).
 
-- March 22, 2026: submissions opened.
-- August 15, 2026: extended submission deadline.
-- After August 15: the jury will review all submissions in a single round. Because the extension postponed the later schedule, the announcement’s former September 1 results date is superseded; no replacement date is stated.
-- After judging: contributors will be contacted with their results, and a roundup of qualifying essays will be published. Planning for the Rags Drum Repeat critical dōjinshi will then begin with the authors who separately consent to inclusion.
+Selection:
+The jury will determine whether submissions qualify by **a simple majority vote**, **emphasizing originality, intellectual substance, and critical engagement**.
 
-**Judging:**
+Publication and rewards:
+**Once the jury has judged a submission to Rags Drum Repeat, the organizers will contact its author as soon as possible with the result. Accepted articles will be scheduled promptly for publication across Lab on Roof’s accounts on different platforms. We will edit the articles from this Rags Drum into a dōjinshi anthology of criticism and provide a copy to each award recipient. We are also considering participating in subsequent dōjinshi sales events such as Comiket or Comicup. If we do, proceeds will be used solely to support the next annual call for submissions and encourage new, original criticism.**
 
-The jury will decide by simple majority whether each submission is a qualifying essay, with particular attention to originality, intellectual substance, and critical force.
+The organizers will pay approximately RMB 300 for each accepted submission.
 
-**Publication and honoraria:**
+Submission methods—choose either:
 
-After judging, the organizers will contact contributors as soon as possible. Each qualifying essay may be published across Lab on Roof’s platforms once its author grants the nonexclusive permission described under “Other Provisions.” Qualification does not automatically place an essay in the Rags Drum Repeat critical dōjinshi. We will invite each qualifying author to opt in separately, confirm that the author can authorize print publication, and obtain consent before including the work. Every author whose essay appears in the dōjinshi will receive a copy. We may also take the dōjinshi to sales events such as Comiket and Comicup. If we do, all proceeds will support the next annual call and the production of new original criticism.
+1. Email your manuscript, including your QQ contact details, to: **a1835631041@163.com**
 
-Each qualifying essay will receive an honorarium of approximately RMB 300.
+2. Join the event group, upload your manuscript to the group files, and notify the organizers (recommended): **1077208212**
 
-**Submission channels:** The original announcement offered the two routes below. Both depended on QQ: email submissions had to include QQ contact details, and the other route used a QQ group. Its only stated exception was to contact Lab on Roof by private message through Zhihu, Bilibili, or WeChat. These details are preserved as part of the archived call, not as active submission options.
-
-1. Email the manuscript, together with your QQ contact details, to **a1835631041@163.com**.
-
-2. Join the event QQ group, upload the manuscript to the group files, and notify the organizers (recommended): **1077208212**.
-
-Submit the manuscript under the title “Rags Drum Submission – Author – Essay Title.” In exceptional circumstances where neither method is workable, send a private message to Lab on Roof’s Zhihu or Bilibili account, or its WeChat public account, to make other arrangements.
+Please label your submission using the format “拾荒战略投稿－作者－文章标题,” replacing 作者 with the author’s name and 文章标题 with the article title. If exceptional circumstances prevent you from submitting through either method, please contact Lab on Roof through private messages on Zhihu or Bilibili, or through our WeChat official account, to discuss an alternative.
 
 ## Jury
 
-**A group of enthusiasts of ACGN and audiovisual art who hope criticism can give works new life.**
+**A group of enthusiasts of ACGN and the audiovisual arts, hoping to bring new life to works through criticism.**
 
-## Other Provisions
+## Other Matters
 
-1. If an essay qualifies, Lab on Roof will ask the author for a nonexclusive license to publish it across our platforms. The author retains copyright and may publish the work elsewhere before or after our edition; we do not require the work to make its first appearance with us. Permission to publish in the later dōjinshi is separate and optional. Authors who opt in must be able to authorize that print use without infringing another publisher’s or venue’s rights. **All rights not expressly granted remain with the author.**
+1. For accepted submissions, Lab on Roof **requires only non-exclusive permission to publish across its accounts, without requiring first-publication rights**. However, for the subsequent dōjinshi, authors who wish to have their articles included must be able to authorize publication in that form without risking infringement of any rights held by other platforms that may have published the work. **All other rights under copyright remain with the original author.**
 
-2. To encourage more ACGN criticism, research, and exchange among critics, **Lab on Roof may adapt a qualifying essay into a video essay or another form.** Before doing so, we will notify the author and obtain their consent. The author’s rights in the resulting adaptation will be protected.
+2. To foster the production of more and better ACG criticism and research, as well as exchanges among those writing it, **Lab on Roof may adapt accepted submissions into video essays or other forms**. We will inform the author and obtain their consent beforehand. The author’s rights under copyright will be protected in the video essay.
 
-3. We thank **“球团”** for creating a new mascot character for Lab on Roof, and thank the critics, groups, and platforms that offered the event their generous advice and sincere assistance.
+3. Our thanks to **Qiutuan (球团)** for designing Lab on Roof’s new mascot girl, and to the critics, groups, and platforms that have offered friendly advice and sincere help with the event.
 
-4. Our experience in organizing an event of this kind remains limited. To the fullest extent permitted by applicable law and platform rules, the organizers reserve the right to interpret or amend the event’s methods, schedule, and related provisions. We ask critics and readers for their understanding.
+4. Given our limited organizing experience, the organizers reserve the right, to the fullest extent permitted by laws, regulations, and platform rules, to interpret and amend the event’s procedures, schedule, and related provisions. We ask critics and readers to take note and appreciate your understanding.
 
-5. The original announcement warmly invited readers and critics to **share the announcement, tell others about it, join the discussion, and take part in the call.**
+5. We warmly invite all readers and critics to **share this announcement and event information, spread the word, join the discussion, and submit your work**!
 
-![Lab on Roof’s new mascot character holding an electric guitar, surrounded by effects pedals and an amplifier](attachments/wechat/TaKTNEhIVG31NUGq28rulQ/001.png)
+![Rags Drum Repeat Vol. 1 event poster: a mascot girl wearing headphones, with a yellow electric guitar, effects pedals, and an amplifier](attachments/wechat/TaKTNEhIVG31NUGq28rulQ/001.png)

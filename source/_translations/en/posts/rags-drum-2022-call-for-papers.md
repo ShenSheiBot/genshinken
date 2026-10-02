@@ -1,14 +1,25 @@
 ---
+title: "Rags Drum 2022"
+title_breaks: ["Rags Drum 2022"]
+subtitle: "Lab on Roof’s Annual Call for Submissions"
+date: 2022-05-06
+categories: [Lab on Roof Community]
+section: community
+tags: []
+post_author: Lab on Roof
+excerpt: "Lab on Roof launches its annual call for submissions, “Rags Drum 2022,” announcing the scope, schedules, selection procedures, payments and submission methods for the Pre-Festival and Post-Festival tracks."
+citation:
+  itemType: blogPost
+  citationKey: roof2022RagsDrumCallForPapers
+  date: "2022-05-06"
+  blogTitle: Lab on Roof
+  url: "https://www.bilibili.com/read/cv16481533/"
 work_id: rags-drum-2022-call-for-papers
 source_type: post
 source_slug: rags-drum-2022-call-for-papers
 slug: rags-drum-2022-call-for-papers
 language: en
 status: review
-title: "Rags Drum 2022"
-title_breaks: ["Rags Drum 2022"]
-subtitle: "Lab on Roof’s Annual Call for Submissions"
-excerpt: "This archived announcement for Lab on Roof’s now-closed Rags Drum 2022 call sets out its fields, two-track schedule, judging, honoraria, submission routes, and publication terms."
 credits:
   - role: translator
     contributor_id: shen-shui-bot
@@ -16,103 +27,97 @@ credits:
 translation_method: agent
 source_relationship: direct
 base_language: zh-Hans
-updated: 2026-08-28
 rights: CC BY-NC-SA 4.0
 format: article
+updated: 2026-09-29
 ---
 
-> **Archive note:** This 2022 call is closed. Its deadlines and submission routes are retained below solely as part of the historical announcement.
-
-> Once works of art ceased to be made for certain people or reserved for the enjoyment of a select few, as happened after the French Revolution, new forms of aesthetic experience opened to every member of the community. Every individual was promised aesthetic equality—each and every person, without exception. … The distinctions among a work’s subject, form, materials, and interpreters were leveled, and the consequences of this aesthetic revolution were therefore shattering. … Even when we criticize something with the aid of elegant theories, all too often we soon find ourselves flirting with the enemy and joining them for a picnic. Should we not mark out a new space where people not yet considered qualified to criticize—ordinary people, the proverbial “Zhang San and Li Si”—have room to show what they can do?
+> Once artworks are no longer made for certain people or reserved for the enjoyment of a select few, as happened after the French Revolution, new forms of aesthetic experience become available to everyone in the community. Every individual is promised equality in aesthetic terms—each and every one, anyone at all, without exception. … The subjects, forms, materials and interpreters of works are placed on an equal footing; the consequences of the aesthetic revolution are therefore shattering. … Even if we engage in critique and use elegant theory, what often happens is that before long we are flirting with the enemy and going on picnics together. Shouldn’t we mark out new spaces, leaving room for those who do not yet have the standing to engage in critique—“ordinary people”—to demonstrate their abilities?
 >
-> —Lu Xinghua, *[The Future of Art and Politics: A Study of Jacques Rancière’s Aesthetic Thought](https://icast.ac.cn/en/people/luxinghua/)*
+> —Lu Xinghua, [*A Study of Rancière’s Aesthetic Thought*](https://www.cp.com.cn/book/b45c55e9-6.html)
 
-To **encourage more—and better—criticism and research on anime, comics, and games (ACG), and conversation among the people producing it**, Lab on Roof decided to continue the program in 2022 with its **third call for submissions on ACG culture**, under the name **Rags Drum 2022**.
+To **foster the continued production of more and better criticism and research on animation, comics and games (ACG), and exchanges among their critics and researchers**, Lab on Roof has decided to **continue its ACG call for submissions with a third edition in 2022**, titled **Rags Drum 2022**.
 
-[fig] Square Rags Drum 2022 poster. Visible Chinese text: “Lab on Roof · May–October 2022 · Annual Call for Submissions · Rags Drum.”
+![Square event poster for Rags Drum 2022](/attachments/roof-archive/cv16481533/66b8eed2428110ab0b001f2e33c807c014f69e02.jpg)
 
-![Square Rags Drum 2022 poster showing an astronaut and a red torii beneath star trails; the Chinese text identifies Lab on Roof, the May–October 2022 event period, and its annual call for submissions](/attachments/roof-archive/cv16481533/66b8eed2428110ab0b001f2e33c807c014f69e02.jpg)
+## Scope and Format Requirements
 
-## Fields and Format Requirements
+1. Original analysis, criticism or comparative research on **works, creators, histories, industries and other phenomena in video games, animation and comics**, approached through **philosophy and the social sciences, the humanities and the arts, technology and media, industry and production**, or related perspectives. There are no geographical restrictions, and fan-created and derivative works are included. Submissions consisting solely of translations or gameplay guides will not be accepted.
 
-1. The call invited original criticism or comparative research on **video games, animation, and comics—including their works, creators, histories, industries, and related phenomena—from perspectives such as philosophy and the social sciences, the humanities and arts, technology and media, and industry and production**. There were no geographical restrictions, and fan-made and other derivative works were also in scope. Submissions consisting solely of translation or game guides were not accepted.
-
-2. An academic format—with **notes and citations, an abstract, keywords, and a bibliography**—was recommended but not required. Submissions could take the form of **written essays, video essays, or audio recordings**. Chinese-, English-, and Japanese-language submissions were accepted, though **Simplified Chinese was recommended**. Authors had to affirm that their work was original and had not been, and would not be, used commercially; quoted materials and borrowed ideas had to meet accepted academic standards. If plagiarism or misappropriation was discovered before or after selection, the organizers would make the circumstances public and rescind any award or honorarium.
+2. We recommend following an academic format, **providing notes and citations, an abstract, keywords, references**, and so forth, **but this is not mandatory**. Submissions may take the form of **articles, video essays or audio recordings**. Chinese, English and Japanese submissions are welcome, though **Simplified Chinese is recommended**. Authors must affirm that their submissions are original, have not been and will not be used for commercial purposes, and that **their citation of materials, ideas and so forth complies with academic standards**. If plagiarism or misappropriation is discovered, whether before or after selection, the organizers will make the matter public and withdraw any rewards granted.
 
 ## Schedule and Procedures
 
-To make participation more flexible and allow more critics to join the event, the call offered **two** tracks.
+To make the call more flexible and enable more critics and researchers to join this festival, there will be **two** participation tracks:
 
-### 1. Eve Festival Only
+### 1. Entering the “Pre-Festival” Only
 
-Eligibility: **Previously published** original work by the author that had not been used commercially, as well as **unpublished** original work by the author that had not been used commercially. The announcement gave first publication by a commercial outlet that acquired the copyright as an example of commercial use.
+Eligibility: **Previously published** original works that have not been used for commercial purposes (commercial use includes, for example, first publication in a commercial outlet that acquires the copyright); **unpublished** original works that have not been used for commercial purposes.
 
-Submission format: Both kinds of work **had to be submitted as a complete text or finished work**.
-
-Schedule:
-
-- May 6, 2022: submissions to the Eve Festival opened with the launch of the event.
-- August 1, 2022: submissions closed for both tracks.
-- August 7, 2022: qualifying Eve Festival works were to be announced, including entries submitted only to the Eve Festival and those continuing through both the Eve Festival and After Festival. The Eve Festival would end and the After Festival would begin.
-
-Judging:
-
-At the **Eve Festival** stage, the jury would decide whether a submission qualified by **simple-majority vote**, following a policy that **prioritized originality, intellectual substance, and critical force**.
-
-Publication and honoraria:
-
-Once the jury had reached a decision on an Eve Festival–only entry, the organizers would contact its author as soon as possible. **Qualifying works would then be scheduled promptly for publication across Lab on Roof’s accounts on different platforms.**
-
-The organizers would pay each qualifying work an honorarium of approximately **RMB 200–300**.
-
-### 2. Eve Festival + After Festival
-
-Eligibility: **Unpublished** original work by the author that had not been used commercially.
-
-Submission format: At the **Eve Festival stage**, entrants could submit a **200–500-character synopsis**, though a complete text or finished work was also welcome. The announcement does not say how this character count would apply to an English- or Japanese-language submission. At the After Festival stage, a complete text or finished work was required, and **its subject had to remain consistent with the Eve Festival entry. Only authors and submissions that qualified at the Eve Festival stage could enter the After Festival.**
+Submission format: Both categories **must be submitted as full texts or completed works**.
 
 Schedule:
 
-- May 6, 2022: submissions to the Eve Festival + After Festival track opened with the launch of the event.
-- August 1, 2022: submissions closed for both tracks.
-- August 7, 2022: qualifying Eve Festival works were to be announced, including entries submitted only to the Eve Festival and those continuing through both stages. The Eve Festival would end and the **After Festival would begin**. As submissions were accepted, Lab on Roof’s accounts would announce the titles and authors of works participating in the After Festival.
-- October 7, 2022: entries closed for the After Festival, the second half of the combined track.
-- Second half of October 2022: qualifying After Festival works were to be announced together. The After Festival would end, concluding the event.
+- May 6: Submissions to the “Pre-Festival” open on the day the event begins.
+- August 1: Entry deadline for both tracks.
+- August 7: All accepted “Pre-Festival” submissions will be announced, including both “Pre-Festival”-only entries and entries proceeding through the “Pre-Festival” + “Post-Festival.” The “Pre-Festival” ends and the “Post-Festival” begins.
 
-Judging:
+Selection:
 
-At the **After Festival** stage, the jury would decide whether a submission qualified by **absolute-majority vote**, following a policy that **prioritized originality, intellectual substance, and critical force**.
+During the **Pre-Festival**, the judging panel will decide whether to accept submissions by **simple majority**, **with an emphasis on originality, depth of thought and critical engagement**.
 
-Publication and honoraria:
+Publication and Payment:
 
-Qualifying works entered in the combined Eve Festival + After Festival track were to be announced together and then published across Lab on Roof’s accounts on different platforms. This section gives **August 7 and October 7** as the respective announcement dates for the Eve Festival and After Festival. That conflicts with the schedule above, which makes October 7 the After Festival submission deadline and places the results announcement in the second half of October; the source does not resolve the discrepancy.
+Once the judging panel has reached a decision on a “Pre-Festival”-only submission, the organizers will contact its author as soon as possible with the result. **Accepted submissions will be promptly scheduled for publication on Lab on Roof’s accounts across platforms**.
 
-If **five or more** submissions qualified in the combined track, each qualifying work would receive **RMB 10,000 divided by the number of qualifying works**. If **zero to four** works qualified, each qualifying work would receive **RMB 2,000**.
+The organizers will pay approximately **RMB 200–300** for each accepted submission.
 
-The announcement offered either of the following submission routes for both tracks:
+### 2. Entering Both the “Pre-Festival” + “Post-Festival”
 
-1. Email the submission, together with QQ contact details, to **lab_on_roof@163.com**.
+Eligibility: **Unpublished** original works that have not been used for commercial purposes.
 
-2. Join the event QQ group, upload the submission to the group files, and notify the organizers (recommended): **103115110**.
+Submission format: **A 200–500-character abstract may be submitted for the “Pre-Festival”**; full texts or completed works are also welcome. For the “Post-Festival,” a full text or completed work is required, and **its topic must remain consistent with the “Pre-Festival” submission. Entries and their authors may participate in the “Post-Festival” only if those entries were accepted in the “Pre-Festival.”**
 
-If exceptional circumstances made both methods impossible, entrants could contact Lab on Roof privately through its Zhihu or Bilibili account to discuss an alternative.
+Schedule:
 
-## Jury
+- May 6: Submissions to the “Pre-Festival” + “Post-Festival” open on the day the event begins.
+- August 1: Entry deadline for both tracks.
+- August 7: All accepted “Pre-Festival” submissions will be announced, including both “Pre-Festival”-only entries and entries proceeding through the “Pre-Festival” + “Post-Festival.” The “Pre-Festival” ends and **the “Post-Festival” begins**. The titles and authors of entries participating in the “Post-Festival” will be announced on Lab on Roof’s accounts across platforms **(submissions open)**.
+- October 7: Entry deadline for the “Post-Festival,” the second half of the “Pre-Festival” + “Post-Festival” track.
+- Second half of October: All accepted “Post-Festival” submissions will be announced together. The “Post-Festival” ends, bringing the entire event to a close.
 
-**A group of enthusiasts on equal intellectual and aesthetic footing with their audience—no academic authorities and no seats reserved for scene bigwigs!**
+Selection:
 
-## Other Provisions
+During the **Post-Festival**, the judging panel will decide whether to accept submissions by **absolute majority**, **with an emphasis on originality, depth of thought and critical engagement**.
 
-1. For a qualifying Eve Festival–only entry, Lab on Roof required only permission to **publish it nonexclusively, without requiring first publication**, across its accounts on different platforms. For a qualifying entry in the combined Eve Festival + After Festival track, Lab on Roof required only permission to **publish it first, but nonexclusively**, across those accounts. **All rights not specified here remained with the author.**
+Publication and Payment:
 
-2. To encourage more—and better—criticism and research on ACG culture and exchange among its practitioners, **Lab on Roof might adapt qualifying submissions into video essays or other formats**. Before doing so, it would inform the author and obtain their consent; the author’s relevant rights would be protected in any video essay.
+For entries in the “Pre-Festival” + “Post-Festival” track, the panel’s selections of **accepted “Pre-Festival” and “Post-Festival” submissions will be announced on August 7 and October 7, respectively, in a single announcement for each stage**. Accepted submissions will subsequently be published on Lab on Roof’s accounts across platforms.
 
-3. The organizers thanked **初鹿野凪** for creating the event posters, as well as the critics, groups, and platforms that had offered thoughtful advice and sincere assistance.
+For the “Pre-Festival” + “Post-Festival” track, when the number of accepted submissions is **≥5**, the organizers will pay **RMB (10,000 / number of accepted submissions)** for each accepted submission. When the number is **0–4**, the organizers will pay **RMB 2,000** for each accepted submission.
 
-4. Given their limited organizing experience, the organizers reserved the right, within the limits of law and platform rules, to interpret and amend the event’s procedures and schedule. They asked critics and readers for their understanding.
+Submission Methods for Both Tracks (Choose Either):
 
-5. At the time, readers and critics were invited to **share and circulate the announcement, join the discussion, and submit their work**.
+1. Email your submission, including your QQ contact details, to **lab_on_roof@163.com**.
 
-[fig] Horizontal Rags Drum 2022 poster. Visible Chinese text: “Lab on Roof · May–October 2022 · Annual Call for Submissions · Rags Drum.”
+2. Join the event’s QQ group, upload your submission to the group’s shared files and notify the organizers (recommended): **103115110**.
 
-![Horizontal Rags Drum 2022 poster showing an astronaut and a red torii beneath star trails; the Chinese text identifies Lab on Roof, the May–October 2022 event period, and its annual call for submissions](/attachments/roof-archive/cv16481533/8d1d726a630fd10f11284c02d4f537520f5c16d1.jpg)
+If exceptional circumstances prevent you from using either method, please send a private message to Lab on Roof’s Zhihu or Bilibili account to discuss an alternative.
+
+## Judging Panel
+
+**A group of enthusiasts on an equal intellectual and aesthetic footing with our audience! No academic authorities, no “places” for scene bigwigs!**
+
+## Other Matters
+
+1. For accepted “Pre-Festival”-only submissions, Lab on Roof **requires only non-exclusive permission to publish the work on its accounts across platforms, with no requirement to publish it first**. For accepted submissions in the “Pre-Festival” + “Post-Festival” track, Lab on Roof **requires only non-exclusive permission to publish the work first on its accounts across platforms**. **All rights under copyright not specified here remain with the original author**.
+
+2. To foster the continued production of more and better ACG criticism and research, and exchanges among their critics and researchers, **Lab on Roof may adapt accepted submissions into video essays or other forms**. Before doing so, Lab on Roof will notify the author and obtain their consent. The author’s relevant rights in the video essay will be protected under copyright.
+
+3. Our thanks to **初鹿野凪** for designing the event posters, and to the critics, researchers, groups and platforms who have offered friendly suggestions and generous help with the event.
+
+4. Given our limited experience in organizing events, the organizers reserve the right to interpret and amend the event’s procedures, schedule and other rules to the fullest extent permitted by laws, regulations and platform rules. We ask all critics, researchers and readers to take note and thank you for your understanding.
+
+5. We warmly invite all readers, critics and researchers to **share this announcement and information about the event, spread the word, join the discussion and submit work**!
+
+![Landscape event poster for Rags Drum 2022](/attachments/roof-archive/cv16481533/8d1d726a630fd10f11284c02d4f537520f5c16d1.jpg)
