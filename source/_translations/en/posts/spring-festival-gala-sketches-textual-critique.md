@@ -1,0 +1,82 @@
+---
+title: "Looking Sideways: A Blunt Critique of the Spring Festival Gala’s Comedy Sketches"
+date: 2022-02-01
+work_id: spring-festival-gala-sketches-textual-critique
+source_type: post
+source_slug: spring-festival-gala-sketches-textual-critique
+slug: spring-festival-gala-sketches-textual-critique
+language: en
+script: latn
+status: draft
+categories: [Thought and Theory]
+section: essay
+format: article
+tags: [Gender Studies, Cultural Criticism]
+post_author: "Chunqi Meikong (春琦美空)"
+excerpt: "A critique of the textual structures of five Spring Festival Gala sketches, examining patriarchal roles, family narratives, monetary relations, and intergenerational conflicts over media."
+credits:
+  - role: translator
+    contributor_id: shen-shui-bot
+    scope: complete work
+translation_method: agent
+source_relationship: direct
+base_language: zh-Hans
+updated: "2026-10-03"
+rights: CC BY-NC-SA 4.0
+citation:
+  itemType: blogPost
+  citationKey: chunqi2022SpringGalaSketches
+  creators:
+    - creatorType: author
+      name: 春琦美空
+  date: "2022-02-01"
+  title: "斜目而视：钝评春晚小品文本内容"
+  url: "https://mp.weixin.qq.com/s/5qnDr5h2s0ctxyvV1Rb6ow"
+  language: zh-CN
+---
+
+> The following comments concern the textual content and structure of comedy sketches as an artistic form, not the merits of their performers, scriptwriters, or other creators.
+
+The first sketch[^1] seems to dismantle overbearing, unreasonable, premodern paternalism and advocate the pluralism and tolerance of modern society. In fact, a new cyber-capital dad in the style of China’s first-tier cities replaces the patriarchal dad of work-unit nostalgia.[^2] The son’s fawning over an absent superior also shows the continuity between these two kinds of dad in their oppression of workers, women and men alike.
+
+The “point of suture” that manages the irreconcilable contradiction between these two dads is the daughter-in-law. Her domestic virtue—signaled in the sketch by her pregnancy—neutralizes their contradiction. At the structural core of the first sketch is power being updated as it passes from one dad to the other. Through the female character’s perfect performance of the gender roles of daughter-in-law / virtuous wife / good mother—performance = mediation—this power undergoes a peaceful evolution.[^3]
+
+The second sketch uses emotional bonds to resist the monetary debt relations that inevitably arise. These threaten modern society’s various buffers—family, relatives, friends, former classmates, and so on. (Getting a sham divorce to become a debt dodger does, at least, expose marriage’s essential status as an economic contract within the modern legal system.) The ending is far too abrupt.
+In modern society, people’s social relations are increasingly confined to the economic dimension. Purchasing power becomes the only real power—even the “sanctity” invoked in talk of marriage cannot provide a basis = a wall for resisting this logic’s expansion. Yet within this vulgar economic determinism, people often appeal to a fantasy of pseudo-transcendence. This frequently takes the form of a love-conquers-all doctrine: romantic tales of a rich young lady eloping with an impoverished scholar, for instance. What is so poor about this sketch, though, is that it is feeble even at producing fantasy. The reason it offers is a friendship from schooldays = a cassette of the song “Friends,” something unlikely to strike much of a chord. It has little force.
+
+The third sketch: that classic of classics, the mother-in-law–daughter-in-law relationship. There is no dad present in this arrangement; I don’t know whether the husband’s father has died or his parents have divorced. This is worth noticing. The mother-in-law is given a later-life romance, which should also be considered alongside the husband’s prolonged absence near the beginning. Before leaving, though, he establishes a crucial position. Comforting his mother: “Oh, she’s just like that!” Comforting his wife: “Oh, she’s just like that!” Taken together, these self-referential remarks suggest that he regards both his wife and his mother as beyond reason: each becomes an image of the hysterical woman. Faced with these supposedly unreasonable women and their “domestic affairs,” the husband decides that reason cannot settle things, exits, and leaves them to quarrel.
+Later, he returns and asks each woman what she thinks about their conflict. He still does not state his own actual view—who is right and who is wrong—but instead brings in an Uncle Zhang and his son. There is no dad from within the family—no head of the household whose authority to settle everything goes without saying. If that thing were present and functioning, this whole series of conflicts probably would not arise. But then Uncle Zhang arrives. He is a foolish, stone-like figure who expresses himself through his son: an amusing but rather powerless character. So what, in the end, is the substance of this conflict between mother-in-law and daughter-in-law? After the big dad is dead—the decline of premodern patriarchal rule—the small narratives of two generations can neither reconcile nor communicate with each other. One belongs to the Douyin new-media generation; the other to the generation that dances together in public squares. (Both use Douyin, the short-video platform, but that is like sharing the same air. It does not mean that the narratives on the platform are homogeneous: they take the form commonly called information cocoons or island universes.) The mother-in-law’s talk of “maintaining a persona” reveals this. Everyone has a “front-stage” persona to maintain. The mother-in-law had one in her public-square dancing circle / in front of Uncle Zhang; she feels that her daughter-in-law’s short videos, circulating through social networks, have shattered it. A persona is a role, and a role is one recognized within a particular narrative.
+When two heterogeneous narratives = island universes collide, conflict is inevitable: the alternative, the collapse of someone’s role or persona, is social death. This is true regardless of age or gender. The conflict is resolved through Uncle Zhang’s position in discourse: he appears somewhat foolish yet also reveals a side of his own truth. Through him, the mother-in-law discovers that the narrative discourse of the Douyin videos has not destroyed her role = persona. Instead, in the form of a truth bound up with misrecognition, she gains recognition from the little other she likes—Uncle Zhang. The two previously conflicting communication networks short-circuit at the node that is Uncle Zhang and merge into one. Overall, the daughter-in-law in this mother-in-law story is a dangerously demonized image of a Douyin user—a crude smear on everyone who uses short-form video, slipped into a story about relations between mothers- and daughters-in-law. She effectively subjects her mother-in-law to online abuse, and her evasive arguments are very weak. (She keeps insisting: I have my own network of meaning; you old people don’t know how to surf the internet and aren’t tolerant enough! She refuses to acknowledge and respect her mother-in-law’s independent system of discourse and values.) Luckily, Uncle Zhang turns up later to give her a face-saving way out. Otherwise, in terms of ordinary social ethics, this conflict could not achieve even a false reconciliation.
+Overall, the reconciliation here is thoroughly false. Along the way, there is both disrespect for the mother-in-law = the older generation of women / mothers, and a malicious distortion of the new generation of professional women / young Douyin users. The sketch’s aggressivity does seem a little diminished, but this comes at the cost of the mother-in-law’s integration into the younger generation’s Douyin discourse network. (Old people, learn to surf the internet and accept a plurality of values!) The violence behind this integration—especially for the mother-in-law—dissolves into the pseudo-transcendence of her later-life romance. The several self-abasing jokes she makes about her body and weight also leave me speechless. Throughout, the man who is both husband and son takes no substantive position: he is waiting for Uncle Zhang to arrive and provide an emotional way out, without his having to split hairs over who is right and who is wrong.
+
+The fourth sketch stands out in a poor field; it is not bad. Its theme is another classic of classics: using feeling to dissolve the power of money. Once money’s power is lost, previously harmonious relations among relatives and friends all face the threat of upheaval. The big boss’s paternal authority begins to wobble along with them. To prop up that tottering authority, he still has to sell his car to plug the financial hole, rather than think of another kind of power: workers joining together in solidarity outside the logic of capitalist profit. Then comes the classic reversal: relatives’ and friends’ bonds can transcend money relations after all. Ha. As a symptom, this sham victory can only expose the fact that money is the ultimate winner in everyday life: for relatives and friends in poverty, everything is grief.
+
+The first thing worth noticing about the fifth sketch is that the conflict between this couple comes from the decline of the domestic sphere as a place of authentic attachment. Each thinks the other has failed to “care for the family,” failed to care about or value them; this manifests itself in marriage—the ritual confirming eternal true love—being put off again and again. Yet this decline of the domestic sphere commands the close attention of the big dad = the hospital director. On the phone, he says he has long known that the couple’s relationship is in trouble, and instructs the department head, the little dad, to hurry up and mediate. Now, why might that be?
+Because the decline and dissolution of the family will lead to the decline and dissolution of the social community as an organism. (If they really divorce, “who will look after the elderly, who will take the children to and from school, and who will do the housework?” If no one does these things, first, the husband, as a husband, will become less efficient at work; second, society as a whole will no longer be able to reproduce its population—and the hospital’s functioning will also deteriorate.) So the “hospital director” is in a hurry: settle the conflict at once and get the family functioning again.
+But then again, what caused the decline of the domestic sphere? The sketch supplies a reason beyond reproach: too busy serving the people! Looking after everyone else, with no time to look after their own family! This leaves the audience unable to fault either spouse’s character. The rift in their relationship comes neither from the decay and dissolution of moral and ethical standards—there is no adultery à la *Hirugao—Love Affairs in the Afternoon*—nor from an unscrupulous company imposing a 996 work schedule.[^4] They have not been written as programmers at an internet company in a major city; the setting is a hospital, with its public-service associations. No: the problem is that both are so selfless! Their relationship breaks down, then, through mere contingency, a deus ex machina conjured out of nothing. (Several attempts to hold the wedding all happen to clash with work trips. Some coincidence!) The conflict is quickly brought to a close again. There was no plausible real-world logic to it in the first place.
+
+This shows the weakness of the dramatic writing. If it really wanted to expose the greatest sources of instability in marriage and the family—the rising divorce rate—it could have one of them actually commit adultery = postmodern desire defeating the morality of modernity. Or it could show unscrupulous entrepreneurs exploiting workers until marriage and family life lose their vitality. It does neither. Its intended defense of marriage and the family as institutions of modernity is therefore highly unconvincing: it neither confronts nor tries to answer the pressing questions of real life.
+The conflict arises because both are selfless, too selfless: they neglect the family. It is resolved because both continue to be selfless, too selfless: they resort to sacrificing themselves for each other, staking their lives in exchange for eternal true love. Anyway, true love lasts forever. End of story!
+One last thing worth mentioning: whether during the early quarrel or the later reconciliation, the wife’s taking primary responsibility for “domestic affairs” is assumed, treated as a virtue she ought to uphold. This reveals that although women also struggle to make a living in the public sphere and work in public-service professions such as hospital nursing and medicine, responsibility for the domestic sphere still often falls to them, unpaid and without that allocation of responsibility needing any justification—that is, they are considered naturally better suited to it. In this sketch, too, that value is taken for granted as beyond question.
+The cult of the stay-at-home housewife is now gathering force beneath the surface, whether as an old patriarchal virtue or as a middle-class, bourgeois **new fashion** for the apparently freely chosen role of “professional housewife.” Enough has been said about the former; the latter is a newly emerging and deeply disturbing phenomenon. We must remember the red historical legacy of “women can hold up half the sky,” and not give up working to make our way in the public sphere, participating in economic life and helping to build public life. We should not retreat into the domestic sphere.
+
+And don’t tell me you can’t please everyone. There is nothing wrong with demanding work that is both red and expert. Why not simply rerun the song-and-dance epic *The East Is Red*? I think people would actually quite enjoy it. “Along the Songhua River,” *Yellow River Cantata*, “Unity Is Strength,” “The School Song of the Anti-Japanese Military and Political University,” “The East Is Red,” “Crossing the Yalu River,” “Singing of the Motherland,” “The Internationale,” “Sing a Folk Song to the Party”—aren’t these pretty good? Something for everyone, young and old, women and men, without so much inexplicable preaching and sexism.
+[The large-scale song-and-dance epic *The East Is Red* — Bilibili](https://www.bilibili.com/video/BV1Z4411H7md). The second half in particular is genuinely worth watching: a medley of hits. You could call it the Yan’an Forum on Literature and Art made flesh.[^5] We should have watched it and learned from it long ago.
+
+Further reading:
+
+Dai Yuchen, *Encountering “The Parallax View”: Žižek and Cultural Studies* (English rendering of 遭遇“视差之见”：齐泽克与文化研究). East China Normal University Press.
+
+Karatani Kōjin, *Origins of Modern Japanese Literature* (日本现代文学的起源, Chinese edition). Central Compilation & Translation Press.
+
+Uno Tsunehiro, *The Imagination of the 2000s* (零零年代的想象力).
+
+[^1]: Translator’s note: The essay discusses the short stage comedies in CCTV’s 2022 Spring Festival Gala, the annual Lunar New Year television variety show. In order, they are 《父与子》 (“Father and Son”), 《还不还》 (“Will You Pay It Back?”), 《喜上加喜》 (“Joy upon Joy”), 《发红包》 (“Handing Out Red Envelopes”), and 《休息区的故事》 (“A Story in the Rest Area”). These English titles are descriptive translations. See [CCTV’s account of the 2022 Gala](https://news.cctv.com/2022/02/01/ARTIvioZukpVg0HgifBUVguc220201.shtml).
+
+[^2]: Translator’s note: The [work unit, or *danwei*](https://pmc.ncbi.nlm.nih.gov/articles/PMC9712009/), was not merely an employer: it also organized housing, welfare, and much of collective life in socialist urban China.
+
+[^3]: Translator’s note: [“Peaceful evolution”](https://www.marxists.org/reference/archive/mao/works/1964/phnycom2.htm) is a Chinese Communist political expression for the nonmilitary transformation or subversion of socialism, here applied to a succession between paternal powers.
+
+[^4]: Translator’s note: [“996”](https://github.com/996icu/996.ICU/blob/master/README.md) means working from 9 a.m. to 9 p.m., six days a week.
+
+[^5]: Translator’s note: [“Both red and expert”](https://www.marxists.org/reference/archive/mao/works/1964/phnycom2.htm) joins political commitment to professional competence. The Yan’an Forum was the 1942 gathering at which Mao Zedong delivered his [talks on literature and art](https://www.marxists.org/reference/archive/mao/selected-works/volume-3/mswv3_08.htm); “made flesh” invokes the Christian language of the Incarnation.

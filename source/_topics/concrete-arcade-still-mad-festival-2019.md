@@ -1,4 +1,6 @@
 ---
+localized_titles:
+  en: "Concrete Arcade: Still-Image MAD Festival 2019"
 title: 混凝土拱廊街：静止系 MAD 祭典 2019
 subtitle: 屋顶现视研 × ZERO MAD TEAM
 summary: 从活动发起、参与规则到参赛作品评议与奖项结果，完整呈现 2019 届“混凝土拱廊街”静止系 MAD 祭典。

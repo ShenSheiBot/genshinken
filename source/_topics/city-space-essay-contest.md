@@ -1,4 +1,6 @@
 ---
+localized_titles:
+  en: "Cities · Space Essay Contest"
 title: 《都市·空间》征文
 subtitle: 屋顶现视研第一期主题征文
 summary: 从城市表象、都市传说、轻小说的慢生活转向与限制空间叙事四条路径，讨论动画、漫画与轻小说中的都市经验。

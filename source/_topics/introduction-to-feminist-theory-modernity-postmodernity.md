@@ -1,4 +1,6 @@
 ---
+localized_titles:
+  en: "Reading Feminist Theory: From Modernity to Postmodernity"
 title: 导读女性主义理论：从现代性到后现代
 subtitle: 网哲邻人部女性主义理论选文
 summary: 按合辑编号汇集女性主义理论译文，从早期妇女权利文献延伸至黑人女性主义、第三波、跨国女性主义与酷儿生态学。
