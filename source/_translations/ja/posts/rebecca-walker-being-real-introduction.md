@@ -6,9 +6,7 @@ source_slug: rebecca-walker-being-real-introduction
 language: ja
 status: reviewed
 title: それ、フェミニズムのお作法にかなってる？——『To Be Real』序文
-title_breaks:
-  - それ、フェミニズムのお作法にかなってる？——
-  - 『To Be Real』序文
+title_breaks: ["それ、フェミニズムの","お作法にかなってる？——","『To Be Real』序文"]
 excerpt: レベッカ・ウォーカーは『To Be
   Real』序文で、フェミニストというアイデンティティがもたらす規範の圧力を振り返り、矛盾や欲望、個人の経験をフェミニズムの対話へ持ち込むことを呼びかける。
 credits:

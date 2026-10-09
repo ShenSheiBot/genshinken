@@ -6,11 +6,7 @@ source_slug: heywood-drake-benjamins-third-wave-feminism
 language: ja
 status: reviewed
 title: 全員、ベンジャミン［100ドル札の顔］に注目――第三波フェミニズムを規定する経済的要因
-title_breaks:
-  - 全員、ベンジャミン
-  - ［100ドル札の顔］に注目――
-  - 第三波フェミニズムを規定する
-  - 経済的要因
+title_breaks: ["全員、ベンジャミン［100ドル札の顔］に注目","――第三波フェミニズムを規定する","経済的要因"]
 excerpt: レスリー・ヘイウッドとジェニファー・ドレイクが、米国のベビーブーム後の世代の経済状況と人口構成、グローバル化とテクノカルチャーから、第三波フェミニズムの物質的条件と運動の形態を分析する。
 credits:
   - role: translator

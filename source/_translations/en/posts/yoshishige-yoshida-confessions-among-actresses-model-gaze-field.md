@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Yoshishige Yoshida’s Confessions Among Actresses:","The Human Model, the Gaze, and the Field"]
 title: "Yoshishige Yoshida’s Confessions Among Actresses: The Human Model, the Gaze, and the Field"
 date: 2021-08-08
 updated: 2026-10-03

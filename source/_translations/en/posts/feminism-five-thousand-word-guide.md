@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Speedrun Feminism in One Post!","50,000 Chinese Characters","of Highlights—Save This Collection"]
 title: "Speedrun Feminism in One Post! 50,000 Chinese Characters of Highlights—Save This Collection"
 date: 2025-03-08
 slug: feminism-five-thousand-word-guide

@@ -1,6 +1,6 @@
 ---
 title: The Specificity of Japanese Animation in a Single Shot
-title_breaks: ["The Specificity of Japanese Animation in a Single Shot"]
+title_breaks: ["The Specificity of Japanese Animation","in a Single Shot"]
 date: 2020-04-18
 slug: one-shot-japanese-animation-specificity
 script: latn

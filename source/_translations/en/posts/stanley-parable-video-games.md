@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Are You Playing the Game,","or Is the Game Playing You?","— On The Stanley Parable","and Video Games"]
 title: "Are You Playing the Game, or Is the Game Playing You? — On The Stanley Parable and Video Games"
 description: "Through metagames, the power relations between narrator and player, absurdism, and mirror identification, this essay asks how The Stanley Parable forces us to rethink choice, freedom, and play."
 date: 2020-11-11

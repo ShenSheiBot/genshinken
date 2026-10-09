@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Part One:","The Madwoman","as a Starting Point","for Criticism"]
 work_id: "mad-women-yandere-darkening-cultural-analysis-part-one"
 source_type: "book-chapter"
 source_book_slug: "mad-women-yandere-darkening-cultural-analysis"

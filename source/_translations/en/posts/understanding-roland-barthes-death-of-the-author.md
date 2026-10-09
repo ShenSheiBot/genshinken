@@ -1,4 +1,5 @@
 ---
+title_breaks: ["How Should We Understand","Roland Barthes’s Claim","That “the Author Is Dead”?"]
 title: "How Should We Understand Roland Barthes’s Claim That “the Author Is Dead”?"
 date: 2019-03-08
 slug: understanding-roland-barthes-death-of-the-author

@@ -7,8 +7,7 @@ slug: lecture-03
 language: ja
 status: reviewed
 title: 第三講　キャラクターとはパターンの組み合わせである
-title_breaks:
-  - 第三講　キャラクターとはパターンの組み合わせである
+title_breaks: ["第三講　キャラクターとは","パターンの組み合わせである"]
 excerpt: 大塚英志が、キャラクター、パターン、オリジナリティ、世界観を手がかりに、アニメ・漫画・ゲームがつくる仮想現実を小説へどう生かすかを説く。
 credits:
   - role: translator

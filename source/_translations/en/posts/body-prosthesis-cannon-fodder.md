@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Archaeology of the Work |","Body/Prosthesis—Autonomous","Technical Objects in Cannon Fodder"]
 title: "Archaeology of the Work | Body/Prosthesis—Autonomous Technical Objects in Cannon Fodder"
 date: 2018-12-24
 updated: 2026-10-02

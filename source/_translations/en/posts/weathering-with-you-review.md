@@ -1,6 +1,7 @@
 ---
+title_breaks: ["Becoming Your “Alright”—Reflections","on Weathering with You"]
 title: "Becoming Your “Alright”—Reflections on Weathering with You"
-title_breaks: ["Becoming Your “Alright”—Reflections on Weathering with You"]
+
 date: 2019-07-21
 slug: weathering-with-you-review
 script: latn

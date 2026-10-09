@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Woodpecker Detective’s Office:","A Vulgar Memorial for a Socialist"]
 title: "Woodpecker Detective’s Office: A Vulgar Memorial for a Socialist"
 date: 2020-10-08
 slug: woodpecker-detectives-office-socialist-memorial

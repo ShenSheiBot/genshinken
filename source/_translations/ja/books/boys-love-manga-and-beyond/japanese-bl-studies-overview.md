@@ -7,8 +7,7 @@ slug: japanese-bl-studies-overview
 language: ja
 status: review
 title: 日本の「BL研究」とは何か？――歴史的・分析的概観
-title_breaks:
-  - 日本の「BL研究」とは何か？――歴史的・分析的概観
+title_breaks: ["日本の「BL研究」とは何か？","――歴史的・分析的概観"]
 excerpt: >-
   二つの章の抄訳を通じて、少年愛・JUNE・やおいからBLへと至るジャンルの系譜をたどる。あわせて、日本のBL研究がジェンダー越境、表象の政治、クィアな読み、同人コミュニティをめぐって重ねてきた理論的議論を振り返る。
 credits:

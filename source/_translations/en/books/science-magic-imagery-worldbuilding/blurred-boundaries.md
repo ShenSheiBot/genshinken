@@ -1,4 +1,5 @@
 ---
+title_breaks: ["The Blurring of Imagery:","A Diachronic Projection"]
 work_id: science-magic-imagery-worldbuilding-blurred-boundaries
 source_type: book-chapter
 source_book_slug: science-magic-imagery-worldbuilding

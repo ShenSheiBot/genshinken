@@ -6,10 +6,7 @@ source_slug: victoria-woodhull-truth-shall-make-you-free
 language: ja
 status: reviewed
 title: そして真理はあなたたちを自由にする――社会的自由の原則についての演説（1871）
-title_breaks:
-  - そして真理はあなたたちを自由にする――
-  - 社会的自由の原則についての
-  - 演説（1871）
+title_breaks: ["そして真理は","あなたたちを自由にする","――社会的自由の原則についての","演説（1871）"]
 excerpt: ヴィクトリア・ウッドハルは、1871年にスタインウェイ・ホールで行った演説で自由恋愛を擁護し、愛する相手を選び、関係を変える個人の権利に、国家や婚姻制度が干渉してはならないと主張する。
 credits:
   - role: translator

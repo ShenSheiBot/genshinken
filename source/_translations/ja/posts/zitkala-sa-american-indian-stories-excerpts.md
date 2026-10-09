@@ -6,9 +6,7 @@ source_slug: zitkala-sa-american-indian-stories-excerpts
 language: ja
 status: reviewed
 title: 『アメリカ・インディアンの物語』抜粋
-title_breaks:
-  - 『アメリカ・インディアンの物語』
-  - 抜粋
+title_breaks: ["『アメリカ・インディアンの物語』抜粋"]
 excerpt: ダコタ・スーの作家ジトカラ＝シャが、白人入植者に向けた母の呪いを振り返り、先住民寄宿学校が「文明化」の名の下にもたらした傷を語る。
 credits:
   - role: translator

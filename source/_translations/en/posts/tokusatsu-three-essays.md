@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Three Essays on Tokusatsu:","Monsters of the Real,","the Temptations of the Imaginary,","and a Father’s Expectations"]
 title: "Three Essays on Tokusatsu: Monsters of the Real, the Temptations of the Imaginary, and a Father’s Expectations"
 date: 2019-07-25
 updated: 2026-10-03

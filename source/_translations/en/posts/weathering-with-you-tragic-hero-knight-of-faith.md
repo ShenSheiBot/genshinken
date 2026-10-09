@@ -1,6 +1,6 @@
 ---
 title: "“Tragic Hero—Knight of Infinite Resignation—Knight of Faith”"
-title_breaks: ["“Tragic Hero—Knight of", "Infinite Resignation—Knight", "of Faith”"]
+
 date: 2019-11-09
 categories: [Animation]
 section: review

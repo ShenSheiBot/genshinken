@@ -94,6 +94,7 @@ export type TranslationEdition = {
   slug: string;
   bookSlug: string;
   bookTitle: string;
+  bookTitleBreaks: string[];
   bookSubtitle: string;
   bookExcerpt: string;
   href: string;
@@ -521,6 +522,7 @@ async function loadLocale(locale: TranslationLocale): Promise<TranslationEdition
       slug,
       bookSlug,
       bookTitle,
+      bookTitleBreaks: bookManifest?.titleBreaks ?? [],
       bookSubtitle,
       bookExcerpt,
       href: "",

@@ -6,9 +6,7 @@ source_slug: sarah-grimke-letters-equality-of-sexes-excerpt
 language: ja
 status: reviewed
 title: 『男女平等と女性の境遇に関する書簡』抄
-title_breaks:
-  - 『男女平等と
-  - 女性の境遇に関する書簡』抄
+title_breaks: ["『男女平等と女性の境遇に関する書簡』抄"]
 excerpt: サラ・ムーア・グリムケの1838年刊行の書簡集から、第八書簡を抄訳。アメリカの女性教育、家事労働、同じ仕事に対する報酬の男女差から、奴隷制下の黒人女性への抑圧へと論を進め、男女の道徳的・知的な平等を訴える。
 credits:
   - role: translator

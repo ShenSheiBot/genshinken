@@ -6,8 +6,7 @@ source_slug: feminism-five-thousand-word-guide
 language: ja
 status: reviewed
 title: 一篇で速習する、フェミニズム主要概念――五万字保存版
-title_breaks:
-  - "一篇で速習する、フェミニズム主要概念――五万字保存版"
+title_breaks: ["一篇で速習する、","フェミニズム主要概念","――五万字保存版"]
 excerpt: 一篇で速習する、フェミニズム主要概念――五万字保存版
 credits:
   - role: translator

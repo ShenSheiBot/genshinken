@@ -1,6 +1,6 @@
 ---
 title: 『さよならの朝に約束の花をかざろう』――母親、女、そして女性
-title_breaks: [『さよならの朝に約束の花をかざろう』――, 母親、女、そして女性]
+title_breaks: ["『さよならの朝に","約束の花をかざろう』――","母親、女、そして女性"]
 date: 2019-02-27
 slug: maquia-mother-woman-female
 script: ja

@@ -6,10 +6,7 @@ slug: recrossing-00s-criticism
 language: ja
 status: reviewed
 title: ゼロ年代批評を再交差させる――東浩紀／宇野常寛／低志会の解離
-title_breaks:
-  - ゼロ年代批評を再交差させる――
-  - 東浩紀／宇野常寛／
-  - 低志会の解離
+title_breaks: ["ゼロ年代批評を","再交差させる――","東浩紀／宇野常寛／","低志会の解離"]
 excerpt: ゼロ年代批評を再交差させる――東浩紀／宇野常寛／低志会の解離
 credits:
   - role: translator

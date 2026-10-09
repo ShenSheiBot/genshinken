@@ -6,9 +6,7 @@ slug: song-of-saya-pure-love-matrix
 language: ja
 status: review
 title: 『沙耶の唄』の純愛マトリクス
-title_breaks:
-  - 『沙耶の唄』の
-  - 純愛マトリクス
+title_breaks: ["『沙耶の唄』の純愛マトリクス"]
 excerpt: 非木は『沙耶の唄』の冒頭で示される人物関係から出発し、完全グラフと純愛の論理を使って、三つの結末を生み出す構造を読み解く。
 credits:
   - role: translator

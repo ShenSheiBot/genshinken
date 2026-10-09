@@ -6,8 +6,7 @@ slug: marchen-madchen-production-postmortem
 language: ja
 status: review
 title: 『メルヘン・メドヘン』――制作崩壊を振り返る
-title_breaks:
-  - "『メルヘン・メドヘン』――制作崩壊を振り返る"
+title_breaks: ["『メルヘン・メドヘン』","――制作崩壊を振り返る"]
 excerpt: 『メルヘン・メドヘン』に参加した主要スタッフが匿名で振り返る。制作日程、予算、進行管理、外注をめぐる判断は、いかにして現場を崩壊へ追い込んだのか。
 credits:
   - role: translator

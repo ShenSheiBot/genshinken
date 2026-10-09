@@ -7,8 +7,7 @@ slug: season-2-episodes-07-12
 language: ja
 status: reviewed
 title: 第2期・第7～12話 制作ノートと視聴後記
-title_breaks:
-  - 第2期・第7～12話 制作ノートと視聴後記
+title_breaks: ["第2期・第7～12話 制作ノートと","視聴後記"]
 excerpt: 第1期の最初の5話の制作現場から出発し、畠山守が絵コンテ、影なし作画、ロトスコープ、リミテッドアニメーションによって、原作漫画に忠実でありながら『かぐや様』独自の喜劇のリズムを築いた過程を分析する。
 credits:
   - role: translator

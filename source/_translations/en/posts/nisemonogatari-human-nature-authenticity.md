@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Nisemonogatari / Human Nature Is Evil /","The Question of the Genuine and the Fake"]
 title: "Nisemonogatari / Human Nature Is Evil / The Question of the Genuine and the Fake"
 date: 2019-03-28
 work_id: nisemonogatari-human-nature-authenticity

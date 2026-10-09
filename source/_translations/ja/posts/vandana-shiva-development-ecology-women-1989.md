@@ -6,9 +6,7 @@ source_slug: vandana-shiva-development-ecology-women-1989
 language: ja
 status: reviewed
 title: 開発、エコロジー、女性（1989）
-title_breaks:
-  - 開発、エコロジー、女性
-  - （1989）
+title_breaks: ["開発、エコロジー、女性（1989）"]
 excerpt: ヴァンダナ・シヴァは「負の開発」という概念によって、自然経済や女性の労働を低く評価する近代化を批判し、生命を支える営みから生産性と成長を定義し直すことを提唱する。
 credits:
   - role: translator

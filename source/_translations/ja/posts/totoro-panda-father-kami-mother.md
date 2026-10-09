@@ -1,6 +1,6 @@
 ---
 title: 新番新語｜トトロのパンダのお父さんと神様のお母さん
-title_breaks: ["新番新語｜トトロの", "パンダのお父さんと神様のお母さん"]
+title_breaks: ["新番新語｜トトロの","パンダのお父さんと","神様のお母さん"]
 date: 2018-12-18
 slug: totoro-panda-father-kami-mother
 script: ja

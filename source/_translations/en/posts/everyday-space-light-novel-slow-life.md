@@ -1,4 +1,5 @@
 ---
+title_breaks: ["“Cities · Space” Writing Event |","The Space of the Everyday:","Light Novels’ “Slow-Life” Turn","and Its Essence"]
 title: "“Cities · Space” Writing Event | The Space of the Everyday: Light Novels’ “Slow-Life” Turn and Its Essence"
 date: 2019-08-28
 work_id: everyday-space-light-novel-slow-life

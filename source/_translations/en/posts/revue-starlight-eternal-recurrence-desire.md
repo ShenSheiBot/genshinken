@@ -1,4 +1,5 @@
 ---
+title_breaks: ["New Anime, New Words |","The Enigma of Revue Starlight:","Recurrence and Apollo’s Opera,","Desire in Nietzsche and Deleuze"]
 title: "New Anime, New Words | The Enigma of Revue Starlight: Recurrence and Apollo’s Opera, Desire in Nietzsche and Deleuze"
 date: 2018-11-28
 slug: revue-starlight-eternal-recurrence-desire

@@ -1,6 +1,6 @@
 ---
 title: 『JKハルは異世界で娼婦になった』書評
-title_breaks: [『JKハルは異世界で, 娼婦になった』書評]
+title_breaks: ["『JKハルは異世界で娼婦になった』","書評"]
 date: 2019-07-28
 slug: jk-koharu-in-another-world-review
 script: ja

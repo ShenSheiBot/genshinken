@@ -6,9 +6,7 @@ source_slug: redstockings-manifesto-1969
 language: ja
 status: reviewed
 title: レッドストッキングス宣言（1969）
-title_breaks:
-  - レッドストッキングス宣言
-  - （1969）
+title_breaks: ["レッドストッキングス宣言（1969）"]
 excerpt: 1969年の『レッドストッキングス宣言』は、女性を抑圧された階級と位置づけ、男性至上主義を基本的な支配形態と捉え、個人の経験を分かち合って共通の抑圧を認識し、女性が団結することで解放を進めるよう呼びかける。
 credits:
   - role: translator

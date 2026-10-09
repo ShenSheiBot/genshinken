@@ -5,8 +5,7 @@ slug: i-expression
 language: ja
 status: reviewed
 title: I：批評の言葉を問い直す――白、『氷菓』、団長
-title_breaks:
-  - I：批評の言葉を問い直す――白、『氷菓』、団長
+title_breaks: ["I：批評の言葉を問い直す","――白、『氷菓』、団長"]
 excerpt: アニメ批評の言葉そのものをめぐるAustoriaの連続論考。意味の伝達、隠喩、自然主義から、崇高、私的体験、そしてアニメの「深さ」が持つさまざまな顔へ。
 credits:
   - role: translator

@@ -1,6 +1,6 @@
 ---
 title: "整理 | 『超人幻想』年表"
-title_breaks: ["整理 | 『超人幻想』", "年表"]
+title_breaks: ["整理 | 『超人幻想』年表"]
 date: 2019-01-21
 slug: concrete-revolutio-timeline
 script: ja

@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Delicious Meal-Replacement Yogurt!","A Vital Signs Maintenance Tea Party","Special Event"]
 title: "Delicious Meal-Replacement Yogurt! A Vital Signs Maintenance Tea Party Special Event"
 date: 2024-01-27
 slug: life-signs-yogurt-bowl-event

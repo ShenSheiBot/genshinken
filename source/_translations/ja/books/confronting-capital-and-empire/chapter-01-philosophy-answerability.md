@@ -5,8 +5,7 @@ slug: chapter-01-philosophy-answerability
 language: ja
 status: reviewed
 title: 第一章：哲学と応答責任――京都学派と、世界史が顕現する瞬間
-title_breaks:
-  - 第一章：哲学と応答責任――京都学派と、世界史が顕現する瞬間
+title_breaks: ["第一章：哲学と応答責任","――京都学派と、","世界史が顕現する瞬間"]
 excerpt: 『資本と帝国に対峙する――京都学派哲学を再考する』は、京都学派とマルクス主義が資本主義的近代性をめぐって取り結ぶ思想的関係を論じ、帝国と世界史における日本哲学の位置を考察する。
 credits:
   - role: translator

@@ -7,8 +7,7 @@ slug: tomino-lower
 language: ja
 status: reviewed
 title: 富野由悠季と「母性のディストピア」（下）
-title_breaks:
-  - 富野由悠季と「母性のディストピア」（下）
+title_breaks: ["富野由悠季と","「母性のディストピア」（下）"]
 excerpt: 宇野常寛は宮崎駿、富野由悠季、押井守、および戦後の映像史を軸に、母性のユートピアと母性のディストピアが日本アニメーションの政治的想像力をいかに形づくったかを論じる。
 credits:
   - role: translator

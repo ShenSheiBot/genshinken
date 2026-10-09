@@ -1,6 +1,6 @@
 ---
 title: 勝者の時代に、愛にできることはまだあるかい？　たぶん、もうない。
-title_breaks: ["勝者の時代に、愛にできることはまだあるかい？　たぶん、もうない。"]
+title_breaks: ["勝者の時代に、","愛にできることは","まだあるかい？　たぶん、もうない。"]
 date: 2019-12-02
 slug: weathering-with-you-love-in-the-age-of-winners
 script: ja

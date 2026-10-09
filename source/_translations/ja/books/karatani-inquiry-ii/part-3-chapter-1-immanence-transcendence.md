@@ -7,8 +7,7 @@ slug: part-3-chapter-1-immanence-transcendence
 language: ja
 status: reviewed
 title: 第三部：世界宗教をめぐって｜第一章：内在性と超越性
-title_breaks:
-  - 第三部：世界宗教をめぐって｜第一章：内在性と超越性
+title_breaks: ["第三部：世界宗教をめぐって｜","第一章：内在性と超越性"]
 excerpt: 柄谷行人『探究Ⅱ』の中国語掲載全文に基づく日本語訳。固有名、単独性、特殊性、超越論的動機をめぐり、主体、他者、歴史を考察する。
 credits:
   - role: translator

@@ -1,6 +1,6 @@
 ---
 title: "『JOJO5 黄金の風』（演出）分析――第02話"
-title_breaks: ["『JOJO5 黄金の風』（演出）分析――", "第02話"]
+title_breaks: ["『JOJO5 黄金の風』","（演出）分析――第02話"]
 date: 2018-12-10
 slug: jojo5-golden-wind-direction-analysis-episode-02
 script: ja

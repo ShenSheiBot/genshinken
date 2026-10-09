@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Answer: What Do You Think of", "the “Net Depression Cloud” Meme?"]
 title: "Answer: What Do You Think of the “Net Depression Cloud” Meme?"
 date: 2020-08-13
 slug: net-cloud-depression-meme

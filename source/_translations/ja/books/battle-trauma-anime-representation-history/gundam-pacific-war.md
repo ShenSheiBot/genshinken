@@ -7,8 +7,7 @@ slug: gundam-pacific-war
 language: ja
 status: review
 title: 『機動戦士ガンダム』と太平洋戦争――戦争表象の深層と主人公のトラウマ
-title_breaks:
-  - 『機動戦士ガンダム』と太平洋戦争――戦争表象の深層と主人公のトラウマ
+title_breaks: ["『機動戦士ガンダム』と","太平洋戦争","――戦争表象の深層と","主人公のトラウマ"]
 excerpt: 三篇の抄訳が、『機動戦士ガンダム』と太平洋戦争の関係、世界のなかでの日本アニメの特殊性、そして被害とトラウマの記憶を語る戦争アニメの反戦メッセージを論じる。
 credits:
   - role: translator

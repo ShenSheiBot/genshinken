@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Wonderful at Sixteen:","Subahibi from","a Gender Perspective","(Part One)"]
 title: "Wonderful at Sixteen: Subahibi from a Gender Perspective (Part One)"
 excerpt: "I want to bring what I now know and have experienced to a fresh analysis of the work that influenced me most."
 work_id: "gender-perspective-subahibi-part-1"

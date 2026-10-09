@@ -6,10 +6,7 @@ source_slug: styled-masculinity-salon-hair-care
 language: ja
 status: reviewed
 title: スタイリングされる男性性――男性のサロンでのヘアケア消費と差異の構築
-title_breaks:
-  - スタイリングされる男性性――
-  - 男性のサロンでのヘアケア消費と
-  - 差異の構築
+title_breaks: ["スタイリングされる男性性――","男性のサロンでの","ヘアケア消費と差異の構築"]
 excerpt: クリステン・バーバーは、南カリフォルニアのヘアサロンでのフィールドワークを通じて、男性が髪を整えるための消費によって、階級、人種、性的指向、男性性をめぐる境界をどのように引き直しているのかを分析する。
 credits:
   - role: translator

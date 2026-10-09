@@ -1,6 +1,6 @@
 ---
 title: 震災後の想像力：2010年代の日本のオタク文化――宇野常寛
-title_breaks: [震災後の想像力：2010年代の, 日本のオタク文化――宇野常寛]
+title_breaks: ["震災後の想像力：","2010年代の日本のオタク文化","――宇野常寛"]
 date: 2019-02-13
 slug: imagination-after-earthquake-otaku-culture-2010s
 script: ja

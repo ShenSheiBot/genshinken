@@ -1,6 +1,6 @@
 ---
 title: １ヶ月1000万頂く頂き女子りりちゃんの【みんなを稼がせるマニュアル】
-title_breaks: [１ヶ月1000万頂く, 頂き女子りりちゃんの, 【みんなを稼がせるマニュアル】]
+title_breaks: ["１ヶ月1000万頂く","頂き女子りりちゃんの","【みんなを稼がせる","マニュアル】"]
 date: 2024-06-19
 slug: riri-chan-manual-for-making-money-together
 script: ja

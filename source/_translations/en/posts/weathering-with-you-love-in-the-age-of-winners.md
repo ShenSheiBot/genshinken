@@ -1,4 +1,5 @@
 ---
+title_breaks: ["In the Age of Winners,","Is There Still Anything That Love Can Do?","Probably Not."]
 title: "In the Age of Winners, Is There Still Anything That Love Can Do? Probably Not."
 date: 2019-12-02
 work_id: weathering-with-you-love-in-the-age-of-winners

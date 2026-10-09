@@ -1,6 +1,6 @@
 ---
 title: 彼女たちはそのころ愛し合い、旅をし、とどまり、同性愛者になった
-title_breaks: [彼女たちはそのころ愛し合い、旅をし、とどまり、, 同性愛者になった]
+title_breaks: ["彼女たちはそのころ愛し合い、","旅をし、とどまり、","同性愛者になった"]
 date: 2022-12-07
 slug: gertrude-stein-miss-furr-and-miss-skeene-excerpt
 script: ja

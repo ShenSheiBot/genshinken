@@ -1,6 +1,6 @@
 ---
 title: アニメ業界の新人たちの苦闘
-title_breaks: [アニメ業界の新人たちの, 苦闘]
+title_breaks: ["アニメ業界の新人たちの苦闘"]
 date: 2018-11-07
 slug: anime-newcomers-struggle
 script: ja

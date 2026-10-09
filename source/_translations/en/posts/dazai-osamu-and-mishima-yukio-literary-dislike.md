@@ -1,6 +1,6 @@
 ---
 title: "Answer: How Should We Judge Dazai Osamu as a Person? Why Did Mishima Yukio Dislike Dazai Osamu’s Literary Works?"
-title_breaks: ["Answer: How Should We Judge", "Dazai Osamu as a Person?", "Why Did Mishima Yukio", "Dislike", "Dazai Osamu’s Literary Works?"]
+title_breaks: ["Answer: How Should We Judge","Dazai Osamu as a Person?","Why Did Mishima Yukio Dislike","Dazai Osamu’s Literary Works?"]
 date: 2020-04-08
 work_id: dazai-osamu-and-mishima-yukio-literary-dislike
 source_type: post

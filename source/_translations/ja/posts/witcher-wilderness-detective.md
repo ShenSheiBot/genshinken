@@ -1,8 +1,6 @@
 ---
 title: ウィッチャー、荒野の探偵
-title_breaks:
-  - ウィッチャー、
-  - 荒野の探偵
+title_breaks: ["ウィッチャー、荒野の探偵"]
 date: 2021-12-03T00:00:00.000Z
 slug: witcher-wilderness-detective
 script: ja

@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Natsume’s Book of Friends:","How Does This “Healing” Anime Heal?"]
 title: "Natsume’s Book of Friends: How Does This “Healing” Anime Heal?"
 date: 2018-11-24
 work_id: natsume-book-of-friends-healing-anime

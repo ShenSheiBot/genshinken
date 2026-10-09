@@ -7,8 +7,7 @@ slug: lecture-09
 language: ja
 status: reviewed
 title: 第九講　「世界観」とはズレた日常である
-title_breaks:
-  - 第九講　「世界観」とはズレた日常である
+title_breaks: ["第九講　「世界観」とは","ズレた日常である"]
 excerpt: 大塚英志が、キャラクター、パターン、オリジナリティ、世界観を手がかりに、アニメ・漫画・ゲームがつくる仮想現実を小説へどう生かすかを説く。
 credits:
   - role: translator

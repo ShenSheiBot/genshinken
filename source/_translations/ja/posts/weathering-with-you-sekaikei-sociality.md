@@ -6,10 +6,7 @@ slug: weathering-with-you-sekaikei-sociality
 language: ja
 status: review
 title: 存在しないかもしれない豪雨――「セカイ系」が「社会性」に出会うとき
-title_breaks:
-  - 存在しないかもしれない豪雨――
-  - 「セカイ系」が「社会性」に
-  - 出会うとき
+title_breaks: ["存在しないかもしれない","豪雨――","「セカイ系」が「社会性」に","出会うとき"]
 excerpt: 「豪雨は存在しないかもしれない」という仮説から『天気の子』を読み直す。セカイ系の危機による別離と、社会の規律訓練による別離を区別し、形の定まらない生活のなかで、どう歩み続けるのかを問う。
 credits:
   - role: translator

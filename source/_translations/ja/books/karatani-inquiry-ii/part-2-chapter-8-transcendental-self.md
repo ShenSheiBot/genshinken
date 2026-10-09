@@ -7,8 +7,7 @@ slug: part-2-chapter-8-transcendental-self
 language: ja
 status: reviewed
 title: 第二部：超越論的動機について｜第八章：超越論的自我
-title_breaks:
-  - 第二部：超越論的動機について｜第八章：超越論的自我
+title_breaks: ["第二部：","超越論的動機について｜","第八章：超越論的自我"]
 excerpt: 柄谷行人『探究Ⅱ』の中国語掲載全文に基づく日本語訳。固有名、単独性、特殊性、超越論的動機をめぐり、主体、他者、歴史を考察する。
 credits:
   - role: translator

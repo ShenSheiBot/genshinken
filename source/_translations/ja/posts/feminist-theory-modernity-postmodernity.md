@@ -1,6 +1,6 @@
 ---
 title: フェミニズム理論を読む――近代性からポストモダンへ
-title_breaks: ["フェミニズム理論を読む――近代性から", "ポストモダンへ"]
+title_breaks: ["フェミニズム理論を読む","――近代性からポストモダンへ"]
 date: 2022-05-29
 slug: feminist-theory-modernity-postmodernity
 categories: [思想と理論]

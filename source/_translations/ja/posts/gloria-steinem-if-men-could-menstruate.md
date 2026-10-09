@@ -6,7 +6,7 @@ slug: gloria-steinem-if-men-could-menstruate
 language: ja
 status: reviewed
 title: もし男性が月経したら
-title_breaks: [もし男性が, 月経したら]
+title_breaks: ["もし男性が月経したら"]
 excerpt: グロリア・スタイネムは、皮肉な仮定を通じて、権力が月経や身体、ジェンダーについての社会的な解釈をいかに形づくるかを明らかにする。
 credits:
   - role: translator

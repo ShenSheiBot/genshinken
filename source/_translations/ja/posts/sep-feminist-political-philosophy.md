@@ -6,9 +6,7 @@ source_slug: sep-feminist-political-philosophy
 language: ja
 status: reviewed
 title: SEP：フェミニスト政治哲学
-title_breaks:
-  - SEP：フェミニスト
-  - 政治哲学
+title_breaks: ["SEP：フェミニスト政治哲学"]
 excerpt: 『スタンフォード哲学百科事典』「フェミニスト政治哲学」項目の日本語訳。歴史的文脈と、自由主義、急進主義、社会主義、ケア、ポスト構造主義、脱植民地的・パフォーマティヴな諸立場をたどる。
 credits:
   - role: translator

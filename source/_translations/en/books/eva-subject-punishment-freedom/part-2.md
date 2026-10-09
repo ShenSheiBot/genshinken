@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Part Two:","The Completed World,","Instrumentality,","and Textual Interpretation"]
 work_id: eva-subject-punishment-freedom-part-2
 source_type: book-chapter
 source_book_slug: eva-subject-punishment-freedom

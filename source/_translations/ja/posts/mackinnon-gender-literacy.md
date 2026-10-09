@@ -6,9 +6,7 @@ source_slug: mackinnon-gender-literacy
 language: ja
 status: reviewed
 title: ジェンダー・リテラシー（1994）
-title_breaks:
-  - ジェンダー・リテラシー
-  - （1994）
+title_breaks: ["ジェンダー・リテラシー（1994）"]
 excerpt: キャサリン・A・マッキノンは、法におけるジェンダー・バイアスが中立性、無知、既得権益によってどう維持されているかを論じ、ジェンダー・リテラシーを法学教育と法実務の基準にすることを提起する。
 credits:
   - role: translator

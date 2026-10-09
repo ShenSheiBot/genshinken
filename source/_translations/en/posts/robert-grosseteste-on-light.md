@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Robert Grosseteste:","On Light"]
 title: "Robert Grosseteste: On Light"
 date: 2020-10-25
 updated: 2026-10-03

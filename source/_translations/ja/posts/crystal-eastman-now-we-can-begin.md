@@ -6,7 +6,7 @@ slug: crystal-eastman-now-we-can-begin
 language: ja
 status: reviewed
 title: 今こそ、私たちは始められる！（1920）
-title_breaks: [今こそ、私たちは始められる！, （1920）]
+title_breaks: ["今こそ、私たちは始められる！","（1920）"]
 excerpt: アメリカで女性が選挙権を得た後、クリスタル・イーストマンは、女性の解放にはなお、職業選択の自由、経済的独立、平等な家事分担、子どもを産むかどうかを自ら決めること、母親への経済的保障が必要だと訴えた。
 credits:
   - role: translator

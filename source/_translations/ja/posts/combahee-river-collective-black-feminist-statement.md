@@ -6,9 +6,7 @@ slug: combahee-river-collective-black-feminist-statement
 language: ja
 status: reviewed
 title: 黒人フェミニズム宣言――コンバヒーリバー・コレクティヴ声明
-title_breaks:
-  - 黒人フェミニズム宣言――
-  - コンバヒーリバー・コレクティヴ声明
+title_breaks: ["黒人フェミニズム宣言","――コンバヒーリバー・コレクティヴ","声明"]
 excerpt: コンバヒーリバー・コレクティヴによる1977年の政治声明。黒人フェミニズムの起源をたどり、アイデンティティ・ポリティクス、複数の抑圧、社会主義、組織づくりの実践の関係を明らかにする。
 credits:
   - role: translator

@@ -1,4 +1,5 @@
 ---
+title_breaks: ["New Anime, Fresh Takes |","Liz and the Blue Bird:","An Appreciation of the Score, and More"]
 title: "New Anime, Fresh Takes | Liz and the Blue Bird: An Appreciation of the Score, and More"
 date: 2018-12-16
 work_id: liz-and-the-blue-bird-score-analysis

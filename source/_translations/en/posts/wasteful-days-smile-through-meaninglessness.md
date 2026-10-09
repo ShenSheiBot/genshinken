@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Onward with a Smile amid “Meaninglessness”","— An End-of-Series Review","of Wasteful Days of High School Girls"]
 title: "Onward with a Smile amid “Meaninglessness” — An End-of-Series Review of Wasteful Days of High School Girls"
 date: 2019-11-01
 work_id: wasteful-days-smile-through-meaninglessness

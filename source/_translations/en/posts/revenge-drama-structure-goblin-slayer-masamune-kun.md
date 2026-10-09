@@ -1,4 +1,5 @@
 ---
+title_breaks: ["The Structure of Revenge Drama:","Goblin Slayer","and Masamune-kun’s Revenge"]
 title: "The Structure of Revenge Drama: Goblin Slayer and Masamune-kun’s Revenge"
 date: 2018-12-09
 work_id: revenge-drama-structure-goblin-slayer-masamune-kun

@@ -111,7 +111,21 @@ function ReaderTitleGlyphs({ text, keyPrefix }: { text: string; keyPrefix: strin
 }
 
 export function ReaderTitleText({ text, locale = "zh" }: { text: string; locale?: ReadingUiLocale }) {
-  return Array.from(READER_TITLE_SEGMENTERS[locale].segment(text)).map((segment, index) => {
+  // ICU may split an unfamiliar loanword into individual kana. Keep the
+  // uninterrupted katakana word together instead of breaking it mid-syllable.
+  // Also keep Japanese episode labels together (ordinal prefix, number, episode counter).
+  const segments = locale === "ja"
+    ? text.split(/(第[0-9０-９]+(?:[〜～–-][0-9０-９]+)?話|[\p{Script=Katakana}ー]+)/gu).filter(Boolean).flatMap<{ segment: string; isWordLike?: boolean }>((part) =>
+        /^(?:第[0-9０-９]+(?:[〜～–-][0-9０-９]+)?話|[\p{Script=Katakana}ー]+)$/u.test(part)
+          ? [{ segment: part, isWordLike: true }]
+          : Array.from(READER_TITLE_SEGMENTERS.ja.segment(part)))
+    : locale === "en"
+      ? (text.match(/[\p{L}\p{N}]+(?:[-’'][\p{L}\p{N}]+)+|[^\p{L}\p{N}]+|[\p{L}\p{N}]+/gu) ?? []).flatMap<{ segment: string; isWordLike?: boolean }>((part) =>
+          /^[\p{L}\p{N}]+(?:[-’'][\p{L}\p{N}]+)+$/u.test(part)
+            ? [{ segment: part, isWordLike: true }]
+            : Array.from(READER_TITLE_SEGMENTERS.en.segment(part)))
+      : Array.from(READER_TITLE_SEGMENTERS[locale].segment(text));
+  return segments.map((segment, index) => {
     const glyphs = (
       <ReaderTitleGlyphs text={segment.segment} keyPrefix={`segment-${index}`} />
     );

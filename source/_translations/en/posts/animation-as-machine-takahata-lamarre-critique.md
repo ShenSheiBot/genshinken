@@ -1,6 +1,6 @@
 ---
 title: "Animation as a Machine: A Critique of Isao Takahata, and How Lamarre Missed the ‘Anime Machine’"
-title_breaks: ["Animation as a Machine: A Critique of Isao Takahata, and How Lamarre Missed the ‘Anime Machine’"]
+title_breaks: ["Animation as a Machine:","A Critique of Isao Takahata,","and How Lamarre Missed","the ‘Anime Machine’"]
 date: 2021-05-12
 slug: animation-as-machine-takahata-lamarre-critique
 script: latn

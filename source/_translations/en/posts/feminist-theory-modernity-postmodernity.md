@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Collection Introduction—Reading","Feminist Theory:","From Modernity to Postmodernity"]
 title: "Collection Introduction—Reading Feminist Theory: From Modernity to Postmodernity"
 date: 2022-05-29
 updated: 2026-10-03

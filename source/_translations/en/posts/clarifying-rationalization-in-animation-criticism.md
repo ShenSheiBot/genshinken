@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Friends, Let’s Clarify","the Issue of Rationalization","in Animation Criticism"]
 title: "Friends, Let’s Clarify the Issue of Rationalization in Animation Criticism"
 date: 2019-02-02
 work_id: clarifying-rationalization-in-animation-criticism

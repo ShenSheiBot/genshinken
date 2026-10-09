@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Shiki and the Figure of the Doctor","in Changing Views of Medical History"]
 title: "Shiki and the Figure of the Doctor in Changing Views of Medical History"
 date: 2018-11-28
 updated: 2026-10-03

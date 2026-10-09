@@ -5,8 +5,7 @@ slug: chapter-05-ethnicity-species
 language: ja
 status: reviewed
 title: 第五章：エスニシティと種――多民族国家の哲学と日本帝国主義について
-title_breaks:
-  - 第五章：エスニシティと種――多民族国家の哲学と日本帝国主義について
+title_breaks: ["第五章：エスニシティと種","――多民族国家の哲学と","日本帝国主義について"]
 excerpt: 『資本と帝国に対峙する――京都学派哲学を再考する』は、京都学派とマルクス主義が資本主義的近代性をめぐって取り結ぶ思想的関係を論じ、帝国と世界史における日本哲学の位置を考察する。
 credits:
   - role: translator

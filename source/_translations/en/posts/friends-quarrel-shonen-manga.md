@@ -1,4 +1,5 @@
 ---
+title_breaks: ["‘Friends Quarreling’ in Shōnen Manga:","A Typical Narrative Pattern","Seen through K’s SaruMi and Other Examples"]
 title: "‘Friends Quarreling’ in Shōnen Manga: A Typical Narrative Pattern Seen through K’s SaruMi and Other Examples"
 date: 2018-12-02
 updated: 2026-10-02

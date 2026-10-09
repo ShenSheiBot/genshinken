@@ -6,7 +6,7 @@ slug: silent-vampire-kizumonogatari
 language: ja
 status: review
 title: 沈黙する吸血鬼──映画『傷物語 -こよみヴァンプ-』論
-title_breaks: ["沈黙する吸血鬼──映画『傷物語 -こよみヴァンプ-』論"]
+title_breaks: ["沈黙する吸血鬼","──映画『傷物語 -こよみヴァンプ-』論"]
 excerpt: 長い無言の映像を残し、重要なモノローグを削った『傷物語 -こよみヴァンプ-』。声の剝奪から終幕の呼吸へ、失語が沈黙へと変わる瞬間を読み解く。
 credits:
   - role: translator

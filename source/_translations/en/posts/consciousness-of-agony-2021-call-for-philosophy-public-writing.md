@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Consciousness of Agony 2021:","Wangzhe Linrenbu’s First Call","for Public Philosophy Submissions"]
 title: "Consciousness of Agony 2021: Wangzhe Linrenbu’s First Call for Public Philosophy Submissions"
 date: 2021-10-05
 slug: consciousness-of-agony-2021-call-for-philosophy-public-writing

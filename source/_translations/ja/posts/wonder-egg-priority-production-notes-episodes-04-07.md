@@ -6,8 +6,7 @@ slug: wonder-egg-priority-production-notes-episodes-04-07
 language: ja
 status: review
 title: ワンダーエッグ・プライオリティ 第4〜7話 制作ノート
-title_breaks:
-  - "ワンダーエッグ・プライオリティ 第4〜7話 制作ノート"
+title_breaks: ["ワンダーエッグ・プライオリティ 第4〜7話 制作ノート"]
 excerpt: kViNによる『ワンダーエッグ・プライオリティ』第4〜7話の制作ノート。その中国語版をもとに、新人演出と作画監督の協働、スタジオの制作体制、厳しいスケジュールのもとで浮かび上がる問題、そして少女たちの自死をめぐる描写と脚本家の発言との隔たりをたどる。
 credits:
   - role: translator

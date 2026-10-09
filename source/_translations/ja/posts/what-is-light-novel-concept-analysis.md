@@ -6,9 +6,7 @@ slug: what-is-light-novel-concept-analysis
 language: ja
 status: review
 title: ライトノベルの定義とは何か？――概念分析
-title_breaks:
-  - ライトノベルの定義とは何か？――
-  - 概念分析
+title_breaks: ["ライトノベルの定義とは何か？","――概念分析"]
 excerpt: イラスト、キャラクター、装丁、文体、ゲーム的リアリズム、メディア横断性などの観点からライトノベルのさまざまな定義を整理し、ジャンルや表現手法としてのライトノベルが、どこまでを含むのかを考える。
 credits:
   - role: translator

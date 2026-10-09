@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Answers to “Why Do Some Japanese People","Feel Nostalgic for the Shōwa Era?”","and “How Do Japanese People","View Jin Yong’s Work?”"]
 title: "Answers to “Why Do Some Japanese People Feel Nostalgic for the Shōwa Era?” and “How Do Japanese People View Jin Yong’s Work?”"
 date: 2019-04-18
 work_id: showa-nostalgia-and-jin-yong-in-japan

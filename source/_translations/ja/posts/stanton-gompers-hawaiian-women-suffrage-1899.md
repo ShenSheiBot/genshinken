@@ -6,9 +6,7 @@ source_slug: stanton-gompers-hawaiian-women-suffrage-1899
 language: ja
 status: reviewed
 title: ハワイの女性のための請願（1899年）
-title_breaks:
-  - ハワイの女性のための請願
-  - （1899年）
+title_breaks: ["ハワイの女性のための請願（1899年）"]
 excerpt: 1899年、スタントンとアンソニーは、アメリカが新たに占領した島々の女性の選挙権を保障するようアメリカ議会に求めた。一方、ゴンパーズは返信で、現地の人々に代わって制度を定める権利がアメリカにあるのかと問い返した。
 credits:
   - role: translator

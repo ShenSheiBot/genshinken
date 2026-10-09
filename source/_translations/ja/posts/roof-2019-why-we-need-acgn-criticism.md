@@ -6,10 +6,7 @@ slug: roof-2019-why-we-need-acgn-criticism
 language: ja
 status: reviewed
 title: 屋頂現視研2019：なぜ今なお屋頂現視研とそのACGN評論を必要とするのか
-title_breaks:
-  - 屋頂現視研2019：
-  - なぜ今なお
-  - 屋頂現視研とそのACGN評論を必要とするのか
+title_breaks: ["屋頂現視研2019：","なぜ今なお屋頂現視研と","そのACGN評論を必要とするのか"]
 excerpt: 屋頂現視研がベンヤミンの歴史観と精神分析を手がかりにACGN批評の置かれた状況を論じ、理論を通じて問いを立て、作品や文化をめぐる「単純さ」を疑い続ける理由を語る。
 credits:
   - role: translator

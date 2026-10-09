@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Parallax Views |","Iori Nagase—Why Psychoanalysis","Is an Adventure"]
 title: "Parallax Views | Iori Nagase—Why Psychoanalysis Is an Adventure"
 date: 2018-12-30
 work_id: iori-nagase-psychoanalysis-adventure

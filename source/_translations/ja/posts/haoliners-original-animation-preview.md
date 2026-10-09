@@ -1,6 +1,6 @@
 ---
 title: この先が楽しみだ――絵梦が「国創」発表会で披露したオリジナル作品の見どころ
-title_breaks: ["この先が楽しみだ――", "絵梦が「国創」発表会で披露したオリジナル作品の見どころ"]
+title_breaks: ["この先が楽しみだ","――絵梦が「国創」発表会で披露した","オリジナル作品の見どころ"]
 date: 2018-12-21
 slug: haoliners-original-animation-preview
 script: ja

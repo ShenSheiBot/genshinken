@@ -1,6 +1,6 @@
 ---
 title: 『リゼロ』制作日誌――似ているようで違う世界で続編を始める
-title_breaks: [『リゼロ』制作日誌――似ているようで, 違う世界で続編を始める]
+title_breaks: ["『リゼロ』制作日誌","――似ているようで違う世界で","続編を始める"]
 date: 2020-06-28
 slug: rezero-production-journal-sequel
 script: ja

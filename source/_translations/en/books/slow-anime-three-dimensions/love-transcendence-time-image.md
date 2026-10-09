@@ -1,4 +1,5 @@
 ---
+title_breaks: ["II. Love and Transcendence /","III. The Time-Image /","IV. Conclusion"]
 work_id: slow-anime-three-dimensions-love-transcendence-time-image
 source_type: book-chapter
 source_book_slug: slow-anime-three-dimensions

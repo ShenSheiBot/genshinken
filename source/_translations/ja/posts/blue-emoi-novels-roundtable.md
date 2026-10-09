@@ -1,6 +1,6 @@
 ---
 title: "青くて、エモい小説たち――「ブルーライト文芸」座談会"
-title_breaks: ["青くて、エモい小説たち――", "「ブルーライト文芸」", "座談会"]
+title_breaks: ["青くて、エモい小説たち","――「ブルーライト文芸」","座談会"]
 date: 2025-01-04
 slug: blue-emoi-novels-roundtable
 categories: [オタク文化]

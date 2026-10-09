@@ -1,4 +1,5 @@
 ---
+title_breaks: ["ACG Characters:","Interiority, Attributes,","and Literariness"]
 title: "ACG Characters: Interiority, Attributes, and Literariness"
 date: "2019-03-21"
 work_id: acg-character-interiority-attributes-literariness

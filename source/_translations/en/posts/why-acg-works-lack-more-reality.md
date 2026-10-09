@@ -1,4 +1,5 @@
 ---
+title_breaks: ["The Parallax View |","Why Can’t ACG Works Convey","More of a Sense of Reality?"]
 title: "The Parallax View | Why Can’t ACG Works Convey More of a Sense of Reality?"
 date: 2019-01-07
 updated: 2026-10-03

@@ -1,6 +1,6 @@
 ---
 title: ああ、資本！――世界にまたがる生産ラインを生きる（1981）
-title_breaks: [ああ、資本！――, 世界にまたがる生産ラインを生きる（1981）]
+title_breaks: ["ああ、資本！","――世界にまたがる生産ラインを","生きる（1981）"]
 date: 2023-04-30
 slug: ehrenreich-fuentes-life-global-assembly-line
 script: ja

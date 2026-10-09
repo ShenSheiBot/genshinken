@@ -6,8 +6,7 @@ source_slug: nancy-hartsock-foucault-power-theory-for-women
 language: ja
 status: reviewed
 title: フーコーの権力論――女性のための理論か？
-title_breaks:
-  - フーコーの権力論――女性のための理論か？
+title_breaks: ["フーコーの権力論","――女性のための理論か？"]
 excerpt: ナンシー・ハートソックは、フーコーの権力理論が変革ではなく抵抗にとどまると批判する。そしてフェミニスト・スタンドポイント理論から、支配関係を説明し、変えるための知識と権力の捉え方を提示する。
 credits:
   - role: translator

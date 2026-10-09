@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Concrete Arcade:","Still-Image MAD Festival 2019","— Launch"]
 title: "Concrete Arcade: Still-Image MAD Festival 2019 — Launch"
 date: 2019-10-04
 work_id: concrete-arcade-still-mad-festival-2019-launch

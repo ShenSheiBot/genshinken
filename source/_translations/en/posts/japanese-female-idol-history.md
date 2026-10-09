@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Idols and Society:","A Short History of Japanese Female Idols"]
 title: "Idols and Society: A Short History of Japanese Female Idols"
 date: 2023-11-24
 updated: 2026-10-03

@@ -1,6 +1,6 @@
 ---
 title: 『屍鬼』と医学史観の変化にみる医師像
-title_breaks: [『屍鬼』と医学史観の変化にみる, 医師像]
+title_breaks: ["『屍鬼』と医学史観の変化にみる医師像"]
 date: 2018-11-28
 slug: shiki-doctors-medical-historiography
 script: ja

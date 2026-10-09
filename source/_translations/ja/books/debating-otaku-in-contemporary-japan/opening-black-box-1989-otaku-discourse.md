@@ -7,8 +7,7 @@ slug: opening-black-box-1989-otaku-discourse
 language: ja
 status: reviewed
 title: Björn-Ole Kamm「1989年のおたく言説のブラックボックスを開く」
-title_breaks:
-  - Björn-Ole Kamm「1989年のおたく言説のブラックボックスを開く」
+title_breaks: ["Björn-Ole Kamm","「1989年のおたく言説の","ブラックボックスを開く」"]
 excerpt: 大塚英志はおたく文化の歴史化と政治性を問い、Björn-Ole Kammは宮崎勤事件後の新聞・司法・批評言説から、おたく像が共同で構築される過程を解きほぐす。
 credits:
   - role: translator

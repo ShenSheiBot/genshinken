@@ -5,8 +5,7 @@ slug: part-2
 language: ja
 status: reviewed
 title: 第2部：知識はどこから来るのか（第7〜10章）
-title_breaks:
-  - 第2部：知識はどこから来るのか（第7〜10章）
+title_breaks: ["第2部：知識はどこから来るのか","（第7〜10章）"]
 excerpt: ダンカン・プリチャードによる認識論入門。知識の条件と価値を出発点に、正当化、合理性、徳、知覚、証言、記憶、アプリオリな知識、帰納の問題を論じる。
 credits:
   - role: translator

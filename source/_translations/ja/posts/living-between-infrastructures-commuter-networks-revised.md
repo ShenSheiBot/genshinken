@@ -1,6 +1,6 @@
 ---
 title: インフラの隙間を生きる――通勤ネットワーク、テレビ放送、携帯電話
-title_breaks: ["インフラの", "隙間を生きる――", "通勤ネットワーク、テレビ放送、", "携帯電話"]
+title_breaks: ["インフラの隙間を生きる","――通勤ネットワーク、","テレビ放送、携帯電話"]
 date: 2026-05-27
 slug: living-between-infrastructures-commuter-networks-revised
 categories: [アニメ]

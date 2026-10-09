@@ -6,10 +6,7 @@ slug: concrete-revolutio-media-form-aikawa-sho-reconsidered
 language: ja
 status: reviewed
 title: アニメーションのメディア形態：『コンクリート・レボルティオ～超人幻想～』再検討、「社会派」の會川昇
-title_breaks:
-  - アニメーションのメディア形態：
-  - 『コンクリート・レボルティオ～超人幻想～』再検討、
-  - 「社会派」の會川昇
+title_breaks: ["アニメーションのメディア形態：","『コンクリート・レボルティオ～超人幻想～』","再検討、「社会派」の會川昇"]
 excerpt: 『超人幻想』の時間跳躍と空間表現を起点に、特撮における身体とミニチュア、「身体考古」のメディア条件をたどり、アニメーションのキャラクターと社会的背景のあいだの資源配分を論じる。
 credits:
   - role: translator

@@ -6,10 +6,7 @@ source_slug: feminist-theory-resource-index
 language: ja
 status: reviewed
 title: フェミニズム理論の資料、いちばん揃っているのはここ――数十万字、更新中
-title_breaks:
-  - フェミニズム理論の資料、
-  - いちばん揃っているのはここ――
-  - 数十万字、更新中
+title_breaks: ["フェミニズム理論の資料、","いちばん揃っているのは","ここ――数十万字、更新中"]
 excerpt: 年末の総まとめとして索引をつくり、まだ残っている仕事を洗い出してみます。これからの翻訳・公開もお楽しみに。抜けがあれば、確かめたうえでご指摘ください。役に立ったら、ぜひシェアを。
 credits:
   - role: translator

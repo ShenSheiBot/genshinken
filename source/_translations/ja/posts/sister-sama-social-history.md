@@ -6,9 +6,7 @@ slug: sister-sama-social-history
 language: ja
 status: review
 title: 「お姉様」の社会史（試論）
-title_breaks:
-  - 「お姉様」の社会史
-  - （試論）
+title_breaks: ["「お姉様」の社会史（試論）"]
 excerpt: 戦前の少女文化の「エス」から『マリア様がみてる』へ。戦後の少女漫画、百合文化、大衆メディアをたどり、「お姉様」像の断絶、拡散、復活を追う。
 credits:
   - role: translator

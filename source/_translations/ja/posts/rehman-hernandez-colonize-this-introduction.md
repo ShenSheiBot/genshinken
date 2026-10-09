@@ -6,8 +6,7 @@ source_slug: rehman-hernandez-colonize-this-introduction
 language: ja
 status: reviewed
 title: 植民地にしてみな！――若い有色女性たちが語る、いまのフェミニズム
-title_breaks:
-  - "植民地にしてみな！――若い有色女性たちが語る、いまのフェミニズム"
+title_breaks: ["植民地にしてみな！","――若い有色女性たちが語る、","いまのフェミニズム"]
 excerpt: ブシュラ・レーマンとデイジー・エルナンデスは、家族、移民としての経験、クィアとしての自分、そして「9・11」後の暴力から出発し、若い有色女性たちが自分たちの暮らしを自分たちの言葉で名づける必要性を、フェミニズムの立場から語る。
 credits:
   - role: translator

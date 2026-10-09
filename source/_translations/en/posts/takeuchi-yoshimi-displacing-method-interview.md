@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Takeuchi Yoshimi as Method—On","“Displacing Takeuchi Yoshimi”"]
 title: "Takeuchi Yoshimi as Method—On “Displacing Takeuchi Yoshimi”"
 date: 2026-08-03
 updated: 2026-10-03

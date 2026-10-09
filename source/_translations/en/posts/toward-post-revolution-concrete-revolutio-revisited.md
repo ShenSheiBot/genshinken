@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Toward Post-Revolution—Concrete Revolutio","Revisited"]
 title: "Toward Post-Revolution—Concrete Revolutio Revisited"
 date: 2019-05-16
 slug: toward-post-revolution-concrete-revolutio-revisited

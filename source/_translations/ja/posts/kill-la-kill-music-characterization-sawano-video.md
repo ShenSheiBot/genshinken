@@ -6,11 +6,7 @@ slug: kill-la-kill-music-characterization-sawano-video
 language: ja
 status: review
 title: 『キルラキル』――音楽でキャラクターを描く、澤野弘之の作曲実験
-title_breaks:
-  - 『キルラキル』――
-  - 音楽でキャラクターを描く、
-  - 澤野弘之の
-  - 作曲実験
+title_breaks: ["『キルラキル』","――音楽でキャラクターを描く、","澤野弘之の作曲実験"]
 excerpt: 『キルラキル』のキャラクターのテーマ曲を中心に、澤野弘之がモチーフ、楽器の使い方、音楽のスタイルを通じて、登場人物それぞれの個性を音でどう描き分けているのかを分析する。
 credits:
   - role: translator

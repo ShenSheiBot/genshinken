@@ -1,6 +1,6 @@
 ---
 title: "How Is (Anime) Criticism Possible? Thoughts from a “Stranger’s” Perspective"
-title_breaks: ["How Is (Anime) Criticism", "Possible? Thoughts from", "a “Stranger’s” Perspective"]
+title_breaks: ["How Is (Anime) Criticism Possible?","Thoughts from a “Stranger’s” Perspective"]
 date: 2018-12-03
 categories: [Otaku Culture]
 section: essay

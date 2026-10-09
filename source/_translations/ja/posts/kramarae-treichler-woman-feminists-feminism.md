@@ -6,9 +6,7 @@ source_slug: kramarae-treichler-woman-feminists-feminism
 language: ja
 status: reviewed
 title: 「女」「フェミニスト」と「フェミニズム」
-title_breaks:
-  - 「女」「フェミニスト」
-  - と「フェミニズム」
+title_breaks: ["「女」「フェミニスト」と","「フェミニズム」"]
 excerpt: 1843年から1984年までの引用を通じて、さまざまな作家や活動家が「女」「フェミニスト」「フェミニズム」をどのように繰り返し定義してきたかをたどる。
 credits:
   - role: translator

@@ -1,4 +1,5 @@
 ---
+title_breaks: ["The Invisible Guardian:","A New Kind of Experience,","a Classic Subject,","and a Compelling Story Come Together"]
 title: "The Invisible Guardian: A New Kind of Experience, a Classic Subject, and a Compelling Story Come Together"
 date: 2019-03-06
 slug: invisible-guardian-new-experience-classic-genre-story

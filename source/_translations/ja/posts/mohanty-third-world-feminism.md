@@ -6,9 +6,7 @@ source_slug: mohanty-third-world-feminism
 language: ja
 status: reviewed
 title: ポスト・マルクス主義：モーハンティーと第三世界フェミニズム
-title_breaks:
-  - ポスト・マルクス主義：
-  - モーハンティーと第三世界フェミニズム
+title_breaks: ["ポスト・マルクス主義：","モーハンティーと","第三世界フェミニズム"]
 excerpt: Feyzi
   Ismailが、普遍主義と差異、ナショナリズム、女性労働、資本主義国家機構への抵抗戦略を手がかりに、チャンドラー・タルパデー・モーハンティーと第三世界フェミニズムの理論的貢献と限界を検討する。
 credits:

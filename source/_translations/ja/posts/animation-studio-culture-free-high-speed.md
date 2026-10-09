@@ -6,8 +6,7 @@ slug: animation-studio-culture-free-high-speed
 language: ja
 status: review
 title: アニメ制作会社の文化とは何か――京アニ、内海紘子、そして『Free!』から考える
-title_breaks:
-  - "アニメ制作会社の文化とは何か――京アニ、内海紘子、そして『Free!』から考える"
+title_breaks: ["アニメ制作会社の文化とは何か","――京アニ、内海紘子、","そして『Free!』から考える"]
 excerpt: 京都アニメーション、アニメーションDo、『Free!』シリーズを例に、スタッフの構成、制作体制、個人の作風がともにアニメ制作会社の文化を形づくるさまを論じる。
 credits:
   - role: translator

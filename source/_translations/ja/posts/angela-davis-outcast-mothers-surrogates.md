@@ -6,9 +6,7 @@ slug: angela-davis-outcast-mothers-surrogates
 language: ja
 status: reviewed
 title: 排除された母親たちと代理母たち
-title_breaks:
-  - 排除された
-  - 母親たちと代理母たち
+title_breaks: ["排除された母親たちと","代理母たち"]
 excerpt: アンジェラ・Y・デイヴィスは、奴隷制のもとで黒人女性が母としての承認を奪われた歴史を出発点に、生殖技術、代理出産の商品化、十代の妊娠、不妊手術（生殖能力を失わせる手術）の濫用をめぐる、人種と階級の権力関係を分析する。
 credits:
   - role: translator

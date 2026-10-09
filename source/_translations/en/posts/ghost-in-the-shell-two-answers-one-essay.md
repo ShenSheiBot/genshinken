@@ -1,4 +1,5 @@
 ---
+title_breaks: ["On Ghost in the Shell:","Two Answers and an Essay"]
 work_id: ghost-in-the-shell-two-answers-one-essay
 source_type: post
 source_slug: ghost-in-the-shell-two-answers-one-essay

@@ -1,6 +1,6 @@
 ---
 title: "Rags Drum 2022: Results of the Annual Call for Submissions"
-title_breaks: ["Rags Drum 2022:", "Results of the", "Annual Call", "for Submissions"]
+title_breaks: ["Rags Drum 2022:","Results of the Annual Call for Submissions"]
 subtitle: Fate Changes Trains
 date: 2022-10-28
 categories: [Lab on Roof Community]

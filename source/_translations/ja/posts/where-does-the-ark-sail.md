@@ -1,6 +1,6 @@
 ---
 title: けれど、方舟はどこへ向かうのか？
-title_breaks: [けれど、方舟はどこへ向かうのか？]
+title_breaks: ["けれど、方舟は","どこへ向かうのか？"]
 date: 2019-06-24
 slug: where-does-the-ark-sail
 script: ja

@@ -5,8 +5,7 @@ slug: chapter-06-aleatory-dialectic
 language: ja
 status: reviewed
 title: 第六章：偶然の弁証法――田辺元とマルクスの対話
-title_breaks:
-  - 第六章：偶然の弁証法――田辺元とマルクスの対話
+title_breaks: ["第六章：偶然の弁証法","――田辺元とマルクスの対話"]
 excerpt: 『資本と帝国に対峙する――京都学派哲学を再考する』は、京都学派とマルクス主義が資本主義的近代性をめぐって取り結ぶ思想的関係を論じ、帝国と世界史における日本哲学の位置を考察する。
 credits:
   - role: translator

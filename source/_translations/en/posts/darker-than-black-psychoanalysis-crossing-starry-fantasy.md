@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Darker than Black","and Psychoanalysis—Traversing","the Fantasy of the Stars"]
 title: Darker than Black and Psychoanalysis—Traversing the Fantasy of the Stars
 date: 2022-06-21
 work_id: darker-than-black-psychoanalysis-crossing-starry-fantasy

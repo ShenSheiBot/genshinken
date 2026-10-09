@@ -1,4 +1,5 @@
 ---
+title_breaks: ["What the Mother of Mifune Hasn’t Seen:","A Not-So-Hardcore Kara no Kyoukai Obsessive","Puts Your Soul to the Test"]
 title: "What the Mother of Mifune Hasn’t Seen: A Not-So-Hardcore Kara no Kyoukai Obsessive Puts Your Soul to the Test"
 date: 2019-03-10
 updated: 2026-10-03

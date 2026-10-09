@@ -6,9 +6,7 @@ source_slug: emma-lazarus-new-colossus-bilingual
 language: ja
 status: reviewed
 title: 新しい巨像（1883）
-title_breaks:
-  - 新しい巨像
-  - （1883）
+title_breaks: ["新しい巨像（1883）"]
 excerpt: エマ・ラザラスが1883年に書いた十四行詩。「亡命者の母」という姿を通して自由の女神像に新たな意味を与える詩を、日本語訳と英語原詩で掲載する。
 credits:
   - role: translator

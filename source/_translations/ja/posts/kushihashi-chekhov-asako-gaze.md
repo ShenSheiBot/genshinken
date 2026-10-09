@@ -1,6 +1,6 @@
 ---
 title: 串橋がチェーホフの戯曲の一節を暗唱するとき、ひとり驚いていない朝子の目
-title_breaks: ["串橋がチェーホフの戯曲の一節を暗唱するとき、", ひとり驚いていない朝子の目]
+title_breaks: ["串橋がチェーホフの戯曲の一節を","暗唱するとき、","ひとり驚いていない朝子の目"]
 date: 2022-08-18
 slug: kushihashi-chekhov-asako-gaze
 script: ja

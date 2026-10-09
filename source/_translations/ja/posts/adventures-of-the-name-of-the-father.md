@@ -1,6 +1,6 @@
 ---
 title: 特集討論｜〈父の名〉の冒険――『EVA』と新海誠を斜めから見る
-title_breaks: [特集討論｜, 〈父の名〉の冒険――, 『EVA』と新海誠を斜めから見る]
+title_breaks: ["特集討論｜","〈父の名〉の冒険――","『EVA』と新海誠を","斜めから見る"]
 date: 2018-12-15
 slug: adventures-of-the-name-of-the-father
 script: ja

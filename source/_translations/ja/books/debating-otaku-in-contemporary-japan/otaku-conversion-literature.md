@@ -7,8 +7,7 @@ slug: otaku-conversion-literature
 language: ja
 status: reviewed
 title: 大塚英志「転向文学」としてのおたく文化
-title_breaks:
-  - 大塚英志「転向文学」としてのおたく文化
+title_breaks: ["大塚英志","「転向文学」としての","おたく文化"]
 excerpt: 大塚英志はおたく文化の歴史化と政治性を問い、Björn-Ole Kammは宮崎勤事件後の新聞・司法・批評言説から、おたく像が共同で構築される過程を解きほぐす。
 credits:
   - role: translator

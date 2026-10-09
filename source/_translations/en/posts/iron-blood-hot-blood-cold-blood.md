@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Iron-Blooded,","Hot-Blooded,","Cold-Blooded"]
 title: "Iron-Blooded, Hot-Blooded, Cold-Blooded"
 date: 2019-10-28
 work_id: iron-blood-hot-blood-cold-blood

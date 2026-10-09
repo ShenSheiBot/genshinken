@@ -1,6 +1,6 @@
 ---
 title: "Deciphering “The Drowned Giant”: A Reading of the “Giant” Metaphor"
-title_breaks: ["Deciphering", "“The Drowned Giant”:", "A Reading of the", "“Giant” Metaphor"]
+title_breaks: ["Deciphering “The Drowned Giant”:","A Reading of the “Giant” Metaphor"]
 date: 2021-11-24
 work_id: decoding-the-drowned-giant
 source_type: post

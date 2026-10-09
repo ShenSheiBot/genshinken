@@ -5,8 +5,7 @@ slug: chapter-08-subjective-drive
 language: ja
 status: reviewed
 title: 第八章：資本の主体的欲動――梯明秀の物質現象学
-title_breaks:
-  - 第八章：資本の主体的欲動――梯明秀の物質現象学
+title_breaks: ["第八章：資本の主体的欲動","――梯明秀の物質現象学"]
 excerpt: 『資本と帝国に対峙する――京都学派哲学を再考する』は、京都学派とマルクス主義が資本主義的近代性をめぐって取り結ぶ思想的関係を論じ、帝国と世界史における日本哲学の位置を考察する。
 credits:
   - role: translator

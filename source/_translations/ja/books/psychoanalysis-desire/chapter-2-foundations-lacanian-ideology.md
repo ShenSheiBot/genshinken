@@ -5,8 +5,7 @@ slug: chapter-2-foundations-lacanian-ideology
 language: ja
 status: reviewed
 title: 精神分析の欲望2：ラカン的イデオロギーの基盤
-title_breaks:
-  - 精神分析の欲望2：ラカン的イデオロギーの基盤
+title_breaks: ["精神分析の欲望2：","ラカン的イデオロギーの基盤"]
 excerpt: ガブリエル・トゥピナンバ『精神分析の欲望』の連載第0～4回（謝辞・序文・序論および第1～4章）。ジジェクの序文と著者の序論を起点に、精神分析の政治、ラカン的イデオロギー、制度の歴史、普遍性の問題を考察する。
 credits:
   - role: translator

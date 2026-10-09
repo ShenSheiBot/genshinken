@@ -8,7 +8,7 @@ slug: "oguro-anno-oshii-dialogue"
 language: "ja"
 status: "review"
 title: "小黒祐一郎×庵野秀明×押井守 対談"
-title_breaks: ["小黒祐一郎×庵野秀明×押井守 対談"]
+title_breaks: ["小黒祐一郎×庵野秀明","×押井守 対談"]
 credits: [{"role":"translator","contributor_id":"bing-koori","scope":"中国語版"},{"role":"translator","contributor_id":"shen-shui-bot","scope":"全文"},{"role":"reviewer","contributor_id":"shen-shui-bot","scope":"全文"}]
 translation_method: "agent"
 source_relationship: "direct"

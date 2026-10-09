@@ -1,4 +1,5 @@
 ---
+title_breaks: ["What Is “Yún Behavior”?","Ontology and Internal Heterogeneity"]
 title: What Is “Yún Behavior”? Ontology and Internal Heterogeneity
 excerpt: >-
   Starting from absent participation, quasi-commentness, communities as public

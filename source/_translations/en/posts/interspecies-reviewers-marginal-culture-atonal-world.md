@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Marginal Cultures and Sex Establishments:","A Reviewer’s Guide to the Atonal World"]
 title: "Marginal Cultures and Sex Establishments: A Reviewer’s Guide to the Atonal World"
 date: 2020-06-27
 work_id: interspecies-reviewers-marginal-culture-atonal-world

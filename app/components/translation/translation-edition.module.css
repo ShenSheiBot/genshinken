@@ -214,3 +214,14 @@
   .placeholderCard { padding: 34px 24px 48px; }
   .placeholderCard::after { font-size: 220px; }
 }
+
+/* Editorial breaks are preferred lines, not permission to overflow a narrow cover. */
+.page h1 [data-reader-title-segment] {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+/* Latin quotation marks are narrower than the CJK half-em optical trim. */
+.page:lang(en) h1 [data-reader-title-punctuation] {
+  margin-inline: 0;
+}

@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Scientific Imagery:","Crossing the Barriers","of Reality"]
 work_id: science-magic-imagery-worldbuilding-science-imagery
 source_type: book-chapter
 source_book_slug: science-magic-imagery-worldbuilding

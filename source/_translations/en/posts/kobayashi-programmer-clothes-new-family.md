@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Some Thoughts |","A Woman Programmer,","Plaid Shirts, and a New Family"]
 title: "Some Thoughts | A Woman Programmer, Plaid Shirts, and a New Family"
 date: 2019-01-14
 updated: 2026-10-02

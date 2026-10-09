@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Something to Look Forward To:","A Preview of Haoliners’ Originals","at Bilibili’s Chinese Animation Showcase"]
 title: "Something to Look Forward To: A Preview of Haoliners’ Originals at Bilibili’s Chinese Animation Showcase"
 date: 2018-12-21
 work_id: haoliners-original-animation-preview

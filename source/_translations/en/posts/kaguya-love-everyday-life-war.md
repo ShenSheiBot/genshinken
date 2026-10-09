@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Love in Several Parts:","Kaguya-sama and the Relations between","Love, Everyday Life, and War"]
 title: "Love in Several Parts: Kaguya-sama and the Relations between Love, Everyday Life, and War"
 date: 2019-01-27
 slug: kaguya-love-everyday-life-war

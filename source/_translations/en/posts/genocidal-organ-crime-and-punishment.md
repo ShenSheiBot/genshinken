@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Crime and Punishment","in Genocidal Organ"]
 title: "Crime and Punishment in Genocidal Organ"
 date: 2020-12-13
 updated: "2026-10-02"

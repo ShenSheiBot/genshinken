@@ -6,11 +6,7 @@ slug: yuri-anime-patriarchy-complicity
 language: ja
 status: review
 title: 『転生王女と天才令嬢の魔法革命』から読み解く百合アニメと家父長制の共犯関係
-title_breaks:
-  - 『転生王女と
-  - 天才令嬢の魔法革命』から読み解く
-  - 百合アニメと
-  - 家父長制の共犯関係
+title_breaks: ["『転生王女と天才令嬢の魔法革命』から","読み解く","百合アニメと家父長制の共犯関係"]
 excerpt: 『水星の魔女』『転生王女と天才令嬢の魔法革命』『リコリス・リコイル』を手がかりに、百合アニメに求められる「成長」の基準を問い直し、家父長制との共犯関係に陥る作品と、その罠をかわす作品を論じる。
 credits:
   - role: translator

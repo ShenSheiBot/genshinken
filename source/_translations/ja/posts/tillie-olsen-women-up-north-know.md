@@ -6,9 +6,7 @@ source_slug: tillie-olsen-women-up-north-know
 language: ja
 status: reviewed
 title: 北部の女たちに知ってほしい
-title_breaks:
-  - 北部の女たちに
-  - 知ってほしい
+title_breaks: ["北部の女たちに知ってほしい"]
 excerpt: ティリー・オルセンが1934年に書いた詩。サンアントニオのメキシコ系女性労働者の家内労働と病を通して、北部の百貨店に並ぶ手の込んだ子ども服の本当の代価を問う。
 credits:
   - role: translator

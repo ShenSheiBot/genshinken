@@ -1,4 +1,5 @@
 ---
+title_breaks: ["The Limits of Sugaru Miaki:","Reinterpreting the “Byakuyakō” Relationship"]
 title: "The Limits of Sugaru Miaki: Reinterpreting the “Byakuyakō” Relationship"
 date: 2019-02-03
 slug: mikage-boundaries-baiyexing-relationship

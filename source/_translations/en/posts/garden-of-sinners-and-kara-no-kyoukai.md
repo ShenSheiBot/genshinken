@@ -1,4 +1,5 @@
 ---
+title_breaks: ["In Focus |", "“The garden of sinners”", "and “Kara no Kyoukai”", "(空之境界)"]
 work_id: garden-of-sinners-and-kara-no-kyoukai
 source_type: post
 source_slug: garden-of-sinners-and-kara-no-kyoukai

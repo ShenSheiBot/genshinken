@@ -6,9 +6,7 @@ source_slug: ruiz-de-burton-squatter-and-don-excerpt
 language: ja
 status: reviewed
 title: 『無断占有者とドン』抜粋
-title_breaks:
-  - 『無断占有者とドン』
-  - 抜粋
+title_breaks: ["『無断占有者とドン』抜粋"]
 excerpt: 米墨戦争後のカリフォルニアで、メキシコ系の牧場主たちは、条約の約束が土地法、無断占有者の票、土地委員会によっていかに反故にされたかを振り返る。
 credits:
   - role: translator

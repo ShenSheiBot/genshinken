@@ -6,11 +6,7 @@ slug: zizek-materialism-without-materialism
 language: ja
 status: reviewed
 title: 唯物論なき唯物論――スラヴォイ・ジジェクと物質の消失
-title_breaks:
-  - 唯物論なき
-  - 唯物論――
-  - スラヴォイ・ジジェクと
-  - 物質の消失
+title_breaks: ["唯物論なき唯物論","――スラヴォイ・ジジェクと","物質の消失"]
 excerpt: ジジェクによる弁証法的唯物論の再構築を、「物質の消失」、自然と文化、ヘーゲル＝ラカンの枠組みという観点から批判的に検討する。
 credits:
   - role: translator

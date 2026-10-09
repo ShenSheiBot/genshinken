@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Subahibi from","a Gender Perspective","(Part Two):","Gender Performativity","and Power"]
 title: "Subahibi from a Gender Perspective (Part Two): Gender Performativity and Power"
 excerpt: "Let us recall the line of development outlined in the previous installment: female unconscious subject → desiring subject (gender performativity) → social individual."
 work_id: "gender-perspective-subahibi-part-2"

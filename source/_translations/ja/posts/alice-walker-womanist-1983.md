@@ -6,7 +6,7 @@ slug: alice-walker-womanist-1983
 language: ja
 status: reviewed
 title: 姑娘主義者（1983）
-title_breaks: [姑娘主義者, （1983）]
+title_breaks: ["姑娘主義者（1983）"]
 excerpt: アリス・ウォーカーは『母の庭をさがして』で辞書式項目として「womanist」を提起し、「紫とラベンダー色の関係のように」という比喩で、それとフェミニズムの関係を表現した。
 credits:
   - role: translator

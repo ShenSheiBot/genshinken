@@ -1,6 +1,6 @@
 ---
 title: 『少女革命ウテナ』『lain』と日本――境界に立つ「少女」たち
-title_breaks: [『少女革命ウテナ』『lain』と日本――, 境界に立つ, 「少女」たち]
+title_breaks: ["『少女革命ウテナ』『lain』と日本","――境界に立つ「少女」たち"]
 date: 2021-11-16
 slug: utena-lain-liminal-girls
 script: ja

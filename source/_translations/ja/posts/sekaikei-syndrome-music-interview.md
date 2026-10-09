@@ -6,10 +6,7 @@ slug: sekaikei-syndrome-music-interview
 language: ja
 status: review
 title: 「セカイ系症候群末期患者」のための音楽｜行方不明者リスト インタビュー
-title_breaks:
-  - 「セカイ系症候群
-  - 末期患者」のための音楽｜
-  - 行方不明者リスト インタビュー
+title_breaks: ["「セカイ系症候群末期患者」のための音楽｜","行方不明者リスト インタビュー"]
 excerpt: 北出栞が行方不明者リストのシガワにインタビュー。『新世紀エヴァンゲリオン』などの作品を介して、セカイ系の閉塞感と時代の病理をいかに音楽へと変えていくのかを語り合う。
 credits:
   - role: translator

@@ -6,9 +6,7 @@ source_slug: rose-schneiderman-we-found-you-wanting
 language: ja
 status: reviewed
 title: あなたがたは、期待に応えなかった
-title_breaks:
-  - あなたがたは、
-  - 期待に応えなかった
+title_breaks: ["あなたがたは、期待に応えなかった"]
 excerpt: トライアングル社の婦人用ブラウス工場の火災後、ローズ・シュナイダーマンは追悼会で安易な同情を拒み、労働者が自分たちを救う唯一の道は、強力な労働者階級の運動だと訴えた。
 credits:
   - role: translator

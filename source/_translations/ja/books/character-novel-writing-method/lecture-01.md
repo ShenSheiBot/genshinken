@@ -7,8 +7,7 @@ slug: lecture-01
 language: ja
 status: reviewed
 title: 第一講　キャラクター小説とは何か
-title_breaks:
-  - 第一講　キャラクター小説とは何か
+title_breaks: ["第一講　キャラクター小説","とは何か"]
 excerpt: 大塚英志が、キャラクター、パターン、オリジナリティ、世界観を手がかりに、アニメ・漫画・ゲームがつくる仮想現実を小説へどう生かすかを説く。
 credits:
   - role: translator

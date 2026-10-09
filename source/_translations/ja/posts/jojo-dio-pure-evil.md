@@ -6,9 +6,7 @@ slug: jojo-dio-pure-evil
 language: ja
 status: review
 title: 回答：『ジョジョの奇妙な冒険』のDIOは、本当に純粋な悪人なのか？
-title_breaks:
-  - 回答：『ジョジョの奇妙な冒険』の
-  - DIOは、本当に純粋な悪人なのか？
+title_breaks: ["回答：","『ジョジョの奇妙な冒険』の","DIOは、本当に","純粋な悪人なのか？"]
 excerpt: 階級的出自や教育、ジェンダー化された他者としての立場に注目してDIOを読み直す。知を求める姿勢と階級上昇、母親への同一化、他者を拒む姿を論じつつ、下層の人々を搾取するDIOへの批判も手放さない。
 credits:
   - role: translator

@@ -1,4 +1,5 @@
 ---
+title_breaks: ["I. Critical Expression","as a Problem:","White, Hyouka,","and the Commander"]
 title: "I. Critical Expression as a Problem: White, Hyouka, and the Commander"
 authors: ["Austoria"]
 work_id: "meta-animation-criticism-i-expression"

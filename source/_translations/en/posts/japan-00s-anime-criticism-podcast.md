@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Chiteijin Channel × Lab on Roof Podcast:","Revisiting Japanese Anime and Manga Criticism","of the 2000s—How “Erciyuan” Intersects","with “the Postmodern,”","feat. Yeshen Renjing and Tiankeng"]
 title: "Chiteijin Channel × Lab on Roof Podcast: Revisiting Japanese Anime and Manga Criticism of the 2000s—How “Erciyuan” Intersects with “the Postmodern,” feat. Yeshen Renjing and Tiankeng"
 date: 2025-06-08
 updated: 2026-10-02

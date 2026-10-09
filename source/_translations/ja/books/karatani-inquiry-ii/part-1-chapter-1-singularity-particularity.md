@@ -7,8 +7,7 @@ slug: part-1-chapter-1-singularity-particularity
 language: ja
 status: reviewed
 title: 第一部：固有名について｜第一章：単独性と特殊性
-title_breaks:
-  - 第一部：固有名について｜第一章：単独性と特殊性
+title_breaks: ["第一部：固有名について｜","第一章：単独性と特殊性"]
 excerpt: 柄谷行人『探究Ⅱ』の中国語掲載全文に基づく日本語訳。固有名、単独性、特殊性、超越論的動機をめぐり、主体、他者、歴史を考察する。
 credits:
   - role: translator

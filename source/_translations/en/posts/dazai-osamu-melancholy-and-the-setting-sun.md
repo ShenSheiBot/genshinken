@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Answers: Why Do So Many People Like","Osamu Dazai When He Is So Gloomy?","How Should We Understand","The Setting Sun?"]
 title: "Answers: Why Do So Many People Like Osamu Dazai When He Is So Gloomy? How Should We Understand The Setting Sun?"
 date: 2020-04-27
 work_id: dazai-osamu-melancholy-and-the-setting-sun

@@ -7,8 +7,7 @@ slug: magic-imagery
 language: ja
 status: reviewed
 title: 3. 魔法のイメージ――他者としての巨竜、他者としての月
-title_breaks:
-  - 3. 魔法のイメージ――他者としての巨竜、他者としての月
+title_breaks: ["3. 魔法のイメージ","――他者としての巨竜、","他者としての月"]
 excerpt: 作品の何を、私たちは科学らしい、魔法らしいと感じるのか。もっともらしいSF性と他者性を手掛かりに、アニメ、マンガ、ゲーム、ライトノベルにおける両者のイメージの成り立ちと、境界が曖昧になる理由を考える。
 credits:
   - role: translator

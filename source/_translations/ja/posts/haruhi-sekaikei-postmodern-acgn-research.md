@@ -6,11 +6,7 @@ slug: haruhi-sekaikei-postmodern-acgn-research
 language: ja
 status: reviewed
 title: 涼宮ハルヒシリーズと「セカイ系」から考える――ポストモダンとACGN研究についてのいくつかのうわごと
-title_breaks:
-  - 涼宮ハルヒシリーズと
-  - 「セカイ系」から考える――
-  - ポストモダンと
-  - ACGN研究についてのいくつかのうわごと
+title_breaks: ["涼宮ハルヒシリーズと","「セカイ系」から考える","――ポストモダンとACGN研究についての","いくつかのうわごと"]
 excerpt: 真紅様が「セカイ系」、ポストモダニティ、文化研究という三つの手がかりから涼宮ハルヒシリーズを読み直し、ラベル貼りや理論先行に陥り、作品の精読を軽視するACGN研究のあり方を問う。
 credits:
   - role: translator

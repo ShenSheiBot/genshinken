@@ -6,9 +6,7 @@ source_slug: howe-mothers-day-proclamation-1870
 language: ja
 status: reviewed
 title: 母の日宣言（1870年）
-title_breaks:
-  - 母の日宣言
-  - （1870年）
+title_breaks: ["母の日宣言（1870年）"]
 excerpt: ジュリア・ウォード・ハウがアメリカ南北戦争後に発表した反戦宣言。各国の女性に、夫や息子を殺戮に送り出すことを拒み、国境を越えた女性会議を開いて平和を推し進めるよう呼びかける。
 credits:
   - role: translator

@@ -5,8 +5,7 @@ slug: chapter-03-commodity-fetishism
 language: ja
 status: reviewed
 title: 第三章：商品の物神的性格と無の物神崇拝――マルクスと西田における転倒の問題
-title_breaks:
-  - 第三章：商品の物神的性格と無の物神崇拝――マルクスと西田における転倒の問題
+title_breaks: ["第三章：商品の物神的性格と","無の物神崇拝","――マルクスと西田における","転倒の問題"]
 excerpt: 『資本と帝国に対峙する――京都学派哲学を再考する』は、京都学派とマルクス主義が資本主義的近代性をめぐって取り結ぶ思想的関係を論じ、帝国と世界史における日本哲学の位置を考察する。
 credits:
   - role: translator

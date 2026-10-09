@@ -1,4 +1,5 @@
 ---
+title_breaks: ["“City · Space” Call for Essays:","How Does “Limiting Space”","Help Tell a Good Story?"]
 title: "“City · Space” Call for Essays: How Does “Limiting Space” Help Tell a Good Story?"
 date: 2019-09-01
 work_id: limited-space-narrative-techniques

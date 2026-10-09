@@ -1,4 +1,5 @@
 ---
+title_breaks: ["A Brief Look Ahead","from the Anonymous Phantom","on the Roof"]
 title: "A Brief Look Ahead from the Anonymous Phantom on the Roof"
 date: 2019-02-22
 slug: anonymous-phantom-on-the-roof

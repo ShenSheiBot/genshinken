@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Part One:","Dear Nausicaä and the Ruins"]
 work_id: miyazaki-sin-and-nihility-part-01
 source_type: book-chapter
 source_book_slug: miyazaki-sin-and-nihility

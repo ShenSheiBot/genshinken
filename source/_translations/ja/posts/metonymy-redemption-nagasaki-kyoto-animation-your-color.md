@@ -1,6 +1,6 @@
 ---
 title: "救済のパラフレゾロジー──長崎、京アニ、きみの色"
-title_breaks: ["救済のパラフレゾロジー──長崎、","京アニ、きみの色"]
+title_breaks: ["救済のパラフレゾロジー","──長崎、京アニ、きみの色"]
 date: "2026-06-30T00:00:00.000Z"
 updated: "2026-10-08"
 slug: "metonymy-redemption-nagasaki-kyoto-animation-your-color"

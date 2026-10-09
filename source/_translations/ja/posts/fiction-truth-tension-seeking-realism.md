@@ -6,11 +6,7 @@ slug: fiction-truth-tension-seeking-realism
 language: ja
 status: reviewed
 title: 虚構と真のあいだの緊張――虚構の物語のなかでリアリティを求めるには
-title_breaks:
-  - 虚構と真のあいだの
-  - 緊張――
-  - 虚構の物語のなかで
-  - リアリティを求めるには
+title_breaks: ["虚構と真のあいだの緊張","――虚構の物語のなかで","リアリティを求めるには"]
 excerpt: キョンの虚構とリアリティをめぐる名言を出発点に、真理述語の階層、記述理論、可能世界、自由論理、超付値意味論を用いて、虚構世界・対象・真理値の関係を明らかにする。
 credits:
   - role: translator

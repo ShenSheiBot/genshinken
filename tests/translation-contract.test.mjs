@@ -78,10 +78,18 @@ test("translated book metadata has one directory-level source of truth", () => {
         slug: "target-book",
         language: "en",
         title: "Target Book",
+        titleBreaks: ["Target Book"],
         subtitle: "",
         excerpt: "One translated book description.",
       }
     );
+    const manifestPath = path.join(directory, "book.json");
+    const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf8"));
+    fs.writeFileSync(manifestPath, JSON.stringify({ ...manifest, title_breaks: ["Target", "Book"] }));
+    assert.deepEqual(readTranslationBookManifest(directory).titleBreaks, ["Target", "Book"]);
+    fs.writeFileSync(manifestPath, JSON.stringify({ ...manifest, title_breaks: ["Changed", "Book"] }));
+    assert.throws(() => readTranslationBookManifest(directory), /must concatenate exactly/u);
+    fs.writeFileSync(manifestPath, JSON.stringify(manifest));
     assert.doesNotThrow(() => assertChapterUsesTranslationBookManifest({ title: "Chapter" }, "chapter.md"));
     assert.throws(
       () => assertChapterUsesTranslationBookManifest({ book_title: "Duplicate" }, "chapter.md"),

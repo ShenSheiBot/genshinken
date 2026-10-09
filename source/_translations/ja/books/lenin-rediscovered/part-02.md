@@ -7,8 +7,7 @@ slug: part-02
 language: ja
 status: reviewed
 title: 第2回 ロシア社会民主主義とエルフルト派
-title_breaks:
-  - 第2回 ロシア社会民主主義とエルフルト派
+title_breaks: ["第2回 ロシア社会民主主義と","エルフルト派"]
 excerpt: Lars T. Lih『Lenin Rediscovered』の中国語編訳をもとに、社会主義と労働運動の結合という定式から、レーニンとロシア社会民主主義の歴史的文脈に分け入る。
 credits:
   - role: translator

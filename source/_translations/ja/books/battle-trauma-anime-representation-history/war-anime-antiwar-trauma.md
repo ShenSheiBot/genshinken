@@ -7,8 +7,7 @@ slug: war-anime-antiwar-trauma
 language: ja
 status: review
 title: 戦争アニメと反戦メッセージとしてのトラウマ
-title_breaks:
-  - 戦争アニメと反戦メッセージとしてのトラウマ
+title_breaks: ["戦争アニメと","反戦メッセージとしての","トラウマ"]
 excerpt: 三篇の抄訳が、『機動戦士ガンダム』と太平洋戦争の関係、世界のなかでの日本アニメの特殊性、そして被害とトラウマの記憶を語る戦争アニメの反戦メッセージを論じる。
 credits:
   - role: translator

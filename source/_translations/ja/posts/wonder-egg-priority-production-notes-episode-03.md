@@ -6,8 +6,7 @@ slug: wonder-egg-priority-production-notes-episode-03
 language: ja
 status: review
 title: ワンダーエッグ・プライオリティ 第3話 制作ノート
-title_breaks:
-  - ワンダーエッグ・プライオリティ 第3話 制作ノート
+title_breaks: ["ワンダーエッグ・プライオリティ 第3話 制作ノート"]
 excerpt: kViNが『ワンダーエッグ・プライオリティ』第3話の制作を読み解く。米森雄紀の演出デビューを軸に、キャラクター作画、触れることの言語、写実と誇張を行き来する映像表現に迫る。
 credits:
   - role: translator

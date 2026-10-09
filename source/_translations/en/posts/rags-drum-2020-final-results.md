@@ -16,7 +16,7 @@ rights: Original work. Reproduction without authorization is prohibited.
 format: article
 updated: 2026-09-29
 title: "Rags Drum 2020: Results of the Annual Call for Submissions"
-title_breaks: ["Rags Drum 2020:", "Results of the", "Annual Call", "for Submissions"]
+title_breaks: ["Rags Drum 2020:","Results of the Annual Call for Submissions"]
 subtitle: Mission Accomplished
 date: 2020-11-05
 categories: [Lab on Roof Community]

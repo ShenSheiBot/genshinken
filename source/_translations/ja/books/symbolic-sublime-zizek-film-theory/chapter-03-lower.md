@@ -5,8 +5,7 @@ slug: chapter-03-lower
 language: ja
 status: reviewed
 title: 第3章　映画研究における階級闘争（下）
-title_breaks:
-  - 第3章　映画研究における階級闘争（下）
+title_breaks: ["第3章　映画研究における","階級闘争（下）"]
 excerpt: マシュー・フリスフェダーが、ラカン、マルクス主義、イデオロギー批判を出発点に、ジジェクが映画を通して崇高な対象、階級闘争、形式、享楽をどう論じるのかを体系的に説き明かす。
 credits:
   - role: translator

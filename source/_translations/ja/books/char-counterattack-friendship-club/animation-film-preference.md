@@ -8,7 +8,7 @@ slug: "animation-film-preference"
 language: "ja"
 status: "review"
 title: "アニメ映画好き嫌い論――會川昇寄稿"
-title_breaks: ["アニメ映画好き嫌い論――會川昇寄稿"]
+title_breaks: ["アニメ映画好き嫌い論","――會川昇寄稿"]
 credits: [{"role":"translator","contributor_id":"bing-koori","scope":"中国語版"},{"role":"translator","contributor_id":"shen-shui-bot","scope":"全文"},{"role":"reviewer","contributor_id":"shen-shui-bot","scope":"全文"}]
 translation_method: "agent"
 source_relationship: "direct"

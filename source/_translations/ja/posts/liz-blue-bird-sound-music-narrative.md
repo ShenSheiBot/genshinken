@@ -6,11 +6,7 @@ slug: liz-blue-bird-sound-music-narrative
 language: ja
 status: reviewed
 title: 「形影相追」――『リズと青い鳥』における音響効果・音楽・物語・アニメーションの有機的な結びつき
-title_breaks:
-  - 「形影相追」――
-  - 『リズと青い鳥』における
-  - 音響効果・音楽・物語・アニメーションの
-  - 有機的な結びつき
+title_breaks: ["「形影相追」","――『リズと青い鳥』における","音響効果・音楽・物語・","アニメーションの有機的な結びつき"]
 excerpt: 「形影相追」――『リズと青い鳥』における音響効果・音楽・物語・アニメーションの有機的な結びつき
 credits:
   - role: translator

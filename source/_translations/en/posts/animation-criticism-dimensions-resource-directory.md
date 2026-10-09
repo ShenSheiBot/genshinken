@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Personal Notes on Expanding","the Dimensions of Animation Criticism:","A Resource Directory, Version 2.2"]
 title: "Personal Notes on Expanding the Dimensions of Animation Criticism: A Resource Directory, Version 2.2"
 date: 2019-03-24
 updated: 2026-10-02

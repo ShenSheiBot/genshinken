@@ -6,7 +6,7 @@ slug: sep-foreknowledge-and-free-will
 language: ja
 status: reviewed
 title: SEP：予知と自由意志（Foreknowledge and Free Will）
-title_breaks: ["SEP：予知と自由意志（Foreknowledge and Free Will）"]
+title_breaks: ["SEP：予知と自由意志","（Foreknowledge and Free Will）"]
 excerpt: 『スタンフォード哲学百科事典』（SEP）の項目「予知と自由意志」。神学的宿命論の基本論証を出発点に、アリストテレス、ボエティウス、オッカム、モリナ、フランクファートの名を冠する応答を整理し、論理的宿命論と時間的様相の問題を論じる。
 credits:
   - role: translator

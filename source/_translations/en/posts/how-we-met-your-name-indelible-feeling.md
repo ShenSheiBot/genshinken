@@ -1,4 +1,5 @@
 ---
+title_breaks: ["How We Met:","Reading Your Name","through an Indelible Feeling"]
 work_id: how-we-met-your-name-indelible-feeling
 source_type: post
 source_slug: how-we-met-your-name-indelible-feeling

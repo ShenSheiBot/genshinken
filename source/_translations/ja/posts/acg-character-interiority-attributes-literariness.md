@@ -6,9 +6,7 @@ slug: acg-character-interiority-attributes-literariness
 language: ja
 status: reviewed
 title: ACGキャラクターの内面・属性・文学性
-title_breaks:
-  - ACGキャラクターの内面・
-  - 属性・文学性
+title_breaks: ["ACGキャラクターの内面・属性・文学性"]
 excerpt: キャラクターの属性と意志の衝突を出発点に、手塚治虫、『かぐや様は告らせたい』、長門有希、里村茜を結び、キャラクターの内面の葛藤を通じてライトノベルと漫画が文学性を獲得する過程を論じる。
 credits:
   - role: translator

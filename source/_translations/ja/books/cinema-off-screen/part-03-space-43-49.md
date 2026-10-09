@@ -7,8 +7,7 @@ slug: part-03-space-43-49
 language: ja
 status: reviewed
 title: 第3期　第1章「空間」（43–49頁）
-title_breaks:
-  - 第3期　第1章「空間」（43–49頁）
+title_breaks: ["第3期　第1章「空間」","（43–49頁）"]
 excerpt: Chenshu Zhou『Cinema Off Screen』中国語抄訳の日本語版。社会主義中国の上映空間、労働者文化宮、農村映写員の労働を考察する。
 credits:
   - role: translator

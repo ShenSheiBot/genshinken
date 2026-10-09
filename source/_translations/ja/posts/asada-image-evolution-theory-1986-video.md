@@ -6,10 +6,7 @@ slug: asada-image-evolution-theory-1986-video
 language: ja
 status: reviewed
 title: 浅田彰『影像進化論』（1986）
-title_breaks:
-  - 浅田彰
-  - 『影像進化論』
-  - （1986）
+title_breaks: ["浅田彰『影像進化論』（1986）"]
 excerpt: 1986年のテレビ番組『影像進化論』の抜粋：浅田彰がスピノザとフェルメールを取り上げ、科学／芸術の二元論へと話を進める。Vall訳、红茶泡海苔校正。
 credits:
   - role: translator

@@ -7,8 +7,7 @@ slug: chapter-15
 language: ja
 status: reviewed
 title: 第十五章　脱・キャラ論――ケータイ小説と「物語／叙事」の逆襲
-title_breaks:
-  - 第十五章　脱・キャラ論――ケータイ小説と「物語／叙事」の逆襲
+title_breaks: ["第十五章　脱・キャラ論","――ケータイ小説と","「物語／叙事」の逆襲"]
 excerpt: 宇野常寛が十六章にわたり、90年代からゼロ年代にかけての日本文化の想像力の変化を追い、世界系、決断主義、生存系、母性のディストピアと、その超克について論じる。
 credits:
   - role: translator

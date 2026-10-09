@@ -7,8 +7,7 @@ slug: chapter-09-late-modernity-imperialism
 language: ja
 status: reviewed
 title: 第9章　後期近代のフェミニズムと帝国主義
-title_breaks:
-  - 第9章　後期近代のフェミニズムと帝国主義
+title_breaks: ["第9章　後期近代の","フェミニズムと帝国主義"]
 excerpt: スーザン・アーチャー・マンとアシュリー・スザンヌ・パターソンによるフェミニズム理論の手引き。知識生産、リベラル、ラディカル、社会主義、交差性から、第三波と帝国主義批判へ。
 credits:
   - role: translator

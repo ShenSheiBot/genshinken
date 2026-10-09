@@ -6,10 +6,7 @@ slug: tokyo-ghoul-unravel-opening-analysis
 language: ja
 status: review
 title: 回答：『東京喰種トーキョーグール』のOP「unravel」をどう評価する？
-title_breaks:
-  - 回答：
-  - 『東京喰種トーキョーグール』のOP
-  - 「unravel」をどう評価する？
+title_breaks: ["回答：『東京喰種トーキョーグール』の","OP「unravel」をどう評価する？"]
 excerpt: 「unravel」の語義、金木研の孤立した姿、人物と鏡像の非対称な関係、そして赫子の視覚表現から、『東京喰種トーキョーグール』のオープニングが自己の分裂と世界の崩壊をどう描くかを読み解く。
 credits:
   - role: translator

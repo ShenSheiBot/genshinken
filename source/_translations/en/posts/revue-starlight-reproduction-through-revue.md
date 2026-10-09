@@ -1,4 +1,5 @@
 ---
+title_breaks: ["New Anime, New Takes |","Revue Starlight—Reproduction","through Revue"]
 work_id: revue-starlight-reproduction-through-revue
 source_type: post
 source_slug: revue-starlight-reproduction-through-revue

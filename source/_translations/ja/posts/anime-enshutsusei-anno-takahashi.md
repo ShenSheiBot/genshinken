@@ -1,6 +1,6 @@
 ---
 title: アニメーションの演出性――安濃高志と高橋ナオヒトの再発見
-title_breaks: [アニメーションの演出性――, 安濃高志と高橋ナオヒトの再発見]
+title_breaks: ["アニメーションの演出性――","安濃高志と","高橋ナオヒトの再発見"]
 date: 2022-10-30
 slug: anime-enshutsusei-anno-takahashi
 script: ja

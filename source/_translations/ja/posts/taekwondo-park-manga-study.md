@@ -1,6 +1,6 @@
 ---
 title: 漫画研究：『空手道朴』
-title_breaks: [漫画研究：, 『空手道朴』]
+title_breaks: ["漫画研究：『空手道朴』"]
 date: 2019-10-10
 slug: taekwondo-park-manga-study
 script: ja

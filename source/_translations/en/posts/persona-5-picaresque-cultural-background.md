@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Feature |","The Song of the Haughty Wanderer:","On the Cultural Background of Persona 5"]
 work_id: persona-5-picaresque-cultural-background
 source_type: post
 source_slug: persona-5-picaresque-cultural-background

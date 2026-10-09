@@ -6,9 +6,7 @@ slug: suan-anime-spatiality
 language: ja
 status: reviewed
 title: 「日本アニメ」の空間性――メディア形式、脱定位、グローバル化
-title_breaks:
-  - 「日本アニメ」の空間性――
-  - メディア形式、脱定位、グローバル化
+title_breaks: ["「日本アニメ」の空間性――","メディア形式、脱定位、","グローバル化"]
 excerpt: スティービー・スアンが、メディア形式、脱定位、グローバル化を手がかりに、「日本アニメ」の空間性を問い直す。
 credits:
   - role: translator

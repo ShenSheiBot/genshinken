@@ -1,4 +1,5 @@
 ---
+title_breaks: ["A Theory of Urban Space","in Makoto Shinkai’s Films"]
 title: A Theory of Urban Space in Makoto Shinkai’s Films
 date: 2026-08-30
 work_id: shinkai-urban-space-theory

@@ -7,8 +7,7 @@ slug: part-3-chapter-7-gift-exchange
 language: ja
 status: reviewed
 title: 第三部：世界宗教をめぐって｜第七章：贈与と交換、およびあとがき
-title_breaks:
-  - 第三部：世界宗教をめぐって｜第七章：贈与と交換、およびあとがき
+title_breaks: ["第三部：世界宗教をめぐって｜","第七章：贈与と交換、","およびあとがき"]
 excerpt: 柄谷行人『探究Ⅱ』の中国語掲載全文に基づく日本語訳。固有名、単独性、特殊性、超越論的動機をめぐり、主体、他者、歴史を考察する。
 credits:
   - role: translator

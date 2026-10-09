@@ -1,4 +1,5 @@
 ---
+title_breaks: ["A Genuine and Inclusive Will to Live:","Chōnin Culture and Ukiyo-e","in Bōyū Tōkaidō"]
 work_id: bouyuu-toukaidou-chonin-culture-ukiyo-e
 source_type: post
 source_slug: bouyuu-toukaidou-chonin-culture-ukiyo-e

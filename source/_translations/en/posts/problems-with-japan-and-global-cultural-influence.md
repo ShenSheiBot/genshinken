@@ -1,4 +1,5 @@
 ---
+title_breaks: ["What Is Wrong with Japan?","Why Does Japanese Culture Have","So Much Influence around the World?"]
 title: "What Is Wrong with Japan? Why Does Japanese Culture Have So Much Influence around the World?"
 date: 2019-04-03
 slug: problems-with-japan-and-global-cultural-influence

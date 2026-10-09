@@ -1,4 +1,5 @@
 ---
+title_breaks: ["FGO 2.4:","The Final Dark Human","— Soyons tout!"]
 work_id: fgo-lostbelt-4-black-final-human
 source_type: post
 source_slug: fgo-lostbelt-4-black-final-human

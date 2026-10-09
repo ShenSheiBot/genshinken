@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Does “Yàsāxī” (優しい)","Really Mean Chinese “Wēnróu”","— “Gentle”?"]
 title: 'Does “Yàsāxī” (優しい) Really Mean Chinese “Wēnróu” — “Gentle”?'
 date: "2019-05-09"
 updated: "2026-10-03"

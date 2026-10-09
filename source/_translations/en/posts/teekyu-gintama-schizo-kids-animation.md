@@ -1,6 +1,6 @@
 ---
 title: "A Kind of Schizo-Kid Anime: Teekyu VS Gintama"
-title_breaks: ["A Kind of Schizo-Kid Anime: Teekyu VS Gintama"]
+title_breaks: ["A Kind of Schizo-Kid Anime:","Teekyu VS Gintama"]
 date: 2020-02-25
 slug: teekyu-gintama-schizo-kids-animation
 script: latn

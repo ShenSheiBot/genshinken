@@ -1,4 +1,5 @@
 ---
+title_breaks: ["“The Hystericized Postmodern”:","A Psychoanalytic Critique of Hiroki Azuma"]
 title: "“The Hystericized Postmodern”: A Psychoanalytic Critique of Hiroki Azuma"
 date: 2019-01-01
 slug: hystericized-postmodern-azuma-critique

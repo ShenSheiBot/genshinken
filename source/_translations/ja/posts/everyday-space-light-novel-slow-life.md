@@ -6,7 +6,7 @@ slug: everyday-space-light-novel-slow-life
 language: ja
 status: review
 title: "『都市・空間』寄稿企画　日常の空間：ライトノベルの「スローライフ」への転回とその本質"
-title_breaks: ["『都市・空間』寄稿企画　日常の空間：ライトノベルの「スローライフ」への転回とその本質"]
+title_breaks: ["『都市・空間』寄稿企画　日常の空間：","ライトノベルの","「スローライフ」への転回と","その本質"]
 excerpt: "Webライトノベルの「スローライフ」への転回を手がかりに、異世界がいかに日常を取り戻すための空間を提供するのかを分析し、その想像力と都市の労働、消費社会、郊外の共同体との関係を論じる。"
 credits:
   - role: translator

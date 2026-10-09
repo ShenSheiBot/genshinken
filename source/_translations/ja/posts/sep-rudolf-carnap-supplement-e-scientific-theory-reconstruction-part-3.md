@@ -6,10 +6,7 @@ slug: sep-rudolf-carnap-supplement-e-scientific-theory-reconstruction-part-3
 language: ja
 status: reviewed
 title: SEP「ルドルフ・カルナップ」――補遺 E：科学理論の再構成（3）
-title_breaks:
-  - SEP「ルドルフ・カルナップ」――
-  - 補遺 E：
-  - 科学理論の再構成（3）
+title_breaks: ["SEP「ルドルフ・カルナップ」","――補遺 E：","科学理論の再構成（3）"]
 excerpt: 『スタンフォード哲学百科事典』「ルドルフ・カルナップ」の補遺 E「科学理論の再構成」第3回。原補遺の第6節全体を収録し、成熟期のカルナップによる理論再構成の構造主義と、構造実在論との違いを論じる。中国語訳をもとにした日本語版。
 credits:
   - role: translator

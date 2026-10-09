@@ -7,8 +7,7 @@ slug: love-transcendence-time-image
 language: ja
 status: reviewed
 title: 第二章：愛と超越、時間イメージ
-title_breaks:
-  - 第二章：愛と超越、時間イメージ
+title_breaks: ["第二章：愛と超越、","時間イメージ"]
 excerpt: 空間のリアリズム、愛と超越、時間イメージという三つの次元から、押井守、高橋ナオヒト、川面真也が静止、長回し、ミザンセーヌを通じて、スローアニメ独自の美学をいかに生み出しているかを考察する。
 credits:
   - role: translator

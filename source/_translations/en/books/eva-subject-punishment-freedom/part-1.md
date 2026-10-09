@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Part One:","Sekai-kei and","Asuka—Trauma of the Self"]
 work_id: eva-subject-punishment-freedom-part-1
 source_type: book-chapter
 source_book_slug: eva-subject-punishment-freedom

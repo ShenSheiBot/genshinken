@@ -1,4 +1,6 @@
 ---
+title_breaks: ["Kamen Rider Kiva:","Art, Betrayal,","Transcendence—Breaking","the Shackles of Fate"]
+
 title: "Kamen Rider Kiva: Art, Betrayal, Transcendence—Breaking the Shackles of Fate"
 date: 2019-05-04
 slug: kamen-rider-kiva-oto-ya-art-betrayal

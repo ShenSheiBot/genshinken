@@ -1,4 +1,5 @@
 ---
+title_breaks: ["The Pure-Love Matrix","of The Song of Saya"]
 title: "The Pure-Love Matrix of The Song of Saya"
 description: "Starting from the relationships established at the opening of The Song of Saya, Fei Mu uses complete graphs and the logic of pure love to derive the structural positions of its three endings."
 date: 2021-07-31

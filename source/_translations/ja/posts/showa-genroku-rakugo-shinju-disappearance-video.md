@@ -6,9 +6,7 @@ slug: showa-genroku-rakugo-shinju-disappearance-video
 language: ja
 status: review
 title: 『昭和元禄落語心中』と死
-title_breaks:
-  - 『昭和元禄落語心中』と
-  - 死
+title_breaks: ["『昭和元禄落語心中』と死"]
 excerpt: Pause and Select が『昭和元禄落語心中』を通して落語、伝統、死を論じる。中国語版は群青七号楼による有志翻訳。
 credits:
   - role: translator

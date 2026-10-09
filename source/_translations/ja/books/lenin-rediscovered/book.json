@@ -5,5 +5,8 @@
   "language": "ja",
   "title": "レーニン再発見",
   "excerpt": "Lars T. Lih『Lenin Rediscovered』の中国語編訳をもとに、社会主義と労働運動の結合という定式から、レーニンとロシア社会民主主義の歴史的文脈に分け入る。",
-  "subtitle": "『何をなすべきか？』の歴史的文脈"
+  "subtitle": "『何をなすべきか？』の歴史的文脈",
+  "title_breaks": [
+    "レーニン再発見"
+  ]
 }

@@ -1,4 +1,5 @@
 ---
+title_breaks: ["New Anime, New Reflections |","Thoughts Prompted by Zombie Land Saga:","Can Idols Become Legends?"]
 title: "New Anime, New Reflections | Thoughts Prompted by Zombie Land Saga: Can Idols Become Legends?"
 date: 2018-12-14
 updated: 2026-10-03

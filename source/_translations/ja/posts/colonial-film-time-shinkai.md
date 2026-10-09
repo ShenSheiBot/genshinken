@@ -6,10 +6,7 @@ slug: colonial-film-time-shinkai
 language: ja
 status: review
 title: 植民地性の映画的時間――新海誠『雲のむこう、約束の場所』論
-title_breaks:
-  - 植民地性の映画的時間――
-  - 新海誠
-  - 『雲のむこう、約束の場所』論
+title_breaks: ["植民地性の映画的時間","――新海誠","『雲のむこう、約束の場所』論"]
 excerpt: 分断された日本、遠い塔、平行する世界。新海誠の映像が現在の植民地性を可視化する一方、その結末はいかに歴史からの逃避を夢見るのか。
 credits:
   - role: translator

@@ -1,6 +1,6 @@
 ---
 title: 日本アニメ研究の脱植民地化――序論
-title_breaks: ["日本アニメ研究の脱植民地化――", "序論"]
+title_breaks: ["日本アニメ研究の脱植民地化","――序論"]
 date: 2026-03-18
 slug: decolonising-anime-studies-prolegomenon
 categories: [アニメ]

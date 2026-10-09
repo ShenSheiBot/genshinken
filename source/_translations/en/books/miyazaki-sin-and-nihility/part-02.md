@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Part Two:","Paradise Lost,","Love, and Rebirth"]
 work_id: miyazaki-sin-and-nihility-part-02
 source_type: book-chapter
 source_book_slug: miyazaki-sin-and-nihility

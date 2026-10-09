@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Exquisite Psychedelic Longing,","Childhood Entwined","with Strange Dreams:","A Cultural Genealogy of “Alice”"]
 work_id: alice-cultural-genealogy-touhou
 source_type: post
 source_slug: alice-cultural-genealogy-touhou

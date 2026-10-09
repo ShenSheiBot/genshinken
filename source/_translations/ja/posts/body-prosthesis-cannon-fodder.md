@@ -1,6 +1,6 @@
 ---
 title: 作品考古｜身体／義肢――『大砲の街』で自律する技術的対象
-title_breaks: ["作品考古｜身体／義肢", "――『大砲の街』で自律する技術的対象"]
+title_breaks: ["作品考古｜身体／義肢","――『大砲の街』で自律する","技術的対象"]
 date: 2018-12-24
 slug: body-prosthesis-cannon-fodder
 script: ja

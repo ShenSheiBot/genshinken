@@ -6,7 +6,7 @@ slug: audre-lorde-masters-tools-house
 language: ja
 status: reviewed
 title: 主人の道具は決して主人の家を解体できない
-title_breaks: ["主人の道具は決して主人の家を解体できない"]
+title_breaks: ["主人の道具は決して","主人の家を解体できない"]
 excerpt: オードリー・ロードは、フェミニズムの学問が黒人女性、レズビアン、貧しい女性、第三世界の女性の経験を排除していると批判し、差異が共同体を生み出す創造的な力になりうることを論じる。
 credits:
   - role: translator

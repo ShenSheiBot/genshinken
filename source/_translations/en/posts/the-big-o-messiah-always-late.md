@@ -1,6 +1,7 @@
 ---
+title_breaks: ["The Messiah Who Is Bound","to Be Late—A Reading of The Big O"]
 title: "The Messiah Who Is Bound to Be Late—A Reading of The Big O"
-title_breaks: ["The Messiah Who Is Bound to Be Late—A Reading of The Big O"]
+
 date: 2020-11-10
 slug: the-big-o-messiah-always-late
 script: latn

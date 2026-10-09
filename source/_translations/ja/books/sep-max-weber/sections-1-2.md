@@ -5,8 +5,7 @@ slug: sections-1-2
 language: ja
 status: reviewed
 title: 第1〜2節：生涯と経歴、哲学的影響
-title_breaks:
-  - 第1〜2節：生涯と経歴、哲学的影響
+title_breaks: ["第1〜2節：","生涯と経歴、哲学的影響"]
 excerpt: 『スタンフォード哲学百科事典』の「マックス・ヴェーバー」から、序文と第1〜5節を中国語版に基づいて日本語訳。原項目の第6〜7節、注、完全な参考文献一覧は中国語版では未訳。
 credits:
   - role: translator

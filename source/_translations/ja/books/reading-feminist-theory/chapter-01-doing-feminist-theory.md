@@ -7,8 +7,7 @@ slug: chapter-01-doing-feminist-theory
 language: ja
 status: reviewed
 title: 第1章　フェミニズム理論をつくる
-title_breaks:
-  - 第1章　フェミニズム理論をつくる
+title_breaks: ["第1章　フェミニズム理論","をつくる"]
 excerpt: スーザン・アーチャー・マンとアシュリー・スザンヌ・パターソンによるフェミニズム理論の手引き。知識生産、リベラル、ラディカル、社会主義、交差性から、第三波と帝国主義批判へ。
 credits:
   - role: translator

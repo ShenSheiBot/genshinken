@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Revised Version ||","Frontstage, Backstage, and the Theater:","An Analysis of Revue Starlight","through Goffman’s Dramaturgical Perspective"]
 title: "Revised Version || Frontstage, Backstage, and the Theater: An Analysis of Revue Starlight through Goffman’s Dramaturgical Perspective"
 date: 2019-04-05
 updated: 2026-10-03

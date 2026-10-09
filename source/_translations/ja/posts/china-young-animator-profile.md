@@ -6,9 +6,7 @@ slug: china-young-animator-profile
 language: ja
 status: review
 title: ちな（China）：16歳で業界入りした超天才原画マン
-title_breaks:
-  - ちな（China）：
-  - 16歳で業界入りした超天才原画マン
+title_breaks: ["ちな（China）：","16歳で業界入りした","超天才原画マン"]
 excerpt: 16歳で日本のアニメ業界に飛び込んだちな（China）を紹介。原画から作画監督、さらに絵コンテ・演出へと駆け上がる、その成長をたどる。
 credits:
   - role: translator

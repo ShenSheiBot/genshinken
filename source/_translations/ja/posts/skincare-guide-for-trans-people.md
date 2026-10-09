@@ -6,8 +6,7 @@ source_slug: skincare-guide-for-trans-people
 language: ja
 status: reviewed
 title: トランスジェンダーの人たちと、すべての人へ――かんたんスキンケア入門
-title_breaks:
-  - "トランスジェンダーの人たちと、すべての人へ――かんたんスキンケア入門"
+title_breaks: ["トランスジェンダーの人たちと、","すべての人へ","――かんたんスキンケア入門"]
 excerpt: トランスジェンダーの人たちと、すべての人のためのスキンケア入門。肌の状態、洗浄、保湿、紫外線対策から、予算と買い物先まで。
 credits:
   - role: translator

@@ -7,8 +7,7 @@ slug: part-3
 language: ja
 status: reviewed
 title: ジェンダーの視点から読む『素晴らしき日々』（下）
-title_breaks:
-  - ジェンダーの視点から読む『素晴らしき日々』（下）
+title_breaks: ["ジェンダーの視点から読む","『素晴らしき日々』（下）"]
 excerpt: 精神分析、クィア理論、ジェンダー社会学を手がかりに、钟子默が『素晴らしき日々』の登場人物、欲望と権力の関係を読み解く三部作。
 credits:
   - role: translator

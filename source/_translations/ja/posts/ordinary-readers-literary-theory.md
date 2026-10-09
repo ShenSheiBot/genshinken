@@ -6,9 +6,7 @@ slug: ordinary-readers-literary-theory
 language: ja
 status: reviewed
 title: 回答：一般の読者は文学理論をどう考えればよいのか？
-title_breaks:
-  - 回答：一般の読者は
-  - 文学理論をどう考えればよいのか？
+title_breaks: ["回答：一般の読者は","文学理論を","どう考えればよいのか？"]
 excerpt: 文学理論が常識や体系的な解釈を疑うことから出発し、文学の危機や読書をめぐる関係を通じて、理論、近代文学、一般読者が互いをどう成り立たせるのかを論じる。
 credits:
   - role: translator

@@ -6,9 +6,7 @@ slug: chiba-kokubun-before-language-disappears
 language: ja
 status: reviewed
 title: 言語が消滅する前に
-title_breaks:
-  - 言語が
-  - 消滅する前に
+title_breaks: ["言語が消滅する前に"]
 excerpt: 國分功一郎と千葉雅也が、交流と即時的な情動が幅を利かせる時代に言語がなぜ後退しつつあるのか、そして詩、文学、教育、政治が言語の物質性と間接性をいかに保つのかを論じる。
 credits:
   - role: translator

@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Answer: How Should We Assess","Tatsuki Fujimoto’s One-Shot Manga","Look Back?—A Lacanian Analysis"]
 title: "Answer: How Should We Assess Tatsuki Fujimoto’s One-Shot Manga Look Back?—A Lacanian Analysis"
 date: "2021-08-11"
 work_id: look-back-lacanian-analysis

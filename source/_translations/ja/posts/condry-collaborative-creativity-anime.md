@@ -1,6 +1,6 @@
 ---
 title: 創造的な協働、ダークエネルギー、そして日本アニメ産業の世界的成功
-title_breaks: ["創造的な協働、ダークエネルギー、そして", "日本アニメ産業の世界的成功"]
+title_breaks: ["創造的な協働、","ダークエネルギー、そして","日本アニメ産業の世界的成功"]
 date: 2019-04-29
 slug: condry-collaborative-creativity-anime
 script: ja

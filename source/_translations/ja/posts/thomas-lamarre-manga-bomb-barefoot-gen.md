@@ -2,7 +2,7 @@
 updated: '2026-10-08'
 
 title: Manga Bomb――『はだしのゲン』の線のあいだ
-title_breaks: ["Manga Bomb――", "『はだしのゲン』の", "線のあいだ"]
+title_breaks: ["Manga Bomb――","『はだしのゲン』の","線のあいだ"]
 date: 2026-07-20
 slug: thomas-lamarre-manga-bomb-barefoot-gen
 categories: [思想・理論]

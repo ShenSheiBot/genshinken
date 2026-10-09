@@ -6,9 +6,7 @@ slug: deleuze-film-theory-introduction-upper
 language: ja
 status: reviewed
 title: ドゥルーズ映画理論入門（上）
-title_breaks:
-  - ドゥルーズ映画理論
-  - 入門（上）
+title_breaks: ["ドゥルーズ映画理論入門（上）"]
 excerpt: リチャード・ラシュトンがオフュルスの『永遠のガビー』と『輪舞』を例に、ドゥルーズの運動イメージと時間イメージを区別し、開かれた過去と歴史の変化を論じる。
 credits:
   - role: translator

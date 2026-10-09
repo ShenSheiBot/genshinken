@@ -1,6 +1,6 @@
 ---
 title: 一周年｜守り続けるものと、これから――屋顶からの手紙
-title_breaks: [一周年｜守り続けるものと、これから――, 屋顶からの手紙]
+title_breaks: ["一周年｜","守り続けるものと、","これから――屋顶からの手紙"]
 date: 2019-08-10
 slug: first-anniversary-persistence-and-outlook
 script: ja

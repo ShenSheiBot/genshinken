@@ -5,8 +5,7 @@ slug: chapter-02-lower
 language: ja
 status: reviewed
 title: 第2章　映画における崇高な対象（下）
-title_breaks:
-  - 第2章　映画における崇高な対象（下）
+title_breaks: ["第2章　映画における","崇高な対象（下）"]
 excerpt: マシュー・フリスフェダーが、ラカン、マルクス主義、イデオロギー批判を出発点に、ジジェクが映画を通して崇高な対象、階級闘争、形式、享楽をどう論じるのかを体系的に説き明かす。
 credits:
   - role: translator

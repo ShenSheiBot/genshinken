@@ -1,6 +1,6 @@
 ---
 title: "ノイズの信号――『serial experiments lain』の同人漫画にして図像論文*"
-title_breaks: ["ノイズの信号――", "『serial experiments lain』の", "同人漫画にして", "図像論文*"]
+title_breaks: ["ノイズの信号――","『serial experiments lain』の","同人漫画にして図像論文*"]
 date: 2026-01-25
 slug: manga-signal-of-noise
 categories: [漫画]

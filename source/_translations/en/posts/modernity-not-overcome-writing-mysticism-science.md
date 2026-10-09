@@ -1,4 +1,6 @@
 ---
+title_breaks: ["The Non-Overcoming of Modernity:", "Absent Origin", "and Subjectivity—The Mysticism", "of Writing and Science"]
+
 title: 'The Non-Overcoming of Modernity: Absent Origin and Subjectivity—The Mysticism of Writing and Science'
 excerpt: From the mystical power of Chinese characters to the birth of the subject, this essay examines absent origins, science, and the East’s non-overcoming of modernity.
 work_id: modernity-not-overcome-writing-mysticism-science

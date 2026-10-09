@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Tracing the Sources of Humor","in Tomihiko Morimi’s Works"]
 work_id: morimi-tomihiko-humor-genealogy
 source_type: post
 source_slug: morimi-tomihiko-humor-genealogy

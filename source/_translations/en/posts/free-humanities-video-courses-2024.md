@@ -1,4 +1,5 @@
 ---
+title_breaks: ["A Guide to Free Video Courses","for the Intellectually Curious","(Humanities, Social Sciences, and the Arts)","| 2024 Version"]
 title: "A Guide to Free Video Courses for the Intellectually Curious (Humanities, Social Sciences, and the Arts) | 2024 Version"
 date: 2024-08-28
 updated: "2026-10-02"

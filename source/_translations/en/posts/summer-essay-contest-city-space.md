@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Lab on Roof Summer Essay Contest:","Cities · Space"]
 title: "Lab on Roof Summer Essay Contest: Cities · Space"
 date: 2019-06-07
 work_id: summer-essay-contest-city-space

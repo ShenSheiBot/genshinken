@@ -7,8 +7,7 @@ slug: science-imagery
 language: ja
 status: reviewed
 title: 2. 科学のイメージ――現実の垣根を越えて
-title_breaks:
-  - 2. 科学のイメージ――現実の垣根を越えて
+title_breaks: ["2. 科学のイメージ","――現実の垣根を越えて"]
 excerpt: 作品の何を、私たちは科学らしい、魔法らしいと感じるのか。もっともらしいSF性と他者性を手掛かりに、アニメ、マンガ、ゲーム、ライトノベルにおける両者のイメージの成り立ちと、境界が曖昧になる理由を考える。
 credits:
   - role: translator

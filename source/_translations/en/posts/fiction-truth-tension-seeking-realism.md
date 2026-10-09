@@ -1,4 +1,5 @@
 ---
+title_breaks: ["The Tension Between","Fiction and Truth—How to Seek","a Sense of Reality in Fictional Stories"]
 title: "The Tension Between Fiction and Truth—How to Seek a Sense of Reality in Fictional Stories"
 date: 2019-02-09
 updated: 2026-10-02

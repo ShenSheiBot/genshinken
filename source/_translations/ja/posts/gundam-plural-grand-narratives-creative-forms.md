@@ -6,9 +6,7 @@ slug: gundam-plural-grand-narratives-creative-forms
 language: ja
 status: reviewed
 title: 雑談｜多元的な大きな物語と創作形式――ガンダムシリーズを例に
-title_breaks:
-  - 雑談｜多元的な大きな物語と
-  - 創作形式――ガンダムシリーズを例に
+title_breaks: ["雑談｜多元的な大きな物語と","創作形式――","ガンダムシリーズを例に"]
 excerpt: ガンダムシリーズの外伝、設定資料集、ゲーム、平行世界を例に、虚構の歴史が複数の創作形式を通じて多元的な大きな物語を形づくる仕組みを論じる。
 credits:
   - role: translator

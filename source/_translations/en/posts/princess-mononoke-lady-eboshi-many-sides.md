@@ -1,4 +1,5 @@
 ---
+title_breaks: ["An Essay on Princess Mononoke:","Lady Eboshi’s Many Sides"]
 title: "An Essay on Princess Mononoke: Lady Eboshi’s Many Sides"
 date: 2019-01-28
 slug: princess-mononoke-lady-eboshi-many-sides

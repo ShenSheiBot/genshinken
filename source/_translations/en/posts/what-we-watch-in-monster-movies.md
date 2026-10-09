@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Casual Thoughts |","What Are We Really Watching","When We Watch Monster Movies?"]
 title: "Casual Thoughts | What Are We Really Watching When We Watch Monster Movies?"
 description: "From Godzilla to Pacific Rim, a debate about what monster movies show us beyond the spectacle: disaster, human nature, and anthropocentrism."
 date: 2018-12-01

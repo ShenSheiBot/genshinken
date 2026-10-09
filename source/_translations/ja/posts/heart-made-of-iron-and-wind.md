@@ -6,9 +6,7 @@ slug: heart-made-of-iron-and-wind
 language: ja
 status: review
 title: 「心は、鉄と風でできているのだと思う。」
-title_breaks:
-  - 「心は、
-  - 鉄と風でできているのだと思う。」
+title_breaks: ["「心は、","鉄と風でできているのだ","と思う。」"]
 excerpt: 『蒼の彼方のフォーリズム』の「心は鉄と風でできている」という比喩から、心が開くこと、決断、そしてゲーム体験にある捉え尽くせない惑いをめぐって考える。
 credits:
   - role: translator

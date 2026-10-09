@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Animation’s Form as a Medium:","Concrete Revolutio Reconsidered","and the “Socially Engaged” Sho Aikawa"]
 title: "Animation’s Form as a Medium: Concrete Revolutio Reconsidered and the “Socially Engaged” Sho Aikawa"
 date: 2019-04-12
 updated: 2026-10-02

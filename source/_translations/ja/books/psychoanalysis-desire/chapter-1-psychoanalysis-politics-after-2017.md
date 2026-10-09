@@ -5,8 +5,7 @@ slug: chapter-1-psychoanalysis-politics-after-2017
 language: ja
 status: reviewed
 title: 精神分析の欲望1：2017年以後の精神分析と政治
-title_breaks:
-  - 精神分析の欲望1：2017年以後の精神分析と政治
+title_breaks: ["精神分析の欲望1：","2017年以後の精神分析と政治"]
 excerpt: ガブリエル・トゥピナンバ『精神分析の欲望』の連載第0～4回（謝辞・序文・序論および第1～4章）。ジジェクの序文と著者の序論を起点に、精神分析の政治、ラカン的イデオロギー、制度の歴史、普遍性の問題を考察する。
 credits:
   - role: translator

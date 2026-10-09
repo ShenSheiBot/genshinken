@@ -1,4 +1,5 @@
 ---
+title_breaks: ["A Few Thoughts on Diaosi Culture:","The Logic of Counterattack"]
 work_id: diaosi-culture-logic-of-counterattack
 source_type: post
 source_slug: diaosi-culture-logic-of-counterattack

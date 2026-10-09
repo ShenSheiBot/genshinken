@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Mamoru Oshii,","Author of Tachigui"]
 title: "Mamoru Oshii, Author of Tachigui"
 date: 2019-08-12
 work_id: author-of-tachiguishi-oshii

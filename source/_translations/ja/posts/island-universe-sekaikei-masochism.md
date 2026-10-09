@@ -6,7 +6,7 @@ slug: island-universe-sekaikei-masochism
 language: ja
 status: review
 title: "「島宇宙」、「セカイ系」、「マゾヒズム」"
-title_breaks: ["「島宇宙」、「セカイ系」、「マゾヒズム」"]
+title_breaks: ["「島宇宙」、","「セカイ系」、","「マゾヒズム」"]
 excerpt: "鍾子默は幻想、被虐的幻想、島宇宙を手がかりに、『天気の子』における社会的媒介と政治的決断の曖昧さを批判し、異性愛による救済を問い直す。"
 credits:
   - role: translator

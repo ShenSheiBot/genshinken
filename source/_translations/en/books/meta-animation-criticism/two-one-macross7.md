@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Excursus:","Macross 7 Against Depth"]
 work_id: meta-animation-criticism-two-one-macross7
 source_type: book-chapter
 source_book_slug: meta-animation-criticism

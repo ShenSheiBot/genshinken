@@ -6,9 +6,7 @@ slug: stevie-suan-globalization-world-system-anime
 language: ja
 status: reviewed
 title: アニメの（反）個人主義
-title_breaks:
-  - アニメの
-  - （反）個人主義
+title_breaks: ["アニメの（反）個人主義"]
 excerpt: スティービー・スアンが『新世紀エヴァンゲリオン』と、その後のセカイ系作品を手がかりに、アニメが個人主義、グローバル化、アイデンティティの危機にどう向き合うのかを論じる。
 credits:
   - role: translator

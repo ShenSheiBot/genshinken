@@ -6,9 +6,7 @@ source_slug: erotophobia-colonization-queers-nature
 language: ja
 status: reviewed
 title: エロトフォビアとクィア／自然の植民地化（1997）
-title_breaks:
-  - エロトフォビアとクィア／自然の
-  - 植民地化（1997）
+title_breaks: ["エロトフォビアと","クィア／自然の植民地化（1997）"]
 excerpt: グレタ・ガードは、エロティックなものへの恐怖・嫌悪が、異性愛規範、人種主義、自然の植民地化にいかに関わってきたかをたどり、クィアと自然の解放の可能性を論じる。
 credits:
   - role: translator

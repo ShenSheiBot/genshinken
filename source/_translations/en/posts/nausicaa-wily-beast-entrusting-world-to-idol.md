@@ -22,11 +22,7 @@ format: article
 title: >-
   From Nausicaä to Wily Beast and Weakest Creature: “Entrusting the World to
   Idols” amid Many Predicaments
-title_breaks:
-  - From Nausicaä to Wily Beast
-  - 'and Weakest Creature:'
-  - “Entrusting the World to Idols”
-  - amid Many Predicaments
+title_breaks: ["From Nausicaä","to Wily Beast and Weakest Creature:","“Entrusting the World to Idols”","amid Many Predicaments"]
 excerpt: >-
   Through Nausicaä, Yurikuma Arashi, Kemono Friends, and Touhou: Wily Beast and
   Weakest Creature, Gongjiuji traces Heisei culture’s changing approaches to

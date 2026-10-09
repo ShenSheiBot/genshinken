@@ -7,8 +7,7 @@ slug: section-7
 language: ja
 status: reviewed
 title: 選訳③：ガメラ、ティガ、ガイアと『EVA』（第7節）
-title_breaks:
-  - 選訳③：ガメラ、ティガ、ガイアと『EVA』（第7節）
+title_breaks: ["選訳③：ガメラ、ティガ、","ガイアと『EVA』（第7節）"]
 excerpt: 宇野常寛がウルトラマンと仮面ライダーを手がかりに、商業的なヒーロー番組が正義を問い直さざるをえなかった歴史をたどる。
 credits:
   - role: translator

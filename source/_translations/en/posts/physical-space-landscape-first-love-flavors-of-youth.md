@@ -23,11 +23,7 @@ excerpt: >-
   considers the material conditions of modern romantic relationships and how
   animation discovers and reproduces the landscapes of young people’s lives in
   China.
-title_breaks:
-  - 'New Anime, New Perspectives | '
-  - 'Physical Space, Landscape, '
-  - 'First Love—Starting with '
-  - Flavors of Youth
+title_breaks: ["New Anime, New Perspectives |","Physical Space, Landscape,","First Love—Starting with Flavors of Youth"]
 ---
 [*Flavors of Youth*](https://www.cwfilms.jp/en/products/article/shikioriori.html) is a Chinese–Japanese animated co-production released in August 2018. Its greatest promise lay in the fact that **the animation production stage was entrusted to Japan’s CoMix Wave Films**. The studio had worked on many of Makoto Shinkai’s films, and the quality of its artwork—particularly its ability to render settings faithfully—is breathtaking. The promotional video certainly caught the eye when it appeared. I, at least, had some hopes for it.
 

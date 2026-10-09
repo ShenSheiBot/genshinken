@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Preface to The King’s Heart:","“Ailing Tomino” and Women’s Issues"]
 title: "Preface to The King’s Heart: “Ailing Tomino” and Women’s Issues"
 date: 2021-05-19
 slug: king-heart-preface-tomino-and-gender

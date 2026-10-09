@@ -6,9 +6,7 @@ slug: how-to-view-shinkais-weathering-with-you
 language: ja
 status: review
 title: 回答：新海誠の新作アニメ『天気の子』をどう見るか？
-title_breaks:
-  - 回答：新海誠の
-  - 新作アニメ『天気の子』をどう見るか？
+title_breaks: ["回答：新海誠の新作アニメ","『天気の子』をどう見るか？"]
 excerpt: 实在狗子が、豪雨という不可視の災厄、少年少女の関係の外に立つおじさんの視点、東京の都市空間を手がかりに『天気の子』を読み直す。そこに見いだすのは、『君の名は。』型のセカイ系構造への反省だ。
 credits:
   - role: translator

@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Part Three:","A Cultural Critique","of the Madwoman Fantasy"]
 excerpt: "Starting from the “madwoman” of feminist literary criticism, this essay traces the history of women’s bodies in Japan—from premodern maternal norms and the Meiji national body to postwar consumer society and shōjo culture—and asks how patriarchal discourse and the possibility of resistance operate in anime attributes such as darkening and yandere."
 work_id: "mad-women-yandere-darkening-cultural-analysis-part-three"
 source_type: "book-chapter"

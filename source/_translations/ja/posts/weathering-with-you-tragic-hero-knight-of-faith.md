@@ -6,7 +6,7 @@ slug: weathering-with-you-tragic-hero-knight-of-faith
 language: ja
 status: review
 title: "「悲劇的英雄―無限の諦めの騎士―信仰の騎士」"
-title_breaks: ["「悲劇的英雄―無限の諦めの騎士―信仰の騎士」"]
+title_breaks: ["「悲劇的英雄―","無限の諦めの騎士―","信仰の騎士」"]
 excerpt: "キルケゴールの悲劇的英雄、無限の諦めの騎士、信仰の騎士を出発点に、精神分析とヘーゲル的弁証法から『天気の子』における帆高の選択、犠牲、享楽を問い直す。"
 credits:
   - role: translator

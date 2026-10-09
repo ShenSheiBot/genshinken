@@ -6,8 +6,7 @@ slug: friends-quarrel-shonen-manga
 language: ja
 status: review
 title: 少年マンガの「友だち同士のけんか」――『K』の伏八などに見る物語の型
-title_breaks:
-  - "少年マンガの「友だち同士のけんか」――『K』の伏八などに見る物語の型"
+title_breaks: ["少年マンガの","「友だち同士のけんか」","――『K』の伏八などに見る","物語の型"]
 excerpt: 篱落呼灯が、『K』の伏見猿比古と八田美咲を中心に、友人同士が別々の道を歩み、やがて理解と和解に至る少年マンガの典型的な物語を論じ、少女マンガの初恋をめぐる構造と並べて考察する。
 credits:
   - role: translator

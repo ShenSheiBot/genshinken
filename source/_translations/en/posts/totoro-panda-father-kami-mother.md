@@ -1,4 +1,5 @@
 ---
+title_breaks: ["New Anime, New Takes |","Totoro’s Panda Father and Divine Mother"]
 title: "New Anime, New Takes | Totoro’s Panda Father and Divine Mother"
 date: 2018-12-18
 slug: totoro-panda-father-kami-mother

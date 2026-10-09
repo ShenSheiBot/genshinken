@@ -1,4 +1,6 @@
 ---
+title_breaks: ["The Most Comprehensive","Feminist Theory Resource Collection","Is Here—Hundreds of Thousands","of Chinese Characters,","and Still Growing"]
+
 title: "The Most Comprehensive Feminist Theory Resource Collection Is Here—Hundreds of Thousands of Chinese Characters, and Still Growing"
 date: 2023-12-12
 updated: "2026-10-02"

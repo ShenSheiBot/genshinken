@@ -6,9 +6,7 @@ slug: conjoined-by-hand-aesthetic-materiality
 language: ja
 status: reviewed
 title: 手によって結び合わされる――漫画『この世界の片隅に』の美学的物質性
-title_breaks:
-  - 手によって結び合わされる――
-  - 漫画『この世界の片隅に』の美学的物質性
+title_breaks: ["手によって結び合わされる","――漫画『この世界の片隅に』","の美学的物質性"]
 excerpt: ジャクリーヌ・ベルントが、美学的物質性の観点から、こうの史代の漫画『この世界の片隅に』における手描きの線、メディア特性、読者の参加を考察する。
 credits:
   - role: translator

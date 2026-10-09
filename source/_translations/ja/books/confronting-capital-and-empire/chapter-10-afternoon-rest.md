@@ -5,8 +5,7 @@ slug: chapter-10-afternoon-rest
 language: ja
 status: reviewed
 title: 第十章：あの憩いと想いの午後に
-title_breaks:
-  - 第十章：あの憩いと想いの午後に
+title_breaks: ["第十章：","あの憩いと想いの午後に"]
 excerpt: 『資本と帝国に対峙する――京都学派哲学を再考する』は、京都学派とマルクス主義が資本主義的近代性をめぐって取り結ぶ思想的関係を論じ、帝国と世界史における日本哲学の位置を考察する。
 credits:
   - role: translator

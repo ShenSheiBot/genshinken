@@ -5,8 +5,7 @@ slug: chapter-04-nishida-antinomy
 language: ja
 status: reviewed
 title: 第四章：西田幾多郎とブルジョワ哲学の二律背反
-title_breaks:
-  - 第四章：西田幾多郎とブルジョワ哲学の二律背反
+title_breaks: ["第四章：西田幾多郎と","ブルジョワ哲学の二律背反"]
 excerpt: 『資本と帝国に対峙する――京都学派哲学を再考する』は、京都学派とマルクス主義が資本主義的近代性をめぐって取り結ぶ思想的関係を論じ、帝国と世界史における日本哲学の位置を考察する。
 credits:
   - role: translator

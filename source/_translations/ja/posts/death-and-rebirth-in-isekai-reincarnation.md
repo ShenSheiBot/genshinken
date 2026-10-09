@@ -6,9 +6,7 @@ slug: death-and-rebirth-in-isekai-reincarnation
 language: ja
 status: review
 title: 死はいかにして「新たな生」となるのか――異世界転生作品における死の研究
-title_breaks:
-  - 死はいかにして「新たな生」となるのか――
-  - 異世界転生作品における死の研究
+title_breaks: ["死はいかにして","「新たな生」となるのか――","異世界転生作品における","死の研究"]
 excerpt: 甚谁がファンタジーから異世界転生への系譜をたどり、主人公の死、人生のリセット、労働倫理、そして日本と中国における「やり直し」の想像力の違いを論じる。
 credits:
   - role: translator

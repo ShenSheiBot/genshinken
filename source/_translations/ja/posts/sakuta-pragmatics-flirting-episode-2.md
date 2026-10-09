@@ -1,6 +1,6 @@
 ---
 title: 語用論から見ると、咲太の口説きの腕前はどれほどすごいのか（1）
-title_breaks: [語用論から見ると、咲太の, 口説きの腕前はどれほどすごいのか（1）]
+title_breaks: ["語用論から見ると、","咲太の口説きの腕前は","どれほどすごいのか（1）"]
 date: 2018-11-17
 slug: sakuta-pragmatics-flirting-episode-2
 script: ja

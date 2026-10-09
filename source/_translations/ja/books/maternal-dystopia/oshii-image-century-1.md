@@ -7,8 +7,7 @@ slug: oshii-image-century-1
 language: ja
 status: reviewed
 title: 押井守と「母性のディストピア」――押井守と『映像の世紀』（一）
-title_breaks:
-  - 押井守と「母性のディストピア」――押井守と『映像の世紀』（一）
+title_breaks: ["押井守と","「母性のディストピア」","――押井守と","『映像の世紀』（一）"]
 excerpt: 宇野常寛は宮崎駿、富野由悠季、押井守、および戦後の映像史を軸に、母性のユートピアと母性のディストピアが日本アニメーションの政治的想像力をいかに形づくったかを論じる。
 credits:
   - role: translator

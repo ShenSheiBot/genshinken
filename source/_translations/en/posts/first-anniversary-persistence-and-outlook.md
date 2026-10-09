@@ -1,4 +1,5 @@
 ---
+title_breaks: ["First Anniversary:","Holding Fast","and Looking Ahead—A Letter","from the Roof"]
 title: "First Anniversary: Holding Fast and Looking Ahead—A Letter from the Roof"
 date: 2019-08-10
 updated: 2026-10-02

@@ -7,8 +7,7 @@ slug: part-1-wartime-animation
 language: ja
 status: reviewed
 title: 物種主義（上）――戦時アニメーションにおける人種の動物への翻訳
-title_breaks:
-  - 物種主義（上）――戦時アニメーションにおける人種の動物への翻訳
+title_breaks: ["物種主義（上）","――戦時アニメーション","における人種の動物への翻訳"]
 excerpt: トーマス・ラマールが、戦時アニメーションにおいて人種差異が人間と動物の種関係へと翻訳される仕方を考察する。
 credits:
   - role: translator

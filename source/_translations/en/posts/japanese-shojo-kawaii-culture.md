@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Why Does Japanese Culture Have","Such a Pathological Fondness for Girls?","Why Do Japanese Women Always","Emphasize Cuteness?"]
 title: "Why Does Japanese Culture Have Such a Pathological Fondness for Girls? Why Do Japanese Women Always Emphasize Cuteness?"
 date: 2019-02-25
 updated: 2026-10-02

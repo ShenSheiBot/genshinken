@@ -1,4 +1,5 @@
 ---
+title_breaks: ["From Animality Back to Humanity:","The Metaphors and Shortcomings","of BEASTARS"]
 title: 'From Animality Back to Humanity: The Metaphors and Shortcomings of BEASTARS'
 date: 2020-01-06
 work_id: beastars-from-animality-to-humanity

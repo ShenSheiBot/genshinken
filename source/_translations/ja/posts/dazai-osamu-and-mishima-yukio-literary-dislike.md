@@ -6,8 +6,7 @@ slug: dazai-osamu-and-mishima-yukio-literary-dislike
 language: ja
 status: reviewed
 title: 回答：太宰治という人をどう評価するか？　三島由紀夫はなぜ太宰治の文学作品を好まなかったのか？
-title_breaks:
-  - 回答：太宰治という人をどう評価するか？　三島由紀夫はなぜ太宰治の文学作品を好まなかったのか？
+title_breaks: ["回答：太宰治という人をどう評価するか？　三島由紀夫はなぜ","太宰治の文学作品を","好まなかったのか？"]
 excerpt: 原罪意識や自罰衝動、家庭の幸福への罪悪感を手がかりに太宰治を捉え、現実へ反諷的に介入する三島と、現実から身を引く太宰の違いから、三島由紀夫の太宰文学への「同族嫌悪」を説明する。
 credits:
   - role: translator

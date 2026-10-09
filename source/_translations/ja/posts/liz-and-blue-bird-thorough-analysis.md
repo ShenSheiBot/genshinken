@@ -1,6 +1,6 @@
 ---
 title: 文献翻訳｜『リズと青い鳥』徹底分析
-title_breaks: ["文献翻訳｜", "『リズと青い鳥』", "徹底分析"]
+title_breaks: ["文献翻訳｜","『リズと青い鳥』徹底分析"]
 date: 2018-12-29
 slug: liz-and-blue-bird-thorough-analysis
 script: ja

@@ -1,4 +1,5 @@
 ---
+title_breaks: ["The “Demon City”:","Image and Reality—Beginning","with Shanghai in Japanese Anime","and Manga"]
 title: "The “Demon City”: Image and Reality—Beginning with Shanghai in Japanese Anime and Manga"
 date: 2019-08-15
 updated: 2026-10-03

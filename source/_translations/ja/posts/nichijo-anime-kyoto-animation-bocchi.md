@@ -6,7 +6,7 @@ slug: nichijo-anime-kyoto-animation-bocchi
 language: ja
 status: review
 title: "日常のゆくえ——京アニ事件から『ぼっち・ざ・ろっく！』まで"
-title_breaks: ["日常のゆくえ——京アニ","事件から『ぼっち・ざ・ろっく！』まで"]
+title_breaks: ["日常のゆくえ","——京アニ事件から","『ぼっち・ざ・ろっく！』まで"]
 excerpt: "三人のアニメ批評家が、2010年代半ば以降の日常系アニメをめぐって、室内空間の崩壊、労働、屋外活動、孤独について語る。"
 credits:
   - role: translator

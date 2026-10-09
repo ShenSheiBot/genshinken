@@ -1,4 +1,5 @@
 ---
+title_breaks: ["The Parallax View:","What We Have Overlooked—Some","Thoughts on Celestial Method"]
 title: "The Parallax View: What We Have Overlooked—Some Thoughts on Celestial Method"
 date: 2019-04-10
 updated: 2026-10-02

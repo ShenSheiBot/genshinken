@@ -1,4 +1,5 @@
 ---
+title_breaks: ["I.i. Supplement:","The Ebbing of the Sublime","and Private","Experience—Zombieland Saga","and VTubers"]
 title: "I.i. Supplement: The Ebbing of the Sublime and Private Experience—Zombieland Saga and VTubers"
 authors: ["Austoria"]
 work_id: "meta-animation-criticism-i-i-sublime-tide"

@@ -6,9 +6,7 @@ slug: lila-abu-lughod-do-muslim-women-need-saving
 language: ja
 status: reviewed
 title: ムスリム女性は本当に救済を必要としているのか？
-title_breaks:
-  - ムスリム女性は
-  - 本当に救済を必要としているのか？
+title_breaks: ["ムスリム女性は","本当に救済を","必要としているのか？"]
 excerpt: 人類学者ライラ・アブー＝ルゴドが「ムスリム女性の救済」を掲げる戦争のレトリックを問い直し、ブルカ、文化的差異、植民地主義的フェミニズム、世界規模の不公正の関係を考える。
 credits:
   - role: translator

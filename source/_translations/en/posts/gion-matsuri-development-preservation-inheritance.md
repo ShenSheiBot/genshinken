@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Japanese Festival Culture:","Development, Preservation,","and Transmission—A Study","of Kyoto’s Gion Matsuri"]
 title: "Japanese Festival Culture: Development, Preservation, and Transmission—A Study of Kyoto’s Gion Matsuri"
 date: 2019-05-23
 work_id: gion-matsuri-development-preservation-inheritance

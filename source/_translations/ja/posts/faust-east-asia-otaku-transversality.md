@@ -6,10 +6,7 @@ slug: faust-east-asia-otaku-transversality
 language: ja
 status: review
 title: オタク文化のトランスナショナリティ──『ファウスト』は東アジアでいかに「誤読」されたか
-title_breaks:
-  - オタク文化のトランスナショナリティ──
-  - 『ファウスト』は東アジアで
-  - いかに「誤読」されたか
+title_breaks: ["オタク文化の","トランスナショナリティ──","『ファウスト』は東アジアで","いかに「誤読」されたか"]
 excerpt: 紅茶泡海苔が、『ファウスト』の東アジアへの伝播と異文化での「誤読」をたどり、オタク文化のグローバル化を論じる。
 credits:
   - role: translator

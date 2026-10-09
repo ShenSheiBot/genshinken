@@ -5,8 +5,7 @@ slug: macross7-fukasa-ni-aragau
 language: ja
 status: reviewed
 title: 2.1：「深さ」に抗する『マクロス7』
-title_breaks:
-  - 2.1：「深さ」に抗する『マクロス7』
+title_breaks: ["2.1：「深さ」に抗する","『マクロス7』"]
 excerpt: アニメ批評の言葉そのものをめぐるAustoriaの連続論考。意味の伝達、隠喩、自然主義から、崇高、私的体験、そしてアニメの「深さ」が持つさまざまな顔へ。
 credits:
   - role: translator

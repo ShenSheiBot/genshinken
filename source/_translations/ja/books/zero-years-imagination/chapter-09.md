@@ -7,8 +7,7 @@ slug: chapter-09
 language: ja
 status: reviewed
 title: 第九章　解体者としてのよしながふみ――二十四年組から離れて
-title_breaks:
-  - 第九章　解体者としてのよしながふみ――二十四年組から離れて
+title_breaks: ["第九章　解体者としての","よしながふみ","――二十四年組から離れて"]
 excerpt: 宇野常寛が十六章にわたり、90年代からゼロ年代にかけての日本文化の想像力の変化を追い、世界系、決断主義、生存系、母性のディストピアと、その超克について論じる。
 credits:
   - role: translator

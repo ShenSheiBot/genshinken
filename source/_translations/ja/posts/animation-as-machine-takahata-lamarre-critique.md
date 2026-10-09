@@ -6,11 +6,7 @@ slug: animation-as-machine-takahata-lamarre-critique
 language: ja
 status: reviewed
 title: 機械としてのアニメーション――高畑勲批判、ラマールが「アニメーション＝機械」を見落としたことについて
-title_breaks:
-  - 機械としてのアニメーション――
-  - 高畑勲批判、
-  - ラマールが「アニメーション＝機械」を
-  - 見落としたことについて
+title_breaks: ["機械としてのアニメーション","――高畑勲批判、","ラマールが","「アニメーション＝機械」を","見落としたことについて"]
 excerpt: 『かぐや姫の物語』を出発点に、ジブリと技術をめぐるラマールの二元論を批判し、アニメーション制作における技術装置と生の哲学を論じる。
 credits:
   - role: translator

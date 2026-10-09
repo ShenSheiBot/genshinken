@@ -1,4 +1,6 @@
 ---
+title_breaks: ["How Shirogane Was Tempered—Peddling","Anxiety Is Not “Hardcore” Analysis;","Reality Is Not Desirable;","Love Is Not Explained","by Money-Worshipping Conspiracy Theories"]
+
 title: "How Shirogane Was Tempered—Peddling Anxiety Is Not “Hardcore” Analysis; Reality Is Not Desirable; Love Is Not Explained by Money-Worshipping Conspiracy Theories"
 date: 2019-03-30
 work_id: how-shirogane-was-forged-countercritique

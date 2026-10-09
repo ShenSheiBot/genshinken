@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Akio Jissōji: In Praise of","“I Want to Buy Kyoto”"]
 title: "Akio Jissōji: In Praise of “I Want to Buy Kyoto”"
 date: 2021-12-02
 updated: 2026-10-02

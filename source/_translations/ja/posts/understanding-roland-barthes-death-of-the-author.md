@@ -6,9 +6,7 @@ slug: understanding-roland-barthes-death-of-the-author
 language: ja
 status: reviewed
 title: ロラン・バルトの「作者は死んだ」という考えをどう理解するか？
-title_breaks:
-  - ロラン・バルトの「作者は死んだ」という考えを
-  - どう理解するか？
+title_breaks: ["ロラン・バルトの","「作者は死んだ」という考えを","どう理解するか？"]
 excerpt: ロラン・バルト「作者の死」の論証を読み解き、その思想的背景を探る。新批評、デリダ、フーコーの応答を踏まえ、意味の中心だった作者が、多重で非連続的な作者機能へと変わり、幽霊のような姿でテクストへ戻ってくるまでを論じる。
 credits:
   - role: translator

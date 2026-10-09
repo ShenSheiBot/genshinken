@@ -7,8 +7,7 @@ slug: chapter-10-postmodernism-imperialism
 language: ja
 status: reviewed
 title: 第10章　ポストモダンのフェミニズムと帝国主義
-title_breaks:
-  - 第10章　ポストモダンのフェミニズムと帝国主義
+title_breaks: ["第10章　ポストモダンの","フェミニズムと帝国主義"]
 excerpt: スーザン・アーチャー・マンとアシュリー・スザンヌ・パターソンによるフェミニズム理論の手引き。知識生産、リベラル、ラディカル、社会主義、交差性から、第三波と帝国主義批判へ。
 credits:
   - role: translator

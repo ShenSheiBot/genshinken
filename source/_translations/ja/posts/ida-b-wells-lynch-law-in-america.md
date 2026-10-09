@@ -6,9 +6,7 @@ source_slug: ida-b-wells-lynch-law-in-america
 language: ja
 status: reviewed
 title: アメリカのリンチ法（1900年）
-title_breaks:
-  - アメリカのリンチ法
-  - （1900年）
+title_breaks: ["アメリカのリンチ法（1900年）"]
 excerpt: アイダ・B・ウェルズは統計と具体的な事件を通じ、アメリカのリンチが「不文の法」を口実に黒人から選挙権を奪い、人種暴力を女性の保護に見せかける仕組みを暴く。
 credits:
   - role: translator

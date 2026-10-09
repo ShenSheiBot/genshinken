@@ -7,8 +7,7 @@ slug: chapter-04-upper
 language: ja
 status: reviewed
 title: 『セカイからもっと近くに』第四章（上）：小松左京と未来の問題
-title_breaks:
-  - 『セカイからもっと近くに』第四章（上）：小松左京と未来の問題
+title_breaks: ["『セカイからもっと近くに』","第四章（上）：","小松左京と未来の問題"]
 excerpt: 東浩紀が、新井素子、法月綸太郎、押井守、小松左京を読み、現実から切り離された文学が社会や家族、恋愛、未来へ再び近づく可能性を論じる。
 credits:
   - role: translator

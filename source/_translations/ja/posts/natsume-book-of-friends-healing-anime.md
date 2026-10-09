@@ -6,8 +6,7 @@ slug: natsume-book-of-friends-healing-anime
 language: ja
 status: review
 title: 「癒し系」アニメ『夏目友人帳』に、なぜ癒されるのか
-title_breaks:
-  - "「癒し系」アニメ『夏目友人帳』に、なぜ癒されるのか"
+title_breaks: ["「癒し系」アニメ『夏目友人帳』に、","なぜ癒されるのか"]
 excerpt: 短い生を生きる人間を守り、待ち続け、恩を返す妖怪たち。その姿や互いに支え合う関係から、『夏目友人帳』が複雑な暮らしのなかに埋もれた素朴な感情をどう浮かび上がらせるのかを考える。
 credits:
   - role: translator

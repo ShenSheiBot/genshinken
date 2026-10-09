@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Parallax View |","Toward an Ontological Aesthetics","of Erciyuan—The Sacred Returns","with Force"]
 title: "Parallax View | Toward an Ontological Aesthetics of Erciyuan—The Sacred Returns with Force"
 date: 2019-01-08
 work_id: parallax-view-ontology-aesthetics-sacred-return

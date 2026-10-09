@@ -6,8 +6,7 @@ slug: kensuke-ushio-anime-expo-2018-interview
 language: ja
 status: review
 title: 山田は最高のパートナー：Anime Expo 2018 牛尾憲輔インタビュー
-title_breaks:
-  - "山田は最高のパートナー：Anime Expo 2018 牛尾憲輔インタビュー"
+title_breaks: ["山田は最高のパートナー：","Anime Expo 2018 牛尾憲輔インタビュー"]
 excerpt: Anime Expo 2018で牛尾憲輔が語る、『リズと青い鳥』の音楽。「互いに素」やデカルコマニーを取り入れた作曲、山田尚子との共同制作、商業的な映画音楽と今後の創作への思い。
 credits:
   - role: translator

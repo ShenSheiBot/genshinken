@@ -1,6 +1,6 @@
 ---
 title: "新番新語 | 少女☆歌劇 レヴュースタァライト――レヴューを通じた再生産"
-title_breaks: ["新番新語 | 少女☆歌劇 レヴュースタァライト", "――レヴューを通じた再生産"]
+title_breaks: ["新番新語 | 少女☆歌劇 レヴュースタァライト","――レヴューを通じた再生産"]
 date: 2018-11-25
 slug: revue-starlight-reproduction-through-revue
 script: ja

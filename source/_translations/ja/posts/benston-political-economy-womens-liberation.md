@@ -6,9 +6,7 @@ slug: benston-political-economy-womens-liberation
 language: ja
 status: reviewed
 title: 女性解放の政治経済学（1969年）
-title_breaks:
-  - 女性解放の政治経済学
-  - （1969年）
+title_breaks: ["女性解放の政治経済学","（1969年）"]
 excerpt: マーガレット・ベンストンは、家事労働が使用価値を生産しながら商品交換の外に置かれている構造から、女性の抑圧の物質的基盤と解放の条件を分析する。
 credits:
   - role: translator

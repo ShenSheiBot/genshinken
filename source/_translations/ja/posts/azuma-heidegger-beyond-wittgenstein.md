@@ -6,9 +6,7 @@ slug: azuma-heidegger-beyond-wittgenstein
 language: ja
 status: reviewed
 title: 東浩紀：ハイデガーは何をもってヴィトゲンシュタインを超えるのか？
-title_breaks:
-  - 東浩紀：ハイデガーは何をもって
-  - ヴィトゲンシュタインを超えるのか？
+title_breaks: ["東浩紀：ハイデガーは","何をもって","ヴィトゲンシュタインを","超えるのか？"]
 excerpt: 東浩紀は、カルナップとヴィトゲンシュタインによる論理の限界規定を参照しながら、ハイデガーが存在の二重構造によって存在を思考する厳密な方法をいかに築いたかを説明する。
 credits:
   - role: translator

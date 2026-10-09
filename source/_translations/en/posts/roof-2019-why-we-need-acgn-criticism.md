@@ -1,6 +1,6 @@
 ---
 title: "Roof Research Society 2019: Why There Is Still a Need for Roof Research Society and Its ACGN Criticism"
-title_breaks: ["Roof Research Society 2019: Why There Is Still a Need for Roof Research Society and Its ACGN Criticism"]
+title_breaks: ["Roof Research Society 2019:","Why There Is Still a Need","for Roof Research Society","and Its ACGN Criticism"]
 date: 2020-01-01
 slug: roof-2019-why-we-need-acgn-criticism
 script: latn

@@ -6,10 +6,7 @@ slug: hello-world-film-review
 language: ja
 status: review
 title: 『天気の子』より面白いかもしれない——劇場アニメ『HELLO WORLD』を観て
-title_breaks:
-  - 『天気の子』より面白いかもしれない——
-  - 劇場アニメ『HELLO WORLD』
-  - を観て
+title_breaks: ["『天気の子』より面白いかもしれない", "——劇場アニメ", "『HELLO WORLD』を観て"]
 excerpt: 映像と音の組み合わせやプレスコを切り口に、『HELLO WORLD』の三重の反転、代替による救済、ゼロ年代の物語の系譜、そしてアニメ化における人物の内面描写の取捨選択を論じる。
 credits:
   - role: translator

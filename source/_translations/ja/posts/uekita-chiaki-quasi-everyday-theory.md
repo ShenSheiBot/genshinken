@@ -6,9 +6,7 @@ slug: uekita-chiaki-quasi-everyday-theory
 language: ja
 status: reviewed
 title: 上北千明：擬日常論
-title_breaks:
-  - 上北千明：
-  - 擬日常論
+title_breaks: ["上北千明：擬日常論"]
 excerpt: 『花と奥たん』と『デッドデッドデーモンズデデデデデストラクション』を手がかりに、災害の後も続く生活を「擬日常」と名づけ、昭和の郊外、通勤鉄道、インターネットが日常と非日常の境界をどう変えてきたのかを考える。
 credits:
   - role: translator

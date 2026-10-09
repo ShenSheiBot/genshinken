@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Why Are Men Usually the Ones Bullied","at Home in Japanese Anime?","What Do You Make of","“Beautiful Exteriors Are All Alike;","an Interesting Soul Is One in Ten Thousand”?"]
 title: "Why Are Men Usually the Ones Bullied at Home in Japanese Anime? What Do You Make of “Beautiful Exteriors Are All Alike; an Interesting Soul Is One in Ten Thousand”?"
 date: '2019-06-05'
 work_id: anime-domestic-violence-beauty-and-soul

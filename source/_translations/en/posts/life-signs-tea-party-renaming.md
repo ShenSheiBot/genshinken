@@ -1,4 +1,5 @@
 ---
+title_breaks: ["About Changing Our Name","to “Vital Signs Maintenance Tea Party”"]
 title: "About Changing Our Name to “Vital Signs Maintenance Tea Party”"
 date: 2023-11-28
 updated: "2026-10-02"

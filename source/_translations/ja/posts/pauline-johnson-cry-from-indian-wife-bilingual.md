@@ -6,9 +6,7 @@ source_slug: pauline-johnson-cry-from-indian-wife-bilingual
 language: ja
 status: reviewed
 title: あるインディアンの妻の叫び
-title_breaks:
-  - あるインディアンの
-  - 妻の叫び
+title_breaks: ["あるインディアンの妻の叫び"]
 excerpt: モホーク系の詩人E・ポーリーン・ジョンソンは、あるインディアンの妻が夫を送り出す声を通して、植民地支配への抵抗と敵方の母や恋人への共感との間で引き裂かれる心を描く。
 credits:
   - role: translator

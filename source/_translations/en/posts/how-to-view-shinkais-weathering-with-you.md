@@ -1,4 +1,5 @@
 ---
+title_breaks: ["An Answer: What Should We Make","of Makoto Shinkai’s New Animated Film,","Weathering with You?"]
 title: "An Answer: What Should We Make of Makoto Shinkai’s New Animated Film, Weathering with You?"
 date: 2020-09-10
 slug: how-to-view-shinkais-weathering-with-you

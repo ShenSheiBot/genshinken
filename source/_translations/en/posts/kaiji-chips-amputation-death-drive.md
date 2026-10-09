@@ -16,10 +16,7 @@ updated: '2026-08-23'
 rights: CC BY-NC-SA 4.0
 format: article
 title: 'Chips, Amputation, and the Death Drive—Kaiji Itou’s Suicide Game'
-title_breaks:
-  - 'Chips, Amputation,'
-  - and the Death Drive—Kaiji
-  - Itou’s Suicide Game
+title_breaks: ["Chips, Amputation,","and the Death Drive—Kaiji Itou’s","Suicide Game"]
 excerpt: >-
   Drawing on Baudrillard’s symbolic exchange and Deleuze’s body without organs,
   米岡 examines how chips, bodies pledged as collateral, and the death drive form

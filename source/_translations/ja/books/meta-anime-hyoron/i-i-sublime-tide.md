@@ -5,8 +5,7 @@ slug: i-i-sublime-tide
 language: ja
 status: reviewed
 title: I.i（番外）：『ゾンビランドサガ』とVTuberを例に、崇高の退潮と私的体験を考える
-title_breaks:
-  - I.i（番外）：『ゾンビランドサガ』とVTuberを例に、崇高の退潮と私的体験を考える
+title_breaks: ["I.i（番外）：","『ゾンビランドサガ』と","VTuberを例に、","崇高の退潮と私的体験を考える"]
 excerpt: アニメ批評の言葉そのものをめぐるAustoriaの連続論考。意味の伝達、隠喩、自然主義から、崇高、私的体験、そしてアニメの「深さ」が持つさまざまな顔へ。
 credits:
   - role: translator

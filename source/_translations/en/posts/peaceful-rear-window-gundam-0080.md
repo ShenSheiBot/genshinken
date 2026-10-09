@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Peace’s Rear Window:", "Notes on", "Mobile Suit Gundam 0080:", "War in the Pocket"]
 title: "Peace’s Rear Window: Notes on Mobile Suit Gundam 0080: War in the Pocket"
 date: 2021-01-17
 slug: peaceful-rear-window-gundam-0080

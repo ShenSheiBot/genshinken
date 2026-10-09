@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Dazai Osamu and Mishima Yukio:","No Longer Human, Yours and Mine"]
 title: "Dazai Osamu and Mishima Yukio: No Longer Human, Yours and Mine"
 date: 2020-05-18
 updated: 2026-10-02

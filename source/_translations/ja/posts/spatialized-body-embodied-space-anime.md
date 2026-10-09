@@ -1,6 +1,6 @@
 ---
 title: "空間化された身体 VS 身体化された空間――日本のアニメ・マンガにおける空間と身体をめぐる想像力"
-title_breaks: ["空間化された身体 VS 身体化された空間――日本のアニメ・マンガにおける空間と身体をめぐる想像力"]
+title_breaks: ["空間化された身体 VS 身体化された空間","――日本のアニメ・マンガにおける","空間と身体をめぐる想像力"]
 date: 2021-11-23
 slug: spatialized-body-embodied-space-anime
 script: ja

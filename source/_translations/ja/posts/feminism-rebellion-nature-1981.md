@@ -6,9 +6,7 @@ source_slug: feminism-rebellion-nature-1981
 language: ja
 status: reviewed
 title: フェミニズムと自然の反乱（1981）
-title_breaks:
-  - フェミニズムと自然の
-  - 反乱（1981）
+title_breaks: ["フェミニズムと自然の反乱（1981）"]
 excerpt: イネストラ・キングがフェミニズムとエコロジーの結びつきを論じる。ラディカル・フェミニズムと社会主義フェミニズムの対立を振り返り、自然／文化の二元論を超えるエコロジカル・フェミニズムの視点を提示する。
 credits:
   - role: translator

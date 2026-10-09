@@ -1,3 +1,6 @@
+import type { CSSProperties } from "react";
+import { ReaderTitleText } from "@/app/components/reading-edition/ReadingEdition";
+import { longestTitleSegmentWidthEm } from "@/lib/title-layout";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -144,6 +147,7 @@ export default async function LocalizedBookPage({ params }: { params: Promise<{ 
   const { allEditions, sourceBook, targetEditions, isTargetRoute } = resolved;
   const sample = targetEditions[0];
   const title = sample?.bookTitle ?? sourceBook.title;
+  const titleBreaks = sample?.bookTitleBreaks ?? [title];
   const subtitle = sample?.bookSubtitle ?? sourceBook.subtitle;
   const labels = locale === "en" ? {
     brand: "Lab on Roof", status: isTargetRoute ? "Translated book" : "Edition unavailable",
@@ -210,9 +214,16 @@ export default async function LocalizedBookPage({ params }: { params: Promise<{ 
             {sourceBook.title}
           </Link>
         </div>
-        <div>
+        <div className={styles.titleColumn}>
           <span className={styles.status}>{labels.status}</span>
-          <h1>{title}</h1>
+          <h1 style={{ "--title-longest-em": longestTitleSegmentWidthEm(titleBreaks) } as CSSProperties}>
+            {titleBreaks.map((segment, index) => (
+              <span className={styles.titleSegment} data-reader-title-segment key={index}>
+                <ReaderTitleText text={segment} locale={locale} />
+                {locale === "en" && index < titleBreaks.length - 1 ? " " : null}
+              </span>
+            ))}
+          </h1>
           {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
           <p lang={sample ? locale : sourceBook.script === "hant" ? "zh-Hant" : "zh-Hans"}>
             {sample?.bookExcerpt ?? sourceBook.description}

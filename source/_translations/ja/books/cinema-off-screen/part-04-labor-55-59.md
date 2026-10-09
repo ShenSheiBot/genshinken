@@ -7,8 +7,7 @@ slug: part-04-labor-55-59
 language: ja
 status: reviewed
 title: 第4期　第2章「労働」（55–59頁）
-title_breaks:
-  - 第4期　第2章「労働」（55–59頁）
+title_breaks: ["第4期　第2章","「労働」（55–59頁）"]
 excerpt: Chenshu Zhou『Cinema Off Screen』中国語抄訳の日本語版。社会主義中国の上映空間、労働者文化宮、農村映写員の労働を考察する。
 credits:
   - role: translator

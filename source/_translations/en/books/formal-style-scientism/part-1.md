@@ -1,4 +1,5 @@
 ---
+title_breaks: ["A Critique of","Izumi Nobuyuki, Part I"]
 work_id: formal-style-scientism-part-1
 source_type: book-chapter
 source_book_slug: formal-style-scientism

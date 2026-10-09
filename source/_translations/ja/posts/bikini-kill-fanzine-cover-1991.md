@@ -6,10 +6,7 @@ source_slug: bikini-kill-fanzine-cover-1991
 language: ja
 status: reviewed
 title: 『ビキニ・キル』ファンジン表紙（1991年）
-title_breaks:
-  - 『ビキニ・キル』
-  - ファンジン表紙
-  - （1991年）
+title_breaks: ["『ビキニ・キル』","ファンジン表紙（1991年）"]
 excerpt: おそらく1991年頃に初刷が出た『ビキニ・キル』ファンジン第2号の英語原版表紙と、中国語版に添えられた第三波フェミニズム、ライオット・ガール運動、学術界の外での理論生産をめぐる解説を紹介する。
 credits:
   - role: translator

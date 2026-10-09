@@ -6,10 +6,7 @@ slug: animation-eyebrow-hair-perception-video
 language: ja
 status: review
 title: 至るところにある知覚：二次元アニメーションにおける「眉や目と髪」の処理――体験と考証
-title_breaks:
-  - 至るところにある知覚：
-  - 二次元アニメーションにおける「眉や目と髪」の
-  - 処理――体験と考証
+title_breaks: ["至るところにある知覚：","二次元アニメーションにおける","「眉や目と髪」の処理","――体験と考証"]
 excerpt: アニメーション史と知覚の現象学を手がかりに、二次元アニメーションで眉や目を髪越しに見せる処理と、髪で隠す処理、その視覚的な効果を考察する。
 credits:
   - role: translator

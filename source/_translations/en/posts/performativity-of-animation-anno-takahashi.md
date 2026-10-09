@@ -1,6 +1,6 @@
 ---
 title: "Direction at Work in Animation: Rediscovering Takashi Anno and Naohito Takahashi"
-title_breaks: ["Direction at Work in Animation: Rediscovering Takashi Anno and Naohito Takahashi"]
+title_breaks: ["Direction at Work in Animation:","Rediscovering Takashi Anno","and Naohito Takahashi"]
 date: 2022-10-30
 slug: performativity-of-animation-anno-takahashi
 script: latn

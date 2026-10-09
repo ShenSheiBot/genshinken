@@ -5,8 +5,7 @@ slug: chapter-02-labor-process-historical-time
 language: ja
 status: reviewed
 title: 第二章：労働過程と歴史的時間の発生――マルクスとともに、西田とともに
-title_breaks:
-  - 第二章：労働過程と歴史的時間の発生――マルクスとともに、西田とともに
+title_breaks: ["第二章：労働過程と","歴史的時間の発生","――マルクスとともに、","西田とともに"]
 excerpt: 『資本と帝国に対峙する――京都学派哲学を再考する』は、京都学派とマルクス主義が資本主義的近代性をめぐって取り結ぶ思想的関係を論じ、帝国と世界史における日本哲学の位置を考察する。
 credits:
   - role: translator

@@ -7,8 +7,7 @@ slug: chapter-05
 language: ja
 status: reviewed
 title: 第五章　戦わなければ生き残れない――生存系の系譜
-title_breaks:
-  - 第五章　戦わなければ生き残れない――生存系の系譜
+title_breaks: ["第五章　戦わなければ", "生き残れない――生存系の系譜"]
 excerpt: 宇野常寛が十六章にわたり、90年代からゼロ年代にかけての日本文化の想像力の変化を追い、世界系、決断主義、生存系、母性のディストピアと、その超克について論じる。
 credits:
   - role: translator

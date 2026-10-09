@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Recommendation | “You and Me,”","Trusting and Valuing Each Other:","I Want to Eat Your Pancreas"]
 title: "Recommendation | “You and Me,” Trusting and Valuing Each Other: I Want to Eat Your Pancreas"
 date: 2019-01-23
 work_id: pancreas-you-and-me-mutual-trust

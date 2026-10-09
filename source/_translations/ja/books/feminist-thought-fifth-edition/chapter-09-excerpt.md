@@ -7,8 +7,7 @@ slug: chapter-09-excerpt
 language: ja
 status: reviewed
 title: 第9章抜粋：実存主義、ポスト構造主義、ポストモダン・フェミニズム
-title_breaks:
-  - 第9章抜粋：実存主義、ポスト構造主義、ポストモダン・フェミニズム
+title_breaks: ["第9章抜粋：","実存主義、ポスト構造主義、","ポストモダン・フェミニズム"]
 excerpt: Rosemarie TongとTina Fernandes Bottsによる『Feminist Thought』第5版の日本語版。第1章全訳と、第9章のボーヴォワール／バトラー論の抜粋を収録する。
 credits:
   - role: translator

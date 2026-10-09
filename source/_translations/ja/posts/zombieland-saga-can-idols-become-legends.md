@@ -1,6 +1,6 @@
 ---
 title: 新番新語｜『ゾンビランドサガ』をきっかけにした雑感――アイドルは伝説になれるか？
-title_breaks: ["新番新語｜", "『ゾンビランドサガ』をきっかけにした雑感――", "アイドルは伝説になれるか？"]
+title_breaks: ["新番新語｜","『ゾンビランドサガ』をきっかけにした雑感","――アイドルは伝説になれるか？"]
 date: 2018-12-14
 slug: zombieland-saga-can-idols-become-legends
 script: ja

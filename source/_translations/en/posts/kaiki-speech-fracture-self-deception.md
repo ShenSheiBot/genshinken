@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Monogatari / Love / Deishu Kaiki:","Speech / Fracture / Self-Deception"]
 work_id: monogatari-kaiki-speech-self-deception
 source_type: post
 source_slug: monogatari-love-deishu-kaiki-speech-fracture-self-deception

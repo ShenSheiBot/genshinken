@@ -6,9 +6,7 @@ slug: animation-criticism-dimensions-resource-directory
 language: ja
 status: reviewed
 title: 随筆：個人がアニメ評論の次元を広げるための資料目録 2.2版
-title_breaks:
-  - 随筆：個人がアニメ評論の次元を広げるための
-  - 資料目録 2.2版
+title_breaks: ["随筆：個人がアニメ評論の","次元を広げるための","資料目録 2.2版"]
 excerpt: アニメ制作、美術と芸術哲学、哲学・社会科学、映画理論、日本アニメ史、評論実践という七つの方向から、アニメ鑑賞と評論の次元を広げるための学習経路と資料目録を整理する。
 credits:
   - role: translator

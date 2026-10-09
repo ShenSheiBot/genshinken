@@ -6,9 +6,7 @@ source_slug: grace-chang-global-trade-filipina-workers
 language: ja
 status: reviewed
 title: フィリピン人女性労働者のグローバルな取引（1997年）
-title_breaks:
-  - フィリピン人女性労働者のグローバルな取引
-  - （1997年）
+title_breaks: ["フィリピン人女性労働者の","グローバルな取引（1997年）"]
 excerpt: グレイス・チャンは、構造調整政策、移民制度、ケアへの需要が結びつき、フィリピン人女性労働者を国境を越えて取引する仕組みを形づくる過程を追う。
 credits:
   - role: translator

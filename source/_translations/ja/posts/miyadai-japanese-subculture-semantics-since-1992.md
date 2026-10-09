@@ -1,6 +1,6 @@
 ---
 title: 宮台真司：1992年以降の日本サブカルチャー史における意味論的変遷
-title_breaks: [宮台真司：, 1992年以降の日本サブカルチャー史における, 意味論的変遷]
+title_breaks: ["宮台真司：","1992年以降の","日本サブカルチャー史における","意味論的変遷"]
 date: 2019-03-14
 slug: miyadai-japanese-subculture-semantics-since-1992
 script: ja

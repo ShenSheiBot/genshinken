@@ -6,9 +6,7 @@ source_slug: waheenee-indian-girls-story-bilingual
 language: ja
 status: reviewed
 title: あるインディアンの少女の自述（1921）
-title_breaks:
-  - あるインディアンの少女の自述
-  - （1921）
+title_breaks: ["あるインディアンの少女の自述（1921）"]
 excerpt: ヒダーツァの女性ワヒーニーが晩年、土で覆った家、トウモロコシの歌、ミズーリ川のほとりの村を振り返り、「白人の道」がインディアンの暮らしに取って代わったことを嘆く。
 credits:
   - role: translator

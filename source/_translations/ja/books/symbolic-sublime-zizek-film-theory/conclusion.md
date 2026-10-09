@@ -5,8 +5,7 @@ slug: conclusion
 language: ja
 status: reviewed
 title: 結論――欲動の様態をとるリアリズムとしての理論
-title_breaks:
-  - 結論――欲動の様態をとるリアリズムとしての理論
+title_breaks: ["結論――欲動の様態をとる","リアリズムとしての理論"]
 excerpt: マシュー・フリスフェダーが、ラカン、マルクス主義、イデオロギー批判を出発点に、ジジェクが映画を通して崇高な対象、階級闘争、形式、享楽をどう論じるのかを体系的に説き明かす。
 credits:
   - role: translator

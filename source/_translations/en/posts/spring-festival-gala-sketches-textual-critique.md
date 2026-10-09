@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Looking Sideways:","A Blunt Critique of the Spring Festival Gala’s","Comedy Sketches"]
 title: "Looking Sideways: A Blunt Critique of the Spring Festival Gala’s Comedy Sketches"
 date: 2022-02-01
 work_id: spring-festival-gala-sketches-textual-critique

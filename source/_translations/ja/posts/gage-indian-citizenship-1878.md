@@ -6,9 +6,7 @@ source_slug: gage-indian-citizenship-1878
 language: ja
 status: reviewed
 title: インディアンの市民権（1878年）
-title_breaks:
-  - インディアンの市民権
-  - （1878年）
+title_breaks: ["インディアンの市民権（1878年）"]
 excerpt: マティルダ・ジョスリン・ゲージは、米国による市民権の強制に対するイロクォイ連邦の抗議を記録し、市民権、土地の私有化、先住民の主権のあいだにある対立を浮き彫りにする。末尾に歴史的解説を付す。
 credits:
   - role: translator

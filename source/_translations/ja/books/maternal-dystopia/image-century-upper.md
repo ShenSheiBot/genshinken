@@ -7,8 +7,7 @@ slug: image-century-upper
 language: ja
 status: reviewed
 title: 「映像の世紀」の終焉と「政治と文学」の再設定（上）
-title_breaks:
-  - 「映像の世紀」の終焉と「政治と文学」の再設定（上）
+title_breaks: ["「映像の世紀」の終焉と","「政治と文学」の再設定（上）"]
 excerpt: 宇野常寛は宮崎駿、富野由悠季、押井守、および戦後の映像史を軸に、母性のユートピアと母性のディストピアが日本アニメーションの政治的想像力をいかに形づくったかを論じる。
 credits:
   - role: translator

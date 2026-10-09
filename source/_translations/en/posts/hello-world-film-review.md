@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Possibly Better Than Weathering with You:","Thoughts on the Animated Feature","HELLO WORLD"]
 title: "Possibly Better Than Weathering with You: Thoughts on the Animated Feature HELLO WORLD"
 date: 2019-10-02
 work_id: hello-world-film-review

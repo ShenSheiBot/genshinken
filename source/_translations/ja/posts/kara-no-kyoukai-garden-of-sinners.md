@@ -16,7 +16,7 @@ source_relationship: direct
 base_language: zh-Hans
 format: article
 title: 特集考察｜“The garden of sinners”と『空の境界』
-title_breaks: ["特集考察｜“The garden of sinners”と『空の境界』"]
+title_breaks: ["特集考察｜","“The garden of sinners”と","『空の境界』"]
 excerpt: sinner、空、境界、gardenという四つの概念を手がかりに、『空の境界』における常識と異常、両儀式と荒耶宗蓮の隔たりと対立を読み解く。
 status: review
 updated: '2026-10-05'

@@ -6,9 +6,7 @@ slug: furukawa-tomohiro-interview-3-precure-storyboards
 language: ja
 status: review
 title: 「絵コンテの力を最初に教えてくれたのは『プリキュア』でした」
-title_breaks:
-  - 「絵コンテの力を最初に教えてくれたのは
-  - 『プリキュア』でした」
+title_breaks: ["「絵コンテの力を","最初に教えてくれたのは","『プリキュア』でした」"]
 excerpt: 古川知宏が、『ふたりはプリキュア』第8話を通じて初めて絵コンテと演出の具体的な仕事を知った経験を振り返り、それが後の進路や制作手法に与えた影響を語る。
 credits:
   - role: translator

@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Answering “How Did Makoto Shinkai Become","a First-Rate Animation Creator","Without Formal Training in Animation?”"]
 title: "Answering “How Did Makoto Shinkai Become a First-Rate Animation Creator Without Formal Training in Animation?”"
 date: 2019-04-06
 work_id: how-shinkai-became-first-rate-animation-creator

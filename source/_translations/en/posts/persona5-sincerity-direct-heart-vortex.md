@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Sincerity, the Straightforward Mind,","and the Original Mind:","The Vortex of Persona 5"]
 title: "Sincerity, the Straightforward Mind, and the Original Mind: The Vortex of Persona 5"
 date: 2019-03-19
 updated: 2026-10-03

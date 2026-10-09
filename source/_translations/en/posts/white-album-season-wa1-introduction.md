@@ -1,6 +1,6 @@
 ---
 title: "Notes | It’s White Album Season Again…"
-title_breaks: ["Notes | It’s", "White Album Season Again…"]
+title_breaks: ["Notes | It’s White Album Season Again…"]
 date: 2019-01-06
 updated: "2026-10-03"
 work_id: white-album-season-wa1-introduction

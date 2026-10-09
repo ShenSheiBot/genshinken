@@ -1,6 +1,6 @@
 ---
 title: 都市の中の「村」だってアニメをつくる！知られざる大阪のアニメ制作圏を訪ねて
-title_breaks: [都市の中の「村」だってアニメをつくる！, 知られざる, 大阪のアニメ制作圏を訪ねて]
+title_breaks: ["都市の中の「村」だって","アニメをつくる！","知られざる大阪のアニメ制作圏を訪ねて"]
 date: 2018-11-26
 slug: osaka-animation-studios-field-report
 script: ja

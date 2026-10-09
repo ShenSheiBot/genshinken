@@ -7,8 +7,7 @@ slug: chapter-08-early-modernity-imperialism
 language: ja
 status: reviewed
 title: 第8章　近代初期のフェミニズムと帝国主義
-title_breaks:
-  - 第8章　近代初期のフェミニズムと帝国主義
+title_breaks: ["第8章　近代初期の","フェミニズムと帝国主義"]
 excerpt: スーザン・アーチャー・マンとアシュリー・スザンヌ・パターソンによるフェミニズム理論の手引き。知識生産、リベラル、ラディカル、社会主義、交差性から、第三波と帝国主義批判へ。
 credits:
   - role: translator

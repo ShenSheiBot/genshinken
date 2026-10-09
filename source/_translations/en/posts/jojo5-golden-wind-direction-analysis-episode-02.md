@@ -1,4 +1,5 @@
 ---
+title_breaks: ["JoJo’s Bizarre Adventure:","Golden Wind","(Part 5)—Episode 02:","Direction Analysis"]
 title: "JoJo’s Bizarre Adventure: Golden Wind (Part 5)—Episode 02: Direction Analysis"
 date: 2018-12-10
 work_id: jojo5-golden-wind-direction-analysis-episode-02

@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Notes on Plural Grand Narratives","and Creative Forms:","The Case of Gundam"]
 title: "Notes on Plural Grand Narratives and Creative Forms: The Case of Gundam"
 date: 2019-01-12
 slug: gundam-plural-grand-narratives-creative-forms

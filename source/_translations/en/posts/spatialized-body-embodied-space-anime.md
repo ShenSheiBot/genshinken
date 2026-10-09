@@ -1,4 +1,5 @@
 ---
+title_breaks: ["The Spatialized Body VS","Space Imagined as a Body:","Imagining Space and the Body","in Japanese Anime and Manga"]
 work_id: spatialized-body-embodied-space-anime
 source_type: post
 source_slug: spatialized-body-embodied-space-anime

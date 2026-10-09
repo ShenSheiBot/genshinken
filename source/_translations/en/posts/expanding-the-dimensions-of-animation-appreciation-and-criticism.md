@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Notes on Expanding the Dimensions","of Animation Appreciation","and Criticism"]
 title: Notes on Expanding the Dimensions of Animation Appreciation and Criticism
 date: 2019-01-10
 updated: 2026-10-02

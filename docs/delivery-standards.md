@@ -25,6 +25,15 @@
 
 ---
 
+## Translated cover-title acceptance
+
+For English and Japanese editions, run `npm run verify:translation-title-layout`
+against the matching built site before publishing title or reading-cover changes.
+Use the same translation visibility settings for the build and the check. See
+[translated title layout](translation-title-layout.md) for the full-route command,
+report, and screenshot options. Review the actual line breaks as well: passing
+geometry does not establish readable grouping of names, terms, or subtitles.
+
 ## 0.1 编辑原则与工作备忘
 
 来源全文是编辑判断的底本，转换器只负责确定性的格式恢复，不替编辑者决定段落、署名、图题、删留、

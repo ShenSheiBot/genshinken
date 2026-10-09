@@ -1,6 +1,6 @@
 ---
 title: "Things That Haunt, or Conceptions of Urban Legend"
-title_breaks: ["Things That Haunt, or", "Conceptions of", "Urban Legend"]
+title_breaks: ["Things That Haunt,","or Conceptions of Urban Legend"]
 date: 2019-08-18
 updated: 2026-10-03
 work_id: urban-legends-concepts

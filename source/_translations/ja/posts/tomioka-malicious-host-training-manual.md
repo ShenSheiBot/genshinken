@@ -6,9 +6,7 @@ source_slug: tomioka-malicious-host-training-manual
 language: ja
 status: reviewed
 title: 悪質ホストの「研修教材」
-title_breaks:
-  - 悪質ホストの
-  - 「研修教材」
+title_breaks: ["悪質ホストの「研修教材」"]
 excerpt: 流出した新人ホスト向けの研修ノート。そこには、マインドコントロールと恋愛感情の誘導、売掛の仕組みによって、若い女性を巨額の借金へと追い込むホストクラブの手口が記されていた。
 credits:
   - role: translator

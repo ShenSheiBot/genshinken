@@ -7,8 +7,7 @@ slug: sections-4-and-6-latter-half
 language: ja
 status: reviewed
 title: 選訳②：東映のリトル・ピープル／仮面ライダー、ロボットと消費社会（第4節・第6節後半）
-title_breaks:
-  - 選訳②：東映のリトル・ピープル／仮面ライダー、ロボットと消費社会（第4節・第6節後半）
+title_breaks: ["選訳②：東映のリトル・ピープル／","仮面ライダー、ロボットと","消費社会（第4節・第6節後半）"]
 excerpt: 宇野常寛がウルトラマンと仮面ライダーを手がかりに、商業的なヒーロー番組が正義を問い直さざるをえなかった歴史をたどる。
 credits:
   - role: translator

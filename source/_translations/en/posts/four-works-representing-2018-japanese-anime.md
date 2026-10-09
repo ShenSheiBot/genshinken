@@ -1,4 +1,5 @@
 ---
+title_breaks: ["A Parallax View |","If I Were to Pick Four Works","to Represent Japanese Animation","in 2018…"]
 title: "A Parallax View | If I Were to Pick Four Works to Represent Japanese Animation in 2018…"
 date: 2018-12-28
 slug: four-works-representing-2018-japanese-anime

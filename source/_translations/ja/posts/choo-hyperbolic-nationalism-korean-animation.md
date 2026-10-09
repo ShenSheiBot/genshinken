@@ -1,6 +1,6 @@
 ---
 title: 誇張的ナショナリズム――日本の「影」にある韓国アニメーション産業
-title_breaks: ["誇張的ナショナリズム――", "日本の「影」にある韓国アニメーション産業"]
+title_breaks: ["誇張的ナショナリズム","――日本の「影」にある","韓国アニメーション産業"]
 date: 2025-11-22
 slug: choo-hyperbolic-nationalism-korean-animation
 categories: [アニメーション]

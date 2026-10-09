@@ -1,4 +1,5 @@
 ---
+title_breaks: ["How Does Death Make a “New Life” Possible?","A Study of Death","in Isekai Reincarnation Fiction"]
 work_id: death-and-rebirth-in-isekai-reincarnation
 source_type: post
 source_slug: death-and-rebirth-in-isekai-reincarnation

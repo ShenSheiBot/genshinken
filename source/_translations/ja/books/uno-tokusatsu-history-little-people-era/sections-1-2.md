@@ -7,8 +7,7 @@ slug: sections-1-2
 language: ja
 status: reviewed
 title: 選訳①：英雄の回路、怪獣たちの「戦後」（第1–2節）
-title_breaks:
-  - 選訳①：英雄の回路、怪獣たちの「戦後」（第1–2節）
+title_breaks: ["選訳①：英雄の回路、","怪獣たちの「戦後」","（第1–2節）"]
 excerpt: 宇野常寛がウルトラマンと仮面ライダーを手がかりに、商業的なヒーロー番組が正義を問い直さざるをえなかった歴史をたどる。
 credits:
   - role: translator

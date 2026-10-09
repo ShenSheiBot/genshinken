@@ -1,6 +1,6 @@
 ---
 title: 現実と包容に根ざした生きる意志――『卯酉東海道』にみる町人文化と浮世絵
-title_breaks: [現実と包容に根ざした生きる意志――, 『卯酉東海道』にみる, 町人文化と浮世絵]
+title_breaks: ["現実と包容に根ざした","生きる意志――","『卯酉東海道』にみる","町人文化と浮世絵"]
 date: 2020-05-28
 slug: bouyuu-toukaidou-chonin-culture-ukiyo-e
 script: ja

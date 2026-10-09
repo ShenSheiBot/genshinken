@@ -6,10 +6,7 @@ slug: 1984-tokyo-commuter-subculture-otaku
 language: ja
 status: review
 title: 1984――東京通勤圏でのサブカルとオタクの距離感
-title_breaks:
-  - 1984――東京通勤圏での
-  - サブカルとオタクの
-  - 距離感
+title_breaks: ["1984――東京通勤圏での","サブカルとオタクの距離感"]
 excerpt: 東京まで電車で一時間。千葉の高校生は、思想書、パソコン、漫画を通じて何に触れ、なぜオタク寄りになったのか。1984年の体験から、サブカルとの曖昧な境界を振り返る。
 credits:
   - role: translator

@@ -1,6 +1,6 @@
 ---
 title: 特集｜さすらう不遜な者の歌――『ペルソナ5』の文化的背景をめぐって
-title_breaks: [特集｜, さすらう不遜な者の歌――, 『ペルソナ5』の文化的背景をめぐって]
+title_breaks: ["特集｜","さすらう不遜な者の歌――","『ペルソナ5』の","文化的背景をめぐって"]
 date: 2018-11-21
 slug: persona-5-picaresque-bunka-haikei
 script: ja

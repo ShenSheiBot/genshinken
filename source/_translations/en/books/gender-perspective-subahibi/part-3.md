@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Subahibi from","a Gender Perspective","(Part Three)"]
 title: "Subahibi from a Gender Perspective (Part Three)"
 excerpt: "This installment mainly fills in the gaps, concentrating on Kagami’s and Kimika’s experiences in an attempt to find types that can serve as the basis of analysis."
 work_id: "gender-perspective-subahibi-part-3"

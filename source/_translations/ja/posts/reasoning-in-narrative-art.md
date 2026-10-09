@@ -6,8 +6,7 @@ slug: reasoning-in-narrative-art
 language: ja
 status: reviewed
 title: 漫画『ねじの人々』から考える、物語のなかに理屈をどう織り込むか
-title_breaks:
-  - 漫画『ねじの人々』から考える、物語のなかに理屈をどう織り込むか
+title_breaks: ["漫画『ねじの人々』から考える、","物語のなかに理屈をどう織り込むか"]
 excerpt: 『ねじの人々』を中心に、物語のなかで道理や考え方を説くことが、筋の展開、知識の伝達、主題の表現にどう関わるかを整理する。人物の言葉や絵、物語の展開を通じて、漫画が抽象的な概念を取り込む方法を考える。
 credits:
   - role: translator

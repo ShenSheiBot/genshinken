@@ -1,4 +1,5 @@
 ---
+title_breaks: ["Magical Imagery:","The Other’s Dragon,","the Other’s Moon"]
 work_id: science-magic-imagery-worldbuilding-magic-imagery
 source_type: book-chapter
 source_book_slug: science-magic-imagery-worldbuilding

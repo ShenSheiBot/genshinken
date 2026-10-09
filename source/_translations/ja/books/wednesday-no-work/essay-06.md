@@ -7,8 +7,7 @@ slug: essay-06
 language: ja
 status: reviewed
 title: 第6回　僕たちにエヴァンゲリオンは必要ない
-title_breaks:
-  - 第6回　僕たちにエヴァンゲリオンは必要ない
+title_breaks: ["第6回　僕たちに","エヴァンゲリオンは必要ない"]
 excerpt: 宇野常寛が『シン・エヴァンゲリオン劇場版』と『花束みたいな恋をした』を通して、伴侶を得た後の現実や、未知の人間関係に踏み込まない現代の物語を批判する。
 credits:
   - role: translator
