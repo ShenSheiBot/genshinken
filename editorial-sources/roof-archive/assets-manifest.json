@@ -8783,38 +8783,38 @@
     },
     {
       "key": "roof-archive/cv3120530/03-dream-drawing.png",
-      "bytes": 304474,
-      "sha256": "88ba96af513dd80a69a8118c441cbc277957024028220e74d516fea4c6f9a913",
-      "contentType": "image/png"
-    },
-    {
-      "key": "roof-archive/cv3120530/04-alien-clue.png",
       "bytes": 139434,
       "sha256": "4ba48c3fe9e274eb56d40d1d16d67ddf6f09726d6c01271e613b014ebc08c84a",
       "contentType": "image/png"
     },
     {
-      "key": "roof-archive/cv3120530/05-world-end.png",
+      "key": "roof-archive/cv3120530/04-alien-clue.png",
       "bytes": 217617,
       "sha256": "f33a38d1c646603d46a0aa2ff53184b03d17ba7ccedc08002bf8057056032bc6",
       "contentType": "image/png"
     },
     {
-      "key": "roof-archive/cv3120530/06-cave.png",
+      "key": "roof-archive/cv3120530/05-world-end.png",
       "bytes": 142810,
       "sha256": "8cbf8ffb51b05d054ceea157d24318ab400d946e6ddf47473e2f800328049a8f",
       "contentType": "image/png"
     },
     {
-      "key": "roof-archive/cv3120530/07-surreal-sea.png",
+      "key": "roof-archive/cv3120530/06-cave.png",
       "bytes": 151971,
       "sha256": "c7b8f76f85a62fce0754c1db1d8057fad9385025576b6929af87dcc682fe4e43",
       "contentType": "image/png"
     },
     {
-      "key": "roof-archive/cv3120530/08-seaside-cafe.png",
+      "key": "roof-archive/cv3120530/07-surreal-sea.png",
       "bytes": 285237,
       "sha256": "2f2699627741e757351e2cd09aa0128c33fa78dcf18e05d39b8b967158cab918",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv3120530/08-seaside-cafe.png",
+      "bytes": 261154,
+      "sha256": "f1d06c548d92dfb11ca7ee09029ae65b28cc2c846606bfdecc87f18a53dbd716",
       "contentType": "image/png"
     },
     {
@@ -17219,8 +17219,8 @@
     },
     {
       "key": "roof-archive/cv21792051/01-author-portrait-v5.png",
-      "bytes": 108405,
-      "sha256": "3fa27583c450a30f4a411d68c7dcf42d4b56d7646d3b8ef534f1800c1c2d34ca",
+      "bytes": 256432,
+      "sha256": "60188f45a468883fdf20d3f12cfdf9c5a68011196ea8dd44b7e1d2e5bc5f15d0",
       "contentType": "image/png"
     },
     {
@@ -18223,6 +18223,450 @@
       "key": "roof-archive/cv1708099/translations/ja/20-editor-note-meme.png",
       "bytes": 129240,
       "sha256": "30a59682bf0efe57ebe09aee73c900b230b3297c1813da977939f6d512125c09",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv10137308/translations/ja/28fe49e37a92084c6a838d7e7526bd95694ebde2-ja.png",
+      "bytes": 16642,
+      "sha256": "17b33060e8132ac222965bfd854878a05f374a6396cd6706cc3a8d4bfee899c8",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv10137308/translations/ja/8de8ab784b543707754a7802dd1c68751968f2d4-ja.png",
+      "bytes": 28103,
+      "sha256": "b3c5b39aceea8f5e79ff256c75e5bbb189bccfd9f4696e8e6431b12f5bbcb9b6",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv10137506/translations/ja/figure-1-ja.png",
+      "bytes": 4302,
+      "sha256": "333e386a5a60c91b45aa6fb5e607c2ad4bd45abbd94b460e76274047ee9de961",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv10137506/translations/ja/figure-2-ja.png",
+      "bytes": 17901,
+      "sha256": "c00b637398e84760d2a54f33e6efdbc8047ae69245a6214d4d2ff7ea14606b95",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv10766775/translations/ja/01-lacanian-objects-diagram-ja.png",
+      "bytes": 115928,
+      "sha256": "b0cb2f2342173b926409d53623fc755766cb3d05c46cbaadda9d682b621af09e",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv10766775/translations/ja/02-seminar-xx-diagram-ja.png",
+      "bytes": 41307,
+      "sha256": "a3a04e4a530a6bdb25a76e7716388e718e6e535fe3fedb798e225f67ac26870b",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv10897532/translations/ja/figure-1-ja.png",
+      "bytes": 91887,
+      "sha256": "ae80429ca27dfde86e0a9c321cca32900b25ded1a9c6f28adb1e1d9acc758cb3",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv10897532/translations/ja/figure-2-ja.png",
+      "bytes": 60826,
+      "sha256": "6cbcca24946e5ccc5d9159236de32880c5d33e435842c310ff8fbe051000a33a",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv11559151/translations/ja/5094129339b9da5874bead457458161b9f8748fd-ja.png",
+      "bytes": 14575,
+      "sha256": "666f96eedcc3ac5cc192e1172d895f2774449915c5af115339dcc53bb227f5f2",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv11559151/translations/ja/82390733912eede6834dc73d8bf03ff353a0909c-ja.png",
+      "bytes": 36799,
+      "sha256": "33853d6b34c9b9455f078069032852c1d29635e015e72b6fb669bd0112992f79",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv13739534/translations/ja/figure-2.ja.png",
+      "bytes": 278378,
+      "sha256": "d85345bca64488850dd3d8ab48c79876d96c4de308b6e99881189547871a0cad",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv13739534/translations/ja/figure-5.ja.png",
+      "bytes": 264018,
+      "sha256": "abe1bd2be35c28702f3336dfd50071507d4ebcbf683f09292889951e46d4b2cb",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv14084596/translations/ja/figure-3-ja-currency-recovered.png",
+      "bytes": 165820,
+      "sha256": "e2f40b5f6d0b10afa89fa5a4a9915a65c3c978e6602a47d11d79b061a9498ea0",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv14594447/translations/ja/figure-4-ja.png",
+      "bytes": 52880,
+      "sha256": "b46f0e1addef2e7dad5b126c53168c3fccfc866995b4b94e9be4d74dcfab2f1b",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1652116/translations/ja/08-breadth-analysis-diagram-ja.png",
+      "bytes": 182468,
+      "sha256": "24ee9091699641bb2504eec9a845cb4ceb427cdecf9aba4c0f51ddac2bf10c44",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1652116/translations/ja/09-criticism-dimensions-diagram-ja.png",
+      "bytes": 191625,
+      "sha256": "b57c3fa4d7c4308bee083d4c2c451e787eb90f46dd5a79e3839b2aa36d0bb5d2",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1668131/translations/ja/slime-from-a-biological-perspective/12-cnidocyte-diagram-ja.png",
+      "bytes": 183446,
+      "sha256": "c6848268a0b604356a7bab49a25ffb72184de618c79ffb7afb22e5997d6005e3",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1705216/ja/01-author-portrait-source-crop.png",
+      "bytes": 22914,
+      "sha256": "f4a90ccc025134f56fdfa9a481189a0849923f9962b286d20b45eede4553c773",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1705216/ja/07-moe-elements-published.jpg",
+      "bytes": 28338,
+      "sha256": "f8a717ec0f19da00583fe0e761a98acf84ed89db0a4eb766472b7d79ddc3d3ed",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv1804388/translations/ja/01-enjoy-your-symptom-ja.jpg",
+      "bytes": 44094,
+      "sha256": "28e654de7b91e1b225ec2cdecace6158f34f088cf6fa7a7c0924e1d364d1ece8",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv1822938/translations/ja/white-album-season-wa1-introduction/author-portrait-clean-20261006.png",
+      "bytes": 100088,
+      "sha256": "121996119c0723226030addf33e72cf832e15a8959952040ab6ccf54f6a152e1",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1842794/translations/ja/03-animation-direction-zhihu-ja.png",
+      "bytes": 29951,
+      "sha256": "7c6b731aec354ee7d09a0fcc00b0f49fa1c2d1d2157a1fe2e27f9b0e860e0d0d",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1842794/translations/ja/16-review-dimensions-axis-ja.png",
+      "bytes": 186054,
+      "sha256": "68dadfa9579163613bd81a46f751fa3b7de35122fa7686afa0213d5d7a3b5eb0",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1842794/translations/ja/17-commentary-categories-ja.png",
+      "bytes": 202939,
+      "sha256": "5acf8ec1d013cf530d4130f0ecf0a25692d5fffbad469f406b6eac0cbcd7f6f3",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1855930/translations/ja/03-03-ja.png",
+      "bytes": 60602,
+      "sha256": "774cabbc9862dc6af3a3bb6d290d0482a935ab9a389d355c81527eff45f14928",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1855930/translations/ja/07-07-ja.png",
+      "bytes": 43858,
+      "sha256": "eca21bf43dfe402691a048a50e89d5c490085d027143e0d7fc6d77d52726d0d3",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1895936/translations/ja/11-sublime-value-axis.ja.png",
+      "bytes": 22113,
+      "sha256": "b2f4b1c7b343edb08a2a56ba51ec25c3e233247de4361c90bc6d3f01b6b8a665",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1938851/translations/ja/05-kaguya-manga-annoying.png",
+      "bytes": 44695,
+      "sha256": "15542ce52b800bbd3f674193c25090549918d08e0b5a07cfe0e48b04a5359264",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv1980660/translations/ja/02-spice-and-wolf-volume-2-ja.jpg",
+      "bytes": 129940,
+      "sha256": "ba27a95f1cd8d7cfc22ba3d31636491d20de28323df68d67bf7b244ee5ff03ea",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv1984621/translations/ja/02-jojo-truth-ja.png",
+      "bytes": 437037,
+      "sha256": "828f4daea1779d06a334cae0b780530ccaa74af637b25c57108a9781c275badd",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv2031971/translations/ja/13-editor-defeated-ja.png",
+      "bytes": 182236,
+      "sha256": "adc21db27a21218879947727b7e43c4913384925f1d6c8c3b4bef9d99daabbb1",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv2295534/translations/ja/06-kaguya-verdict.jpg",
+      "bytes": 933889,
+      "sha256": "de98b33752d9d1c3c73b121f0e9a13dc10a5c3508159016211f31dcd9820f404",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv2318316/translations/ja/06-revue-starlight-composition-ja.png",
+      "bytes": 430845,
+      "sha256": "65790646a1dcf2d9dab53998acbeb65e5b53fd23d82f88204a686f36cbf4d2c6",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv2318316/translations/ja/08-modern-art-course-ja.png",
+      "bytes": 378996,
+      "sha256": "1a510873c760eef730bdd2255b14d326599961df42769444d4bdd3258c93eeae",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv2318316/translations/ja/23-review-dimensions-ja.png",
+      "bytes": 161024,
+      "sha256": "d00fc656b8b5e95d3a59d05ffc4748cc1eaf01ecdbe46088658de58986cf2531",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv2318316/translations/ja/24-review-categories-ja.png",
+      "bytes": 141070,
+      "sha256": "1933e9866e02948320683e1250ab4b1841e36f194ccd7c17d3386b19ddbf9b23",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv2620345/translations/ja/04-shoko-notebook-ja.jpg",
+      "bytes": 12574,
+      "sha256": "1804d6f4c2981dff6751b272b4fe1666c3766f68446974ded5efa4038a06821f",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv2944298/01-author-portrait-source-crop.png",
+      "bytes": 185519,
+      "sha256": "73daeef3f7ca34d525e375cf49034a8e1f5a056423438ba4f388e37b6ce8605b",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv2979462/translations/ja/04-storybook-openings-ja.png",
+      "bytes": 999309,
+      "sha256": "36d6e83cdf5ebefafee1e9efb42a501ca067e504dac16586c3bc49d24182b263",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv2979462/translations/ja/06-blue-cat-exposition-ja.png",
+      "bytes": 1464862,
+      "sha256": "49508d6cc45a8be8cc36dfd37a15bf74caa8402c033d6897450e43b5c840861a",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv2979462/translations/ja/07-charlie-lola-knowledge-ja.png",
+      "bytes": 1935993,
+      "sha256": "1f5bd044cbd4c8c6b05dafd20f4ce486a413111015534239a2f27ebf800ad6fd",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv2979462/translations/ja/10-ghost-in-shell-theme-ja.png",
+      "bytes": 549932,
+      "sha256": "15419477eb7e324037d836d7e65f78fbc0e4bbebf115a44c90df319a6796091c",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv2979462/translations/ja/15-author-appearances-ja.png",
+      "bytes": 471911,
+      "sha256": "c52b63ad4d1e96705277676449868f99f4866210e390542986fc8ad313585cd6",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv2979462/translations/ja/19-early-school-life-ja.png",
+      "bytes": 706482,
+      "sha256": "9ff272c9d32fabddeb40ca2e74328b735de3f087e4226db2db33cf957bc6896d",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv3064956/26-godzilla-dining.png",
+      "bytes": 128913,
+      "sha256": "62e35b97dd9b873c915f8155a80845cec20f85be4ab023f2d40ef856b461d558",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv3120530/03a-jabberwock-book.png",
+      "bytes": 304474,
+      "sha256": "88ba96af513dd80a69a8118c441cbc277957024028220e74d516fea4c6f9a913",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv3120530/14-hamamoto-never-forgive.png",
+      "bytes": 194026,
+      "sha256": "e5d6e96d51397458fdf1f174854fca5b61765e4c8117514cad10a30ea8bd1e0f",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv3308862/translations/ja/08-ja.png",
+      "bytes": 62231,
+      "sha256": "6351ce0f55c6bf2f2c9abeda01eda44c45b574b613ee40fab75aa77b9d62cc76",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv3522753/translations/ja/14-xxxholic-collection-room-ja.png",
+      "bytes": 570492,
+      "sha256": "0806187be55bed8f77a487796e2b4d10d0dad61ee26a22a6a38829cea01d5742",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv3522753/translations/ja/21-getenrou-01-ja.png",
+      "bytes": 221744,
+      "sha256": "ac851d5c153745c2d4b77ca27695fb9795ffc6d483e1edc1d01640f785e2678e",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv5396377/translations/ja/15-izumi-composition-swap-diagram-ja.png",
+      "bytes": 227386,
+      "sha256": "08d104bf59e368c7af4f8b7f55305dfbc1fe29fdc0f648ce09bb0ff71601f3c9",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv5581685/translations/ja/05-figure-04-shinako-design-comparison-ja.png",
+      "bytes": 200168,
+      "sha256": "d0009a9dd2ef57382201f25e4af10ef20b419ecab32517e576c63935a3435085",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv5581685/translations/ja/07-figure-06-smoking-manga-ja.png",
+      "bytes": 614121,
+      "sha256": "a65d69e86926feb7b5d2d991a2bab68a48555a50e2b20b87f1c84151136e1ebd",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv5581685/translations/ja/08-figure-07-manga-gas-shutoff-ja.png",
+      "bytes": 657847,
+      "sha256": "ba825c334851189ecd485d1e82a34125b29bbfbda5150a430e9a797760714e6f",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv5581685/translations/ja/09-figure-08-manga-cold-water-ja.png",
+      "bytes": 314501,
+      "sha256": "0148b5280f2a6fc8b179675c74d73af3e90dd6f3f5ffdf03d60fc1221d7a8634",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv5581685/translations/ja/10-figure-09-manga-donation-box-ja.png",
+      "bytes": 197195,
+      "sha256": "90b653be7c352c91f50a40145669a6ebc8799fd8c6886784ab2a62a2d737aa06",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv5581685/translations/ja/11-figure-10-manga-nail-polish-ja.png",
+      "bytes": 310393,
+      "sha256": "15b4df8caff4920b84bd0860bd7d0c2f02705821d06b0bd3c0cc1086a40634d3",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv5581685/translations/ja/16-figure-15-manga-reaction-ja.png",
+      "bytes": 621448,
+      "sha256": "0b490213fa6911f1cdbea5b89bf000abe5e192a73b168ff7223cdf29b0b9f9ae",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv5581685/translations/ja/17-figure-16-manga-at-table-ja.png",
+      "bytes": 443835,
+      "sha256": "5d9754f6e2bd9c8b9e4042f81345ccfb673f04513dc940af71c239358cc1b34b",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv5581685/translations/ja/21-figure-20-manga-decision-ja.png",
+      "bytes": 2091080,
+      "sha256": "6e121f8c593ec7d75bab8b4ad0b18838e6bfb08b2d40846f65878c404dd66ed7",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv5581685/translations/ja/22-figure-21-manga-after-fall-ja.png",
+      "bytes": 482354,
+      "sha256": "bcc1a794786467c547fb4ad465277c6ec25a4a646a7dadec4bccac4ddfa3cacb",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv5581685/translations/ja/28-figure-27-manga-restaurant-ja.png",
+      "bytes": 1854906,
+      "sha256": "46a7aa2d35ad87a4dd6e28af7d36adfa2af4ad10f1e1a27a39ae4c0226e68be9",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv5581685/translations/ja/29-figure-28-convenience-store-ja.png",
+      "bytes": 1920001,
+      "sha256": "5fa887c1a84cde8743009843c515b233a0f11c442e11d623b91f5e0944e53132",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv5581685/translations/ja/30-figure-29-convenience-exterior-ja.png",
+      "bytes": 1011498,
+      "sha256": "602bc06b94c86731a3670f63e36eedaa9098dd4a1c800719b225d748b86d128d",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv5581685/translations/ja/35-figure-34-night-walk-manga-ja.png",
+      "bytes": 1439934,
+      "sha256": "b14c26e5a2baa795392f1bad52229c61b00ed45fc3e0fa2649803ebe29dfa1dc",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv5581685/translations/ja/36-figure-35-memory-manga-ja.png",
+      "bytes": 717116,
+      "sha256": "8aa39464d36616846e0ea9d27a5507ecb13345fe5249219a478d3de2a1c4a66c",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv7634594/translations/ja/01-kaneki-on-throne.png",
+      "bytes": 1210208,
+      "sha256": "de365cc0c5f463d99ae8f1736a3742fe8775394a5ede7bc93cbbe9e8a717fea9",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv7634594/translations/ja/02-kaneki-and-mirror-image.png",
+      "bytes": 857539,
+      "sha256": "fccb4b54f5b7138569702dbe90fb636b62cb97c3a153dfb75a46b4a57186dab6",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv7634594/translations/ja/03-colorful-kagune.png",
+      "bytes": 917736,
+      "sha256": "54705fee4c8f8ec244cbddc609d8d3b2c5be1617e8ccf515d1df3889f541383d",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8255716/translations/ja/05-3000-leagues-layout-notes.jpg",
+      "bytes": 146121,
+      "sha256": "bd3fb9727f8da22f41753dba3f37c1b6a71854429a2feb88854bc1c554e629fa",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "roof-archive/cv8347885/translations/ja/01-cloud-gamer-triple-meme-ja.png",
+      "bytes": 45688,
+      "sha256": "fb731a7b2014e14a7d76ea3d3cbf7796c6bb822573b16a0a5d3f3775650de4c1",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8380081/translations/ja/03-family-portrait-game-ja.png",
+      "bytes": 2111853,
+      "sha256": "df6d0da8c3aadb32278fad1adafe61cd32a28c023f2d6ba9fdc2c39001759686",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv8416238/translations/ja/custom-noun-narrative-diagram-ja.png",
+      "bytes": 32279,
+      "sha256": "2432a28d08494080597c33175470bff6a790ac85a7782b01b27abea3fb7efb7a",
+      "contentType": "image/png"
+    },
+    {
+      "key": "roof-archive/cv9834806/translations/ja/242446596815c3b43ac0d1befc7f2fcd0b523f47-ja.png",
+      "bytes": 1067091,
+      "sha256": "f4fa954446ca5cf2b64fb6bcf77a7d8c04040a62a2a2dfc2087bfd779670f3da",
       "contentType": "image/png"
     }
   ]

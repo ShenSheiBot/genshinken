@@ -20,7 +20,7 @@ function formattedBuildTimestamp(value: string | null): BuildTimestamp | null {
   };
 }
 
-export default function FooterBuildTimestamp() {
+export default function FooterBuildTimestamp({ locale = "zh" }: { locale?: "zh" | "en" | "ja" }) {
   const pathname = usePathname();
   const [timestamp, setTimestamp] = useState<BuildTimestamp | null>(null);
 
@@ -39,7 +39,7 @@ export default function FooterBuildTimestamp() {
 
   return (
     <time className="foot-build" data-build-timestamp dateTime={timestamp.iso}>
-      <span>最新修改</span>
+      <span>{{ zh: "最新修改", en: "Last updated", ja: "最終更新" }[locale]}</span>
       <span>{timestamp.label}</span>
     </time>
   );

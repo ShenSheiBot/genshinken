@@ -126,6 +126,76 @@ FALLBACK_FONTS = (
         "variable": "--font-roof-noto-sans-math-fallback",
         "kind": "fallback-math",
     },
+    {
+        "family": "Roof Noto Sans KR Fallback",
+        "source": "NotoSansKR.ttf",
+        "source_sha256": "194018e6b2b293a7964f037b25c0249ce1418bc9ab3c971060a03aa57861e252",
+        "url": f"https://raw.githubusercontent.com/google/fonts/{UPSTREAM_COMMIT}/ofl/notosanskr/NotoSansKR%5Bwght%5D.ttf",
+        "output": "roof-noto-sans-kr-fallback.woff2",
+        "weight": "100 900",
+        "variable": "--font-roof-noto-sans-kr-fallback",
+        "kind": "fallback-korean",
+    },
+    {
+        "family": "Roof Noto Sans Armenian Fallback",
+        "source": "NotoSansArmenian.ttf",
+        "source_sha256": "0870908d8318435a5daf1cd280ae15063f990cd9ad60f3e94c734ce9e1ffef71",
+        "url": f"https://raw.githubusercontent.com/google/fonts/{UPSTREAM_COMMIT}/ofl/notosansarmenian/NotoSansArmenian%5Bwdth%2Cwght%5D.ttf",
+        "output": "roof-noto-sans-armenian-fallback.woff2",
+        "weight": "100 900",
+        "variable": "--font-roof-noto-sans-armenian-fallback",
+        "kind": "fallback-armenian",
+    },
+    {
+        "family": "Roof Noto Sans Canadian Aboriginal Fallback",
+        "source": "NotoSansCanadianAboriginal.ttf",
+        "source_sha256": "81b0f7e7ca48b28e343bb6a523a066743acedfbb29f374cbe4501e6d5f08f7af",
+        "url": f"https://raw.githubusercontent.com/google/fonts/{UPSTREAM_COMMIT}/ofl/notosanscanadianaboriginal/NotoSansCanadianAboriginal%5Bwght%5D.ttf",
+        "output": "roof-noto-sans-canadian-aboriginal-fallback.woff2",
+        "weight": "100 900",
+        "variable": "--font-roof-noto-sans-canadian-aboriginal-fallback",
+        "kind": "fallback-canadian-aboriginal",
+    },
+    {
+        "family": "Roof Noto Sans Yi Fallback",
+        "source": "NotoSansYi-Regular.ttf",
+        "source_sha256": "ee4de376a1e4f3c4bc7e116f4f46538348716b8408b86a0fc18c1c6128d2e56d",
+        "url": f"https://raw.githubusercontent.com/google/fonts/{UPSTREAM_COMMIT}/ofl/notosansyi/NotoSansYi-Regular.ttf",
+        "output": "roof-noto-sans-yi-fallback.woff2",
+        "weight": "400",
+        "variable": "--font-roof-noto-sans-yi-fallback",
+        "kind": "fallback-yi",
+    },
+    {
+        "family": "Roof Noto Sans Fallback",
+        "source": "NotoSans.ttf",
+        "source_sha256": "bfb7bb691513f12e734dc346c03a03f784912432d7e3fa8e56efcf906fe86b3d",
+        "url": f"https://raw.githubusercontent.com/google/fonts/{UPSTREAM_COMMIT}/ofl/notosans/NotoSans%5Bwdth%2Cwght%5D.ttf",
+        "output": "roof-noto-sans-fallback.woff2",
+        "weight": "100 900",
+        "variable": "--font-roof-noto-sans-fallback",
+        "kind": "fallback-phonetic",
+    },
+    {
+        "family": "Roof Noto Emoji Fallback",
+        "source": "NotoEmoji.ttf",
+        "source_sha256": "de6c18832938afc99caf132b39d6a30a19bac7f2e812e28db2535b4608d27551",
+        "url": f"https://raw.githubusercontent.com/google/fonts/{UPSTREAM_COMMIT}/ofl/notoemoji/NotoEmoji%5Bwght%5D.ttf",
+        "output": "roof-noto-emoji-fallback.woff2",
+        "weight": "300 700",
+        "variable": "--font-roof-noto-emoji-fallback",
+        "kind": "fallback-emoji",
+    },
+    {
+        "family": "Roof Noto Sans Symbols 2 Fallback",
+        "source": "NotoSansSymbols2-Regular.ttf",
+        "source_sha256": "7d5fb73b7ca67a6798101741f5d280a3d016a56a197afcd4199dbb57b4b82a21",
+        "url": f"https://raw.githubusercontent.com/google/fonts/{UPSTREAM_COMMIT}/ofl/notosanssymbols2/NotoSansSymbols2-Regular.ttf",
+        "output": "roof-noto-sans-symbols-2-fallback.woff2",
+        "weight": "400",
+        "variable": "--font-roof-noto-sans-symbols-2-fallback",
+        "kind": "fallback-symbols",
+    },
 )
 
 
@@ -263,10 +333,14 @@ def code_point_digest(points: set[int]) -> str:
 
 STACK_SPECS = {
     "--font-roof-translation-serif-stack": (
-        "primary-serif", "fallback-serif", "fallback-latin", "fallback-math", "fallback-music"
+        "primary-serif", "fallback-serif", "fallback-latin", "fallback-math", "fallback-music",
+        "fallback-korean", "fallback-armenian", "fallback-canadian-aboriginal",
+        "fallback-yi", "fallback-phonetic", "fallback-emoji", "fallback-symbols"
     ),
     "--font-roof-translation-sans-stack": (
-        "primary-sans", "fallback-sans", "fallback-latin", "fallback-math", "fallback-music"
+        "primary-sans", "fallback-sans", "fallback-latin", "fallback-math", "fallback-music",
+        "fallback-korean", "fallback-armenian", "fallback-canadian-aboriginal",
+        "fallback-yi", "fallback-phonetic", "fallback-emoji", "fallback-symbols"
     ),
 }
 
@@ -416,17 +490,21 @@ def main() -> None:
     fallback_sources = [(record, source_font(record, source_dir)) for record in FALLBACK_FONTS]
     primary_supported = set.intersection(*(font_code_points(path) for _, path in sources))
     fallback_supported = set.intersection(*(font_code_points(path) for _, path in fallback_sources[:2]))
-    latin_supported = font_code_points(fallback_sources[2][1])
-    music_supported = font_code_points(fallback_sources[3][1])
-    math_supported = font_code_points(fallback_sources[4][1])
+    fallback_coverage = {
+        record["kind"]: (
+            fallback_supported if record["kind"] in {"fallback-serif", "fallback-sans"}
+            else font_code_points(path)
+        )
+        for record, path in fallback_sources
+    }
     requested = corpus_code_points(files)
     target_points = rendered_corpus_code_points(files)
-    covered = primary_supported | fallback_supported | latin_supported | music_supported | math_supported
+    covered = primary_supported.union(*fallback_coverage.values())
     unsupported = target_points - covered
     unsupported_noncontrol = {point for point in unsupported if point >= 0x20 and not 0x7F <= point < 0xA0}
     if unsupported_noncontrol:
         raise SystemExit(
-            "Japanese corpus contains visible glyphs unavailable in the hosted JP/SC/Latin/math/music sources. "
+            "Japanese corpus contains visible glyphs unavailable in the hosted font sources. "
             "Add a pinned source face or remove the unsupported visible character; do not add a one-off whitelist: "
             + ", ".join(compact_ranges(unsupported_noncontrol))
         )
@@ -454,12 +532,7 @@ def main() -> None:
         print(f"built {output.relative_to(ROOT)} ({output.stat().st_size:,} bytes)")
     fallback_points = target_points - primary_supported
     for record, source in fallback_sources:
-        supported = (
-            fallback_supported if record["kind"] in {"fallback-serif", "fallback-sans"}
-            else latin_supported if record["kind"] == "fallback-latin"
-            else music_supported if record["kind"] == "fallback-music"
-            else math_supported
-        )
+        supported = fallback_coverage[record["kind"]]
         points = fallback_points & supported
         output = OUTPUT_DIR / record["output"]
         subset_font(source, output, points)
@@ -473,7 +546,7 @@ def main() -> None:
             "source": record["source"],
             "sourceSha256": record["source_sha256"],
             "sourceUrl": record["url"],
-            "unicodeRange": " ".join(compact_ranges(points)),
+            "unicodeRange": ", ".join(compact_ranges(points)),
             "variable": record["variable"],
             "weight": record["weight"],
         })

@@ -1,5 +1,6 @@
 ---
 localized_titles:
+  ja: "「都市・空間」評論募集"
   en: "Cities · Space Essay Contest"
 title: 《都市·空间》征文
 subtitle: 屋顶现视研第一期主题征文

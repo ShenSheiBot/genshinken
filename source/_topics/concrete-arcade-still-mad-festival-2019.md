@@ -1,5 +1,6 @@
 ---
 localized_titles:
+  ja: "コンクリート・アーケード：静止画MAD祭典2019"
   en: "Concrete Arcade: Still-Image MAD Festival 2019"
 title: 混凝土拱廊街：静止系 MAD 祭典 2019
 subtitle: 屋顶现视研 × ZERO MAD TEAM

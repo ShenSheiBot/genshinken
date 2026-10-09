@@ -63,8 +63,9 @@ the upstream installable font.
 `scripts/build-translation-font-subsets.py` scans the complete Japanese
 translation tree, localized translation components, and
 `source/_translations/language-dispositions.json`. It builds the primary Noto
-Serif/Sans JP subsets plus tiny generated SC, Latin, math and music subsets for
-code points absent from the JP sources. These are controlled hosted fallbacks,
+Serif/Sans JP subsets plus generated SC, Latin, math, music, Korean, Armenian,
+Canadian Aboriginal, Yi, phonetic, symbol and emoji subsets for code points
+absent from the JP sources. These are controlled hosted fallbacks,
 not a character whitelist: new text is covered automatically when one of the
 pinned sources contains it, otherwise generation fails and reports the
 unsupported code point.

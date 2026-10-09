@@ -4,6 +4,21 @@ Fonts source families, all distributed under the SIL Open Font License 1.1:
 * Noto Serif SC / Noto Sans SC — Copyright 2014 The Noto Project Authors.
 * EB Garamond — Copyright 2010 The EB Garamond Project Authors.
 * Noto Music — Copyright 2015 The Noto Project Authors.
+* Noto Sans KR — Copyright 2014-2021 Adobe (http://www.adobe.com/),
+  with Reserved Font Name 'Source'.
+* Noto Sans Armenian — Copyright 2022 The Noto Project Authors
+  (https://github.com/notofonts/armenian).
+* Noto Sans Canadian Aboriginal — Copyright 2022 The Noto Project Authors
+  (https://github.com/notofonts/canadian-aboriginal).
+* Noto Sans Yi — Copyright 2022 The Noto Project Authors
+  (https://github.com/notofonts/yi).
+* Noto Sans — Copyright 2022 The Noto Project Authors
+  (https://github.com/notofonts/latin-greek-cyrillic).
+* Noto Sans Math — Copyright 2022 The Noto Project Authors
+  (https://github.com/notofonts/math).
+* Noto Sans Symbols 2 — Copyright 2022 The Noto Project Authors
+  (https://github.com/notofonts/symbols).
+* Noto Emoji — Copyright 2013 Google LLC.
 
 The complete license text is included in OFL-Noto-CJK.txt and is also available
 at https://scripts.sil.org/OFL. The generated files are modified font software

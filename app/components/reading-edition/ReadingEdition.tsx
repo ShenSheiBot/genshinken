@@ -21,6 +21,8 @@ import { countRenderedListItems, splitRenderedApparatus } from "@/lib/markdown";
 import { isCompactTitleSegment, longestTitleSegmentWidthEm } from "@/lib/title-layout";
 import type { ReadingUiLocale } from "./reading-edition-ui";
 
+import { relatedPostsFor } from "@/lib/related-reading";
+
 const sectionFor = (post: PostSummary): EditorialSection => post.section;
 const sectionMeta = EDITORIAL_SECTION_META;
 const sectionLibraryHref = (section: EditorialSection) =>
@@ -374,45 +376,35 @@ export function DossierReading({
   );
 }
 
-function relatedPostsFor(current: Post, posts: PublicContentEntry[]): PublicContentEntry[] {
-  const currentTags = new Set(current.tags.map((tag) => tag.normalize("NFKC").trim()));
-
-  return posts
-    .filter((post) => post.slug !== current.slug)
-    .map((post) => {
-      const sharedTags = post.tags.filter((tag) => currentTags.has(tag.normalize("NFKC").trim())).length;
-      const sameTheme = post.category === current.category;
-      const sameSection = sectionFor(post) === sectionFor(current);
-
-      // 标签最能表明材料的直接关联；主题分类与栏目补足没有共同标签的文章。
-      return {
-        post,
-        score: sharedTags * 100 + Number(sameTheme) * 20 + Number(sameSection) * 8,
-      };
-    })
-    .sort((a, b) => b.score - a.score || b.post.timestamp - a.post.timestamp || a.post.slug.localeCompare(b.post.slug))
-    .slice(0, 3)
-    .map(({ post }) => post);
-}
-
-function RelatedReading({ current, posts }: {
-  current: Post;
+export function RelatedReading({ current, posts, locale = "zh" }: {
+  current: Pick<PostSummary, "slug" | "tags" | "category" | "section">;
   posts: PublicContentEntry[];
+  locale?: "zh" | "en" | "ja";
 }) {
   const candidates = relatedPostsFor(current, posts);
+  if (!candidates.length) return null;
+  const labels = {
+    zh: { heading: "相关推荐", article: "文稿", minutes: (n: number) => `预计阅读 ${n} 分钟` },
+    en: { heading: "Related reading", article: "Article", minutes: (n: number) => `${n} min read` },
+    ja: { heading: "関連記事", article: "記事", minutes: (n: number) => `読了目安 ${n} 分` },
+  }[locale];
+  const sections = {
+    en: { essay: "Essay", review: "Review", translation: "Translation", interview: "Interview", community: "Community", multimedia: "Media", negative: "Archive" },
+    ja: { essay: "論考", review: "評論", translation: "翻訳", interview: "インタビュー", community: "コミュニティ", multimedia: "メディア", negative: "アーカイブ" },
+  };
 
   return (
     <section className={styles.latestUpdates} data-surface="paper" aria-labelledby="related-heading" data-reveal>
       <div className={styles.latestInner}>
         <header className={styles.latestHeading}>
           <div>
-            <h2 id="related-heading">相关推荐</h2>
+            <h2 id="related-heading">{labels.heading}</h2>
           </div>
-          <p>
+          {locale === "zh" && <p>
             <Link href="/library" className={styles.viewAll}>
               查看全部内容 <b aria-hidden="true">→</b>
             </Link>
-          </p>
+          </p>}
         </header>
 
         <ol className={styles.latestGrid}>
@@ -426,14 +418,14 @@ function RelatedReading({ current, posts }: {
                     href={post.href}
                   >
                     <header>
-                      <span>文稿 {post.no}</span>
-                      <span>{section.label}</span>
+                      <span>{labels.article} {post.no}</span>
+                      <span>{locale === "zh" ? section.label : sections[locale][post.section]}</span>
                     </header>
                     <h3>{post.title}</h3>
                     {(post.excerpt || post.subtitle) && <p>{post.excerpt || post.subtitle}</p>}
                     <footer>
                       <time dateTime={post.displayDateISO}>{post.displayDateDisplay}</time>
-                      <span>预计阅读 {post.readMin} 分钟 <b aria-hidden="true">→</b></span>
+                      <span>{labels.minutes(post.readMin)} <b aria-hidden="true">→</b></span>
                     </footer>
                   </Link>
                 </article>

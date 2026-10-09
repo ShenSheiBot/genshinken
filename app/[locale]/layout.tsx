@@ -6,6 +6,7 @@ import "../cjk-fonts.generated.css";
 import "../translation-fonts.generated.css";
 import "../components/editorial-motion/EditorialMotion.css";
 import { site } from "@/lib/site";
+import Footer from "@/app/components/Footer";
 import EditorialReveal from "@/app/components/editorial-motion/EditorialReveal";
 import {
   documentFontVariables,
@@ -84,6 +85,7 @@ export default async function LocaleLayout({
         <SiteSearchProvider tags={searchTags} locale={locale}>
           <a href="#main" className="skip-link">{skipLabels[locale]}</a>
           {children}
+          <Footer locale={locale} />
           <EditorialReveal />
         </SiteSearchProvider>
       </body>

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { CSSProperties } from "react";
 import {
+  getAllTranslationEditions,
+  translationPreviewEnabled,
   translationCitation,
   type EditionLanguageLink,
   type TranslationEdition,
@@ -15,6 +17,7 @@ import { site } from "@/lib/site";
 import { CREDIT_ROLE_META } from "@/lib/credit-roles";
 import type { CreditLinkItem } from "@/app/components/CreditLinks";
 import {
+  RelatedReading,
   DossierCover,
   DossierReading,
   ReaderTitleText,
@@ -26,6 +29,9 @@ import { READING_UI } from "@/app/components/reading-edition/reading-edition-ui"
 import readerStyles from "@/app/components/reading-edition/reading-edition.module.css";
 import LanguageSwitcher from "./LanguageSwitcher";
 import styles from "./translation-edition.module.css";
+
+import { getAllPublicContent } from "@/lib/public-content";
+import { localizedReadingEntries } from "@/lib/related-reading";
 
 const ui = {
   en: {
@@ -69,7 +75,7 @@ export type TranslationChapterNavigation = {
   next?: { href: string; number: string; title: string; translated: boolean };
 };
 
-export default function TranslationEditionPage({
+export default async function TranslationEditionPage({
   locale, source, edition, links, topicMemberships = [], chapterNavigation,
 }: {
   locale: TranslationLocale;
@@ -79,6 +85,11 @@ export default function TranslationEditionPage({
   topicMemberships?: TopicMembership[];
   chapterNavigation?: TranslationChapterNavigation;
 }) {
+  const [publicContent, editions] = await Promise.all([getAllPublicContent(), getAllTranslationEditions()]);
+  const current = publicContent.find((post) => source.ref.type === "post"
+    ? post.kind === "post" && post.slug === source.ref.slug
+    : post.kind === "book" && post.bookSlug === source.ref.bookSlug);
+  const related = localizedReadingEntries(publicContent, editions, locale, translationPreviewEnabled());
   const labels = ui[locale];
   const readerUi = READING_UI[locale];
   const creators = source.credits.filter((credit) => visibleCreatorRoles.has(credit.role));
@@ -259,6 +270,7 @@ export default function TranslationEditionPage({
         {edition.rights && <p className={styles.editionRights}>{labels.rights}: {edition.rights}</p>}
         <p className={readerStyles.rightsNotice}>{site.rightsNotice[locale]}</p>
       </DossierReading>
+      {current && <RelatedReading current={current} posts={related} locale={locale} />}
     </ReadingDossierRoot>
   );
 }

@@ -110,7 +110,7 @@ citation:
 
 如果像本雅明断言的那样，Capitalism终究是一种宗教，那么，Capitalism就是有关“不死”的、幽灵般的生命的淫荡宗教，哥斯拉也确实就是那个不死的怪兽之王。
 
-![文中配图 76](/attachments/roof-archive/cv3064956/25-godzilla-prop.jpg)
+![文中配图 76](/attachments/roof-archive/cv3064956/26-godzilla-dining.png)
 
 ---
 

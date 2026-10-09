@@ -1,5 +1,6 @@
 ---
 localized_titles:
+  ja: "フェミニズム理論への手引き――近代性からポストモダニティへ"
   en: "Reading Feminist Theory: From Modernity to Postmodernity"
 title: 导读女性主义理论：从现代性到后现代
 subtitle: 网哲邻人部女性主义理论选文
