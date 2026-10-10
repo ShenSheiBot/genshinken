@@ -41,10 +41,10 @@ const externalCopy = {
   ja: {
     edition: "日本語原文",
     eyebrow: "原著 · 外部公開",
-    title: "日本語原文は正規の公開・刊行先で読めます。",
-    body: "別言語版から日本語へ再翻訳せず、確認済みの書誌情報と正規の入手先をご案内します。",
+    title: "日本語の原文・原資料をご案内します。",
+    body: "別言語版から日本語へ再翻訳せず、原文・原資料の掲載先や、収録書籍の入手先をご案内します。",
     original: "原版情報",
-    labels: { read: "原文を読む", publisher: "出版社で確認する", purchase: "書籍を購入する", library: "図書館で探す" },
+    labels: { read: "原文・原資料を見る", publisher: "出版社で確認する", purchase: "購入・購読する", library: "図書館で探す" },
   },
 } as const;
 

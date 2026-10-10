@@ -1252,6 +1252,1243 @@
           "url": "https://www.kodansha.co.jp/book/products/0000174032"
         }
       ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "maternal-dystopia",
+      "source_chapter_id": "image-century-upper",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "母性のディストピア",
+      "creator": "宇野常寛",
+      "publication": "集英社",
+      "format": "book",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.shueisha.co.jp/books/items/contents.html?isbn=9784087711196"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "maternal-dystopia",
+      "source_chapter_id": "miyazaki-lower",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "母性のディストピア",
+      "creator": "宇野常寛",
+      "publication": "集英社",
+      "format": "book",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.shueisha.co.jp/books/items/contents.html?isbn=9784087711196"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "maternal-dystopia",
+      "source_chapter_id": "miyazaki-upper",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "母性のディストピア",
+      "creator": "宇野常寛",
+      "publication": "集英社",
+      "format": "book",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.shueisha.co.jp/books/items/contents.html?isbn=9784087711196"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "maternal-dystopia",
+      "source_chapter_id": "oshii-image-century-1",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "母性のディストピア",
+      "creator": "宇野常寛",
+      "publication": "集英社",
+      "format": "book",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.shueisha.co.jp/books/items/contents.html?isbn=9784087711196"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "maternal-dystopia",
+      "source_chapter_id": "tomino-lower",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "母性のディストピア",
+      "creator": "宇野常寛",
+      "publication": "集英社",
+      "format": "book",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.shueisha.co.jp/books/items/contents.html?isbn=9784087711196"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "maternal-dystopia",
+      "source_chapter_id": "tomino-middle",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "母性のディストピア",
+      "creator": "宇野常寛",
+      "publication": "集英社",
+      "format": "book",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.shueisha.co.jp/books/items/contents.html?isbn=9784087711196"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "maternal-dystopia",
+      "source_chapter_id": "tomino-upper",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "母性のディストピア",
+      "creator": "宇野常寛",
+      "publication": "集英社",
+      "format": "book",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.shueisha.co.jp/books/items/contents.html?isbn=9784087711196"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "wednesday-no-work",
+      "source_chapter_id": "essay-06",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "水曜日は働かない",
+      "creator": "宇野常寛",
+      "publication": "集英社",
+      "format": "book",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.shueisha.co.jp/books/items/contents.html?isbn=9784834253603"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "wednesday-no-work",
+      "source_chapter_id": "essay-07",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "水曜日は働かない",
+      "creator": "宇野常寛",
+      "publication": "集英社",
+      "format": "book",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.shueisha.co.jp/books/items/contents.html?isbn=9784834253603"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "character-novel-writing-method",
+      "source_chapter_id": "lecture-01",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "キャラクター小説の作り方",
+      "creator": "大塚英志",
+      "publication": "角川書店／KADOKAWA",
+      "format": "book",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.hanmoto.com/bd/isbn/9784044191221"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "character-novel-writing-method",
+      "source_chapter_id": "lecture-02",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "キャラクター小説の作り方",
+      "creator": "大塚英志",
+      "publication": "角川書店／KADOKAWA",
+      "format": "book",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.hanmoto.com/bd/isbn/9784044191221"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "character-novel-writing-method",
+      "source_chapter_id": "lecture-03",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "キャラクター小説の作り方",
+      "creator": "大塚英志",
+      "publication": "角川書店／KADOKAWA",
+      "format": "book",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.hanmoto.com/bd/isbn/9784044191221"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "character-novel-writing-method",
+      "source_chapter_id": "lecture-09",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "キャラクター小説の作り方",
+      "creator": "大塚英志",
+      "publication": "角川書店／KADOKAWA",
+      "format": "book",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.hanmoto.com/bd/isbn/9784044191221"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "zero-years-imagination",
+      "source_chapter_id": "chapter-01",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "ゼロ年代の想像力",
+      "creator": "宇野常寛",
+      "publication": "早川書房",
+      "format": "book",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.hanmoto.com/bd/isbn/9784152089410"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "zero-years-imagination",
+      "source_chapter_id": "chapter-02",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "ゼロ年代の想像力",
+      "creator": "宇野常寛",
+      "publication": "早川書房",
+      "format": "book",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.hanmoto.com/bd/isbn/9784152089410"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "zero-years-imagination",
+      "source_chapter_id": "chapter-03",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "ゼロ年代の想像力",
+      "creator": "宇野常寛",
+      "publication": "早川書房",
+      "format": "book",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.hanmoto.com/bd/isbn/9784152089410"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "zero-years-imagination",
+      "source_chapter_id": "chapter-04",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "ゼロ年代の想像力",
+      "creator": "宇野常寛",
+      "publication": "早川書房",
+      "format": "book",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.hanmoto.com/bd/isbn/9784152089410"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "zero-years-imagination",
+      "source_chapter_id": "chapter-05",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "ゼロ年代の想像力",
+      "creator": "宇野常寛",
+      "publication": "早川書房",
+      "format": "book",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.hanmoto.com/bd/isbn/9784152089410"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "zero-years-imagination",
+      "source_chapter_id": "chapter-06",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "ゼロ年代の想像力",
+      "creator": "宇野常寛",
+      "publication": "早川書房",
+      "format": "book",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.hanmoto.com/bd/isbn/9784152089410"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "zero-years-imagination",
+      "source_chapter_id": "chapter-07",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "ゼロ年代の想像力",
+      "creator": "宇野常寛",
+      "publication": "早川書房",
+      "format": "book",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.hanmoto.com/bd/isbn/9784152089410"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "zero-years-imagination",
+      "source_chapter_id": "chapter-08",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "ゼロ年代の想像力",
+      "creator": "宇野常寛",
+      "publication": "早川書房",
+      "format": "book",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.hanmoto.com/bd/isbn/9784152089410"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "zero-years-imagination",
+      "source_chapter_id": "chapter-09",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "ゼロ年代の想像力",
+      "creator": "宇野常寛",
+      "publication": "早川書房",
+      "format": "book",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.hanmoto.com/bd/isbn/9784152089410"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "zero-years-imagination",
+      "source_chapter_id": "chapter-10",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "ゼロ年代の想像力",
+      "creator": "宇野常寛",
+      "publication": "早川書房",
+      "format": "book",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.hanmoto.com/bd/isbn/9784152089410"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "zero-years-imagination",
+      "source_chapter_id": "chapter-11",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "ゼロ年代の想像力",
+      "creator": "宇野常寛",
+      "publication": "早川書房",
+      "format": "book",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.hanmoto.com/bd/isbn/9784152089410"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "zero-years-imagination",
+      "source_chapter_id": "chapter-12",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "ゼロ年代の想像力",
+      "creator": "宇野常寛",
+      "publication": "早川書房",
+      "format": "book",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.hanmoto.com/bd/isbn/9784152089410"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "zero-years-imagination",
+      "source_chapter_id": "chapter-13",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "ゼロ年代の想像力",
+      "creator": "宇野常寛",
+      "publication": "早川書房",
+      "format": "book",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.hanmoto.com/bd/isbn/9784152089410"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "zero-years-imagination",
+      "source_chapter_id": "chapter-14",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "ゼロ年代の想像力",
+      "creator": "宇野常寛",
+      "publication": "早川書房",
+      "format": "book",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.hanmoto.com/bd/isbn/9784152089410"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "zero-years-imagination",
+      "source_chapter_id": "chapter-15",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "ゼロ年代の想像力",
+      "creator": "宇野常寛",
+      "publication": "早川書房",
+      "format": "book",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.hanmoto.com/bd/isbn/9784152089410"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "zero-years-imagination",
+      "source_chapter_id": "chapter-16",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "ゼロ年代の想像力",
+      "creator": "宇野常寛",
+      "publication": "早川書房",
+      "format": "book",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.hanmoto.com/bd/isbn/9784152089410"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "sekaikei-as-impossibility-sugii-hikaru",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "不可能性としてのセカイ系――杉井光の忘却の否定神学について",
+      "creator": "紅茶泡海苔",
+      "publication": "ferne web",
+      "format": "web",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://ferne-web.com/article/fishersonic/"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "azuma-hiroki-philosopher-as-business-owner",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "ゲンロン戦記──「知の観客」をつくる",
+      "creator": "東浩紀",
+      "publication": "中央公論新社",
+      "format": "book",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.chuko.co.jp/laclef/2020/12/150709.html"
+        }
+      ],
+      "coverage": "序章・第1章"
+    },
+    {
+      "source_type": "post",
+      "source_slug": "azuma-hiroki-what-is-criticism",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "テーマパーク化する地球",
+      "creator": "東浩紀",
+      "publication": "ゲンロン",
+      "format": "book",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://shop.genron.co.jp/products/22303"
+        }
+      ],
+      "coverage": "第3章"
+    },
+    {
+      "source_type": "post",
+      "source_slug": "karatani-marx-shadow-trier",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "遠い国 遠い言葉 柄谷行人未刊行文集",
+      "creator": "柄谷行人",
+      "publication": "読書人",
+      "format": "book",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.hanmoto.com/bd/isbn/9784924671997"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "economic-thought-history-adam-smith",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "経済学史―経済理論誕生の経緯をたどる",
+      "creator": "野原慎司・沖公祐・高見典和",
+      "publication": "日本評論社",
+      "format": "book",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.nippyo.co.jp/shop/book/8074.html"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "battle-beauties-shouts-and",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "戦闘美少女と叫び、そして百合",
+      "creator": "石田美紀",
+      "publication": "『ユリイカ』2014年12月号・青土社",
+      "format": "journal",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.seidosha.co.jp/book/index.php?id=2225"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "1984-tokyo-commuter-subculture-otaku",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "1984 東京通勤圏でのサブカルとオタクの距離感",
+      "creator": "乙木一史",
+      "publication": "『ユリイカ』2005年8月臨時増刊号・青土社",
+      "format": "journal",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.seidosha.co.jp/book/index.php?id=2559"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "bl-penetration-deepening-diversification-2000s-2010s",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "BLの浸透と深化、拡大と多様化――2000年代～10年代",
+      "creator": "堀あきこ・守如子",
+      "publication": "『BLの教科書』有斐閣",
+      "format": "book",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.yuhikaku.co.jp/book/b10189479.html"
+        }
+      ],
+      "coverage": "第4章、57–74頁"
+    },
+    {
+      "source_type": "post",
+      "source_slug": "anime-machine-roundtable",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "対談『アニメ・マシーン』から考える",
+      "creator": "トマス・ラマール・石岡良治／司会：門林岳史",
+      "publication": "『表象』07・月曜社",
+      "format": "journal",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.repre.org/publications/journal/07/"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "nei-masahiro-market-mechanism-competition",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "経済学再入門",
+      "creator": "根井雅弘",
+      "publication": "講談社",
+      "format": "book",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.kodansha.co.jp/book/products/0000211710"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "metonymy-redemption-nagasaki-kyoto-animation-your-color",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "救済のパラフレゾロジー──長崎、京アニ、きみの色",
+      "creator": "てらまっと",
+      "publication": "週末批評",
+      "format": "web",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://worldend-critic.com/2024/09/20/paraphrasology-kiminoiro-teramat/"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "girls-band-cry-middle-finger",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "仁菜は誰に中指を立てるべきだったのか――《ガールズバンドクライ》について",
+      "creator": "noirse",
+      "publication": "Mercure des Arts",
+      "format": "web",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://mercuredesarts.com/2024/07/14/diary-who-should-nina-have-raised-the-middle-finger-to-noirse/"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "uno-suzume-national-author-awareness",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "『すずめの戸締まり』と「震災」の問題",
+      "creator": "宇野常寛",
+      "publication": "note",
+      "format": "web",
+      "links": [
+        {
+          "kind": "purchase",
+          "url": "https://note.com/wakusei2nduno/n/n0dac3b2317a8"
+        }
+      ],
+      "coverage": "冒頭公開・本文有料"
+    },
+    {
+      "source_type": "post",
+      "source_slug": "yuri-anime-patriarchy-complicity",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "『転生王女と天才令嬢の魔法革命』から読み解く百合アニメと家父長制の共犯関係",
+      "creator": "王琼海",
+      "publication": "『情況』2024年冬号・情況出版",
+      "format": "journal",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://jokyo.org/backnumber/"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "matsuda-japanese-criticism-space",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "たった一つの、私のものではない「日本語」――ジャック・デリダ、中上健次、『批評空間』――",
+      "creator": "松田樹",
+      "publication": "Suppléments 第3号（2024）",
+      "format": "journal",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://decon.fpark.tmu.ac.jp/_src/17498/05%E6%9D%BE%E7%94%B0%E6%A8%B9.pdf?v=1649178911055"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "closer-to-the-world",
+      "source_chapter_id": "chapter-01",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "セカイからもっと近くに――現実から切り離された文学の諸問題",
+      "creator": "東浩紀",
+      "publication": "東京創元社",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.tsogen.co.jp/np/isbn/9784488015367"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "closer-to-the-world",
+      "source_chapter_id": "chapter-02",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "セカイからもっと近くに――現実から切り離された文学の諸問題",
+      "creator": "東浩紀",
+      "publication": "東京創元社",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.tsogen.co.jp/np/isbn/9784488015367"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "closer-to-the-world",
+      "source_chapter_id": "chapter-03-lower",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "セカイからもっと近くに――現実から切り離された文学の諸問題",
+      "creator": "東浩紀",
+      "publication": "東京創元社",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.tsogen.co.jp/np/isbn/9784488015367"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "closer-to-the-world",
+      "source_chapter_id": "chapter-03-upper",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "セカイからもっと近くに――現実から切り離された文学の諸問題",
+      "creator": "東浩紀",
+      "publication": "東京創元社",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.tsogen.co.jp/np/isbn/9784488015367"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "closer-to-the-world",
+      "source_chapter_id": "chapter-04-lower",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "セカイからもっと近くに――現実から切り離された文学の諸問題",
+      "creator": "東浩紀",
+      "publication": "東京創元社",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.tsogen.co.jp/np/isbn/9784488015367"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "closer-to-the-world",
+      "source_chapter_id": "chapter-04-upper",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "セカイからもっと近くに――現実から切り離された文学の諸問題",
+      "creator": "東浩紀",
+      "publication": "東京創元社",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.tsogen.co.jp/np/isbn/9784488015367"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "layout-history-lectures",
+      "source_chapter_id": "fifth-lecture-questions",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "web",
+      "title": "パース・レイアウト講座―歴史編（第6回）配布資料",
+      "creator": "笹木信作・徳野悠我",
+      "publication": "日本アニメーター・演出協会（JAniCA）",
+      "coverage": "講義予定（2–4頁）、第1・3・4・5回質問集（5–24頁）",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://www.janica.jp/course/perspective/history06_handout.pdf"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "layout-history-lectures",
+      "source_chapter_id": "first-lecture-questions",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "web",
+      "title": "パース・レイアウト講座―歴史編（第6回）配布資料",
+      "creator": "笹木信作・徳野悠我",
+      "publication": "日本アニメーター・演出協会（JAniCA）",
+      "coverage": "講義予定（2–4頁）、第1・3・4・5回質問集（5–24頁）",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://www.janica.jp/course/perspective/history06_handout.pdf"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "layout-history-lectures",
+      "source_chapter_id": "fourth-lecture-questions",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "web",
+      "title": "パース・レイアウト講座―歴史編（第6回）配布資料",
+      "creator": "笹木信作・徳野悠我",
+      "publication": "日本アニメーター・演出協会（JAniCA）",
+      "coverage": "講義予定（2–4頁）、第1・3・4・5回質問集（5–24頁）",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://www.janica.jp/course/perspective/history06_handout.pdf"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "layout-history-lectures",
+      "source_chapter_id": "lecture-and-history",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "web",
+      "title": "パース・レイアウト講座―歴史編（第6回）配布資料",
+      "creator": "笹木信作・徳野悠我",
+      "publication": "日本アニメーター・演出協会（JAniCA）",
+      "coverage": "講義予定（2–4頁）、第1・3・4・5回質問集（5–24頁）",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://www.janica.jp/course/perspective/history06_handout.pdf"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "layout-history-lectures",
+      "source_chapter_id": "third-lecture-questions",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "web",
+      "title": "パース・レイアウト講座―歴史編（第6回）配布資料",
+      "creator": "笹木信作・徳野悠我",
+      "publication": "日本アニメーター・演出協会（JAniCA）",
+      "coverage": "講義予定（2–4頁）、第1・3・4・5回質問集（5–24頁）",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://www.janica.jp/course/perspective/history06_handout.pdf"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "char-counterattack-friendship-club",
+      "source_chapter_id": "animation-film-preference",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "機動戦士ガンダム 逆襲のシャア 友の会［復刻版］",
+      "creator": "庵野秀明（企画・発行・責任編集）",
+      "publication": "アニメスタイル編集部",
+      "format": "book",
+      "identifier": "9784905033219",
+      "links": [
+        {
+          "kind": "purchase",
+          "url": "https://www.amazon.co.jp/dp/4905033217"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "char-counterattack-friendship-club",
+      "source_chapter_id": "anno-ikuhara-dialogue",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "機動戦士ガンダム 逆襲のシャア 友の会［復刻版］",
+      "creator": "庵野秀明（企画・発行・責任編集）",
+      "publication": "アニメスタイル編集部",
+      "format": "book",
+      "identifier": "9784905033219",
+      "links": [
+        {
+          "kind": "purchase",
+          "url": "https://www.amazon.co.jp/dp/4905033217"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "char-counterattack-friendship-club",
+      "source_chapter_id": "light-of-hope",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "機動戦士ガンダム 逆襲のシャア 友の会［復刻版］",
+      "creator": "庵野秀明（企画・発行・責任編集）",
+      "publication": "アニメスタイル編集部",
+      "format": "book",
+      "identifier": "9784905033219",
+      "links": [
+        {
+          "kind": "purchase",
+          "url": "https://www.amazon.co.jp/dp/4905033217"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "char-counterattack-friendship-club",
+      "source_chapter_id": "oguro-anno-izubuchi-dialogue",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "機動戦士ガンダム 逆襲のシャア 友の会［復刻版］",
+      "creator": "庵野秀明（企画・発行・責任編集）",
+      "publication": "アニメスタイル編集部",
+      "format": "book",
+      "identifier": "9784905033219",
+      "links": [
+        {
+          "kind": "purchase",
+          "url": "https://www.amazon.co.jp/dp/4905033217"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "char-counterattack-friendship-club",
+      "source_chapter_id": "oguro-anno-oshii-dialogue",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "機動戦士ガンダム 逆襲のシャア 友の会［復刻版］",
+      "creator": "庵野秀明（企画・発行・責任編集）",
+      "publication": "アニメスタイル編集部",
+      "format": "book",
+      "identifier": "9784905033219",
+      "links": [
+        {
+          "kind": "purchase",
+          "url": "https://www.amazon.co.jp/dp/4905033217"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "char-counterattack-friendship-club",
+      "source_chapter_id": "oguro-anno-suzuki-dialogue",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "機動戦士ガンダム 逆襲のシャア 友の会［復刻版］",
+      "creator": "庵野秀明（企画・発行・責任編集）",
+      "publication": "アニメスタイル編集部",
+      "format": "book",
+      "identifier": "9784905033219",
+      "links": [
+        {
+          "kind": "purchase",
+          "url": "https://www.amazon.co.jp/dp/4905033217"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "char-counterattack-friendship-club",
+      "source_chapter_id": "opening-message",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "機動戦士ガンダム 逆襲のシャア 友の会［復刻版］",
+      "creator": "庵野秀明（企画・発行・責任編集）",
+      "publication": "アニメスタイル編集部",
+      "format": "book",
+      "identifier": "9784905033219",
+      "links": [
+        {
+          "kind": "purchase",
+          "url": "https://www.amazon.co.jp/dp/4905033217"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "japanese-animation-media-ecology",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "座談会「日本アニメのメディア・エコロジー」",
+      "creator": "マーク・スタインバーグ・アレクサンダー・ツァールテン・門林岳史",
+      "publication": "表象文化論学会ニューズレター『REPRE』18",
+      "format": "web",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://www.repre.org/repre/vol18/special/round-table1.php"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "kimura-1959-generation-toei-animation",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "五九年世代と「演出中心主義」――高畑勲と東映動画の〈長い六〇年代〉",
+      "creator": "木村智哉",
+      "publication": "『ユリイカ』2018年7月臨時増刊号「高畑勲の世界」・青土社",
+      "format": "journal",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.seidosha.co.jp/book/index.php?id=3183"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "uno-kamen-rider-black-sun",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "批評座談会〈仮面ライダーBLACK SUN〉",
+      "creator": "宇野常寛",
+      "publication": "PLANETS YouTubeチャンネル",
+      "format": "web",
+      "coverage": "座談会動画",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://www.youtube.com/watch?v=rPpZ-cLDz0E"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "otsuka-eiji-literature-bad-debt",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "不良債権としての「文学」",
+      "creator": "大塚英志",
+      "publication": "『群像』2002年6月号・文学フリマ再録",
+      "format": "journal",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://bunfree.net/archive/articles/literature_as_bad_debts/"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "tomioka-malicious-host-training-manual",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "悪質ホストの“研修教材”入手、女性を沼らせ「売掛」吊り上げる恐るべきテクニックとは？",
+      "creator": "富岡悠希",
+      "publication": "弁護士ドットコムニュース",
+      "format": "web",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://www.bengo4.com/c_18/n_16720/"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "shinkai-nishijima-azuma-sekai-farther-dialogue-part-1",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "コンテンツの思想",
+      "creator": "東浩紀・新海誠・西島大介",
+      "publication": "青土社",
+      "format": "book",
+      "identifier": "9784791763252",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.seidosha.co.jp/book/index.php?id=1548"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "shinkai-nishijima-azuma-sekai-farther-dialogue-part-2",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "コンテンツの思想",
+      "creator": "東浩紀・新海誠・西島大介",
+      "publication": "青土社",
+      "format": "book",
+      "identifier": "9784791763252",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.seidosha.co.jp/book/index.php?id=1548"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "otsuka-world-and-variation-narrative-reproduction-consumption",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "世界と趣向――物語の複製と消費",
+      "creator": "大塚英志",
+      "publication": "『「物語消費論」集成 1989–2021』・KADOKAWA",
+      "format": "book",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.kadokawa.co.jp/product/302605002957/"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "asada-image-evolution-theory-1986-video",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "浅田彰 No.1（番組映像）",
+      "creator": "浅田彰",
+      "publication": "YouTube（中国語版に記載された映像出典）",
+      "format": "web",
+      "coverage": "番組映像・再生リスト",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://www.youtube.com/watch?v=CScihJCTY08&list=PL13B00C5609631E86"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "lesbian-love-womanhood",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "レズビアン―女であることを愛せるか",
+      "creator": "藤本由香里",
+      "publication": "『私の居場所はどこにあるの？―少女マンガが映す心のかたち』・学陽書房",
+      "format": "book",
+      "identifier": "9784313870116",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.hanmoto.com/bd/isbn/9784313870116"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "wartime-models-and-imaginary-weapons",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "戦時下の兵器模型と空想兵器図解―戦後ミリタリーモデルの二つの起源",
+      "creator": "松井広志",
+      "publication": "『動員のメディアミックス―〈創作する大衆〉の戦時下・戦後』・思文閣出版",
+      "format": "book",
+      "identifier": "9784784218974",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.hanmoto.com/bd/isbn/9784784218974"
+        }
+      ]
     }
   ]
 }
