@@ -60,6 +60,1198 @@
           "url": "https://doi.org/10.5040/9781474263894.ch-003"
         }
       ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "azuma-criticism-as-illness",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "journal",
+      "title": "批評という病",
+      "creator": "東浩紀",
+      "publication": "『ゲンロン4』",
+      "published": "2016-11-15",
+      "identifier": "ISBN 978-4-907188-19-1",
+      "coverage": "30–48頁",
+      "links": [
+        {
+          "kind": "purchase",
+          "url": "https://shop.genron.co.jp/products/89"
+        },
+        {
+          "kind": "library",
+          "url": "https://cir.nii.ac.jp/crid/1523951029808901888"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "azuma-heidegger-beyond-wittgenstein",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "存在論的、郵便的―ジャック・デリダについて―",
+      "creator": "東浩紀",
+      "publication": "新潮社",
+      "published": "1998-10-30",
+      "identifier": "ISBN 978-4-10-426201-4",
+      "coverage": "第四章「存在論的、郵便的」第1節「論理的」（224–236頁）",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.shinchosha.co.jp/book/426201/"
+        },
+        {
+          "kind": "library",
+          "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I000002718029"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "furukawa-tomohiro-interview-1-saint-seiya-style",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "web",
+      "title": "古川知宏① 作家の「様式美」が詰まった『聖闘士星矢 真紅の少年伝説』",
+      "creator": "古川知宏（取材・文：前田 久）",
+      "publication": "Febri",
+      "published": "2021-11-15",
+      "coverage": "古川知宏インタビュー 第1回",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://febri.jp/febri_talk/furukawa_tomohiro_1/"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "furukawa-tomohiro-interview-2-patlabor-original-animation",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "web",
+      "title": "古川知宏② 押井守の「演出論」を学んだ『機動警察パトレイバー the Movie』",
+      "creator": "古川知宏（取材・文：前田 久）",
+      "publication": "Febri",
+      "published": "2021-11-17",
+      "coverage": "古川知宏インタビュー 第2回",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://febri.jp/febri_talk/furukawa_tomohiro_2/"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "furukawa-tomohiro-interview-3-precure-storyboards",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "web",
+      "title": "古川知宏③ 絵コンテの力に気づいた『ふたりはプリキュア』",
+      "creator": "古川知宏（取材・文：前田 久）",
+      "publication": "Febri",
+      "published": "2021-11-19",
+      "coverage": "古川知宏インタビュー 第3回",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://febri.jp/febri_talk/furukawa_tomohiro_3/"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "blue-emoi-novels-roundtable",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "web",
+      "title": "青くてエモい小説たち──「ブルーライト文芸」座談会",
+      "creator": "ペシミ、紅茶泡海苔、舞風つむじ",
+      "publication": "note",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://note.com/hummm09/n/n5480654b38ca"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "comedy-of-birth-k-on-everyday-anime",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "web",
+      "title": "生誕の喜劇──アニメ『けいおん！』と日常系の臨界点",
+      "creator": "志津史比古",
+      "publication": "週末批評",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://worldend-critic.com/2024/04/05/comedy_of_being_born_ashizu/"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "distant-view-everyday-k-on",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "web",
+      "title": "日常における遠景──「エンドレスエイト」で『けいおん！』を読む",
+      "creator": "志津史比古",
+      "publication": "週末批評",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://worldend-critic.com/2023/08/12/nichijo-endlesseight-ashizu/"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "embracing-the-flawed-kizumonogatari",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "web",
+      "title": "傷物達を抱きしめて──映画『傷物語』とアニメーションの政治性",
+      "creator": "あにもに",
+      "publication": "週末批評",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://worldend-critic.com/2022/06/04/kizumonotachi/"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "faust-east-asia-otaku-transversality",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "web",
+      "title": "【巻頭言】トランスナショナル・オタクカルチャー──『ファウスト』は東アジアでいかに“誤読”されたか",
+      "creator": "紅茶泡海苔",
+      "publication": "週末批評",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://worldend-critic.com/2025/08/02/transnational-otaku-culture-kocha/"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "hardcore-post-everyday-anime",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "web",
+      "title": "ポスト日常系アニメのハード・コア：室内空間の解体と『とある科学の超電磁砲S』",
+      "creator": "てらまっと",
+      "publication": "てらまっとのアニメ批評ブログ",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://teramat.hatenablog.com/entry/2021/11/11/000436"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "interview-shinkai-ex-boyfriend",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "web",
+      "title": "「新海誠が好きだった元カレ」がいた人々にインタビューしてみた",
+      "creator": "ペシミ（聞き手）",
+      "publication": "note",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://note.com/hummm09/n/n71120bcb127c"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "karatani-critique-space-asada-aki",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "web",
+      "title": "「宇宙人」との共同作業　危機の時代に立ち上げた「批評空間」：私の謎　柄谷行人回想録⑲",
+      "creator": "柄谷行人",
+      "publication": "じんぶん堂",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://book.asahi.com/jinbun/article/15459235"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "kizumonogatari-architecture-landscape",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "journal",
+      "title": "『傷物語』と建築的風景",
+      "creator": "あにもに",
+      "publication": "号外もにも～ど",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://moni-mode.hatenablog.com/entry/2021/12/24/230000"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "liz-and-blue-bird-thorough-analysis",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "web",
+      "title": "映画『リズと青い鳥』の徹底分析（大きくネタバレします。注意してください）ー大好きのハグとハッピーアイスクリームー",
+      "creator": "富崎学",
+      "publication": "アニメの詩学　その分析と批評",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://anime-analysis.hatenablog.com/entry/2018/05/07/004139"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "liz-and-the-blue-bird-unconscious-animation",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "web",
+      "title": "無意識をアニメートする：『リズと青い鳥』と微小なものの超越性",
+      "creator": "てらまっと",
+      "publication": "てらまっとのアニメ批評ブログ",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://teramat.hatenablog.com/entry/20180707/1530975783"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "nichijo-anime-kyoto-animation-bocchi",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "web",
+      "title": "【座談会】日常のゆくえ──京アニ事件から『ぼっち・ざ・ろっく！』まで",
+      "creator": "舞風つむじ、noirse、てらまっと",
+      "publication": "週末批評",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://worldend-critic.com/2023/07/15/nichijo-symposium/"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "recrossing-00s-criticism",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "web",
+      "title": "ゼロ年代批評を再交差させよ──東浩紀／宇野常寛／低志会のディソシエーション",
+      "creator": "杉田俊介",
+      "publication": "週末批評",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://worldend-critic.com/2025/05/30/recrossing-00s-criticsism-sugitashunsuke/"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "silent-vampire-kizumonogatari",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "web",
+      "title": "沈黙する吸血鬼──映画『傷物語 -こよみヴァンプ-』論",
+      "creator": "あにもに",
+      "publication": "週末批評",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://worldend-critic.com/2025/05/09/silent-vampire-animmony/"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "sister-sama-social-history",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "web",
+      "title": "「お姉様」の社会史（試論）",
+      "creator": "レニ",
+      "publication": "京都大学百合文化研究会",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://ku-yuribunken.hatenablog.com/entry/2021/12/18/135841"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "sekaikei-syndrome-music-interview",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "web",
+      "title": "「セカイ系症候群末期患者」のための音楽 ｜行方不明者リスト interview",
+      "creator": "シガワ",
+      "publication": "AVYSS magazine",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://avyss-magazine.com/2026/06/19/72452/"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "sugii-hikaru-light-novel-literary-prize",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "web",
+      "title": "ライトノベルに文学賞がないのは評論家がいないから",
+      "creator": "杉井光",
+      "publication": "カクヨム",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://kakuyomu.jp/works/16817330669771510815/episodes/822139845419609812"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "ueno-chizuko-fifteen-hour-bride",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "journal",
+      "title": "15時間の花嫁",
+      "creator": "上野千鶴子",
+      "publication": "婦人公論 2023年4月号",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://fujinkoron.jp/articles/-/7987"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "uno-gundam-witch-from-mercury-war-school-diorama",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "web",
+      "title": "『機動戦士ガンダム 水星の魔女』と「戦争」の問題",
+      "creator": "宇野常寛",
+      "publication": "note",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://note.com/wakusei2nduno/n/n3880c7db03ba"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "uno-spy-family-family-boyhood",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "web",
+      "title": "『SPY×FAMILY』と家族（と少年性）の問題",
+      "creator": "宇野常寛",
+      "publication": "note",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://note.com/wakusei2nduno/n/n0c02a24d6408"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "chiba-kokubun-before-language-disappears",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "言語が消滅する前に",
+      "creator": "國分功一郎・千葉雅也",
+      "publication": "幻冬舎",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.gentosha.co.jp/book/detail/9784344986367/"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "uno-akb48-perpetual-motion-machine-of-character-consumption",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "リトル・ピープルの時代",
+      "creator": "宇野常寛",
+      "publication": "幻冬舎",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.gentosha.co.jp/book/detail/9784344020245/"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "fujitsu-ryota-porco-rosso-patlabor-2",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "『紅の豚』の苦悩、『パトレイバー2』の現実",
+      "creator": "藤津亮太",
+      "publication": "『アニメと戦争』日本評論社",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.nippyo.co.jp/shop/book/8466.html"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "luckily-hamaguchi-likes-actors",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "journal",
+      "title": "ユリイカ2018年9月号 特集＝濱口竜介",
+      "creator": "濱口竜介・蓮實重彥／取材・構成：三浦哲哉",
+      "publication": "青土社",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.seidosha.co.jp/book/index.php?id=3201"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "happy-hour-pregnancy",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "journal",
+      "title": "『ハッピーアワー』と妊娠",
+      "creator": "木下千花",
+      "publication": "『ユリイカ』2018年9月号・青土社",
+      "links": [
+        {
+          "kind": "library",
+          "url": "https://ndlsearch.ndl.go.jp/books/R000000004-I029399936"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "kushihashi-chekhov-asako-gaze",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "journal",
+      "title": "串橋がチェーホフの戯曲の一節を暗唱するとき、ひとり驚いていない朝子の目",
+      "creator": "三浦哲哉",
+      "publication": "『ユリイカ』2018年9月号・青土社",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.seidosha.co.jp/book/index.php?id=3201"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "hiroshi-nagasaki-rebellion-theory",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "叛乱論／結社と技術 増補改訂新版",
+      "creator": "長崎浩",
+      "publication": "航思社",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.hanmoto.com/bd/isbn/9784906738502"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "kasai-uno-sekaikei-state-of-exception",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "セカイ系と例外状態",
+      "creator": "笠井潔",
+      "publication": "『テロルとゴジラ』作品社",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://sakuhinsha.com/nonfiction/26061.html"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "asada-review-karatani-architecture-as-metaphor",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "逃走論―スキゾ・キッズの冒険",
+      "creator": "浅田彰",
+      "publication": "筑摩書房",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.chikumashobo.co.jp/product/9784480841384/"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "karatani-why-i-quit-literature",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "柄谷行人講演集成1995–2015 思想的地震",
+      "creator": "柄谷行人",
+      "publication": "筑摩書房",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://chikumashobo.co.jp/product/9784480097736/"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "takahata-endless-dream-grave-of-the-fireflies",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "web",
+      "title": "高畑勲の醒めない夢──『火垂るの墓』とアニメーションの亡霊",
+      "creator": "志津史比古",
+      "publication": "週末批評",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://worldend-critic.com/2025/08/15/isao-takahata-endless-dream-shizua/"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "erotic-idol-female-oriented-av-men",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "journal",
+      "title": "女性向けAV男優という「エロティック・アイドル」――若さ・素・顔",
+      "creator": "服部恵典",
+      "publication": "『ユリイカ』2019年11月臨時増刊号・青土社",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.seidosha.co.jp/book/index.php?id=3352"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "yuri-genre-formation-process",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "journal",
+      "title": "「百合」ジャンルの成立過程の検討——同人活動の創作者の実践に基づくジャンルの概念分析——",
+      "creator": "上村太郎",
+      "publication": "『ソシオロゴス』48号",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://www.l.u-tokyo.ac.jp/~slogos/archive/48/48_kamimura.pdf"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "takinami-shinkai-landscape-materialism",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "journal",
+      "title": "きらめく世界の唯物論——新海誠作品における風景について",
+      "creator": "滝浪佑紀",
+      "publication": "『城西国際大学紀要』第26巻第5号",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://www.jiu.ac.jp/files/user/education/books/pdf/840-35.pdf"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "karatani-asada-complete-dialogues",
+      "source_chapter_id": "karatani-asada-and-me",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "柄谷行人 浅田彰 全対話",
+      "creator": "柄谷行人・浅田彰",
+      "publication": "講談社",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.kodansha.co.jp/book/products/0000325750"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "karatani-asada-complete-dialogues",
+      "source_chapter_id": "orientalism-asia",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "柄谷行人 浅田彰 全対話",
+      "creator": "柄谷行人・浅田彰",
+      "publication": "講談社",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.kodansha.co.jp/book/products/0000325750"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "battle-trauma-anime-representation-history",
+      "source_chapter_id": "gundam-pacific-war",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "〈戦い〉と〈トラウマ〉のアニメ表象史",
+      "creator": "森茂起・川口茂雄 編",
+      "publication": "日本評論社",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.nippyo.co.jp/shop/book/9096.html"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "battle-trauma-anime-representation-history",
+      "source_chapter_id": "specificity-and-future",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "〈戦い〉と〈トラウマ〉のアニメ表象史",
+      "creator": "森茂起・川口茂雄 編",
+      "publication": "日本評論社",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.nippyo.co.jp/shop/book/9096.html"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "battle-trauma-anime-representation-history",
+      "source_chapter_id": "war-anime-antiwar-trauma",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "〈戦い〉と〈トラウマ〉のアニメ表象史",
+      "creator": "森茂起・川口茂雄 編",
+      "publication": "日本評論社",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.nippyo.co.jp/shop/book/9096.html"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "uno-tokusatsu-history-little-people-era",
+      "source_chapter_id": "section-7",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "リトル・ピープルの時代",
+      "creator": "宇野常寛",
+      "publication": "幻冬舎",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.gentosha.co.jp/book/detail/9784344020245/"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "uno-tokusatsu-history-little-people-era",
+      "source_chapter_id": "sections-1-2",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "リトル・ピープルの時代",
+      "creator": "宇野常寛",
+      "publication": "幻冬舎",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.gentosha.co.jp/book/detail/9784344020245/"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "uno-tokusatsu-history-little-people-era",
+      "source_chapter_id": "sections-15-16",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "リトル・ピープルの時代",
+      "creator": "宇野常寛",
+      "publication": "幻冬舎",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.gentosha.co.jp/book/detail/9784344020245/"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "uno-tokusatsu-history-little-people-era",
+      "source_chapter_id": "sections-17-20-finale",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "リトル・ピープルの時代",
+      "creator": "宇野常寛",
+      "publication": "幻冬舎",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.gentosha.co.jp/book/detail/9784344020245/"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "uno-tokusatsu-history-little-people-era",
+      "source_chapter_id": "sections-4-and-6-latter-half",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "リトル・ピープルの時代",
+      "creator": "宇野常寛",
+      "publication": "幻冬舎",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.gentosha.co.jp/book/detail/9784344020245/"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "karatani-inquiry-ii",
+      "source_chapter_id": "part-1-chapter-1-singularity-particularity",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "探究Ⅱ",
+      "creator": "柄谷行人",
+      "publication": "講談社",
+      "identifier": "ISBN 978-4-06-203982-6",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.kodansha.co.jp/book/products/0000174032"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "karatani-inquiry-ii",
+      "source_chapter_id": "part-1-chapter-2-proper-names-history",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "探究Ⅱ",
+      "creator": "柄谷行人",
+      "publication": "講談社",
+      "identifier": "ISBN 978-4-06-203982-6",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.kodansha.co.jp/book/products/0000174032"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "karatani-inquiry-ii",
+      "source_chapter_id": "part-1-chapter-3-names-language",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "探究Ⅱ",
+      "creator": "柄谷行人",
+      "publication": "講談社",
+      "identifier": "ISBN 978-4-06-203982-6",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.kodansha.co.jp/book/products/0000174032"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "karatani-inquiry-ii",
+      "source_chapter_id": "part-1-chapter-4-possibility-actuality",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "探究Ⅱ",
+      "creator": "柄谷行人",
+      "publication": "講談社",
+      "identifier": "ISBN 978-4-06-203982-6",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.kodansha.co.jp/book/products/0000174032"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "karatani-inquiry-ii",
+      "source_chapter_id": "part-1-chapter-5-contingency-relations",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "探究Ⅱ",
+      "creator": "柄谷行人",
+      "publication": "講談社",
+      "identifier": "ISBN 978-4-06-203982-6",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.kodansha.co.jp/book/products/0000174032"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "karatani-inquiry-ii",
+      "source_chapter_id": "part-2-chapter-1-place-of-spirit",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "探究Ⅱ",
+      "creator": "柄谷行人",
+      "publication": "講談社",
+      "identifier": "ISBN 978-4-06-203982-6",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.kodansha.co.jp/book/products/0000174032"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "karatani-inquiry-ii",
+      "source_chapter_id": "part-2-chapter-2-proof-of-god",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "探究Ⅱ",
+      "creator": "柄谷行人",
+      "publication": "講談社",
+      "identifier": "ISBN 978-4-06-203982-6",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.kodansha.co.jp/book/products/0000174032"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "karatani-inquiry-ii",
+      "source_chapter_id": "part-2-chapter-3-ideas-representations",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "探究Ⅱ",
+      "creator": "柄谷行人",
+      "publication": "講談社",
+      "identifier": "ISBN 978-4-06-203982-6",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.kodansha.co.jp/book/products/0000174032"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "karatani-inquiry-ii",
+      "source_chapter_id": "part-2-chapter-4-spinozas-geometry",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "探究Ⅱ",
+      "creator": "柄谷行人",
+      "publication": "講談社",
+      "identifier": "ISBN 978-4-06-203982-6",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.kodansha.co.jp/book/products/0000174032"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "karatani-inquiry-ii",
+      "source_chapter_id": "part-2-chapter-5-infinity-history",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "探究Ⅱ",
+      "creator": "柄谷行人",
+      "publication": "講談社",
+      "identifier": "ISBN 978-4-06-203982-6",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.kodansha.co.jp/book/products/0000174032"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "karatani-inquiry-ii",
+      "source_chapter_id": "part-2-chapter-6-passivity-will",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "探究Ⅱ",
+      "creator": "柄谷行人",
+      "publication": "講談社",
+      "identifier": "ISBN 978-4-06-203982-6",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.kodansha.co.jp/book/products/0000174032"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "karatani-inquiry-ii",
+      "source_chapter_id": "part-2-chapter-7-natural-rights",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "探究Ⅱ",
+      "creator": "柄谷行人",
+      "publication": "講談社",
+      "identifier": "ISBN 978-4-06-203982-6",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.kodansha.co.jp/book/products/0000174032"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "karatani-inquiry-ii",
+      "source_chapter_id": "part-2-chapter-8-transcendental-self",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "探究Ⅱ",
+      "creator": "柄谷行人",
+      "publication": "講談社",
+      "identifier": "ISBN 978-4-06-203982-6",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.kodansha.co.jp/book/products/0000174032"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "karatani-inquiry-ii",
+      "source_chapter_id": "part-2-chapter-9-transcendental-motive",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "探究Ⅱ",
+      "creator": "柄谷行人",
+      "publication": "講談社",
+      "identifier": "ISBN 978-4-06-203982-6",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.kodansha.co.jp/book/products/0000174032"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "karatani-inquiry-ii",
+      "source_chapter_id": "part-3-chapter-1-immanence-transcendence",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "探究Ⅱ",
+      "creator": "柄谷行人",
+      "publication": "講談社",
+      "identifier": "ISBN 978-4-06-203982-6",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.kodansha.co.jp/book/products/0000174032"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "karatani-inquiry-ii",
+      "source_chapter_id": "part-3-chapter-2-jewish-matters",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "探究Ⅱ",
+      "creator": "柄谷行人",
+      "publication": "講談社",
+      "identifier": "ISBN 978-4-06-203982-6",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.kodansha.co.jp/book/products/0000174032"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "karatani-inquiry-ii",
+      "source_chapter_id": "part-3-chapter-3-exteriority-thought",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "探究Ⅱ",
+      "creator": "柄谷行人",
+      "publication": "講談社",
+      "identifier": "ISBN 978-4-06-203982-6",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.kodansha.co.jp/book/products/0000174032"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "karatani-inquiry-ii",
+      "source_chapter_id": "part-3-chapter-4-other-of-psychoanalysis",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "探究Ⅱ",
+      "creator": "柄谷行人",
+      "publication": "講談社",
+      "identifier": "ISBN 978-4-06-203982-6",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.kodansha.co.jp/book/products/0000174032"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "karatani-inquiry-ii",
+      "source_chapter_id": "part-3-chapter-5-communication-space",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "探究Ⅱ",
+      "creator": "柄谷行人",
+      "publication": "講談社",
+      "identifier": "ISBN 978-4-06-203982-6",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.kodansha.co.jp/book/products/0000174032"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "karatani-inquiry-ii",
+      "source_chapter_id": "part-3-chapter-6-infinity-indefiniteness",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "探究Ⅱ",
+      "creator": "柄谷行人",
+      "publication": "講談社",
+      "identifier": "ISBN 978-4-06-203982-6",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.kodansha.co.jp/book/products/0000174032"
+        }
+      ]
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "karatani-inquiry-ii",
+      "source_chapter_id": "part-3-chapter-7-gift-exchange",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "探究Ⅱ",
+      "creator": "柄谷行人",
+      "publication": "講談社",
+      "identifier": "ISBN 978-4-06-203982-6",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.kodansha.co.jp/book/products/0000174032"
+        }
+      ]
     }
   ]
 }

@@ -52,7 +52,7 @@ format: article
 
 [fig] 図1. 「Genesis」MVに登場するGrimes、ブルック・キャンディとその取り巻きのスナップショット。
 
-![「Genesis」MVで日本のポップカルチャー風の装いをするGrimesと友人たち](https://assets.labonroof.top/attachments/wechat/6E4vTxEmzYsp5mBJA1IfOg/body-001.jpg)
+![「Genesis」MVで日本のポップカルチャー風の装いをするGrimesと友人たち](attachments/wechat/6E4vTxEmzYsp5mBJA1IfOg/body-001.jpg)
 
 「Genesis」という題名だからといって、欧米のポップMVで魅惑的な「日本クール」を呼び起こした最初の作品というわけではない。[^5]その栄誉は、おそらく一発屋のバンド、The Vaporsにある。彼らのシングル「Turning Japanese」は「ポップソング史上もっとも愚かな作品の一つ」とRolling Stoneの記事が評している[^6]し、悪名高いアジアン・リフとその他のオリエンタリズム的ステレオタイプを含んでいた。[^7]1980年代以降、日本のポップカルチャーを参照するMVは、おおむね二種類に分かれる。ひとつは古典的なフラヌール（flâneur）風を基調とし、欧米人が東京を歩き回る姿を描くもの（ソフィア・コッポラの映画『ロスト・イン・トランスレーション』（2004）から刺激を受けたのかもしれない）。そこではクールさが東京という都市の森の自然な一部となる――伝統的な意味でも、ポップカルチャー的な意味でも。The Killersの「Read My Mind」やThe Black Eyed Peasの「Just Can’t Get Enough」が代表例だ。もうひとつは「日本製」のポップカルチャーを直接引用するもの。主役はアーティスト本人やそのアニメ的分身であったり、日本のポップカルチャーをテーマに組み込んだりする。Beastie Boysの「Intergalactic」、t.A.T.u.の「Gomenasai」などがそうだ。最も目立つのはスタジオ制作アニメ風のMVで、Daft Punk、松本零士、東映アニメーションが共同制作した『インターステラ5555』（2003）、ブリトニー・スピアーズの「Break the Ice」（2008）、ファレル・ウィリアムスが村上隆、<u>Mr.</u>、Fantasista Utamaroと組んだ「It Girl」（2014）が挙げられる。
 
@@ -74,7 +74,7 @@ format: article
 
 [fig] 図2. 「オタク対日本かぶれ」ミームの二例。
 
-![「オタクと日本かぶれ」の対照ミーム](https://assets.labonroof.top/attachments/wechat/6E4vTxEmzYsp5mBJA1IfOg/body-002.jpg)
+![「オタクと日本かぶれ」の対照ミーム](attachments/wechat/6E4vTxEmzYsp5mBJA1IfOg/body-002.jpg)
 
 [fig-note] 画像内の英文の意味。見出しは「オタクと日本かぶれの見分け方」。上段左の「オタク」は、①アニメへの愛情を節度をもって示す、②特定のシリーズやアニメ全般に自分ほど熱心でない人がいることを理解する、③アニメを冗談の種にしたり批評したりできる、④文法と綴りを正しく使う、とされる。男性の発話は「ナルトは好きだけど、大きな欠点はちゃんと指摘できる」。上段右の「日本かぶれ」は、①アニメを何より優れたものと考え、ほかの映像作品、とくに欧米のアニメーションをけなす、②日本を聖地のように見る、③日本についての知識は言葉も含めてアニメから得たものばかり、④格好よく聞こえるように「カワイイ」などの日本語を頻繁に使う、⑤コメントは文法や綴りの間違いだらけ、⑥いつでも誰も彼もをものすごくイラつかせる、とされる。手書き部分には「エドワードちゃん」「スゴイ」「です」「やおい」「美少年」といった語が重ねられている。
 
@@ -100,7 +100,7 @@ Grimesはまた、現代の美術・文化界の多くのアーティストが�
 
 [fig] 図3. 左はVektroid『Floral Shoppe』のジャケット（アーティスト名とアルバム名が日本語表記）。右はMACROSS 82-99『SAILORWAVE』のジャケット。
 
-![VektroidとMACROSS 82-99の日本語ジャケット](https://assets.labonroof.top/attachments/wechat/6E4vTxEmzYsp5mBJA1IfOg/body-003.jpg)
+![VektroidとMACROSS 82-99の日本語ジャケット](attachments/wechat/6E4vTxEmzYsp5mBJA1IfOg/body-003.jpg)
 
 この節の最後の事例は、カナダのアーティストJon Rafman（1981年生）のビデオアート『Still Life (Betamale)』[^訳注8]である。MVは2013年にYouTubeで公開された。曲の作者はDaniel Lopatin（1982年生）、Oneohtrix Point Neverの名で知られる。プラットフォームはこの動画に、ある人々が「前例のない」とみなす措置を取った。YouTubeで削除され、動画共有サイトVimeoに再アップロードされたが、露骨な内容を理由にそこでも削除された。[^57]その後RafmanはVimeoに三度目のアップロードを成功させ、現在は二人のアーティストの個人サイトでも視聴できる。このビデオ作品は、インターネットの暗部から出てきた意識の流れのようで、目に見えない異様さを伝える。獣の着ぐるみやアニメガオ・キグルミ（全身タイツ、コスプレ衣装、アニメの面を合わせた一式）を着るアマチュア演者から、他の日本かぶれ的奇癖、1980～90年代の日本のアダルトゲームのスクリーンショットやGIFまでを収める。さらに、血まみれのアニメ風イラストを共有するネットコミュニティGurochan（ロリコン的テーマが特に多い）から来た、極度に狂乱したポルノ画像のコラージュも出てくる。Rafmanは、Gurochanとの接近が、吐き気がするまで（ad nauseam）過剰にサーフィンした過程を反映すると説明する。「映像のクライマックスには大量の暴力的なフェティッシュ画像が積み上がる。深層インターネットで画像を消費しすぎた感覚過負荷を表現したかった」と。[^58]
 
@@ -108,7 +108,7 @@ Grimesはまた、現代の美術・文化界の多くのアーティストが�
 
 [fig] 図4. 『Still Life (Betamale)』の「ベータ男性」。
 
-![「Still Life (Betamale)」MVのベータ男性](https://assets.labonroof.top/attachments/wechat/6E4vTxEmzYsp5mBJA1IfOg/body-004.png)
+![「Still Life (Betamale)」MVのベータ男性](attachments/wechat/6E4vTxEmzYsp5mBJA1IfOg/body-004.png)
 
 『Still Life (Betamale)』には、Rafmanが意図して生み出したのではない、もう一つの分析可能な層がある。Rafmanは4chanの/mu/板で匿名のスレッドを立て、動画が敬意を表するバイラルな内容とショック映像の源泉、「聖地メッカ・4chan」へ巡礼しようとした。スレッドは最終的に43ページのPDFに変換され、Rafmanの個人サイトに保存された。4chanユーザーの動画への反応と議論を収録した文書だ。しかしRafmanのオンライン人類学は、4chanユーザーから嫌悪と軽蔑を受けた。[^62]文書はネットスラング、イメージマクロ、リアクション画像[^訳注9]で埋まり、Rafmanの引用元を知るユーザーが彼の芸術倫理を疑う様子も記録する。スレッドには、「Tumblrとファーリー（獣人ファン）の糞を混ぜた、もっと大きな糞にすぎない」「驚いた、あなたTumblrを持ってるんだ！　よくやったよ。ファーリー（獣人ファン）は<strong>クソ気味悪い！</strong>日本のエロ画像は<strong>マジで怖い！</strong>」といった皮肉が飛び交った（匿名ユーザーの発言を日本語訳。粗暴な語調は原文どおり）。最も激しい憤りは、Rafmanが許可も出典表示もなく、Tumblrブログfmtownsmartyに由来する日本のゲームのスクリーンショットとGIFを30点以上使ったことへ向けられた。同じくTumblrユーザーの一人は抗議のなかで特に率直だった。彼女／彼は、他者文化の内部で（上から目線で）「生活を体験」し、文化的内容を盗掘して、伝統的なアート界の文化的・社会的資本を得るやり方をRafmanが引き継いでいると非難した。[^63]現在、Rafmanの個人サイトの『Still Life (Betamale)』ページには、参照したアマチュア作品（fmtownsmarty、Gurochan、多数の獣着ぐるみ・アニメガオ・キグルミ演者など）への「特別な謝辞」が載っている。しかし遅く、曖昧な告知は批判を鎮めなかったようだ。
 
@@ -120,11 +120,11 @@ Grimesはまた、現代の美術・文化界の多くのアーティストが�
 
 [fig] 図5. 左はPrincess Nokia「Dragons」MV（『ドラゴンボール』の神龍）のスナップショット。右はPrincess Nokiaのアルバム『Metallic Butterfly』（初音ミク）のジャケット。
 
-![Princess Nokia「Dragons」MVと『Metallic Butterfly』ジャケット](https://assets.labonroof.top/attachments/wechat/6E4vTxEmzYsp5mBJA1IfOg/body-005.jpg)
+![Princess Nokia「Dragons」MVと『Metallic Butterfly』ジャケット](attachments/wechat/6E4vTxEmzYsp5mBJA1IfOg/body-005.jpg)
 
 Princess Nokiaのデビュー・アルバム『Metallic Butterfly』は2014年発売で、ジャケットは初音ミクのファンアートだ（図5右）。果てしない都市の夜景を背にした、愛される青緑の髪のVocaloid歌姫は「ハイテク幻想音楽」[^68]の美学を完璧に体現する。Princess Nokiaによれば、この美学がアルバムの基調（『攻殻機動隊』の草薙素子が示すように、Nokiaも「ネットの無限の広がり」を伝えているようだ）だ。「Cybiko」をはじめとする曲は、日本ポップカルチャーの影響から生まれた欧米の文化商品を大量に参照する。『マトリックス』、『Æon Flux』のような「日本化」された映画・アニメ、『モータルコンバット』のようなゲーム、あるいは90年代末から2000年代初頭の活気あるサイバー・オリエンタリズム的Y2K美学である。しかし、Princess Nokiaが黒人性を誇張したり装ったりして「ブラックフィッシング」を行ったという最近の非難[^訳注11][^69]を踏まえると、本人の文化的曖昧さと（文化的）変装への集中は、いっそう皮肉に見える。いずれにせよ、Princess Nokiaのようなアーティストにとって「日本クール」はミレニアル世代の日本ポップカルチャーへのノスタルジーだけでなく、カワイイと日本アニメ文化のグローバル化の産物が、制御しがたい混血、国境を越える「汚染」であり続けるという連想から来る。研究者Christine Yanoが指摘するように、Hello Kittyほど無害に見えるキャラクターでさえ「悪い手本」と見なされることがあり、その世界的流通は「声高な中傷者の一団」を生み出した。[^70]
 
-同じころ、Josip On Deck（本名Josip Opara-nadi、1993年生）やHentai Dude（本名Colin Haynes、1994年生）などの米国ラッパーは、曲とMVで日本ポップカルチャーを遠慮なく引用した。二人はNerdcoreヒップホップとシアトリカル・ラップという二つのマイクロジャンルの出身で、SoundCloudとBandcampから生まれた音楽シーンに深く関わった。Josipは「Anime Pu$$y」「Mai Waifu」で4chan上の名声を一気に得た。個人MVでは、お気に入りの等身大抱き枕（dakimakura）を抱き、日本アニメやゲームをラップする（図6）。（残念ながら2021年6月時点で、「Anime Pu$$y」と2020年3月にアップロードされた新曲「Bape Store」を除き、JosipのYouTubeチャンネルにあった曲とMVはすべて削除されている。）4chanは人種差別の蔓延で悪名高いコミュニティだが、黒人のJosipは幼いころからこのサイトの熱心な利用者だった。[^71]多くの人と同じく、彼は「chan文化」の諸側面に惹かれた。それはオタク／ゲーム／ネットミーム（LOLcatsなど）[^訳注12]／ハクティビスト（Anonymousなど）の文化に由来する。ドナルド・トランプが2016年に米大統領へ当選して以来、4chanは「政治的に不適切な」オルタナ右翼・白人至上主義運動を支持するネット・トロールと結びついた。[^72]だからといって、この種の毒性が以前はなかったわけではない。4chanとRedditは、Gamergateのようなハラスメント事件の中心だった。[^73]
+同じころ、Josip On Deck（本名Josip Opara-nadi、1993年生）やHentai Dude（本名Colin Haynes、1994年生）などの米国ラッパーは、曲とMVで日本ポップカルチャーを遠慮なく引用した。二人はNerdcoreヒップホップとシアトリカル・ラップという二つのマイクロジャンルの出身で、SoundCloudとBandcampから生まれた音楽シーンに深く関わった。Josipは「Anime Pu\$\$y」「Mai Waifu」で4chan上の名声を一気に得た。個人MVでは、お気に入りの等身大抱き枕（dakimakura）を抱き、日本アニメやゲームをラップする（図6）。（残念ながら2021年6月時点で、「Anime Pu\$\$y」と2020年3月にアップロードされた新曲「Bape Store」を除き、JosipのYouTubeチャンネルにあった曲とMVはすべて削除されている。）4chanは人種差別の蔓延で悪名高いコミュニティだが、黒人のJosipは幼いころからこのサイトの熱心な利用者だった。[^71]多くの人と同じく、彼は「chan文化」の諸側面に惹かれた。それはオタク／ゲーム／ネットミーム（LOLcatsなど）[^訳注12]／ハクティビスト（Anonymousなど）の文化に由来する。ドナルド・トランプが2016年に米大統領へ当選して以来、4chanは「政治的に不適切な」オルタナ右翼・白人至上主義運動を支持するネット・トロールと結びついた。[^72]だからといって、この種の毒性が以前はなかったわけではない。4chanとRedditは、Gamergateのようなハラスメント事件の中心だった。[^73]
 
 振り返れば、作家Joanne McNeilのいうとおり、Josipの曲は4chanのポリティカル・インコレクトな姿勢を率直に取り込み、そのもっとも馬鹿げた、問題のある特徴を享楽的に消費する。「匿名からオルタナ右翼（コミュニティ）へ」という転回が、Josipの率直さに複雑な色を添える。[^74]Josipの過激な歌詞は次のとおりだ（以下は本文掲載の英語歌詞と日本語訳。）。
 
@@ -146,9 +146,9 @@ Princess Nokiaのデビュー・アルバム『Metallic Butterfly』は2014年�
 
 [fig] 図6. Josip On Deck「Senpai Gon Notice You」（2014）MVで、アニメ『らき☆すた』の泉こなたが描かれた等身大抱き枕を抱くJosip On Deck。
 
-![『らき☆すた』泉こなたの抱き枕を抱くJosip On Deck](https://assets.labonroof.top/attachments/wechat/6E4vTxEmzYsp5mBJA1IfOg/body-006.jpg)
+![『らき☆すた』泉こなたの抱き枕を抱くJosip On Deck](attachments/wechat/6E4vTxEmzYsp5mBJA1IfOg/body-006.jpg)
 
-ファンダムのスラング「Waifu」（嫁）――英語のwifeを日本語風に発音した語――は、萌えキャラクターに対する男性の所有欲を表す。このオタク文化の女性嫌悪はギャングスタ・ラップと重なる。実際、上に引用した「Mai Waifu」の歌詞は、「人間ではなく／超人化され、抽象的で生きていない」アニメの嫁と現実の女性を直接対立させる。厄介な生理機能や有機的な仕組み[^訳注13]を備えた女性より、二次元の嫁のほうが明らかに有利なのだ。[^76]「Anime Pu$$y」では、Josipは恥知らずにも「世界中の女がみんな紙の上の存在ならいいのに」と宣言する（本文掲載の日本語訳。）。[^77]現実の「pussy」（女性器）から、孤独なオタクが架空の恋人を愛する幻想へ滑り落ちるこの連想は、荒唐無稽で「日本化」された日本かぶれを嘲笑すると同時に、ギャングスタ・ラップに典型的な「セックス、ドラッグ、破滅についての大言壮語」を皮肉る。[^78]
+ファンダムのスラング「Waifu」（嫁）――英語のwifeを日本語風に発音した語――は、萌えキャラクターに対する男性の所有欲を表す。このオタク文化の女性嫌悪はギャングスタ・ラップと重なる。実際、上に引用した「Mai Waifu」の歌詞は、「人間ではなく／超人化され、抽象的で生きていない」アニメの嫁と現実の女性を直接対立させる。厄介な生理機能や有機的な仕組み[^訳注13]を備えた女性より、二次元の嫁のほうが明らかに有利なのだ。[^76]「Anime Pu\$\$y」では、Josipは恥知らずにも「世界中の女がみんな紙の上の存在ならいいのに」と宣言する（本文掲載の日本語訳。）。[^77]現実の「pussy」（女性器）から、孤独なオタクが架空の恋人を愛する幻想へ滑り落ちるこの連想は、荒唐無稽で「日本化」された日本かぶれを嘲笑すると同時に、ギャングスタ・ラップに典型的な「セックス、ドラッグ、破滅についての大言壮語」を皮肉る。[^78]
 
 もう一つ興味深いのは、本稿に登場する全アーティストのなかで、Josipこそが日本かぶれの定義にもっとも合致することだ。ほかのウィーブウェーブ事例の「変種」ではなく、正真正銘のWeeabooである。彼の曲と映像にはネットスラングと理由のない日本語表現（Konnichiwa＝こんにちは＝Hello、カワイイ、スゴイ、萌え、dokidoki＝ドキドキ＝胸の高鳴り）が詰まり、自分をJosip-san／Josipさんと呼ぶ。そのためネットのファンダム用語や深層ウェブ語彙に詳しくない観客は完全に置き去りにされるだろう。Josipは日本かぶれが社会で嫌われ、認められない立場にも気づいている（本文掲載の歌詞の日本語訳：「俺は進撃の巨人を見て、コンベンションに行きたいだけ／なぜみんな遊ぶなと言うのか」）。それでも自称「オタク神（Otaku Kami-Sama）」として、「本物の」あるいは「理想の」日本アイデンティティを強引に立ち上げ、いわゆる日本アニメとファンダムに存在する人種問題をひっくり返す。[^79]たとえばこの「人種問題」は、コスプレ文化の人種差別が常態化している点に現れる。Josipのような黒人ファンは、先入観的な民族・人種的真正性――ステレオタイプ的な日本性か、デフォルトの白人ファンだけがアニメキャラクターのコスプレにふさわしいという考え――に適合しにくい。[^80]別の曲「I’m Japanese」では、「鏡を見ると／日本人のニガーが見える」「自分の人種の女だけをファックする（極東の女だ）」とまで歌う（本文掲載の日本語訳。）。[^81]Josipは、文化間、さらには人種・民族を横断するアイデンティティのタブーを棒のように振り回し、挑発とショック・ユーモアによってヒップホップの倫理に新風を吹き込む。都市の黒人文化をありのままに表現するのだ。
 
@@ -156,7 +156,7 @@ Josip On Deckだけが日本かぶれの状況に「底辺のユーモア」を�
 
 [fig] 図7. Doja Cat「Mooo!」MVのスナップショット。背景はアニメの乳揺れGIF。
 
-![Doja Cat「Mooo!」MVの乳揺れアニメGIF](https://assets.labonroof.top/attachments/wechat/6E4vTxEmzYsp5mBJA1IfOg/body-007.jpg)
+![Doja Cat「Mooo!」MVの乳揺れアニメGIF](attachments/wechat/6E4vTxEmzYsp5mBJA1IfOg/body-007.jpg)
 
 表面上はひどく下品だが、Doja Catが同時に用いる性化、性差別、スカトロジカル（scatological――この動画では牛の副産物を画面で反復消費する気持ち悪さ）、そして不条理なユーモアは極めて複雑な意味をもつ。言葉と映像の掛詞で、二つの「動物化による非人間化」のあいだに不快だが示唆的な連続性をつくる。一方、過剰に性化されたJezebel型の黒人女性というステレオタイプ――「高度に性化され、価値を『セックス』だけに限定された、魅惑的で妖艶な黒人女性」――は黒人への抑圧の歴史の一部だ。[^85][^86]しかしヒップホップや黒人スピリチュアル音楽はこのイメージを頻繁に用いる。Doja Catはラップで、smoothやmoodの語尾を「mooo」と引き伸ばし、黒人の音楽的伝統を呼び起こす。他方、「動物化されたオタク」[^87]が二次元の胸を欲望すること――東浩紀が『動物化するポストモダン』で語ったオタクのポストモダン的な衰弱の有名な議論を借りたもの――は、背景でループする「ギャグおっぱい」[^88]GIFに包摂される。この並置は連続性を示唆する。歴史的現実でも、オタクの「浅い」ポスト歴史的幻想の領域でも、女性は体系的に「身体へと還元され、他者を喜ばせる道具としてのみ見なされる」。[^89]この連続性に、動画のDIY的なグリッチ美学と猥雑な歌詞が加わり、人間の発展や技術進歩の目的論に抵抗する創作姿勢が浮かぶ。とはいえ、「Mooo!」を「文明への幻滅を直接表現する」作品と読もうとしても、その純粋な悪ふざけに退けられる。
 
@@ -164,7 +164,7 @@ Doja Catが最近発表した別のMV「Like That」（2019）も危険な境界
 
 [fig] 図8. 「Like That」のスナップショット。Doja Catが月野うさぎのようなポーズをとる。
 
-![Doja Cat「Like That」MVで月野うさぎのポーズをまねる姿](https://assets.labonroof.top/attachments/wechat/6E4vTxEmzYsp5mBJA1IfOg/body-008.jpg)
+![Doja Cat「Like That」MVで月野うさぎのポーズをまねる姿](attachments/wechat/6E4vTxEmzYsp5mBJA1IfOg/body-008.jpg)
 
 Doja Catと本稿で取り上げたほかのバイラル・アーティストの事例は、サブカルチャーとマイクロジャンルで満ちたグローバルなメディア圏（mediasphere、注意が通貨である空間）で、ウィーブウェーブがミレニアル世代と若い世代が知っている引用元、語彙、行動を独特で印象的に再現することを示す。彼らがそれらを否定するときでさえそうだ。日本アニメ、マンガ、ゲームの映像――そして英語圏のネット世界で生まれた派生物（ここが決定的に重要だ）――なしには語れない、つくれない、演じられない物語を、言葉にし、制作し、演じることで、日本かぶれは自分と同じ状況にいる観客と交信する。その過程で新しい基準が生まれ、観客は文化を理解するためにさまざまな程度のサブカルチャー知識を要求される。Grimesの穏やかで非公式な「日本化」から、Josip On Deckの高密度の出力まで。逆説的に、Rafmanのオンライン人類学が制度の内側へ入り込む現象（より大きいのは、ファンが日本ポップカルチャーを引用して承認と連帯を得る行為）に後押しされ、日本かぶれのクール化はついに一部の階層制度を復活させ、それ自体がウィーブウェーブ体験の核心になった。
 
@@ -186,7 +186,7 @@ Doja Catと本稿で取り上げたほかのバイラル・アーティストの
 
 「実践は真理を検証する唯一の基準」。訳者から例を一つ。E.g., 中国のZERO COVIDはシンガポール経済にどう影響する？　図のとおり（シンガポールに有利）：
 
-![人物とネットミームのコラージュ](https://assets.labonroof.top/attachments/wechat/6E4vTxEmzYsp5mBJA1IfOg/body-009.jpg)
+![人物とネットミームのコラージュ](attachments/wechat/6E4vTxEmzYsp5mBJA1IfOg/body-009.jpg)
 
 [^訳注10]: 前述のとおりPrincess Nokiaのジェンダー・アイデンティティはノンコンフォーミングで、代名詞はshe/herとthey/them。
 [^訳注11]: blackfishing。非黒人（欧米白人）が化粧や髪型で肌を黒くし、黒人または黒人との混血に見せること。blackfaceと同様の人種差別／文化流用の性格をもつ。https://www.health.com/mind-body/what-is-blackfishing
@@ -194,7 +194,7 @@ Doja Catと本稿で取り上げたほかのバイラル・アーティストの
 
 [fig]
 
-![「I Can Has Cheeseburger?」と書かれた猫ミーム](https://assets.labonroof.top/attachments/wechat/6E4vTxEmzYsp5mBJA1IfOg/body-010.jpg)
+![「I Can Has Cheeseburger?」と書かれた猫ミーム](attachments/wechat/6E4vTxEmzYsp5mBJA1IfOg/body-010.jpg)
 
 [fig-note] 「ぼく、ちーずばーが、もらえれる？」――「チーズバーガーをもらえる？」という意味。画像の「I CAN HAS CHEEZBURGER?」は文法と綴りをわざと崩している。
 
@@ -280,7 +280,7 @@ Doja Catと本稿で取り上げたほかのバイラル・アーティストの
 [^74]: See McNeil, “From Anon to Alt-Right.”
 [^75]: Josip On Deck, “Mai Waifu (Music Video),” YouTube, 2012, https://web.archive.org/web/201504-04111205/https://www.youtube.com/watch?v=djI6nc9EVMM
 [^76]: Marco Pellitteri, *The Dragon and the Dazzle*, John Libbey, 2011, p. 80.
-[^77]: Josip On Deck, “Anime Pu$$y Ft. Killa Karisma,” YouTube, 2019, https://www.youtube.com/watch?v=qe3c2XGnJw4
+[^77]: Josip On Deck, “Anime Pu\$\$y Ft. Killa Karisma,” YouTube, 2019, https://www.youtube.com/watch?v=qe3c2XGnJw4
 [^78]: Jabari Asim, *The N Word*, Houghton Mifflin Harcourt, 2007, p. 229.
 [^79]: Josh Toussaint-Strauss, Joseph Pierce Ryan Baxter, and Paul Boyd, “Anime Has a Race Problem, Here’s How Black Fans Are Fixing It—Video,” *The Guardian*, 1 Oct. 2020, https://www.theguardian.com/culture/video/2020/oct/01/anime-has-a-race-problem-heres-how-black-fans-are-fixing-it-video
 [^80]: Talynn Kel, “Your Fandom Is Racist and So Are You,” The Establishment, 8 Dec. 2017, https://theestablishment.co/your-fandom-is-racist-and-so-are-you-638c5200b15b/
