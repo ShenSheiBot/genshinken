@@ -256,7 +256,7 @@ source_chapter_id: chapter-2-foundations-lacanian-ideology
 
 [^ja-badiou]: 日訳注：この引用の否定関係は、[バディウ「標記と欠如――ゼロについて」原文](https://cahiers.kingston.ac.uk/vol10/cpa10.8.badiou.html)に基づく。中国語引用は「ほかのところで生産していないものを欠く」と読める形になっているが、原文は「ほかのところで自ら生産するもの以外は何も欠かない」とする。
 
-[^ja-suture]: 日訳注：引用は[ミレール「縫合」原文](https://cahiers.kingston.ac.uk/vol01/cpa1.3.miller.html)と照合した。日本語刊行訳からの引用ではない。
+[^ja-suture]: [ミレール「縫合」原文](https://cahiers.kingston.ac.uk/vol01/cpa1.3.miller.html)を参照。
 
 [^ja-reality]: 日訳注：この引用は、[ラカン「現実原則の彼岸」原文](https://www.lutecium.org/mirror/aejcpp.free.fr/lacan/1936-10-00.htm)と照合した。「現実」はこの初期論文の *réel* に対応し、後期の体系的な術語としての〈現実界〉へ一律に読み替えてはいない。
 

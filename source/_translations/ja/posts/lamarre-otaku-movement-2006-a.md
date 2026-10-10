@@ -250,11 +250,11 @@ GAINAXは、画像<u>と</u>現実の女性との対応を放棄し、画像が�
 [^1]: グローカリゼーション（glocalization）は、製品や作品を各地域の市場に合わせてローカライズする過程を指す。
 [^2]: Joseph Tobin, “Conclusion: The Rise and Fall of the Pokémon Empire,” in *Pikachu’s Global Adventure: The Rise and Fall of Pokémon*, ed. Joseph Tobin (Duke University Press, 2004), p. 269。引用は同書を踏まえた訳。
 [^3]: Saya Shiraishi, “Japan’s Soft Power: Doraemon Goes Overseas,” in *Network Power: Japan and Asia*, eds. Peter J. Katzenstein and Takashi Shiraishi (Cornell University Press, 1997), pp. 234–271。
-[^4]: ドゥルーズ『差異と反復』の「<em>暗い先駆</em>」の一節を踏まえた著者の要約。確定した日本語原句としてではなく要約として示す。
+[^4]: ドゥルーズ『差異と反復』の「<em>暗い先駆</em>」の一節を踏まえた著者の要約。
 [^5]: Tobin, “Conclusion,” p. 270。引用はトービンの議論を踏まえた訳。
 [^6]: 同上、pp. 280–281。
 [^7]: Antonio Negri, *The Savage Anomaly* (1991); *Insurgencies: Constituent Power and the Modern State* (1999)。constituent power は「構成的権力」、constituted power は「構成された権力」と訳す。
-[^8]: Timothy Rayner, “Reinventing the Multitude: From Exodus to the Regulation of Norms,” *Radical Philosophy* 131 (2005)。引用は要約訳。
+[^8]: Timothy Rayner, “Reinventing the Multitude: From Exodus to the Regulation of Norms,” *Radical Philosophy* 131 (2005)。
 [^9]: 構成的権力の撤退／脱出については Hardt and Negri, *Empire* および *Multitude* を参照。
 [^10]: John Kraniauskas, “Empire or Multitude: Transnational Negri,” *Radical Philosophy* 103 (2000), pp. 29–39。引用は訳。
 [^11]: Ernesto Laclau, “The Empire of the Multitude,” in *The Empire’s New Clothes* (2004), p. 21。
@@ -292,11 +292,10 @@ GAINAXは、画像<u>と</u>現実の女性との対応を放棄し、画像が�
 [^43]: Susan J. Napier, *Anime from Akira to Princess Mononoke* (Palgrave Macmillan, 2001), p. 4。
 [^44]: ラクラウとクラニオスカスによるハート＝ネグリ『帝国』の内在性政治への批判を参照。
 
-## 編集注
 
-（訳者注：本文の脚注・書誌は原著のシカゴ式引用を踏まえ、未照合の版・頁は要約または翻訳として示した。）
 
-本稿の脚注・書誌は原著のシカゴ式引用を踏まえた訳である。一次資料の版・頁は再照合していないものがあるため、本文中の引用は責任主体を示した要約または翻訳として扱った。作品名・固有名詞の表記は日本語読者向けに統一した。
+
+
 
 ## 著者紹介
 

@@ -88,6 +88,6 @@ _シェリス・クラマレー、ポーラ・A・トライクラー編『A Femi
 
 [^germain]: 氏名は[辞典][dictionary]（161頁）の Diane F. Germain による。中国語版では「ダイアナ・E・ジャーメイン」に当たる表記。
 
-[^source]: 引用元は原則として[『A Feminist Dictionary』の収録文][dictionary]であり、各発言の初出資料からの直接引用ではない。引用の選択と配列は中国語版による。ドウォーキンの「14頁」とラッセルの「75頁」は、辞典ではなく、辞典が挙げる参照元の頁を示す。中国語版の出典表示は158–161、492–494頁だが、コービットの引用がある491頁を補った。概要の終年も、この引用の年に合わせ、中国語版の1983年から1984年とした。
+[^source]: 引用元は[『A Feminist Dictionary』の収録文][dictionary]。引用の選択と配列による。ドウォーキンの「14頁」とラッセルの「75頁」は、辞典ではなく、辞典が挙げる参照元の頁を示す。出典表示は158–161、492–494頁、コービットの引用がある491頁を補った。概要の終年も、この引用の年に合わせた。
 
 [dictionary]: https://www.scribd.com/document/968318686/A-Feminist-Dictionary-Cheris-Kramarae-and-Paula-A-Treichler-With-Assistance-From-London-Boston-England-1985-Rivers-Oram-Press-Pandora

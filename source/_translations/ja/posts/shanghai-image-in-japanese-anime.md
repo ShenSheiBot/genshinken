@@ -136,6 +136,6 @@ format: article
 
 [^date]: 「18世紀から19世紀への変わり目」は原文の表記。直後に述べられる幕末・明治初年との時期の整合には疑問が残る。
 
-[^sakai]: 酒井直樹の議論は、李欧梵の上記論文49頁にある中国語引用からの重訳。[掲載誌原資料](https://www.cuhk.edu.hk/ics/21c/media/articles/c054-199906030.pdf)。
+[^sakai]: 酒井直樹の議論については、李欧梵の上記論文49頁。[掲載誌原資料](https://www.cuhk.edu.hk/ics/21c/media/articles/c054-199906030.pdf)。
 
 [^song]: 「あこがれの上海」は、[河田和子「戦前の上海航路と昭和期の文学者」](https://catalog.lib.kyushu-u.ac.jp/opac_download_md/16009/KJ00005484043.pdf)『Comparatio』第5号、2001年、96頁に掲載された歌詞による。同論文は『西條八十全集』第9巻、41～42頁を出典としている。

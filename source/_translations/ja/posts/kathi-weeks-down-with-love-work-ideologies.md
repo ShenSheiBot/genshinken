@@ -152,6 +152,6 @@ format: article
 
 [^5]: 「もっと笑え？　なら、もっと賃金を（More smiles? More money.）」は、1970年代の家事労働賃金要求運動のスローガンである。シルヴィア・フェデリーチによれば、その狙いは、「笑顔」のように、主として女性が担い、家庭のなかで男性に提供されるサービスを、自然で無償のものとする考えを捨て去ることにある。賃金と結びつけることで、それを「労働」として捉えるのである。これは、家父長制のもとで、進んで労働を差し出し、見返りを求めない女性を繰り返し作り出すこと、つまり女性を従属するジェンダー主体にすることへの反撃である。――中国語版訳者注
 
-[^ja]: 日本語版の引用について：本文中の引用は、ウィークスが引用した文言の日本語訳であり、既刊邦訳からの引用ではない。原典未照合の箇所は、[ウィークス論考の許諾再録](https://www.versobooks.com/en-gb/blogs/news/3614-down-with-love-feminist-critique-and-the-new-ideologies-of-work)を介した引用である。参照文献の一覧も同再録の末尾にある。中国語版で省かれていた後半の出典表示は、この再録に基づいて補った。年・頁はウィークスが参照する版の表示であり、邦訳の頁ではない。
+[^ja]: [原論考の再録・参照文献](https://www.versobooks.com/en-gb/blogs/news/3614-down-with-love-feminist-critique-and-the-new-ideologies-of-work)。
 
     ボーヴォワールの言葉は、ウィークスが引用する英訳を経由している。ジョブズの引用は[スタンフォード大学の公式記録](https://news.stanford.edu/stories/2005/06/youve-got-find-love-jobs-says)と照合し、引用の範囲と反復はウィークス掲載形に従った。フェデリーチのスローガンと結語は、[『Wages Against Housework』1975年初版](https://files.libcom.org/files/Federici-Silvia-Wages-Against-Housework.pdf)の対応箇所でも確認されている。

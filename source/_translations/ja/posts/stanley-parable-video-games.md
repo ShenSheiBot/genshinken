@@ -353,7 +353,7 @@ Steamの実績にも、五年間プレイしないことで取れるもの、指
 
 25\. 藍江「ビデオゲーム世代の存在哲学」（原題：电子游戏世代的存在哲学）[G/OL]. 『信睿周報』2019(20190912)[2019-09-12] <https://www.thepaper.cn/newsDetail_forward_4407441>
 
-[^ref-26]: Žižek S. The Pervert’s Guide to Cinema（映画『スラヴォイ・ジジェクによる倒錯的映画ガイド』）. P Guide Ltd, 2006. 本文では、中国語原稿における発言の紹介・解釈を訳している。映画の逐語訳や公式日本語字幕の引用ではない。
+[^ref-26]: Žižek S. The Pervert’s Guide to Cinema（映画『スラヴォイ・ジジェクによる倒錯的映画ガイド』）. P Guide Ltd, 2006.
 
 [^ref-27]: Becker B. Cyborgs, agents, and transhumanists: Crossing traditional borders of body and identity in the context of new technology[J]. Leonardo, 2000, 33(5): 361-365.
 

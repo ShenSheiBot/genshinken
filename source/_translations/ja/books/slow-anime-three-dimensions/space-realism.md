@@ -143,15 +143,15 @@ format: article
 
 [^1]: フリーライター。筆名は「饼干」「鲜奶饼干」「cyclotron」。本稿は2019年6月の発表で、本文の「今日」「現在」も発表当時を指す。第一章の訂正は2020年3月31日の追記。
 
-[^2]: Tamerlane, [“Why Over Sixty Years of Animation History Still Remains Obscure”](https://wavemotioncannon.com/2016/01/08/why-over-sixty-years-of-animation-history-still-remains-obscure/), 2018-11-20（原注記載日）。[中国語訳の出典](https://weibo.com/ttarticle/p/show?id=2309403948634805820883#_0)（引用は中国語訳から重訳）。
+[^2]: Tamerlane, [“Why Over Sixty Years of Animation History Still Remains Obscure”](https://wavemotioncannon.com/2016/01/08/why-over-sixty-years-of-animation-history-still-remains-obscure/), 2018-11-20（原注記載日）。[中国語訳の出典](https://weibo.com/ttarticle/p/show?id=2309403948634805820883#_0)。
 
 [^3]: 林松輝『蔡明亮与缓慢电影』、台北：台大出版中心、2016年、17–19頁。
 
-[^4]: セバスチャン・ドゥニ『动画电影』、謝秀娟訳、杭州：浙江大学出版社、2013年、40頁（引用は中国語訳から重訳）。
+[^4]: セバスチャン・ドゥニ『动画电影』、謝秀娟訳、杭州：浙江大学出版社、2013年、40頁。
 
-[^5]: ロラン・バルト「影像的修辞」、邵一平・肖熹訳、『电影艺术』2012年第2期、98頁（引用は中国語訳から重訳）。
+[^5]: ロラン・バルト「影像的修辞」、邵一平・肖熹訳、『电影艺术』2012年第2期、98頁。
 
-[^6]: アンドレ・バザン『电影是什么』、崔君衍訳、北京：文化芸術出版社、2008年、153頁（引用は中国語訳から重訳）。
+[^6]: アンドレ・バザン『电影是什么』、崔君衍訳、北京：文化芸術出版社、2008年、153頁。
 
 [^7]: 同上、147頁。
 
@@ -167,7 +167,7 @@ format: article
 
 [^13]: Bordwell, David. Figures Traced in Light: On Cinematic Staging. California: University of California Press, 2005, pp. 186–237.
 
-[^14]: ジェームズ・ウッデン『无人是孤岛：侯孝贤的电影世界』、黄文傑訳、上海：復旦大学出版社、2014年、108–111頁（引用は中国語訳から重訳）。
+[^14]: ジェームズ・ウッデン『无人是孤岛：侯孝贤的电影世界』、黄文傑訳、上海：復旦大学出版社、2014年、108–111頁。
 
 [^15]: NHK『ハイビジョン特集 映画監督 押井守 妄想を形にする ～新作密着ドキュメント～』、2018-11-20（原注記載日）、[参照動画](https://www.bilibili.com/video/av18074575)。
 
@@ -181,7 +181,7 @@ format: article
 
 [^20]: 注14に同じ。
 
-[^21]: 今敏「動畫大師最後的訪談：意識溢流的棲映之地──今敏」、劉佳旻インタビュー、施穎弘・卓于綉訳、『dpi設計插畫誌』第134号、22–29頁、http://www.studio2talks.com/archives/9368#.W_vGjfkzbb0 より（引用は中国語訳から重訳）。
+[^21]: 今敏「動畫大師最後的訪談：意識溢流的棲映之地──今敏」、劉佳旻インタビュー、施穎弘・卓于綉訳、『dpi設計插畫誌』第134号、22–29頁、http://www.studio2talks.com/archives/9368#.W_vGjfkzbb0 より。
 
 [^22]: 映像特典・座談会「あれから10年、僕らの青春」～ここからすべてが始まった！、ジブリがいっぱい COLLECTION『海がきこえる』、2018-11-25（原注記載日）、[参照動画](https://www.bilibili.com/video/av31732311)。
 
@@ -190,4 +190,3 @@ format: article
 ---
 
 **編者注：** このすばらしい文章の転載を許可してくださった饼干氏に感謝します。本稿は、このあと「愛と超越」「時間イメージ」の二節へと続きます。
-

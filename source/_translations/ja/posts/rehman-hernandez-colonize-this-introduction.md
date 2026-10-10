@@ -97,7 +97,7 @@ format: article
 
 [^borderlands]: ボーダーランズは、地理的な国境地帯だけでなく、複数の言語や文化が交差する領域を指す。[吉原令子「『帝国』のフェミニズムへの批判に関する一試論」、p. 194](https://www.jstage.jst.go.jp/article/eibeibunka/34/0/34_KJ00001033487/_pdf)
 
-[^lorde]: 原詩の一行は “We were never meant to survive.”。本文の日本語は既刊邦訳からの引用ではない。[Audre Lorde, “A Litany for Survival”、出典表示付き転載PDF、第2頁](https://i-ac.eu/downloads/poem_audre_lorde_an.pdf)
+[^lorde]: 原詩の一行は “We were never meant to survive.”。[Audre Lorde, “A Litany for Survival”、出典表示付き転載PDF、第2頁](https://i-ac.eu/downloads/poem_audre_lorde_an.pdf)
 
 [^femme]: フェムは、女性的な装いや自己表現と、レズビアン／クィアとしての欲望や自己認識に関わる語。[井芹真紀子「〈トラブル〉再考」、pp. 28–29](https://icu.repo.nii.ac.jp/record/1901/files/KJ00006223219.pdf)
 

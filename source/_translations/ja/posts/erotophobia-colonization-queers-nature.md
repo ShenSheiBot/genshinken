@@ -89,6 +89,6 @@ format: article
 
 [^t2]: 「ソドミー」は、ここでは宗教的・法的に非難や処罰の対象とされた性行為のカテゴリーを指し、特定の身体行為だけを意味しない。ナドレはナバホの文化固有の名称であり、一般的なトランスジェンダー概念や、北米先住民全体に共通する呼称と同一ではない。ベルダーシュの語源とナドレという名称の選択については、著者自身が原注で説明している。
 
-[^t3]: この処刑命令は、ガードがエレイラから引用した文にも、絞殺のあとで「生きたまま焼く」とある。処刑の順序には矛盾が残るが、スペイン語史料は未確認であり、引用の文言をそのまま示した。参照：[英語転記本文、Ereira 1992, 140からの引用](https://www.lespantheresroses.org/textes/ecology_toward_a_queer_ecofeminism.pdf)。
+[^t3]: この処刑命令は、ガードがエレイラから引用した文にも、絞殺のあとで「生きたまま焼く」とある。参照：[英語転記本文、Ereira 1992, 140からの引用](https://www.lespantheresroses.org/textes/ecology_toward_a_queer_ecofeminism.pdf)。
 
 [^t4]: 中国語版では「子どもの性教育」「均衡の取れた参加者」「私たちが知覚する社会関係・制度から生じる抑圧のマトリックス」とされているが、英語原著はそれぞれ、子どもが関わる性的接触、文化と自然への平等な参加、互いに結びつけて捉えられることから生じる抑圧を述べている。ここでは英語原著の意味を採った。参照：[英語再録版、39頁](https://we.riseup.net/assets/47699/towards%2Ba%2Bqueer%2Becofeminism.pdf)、[英語転記本文、結論部](https://www.lespantheresroses.org/textes/ecology_toward_a_queer_ecofeminism.pdf)。

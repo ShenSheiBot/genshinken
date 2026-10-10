@@ -45,7 +45,7 @@ updated: '2026-10-05'
 
 だが貝木は、この話を阿良々木暦にどう語っているのか。
 
-*以下、記事中の中国語訳からの重訳。*
+
 
 > 「――何を言ったんだ？」
 >
@@ -132,4 +132,4 @@ updated: '2026-10-05'
 
 [^lyrics]: 「木枯らしセンティメント」：作詞 meg rock、作曲・編曲 神前暁、歌 戦場ヶ原ひたぎ・貝木泥舟。[公式音楽情報](https://www.monogatari-series.com/2ndseason/music/index.html)。日本語部分の抜粋範囲と表記は記事による。
 
-[^poem]: 訳注：コールリッジ「失意のオード」（*Dejection: An Ode*）第二連冒頭、第21〜24行。記事中の中国語訳からの重訳。[原詩](https://www.gutenberg.org/cache/epub/11101/pg11101.html.utf8)。
+[^poem]: 訳注：コールリッジ「失意のオード」（*Dejection: An Ode*）第二連冒頭、第21〜24行。[原詩](https://www.gutenberg.org/cache/epub/11101/pg11101.html.utf8)。

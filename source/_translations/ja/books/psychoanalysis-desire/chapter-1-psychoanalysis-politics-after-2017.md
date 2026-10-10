@@ -107,6 +107,6 @@ D. 共可能性。精神分析の外にある関与を肯定することが、�
 
 [^ja-pavon]: 日訳注：底本の「David-Pavan Cuellar」は、[本人の論文の著者表記](https://onlinelibrary.wiley.com/doi/abs/10.1002/9781405165518.wbeosl010.pub2)に従い、David Pavón-Cuéllar とした。
 
-[^ja-lacan-politics]: 日訳注：1966年の否定表現は、[「精神分析の対象についての哲学の学生への回答」原文](https://cahiers.kingston.ac.uk/vol03/cpa3.1.lacan.html)に基づく。1969年の発言は[ラカンの1969年12月3日ヴァンセンヌ講義の記録](https://ecole-lacanienne.net/wp-content/uploads/2016/04/1969-12-03.pdf)に対応する。『テレビジョン』の引用は中国語本文からの重訳。
+[^ja-lacan-politics]: 日訳注：1966年の否定表現は、[「精神分析の対象についての哲学の学生への回答」原文](https://cahiers.kingston.ac.uk/vol03/cpa3.1.lacan.html)に基づく。1969年の発言は[ラカンの1969年12月3日ヴァンセンヌ講義の記録](https://ecole-lacanienne.net/wp-content/uploads/2016/04/1969-12-03.pdf)に対応する。
 
 [^ja-efp]: 日訳注：中国語本文ではEFP創設を1963年とする箇所と1964年とする箇所がある。ここでは、[ラカンのEFP創設文書](https://www.association-mondiale-psychanalyse.org/acte-de-fondation/)の日付、1964年6月21日に従った。著者による約十八年周期という歴史の見立ては、そのまま示している。

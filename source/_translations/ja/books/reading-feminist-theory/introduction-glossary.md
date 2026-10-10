@@ -21,7 +21,7 @@ updated: '2026-10-08'
 format: article
 ---
 
-〔日本語版注：本記事は、Susan Archer Mann／Ashly Suzanne Patterson編 *Reading Feminist Theory: From Modernity to Postmodernity*（Oxford University Press, 2016、ISBN 9780199364985）の導論を中心とする中国語版からの翻訳である。本文が参照する「選文」と第6章は収録されていない。引用は別記のあるものを除き中国語掲載文から訳した。本文の「今日」「現在」「近年」などは原著の叙述時点、中国語訳者の後記・追記は2022年の時点を指す。本ページの署名は日本語訳の担当者を示し、中国語版の翻訳者・校閲者の署名は[元記事](/books/reading-feminist-theory)で確認できる。〕
+〔日本語版注：本記事は、Susan Archer Mann／Ashly Suzanne Patterson編 *Reading Feminist Theory: From Modernity to Postmodernity*（Oxford University Press, 2016、ISBN 9780199364985）の導論を中心とする。本文が参照する「選文」と第6章は収録されていない。本文の「今日」「現在」「近年」などは原著の叙述時点、中国語訳者の後記・追記は2022年の時点を指す。〕
 
 <h2 id="introduction-glossary">総論と用語集</h2>
 

@@ -19,8 +19,6 @@ format: "article"
 
 中国語版：翻訳 daicon／校正 スカウト
 
-**日本語版について：** 本記事は、講義内容の予定と事前に寄せられた質問への回答を、中国語記事の五部構成に沿って収めたものです。講義当日の逐語録ではありません。講義予定・問答は対応する日本語配布資料から復元し、明白な誤記や読みを妨げる構文を整えました。中国語版独自の紹介・語釈・再掲は、その出自を示して訳しています。
-
 各部の紹介と謝辞、回答の再掲は、原記事の構成を保つため省略していません。紹介・講師紹介の「今年」「現時点」などは2020年当時の記述です。第7回の中止情報と担当話数には訂正注があります。問答中の「今回」「講座で説明します」などは、それぞれの講座に向けた当時の案内であり、本記事の後段での説明を約束するものではありません。参考上映の映像や別紙の全ては収録していません。資料のページ数は、特記しない限り77ページ版PDFの通しページです。記事内リンクと参照注は日本語版で補いました。
 
 [講座紹介と講義予定](#lecture-and-history)／[第1回質問集](/ja/books/layout-history-lectures/chapters/first-lecture-questions#first-lecture-questions)／[第3回質問集](/ja/books/layout-history-lectures/chapters/third-lecture-questions#third-lecture-questions)／[第4回質問集](/ja/books/layout-history-lectures/chapters/fourth-lecture-questions#fourth-lecture-questions)／[第5回質問集](/ja/books/layout-history-lectures/chapters/fifth-lecture-questions#fifth-lecture-questions)

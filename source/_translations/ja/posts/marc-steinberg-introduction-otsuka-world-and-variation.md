@@ -39,7 +39,7 @@ base_language: zh-Hans
 updated: '2026-10-07'
 format: article
 ---
-日本語版の案内：本稿は、[『Mechademia』第5巻（2010年）](https://www.mechademia.net/journal/first-decade/)に掲載された英訳序文の中国語版（中国語訳：celani）からの重訳である。本文の「本巻」は同巻を、「ここに訳出する論考」は大塚の論考の英訳を指す。「現在」「近年」なども序文執筆当時を基準とする。2023年11月4日は中国語版の日付である。
+出典：[『Mechademia』第5巻（2010年）](https://www.mechademia.net/journal/first-decade/)。本文の「本巻」は同巻を、「ここに訳出する論考」は大塚の論考の英訳を指す。「現在」「近年」なども序文執筆当時を基準とする。2023年11月4日は中国語版の日付である。
 
 > 中国語版の導入：本稿は、マーク・スタインバーグが大塚英志「世界と趣向――物語の複製と消費」の英訳に寄せた序文（“Translator’s Introduction: Ōtsuka Eiji and Narrative Consumption”）を訳したものであり、大塚の論考の中国語訳を補うものである。
 >

@@ -130,4 +130,4 @@ format: article
 
 私は作者君単推しです。
 
-[^brant]: 訳注：本記事に引かれた中国語訳からの重訳。対応する原文は『阿呆船』第108章9–16行。参照：[1495年バーゼル版に基づく転記本文（Narragonien digital）](https://www.narragonien-digital.de/exist/data/druck/Lesetext_GW5046/narrenschiff_basel_3.3.1495_t4r-t6v.pdf)。
+[^brant]: 対応する原文は『阿呆船』第108章9–16行。参照：[1495年バーゼル版に基づく転記本文（Narragonien digital）](https://www.narragonien-digital.de/exist/data/druck/Lesetext_GW5046/narrenschiff_basel_3.3.1495_t4r-t6v.pdf)。

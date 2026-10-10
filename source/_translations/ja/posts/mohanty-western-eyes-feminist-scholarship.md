@@ -136,7 +136,7 @@ format: article
 
 [^j-discursive]: 日訳注：中国語の「随意的自我表现」（気ままな、あるいは恣意的な自己表現）は、原著の *discursive self-presentation* に基づき、「言説上の自己表象」と補訂した。[1991年版74頁](https://www.sfu.ca/~decaste/OISE/page2/files/MohantyWesternEyes.pdf)参照。
 
-[^j-marx]: 日訳注：『ルイ・ボナパルトのブリュメール18日』第VII章の一句。前書きでは前半のみが引用されている。ここでの日本語は既存邦訳からの引用ではなく、[ドイツ語電子本文](https://www.marxists.org/deutsch/archiv/marx-engels/1852/brumaire/kapitel7.htm)と照合した訳である。
+[^j-marx]: 日訳注：『ルイ・ボナパルトのブリュメール18日』第VII章の一句。前書きでは前半のみが引用されている。ここでの日本語は[ドイツ語電子本文](https://www.marxists.org/deutsch/archiv/marx-engels/1852/brumaire/kapitel7.htm)と照合した訳である。
 
 [^j-preface]: 日訳注：「ポストコロニアル言説」は中国語訳者の用語。本文が批判する「植民地主義言説」とは区別している。
 

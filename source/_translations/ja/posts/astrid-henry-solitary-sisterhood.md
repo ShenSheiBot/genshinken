@@ -29,8 +29,6 @@ format: article
 >
 > 中国語版の案内：「フェミニズム理論を読む――近代からポストモダンへ」選文98。個々の文章を訳して紹介することは、その主張への訳者たちの賛同を意味しません。
 >
-> 日本語版について：本稿は、英語論文の中国語選訳と、中国語訳者による要約・解説を日本語に訳したものです。本文中の引用も、別記したものを除き、中国語版からの再訳です。
-
 ---
 
 著者について：
@@ -201,7 +199,7 @@ JeeYeun Lee：
 **日訳注A**　水道水に加えられた成分を意識せず暮らすように、フェミニズムの恩恵も意識されない、という比喩。中国語版では、その成分を「消毒剤の鉱物質」としている。ここでは、原著の検索断片にある *fluoride* に従い、「フッ化物」とした。[原著電子版](https://books.google.com/books/about/Different_Wavelengths.html?id=l2G2AgAAQBAJ)
 
 <a id="ja-note-b"></a>
-**日訳注B**　本文は中国語版の説明に沿った再訳である。原著の検索断片には *the feminism drops out of Feminism* とあり、小文字と大文字の語を対置している。中国語版はこれを、特定のフェミニズムとフェミニズム全体との関係として説明している。[原著の該当検索](https://books.google.com/books?id=l2G2AgAAQBAJ&jscmd=SearchWithinVolume2&q=Gina)
+**日訳注B**　原著の検索断片には *the feminism drops out of Feminism* とあり、小文字と大文字の語を対置している。中国語版はこれを、特定のフェミニズムとフェミニズム全体との関係として説明している。[原著の該当検索](https://books.google.com/books?id=l2G2AgAAQBAJ&jscmd=SearchWithinVolume2&q=Gina)
 
 <a id="ja-note-c"></a>
 **日訳注C**　ウォーカーの文章を結ぶ「私はポストフェミニズムのフェミニストではない。私は第三波だ」の二文は、『Ms.』公式サイト掲載PDFの保存版にある文言に基づいて訳した。一方、ウォーカーの文章全体には「私たち」に当たる語も、連帯と具体的行動への呼びかけもある。本文の「『私たち』という言葉はない」は、中国語版に示された批評として残している。[『Ms.』掲載文の保存版](https://web.archive.org/web/20170115202333id_/http://www.msmagazine.com/spring2002/BecomingThirdWaveRebeccaWalker.pdf)  
@@ -211,7 +209,7 @@ JeeYeun Lee：
 **日訳注D**　中国語版は引用末尾を「悪態をつくかどうかも自分で選ぼう」としているが、原著の検索断片には *Claim and reclaim your F-word* とある。ここでは、文脈上のF-wordをフェミニズムと解し、その言葉を取り戻す呼びかけとして訳した。[原著電子版](https://books.google.com/books/about/Different_Wavelengths.html?id=l2G2AgAAQBAJ)
 
 <a id="ja-note-e"></a>
-**日訳注E**　本文は中国語版からの再訳。公式公開の1969年宣言第VI節の当該箇所は、「他の女性たちとの間を隔てる、経済・人種・教育・地位上のあらゆる特権を退ける」と訳せる。拒んでいるのは「特権」であり、「違い」を分裂の口実にしないという中国語版の表現とは異なる。[レッドストッキングス公式宣言](https://www.redstockings.org/rs-manifesto)
+**日訳注E**　公式公開の1969年宣言第VI節の当該箇所は、「他の女性たちとの間を隔てる、経済・人種・教育・地位上のあらゆる特権を退ける」と訳せる。拒んでいるのは「特権」であり、「違い」を分裂の口実にしないという中国語版の表現とは異なる。[レッドストッキングス公式宣言](https://www.redstockings.org/rs-manifesto)
 
 <a id="ja-note-f"></a>
 **日訳注F**　モーガンの本は、原注20によれば1999年刊。中国語訳者注のアルバム名にある2006年より前であり、この楽曲説明をそのまま書名の由来とすることはできない。

@@ -87,7 +87,7 @@ _眠りを待つ。待つ……_[^7]
 
 [^7]: Judy Chicago, *Through the Flower*, pp. 213–217所収。
 
-[^8]: Virginia Woolf, *A Room of One’s Own*（『自分ひとりの部屋』）（New York: Harcourt Brace Jovanovich, 1928）, p. 86。〔訳注：1928年は中国語版および[英語再録の注22](https://www.goddessariadne.org/why-women-need-the-goddess-part-2)の記載。作品の初刊は1929年であり、『Heresies』初出誌の注には1957年とある。ここでは原注の年を残したが、指定版・頁は未照合。〕
+[^8]: Virginia Woolf, *A Room of One’s Own*（『自分ひとりの部屋』）（New York: Harcourt Brace Jovanovich, 1928）, p. 86。〔訳注：1928年は中国語版および[英語再録の注22](https://www.goddessariadne.org/why-women-need-the-goddess-part-2)の記載。作品の初刊は1929年であり、『Heresies』初出誌の注には1957年とある。〕
 
 [^訳注1]: 中国語版では「講座」となっているが、[英語再録](https://www.goddessariadne.org/why-women-need-the-goddess-part-1)の *conference* に従い「会議」とした。
 

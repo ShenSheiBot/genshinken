@@ -25,7 +25,6 @@ format: interview
 
 > 原文：[「Anime Expo 2018 牛尾憲輔インタビュー」](https://t-ono.net/interview/kensuke-ushio-interview-anime-expo-2018.html)（*Kensuke Ushio Interview @ Anime Expo 2018*）<br>
 
-※本稿は中国語版からの日本語訳です。見出しと訳者クレジットは中国語版によります。
 
 > **中国語版訳者より：**訳し終わって気づいたけど、これ、中身のある話がちょっと少なすぎないか。業界の裏話や、とんでもないスクープでもあるのかと思ったら、薄味もいいところ！　牛尾と山田のカップリング感が増した、それだけが収穫でした（いや、違う）。
 

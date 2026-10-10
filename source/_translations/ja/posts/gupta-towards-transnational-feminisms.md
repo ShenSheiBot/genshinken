@@ -88,7 +88,7 @@ format: article
 
 [^mohanty-date]: 日本語訳注：本文と参考文献の「1986」は、グプタ論文と中国語版の表記を保持した。ただし、照合した「Under Western Eyes」の誌面資料は1984年刊を示す。また、ここで引用されるミクロ／マクロ政治の文言は、2003a の p.501 に確認できる。[「Under Western Eyes」誌面資料](https://www2.kobe-u.ac.jp/~alexroni/IPD%202015%20readings/IPD%202015_5/under-western-eyes.pdf)、[モーハンティー、2003a、p.501](https://www2.kobe-u.ac.jp/~alexroni/IPD%202015%20readings/IPD%202015_5/Under%20western%20Eyes%20revisited.pdf)
 
-[^accounts]: 日本語訳注：グレウォールとカプランを参照したこの判断と、続くバスーの議論の紹介は、いずれもグプタの叙述によるもので、各文献からの直接引用ではない。[グプタ、p.34](https://d-nb.info/1186498129/34)
+[^accounts]: 日本語訳注：グレウォールとカプランを参照したこの判断と、続くバスーの議論の紹介。[グプタ、p.34](https://d-nb.info/1186498129/34)
 
 [^capitalism]: 日本語訳注：括弧内の「トランスナショナル・フェミニズムの実践の」は、モーハンティーの文にグプタが加えた補足である。[グプタ、p.34](https://d-nb.info/1186498129/34)、[モーハンティー、2003b、p.250](https://hamtramckfreeschool.files.wordpress.com/2014/05/mohanty-chandra-feminism-without-borders-decolonizing-theory-practicing-solidarity.pdf)
 

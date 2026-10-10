@@ -71,7 +71,7 @@ _世界各地の女性たちは、長いあいだ、「すでに知られてい�
 
 [^edition]: 底本は中国語選訳（訳：yuyugayu、校閲：柴来人）。[英語原著](https://drive.google.com/file/d/1o-hTdTDgBu5DlONNVzqJQlGeEO4zmOws/view)との明白な相違は注記した。中国語版の省略は補っていない。
 
-[^peacock]: 中国語訳者注（日訳者による整理）：ピーコック事件は、妻が別の男性とベッドにいるのを見つけた夫が、妻を殺害した事件。夫は、murder より軽く扱われる故殺罪（voluntary manslaughter）について有罪答弁をした。中国語訳者は、担当裁判官が、結婚した男性ならこうした場面で手を出さずにはいられず、自分にも我慢できるとは思えない、という趣旨の発言をしたと紹介している。日訳者補記：この発言紹介は逐語訳ではない。原著注3が参照するシャフランの論文に、裁判記録からの引用が掲載されている。Lynn Hecht Schafran, [“There’s No Accounting for Judges”](https://www.legalmomentum.org/sites/default/files/reports/theresnoaccountingforjudgeslhs.pdf), *Albany Law Review*, 58, 1063–1064頁。
+[^peacock]: 中国語訳者注：ピーコック事件は、妻が別の男性とベッドにいるのを見つけた夫が、妻を殺害した事件。夫は、murder より軽く扱われる故殺罪（voluntary manslaughter）について有罪答弁をした。中国語訳者は、担当裁判官が、結婚した男性ならこうした場面で手を出さずにはいられず、自分にも我慢できるとは思えない、という趣旨の発言をしたと紹介している。原著注3が参照するシャフランの論文には、裁判記録からの引用が掲載されている。Lynn Hecht Schafran, [“There’s No Accounting for Judges”](https://www.legalmomentum.org/sites/default/files/reports/theresnoaccountingforjudgeslhs.pdf), *Albany Law Review*, 58, 1063–1064頁。
 
 [^naming]: 中国語訳者注：論敵を一人ずつ名指ししている。
 
@@ -89,7 +89,7 @@ _世界各地の女性たちは、長いあいだ、「すでに知られてい�
 
 [^court]: 日訳者注：中国語版の「ジェンダー・リテラシーを身につけた裁判所」は、原著221頁では逆に「ジェンダーを理解しない裁判所」である。「公平」とされた箇所も、性的な標的にしてよい相手という意味に修正した。また、中国語版には「平等保護原則に合致しているように見えるから」という補足があるが、英語原著にはないため、著者の説明とは分けてここに残す。
 
-[^carr]: 原著注8・日訳者注：本文の言葉はマッキノンによる引用的な言い換えであり、判決の逐語訳ではない。[カー事件判決](https://openjurist.org/32/f3d/1007)、32 F.3d 1007, 1011（1994）、第8段落の実際の文言は “Of course it was unwelcome.”（「もちろん、それは望まれない行為だった」）。原著注8にもこちらの文言が記されている。
+[^carr]: 原著注8：[カー事件判決](https://openjurist.org/32/f3d/1007)、32 F.3d 1007, 1011（1994）、第8段落の文言は “Of course it was unwelcome.”（「もちろん、それは望まれない行為だった」）。原著注8にもこちらの文言が記されている。
 
 [^vinson]: 原著注9：[ *Meritor Savings Bank v. Vinson* ](https://supreme.justia.com/cases/federal/us/477/57/), 477 U.S. 57（1986）。
 

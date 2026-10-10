@@ -67,7 +67,7 @@ _『The Woman’s Tribune』、1897年10月9日。_[^stanton-bibliography]
 
 [^stanton-appendix]: 日訳者注：見出しと番号は中国語版のもの。新聞では、以下の五つの決議は、スタントンが送り、ネブラスカの女性選挙権運動の大会で全会一致で採択されたものとして紹介されている。[『The Woman’s Tribune』1897年10月9日号、79頁](https://www.loc.gov/resource/sn85038008/1897-10-09/ed-1/?sp=3)。
 
-[^stanton-variants]: 日訳者校合注：中国語版に従って訳した。新聞掲載形では、専門職の列挙に「医師」はなく、「女性全体」に対応する箇所は “white sex”（白人女性）と印刷されている。誤植なのか、別の版で修正されたのかは確認できていない。また、決議第1項末尾の「教育を受けた女性」に対応する表現は “this superior class”（この優越した層）である。[『The Woman’s Tribune』1897年10月9日号、79頁、第1・第2段](https://www.loc.gov/resource/sn85038008/1897-10-09/ed-1/?sp=3)。
+[^stanton-variants]: 新聞掲載形では、専門職の列挙に「医師」はなく、「女性全体」に対応する箇所は “white sex”（白人女性）と印刷されている。また、決議第1項末尾の「教育を受けた女性」に対応する表現は “this superior class”（この優越した層）である。[『The Woman’s Tribune』1897年10月9日号、79頁、第1・第2段](https://www.loc.gov/resource/sn85038008/1897-10-09/ed-1/?sp=3)。
 
 [^stanton-iron]: 日訳者校合注：中国語版では説明的な文になっているが、ここでは新聞掲載形の問いかけに基づいて反語の形を採った。[同号79頁、第2段](https://www.loc.gov/resource/sn85038008/1897-10-09/ed-1/?sp=3)。
 

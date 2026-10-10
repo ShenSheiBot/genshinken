@@ -103,14 +103,14 @@ BL漫画と同性愛には何の関係もない。[^opening] あるいは少な�
 
 [^allan]: 『ALLAN』1983年8月号の「新宿二丁目」特集は本稿掲載の表紙、およびウェルカーの[関連研究](https://www.scribd.com/document/663502720/4825512)、138頁注184を参照。
 
-[^letters]: 日訳注：読者の発言・署名・投稿題は中国語版からの重訳で、日本語原投稿の文言ではない。筆名も中国語版に基づく仮表記・仮訳を含む。「ホモ」「レズ」などは当時の呼称として用いる。
+[^letters]: 「ホモ」「レズ」などは当時の呼称として用いる。
 
 [^venues]: 「若草の会」については[堀川修平の研究](https://www.jstage.jst.go.jp/article/genderhistory/12/0/12_51/_pdf)を、「祭」とリボンヌについてはウェルカーの[関連研究](https://www.scribd.com/document/663502720/4825512)、62～63頁を参照。
 
 [^shonen]: ここでは、漫画のジャンル名と、少年を性的な欲望の対象とする意味での「少年愛」が重なっている。ウェルカーの[関連研究](https://www.scribd.com/document/663502720/4825512)、139頁の同じ投稿の説明を参照。
 
-[^scott]: ジョーン・W・スコット「The Evidence of Experience」（1991）、792頁。[原論文](https://blogs.princeton.edu/poeticsofhistory/wp-content/uploads/sites/661/2019/05/1343743.pdf)からの訳。既刊邦訳からの引用ではない。
+[^scott]: ジョーン・W・スコット「The Evidence of Experience」（1991）、792頁。[原論文](https://blogs.princeton.edu/poeticsofhistory/wp-content/uploads/sites/661/2019/05/1343743.pdf)からの訳。
 
-[^butler]: ジュディス・バトラー『Undoing Gender』（2004）、28頁。[原著](https://selforganizedseminar.wordpress.com/wp-content/uploads/2011/07/butler-undoing_gender.pdf)からの訳。中国語版の「規範の可能性」は、原著では「規範を超える可能性」。既刊邦訳からの引用ではない。
+[^butler]: ジュディス・バトラー『Undoing Gender』（2004）、28頁。[原著](https://selforganizedseminar.wordpress.com/wp-content/uploads/2011/07/butler-undoing_gender.pdf)からの訳。中国語版の「規範の可能性」は、原著では「規範を超える可能性」。
 
-[^weston]: キャス・ウェストン「Lesbian/Gay Studies in the House of Anthropology」（1993）、349～350頁。[原論文の公開複製](https://www.scribd.com/document/216181831/Lesbian-and-Gays-Studies)からの訳。既刊邦訳からの引用ではない。
+[^weston]: キャス・ウェストン「Lesbian/Gay Studies in the House of Anthropology」（1993）、349～350頁。[原論文の公開複製](https://www.scribd.com/document/216181831/Lesbian-and-Gays-Studies)からの訳。

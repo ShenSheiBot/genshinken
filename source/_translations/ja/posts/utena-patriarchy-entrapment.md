@@ -143,9 +143,9 @@ updated: '2026-10-06'
 
 [^bahlieda]: Robert Bahlieda, “The Legacy of Patriarchy,” *The Democratic Gulag: Patriarchy, Leadership & Education*, Peter Lang, 2015, p.16。定義はFox（1989）, p.147からの引用。本稿では中国語版の省略を含む引用に沿って訳した。[該当頁](https://api.pageplace.de/preview/DT0400.9781453915455_A45242684/preview-9781453915455_A45242684.pdf#page=26)。
 
-[^1]: Judith Butler, “Subjects of Sex/Gender/Desire,” *Gender Trouble: Feminism and the Subversion of Identity*, Routledge, 1990。引用箇所はRoutledge Classics版（2006年）、pp.8–9。本稿の引用は中国語版からの重訳で、竹村和子による邦訳からの引用ではない。[英語刊行本文](https://ebooks.umu.ac.ug/librarian/books-file/Gender%20Trouble.pdf#page=45)。
+[^1]: Judith Butler, “Subjects of Sex/Gender/Desire,” *Gender Trouble: Feminism and the Subversion of Identity*, Routledge, 1990。引用箇所はRoutledge Classics版（2006年）、pp.8–9。[英語刊行本文](https://ebooks.umu.ac.ug/librarian/books-file/Gender%20Trouble.pdf#page=45)。
 
-[^2]: Alan Sinfield, “Cultural Materialism, Othello, and the Politics of Plausibility,” *Faultlines: Cultural Materialism and the Politics of Dissident Reading*, University of California Press, Berkeley, 1992, 第2章。引用はp.33。本稿の引用は中国語版からの重訳。[刊行本文](https://publishing.cdlib.org/ucpressebooks/public/book/faultlines-cultural-materialism-and-the-politics-of-dissident-reading.html)。
+[^2]: Alan Sinfield, “Cultural Materialism, Othello, and the Politics of Plausibility,” *Faultlines: Cultural Materialism and the Politics of Dissident Reading*, University of California Press, Berkeley, 1992, 第2章。引用はp.33。[刊行本文](https://publishing.cdlib.org/ucpressebooks/public/book/faultlines-cultural-materialism-and-the-politics-of-dissident-reading.html)。
 
 [^3]: 小谷真理・幾原邦彦「攪乱、横断、ボーダレス、揺らぐセクシュアリティ――『少女革命ウテナ』が生まれる場所」『武蔵野美術』115号、2000年、50–61頁。引用は53頁。[誌面画像](https://drive.google.com/file/d/1UjExFcj1ACMsbM70xSY7dHyzEeulnCoJ/view)。
 

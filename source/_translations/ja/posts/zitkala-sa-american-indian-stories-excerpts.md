@@ -75,7 +75,7 @@ _紹介：「フェミニズム理論を読む」の選文109に取り上げら�
 
 [^source]: 本文は *American Indian Stories* 所収 “An Indian Teacher Among Indians” の第三・第四節（[Hayworth Publishing House、1921年版、93–99頁](https://archive.org/download/americanindianst1921zitk/americanindianst1921zitk.pdf)）。冒頭の紹介は中国語版に基づくが、中国語版が就学経験としている箇所は、ここでは教師としての経験である。この抜粋を含む作品の初出は[『アトランティック・マンスリー』1900年3月号](https://www.theatlantic.com/magazine/archive/1900/03/an-indian-teacher-among-indians/636832/)。末尾の1921年は単行本の刊行年を示す。
 
-[^changeling]: 直前に出てくるインディアンの若者を指す。原語の *changeling*（原著95頁）には、別の子とすり替えられた子という意味がある。ここでは、教育によって別人に作り替えられた若者の比喩とも読めるが、文脈上の語義は確定していない。中国語版は「丑小孩」（醜い子）とする。
+[^changeling]: 直前に出てくるインディアンの若者を指す。原語の *changeling*（原著95頁）には、別の子とすり替えられた子という意味があり、ここでは教育によって別人に作り替えられた若者の比喩となっている。中国語版は「丑小孩」（醜い子）とする。
 
 [^father]: ここでは合衆国大統領を指す歴史的呼称。[国立アメリカ・インディアン博物館の展示資料](https://americanindian.si.edu/exhibitions/infinityofnations/plains-plateau/206230.html)にも、大統領を指す用例がある。中国語版の「国父」に当たるが、後の「白い父」とともに、父子関係にたとえた呼び名である。
 

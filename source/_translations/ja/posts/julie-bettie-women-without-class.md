@@ -100,13 +100,13 @@ _階級_をパフォーマンスやパフォーマティヴィティと結びつ
 
 [^ja-source]: 日訳者注：中国語訳は叶叶。本稿は中国語選訳を底本とする抜粋であり、末尾は原著全体の結末ではない。「……」も中国語選訳の表記を引き継いだ。第1節の学術引用は、特記のないかぎり中国語選訳を介した訳。第2・第3節は、2003年の著書からの許諾付き再録「How Working-Class Chicas Get Working-Class Lives」（*Gender Through the Prism of Difference*, 第3版、2005、pp.447–464）に照らして訂正した。中国語選訳で省かれた段落は補っていない。[英語再録](https://xyonline.net/sites/xyonline.net/files/2019-08/Zinn%2C%20%20Gender%20Through%20the%20Prism%20of%20Difference%20%282005%29.pdf#page=460)。
 
-[^ja-theory]: 日訳者注：「表現型と身体的性、それぞれの連続体」は、[Oberackerの博士論文](https://paperzz.com/doc/8669422/the-people-and-me--michael-moore-and-the-politics-of-poli...)（2009、p.171注41）によるBettie 2003年版p.51の引用に基づく。原著の当該頁は未確認。
+[^ja-theory]: 日訳者注：「表現型と身体的性、それぞれの連続体」は、[Oberackerの博士論文](https://paperzz.com/doc/8669422/the-people-and-me--michael-moore-and-the-politics-of-poli...)（2009、p.171注41）によるBettie 2003年版p.51の引用に基づく。
 
-[^ja-structure]: 日訳者注：主体と社会構造の関係は、著者の[先行論文](https://www.academia.edu/84809055/Women_without_Class_Chicas_Cholas_Trash_and_the_Presence_Absence_of_Class_Identity)（2000、p.10注19）を参照した。2003年の著書の対応文は未確認。
+[^ja-structure]: 日訳者注：主体と社会構造の関係は、著者の[先行論文](https://www.academia.edu/84809055/Women_without_Class_Chicas_Cholas_Trash_and_the_Presence_Absence_of_Class_Identity)（2000、p.10注19）を参照した。
 
 [^ja-thick]: 日訳者注：「厚い記述」は、単なる細部の描写ではなく、行為がその社会的文脈でどのような意味をもつかを読み解く記述を指す。[ギアーツの論考](https://www.csun.edu/~rdavids/301fall08/301readings/Geertz_Thick_Description.pdf)参照。
 
-[^ja-compounds]: 日訳者注：三つの複合表現は、[Craigの論考](https://api.pageplace.de/preview/DT0400.9780190842482_A40612147/preview-9780190842482_A40612147.pdf#page=46)（2021、p.27）によるBettie 2014年版p.56の引用に基づく。2003年版との同一性は未確認。
+[^ja-compounds]: 日訳者注：三つの複合表現は、[Craigの論考](https://api.pageplace.de/preview/DT0400.9780190842482_A40612147/preview-9780190842482_A40612147.pdf#page=46)（2021、p.27）によるBettie 2014年版p.56の引用に基づく。
 
 [^ja-mohanty]: 日訳者注：「歴史と地理から生まれる」は、Mohanty, *Feminism without Borders*（2003）所収「Cartographies of Struggle」の[再録版OCR](https://www.scribd.com/document/670538389/Mohanty-Feminism-Wihout-Borders-2003)で対応句を確認した。本文の1991年という参照年と頁は中国語選訳による。
 

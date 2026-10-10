@@ -61,19 +61,19 @@ format: article
 
 [^foreign]: 日訳者注：英語初出の *foreign powers*。外国から介入する勢力ではなく、条約を結ぶ相手である、米国とは別個の政治共同体を指す。[英語初出、2頁](https://ohiomemory.org/digital/collection/p16007coll77/id/19395)
 
-[^declaration]: 日訳者注：前者は米国独立宣言の一節を独立した文にしたもの。後者は、独立宣言の逐語引用ではない。[米国国立公文書館「独立宣言」転写本文](https://www.archives.gov/founding-docs/declaration-transcript)
+[^declaration]: [米国国立公文書館「独立宣言」転写本文](https://www.archives.gov/founding-docs/declaration-transcript)。
 
 [^supplement]: 中国語版補足：黒人男性への選挙権付与には「南北戦争後」、末尾の「一貫性」には「二重基準を用いないこと」という説明が添えられている。いずれもゲージの英語初出にはない。
 
 [^toad]: 日訳者注：シェイクスピア『お気に召すまま』第2幕第1場12–14行では、逆境が、醜く有毒でありながら頭に宝石を持つヒキガエルにたとえられる。これに対し、ゲージは一貫性のありかをヒキガエルの頭の中にしか見いだせないと皮肉っている。中国語訳注は、頭に宝石があるという伝承を紹介し、「苦難と闘争を経てこそ勝利を得られる」という意味だと説明するが、ゲージの結尾は勝利への希望ではなく、この比喩を転用した政府批判である。[Folger版、第2幕第1場](https://www.folger.edu/explore/shakespeares-works/as-you-like-it/read/2/1/)
 
-[^guide]: 日訳者注：以下はゲージの論説とは別の、後世の解説である。引用は中国語版を介した重訳であり、出典の年・頁も同版による。1877年声明はSneiderからの引用で、［およびその他の］は中国語版にある補い。末尾のマンキラーの発言はMihesuahからの引用であり、Mihesuahは書名ではなく著者名である。各文献の書誌は末尾に掲げる。
+[^guide]: 日訳者注：以下はゲージの論説とは別の、後世の解説である。1877年声明はSneiderからの引用で、［およびその他の］は中国語版にある補い。末尾のマンキラーの発言はMihesuahからの引用であり、Mihesuahは書名ではなく著者名である。各文献の書誌は末尾に掲げる。
 
 [^1924]: 日訳者注：中国語版は「1924年に市民権と選挙権を得た」と一括しているが、1924年6月2日法が市民としたのは、米国内で生まれた、それまで米国市民でなかったインディアンである。同法には選挙権を一括して付与する条項はなく、部族その他の財産に対する権利を損なわない旨も定められている。本文ではこの区別を明確にした。[1924年6月2日法、43 Stat. 253, ch. 233](https://www.govinfo.gov/content/pkg/STATUTE-43/pdf/STATUTE-43-Pg253.pdf)
 
 [^engels]: 日訳者注：エンゲルスは『家族・私有財産・国家の起源』第II章で、女性の重労働をそのまま低い社会的地位の証拠とする見方を批判し、共同家政が社会的な仕事であったことを論じている。[ドイツ語本文、第II章](https://projekt-gutenberg.org/authors/friedrich-engels/books/der-ursprung-der-familie-des-privateigenthums-und-des-staats/chapter/4/)
 
-[^matri]: 日訳者注：ここでの「母権制」は権威や権力の所在に関わる語であり、出自や所属を母方でたどる「母系制」とは異なる。[馬場優子「掘り棒とトマホーク」1992年、27頁](https://otsuma.repo.nii.ac.jp/records/2944)。中国語版は「母権制」に「母系制」を意味する *matrilineal* と注番号 [4] を併記しているが、対応する注本文はない。一方、Clarkによる同じ発言の再引用には「母権制」を意味する *matriarchal* とある。本訳は中国語の「母権制」を残したが、Mihesuahの42頁とは未照合である。[Clark、2012年、146頁](https://data2.unhcr.org/en/documents/download/46176)
+[^matri]: ここでの「母権制」は権威や権力の所在に関わる語であり、出自や所属を母方でたどる「母系制」とは異なる。[馬場優子「掘り棒とトマホーク」1992年、27頁](https://otsuma.repo.nii.ac.jp/records/2944)。中国語版は「母権制」に「母系制」を意味する *matrilineal* と注番号 [4] を併記している。一方、Clarkによる同じ発言の再引用には「母権制」を意味する *matriarchal* とある。[Clark、2012年、146頁](https://data2.unhcr.org/en/documents/download/46176)
 
 ## 参照文献
 

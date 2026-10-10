@@ -44,7 +44,7 @@ updated: '2026-10-06'
 
 **「いい年して、まだアニメ見てるの？（冷たい目.jpg）」**
 
-[fig] 承太郎さん、早く押して……いや、この人たちを止めて！[^captions]
+[fig] 承太郎さん、早く押して……いや、この人たちを止めて！
 
 ![承太郎に助けを求める仗助の顔のアップ。無敵のスタープラチナで何とかしてほしいと訴える字幕](attachments/roof-archive/cv2005395/01-press-the-button.png)
 
@@ -121,7 +121,5 @@ updated: '2026-10-06'
 [fig] は、早く押してよ（察して）。
 
 ![キラークイーンの手が親指を立てた「いいね」画像。「そっといいね」と「bite the dust」の文字](/attachments/translations/ja/jojo-memes-spring-festival-survival/11-bite-the-dust-like.ja.png)
-
-[^captions]: 図題は原記事のキャプションに沿った訳で、作品の台詞の逐語引用ではない箇所もある。「字幕訳」は画像内の中国語字幕の訳。
 
 [^yangge]: 「ギャングスター」の「ギャング」を、中国語の「秧歌（ヤンガー）」に聞きなした空耳。「秧歌」は中国の民俗舞踊なので、字面は「秧歌のスター」になる。[空耳の説明](https://www.xincibaike.cn/xinci/2834.html)、[秧歌について](https://www.ihchina.cn/ccr_detail/12815/)。

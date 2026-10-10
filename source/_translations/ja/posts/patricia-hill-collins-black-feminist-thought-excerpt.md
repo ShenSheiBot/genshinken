@@ -77,7 +77,7 @@ _中国語版に記載された権利・許諾表示：Copyrishr © 1990, 1991, 
 
 [^enumeration]: 日本語訳注：中国語版は「貧しい白人女性」としているが、[コリンズ原著225頁](https://depthome.brooklyn.cuny.edu/oer/tvra/016_HillCollins_KnowledgeConsciousnessPoliticsEmp.pdf)では「貧しい人々」と「白人女性」が別々に列挙されているため、分けて訳した。第三節に現れる「貧しい白人女性」は、原著でも一つの集団を指す。
 
-[^erotic]: 日本語訳注：中国語版の「性愛の根本的な権力に依存する」に対し、[コリンズ原著226頁](https://depthome.brooklyn.cuny.edu/oer/tvra/016_HillCollins_KnowledgeConsciousnessPoliticsEmp.pdf)は、その力を「取り込む」としている。「エロティックなもの」は性愛だけに限定しない語として用いた。ロードも、身体や感情、仕事や生活を支える力として論じている。ただし、この箇所がロードからの直接引用であるとは確認されていない。[ロード「Uses of the Erotic: The Erotic as Power」、53–57頁](https://sites.evergreen.edu/mediaculture/wp-content/uploads/sites/20/2015/03/AudreLordeSisterOutsiderExcerpts.pdf)。
+[^erotic]: 日本語訳注：中国語版の「性愛の根本的な権力に依存する」に対し、[コリンズ原著226頁](https://depthome.brooklyn.cuny.edu/oer/tvra/016_HillCollins_KnowledgeConsciousnessPoliticsEmp.pdf)は、その力を「取り込む」としている。「エロティックなもの」は性愛だけに限定しない語として用いた。ロードも、身体や感情、仕事や生活を支える力として論じている。[ロード「Uses of the Erotic: The Erotic as Power」、53–57頁](https://sites.evergreen.edu/mediaculture/wp-content/uploads/sites/20/2015/03/AudreLordeSisterOutsiderExcerpts.pdf)。
 
 [^hooks]: 日本語訳注・出典注：この引用は[コリンズ原著226頁](https://depthome.brooklyn.cuny.edu/oer/tvra/016_HillCollins_KnowledgeConsciousnessPoliticsEmp.pdf)を介したもの。中国語版では引用の境界が曖昧だが、家の比喩までがフックスの言葉であり、「私」もフックスを指す。コリンズの出典指示は、bell hooks, *Talking Back: Thinking Feminist, Thinking Black*（1989）、175頁。
 
@@ -91,6 +91,6 @@ _中国語版に記載された権利・許諾表示：Copyrishr © 1990, 1991, 
 
 [^comfortable]: 中国語版は本文で「最も切迫した」と訳し、中国語訳者注に「comfortableについては『かなり大きい』という意味を採った」と記している。日本語訳では、[原著229頁](https://depthome.brooklyn.cuny.edu/oer/tvra/016_HillCollins_KnowledgeConsciousnessPoliticsEmp.pdf)の comfortable と前後の批判的な文脈に照らし、「いちばん扱いやすい」とした。
 
-[^mills]: 出典注：C. Wright Mills, *The Sociological Imagination*（1959）、[6頁](https://bpb-us-e2.wpmucdn.com/sites.middlebury.edu/dist/4/2073/files/2011/09/Mills-Sociological-Imagination.pdf)。本文はコリンズによる概念の援用と要約であり、ミルズの直接引用ではない。
+[^mills]: 出典注：C. Wright Mills, *The Sociological Imagination*（1959）、[6頁](https://bpb-us-e2.wpmucdn.com/sites.middlebury.edu/dist/4/2073/files/2011/09/Mills-Sociological-Imagination.pdf)。
 
 [^lorde-self]: 出典注：Audre Lorde, “Age, Race, Class, and Sex: Women Redefining Difference,” *Sister Outsider*（1984）、[120–121頁](https://openlab.citytech.cuny.edu/westengardeng2160fa2016/files/2011/06/Lorde-Age-Race-Class-and-Sex.pdf)。引用範囲はコリンズに従う。

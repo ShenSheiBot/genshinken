@@ -55,11 +55,11 @@ format: article
 
 [^household]: 日本語訳注：「モルモン教の習わし」は当時の多妻結婚への言及。教会は1852年から1890年にかけて、この慣行を公に認めていた。ここでは、モルモン教徒ではない家庭にもある、事実上の多妻関係を揶揄していると読める。[教会歴史のテーマ「ユタ州における多妻結婚」](https://www.churchofjesuschrist.org/study/history/topics/plural-marriage-in-utah?lang=jpn)。
 
-[^home-spirit]: 日本語訳注：「一つに結ばれた共同の家庭」は、家族の範囲を広げる構想を示す表現で、特定の共同生活制度を指すかどうかは確認されていない。また、当時のアメリカでは心霊主義が社会改革思想と結びついており、ここでも科学と霊界の働きがともに社会の進歩をもたらすと語られている。[原刊本p.42](https://tile.loc.gov/storage-services/service/rbc/rbnawsa/n8216/043.gif)、[稲垣伸一「理想国家建設の夢」、pp.93–96、100–101](https://jissen.repo.nii.ac.jp/record/737/files/KJ00007064360.pdf)。
+[^home-spirit]: 「一つに結ばれた共同の家庭」は、家族の範囲を広げる構想を示す。当時のアメリカでは心霊主義が社会改革思想と結びついており、ここでも科学と霊界の働きがともに社会の進歩をもたらすと語られている。[原刊本p.42](https://tile.loc.gov/storage-services/service/rbc/rbnawsa/n8216/043.gif)、[稲垣伸一「理想国家建設の夢」、pp.93–96、100–101](https://jissen.repo.nii.ac.jp/record/737/files/KJ00007064360.pdf)。
 
 [^millennium]: 日本語訳注：「ヨハネの黙示録」20章に基づく、キリストと信徒が千年にわたって統治する至福の王国。19世紀アメリカでは、その到来への期待が社会改革思想とも結びついた。[稲垣伸一「理想国家建設の夢」、p.101](https://jissen.repo.nii.ac.jp/record/737/files/KJ00007064360.pdf)。
 
-[^closing]: 出典注：この結語は、ウッドハルが演説の前半で、ボストンの *Woman’s Journal* 紙から引いた言葉の再引用。同紙が自由恋愛を唱える人々との関係を否定していることに触れたうえで、同紙にも自由恋愛の思想に通じる言葉があるとして紹介している。引用元の掲載号・筆者は未確認。[原刊本p.22](https://tile.loc.gov/storage-services/service/rbc/rbnawsa/n8216/023.gif)、[p.43](https://tile.loc.gov/storage-services/service/rbc/rbnawsa/n8216/044.gif)。
+[^closing]: 出典注：この結語は、ウッドハルが演説の前半で、ボストンの *Woman’s Journal* 紙から引いた言葉の再引用。同紙が自由恋愛を唱える人々との関係を否定していることに触れたうえで、同紙にも自由恋愛の思想に通じる言葉があるとして紹介している。[原刊本p.22](https://tile.loc.gov/storage-services/service/rbc/rbnawsa/n8216/023.gif)、[p.43](https://tile.loc.gov/storage-services/service/rbc/rbnawsa/n8216/044.gif)。
 
 [^collation]: 原著校合注：中国語版と原著の意味に相違がある次の箇所は、原著に従った。頁数は原刊本の印刷頁。
 

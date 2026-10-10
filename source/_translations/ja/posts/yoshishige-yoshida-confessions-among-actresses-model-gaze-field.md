@@ -456,19 +456,19 @@ format: article
 
 （全文終）
 
-[^1]: [『スタンフォード哲学百科事典』ベンヤミン項の中国語掲載ページ](https://zhuanlan.zhihu.com/p/379106480)。冒頭の引用は[同項の英語本文](https://plato.stanford.edu/entries/benjamin/)による。続くベンヤミンの引用は[ドイツ語本文](https://www.textlog.de/benjamin/abhandlungen/ursprung-des-deutschen-trauerspiels/aufteilung-und-zerstreuung-im-begriff)による訳。それ以外の文献からの引用は、別記したものを除き、中国語原稿に掲げられた引用から訳した。
+[^1]: [『スタンフォード哲学百科事典』ベンヤミン項の中国語掲載ページ](https://zhuanlan.zhihu.com/p/379106480)。冒頭の引用は[同項の英語本文](https://plato.stanford.edu/entries/benjamin/)による。続くベンヤミンの引用は[ドイツ語本文](https://www.textlog.de/benjamin/abhandlungen/ursprung-des-deutschen-trauerspiels/aufteilung-und-zerstreuung-im-begriff)による訳。
 
 [^2]: 日本アート・シアター・ギルド（略称ATG）は、芸術映画専門の小映画館に作品を配給する組織として、1962年に設立された。中国で最もよく知られるATG作品は、おそらく寺山修司監督の『田園に死す』（1974）だろう。
 
 [^3]: ロベール・ブレッソン『シネマトグラフ覚書――映画監督のノート』。本文の一句は松浦寿輝訳。[東京藝術大学の公開資料](https://www.geidai.ac.jp/wp-content/uploads/2015/06/33d8141739f6ad606fdcc405410ced63.pdf)、3頁に再録。
 
-[^4]: 佐藤忠男『日本映画史』中国語版下巻からの重訳。
+[^4]: 佐藤忠男『日本映画史』下巻。
 
-[^5]: 注3と同書。この引用は中国語版からの重訳。
+[^5]: 注3と同書。
 
 [^6]: Ayda Sevin, [MARGINS OF THE IMAGE: FRAMING AND DEFRAMING IN THE GRAPHIC NOVEL AND THE FILM V FOR VENDETTA](https://core.ac.uk/download/pdf/52925047.pdf)。
 
-[^7]: 注3と同書。この二句は中国語版からの重訳。
+[^7]: 注3と同書。
 
 [^8]: 「一場面一ショット」の「場面」とは異なり、本稿の「遠心的な場」の「場」は、英語のsceneではなくfieldにあたる。
 
@@ -496,13 +496,13 @@ format: article
 
 [^20]: [今敏の講座の掲載動画](https://www.bilibili.com/video/av62952348)。
 
-[^21]: 東浩紀の発言を、[知乎掲載記事](https://zhuanlan.zhihu.com/p/51962685)の中国語訳から重訳。
+[^21]: 東浩紀の発言を、[知乎掲載記事](https://zhuanlan.zhihu.com/p/51962685)より。
 
 [^22]: [『パトレイバー2』の鳥についての参照記事](https://www.bilibili.com/read/cv5126582)。
 
 [^23]: [『パトレイバー2』の演出についての参照記事](https://www.bilibili.com/read/cv4929792)。
 
-[^24]: 押井守の発言として、注21と同じ記事に引用された中国語訳からの重訳。
+[^24]: 押井守の発言として、注21と同じ記事より。
 
 [^25]: [「表面」と「背面」をめぐる参照記事](https://rocefactor.hatenablog.com/entry/2021/03/10/234559)。
 

@@ -53,7 +53,7 @@ format: article
 
 [^genre]: 原著との異同：中国語は「历史架空小说」（架空の歴史を描く小説）だが、解説の参照先には *historical romance* とあるため、「歴史ロマンス」とした。[Sánchez／Pita、1997年版序論、p.7](https://www.scribd.com/doc/206131365/The-Squatter-and-the-Don-by-Mario-Amparo-Ruiz-de-Burton)。
 
-[^text]: 日本語版注：小説部分は中国語訳からの再訳。対応箇所は[1885年刊本](https://archive.org/download/squatteranddon00burtrich/squatteranddon00burtrich.pdf)の第II章、pp.19–21と第XVI章、pp.160–162。「残酷な国」「かつてない『アメリカ流の速さ』」「星条旗」は中国語訳による強調・具体化。終盤の「異を唱えにくい」は、英語原著では「大いに正当化できるように見えた」という趣旨。末尾の土地供与は原著に従う（末注参照）。
+[^text]: 小説の対応箇所は[1885年刊本](https://archive.org/download/squatteranddon00burtrich/squatteranddon00burtrich.pdf)の第II章、pp.19–21と第XVI章、pp.160–162。「残酷な国」「かつてない『アメリカ流の速さ』」「星条旗」は中国語訳による強調・具体化。終盤の「異を唱えにくい」は、英語原著では「大いに正当化できるように見えた」という趣旨。末尾の土地供与は原著に従う（末注参照）。
 
 [^spanish]: 日本語版注：ここでいう「スペイン人」「スペイン系アメリカ人」は、米国の征服以前、メキシコ領だったカリフォルニアに根を持つスペイン系住民を指す。後半の「地元生まれのスペイン系住民」も同じ集団であり、アメリカ先住民を指すものではない。[原著第XVI章](https://www.gutenberg.org/files/35538/35538-h/35538-h.html#c16)。
 

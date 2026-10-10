@@ -78,13 +78,13 @@ format: article
 
 [^history]: 日本語版注（出典）：*History of Woman Suffrage* の日本語表記。スタントン、アンソニー、マティルダ・ジョスリン・ゲイジ編。第1巻には、スタントンとダグラスが参政権決議を支持したことが記されている。[第1巻第2版（1889年）、73頁](https://www.gutenberg.org/files/28020/28020-h/28020-h.htm)。
 
-[^clay]: 日本語版注（出典・本文異同）：ダグラスによる引用であり、クレイの1839年2月7日の演説刊行本文とは逐語的には一致しない。論点は「他人の財産を持てるか」ではなく「人間を財産として所有できるか」である。また、続く中国語版の「生命を野蛮な状態にとどめる」に当たる英語原稿の一文は、奴隷制を延命させることを指す。[ダグラス原稿、画像23・タイプ原稿6頁](https://www.loc.gov/resource/mss11879.25005/?sp=23)、[クレイ演説冊子（1839年）、28頁](https://upload.wikimedia.org/wikipedia/commons/a/ac/Speech_of_the_Hon._Henry_Clay%2C_in_the_Senate_of_the_United_States_-_on_the_subject_of_abolition_petitions%2C_February_7%2C_1839_%28IA_speechofhonhenry1839clay%29.pdf)。
+[^clay]: ダグラスが引くクレイの論点は、「他人の財産を持てるか」ではなく「人間を財産として所有できるか」である。また、続く中国語版の「生命を野蛮な状態にとどめる」に当たる英語原稿の一文は、奴隷制を延命させることを指す。[ダグラス原稿、画像23・タイプ原稿6頁](https://www.loc.gov/resource/mss11879.25005/?sp=23)、[クレイ演説冊子（1839年）、28頁](https://upload.wikimedia.org/wikipedia/commons/a/ac/Speech_of_the_Hon._Henry_Clay%2C_in_the_Senate_of_the_United_States_-_on_the_subject_of_abolition_petitions%2C_February_7%2C_1839_%28IA_speechofhonhenry1839clay%29.pdf)。
 
 [^jasper]: 日本語版注（出典）：ジャスパーの説教 “The Sun Do Move!” への言及。太陽が地球の周囲を動くという主張であり、地動説を述べた言葉ではない。[説教記録冊子（1882年）、8頁](https://upload.wikimedia.org/wikipedia/commons/1/1b/%22The_sun_do_move%21%22_The_celebrated_theory_of_the_sun%27s_rotation_around_the_earth_%28IA_thesundomovecele00jasp%29.pdf)。
 
 [^eyes]: 日本語版注（出典・本文異同）：中国語版は「像をじっと見つめながら通り過ぎた」とするが、英語原稿は “with averted eyes”（目をそらして）で、意味が逆になっている。[原稿、画像24・タイプ原稿7頁](https://www.loc.gov/resource/mss11879.25005/?sp=24)。
 
-[^unfinished]: 日本語版注（出典・本文異同）：中国語版は「革命はまだ成功していない、同志はなお努力しなければならない」と表現する。英語原稿では、議長が仕事の未完了を指摘したという要約であり、この標語の直接引用ではない。[原稿、画像24・タイプ原稿7頁](https://www.loc.gov/resource/mss11879.25005/?sp=24)。
+[^unfinished]: 日本語版注（出典）：英語原稿では、議長が仕事の未完了を指摘したと記されている。[原稿、画像24・タイプ原稿7頁](https://www.loc.gov/resource/mss11879.25005/?sp=24)。
 
 [^parker]: 日本語版注（出典）：パーカーのジョン・クインシー・アダムズ追悼演説（1848年3月5日）にある分類の要約・転用。原典には価値の序列があり、真理の発見者を最も高く、次いで組織者、管理者の順に論じる。ダグラスはその逆順に挙げている。[パーカー演説集、第2巻（1867年）、253–260頁](https://www.gutenberg.org/files/34637/34637-h/34637-h.htm)。
 

@@ -75,7 +75,7 @@ format: article
 
 [^benston-3]: これは、集団ないし区分の全体について当てはまる。個人としての女性は、社会化の影響からかなりの程度まで抜け出すことができるし、実際にそうした女性もいる――条件に恵まれれば、経済的に非常に豊かな暮らしを手に入れることさえできる――しかし、大多数の女性にはその機会がない。
 
-[^benston-4]: Ernest Mandel, *An Introduction to Marxist Economic Theory*, New York: Merit Publishers, 1967, pp. 10–11.〔訳注：引用は中国語掲載形からの重訳。〕
+[^benston-4]: Ernest Mandel, *An Introduction to Marxist Economic Theory*, New York: Merit Publishers, 1967, pp. 10–11.
 
 [^benston-5]: この数字は簡単に見積もれる。たとえば、子どものいない既婚女性が、毎週、料理と食器洗いに10時間、掃除に4時間、洗濯に1時間、食料品の買い物に1時間を費やすとする。こうした仕事に毎週必要な*最低限*の時間――週あたりの数字であることに注意してほしい――は合計16時間になる。これはすでに非現実的なほど少ない見積もりだ。それでも、通常の週労働時間の半分近くに達している。
 

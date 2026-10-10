@@ -21,7 +21,7 @@ updated: 2026-10-05
 format: article
 ---
 
-> 日訳注：本稿は1998年の原著序章からの中国語抄訳を底本とし、英語原著と校合した日本語訳である。省略された議論は補っていない。引用の日本語は本稿で訳出したもので、既刊邦訳からの引用ではない。
+> 本稿は1998年の原著序章からの中国語抄訳を底本とし、英語原著と校合した日本語訳である。
 
 > 原著（1998年）：*An Introduction to Female Masculinity: Masculinity without Men*
 >
@@ -81,7 +81,7 @@ _――ガートルード・スタイン、Everybody’s Autobiography（1937年
 
 
 [^1]: 【原注1】Leslie Feinberg, *Stone Butch Blues: A Novel* (Ithaca, N.Y.: Firebrand, 1993), 59。  
-    【日訳者注】引用はハルバースタムの掲載形を基準に訳出し、[著者公開の2014年版](https://lesliefeinberg.net/wp-content/uploads/2015/08/Stone-Butch-Blues-by-Leslie-Feinberg.pdf)、61頁とも照合した。1993年版の当該頁を直接照合したものではない。
+    【日訳者注】引用はハルバースタムの掲載形を基準に訳出し、[著者公開の2014年版](https://lesliefeinberg.net/wp-content/uploads/2015/08/Stone-Butch-Blues-by-Leslie-Feinberg.pdf)、61頁とも照合した。
 
 [^2]: 【原注2】Nice Rodriguez, *Throw It to the River* (Toronto, Canada: Women’s Press, 1993), 25–26。  
     【日訳者注】本作からの引用は、いずれも[ハルバースタムが引用した本文](https://transreads.org/wp-content/uploads/2019/06/2019-06-08_5cfba24a7c20f_judith-halberstam-female-masculinity-2.pdf)、23頁による。本文中の頁数は、ハルバースタムが示す原作の頁数。

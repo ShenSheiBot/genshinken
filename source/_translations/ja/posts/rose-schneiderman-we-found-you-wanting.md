@@ -49,4 +49,4 @@ _ポスターはシュナイダーマンを「著名な労働組合活動家」�
 
 [^workhouse]: 日本語版訳注：「労役場」は *workhouse*。ここでは労働を課される収容・処罰施設を指す。中国語版は「労働救済院」と訳し、「労働改造収容所」という括弧内の説明を添えているが、この説明は英語初出にはない。当時のニューヨークの制度については、[市矯正局の歴史資料、8頁](https://www.correctionhistory.org/html/chronicl/centennial/ccp3legal.pdf)を参照。
 
-[^supplement]: 日本語版訳注：中国語版の導入には、シュナイダーマンが「別の演説で詩『パンとバラ』を引用し、広めた」との説明がある。ただし、シュナイダーマンがこの詩を直接引用し、広めたという関係は確認できていない。オッペンハイムの詩「パンとバラ」は[『The American Magazine』1911年12月号、214頁](https://archive.org/download/americanmagazin20unkngoog/page/n230.jpg)に掲載されている。一方、補足の発言は、Minerva K. Brooksによる報告記事 “Rose Schneiderman in Ohio,” [『Life and Labor』1912年9月号、288頁](https://books.google.com/books?id=epBZAAAAYAAJ&pg=PA288)に収録された引用であり、詩そのものではない。末尾は、中国語版では「女性の投票権のために肩を並べて闘おう」となっているが、掲載誌の文言に即し、働く女性が闘う手段として投票権を得られるよう、特権を持つ女性に協力を求める言葉として訳した。
+[^supplement]: オッペンハイムの詩「パンとバラ」は[『The American Magazine』1911年12月号、214頁](https://archive.org/download/americanmagazin20unkngoog/page/n230.jpg)に掲載されている。補足の発言は、Minerva K. Brooksによる報告記事 “Rose Schneiderman in Ohio,” [『Life and Labor』1912年9月号、288頁](https://books.google.com/books?id=epBZAAAAYAAJ&pg=PA288)に収録されている。

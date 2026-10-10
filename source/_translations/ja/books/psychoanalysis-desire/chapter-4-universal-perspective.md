@@ -135,13 +135,13 @@ EFP解散時のアルチュセールの介入についての短い検討でも�
 
 ---
 
-[^ja-lacan-politics]: 日訳注：1966年の否定表現は、[「精神分析の対象についての哲学の学生への回答」原文](https://cahiers.kingston.ac.uk/vol03/cpa3.1.lacan.html)に基づく。1969年の発言は[ラカンの1969年12月3日ヴァンセンヌ講義の記録](https://ecole-lacanienne.net/wp-content/uploads/2016/04/1969-12-03.pdf)に対応する。『テレビジョン』の引用は中国語本文からの重訳。
+[^ja-lacan-politics]: 日訳注：1966年の否定表現は、[「精神分析の対象についての哲学の学生への回答」原文](https://cahiers.kingston.ac.uk/vol03/cpa3.1.lacan.html)に基づく。1969年の発言は[ラカンの1969年12月3日ヴァンセンヌ講義の記録](https://ecole-lacanienne.net/wp-content/uploads/2016/04/1969-12-03.pdf)に対応する。
 
 [^ja-efp]: 日訳注：中国語本文ではEFP創設を1963年とする箇所と1964年とする箇所がある。ここでは、[ラカンのEFP創設文書](https://www.association-mondiale-psychanalyse.org/acte-de-fondation/)の日付、1964年6月21日に従った。著者による約十八年周期という歴史の見立ては、そのまま示している。
 
 [^ja-talking]: 日訳注：中国語本文は「ドーラ」とする。フロイトの[『精神分析について』第1講](https://www.gutenberg.org/cache/epub/20613/pg20613-images.html)では、talking cureという命名はブロイアーの患者に帰される。
 
-[^ja-suture]: 日訳注：引用は[ミレール「縫合」原文](https://cahiers.kingston.ac.uk/vol01/cpa1.3.miller.html)と照合した。日本語刊行訳からの引用ではない。
+[^ja-suture]: [ミレール「縫合」原文](https://cahiers.kingston.ac.uk/vol01/cpa1.3.miller.html)を参照。
 
 [^ja-consistency]: 日訳注：ここで「整合性」「無矛盾性」「まとまり」と訳し分けた語群は、中国語本文では「一致」「连贯」などによってつながっている。著者は、その臨床・論理・組織をまたぐ一般化を問題にしている。
 
@@ -155,11 +155,9 @@ EFP解散時のアルチュセールの介入についての短い検討でも�
 
 [^ja-seminar]: 日訳注：「父の名」の唯一の講義は1963年11月20日で、中国語底本の「1962年」と異なる。第11セミネールは1964年の講義、1973年の刊行であり、本文では両者を区別した。講義年は[ラカンの講義・著作年表](https://ecole-lacanienne.net/wp-content/uploads/2016/05/Pas-tout-Lacan-Sommaire-.pdf)を参照。底本が第11セミネールの結びを「1963年」の記述につなげる箇所は、SFPとの断絶の年として示した。また「分析者から分析者へ」という重複は、前後に従い、分析主体から分析家への移行とした。
 
-[^ja-althusser]: 日訳注：中国語本文は「結果など決して生じない」とするが、その直後に被害の波及を述べており、否定に不整合がある。引用元の該当箇所を確定できていないため、逆の意味へ黙って修復せず、底本の形を残した。
-
 [^ja-signifiant]: 日訳注：中国語本文はフランス語 *vers un signifiant nouveau* に「まったく新しい意味へ」という括弧内訳を添える。ここではフランス語を「新しいシニフィアンへ」と訳し、その後の著者による、シニフィアンの理論そのものを新しくするという再解釈と区別した。
 
-[^ja-freud]: 日訳注：邦訳書名は[光文社古典新訳文庫の目次](https://www.kotensinyaku.jp/books/book346/)による。引用本文はその刊行訳からではない。著者は最初の二節の移行を論じ、論文を「二つの部分」とするが、[1912年の原資料](https://www.freudedition.net/en/werke/uber-die-allgemeinste-erniedrigung-des-liebeslebens/druckschrift-0)はI・II・IIIの三節からなる。本文に現れる「性冷感」などは、引用元の歴史的な分類語として訳した。
+[^ja-freud]: 日訳注：邦訳書名は[光文社古典新訳文庫の目次](https://www.kotensinyaku.jp/books/book346/)による。著者は最初の二節の移行を論じ、論文を「二つの部分」とするが、[1912年の原資料](https://www.freudedition.net/en/werke/uber-die-allgemeinste-erniedrigung-des-liebeslebens/druckschrift-0)はI・II・IIIの三節からなる。本文に現れる「性冷感」などは、引用元の歴史的な分類語として訳した。
 
 [^ja-pavon]: 日訳注：底本の「David-Pavan Cuellar」は、[本人の論文の著者表記](https://onlinelibrary.wiley.com/doi/abs/10.1002/9781405165518.wbeosl010.pub2)に従い、David Pavón-Cuéllar とした。
 

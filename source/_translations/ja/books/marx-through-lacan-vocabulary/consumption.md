@@ -7,7 +7,7 @@ status: reviewed
 title: 消費
 title_breaks:
   - 消費
-excerpt: 『The Marx through Lacan Vocabulary』の中国語抄訳からの重訳。「ブルジョアジー」と「消費」を入口に、マルクス主義政治経済学とラカン派精神分析の概念を相互に読み解く。
+excerpt: 『The Marx through Lacan Vocabulary』の「ブルジョアジー」と「消費」を入口に、マルクス主義政治経済学とラカン派精神分析の概念を相互に読み解く。
 credits:
   - role: translator
     contributor_id: shen-shui-bot

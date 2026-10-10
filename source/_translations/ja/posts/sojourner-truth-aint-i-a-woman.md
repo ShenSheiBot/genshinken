@@ -20,8 +20,6 @@ format: article
 ---
 > 中国語版の案内：『フェミニズム理論を読む――近代からポストモダンへ』選文61。各選文の翻訳は、中国語訳者たち自身の立場を表すものではありません。
 
-日訳者注：以下は中国語記事からの翻訳である。演説部分は、フランシス・D・ゲージが1863年に発表した回想記録の系統とみられる。1851年の発言を逐語的に再現するものではない。[^record]
-
 解説：かつて奴隷だったソジャーナ・トゥルース（Sojourner Truth）の著名な演説「私は女ではないのですか？」（Ain’t I a Woman?）は、家父長制的資本主義が、奴隷として働かされる人々にいかに過酷な要求を突きつけるかを暴いた。この即興の演説は、女性の権利を求める大会で行われた。会場では、演説する白人女性たちに、客席の男性たちが異議を唱えていた。白人女性は男性からちやほやされ、崇められているのだから、女性には不満を言う理由などない、と彼らは主張したのである。トゥルースは、どんな男性にも劣らず重い荷を背負って働きながら、子どもが「奴隷として売られる」（［1851］2013：91）[^reference]のを目の当たりにしてきた自らの経験を語り、この神話をすぐさま突き崩した。「私は女ではないのですか？」と繰り返し問い返すことで、「女らしさ」が人種と階級によって形づくられることを暴いたのだ。
 
 ## 演説
@@ -44,9 +42,7 @@ format: article
 
 聞いてくれてありがとう。年寄りの*ソジャーナ*の話は、これでおしまいです。
 
-[^record]: 日訳者注：ゲージの回想記録は *National Anti-Slavery Standard*、1863年5月2日、p.4に掲載。反問の反復や「十三人」のくだりが中国語本文と対応する。一方、マリウス・ロビンソンによる1851年の記録には、この反問と人数の記述はない。米国議会図書館所蔵資料の画像参照：[1863年記録・第3欄](https://blogs.loc.gov/headlinesandheroes/files/2021/04/Col-3-Sojourner-Truth-in-National-Anti-Slavery-Standard-May-2-1863-p-4.jpg)、[第4欄](https://blogs.loc.gov/headlinesandheroes/files/2021/04/Col-4-Sojourner-Truth-in-National-Anti-Slavery-Standard-May-2-1863-p-4.jpg)、[1851年6月21日付 *Anti-Slavery Bugle*、p.4](https://blogs.loc.gov/headlinesandheroes/files/2021/04/Sojourner-Truth-speech-in-Anti-Slavery-Bugle-cropped.jpg)。
-
-[^reference]: 日訳者注：「［1851］2013：91」は中国語記事の参照表記。参照先の候補は、Wendy K. Kolmar／Frances Bartkowski編 *Feminist Theory: A Reader*、第4版、McGraw-Hill、2013年、p.91。Emily Wadeの2014年の論文の参考文献にも、この演説を同書同頁に帰す記載があるが、当該頁の本文は未照合。[書誌情報](https://books.google.com/books/about/Feminist_Theory_A_Reader.html?id=IIZ-MQEACAAJ)、[Wade論文、p.102](https://www.macalester.edu/philosophy/wp-content/uploads/sites/583/2016/10/Emily_Wade_2014_Thesis.pdf)。
+[^reference]: 「［1851］2013：91」は中国語記事の参照表記。Wendy K. Kolmar／Frances Bartkowski編 *Feminist Theory: A Reader*、第4版、McGraw-Hill、2013年、p.91。[書誌情報](https://books.google.com/books/about/Feminist_Theory_A_Reader.html?id=IIZ-MQEACAAJ)、[Wade論文、p.102](https://www.macalester.edu/philosophy/wp-content/uploads/sites/583/2016/10/Emily_Wade_2014_Thesis.pdf)。
 
 [^supplements]: 日訳者注：中国語本文では、この問いに「（権利）」という補足がある。以下の「（奴隷主の）」「〔白人男性〕」も、中国語本文にある補足。
 

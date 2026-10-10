@@ -39,7 +39,7 @@ format: article
 > 英訳：Daniela Gioseffi、Enildo Garcia<br>
 > Daniela Gioseffi編『[Women on War: An International Anthology of Writings from Antiquity to the Present](https://feministpress.org/products/9781558614093-women-on-war)』（Feminist Press at CUNY、ニューヨーク、2003年）所収。中国語記事には「許可を得て転載」と記載。
 
-中国語訳：喵喵单推人。本稿の詩は中国語掲載訳からの重訳。[^訳注1]
+中国語訳：喵喵单推人。[^訳注1]
 
 ## 解説
 
@@ -57,4 +57,4 @@ format: article
 
 [^訳注2]: 選集は『[Reading Feminist Theory: From Modernity to Postmodernity](https://books.google.com/books?id=2rm6BwAAQBAJ)』（Susan Archer Mann、Ashly Suzanne Patterson編、2016年）。「[1985] 1988」は中国語記事の表記。詩を収めた『[Women on War](https://books.google.com/books?id=ZH2FtB14fcEC)』の初版は1988年刊。
 
-[^訳注3]: 中国語記事に掲載されたモーガン引用からの重訳。原典は『Sisterhood Is Powerful』（1970年）だが、引用全文は未照合。「没有政治」（字義どおりには「政治はない」）は、英語の “making coffee but not policy”（コーヒーはいれるが、方針は決めない）という対比に即して訳した。
+[^訳注3]: 原典は『Sisterhood Is Powerful』（1970年）。「没有政治」（字義どおりには「政治はない」）は、英語の “making coffee but not policy”（コーヒーはいれるが、方針は決めない）という対比に即して訳した。

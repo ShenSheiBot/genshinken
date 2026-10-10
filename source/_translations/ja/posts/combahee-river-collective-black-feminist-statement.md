@@ -149,7 +149,7 @@ _「白人の異性愛男性に、いったいどんな革命的役割が果た�
 
 [^ja-heterosexuality]: 日訳者注：冒頭の中国語版には、異性愛による抑圧に「（強制的な）」という補足がある。また第1節末尾では「強制的異性愛」と訳されているが、[英語本文](https://americanstudies.yale.edu/sites/default/files/files/Keyword%20Coalition_Readings.pdf)の対応語は heterosexism であり、ここでは「異性愛中心主義」とした。
 
-[^ja-davis]: 日訳者注：論文名は仮訳。原題は “Reflections on the Black Woman’s Role in the Community of Slaves”。本文の記述は声明による要約・参照であり、デイヴィスの文章の直接引用ではない。[『The Massachusetts Review』掲載の再録](https://massreview.org/sites/default/files/Davis_0/index.pdf)を参照。
+[^ja-davis]: 日訳者注：論文名は仮訳。原題は “Reflections on the Black Woman’s Role in the Community of Slaves”。[『The Massachusetts Review』掲載の再録](https://massreview.org/sites/default/files/Davis_0/index.pdf)を参照。
 
 [^ja-childhood]: 日訳者注：中国語版では「私たちはそろって、おとなしく温良な性格を保った」という形になっている。[英語転記本文のPDF通し3頁](https://americanstudies.yale.edu/sites/default/files/files/Keyword%20Coalition_Readings.pdf)では、おとなしくするよう「言われた」経験であるため、その意味に改めた。
 
@@ -163,4 +163,4 @@ _「白人の異性愛男性に、いったいどんな革命的役割が果た�
 
 [^ja-roles]: 日訳者注：中国語版は「男性と女性の声」となっているが、[1979年刊行版368頁](https://queer.archive.work/library/download/combahee/Zillah_Eisenstein.pdf)および[引用元のパンフレット4–5頁](https://www.freedomarchives.org/Documents/Finder/Black%20Liberation%20Disk/Black%20Power%21/SugahData/Books/Mumininas.S.pdf)に従い、「役割」とした。
 
-[^ja-morgan]: 日訳者注：書名は仮訳。原題は *Sisterhood Is Powerful*。この一節は、[Yale大学公開の声明のPDF通し11頁](https://americanstudies.yale.edu/sites/default/files/files/Keyword%20Coalition_Readings.pdf)に、モーガンの序文からの引用として収められている。本稿も声明に引かれた一節として訳出した。モーガンの原著序文そのものとは未照合。
+[^ja-morgan]: 日訳者注：書名は仮訳。原題は *Sisterhood Is Powerful*。この一節は、[Yale大学公開の声明のPDF通し11頁](https://americanstudies.yale.edu/sites/default/files/files/Keyword%20Coalition_Readings.pdf)に、モーガンの序文からの引用として収められている。本稿も声明に引かれた一節として訳出した。
