@@ -97,6 +97,33 @@ class ProtectedStructureTests(unittest.TestCase):
     def test_inline_html_emphasis_can_be_written_in_markdown(self) -> None:
         self.assertEqual(self.failures("<strong>Claim</strong>", "**Claim**"), [])
 
+    def test_emphasis_normalization_does_not_hide_resource_loss(self) -> None:
+        source = (
+            "<strong>Claim</strong>\n\nSupporting paragraph.\n\n"
+            "![Evidence](/evidence.png)\n\n"
+            "| Term | Meaning |\n| --- | --- |\n| A | First |\n| B | Second |\n\n"
+            "Conclusion.[^note]\n\n[^note]: Source details.\n"
+        )
+        valid = source.replace("<strong>Claim</strong>", "**Claim**")
+        self.assertEqual(self.failures(source, valid), [])
+        mutations = {
+            "images": valid.replace("![Evidence](/evidence.png)", ""),
+            "tables": valid.replace("| B | Second |\n", ""),
+            "footnote_integrity": valid.replace("[^note]: Source details.", ""),
+        }
+        for field, broken in mutations.items():
+            with self.subTest(field=field):
+                self.assertTrue(any(item["field"] == field for item in self.failures(source, broken)))
+
+    def test_deleted_prose_paragraph_is_reported_but_not_a_fidelity_verdict(self) -> None:
+        source = "<strong>Claim</strong>\n\nSupporting argument.\n\nConclusion.\n"
+        target = "**Claim**\n\nConclusion.\n"
+        failures, warnings = self.comparison(source, target)
+        # Reparagraphing is permitted: this checker reports counts, not meaning.
+        self.assertEqual(failures, [])
+        difference = next(item for item in warnings if item["field"] == "logical_paragraphs")
+        self.assertEqual((difference["source"], difference["target"]), (3, 2))
+
     def test_target_may_add_structural_html(self) -> None:
         source = "Paragraph.\n"
         target = "<figure><figcaption>Caption</figcaption></figure>\n"
