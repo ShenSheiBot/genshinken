@@ -179,6 +179,10 @@ ZettaiAbsolute に参加するなかで、Discord を通じて Guzzu や Xin と
 
 </figure>
 
+[fig] 多くのメンバーは『BORUTO』第65話にも参加している。
+
+![『TO BE HERO』に参加した原画マンの一覧](attachments/wechat/Hyhowxyn0lzWGzpDbI6YCQ/body-013.jpg)
+
 **中国のアニメーターから学んだことはありますか？　第1期では kilocrescent と LAN の作画がみんなの目を引きましたが、第2期は明らかに様子が違います。スタジオに才能ある人がもっと増えましたね。**
 
 **Till：**もちろんです！　彼らから学ぶ機会をくれた LAN に、とても感謝しています。

@@ -61,6 +61,8 @@ source_chapter_id: sections-4-3-5-6
 
 **画像内の表（日本語訳）**
 
+[表の原資料](attachments/roof-archive/cv8206089/01-economic-structures-income-table.png)
+
 | 経済構造 | 最も不利な立場の集団 | 中間の集団 | 最も有利な立場の集団 |
 |---|---:|---:|---:|
 | A | 10,000 | 10,000 | 10,000 |

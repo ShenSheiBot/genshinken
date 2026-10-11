@@ -70,8 +70,23 @@ not a character whitelist: new text is covered automatically when one of the
 pinned sources contains it, otherwise generation fails and reports the
 unsupported code point.
 
-The primary and fallback source files are downloaded from the pinned
-`google/fonts` commit into the ignored `.local-archive/font-sources` cache.
+The JP primary and SC fallback faces use the native variable CFF2 sources from
+`notofonts/noto-cjk` at commit `f8d157532fbfaeda587e826d4cd5b21a49186f7c`
+(Noto Serif 2.003 and Sans 2.004). These retain the original cubic outlines,
+complete character coverage, and weight axes while avoiding the larger
+quadratic-outline conversion. Their layout subset retains standard horizontal
+shaping; the site does not request vertical or historical stylistic alternates.
+The existing SIL OFL 1.1 license in `OFL-Noto-CJK.txt` applies.
+
+Other fallback sources remain pinned to the `google/fonts` commit. Source
+hashes and URLs are recorded in the manifest; downloads are cached outside Git.
+SC fallback characters are grouped into small `unicode-range` faces of the
+same family and weight range, so rare Chinese names in one edition do not
+force every edition to download the whole archive's fallback repertoire.
+`verify:fonts` checks both each shard and the combined per-edition transfer
+against the existing 100 kB fallback bound, including localized UI text and
+individual language-disposition cards. The primary JP pair retains its
+aggregate 2.2 MB budget.
 Japanese content and localized bibliographic metadata use the same automatic
 sync path:
 

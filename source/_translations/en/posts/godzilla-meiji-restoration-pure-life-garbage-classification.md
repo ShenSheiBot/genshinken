@@ -175,7 +175,7 @@ If, as Benjamin asserts, capitalism is ultimately a religion, then capitalism is
 
 [fig]
 
-![The same close-up of a tearful woman rejecting the new era.](/attachments/roof-archive/cv3064956/25-godzilla-prop.jpg)
+![A Godzilla figure eating rice with chopsticks.](/attachments/roof-archive/cv3064956/26-godzilla-dining.png)
 
 [fig-note] Chinese subtitle: “A new era like this? We can do without it.”
 

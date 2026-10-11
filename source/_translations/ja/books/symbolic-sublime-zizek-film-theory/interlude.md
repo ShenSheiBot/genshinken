@@ -17,7 +17,7 @@ credits:
 translation_method: agent
 source_relationship: mixed
 base_language: zh-Hans
-updated: '2026-10-08'
+updated: '2026-10-10'
 format: article
 license: CC BY-NC-SA 4.0
 source_book_slug: symbolic-sublime-zizek-film-theory
@@ -70,9 +70,9 @@ source_chapter_id: interlude
 
 ジジェクはジャック＝アラン・ミレールにならい、分析家のディスクールを「倒錯者のディスクール」と関連づけている[^interlude-symbolic-sublime-interlude-3]。分析家のディスクールでは、対象aが作用の担い手の位置（agency）を占め、主体（$\bar{S}$）が作業を行う位置（work）を占める。その作業によって新たな主人のシニフィアンが生み出される。知が占めるのは真理の位置である（Knowledge in the position of Truth）。
 
-![ラカンの分析家のディスクールの図式](attachments/roof-archive/cv11663157/figure-1.png)
+[fig] 図I.1　分析家のディスクール。
 
-図I.1　分析家のディスクール。
+![ラカンの分析家のディスクールの図式](attachments/roof-archive/cv11663157/figure-1.png)
 
 『倒錯的映画ガイド』でジジェクが占めるのは、分析家のディスクールにおける対象aの位置である。だがそれは、「分析の終わり」を示す「主体の失墜」の位置ではない。彼は解釈する立場にとどまっており、それはまだ革命的な立場ではない。言い換えれば、彼の立場自体がカント的な視点とヘーゲル的な視点のあいだに囚われており、まだマルクス主義的な視点にはなっていないのである。
 

@@ -13,6 +13,7 @@ const eslintConfig = [
       ".wrangler/**",
       ".codex/**",
       ".local-archive/**",
+      "docs/plans/**",
       "out/**",
       "build/**",
       "node_modules/**",

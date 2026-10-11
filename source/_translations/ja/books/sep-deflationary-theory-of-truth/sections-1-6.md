@@ -130,6 +130,8 @@ $(\mathrm{ES\text{-}prop})$ $p$という命題が真であるのは、$p$のと�
 
 
 
+[表の原資料](attachments/roof-archive/cv5570231/01-six-versions-of-deflationism.png)
+
 | 同値性の種類 | 文を対象とする | 命題を対象とする |
 |---|---:|---:|
 | 分析的 | A | B |

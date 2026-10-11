@@ -1093,6 +1093,11 @@ assert.doesNotMatch(
     "sep-rudolf-carnap-supplement-e-scientific-theory-reconstruction-part-3.md",
   ]);
   const malformedCjkHref = /href="https?:\/\/[^"]*%(?:EF%BC(?:%8C|%88|%89|%9B|%9A|%81|%9F)|EF%BC(?:%BB|%BD)|E3%80(?:%81|%82|%90|%91|%8A|%8B|%8C|%8D)|E2%80(?:%98|%99|%9C|%9D))[^"]*"/iu;
+  const hasMalformedAutolink = (html) => (html.match(/<a\b[^>]*>[\s\S]*?<\/a>/gu) ?? []).some((anchor) =>
+    /^https?:\/\//u.test(anchor.replace(/<[^>]*>/gu, "")) && malformedCjkHref.test(anchor));
+  assert.equal(hasMalformedAutolink('<a href="https://example.org/A%E2%80%99s">A’s book</a>'), false);
+  assert.equal(hasMalformedAutolink('<a href="https://example.org/book%E3%80%82">https://example.org/book。</a>'), true);
+
 
   const posts = fs
     .readdirSync(postsDirectory)
@@ -1155,7 +1160,7 @@ assert.doesNotMatch(
     }
     const width = invalidWidth.exec(html);
     if (width) corpusFailures.push(`${name}: 非法图版宽度 ${width[0]}（仅允许 =25/33/50/66/75/100%）`);
-    const malformedLink = malformedCjkHref.exec(html);
+    const malformedLink = hasMalformedAutolink(html);
     if (malformedLink) corpusFailures.push(`${name}: 裸 URL 吞入了中文标点或后续正文`);
   }
   const translationRoot = path.join(process.cwd(), "source", "_translations");
@@ -1201,7 +1206,9 @@ assert.doesNotMatch(
     if (markerLeak.test(html.replace(/<[^>]+>/gu, ""))) corpusFailures.push(`${relative}: 译文图版／特殊版式标记字面渲染进页面`);
     const width = invalidWidth.exec(html);
     if (width) corpusFailures.push(`${relative}: 非法图版宽度 ${width[0]}`);
-    if (malformedCjkHref.test(html)) corpusFailures.push(`${relative}: 译文裸 URL 吞入了中文标点或后续正文`);
+    if (hasMalformedAutolink(html)) {
+      corpusFailures.push(`${relative}: 译文裸 URL 吞入了中文标点或后续正文`);
+    }
   }
   assert.deepEqual(
     corpusFailures,

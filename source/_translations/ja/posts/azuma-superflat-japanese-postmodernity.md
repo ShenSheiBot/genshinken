@@ -20,7 +20,7 @@ credits:
 translation_method: agent
 source_relationship: mixed
 base_language: zh-Hans
-updated: '2026-10-08'
+updated: '2026-10-10'
 format: article
 ---
 
@@ -28,7 +28,7 @@ format: article
 
 **このテキストは、東浩紀が2001年4月5日、米国のパシフィック・デザイン・センター（Pacific Design Center）にあるMOCA美術館のスーパーフラット展で行った講演の記録である。内容と構成上の都合により、図版に付された説明の一部を省略した。本稿は屋頂現視研―群青七号楼のメンバーが学習・討論用にボランティアで翻訳したものである。**
 
-［図］村上隆。
+[fig] 村上隆。
 
 ![村上隆の肖像](attachments/roof-archive/cv4994654/01-takashi-murakami-portrait.png "=50%")
 

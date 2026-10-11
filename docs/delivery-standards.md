@@ -359,15 +359,19 @@ P1/P2/P4/P5 由 `scripts/validate-content.mjs` 的 `validateProseTypography` 在
 
   只有 Author 与 Committer 的姓名、邮箱都完全一致时才可推送。
 - 推送 `main` 只发布 Git 提交并触发 GitHub 质量与内容发现流程，不会自动部署站点。
-- 预览稿使用 `npm run cf:upload:preview` 从当前工作区构建并上传 Cloudflare Worker Version，随后自动将同一
-  Version 提升到固定预览域名 `https://preview.labonroof.top`。命令输出的版本化 `workers.dev` URL 仅是内部
-  故障诊断地址，不作为交付入口。
-- 用户确认达到发布等级后，提交已经验收的工作区并按需发布生产；固定预览域名已经由上传命令指向该候选
-  Version。若自动提升中断，才使用 `npm run cf:promote:preview -- <VERSION_ID>` 恢复同一 Version；恢复不重新构建、
-  不重新上传，也不得换成另一个候选版本。生产发布仍使用 `npm run cf:deploy:production`，并从干净提交构建。
-- 上传和部署脚本会同步字体、执行 OpenNext 构建并移除由 R2 承载的重复附件；生产部署另行拒绝带有已跟踪
-  改动的工作区并从当前提交建立干净构建根。完成后必须以 Wrangler 返回的 Version ID 和目标 URL 回读，
-  并对相应公开地址执行发布回归；Git push、GitHub Actions 绿色或 Worker 进程健康都不能代替线上页面验收。
+- Preview upload (`npm run cf:upload:preview`) requires committed source files,
+  a clean checkout, and successful GitHub **Quality** CI for the exact commit.
+  Failed, pending, missing, or unreadable CI results block publication. Use
+  `cf:build:preview` for local draft builds that must not be published.
+- Upload tags the Worker Version with the full source SHA and promotes that same
+  version to the fixed preview domain after rechecking Quality. If promotion is
+  interrupted, `npm run cf:promote:preview -- <VERSION_ID>` reads the version's
+  commit tag and checks its Quality result before changing traffic. Untagged
+  versions cannot be promoted through this command. A dry run changes no traffic.
+- Production publication still requires owner approval and uses
+  `npm run cf:deploy:production` from a clean commit. After either publication,
+  read back the returned Version ID and target URL and run the release checks;
+  a Git push or successful CI alone is not live acceptance.
 - Cloudflare 候选上传或生产部署已经包含完整 OpenNext／Next 构建。紧邻发布入口之前不要再运行一次独立
   `npm run build`；独立构建只用于不执行发布入口的本地成品验收。
 - 电子书成品与字体同为哈希增量产物：发布内容更新后运行 `npm run ebooks:build`（等价于 `--if-stale`，

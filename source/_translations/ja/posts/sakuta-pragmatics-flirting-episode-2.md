@@ -36,9 +36,11 @@ format: article
 ---
 『青春ブタ野郎はバニーガール先輩の夢を見ない』第2話の18分ごろ、列車の中でこんな会話が交わされる。
 
+[fig]
+
 ![左に麻衣の後ろ姿、右に列車の窓に映った顔。中国語字幕は「私のこと、見える？」の意](attachments/wechat/qtICGMWRGAHzsVaF_zaTeA/body-002.jpg)
 
-*画像内の中国語字幕の訳：「私のこと、見える？」*
+[fig-note] 画像内の中国語字幕の訳：「私のこと、見える？」
 
 〈最初の七発話は[アニプレックス公式短編](https://www.youtube.com/watch?v=AwMVWkqzDbI)の日本語テロップに基づく。[台詞の掲載先](https://www.mrdorama.com/entry/2019/10/21/225943)。以下の再掲も同じ。〉
 

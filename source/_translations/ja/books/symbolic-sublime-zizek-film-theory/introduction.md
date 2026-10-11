@@ -75,9 +75,11 @@ source_chapter_id: introduction
 
 その商品カタログと、ジジェクへの執筆依頼：
 
+[fig]
+
 ![A&Fの商品カタログと執筆依頼](attachments/roof-archive/cv9951244/02-af-quarterly-invitation.png "A&Fの商品カタログと執筆依頼")
 
-*表紙：『A&F Quarterly』（A&F季刊誌）。「BACK TO SCHOOL ISSUE」は「新学期号」。右側の執筆依頼：*
+[fig-note] 表紙：『A&F Quarterly』（A&F季刊誌）。「BACK TO SCHOOL ISSUE」は「新学期号」。右側の執筆依頼：
 
 > 親愛なるスラヴォイへ
 >
@@ -89,9 +91,11 @@ source_chapter_id: introduction
 
 ジジェクの返答：
 
+[fig]
+
 ![ジジェクがA&Fに寄せた広告コピー](attachments/roof-archive/cv9951244/03-zizek-af-copy.png "ジジェクがA&Fに寄せた広告コピー")
 
-*画像内のコピー（上段左から右、下段左から右の順）：*
+[fig-note] 画像内のコピー（上段左から右、下段左から右の順）：
 
 > 眼鏡をかけた先生がいなければ、裸のカップルは、**コト**に及ぶこともできない、不器用で何も知らない二人でしかなくなる。
 

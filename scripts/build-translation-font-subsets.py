@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Build the self-hosted Japanese translation fonts from the live JA corpus.
 
-The primary JP faces and the controlled fallback faces are pinned to one
-google/fonts commit. Source fonts are cached outside Git in
+The primary JP and SC fallback faces use pinned native Noto CJK CFF2
+sources; the other fallback faces are pinned to one google/fonts commit. Source fonts are cached outside Git in
 .local-archive/font-sources; generated WOFF2 files, their manifest, and the
 tiny CSS binding are committed site assets.  The fallback faces are generated
 from the live corpus, not from a hand-maintained character allow-list: a newly
@@ -30,7 +30,8 @@ MANIFEST_PATH = OUTPUT_DIR / "translation-font-manifest.json"
 CSS_PATH = ROOT / "app" / "translation-fonts.generated.css"
 CACHE_DIR = ROOT / ".local-archive" / "font-sources" / "google-fonts-e1118da9"
 UPSTREAM_COMMIT = "e1118da94a8cb00cf6d06cdac9ef13eb1e5c6ab7"
-GENERATOR_VERSION = 3
+GENERATOR_VERSION = 4
+CJK_UPSTREAM_COMMIT = "f8d157532fbfaeda587e826d4cd5b21a49186f7c"
 GENERATOR_STRATEGY = "japanese-translation-corpus-variable-fonts-with-generated-script-and-symbol-fallbacks"
 TEXT_EXTENSIONS = {".css", ".json", ".md", ".ts", ".tsx"}
 CORPUS_ROOTS = (
@@ -51,9 +52,9 @@ BASE_CODE_POINTS = (
 FONTS = (
     {
         "family": "Roof Noto Serif JP",
-        "source": "NotoSerifJP.ttf",
-        "source_sha256": "2fd527ba12b6a44ec30d796d633360da0aeba6c5d4af1304ce12bb4dc15a7dfc",
-        "url": f"https://raw.githubusercontent.com/google/fonts/{UPSTREAM_COMMIT}/ofl/notoserifjp/NotoSerifJP%5Bwght%5D.ttf",
+        "source": "NotoSerifJP-VF.otf",
+        "source_sha256": "39701fd096bc51204a8444c6c2659f007b29674a13eb62ddfa470638fe8179cd",
+        "url": f"https://raw.githubusercontent.com/notofonts/noto-cjk/{CJK_UPSTREAM_COMMIT}/Serif/Variable/OTF/Subset/NotoSerifJP-VF.otf",
         "output": "roof-noto-serif-jp.woff2",
         "weight": "200 900",
         "variable": "--font-roof-noto-serif-jp",
@@ -61,9 +62,9 @@ FONTS = (
     },
     {
         "family": "Roof Noto Sans JP",
-        "source": "NotoSansJP.ttf",
-        "source_sha256": "c2f3b4d463500a2ddcd3849cded1fceeb9fd6d1c32e6cbecd568453ba50fc68f",
-        "url": f"https://raw.githubusercontent.com/google/fonts/{UPSTREAM_COMMIT}/ofl/notosansjp/NotoSansJP%5Bwght%5D.ttf",
+        "source": "NotoSansJP-VF.otf",
+        "source_sha256": "85e5ef353081175fb9f764f037c550dd4b5ad913cb030c0de98a5d4d4018014b",
+        "url": f"https://raw.githubusercontent.com/notofonts/noto-cjk/{CJK_UPSTREAM_COMMIT}/Sans/Variable/OTF/Subset/NotoSansJP-VF.otf",
         "output": "roof-noto-sans-jp.woff2",
         "weight": "100 900",
         "variable": "--font-roof-noto-sans-jp",
@@ -78,9 +79,9 @@ FONTS = (
 FALLBACK_FONTS = (
     {
         "family": "Roof Noto Serif SC Fallback",
-        "source": "NotoSerifSC.ttf",
-        "source_sha256": "050080d9255a86808f2945bffac582b31ef32bc36411ce29563b4961670c66f9",
-        "url": f"https://raw.githubusercontent.com/google/fonts/{UPSTREAM_COMMIT}/ofl/notoserifsc/NotoSerifSC%5Bwght%5D.ttf",
+        "source": "NotoSerifSC-VF.otf",
+        "source_sha256": "71b4d3ded2d90ff43bb75a4e48cdbe170f0b8d5486dc89ff87f2a1728b56da64",
+        "url": f"https://raw.githubusercontent.com/notofonts/noto-cjk/{CJK_UPSTREAM_COMMIT}/Serif/Variable/OTF/Subset/NotoSerifSC-VF.otf",
         "output": "roof-noto-serif-sc-fallback.woff2",
         "weight": "200 900",
         "variable": "--font-roof-noto-serif-sc-fallback",
@@ -88,9 +89,9 @@ FALLBACK_FONTS = (
     },
     {
         "family": "Roof Noto Sans SC Fallback",
-        "source": "NotoSansSC.ttf",
-        "source_sha256": "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da",
-        "url": f"https://raw.githubusercontent.com/google/fonts/{UPSTREAM_COMMIT}/ofl/notosanssc/NotoSansSC%5Bwght%5D.ttf",
+        "source": "NotoSansSC-VF.otf",
+        "source_sha256": "d13ed01ec8aa45d6178999b648e96fb92150683e9f8e2a581f2acf208dcbe44b",
+        "url": f"https://raw.githubusercontent.com/notofonts/noto-cjk/{CJK_UPSTREAM_COMMIT}/Sans/Variable/OTF/Subset/NotoSansSC-VF.otf",
         "output": "roof-noto-sans-sc-fallback.woff2",
         "weight": "100 900",
         "variable": "--font-roof-noto-sans-sc-fallback",
@@ -287,10 +288,17 @@ def subset_font(source: Path, output: Path, points: set[int]) -> None:
     from fontTools.ttLib import TTFont
 
     options = Options()
-    options.layout_features = ["*"]
-    options.name_IDs = ["*"]
-    options.name_languages = ["*"]
-    options.name_legacy = True
+    # CJK pages use horizontal default shaping, not vertical or historical
+    # stylistic alternates. Native CFF2 keeps the original cubic outlines and
+    # complete weight axes instead of Google's larger quadratic conversion.
+    if source.suffix == ".otf":
+        options.layout_features = [feature for feature in options.layout_features if feature not in {"vert", "vrt2"}]
+    else:
+        options.layout_features = ["*"]
+    if source.suffix != ".otf":
+        options.name_IDs = ["*"]
+        options.name_languages = ["*"]
+        options.name_legacy = True
     options.notdef_glyph = True
     options.recommended_glyphs = True
     options.symbol_cmap = True
@@ -348,22 +356,24 @@ STACK_SPECS = {
 def generated_css(records: list[dict[str, object]]) -> str:
     faces = []
     variables = []
-    for record in records:
-        variable = str(record["variable"])
-        unicode_range = record.get("unicodeRange")
-        face_lines = [
-                "@font-face {",
-                f'  font-family: "{record["family"]}";',
-                f'  src: url("/fonts/{record["file"]}?v={str(record["sha256"])[:12]}") format("woff2");',
-                "  font-style: normal;",
-                f'  font-weight: {record["weight"]};',
-                "  font-display: swap;",
-        ]
-        if unicode_range:
-            face_lines.append(f"  unicode-range: {unicode_range};")
-        face_lines.append("}")
-        faces.append("\n".join(face_lines))
-        variables.append(f'  {variable}: "{record["family"]}";')
+    for family_record in records:
+        for shard in family_record.get("shards", [family_record]):
+            record = {**family_record, **shard}
+            variable = str(record["variable"])
+            unicode_range = record.get("unicodeRange")
+            face_lines = [
+                    "@font-face {",
+                    f'  font-family: "{record["family"]}";',
+                    f'  src: url("/fonts/{record["file"]}?v={str(record["sha256"])[:12]}") format("woff2");',
+                    "  font-style: normal;",
+                    f'  font-weight: {record["weight"]};',
+                    "  font-display: swap;",
+            ]
+            if unicode_range:
+                face_lines.append(f"  unicode-range: {unicode_range};")
+            face_lines.append("}")
+            faces.append("\n".join(face_lines))
+        variables.append(f'  {variable}: "{family_record["family"]}";')
     by_kind = {str(record["kind"]): str(record["family"]) for record in records}
     stacks = []
     for variable, kinds in STACK_SPECS.items():
@@ -420,11 +430,12 @@ def generated_outputs_are_current(files: list[Path]) -> bool:
         expected_digest = record.get("sha256")
         if not isinstance(file_name, str) or not isinstance(expected_digest, str):
             return False
-        output = OUTPUT_DIR / file_name
-        if not output.is_file() or digest_file(output) != expected_digest:
-            return False
-        if f'/fonts/{file_name}?v={expected_digest[:12]}' not in css:
-            return False
+        for shard in record.get("shards", [record]):
+            output = OUTPUT_DIR / shard["file"]
+            if not output.is_file() or digest_file(output) != shard["sha256"]:
+                return False
+            if f'/fonts/{shard["file"]}?v={shard["sha256"][:12]}' not in css:
+                return False
     return True
 
 
@@ -535,10 +546,29 @@ def main() -> None:
         supported = fallback_coverage[record["kind"]]
         points = fallback_points & supported
         output = OUTPUT_DIR / record["output"]
-        subset_font(source, output, points)
+        shards = []
+        if record["kind"] in {"fallback-serif", "fallback-sans"}:
+            # Keep characters used together in the same native Unicode shard.
+            # Larger repertoires come first so long name-heavy editions do not
+            # fetch nearly every shard merely because their names sort apart.
+            profiles = sorted(
+                (points & set(map(ord, path.read_text(encoding="utf-8"))) for path in files),
+                key=lambda profile: (-len(profile), tuple(sorted(profile))),
+            )
+            ordered = sorted(points, key=lambda point: (*[point not in profile for profile in profiles], point))
+            for index, offset in enumerate(range(0, len(ordered), 8)):
+                group = set(ordered[offset:offset + 8])
+                shard = output if index == 0 else output.with_name(f"{output.stem}-{index:03d}.woff2")
+                subset_font(source, shard, group)
+                shards.append({"file": shard.name, "bytes": shard.stat().st_size,
+                               "sha256": digest_file(shard), "unicodeRange": ", ".join(compact_ranges(group)),
+                               "codePointCount": len(group)})
+        else:
+            subset_font(source, output, points)
         font_records.append({
             "bytes": output.stat().st_size,
             "codePointCount": len(points),
+            **({"shards": shards} if shards else {}),
             "family": record["family"],
             "file": record["output"],
             "kind": record["kind"],
@@ -575,6 +605,7 @@ def main() -> None:
         "fallbackCodePointCount": len(fallback_points),
         "subsetCodePointCount": len(subset_points),
         "upstreamCommit": UPSTREAM_COMMIT,
+        "cjkUpstreamCommit": CJK_UPSTREAM_COMMIT,
         "toolchainSha256": toolchain_digest,
         "version": GENERATOR_VERSION,
     }

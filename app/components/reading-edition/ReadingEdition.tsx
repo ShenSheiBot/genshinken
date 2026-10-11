@@ -19,6 +19,7 @@ import ArticleLinkPreviewRuntime from "@/app/components/ArticleLinkPreviewRuntim
 import type { EditionLanguageLink } from "@/lib/translations";
 import { countRenderedListItems, splitRenderedApparatus } from "@/lib/markdown";
 import { isCompactTitleSegment, longestTitleSegmentWidthEm } from "@/lib/title-layout";
+import { groupJapaneseHeadingWords, japaneseReaderWords } from "@/lib/reader-heading-words";
 import type { ReadingUiLocale } from "./reading-edition-ui";
 
 import { relatedPostsFor } from "@/lib/related-reading";
@@ -115,10 +116,7 @@ export function ReaderTitleText({ text, locale = "zh" }: { text: string; locale?
   // uninterrupted katakana word together instead of breaking it mid-syllable.
   // Also keep Japanese episode labels together (ordinal prefix, number, episode counter).
   const segments = locale === "ja"
-    ? text.split(/(第[0-9０-９]+(?:[〜～–-][0-9０-９]+)?話|[\p{Script=Katakana}ー]+)/gu).filter(Boolean).flatMap<{ segment: string; isWordLike?: boolean }>((part) =>
-        /^(?:第[0-9０-９]+(?:[〜～–-][0-9０-９]+)?話|[\p{Script=Katakana}ー]+)$/u.test(part)
-          ? [{ segment: part, isWordLike: true }]
-          : Array.from(READER_TITLE_SEGMENTERS.ja.segment(part)))
+    ? japaneseReaderWords(text)
     : locale === "en"
       ? (text.match(/[\p{L}\p{N}]+(?:[-’'][\p{L}\p{N}]+)+|[^\p{L}\p{N}]+|[\p{L}\p{N}]+/gu) ?? []).flatMap<{ segment: string; isWordLike?: boolean }>((part) =>
           /^[\p{L}\p{N}]+(?:[-’'][\p{L}\p{N}]+)+$/u.test(part)
@@ -244,7 +242,7 @@ export function ArticleFlow({
         lang={languageTag}
         data-han-convert-lang={sourceScript ? "" : undefined}
         data-pagefind-body=""
-        dangerouslySetInnerHTML={{ __html: parts.main }}
+        dangerouslySetInnerHTML={{ __html: groupJapaneseHeadingWords(parts.main, languageTag) }}
       />
       <div className={styles.endMark} data-reading-end="" aria-label={endLabel}>
         <span />

@@ -50,6 +50,8 @@ format: article
 
 作画のほかには、演出もある。
 
+[fig]
+
 ![知乎のページ「日本アニメにはどんな一般的で特色ある演出手法があるか？」](attachments/roof-archive/cv2318316/03-animation-direction-zhihu.jpg)
 
 [fig-note] 質問：日本アニメには、どのような一般的で特色ある演出手法があるか？
@@ -65,6 +67,8 @@ format: article
 > [用語解説総まとめ検索ページ - Anitama](https://www.anitama.cn/)
 
 筆者はさらに、豆瓣の情報と、自分の本選びの経験を頼りに、アニメの視聴覚言語、絵コンテ、脚本設計に関する中国語の教材を何冊か選んで買ってみた（比較的薄く、文章も少なくて、かなり読みやすい）。ただ、実物を見せるとなると、初心者を変な方向へ導いてしまわないかと少し不安になる。それでも、年糕兄貴が以前作った解説のいくつかは、参考にして学ぶことができるだろう。
+
+[fig]
 
 ![年糕によるアニメ解説動画一覧](attachments/roof-archive/cv2318316/05-nengao-video-list.jpg)
 
@@ -91,11 +95,15 @@ format: article
 
 もちろん、アニメに携わる人の大半は、芸術史を専門に学んだ人ではない。それでも、よく言われることには注意しておくべきだろう。人々が芸術を創作するとき、意識的であれ無意識であれ、つねにその時代全体の精神と、過去および現在の社会・歴史から影響を受けている。この話はここでは脇に置き、筆者が昨年以来学んできた美術史の知識も実際には浅いと断ったうえで、好きなものをいくつか薦めよう。
 
+[fig]
+
 ![学堂在線「西洋美術史十六講」講座](attachments/roof-archive/cv2318316/07-western-art-history-course.jpg)
 
 [fig-note] 学銀在線「西洋美術史十六講」。講師：王微曦（湖北大学）。
 
 [「西洋美術史十六講」（学堂在線検索）](https://www.xuetangx.com/search?query=%E8%A5%BF%E6%96%B9%E7%BE%8E%E6%9C%AF%E5%8F%B2%E5%8D%81%E5%85%AD%E8%AE%B2%20%E6%B9%96%E5%8C%97%E5%A4%A7%E5%AD%A6%20%E7%8E%8B%E5%BE%AE%E6%9B%A6)
+
+[fig]
 
 ![西洋現代美術鑑賞講座のスクリーンショット](attachments/roof-archive/cv2318316/translations/ja/08-modern-art-course-ja.png)
 
@@ -132,6 +140,8 @@ format: article
 
 筆者はさらに、興味を持つきっかけや読者への案内として、いくつかのMOOCも見つけた。
 
+[fig]
+
 ![学堂在線「古典社会学理論」講座](attachments/roof-archive/cv2318316/11-classical-sociology-course.jpg)
 
 [fig-note] 「古典社会学理論」、鄭莉教授（ハルビン工程大学社会学系）。紹介欄には「構造機能主義、社会的コンフリクト論、社会的交換とシンボリック相互作用の議論……」、章節欄には「ヴェーバーの社会的行為の理論」「1.4 ヴェーバーの政治社会学」「1.5 ヴェーバーの宗教社会学」などが並ぶ。
@@ -146,6 +156,8 @@ format: article
 
 [「古典を通り抜け、あなたと読書する」（中国大学MOOC検索）](https://www.icourse163.org/search.htm?search=%E7%A9%BF%E8%BF%87%E7%BB%8F%E5%85%B8%20%E9%99%AA%E4%BD%A0%E8%AF%BB%E4%B9%A6)
 
+[fig]
+
 ![中国哲学講座のページ](attachments/roof-archive/cv2318316/14-chinese-philosophy-course.jpg)
 
 [fig-note] 「中国哲学」、北京師範大学・章偉文。「本講座は大学の哲学専攻の学部生が必修とする専門基礎科目であり、中国哲学の発展段階を基礎に、論争を軸として、学生が中国哲学の知識を体系的に身につけ、中国……を理解することを目指す」。
@@ -157,6 +169,8 @@ format: article
 ## 4、映画理論と映画史（テレビドラマはひとまず置いておく）
 
 映画は、もっとも広く親しまれている大衆文化であり、社会文化の重要な一部である。アニメのクリエイターは、絵コンテや演出といった面で、映画の手法から影響を受けることがある。たとえば写実性を際立たせるため、被写界深度の浅い実写映像にならい、焦点の合っていない部分や遠景をぼかすことなどだ。アニメでは本来、この効果が自動的に生じるわけではない。もちろん逆に、実写映像の側も無意識にそうしているとは限らない。
+
+[fig]
 
 ![アニメのショットでリアリズムを解説する熟肉（字幕付き）雑談動画](attachments/roof-archive/cv2318316/15-realism-analysis.jpg)
 
@@ -178,6 +192,8 @@ format: article
 - [【TNABO】ショット言語：物語における構図 by Channel Criswell](https://www.bilibili.com/video/BV1zW411J7mf)
 
 ちなみに、TNABOも日本アニメを見るのが好きだ。映画鑑賞の動画をもっと見たい？
+
+[fig]
 
 ![映画美学、映画哲学、映画理論などの動画一覧](attachments/roof-archive/cv2318316/16-film-video-list.jpg)
 

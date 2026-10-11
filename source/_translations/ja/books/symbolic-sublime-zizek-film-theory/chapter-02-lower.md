@@ -17,7 +17,7 @@ credits:
 translation_method: agent
 source_relationship: mixed
 base_language: zh-Hans
-updated: '2026-10-08'
+updated: '2026-10-10'
 format: article
 license: CC BY-NC-SA 4.0
 source_book_slug: symbolic-sublime-zizek-film-theory
@@ -104,14 +104,14 @@ source_chapter_id: chapter-02-lower
 
 こうして、ジジェクの描くリンチの作品は、女性の享楽の概念を考えるうえでの鍵となる。ラカンの「性別化の式」は、「男性的（masculinity）」な享楽の様式と、「女性的（feminine）」な享楽の様式を区別する。セミネールXX『アンコール』（1972–1973年）で、ラカンは次の式を示している。
 
+[fig] 図2.4　ラカンの性別化の論理。
+
 $$
 \begin{array}{cc|cc}
 \exists x & \overline{\Phi x} & \overline{\exists x} & \overline{\Phi x} \\
 \forall x & \Phi x & \overline{\forall x} & \Phi x
 \end{array}
 $$
-
-図2.4　ラカンの性別化の論理。
 
 これらの式は、男性／女性の享楽の本質を論じるものではない。性差の行き詰まりから、享楽がどのように構成されるかを述べている。
 

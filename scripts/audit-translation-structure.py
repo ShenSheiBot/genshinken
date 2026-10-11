@@ -110,6 +110,25 @@ def reference_definitions(text: str) -> dict[str, str]:
     return definitions
 
 
+def closing_bracket(text: str, opening: int) -> int:
+    depth = 0
+    escaped = False
+    for index in range(opening, len(text)):
+        char = text[index]
+        if escaped:
+            escaped = False
+            continue
+        if char == "\\":
+            escaped = True
+        elif char == "[":
+            depth += 1
+        elif char == "]":
+            depth -= 1
+            if depth == 0:
+                return index
+    return -1
+
+
 def markdown_images(line: str, references: dict[str, str]) -> list[tuple[int, int, str, bool]]:
     found: list[tuple[int, int, str, bool]] = []
     cursor = 0
@@ -117,7 +136,7 @@ def markdown_images(line: str, references: dict[str, str]) -> list[tuple[int, in
         start = line.find("![", cursor)
         if start == -1:
             break
-        close_alt = line.find("]", start + 2)
+        close_alt = closing_bracket(line, start + 1)
         if close_alt == -1:
             break
         after = close_alt + 1
@@ -158,7 +177,7 @@ def markdown_links(line: str, references: dict[str, str], excluded: list[tuple[i
         if any(left <= start < right for left, right in excluded) or line.startswith("[^", start):
             cursor = start + 1
             continue
-        close_label = line.find("]", start + 1)
+        close_label = closing_bracket(line, start)
         if close_label == -1:
             break
         after = close_label + 1
@@ -250,6 +269,8 @@ def protected_events(text: str, media_map: dict[str, str], link_map: dict[str, s
     fence_info = ""
     fence_content: list[str] = []
     in_quote = False
+    in_table = False
+    in_definition = False
 
     for line_number, line in enumerate(lines, start=1):
         fence = FENCE_RE.match(line)
@@ -290,13 +311,22 @@ def protected_events(text: str, media_map: dict[str, str], link_map: dict[str, s
         table = TABLE_SEPARATOR_RE.match(line)
         if table:
             events.append(("table-separator", table_column_count(line)))
-        elif not list_item and TABLE_ROW_RE.match(line):
+            in_table = True
+        elif not list_item and TABLE_ROW_RE.match(line) and (
+            in_table or (line_number < len(lines) and TABLE_SEPARATOR_RE.match(lines[line_number]))
+        ):
             events.append(("table-row", table_column_count(line)))
+        else:
+            in_table = False
         if list_item:
             marker = list_item.group(2)
             events.append(("list-item", len(list_item.group(1)), "ordered" if marker[0].isdigit() else "unordered"))
 
         definition = FOOTNOTE_DEF_RE.match(line)
+        if definition:
+            in_definition = True
+        elif line.strip() and not line.startswith(("    ", "\t")):
+            in_definition = False
         if definition:
             events.append(("footnote-definition", definition.group(1), footnote_definition_has_content(lines, line_number - 1)))
 
@@ -333,7 +363,7 @@ def protected_events(text: str, media_map: dict[str, str], link_map: dict[str, s
         for match in FOOTNOTE_CALL_RE.finditer(line):
             if definition and match.start() == definition.start():
                 continue
-            inline.append((match.start(), ("footnote-call", match.group(1)), match.span()))
+            inline.append((match.start(), ("footnote-crossref" if in_definition else "footnote-call", match.group(1)), match.span()))
             occupied.append(match.span())
         for match in URL_RE.finditer(line):
             if overlaps(match.span(), occupied + reference_span):
@@ -341,7 +371,9 @@ def protected_events(text: str, media_map: dict[str, str], link_map: dict[str, s
             url = trim_url(match.group(0))
             inline.append((match.start(), ("link", normalize_resource(url, link_map), True), match.span()))
         for match in HTML_TAG_RE.finditer(line):
-            if match.group(2).lower() in {"img", "a", "span", "br"}:
+            # Inline emphasis and headings can be represented in Markdown.
+            # Literal angle-bracket terms are not structural HTML elements.
+            if match.group(2).lower() not in {"figure", "figcaption", "table", "thead", "tbody", "tr", "td", "th", "video", "audio", "iframe", "details", "summary"}:
                 continue
             inline.append((match.start(), ("html-tag", "close" if match.group(1) else "open", match.group(2).lower()), match.span()))
         for match in HTML_CAPTION_RE.finditer(line):
@@ -400,7 +432,9 @@ def source_media_identity(value: object) -> str | None:
     match = re.fullmatch(r"(.+?)/([^/]+?)(?:\.[A-Za-z0-9]+)?", value)
     if not match:
         return None
-    return f"{match.group(1)}/{match.group(2)}"
+    parent = re.sub(r"/(?:ja|en)$", "", match.group(1))
+    stem = re.sub(r"-(?:source-crop|v[0-9]+|ja|en)$", "", match.group(2))
+    return f"{parent}/{stem}"
 
 
 def protected_events_equivalent(source: tuple[object, ...], target: tuple[object, ...]) -> bool:
@@ -421,7 +455,7 @@ def protected_events_equivalent(source: tuple[object, ...], target: tuple[object
         return False
     source_path = re.split(r"[?#]", source[1], maxsplit=1)[0].lstrip("/")
     target_path = re.split(r"[?#]", target[1], maxsplit=1)[0].lstrip("/")
-    localized = re.fullmatch(r"(.+?)/translations/(?:en|ja)/[^/]+", target_path)
+    localized = re.fullmatch(r"(.+?)/(?:translations/)?(?:en|ja)/(?:[^/]+/)?[^/]+", target_path)
     return localized is not None and localized.group(1) == str(Path(source_path).parent)
 
 
@@ -436,7 +470,7 @@ def image_inventories_equivalent(
         if not isinstance(target_event[1], str):
             return False
         target_path = re.split(r"[?#]", target_event[1], maxsplit=1)[0].lstrip("/")
-        localized = re.fullmatch(r"(.+?)/translations/(?:en|ja)/[^/]+", target_path)
+        localized = re.fullmatch(r"(.+?)/(?:translations/)?(?:en|ja)/(?:[^/]+/)?[^/]+", target_path)
         if localized is not None:
             localized_targets.append((target_event, localized.group(1)))
             continue
@@ -491,11 +525,11 @@ def image_event_identity(event: tuple[object, ...]) -> tuple[object, ...]:
 
 
 def event_sequence_is_subsequence(
-    source: list[tuple[object, ...]], target: list[tuple[object, ...]]
+    source: list[tuple[object, ...]], target: list[tuple[object, ...]], allow_added_columns: bool = False
 ) -> bool:
     cursor = 0
     for event in target:
-        if cursor < len(source) and source[cursor] == event:
+        if cursor < len(source) and (source[cursor] == event or (allow_added_columns and source[cursor][0] == event[0] and source[cursor][1] <= event[1])):
             cursor += 1
     return cursor == len(source)
 
@@ -510,7 +544,7 @@ def footnote_integrity(events: list[tuple[object, ...]]) -> list[str]:
     calls = {
         str(event[1])
         for event in events
-        if event and event[0] == "footnote-call"
+        if event and event[0] in {"footnote-call", "footnote-crossref"}
     }
     failures.extend(sorted(calls - definitions.keys()))
     return sorted(set(failures))
@@ -537,6 +571,18 @@ def compare_structures(source: dict[str, object], target: dict[str, object], seg
     # global event stream to remain byte-for-byte aligned.
     source_images = events_of_kind(source_events, "image")
     target_images = events_of_kind(target_events, "image")
+    # Reconstructed tables and transcribed facsimiles may retain the original
+    # as a normal reader-accessible link rather than repeat the raster inline.
+    remaining_images = list(source_images)
+    for image in target_images:
+        match = next((item for item in remaining_images if protected_events_equivalent(item, image)), None)
+        if match is not None:
+            remaining_images.remove(match)
+    linked_sources = {item[1] for item in events_of_kind(target_events, "link")}
+    linked_images = [item for item in remaining_images if item[1] in linked_sources]
+    if linked_images:
+        target_images = target_images + linked_images
+        warnings.append({"segment": segment, "field": "image_presentation", "message": "original figures retained as accessible links; inspect semantic reconstruction", "resources": [item[1] for item in linked_images]})
     if not image_inventories_equivalent(source_images, target_images):
         failures.append(
             {
@@ -567,7 +613,7 @@ def compare_structures(source: dict[str, object], target: dict[str, object], seg
     ]:
         left = events_of_kind(source_events, *kinds)
         right = events_of_kind(target_events, *kinds)
-        if not event_sequence_is_subsequence(left, right):
+        if not event_sequence_is_subsequence(left, right, allow_added_columns=field == "tables"):
             failures.append(
                 {
                     "segment": segment,
@@ -595,6 +641,12 @@ def compare_structures(source: dict[str, object], target: dict[str, object], seg
     for kind, field in [("footnote-call", "footnote_calls"), ("footnote-definition", "footnote_definitions"), ("link", "links")]:
         left = events_of_kind(source_events, kind)
         right = events_of_kind(target_events, kind)
+        if kind == "link":
+            # Bare parenthetical glosses such as [語](meaning) in imported
+            # sources do not identify a resource in this site's namespace.
+            is_resource = lambda item: bool(re.search(r"[:/.#]", str(item[1])))
+            left = [item for item in left if is_resource(item)]
+            right = [item for item in right if is_resource(item)]
         if len(right) < len(left):
             failures.append(
                 {
@@ -642,12 +694,30 @@ def compare_structures(source: dict[str, object], target: dict[str, object], seg
     return failures, warnings
 
 
-def audit_direct(source_path: Path, target_path: Path, target_language: str) -> dict[str, object]:
+def audit_direct(source_path: Path, target_path: Path, target_language: str, media_scopes: list[str] | None = None) -> dict[str, object]:
     source = parse_structure(source_path.read_text(encoding="utf-8"))
     target_text = target_path.read_text(encoding="utf-8")
     target = parse_structure(target_text)
+    # Localized figures have two repository-supported directory layouts. The
+    # older nested layout is handled by image_inventories_equivalent; these
+    # work-scoped paths must obey the same one-for-one inventory semantics.
+    remaining = list(events_of_kind(source["events"], "image"))
+    replacements = []
+    for event in events_of_kind(target["events"], "image"):
+        exact = next((x for x in remaining if protected_events_equivalent(x, event)), None)
+        if exact is not None:
+            remaining.remove(exact)
+        else:
+            replacements.append(event)
+    for event in replacements:
+        match = re.fullmatch(r"/?attachments/(?:translations|translation-revisions)/(en|ja)/([^/]+)/.+", str(event[1]))
+        if match and match[1] == target_language and match[2] in (media_scopes or []):
+            original = next((x for x in remaining if x[2] == event[2]), None)
+            if original is not None:
+                remaining.remove(original)
+                target["events"][target["events"].index(event)] = original
     failures, warnings = compare_structures(source, target)
-    localized_media_locales = set(re.findall(r"/translations/(en|ja)/", target_text))
+    localized_media_locales = set(re.findall(r"/(?:translations|translation-revisions)/(en|ja)/", target_text))
     wrong_media_locales = sorted(localized_media_locales - {target_language})
     if wrong_media_locales:
         failures.append(
@@ -683,6 +753,7 @@ def main() -> int:
     parser.add_argument("target", nargs="?", type=Path)
     parser.add_argument("--target-language", choices=("zh", "en", "ja"))
     parser.add_argument("--json", action="store_true", help="emit machine-readable JSON")
+    parser.add_argument("--media-scope", action="append", default=[])
     args = parser.parse_args()
     try:
         if not args.source or not args.target or not args.target_language:
@@ -690,7 +761,7 @@ def main() -> int:
         for path in (args.source, args.target):
             if not path.is_file():
                 parser.error(f"file does not exist: {path}")
-        report = audit_direct(args.source, args.target, args.target_language)
+        report = audit_direct(args.source, args.target, args.target_language, args.media_scope)
     except OSError as error:
         print(f"INPUT ERROR: {error}", file=sys.stderr)
         return 2

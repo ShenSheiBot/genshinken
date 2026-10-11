@@ -370,7 +370,9 @@ try {
     );
     const result = spawnSync(
       "python3",
-      [auditScript, sourcePath, targetPath, "--target-language", edition.locale, "--json"],
+      [auditScript, sourcePath, targetPath, "--target-language", edition.locale, "--json",
+        ...[edition.workId, edition.source.slug, edition.source.bookSlug, edition.source.manifest?.documentSlug]
+          .filter(Boolean).flatMap((scope) => ["--media-scope", scope])],
       {
         cwd: root,
         encoding: "utf8",

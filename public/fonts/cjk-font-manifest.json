@@ -1,6 +1,6 @@
 {
   "conversion": "opencc-js:cn2t+t2cn",
-  "corpusFileCount": 666,
+  "corpusFileCount": 667,
   "fonts": {
     "Roof Noto Sans SC": {
       "bytes": 2010656,

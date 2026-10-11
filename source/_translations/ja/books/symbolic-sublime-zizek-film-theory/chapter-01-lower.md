@@ -17,7 +17,7 @@ credits:
 translation_method: agent
 source_relationship: mixed
 base_language: zh-Hans
-updated: '2026-10-08'
+updated: '2026-10-10'
 format: article
 license: CC BY-NC-SA 4.0
 source_book_slug: symbolic-sublime-zizek-film-theory
@@ -50,17 +50,17 @@ source_chapter_id: chapter-01-lower
 
 この意味で、ラカンはソシュールの構造主義言語学へと接近し、当時展開しはじめた、科学的かつ哲学的な「フロイトへの回帰」をさらに明確にした。しかし、シニフィエ（signified）を優先したソシュールとは違い、ラカンはシニフィアン（signifier）を優先する。そのため彼は、ソシュールにおけるシニフィアンとシニフィエの、横棒の上下の位置を逆転させた。
 
-![ラカンにおけるシニフィエとシニフィアンの関係図](attachments/roof-archive/cv10137506/translations/ja/figure-1-ja.png)
+[fig] 図1.3　ラカンにおけるシニフィエとシニフィアンの関係
 
-図1.3　ラカンにおけるシニフィエとシニフィアンの関係
+![ラカンにおけるシニフィエとシニフィアンの関係図](attachments/roof-archive/cv10137506/translations/ja/figure-1-ja.png)
 
 図中では、横棒の上がシニフィアン（Signifier）、下がシニフィエ（Signified）である。
 
 ラカンがこうする目的は、ある言語の意味作用の連鎖（signifying chain）が、シニフィアンとそのシニフィエ、すなわち概念との結びつきを必ずしも必要とせず、シニフィアン同士の差異によって組織されることを示すためである。「無意識における文字の審級、あるいはフロイト以来の理性」（“The Instance of the Letter in the Unconscious”）では、同じ形をした二つの扉のイメージを論じ、ソシュールのモデルを自分のモデルに置き換えた。よく知られる例である。
 
-![ラカンによる二つの扉の例](attachments/roof-archive/cv10137506/translations/ja/figure-2-ja.png)
+[fig] 図1.4　ラカンによる二つの扉の例
 
-図1.4　ラカンによる二つの扉の例
+![ラカンによる二つの扉の例](attachments/roof-archive/cv10137506/translations/ja/figure-2-ja.png)
 
 扉の上の表示は、左が「婦人（Ladies）」、右が「紳士（Gentlemen）」。本文の「婦人用」「紳士用」に当たる。
 

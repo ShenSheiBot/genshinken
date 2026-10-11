@@ -17,7 +17,7 @@ credits:
 translation_method: agent
 source_relationship: mixed
 base_language: zh-Hans
-updated: '2026-10-08'
+updated: '2026-10-10'
 format: article
 license: CC BY-NC-SA 4.0
 source_book_slug: symbolic-sublime-zizek-film-theory
@@ -122,7 +122,7 @@ source_chapter_id: chapter-03-upper
 
 シニフィアンの連鎖（$S_2$）が作用する位置を占めると、残るのは、つなぎ留められることなく浮遊する一連のシニフィアンだけである。これは、フレドリック・ジェイムソンがポストモダニズムを定義する仕方によく似ている。彼はそこで、ラカンの精神病（psychosis）の定式、すなわち「シニフィアンの連鎖の崩壊」——ドゥルーズとガタリから借りた概念——を参照している[^chapter-03-upper-symbolic-sublime-16]。私が大学のディスクールを参照するのは、近代性とポストモダン性の違いを、ディスクールのすべての位置が埋まっている状態（近代性）と、左下の位置にあるものが排除（foreclose）されている状態（ポストモダン性）の関係として考えるからだ。後者は、次の差し替え図で、主人のシニフィアンを囲む括弧によって示される。
 
-中国語訳者注：図は著者の以前の論文から採った。本の図は間違っている。
+[fig] 中国語訳者注：図は著者の以前の論文から採った。本の図は間違っている。
 
 ![中国語訳者による差し替え図：左上に知、左下に括弧に入った主人のシニフィアン、右上に対象a、右下に分裂した主体](attachments/roof-archive/cv11559151/449cd9d6de89d998f55e9b6e875d2dd9bf6db661.png)
 

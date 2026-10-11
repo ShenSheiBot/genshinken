@@ -65,9 +65,11 @@ format: article
 
 （1969年）
 
+[fig]
+
 ![労働者たちが集まってマルクス主義理論を学ぶ姿を描いた宣伝画](attachments/wechat/vuach5uAJsbaJL42FKAOxw/body-001.jpg)
 
-[fig] 中国語版に添えられた、工場での集団学習を描く宣伝画。下端の標語は「闘争のなかでマルクス主義の理論部隊を育成・拡充しよう」。上部の横断幕は「革命に力を入れ、生産・仕事・戦争への備えを推し進めよう」。大連高圧弁工場・朱也青作、人民美術出版社、1975年4月。本稿が書かれた1969年より後の制作である。[所蔵情報：Chinese Posters](https://chineseposters.net/posters/e13-562)。
+[fig-note] 中国語版に添えられた、工場での集団学習を描く宣伝画。下端の標語は「闘争のなかでマルクス主義の理論部隊を育成・拡充しよう」。上部の横断幕は「革命に力を入れ、生産・仕事・戦争への備えを推し進めよう」。大連高圧弁工場・朱也青作、人民美術出版社、1975年4月。本稿が書かれた1969年より後の制作である。[所蔵情報：Chinese Posters](https://chineseposters.net/posters/e13-562)。
 
 [^benston-1]: Marlene Dixon, “Secondary Social Status of Women.” 入手先：U.S. Voice of Women’s Liberation Movement, 1940 Bissell, Chicago, Illinois 60614.
 

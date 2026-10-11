@@ -65,16 +65,16 @@ const japaneseFonts = [
   {
     family: "Roof Noto Serif JP",
     file: "roof-noto-serif-jp.woff2",
-    source: "NotoSerifJP.ttf",
-    sourceSha256: "2fd527ba12b6a44ec30d796d633360da0aeba6c5d4af1304ce12bb4dc15a7dfc",
+    source: "NotoSerifJP-VF.otf",
+    sourceSha256: "39701fd096bc51204a8444c6c2659f007b29674a13eb62ddfa470638fe8179cd",
     variable: "--font-roof-noto-serif-jp",
     weight: "200 900",
   },
   {
     family: "Roof Noto Sans JP",
     file: "roof-noto-sans-jp.woff2",
-    source: "NotoSansJP.ttf",
-    sourceSha256: "c2f3b4d463500a2ddcd3849cded1fceeb9fd6d1c32e6cbecd568453ba50fc68f",
+    source: "NotoSansJP-VF.otf",
+    sourceSha256: "85e5ef353081175fb9f764f037c550dd4b5ad913cb030c0de98a5d4d4018014b",
     variable: "--font-roof-noto-sans-jp",
     weight: "100 900",
   },
@@ -340,7 +340,8 @@ assert.match(
   /^var\(--font-eb-garamond\)/u,
   "English serif-mode quotation runs must retain the quotation face after the shared reader cascade"
 );
-assert.equal(translationFontManifest.version, 3, "unsupported Japanese translation font manifest version");
+assert.equal(translationFontManifest.version, 4, "unsupported Japanese translation font manifest version");
+assert.equal(translationFontManifest.cjkUpstreamCommit, "f8d157532fbfaeda587e826d4cd5b21a49186f7c");
 assert.equal(
   translationFontManifest.strategy,
   "japanese-translation-corpus-variable-fonts-with-generated-script-and-symbol-fallbacks",
@@ -376,7 +377,7 @@ for (const expected of japaneseFonts) {
   assert.equal(record.sourceSha256, expected.sourceSha256);
   assert.equal(record.weight, expected.weight);
   assert.equal(record.codePointCount, translationFontManifest.subsetCodePointCount);
-  assert.match(record.sourceUrl, new RegExp(`${translationFontManifest.upstreamCommit}/`));
+  assert.match(record.sourceUrl, new RegExp("notofonts/noto-cjk/f8d157532fbfaeda587e826d4cd5b21a49186f7c/"));
   const assetPath = path.join(root, "public", "fonts", expected.file);
   assert.ok(fs.existsSync(assetPath), `missing ${expected.file}`);
   const bytes = fs.readFileSync(assetPath);
@@ -405,7 +406,9 @@ assert.ok(japaneseFontBytes <= 2_200_000, "Japanese serif + sans payload exceeds
 const japaneseFallbackRecords = Object.values(translationFontManifest.fonts ?? {})
   .filter((record) => typeof record === "object" && record.kind?.startsWith("fallback-"));
 assert.ok(japaneseFallbackRecords.length > 0, "Japanese font manifest has no generated fallback records");
-for (const record of japaneseFallbackRecords) {
+for (const familyRecord of japaneseFallbackRecords) {
+ for (const shard of familyRecord.shards ?? [familyRecord]) {
+  const record = { ...familyRecord, ...shard };
   assert.equal(typeof record.family, "string");
   assert.equal(typeof record.file, "string");
   assert.equal(typeof record.variable, "string");
@@ -420,13 +423,12 @@ for (const record of japaneseFallbackRecords) {
   const digest = crypto.createHash("sha256").update(bytes).digest("hex");
   assert.equal(record.bytes, bytes.length);
   assert.equal(record.sha256, digest);
-  const face = translationFaceBlocks.find((block) => (
-    new RegExp(`font-family\\s*:\\s*["']${escapeRegExp(record.family)}["']\\s*;`).test(block)
-  ));
+  const face = translationFaceBlocks.find((block) => block.includes(`/fonts/${record.file}?v=${digest.slice(0, 12)}`));
   assert.ok(face, `missing generated @font-face for ${record.family}`);
   assert.match(face, new RegExp(`url\\(["']?/fonts/${escapeRegExp(record.file)}\\?v=${digest.slice(0, 12)}["']?\\)`));
   assert.match(face, /unicode-range\s*:/u, `${record.file} must use generated coverage, not a hand whitelist`);
   assert.equal(propertyValue(translationFontCss, record.variable), `"${record.family}"`);
+}
 }
 
 const translationCorpusRoots = [
@@ -439,6 +441,54 @@ const translationCorpusFiles = translationCorpusRoots
   .flatMap((directory) => walkTextFiles(path.join(root, directory)))
   .filter((file) => textExtensions.has(path.extname(file)))
   .sort();
+// The browser downloads SC fallback shards only when their Unicode ranges are
+// present. Keep the original 100 kB bound per face per edition, including all
+// localized UI text; checking individual shard sizes alone would hide regressions.
+const sharedTranslationText = translationCorpusFiles
+  .filter((file) => !file.includes(`${path.sep}source${path.sep}`))
+  .map(readUtf8).join("\n");
+const fallbackRoutes = translationCorpusFiles.filter((file) => file.endsWith(".md"))
+  .map((file) => [path.relative(root, file), readUtf8(file)]);
+const bookIndexes = new Map();
+for (const file of translationCorpusFiles.filter((file) => file.includes(`${path.sep}ja${path.sep}books${path.sep}`) && file.endsWith(".md"))) {
+  const book = path.dirname(file);
+  bookIndexes.set(book, `${bookIndexes.get(book) ?? ""}\n${/^---\r?\n([\s\S]*?)\r?\n---/u.exec(readUtf8(file))?.[1] ?? ""}`);
+}
+fallbackRoutes.push(...bookIndexes);
+const dispositionItems = JSON.parse(readUtf8(path.join(root, "source/_translations/language-dispositions.json"))).items;
+for (const item of dispositionItems.filter((item) => item.locale === "ja")) {
+  fallbackRoutes.push([`disposition:${item.source_slug ?? item.source_chapter_id}`, JSON.stringify(item)]);
+}
+function unicodePoints(range) {
+  const points = new Set();
+  for (const part of range.split(",").filter(Boolean)) {
+    const [start, end = start] = part.trim().replace(/^U\+/u, "").split("-").map((value) => parseInt(value, 16));
+    for (let point = start; point <= end; point++) points.add(point);
+  }
+  return points;
+}
+let largestFallbackTransfer = 0;
+for (const family of japaneseFallbackRecords.filter((record) => record.shards)) {
+  const seen = new Set();
+  const shards = family.shards.map((shard) => {
+    const points = unicodePoints(shard.unicodeRange);
+    assert.equal(points.size, shard.codePointCount);
+    for (const point of points) {
+      assert.ok(!seen.has(point), `${family.family} has overlapping shards`);
+      seen.add(point);
+    }
+    return { ...shard, points };
+  });
+  assert.deepEqual(seen, unicodePoints(family.unicodeRange));
+  assert.equal(seen.size, family.codePointCount);
+  for (const [route, text] of fallbackRoutes) {
+    const points = new Set([...text, ...sharedTranslationText].map((character) => character.codePointAt(0)));
+    const bytes = shards.filter((shard) => [...shard.points].some((point) => points.has(point)))
+      .reduce((total, shard) => total + shard.bytes, 0);
+    largestFallbackTransfer = Math.max(largestFallbackTransfer, bytes);
+    assert.ok(bytes <= 100_000, `${family.family} requires ${bytes} bytes on ${route}, exceeding its 100 kB fallback budget`);
+  }
+}
 const translationCorpusRelative = translationCorpusFiles.map((file) => (
   path.relative(root, file).split(path.sep).join("/")
 ));
@@ -576,5 +626,5 @@ for (const character of "軟頭髮後臺幹頁網絡閱讀記錄開啓專題連"
 console.log(
   `hosted font contract passed (${manifest.targetCodePointCount} OpenCC-closed Chinese points, `
   + `${translationFontManifest.subsetCodePointCount} Japanese corpus points in ${japaneseFontBytes.toLocaleString()} bytes, `
-  + `${expectedFonts.length} Chinese roles)`
+  + `${expectedFonts.length} Chinese roles; largest SC fallback transfer ${largestFallbackTransfer.toLocaleString()} bytes)`
 );

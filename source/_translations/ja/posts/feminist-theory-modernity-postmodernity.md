@@ -86,5 +86,3 @@ format: article
 [第9章　後期近代のフェミニズムと帝国主義](/books/reading-feminist-theory/chapters/chapter-09-late-modernity-imperialism)
 
 [第10章　ポストモダンのフェミニズムと帝国主義](/books/reading-feminist-theory/chapters/chapter-10-postmodernism-imperialism)
-
-[/layout]

@@ -53,6 +53,8 @@ The world’s end leads to the Lady’s breasts, to Miyata’s inner world. She 
 
 [fig-note] Chinese subtitle: “…is perfectly made by genes.”
 
+![The Jabberwock illustration in the book](attachments/roof-archive/cv3120530/03a-jabberwock-book.png)
+
 ## I. The master of the dream
 
 *Through the Looking-Glass* ends with a famous acrostic. In the closing rhyme of this poem spelling out his lover’s name, Carroll writes: “Life, what is it but a dream?”[^carroll] This is an unmistakable pointer to the world’s end.
@@ -63,9 +65,7 @@ Aoyama’s initial hypothesis is that penguins and bats are both connected with 
 
 [fig] An illustration of the dream.
 
-![An illustration of the dream: a book open to an illustration of the Jabberwock](attachments/roof-archive/cv3120530/03-dream-drawing.png)
-
-[fig-note] Chinese subtitle: “This monster called the Jabberwock is pretty scary.”
+![A hand-drawn figure inside a cracked, globe-like shell](attachments/roof-archive/cv3120530/03-dream-drawing.png)
 
 Miyata is the master of the dream. Only as its master can she conjure penguins at will and pass freely between the world and the “Sea”—or that is how things ought to have been—until the dream begins to crumble…
 
@@ -85,7 +85,9 @@ Miyata knows perfectly well how absurd this makeshift identity is. Rather unimpr
 
 [fig] An extraterrestrial clue.
 
-![An extraterrestrial clue: a hand-drawn figure inside a cracked, globe-like shell](attachments/roof-archive/cv3120530/04-alien-clue.png)
+![The Lady speaking to Aoyama at the café](attachments/roof-archive/cv3120530/04-alien-clue.png)
+
+[fig-note] Chinese subtitle: “You think I’m an idiot, don’t you?”
 
 The “extraterrestrial theory” is a workable explanation, but we arrive at it far too easily. It scarcely merits a “Eureka.” We therefore see it more as a clumsy way for the dream to paper over its holes (manifest content), while the dream’s deeper meaning (latent content) remains undisclosed.
 
@@ -109,9 +111,9 @@ Well-read science-fiction fans may notice that the film’s three reversals in o
 
 [fig] The world’s end.
 
-![The world’s end: the Lady speaking to Aoyama at the café](attachments/roof-archive/cv3120530/05-world-end.png)
+![Hands turning a small bag inside out](attachments/roof-archive/cv3120530/05-world-end.png)
 
-[fig-note] Chinese subtitle: “You think I’m an idiot, don’t you?”
+[fig-note] Chinese subtitle: “…can be seen as hidden inside the bag.”
 
 Aoyama: “I know about the world’s end. It ought to be much farther away. On the other side of the universe, for example.”
 
@@ -133,9 +135,9 @@ Why would the city in the Sea make us sad?
 
 [fig] Caves and hollows.
 
-![Caves and hollows: hands turning a small bag inside out](attachments/roof-archive/cv3120530/06-cave.png)
+![The Lady leaning towards Aoyama as she speaks](attachments/roof-archive/cv3120530/06-cave.png)
 
-[fig-note] Chinese subtitle: “…can be seen as hidden inside the bag.”
+[fig-note] Chinese subtitle: “I make penguins to plug the holes in the world.”
 
 ## IV. “Caves,” “Hollows” and “Breaches”
 
@@ -153,9 +155,9 @@ If Aoyama’s world is Miyata’s dream, then the Sea is made of fragments of me
 
 [fig] The unconscious within the Sea.
 
-![The unconscious within the Sea: the Lady leaning towards Aoyama as she speaks](attachments/roof-archive/cv3120530/07-surreal-sea.png)
+![Distorted buildings and streets inside the Sea](attachments/roof-archive/cv3120530/07-surreal-sea.png)
 
-[fig-note] Chinese subtitle: “I make penguins to plug the holes in the world.”
+[fig-note] Chinese subtitle: “All I know is that I have memories of time spent with her.”
 
 We soon realise, then, why Miyata must disappear at the story’s end. Since her reason for existing is to repair the “breaches” between consciousness and the unconscious, the Lady’s true identity can only be the mechanism of “dream-censorship.” In Freud’s theory, this mechanism disguises unconscious desires through metaphor, substitution, condensation and other means—just as Miyata transforms “cheerfulness” into “penguins”—releasing accumulated pressure, or libido, through dreams. Now, once Miyata has completed her repression of the inescapable past within her unconscious, while also creating a dream in which desire can find symbolic expression, the censorship mechanism no longer has any reason to exist. This is the second explanation of the world’s end: to see the end means making peace with the past and being freed from what she cannot let go of. In Aoyama’s eyes, however, the whole tragedy becomes the sight of the Lady waving and dissolving in the sunlight.
 
@@ -171,9 +173,9 @@ Images and objects connected with the sea are scattered like fireworks into ever
 
 [fig] The Seaside Café.
 
-![The Seaside Café: a view of the distorted buildings and streets inside the Sea](attachments/roof-archive/cv3120530/08-seaside-cafe.png)
+![An illuminated chalkboard sign for the Seaside Café](attachments/roof-archive/cv3120530/08-seaside-cafe.png)
 
-[fig-note] Chinese subtitle: “All I know is that I have memories of time spent with her.”
+[fig-note] The sign reads “Seaside Café.”
 
 “I remember you saying you grew up in a seaside town. Is that right?”
 
@@ -193,11 +195,7 @@ Aoyama and his companions try twice to leave town, and fail both times. The trai
 
 This episode is heavily symbolic. The sea of her hometown has been folded into the silver moon, making Aoyama’s world a Möbius strip without an end. It echoes Miyata’s sigh in the hallucination: however far she goes, she always returns to where she began. She has imprisoned herself in a city where time stands still, unable either to return to her hometown or truly to get away from it.
 
-[fig] The seaside hometown.
 
-![The seaside hometown: a chalkboard sign reading “Seaside Café”](attachments/roof-archive/cv3120530/09-hometown-sea.png)
-
-[fig-note] The sign reads “Seaside Café.”
 
 Miyata has never escaped the shadow of childhood. She merely recoils instinctively from remembering that expanse of blue, now on the verge of overflowing. She is therefore doomed to wander through a city where she “can neither reach a distant place nor move beyond the past.” More sadly still, she does not even realise this herself, and can only turn to Aoyama for help.
 
@@ -287,6 +285,8 @@ While looking at the resemblance between Hamamoto and Miyata, we must not forget
 2. What deeper meaning lies in his conflict with Hamamoto over this?
 3. Why will Hamamoto “never forgive Suzuki for as long as she lives”?
 
+![Hamamoto tells Suzuki she will never forgive him](attachments/roof-archive/cv3120530/14-hamamoto-never-forgive.png)
+
 Let us begin with question 3. In terms of the plot, the answer is obvious: Suzuki broke a promise and disclosed the Sea’s secret to her father. But here is the contradiction: we never see a promise between Hamamoto and Suzuki. We see only a promise between Hamamoto and Aoyama. This seems to mean that Suzuki, not Aoyama, was Miyata’s actual childhood companion. Aoyama is merely an ideal Hamamoto has invented. He is ideal because he is Suzuki’s exact opposite: one readily tells her father the Sea’s secret, while the other chooses to remain silent to the very end. Aoyama has also been created to make up for what went wrong in the past. Had Suzuki’s disclosure not led Hamamoto’s father to investigate the Sea further, he would not have been swept into it. We can now assert that the scene in which Hamamoto quarrels with her father is not an invention within the dream, but a memory of something that actually happened. It became the fuse that set off the tragedy.
 
 This conjecture supplies the last piece of the puzzle, laying the whole story of the past before the audience. First, Miyata’s father learned from Suzuki what his daughter was researching. Thinking the subject too dangerous, he ordered her to stop. This caused a rupture between father and daughter, and another between the childhood companions Suzuki and Miyata. Miyata felt that her father had broken his word—you must not casually tell others about a truly important research topic—and, out of spite, did not tell him how dangerous the Sea, her research subject, was. This ultimately led to her father’s death.
@@ -313,7 +313,7 @@ Laughing aloud, the girl runs freely with the boy through the reflections scatte
 
 [fig] The Sea’s liberation.
 
-![The Sea’s liberation: the Lady holding a drinks can beside Aoyama amid the upheaval](attachments/roof-archive/cv3120530/16-final-liberation.png)
+![The Lady and Aoyama standing amid the upheaval, with the Lady’s hand on her head](attachments/roof-archive/cv3120530/16-final-liberation.png)
 
 [fig-note] Chinese subtitle: “Strange changes are happening all over the world.”
 

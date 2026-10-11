@@ -479,6 +479,15 @@
 .body :global(h1),
 .body :global(h2) { font-size: 27px; }
 
+/* A normal Japanese word moves intact; a word wider than the column can wrap. */
+.body:lang(ja) :global([data-reader-heading-word]) {
+  display: inline-block;
+  max-width: 100%;
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: anywhere;
+}
+
 .body :global(h3) { margin-top: 2.3rem; font-size: 21px; }
 .body :global(h4) { margin-top: 2.1rem; font-size: 18px; border-top: 0; padding-top: 0; }
 

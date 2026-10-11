@@ -4,6 +4,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { cloudflareBuildIdentity } from "./cloudflare-build-identity.mjs";
 import { extractWorkerVersionId } from "./cloudflare-preview-version.mjs";
+import { requireSuccessfulQuality, previewVersionCommit } from "./preview-quality.mjs";
 
 const sourceRoot = process.cwd();
 const target = process.argv[2];
@@ -93,6 +94,14 @@ function assertTrackedWorktreeClean() {
 
 function syncFonts(root) {
   run("npm", ["run", "fonts:sync"], root);
+}
+
+function assertQuality(commit) {
+  const runs = JSON.parse(run("gh", ["run", "list", "--workflow", "quality.yml",
+    "--commit", commit, "--limit", "100", "--json", "databaseId,headSha,status,conclusion"],
+  sourceRoot, { capture: true }));
+  const passed = requireSuccessfulQuality(runs, commit);
+  console.log(`Quality CI ${passed.databaseId} passed for ${commit}`);
 }
 
 /**
@@ -219,18 +228,32 @@ let restoreWranglerAdapter = () => {};
 try {
   restoreWranglerAdapter = activateWranglerAdapter(sourceRoot);
   if (action === "promote") {
+    if (!dryRun) {
+      const version = JSON.parse(run("wrangler", ["versions", "view", actionValue, "--env", "preview", "--json"],
+        sourceRoot, { localBinary: true, capture: true }));
+      assertQuality(previewVersionCommit(version));
+    }
     const promoteArgs = ["versions", "deploy", `${actionValue}@100`, "--env", "preview", "--yes"];
     if (dryRun) promoteArgs.push("--dry-run");
     console.log(`${dryRun ? "Rendering" : "Promoting"} previously inspected preview version ${actionValue}`);
     run("wrangler", promoteArgs, sourceRoot, { localBinary: true });
   } else if (target === "preview") {
-    // A candidate preview deliberately includes the current uncommitted working
-    // tree. It cannot change a fixed domain, and keeping .next/cache makes
-    // feedback iterations materially faster.
+    let previewCommit;
+    if (action === "upload") {
+      assertTrackedWorktreeClean();
+      const untracked = run("git", ["ls-files", "--others", "--exclude-standard"], sourceRoot, { capture: true });
+      if (untracked.trim()) throw new Error("Commit untracked source files before uploading a preview.");
+      previewCommit = run("git", ["rev-parse", "HEAD"], sourceRoot, { capture: true }).trim();
+      assertQuality(previewCommit);
+    }
     build(sourceRoot, { reuseNextCache: true });
     if (action === "upload") {
+      assertTrackedWorktreeClean();
+      if (run("git", ["rev-parse", "HEAD"], sourceRoot, { capture: true }).trim() !== previewCommit) {
+        throw new Error("Git HEAD changed during the preview build; rebuild the approved commit.");
+      }
       console.log("Uploading preview version and promoting it to the fixed preview domain");
-      const upload = run("opennextjs-cloudflare", ["upload", "--env", "preview"], sourceRoot, {
+      const upload = run("opennextjs-cloudflare", ["upload", "--env", "preview", "--tag", `git-${previewCommit}`], sourceRoot, {
         localBinary: true,
         captureOutput: true,
       });
@@ -238,6 +261,7 @@ try {
       process.stderr.write(upload.stderr);
       const versionId = extractWorkerVersionId(`${upload.stdout}\n${upload.stderr}`);
       const promoteArgs = ["versions", "deploy", `${versionId}@100`, "--env", "preview", "--yes"];
+      assertQuality(previewCommit);
       console.log(`Promoting preview version ${versionId} to preview.labonroof.top`);
       run("wrangler", promoteArgs, sourceRoot, { localBinary: true });
       console.log("Fixed preview URL: https://preview.labonroof.top");

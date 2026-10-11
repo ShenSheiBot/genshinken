@@ -1,5 +1,5 @@
 ---
-updated: '2026-10-07'
+updated: '2026-10-10'
 
 title: 萌えればそれでいい？――2010年代の楽曲とMVに現れた「ウィーブウェーブ」
 title_breaks: ["萌えればそれでいい？――", "2010年代の楽曲とMVに", "現れた「ウィーブウェーブ」"]
@@ -223,7 +223,7 @@ Doja Catと本稿で取り上げたほかのバイラル・アーティストの
 [^17]: Michel Bauwens, “The Produsage Revolution: A Stellar New Book,” P2P Foundation, 15 Nov. 2007, https://blog.p2pfoundation.net/the-produsage-revolution-a-stellar-new-book/2007/11/15
 [^18]: David Berry and Michael Dieter (eds.), *Postdigital Aesthetics: Art, Computation and Design*, Palgrave Macmillan, 2015, pp. 21–22.
 [^19]: “How to Avoid Becoming a Weeaboo,” WikiHow, https://www.wikihow.com/Avoid-Becoming-a-Weeaboo
-[^20]: Thomas Lamarre, “Cool, Creepy, Moe: Otaku Fictions, Discourses, and Policies,” *Diversité Urbaine* 13(1), 2013, pp. 133–34.
+[^20]: Thomas Lamarre, “Cool, Creepy, Moe: Otaku Fictions, Discourses, and Policies,” *Diversité Urbaine* 13(1), 2013, pp. 133–34, https://doi.org/10.7202/1024714ar
 [^21]: Casey Brienza, “‘Manga Is Not Pizza’: The Performance of Ethno-Racial Authenticity and the Politics of American Anime and Manga Fandom in Svetlana Chmakova’s Dramacon,” in *Global Manga*, Routledge, 2015, pp. 95–113.
 [^22]: Fled From Nowhere, “Weeb,” Urban Dictionary, 22 May 2017, https://www.urbandictionary.com/define.php?term=weeb
 [^23]: John Oppliger, “Ask John: Why Do Americans Think Moe Is Killing Anime?,” AnimeNation, accessed 29 Jan. 2021, https://www.animenation.net/blog/ask-john-why-do-americans-think-moe-is-killing-anime/
@@ -242,7 +242,7 @@ Doja Catと本稿で取り上げたほかのバイラル・アーティストの
 [^36]: Grimes, “MY NAME IS DARK (LYRIC_VIDEO) (NOT Thee OFFICIAL VIDEOOO, Just a Cute Vibe) Xxo,” YouTube, 2019, https://www.youtube.com/watch?v=Fq1fW-jIRms&feature=emb_title
 [^37]: William Gibson, Twitter clarification on *Idoru*, accessed 29 Jan. 2021, https://twitter.com/GreatDismal/status/1233621922442645504
 [^38]: Grimes, “Idoru (Slightly Shorter Version),” YouTube, Mar. 2020, https://www.youtube.com/watch?v=f8Pn5tOM92c
-[^39]: bunny !!!, YouTube comment, Mar. 2020, same URL.
+[^39]: bunny !!!, YouTube comment, Mar. 2020, https://www.youtube.com/watch?v=f8Pn5tOM92c
 [^40]: erinspitfire, YouTube comment, Mar. 2020, https://www.youtube.com/watch?v=oCrhTU9HkVQ
 [^41]: Nick Douglas, “It’s Supposed to Look Like Shit: The Internet Ugly Aesthetic,” *Journal of Visual Culture* 13(3), 2014, pp. 314–39, https://doi.org/10.1177/1470412914544516
 [^42]: Lizzie Wilson, YouTube comment, May 2020, https://www.youtube.com/watch?v=Fq1fW-jIRms&lc=Ugyocnbzsyoxbv2SnEh4AaABAg

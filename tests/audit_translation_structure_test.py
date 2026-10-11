@@ -16,6 +16,44 @@ SPEC.loader.exec_module(audit)
 
 
 class ProtectedStructureTests(unittest.TestCase):
+    def test_nested_brackets_preserve_images_and_links(self) -> None:
+        parsed = audit.parse_structure('![Film [edition]](/image.jpg)\n\n[Book [subtitle]](https://example.org/book)')
+        self.assertEqual(len(audit.events_of_kind(parsed['events'], 'image')), 1)
+        self.assertEqual(len(audit.events_of_kind(parsed['events'], 'link')), 1)
+
+    def test_bibliographic_crossreference_can_be_expanded(self) -> None:
+        source = 'Text[^1] and more[^2].\n\n[^1]: Book.\n[^2]: Same as [^1], p. 2.'
+        target = 'Text[^1] and more[^2].\n\n[^1]: Book.\n[^2]: Book, p. 2.'
+        self.assertEqual(self.failures(source, target), [])
+        self.assertTrue(self.failures(source, target.replace('more[^2]', 'more')))
+
+    def test_table_may_add_translation_column_but_not_drop_cells(self) -> None:
+        source = '| Term | Meaning |\n| --- | --- |\n| A | B |'
+        expanded = '| Term | Meaning | Translation |\n| --- | --- | --- |\n| A | B | C |'
+        self.assertEqual(self.failures(source, expanded), [])
+        self.assertTrue(self.failures(expanded, source))
+
+    def test_reconstructed_figure_keeps_access_to_original(self) -> None:
+        source = '![Table](/table.png)'
+        target = '| A | B |\n| --- | --- |\n| 1 | 2 |\n\n[Original table](/table.png)'
+        failures, warnings = self.comparison(source, target)
+        self.assertEqual(failures, [])
+        self.assertTrue(any(w['field'] == 'image_presentation' for w in warnings))
+        self.assertTrue(self.failures(source, target.replace('/table.png', '/wrong.png')))
+
+    def test_work_scoped_localized_images_keep_inventory(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            source = Path(directory) / 'source.md'
+            target = Path(directory) / 'target.md'
+            source.write_text('![One](/attachments/original/one.jpg)\n\n![Two](/attachments/original/two.jpg)')
+            text = '![One](/attachments/translations/ja/work/one.png)\n\n![Two](/attachments/translations/ja/work/two.png)'
+            target.write_text(text)
+            self.assertEqual(audit.audit_direct(source, target, 'ja', ['work'])['failures'], [])
+            self.assertTrue(audit.audit_direct(source, target, 'ja', ['other'])['failures'])
+            self.assertTrue(audit.audit_direct(source, target, 'en', ['work'])['failures'])
+            target.write_text(text.split('\n\n')[0])
+            self.assertTrue(audit.audit_direct(source, target, 'ja', ['work'])['failures'])
+
     def comparison(self, source: str, target: str, media_map: dict[str, str] | None = None) -> tuple[list[dict[str, object]], list[dict[str, object]]]:
         return audit.compare_structures(
             audit.parse_structure(source, media_map),
@@ -51,6 +89,13 @@ class ProtectedStructureTests(unittest.TestCase):
         text = "5. Rothschild T. *Medienwissenschaft Rezensionen | Reviews*, 1999(4).\n"
         events = audit.parse_structure(text)["events"]
         self.assertFalse(any(event[0].startswith("table-") for event in events))
+
+    def test_prose_and_math_pipes_are_not_tables(self) -> None:
+        events = audit.parse_structure("A | B\n\n$P(x|y)$\n")["events"]
+        self.assertFalse(any(event[0].startswith("table-") for event in events))
+
+    def test_inline_html_emphasis_can_be_written_in_markdown(self) -> None:
+        self.assertEqual(self.failures("<strong>Claim</strong>", "**Claim**"), [])
 
     def test_target_may_add_structural_html(self) -> None:
         source = "Paragraph.\n"
