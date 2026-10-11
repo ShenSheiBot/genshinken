@@ -148,34 +148,6 @@ source_chapter_id: chapter-01-lower
 
 認知主義者が精神分析的映画理論に向けた多くの批判は、まったく根拠がないわけではない。マガウアンが指摘するように、認知主義者や中範囲の研究者の多くが映画の〈理論〉を問題視するのは、「理論に合わない実証的な証拠を顧みず、精神分析の概念を映画に適用しがちだから」である。[^chapter-01-symbolic-sublime-62] キャロルにとっては、一部の映画理論家が「理論」と「解釈」を混同している証拠もある。多くの研究者は、「難解な『理論』由来の用語を使っているとはいえ、実際には個々の映画を作為的に読んでいるだけなのに、自分は映画理論を生み出していると思い込んでいる」と彼はいう。さらにこう付け加える。「映画の解説は、映画に理論を読み込むことで行われがちだ。ある特定の映画を解釈し、そこに、理論を想像界で語り直した寓話を見つける。それによって、主体位置を生み出す過程――おそらく因果的な過程であるはずだ――が実際に存在することを、裏づけられるかのように……今日の映画研究者は、さまざまな普遍的モデルを証明する技法や映画を、次々と発見したふりをするだけではない……彼らは、まさにその理論を表現している映画を見つけたとも主張する」。[^chapter-01-symbolic-sublime-63] ここでキャロルが念頭に置いているのはジジェクだ、と考えずにはいられない。
 
-[^chapter-01-symbolic-sublime-1]: Jean-Louis Baudry, “Ideological Effects of the Basic Cinematographic Apparatus,” trans. Alan Williams, Film Quarterly 28, no. 2: 39–47; Jean-Louis Comolli and Paul Narboni, “Cinema/Ideology/Criticism,” in Movies and Methods, ed. Bill Nichols, vol. 1 (Berkeley: University of California Press, 1976); Christian Metz, The Imaginary Signifier: Psychoanalysis and the Cinema, trans. Ben Brewster et al. (Bloomington: Indiana University Press, 1982); Laura Mulvey, “Visual Pleasure and Narrative Cinema,” in Film and Theory: An Anthology, eds. Toby Miller and Robert Stam (Oxford: Blackwell, 2000); MacCabe, Tracking the Signifier— Theoretical Essays: Film, Linguistics, Literature (Minneapolis: University of Minnesota Press, 1985); Stephen Heath, “Narrative Space,” Screen 17, no. 3 (1976): 68–112, and “Notes on Suture,” Screen 18, no. 4 (1977–78): 48–76.
-[^chapter-01-symbolic-sublime-2]: Joan Copjec, Read My Desire: Lacan against the Historicists (Cambridge, MA: MIT Press, 1994) を参照。
-[^chapter-01-symbolic-sublime-3]: Mary Ann Doane, “Film and the Masquerade: Theorizing the Female Spectator,” in Film and Theory: An Anthology, eds. Toby Miller and Robert Stam (Oxford: Blackwell, 2000); Constance Penley, ed., Feminism and Film Theory (London: Routledge, 1988); Penley, ed., The Future of an Illusion: Film, Feminism and Psychoanalysis (Minneapolis: University of Minnesota, 1989); Jacqueline Rose, Sexuality in the Field of Vision (London: Verso, 1986); and Kaja Silverman, The Subject of Semiotics (Oxford: Oxford University Press, 1983).
-[^chapter-01-symbolic-sublime-4]: Jacqueline Rose, “The Imaginary” and “The Cinematic Apparatus— Problems in Current Theory,” in Sexuality in the Field of Vision (London: Verso, 1986) を参照。
-[^chapter-01-symbolic-sublime-5]: Juliet Mitchell and Jacqueline Rose, eds. Feminine Sexuality: Jacques Lacan and the école freudienne, trans. Jacqueline Rose (New York: W. W. Norton, 1982).
-[^chapter-01-symbolic-sublime-6]: Michel Foucault, Discipline and Punish: The Birth of the Prison, trans. Alan Sheridan (New York: Pantheon, 1977) を参照。
-[^chapter-01-symbolic-sublime-7]: Jacques Lacan, “The Mirror Stage as Formative of the I Function as Revealed in Psychoanalytic Experience,” in Écrits: The First Complete Edition in English, trans. Bruce Fink (New York: W. W. Norton, 2006).
-[^chapter-01-symbolic-sublime-8]: Copjec, Read My Desire, 19. ここでコプチェクは、「鏡像段階」のまなざしが、フーコーの「パノプティシズム」の概念と混同されていると論じる。Foucault, Discipline and Punish を参照。また、Anne Friedberg, Window Shopping: Cinema and the Postmodern (Berkeley: University of California Press, 1993) も参照。フリードバーグは、フーコーの「まなざし」が映画理論にどう関わるかを考察している。
-[^chapter-01-symbolic-sublime-9]: Todd McGowan 編、International Journal of Žižek Studies 1, no. 3 (2007) の特集[「Žižek and Cinema」](http://zizekstudies.org/index.php/ijzs/issue/view/5)を参照。
-[^chapter-01-symbolic-sublime-10]: Todd McGowan, “Introduction: Enjoying the Cinema,” International Journal of Žižek Studies 1, no. 3 (2007): 1–13.
-[^chapter-01-symbolic-sublime-11]: Slavoj Žižek, The Metastases of Enjoyment: On Women and Causality (London: Verso, 1994), 175.
-[^chapter-01-symbolic-sublime-12]: McGowan, “Introduction: Enjoying the Cinema.”
-[^chapter-01-symbolic-sublime-13]: Sophie Fiennes, “The Pervert’s Guide to Cinema,” International Journal of Žižek Studies 1: 1–3, 2.
-[^chapter-01-symbolic-sublime-14]: Todd McGowan and Sheila Kunkle, Lacan and Contemporary Film (New York: Other Press, 2004), xxi.
-[^chapter-01-symbolic-sublime-15]: David Bordwell and Noël Carroll, “Introduction” in Post-Theory: Reconstructing Film Studies, eds. David Bordwell and Noël Carroll (Madison: University of Wisconsin Press, 1996), xiii.
-[^chapter-01-symbolic-sublime-16]: David Bordwell, [“Slavoj Žižek: Say Anything”](http://www.davidbordwell.com/essays/zizek.php), David Bordwell’s Website on Cinema, 最終更新2005年4月。
-[^chapter-01-symbolic-sublime-17]: Lee Grieveson and Haidee Wasson, eds., Inventing Film Studies (Durham: Duke University Press, 2008), xi.
-[^chapter-01-symbolic-sublime-18]: ここで映画の〈理論〉と映画研究の歴史を概観するにあたっては、主として Robert Stam, Film Theory: An Introduction (Oxford: Blackwell, 2000) に依拠した。あわせて、Dudley Andrew の近年の論文 “The Core and Flow of Film Studies,” Critical Inquiry 35 (2009): 879–915、Robert Lapsley and Michael Westlake, Film Theory: An Introduction, 第2版 (Manchester: Manchester University Press, 2006)、および Grieveson と Wasson 編の Inventing Film Studies に収められた二つの論文、Philip Rosen の “Screen and 1970s Film Theory” と、Amelie Hastie、Lynne Joyrich、Patricia White、Sharon Willis による “(Re)Inventing Camera Obscura” を参照した。
-[^chapter-01-symbolic-sublime-19]: Comolli and Narboni, “Cinema/Ideology/Criticism,” 24.
-[^chapter-01-symbolic-sublime-20]: Rosen, “Screen and Film Theory,” 268.
-[^chapter-01-symbolic-sublime-21]: Ferdinand de Saussure, Course in General Linguistics, trans. Roy Harris (Chicago: Open Court Press, 1988).
-[^chapter-01-symbolic-sublime-22]: Roland Barthes, Mythologies (New York: Hill and Wang, 1972).
-[^chapter-01-symbolic-sublime-23]: Philip Rosen, “Introduction: The Saussurian Impulse and Cinema Semiotics,” in Narrative, Apparatus, Ideology: A Film Theory Reader, ed. Philip Rosen (New York: Columbia University Press, 1986), 7. [出版社目次](https://cup.columbia.edu/book/narrative-apparatus-ideology/9780231058810/)。
-[^chapter-01-symbolic-sublime-24]: Comolli and Narboni, “Cinema/Ideology/Criticism” を参照。
-[^chapter-01-symbolic-sublime-25]: Louis Althusser, “Ideology and Ideological State Apparatuses (Notes towards an Investigation),” in Lenin and Philosophy and Other Essays, trans. Ben Brewster (New York: Monthly Review Press, 2001), 85.
-[^chapter-01-symbolic-sublime-26]: Baudry, “Ideological Effects,” 46.
-[^chapter-01-symbolic-sublime-27]: Louis Althusser, “Reply to John Lewis,” in On Ideology (London: Verso, 2008) を参照。
-[^chapter-01-symbolic-sublime-28]: <span id="chapter-01-original-note-28"></span> ラカンは「セミネールXI」でこう述べている。「無意識は、言葉が主体に及ぼす効果によって構成される。それは、言葉の効果が展開するなかで主体が規定される次元であり、したがって無意識は言語のように構造化されている」。The Four Fundamental Concepts of Psycho-Analysis, Jacques-Alain Miller 編、Alan Sheridan 英訳 (New York: W. W. Norton, 1981), 149。
 [^chapter-01-symbolic-sublime-29]: Jacques-Alain Miller, “Suture (Elements of the Logic of the Signifier),” Screen 18, no. 4 (1977–1978): 24–34、および Jean-Pierre Oudart, “Cinema and Suture,” Screen 18, no. 4 (1977–78): 35–47 を参照。
 [^chapter-01-symbolic-sublime-30]: Althusser, “Ideology,” 109.
 [^chapter-01-symbolic-sublime-31]: Fredric Jameson, “Postmodernism, or The Cultural Logic of Late Capitalism,” New Left Review I, no. 146 (1984): 53–92, 91–92.
@@ -212,8 +184,4 @@ source_chapter_id: chapter-01-lower
 [^chapter-01-symbolic-sublime-62]: McGowan, Real Gaze, 4.
 [^chapter-01-symbolic-sublime-63]: Carroll, “Prospects for Film Theory,” 43.
 
-
-[^ja-bibliography]: 原著：Matthew Flisfeder, *The Symbolic, the Sublime, and Slavoj Žižek’s Theory of Film*（Palgrave Macmillan、2012年）。ISBN 9780230341470（ハードカバー）。[出版社書誌](https://link.springer.com/book/10.1057/9781137110749)。
-[^ja-titles]: 邦訳書誌：[『斜めから見る――大衆文化を通してラカン理論へ』](https://www.seidosha.co.jp/book/index.php?id=528)（鈴木晶訳、青土社）、[『汝の症候を楽しめ――ハリウッドVSラカン』](https://www.chikumashobo.co.jp/product/9784480847089/)（鈴木晶訳、筑摩書房）。本文の年は原著刊行年。
-[^ja-film-title]: *The Pervert’s Guide to Cinema*。ソフィー・ファインズ監督、2006年。[作品公式サイト](https://www.thepervertsguide.com/about_jp.html)。
 [^ja-mulvey]: 邦訳は斉藤綾子訳「視覚的快楽と物語映画」、[『「新」映画理論集成1』](https://www.filmart.co.jp/books/978-4-8459-9874-6/)所収。

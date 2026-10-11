@@ -433,7 +433,7 @@ export function RelatedReading({ current, posts, locale = "zh" }: {
                       <span>{labels.article} {post.no}</span>
                       <span>{locale === "zh" ? section.label : sections[locale][post.section]}</span>
                     </header>
-                    <h3>{post.title}</h3>
+                    <h3><ReaderTitleText text={post.title} locale={locale} /></h3>
                     {(post.excerpt || post.subtitle) && <p>{post.excerpt || post.subtitle}</p>}
                     <footer>
                       <time dateTime={post.displayDateISO}>{post.displayDateDisplay}</time>

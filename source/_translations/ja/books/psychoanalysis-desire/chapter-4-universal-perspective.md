@@ -135,30 +135,6 @@ EFP解散時のアルチュセールの介入についての短い検討でも�
 
 ---
 
-[^ja-lacan-politics]: 日訳注：1966年の否定表現は、[「精神分析の対象についての哲学の学生への回答」原文](https://cahiers.kingston.ac.uk/vol03/cpa3.1.lacan.html)に基づく。1969年の発言は[ラカンの1969年12月3日ヴァンセンヌ講義の記録](https://ecole-lacanienne.net/wp-content/uploads/2016/04/1969-12-03.pdf)に対応する。
-
-[^ja-efp]: 日訳注：中国語本文ではEFP創設を1963年とする箇所と1964年とする箇所がある。ここでは、[ラカンのEFP創設文書](https://www.association-mondiale-psychanalyse.org/acte-de-fondation/)の日付、1964年6月21日に従った。著者による約十八年周期という歴史の見立ては、そのまま示している。
-
-[^ja-talking]: 日訳注：中国語本文は「ドーラ」とする。フロイトの[『精神分析について』第1講](https://www.gutenberg.org/cache/epub/20613/pg20613-images.html)では、talking cureという命名はブロイアーの患者に帰される。
-
-[^ja-suture]: [ミレール「縫合」原文](https://cahiers.kingston.ac.uk/vol01/cpa1.3.miller.html)を参照。
-
-[^ja-consistency]: 日訳注：ここで「整合性」「無矛盾性」「まとまり」と訳し分けた語群は、中国語本文では「一致」「连贯」などによってつながっている。著者は、その臨床・論理・組織をまたぐ一般化を問題にしている。
-
-[^ja-badiou]: 日訳注：この引用の否定関係は、[バディウ「標記と欠如――ゼロについて」原文](https://cahiers.kingston.ac.uk/vol10/cpa10.8.badiou.html)に基づく。中国語引用は「ほかのところで生産していないものを欠く」と読める形になっているが、原文は「ほかのところで自ら生産するもの以外は何も欠かない」とする。
-
-[^ja-badiou-follow]: 日訳注：この箇所で再び引かれるバディウの命題は、中国語底本では「欠いているものは、ほかでは生産されていない」となっている。先の引用と同じ命題を指すため、ここでも[「標記と欠如」のフランス語原文](https://cahiers.kingston.ac.uk/vol10/cpa10.8.badiou.html)に従って否定関係を改めた。臨床への適用は、バディウ自身ではなく本書の著者による。
-
-[^ja-reality]: 日訳注：この引用は、[ラカン「現実原則の彼岸」原文](https://www.lutecium.org/mirror/aejcpp.free.fr/lacan/1936-10-00.htm)と照合した。「現実」はこの初期論文の *réel* に対応し、後期の体系的な術語としての〈現実界〉へ一律に読み替えてはいない。
-
-[^ja-postface]: 日訳注：中国語本文は「序文」とするが、*pas-à-lire* が確認できるのは[第11セミネールへの1973年の後書き](https://www.gnipl.fr/Recherche_Lacan/wp-content/uploads/1973%20LACAN%20POSTFACE%204%20CONCEPTS.pdf)である。
-
-[^ja-seminar]: 日訳注：「父の名」の唯一の講義は1963年11月20日で、中国語底本の「1962年」と異なる。第11セミネールは1964年の講義、1973年の刊行であり、本文では両者を区別した。講義年は[ラカンの講義・著作年表](https://ecole-lacanienne.net/wp-content/uploads/2016/05/Pas-tout-Lacan-Sommaire-.pdf)を参照。底本が第11セミネールの結びを「1963年」の記述につなげる箇所は、SFPとの断絶の年として示した。また「分析者から分析者へ」という重複は、前後に従い、分析主体から分析家への移行とした。
-
-[^ja-signifiant]: 日訳注：中国語本文はフランス語 *vers un signifiant nouveau* に「まったく新しい意味へ」という括弧内訳を添える。ここではフランス語を「新しいシニフィアンへ」と訳し、その後の著者による、シニフィアンの理論そのものを新しくするという再解釈と区別した。
-
 [^ja-freud]: 日訳注：邦訳書名は[光文社古典新訳文庫の目次](https://www.kotensinyaku.jp/books/book346/)による。著者は最初の二節の移行を論じ、論文を「二つの部分」とするが、[1912年の原資料](https://www.freudedition.net/en/werke/uber-die-allgemeinste-erniedrigung-des-liebeslebens/druckschrift-0)はI・II・IIIの三節からなる。本文に現れる「性冷感」などは、引用元の歴史的な分類語として訳した。
-
-[^ja-pavon]: 日訳注：底本の「David-Pavan Cuellar」は、[本人の論文の著者表記](https://onlinelibrary.wiley.com/doi/abs/10.1002/9781405165518.wbeosl010.pub2)に従い、David Pavón-Cuéllar とした。
 
 [^ja-republic]: 日訳注：バディウによる書き換えは、[『La République de Platon』](https://www.fayard.fr/livre/la-republique-de-platon-9782818503980/)を指す。以下はこの作品中のソクラテスの発言であり、プラトンの原句ではない。

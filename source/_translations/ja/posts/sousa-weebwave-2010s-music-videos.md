@@ -293,7 +293,7 @@ Doja Catと本稿で取り上げたほかのバイラル・アーティストの
 [^87]: Jonathan E. Abel, translator’s introduction to *The Postmodern Animal*, University of Minnesota Press, 2009, p. xvi.
 [^88]: “Gag Boobs,” TV Tropes, https://tvtropes.org/pmwiki/pmwiki.php/Main/-GagBoobs
 [^89]: See Anderson et al., “Revisiting the Jezebel Stereotype,” p. 461.
-[^90]: Akeia A. F. Benard, “Colonizing Black Female Bodies Within Patriarchal Capitalism,” *Sexualization, Media, & Society* 2(4), 2016, pp. 7–9, https://doi.org/10.1177/2374623816680622
+90. Akeia A. F. Benard, “Colonizing Black Female Bodies Within Patriarchal Capitalism,” *Sexualization, Media, & Society* 2(4), 2016, pp. 7–9, https://doi.org/10.1177/2374623816680622
 [^91]: Julia Kristeva, *Powers of Horror: An Essay on Abjection*, trans. Leon S. Roudiez, Columbia University Press, 1982, p. 114.
 
 ## 著者紹介

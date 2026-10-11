@@ -188,14 +188,6 @@ $(\mathrm{strong\text{-}ES})$ $p$という命題が強い意味で真である�
 
 真理についてインフレ主義者になるか、デフレ主義者になるかという選択は、「真理の理論家が下さなければならない最大の決断」と呼ばれてきた（Boghossian 1990）。[^ja-boghossian] 直観的には、たしかにそうだろう。しかし、哲学的な吟味にかけると、この決断がいったい何を意味するのかは、まだはっきりしていない。そのことに気づくと、立ち止まらざるをえない。真理のデフレ主義に最終的な評価を下すまでには、なお多くの仕事が残っているのである。
 
-[^ja-intro]: 訳注：中国語本文は「ある言明を断言するとは、その言明自体を断言すること」となっている。〔　〕内は[SEPの冒頭](https://plato.stanford.edu/archives/spr2018/entries/truth-deflationary/)にある語句。
-
-[^ja-ramsey]: 訳注：ここでの「値」は命題関数の値であり、真理値ではない。出典はラムジー「Facts and Propositions」（1927）。[公開本文](https://mickindex.sakura.ne.jp/ramsey/ramsey_FaP_en.html)、[SEPの引用箇所](https://plato.stanford.edu/archives/spr2018/entries/truth-deflationary/#HisDef)。
-
-[^ja-analytic]: 訳注：中国語本文の説明では、比較の右側に「という命題」が付く。（4）の右辺は「ブルートゥスはカエサルを殺した」という文であり、命題の名前ではない。
-
-[^ja-utility]: 訳注：[SEPの第4節](https://plato.stanford.edu/archives/spr2018/entries/truth-deflationary/#UtiDefTru)では、真理概念は不要だという含意をまず示し、それに反して実際には有用だと説明している。中国語本文では前半が「不要であることを示す」となっている。
-
 [^ja-correspondence]: 訳注：中国語本文の「十分条件」に対し、[SEPの第7.2節](https://plato.stanford.edu/archives/spr2018/entries/truth-deflationary/#Obj2Cor)で述べられているのは、真理論が満たすべき「適切性の条件」である。
 
 [^ja-gap]: 訳注：中国語本文では、第四の方策自体が「不適切」とされる。[SEPの第7.3節](https://plato.stanford.edu/archives/spr2018/entries/truth-deflationary/#Obj3TruValGap)では、この方策が不適切だとするのは、それまでの空隙説の定式化である。
@@ -221,9 +213,3 @@ $(\mathrm{strong\text{-}ES})$ $p$という命題が強い意味で真である�
 [^ja-moore]: 訳注：中国語本文では「二つのデフレ主義的見解」の指示先と、同一だとされる立場が明確でない。[SEPの第7.6節](https://plato.stanford.edu/archives/spr2018/entries/truth-deflationary/#Obj6InfDef)で問われるのは、デフレ主義とムーア的立場が、因果的な対応説に反対するという一点で共通するだけなのか、それとも端的に同一なのか、である。
 
 [^ja-boghossian]: 出典：Boghossian, “The Status of Content”（1990）, p. 164。[著者公開PDF](https://paulboghossian.com/pb/files/StatusOfContent.pdf)。
-
-[^ja-frege]: 出典：フレーゲ「思想」（“Der Gedanke”, 1918）。[ドイツ語本文](https://odysseetheater.org/ftp/bibliothek/Philosophie/Frege/Frege_Der_Gedanke.pdf)。
-
-[^ja-ayer]: 出典：Ayer, “The Criterion of Truth”（1935）。[SEPの引用箇所](https://plato.stanford.edu/archives/spr2018/entries/truth-deflationary/#HisDef)。
-
-[^ja-quine]: 出典：Quine, *Philosophy of Logic*（1970。『論理学の哲学』）。[SEPの引用箇所](https://plato.stanford.edu/archives/spr2018/entries/truth-deflationary/#HisDef)。

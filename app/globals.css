@@ -671,7 +671,7 @@ html:is([lang="zh"], [lang="zh-Hans"], [lang="zh-Hant"]) .art-body em {
 .art-body blockquote p {
   font-family: var(--reader-quote-family, var(--f-quote-cjk));
   font-size: 18px; line-height: 1.8; margin: 0 0 14px;
-  text-align: justify; text-justify: inter-character;
+  text-align: start; text-justify: inter-character;
 }
 .art-body blockquote .latin-run,
 .art-body blockquote p .latin-run {

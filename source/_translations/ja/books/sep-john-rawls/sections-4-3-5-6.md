@@ -57,8 +57,6 @@ source_chapter_id: sections-4-3-5-6
 
 これを示すため、仮想的な四つの経済構造 A～D を考えてみよう。図には、それぞれの経済構造において、三つの集団それぞれの代表的な成員が、生涯を通じて平均してどれだけの所得を得るかを示してある。
 
-
-
 **画像内の表（日本語訳）**
 
 [表の原資料](attachments/roof-archive/cv8206089/01-economic-structures-income-table.png)
@@ -320,12 +318,6 @@ source_chapter_id: sections-4-3-5-6
 しかし、ロールズの構想は限定されていると同時に、ユートピア的でもある。それが可能だと信じることは、個人が必ずしも利己的で不道徳な存在ではなく、国際関係もまた、権力、富、名誉をめぐる競争以上のものになりうる、と信じることである。正義と平和の未来が可能だと肯定することは、避けようがないとも思える諦めや冷笑から、私たちを解き放ちうる。
 
 ロールズによれば、政治哲学は、「社会的世界がどのようにして現実主義的ユートピアの特徴を備えたものになりうるかを示すことで、政治的な努力の長期的な目標を与え、その実現に向けて今日の私たちにできることに、意味を与える」のである（LP, 128）。
-
-[^references]: 本文中の略号は、TJ＝『正義論』（A Theory of Justice、1971年初版）、PL＝『政治的リベラリズム』（Political Liberalism）、JF＝『公正としての正義 再説』（Justice as Fairness: A Restatement）、LP＝『万民の法』（The Law of Peoples）。BI は学生時代の論文を収めた A Brief Inquiry into the Meaning of Sin & Faith（2009年刊）を指す。頁数は英語版のもの。各版の書誌は[原記事の書誌一覧](https://plato.stanford.edu/archives/fall2017/entries/rawls/#Bib)を参照。
-
-[^hobbes]: ホッブズ『リヴァイアサン』[第11章](https://www.gutenberg.org/files/3207/3207-h/3207-h.htm)から。
-
-[^vatican]: 第二バチカン公会議『信教の自由に関する宣言』（1965年12月7日）第2項。[教皇庁掲載のラテン語正文](https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decl_19651207_dignitatis-humanae_lt.html)。
 
 [^two-principles]: JF, 42–43。[原記事・第4.3節](https://plato.stanford.edu/archives/fall2017/entries/rawls/#TwoPriJusFai)参照。
 

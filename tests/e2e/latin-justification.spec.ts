@@ -14,6 +14,7 @@ test('Latin names in a justified Japanese quotation retain normal letter spacing
     .body p {font:20px/1.8 sans-serif;letter-spacing:0;text-indent:0}
     blockquote {margin:0!important;padding:0!important;border:0!important}
     </style><main class="root"><article class="body art-body" lang="ja">${html}</article></main>`);
+  await expect(page.locator("blockquote p")).toHaveCSS("text-align", "start");
   const widths = [280, 320, 375, 450, 620, 740];
   for (const width of widths) {
     const result = await page.evaluate((width) => {
@@ -21,6 +22,7 @@ test('Latin names in a justified Japanese quotation retain normal letter spacing
       p.style.width = `${width}px`;
       const name = p.querySelector('strong .latin-run')!;
       const measure = () => { const r = document.createRange(); r.selectNodeContents(name); return r.getBoundingClientRect().width; };
+      p.style.textAlign = "justify";
       const justified = measure();
       p.style.textAlign = 'start';
       const natural = measure();

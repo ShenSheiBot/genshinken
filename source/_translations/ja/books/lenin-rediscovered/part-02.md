@@ -559,50 +559,9 @@ SPD式の組織への疑問にも、レーニンは答えた。革命的ナロ�
 
 「原著」の頁は[Lars T. Lih, *Lenin Rediscovered: What Is to Be Done? in Context*, Haymarket Books, 2008](https://files.libcom.org/files/Lars%20T.%20Lih%20-%20Lenin%20Rediscovered%20-%20What%20Is%20to%20Be%20Done%20In%20Context%20%282008%29.pdf)の印刷頁を指す。中国語版と意味・帰属が異なる重要箇所には、日本語版注を付した。「著者注」はLihによるもの。日本語ページ冒頭の署名は日本語翻訳担当者のものであり、[原記事](/books/lenin-rediscovered)に残る中国語版の翻訳・校閲クレジットとライセンス表示は、原著や引用資料の権利表示とは別である。
 
-[^author-party]: 著者注：政治権力を目指す何らかの組織の必要は、新しい世界観に内在する。それに比べ、「党」の役割についてのマルクスの見解は、それほど根本的な問題ではない。特にこの時期は、ふさわしい制度も用語もまだ形成途上だった。この留保のもとでは、John Molyneux, *Marxism and the Party*（Pluto Press, 1978）と、Monty Johnstone, “Marx and Engels and the Concept of the Party”（*The Socialist Register 1967*, Merlin Press）の党論の検討は貴重な知見を与える。
-
-[^ja-national]: 日本語版注：ここでのnationalisationは、国家所有への移行ではなく、地方的に分散していた経済や組織の全国的な統合を指す。中国語版の「国有化」とは区別する（原著p.49）。
-
-[^author-eley]: 著者注：イーリーは、新しい「独立した労働者の大衆政党」を見事に描いている。「独立とは、自由主義の連合から独立して組織されたこと。大衆とは、広い基盤を持つ公的な扇動を必要としたこと。労働者とは、階級に基礎を置く組織の必要を強調したこと。そして政党とは、恒常的で、中央に組織され、綱領によって調整された、全国的な活動を提起したことだ」。残念ながら彼はこれを「前衛主義」と対立させる。だがこの戦略こそ、レーニンを含む社会民主主義者が前衛党と言って意味したものだった。
-
-[^ja-estate]: 日本語版注：ラサールの[『労働者綱領』](https://www.marxists.org/deutsch/referenz/lassalle/1862/04/programm.htm)でいう「身分」は、第三身分から第四身分へという議論につながる。中国語版の「荘園」は、英語estateの別の語義である（原著pp.55–57）。
-
-[^author-spd-background]: 著者注：社会民主党登場の背景については、David E. Barclay and Eric D. Weitz編、*Between Reform and Revolution: German Socialism and Communism from 1840 to 1990*（Berghahn Books, 1998）を参照。
-
-[^ja-jeeves]: 日本語版注：これはLihによるジーヴズの口調のもじりであり、作品中の台詞そのものではない（原著p.60）。ウッドハウスの[『Carry On, Jeeves』](https://www.gutenberg.org/files/65974/65974-h/65974-h.htm)には、ジーヴズの語りにmentally negligibleという類似の言い回しがある。
-
-[^ja-hunter-numbers]: 日本語版注：ハンターの比較対象は、スペイン、メキシコ、残る四か国の人口合計の三つ。中国語版のように六か国の合計ではない（原著p.62）。
-
-[^ja-hunter-democracy]: 日本語版注：原著p.62では、こうした民主的統制は「アメリカ政治には見られない」とされる。中国語版の「不可欠」とは逆の対比である。
-
-[^ja-worker]: 日本語版注：この節の「私」は英語原著の著者Lih。通常の英訳working class、labour movement、workers’ partyでは薄れる語の連関を、worker class、worker movement、worker partyという独自の訳し方で示す議論である（原著pp.69–70）。
-
-[^ja-movement]: 日本語版注：ドイツ語の定義と、語の連関を保ったLihの英訳との比較。後者はここでは日本語で示している。qualifiziert／unqualifiziertは、熟練／不熟練を指す（原著p.70、[カウツキー『エルフルト綱領』第5章](https://www.marxists.org/deutsch/archiv/kautsky/1892/erfurter/5-klassenkampf.htm)）。
-
-[^ja-tribune]: 日本語版注：tribuneは、人物なら「護民官」、議会から人々に語りかける場なら「演壇」。ここでは、この二つの意味が区別される。
-
-[^ja-witbd]: 日本語版注：原著p.75のWITBDは『何をなすべきか？』の略称。中国語版の『世界貿易報告』は別の著作ではない。
-
-[^ja-circles]: 日本語版注：この四つの包含関係は、原著p.77の図1.1による。カウツキーの文章をもとにLihが描いた図で、カウツキー自身の図ではない。
-
 [^ja-stikhiinyi]: 日本語版注：ここでの「自然発生的」は、ロシア語stikhiinyiに対応する。中国語版では「基礎要素的」「要素式」「硬直した」などと訳し分けられているが、停滞や硬直を意味しない。1899年の一節はレーニン[「われわれの当面の任務」英訳](https://www.marxists.org/archive/lenin/works/1899/articles/arg3oit.htm)も参照。
 
-[^ja-moral-suicide]: 日本語版注：支配階級にとっては、社会主義を「受け入れること」が道徳的自殺になるという対比である。[カウツキーのドイツ語本文](https://www.marxists.org/deutsch/archiv/kautsky/1892/erfurter/5-klassenkampf.htm)では、中国語版のように、受け入れないことが自殺になるとは述べていない。
-
-[^author-necessary]: 著者注：「必然的」はnaturnotwendig、自然的に必然という意味である。この一文で意志と決定論が結びついていることに注意したい。多くの論者は矛盾と見るが、カウツキーは明らかに、互いを支えるものと考えている。
-
-[^ja-protection]: 日本語版注：ここでブルジョアジーが求めるのは、労働者の保護ではなく、労働者に対する自らの保護である。エンゲルス[『プロイセンの軍事問題とドイツ労働者党』英訳](https://www.marxists.org/archive/marx/works/1865/02/12.htm)終盤、および原著p.89を参照。
-
 [^ja-newspapers]: 日本語版注：『ラボーチャヤ・ガゼータ』〔Rabochaia gazeta、労働者新聞〕、『ラボーチャヤ・ムイスリ』〔Rabochaia mysl、労働者思想〕、在外刊行物『ラボーチェエ・デーロ』〔Rabochee delo、労働者の事業〕は、それぞれ別の刊行物。中国語版の「工人事业报」には混同がある（原著pp.90、136、138–151）。
-
-
-[^author-east]: 著者注：1898年のロシア社会民主労働党第1回大会の宣言と比較してほしい。「ヨーロッパを東へ進むほど、ブルジョアジーは政治的に弱く、臆病で、卑屈になる。そしてプロレタリアートの肩にかかる文化的・政治的任務は、ますます大きくなる」。その気になればレーニンは、この一文を1917年のボリシェヴィキ革命の正当化に引用できただろう。
-
-[^ja-love]: 日本語版注：原著p.100の逆説は、社会主義への強い愛が民主主義への愛を支えるというもの。中国語版のように、二つの愛を単純に順位づける文ではない。
-
-[^author-interclass]: 著者注：ボリシェヴィズムの全体像を描こうとするなら、階級をまたぐ指導をもっと詳しく論じなければならない。とりわけ動揺する農民や都市の小ブルジョアの姿は、ボリシェヴィキの世界観の中心にある。
-
-[^ja-rae]: 日本語版注：レイの[『現代社会主義』1884年版](https://archive.org/download/contemporarysoc00raej/contemporarysoc00raej_djvu.txt)、p.128にあるpronunciamientosは、軍事的な蜂起・政変を指す。中国語版の「代議制」とは異なる。
 
 [^ja-checklist]: 日本語版注：原著pp.113–114では「福音」への応答の確信も「福音」に含めて八項目、中国語版の最初の一覧ではそれを独立させて九項目となる。各一覧の番号は共通の通し番号ではない。対応関係は次のとおり。
 
@@ -642,13 +601,5 @@ SPD式の組織への疑問にも、レーニンは答えた。革命的ナロ�
 [^ja-red-post]: 日本語版注：「赤い郵便」は、非合法新聞の配布組織を指す。レーニン[「緊急の問題」英訳](https://www.marxists.org/archive/lenin/works/1899/articles/arg4auq.htm)を参照。中国語版の「赤い小冊子」とは異なる。
 
 [^author-famine]: 著者注：ただし回想の証言によれば、レーニンは1891年には飢饉救済に反対していた。この食い違いを、ここで整合的に説明することはできない。1891年の見解の背景についてのよい検討は、Claudio Sergio Ingerflom, *Le citoyen impossible: les racines russes du léninisme*（Payot, 1988）を参照。〔この箇所の引用も順序を入れ替えている。出典：レーニン全集ロシア語第5版、第4巻、pp.235、233。〕
-
-[^ja-agitation]: 日本語版注：当時の「宣伝」は主に少人数への理論教育、「扇動」は具体的な問題を通じて多数に訴える活動を指す。ここでは虚偽や操作を意味しない。第2回「ロシア社会民主主義者の任務」で詳しく論じられる。
-
-[^ja-chutspo]: 日本語版注：Chutspoは、英語では通常chutzpahと表記される語。イディッシュ語を経由し、ヘブライ語に由来する（[American Heritage Dictionary](https://www.ahdictionary.com/word/search.html?q=chutzpah)）。
-
-[^ja-worker-press]: 日本語版注：原著p.68は、労働者の自転車愛好者や禁酒実践者に向けた新聞を挙げている。自転車製造業や、中国語版にある飲食業の労働者を指すものではない。
-
-[^ja-thought-experiment]: 日本語版注：この段落はLihによる思考実験の説明で、カウツキーからの直接引用は「大量の誤解……」の部分である（原著p.78）。
 
 [^ja-propaganda-usage]: 日本語版注：ここでの「私たち」は英語原著の著者とその読者を指す。論じられているのは、英語propagandaの否定的な語感と、当時の社会民主主義の専門的用法との対比であり、日本語の「宣伝」一般の定義ではない。
