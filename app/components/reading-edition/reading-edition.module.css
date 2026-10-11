@@ -528,7 +528,6 @@
 }
 
 .body :global(blockquote p) {
-  text-align: start;
   margin-bottom: .7em;
   font-family: var(--reader-quote-family);
   font-size: calc(var(--reader-font) - 1px);
