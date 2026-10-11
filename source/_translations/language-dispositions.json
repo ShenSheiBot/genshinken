@@ -2489,6 +2489,101 @@
           "url": "https://www.hanmoto.com/bd/isbn/9784784218974"
         }
       ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "uekita-chiaki-quasi-everyday-theory",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "擬日常論",
+      "creator": "川喜田陽（上北千明）",
+      "publication": "『小説トリッパー』2016年夏季号・朝日新聞出版",
+      "published": "2016-06-17",
+      "format": "journal",
+      "coverage": "批評再生塾で上北千明名義により発表後、川喜田陽名義で掲載",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://publications.asahi.com/product/18167.html"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "tomino-hasty-realization-fictional-world",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "性急なフィクション世界のリアリズム化",
+      "creator": "富野由悠季",
+      "publication": "『サンデー毎日』1995年6月3日臨時増刊「オウム教団 野望と崩壊」",
+      "published": "1995-06-03",
+      "format": "journal",
+      "coverage": "原文の全文転記と掲載誌の書誌情報",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://char-blog.hatenadiary.org/entry/20130719/1374248003"
+        },
+        {
+          "kind": "purchase",
+          "url": "https://www.kosho.or.jp/search/%E5%AF%8C%E9%87%8E%E7%94%B1%E6%82%A0%E5%AD%A3?pageno=3"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "miyadai-japanese-subculture-semantics-since-1992",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "平成のサブカルチャー史と、社会システムの自己運動",
+      "creator": "宮台真司",
+      "publication": "『私たちはどこから来て、どこへ行くのか』・幻冬舎",
+      "published": "2014-02-18",
+      "format": "book",
+      "identifier": "9784344025325",
+      "coverage": "同論を収めた日本語版（第三章）",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.gentosha.co.jp/book/detail/9784344025325/"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "riri-chan-manual-for-making-money-together",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "１ヶ月1000万頂く頂き女子りりちゃんの【みんなを稼がせるマニュアル】",
+      "creator": "りりちゃん",
+      "publication": "自主頒布の情報商材（販売終了）",
+      "format": "web",
+      "coverage": "正規の本文公開先は現存確認できず。リンク先は原題と販売事実を確認できる判決文",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://www.courts.go.jp/app/files/hanrei_jp/007/093007_hanrei.pdf"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "imagination-after-earthquake-otaku-culture-2010s",
+      "locale": "ja",
+      "state": "external-original",
+      "title": "Imagination after the Earthquake: Japan’s Otaku Culture in the 2010s",
+      "creator": "宇野常寛（Jeffrey C. Guarneri 英訳）",
+      "publication": "Verge: Studies in Global Asias 1(1)",
+      "published": "2015",
+      "format": "journal",
+      "identifier": "10.5749/vergstudglobasia.1.1.0114",
+      "coverage": "公刊英訳。日本語原稿の公開先は確認できず、日英中を経た再翻訳は掲載しない",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://doi.org/10.5749/vergstudglobasia.1.1.0114"
+        }
+      ]
     }
   ]
 }
