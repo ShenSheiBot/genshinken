@@ -2,12 +2,12 @@ import { expect, test } from "./fixtures";
 
 // Run against a build with translated preview editions enabled.
 const cases = [
-  "/ja/posts/wonder-egg-priority-production-notes-episode-03",
+  "/ja/posts/jojo5-golden-wind-direction-analysis-episode-02",
   "/ja/posts/anime-kamiiro-seikaku-teiryo-bunseki",
   "/ja/books/phenomenology-the-basics",
   "/en/posts/friends-quarrel-shonen-manga",
   "/en/posts/toward-post-revolution-concrete-revolutio-revisited",
-  "/ja/books/reading-feminist-theory/chapters/chapter-05-intersectionality",
+  "/ja/books/meta-anime-hyoron/chapters/i-i-sublime-tide",
 ];
 
 for (const route of cases) {
@@ -28,8 +28,16 @@ for (const route of cases) {
         while (walker.nextNode()) {
           const range = document.createRange();
           range.selectNodeContents(walker.currentNode);
+          // Same rule as scripts/verify-translation-title-layout.mjs and
+          // docs/translation-title-layout.md: only marked punctuation may hang
+          // by its own optical margin, and nothing may leave the viewport.
+          const parent = walker.currentNode.parentElement!;
+          const style = getComputedStyle(parent);
+          const side = parent.dataset.readerTitlePunctuation;
+          const hangLeft = side === "open" ? Math.max(0, -parseFloat(style.marginLeft)) : 0;
+          const hangRight = side === "close" ? Math.max(0, -parseFloat(style.marginRight)) : 0;
           for (const rect of range.getClientRects()) {
-            if (rect.left < Math.max(0, box.left) - 2 || rect.right > Math.min(innerWidth, box.right) + 2) {
+            if (rect.left < Math.max(0, box.left - hangLeft) - 2 || rect.right > Math.min(innerWidth, box.right + hangRight) + 2) {
               failures.push(walker.currentNode.textContent ?? "");
             }
           }
@@ -37,8 +45,8 @@ for (const route of cases) {
         return failures;
       });
       expect(outside, `${route} at ${width}px`).toEqual([]);
-      if (route.includes("wonder-egg-priority")) {
-        const episode = heading.getByText("第3話", { exact: true });
+      if (route.includes("jojo5-golden-wind")) {
+        const episode = heading.getByText("第02話", { exact: true });
         await expect(episode).toHaveCount(1);
         expect(await episode.evaluate((word) => new Set(Array.from(word.getClientRects(), (rect) => Math.round(rect.top))).size)).toBe(1);
       }
@@ -47,8 +55,8 @@ for (const route of cases) {
         await expect(compound).toHaveCount(1);
         expect(await compound.evaluate((word) => new Set(Array.from(word.getClientRects(), (rect) => Math.round(rect.top))).size)).toBe(1);
       }
-      if (route.includes("chapter-05-intersectionality")) {
-        const loanword = heading.getByText("インターセクショナリティ", { exact: true });
+      if (route.includes("i-i-sublime-tide")) {
+        const loanword = heading.getByText("ゾンビランドサガ", { exact: true });
         await expect(loanword).toHaveCount(1);
         expect(await loanword.evaluate((word) => new Set(Array.from(word.getClientRects(), (rect) => Math.round(rect.top))).size)).toBe(1);
       }

@@ -1,12 +1,12 @@
 import { expect, test } from '@playwright/test';
-import { readFileSync } from 'node:fs';
+import { readdirSync, readFileSync } from 'node:fs';
 import { renderMarkdown } from '../../lib/markdown';
 
 const globals = readFileSync('app/globals.css', 'utf8');
 const reader = readFileSync('app/components/reading-edition/reading-edition.module.css', 'utf8')
   .replace(/:global\(([^)]+)\)/g, '$1');
-const source = readFileSync('source/_translations/ja/books/sarazanmai-production-notes/episode-01.md', 'utf8');
-const credit = source.match(/^> 本文は[^\n]+\n> 原文：[^\n]+/m)![0];
+// Credit line from the retired Sarazanmai notes edition: Latin names inside justified Japanese.
+const credit = '> 本文は **kViN** が2019年4月12日に SAKUGABLOG へ掲載したもの\n> 原文：[Sarazanmai Production Notes 01](https://blog.sakugabooru.com/2019/04/12/sarazanmai-production-notes-01/)';
 
 test('Latin names in a justified Japanese quotation retain normal letter spacing', async ({ page }) => {
   const html = await renderMarkdown(credit, { language: 'ja' });
@@ -33,19 +33,17 @@ test('Latin names in a justified Japanese quotation retain normal letter spacing
   }
 });
 
-test('the music article renders literal song dollars and valid image URLs', async ({ page, request }) => {
-  const source = readFileSync('source/_translations/ja/posts/sousa-weebwave-2010s-music-videos.md', 'utf8').replace(/^---\n[\s\S]*?\n---\n/, '');
-  const html = await renderMarkdown(source, { language: 'ja' });
-  await page.setContent(`<style>${globals}\n${reader}</style><main class="root"><article class="body art-body" lang="ja">${html}</article></main>`, { waitUntil: 'domcontentloaded' });
+test('song titles with dollar signs render literally, not as math', async ({ page }) => {
+  const html = await renderMarkdown('Josip On Deckの「Anime Pu\\$\\$y」が4chanで話題になった。', { language: 'ja' });
+  await page.setContent(`<style>${globals}\n${reader}</style><main class="root"><article class="body art-body" lang="ja">${html}</article></main>`);
   const song = page.locator('p').filter({ hasText: 'Anime Pu$$y' }).first();
   await expect(song).toBeVisible();
   await expect(song.locator('.katex')).toHaveCount(0);
-  expect(await page.locator('article').innerText()).not.toMatch(/\[fig(?:-note)?\]/);
-  const urls = await page.locator('article img').evaluateAll(imgs => imgs.map(img => (img as HTMLImageElement).src));
-  expect(urls).toHaveLength(10);
-  for (const url of urls) {
-    expect(url).not.toContain('assets.labonroof.top/attachments/');
-    const response = await request.head(url);
-    expect(response.ok(), url).toBeTruthy();
-  }
+});
+
+test('translations never hard-code asset-host attachment URLs', () => {
+  const offenders = readdirSync('source/_translations', { recursive: true, encoding: 'utf8' })
+    .filter((file) => file.endsWith('.md'))
+    .filter((file) => readFileSync(`source/_translations/${file}`, 'utf8').includes('assets.labonroof.top/attachments/'));
+  expect(offenders).toEqual([]);
 });

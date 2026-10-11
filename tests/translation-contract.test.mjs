@@ -166,6 +166,33 @@ test("language dispositions keep external originals and deliberate absence in on
   }
 });
 
+test("not-available covers any foreign original but never Chinese or the edition's own language", () => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), "roof-language-disposition-"));
+  const write = (locale, originalLanguage) => fs.writeFileSync(path.join(root, "language-dispositions.json"), JSON.stringify({
+    version: 1,
+    items: [{
+      source_type: "post",
+      source_slug: "example-work",
+      locale,
+      state: "not-available",
+      reason: "cross-language-translation",
+      original_language: originalLanguage,
+    }],
+  }));
+  try {
+    for (const [locale, language] of [["ja", "en"], ["ja", "fr"], ["en", "la"], ["en", "ja"]]) {
+      write(locale, language);
+      assert.equal(readLanguageDispositions(root)[0].originalLanguage, language);
+    }
+    for (const [locale, language] of [["ja", "ja"], ["en", "en"], ["ja", "zh"], ["en", "zh-Hans"], ["ja", "xx"]]) {
+      write(locale, language);
+      assert.throws(() => readLanguageDispositions(root), /original_language must be a non-Chinese language/u);
+    }
+  } finally {
+    fs.rmSync(root, { recursive: true, force: true });
+  }
+});
+
 test("translation availability keeps edition lifecycle separate from absence policy", () => {
   assert.equal(translationAvailabilityState("published", false), "available");
   assert.equal(translationAvailabilityState("review", true), "preview");

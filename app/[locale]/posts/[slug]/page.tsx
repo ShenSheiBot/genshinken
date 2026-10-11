@@ -9,6 +9,7 @@ import { getTopicMembershipsForPost } from "@/lib/topics";
 import { translationJsonLd } from "@/lib/translation-jsonld";
 import {
   getAllTranslationEditions,
+  originalLanguageName,
   getEditionLanguageLinks,
   getLanguageDisposition,
   getPublishedTranslationEditions,
@@ -91,7 +92,7 @@ export async function generateMetadata({
   if (!resolved) return {};
   const { source, edition, disposition, href } = resolved;
   const externalOriginal = disposition?.state === "external-original" ? disposition : null;
-  const notAvailable = disposition?.state === "not-available";
+  const notAvailable = disposition?.state === "not-available" ? disposition : null;
   if (!edition) {
     return {
       title: externalOriginal
@@ -105,8 +106,8 @@ export async function generateMetadata({
         ? (locale === "en" ? "Verified publication details and official access routes for the original English edition." : "日本語原文の書誌情報と正規の入手先をご案内します。")
         : notAvailable
           ? locale === "en"
-            ? "This Chinese translation is not retranslated into English."
-            : "英語作品の中国語訳であるため、日本語への再翻訳は提供していません。"
+            ? `This Chinese translation of a ${originalLanguageName("en", notAvailable.originalLanguage)}-language work is not retranslated into English.`
+            : `${originalLanguageName("ja", notAvailable.originalLanguage)}作品の中国語訳であるため、日本語への再翻訳は提供していません。`
         : locale === "en"
           ? "This work is available in Chinese; an English edition has not been published."
           : "この作品は中国語で公開されています。日本語版は未公開です。",

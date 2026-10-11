@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { originalLanguageName } from "@/lib/translations";
 import type {
   EditionLanguageLink,
   LanguageDisposition,
@@ -53,14 +54,14 @@ const notAvailableCopy = {
     edition: "English edition",
     eyebrow: "Not offered · EN",
     title: "This work is not offered in English.",
-    body: "This publication is a Chinese translation of a Japanese-language work. Under this site's language policy, it is not retranslated into English.",
+    body: (language: string) => `This publication is a Chinese translation of a ${language}-language work. Under this site's language policy, it is not retranslated into English.`,
     original: "Chinese edition",
   },
   ja: {
     edition: "日本語版",
     eyebrow: "提供対象外 · JA",
     title: "この作品の日本語版は提供していません。",
-    body: "本稿は英語作品の中国語訳です。当サイトの言語方針により、日本語への再翻訳は行いません。",
+    body: (language: string) => `本稿は${language}作品の中国語訳です。当サイトの言語方針により、日本語への再翻訳は行いません。`,
     original: "中国語版",
   },
 } as const;
@@ -78,13 +79,12 @@ export default function TranslationPlaceholder({
 }) {
   const baseLabels = copy[locale];
   const externalLabels = externalCopy[locale];
-  const unavailableLabels = notAvailableCopy[locale];
   const externalOriginal = disposition?.state === "external-original" ? disposition : null;
-  const notAvailable = disposition?.state === "not-available";
+  const notAvailable = disposition?.state === "not-available" ? disposition : null;
   const labels = externalOriginal
     ? externalLabels
     : notAvailable
-      ? unavailableLabels
+      ? { ...notAvailableCopy[locale], body: notAvailableCopy[locale].body(originalLanguageName(locale, notAvailable.originalLanguage)) }
       : baseLabels;
   const sourceHref = source.href;
   const sourceLanguage = source.language;

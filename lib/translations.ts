@@ -43,6 +43,14 @@ import {
 
 export const TRANSLATION_LOCALES = ["en", "ja"] as const;
 export type TranslationLocale = (typeof TRANSLATION_LOCALES)[number];
+export type OriginalLanguage = "en" | "ja" | "fr" | "de" | "ru" | "es" | "it" | "la" | "ko" | "pt";
+const ORIGINAL_LANGUAGE_NAMES: Record<TranslationLocale, Record<OriginalLanguage, string>> = {
+  en: { en: "English", ja: "Japanese", fr: "French", de: "German", ru: "Russian", es: "Spanish", it: "Italian", la: "Latin", ko: "Korean", pt: "Portuguese" },
+  ja: { en: "英語", ja: "日本語", fr: "フランス語", de: "ドイツ語", ru: "ロシア語", es: "スペイン語", it: "イタリア語", la: "ラテン語", ko: "韓国語", pt: "ポルトガル語" },
+};
+export function originalLanguageName(locale: TranslationLocale, language: OriginalLanguage): string {
+  return ORIGINAL_LANGUAGE_NAMES[locale][language];
+}
 export const TRANSLATION_STATUSES = ["draft", "review", "reviewed", "published"] as const;
 export type TranslationStatus = (typeof TRANSLATION_STATUSES)[number];
 export const TRANSLATION_METHODS = ["agent", "human", "original"] as const;
@@ -157,7 +165,7 @@ export type NotAvailableDisposition = {
   sourceKey: string;
   locale: TranslationLocale;
   reason: "cross-language-translation";
-  originalLanguage: TranslationLocale;
+  originalLanguage: OriginalLanguage;
 };
 export type LanguageDisposition = ExternalOriginal | NotAvailableDisposition;
 
