@@ -640,6 +640,8 @@ html:is([lang="zh"], [lang="zh-Hans"], [lang="zh-Hant"]) .art-body em {
   font-style: normal;
   font-synthesis: none;
 }
+/* Latin words in CJK prose expand at spaces, not between letters. */
+.latin-run { text-justify: inter-word; }
 .art-body p .latin-run,
 .art-body li .latin-run,
 .art-body td .latin-run,
