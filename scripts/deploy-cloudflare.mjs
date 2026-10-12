@@ -38,8 +38,9 @@ for (const key of [
   if (process.env[key]) environment[key] = process.env[key];
 }
 environment.NEXT_TELEMETRY_DISABLED = "1";
-environment.ROOF_TRANSLATION_PREVIEW = target === "preview" ? "1" : "0";
-environment.ROOF_TRANSLATIONS_PUBLIC = target === "preview" ? "1" : "0";
+// Temporary public access to preview editions; keep build flags aligned with wrangler.jsonc.
+environment.ROOF_TRANSLATION_PREVIEW = "1";
+environment.ROOF_TRANSLATIONS_PUBLIC = "1";
 environment.ROOF_BUILD_TIMESTAMP = process.env.ROOF_BUILD_TIMESTAMP || new Date().toISOString();
 
 function run(command, args, cwd, { localBinary = false, capture = false, captureOutput = false } = {}) {

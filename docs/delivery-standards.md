@@ -372,6 +372,12 @@ P1/P2/P4/P5 由 `scripts/validate-content.mjs` 的 `validateProseTypography` 在
   `npm run cf:deploy:production` from a clean commit. After either publication,
   read back the returned Version ID and target URL and run the release checks;
   a Git push or successful CI alone is not live acceptance.
+- Production temporarily exposes the same translation editions as preview, including
+  draft, review, and reviewed editions. Their editorial status and preview labels
+  remain unchanged; visibility is not certification of publication readiness.
+  To restore restricted production visibility, set both production variables in
+  `wrangler.jsonc` to `0`, restore target-dependent build flags in
+  `scripts/deploy-cloudflare.mjs`, and redeploy production. Preview stays enabled.
 - Cloudflare 候选上传或生产部署已经包含完整 OpenNext／Next 构建。紧邻发布入口之前不要再运行一次独立
   `npm run build`；独立构建只用于不执行发布入口的本地成品验收。
 - 电子书成品与字体同为哈希增量产物：发布内容更新后运行 `npm run ebooks:build`（等价于 `--if-stale`，
