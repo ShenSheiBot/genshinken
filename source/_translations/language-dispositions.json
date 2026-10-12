@@ -4948,9 +4948,20 @@
       "source_type": "post",
       "source_slug": "imagination-after-earthquake-otaku-culture-2010s",
       "locale": "en",
-      "state": "not-available",
-      "reason": "cross-language-translation",
-      "original_language": "ja"
+      "state": "external-original",
+      "format": "journal",
+      "title": "Imagination after the Earthquake: Japan’s Otaku Culture in the 2010s",
+      "creator": "Uno Tsunehiro; translated by Jeffrey C. Guarneri",
+      "publication": "Verge: Studies in Global Asias 1(1), pp. 114–136",
+      "published": "2015",
+      "identifier": "10.5749/vergstudglobasia.1.1.0114",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.jstor.org/stable/10.5749/vergstudglobasia.1.1.0114"
+        }
+      ],
+      "coverage": "Published English translation, not a new translation from the Chinese edition."
     },
     {
       "source_type": "post",
@@ -6009,11 +6020,19 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "read",
+          "url": "https://www.masshist.org/digitaladams/archive/doc?id=L17760331aa"
+        },
+        {
+          "kind": "read",
+          "url": "https://www.masshist.org/digitaladams/archive/doc?id=L17760414ja"
+        },
+        {
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
         }
       ],
-      "coverage": "Reading 8; the English anthology selection corresponding to the Chinese edition.",
+      "coverage": "The two reading links contain Abigail Adams’s letter of March 31–April 5, 1776, and John Adams’s reply of April 14, 1776. The Chinese edition selects passages from both.",
       "published": "2016",
       "identifier": "ISBN 9780199364985"
     },
@@ -6028,8 +6047,12 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "read",
+          "url": "https://forever.fordham.edu/s/1362/rd/index.aspx?cc=1&content_id=4622&gid=1&pgid=4447&sid=1362"
+        },
+        {
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
         }
       ],
       "coverage": "Reading 71; the English anthology selection corresponding to the Chinese edition.",
@@ -6047,11 +6070,15 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "coverage": "Reading 34; the English anthology selection corresponding to the Chinese edition.",
+      "coverage": "Reading 34; the English anthology selection corresponding to the Chinese edition. Google Books provides a limited preview of the anthology; WorldCat lists library holdings.",
       "published": "2016",
       "identifier": "ISBN 9780199364985"
     },
@@ -6066,11 +6093,15 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "coverage": "Reading 77; the English anthology selection corresponding to the Chinese edition.",
+      "coverage": "Reading 77; the English anthology selection corresponding to the Chinese edition. Google Books provides a limited preview of the anthology; WorldCat lists library holdings.",
       "published": "2016",
       "identifier": "ISBN 9780199364985"
     },
@@ -6085,11 +6116,15 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "coverage": "Reading 98; the English anthology selection corresponding to the Chinese edition.",
+      "coverage": "Reading 98; the English anthology selection corresponding to the Chinese edition. Google Books provides a limited preview of the anthology; WorldCat lists library holdings.",
       "published": "2016",
       "identifier": "ISBN 9780199364985"
     },
@@ -6104,8 +6139,12 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "read",
+          "url": "https://publish.illinois.edu/womenanddevelopment/files/2015/12/Lorde_The_Masters_Tools.pdf"
+        },
+        {
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
         }
       ],
       "coverage": "Reading 72; the English anthology selection corresponding to the Chinese edition.",
@@ -6123,11 +6162,15 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "coverage": "Reading 94; the English anthology selection corresponding to the Chinese edition.",
+      "coverage": "Reading 94; the English anthology selection corresponding to the Chinese edition. Google Books provides a limited preview of the anthology; WorldCat lists library holdings.",
       "published": "2016",
       "identifier": "ISBN 9780199364985"
     },
@@ -6142,8 +6185,12 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "read",
+          "url": "https://openyls.law.yale.edu/bitstreams/d876a89b-40fd-4189-9d54-36a9305a4898/download"
+        },
+        {
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
         }
       ],
       "coverage": "Reading 2; the English anthology selection corresponding to the Chinese edition.",
@@ -6161,11 +6208,15 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "coverage": "Reading 53; the English anthology selection corresponding to the Chinese edition.",
+      "coverage": "Reading 53; the English anthology selection corresponding to the Chinese edition. Google Books provides a limited preview of the anthology; WorldCat lists library holdings.",
       "published": "2016",
       "identifier": "ISBN 9780199364985"
     },
@@ -6180,11 +6231,15 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "coverage": "Reading 90; the English anthology selection corresponding to the Chinese edition.",
+      "coverage": "Reading 90; the English anthology selection corresponding to the Chinese edition. Google Books provides a limited preview of the anthology; WorldCat lists library holdings.",
       "published": "2016",
       "identifier": "ISBN 9780199364985"
     },
@@ -6199,11 +6254,15 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "coverage": "Reading 33; the English anthology selection corresponding to the Chinese edition.",
+      "coverage": "Reading 33; the English anthology selection corresponding to the Chinese edition. Google Books provides a limited preview of the anthology; WorldCat lists library holdings.",
       "published": "2016",
       "identifier": "ISBN 9780199364985"
     },
@@ -6218,11 +6277,15 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "read",
+          "url": "https://americanstudies.yale.edu/sites/default/files/files/Keyword%20Coalition_Readings.pdf"
+        },
+        {
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
         }
       ],
-      "coverage": "Reading 68; the English anthology selection corresponding to the Chinese edition.",
+      "coverage": "The full statement appears at the beginning of the Yale reading packet. WorldCat identifies the anthology used for the Chinese selection.",
       "published": "2016",
       "identifier": "ISBN 9780199364985"
     },
@@ -6237,8 +6300,12 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "read",
+          "url": "https://mc.dlib.nyu.edu/files/books/lib000037/lib000037_lo.pdf"
+        },
+        {
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
         }
       ],
       "coverage": "Reading 49; the English anthology selection corresponding to the Chinese edition.",
@@ -6256,11 +6323,15 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "coverage": "Reading 114; the English anthology selection corresponding to the Chinese edition.",
+      "coverage": "Reading 114; the English anthology selection corresponding to the Chinese edition. Google Books provides a limited preview of the anthology; WorldCat lists library holdings.",
       "published": "2016",
       "identifier": "ISBN 9780199364985"
     },
@@ -6275,8 +6346,12 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "read",
+          "url": "https://www.poetryfoundation.org/poems/46550/the-new-colossus"
+        },
+        {
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
         }
       ],
       "coverage": "Reading 40; the English anthology selection corresponding to the Chinese edition.",
@@ -6294,11 +6369,15 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "coverage": "Reading 57; the English anthology selection corresponding to the Chinese edition.",
+      "coverage": "Reading 57; the English anthology selection corresponding to the Chinese edition. Google Books provides a limited preview of the anthology; WorldCat lists library holdings.",
       "published": "2016",
       "identifier": "ISBN 9780199364985"
     },
@@ -6313,11 +6392,15 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "read",
+          "url": "https://socialwelfare.library.vcu.edu/womens-suffrage/frederick-douglass-woman-suffrage-1888/"
+        },
+        {
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
         }
       ],
-      "coverage": "Reading 63; the English anthology selection corresponding to the Chinese edition.",
+      "coverage": "Reading 63; the English anthology selection corresponding to the Chinese edition. A public reading edition is linked alongside library holdings for the anthology.",
       "published": "2016",
       "identifier": "ISBN 9780199364985"
     },
@@ -6332,11 +6415,15 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "coverage": "Reading 101; the English anthology selection corresponding to the Chinese edition.",
+      "coverage": "Reading 101; the English anthology selection corresponding to the Chinese edition. Google Books provides a limited preview of the anthology; WorldCat lists library holdings.",
       "published": "2016",
       "identifier": "ISBN 9780199364985"
     },
@@ -6351,8 +6438,12 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "read",
+          "url": "https://www.english.upenn.edu/sites/www.english.upenn.edu/files/Garland-Thomson_Rosemarie_Disability-Feminist-Theory.pdf"
+        },
+        {
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
         }
       ],
       "coverage": "Reading 79; the English anthology selection corresponding to the Chinese edition.",
@@ -6370,11 +6461,15 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "read",
+          "url": "https://www.gutenberg.org/files/33403/33403-h/33403-h.htm"
+        },
+        {
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
         }
       ],
-      "coverage": "Reading 25; the English anthology selection corresponding to the Chinese edition.",
+      "coverage": "The reading link contains Geography and Plays (1922), including “Miss Furr and Miss Skeene”; the Chinese edition selects a passage from that work.",
       "published": "2016",
       "identifier": "ISBN 9780199364985"
     },
@@ -6389,8 +6484,12 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "read",
+          "url": "https://www.tandfonline.com/doi/full/10.1080/23293691.2019.1619050"
+        },
+        {
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
         }
       ],
       "coverage": "Reading 36; the English anthology selection corresponding to the Chinese edition.",
@@ -6408,11 +6507,15 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "coverage": "Reading 121; the English anthology selection corresponding to the Chinese edition.",
+      "coverage": "Reading 121; the English anthology selection corresponding to the Chinese edition. Google Books provides a limited preview of the anthology; WorldCat lists library holdings.",
       "published": "2016",
       "identifier": "ISBN 9780199364985"
     },
@@ -6427,11 +6530,15 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "coverage": "Reading 127; the English anthology selection corresponding to the Chinese edition.",
+      "coverage": "Reading 127; the English anthology selection corresponding to the Chinese edition. Google Books provides a limited preview of the anthology; WorldCat lists library holdings.",
       "published": "2016",
       "identifier": "ISBN 9780199364985"
     },
@@ -6446,11 +6553,15 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "coverage": "Reading 134; the English anthology selection corresponding to the Chinese edition.",
+      "coverage": "Reading 134; the English anthology selection corresponding to the Chinese edition. Google Books provides a limited preview of the anthology; WorldCat lists library holdings.",
       "published": "2016",
       "identifier": "ISBN 9780199364985"
     },
@@ -6465,11 +6576,15 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "coverage": "Reading 85; the English anthology selection corresponding to the Chinese edition.",
+      "coverage": "Reading 85; the English anthology selection corresponding to the Chinese edition. Google Books provides a limited preview of the anthology; WorldCat lists library holdings.",
       "published": "2016",
       "identifier": "ISBN 9780199364985"
     },
@@ -6484,11 +6599,19 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "publisher",
+          "url": "https://journals.sagepub.com/doi/10.1177/030981687900800102"
+        },
+        {
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "coverage": "Reading 55; the English anthology selection corresponding to the Chinese edition.",
+      "coverage": "Reading 55; the English anthology selection corresponding to the Chinese edition. Google Books provides a limited preview of the anthology; WorldCat lists library holdings.",
       "published": "2016",
       "identifier": "ISBN 9780199364985"
     },
@@ -6503,11 +6626,15 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "coverage": "Reading 97; the English anthology selection corresponding to the Chinese edition.",
+      "coverage": "Reading 97; the English anthology selection corresponding to the Chinese edition. Google Books provides a limited preview of the anthology; WorldCat lists library holdings.",
       "published": "2016",
       "identifier": "ISBN 9780199364985"
     },
@@ -6522,11 +6649,15 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "read",
+          "url": "https://www.plough.com/articles/the-original-mothers-day-proclamation"
+        },
+        {
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
         }
       ],
-      "coverage": "Reading 100; the English anthology selection corresponding to the Chinese edition.",
+      "coverage": "Reading 100; the English anthology selection corresponding to the Chinese edition. A public reading edition is linked alongside library holdings for the anthology.",
       "published": "2016",
       "identifier": "ISBN 9780199364985"
     },
@@ -6541,8 +6672,12 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "read",
+          "url": "https://daily.jstor.org/lynch-law-in-america-annotated/"
+        },
+        {
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
         }
       ],
       "coverage": "Reading 65; the English anthology selection corresponding to the Chinese edition.",
@@ -6560,11 +6695,15 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "coverage": "Reading 18; the English anthology selection corresponding to the Chinese edition.",
+      "coverage": "Reading 18; the English anthology selection corresponding to the Chinese edition. Google Books provides a limited preview of the anthology; WorldCat lists library holdings.",
       "published": "2016",
       "identifier": "ISBN 9780199364985"
     },
@@ -6579,11 +6718,15 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "coverage": "Reading 96; the English anthology selection corresponding to the Chinese edition.",
+      "coverage": "Reading 96; the English anthology selection corresponding to the Chinese edition. Google Books provides a limited preview of the anthology; WorldCat lists library holdings.",
       "published": "2016",
       "identifier": "ISBN 9780199364985"
     },
@@ -6598,11 +6741,15 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "coverage": "Reading 118; the English anthology selection corresponding to the Chinese edition.",
+      "coverage": "Reading 118; the English anthology selection corresponding to the Chinese edition. Google Books provides a limited preview of the anthology; WorldCat lists library holdings.",
       "published": "2016",
       "identifier": "ISBN 9780199364985"
     },
@@ -6617,11 +6764,15 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "coverage": "Reading 1; the English anthology selection corresponding to the Chinese edition.",
+      "coverage": "Reading 1; the English anthology selection corresponding to the Chinese edition. Google Books provides a limited preview of the anthology; WorldCat lists library holdings.",
       "published": "2016",
       "identifier": "ISBN 9780199364985"
     },
@@ -6636,8 +6787,12 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "read",
+          "url": "https://www.sfu.ca/~decaste/OISE/page2/files/abu-lughod.pdf"
+        },
+        {
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
         }
       ],
       "coverage": "Reading 132; the English anthology selection corresponding to the Chinese edition.",
@@ -6655,11 +6810,15 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "coverage": "Reading 50; the English anthology selection corresponding to the Chinese edition.",
+      "coverage": "Reading 50; the English anthology selection corresponding to the Chinese edition. Google Books provides a limited preview of the anthology; WorldCat lists library holdings.",
       "published": "2016",
       "identifier": "ISBN 9780199364985"
     },
@@ -6674,8 +6833,12 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "read",
+          "url": "https://warwick.ac.uk/fac/arts/english/currentstudents/postgraduate/masters/modules/femlit/under-western-eyes.pdf"
+        },
+        {
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
         }
       ],
       "coverage": "Reading 124; the English anthology selection corresponding to the Chinese edition.",
@@ -6693,11 +6856,15 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "coverage": "Reading 59; the English anthology selection corresponding to the Chinese edition.",
+      "coverage": "Reading 59; the English anthology selection corresponding to the Chinese edition. Google Books provides a limited preview of the anthology; WorldCat lists library holdings.",
       "published": "2016",
       "identifier": "ISBN 9780199364985"
     },
@@ -6712,11 +6879,15 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "coverage": "Reading 7; the English anthology selection corresponding to the Chinese edition.",
+      "coverage": "Reading 7; the English anthology selection corresponding to the Chinese edition. Google Books provides a limited preview of the anthology; WorldCat lists library holdings.",
       "published": "2016",
       "identifier": "ISBN 9780199364985"
     },
@@ -6731,11 +6902,15 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "coverage": "Reading 75; the English anthology selection corresponding to the Chinese edition.",
+      "coverage": "Reading 75; the English anthology selection corresponding to the Chinese edition. Google Books provides a limited preview of the anthology; WorldCat lists library holdings.",
       "published": "2016",
       "identifier": "ISBN 9780199364985"
     },
@@ -6750,8 +6925,12 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "read",
+          "url": "https://poets.org/poem/cry-indian-wife"
+        },
+        {
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
         }
       ],
       "coverage": "Reading 103; the English anthology selection corresponding to the Chinese edition.",
@@ -6769,8 +6948,12 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "read",
+          "url": "https://gayliberationfront.org/voices/woman-identified-woman-manifesto-radicalesbians-1970"
+        },
+        {
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
         }
       ],
       "coverage": "Reading 29; the English anthology selection corresponding to the Chinese edition.",
@@ -6788,11 +6971,15 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "coverage": "Reading 91; the English anthology selection corresponding to the Chinese edition.",
+      "coverage": "Reading 91; the English anthology selection corresponding to the Chinese edition. Google Books provides a limited preview of the anthology; WorldCat lists library holdings.",
       "published": "2016",
       "identifier": "ISBN 9780199364985"
     },
@@ -6807,8 +6994,12 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "read",
+          "url": "https://www.redstockings.org/rs-manifesto"
+        },
+        {
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
         }
       ],
       "coverage": "Reading 27; the English anthology selection corresponding to the Chinese edition.",
@@ -6826,11 +7017,15 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "coverage": "Reading 95; the English anthology selection corresponding to the Chinese edition.",
+      "coverage": "Reading 95; the English anthology selection corresponding to the Chinese edition. Google Books provides a limited preview of the anthology; WorldCat lists library holdings.",
       "published": "2016",
       "identifier": "ISBN 9780199364985"
     },
@@ -6845,11 +7040,15 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "coverage": "Reading 31; the English anthology selection corresponding to the Chinese edition.",
+      "coverage": "Reading 31; the English anthology selection corresponding to the Chinese edition. Google Books provides a limited preview of the anthology; WorldCat lists library holdings.",
       "published": "2016",
       "identifier": "ISBN 9780199364985"
     },
@@ -6864,8 +7063,12 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "read",
+          "url": "https://trianglefire.ilr.cornell.edu/primary/testimonials/ootss_RoseSchneiderman.html"
+        },
+        {
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
         }
       ],
       "coverage": "Reading 47; the English anthology selection corresponding to the Chinese edition.",
@@ -6883,8 +7086,12 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "read",
+          "url": "https://www.gutenberg.org/files/35538/35538-h/35538-h.html"
+        },
+        {
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
         }
       ],
       "coverage": "Reading 102; the English anthology selection corresponding to the Chinese edition.",
@@ -6902,8 +7109,12 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "read",
+          "url": "https://tildesites.bowdoin.edu/~smcmahon/courses/hist246/readingguide/files/grimke_condition_letterviii.pdf"
+        },
+        {
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
         }
       ],
       "coverage": "Reading 10; the English anthology selection corresponding to the Chinese edition.",
@@ -6921,8 +7132,12 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "read",
+          "url": "https://www.nps.gov/wori/learn/historyculture/declaration-of-sentiments.htm"
+        },
+        {
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
         }
       ],
       "coverage": "Reading 11; the English anthology selection corresponding to the Chinese edition.",
@@ -6940,11 +7155,15 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "read",
+          "url": "https://home.nps.gov/teachers/classrooms/aint-i-a-woman.htm"
+        },
+        {
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
         }
       ],
-      "coverage": "Reading 61; the English anthology selection corresponding to the Chinese edition.",
+      "coverage": "The Chinese selection follows Frances Gage’s 1863 account of the 1851 speech. The National Park Service prints that version alongside Marius Robinson’s 1851 report.",
       "published": "2016",
       "identifier": "ISBN 9780199364985"
     },
@@ -6959,11 +7178,15 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "coverage": "Reading 105; the English anthology selection corresponding to the Chinese edition.",
+      "coverage": "Reading 105; the English anthology selection corresponding to the Chinese edition. Google Books provides a limited preview of the anthology; WorldCat lists library holdings.",
       "published": "2016",
       "identifier": "ISBN 9780199364985"
     },
@@ -6978,11 +7201,15 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "coverage": "Reading 104; the English anthology selection corresponding to the Chinese edition.",
+      "coverage": "Reading 104; the English anthology selection corresponding to the Chinese edition. Google Books provides a limited preview of the anthology; WorldCat lists library holdings.",
       "published": "2016",
       "identifier": "ISBN 9780199364985"
     },
@@ -6997,11 +7224,19 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "publisher",
+          "url": "https://www.jstor.org/stable/3177755"
+        },
+        {
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "coverage": "Reading 51; the English anthology selection corresponding to the Chinese edition.",
+      "coverage": "Reading 51; the English anthology selection corresponding to the Chinese edition. Google Books provides a limited preview of the anthology; WorldCat lists library holdings.",
       "published": "2016",
       "identifier": "ISBN 9780199364985"
     },
@@ -7016,11 +7251,15 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "coverage": "Reading 126; the English anthology selection corresponding to the Chinese edition.",
+      "coverage": "Reading 126; the English anthology selection corresponding to the Chinese edition. Google Books provides a limited preview of the anthology; WorldCat lists library holdings.",
       "published": "2016",
       "identifier": "ISBN 9780199364985"
     },
@@ -7035,11 +7274,15 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "coverage": "Reading 120; the English anthology selection corresponding to the Chinese edition.",
+      "coverage": "Reading 120; the English anthology selection corresponding to the Chinese edition. Google Books provides a limited preview of the anthology; WorldCat lists library holdings.",
       "published": "2016",
       "identifier": "ISBN 9780199364985"
     },
@@ -7054,11 +7297,15 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "coverage": "Reading 14; the English anthology selection corresponding to the Chinese edition.",
+      "coverage": "Reading 14; the English anthology selection corresponding to the Chinese edition. Google Books provides a limited preview of the anthology; WorldCat lists library holdings.",
       "published": "2016",
       "identifier": "ISBN 9780199364985"
     },
@@ -7073,8 +7320,12 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "read",
+          "url": "https://www.gutenberg.org/cache/epub/10376/pg10376.html"
+        },
+        {
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
         }
       ],
       "coverage": "Reading 109; the English anthology selection corresponding to the Chinese edition.",
@@ -7092,11 +7343,15 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity · Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "read",
+          "url": "https://www.gutenberg.org/ebooks/71448"
+        },
+        {
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
         }
       ],
-      "coverage": "Reading 66; the English anthology selection corresponding to the Chinese edition.",
+      "coverage": "Reading 66; the English anthology selection corresponding to the Chinese edition. A public reading edition is linked alongside library holdings for the anthology.",
       "published": "2016",
       "identifier": "ISBN 9780199364985"
     },
@@ -8038,11 +8293,16 @@
       "publication": "Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "published": "2016"
+      "published": "2016",
+      "coverage": " Google Books provides a limited preview of the anthology; WorldCat lists library holdings."
     },
     {
       "source_type": "book-chapter",
@@ -8056,11 +8316,16 @@
       "publication": "Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "published": "2016"
+      "published": "2016",
+      "coverage": " Google Books provides a limited preview of the anthology; WorldCat lists library holdings."
     },
     {
       "source_type": "book-chapter",
@@ -8074,11 +8339,16 @@
       "publication": "Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "published": "2016"
+      "published": "2016",
+      "coverage": " Google Books provides a limited preview of the anthology; WorldCat lists library holdings."
     },
     {
       "source_type": "book-chapter",
@@ -8092,11 +8362,16 @@
       "publication": "Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "published": "2016"
+      "published": "2016",
+      "coverage": " Google Books provides a limited preview of the anthology; WorldCat lists library holdings."
     },
     {
       "source_type": "book-chapter",
@@ -8110,11 +8385,16 @@
       "publication": "Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "published": "2016"
+      "published": "2016",
+      "coverage": " Google Books provides a limited preview of the anthology; WorldCat lists library holdings."
     },
     {
       "source_type": "book-chapter",
@@ -8128,11 +8408,16 @@
       "publication": "Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "published": "2016"
+      "published": "2016",
+      "coverage": " Google Books provides a limited preview of the anthology; WorldCat lists library holdings."
     },
     {
       "source_type": "book-chapter",
@@ -8146,11 +8431,16 @@
       "publication": "Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "published": "2016"
+      "published": "2016",
+      "coverage": " Google Books provides a limited preview of the anthology; WorldCat lists library holdings."
     },
     {
       "source_type": "book-chapter",
@@ -8164,11 +8454,16 @@
       "publication": "Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "published": "2016"
+      "published": "2016",
+      "coverage": " Google Books provides a limited preview of the anthology; WorldCat lists library holdings."
     },
     {
       "source_type": "book-chapter",
@@ -8182,11 +8477,16 @@
       "publication": "Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "published": "2016"
+      "published": "2016",
+      "coverage": " Google Books provides a limited preview of the anthology; WorldCat lists library holdings."
     },
     {
       "source_type": "book-chapter",
@@ -8200,11 +8500,16 @@
       "publication": "Oxford University Press",
       "links": [
         {
-          "kind": "purchase",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
+        },
+        {
+          "kind": "read",
+          "url": "https://books.google.com/books?id=2rm6BwAAQBAJ"
         }
       ],
-      "published": "2016"
+      "published": "2016",
+      "coverage": " Google Books provides a limited preview of the anthology; WorldCat lists library holdings."
     },
     {
       "source_type": "book-chapter",
@@ -10153,8 +10458,12 @@
       "publication": "Reading Feminist Theory: From Modernity to Postmodernity, Oxford University Press",
       "links": [
         {
-          "kind": "publisher",
-          "url": "https://miamioh.ecampus.com/reading-feminist-theory-from-modernity/bk/9780199364985"
+          "kind": "read",
+          "url": "https://www.gutenberg.org/cache/epub/67133/pg67133-images.html"
+        },
+        {
+          "kind": "library",
+          "url": "https://search.worldcat.org/title/900158337"
         }
       ],
       "coverage": "Reading 110, an excerpt from Waheenee (1921).",
@@ -10401,7 +10710,7 @@
       "links": [
         {
           "kind": "library",
-          "url": "https://catalog.iavalley.edu/bib/24903"
+          "url": "https://search.worldcat.org/title/900960276"
         }
       ],
       "coverage": "Selection in Exploring Masculinities, pp. 269–279."
@@ -10729,6 +11038,486 @@
       ],
       "coverage": "Archived original article.",
       "published": "2019-08-06"
+    },
+    {
+      "source_type": "post",
+      "source_slug": "crisis-of-verse",
+      "locale": "ja",
+      "state": "not-available",
+      "reason": "cross-language-translation",
+      "original_language": "fr"
+    },
+    {
+      "source_type": "post",
+      "source_slug": "robert-grosseteste-on-light",
+      "locale": "ja",
+      "state": "not-available",
+      "reason": "cross-language-translation",
+      "original_language": "la"
+    },
+    {
+      "source_type": "post",
+      "source_slug": "sep-compositionality",
+      "locale": "ja",
+      "state": "not-available",
+      "reason": "cross-language-translation",
+      "original_language": "en"
+    },
+    {
+      "source_type": "post",
+      "source_slug": "ikuhara-sarazanmai-preview",
+      "locale": "ja",
+      "state": "not-available",
+      "reason": "cross-language-translation",
+      "original_language": "en"
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "incontinence-of-the-void",
+      "source_chapter_id": "chapter-1-the-barred-one",
+      "locale": "ja",
+      "state": "not-available",
+      "reason": "cross-language-translation",
+      "original_language": "en"
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "photographic-image-surrealism",
+      "source_chapter_id": "introduction-bazin-sartre",
+      "locale": "ja",
+      "state": "not-available",
+      "reason": "cross-language-translation",
+      "original_language": "en"
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "photographic-image-surrealism",
+      "source_chapter_id": "camera-lucida-enlargement",
+      "locale": "ja",
+      "state": "not-available",
+      "reason": "cross-language-translation",
+      "original_language": "en"
+    },
+    {
+      "source_type": "post",
+      "source_slug": "asada-akira-bts-radio-sakamoto",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "web",
+      "title": "浅田彰によるBTS講義",
+      "creator": "浅田彰",
+      "publication": "RADIO SAKAMOTO（2021年11月7日）",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://www.j-wave.co.jp/original/radiosakamoto/program/211107.htm"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "asada-memorial-ryuichi-sakamoto-late-style",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "web",
+      "title": "坂本龍一さんを悼む　見事な「晩年様式」の達成",
+      "creator": "浅田彰",
+      "publication": "山陰中央新報（共同通信）",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://www.sanin-chuo.co.jp/articles/-/363792"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "osugi-shigeo-peace-and-stupidity",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "web",
+      "title": "「日本国民」と「諸国民」の間で「われわれ」はいかに可能か",
+      "creator": "大杉重男",
+      "publication": "批評の練習帳",
+      "links": [
+        {
+          "kind": "read",
+          "url": "https://franzjoseph.blog134.fc2.com/blog-entry-199.html"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "azuma-norizuki-dialogue-1-mystery-and-cryptography",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "サイバースペースはなぜそう呼ばれるか＋",
+      "creator": "東浩紀・法月綸太郎",
+      "publication": "サイバースペースはなぜそう呼ばれるか＋",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.kawade.co.jp/np/isbn/9784309410692/"
+        }
+      ],
+      "coverage": "法月綸太郎との対話を収録。中国語版は対話の第一部。"
+    },
+    {
+      "source_type": "post",
+      "source_slug": "imagination-and-animal",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "想像界と動物的通路",
+      "creator": "東浩紀",
+      "publication": "サイバースペースはなぜそう呼ばれるか＋",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.kawade.co.jp/np/isbn/9784309410692/"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "chiba-masaya-how-to-become-a-minor-thought-master",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "現代思想入門",
+      "creator": "千葉雅也",
+      "publication": "講談社現代新書",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.kodansha.co.jp/book/products/0000363613"
+        }
+      ],
+      "coverage": "中国語版は第六章「現代思想のつくり方」の抜粋。"
+    },
+    {
+      "source_type": "post",
+      "source_slug": "karatani-akutagawa-in-a-grove",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "藪の中",
+      "creator": "柄谷行人",
+      "publication": "意味という病（講談社文芸文庫）",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.kodansha.co.jp/book/products/0000167459"
+        }
+      ]
+    },
+    {
+      "source_type": "post",
+      "source_slug": "saito-identity-to-character",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "「アイデンティティ」から「キャラ」へ",
+      "creator": "斎藤環",
+      "publication": "承認をめぐる病（日本評論社）",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.nippyo.co.jp/shop/book/6388.html"
+        }
+      ],
+      "coverage": "第14章。"
+    },
+    {
+      "source_type": "post",
+      "source_slug": "sturm-und-drang-introduction-to-psychoanalysis-excerpt",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "疾風怒濤精神分析入門――ジャック・ラカン的生き方のススメ",
+      "creator": "片岡一竹（序文：向井雅明）",
+      "publication": "誠信書房",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.seishinshobo.co.jp/book/b308595.html"
+        }
+      ],
+      "coverage": "中国語版は序文と本文の抜粋。"
+    },
+    {
+      "source_type": "post",
+      "source_slug": "akagi-tomohiro-maruyama-war",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "「丸山眞男」をひっぱたきたい――31歳フリーター。希望は、戦争。",
+      "creator": "赤木智弘",
+      "publication": "論座（2007年1月号）；若者を見殺しにする国（双風舎）",
+      "links": [
+        {
+          "kind": "purchase",
+          "url": "https://honto.jp/ebook/pd_26314587.html"
+        }
+      ],
+      "coverage": "論説を収録する『若者を見殺しにする国』の電子書籍。"
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "intensive-lectures-japanese-modern-thought",
+      "source_chapter_id": "lecture-01",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "集中講義！日本の現代思想――ポストモダンとは何だったのか",
+      "creator": "仲正昌樹",
+      "publication": "NHKブックス1072",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.nhk-book.co.jp/detail/000000910722006.html"
+        }
+      ],
+      "published": "2006",
+      "coverage": "2006年版。中国語版に対応する講義を収録。2025年の増補新版とは異なる。"
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "intensive-lectures-japanese-modern-thought",
+      "source_chapter_id": "lecture-02",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "集中講義！日本の現代思想――ポストモダンとは何だったのか",
+      "creator": "仲正昌樹",
+      "publication": "NHKブックス1072",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.nhk-book.co.jp/detail/000000910722006.html"
+        }
+      ],
+      "published": "2006",
+      "coverage": "2006年版。中国語版に対応する講義を収録。2025年の増補新版とは異なる。"
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "intensive-lectures-japanese-modern-thought",
+      "source_chapter_id": "lecture-07",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "集中講義！日本の現代思想――ポストモダンとは何だったのか",
+      "creator": "仲正昌樹",
+      "publication": "NHKブックス1072",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.nhk-book.co.jp/detail/000000910722006.html"
+        }
+      ],
+      "published": "2006",
+      "coverage": "2006年版。中国語版に対応する講義を収録。2025年の増補新版とは異なる。"
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "intensive-lectures-japanese-modern-thought",
+      "source_chapter_id": "lecture-08",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "集中講義！日本の現代思想――ポストモダンとは何だったのか",
+      "creator": "仲正昌樹",
+      "publication": "NHKブックス1072",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.nhk-book.co.jp/detail/000000910722006.html"
+        }
+      ],
+      "published": "2006",
+      "coverage": "2006年版。中国語版に対応する講義を収録。2025年の増補新版とは異なる。"
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "nippon-thought",
+      "source_chapter_id": "prologue",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "ニッポンの思想",
+      "creator": "佐々木敦",
+      "publication": "講談社現代新書",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.kodansha.co.jp/book/products/0000210495"
+        }
+      ],
+      "coverage": "原著の対応する章を参照。"
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "nippon-thought",
+      "source_chapter_id": "chapter-01",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "ニッポンの思想",
+      "creator": "佐々木敦",
+      "publication": "講談社現代新書",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.kodansha.co.jp/book/products/0000210495"
+        }
+      ],
+      "coverage": "原著の対応する章を参照。"
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "nippon-thought",
+      "source_chapter_id": "chapter-02",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "ニッポンの思想",
+      "creator": "佐々木敦",
+      "publication": "講談社現代新書",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.kodansha.co.jp/book/products/0000210495"
+        }
+      ],
+      "coverage": "原著の対応する章を参照。"
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "nippon-thought",
+      "source_chapter_id": "chapter-03",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "ニッポンの思想",
+      "creator": "佐々木敦",
+      "publication": "講談社現代新書",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.kodansha.co.jp/book/products/0000210495"
+        }
+      ],
+      "coverage": "原著の対応する章を参照。"
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "nippon-thought",
+      "source_chapter_id": "chapter-04",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "ニッポンの思想",
+      "creator": "佐々木敦",
+      "publication": "講談社現代新書",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.kodansha.co.jp/book/products/0000210495"
+        }
+      ],
+      "coverage": "原著の対応する章を参照。"
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "nippon-thought",
+      "source_chapter_id": "chapter-05-upper",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "ニッポンの思想",
+      "creator": "佐々木敦",
+      "publication": "講談社現代新書",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.kodansha.co.jp/book/products/0000210495"
+        }
+      ],
+      "coverage": "原著の対応する章を参照。"
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "nippon-thought",
+      "source_chapter_id": "chapter-05-lower",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "ニッポンの思想",
+      "creator": "佐々木敦",
+      "publication": "講談社現代新書",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.kodansha.co.jp/book/products/0000210495"
+        }
+      ],
+      "coverage": "原著の対応する章を参照。"
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "nippon-thought",
+      "source_chapter_id": "chapter-06",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "ニッポンの思想",
+      "creator": "佐々木敦",
+      "publication": "講談社現代新書",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.kodansha.co.jp/book/products/0000210495"
+        }
+      ],
+      "coverage": "原著の対応する章を参照。"
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "nippon-thought",
+      "source_chapter_id": "chapter-07",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "ニッポンの思想",
+      "creator": "佐々木敦",
+      "publication": "講談社現代新書",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.kodansha.co.jp/book/products/0000210495"
+        }
+      ],
+      "coverage": "原著の対応する章を参照。"
+    },
+    {
+      "source_type": "book-chapter",
+      "source_book_slug": "nippon-thought",
+      "source_chapter_id": "chapter-08",
+      "locale": "ja",
+      "state": "external-original",
+      "format": "book",
+      "title": "ニッポンの思想",
+      "creator": "佐々木敦",
+      "publication": "講談社現代新書",
+      "links": [
+        {
+          "kind": "publisher",
+          "url": "https://www.kodansha.co.jp/book/products/0000210495"
+        }
+      ],
+      "coverage": "原著の対応する章を参照。"
     }
   ]
 }
