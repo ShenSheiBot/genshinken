@@ -1,6 +1,6 @@
 {
   "conversion": "opencc-js:cn2t+t2cn",
-  "corpusFileCount": 668,
+  "corpusFileCount": 669,
   "fonts": {
     "Roof Noto Sans SC": {
       "bytes": 2010656,
@@ -35,11 +35,11 @@
       "weight": "200 900"
     },
     "Roof Zhuque Fangsong": {
-      "bytes": 2630388,
+      "bytes": 2629920,
       "codePointCount": 7074,
       "emphasisCodePointCount": 438,
       "file": "roof-zhuque-fangsong.woff2",
-      "sha256": "5a90591ef1994b50e92fcfbe134d8f8747d094c72908f506e76ca9a1c3de9b5f",
+      "sha256": "280903be3425c7ac23abd2830fd2c64df44f515c8eeaa13468e1712713bf2580",
       "source": "ZhuqueFangsong-Regular.ttf",
       "sourceSha256": "558c62730844fe54ba220146ed62f859d4e2880188d92d985f8921c6e3743bc4",
       "sourceUrl": "https://github.com/TrionesType/zhuque/releases/download/v0.212/ZhuqueFangsong-v0.212.zip#ZhuqueFangsong-Regular.ttf",
@@ -221,8 +221,8 @@
   },
   "siteCodePointCount": 6848,
   "siteCodePointSha256": "aeba233b4ff0f10d98cf1042e0f9d434ab1e20e93f5073a7c4091a1d17ca82f1",
-  "sourceCodePointCount": 5890,
-  "sourceCodePointSha256": "f0f73ab9ca0c6128330dec300bda18f3bb7580fb31f972c14c0c5c0951b39e53",
+  "sourceCodePointCount": 5891,
+  "sourceCodePointSha256": "aac534c45f510a6e0c8e014af225d9a8ee926d7ceadbeb3d0b4712c55be077b5",
   "strategy": "chinese-site-corpus-opencc-closure-variable-pair-and-upright-zhuque-emphasis",
   "targetCodePointCount": 6848,
   "toolchainSha256": "b192f1da4344abea6d8568a33b15e3ecfb6d9f8242b22257639c7cf28d4424c3",
