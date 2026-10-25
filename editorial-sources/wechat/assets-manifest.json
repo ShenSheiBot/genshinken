@@ -803,6 +803,18 @@
       "contentType": "image/jpeg"
     },
     {
+      "key": "wechat/-j1TGu6g6ZeKmMBM6z8_nw/translations/ja/001-ja.png",
+      "bytes": 143349,
+      "sha256": "1bd0a6f57bdbffb71d83a5a71ae52e1cf1f82e7215fad4ccec2232767e0712c2",
+      "contentType": "image/png"
+    },
+    {
+      "key": "wechat/-j1TGu6g6ZeKmMBM6z8_nw/translations/ja/005-ja.png",
+      "bytes": 177360,
+      "sha256": "e94dd29fcdcbf225ae758adff987fd87bed1e20dc72a5fd0e318da57761e7e84",
+      "contentType": "image/png"
+    },
+    {
       "key": "wechat/-luXavCTTMj7QhL_XwXXhg/body-001.jpg",
       "bytes": 67449,
       "sha256": "b84f4a02c48560c4c1b7a69068e32c24607ed1885cdaaa262f861e3c94e30c48",
@@ -2393,15 +2405,33 @@
       "contentType": "image/jpeg"
     },
     {
+      "key": "wechat/9ophqPBsSFU6S_R6es302A/body-001-ja.png",
+      "bytes": 79531,
+      "sha256": "7e92db76c5ed2dee25831556b410fcf98d8e05b2e8b2bb5939f5eebbfe0b3fcf",
+      "contentType": "image/png"
+    },
+    {
       "key": "wechat/9ophqPBsSFU6S_R6es302A/body-001.jpg",
       "bytes": 44176,
       "sha256": "f97abb0d9698df01f7e5fb1c76642f5ab5c1b6201e061628647e1c97d85d18e8",
       "contentType": "image/jpeg"
     },
     {
+      "key": "wechat/9ophqPBsSFU6S_R6es302A/body-002-ja.png",
+      "bytes": 39862,
+      "sha256": "fb704f0b95808ae80f271dccdf0e168263df19cc136f4513f9aeca80cc1a42c9",
+      "contentType": "image/png"
+    },
+    {
       "key": "wechat/9ophqPBsSFU6S_R6es302A/body-002.png",
       "bytes": 45590,
       "sha256": "802e4b47d1122a7a84bc17cb99c22b4252b3a407821e2a1e03b3b94d491012c0",
+      "contentType": "image/png"
+    },
+    {
+      "key": "wechat/9ophqPBsSFU6S_R6es302A/body-003-ja.png",
+      "bytes": 133739,
+      "sha256": "58560bcf79e8137042c389fd5b2645322d1b6407f0989821134b5b70f929dab4",
       "contentType": "image/png"
     },
     {
@@ -2411,9 +2441,21 @@
       "contentType": "image/jpeg"
     },
     {
+      "key": "wechat/9ophqPBsSFU6S_R6es302A/body-004-ja.png",
+      "bytes": 43669,
+      "sha256": "f238f9966831dd88a29ffecc3d0e35973c240444fd4ef65dfd81a0ff9683326d",
+      "contentType": "image/png"
+    },
+    {
       "key": "wechat/9ophqPBsSFU6S_R6es302A/body-004.png",
       "bytes": 68999,
       "sha256": "256f7d1125620fb5e0162cbdf33e54846354f60d1f3f10a2ba2d440b56556dd1",
+      "contentType": "image/png"
+    },
+    {
+      "key": "wechat/9ophqPBsSFU6S_R6es302A/body-005-ja.png",
+      "bytes": 76281,
+      "sha256": "7fee565e70d4de8ee0a02b69de6b17544ae39502707877ea058e9991616d0176",
       "contentType": "image/png"
     },
     {
@@ -2423,10 +2465,22 @@
       "contentType": "image/png"
     },
     {
+      "key": "wechat/9ophqPBsSFU6S_R6es302A/body-006-ja.png",
+      "bytes": 123951,
+      "sha256": "256e4d8ba8437d519b6be77e9a6d52b42c0d3f07ef4385212dccb6062cab5d19",
+      "contentType": "image/png"
+    },
+    {
       "key": "wechat/9ophqPBsSFU6S_R6es302A/body-006.jpg",
       "bytes": 59140,
       "sha256": "18a998a3f6fafdadf2973d35c4129bf040ec1b9e6372561c886de03287b4cfb5",
       "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/9ophqPBsSFU6S_R6es302A/body-007-ja.png",
+      "bytes": 175648,
+      "sha256": "d99782d6750d91ac780ebdb151f3d1af51c6d0429184f632dcae9818121d4c2d",
+      "contentType": "image/png"
     },
     {
       "key": "wechat/9ophqPBsSFU6S_R6es302A/body-007.jpg",
@@ -2435,10 +2489,22 @@
       "contentType": "image/jpeg"
     },
     {
+      "key": "wechat/9ophqPBsSFU6S_R6es302A/body-008-ja.png",
+      "bytes": 158312,
+      "sha256": "47b4713f9b0db8ad4a3101078e4cc83112b8beb356bdb6429a48cc83381c642c",
+      "contentType": "image/png"
+    },
+    {
       "key": "wechat/9ophqPBsSFU6S_R6es302A/body-008.jpg",
       "bytes": 92010,
       "sha256": "6fd6cc34fa8dac140929879deef0b24257e476917d3579e5a8d45c5aa6799cac",
       "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/9ophqPBsSFU6S_R6es302A/body-009-ja.png",
+      "bytes": 100711,
+      "sha256": "3a3fa120f4d16570d89f2f919e7dba00db4bae4f0ce482483b61b9ffb05d2380",
+      "contentType": "image/png"
     },
     {
       "key": "wechat/9ophqPBsSFU6S_R6es302A/body-009.jpg",
@@ -3281,6 +3347,24 @@
       "contentType": "image/png"
     },
     {
+      "key": "wechat/DdFErGBP0IlTmf5WnEI2VQ/translations/ja/figure-3-2-ja.png",
+      "bytes": 156246,
+      "sha256": "686ea9b239a42155ae46a4659079c1ec90d5f98cc6128b3e39ab4803159d15a5",
+      "contentType": "image/png"
+    },
+    {
+      "key": "wechat/DdFErGBP0IlTmf5WnEI2VQ/translations/ja/figure-3-3-ja.png",
+      "bytes": 189541,
+      "sha256": "efe4384ee31cdb4a107e2fa3e7c58f1eb17ebc0c18ac51a79579c506266b199e",
+      "contentType": "image/png"
+    },
+    {
+      "key": "wechat/DdFErGBP0IlTmf5WnEI2VQ/translations/ja/figure-3-4-ja.png",
+      "bytes": 279485,
+      "sha256": "2a1bf27ae7b820d58ec0dfcc0bc75b5761be087416272ab9b7fb32b654fcd4cb",
+      "contentType": "image/png"
+    },
+    {
       "key": "wechat/dGLBZR_kff3Zt93M3cITQQ/body-001.jpg",
       "bytes": 62804,
       "sha256": "22b3a155337151d6e176777dfbcacde6d1bd928455f49e6fb83648c9549619ea",
@@ -3428,6 +3512,12 @@
       "key": "wechat/dVSX5wd5-6AKOQ_XGRSn4w/005.jpg",
       "bytes": 186308,
       "sha256": "33f0816ca44e8e38dea1c159bc9836e0a4140e47abbc60f656377019ddf53835",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/dVSX5wd5-6AKOQ_XGRSn4w/translations/ja/002-captain-tsubasa-road-to-2002-vol-01-ja.jpg",
+      "bytes": 489982,
+      "sha256": "dffc08b11d9dfd3aecce86788e8d9a55dfb33042d3bf4c41e78ceb4d82575fc9",
       "contentType": "image/jpeg"
     },
     {
@@ -4793,6 +4883,18 @@
       "contentType": "image/png"
     },
     {
+      "key": "wechat/h2ex0GUc0xYMIdgJXEfKUA/translations/ja/figure-2-4-ja.png",
+      "bytes": 180509,
+      "sha256": "d1a50898e0a8c4c2996e353d3d534ff41e75775352bbe1a8ad4b1356a1ec58b1",
+      "contentType": "image/png"
+    },
+    {
+      "key": "wechat/h2ex0GUc0xYMIdgJXEfKUA/translations/ja/figure-2-5-ja.png",
+      "bytes": 227724,
+      "sha256": "6e4220cd6be2f1fec74a015923e443df658432cd176ce7325b6f03803b7aaf54",
+      "contentType": "image/png"
+    },
+    {
       "key": "wechat/HFkV-yvsvNan_CwpYdlDNg/body-001.jpg",
       "bytes": 67867,
       "sha256": "236478ea9ce74dc79adfae7ebd722c4229fc25110b62d3bafe0f06584f912a7b",
@@ -5735,6 +5837,12 @@
       "contentType": "image/jpeg"
     },
     {
+      "key": "wechat/ldBevDqvKrYOy_T7nLqORw/translations/ja/body-005.png",
+      "bytes": 1528038,
+      "sha256": "cd129737715b1e18bd24431ca9f16231bce57eed8f1da511c2caf5561d32d768",
+      "contentType": "image/png"
+    },
+    {
       "key": "wechat/lh_cF0IbjFOeVwUaDw4PWQ/body-001.png",
       "bytes": 569119,
       "sha256": "0de6e50c15c6e9ebfc2b616bc29f60dec44429cea37f03f6303e2c1ffa85b63a",
@@ -5793,6 +5901,12 @@
       "bytes": 139781,
       "sha256": "73510b9322974ba93d2a126ce9a30743a349261a711ba50c61d04bfdc467be84",
       "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/lh_cF0IbjFOeVwUaDw4PWQ/translations/ja/body-005-ja.png",
+      "bytes": 85537,
+      "sha256": "623370a90ba90e9a47f17c8b843d7181fc95ffc256063d92236a3b63cf0c1b74",
+      "contentType": "image/png"
     },
     {
       "key": "wechat/LP8kSlPJrp3z_N3hGmZa8g/001.png",
@@ -6296,6 +6410,12 @@
       "key": "wechat/OMCkhX8DTq0BxXaV3MGQbg/body-007.jpg",
       "bytes": 92543,
       "sha256": "b5f74fb81bbf68515325a3a175fa82affa43170dac8965153455473344530364",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/OMCkhX8DTq0BxXaV3MGQbg/translations/ja/body-007.jpg",
+      "bytes": 241972,
+      "sha256": "a06e6b86c1bc5de316940ed5f78caff7b67a20220da3c5d44477b6d3b9312cf0",
       "contentType": "image/jpeg"
     },
     {
@@ -7577,6 +7697,36 @@
       "contentType": "image/jpeg"
     },
     {
+      "key": "wechat/rjo8kACV_c5eHQ5WicnBjQ/translations/ja/body-006.png",
+      "bytes": 348455,
+      "sha256": "26c4eaaae034eaa80ba8eb33a00b38ec974020a0a9221a58d6fc10718ecd46ed",
+      "contentType": "image/png"
+    },
+    {
+      "key": "wechat/rjo8kACV_c5eHQ5WicnBjQ/translations/ja/body-007.png",
+      "bytes": 342318,
+      "sha256": "a3ef75f0d08478f8680a1098e5fe150f2b4b74cb04b84f3b945515ba4442a94a",
+      "contentType": "image/png"
+    },
+    {
+      "key": "wechat/rjo8kACV_c5eHQ5WicnBjQ/translations/ja/body-008.png",
+      "bytes": 350666,
+      "sha256": "2c7f515bdef4ed2dd5377dcb4dcf91464fee1bf4d4bed9f82f87185359e53180",
+      "contentType": "image/png"
+    },
+    {
+      "key": "wechat/rjo8kACV_c5eHQ5WicnBjQ/translations/ja/body-009.png",
+      "bytes": 337106,
+      "sha256": "14979ad9b3c87e52702124d6c3386bc19e30ca0adf16dc80772685b8c8d230d5",
+      "contentType": "image/png"
+    },
+    {
+      "key": "wechat/rjo8kACV_c5eHQ5WicnBjQ/translations/ja/body-010.png",
+      "bytes": 306753,
+      "sha256": "518e156eb50077cdf08ed97ec745a2e3080a7b91973c52d2219dd42baf0b21d6",
+      "contentType": "image/png"
+    },
+    {
       "key": "wechat/rNFYyVdRlPSR6tLWkhV4Ew/body-001.jpg",
       "bytes": 56194,
       "sha256": "63b2cc14b06c3966153d86dabb5cd887a5f8c298896350b3282510220224969c",
@@ -7623,6 +7773,12 @@
       "bytes": 61075,
       "sha256": "ff178f52b4c026f52b192166bd6cdc4a1617cf781666bdfbc9cbc1309ca336f0",
       "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/rNFYyVdRlPSR6tLWkhV4Ew/translations/ja/body-002.png",
+      "bytes": 358797,
+      "sha256": "fa52e0942ec9f6c15e93faa16b5342f26f9ec6c9336671749b2333286d21ecf1",
+      "contentType": "image/png"
     },
     {
       "key": "wechat/RrUsMclW8Fau1XshyfyX5A/body-001.jpg",
@@ -7844,6 +8000,12 @@
       "key": "wechat/Sik7v7XejBCh2LBM6TtwMA/body-010.gif",
       "bytes": 786562,
       "sha256": "717ce4ddfd42a5b257359b17abaf8d86eebb7481894aa980a267fbb068039093",
+      "contentType": "image/gif"
+    },
+    {
+      "key": "wechat/Sik7v7XejBCh2LBM6TtwMA/translations/ja/body-002.gif",
+      "bytes": 339502,
+      "sha256": "1fcf3f5c816217cb55a584ece6efc5c012f8a7eb94f930040fd2a4b695445499",
       "contentType": "image/gif"
     },
     {
@@ -8115,6 +8277,12 @@
       "bytes": 30136,
       "sha256": "bcb2a9b35c10f10d6b7f875e134a5ae5f25a3560b1f4d8dae2d460d7f394eebf",
       "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/TVP3BNIeCEU0ilvXHT0_XQ/translations/ja/body-005-ja-scene.png",
+      "bytes": 432533,
+      "sha256": "5db4ee1745fad71cd2c414fa905cd2d6d0cc5d779b2edbe4523c7d3b2703715a",
+      "contentType": "image/png"
     },
     {
       "key": "wechat/u29uxi0anacAIbRVBYI1PA/body-001.png",
@@ -8621,9 +8789,21 @@
       "contentType": "image/png"
     },
     {
+      "key": "wechat/Uen_YF2Q0sUeEYWA1zRZdw/body-006.ja.png",
+      "bytes": 128283,
+      "sha256": "2be98301af13f8b4ed7a461999d558fd54c7233660d4ea6042a84af62127ebb7",
+      "contentType": "image/png"
+    },
+    {
       "key": "wechat/Uen_YF2Q0sUeEYWA1zRZdw/body-006.png",
       "bytes": 118015,
       "sha256": "1c22b372695d0582b3bd83d0f80152fae746a3d4397c676d7303590119812dd7",
+      "contentType": "image/png"
+    },
+    {
+      "key": "wechat/Uen_YF2Q0sUeEYWA1zRZdw/body-007.ja.png",
+      "bytes": 68731,
+      "sha256": "c9fade0af32cea1a8661dbc6d1224fff4fd0d2c5df8d366a881bbb07f0419f4d",
       "contentType": "image/png"
     },
     {
@@ -9098,6 +9278,60 @@
       "key": "wechat/Wi9U4WIbGow1rYAoY9T1ZA/013.jpg",
       "bytes": 40523,
       "sha256": "6e3674ec0e695ffda66a13e03d1e7dd52debb63fefa66cc7d98c010f8928e352",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/wNKmF1aYNKa_xjLRcgNurw/body-001.jpg",
+      "bytes": 93385,
+      "sha256": "40394a8343690ae822d2964ead9a50b43e38c4ffcd44bb8143fa5d9ec3190e25",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/wNKmF1aYNKa_xjLRcgNurw/body-002.jpg",
+      "bytes": 219329,
+      "sha256": "5e4a0ff926fa7ea221aa8b4e8ac4d14b6790e7f3a5310fbb1dffed0db716880e",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/wNKmF1aYNKa_xjLRcgNurw/body-003.png",
+      "bytes": 250680,
+      "sha256": "21095d170765d99ed5cb26ea00c98c294e9cb463c5103590043fdcd69023c22c",
+      "contentType": "image/png"
+    },
+    {
+      "key": "wechat/wNKmF1aYNKa_xjLRcgNurw/body-004.jpg",
+      "bytes": 62382,
+      "sha256": "aa255a4fa2c6c04e2c351e6128d6474da659aaaa9637903d9b5cce1aef63bf78",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/wNKmF1aYNKa_xjLRcgNurw/body-005.jpg",
+      "bytes": 18259,
+      "sha256": "5f703c6fcd9dbdcfce001f6aa57df020add5c83b1a7133f00aa2ea6fd1068412",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/wNKmF1aYNKa_xjLRcgNurw/body-006.jpg",
+      "bytes": 57812,
+      "sha256": "374b0a7987efec3a5c738dab266a4982c2b9eaf571b6d00468e26a362ced1803",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/wNKmF1aYNKa_xjLRcgNurw/body-007.jpg",
+      "bytes": 99639,
+      "sha256": "ff2413ee87b6c4625e5c030b0fa7601c26153179f60f2769be805b1b036a0403",
+      "contentType": "image/jpeg"
+    },
+    {
+      "key": "wechat/wNKmF1aYNKa_xjLRcgNurw/body-008.png",
+      "bytes": 622063,
+      "sha256": "d5eb8d597208d124d8641affc87654817c8db1660a498311345e295782c0d11e",
+      "contentType": "image/png"
+    },
+    {
+      "key": "wechat/wNKmF1aYNKa_xjLRcgNurw/body-009.jpg",
+      "bytes": 29490,
+      "sha256": "32794552ba7a70f6089f4845a45a0cc9cdd18fd347e78ab5e58310f58c7cfa47",
       "contentType": "image/jpeg"
     },
     {
@@ -9584,186 +9818,6 @@
       "key": "wechat/ZvpFabKhQe83zPCpVuAdYg/body-001.png",
       "bytes": 716,
       "sha256": "34b326cb4b3c994944f5763a28012005ae529cea19be523d156ca290f90dbaf0",
-      "contentType": "image/png"
-    },
-    {
-      "key": "wechat/-j1TGu6g6ZeKmMBM6z8_nw/translations/ja/001-ja.png",
-      "bytes": 143349,
-      "sha256": "1bd0a6f57bdbffb71d83a5a71ae52e1cf1f82e7215fad4ccec2232767e0712c2",
-      "contentType": "image/png"
-    },
-    {
-      "key": "wechat/-j1TGu6g6ZeKmMBM6z8_nw/translations/ja/005-ja.png",
-      "bytes": 177360,
-      "sha256": "e94dd29fcdcbf225ae758adff987fd87bed1e20dc72a5fd0e318da57761e7e84",
-      "contentType": "image/png"
-    },
-    {
-      "key": "wechat/9ophqPBsSFU6S_R6es302A/body-001-ja.png",
-      "bytes": 79531,
-      "sha256": "7e92db76c5ed2dee25831556b410fcf98d8e05b2e8b2bb5939f5eebbfe0b3fcf",
-      "contentType": "image/png"
-    },
-    {
-      "key": "wechat/9ophqPBsSFU6S_R6es302A/body-002-ja.png",
-      "bytes": 39862,
-      "sha256": "fb704f0b95808ae80f271dccdf0e168263df19cc136f4513f9aeca80cc1a42c9",
-      "contentType": "image/png"
-    },
-    {
-      "key": "wechat/9ophqPBsSFU6S_R6es302A/body-003-ja.png",
-      "bytes": 133739,
-      "sha256": "58560bcf79e8137042c389fd5b2645322d1b6407f0989821134b5b70f929dab4",
-      "contentType": "image/png"
-    },
-    {
-      "key": "wechat/9ophqPBsSFU6S_R6es302A/body-004-ja.png",
-      "bytes": 43669,
-      "sha256": "f238f9966831dd88a29ffecc3d0e35973c240444fd4ef65dfd81a0ff9683326d",
-      "contentType": "image/png"
-    },
-    {
-      "key": "wechat/9ophqPBsSFU6S_R6es302A/body-005-ja.png",
-      "bytes": 76281,
-      "sha256": "7fee565e70d4de8ee0a02b69de6b17544ae39502707877ea058e9991616d0176",
-      "contentType": "image/png"
-    },
-    {
-      "key": "wechat/9ophqPBsSFU6S_R6es302A/body-006-ja.png",
-      "bytes": 123951,
-      "sha256": "256e4d8ba8437d519b6be77e9a6d52b42c0d3f07ef4385212dccb6062cab5d19",
-      "contentType": "image/png"
-    },
-    {
-      "key": "wechat/9ophqPBsSFU6S_R6es302A/body-007-ja.png",
-      "bytes": 175648,
-      "sha256": "d99782d6750d91ac780ebdb151f3d1af51c6d0429184f632dcae9818121d4c2d",
-      "contentType": "image/png"
-    },
-    {
-      "key": "wechat/9ophqPBsSFU6S_R6es302A/body-008-ja.png",
-      "bytes": 158312,
-      "sha256": "47b4713f9b0db8ad4a3101078e4cc83112b8beb356bdb6429a48cc83381c642c",
-      "contentType": "image/png"
-    },
-    {
-      "key": "wechat/9ophqPBsSFU6S_R6es302A/body-009-ja.png",
-      "bytes": 100711,
-      "sha256": "3a3fa120f4d16570d89f2f919e7dba00db4bae4f0ce482483b61b9ffb05d2380",
-      "contentType": "image/png"
-    },
-    {
-      "key": "wechat/DdFErGBP0IlTmf5WnEI2VQ/translations/ja/figure-3-2-ja.png",
-      "bytes": 156246,
-      "sha256": "686ea9b239a42155ae46a4659079c1ec90d5f98cc6128b3e39ab4803159d15a5",
-      "contentType": "image/png"
-    },
-    {
-      "key": "wechat/DdFErGBP0IlTmf5WnEI2VQ/translations/ja/figure-3-3-ja.png",
-      "bytes": 189541,
-      "sha256": "efe4384ee31cdb4a107e2fa3e7c58f1eb17ebc0c18ac51a79579c506266b199e",
-      "contentType": "image/png"
-    },
-    {
-      "key": "wechat/DdFErGBP0IlTmf5WnEI2VQ/translations/ja/figure-3-4-ja.png",
-      "bytes": 279485,
-      "sha256": "2a1bf27ae7b820d58ec0dfcc0bc75b5761be087416272ab9b7fb32b654fcd4cb",
-      "contentType": "image/png"
-    },
-    {
-      "key": "wechat/OMCkhX8DTq0BxXaV3MGQbg/translations/ja/body-007.jpg",
-      "bytes": 241972,
-      "sha256": "a06e6b86c1bc5de316940ed5f78caff7b67a20220da3c5d44477b6d3b9312cf0",
-      "contentType": "image/jpeg"
-    },
-    {
-      "key": "wechat/Sik7v7XejBCh2LBM6TtwMA/translations/ja/body-002.gif",
-      "bytes": 339502,
-      "sha256": "1fcf3f5c816217cb55a584ece6efc5c012f8a7eb94f930040fd2a4b695445499",
-      "contentType": "image/gif"
-    },
-    {
-      "key": "wechat/TVP3BNIeCEU0ilvXHT0_XQ/translations/ja/body-005-ja-scene.png",
-      "bytes": 432533,
-      "sha256": "5db4ee1745fad71cd2c414fa905cd2d6d0cc5d779b2edbe4523c7d3b2703715a",
-      "contentType": "image/png"
-    },
-    {
-      "key": "wechat/Uen_YF2Q0sUeEYWA1zRZdw/body-006.ja.png",
-      "bytes": 128283,
-      "sha256": "2be98301af13f8b4ed7a461999d558fd54c7233660d4ea6042a84af62127ebb7",
-      "contentType": "image/png"
-    },
-    {
-      "key": "wechat/Uen_YF2Q0sUeEYWA1zRZdw/body-007.ja.png",
-      "bytes": 68731,
-      "sha256": "c9fade0af32cea1a8661dbc6d1224fff4fd0d2c5df8d366a881bbb07f0419f4d",
-      "contentType": "image/png"
-    },
-    {
-      "key": "wechat/dVSX5wd5-6AKOQ_XGRSn4w/translations/ja/002-captain-tsubasa-road-to-2002-vol-01-ja.jpg",
-      "bytes": 489982,
-      "sha256": "dffc08b11d9dfd3aecce86788e8d9a55dfb33042d3bf4c41e78ceb4d82575fc9",
-      "contentType": "image/jpeg"
-    },
-    {
-      "key": "wechat/h2ex0GUc0xYMIdgJXEfKUA/translations/ja/figure-2-4-ja.png",
-      "bytes": 180509,
-      "sha256": "d1a50898e0a8c4c2996e353d3d534ff41e75775352bbe1a8ad4b1356a1ec58b1",
-      "contentType": "image/png"
-    },
-    {
-      "key": "wechat/h2ex0GUc0xYMIdgJXEfKUA/translations/ja/figure-2-5-ja.png",
-      "bytes": 227724,
-      "sha256": "6e4220cd6be2f1fec74a015923e443df658432cd176ce7325b6f03803b7aaf54",
-      "contentType": "image/png"
-    },
-    {
-      "key": "wechat/ldBevDqvKrYOy_T7nLqORw/translations/ja/body-005.png",
-      "bytes": 1528038,
-      "sha256": "cd129737715b1e18bd24431ca9f16231bce57eed8f1da511c2caf5561d32d768",
-      "contentType": "image/png"
-    },
-    {
-      "key": "wechat/lh_cF0IbjFOeVwUaDw4PWQ/translations/ja/body-005-ja.png",
-      "bytes": 85537,
-      "sha256": "623370a90ba90e9a47f17c8b843d7181fc95ffc256063d92236a3b63cf0c1b74",
-      "contentType": "image/png"
-    },
-    {
-      "key": "wechat/rNFYyVdRlPSR6tLWkhV4Ew/translations/ja/body-002.png",
-      "bytes": 358797,
-      "sha256": "fa52e0942ec9f6c15e93faa16b5342f26f9ec6c9336671749b2333286d21ecf1",
-      "contentType": "image/png"
-    },
-    {
-      "key": "wechat/rjo8kACV_c5eHQ5WicnBjQ/translations/ja/body-006.png",
-      "bytes": 348455,
-      "sha256": "26c4eaaae034eaa80ba8eb33a00b38ec974020a0a9221a58d6fc10718ecd46ed",
-      "contentType": "image/png"
-    },
-    {
-      "key": "wechat/rjo8kACV_c5eHQ5WicnBjQ/translations/ja/body-007.png",
-      "bytes": 342318,
-      "sha256": "a3ef75f0d08478f8680a1098e5fe150f2b4b74cb04b84f3b945515ba4442a94a",
-      "contentType": "image/png"
-    },
-    {
-      "key": "wechat/rjo8kACV_c5eHQ5WicnBjQ/translations/ja/body-008.png",
-      "bytes": 350666,
-      "sha256": "2c7f515bdef4ed2dd5377dcb4dcf91464fee1bf4d4bed9f82f87185359e53180",
-      "contentType": "image/png"
-    },
-    {
-      "key": "wechat/rjo8kACV_c5eHQ5WicnBjQ/translations/ja/body-009.png",
-      "bytes": 337106,
-      "sha256": "14979ad9b3c87e52702124d6c3386bc19e30ca0adf16dc80772685b8c8d230d5",
-      "contentType": "image/png"
-    },
-    {
-      "key": "wechat/rjo8kACV_c5eHQ5WicnBjQ/translations/ja/body-010.png",
-      "bytes": 306753,
-      "sha256": "518e156eb50077cdf08ed97ec745a2e3080a7b91973c52d2219dd42baf0b21d6",
       "contentType": "image/png"
     }
   ]
